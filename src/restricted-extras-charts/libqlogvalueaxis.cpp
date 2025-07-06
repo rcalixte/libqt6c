@@ -89,7 +89,7 @@ void QLogValueAxis_SetRange(QLogValueAxis* self, double min, double max) {
     self->setRange(static_cast<qreal>(min), static_cast<qreal>(max));
 }
 
-void QLogValueAxis_SetLabelFormat(QLogValueAxis* self, libqt_string format) {
+void QLogValueAxis_SetLabelFormat(QLogValueAxis* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->setLabelFormat(format_QString);
 }
@@ -163,7 +163,7 @@ void QLogValueAxis_Connect_RangeChanged(QLogValueAxis* self, intptr_t slot) {
     });
 }
 
-void QLogValueAxis_LabelFormatChanged(QLogValueAxis* self, libqt_string format) {
+void QLogValueAxis_LabelFormatChanged(QLogValueAxis* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->labelFormatChanged(format_QString);
 }
@@ -419,7 +419,7 @@ void QLogValueAxis_OnCustomEvent(QLogValueAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLogValueAxis_ConnectNotify(QLogValueAxis* self, QMetaMethod* signal) {
+void QLogValueAxis_ConnectNotify(QLogValueAxis* self, const QMetaMethod* signal) {
     auto* vqlogvalueaxis = dynamic_cast<VirtualQLogValueAxis*>(self);
     if (vqlogvalueaxis && vqlogvalueaxis->isVirtualQLogValueAxis) {
         vqlogvalueaxis->connectNotify(*signal);
@@ -429,7 +429,7 @@ void QLogValueAxis_ConnectNotify(QLogValueAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLogValueAxis_QBaseConnectNotify(QLogValueAxis* self, QMetaMethod* signal) {
+void QLogValueAxis_QBaseConnectNotify(QLogValueAxis* self, const QMetaMethod* signal) {
     auto* vqlogvalueaxis = dynamic_cast<VirtualQLogValueAxis*>(self);
     if (vqlogvalueaxis && vqlogvalueaxis->isVirtualQLogValueAxis) {
         vqlogvalueaxis->setQLogValueAxis_ConnectNotify_IsBase(true);
@@ -448,7 +448,7 @@ void QLogValueAxis_OnConnectNotify(QLogValueAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLogValueAxis_DisconnectNotify(QLogValueAxis* self, QMetaMethod* signal) {
+void QLogValueAxis_DisconnectNotify(QLogValueAxis* self, const QMetaMethod* signal) {
     auto* vqlogvalueaxis = dynamic_cast<VirtualQLogValueAxis*>(self);
     if (vqlogvalueaxis && vqlogvalueaxis->isVirtualQLogValueAxis) {
         vqlogvalueaxis->disconnectNotify(*signal);
@@ -458,7 +458,7 @@ void QLogValueAxis_DisconnectNotify(QLogValueAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLogValueAxis_QBaseDisconnectNotify(QLogValueAxis* self, QMetaMethod* signal) {
+void QLogValueAxis_QBaseDisconnectNotify(QLogValueAxis* self, const QMetaMethod* signal) {
     auto* vqlogvalueaxis = dynamic_cast<VirtualQLogValueAxis*>(self);
     if (vqlogvalueaxis && vqlogvalueaxis->isVirtualQLogValueAxis) {
         vqlogvalueaxis->setQLogValueAxis_DisconnectNotify_IsBase(true);
@@ -564,7 +564,7 @@ void QLogValueAxis_OnReceivers(const QLogValueAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLogValueAxis_IsSignalConnected(const QLogValueAxis* self, QMetaMethod* signal) {
+bool QLogValueAxis_IsSignalConnected(const QLogValueAxis* self, const QMetaMethod* signal) {
     auto* vqlogvalueaxis = const_cast<VirtualQLogValueAxis*>(dynamic_cast<const VirtualQLogValueAxis*>(self));
     if (vqlogvalueaxis && vqlogvalueaxis->isVirtualQLogValueAxis) {
         return vqlogvalueaxis->isSignalConnected(*signal);
@@ -574,7 +574,7 @@ bool QLogValueAxis_IsSignalConnected(const QLogValueAxis* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QLogValueAxis_QBaseIsSignalConnected(const QLogValueAxis* self, QMetaMethod* signal) {
+bool QLogValueAxis_QBaseIsSignalConnected(const QLogValueAxis* self, const QMetaMethod* signal) {
     auto* vqlogvalueaxis = const_cast<VirtualQLogValueAxis*>(dynamic_cast<const VirtualQLogValueAxis*>(self));
     if (vqlogvalueaxis && vqlogvalueaxis->isVirtualQLogValueAxis) {
         vqlogvalueaxis->setQLogValueAxis_IsSignalConnected_IsBase(true);

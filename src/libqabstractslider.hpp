@@ -51,13 +51,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QAbstractSlider::SliderAction SliderAction; // C++ enum
-#else
-typedef int SliderAction; // C ABI enum
-typedef int SliderChange; // C ABI enum
-#endif
-
 QAbstractSlider* QAbstractSlider_new(QWidget* parent);
 QAbstractSlider* QAbstractSlider_new2();
 QMetaObject* QAbstractSlider_MetaObject(const QAbstractSlider* self);
@@ -209,9 +202,9 @@ void QAbstractSlider_QBaseShowEvent(QAbstractSlider* self, QShowEvent* event);
 void QAbstractSlider_HideEvent(QAbstractSlider* self, QHideEvent* event);
 void QAbstractSlider_OnHideEvent(QAbstractSlider* self, intptr_t slot);
 void QAbstractSlider_QBaseHideEvent(QAbstractSlider* self, QHideEvent* event);
-bool QAbstractSlider_NativeEvent(QAbstractSlider* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractSlider_NativeEvent(QAbstractSlider* self, const libqt_string eventType, void* message, intptr_t* result);
 void QAbstractSlider_OnNativeEvent(QAbstractSlider* self, intptr_t slot);
-bool QAbstractSlider_QBaseNativeEvent(QAbstractSlider* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractSlider_QBaseNativeEvent(QAbstractSlider* self, const libqt_string eventType, void* message, intptr_t* result);
 int QAbstractSlider_Metric(const QAbstractSlider* self, int param1);
 void QAbstractSlider_OnMetric(const QAbstractSlider* self, intptr_t slot);
 int QAbstractSlider_QBaseMetric(const QAbstractSlider* self, int param1);
@@ -242,12 +235,12 @@ void QAbstractSlider_QBaseChildEvent(QAbstractSlider* self, QChildEvent* event);
 void QAbstractSlider_CustomEvent(QAbstractSlider* self, QEvent* event);
 void QAbstractSlider_OnCustomEvent(QAbstractSlider* self, intptr_t slot);
 void QAbstractSlider_QBaseCustomEvent(QAbstractSlider* self, QEvent* event);
-void QAbstractSlider_ConnectNotify(QAbstractSlider* self, QMetaMethod* signal);
+void QAbstractSlider_ConnectNotify(QAbstractSlider* self, const QMetaMethod* signal);
 void QAbstractSlider_OnConnectNotify(QAbstractSlider* self, intptr_t slot);
-void QAbstractSlider_QBaseConnectNotify(QAbstractSlider* self, QMetaMethod* signal);
-void QAbstractSlider_DisconnectNotify(QAbstractSlider* self, QMetaMethod* signal);
+void QAbstractSlider_QBaseConnectNotify(QAbstractSlider* self, const QMetaMethod* signal);
+void QAbstractSlider_DisconnectNotify(QAbstractSlider* self, const QMetaMethod* signal);
 void QAbstractSlider_OnDisconnectNotify(QAbstractSlider* self, intptr_t slot);
-void QAbstractSlider_QBaseDisconnectNotify(QAbstractSlider* self, QMetaMethod* signal);
+void QAbstractSlider_QBaseDisconnectNotify(QAbstractSlider* self, const QMetaMethod* signal);
 void QAbstractSlider_SetRepeatAction(QAbstractSlider* self, int action);
 void QAbstractSlider_OnSetRepeatAction(QAbstractSlider* self, intptr_t slot);
 void QAbstractSlider_QBaseSetRepeatAction(QAbstractSlider* self, int action);
@@ -284,9 +277,12 @@ int QAbstractSlider_QBaseSenderSignalIndex(const QAbstractSlider* self);
 int QAbstractSlider_Receivers(const QAbstractSlider* self, const char* signal);
 void QAbstractSlider_OnReceivers(const QAbstractSlider* self, intptr_t slot);
 int QAbstractSlider_QBaseReceivers(const QAbstractSlider* self, const char* signal);
-bool QAbstractSlider_IsSignalConnected(const QAbstractSlider* self, QMetaMethod* signal);
+bool QAbstractSlider_IsSignalConnected(const QAbstractSlider* self, const QMetaMethod* signal);
 void QAbstractSlider_OnIsSignalConnected(const QAbstractSlider* self, intptr_t slot);
-bool QAbstractSlider_QBaseIsSignalConnected(const QAbstractSlider* self, QMetaMethod* signal);
+bool QAbstractSlider_QBaseIsSignalConnected(const QAbstractSlider* self, const QMetaMethod* signal);
+double QAbstractSlider_GetDecodedMetricF(const QAbstractSlider* self, int metricA, int metricB);
+void QAbstractSlider_OnGetDecodedMetricF(const QAbstractSlider* self, intptr_t slot);
+double QAbstractSlider_QBaseGetDecodedMetricF(const QAbstractSlider* self, int metricA, int metricB);
 void QAbstractSlider_Delete(QAbstractSlider* self);
 
 #ifdef __cplusplus

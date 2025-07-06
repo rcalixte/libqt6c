@@ -74,7 +74,7 @@ void QLocalSocket_ConnectToServer(QLocalSocket* self) {
     self->connectToServer();
 }
 
-void QLocalSocket_ConnectToServerWithName(QLocalSocket* self, libqt_string name) {
+void QLocalSocket_ConnectToServerWithName(QLocalSocket* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->connectToServer(name_QString);
 }
@@ -83,7 +83,7 @@ void QLocalSocket_DisconnectFromServer(QLocalSocket* self) {
     self->disconnectFromServer();
 }
 
-void QLocalSocket_SetServerName(QLocalSocket* self, libqt_string name) {
+void QLocalSocket_SetServerName(QLocalSocket* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setServerName(name_QString);
 }
@@ -236,12 +236,12 @@ libqt_string QLocalSocket_Tr3(const char* s, const char* c, int n) {
 }
 
 void QLocalSocket_ConnectToServer1(QLocalSocket* self, int openMode) {
-    self->connectToServer(static_cast<QIODeviceBase::OpenMode>(openMode));
+    self->connectToServer(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
 }
 
-void QLocalSocket_ConnectToServer2(QLocalSocket* self, libqt_string name, int openMode) {
+void QLocalSocket_ConnectToServer2(QLocalSocket* self, const libqt_string name, int openMode) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
-    self->connectToServer(name_QString, static_cast<QIODeviceBase::OpenMode>(openMode));
+    self->connectToServer(name_QString, static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
 }
 
 bool QLocalSocket_SetSocketDescriptor2(QLocalSocket* self, intptr_t socketDescriptor, int socketState) {
@@ -249,7 +249,7 @@ bool QLocalSocket_SetSocketDescriptor2(QLocalSocket* self, intptr_t socketDescri
 }
 
 bool QLocalSocket_SetSocketDescriptor3(QLocalSocket* self, intptr_t socketDescriptor, int socketState, int openMode) {
-    return self->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QLocalSocket::LocalSocketState>(socketState), static_cast<QIODeviceBase::OpenMode>(openMode));
+    return self->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QLocalSocket::LocalSocketState>(socketState), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
 }
 
 bool QLocalSocket_WaitForConnected1(QLocalSocket* self, int msecs) {
@@ -380,9 +380,9 @@ void QLocalSocket_OnCanReadLine(const QLocalSocket* self, intptr_t slot) {
 bool QLocalSocket_Open(QLocalSocket* self, int openMode) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
-        return vqlocalsocket->open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return vqlocalsocket->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     } else {
-        return self->QLocalSocket::open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QLocalSocket::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     }
 }
 
@@ -391,9 +391,9 @@ bool QLocalSocket_QBaseOpen(QLocalSocket* self, int openMode) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         vqlocalsocket->setQLocalSocket_Open_IsBase(true);
-        return vqlocalsocket->open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return vqlocalsocket->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     } else {
-        return self->QLocalSocket::open(static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QLocalSocket::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     }
 }
 
@@ -899,7 +899,7 @@ void QLocalSocket_OnCustomEvent(QLocalSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLocalSocket_ConnectNotify(QLocalSocket* self, QMetaMethod* signal) {
+void QLocalSocket_ConnectNotify(QLocalSocket* self, const QMetaMethod* signal) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         vqlocalsocket->connectNotify(*signal);
@@ -909,7 +909,7 @@ void QLocalSocket_ConnectNotify(QLocalSocket* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLocalSocket_QBaseConnectNotify(QLocalSocket* self, QMetaMethod* signal) {
+void QLocalSocket_QBaseConnectNotify(QLocalSocket* self, const QMetaMethod* signal) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         vqlocalsocket->setQLocalSocket_ConnectNotify_IsBase(true);
@@ -928,7 +928,7 @@ void QLocalSocket_OnConnectNotify(QLocalSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLocalSocket_DisconnectNotify(QLocalSocket* self, QMetaMethod* signal) {
+void QLocalSocket_DisconnectNotify(QLocalSocket* self, const QMetaMethod* signal) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         vqlocalsocket->disconnectNotify(*signal);
@@ -938,7 +938,7 @@ void QLocalSocket_DisconnectNotify(QLocalSocket* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLocalSocket_QBaseDisconnectNotify(QLocalSocket* self, QMetaMethod* signal) {
+void QLocalSocket_QBaseDisconnectNotify(QLocalSocket* self, const QMetaMethod* signal) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         vqlocalsocket->setQLocalSocket_DisconnectNotify_IsBase(true);
@@ -986,7 +986,7 @@ void QLocalSocket_OnSetOpenMode(QLocalSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLocalSocket_SetErrorString(QLocalSocket* self, libqt_string errorString) {
+void QLocalSocket_SetErrorString(QLocalSocket* self, const libqt_string errorString) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
@@ -997,7 +997,7 @@ void QLocalSocket_SetErrorString(QLocalSocket* self, libqt_string errorString) {
 }
 
 // Base class handler implementation
-void QLocalSocket_QBaseSetErrorString(QLocalSocket* self, libqt_string errorString) {
+void QLocalSocket_QBaseSetErrorString(QLocalSocket* self, const libqt_string errorString) {
     auto* vqlocalsocket = dynamic_cast<VirtualQLocalSocket*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
@@ -1104,7 +1104,7 @@ void QLocalSocket_OnReceivers(const QLocalSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, QMetaMethod* signal) {
+bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, const QMetaMethod* signal) {
     auto* vqlocalsocket = const_cast<VirtualQLocalSocket*>(dynamic_cast<const VirtualQLocalSocket*>(self));
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         return vqlocalsocket->isSignalConnected(*signal);
@@ -1114,7 +1114,7 @@ bool QLocalSocket_IsSignalConnected(const QLocalSocket* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QLocalSocket_QBaseIsSignalConnected(const QLocalSocket* self, QMetaMethod* signal) {
+bool QLocalSocket_QBaseIsSignalConnected(const QLocalSocket* self, const QMetaMethod* signal) {
     auto* vqlocalsocket = const_cast<VirtualQLocalSocket*>(dynamic_cast<const VirtualQLocalSocket*>(self));
     if (vqlocalsocket && vqlocalsocket->isVirtualQLocalSocket) {
         vqlocalsocket->setQLocalSocket_IsSignalConnected_IsBase(true);

@@ -61,8 +61,8 @@ class VirtualQThreadPool final : public QThreadPool {
     mutable bool qthreadpool_issignalconnected_isbase = false;
 
   public:
-    VirtualQThreadPool() : QThreadPool(){};
-    VirtualQThreadPool(QObject* parent) : QThreadPool(parent){};
+    VirtualQThreadPool() : QThreadPool() {};
+    VirtualQThreadPool(QObject* parent) : QThreadPool(parent) {};
 
     ~VirtualQThreadPool() {
         qthreadpool_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQThreadPool final : public QThreadPool {
     friend void QThreadPool_QBaseChildEvent(QThreadPool* self, QChildEvent* event);
     friend void QThreadPool_CustomEvent(QThreadPool* self, QEvent* event);
     friend void QThreadPool_QBaseCustomEvent(QThreadPool* self, QEvent* event);
-    friend void QThreadPool_ConnectNotify(QThreadPool* self, QMetaMethod* signal);
-    friend void QThreadPool_QBaseConnectNotify(QThreadPool* self, QMetaMethod* signal);
-    friend void QThreadPool_DisconnectNotify(QThreadPool* self, QMetaMethod* signal);
-    friend void QThreadPool_QBaseDisconnectNotify(QThreadPool* self, QMetaMethod* signal);
+    friend void QThreadPool_ConnectNotify(QThreadPool* self, const QMetaMethod* signal);
+    friend void QThreadPool_QBaseConnectNotify(QThreadPool* self, const QMetaMethod* signal);
+    friend void QThreadPool_DisconnectNotify(QThreadPool* self, const QMetaMethod* signal);
+    friend void QThreadPool_QBaseDisconnectNotify(QThreadPool* self, const QMetaMethod* signal);
     friend QObject* QThreadPool_Sender(const QThreadPool* self);
     friend QObject* QThreadPool_QBaseSender(const QThreadPool* self);
     friend int QThreadPool_SenderSignalIndex(const QThreadPool* self);
     friend int QThreadPool_QBaseSenderSignalIndex(const QThreadPool* self);
     friend int QThreadPool_Receivers(const QThreadPool* self, const char* signal);
     friend int QThreadPool_QBaseReceivers(const QThreadPool* self, const char* signal);
-    friend bool QThreadPool_IsSignalConnected(const QThreadPool* self, QMetaMethod* signal);
-    friend bool QThreadPool_QBaseIsSignalConnected(const QThreadPool* self, QMetaMethod* signal);
+    friend bool QThreadPool_IsSignalConnected(const QThreadPool* self, const QMetaMethod* signal);
+    friend bool QThreadPool_QBaseIsSignalConnected(const QThreadPool* self, const QMetaMethod* signal);
 };
 
 #endif

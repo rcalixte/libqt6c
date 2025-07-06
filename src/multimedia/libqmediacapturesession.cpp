@@ -1,3 +1,4 @@
+#include <QAudioBufferInput>
 #include <QAudioInput>
 #include <QAudioOutput>
 #include <QCamera>
@@ -9,11 +10,14 @@
 #include <QMetaMethod>
 #include <QMetaObject>
 #include <QObject>
+#include <QScreenCapture>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
 #include <QTimerEvent>
+#include <QVideoFrameInput>
 #include <QVideoSink>
+#include <QWindowCapture>
 #include <qmediacapturesession.h>
 #include "libqmediacapturesession.hpp"
 #include "libqmediacapturesession.hxx"
@@ -82,6 +86,14 @@ void QMediaCaptureSession_SetAudioInput(QMediaCaptureSession* self, QAudioInput*
     self->setAudioInput(input);
 }
 
+QAudioBufferInput* QMediaCaptureSession_AudioBufferInput(const QMediaCaptureSession* self) {
+    return self->audioBufferInput();
+}
+
+void QMediaCaptureSession_SetAudioBufferInput(QMediaCaptureSession* self, QAudioBufferInput* input) {
+    self->setAudioBufferInput(input);
+}
+
 QCamera* QMediaCaptureSession_Camera(const QMediaCaptureSession* self) {
     return self->camera();
 }
@@ -96,6 +108,30 @@ QImageCapture* QMediaCaptureSession_ImageCapture(QMediaCaptureSession* self) {
 
 void QMediaCaptureSession_SetImageCapture(QMediaCaptureSession* self, QImageCapture* imageCapture) {
     self->setImageCapture(imageCapture);
+}
+
+QScreenCapture* QMediaCaptureSession_ScreenCapture(QMediaCaptureSession* self) {
+    return self->screenCapture();
+}
+
+void QMediaCaptureSession_SetScreenCapture(QMediaCaptureSession* self, QScreenCapture* screenCapture) {
+    self->setScreenCapture(screenCapture);
+}
+
+QWindowCapture* QMediaCaptureSession_WindowCapture(QMediaCaptureSession* self) {
+    return self->windowCapture();
+}
+
+void QMediaCaptureSession_SetWindowCapture(QMediaCaptureSession* self, QWindowCapture* windowCapture) {
+    self->setWindowCapture(windowCapture);
+}
+
+QVideoFrameInput* QMediaCaptureSession_VideoFrameInput(const QMediaCaptureSession* self) {
+    return self->videoFrameInput();
+}
+
+void QMediaCaptureSession_SetVideoFrameInput(QMediaCaptureSession* self, QVideoFrameInput* input) {
+    self->setVideoFrameInput(input);
 }
 
 QMediaRecorder* QMediaCaptureSession_Recorder(QMediaCaptureSession* self) {
@@ -141,6 +177,17 @@ void QMediaCaptureSession_Connect_AudioInputChanged(QMediaCaptureSession* self, 
     });
 }
 
+void QMediaCaptureSession_AudioBufferInputChanged(QMediaCaptureSession* self) {
+    self->audioBufferInputChanged();
+}
+
+void QMediaCaptureSession_Connect_AudioBufferInputChanged(QMediaCaptureSession* self, intptr_t slot) {
+    void (*slotFunc)(QMediaCaptureSession*) = reinterpret_cast<void (*)(QMediaCaptureSession*)>(slot);
+    QMediaCaptureSession::connect(self, &QMediaCaptureSession::audioBufferInputChanged, [self, slotFunc]() {
+        slotFunc(self);
+    });
+}
+
 void QMediaCaptureSession_CameraChanged(QMediaCaptureSession* self) {
     self->cameraChanged();
 }
@@ -148,6 +195,39 @@ void QMediaCaptureSession_CameraChanged(QMediaCaptureSession* self) {
 void QMediaCaptureSession_Connect_CameraChanged(QMediaCaptureSession* self, intptr_t slot) {
     void (*slotFunc)(QMediaCaptureSession*) = reinterpret_cast<void (*)(QMediaCaptureSession*)>(slot);
     QMediaCaptureSession::connect(self, &QMediaCaptureSession::cameraChanged, [self, slotFunc]() {
+        slotFunc(self);
+    });
+}
+
+void QMediaCaptureSession_ScreenCaptureChanged(QMediaCaptureSession* self) {
+    self->screenCaptureChanged();
+}
+
+void QMediaCaptureSession_Connect_ScreenCaptureChanged(QMediaCaptureSession* self, intptr_t slot) {
+    void (*slotFunc)(QMediaCaptureSession*) = reinterpret_cast<void (*)(QMediaCaptureSession*)>(slot);
+    QMediaCaptureSession::connect(self, &QMediaCaptureSession::screenCaptureChanged, [self, slotFunc]() {
+        slotFunc(self);
+    });
+}
+
+void QMediaCaptureSession_WindowCaptureChanged(QMediaCaptureSession* self) {
+    self->windowCaptureChanged();
+}
+
+void QMediaCaptureSession_Connect_WindowCaptureChanged(QMediaCaptureSession* self, intptr_t slot) {
+    void (*slotFunc)(QMediaCaptureSession*) = reinterpret_cast<void (*)(QMediaCaptureSession*)>(slot);
+    QMediaCaptureSession::connect(self, &QMediaCaptureSession::windowCaptureChanged, [self, slotFunc]() {
+        slotFunc(self);
+    });
+}
+
+void QMediaCaptureSession_VideoFrameInputChanged(QMediaCaptureSession* self) {
+    self->videoFrameInputChanged();
+}
+
+void QMediaCaptureSession_Connect_VideoFrameInputChanged(QMediaCaptureSession* self, intptr_t slot) {
+    void (*slotFunc)(QMediaCaptureSession*) = reinterpret_cast<void (*)(QMediaCaptureSession*)>(slot);
+    QMediaCaptureSession::connect(self, &QMediaCaptureSession::videoFrameInputChanged, [self, slotFunc]() {
         slotFunc(self);
     });
 }
@@ -366,7 +446,7 @@ void QMediaCaptureSession_OnCustomEvent(QMediaCaptureSession* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QMediaCaptureSession_ConnectNotify(QMediaCaptureSession* self, QMetaMethod* signal) {
+void QMediaCaptureSession_ConnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal) {
     auto* vqmediacapturesession = dynamic_cast<VirtualQMediaCaptureSession*>(self);
     if (vqmediacapturesession && vqmediacapturesession->isVirtualQMediaCaptureSession) {
         vqmediacapturesession->connectNotify(*signal);
@@ -376,7 +456,7 @@ void QMediaCaptureSession_ConnectNotify(QMediaCaptureSession* self, QMetaMethod*
 }
 
 // Base class handler implementation
-void QMediaCaptureSession_QBaseConnectNotify(QMediaCaptureSession* self, QMetaMethod* signal) {
+void QMediaCaptureSession_QBaseConnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal) {
     auto* vqmediacapturesession = dynamic_cast<VirtualQMediaCaptureSession*>(self);
     if (vqmediacapturesession && vqmediacapturesession->isVirtualQMediaCaptureSession) {
         vqmediacapturesession->setQMediaCaptureSession_ConnectNotify_IsBase(true);
@@ -395,7 +475,7 @@ void QMediaCaptureSession_OnConnectNotify(QMediaCaptureSession* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QMediaCaptureSession_DisconnectNotify(QMediaCaptureSession* self, QMetaMethod* signal) {
+void QMediaCaptureSession_DisconnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal) {
     auto* vqmediacapturesession = dynamic_cast<VirtualQMediaCaptureSession*>(self);
     if (vqmediacapturesession && vqmediacapturesession->isVirtualQMediaCaptureSession) {
         vqmediacapturesession->disconnectNotify(*signal);
@@ -405,7 +485,7 @@ void QMediaCaptureSession_DisconnectNotify(QMediaCaptureSession* self, QMetaMeth
 }
 
 // Base class handler implementation
-void QMediaCaptureSession_QBaseDisconnectNotify(QMediaCaptureSession* self, QMetaMethod* signal) {
+void QMediaCaptureSession_QBaseDisconnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal) {
     auto* vqmediacapturesession = dynamic_cast<VirtualQMediaCaptureSession*>(self);
     if (vqmediacapturesession && vqmediacapturesession->isVirtualQMediaCaptureSession) {
         vqmediacapturesession->setQMediaCaptureSession_DisconnectNotify_IsBase(true);
@@ -511,7 +591,7 @@ void QMediaCaptureSession_OnReceivers(const QMediaCaptureSession* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QMediaCaptureSession_IsSignalConnected(const QMediaCaptureSession* self, QMetaMethod* signal) {
+bool QMediaCaptureSession_IsSignalConnected(const QMediaCaptureSession* self, const QMetaMethod* signal) {
     auto* vqmediacapturesession = const_cast<VirtualQMediaCaptureSession*>(dynamic_cast<const VirtualQMediaCaptureSession*>(self));
     if (vqmediacapturesession && vqmediacapturesession->isVirtualQMediaCaptureSession) {
         return vqmediacapturesession->isSignalConnected(*signal);
@@ -521,7 +601,7 @@ bool QMediaCaptureSession_IsSignalConnected(const QMediaCaptureSession* self, QM
 }
 
 // Base class handler implementation
-bool QMediaCaptureSession_QBaseIsSignalConnected(const QMediaCaptureSession* self, QMetaMethod* signal) {
+bool QMediaCaptureSession_QBaseIsSignalConnected(const QMediaCaptureSession* self, const QMetaMethod* signal) {
     auto* vqmediacapturesession = const_cast<VirtualQMediaCaptureSession*>(dynamic_cast<const VirtualQMediaCaptureSession*>(self));
     if (vqmediacapturesession && vqmediacapturesession->isVirtualQMediaCaptureSession) {
         vqmediacapturesession->setQMediaCaptureSession_IsSignalConnected_IsBase(true);

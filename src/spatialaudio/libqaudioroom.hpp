@@ -28,14 +28,6 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVector3D QVector3D;
 #endif
 
-#ifdef __cplusplus
-typedef QAudioRoom::Material Material; // C++ enum
-typedef QAudioRoom::Wall Wall;         // C++ enum
-#else
-typedef int Material; // C ABI enum
-typedef int Wall;     // C ABI enum
-#endif
-
 QAudioRoom* QAudioRoom_new(QAudioEngine* engine);
 QMetaObject* QAudioRoom_MetaObject(const QAudioRoom* self);
 void* QAudioRoom_Metacast(QAudioRoom* self, const char* param1);
@@ -47,7 +39,7 @@ void QAudioRoom_SetPosition(QAudioRoom* self, QVector3D* pos);
 QVector3D* QAudioRoom_Position(const QAudioRoom* self);
 void QAudioRoom_SetDimensions(QAudioRoom* self, QVector3D* dim);
 QVector3D* QAudioRoom_Dimensions(const QAudioRoom* self);
-void QAudioRoom_SetRotation(QAudioRoom* self, QQuaternion* q);
+void QAudioRoom_SetRotation(QAudioRoom* self, const QQuaternion* q);
 QQuaternion* QAudioRoom_Rotation(const QAudioRoom* self);
 void QAudioRoom_SetWallMaterial(QAudioRoom* self, int wall, int material);
 int QAudioRoom_WallMaterial(const QAudioRoom* self, int wall);
@@ -92,12 +84,12 @@ void QAudioRoom_QBaseChildEvent(QAudioRoom* self, QChildEvent* event);
 void QAudioRoom_CustomEvent(QAudioRoom* self, QEvent* event);
 void QAudioRoom_OnCustomEvent(QAudioRoom* self, intptr_t slot);
 void QAudioRoom_QBaseCustomEvent(QAudioRoom* self, QEvent* event);
-void QAudioRoom_ConnectNotify(QAudioRoom* self, QMetaMethod* signal);
+void QAudioRoom_ConnectNotify(QAudioRoom* self, const QMetaMethod* signal);
 void QAudioRoom_OnConnectNotify(QAudioRoom* self, intptr_t slot);
-void QAudioRoom_QBaseConnectNotify(QAudioRoom* self, QMetaMethod* signal);
-void QAudioRoom_DisconnectNotify(QAudioRoom* self, QMetaMethod* signal);
+void QAudioRoom_QBaseConnectNotify(QAudioRoom* self, const QMetaMethod* signal);
+void QAudioRoom_DisconnectNotify(QAudioRoom* self, const QMetaMethod* signal);
 void QAudioRoom_OnDisconnectNotify(QAudioRoom* self, intptr_t slot);
-void QAudioRoom_QBaseDisconnectNotify(QAudioRoom* self, QMetaMethod* signal);
+void QAudioRoom_QBaseDisconnectNotify(QAudioRoom* self, const QMetaMethod* signal);
 QObject* QAudioRoom_Sender(const QAudioRoom* self);
 void QAudioRoom_OnSender(const QAudioRoom* self, intptr_t slot);
 QObject* QAudioRoom_QBaseSender(const QAudioRoom* self);
@@ -107,9 +99,9 @@ int QAudioRoom_QBaseSenderSignalIndex(const QAudioRoom* self);
 int QAudioRoom_Receivers(const QAudioRoom* self, const char* signal);
 void QAudioRoom_OnReceivers(const QAudioRoom* self, intptr_t slot);
 int QAudioRoom_QBaseReceivers(const QAudioRoom* self, const char* signal);
-bool QAudioRoom_IsSignalConnected(const QAudioRoom* self, QMetaMethod* signal);
+bool QAudioRoom_IsSignalConnected(const QAudioRoom* self, const QMetaMethod* signal);
 void QAudioRoom_OnIsSignalConnected(const QAudioRoom* self, intptr_t slot);
-bool QAudioRoom_QBaseIsSignalConnected(const QAudioRoom* self, QMetaMethod* signal);
+bool QAudioRoom_QBaseIsSignalConnected(const QAudioRoom* self, const QMetaMethod* signal);
 void QAudioRoom_Delete(QAudioRoom* self);
 
 #ifdef __cplusplus

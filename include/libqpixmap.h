@@ -12,22 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbitmap.h"
-#include "libqcolor.h"
-#include "libqiodevice.h"
-#include "libqimage.h"
-#include "libqimagereader.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtransform.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qpixmap.html
 
 /// q_pixmap_new constructs a new QPixmap object.
@@ -544,6 +528,13 @@ double q_pixmap_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_pixmap_encode_metric_f(int64_t metric, double value);
+
+/// Inherited from QPaintDevice
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
 ///
 /// Wrapper to allow calling virtual or protected method
@@ -622,6 +613,33 @@ QPainter* q_pixmap_qbase_shared_painter(void* self);
 ///
 /// ``` QPixmap* self, QPainter* (*slot)() ```
 void q_pixmap_on_shared_painter(void* self, QPainter* (*slot)());
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QPixmap* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_pixmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QPixmap* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_pixmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QPixmap* self, double (*slot)(QPixmap*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_pixmap_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#dtor.QPixmap)
 ///

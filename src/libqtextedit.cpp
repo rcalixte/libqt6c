@@ -64,12 +64,12 @@ QTextEdit* QTextEdit_new2() {
     return new VirtualQTextEdit();
 }
 
-QTextEdit* QTextEdit_new3(libqt_string text) {
+QTextEdit* QTextEdit_new3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextEdit(text_QString);
 }
 
-QTextEdit* QTextEdit_new4(libqt_string text, QWidget* parent) {
+QTextEdit* QTextEdit_new4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextEdit(text_QString, parent);
 }
@@ -130,7 +130,7 @@ QTextDocument* QTextEdit_Document(const QTextEdit* self) {
     return self->document();
 }
 
-void QTextEdit_SetPlaceholderText(QTextEdit* self, libqt_string placeholderText) {
+void QTextEdit_SetPlaceholderText(QTextEdit* self, const libqt_string placeholderText) {
     QString placeholderText_QString = QString::fromUtf8(placeholderText.data, placeholderText.len);
     self->setPlaceholderText(placeholderText_QString);
 }
@@ -147,7 +147,7 @@ libqt_string QTextEdit_PlaceholderText(const QTextEdit* self) {
     return _str;
 }
 
-void QTextEdit_SetTextCursor(QTextEdit* self, QTextCursor* cursor) {
+void QTextEdit_SetTextCursor(QTextEdit* self, const QTextCursor* cursor) {
     self->setTextCursor(*cursor);
 }
 
@@ -215,11 +215,11 @@ int QTextEdit_Alignment(const QTextEdit* self) {
     return static_cast<int>(self->alignment());
 }
 
-void QTextEdit_MergeCurrentCharFormat(QTextEdit* self, QTextCharFormat* modifier) {
+void QTextEdit_MergeCurrentCharFormat(QTextEdit* self, const QTextCharFormat* modifier) {
     self->mergeCurrentCharFormat(*modifier);
 }
 
-void QTextEdit_SetCurrentCharFormat(QTextEdit* self, QTextCharFormat* format) {
+void QTextEdit_SetCurrentCharFormat(QTextEdit* self, const QTextCharFormat* format) {
     self->setCurrentCharFormat(*format);
 }
 
@@ -232,7 +232,7 @@ int QTextEdit_AutoFormatting(const QTextEdit* self) {
 }
 
 void QTextEdit_SetAutoFormatting(QTextEdit* self, int features) {
-    self->setAutoFormatting(static_cast<QTextEdit::AutoFormatting>(features));
+    self->setAutoFormatting(static_cast<QFlags<QTextEdit::AutoFormattingFlag>>(features));
 }
 
 bool QTextEdit_TabChangesFocus(const QTextEdit* self) {
@@ -243,7 +243,7 @@ void QTextEdit_SetTabChangesFocus(QTextEdit* self, bool b) {
     self->setTabChangesFocus(b);
 }
 
-void QTextEdit_SetDocumentTitle(QTextEdit* self, libqt_string title) {
+void QTextEdit_SetDocumentTitle(QTextEdit* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setDocumentTitle(title_QString);
 }
@@ -292,12 +292,12 @@ void QTextEdit_SetWordWrapMode(QTextEdit* self, int policy) {
     self->setWordWrapMode(static_cast<QTextOption::WrapMode>(policy));
 }
 
-bool QTextEdit_Find(QTextEdit* self, libqt_string exp) {
+bool QTextEdit_Find(QTextEdit* self, const libqt_string exp) {
     QString exp_QString = QString::fromUtf8(exp.data, exp.len);
     return self->find(exp_QString);
 }
 
-bool QTextEdit_FindWithExp(QTextEdit* self, QRegularExpression* exp) {
+bool QTextEdit_FindWithExp(QTextEdit* self, const QRegularExpression* exp) {
     return self->find(*exp);
 }
 
@@ -345,15 +345,15 @@ QMenu* QTextEdit_CreateStandardContextMenu(QTextEdit* self) {
     return self->createStandardContextMenu();
 }
 
-QMenu* QTextEdit_CreateStandardContextMenuWithPosition(QTextEdit* self, QPoint* position) {
+QMenu* QTextEdit_CreateStandardContextMenuWithPosition(QTextEdit* self, const QPoint* position) {
     return self->createStandardContextMenu(*position);
 }
 
-QTextCursor* QTextEdit_CursorForPosition(const QTextEdit* self, QPoint* pos) {
+QTextCursor* QTextEdit_CursorForPosition(const QTextEdit* self, const QPoint* pos) {
     return new QTextCursor(self->cursorForPosition(*pos));
 }
 
-QRect* QTextEdit_CursorRect(const QTextEdit* self, QTextCursor* cursor) {
+QRect* QTextEdit_CursorRect(const QTextEdit* self, const QTextCursor* cursor) {
     return new QRect(self->cursorRect(*cursor));
 }
 
@@ -361,7 +361,7 @@ QRect* QTextEdit_CursorRect2(const QTextEdit* self) {
     return new QRect(self->cursorRect());
 }
 
-libqt_string QTextEdit_AnchorAt(const QTextEdit* self, QPoint* pos) {
+libqt_string QTextEdit_AnchorAt(const QTextEdit* self, const QPoint* pos) {
     QString _ret = self->anchorAt(*pos);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
     QByteArray _b = _ret.toUtf8();
@@ -405,7 +405,7 @@ void QTextEdit_SetAcceptRichText(QTextEdit* self, bool accept) {
     self->setAcceptRichText(accept);
 }
 
-void QTextEdit_SetExtraSelections(QTextEdit* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections) {
+void QTextEdit_SetExtraSelections(QTextEdit* self, const libqt_list /* of QTextEdit__ExtraSelection* */ selections) {
     QList<QTextEdit::ExtraSelection> selections_QList;
     selections_QList.reserve(selections.len);
     QTextEdit__ExtraSelection** selections_arr = static_cast<QTextEdit__ExtraSelection**>(selections.data.ptr);
@@ -418,12 +418,12 @@ void QTextEdit_SetExtraSelections(QTextEdit* self, libqt_list /* of QTextEdit__E
 libqt_list /* of QTextEdit__ExtraSelection* */ QTextEdit_ExtraSelections(const QTextEdit* self) {
     QList<QTextEdit::ExtraSelection> _ret = self->extraSelections();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTextEdit__ExtraSelection** _arr = static_cast<QTextEdit__ExtraSelection**>(malloc(sizeof(QTextEdit__ExtraSelection*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTextEdit__ExtraSelection** _arr = static_cast<QTextEdit__ExtraSelection**>(malloc(sizeof(QTextEdit__ExtraSelection*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QTextEdit::ExtraSelection(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -448,7 +448,7 @@ void QTextEdit_SetFontPointSize(QTextEdit* self, double s) {
     self->setFontPointSize(static_cast<qreal>(s));
 }
 
-void QTextEdit_SetFontFamily(QTextEdit* self, libqt_string fontFamily) {
+void QTextEdit_SetFontFamily(QTextEdit* self, const libqt_string fontFamily) {
     QString fontFamily_QString = QString::fromUtf8(fontFamily.data, fontFamily.len);
     self->setFontFamily(fontFamily_QString);
 }
@@ -465,15 +465,15 @@ void QTextEdit_SetFontItalic(QTextEdit* self, bool b) {
     self->setFontItalic(b);
 }
 
-void QTextEdit_SetTextColor(QTextEdit* self, QColor* c) {
+void QTextEdit_SetTextColor(QTextEdit* self, const QColor* c) {
     self->setTextColor(*c);
 }
 
-void QTextEdit_SetTextBackgroundColor(QTextEdit* self, QColor* c) {
+void QTextEdit_SetTextBackgroundColor(QTextEdit* self, const QColor* c) {
     self->setTextBackgroundColor(*c);
 }
 
-void QTextEdit_SetCurrentFont(QTextEdit* self, QFont* f) {
+void QTextEdit_SetCurrentFont(QTextEdit* self, const QFont* f) {
     self->setCurrentFont(*f);
 }
 
@@ -481,22 +481,22 @@ void QTextEdit_SetAlignment(QTextEdit* self, int a) {
     self->setAlignment(static_cast<Qt::Alignment>(a));
 }
 
-void QTextEdit_SetPlainText(QTextEdit* self, libqt_string text) {
+void QTextEdit_SetPlainText(QTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setPlainText(text_QString);
 }
 
-void QTextEdit_SetHtml(QTextEdit* self, libqt_string text) {
+void QTextEdit_SetHtml(QTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setHtml(text_QString);
 }
 
-void QTextEdit_SetMarkdown(QTextEdit* self, libqt_string markdown) {
+void QTextEdit_SetMarkdown(QTextEdit* self, const libqt_string markdown) {
     QString markdown_QString = QString::fromUtf8(markdown.data, markdown.len);
     self->setMarkdown(markdown_QString);
 }
 
-void QTextEdit_SetText(QTextEdit* self, libqt_string text) {
+void QTextEdit_SetText(QTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -529,22 +529,22 @@ void QTextEdit_SelectAll(QTextEdit* self) {
     self->selectAll();
 }
 
-void QTextEdit_InsertPlainText(QTextEdit* self, libqt_string text) {
+void QTextEdit_InsertPlainText(QTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertPlainText(text_QString);
 }
 
-void QTextEdit_InsertHtml(QTextEdit* self, libqt_string text) {
+void QTextEdit_InsertHtml(QTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertHtml(text_QString);
 }
 
-void QTextEdit_Append(QTextEdit* self, libqt_string text) {
+void QTextEdit_Append(QTextEdit* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->append(text_QString);
 }
 
-void QTextEdit_ScrollToAnchor(QTextEdit* self, libqt_string name) {
+void QTextEdit_ScrollToAnchor(QTextEdit* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->scrollToAnchor(name_QString);
 }
@@ -592,7 +592,7 @@ void QTextEdit_Connect_RedoAvailable(QTextEdit* self, intptr_t slot) {
     });
 }
 
-void QTextEdit_CurrentCharFormatChanged(QTextEdit* self, QTextCharFormat* format) {
+void QTextEdit_CurrentCharFormatChanged(QTextEdit* self, const QTextCharFormat* format) {
     self->currentCharFormatChanged(*format);
 }
 
@@ -664,12 +664,12 @@ libqt_string QTextEdit_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QTextEdit_Find2(QTextEdit* self, libqt_string exp, int options) {
+bool QTextEdit_Find2(QTextEdit* self, const libqt_string exp, int options) {
     QString exp_QString = QString::fromUtf8(exp.data, exp.len);
     return self->find(exp_QString, static_cast<QTextDocument::FindFlags>(options));
 }
 
-bool QTextEdit_Find22(QTextEdit* self, QRegularExpression* exp, int options) {
+bool QTextEdit_Find22(QTextEdit* self, const QRegularExpression* exp, int options) {
     return self->find(*exp, static_cast<QTextDocument::FindFlags>(options));
 }
 
@@ -698,7 +698,7 @@ void QTextEdit_ZoomOut1(QTextEdit* self, int range) {
 }
 
 // Derived class handler implementation
-QVariant* QTextEdit_LoadResource(QTextEdit* self, int typeVal, QUrl* name) {
+QVariant* QTextEdit_LoadResource(QTextEdit* self, int typeVal, const QUrl* name) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         return new QVariant(vqtextedit->loadResource(static_cast<int>(typeVal), *name));
@@ -708,7 +708,7 @@ QVariant* QTextEdit_LoadResource(QTextEdit* self, int typeVal, QUrl* name) {
 }
 
 // Base class handler implementation
-QVariant* QTextEdit_QBaseLoadResource(QTextEdit* self, int typeVal, QUrl* name) {
+QVariant* QTextEdit_QBaseLoadResource(QTextEdit* self, int typeVal, const QUrl* name) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_LoadResource_IsBase(true);
@@ -1394,7 +1394,7 @@ void QTextEdit_OnCreateMimeDataFromSelection(const QTextEdit* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QTextEdit_CanInsertFromMimeData(const QTextEdit* self, QMimeData* source) {
+bool QTextEdit_CanInsertFromMimeData(const QTextEdit* self, const QMimeData* source) {
     auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         return vqtextedit->canInsertFromMimeData(source);
@@ -1404,7 +1404,7 @@ bool QTextEdit_CanInsertFromMimeData(const QTextEdit* self, QMimeData* source) {
 }
 
 // Base class handler implementation
-bool QTextEdit_QBaseCanInsertFromMimeData(const QTextEdit* self, QMimeData* source) {
+bool QTextEdit_QBaseCanInsertFromMimeData(const QTextEdit* self, const QMimeData* source) {
     auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_CanInsertFromMimeData_IsBase(true);
@@ -1423,7 +1423,7 @@ void QTextEdit_OnCanInsertFromMimeData(const QTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextEdit_InsertFromMimeData(QTextEdit* self, QMimeData* source) {
+void QTextEdit_InsertFromMimeData(QTextEdit* self, const QMimeData* source) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->insertFromMimeData(source);
@@ -1433,7 +1433,7 @@ void QTextEdit_InsertFromMimeData(QTextEdit* self, QMimeData* source) {
 }
 
 // Base class handler implementation
-void QTextEdit_QBaseInsertFromMimeData(QTextEdit* self, QMimeData* source) {
+void QTextEdit_QBaseInsertFromMimeData(QTextEdit* self, const QMimeData* source) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_InsertFromMimeData_IsBase(true);
@@ -1510,7 +1510,7 @@ void QTextEdit_OnScrollContentsBy(QTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextEdit_DoSetTextCursor(QTextEdit* self, QTextCursor* cursor) {
+void QTextEdit_DoSetTextCursor(QTextEdit* self, const QTextCursor* cursor) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->doSetTextCursor(*cursor);
@@ -1520,7 +1520,7 @@ void QTextEdit_DoSetTextCursor(QTextEdit* self, QTextCursor* cursor) {
 }
 
 // Base class handler implementation
-void QTextEdit_QBaseDoSetTextCursor(QTextEdit* self, QTextCursor* cursor) {
+void QTextEdit_QBaseDoSetTextCursor(QTextEdit* self, const QTextCursor* cursor) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_DoSetTextCursor_IsBase(true);
@@ -2088,7 +2088,7 @@ void QTextEdit_OnHideEvent(QTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTextEdit_NativeEvent(QTextEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTextEdit_NativeEvent(QTextEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
@@ -2099,7 +2099,7 @@ bool QTextEdit_NativeEvent(QTextEdit* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QTextEdit_QBaseNativeEvent(QTextEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTextEdit_QBaseNativeEvent(QTextEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
@@ -2293,7 +2293,7 @@ void QTextEdit_OnCustomEvent(QTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextEdit_ConnectNotify(QTextEdit* self, QMetaMethod* signal) {
+void QTextEdit_ConnectNotify(QTextEdit* self, const QMetaMethod* signal) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->connectNotify(*signal);
@@ -2303,7 +2303,7 @@ void QTextEdit_ConnectNotify(QTextEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextEdit_QBaseConnectNotify(QTextEdit* self, QMetaMethod* signal) {
+void QTextEdit_QBaseConnectNotify(QTextEdit* self, const QMetaMethod* signal) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_ConnectNotify_IsBase(true);
@@ -2322,7 +2322,7 @@ void QTextEdit_OnConnectNotify(QTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextEdit_DisconnectNotify(QTextEdit* self, QMetaMethod* signal) {
+void QTextEdit_DisconnectNotify(QTextEdit* self, const QMetaMethod* signal) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->disconnectNotify(*signal);
@@ -2332,7 +2332,7 @@ void QTextEdit_DisconnectNotify(QTextEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextEdit_QBaseDisconnectNotify(QTextEdit* self, QMetaMethod* signal) {
+void QTextEdit_QBaseDisconnectNotify(QTextEdit* self, const QMetaMethod* signal) {
     auto* vqtextedit = dynamic_cast<VirtualQTextEdit*>(self);
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_DisconnectNotify_IsBase(true);
@@ -2697,7 +2697,7 @@ void QTextEdit_OnReceivers(const QTextEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTextEdit_IsSignalConnected(const QTextEdit* self, QMetaMethod* signal) {
+bool QTextEdit_IsSignalConnected(const QTextEdit* self, const QMetaMethod* signal) {
     auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         return vqtextedit->isSignalConnected(*signal);
@@ -2707,7 +2707,7 @@ bool QTextEdit_IsSignalConnected(const QTextEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTextEdit_QBaseIsSignalConnected(const QTextEdit* self, QMetaMethod* signal) {
+bool QTextEdit_QBaseIsSignalConnected(const QTextEdit* self, const QMetaMethod* signal) {
     auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
     if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
         vqtextedit->setQTextEdit_IsSignalConnected_IsBase(true);
@@ -2725,15 +2725,44 @@ void QTextEdit_OnIsSignalConnected(const QTextEdit* self, intptr_t slot) {
     }
 }
 
+// Derived class handler implementation
+double QTextEdit_GetDecodedMetricF(const QTextEdit* self, int metricA, int metricB) {
+    auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
+    if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
+        return vqtextedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTextEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QTextEdit_QBaseGetDecodedMetricF(const QTextEdit* self, int metricA, int metricB) {
+    auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
+    if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
+        vqtextedit->setQTextEdit_GetDecodedMetricF_IsBase(true);
+        return vqtextedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTextEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QTextEdit_OnGetDecodedMetricF(const QTextEdit* self, intptr_t slot) {
+    auto* vqtextedit = const_cast<VirtualQTextEdit*>(dynamic_cast<const VirtualQTextEdit*>(self));
+    if (vqtextedit && vqtextedit->isVirtualQTextEdit) {
+        vqtextedit->setQTextEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQTextEdit::QTextEdit_GetDecodedMetricF_Callback>(slot));
+    }
+}
+
 void QTextEdit_Delete(QTextEdit* self) {
     delete self;
 }
 
-QTextEdit__ExtraSelection* QTextEdit__ExtraSelection_new(QTextEdit__ExtraSelection* param1) {
+QTextEdit__ExtraSelection* QTextEdit__ExtraSelection_new(const QTextEdit__ExtraSelection* param1) {
     return new QTextEdit::ExtraSelection(*param1);
 }
 
-void QTextEdit__ExtraSelection_OperatorAssign(QTextEdit__ExtraSelection* self, QTextEdit__ExtraSelection* param1) {
+void QTextEdit__ExtraSelection_OperatorAssign(QTextEdit__ExtraSelection* self, const QTextEdit__ExtraSelection* param1) {
     self->operator=(*param1);
 }
 

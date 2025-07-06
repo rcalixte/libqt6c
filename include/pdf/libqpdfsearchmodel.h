@@ -12,18 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "../libqevent.h"
-#include "../libqdatastream.h"
-#include "../libqmetaobject.h"
-#include "../libqmimedata.h"
-#include "../libqobject.h"
-#include "libqpdfdocument.h"
-#include "libqpdflink.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qpdfsearchmodel.html
 
 /// q_pdfsearchmodel_new constructs a new QPdfSearchModel object.
@@ -139,6 +127,11 @@ void q_pdfsearchmodel_on_data(void* self, QVariant* (*slot)(void*, void*, int));
 /// ``` QPdfSearchModel* self, QModelIndex* index, int role ```
 QVariant* q_pdfsearchmodel_qbase_data(void* self, void* index, int role);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#count)
+///
+/// ``` QPdfSearchModel* self ```
+int32_t q_pdfsearchmodel_count(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#setSearchString)
 ///
 /// ``` QPdfSearchModel* self, const char* searchString ```
@@ -168,6 +161,16 @@ void q_pdfsearchmodel_search_string_changed(void* self);
 ///
 /// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
 void q_pdfsearchmodel_on_search_string_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#countChanged)
+///
+/// ``` QPdfSearchModel* self ```
+void q_pdfsearchmodel_count_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#countChanged)
+///
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
+void q_pdfsearchmodel_on_count_changed(void* self, void (*slot)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#updatePage)
 ///
@@ -577,7 +580,7 @@ QThread* q_pdfsearchmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPdfSearchModel* self, QThread* thread ```
-void q_pdfsearchmodel_move_to_thread(void* self, void* thread);
+bool q_pdfsearchmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -592,6 +595,13 @@ int32_t q_pdfsearchmodel_start_timer(void* self, int interval);
 ///
 /// ``` QPdfSearchModel* self, int id ```
 void q_pdfsearchmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPdfSearchModel* self, enum Qt__TimerId id ```
+void q_pdfsearchmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -725,6 +735,13 @@ bool q_pdfsearchmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QPdfSearchModel* self ```
 void q_pdfsearchmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPdfSearchModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pdfsearchmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqobject.h"
-
 /// https://doc.qt.io/qt-6/qbasictimer.html
 
 /// q_basictimer_new constructs a new QBasicTimer object.
@@ -35,6 +33,11 @@ bool q_basictimer_is_active(void* self);
 ///
 /// ``` QBasicTimer* self ```
 int32_t q_basictimer_timer_id(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#id)
+///
+/// ``` QBasicTimer* self ```
+int64_t q_basictimer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#start)
 ///

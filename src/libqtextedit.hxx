@@ -89,6 +89,7 @@ class VirtualQTextEdit final : public QTextEdit {
     using QTextEdit_SenderSignalIndex_Callback = int (*)();
     using QTextEdit_Receivers_Callback = int (*)(const QTextEdit*, const char*);
     using QTextEdit_IsSignalConnected_Callback = bool (*)(const QTextEdit*, QMetaMethod*);
+    using QTextEdit_GetDecodedMetricF_Callback = double (*)(const QTextEdit*, int, int);
 
   protected:
     // Instance callback storage
@@ -163,6 +164,7 @@ class VirtualQTextEdit final : public QTextEdit {
     QTextEdit_SenderSignalIndex_Callback qtextedit_sendersignalindex_callback = nullptr;
     QTextEdit_Receivers_Callback qtextedit_receivers_callback = nullptr;
     QTextEdit_IsSignalConnected_Callback qtextedit_issignalconnected_callback = nullptr;
+    QTextEdit_GetDecodedMetricF_Callback qtextedit_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qtextedit_metacall_isbase = false;
@@ -236,12 +238,13 @@ class VirtualQTextEdit final : public QTextEdit {
     mutable bool qtextedit_sendersignalindex_isbase = false;
     mutable bool qtextedit_receivers_isbase = false;
     mutable bool qtextedit_issignalconnected_isbase = false;
+    mutable bool qtextedit_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQTextEdit(QWidget* parent) : QTextEdit(parent){};
-    VirtualQTextEdit() : QTextEdit(){};
-    VirtualQTextEdit(const QString& text) : QTextEdit(text){};
-    VirtualQTextEdit(const QString& text, QWidget* parent) : QTextEdit(text, parent){};
+    VirtualQTextEdit(QWidget* parent) : QTextEdit(parent) {};
+    VirtualQTextEdit() : QTextEdit() {};
+    VirtualQTextEdit(const QString& text) : QTextEdit(text) {};
+    VirtualQTextEdit(const QString& text, QWidget* parent) : QTextEdit(text, parent) {};
 
     ~VirtualQTextEdit() {
         qtextedit_metacall_callback = nullptr;
@@ -315,6 +318,7 @@ class VirtualQTextEdit final : public QTextEdit {
         qtextedit_sendersignalindex_callback = nullptr;
         qtextedit_receivers_callback = nullptr;
         qtextedit_issignalconnected_callback = nullptr;
+        qtextedit_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -389,6 +393,7 @@ class VirtualQTextEdit final : public QTextEdit {
     inline void setQTextEdit_SenderSignalIndex_Callback(QTextEdit_SenderSignalIndex_Callback cb) { qtextedit_sendersignalindex_callback = cb; }
     inline void setQTextEdit_Receivers_Callback(QTextEdit_Receivers_Callback cb) { qtextedit_receivers_callback = cb; }
     inline void setQTextEdit_IsSignalConnected_Callback(QTextEdit_IsSignalConnected_Callback cb) { qtextedit_issignalconnected_callback = cb; }
+    inline void setQTextEdit_GetDecodedMetricF_Callback(QTextEdit_GetDecodedMetricF_Callback cb) { qtextedit_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQTextEdit_Metacall_IsBase(bool value) const { qtextedit_metacall_isbase = value; }
@@ -462,6 +467,7 @@ class VirtualQTextEdit final : public QTextEdit {
     inline void setQTextEdit_SenderSignalIndex_IsBase(bool value) const { qtextedit_sendersignalindex_isbase = value; }
     inline void setQTextEdit_Receivers_IsBase(bool value) const { qtextedit_receivers_isbase = value; }
     inline void setQTextEdit_IsSignalConnected_IsBase(bool value) const { qtextedit_issignalconnected_isbase = value; }
+    inline void setQTextEdit_GetDecodedMetricF_IsBase(bool value) const { qtextedit_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1479,6 +1485,22 @@ class VirtualQTextEdit final : public QTextEdit {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qtextedit_getdecodedmetricf_isbase) {
+            qtextedit_getdecodedmetricf_isbase = false;
+            return QTextEdit::getDecodedMetricF(metricA, metricB);
+        } else if (qtextedit_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qtextedit_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QTextEdit::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QTextEdit_Event(QTextEdit* self, QEvent* e);
     friend bool QTextEdit_QBaseEvent(QTextEdit* self, QEvent* e);
@@ -1524,16 +1546,16 @@ class VirtualQTextEdit final : public QTextEdit {
     friend void QTextEdit_QBaseWheelEvent(QTextEdit* self, QWheelEvent* e);
     friend QMimeData* QTextEdit_CreateMimeDataFromSelection(const QTextEdit* self);
     friend QMimeData* QTextEdit_QBaseCreateMimeDataFromSelection(const QTextEdit* self);
-    friend bool QTextEdit_CanInsertFromMimeData(const QTextEdit* self, QMimeData* source);
-    friend bool QTextEdit_QBaseCanInsertFromMimeData(const QTextEdit* self, QMimeData* source);
-    friend void QTextEdit_InsertFromMimeData(QTextEdit* self, QMimeData* source);
-    friend void QTextEdit_QBaseInsertFromMimeData(QTextEdit* self, QMimeData* source);
+    friend bool QTextEdit_CanInsertFromMimeData(const QTextEdit* self, const QMimeData* source);
+    friend bool QTextEdit_QBaseCanInsertFromMimeData(const QTextEdit* self, const QMimeData* source);
+    friend void QTextEdit_InsertFromMimeData(QTextEdit* self, const QMimeData* source);
+    friend void QTextEdit_QBaseInsertFromMimeData(QTextEdit* self, const QMimeData* source);
     friend void QTextEdit_InputMethodEvent(QTextEdit* self, QInputMethodEvent* param1);
     friend void QTextEdit_QBaseInputMethodEvent(QTextEdit* self, QInputMethodEvent* param1);
     friend void QTextEdit_ScrollContentsBy(QTextEdit* self, int dx, int dy);
     friend void QTextEdit_QBaseScrollContentsBy(QTextEdit* self, int dx, int dy);
-    friend void QTextEdit_DoSetTextCursor(QTextEdit* self, QTextCursor* cursor);
-    friend void QTextEdit_QBaseDoSetTextCursor(QTextEdit* self, QTextCursor* cursor);
+    friend void QTextEdit_DoSetTextCursor(QTextEdit* self, const QTextCursor* cursor);
+    friend void QTextEdit_QBaseDoSetTextCursor(QTextEdit* self, const QTextCursor* cursor);
     friend bool QTextEdit_EventFilter(QTextEdit* self, QObject* param1, QEvent* param2);
     friend bool QTextEdit_QBaseEventFilter(QTextEdit* self, QObject* param1, QEvent* param2);
     friend bool QTextEdit_ViewportEvent(QTextEdit* self, QEvent* param1);
@@ -1556,8 +1578,8 @@ class VirtualQTextEdit final : public QTextEdit {
     friend void QTextEdit_QBaseActionEvent(QTextEdit* self, QActionEvent* event);
     friend void QTextEdit_HideEvent(QTextEdit* self, QHideEvent* event);
     friend void QTextEdit_QBaseHideEvent(QTextEdit* self, QHideEvent* event);
-    friend bool QTextEdit_NativeEvent(QTextEdit* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QTextEdit_QBaseNativeEvent(QTextEdit* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QTextEdit_NativeEvent(QTextEdit* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QTextEdit_QBaseNativeEvent(QTextEdit* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QTextEdit_Metric(const QTextEdit* self, int param1);
     friend int QTextEdit_QBaseMetric(const QTextEdit* self, int param1);
     friend void QTextEdit_InitPainter(const QTextEdit* self, QPainter* painter);
@@ -1570,10 +1592,10 @@ class VirtualQTextEdit final : public QTextEdit {
     friend void QTextEdit_QBaseChildEvent(QTextEdit* self, QChildEvent* event);
     friend void QTextEdit_CustomEvent(QTextEdit* self, QEvent* event);
     friend void QTextEdit_QBaseCustomEvent(QTextEdit* self, QEvent* event);
-    friend void QTextEdit_ConnectNotify(QTextEdit* self, QMetaMethod* signal);
-    friend void QTextEdit_QBaseConnectNotify(QTextEdit* self, QMetaMethod* signal);
-    friend void QTextEdit_DisconnectNotify(QTextEdit* self, QMetaMethod* signal);
-    friend void QTextEdit_QBaseDisconnectNotify(QTextEdit* self, QMetaMethod* signal);
+    friend void QTextEdit_ConnectNotify(QTextEdit* self, const QMetaMethod* signal);
+    friend void QTextEdit_QBaseConnectNotify(QTextEdit* self, const QMetaMethod* signal);
+    friend void QTextEdit_DisconnectNotify(QTextEdit* self, const QMetaMethod* signal);
+    friend void QTextEdit_QBaseDisconnectNotify(QTextEdit* self, const QMetaMethod* signal);
     friend void QTextEdit_ZoomInF(QTextEdit* self, float range);
     friend void QTextEdit_QBaseZoomInF(QTextEdit* self, float range);
     friend void QTextEdit_SetViewportMargins(QTextEdit* self, int left, int top, int right, int bottom);
@@ -1598,8 +1620,10 @@ class VirtualQTextEdit final : public QTextEdit {
     friend int QTextEdit_QBaseSenderSignalIndex(const QTextEdit* self);
     friend int QTextEdit_Receivers(const QTextEdit* self, const char* signal);
     friend int QTextEdit_QBaseReceivers(const QTextEdit* self, const char* signal);
-    friend bool QTextEdit_IsSignalConnected(const QTextEdit* self, QMetaMethod* signal);
-    friend bool QTextEdit_QBaseIsSignalConnected(const QTextEdit* self, QMetaMethod* signal);
+    friend bool QTextEdit_IsSignalConnected(const QTextEdit* self, const QMetaMethod* signal);
+    friend bool QTextEdit_QBaseIsSignalConnected(const QTextEdit* self, const QMetaMethod* signal);
+    friend double QTextEdit_GetDecodedMetricF(const QTextEdit* self, int metricA, int metricB);
+    friend double QTextEdit_QBaseGetDecodedMetricF(const QTextEdit* self, int metricA, int metricB);
 };
 
 #endif

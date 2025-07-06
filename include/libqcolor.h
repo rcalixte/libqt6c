@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqrgba64.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qcolor.html
 
 /// q_color_new constructs a new QColor object.

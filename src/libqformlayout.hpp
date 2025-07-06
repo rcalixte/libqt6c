@@ -35,16 +35,6 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QFormLayout::FieldGrowthPolicy FieldGrowthPolicy; // C++ enum
-typedef QFormLayout::ItemRole ItemRole;                   // C++ enum
-typedef QFormLayout::RowWrapPolicy RowWrapPolicy;         // C++ enum
-#else
-typedef int FieldGrowthPolicy; // C ABI enum
-typedef int ItemRole;          // C ABI enum
-typedef int RowWrapPolicy;     // C ABI enum
-#endif
-
 QFormLayout* QFormLayout_new(QWidget* parent);
 QFormLayout* QFormLayout_new2();
 QMetaObject* QFormLayout_MetaObject(const QFormLayout* self);
@@ -73,14 +63,14 @@ void QFormLayout_OnSetSpacing(QFormLayout* self, intptr_t slot);
 void QFormLayout_QBaseSetSpacing(QFormLayout* self, int spacing);
 void QFormLayout_AddRow(QFormLayout* self, QWidget* label, QWidget* field);
 void QFormLayout_AddRow2(QFormLayout* self, QWidget* label, QLayout* field);
-void QFormLayout_AddRow3(QFormLayout* self, libqt_string labelText, QWidget* field);
-void QFormLayout_AddRow4(QFormLayout* self, libqt_string labelText, QLayout* field);
+void QFormLayout_AddRow3(QFormLayout* self, const libqt_string labelText, QWidget* field);
+void QFormLayout_AddRow4(QFormLayout* self, const libqt_string labelText, QLayout* field);
 void QFormLayout_AddRowWithWidget(QFormLayout* self, QWidget* widget);
 void QFormLayout_AddRowWithLayout(QFormLayout* self, QLayout* layout);
 void QFormLayout_InsertRow(QFormLayout* self, int row, QWidget* label, QWidget* field);
 void QFormLayout_InsertRow2(QFormLayout* self, int row, QWidget* label, QLayout* field);
-void QFormLayout_InsertRow3(QFormLayout* self, int row, libqt_string labelText, QWidget* field);
-void QFormLayout_InsertRow4(QFormLayout* self, int row, libqt_string labelText, QLayout* field);
+void QFormLayout_InsertRow3(QFormLayout* self, int row, const libqt_string labelText, QWidget* field);
+void QFormLayout_InsertRow4(QFormLayout* self, int row, const libqt_string labelText, QLayout* field);
 void QFormLayout_InsertRow5(QFormLayout* self, int row, QWidget* widget);
 void QFormLayout_InsertRow6(QFormLayout* self, int row, QLayout* layout);
 void QFormLayout_RemoveRow(QFormLayout* self, int row);
@@ -110,9 +100,9 @@ QLayoutItem* QFormLayout_QBaseItemAtWithIndex(const QFormLayout* self, int index
 QLayoutItem* QFormLayout_TakeAt(QFormLayout* self, int index);
 void QFormLayout_OnTakeAt(QFormLayout* self, intptr_t slot);
 QLayoutItem* QFormLayout_QBaseTakeAt(QFormLayout* self, int index);
-void QFormLayout_SetGeometry(QFormLayout* self, QRect* rect);
+void QFormLayout_SetGeometry(QFormLayout* self, const QRect* rect);
 void QFormLayout_OnSetGeometry(QFormLayout* self, intptr_t slot);
-void QFormLayout_QBaseSetGeometry(QFormLayout* self, QRect* rect);
+void QFormLayout_QBaseSetGeometry(QFormLayout* self, const QRect* rect);
 QSize* QFormLayout_MinimumSize(const QFormLayout* self);
 void QFormLayout_OnMinimumSize(const QFormLayout* self, intptr_t slot);
 QSize* QFormLayout_QBaseMinimumSize(const QFormLayout* self);
@@ -143,9 +133,9 @@ QRect* QFormLayout_QBaseGeometry(const QFormLayout* self);
 QSize* QFormLayout_MaximumSize(const QFormLayout* self);
 void QFormLayout_OnMaximumSize(const QFormLayout* self, intptr_t slot);
 QSize* QFormLayout_QBaseMaximumSize(const QFormLayout* self);
-int QFormLayout_IndexOf(const QFormLayout* self, QWidget* param1);
+int QFormLayout_IndexOf(const QFormLayout* self, const QWidget* param1);
 void QFormLayout_OnIndexOf(const QFormLayout* self, intptr_t slot);
-int QFormLayout_QBaseIndexOf(const QFormLayout* self, QWidget* param1);
+int QFormLayout_QBaseIndexOf(const QFormLayout* self, const QWidget* param1);
 bool QFormLayout_IsEmpty(const QFormLayout* self);
 void QFormLayout_OnIsEmpty(const QFormLayout* self, intptr_t slot);
 bool QFormLayout_QBaseIsEmpty(const QFormLayout* self);
@@ -173,12 +163,12 @@ void QFormLayout_QBaseTimerEvent(QFormLayout* self, QTimerEvent* event);
 void QFormLayout_CustomEvent(QFormLayout* self, QEvent* event);
 void QFormLayout_OnCustomEvent(QFormLayout* self, intptr_t slot);
 void QFormLayout_QBaseCustomEvent(QFormLayout* self, QEvent* event);
-void QFormLayout_ConnectNotify(QFormLayout* self, QMetaMethod* signal);
+void QFormLayout_ConnectNotify(QFormLayout* self, const QMetaMethod* signal);
 void QFormLayout_OnConnectNotify(QFormLayout* self, intptr_t slot);
-void QFormLayout_QBaseConnectNotify(QFormLayout* self, QMetaMethod* signal);
-void QFormLayout_DisconnectNotify(QFormLayout* self, QMetaMethod* signal);
+void QFormLayout_QBaseConnectNotify(QFormLayout* self, const QMetaMethod* signal);
+void QFormLayout_DisconnectNotify(QFormLayout* self, const QMetaMethod* signal);
 void QFormLayout_OnDisconnectNotify(QFormLayout* self, intptr_t slot);
-void QFormLayout_QBaseDisconnectNotify(QFormLayout* self, QMetaMethod* signal);
+void QFormLayout_QBaseDisconnectNotify(QFormLayout* self, const QMetaMethod* signal);
 int QFormLayout_MinimumHeightForWidth(const QFormLayout* self, int param1);
 void QFormLayout_OnMinimumHeightForWidth(const QFormLayout* self, intptr_t slot);
 int QFormLayout_QBaseMinimumHeightForWidth(const QFormLayout* self, int param1);
@@ -200,9 +190,9 @@ void QFormLayout_QBaseAddChildWidget(QFormLayout* self, QWidget* w);
 bool QFormLayout_AdoptLayout(QFormLayout* self, QLayout* layout);
 void QFormLayout_OnAdoptLayout(QFormLayout* self, intptr_t slot);
 bool QFormLayout_QBaseAdoptLayout(QFormLayout* self, QLayout* layout);
-QRect* QFormLayout_AlignmentRect(const QFormLayout* self, QRect* param1);
+QRect* QFormLayout_AlignmentRect(const QFormLayout* self, const QRect* param1);
 void QFormLayout_OnAlignmentRect(const QFormLayout* self, intptr_t slot);
-QRect* QFormLayout_QBaseAlignmentRect(const QFormLayout* self, QRect* param1);
+QRect* QFormLayout_QBaseAlignmentRect(const QFormLayout* self, const QRect* param1);
 QObject* QFormLayout_Sender(const QFormLayout* self);
 void QFormLayout_OnSender(const QFormLayout* self, intptr_t slot);
 QObject* QFormLayout_QBaseSender(const QFormLayout* self);
@@ -212,10 +202,14 @@ int QFormLayout_QBaseSenderSignalIndex(const QFormLayout* self);
 int QFormLayout_Receivers(const QFormLayout* self, const char* signal);
 void QFormLayout_OnReceivers(const QFormLayout* self, intptr_t slot);
 int QFormLayout_QBaseReceivers(const QFormLayout* self, const char* signal);
-bool QFormLayout_IsSignalConnected(const QFormLayout* self, QMetaMethod* signal);
+bool QFormLayout_IsSignalConnected(const QFormLayout* self, const QMetaMethod* signal);
 void QFormLayout_OnIsSignalConnected(const QFormLayout* self, intptr_t slot);
-bool QFormLayout_QBaseIsSignalConnected(const QFormLayout* self, QMetaMethod* signal);
+bool QFormLayout_QBaseIsSignalConnected(const QFormLayout* self, const QMetaMethod* signal);
 void QFormLayout_Delete(QFormLayout* self);
+
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new();
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new2(const QFormLayout__TakeRowResult* param1);
+void QFormLayout__TakeRowResult_Delete(QFormLayout__TakeRowResult* self);
 
 #ifdef __cplusplus
 } /* extern C */

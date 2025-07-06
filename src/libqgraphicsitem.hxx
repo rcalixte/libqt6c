@@ -143,8 +143,8 @@ class VirtualQGraphicsItem final : public QGraphicsItem {
     mutable bool qgraphicsitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsItem() : QGraphicsItem(){};
-    VirtualQGraphicsItem(QGraphicsItem* parent) : QGraphicsItem(parent){};
+    VirtualQGraphicsItem() : QGraphicsItem() {};
+    VirtualQGraphicsItem(QGraphicsItem* parent) : QGraphicsItem(parent) {};
 
     ~VirtualQGraphicsItem() {
         qgraphicsitem_advance_callback = nullptr;
@@ -866,14 +866,14 @@ class VirtualQGraphicsItem final : public QGraphicsItem {
     friend void QGraphicsItem_QBaseInputMethodEvent(QGraphicsItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsItem_InputMethodQuery(const QGraphicsItem* self, int query);
     friend QVariant* QGraphicsItem_QBaseInputMethodQuery(const QGraphicsItem* self, int query);
-    friend QVariant* QGraphicsItem_ItemChange(QGraphicsItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsItem_QBaseItemChange(QGraphicsItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsItem_ItemChange(QGraphicsItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsItem_QBaseItemChange(QGraphicsItem* self, int change, const QVariant* value);
     friend bool QGraphicsItem_SupportsExtension(const QGraphicsItem* self, int extension);
     friend bool QGraphicsItem_QBaseSupportsExtension(const QGraphicsItem* self, int extension);
-    friend void QGraphicsItem_SetExtension(QGraphicsItem* self, int extension, QVariant* variant);
-    friend void QGraphicsItem_QBaseSetExtension(QGraphicsItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsItem_Extension(const QGraphicsItem* self, QVariant* variant);
-    friend QVariant* QGraphicsItem_QBaseExtension(const QGraphicsItem* self, QVariant* variant);
+    friend void QGraphicsItem_SetExtension(QGraphicsItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsItem_QBaseSetExtension(QGraphicsItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsItem_Extension(const QGraphicsItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsItem_QBaseExtension(const QGraphicsItem* self, const QVariant* variant);
     friend void QGraphicsItem_UpdateMicroFocus(QGraphicsItem* self);
     friend void QGraphicsItem_QBaseUpdateMicroFocus(QGraphicsItem* self);
     friend void QGraphicsItem_AddToIndex(QGraphicsItem* self);
@@ -1053,8 +1053,8 @@ class VirtualQGraphicsObject final : public QGraphicsObject {
     mutable bool qgraphicsobject_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsObject() : QGraphicsObject(){};
-    VirtualQGraphicsObject(QGraphicsItem* parent) : QGraphicsObject(parent){};
+    VirtualQGraphicsObject() : QGraphicsObject() {};
+    VirtualQGraphicsObject(QGraphicsItem* parent) : QGraphicsObject(parent) {};
 
     ~VirtualQGraphicsObject() {
         qgraphicsobject_metacall_callback = nullptr;
@@ -1958,10 +1958,10 @@ class VirtualQGraphicsObject final : public QGraphicsObject {
     friend void QGraphicsObject_QBaseChildEvent(QGraphicsObject* self, QChildEvent* event);
     friend void QGraphicsObject_CustomEvent(QGraphicsObject* self, QEvent* event);
     friend void QGraphicsObject_QBaseCustomEvent(QGraphicsObject* self, QEvent* event);
-    friend void QGraphicsObject_ConnectNotify(QGraphicsObject* self, QMetaMethod* signal);
-    friend void QGraphicsObject_QBaseConnectNotify(QGraphicsObject* self, QMetaMethod* signal);
-    friend void QGraphicsObject_DisconnectNotify(QGraphicsObject* self, QMetaMethod* signal);
-    friend void QGraphicsObject_QBaseDisconnectNotify(QGraphicsObject* self, QMetaMethod* signal);
+    friend void QGraphicsObject_ConnectNotify(QGraphicsObject* self, const QMetaMethod* signal);
+    friend void QGraphicsObject_QBaseConnectNotify(QGraphicsObject* self, const QMetaMethod* signal);
+    friend void QGraphicsObject_DisconnectNotify(QGraphicsObject* self, const QMetaMethod* signal);
+    friend void QGraphicsObject_QBaseDisconnectNotify(QGraphicsObject* self, const QMetaMethod* signal);
     friend bool QGraphicsObject_SceneEventFilter(QGraphicsObject* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsObject_QBaseSceneEventFilter(QGraphicsObject* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsObject_SceneEvent(QGraphicsObject* self, QEvent* event);
@@ -2004,14 +2004,14 @@ class VirtualQGraphicsObject final : public QGraphicsObject {
     friend void QGraphicsObject_QBaseInputMethodEvent(QGraphicsObject* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsObject_InputMethodQuery(const QGraphicsObject* self, int query);
     friend QVariant* QGraphicsObject_QBaseInputMethodQuery(const QGraphicsObject* self, int query);
-    friend QVariant* QGraphicsObject_ItemChange(QGraphicsObject* self, int change, QVariant* value);
-    friend QVariant* QGraphicsObject_QBaseItemChange(QGraphicsObject* self, int change, QVariant* value);
+    friend QVariant* QGraphicsObject_ItemChange(QGraphicsObject* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsObject_QBaseItemChange(QGraphicsObject* self, int change, const QVariant* value);
     friend bool QGraphicsObject_SupportsExtension(const QGraphicsObject* self, int extension);
     friend bool QGraphicsObject_QBaseSupportsExtension(const QGraphicsObject* self, int extension);
-    friend void QGraphicsObject_SetExtension(QGraphicsObject* self, int extension, QVariant* variant);
-    friend void QGraphicsObject_QBaseSetExtension(QGraphicsObject* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsObject_Extension(const QGraphicsObject* self, QVariant* variant);
-    friend QVariant* QGraphicsObject_QBaseExtension(const QGraphicsObject* self, QVariant* variant);
+    friend void QGraphicsObject_SetExtension(QGraphicsObject* self, int extension, const QVariant* variant);
+    friend void QGraphicsObject_QBaseSetExtension(QGraphicsObject* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsObject_Extension(const QGraphicsObject* self, const QVariant* variant);
+    friend QVariant* QGraphicsObject_QBaseExtension(const QGraphicsObject* self, const QVariant* variant);
     friend void QGraphicsObject_UpdateMicroFocus(QGraphicsObject* self);
     friend void QGraphicsObject_QBaseUpdateMicroFocus(QGraphicsObject* self);
     friend QObject* QGraphicsObject_Sender(const QGraphicsObject* self);
@@ -2020,8 +2020,8 @@ class VirtualQGraphicsObject final : public QGraphicsObject {
     friend int QGraphicsObject_QBaseSenderSignalIndex(const QGraphicsObject* self);
     friend int QGraphicsObject_Receivers(const QGraphicsObject* self, const char* signal);
     friend int QGraphicsObject_QBaseReceivers(const QGraphicsObject* self, const char* signal);
-    friend bool QGraphicsObject_IsSignalConnected(const QGraphicsObject* self, QMetaMethod* signal);
-    friend bool QGraphicsObject_QBaseIsSignalConnected(const QGraphicsObject* self, QMetaMethod* signal);
+    friend bool QGraphicsObject_IsSignalConnected(const QGraphicsObject* self, const QMetaMethod* signal);
+    friend bool QGraphicsObject_QBaseIsSignalConnected(const QGraphicsObject* self, const QMetaMethod* signal);
     friend void QGraphicsObject_AddToIndex(QGraphicsObject* self);
     friend void QGraphicsObject_QBaseAddToIndex(QGraphicsObject* self);
     friend void QGraphicsObject_RemoveFromIndex(QGraphicsObject* self);
@@ -2163,8 +2163,8 @@ class VirtualQAbstractGraphicsShapeItem final : public QAbstractGraphicsShapeIte
     mutable bool qabstractgraphicsshapeitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQAbstractGraphicsShapeItem() : QAbstractGraphicsShapeItem(){};
-    VirtualQAbstractGraphicsShapeItem(QGraphicsItem* parent) : QAbstractGraphicsShapeItem(parent){};
+    VirtualQAbstractGraphicsShapeItem() : QAbstractGraphicsShapeItem() {};
+    VirtualQAbstractGraphicsShapeItem(QGraphicsItem* parent) : QAbstractGraphicsShapeItem(parent) {};
 
     ~VirtualQAbstractGraphicsShapeItem() {
         qabstractgraphicsshapeitem_isobscuredby_callback = nullptr;
@@ -2886,14 +2886,14 @@ class VirtualQAbstractGraphicsShapeItem final : public QAbstractGraphicsShapeIte
     friend void QAbstractGraphicsShapeItem_QBaseInputMethodEvent(QAbstractGraphicsShapeItem* self, QInputMethodEvent* event);
     friend QVariant* QAbstractGraphicsShapeItem_InputMethodQuery(const QAbstractGraphicsShapeItem* self, int query);
     friend QVariant* QAbstractGraphicsShapeItem_QBaseInputMethodQuery(const QAbstractGraphicsShapeItem* self, int query);
-    friend QVariant* QAbstractGraphicsShapeItem_ItemChange(QAbstractGraphicsShapeItem* self, int change, QVariant* value);
-    friend QVariant* QAbstractGraphicsShapeItem_QBaseItemChange(QAbstractGraphicsShapeItem* self, int change, QVariant* value);
+    friend QVariant* QAbstractGraphicsShapeItem_ItemChange(QAbstractGraphicsShapeItem* self, int change, const QVariant* value);
+    friend QVariant* QAbstractGraphicsShapeItem_QBaseItemChange(QAbstractGraphicsShapeItem* self, int change, const QVariant* value);
     friend bool QAbstractGraphicsShapeItem_SupportsExtension(const QAbstractGraphicsShapeItem* self, int extension);
     friend bool QAbstractGraphicsShapeItem_QBaseSupportsExtension(const QAbstractGraphicsShapeItem* self, int extension);
-    friend void QAbstractGraphicsShapeItem_SetExtension(QAbstractGraphicsShapeItem* self, int extension, QVariant* variant);
-    friend void QAbstractGraphicsShapeItem_QBaseSetExtension(QAbstractGraphicsShapeItem* self, int extension, QVariant* variant);
-    friend QVariant* QAbstractGraphicsShapeItem_Extension(const QAbstractGraphicsShapeItem* self, QVariant* variant);
-    friend QVariant* QAbstractGraphicsShapeItem_QBaseExtension(const QAbstractGraphicsShapeItem* self, QVariant* variant);
+    friend void QAbstractGraphicsShapeItem_SetExtension(QAbstractGraphicsShapeItem* self, int extension, const QVariant* variant);
+    friend void QAbstractGraphicsShapeItem_QBaseSetExtension(QAbstractGraphicsShapeItem* self, int extension, const QVariant* variant);
+    friend QVariant* QAbstractGraphicsShapeItem_Extension(const QAbstractGraphicsShapeItem* self, const QVariant* variant);
+    friend QVariant* QAbstractGraphicsShapeItem_QBaseExtension(const QAbstractGraphicsShapeItem* self, const QVariant* variant);
     friend void QAbstractGraphicsShapeItem_UpdateMicroFocus(QAbstractGraphicsShapeItem* self);
     friend void QAbstractGraphicsShapeItem_QBaseUpdateMicroFocus(QAbstractGraphicsShapeItem* self);
     friend void QAbstractGraphicsShapeItem_AddToIndex(QAbstractGraphicsShapeItem* self);
@@ -3037,10 +3037,10 @@ class VirtualQGraphicsPathItem final : public QGraphicsPathItem {
     mutable bool qgraphicspathitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsPathItem() : QGraphicsPathItem(){};
-    VirtualQGraphicsPathItem(const QPainterPath& path) : QGraphicsPathItem(path){};
-    VirtualQGraphicsPathItem(QGraphicsItem* parent) : QGraphicsPathItem(parent){};
-    VirtualQGraphicsPathItem(const QPainterPath& path, QGraphicsItem* parent) : QGraphicsPathItem(path, parent){};
+    VirtualQGraphicsPathItem() : QGraphicsPathItem() {};
+    VirtualQGraphicsPathItem(const QPainterPath& path) : QGraphicsPathItem(path) {};
+    VirtualQGraphicsPathItem(QGraphicsItem* parent) : QGraphicsPathItem(parent) {};
+    VirtualQGraphicsPathItem(const QPainterPath& path, QGraphicsItem* parent) : QGraphicsPathItem(path, parent) {};
 
     ~VirtualQGraphicsPathItem() {
         qgraphicspathitem_boundingrect_callback = nullptr;
@@ -3730,10 +3730,10 @@ class VirtualQGraphicsPathItem final : public QGraphicsPathItem {
     // Friend functions
     friend bool QGraphicsPathItem_SupportsExtension(const QGraphicsPathItem* self, int extension);
     friend bool QGraphicsPathItem_QBaseSupportsExtension(const QGraphicsPathItem* self, int extension);
-    friend void QGraphicsPathItem_SetExtension(QGraphicsPathItem* self, int extension, QVariant* variant);
-    friend void QGraphicsPathItem_QBaseSetExtension(QGraphicsPathItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsPathItem_Extension(const QGraphicsPathItem* self, QVariant* variant);
-    friend QVariant* QGraphicsPathItem_QBaseExtension(const QGraphicsPathItem* self, QVariant* variant);
+    friend void QGraphicsPathItem_SetExtension(QGraphicsPathItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsPathItem_QBaseSetExtension(QGraphicsPathItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsPathItem_Extension(const QGraphicsPathItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsPathItem_QBaseExtension(const QGraphicsPathItem* self, const QVariant* variant);
     friend bool QGraphicsPathItem_SceneEventFilter(QGraphicsPathItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsPathItem_QBaseSceneEventFilter(QGraphicsPathItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsPathItem_SceneEvent(QGraphicsPathItem* self, QEvent* event);
@@ -3776,8 +3776,8 @@ class VirtualQGraphicsPathItem final : public QGraphicsPathItem {
     friend void QGraphicsPathItem_QBaseInputMethodEvent(QGraphicsPathItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsPathItem_InputMethodQuery(const QGraphicsPathItem* self, int query);
     friend QVariant* QGraphicsPathItem_QBaseInputMethodQuery(const QGraphicsPathItem* self, int query);
-    friend QVariant* QGraphicsPathItem_ItemChange(QGraphicsPathItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsPathItem_QBaseItemChange(QGraphicsPathItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsPathItem_ItemChange(QGraphicsPathItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsPathItem_QBaseItemChange(QGraphicsPathItem* self, int change, const QVariant* value);
     friend void QGraphicsPathItem_UpdateMicroFocus(QGraphicsPathItem* self);
     friend void QGraphicsPathItem_QBaseUpdateMicroFocus(QGraphicsPathItem* self);
     friend void QGraphicsPathItem_AddToIndex(QGraphicsPathItem* self);
@@ -3921,12 +3921,12 @@ class VirtualQGraphicsRectItem final : public QGraphicsRectItem {
     mutable bool qgraphicsrectitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsRectItem() : QGraphicsRectItem(){};
-    VirtualQGraphicsRectItem(const QRectF& rect) : QGraphicsRectItem(rect){};
-    VirtualQGraphicsRectItem(qreal x, qreal y, qreal w, qreal h) : QGraphicsRectItem(x, y, w, h){};
-    VirtualQGraphicsRectItem(QGraphicsItem* parent) : QGraphicsRectItem(parent){};
-    VirtualQGraphicsRectItem(const QRectF& rect, QGraphicsItem* parent) : QGraphicsRectItem(rect, parent){};
-    VirtualQGraphicsRectItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem* parent) : QGraphicsRectItem(x, y, w, h, parent){};
+    VirtualQGraphicsRectItem() : QGraphicsRectItem() {};
+    VirtualQGraphicsRectItem(const QRectF& rect) : QGraphicsRectItem(rect) {};
+    VirtualQGraphicsRectItem(qreal x, qreal y, qreal w, qreal h) : QGraphicsRectItem(x, y, w, h) {};
+    VirtualQGraphicsRectItem(QGraphicsItem* parent) : QGraphicsRectItem(parent) {};
+    VirtualQGraphicsRectItem(const QRectF& rect, QGraphicsItem* parent) : QGraphicsRectItem(rect, parent) {};
+    VirtualQGraphicsRectItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem* parent) : QGraphicsRectItem(x, y, w, h, parent) {};
 
     ~VirtualQGraphicsRectItem() {
         qgraphicsrectitem_boundingrect_callback = nullptr;
@@ -4616,10 +4616,10 @@ class VirtualQGraphicsRectItem final : public QGraphicsRectItem {
     // Friend functions
     friend bool QGraphicsRectItem_SupportsExtension(const QGraphicsRectItem* self, int extension);
     friend bool QGraphicsRectItem_QBaseSupportsExtension(const QGraphicsRectItem* self, int extension);
-    friend void QGraphicsRectItem_SetExtension(QGraphicsRectItem* self, int extension, QVariant* variant);
-    friend void QGraphicsRectItem_QBaseSetExtension(QGraphicsRectItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsRectItem_Extension(const QGraphicsRectItem* self, QVariant* variant);
-    friend QVariant* QGraphicsRectItem_QBaseExtension(const QGraphicsRectItem* self, QVariant* variant);
+    friend void QGraphicsRectItem_SetExtension(QGraphicsRectItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsRectItem_QBaseSetExtension(QGraphicsRectItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsRectItem_Extension(const QGraphicsRectItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsRectItem_QBaseExtension(const QGraphicsRectItem* self, const QVariant* variant);
     friend bool QGraphicsRectItem_SceneEventFilter(QGraphicsRectItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsRectItem_QBaseSceneEventFilter(QGraphicsRectItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsRectItem_SceneEvent(QGraphicsRectItem* self, QEvent* event);
@@ -4662,8 +4662,8 @@ class VirtualQGraphicsRectItem final : public QGraphicsRectItem {
     friend void QGraphicsRectItem_QBaseInputMethodEvent(QGraphicsRectItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsRectItem_InputMethodQuery(const QGraphicsRectItem* self, int query);
     friend QVariant* QGraphicsRectItem_QBaseInputMethodQuery(const QGraphicsRectItem* self, int query);
-    friend QVariant* QGraphicsRectItem_ItemChange(QGraphicsRectItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsRectItem_QBaseItemChange(QGraphicsRectItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsRectItem_ItemChange(QGraphicsRectItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsRectItem_QBaseItemChange(QGraphicsRectItem* self, int change, const QVariant* value);
     friend void QGraphicsRectItem_UpdateMicroFocus(QGraphicsRectItem* self);
     friend void QGraphicsRectItem_QBaseUpdateMicroFocus(QGraphicsRectItem* self);
     friend void QGraphicsRectItem_AddToIndex(QGraphicsRectItem* self);
@@ -4807,12 +4807,12 @@ class VirtualQGraphicsEllipseItem final : public QGraphicsEllipseItem {
     mutable bool qgraphicsellipseitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsEllipseItem() : QGraphicsEllipseItem(){};
-    VirtualQGraphicsEllipseItem(const QRectF& rect) : QGraphicsEllipseItem(rect){};
-    VirtualQGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h) : QGraphicsEllipseItem(x, y, w, h){};
-    VirtualQGraphicsEllipseItem(QGraphicsItem* parent) : QGraphicsEllipseItem(parent){};
-    VirtualQGraphicsEllipseItem(const QRectF& rect, QGraphicsItem* parent) : QGraphicsEllipseItem(rect, parent){};
-    VirtualQGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem* parent) : QGraphicsEllipseItem(x, y, w, h, parent){};
+    VirtualQGraphicsEllipseItem() : QGraphicsEllipseItem() {};
+    VirtualQGraphicsEllipseItem(const QRectF& rect) : QGraphicsEllipseItem(rect) {};
+    VirtualQGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h) : QGraphicsEllipseItem(x, y, w, h) {};
+    VirtualQGraphicsEllipseItem(QGraphicsItem* parent) : QGraphicsEllipseItem(parent) {};
+    VirtualQGraphicsEllipseItem(const QRectF& rect, QGraphicsItem* parent) : QGraphicsEllipseItem(rect, parent) {};
+    VirtualQGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem* parent) : QGraphicsEllipseItem(x, y, w, h, parent) {};
 
     ~VirtualQGraphicsEllipseItem() {
         qgraphicsellipseitem_boundingrect_callback = nullptr;
@@ -5502,10 +5502,10 @@ class VirtualQGraphicsEllipseItem final : public QGraphicsEllipseItem {
     // Friend functions
     friend bool QGraphicsEllipseItem_SupportsExtension(const QGraphicsEllipseItem* self, int extension);
     friend bool QGraphicsEllipseItem_QBaseSupportsExtension(const QGraphicsEllipseItem* self, int extension);
-    friend void QGraphicsEllipseItem_SetExtension(QGraphicsEllipseItem* self, int extension, QVariant* variant);
-    friend void QGraphicsEllipseItem_QBaseSetExtension(QGraphicsEllipseItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsEllipseItem_Extension(const QGraphicsEllipseItem* self, QVariant* variant);
-    friend QVariant* QGraphicsEllipseItem_QBaseExtension(const QGraphicsEllipseItem* self, QVariant* variant);
+    friend void QGraphicsEllipseItem_SetExtension(QGraphicsEllipseItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsEllipseItem_QBaseSetExtension(QGraphicsEllipseItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsEllipseItem_Extension(const QGraphicsEllipseItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsEllipseItem_QBaseExtension(const QGraphicsEllipseItem* self, const QVariant* variant);
     friend bool QGraphicsEllipseItem_SceneEventFilter(QGraphicsEllipseItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsEllipseItem_QBaseSceneEventFilter(QGraphicsEllipseItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsEllipseItem_SceneEvent(QGraphicsEllipseItem* self, QEvent* event);
@@ -5548,8 +5548,8 @@ class VirtualQGraphicsEllipseItem final : public QGraphicsEllipseItem {
     friend void QGraphicsEllipseItem_QBaseInputMethodEvent(QGraphicsEllipseItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsEllipseItem_InputMethodQuery(const QGraphicsEllipseItem* self, int query);
     friend QVariant* QGraphicsEllipseItem_QBaseInputMethodQuery(const QGraphicsEllipseItem* self, int query);
-    friend QVariant* QGraphicsEllipseItem_ItemChange(QGraphicsEllipseItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsEllipseItem_QBaseItemChange(QGraphicsEllipseItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsEllipseItem_ItemChange(QGraphicsEllipseItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsEllipseItem_QBaseItemChange(QGraphicsEllipseItem* self, int change, const QVariant* value);
     friend void QGraphicsEllipseItem_UpdateMicroFocus(QGraphicsEllipseItem* self);
     friend void QGraphicsEllipseItem_QBaseUpdateMicroFocus(QGraphicsEllipseItem* self);
     friend void QGraphicsEllipseItem_AddToIndex(QGraphicsEllipseItem* self);
@@ -5693,8 +5693,8 @@ class VirtualQGraphicsPolygonItem final : public QGraphicsPolygonItem {
     mutable bool qgraphicspolygonitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsPolygonItem() : QGraphicsPolygonItem(){};
-    VirtualQGraphicsPolygonItem(QGraphicsItem* parent) : QGraphicsPolygonItem(parent){};
+    VirtualQGraphicsPolygonItem() : QGraphicsPolygonItem() {};
+    VirtualQGraphicsPolygonItem(QGraphicsItem* parent) : QGraphicsPolygonItem(parent) {};
 
     ~VirtualQGraphicsPolygonItem() {
         qgraphicspolygonitem_boundingrect_callback = nullptr;
@@ -6384,10 +6384,10 @@ class VirtualQGraphicsPolygonItem final : public QGraphicsPolygonItem {
     // Friend functions
     friend bool QGraphicsPolygonItem_SupportsExtension(const QGraphicsPolygonItem* self, int extension);
     friend bool QGraphicsPolygonItem_QBaseSupportsExtension(const QGraphicsPolygonItem* self, int extension);
-    friend void QGraphicsPolygonItem_SetExtension(QGraphicsPolygonItem* self, int extension, QVariant* variant);
-    friend void QGraphicsPolygonItem_QBaseSetExtension(QGraphicsPolygonItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsPolygonItem_Extension(const QGraphicsPolygonItem* self, QVariant* variant);
-    friend QVariant* QGraphicsPolygonItem_QBaseExtension(const QGraphicsPolygonItem* self, QVariant* variant);
+    friend void QGraphicsPolygonItem_SetExtension(QGraphicsPolygonItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsPolygonItem_QBaseSetExtension(QGraphicsPolygonItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsPolygonItem_Extension(const QGraphicsPolygonItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsPolygonItem_QBaseExtension(const QGraphicsPolygonItem* self, const QVariant* variant);
     friend bool QGraphicsPolygonItem_SceneEventFilter(QGraphicsPolygonItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsPolygonItem_QBaseSceneEventFilter(QGraphicsPolygonItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsPolygonItem_SceneEvent(QGraphicsPolygonItem* self, QEvent* event);
@@ -6430,8 +6430,8 @@ class VirtualQGraphicsPolygonItem final : public QGraphicsPolygonItem {
     friend void QGraphicsPolygonItem_QBaseInputMethodEvent(QGraphicsPolygonItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsPolygonItem_InputMethodQuery(const QGraphicsPolygonItem* self, int query);
     friend QVariant* QGraphicsPolygonItem_QBaseInputMethodQuery(const QGraphicsPolygonItem* self, int query);
-    friend QVariant* QGraphicsPolygonItem_ItemChange(QGraphicsPolygonItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsPolygonItem_QBaseItemChange(QGraphicsPolygonItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsPolygonItem_ItemChange(QGraphicsPolygonItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsPolygonItem_QBaseItemChange(QGraphicsPolygonItem* self, int change, const QVariant* value);
     friend void QGraphicsPolygonItem_UpdateMicroFocus(QGraphicsPolygonItem* self);
     friend void QGraphicsPolygonItem_QBaseUpdateMicroFocus(QGraphicsPolygonItem* self);
     friend void QGraphicsPolygonItem_AddToIndex(QGraphicsPolygonItem* self);
@@ -6575,12 +6575,12 @@ class VirtualQGraphicsLineItem final : public QGraphicsLineItem {
     mutable bool qgraphicslineitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsLineItem() : QGraphicsLineItem(){};
-    VirtualQGraphicsLineItem(const QLineF& line) : QGraphicsLineItem(line){};
-    VirtualQGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2) : QGraphicsLineItem(x1, y1, x2, y2){};
-    VirtualQGraphicsLineItem(QGraphicsItem* parent) : QGraphicsLineItem(parent){};
-    VirtualQGraphicsLineItem(const QLineF& line, QGraphicsItem* parent) : QGraphicsLineItem(line, parent){};
-    VirtualQGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem* parent) : QGraphicsLineItem(x1, y1, x2, y2, parent){};
+    VirtualQGraphicsLineItem() : QGraphicsLineItem() {};
+    VirtualQGraphicsLineItem(const QLineF& line) : QGraphicsLineItem(line) {};
+    VirtualQGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2) : QGraphicsLineItem(x1, y1, x2, y2) {};
+    VirtualQGraphicsLineItem(QGraphicsItem* parent) : QGraphicsLineItem(parent) {};
+    VirtualQGraphicsLineItem(const QLineF& line, QGraphicsItem* parent) : QGraphicsLineItem(line, parent) {};
+    VirtualQGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem* parent) : QGraphicsLineItem(x1, y1, x2, y2, parent) {};
 
     ~VirtualQGraphicsLineItem() {
         qgraphicslineitem_boundingrect_callback = nullptr;
@@ -7270,10 +7270,10 @@ class VirtualQGraphicsLineItem final : public QGraphicsLineItem {
     // Friend functions
     friend bool QGraphicsLineItem_SupportsExtension(const QGraphicsLineItem* self, int extension);
     friend bool QGraphicsLineItem_QBaseSupportsExtension(const QGraphicsLineItem* self, int extension);
-    friend void QGraphicsLineItem_SetExtension(QGraphicsLineItem* self, int extension, QVariant* variant);
-    friend void QGraphicsLineItem_QBaseSetExtension(QGraphicsLineItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsLineItem_Extension(const QGraphicsLineItem* self, QVariant* variant);
-    friend QVariant* QGraphicsLineItem_QBaseExtension(const QGraphicsLineItem* self, QVariant* variant);
+    friend void QGraphicsLineItem_SetExtension(QGraphicsLineItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsLineItem_QBaseSetExtension(QGraphicsLineItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsLineItem_Extension(const QGraphicsLineItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsLineItem_QBaseExtension(const QGraphicsLineItem* self, const QVariant* variant);
     friend bool QGraphicsLineItem_SceneEventFilter(QGraphicsLineItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsLineItem_QBaseSceneEventFilter(QGraphicsLineItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsLineItem_SceneEvent(QGraphicsLineItem* self, QEvent* event);
@@ -7316,8 +7316,8 @@ class VirtualQGraphicsLineItem final : public QGraphicsLineItem {
     friend void QGraphicsLineItem_QBaseInputMethodEvent(QGraphicsLineItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsLineItem_InputMethodQuery(const QGraphicsLineItem* self, int query);
     friend QVariant* QGraphicsLineItem_QBaseInputMethodQuery(const QGraphicsLineItem* self, int query);
-    friend QVariant* QGraphicsLineItem_ItemChange(QGraphicsLineItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsLineItem_QBaseItemChange(QGraphicsLineItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsLineItem_ItemChange(QGraphicsLineItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsLineItem_QBaseItemChange(QGraphicsLineItem* self, int change, const QVariant* value);
     friend void QGraphicsLineItem_UpdateMicroFocus(QGraphicsLineItem* self);
     friend void QGraphicsLineItem_QBaseUpdateMicroFocus(QGraphicsLineItem* self);
     friend void QGraphicsLineItem_AddToIndex(QGraphicsLineItem* self);
@@ -7461,10 +7461,10 @@ class VirtualQGraphicsPixmapItem final : public QGraphicsPixmapItem {
     mutable bool qgraphicspixmapitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsPixmapItem() : QGraphicsPixmapItem(){};
-    VirtualQGraphicsPixmapItem(const QPixmap& pixmap) : QGraphicsPixmapItem(pixmap){};
-    VirtualQGraphicsPixmapItem(QGraphicsItem* parent) : QGraphicsPixmapItem(parent){};
-    VirtualQGraphicsPixmapItem(const QPixmap& pixmap, QGraphicsItem* parent) : QGraphicsPixmapItem(pixmap, parent){};
+    VirtualQGraphicsPixmapItem() : QGraphicsPixmapItem() {};
+    VirtualQGraphicsPixmapItem(const QPixmap& pixmap) : QGraphicsPixmapItem(pixmap) {};
+    VirtualQGraphicsPixmapItem(QGraphicsItem* parent) : QGraphicsPixmapItem(parent) {};
+    VirtualQGraphicsPixmapItem(const QPixmap& pixmap, QGraphicsItem* parent) : QGraphicsPixmapItem(pixmap, parent) {};
 
     ~VirtualQGraphicsPixmapItem() {
         qgraphicspixmapitem_boundingrect_callback = nullptr;
@@ -8154,10 +8154,10 @@ class VirtualQGraphicsPixmapItem final : public QGraphicsPixmapItem {
     // Friend functions
     friend bool QGraphicsPixmapItem_SupportsExtension(const QGraphicsPixmapItem* self, int extension);
     friend bool QGraphicsPixmapItem_QBaseSupportsExtension(const QGraphicsPixmapItem* self, int extension);
-    friend void QGraphicsPixmapItem_SetExtension(QGraphicsPixmapItem* self, int extension, QVariant* variant);
-    friend void QGraphicsPixmapItem_QBaseSetExtension(QGraphicsPixmapItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsPixmapItem_Extension(const QGraphicsPixmapItem* self, QVariant* variant);
-    friend QVariant* QGraphicsPixmapItem_QBaseExtension(const QGraphicsPixmapItem* self, QVariant* variant);
+    friend void QGraphicsPixmapItem_SetExtension(QGraphicsPixmapItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsPixmapItem_QBaseSetExtension(QGraphicsPixmapItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsPixmapItem_Extension(const QGraphicsPixmapItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsPixmapItem_QBaseExtension(const QGraphicsPixmapItem* self, const QVariant* variant);
     friend bool QGraphicsPixmapItem_SceneEventFilter(QGraphicsPixmapItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsPixmapItem_QBaseSceneEventFilter(QGraphicsPixmapItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsPixmapItem_SceneEvent(QGraphicsPixmapItem* self, QEvent* event);
@@ -8200,8 +8200,8 @@ class VirtualQGraphicsPixmapItem final : public QGraphicsPixmapItem {
     friend void QGraphicsPixmapItem_QBaseInputMethodEvent(QGraphicsPixmapItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsPixmapItem_InputMethodQuery(const QGraphicsPixmapItem* self, int query);
     friend QVariant* QGraphicsPixmapItem_QBaseInputMethodQuery(const QGraphicsPixmapItem* self, int query);
-    friend QVariant* QGraphicsPixmapItem_ItemChange(QGraphicsPixmapItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsPixmapItem_QBaseItemChange(QGraphicsPixmapItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsPixmapItem_ItemChange(QGraphicsPixmapItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsPixmapItem_QBaseItemChange(QGraphicsPixmapItem* self, int change, const QVariant* value);
     friend void QGraphicsPixmapItem_UpdateMicroFocus(QGraphicsPixmapItem* self);
     friend void QGraphicsPixmapItem_QBaseUpdateMicroFocus(QGraphicsPixmapItem* self);
     friend void QGraphicsPixmapItem_AddToIndex(QGraphicsPixmapItem* self);
@@ -8381,10 +8381,10 @@ class VirtualQGraphicsTextItem final : public QGraphicsTextItem {
     mutable bool qgraphicstextitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsTextItem() : QGraphicsTextItem(){};
-    VirtualQGraphicsTextItem(const QString& text) : QGraphicsTextItem(text){};
-    VirtualQGraphicsTextItem(QGraphicsItem* parent) : QGraphicsTextItem(parent){};
-    VirtualQGraphicsTextItem(const QString& text, QGraphicsItem* parent) : QGraphicsTextItem(text, parent){};
+    VirtualQGraphicsTextItem() : QGraphicsTextItem() {};
+    VirtualQGraphicsTextItem(const QString& text) : QGraphicsTextItem(text) {};
+    VirtualQGraphicsTextItem(QGraphicsItem* parent) : QGraphicsTextItem(parent) {};
+    VirtualQGraphicsTextItem(const QString& text, QGraphicsItem* parent) : QGraphicsTextItem(text, parent) {};
 
     ~VirtualQGraphicsTextItem() {
         qgraphicstextitem_metacall_callback = nullptr;
@@ -9328,10 +9328,10 @@ class VirtualQGraphicsTextItem final : public QGraphicsTextItem {
     friend QVariant* QGraphicsTextItem_QBaseInputMethodQuery(const QGraphicsTextItem* self, int query);
     friend bool QGraphicsTextItem_SupportsExtension(const QGraphicsTextItem* self, int extension);
     friend bool QGraphicsTextItem_QBaseSupportsExtension(const QGraphicsTextItem* self, int extension);
-    friend void QGraphicsTextItem_SetExtension(QGraphicsTextItem* self, int extension, QVariant* variant);
-    friend void QGraphicsTextItem_QBaseSetExtension(QGraphicsTextItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsTextItem_Extension(const QGraphicsTextItem* self, QVariant* variant);
-    friend QVariant* QGraphicsTextItem_QBaseExtension(const QGraphicsTextItem* self, QVariant* variant);
+    friend void QGraphicsTextItem_SetExtension(QGraphicsTextItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsTextItem_QBaseSetExtension(QGraphicsTextItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsTextItem_Extension(const QGraphicsTextItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsTextItem_QBaseExtension(const QGraphicsTextItem* self, const QVariant* variant);
     friend bool QGraphicsTextItem_Event(QGraphicsTextItem* self, QEvent* ev);
     friend bool QGraphicsTextItem_QBaseEvent(QGraphicsTextItem* self, QEvent* ev);
     friend void QGraphicsTextItem_TimerEvent(QGraphicsTextItem* self, QTimerEvent* event);
@@ -9340,16 +9340,16 @@ class VirtualQGraphicsTextItem final : public QGraphicsTextItem {
     friend void QGraphicsTextItem_QBaseChildEvent(QGraphicsTextItem* self, QChildEvent* event);
     friend void QGraphicsTextItem_CustomEvent(QGraphicsTextItem* self, QEvent* event);
     friend void QGraphicsTextItem_QBaseCustomEvent(QGraphicsTextItem* self, QEvent* event);
-    friend void QGraphicsTextItem_ConnectNotify(QGraphicsTextItem* self, QMetaMethod* signal);
-    friend void QGraphicsTextItem_QBaseConnectNotify(QGraphicsTextItem* self, QMetaMethod* signal);
-    friend void QGraphicsTextItem_DisconnectNotify(QGraphicsTextItem* self, QMetaMethod* signal);
-    friend void QGraphicsTextItem_QBaseDisconnectNotify(QGraphicsTextItem* self, QMetaMethod* signal);
+    friend void QGraphicsTextItem_ConnectNotify(QGraphicsTextItem* self, const QMetaMethod* signal);
+    friend void QGraphicsTextItem_QBaseConnectNotify(QGraphicsTextItem* self, const QMetaMethod* signal);
+    friend void QGraphicsTextItem_DisconnectNotify(QGraphicsTextItem* self, const QMetaMethod* signal);
+    friend void QGraphicsTextItem_QBaseDisconnectNotify(QGraphicsTextItem* self, const QMetaMethod* signal);
     friend bool QGraphicsTextItem_SceneEventFilter(QGraphicsTextItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsTextItem_QBaseSceneEventFilter(QGraphicsTextItem* self, QGraphicsItem* watched, QEvent* event);
     friend void QGraphicsTextItem_WheelEvent(QGraphicsTextItem* self, QGraphicsSceneWheelEvent* event);
     friend void QGraphicsTextItem_QBaseWheelEvent(QGraphicsTextItem* self, QGraphicsSceneWheelEvent* event);
-    friend QVariant* QGraphicsTextItem_ItemChange(QGraphicsTextItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsTextItem_QBaseItemChange(QGraphicsTextItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsTextItem_ItemChange(QGraphicsTextItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsTextItem_QBaseItemChange(QGraphicsTextItem* self, int change, const QVariant* value);
     friend void QGraphicsTextItem_UpdateMicroFocus(QGraphicsTextItem* self);
     friend void QGraphicsTextItem_QBaseUpdateMicroFocus(QGraphicsTextItem* self);
     friend QObject* QGraphicsTextItem_Sender(const QGraphicsTextItem* self);
@@ -9358,8 +9358,8 @@ class VirtualQGraphicsTextItem final : public QGraphicsTextItem {
     friend int QGraphicsTextItem_QBaseSenderSignalIndex(const QGraphicsTextItem* self);
     friend int QGraphicsTextItem_Receivers(const QGraphicsTextItem* self, const char* signal);
     friend int QGraphicsTextItem_QBaseReceivers(const QGraphicsTextItem* self, const char* signal);
-    friend bool QGraphicsTextItem_IsSignalConnected(const QGraphicsTextItem* self, QMetaMethod* signal);
-    friend bool QGraphicsTextItem_QBaseIsSignalConnected(const QGraphicsTextItem* self, QMetaMethod* signal);
+    friend bool QGraphicsTextItem_IsSignalConnected(const QGraphicsTextItem* self, const QMetaMethod* signal);
+    friend bool QGraphicsTextItem_QBaseIsSignalConnected(const QGraphicsTextItem* self, const QMetaMethod* signal);
     friend void QGraphicsTextItem_AddToIndex(QGraphicsTextItem* self);
     friend void QGraphicsTextItem_QBaseAddToIndex(QGraphicsTextItem* self);
     friend void QGraphicsTextItem_RemoveFromIndex(QGraphicsTextItem* self);
@@ -9501,10 +9501,10 @@ class VirtualQGraphicsSimpleTextItem final : public QGraphicsSimpleTextItem {
     mutable bool qgraphicssimpletextitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsSimpleTextItem() : QGraphicsSimpleTextItem(){};
-    VirtualQGraphicsSimpleTextItem(const QString& text) : QGraphicsSimpleTextItem(text){};
-    VirtualQGraphicsSimpleTextItem(QGraphicsItem* parent) : QGraphicsSimpleTextItem(parent){};
-    VirtualQGraphicsSimpleTextItem(const QString& text, QGraphicsItem* parent) : QGraphicsSimpleTextItem(text, parent){};
+    VirtualQGraphicsSimpleTextItem() : QGraphicsSimpleTextItem() {};
+    VirtualQGraphicsSimpleTextItem(const QString& text) : QGraphicsSimpleTextItem(text) {};
+    VirtualQGraphicsSimpleTextItem(QGraphicsItem* parent) : QGraphicsSimpleTextItem(parent) {};
+    VirtualQGraphicsSimpleTextItem(const QString& text, QGraphicsItem* parent) : QGraphicsSimpleTextItem(text, parent) {};
 
     ~VirtualQGraphicsSimpleTextItem() {
         qgraphicssimpletextitem_boundingrect_callback = nullptr;
@@ -10194,10 +10194,10 @@ class VirtualQGraphicsSimpleTextItem final : public QGraphicsSimpleTextItem {
     // Friend functions
     friend bool QGraphicsSimpleTextItem_SupportsExtension(const QGraphicsSimpleTextItem* self, int extension);
     friend bool QGraphicsSimpleTextItem_QBaseSupportsExtension(const QGraphicsSimpleTextItem* self, int extension);
-    friend void QGraphicsSimpleTextItem_SetExtension(QGraphicsSimpleTextItem* self, int extension, QVariant* variant);
-    friend void QGraphicsSimpleTextItem_QBaseSetExtension(QGraphicsSimpleTextItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsSimpleTextItem_Extension(const QGraphicsSimpleTextItem* self, QVariant* variant);
-    friend QVariant* QGraphicsSimpleTextItem_QBaseExtension(const QGraphicsSimpleTextItem* self, QVariant* variant);
+    friend void QGraphicsSimpleTextItem_SetExtension(QGraphicsSimpleTextItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsSimpleTextItem_QBaseSetExtension(QGraphicsSimpleTextItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsSimpleTextItem_Extension(const QGraphicsSimpleTextItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsSimpleTextItem_QBaseExtension(const QGraphicsSimpleTextItem* self, const QVariant* variant);
     friend bool QGraphicsSimpleTextItem_SceneEventFilter(QGraphicsSimpleTextItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsSimpleTextItem_QBaseSceneEventFilter(QGraphicsSimpleTextItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsSimpleTextItem_SceneEvent(QGraphicsSimpleTextItem* self, QEvent* event);
@@ -10240,8 +10240,8 @@ class VirtualQGraphicsSimpleTextItem final : public QGraphicsSimpleTextItem {
     friend void QGraphicsSimpleTextItem_QBaseInputMethodEvent(QGraphicsSimpleTextItem* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsSimpleTextItem_InputMethodQuery(const QGraphicsSimpleTextItem* self, int query);
     friend QVariant* QGraphicsSimpleTextItem_QBaseInputMethodQuery(const QGraphicsSimpleTextItem* self, int query);
-    friend QVariant* QGraphicsSimpleTextItem_ItemChange(QGraphicsSimpleTextItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsSimpleTextItem_QBaseItemChange(QGraphicsSimpleTextItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsSimpleTextItem_ItemChange(QGraphicsSimpleTextItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsSimpleTextItem_QBaseItemChange(QGraphicsSimpleTextItem* self, int change, const QVariant* value);
     friend void QGraphicsSimpleTextItem_UpdateMicroFocus(QGraphicsSimpleTextItem* self);
     friend void QGraphicsSimpleTextItem_QBaseUpdateMicroFocus(QGraphicsSimpleTextItem* self);
     friend void QGraphicsSimpleTextItem_AddToIndex(QGraphicsSimpleTextItem* self);
@@ -10385,8 +10385,8 @@ class VirtualQGraphicsItemGroup final : public QGraphicsItemGroup {
     mutable bool qgraphicsitemgroup_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsItemGroup() : QGraphicsItemGroup(){};
-    VirtualQGraphicsItemGroup(QGraphicsItem* parent) : QGraphicsItemGroup(parent){};
+    VirtualQGraphicsItemGroup() : QGraphicsItemGroup() {};
+    VirtualQGraphicsItemGroup(QGraphicsItem* parent) : QGraphicsItemGroup(parent) {};
 
     ~VirtualQGraphicsItemGroup() {
         qgraphicsitemgroup_boundingrect_callback = nullptr;
@@ -11116,14 +11116,14 @@ class VirtualQGraphicsItemGroup final : public QGraphicsItemGroup {
     friend void QGraphicsItemGroup_QBaseInputMethodEvent(QGraphicsItemGroup* self, QInputMethodEvent* event);
     friend QVariant* QGraphicsItemGroup_InputMethodQuery(const QGraphicsItemGroup* self, int query);
     friend QVariant* QGraphicsItemGroup_QBaseInputMethodQuery(const QGraphicsItemGroup* self, int query);
-    friend QVariant* QGraphicsItemGroup_ItemChange(QGraphicsItemGroup* self, int change, QVariant* value);
-    friend QVariant* QGraphicsItemGroup_QBaseItemChange(QGraphicsItemGroup* self, int change, QVariant* value);
+    friend QVariant* QGraphicsItemGroup_ItemChange(QGraphicsItemGroup* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsItemGroup_QBaseItemChange(QGraphicsItemGroup* self, int change, const QVariant* value);
     friend bool QGraphicsItemGroup_SupportsExtension(const QGraphicsItemGroup* self, int extension);
     friend bool QGraphicsItemGroup_QBaseSupportsExtension(const QGraphicsItemGroup* self, int extension);
-    friend void QGraphicsItemGroup_SetExtension(QGraphicsItemGroup* self, int extension, QVariant* variant);
-    friend void QGraphicsItemGroup_QBaseSetExtension(QGraphicsItemGroup* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsItemGroup_Extension(const QGraphicsItemGroup* self, QVariant* variant);
-    friend QVariant* QGraphicsItemGroup_QBaseExtension(const QGraphicsItemGroup* self, QVariant* variant);
+    friend void QGraphicsItemGroup_SetExtension(QGraphicsItemGroup* self, int extension, const QVariant* variant);
+    friend void QGraphicsItemGroup_QBaseSetExtension(QGraphicsItemGroup* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsItemGroup_Extension(const QGraphicsItemGroup* self, const QVariant* variant);
+    friend QVariant* QGraphicsItemGroup_QBaseExtension(const QGraphicsItemGroup* self, const QVariant* variant);
     friend void QGraphicsItemGroup_UpdateMicroFocus(QGraphicsItemGroup* self);
     friend void QGraphicsItemGroup_QBaseUpdateMicroFocus(QGraphicsItemGroup* self);
     friend void QGraphicsItemGroup_AddToIndex(QGraphicsItemGroup* self);

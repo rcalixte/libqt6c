@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqtransform.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qstyleoption.html
 
 /// q_styleoption_new constructs a new QStyleOption object.
@@ -1085,7 +1082,8 @@ typedef enum {
     QSTYLEOPTIONTAB_TABPOSITION_BEGINNING = 0,
     QSTYLEOPTIONTAB_TABPOSITION_MIDDLE = 1,
     QSTYLEOPTIONTAB_TABPOSITION_END = 2,
-    QSTYLEOPTIONTAB_TABPOSITION_ONLYONETAB = 3
+    QSTYLEOPTIONTAB_TABPOSITION_ONLYONETAB = 3,
+    QSTYLEOPTIONTAB_TABPOSITION_MOVING = 4
 } QStyleOptionTab__TabPosition;
 
 typedef enum {

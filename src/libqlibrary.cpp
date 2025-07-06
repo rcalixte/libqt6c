@@ -16,17 +16,17 @@ QLibrary* QLibrary_new() {
     return new VirtualQLibrary();
 }
 
-QLibrary* QLibrary_new2(libqt_string fileName) {
+QLibrary* QLibrary_new2(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString);
 }
 
-QLibrary* QLibrary_new3(libqt_string fileName, int verNum) {
+QLibrary* QLibrary_new3(const libqt_string fileName, int verNum) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString, static_cast<int>(verNum));
 }
 
-QLibrary* QLibrary_new4(libqt_string fileName, libqt_string version) {
+QLibrary* QLibrary_new4(const libqt_string fileName, const libqt_string version) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
     return new VirtualQLibrary(fileName_QString, version_QString);
@@ -36,17 +36,17 @@ QLibrary* QLibrary_new5(QObject* parent) {
     return new VirtualQLibrary(parent);
 }
 
-QLibrary* QLibrary_new6(libqt_string fileName, QObject* parent) {
+QLibrary* QLibrary_new6(const libqt_string fileName, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString, parent);
 }
 
-QLibrary* QLibrary_new7(libqt_string fileName, int verNum, QObject* parent) {
+QLibrary* QLibrary_new7(const libqt_string fileName, int verNum, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQLibrary(fileName_QString, static_cast<int>(verNum), parent);
 }
 
-QLibrary* QLibrary_new8(libqt_string fileName, libqt_string version, QObject* parent) {
+QLibrary* QLibrary_new8(const libqt_string fileName, const libqt_string version, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
     return new VirtualQLibrary(fileName_QString, version_QString, parent);
@@ -112,12 +112,12 @@ bool QLibrary_IsLoaded(const QLibrary* self) {
     return self->isLoaded();
 }
 
-bool QLibrary_IsLibrary(libqt_string fileName) {
+bool QLibrary_IsLibrary(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return QLibrary::isLibrary(fileName_QString);
 }
 
-void QLibrary_SetFileName(QLibrary* self, libqt_string fileName) {
+void QLibrary_SetFileName(QLibrary* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setFileName(fileName_QString);
 }
@@ -134,12 +134,12 @@ libqt_string QLibrary_FileName(const QLibrary* self) {
     return _str;
 }
 
-void QLibrary_SetFileNameAndVersion(QLibrary* self, libqt_string fileName, int verNum) {
+void QLibrary_SetFileNameAndVersion(QLibrary* self, const libqt_string fileName, int verNum) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setFileNameAndVersion(fileName_QString, static_cast<int>(verNum));
 }
 
-void QLibrary_SetFileNameAndVersion2(QLibrary* self, libqt_string fileName, libqt_string version) {
+void QLibrary_SetFileNameAndVersion2(QLibrary* self, const libqt_string fileName, const libqt_string version) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString version_QString = QString::fromUtf8(version.data, version.len);
     self->setFileNameAndVersion(fileName_QString, version_QString);
@@ -335,7 +335,7 @@ void QLibrary_OnCustomEvent(QLibrary* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLibrary_ConnectNotify(QLibrary* self, QMetaMethod* signal) {
+void QLibrary_ConnectNotify(QLibrary* self, const QMetaMethod* signal) {
     auto* vqlibrary = dynamic_cast<VirtualQLibrary*>(self);
     if (vqlibrary && vqlibrary->isVirtualQLibrary) {
         vqlibrary->connectNotify(*signal);
@@ -345,7 +345,7 @@ void QLibrary_ConnectNotify(QLibrary* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLibrary_QBaseConnectNotify(QLibrary* self, QMetaMethod* signal) {
+void QLibrary_QBaseConnectNotify(QLibrary* self, const QMetaMethod* signal) {
     auto* vqlibrary = dynamic_cast<VirtualQLibrary*>(self);
     if (vqlibrary && vqlibrary->isVirtualQLibrary) {
         vqlibrary->setQLibrary_ConnectNotify_IsBase(true);
@@ -364,7 +364,7 @@ void QLibrary_OnConnectNotify(QLibrary* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLibrary_DisconnectNotify(QLibrary* self, QMetaMethod* signal) {
+void QLibrary_DisconnectNotify(QLibrary* self, const QMetaMethod* signal) {
     auto* vqlibrary = dynamic_cast<VirtualQLibrary*>(self);
     if (vqlibrary && vqlibrary->isVirtualQLibrary) {
         vqlibrary->disconnectNotify(*signal);
@@ -374,7 +374,7 @@ void QLibrary_DisconnectNotify(QLibrary* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLibrary_QBaseDisconnectNotify(QLibrary* self, QMetaMethod* signal) {
+void QLibrary_QBaseDisconnectNotify(QLibrary* self, const QMetaMethod* signal) {
     auto* vqlibrary = dynamic_cast<VirtualQLibrary*>(self);
     if (vqlibrary && vqlibrary->isVirtualQLibrary) {
         vqlibrary->setQLibrary_DisconnectNotify_IsBase(true);
@@ -480,7 +480,7 @@ void QLibrary_OnReceivers(const QLibrary* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLibrary_IsSignalConnected(const QLibrary* self, QMetaMethod* signal) {
+bool QLibrary_IsSignalConnected(const QLibrary* self, const QMetaMethod* signal) {
     auto* vqlibrary = const_cast<VirtualQLibrary*>(dynamic_cast<const VirtualQLibrary*>(self));
     if (vqlibrary && vqlibrary->isVirtualQLibrary) {
         return vqlibrary->isSignalConnected(*signal);
@@ -490,7 +490,7 @@ bool QLibrary_IsSignalConnected(const QLibrary* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QLibrary_QBaseIsSignalConnected(const QLibrary* self, QMetaMethod* signal) {
+bool QLibrary_QBaseIsSignalConnected(const QLibrary* self, const QMetaMethod* signal) {
     auto* vqlibrary = const_cast<VirtualQLibrary*>(dynamic_cast<const VirtualQLibrary*>(self));
     if (vqlibrary && vqlibrary->isVirtualQLibrary) {
         vqlibrary->setQLibrary_IsSignalConnected_IsBase(true);

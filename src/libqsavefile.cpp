@@ -15,7 +15,7 @@
 #include "libqsavefile.hpp"
 #include "libqsavefile.hxx"
 
-QSaveFile* QSaveFile_new(libqt_string name) {
+QSaveFile* QSaveFile_new(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQSaveFile(name_QString);
 }
@@ -24,7 +24,7 @@ QSaveFile* QSaveFile_new2() {
     return new VirtualQSaveFile();
 }
 
-QSaveFile* QSaveFile_new3(libqt_string name, QObject* parent) {
+QSaveFile* QSaveFile_new3(const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQSaveFile(name_QString, parent);
 }
@@ -81,7 +81,7 @@ libqt_string QSaveFile_Tr(const char* s) {
     return _str;
 }
 
-void QSaveFile_SetFileName(QSaveFile* self, libqt_string name) {
+void QSaveFile_SetFileName(QSaveFile* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setFileName(name_QString);
 }
@@ -191,9 +191,9 @@ void QSaveFile_OnFileName(const QSaveFile* self, intptr_t slot) {
 bool QSaveFile_Open(QSaveFile* self, int flags) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
-        return vqsavefile->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return vqsavefile->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     } else {
-        return self->QSaveFile::open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return self->QSaveFile::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     }
 }
 
@@ -202,9 +202,9 @@ bool QSaveFile_QBaseOpen(QSaveFile* self, int flags) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         vqsavefile->setQSaveFile_Open_IsBase(true);
-        return vqsavefile->open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return vqsavefile->open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     } else {
-        return self->QSaveFile::open(static_cast<QIODeviceBase::OpenMode>(flags));
+        return self->QSaveFile::open(static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(flags));
     }
 }
 
@@ -884,7 +884,7 @@ void QSaveFile_OnCustomEvent(QSaveFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSaveFile_ConnectNotify(QSaveFile* self, QMetaMethod* signal) {
+void QSaveFile_ConnectNotify(QSaveFile* self, const QMetaMethod* signal) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         vqsavefile->connectNotify(*signal);
@@ -894,7 +894,7 @@ void QSaveFile_ConnectNotify(QSaveFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSaveFile_QBaseConnectNotify(QSaveFile* self, QMetaMethod* signal) {
+void QSaveFile_QBaseConnectNotify(QSaveFile* self, const QMetaMethod* signal) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         vqsavefile->setQSaveFile_ConnectNotify_IsBase(true);
@@ -913,7 +913,7 @@ void QSaveFile_OnConnectNotify(QSaveFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSaveFile_DisconnectNotify(QSaveFile* self, QMetaMethod* signal) {
+void QSaveFile_DisconnectNotify(QSaveFile* self, const QMetaMethod* signal) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         vqsavefile->disconnectNotify(*signal);
@@ -923,7 +923,7 @@ void QSaveFile_DisconnectNotify(QSaveFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSaveFile_QBaseDisconnectNotify(QSaveFile* self, QMetaMethod* signal) {
+void QSaveFile_QBaseDisconnectNotify(QSaveFile* self, const QMetaMethod* signal) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         vqsavefile->setQSaveFile_DisconnectNotify_IsBase(true);
@@ -971,7 +971,7 @@ void QSaveFile_OnSetOpenMode(QSaveFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSaveFile_SetErrorString(QSaveFile* self, libqt_string errorString) {
+void QSaveFile_SetErrorString(QSaveFile* self, const libqt_string errorString) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
@@ -982,7 +982,7 @@ void QSaveFile_SetErrorString(QSaveFile* self, libqt_string errorString) {
 }
 
 // Base class handler implementation
-void QSaveFile_QBaseSetErrorString(QSaveFile* self, libqt_string errorString) {
+void QSaveFile_QBaseSetErrorString(QSaveFile* self, const libqt_string errorString) {
     auto* vqsavefile = dynamic_cast<VirtualQSaveFile*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
@@ -1089,7 +1089,7 @@ void QSaveFile_OnReceivers(const QSaveFile* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSaveFile_IsSignalConnected(const QSaveFile* self, QMetaMethod* signal) {
+bool QSaveFile_IsSignalConnected(const QSaveFile* self, const QMetaMethod* signal) {
     auto* vqsavefile = const_cast<VirtualQSaveFile*>(dynamic_cast<const VirtualQSaveFile*>(self));
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         return vqsavefile->isSignalConnected(*signal);
@@ -1099,7 +1099,7 @@ bool QSaveFile_IsSignalConnected(const QSaveFile* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSaveFile_QBaseIsSignalConnected(const QSaveFile* self, QMetaMethod* signal) {
+bool QSaveFile_QBaseIsSignalConnected(const QSaveFile* self, const QMetaMethod* signal) {
     auto* vqsavefile = const_cast<VirtualQSaveFile*>(dynamic_cast<const VirtualQSaveFile*>(self));
     if (vqsavefile && vqsavefile->isVirtualQSaveFile) {
         vqsavefile->setQSaveFile_IsSignalConnected_IsBase(true);

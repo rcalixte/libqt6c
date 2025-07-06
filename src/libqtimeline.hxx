@@ -64,9 +64,9 @@ class VirtualQTimeLine final : public QTimeLine {
     mutable bool qtimeline_issignalconnected_isbase = false;
 
   public:
-    VirtualQTimeLine() : QTimeLine(){};
-    VirtualQTimeLine(int duration) : QTimeLine(duration){};
-    VirtualQTimeLine(int duration, QObject* parent) : QTimeLine(duration, parent){};
+    VirtualQTimeLine() : QTimeLine() {};
+    VirtualQTimeLine(int duration) : QTimeLine(duration) {};
+    VirtualQTimeLine(int duration, QObject* parent) : QTimeLine(duration, parent) {};
 
     ~VirtualQTimeLine() {
         qtimeline_metacall_callback = nullptr;
@@ -316,18 +316,18 @@ class VirtualQTimeLine final : public QTimeLine {
     friend void QTimeLine_QBaseChildEvent(QTimeLine* self, QChildEvent* event);
     friend void QTimeLine_CustomEvent(QTimeLine* self, QEvent* event);
     friend void QTimeLine_QBaseCustomEvent(QTimeLine* self, QEvent* event);
-    friend void QTimeLine_ConnectNotify(QTimeLine* self, QMetaMethod* signal);
-    friend void QTimeLine_QBaseConnectNotify(QTimeLine* self, QMetaMethod* signal);
-    friend void QTimeLine_DisconnectNotify(QTimeLine* self, QMetaMethod* signal);
-    friend void QTimeLine_QBaseDisconnectNotify(QTimeLine* self, QMetaMethod* signal);
+    friend void QTimeLine_ConnectNotify(QTimeLine* self, const QMetaMethod* signal);
+    friend void QTimeLine_QBaseConnectNotify(QTimeLine* self, const QMetaMethod* signal);
+    friend void QTimeLine_DisconnectNotify(QTimeLine* self, const QMetaMethod* signal);
+    friend void QTimeLine_QBaseDisconnectNotify(QTimeLine* self, const QMetaMethod* signal);
     friend QObject* QTimeLine_Sender(const QTimeLine* self);
     friend QObject* QTimeLine_QBaseSender(const QTimeLine* self);
     friend int QTimeLine_SenderSignalIndex(const QTimeLine* self);
     friend int QTimeLine_QBaseSenderSignalIndex(const QTimeLine* self);
     friend int QTimeLine_Receivers(const QTimeLine* self, const char* signal);
     friend int QTimeLine_QBaseReceivers(const QTimeLine* self, const char* signal);
-    friend bool QTimeLine_IsSignalConnected(const QTimeLine* self, QMetaMethod* signal);
-    friend bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, QMetaMethod* signal);
+    friend bool QTimeLine_IsSignalConnected(const QTimeLine* self, const QMetaMethod* signal);
+    friend bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, const QMetaMethod* signal);
 };
 
 #endif

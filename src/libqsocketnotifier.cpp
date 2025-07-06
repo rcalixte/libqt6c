@@ -272,7 +272,7 @@ void QSocketNotifier_OnCustomEvent(QSocketNotifier* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSocketNotifier_ConnectNotify(QSocketNotifier* self, QMetaMethod* signal) {
+void QSocketNotifier_ConnectNotify(QSocketNotifier* self, const QMetaMethod* signal) {
     auto* vqsocketnotifier = dynamic_cast<VirtualQSocketNotifier*>(self);
     if (vqsocketnotifier && vqsocketnotifier->isVirtualQSocketNotifier) {
         vqsocketnotifier->connectNotify(*signal);
@@ -282,7 +282,7 @@ void QSocketNotifier_ConnectNotify(QSocketNotifier* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSocketNotifier_QBaseConnectNotify(QSocketNotifier* self, QMetaMethod* signal) {
+void QSocketNotifier_QBaseConnectNotify(QSocketNotifier* self, const QMetaMethod* signal) {
     auto* vqsocketnotifier = dynamic_cast<VirtualQSocketNotifier*>(self);
     if (vqsocketnotifier && vqsocketnotifier->isVirtualQSocketNotifier) {
         vqsocketnotifier->setQSocketNotifier_ConnectNotify_IsBase(true);
@@ -301,7 +301,7 @@ void QSocketNotifier_OnConnectNotify(QSocketNotifier* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSocketNotifier_DisconnectNotify(QSocketNotifier* self, QMetaMethod* signal) {
+void QSocketNotifier_DisconnectNotify(QSocketNotifier* self, const QMetaMethod* signal) {
     auto* vqsocketnotifier = dynamic_cast<VirtualQSocketNotifier*>(self);
     if (vqsocketnotifier && vqsocketnotifier->isVirtualQSocketNotifier) {
         vqsocketnotifier->disconnectNotify(*signal);
@@ -311,7 +311,7 @@ void QSocketNotifier_DisconnectNotify(QSocketNotifier* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QSocketNotifier_QBaseDisconnectNotify(QSocketNotifier* self, QMetaMethod* signal) {
+void QSocketNotifier_QBaseDisconnectNotify(QSocketNotifier* self, const QMetaMethod* signal) {
     auto* vqsocketnotifier = dynamic_cast<VirtualQSocketNotifier*>(self);
     if (vqsocketnotifier && vqsocketnotifier->isVirtualQSocketNotifier) {
         vqsocketnotifier->setQSocketNotifier_DisconnectNotify_IsBase(true);
@@ -417,7 +417,7 @@ void QSocketNotifier_OnReceivers(const QSocketNotifier* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSocketNotifier_IsSignalConnected(const QSocketNotifier* self, QMetaMethod* signal) {
+bool QSocketNotifier_IsSignalConnected(const QSocketNotifier* self, const QMetaMethod* signal) {
     auto* vqsocketnotifier = const_cast<VirtualQSocketNotifier*>(dynamic_cast<const VirtualQSocketNotifier*>(self));
     if (vqsocketnotifier && vqsocketnotifier->isVirtualQSocketNotifier) {
         return vqsocketnotifier->isSignalConnected(*signal);
@@ -427,7 +427,7 @@ bool QSocketNotifier_IsSignalConnected(const QSocketNotifier* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QSocketNotifier_QBaseIsSignalConnected(const QSocketNotifier* self, QMetaMethod* signal) {
+bool QSocketNotifier_QBaseIsSignalConnected(const QSocketNotifier* self, const QMetaMethod* signal) {
     auto* vqsocketnotifier = const_cast<VirtualQSocketNotifier*>(dynamic_cast<const VirtualQSocketNotifier*>(self));
     if (vqsocketnotifier && vqsocketnotifier->isVirtualQSocketNotifier) {
         vqsocketnotifier->setQSocketNotifier_IsSignalConnected_IsBase(true);
@@ -458,7 +458,7 @@ void QSocketNotifier_Delete(QSocketNotifier* self) {
     delete self;
 }
 
-QSocketDescriptor* QSocketDescriptor_new(QSocketDescriptor* other) {
+QSocketDescriptor* QSocketDescriptor_new(const QSocketDescriptor* other) {
     return new QSocketDescriptor(*other);
 }
 
@@ -470,7 +470,7 @@ QSocketDescriptor* QSocketDescriptor_new3() {
     return new QSocketDescriptor();
 }
 
-QSocketDescriptor* QSocketDescriptor_new4(QSocketDescriptor* param1) {
+QSocketDescriptor* QSocketDescriptor_new4(const QSocketDescriptor* param1) {
     return new QSocketDescriptor(*param1);
 }
 
@@ -494,8 +494,7 @@ int QSocketDescriptor_ToInt(const QSocketDescriptor* self) {
 #ifdef Q_OS_LINUX
     return static_cast<int>(self->operator int());
 #else
-    int _ret_invalidOS;
-    return _ret_invalidOS;
+    return {};
 #endif
 }
 

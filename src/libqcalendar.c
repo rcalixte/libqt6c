@@ -112,6 +112,10 @@ QDate* q_calendar_date_from_parts_with_parts(void* self, void* parts) {
     return QCalendar_DateFromPartsWithParts((QCalendar*)self, (QCalendar__YearMonthDay*)parts);
 }
 
+QDate* q_calendar_match_century_to_weekday(void* self, void* parts, int dow) {
+    return QCalendar_MatchCenturyToWeekday((QCalendar*)self, (QCalendar__YearMonthDay*)parts, dow);
+}
+
 QCalendar__YearMonthDay* q_calendar_parts_from_date(void* self, void* date) {
     return QCalendar_PartsFromDate((QCalendar*)self, (QDate*)date);
 }

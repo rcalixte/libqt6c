@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqgraphicsitem.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include "libqsizepolicy.h"
-
 /// https://doc.qt.io/qt-6/qgraphicslayoutitem.html
 
 /// q_graphicslayoutitem_new constructs a new QGraphicsLayoutItem object.

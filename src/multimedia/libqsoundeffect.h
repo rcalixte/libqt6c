@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudiodevice.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qsoundeffect.html
 
 /// q_soundeffect_new constructs a new QSoundEffect object.
@@ -313,7 +306,7 @@ QThread* q_soundeffect_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSoundEffect* self, QThread* thread ```
-void q_soundeffect_move_to_thread(void* self, void* thread);
+bool q_soundeffect_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -328,6 +321,13 @@ int32_t q_soundeffect_start_timer(void* self, int interval);
 ///
 /// ``` QSoundEffect* self, int id ```
 void q_soundeffect_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSoundEffect* self, enum Qt__TimerId id ```
+void q_soundeffect_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -468,6 +468,13 @@ bool q_soundeffect_inherits(void* self, const char* classname);
 ///
 /// ``` QSoundEffect* self ```
 void q_soundeffect_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSoundEffect* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_soundeffect_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

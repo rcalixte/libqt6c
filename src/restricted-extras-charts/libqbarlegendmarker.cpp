@@ -304,7 +304,7 @@ void QBarLegendMarker_OnCustomEvent(QBarLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarLegendMarker_ConnectNotify(QBarLegendMarker* self, QMetaMethod* signal) {
+void QBarLegendMarker_ConnectNotify(QBarLegendMarker* self, const QMetaMethod* signal) {
     auto* vqbarlegendmarker = dynamic_cast<VirtualQBarLegendMarker*>(self);
     if (vqbarlegendmarker && vqbarlegendmarker->isVirtualQBarLegendMarker) {
         vqbarlegendmarker->connectNotify(*signal);
@@ -314,7 +314,7 @@ void QBarLegendMarker_ConnectNotify(QBarLegendMarker* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QBarLegendMarker_QBaseConnectNotify(QBarLegendMarker* self, QMetaMethod* signal) {
+void QBarLegendMarker_QBaseConnectNotify(QBarLegendMarker* self, const QMetaMethod* signal) {
     auto* vqbarlegendmarker = dynamic_cast<VirtualQBarLegendMarker*>(self);
     if (vqbarlegendmarker && vqbarlegendmarker->isVirtualQBarLegendMarker) {
         vqbarlegendmarker->setQBarLegendMarker_ConnectNotify_IsBase(true);
@@ -333,7 +333,7 @@ void QBarLegendMarker_OnConnectNotify(QBarLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarLegendMarker_DisconnectNotify(QBarLegendMarker* self, QMetaMethod* signal) {
+void QBarLegendMarker_DisconnectNotify(QBarLegendMarker* self, const QMetaMethod* signal) {
     auto* vqbarlegendmarker = dynamic_cast<VirtualQBarLegendMarker*>(self);
     if (vqbarlegendmarker && vqbarlegendmarker->isVirtualQBarLegendMarker) {
         vqbarlegendmarker->disconnectNotify(*signal);
@@ -343,7 +343,7 @@ void QBarLegendMarker_DisconnectNotify(QBarLegendMarker* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QBarLegendMarker_QBaseDisconnectNotify(QBarLegendMarker* self, QMetaMethod* signal) {
+void QBarLegendMarker_QBaseDisconnectNotify(QBarLegendMarker* self, const QMetaMethod* signal) {
     auto* vqbarlegendmarker = dynamic_cast<VirtualQBarLegendMarker*>(self);
     if (vqbarlegendmarker && vqbarlegendmarker->isVirtualQBarLegendMarker) {
         vqbarlegendmarker->setQBarLegendMarker_DisconnectNotify_IsBase(true);
@@ -449,7 +449,7 @@ void QBarLegendMarker_OnReceivers(const QBarLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBarLegendMarker_IsSignalConnected(const QBarLegendMarker* self, QMetaMethod* signal) {
+bool QBarLegendMarker_IsSignalConnected(const QBarLegendMarker* self, const QMetaMethod* signal) {
     auto* vqbarlegendmarker = const_cast<VirtualQBarLegendMarker*>(dynamic_cast<const VirtualQBarLegendMarker*>(self));
     if (vqbarlegendmarker && vqbarlegendmarker->isVirtualQBarLegendMarker) {
         return vqbarlegendmarker->isSignalConnected(*signal);
@@ -459,7 +459,7 @@ bool QBarLegendMarker_IsSignalConnected(const QBarLegendMarker* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QBarLegendMarker_QBaseIsSignalConnected(const QBarLegendMarker* self, QMetaMethod* signal) {
+bool QBarLegendMarker_QBaseIsSignalConnected(const QBarLegendMarker* self, const QMetaMethod* signal) {
     auto* vqbarlegendmarker = const_cast<VirtualQBarLegendMarker*>(dynamic_cast<const VirtualQBarLegendMarker*>(self));
     if (vqbarlegendmarker && vqbarlegendmarker->isVirtualQBarLegendMarker) {
         vqbarlegendmarker->setQBarLegendMarker_IsSignalConnected_IsBase(true);

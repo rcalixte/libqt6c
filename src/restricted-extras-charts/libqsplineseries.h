@@ -12,17 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqbrush.h"
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "libqlineseries.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include <string.h>
-#include "libqxyseries.h"
-
 /// https://doc.qt.io/qt-6/qsplineseries-qtcharts.html
 
 /// q_splineseries_new constructs a new QSplineSeries object.
@@ -1208,7 +1197,7 @@ QThread* q_splineseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSplineSeries* self, QThread* thread ```
-void q_splineseries_move_to_thread(void* self, void* thread);
+bool q_splineseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1223,6 +1212,13 @@ int32_t q_splineseries_start_timer(void* self, int interval);
 ///
 /// ``` QSplineSeries* self, int id ```
 void q_splineseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSplineSeries* self, enum Qt__TimerId id ```
+void q_splineseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1363,6 +1359,13 @@ bool q_splineseries_inherits(void* self, const char* classname);
 ///
 /// ``` QSplineSeries* self ```
 void q_splineseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSplineSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_splineseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

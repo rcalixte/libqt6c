@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractanimation.h"
-#include "libqanimationgroup.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qparallelanimationgroup.html
 
 /// q_parallelanimationgroup_new constructs a new QParallelAnimationGroup object.
@@ -454,7 +447,7 @@ QThread* q_parallelanimationgroup_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QParallelAnimationGroup* self, QThread* thread ```
-void q_parallelanimationgroup_move_to_thread(void* self, void* thread);
+bool q_parallelanimationgroup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -469,6 +462,13 @@ int32_t q_parallelanimationgroup_start_timer(void* self, int interval);
 ///
 /// ``` QParallelAnimationGroup* self, int id ```
 void q_parallelanimationgroup_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QParallelAnimationGroup* self, enum Qt__TimerId id ```
+void q_parallelanimationgroup_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -609,6 +609,13 @@ bool q_parallelanimationgroup_inherits(void* self, const char* classname);
 ///
 /// ``` QParallelAnimationGroup* self ```
 void q_parallelanimationgroup_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QParallelAnimationGroup* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_parallelanimationgroup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -19,7 +19,7 @@ QWaveDecoder* QWaveDecoder_new(QIODevice* device) {
     return new VirtualQWaveDecoder(device);
 }
 
-QWaveDecoder* QWaveDecoder_new2(QIODevice* device, QAudioFormat* format) {
+QWaveDecoder* QWaveDecoder_new2(QIODevice* device, const QAudioFormat* format) {
     return new VirtualQWaveDecoder(device, *format);
 }
 
@@ -27,7 +27,7 @@ QWaveDecoder* QWaveDecoder_new3(QIODevice* device, QObject* parent) {
     return new VirtualQWaveDecoder(device, parent);
 }
 
-QWaveDecoder* QWaveDecoder_new4(QIODevice* device, QAudioFormat* format, QObject* parent) {
+QWaveDecoder* QWaveDecoder_new4(QIODevice* device, const QAudioFormat* format, QObject* parent) {
     return new VirtualQWaveDecoder(device, *format, parent);
 }
 
@@ -722,7 +722,7 @@ void QWaveDecoder_OnCustomEvent(QWaveDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWaveDecoder_ConnectNotify(QWaveDecoder* self, QMetaMethod* signal) {
+void QWaveDecoder_ConnectNotify(QWaveDecoder* self, const QMetaMethod* signal) {
     auto* vqwavedecoder = dynamic_cast<VirtualQWaveDecoder*>(self);
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
         vqwavedecoder->connectNotify(*signal);
@@ -732,7 +732,7 @@ void QWaveDecoder_ConnectNotify(QWaveDecoder* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWaveDecoder_QBaseConnectNotify(QWaveDecoder* self, QMetaMethod* signal) {
+void QWaveDecoder_QBaseConnectNotify(QWaveDecoder* self, const QMetaMethod* signal) {
     auto* vqwavedecoder = dynamic_cast<VirtualQWaveDecoder*>(self);
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
         vqwavedecoder->setQWaveDecoder_ConnectNotify_IsBase(true);
@@ -751,7 +751,7 @@ void QWaveDecoder_OnConnectNotify(QWaveDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWaveDecoder_DisconnectNotify(QWaveDecoder* self, QMetaMethod* signal) {
+void QWaveDecoder_DisconnectNotify(QWaveDecoder* self, const QMetaMethod* signal) {
     auto* vqwavedecoder = dynamic_cast<VirtualQWaveDecoder*>(self);
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
         vqwavedecoder->disconnectNotify(*signal);
@@ -761,7 +761,7 @@ void QWaveDecoder_DisconnectNotify(QWaveDecoder* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWaveDecoder_QBaseDisconnectNotify(QWaveDecoder* self, QMetaMethod* signal) {
+void QWaveDecoder_QBaseDisconnectNotify(QWaveDecoder* self, const QMetaMethod* signal) {
     auto* vqwavedecoder = dynamic_cast<VirtualQWaveDecoder*>(self);
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
         vqwavedecoder->setQWaveDecoder_DisconnectNotify_IsBase(true);
@@ -809,7 +809,7 @@ void QWaveDecoder_OnSetOpenMode(QWaveDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWaveDecoder_SetErrorString(QWaveDecoder* self, libqt_string errorString) {
+void QWaveDecoder_SetErrorString(QWaveDecoder* self, const libqt_string errorString) {
     auto* vqwavedecoder = dynamic_cast<VirtualQWaveDecoder*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
@@ -820,7 +820,7 @@ void QWaveDecoder_SetErrorString(QWaveDecoder* self, libqt_string errorString) {
 }
 
 // Base class handler implementation
-void QWaveDecoder_QBaseSetErrorString(QWaveDecoder* self, libqt_string errorString) {
+void QWaveDecoder_QBaseSetErrorString(QWaveDecoder* self, const libqt_string errorString) {
     auto* vqwavedecoder = dynamic_cast<VirtualQWaveDecoder*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
@@ -927,7 +927,7 @@ void QWaveDecoder_OnReceivers(const QWaveDecoder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWaveDecoder_IsSignalConnected(const QWaveDecoder* self, QMetaMethod* signal) {
+bool QWaveDecoder_IsSignalConnected(const QWaveDecoder* self, const QMetaMethod* signal) {
     auto* vqwavedecoder = const_cast<VirtualQWaveDecoder*>(dynamic_cast<const VirtualQWaveDecoder*>(self));
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
         return vqwavedecoder->isSignalConnected(*signal);
@@ -937,7 +937,7 @@ bool QWaveDecoder_IsSignalConnected(const QWaveDecoder* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QWaveDecoder_QBaseIsSignalConnected(const QWaveDecoder* self, QMetaMethod* signal) {
+bool QWaveDecoder_QBaseIsSignalConnected(const QWaveDecoder* self, const QMetaMethod* signal) {
     auto* vqwavedecoder = const_cast<VirtualQWaveDecoder*>(dynamic_cast<const VirtualQWaveDecoder*>(self));
     if (vqwavedecoder && vqwavedecoder->isVirtualQWaveDecoder) {
         vqwavedecoder->setQWaveDecoder_IsSignalConnected_IsBase(true);

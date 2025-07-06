@@ -67,8 +67,8 @@ class VirtualQThread final : public QThread {
     mutable bool qthread_issignalconnected_isbase = false;
 
   public:
-    VirtualQThread() : QThread(){};
-    VirtualQThread(QObject* parent) : QThread(parent){};
+    VirtualQThread() : QThread() {};
+    VirtualQThread(QObject* parent) : QThread(parent) {};
 
     ~VirtualQThread() {
         qthread_metacall_callback = nullptr;
@@ -333,10 +333,10 @@ class VirtualQThread final : public QThread {
     friend void QThread_QBaseChildEvent(QThread* self, QChildEvent* event);
     friend void QThread_CustomEvent(QThread* self, QEvent* event);
     friend void QThread_QBaseCustomEvent(QThread* self, QEvent* event);
-    friend void QThread_ConnectNotify(QThread* self, QMetaMethod* signal);
-    friend void QThread_QBaseConnectNotify(QThread* self, QMetaMethod* signal);
-    friend void QThread_DisconnectNotify(QThread* self, QMetaMethod* signal);
-    friend void QThread_QBaseDisconnectNotify(QThread* self, QMetaMethod* signal);
+    friend void QThread_ConnectNotify(QThread* self, const QMetaMethod* signal);
+    friend void QThread_QBaseConnectNotify(QThread* self, const QMetaMethod* signal);
+    friend void QThread_DisconnectNotify(QThread* self, const QMetaMethod* signal);
+    friend void QThread_QBaseDisconnectNotify(QThread* self, const QMetaMethod* signal);
     friend int QThread_Exec(QThread* self);
     friend int QThread_QBaseExec(QThread* self);
     friend QObject* QThread_Sender(const QThread* self);
@@ -345,8 +345,8 @@ class VirtualQThread final : public QThread {
     friend int QThread_QBaseSenderSignalIndex(const QThread* self);
     friend int QThread_Receivers(const QThread* self, const char* signal);
     friend int QThread_QBaseReceivers(const QThread* self, const char* signal);
-    friend bool QThread_IsSignalConnected(const QThread* self, QMetaMethod* signal);
-    friend bool QThread_QBaseIsSignalConnected(const QThread* self, QMetaMethod* signal);
+    friend bool QThread_IsSignalConnected(const QThread* self, const QMetaMethod* signal);
+    friend bool QThread_QBaseIsSignalConnected(const QThread* self, const QMetaMethod* signal);
 };
 
 #endif

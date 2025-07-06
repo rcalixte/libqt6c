@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqsettings.h"
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerJSON.html
 
 /// q_scilexerjson_new constructs a new QsciLexerJSON object.
@@ -389,7 +381,7 @@ QThread* q_scilexerjson_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QsciLexerJSON* self, QThread* thread ```
-void q_scilexerjson_move_to_thread(void* self, void* thread);
+bool q_scilexerjson_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -404,6 +396,13 @@ int32_t q_scilexerjson_start_timer(void* self, int interval);
 ///
 /// ``` QsciLexerJSON* self, int id ```
 void q_scilexerjson_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QsciLexerJSON* self, enum Qt__TimerId id ```
+void q_scilexerjson_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -544,6 +543,13 @@ bool q_scilexerjson_inherits(void* self, const char* classname);
 ///
 /// ``` QsciLexerJSON* self ```
 void q_scilexerjson_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QsciLexerJSON* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_scilexerjson_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1470,6 +1476,60 @@ void q_scilexerjson_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// ``` QsciLexerJSON* self, void (*slot)(QsciLexerJSON*, QMetaMethod*) ```
 void q_scilexerjson_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerJSON* self, const char* text ```
+char* q_scilexerjson_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerJSON* self, const char* text ```
+char* q_scilexerjson_qbase_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerJSON* self, char* (*slot)(QsciLexerJSON*, const char*) ```
+void q_scilexerjson_on_text_as_bytes(void* self, char* (*slot)(void*, const char*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerJSON* self, const char* bytes, int size ```
+const char* q_scilexerjson_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerJSON* self, const char* bytes, int size ```
+const char* q_scilexerjson_qbase_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerJSON* self, const char* (*slot)(QsciLexerJSON*, const char*, int) ```
+void q_scilexerjson_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int));
 
 /// Inherited from QObject
 ///

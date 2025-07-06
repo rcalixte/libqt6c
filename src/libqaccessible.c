@@ -115,6 +115,14 @@ QAccessibleHyperlinkInterface* q_accessibleinterface_hyperlink_interface(void* s
     return QAccessibleInterface_HyperlinkInterface((QAccessibleInterface*)self);
 }
 
+QAccessibleSelectionInterface* q_accessibleinterface_selection_interface(void* self) {
+    return QAccessibleInterface_SelectionInterface((QAccessibleInterface*)self);
+}
+
+QAccessibleAttributesInterface* q_accessibleinterface_attributes_interface(void* self) {
+    return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
+}
+
 void q_accessibleinterface_virtual_hook(void* self, int id, void* data) {
     QAccessibleInterface_VirtualHook((QAccessibleInterface*)self, id, data);
 }
@@ -609,6 +617,64 @@ void q_accessiblehyperlinkinterface_operator_assign(void* self, void* param1) {
 
 void q_accessiblehyperlinkinterface_delete(void* self) {
     QAccessibleHyperlinkInterface_Delete((QAccessibleHyperlinkInterface*)(self));
+}
+
+int32_t q_accessibleselectioninterface_selected_item_count(void* self) {
+    return QAccessibleSelectionInterface_SelectedItemCount((QAccessibleSelectionInterface*)self);
+}
+
+libqt_list /* of QAccessibleInterface* */ q_accessibleselectioninterface_selected_items(void* self) {
+    libqt_list _arr = QAccessibleSelectionInterface_SelectedItems((QAccessibleSelectionInterface*)self);
+    return _arr;
+}
+
+QAccessibleInterface* q_accessibleselectioninterface_selected_item(void* self, int selectionIndex) {
+    return QAccessibleSelectionInterface_SelectedItem((QAccessibleSelectionInterface*)self, selectionIndex);
+}
+
+bool q_accessibleselectioninterface_is_selected(void* self, void* childItem) {
+    return QAccessibleSelectionInterface_IsSelected((QAccessibleSelectionInterface*)self, (QAccessibleInterface*)childItem);
+}
+
+bool q_accessibleselectioninterface_select(void* self, void* childItem) {
+    return QAccessibleSelectionInterface_Select((QAccessibleSelectionInterface*)self, (QAccessibleInterface*)childItem);
+}
+
+bool q_accessibleselectioninterface_unselect(void* self, void* childItem) {
+    return QAccessibleSelectionInterface_Unselect((QAccessibleSelectionInterface*)self, (QAccessibleInterface*)childItem);
+}
+
+bool q_accessibleselectioninterface_select_all(void* self) {
+    return QAccessibleSelectionInterface_SelectAll((QAccessibleSelectionInterface*)self);
+}
+
+bool q_accessibleselectioninterface_clear(void* self) {
+    return QAccessibleSelectionInterface_Clear((QAccessibleSelectionInterface*)self);
+}
+
+void q_accessibleselectioninterface_operator_assign(void* self, void* param1) {
+    QAccessibleSelectionInterface_OperatorAssign((QAccessibleSelectionInterface*)self, (QAccessibleSelectionInterface*)param1);
+}
+
+void q_accessibleselectioninterface_delete(void* self) {
+    QAccessibleSelectionInterface_Delete((QAccessibleSelectionInterface*)(self));
+}
+
+libqt_list /* of int64_t */ q_accessibleattributesinterface_attribute_keys(void* self) {
+    libqt_list _arr = QAccessibleAttributesInterface_AttributeKeys((QAccessibleAttributesInterface*)self);
+    return _arr;
+}
+
+QVariant* q_accessibleattributesinterface_attribute_value(void* self, int64_t key) {
+    return QAccessibleAttributesInterface_AttributeValue((QAccessibleAttributesInterface*)self, key);
+}
+
+void q_accessibleattributesinterface_operator_assign(void* self, void* param1) {
+    QAccessibleAttributesInterface_OperatorAssign((QAccessibleAttributesInterface*)self, (QAccessibleAttributesInterface*)param1);
+}
+
+void q_accessibleattributesinterface_delete(void* self) {
+    QAccessibleAttributesInterface_Delete((QAccessibleAttributesInterface*)(self));
 }
 
 QAccessibleEvent* q_accessibleevent_new(void* obj, int64_t typ) {
@@ -1149,4 +1215,63 @@ void q_accessibletablemodelchangeevent_on_accessible_interface(void* self, QAcce
 
 void q_accessibletablemodelchangeevent_delete(void* self) {
     QAccessibleTableModelChangeEvent_Delete((QAccessibleTableModelChangeEvent*)(self));
+}
+
+QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new(void* object, const char* message) {
+    return QAccessibleAnnouncementEvent_new((QObject*)object, qstring(message));
+}
+
+QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new2(void* iface, const char* message) {
+    return QAccessibleAnnouncementEvent_new2((QAccessibleInterface*)iface, qstring(message));
+}
+
+const char* q_accessibleannouncementevent_message(void* self) {
+    libqt_string _str = QAccessibleAnnouncementEvent_Message((QAccessibleAnnouncementEvent*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+int64_t q_accessibleannouncementevent_politeness(void* self) {
+    return QAccessibleAnnouncementEvent_Politeness((QAccessibleAnnouncementEvent*)self);
+}
+
+void q_accessibleannouncementevent_set_politeness(void* self, int64_t politeness) {
+    QAccessibleAnnouncementEvent_SetPoliteness((QAccessibleAnnouncementEvent*)self, politeness);
+}
+
+int64_t q_accessibleannouncementevent_type(void* self) {
+    return QAccessibleEvent_Type((QAccessibleEvent*)self);
+}
+
+QObject* q_accessibleannouncementevent_object(void* self) {
+    return QAccessibleEvent_Object((QAccessibleEvent*)self);
+}
+
+uint32_t q_accessibleannouncementevent_unique_id(void* self) {
+    return QAccessibleEvent_UniqueId((QAccessibleEvent*)self);
+}
+
+void q_accessibleannouncementevent_set_child(void* self, int chld) {
+    QAccessibleEvent_SetChild((QAccessibleEvent*)self, chld);
+}
+
+int32_t q_accessibleannouncementevent_child(void* self) {
+    return QAccessibleEvent_Child((QAccessibleEvent*)self);
+}
+
+QAccessibleInterface* q_accessibleannouncementevent_accessible_interface(void* self) {
+    return QAccessibleAnnouncementEvent_AccessibleInterface((QAccessibleAnnouncementEvent*)self);
+}
+
+QAccessibleInterface* q_accessibleannouncementevent_qbase_accessible_interface(void* self) {
+    return QAccessibleAnnouncementEvent_QBaseAccessibleInterface((QAccessibleAnnouncementEvent*)self);
+}
+
+void q_accessibleannouncementevent_on_accessible_interface(void* self, QAccessibleInterface* (*slot)()) {
+    QAccessibleAnnouncementEvent_OnAccessibleInterface((QAccessibleAnnouncementEvent*)self, (intptr_t)slot);
+}
+
+void q_accessibleannouncementevent_delete(void* self) {
+    QAccessibleAnnouncementEvent_Delete((QAccessibleAnnouncementEvent*)(self));
 }

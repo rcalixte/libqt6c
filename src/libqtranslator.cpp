@@ -93,12 +93,12 @@ libqt_string QTranslator_FilePath(const QTranslator* self) {
     return _str;
 }
 
-bool QTranslator_Load(QTranslator* self, libqt_string filename) {
+bool QTranslator_Load(QTranslator* self, const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return self->load(filename_QString);
 }
 
-bool QTranslator_Load2(QTranslator* self, QLocale* locale, libqt_string filename) {
+bool QTranslator_Load2(QTranslator* self, const QLocale* locale, const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return self->load(*locale, filename_QString);
 }
@@ -131,20 +131,20 @@ libqt_string QTranslator_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QTranslator_Load22(QTranslator* self, libqt_string filename, libqt_string directory) {
+bool QTranslator_Load22(QTranslator* self, const libqt_string filename, const libqt_string directory) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     return self->load(filename_QString, directory_QString);
 }
 
-bool QTranslator_Load32(QTranslator* self, libqt_string filename, libqt_string directory, libqt_string search_delimiters) {
+bool QTranslator_Load32(QTranslator* self, const libqt_string filename, const libqt_string directory, const libqt_string search_delimiters) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     QString search_delimiters_QString = QString::fromUtf8(search_delimiters.data, search_delimiters.len);
     return self->load(filename_QString, directory_QString, search_delimiters_QString);
 }
 
-bool QTranslator_Load4(QTranslator* self, libqt_string filename, libqt_string directory, libqt_string search_delimiters, libqt_string suffix) {
+bool QTranslator_Load4(QTranslator* self, const libqt_string filename, const libqt_string directory, const libqt_string search_delimiters, const libqt_string suffix) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     QString search_delimiters_QString = QString::fromUtf8(search_delimiters.data, search_delimiters.len);
@@ -152,20 +152,20 @@ bool QTranslator_Load4(QTranslator* self, libqt_string filename, libqt_string di
     return self->load(filename_QString, directory_QString, search_delimiters_QString, suffix_QString);
 }
 
-bool QTranslator_Load33(QTranslator* self, QLocale* locale, libqt_string filename, libqt_string prefix) {
+bool QTranslator_Load33(QTranslator* self, const QLocale* locale, const libqt_string filename, const libqt_string prefix) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     return self->load(*locale, filename_QString, prefix_QString);
 }
 
-bool QTranslator_Load42(QTranslator* self, QLocale* locale, libqt_string filename, libqt_string prefix, libqt_string directory) {
+bool QTranslator_Load42(QTranslator* self, const QLocale* locale, const libqt_string filename, const libqt_string prefix, const libqt_string directory) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     return self->load(*locale, filename_QString, prefix_QString, directory_QString);
 }
 
-bool QTranslator_Load5(QTranslator* self, QLocale* locale, libqt_string filename, libqt_string prefix, libqt_string directory, libqt_string suffix) {
+bool QTranslator_Load5(QTranslator* self, const QLocale* locale, const libqt_string filename, const libqt_string prefix, const libqt_string directory, const libqt_string suffix) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
@@ -173,7 +173,7 @@ bool QTranslator_Load5(QTranslator* self, QLocale* locale, libqt_string filename
     return self->load(*locale, filename_QString, prefix_QString, directory_QString, suffix_QString);
 }
 
-bool QTranslator_Load34(QTranslator* self, const unsigned char* data, int lenVal, libqt_string directory) {
+bool QTranslator_Load34(QTranslator* self, const unsigned char* data, int lenVal, const libqt_string directory) {
     QString directory_QString = QString::fromUtf8(directory.data, directory.len);
     return self->load(static_cast<const uchar*>(data), static_cast<int>(lenVal), directory_QString);
 }
@@ -414,7 +414,7 @@ void QTranslator_OnCustomEvent(QTranslator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTranslator_ConnectNotify(QTranslator* self, QMetaMethod* signal) {
+void QTranslator_ConnectNotify(QTranslator* self, const QMetaMethod* signal) {
     auto* vqtranslator = dynamic_cast<VirtualQTranslator*>(self);
     if (vqtranslator && vqtranslator->isVirtualQTranslator) {
         vqtranslator->connectNotify(*signal);
@@ -424,7 +424,7 @@ void QTranslator_ConnectNotify(QTranslator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTranslator_QBaseConnectNotify(QTranslator* self, QMetaMethod* signal) {
+void QTranslator_QBaseConnectNotify(QTranslator* self, const QMetaMethod* signal) {
     auto* vqtranslator = dynamic_cast<VirtualQTranslator*>(self);
     if (vqtranslator && vqtranslator->isVirtualQTranslator) {
         vqtranslator->setQTranslator_ConnectNotify_IsBase(true);
@@ -443,7 +443,7 @@ void QTranslator_OnConnectNotify(QTranslator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTranslator_DisconnectNotify(QTranslator* self, QMetaMethod* signal) {
+void QTranslator_DisconnectNotify(QTranslator* self, const QMetaMethod* signal) {
     auto* vqtranslator = dynamic_cast<VirtualQTranslator*>(self);
     if (vqtranslator && vqtranslator->isVirtualQTranslator) {
         vqtranslator->disconnectNotify(*signal);
@@ -453,7 +453,7 @@ void QTranslator_DisconnectNotify(QTranslator* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTranslator_QBaseDisconnectNotify(QTranslator* self, QMetaMethod* signal) {
+void QTranslator_QBaseDisconnectNotify(QTranslator* self, const QMetaMethod* signal) {
     auto* vqtranslator = dynamic_cast<VirtualQTranslator*>(self);
     if (vqtranslator && vqtranslator->isVirtualQTranslator) {
         vqtranslator->setQTranslator_DisconnectNotify_IsBase(true);
@@ -559,7 +559,7 @@ void QTranslator_OnReceivers(const QTranslator* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTranslator_IsSignalConnected(const QTranslator* self, QMetaMethod* signal) {
+bool QTranslator_IsSignalConnected(const QTranslator* self, const QMetaMethod* signal) {
     auto* vqtranslator = const_cast<VirtualQTranslator*>(dynamic_cast<const VirtualQTranslator*>(self));
     if (vqtranslator && vqtranslator->isVirtualQTranslator) {
         return vqtranslator->isSignalConnected(*signal);
@@ -569,7 +569,7 @@ bool QTranslator_IsSignalConnected(const QTranslator* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QTranslator_QBaseIsSignalConnected(const QTranslator* self, QMetaMethod* signal) {
+bool QTranslator_QBaseIsSignalConnected(const QTranslator* self, const QMetaMethod* signal) {
     auto* vqtranslator = const_cast<VirtualQTranslator*>(dynamic_cast<const VirtualQTranslator*>(self));
     if (vqtranslator && vqtranslator->isVirtualQTranslator) {
         vqtranslator->setQTranslator_IsSignalConnected_IsBase(true);

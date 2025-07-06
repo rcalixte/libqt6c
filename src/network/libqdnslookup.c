@@ -2,6 +2,7 @@
 #include "libqhostaddress.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
+#include "libqsslconfiguration.hpp"
 #include <string.h>
 #include "../libqcoreevent.hpp"
 #include "libqdnslookup.hpp"
@@ -218,6 +219,56 @@ void q_dnstextrecord_delete(void* self) {
     QDnsTextRecord_Delete((QDnsTextRecord*)(self));
 }
 
+QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new() {
+    return QDnsTlsAssociationRecord_new();
+}
+
+QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new2(void* other) {
+    return QDnsTlsAssociationRecord_new2((QDnsTlsAssociationRecord*)other);
+}
+
+void q_dnstlsassociationrecord_operator_assign(void* self, void* other) {
+    QDnsTlsAssociationRecord_OperatorAssign((QDnsTlsAssociationRecord*)self, (QDnsTlsAssociationRecord*)other);
+}
+
+void q_dnstlsassociationrecord_swap(void* self, void* other) {
+    QDnsTlsAssociationRecord_Swap((QDnsTlsAssociationRecord*)self, (QDnsTlsAssociationRecord*)other);
+}
+
+const char* q_dnstlsassociationrecord_name(void* self) {
+    libqt_string _str = QDnsTlsAssociationRecord_Name((QDnsTlsAssociationRecord*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+uint32_t q_dnstlsassociationrecord_time_to_live(void* self) {
+    return QDnsTlsAssociationRecord_TimeToLive((QDnsTlsAssociationRecord*)self);
+}
+
+int64_t q_dnstlsassociationrecord_usage(void* self) {
+    return QDnsTlsAssociationRecord_Usage((QDnsTlsAssociationRecord*)self);
+}
+
+int64_t q_dnstlsassociationrecord_selector(void* self) {
+    return QDnsTlsAssociationRecord_Selector((QDnsTlsAssociationRecord*)self);
+}
+
+int64_t q_dnstlsassociationrecord_match_type(void* self) {
+    return QDnsTlsAssociationRecord_MatchType((QDnsTlsAssociationRecord*)self);
+}
+
+char* q_dnstlsassociationrecord_value(void* self) {
+    libqt_string _str = QDnsTlsAssociationRecord_Value((QDnsTlsAssociationRecord*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_dnstlsassociationrecord_delete(void* self) {
+    QDnsTlsAssociationRecord_Delete((QDnsTlsAssociationRecord*)(self));
+}
+
 QDnsLookup* q_dnslookup_new() {
     return QDnsLookup_new();
 }
@@ -230,16 +281,36 @@ QDnsLookup* q_dnslookup_new3(int64_t typeVal, const char* name, void* nameserver
     return QDnsLookup_new3(typeVal, qstring(name), (QHostAddress*)nameserver);
 }
 
-QDnsLookup* q_dnslookup_new4(void* parent) {
-    return QDnsLookup_new4((QObject*)parent);
+QDnsLookup* q_dnslookup_new4(int64_t typeVal, const char* name, void* nameserver, unsigned short port) {
+    return QDnsLookup_new4(typeVal, qstring(name), (QHostAddress*)nameserver, port);
 }
 
-QDnsLookup* q_dnslookup_new5(int64_t typeVal, const char* name, void* parent) {
-    return QDnsLookup_new5(typeVal, qstring(name), (QObject*)parent);
+QDnsLookup* q_dnslookup_new5(int64_t typeVal, const char* name, int64_t protocol, void* nameserver) {
+    return QDnsLookup_new5(typeVal, qstring(name), protocol, (QHostAddress*)nameserver);
 }
 
-QDnsLookup* q_dnslookup_new6(int64_t typeVal, const char* name, void* nameserver, void* parent) {
-    return QDnsLookup_new6(typeVal, qstring(name), (QHostAddress*)nameserver, (QObject*)parent);
+QDnsLookup* q_dnslookup_new6(void* parent) {
+    return QDnsLookup_new6((QObject*)parent);
+}
+
+QDnsLookup* q_dnslookup_new7(int64_t typeVal, const char* name, void* parent) {
+    return QDnsLookup_new7(typeVal, qstring(name), (QObject*)parent);
+}
+
+QDnsLookup* q_dnslookup_new8(int64_t typeVal, const char* name, void* nameserver, void* parent) {
+    return QDnsLookup_new8(typeVal, qstring(name), (QHostAddress*)nameserver, (QObject*)parent);
+}
+
+QDnsLookup* q_dnslookup_new9(int64_t typeVal, const char* name, void* nameserver, unsigned short port, void* parent) {
+    return QDnsLookup_new9(typeVal, qstring(name), (QHostAddress*)nameserver, port, (QObject*)parent);
+}
+
+QDnsLookup* q_dnslookup_new10(int64_t typeVal, const char* name, int64_t protocol, void* nameserver, unsigned short port) {
+    return QDnsLookup_new10(typeVal, qstring(name), protocol, (QHostAddress*)nameserver, port);
+}
+
+QDnsLookup* q_dnslookup_new11(int64_t typeVal, const char* name, int64_t protocol, void* nameserver, unsigned short port, void* parent) {
+    return QDnsLookup_new11(typeVal, qstring(name), protocol, (QHostAddress*)nameserver, port, (QObject*)parent);
 }
 
 const QMetaObject* q_dnslookup_meta_object(void* self) {
@@ -267,6 +338,10 @@ const char* q_dnslookup_tr(const char* s) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+bool q_dnslookup_is_authentic_data(void* self) {
+    return QDnsLookup_IsAuthenticData((QDnsLookup*)self);
 }
 
 int64_t q_dnslookup_error(void* self) {
@@ -311,6 +386,30 @@ void q_dnslookup_set_nameserver(void* self, void* nameserver) {
     QDnsLookup_SetNameserver((QDnsLookup*)self, (QHostAddress*)nameserver);
 }
 
+unsigned short q_dnslookup_nameserver_port(void* self) {
+    return QDnsLookup_NameserverPort((QDnsLookup*)self);
+}
+
+void q_dnslookup_set_nameserver_port(void* self, unsigned short port) {
+    QDnsLookup_SetNameserverPort((QDnsLookup*)self, port);
+}
+
+int64_t q_dnslookup_nameserver_protocol(void* self) {
+    return QDnsLookup_NameserverProtocol((QDnsLookup*)self);
+}
+
+void q_dnslookup_set_nameserver_protocol(void* self, int64_t protocol) {
+    QDnsLookup_SetNameserverProtocol((QDnsLookup*)self, protocol);
+}
+
+void q_dnslookup_set_nameserver2(void* self, int64_t protocol, void* nameserver) {
+    QDnsLookup_SetNameserver2((QDnsLookup*)self, protocol, (QHostAddress*)nameserver);
+}
+
+void q_dnslookup_set_nameserver3(void* self, void* nameserver, unsigned short port) {
+    QDnsLookup_SetNameserver3((QDnsLookup*)self, (QHostAddress*)nameserver, port);
+}
+
 libqt_list /* of QDnsDomainNameRecord* */ q_dnslookup_canonical_name_records(void* self) {
     libqt_list _arr = QDnsLookup_CanonicalNameRecords((QDnsLookup*)self);
     return _arr;
@@ -344,6 +443,27 @@ libqt_list /* of QDnsServiceRecord* */ q_dnslookup_service_records(void* self) {
 libqt_list /* of QDnsTextRecord* */ q_dnslookup_text_records(void* self) {
     libqt_list _arr = QDnsLookup_TextRecords((QDnsLookup*)self);
     return _arr;
+}
+
+libqt_list /* of QDnsTlsAssociationRecord* */ q_dnslookup_tls_association_records(void* self) {
+    libqt_list _arr = QDnsLookup_TlsAssociationRecords((QDnsLookup*)self);
+    return _arr;
+}
+
+void q_dnslookup_set_ssl_configuration(void* self, void* sslConfiguration) {
+    QDnsLookup_SetSslConfiguration((QDnsLookup*)self, (QSslConfiguration*)sslConfiguration);
+}
+
+QSslConfiguration* q_dnslookup_ssl_configuration(void* self) {
+    return QDnsLookup_SslConfiguration((QDnsLookup*)self);
+}
+
+bool q_dnslookup_is_protocol_supported(int64_t protocol) {
+    return QDnsLookup_IsProtocolSupported(protocol);
+}
+
+unsigned short q_dnslookup_default_port_for_protocol(int64_t protocol) {
+    return QDnsLookup_DefaultPortForProtocol(protocol);
 }
 
 void q_dnslookup_abort(void* self) {
@@ -386,6 +506,22 @@ void q_dnslookup_on_nameserver_changed(void* self, void (*slot)(void*, void*)) {
     QDnsLookup_Connect_NameserverChanged((QDnsLookup*)self, (intptr_t)slot);
 }
 
+void q_dnslookup_nameserver_port_changed(void* self, unsigned short port) {
+    QDnsLookup_NameserverPortChanged((QDnsLookup*)self, port);
+}
+
+void q_dnslookup_on_nameserver_port_changed(void* self, void (*slot)(void*, unsigned short)) {
+    QDnsLookup_Connect_NameserverPortChanged((QDnsLookup*)self, (intptr_t)slot);
+}
+
+void q_dnslookup_nameserver_protocol_changed(void* self, int64_t protocol) {
+    QDnsLookup_NameserverProtocolChanged((QDnsLookup*)self, protocol);
+}
+
+void q_dnslookup_on_nameserver_protocol_changed(void* self, void (*slot)(void*, int64_t)) {
+    QDnsLookup_Connect_NameserverProtocolChanged((QDnsLookup*)self, (intptr_t)slot);
+}
+
 const char* q_dnslookup_tr2(const char* s, const char* c) {
     libqt_string _str = QDnsLookup_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -398,6 +534,10 @@ const char* q_dnslookup_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+void q_dnslookup_set_nameserver32(void* self, int64_t protocol, void* nameserver, unsigned short port) {
+    QDnsLookup_SetNameserver32((QDnsLookup*)self, protocol, (QHostAddress*)nameserver, port);
 }
 
 const char* q_dnslookup_object_name(void* self) {
@@ -435,8 +575,8 @@ QThread* q_dnslookup_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_dnslookup_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_dnslookup_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_dnslookup_start_timer(void* self, int interval) {
@@ -445,6 +585,10 @@ int32_t q_dnslookup_start_timer(void* self, int interval) {
 
 void q_dnslookup_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_dnslookup_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_dnslookup_children(void* self) {
@@ -537,6 +681,10 @@ bool q_dnslookup_inherits(void* self, const char* classname) {
 
 void q_dnslookup_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_dnslookup_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_dnslookup_start_timer2(void* self, int interval, int64_t timerType) {

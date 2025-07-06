@@ -12,19 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "../libqevent.h"
-#include "../libqiodevice.h"
-#include "../libqimage.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "libqpdfdocumentrenderoptions.h"
-#include "libqpdfselection.h"
-#include "../libqpoint.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qpdfdocument.html
 
 /// q_pdfdocument_new constructs a new QPdfDocument object.
@@ -117,6 +104,11 @@ QSizeF* q_pdfdocument_page_point_size(void* self, int page);
 ///
 /// ``` QPdfDocument* self, int page ```
 const char* q_pdfdocument_page_label(void* self, int page);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#pageIndexForLabel)
+///
+/// ``` QPdfDocument* self, const char* label ```
+int32_t q_pdfdocument_page_index_for_label(void* self, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#pageModel)
 ///
@@ -269,7 +261,7 @@ QThread* q_pdfdocument_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPdfDocument* self, QThread* thread ```
-void q_pdfdocument_move_to_thread(void* self, void* thread);
+bool q_pdfdocument_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -284,6 +276,13 @@ int32_t q_pdfdocument_start_timer(void* self, int interval);
 ///
 /// ``` QPdfDocument* self, int id ```
 void q_pdfdocument_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPdfDocument* self, enum Qt__TimerId id ```
+void q_pdfdocument_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -424,6 +423,13 @@ bool q_pdfdocument_inherits(void* self, const char* classname);
 ///
 /// ``` QPdfDocument* self ```
 void q_pdfdocument_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPdfDocument* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pdfdocument_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

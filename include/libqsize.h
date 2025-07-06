@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmargins.h"
-
 /// https://doc.qt.io/qt-6/qsize.html
 
 /// q_size_new constructs a new QSize object.

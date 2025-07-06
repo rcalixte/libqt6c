@@ -12,15 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqfont.h"
-#include "libqimage.h"
-#include "libqpainterpath.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include <string.h>
-#include "libqtransform.h"
-
 /// https://doc.qt.io/qt-6/qrawfont.html
 
 /// q_rawfont_new constructs a new QRawFont object.
@@ -237,6 +228,11 @@ libqt_list /* of int64_t */ q_rawfont_supported_writing_systems(void* self);
 ///
 /// ``` QRawFont* self, const char* tagName ```
 char* q_rawfont_font_table(void* self, const char* tagName);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
+///
+/// ``` QRawFont* self, QFont__Tag* tag ```
+char* q_rawfont_font_table_with_tag(void* self, void* tag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#fromFont)
 ///

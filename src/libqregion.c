@@ -129,6 +129,15 @@ void q_region_set_rects(void* self, void* rect, int num) {
     QRegion_SetRects((QRegion*)self, (QRect*)rect, num);
 }
 
+void q_region_set_rects_with_q_span_lesserconst_q_rect_greater(void* self, libqt_list r) {
+    QRegion_SetRectsWithQSpanLesserconstQRectGreater((QRegion*)self, r);
+}
+
+libqt_list /* of QRect* */ q_region_rects(void* self) {
+    libqt_list _arr = QRegion_Rects((QRegion*)self);
+    return _arr;
+}
+
 int32_t q_region_rect_count(void* self) {
     return QRegion_RectCount((QRegion*)self);
 }

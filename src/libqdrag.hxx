@@ -61,7 +61,7 @@ class VirtualQDrag final : public QDrag {
     mutable bool qdrag_issignalconnected_isbase = false;
 
   public:
-    VirtualQDrag(QObject* dragSource) : QDrag(dragSource){};
+    VirtualQDrag(QObject* dragSource) : QDrag(dragSource) {};
 
     ~VirtualQDrag() {
         qdrag_metacall_callback = nullptr;
@@ -293,18 +293,18 @@ class VirtualQDrag final : public QDrag {
     friend void QDrag_QBaseChildEvent(QDrag* self, QChildEvent* event);
     friend void QDrag_CustomEvent(QDrag* self, QEvent* event);
     friend void QDrag_QBaseCustomEvent(QDrag* self, QEvent* event);
-    friend void QDrag_ConnectNotify(QDrag* self, QMetaMethod* signal);
-    friend void QDrag_QBaseConnectNotify(QDrag* self, QMetaMethod* signal);
-    friend void QDrag_DisconnectNotify(QDrag* self, QMetaMethod* signal);
-    friend void QDrag_QBaseDisconnectNotify(QDrag* self, QMetaMethod* signal);
+    friend void QDrag_ConnectNotify(QDrag* self, const QMetaMethod* signal);
+    friend void QDrag_QBaseConnectNotify(QDrag* self, const QMetaMethod* signal);
+    friend void QDrag_DisconnectNotify(QDrag* self, const QMetaMethod* signal);
+    friend void QDrag_QBaseDisconnectNotify(QDrag* self, const QMetaMethod* signal);
     friend QObject* QDrag_Sender(const QDrag* self);
     friend QObject* QDrag_QBaseSender(const QDrag* self);
     friend int QDrag_SenderSignalIndex(const QDrag* self);
     friend int QDrag_QBaseSenderSignalIndex(const QDrag* self);
     friend int QDrag_Receivers(const QDrag* self, const char* signal);
     friend int QDrag_QBaseReceivers(const QDrag* self, const char* signal);
-    friend bool QDrag_IsSignalConnected(const QDrag* self, QMetaMethod* signal);
-    friend bool QDrag_QBaseIsSignalConnected(const QDrag* self, QMetaMethod* signal);
+    friend bool QDrag_IsSignalConnected(const QDrag* self, const QMetaMethod* signal);
+    friend bool QDrag_QBaseIsSignalConnected(const QDrag* self, const QMetaMethod* signal);
 };
 
 #endif

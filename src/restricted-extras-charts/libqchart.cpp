@@ -123,12 +123,12 @@ void QChart_RemoveAllSeries(QChart* self) {
 libqt_list /* of QAbstractSeries* */ QChart_Series(const QChart* self) {
     QList<QAbstractSeries*> _ret = self->series();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractSeries** _arr = static_cast<QAbstractSeries**>(malloc(sizeof(QAbstractSeries*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractSeries** _arr = static_cast<QAbstractSeries**>(malloc(sizeof(QAbstractSeries*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -160,12 +160,12 @@ void QChart_RemoveAxis(QChart* self, QAbstractAxis* axis) {
 libqt_list /* of QAbstractAxis* */ QChart_Axes(const QChart* self) {
     QList<QAbstractAxis*> _ret = self->axes();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -182,7 +182,7 @@ int QChart_Theme(const QChart* self) {
     return static_cast<int>(self->theme());
 }
 
-void QChart_SetTitle(QChart* self, libqt_string title) {
+void QChart_SetTitle(QChart* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -199,7 +199,7 @@ libqt_string QChart_Title(const QChart* self) {
     return _str;
 }
 
-void QChart_SetTitleFont(QChart* self, QFont* font) {
+void QChart_SetTitleFont(QChart* self, const QFont* font) {
     self->setTitleFont(*font);
 }
 
@@ -207,7 +207,7 @@ QFont* QChart_TitleFont(const QChart* self) {
     return new QFont(self->titleFont());
 }
 
-void QChart_SetTitleBrush(QChart* self, QBrush* brush) {
+void QChart_SetTitleBrush(QChart* self, const QBrush* brush) {
     self->setTitleBrush(*brush);
 }
 
@@ -215,7 +215,7 @@ QBrush* QChart_TitleBrush(const QChart* self) {
     return new QBrush(self->titleBrush());
 }
 
-void QChart_SetBackgroundBrush(QChart* self, QBrush* brush) {
+void QChart_SetBackgroundBrush(QChart* self, const QBrush* brush) {
     self->setBackgroundBrush(*brush);
 }
 
@@ -223,7 +223,7 @@ QBrush* QChart_BackgroundBrush(const QChart* self) {
     return new QBrush(self->backgroundBrush());
 }
 
-void QChart_SetBackgroundPen(QChart* self, QPen* pen) {
+void QChart_SetBackgroundPen(QChart* self, const QPen* pen) {
     self->setBackgroundPen(*pen);
 }
 
@@ -271,7 +271,7 @@ int QChart_AnimationDuration(const QChart* self) {
     return self->animationDuration();
 }
 
-void QChart_SetAnimationEasingCurve(QChart* self, QEasingCurve* curve) {
+void QChart_SetAnimationEasingCurve(QChart* self, const QEasingCurve* curve) {
     self->setAnimationEasingCurve(*curve);
 }
 
@@ -287,7 +287,7 @@ void QChart_ZoomOut(QChart* self) {
     self->zoomOut();
 }
 
-void QChart_ZoomInWithRect(QChart* self, QRectF* rect) {
+void QChart_ZoomInWithRect(QChart* self, const QRectF* rect) {
     self->zoomIn(*rect);
 }
 
@@ -311,7 +311,7 @@ QLegend* QChart_Legend(const QChart* self) {
     return self->legend();
 }
 
-void QChart_SetMargins(QChart* self, QMargins* margins) {
+void QChart_SetMargins(QChart* self, const QMargins* margins) {
     self->setMargins(*margins);
 }
 
@@ -323,11 +323,11 @@ QRectF* QChart_PlotArea(const QChart* self) {
     return new QRectF(self->plotArea());
 }
 
-void QChart_SetPlotArea(QChart* self, QRectF* rect) {
+void QChart_SetPlotArea(QChart* self, const QRectF* rect) {
     self->setPlotArea(*rect);
 }
 
-void QChart_SetPlotAreaBackgroundBrush(QChart* self, QBrush* brush) {
+void QChart_SetPlotAreaBackgroundBrush(QChart* self, const QBrush* brush) {
     self->setPlotAreaBackgroundBrush(*brush);
 }
 
@@ -335,7 +335,7 @@ QBrush* QChart_PlotAreaBackgroundBrush(const QChart* self) {
     return new QBrush(self->plotAreaBackgroundBrush());
 }
 
-void QChart_SetPlotAreaBackgroundPen(QChart* self, QPen* pen) {
+void QChart_SetPlotAreaBackgroundPen(QChart* self, const QPen* pen) {
     self->setPlotAreaBackgroundPen(*pen);
 }
 
@@ -359,7 +359,7 @@ bool QChart_LocalizeNumbers(const QChart* self) {
     return self->localizeNumbers();
 }
 
-void QChart_SetLocale(QChart* self, QLocale* locale) {
+void QChart_SetLocale(QChart* self, const QLocale* locale) {
     self->setLocale(*locale);
 }
 
@@ -367,11 +367,11 @@ QLocale* QChart_Locale(const QChart* self) {
     return new QLocale(self->locale());
 }
 
-QPointF* QChart_MapToValue(QChart* self, QPointF* position) {
+QPointF* QChart_MapToValue(QChart* self, const QPointF* position) {
     return new QPointF(self->mapToValue(*position));
 }
 
-QPointF* QChart_MapToPosition(QChart* self, QPointF* value) {
+QPointF* QChart_MapToPosition(QChart* self, const QPointF* value) {
     return new QPointF(self->mapToPosition(*value));
 }
 
@@ -379,7 +379,7 @@ int QChart_ChartType(const QChart* self) {
     return static_cast<int>(self->chartType());
 }
 
-void QChart_PlotAreaChanged(QChart* self, QRectF* plotArea) {
+void QChart_PlotAreaChanged(QChart* self, const QRectF* plotArea) {
     self->plotAreaChanged(*plotArea);
 }
 
@@ -436,12 +436,12 @@ QAbstractAxis* QChart_AxisY1(const QChart* self, QAbstractSeries* series) {
 libqt_list /* of QAbstractAxis* */ QChart_Axes1(const QChart* self, int orientation) {
     QList<QAbstractAxis*> _ret = self->axes(static_cast<Qt::Orientations>(orientation));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -449,12 +449,12 @@ libqt_list /* of QAbstractAxis* */ QChart_Axes1(const QChart* self, int orientat
 libqt_list /* of QAbstractAxis* */ QChart_Axes2(const QChart* self, int orientation, QAbstractSeries* series) {
     QList<QAbstractAxis*> _ret = self->axes(static_cast<Qt::Orientations>(orientation), series);
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractAxis** _arr = static_cast<QAbstractAxis**>(malloc(sizeof(QAbstractAxis*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -471,16 +471,16 @@ void QChart_SetPlotAreaBackgroundVisible1(QChart* self, bool visible) {
     self->setPlotAreaBackgroundVisible(visible);
 }
 
-QPointF* QChart_MapToValue2(QChart* self, QPointF* position, QAbstractSeries* series) {
+QPointF* QChart_MapToValue2(QChart* self, const QPointF* position, QAbstractSeries* series) {
     return new QPointF(self->mapToValue(*position, series));
 }
 
-QPointF* QChart_MapToPosition2(QChart* self, QPointF* value, QAbstractSeries* series) {
+QPointF* QChart_MapToPosition2(QChart* self, const QPointF* value, QAbstractSeries* series) {
     return new QPointF(self->mapToPosition(*value, series));
 }
 
 // Derived class handler implementation
-void QChart_SetGeometry(QChart* self, QRectF* rect) {
+void QChart_SetGeometry(QChart* self, const QRectF* rect) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setGeometry(*rect);
@@ -490,7 +490,7 @@ void QChart_SetGeometry(QChart* self, QRectF* rect) {
 }
 
 // Base class handler implementation
-void QChart_QBaseSetGeometry(QChart* self, QRectF* rect) {
+void QChart_QBaseSetGeometry(QChart* self, const QRectF* rect) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_SetGeometry_IsBase(true);
@@ -567,7 +567,7 @@ void QChart_OnType(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChart_Paint(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QChart_Paint(QChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->paint(painter, option, widget);
@@ -577,7 +577,7 @@ void QChart_Paint(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* opt
 }
 
 // Base class handler implementation
-void QChart_QBasePaint(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QChart_QBasePaint(QChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_Paint_IsBase(true);
@@ -596,7 +596,7 @@ void QChart_OnPaint(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChart_PaintWindowFrame(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QChart_PaintWindowFrame(QChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->paintWindowFrame(painter, option, widget);
@@ -606,7 +606,7 @@ void QChart_PaintWindowFrame(QChart* self, QPainter* painter, QStyleOptionGraphi
 }
 
 // Base class handler implementation
-void QChart_QBasePaintWindowFrame(QChart* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QChart_QBasePaintWindowFrame(QChart* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_PaintWindowFrame_IsBase(true);
@@ -712,7 +712,7 @@ void QChart_OnInitStyleOption(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSizeF* QChart_SizeHint(const QChart* self, int which, QSizeF* constraint) {
+QSizeF* QChart_SizeHint(const QChart* self, int which, const QSizeF* constraint) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return new QSizeF(vqchart->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -721,7 +721,7 @@ QSizeF* QChart_SizeHint(const QChart* self, int which, QSizeF* constraint) {
 }
 
 // Base class handler implementation
-QSizeF* QChart_QBaseSizeHint(const QChart* self, int which, QSizeF* constraint) {
+QSizeF* QChart_QBaseSizeHint(const QChart* self, int which, const QSizeF* constraint) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_SizeHint_IsBase(true);
@@ -768,7 +768,7 @@ void QChart_OnUpdateGeometry(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QChart_ItemChange(QChart* self, int change, QVariant* value) {
+QVariant* QChart_ItemChange(QChart* self, int change, const QVariant* value) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         return new QVariant(vqchart->itemChange(static_cast<QGraphicsItem::GraphicsItemChange>(change), *value));
@@ -777,7 +777,7 @@ QVariant* QChart_ItemChange(QChart* self, int change, QVariant* value) {
 }
 
 // Base class handler implementation
-QVariant* QChart_QBaseItemChange(QChart* self, int change, QVariant* value) {
+QVariant* QChart_QBaseItemChange(QChart* self, int change, const QVariant* value) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_ItemChange_IsBase(true);
@@ -795,7 +795,7 @@ void QChart_OnItemChange(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QChart_PropertyChange(QChart* self, libqt_string propertyName, QVariant* value) {
+QVariant* QChart_PropertyChange(QChart* self, const libqt_string propertyName, const QVariant* value) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     QString propertyName_QString = QString::fromUtf8(propertyName.data, propertyName.len);
     if (vqchart && vqchart->isVirtualQChart) {
@@ -805,7 +805,7 @@ QVariant* QChart_PropertyChange(QChart* self, libqt_string propertyName, QVarian
 }
 
 // Base class handler implementation
-QVariant* QChart_QBasePropertyChange(QChart* self, libqt_string propertyName, QVariant* value) {
+QVariant* QChart_QBasePropertyChange(QChart* self, const libqt_string propertyName, const QVariant* value) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     QString propertyName_QString = QString::fromUtf8(propertyName.data, propertyName.len);
     if (vqchart && vqchart->isVirtualQChart) {
@@ -882,7 +882,7 @@ void QChart_OnWindowFrameEvent(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QChart_WindowFrameSectionAt(const QChart* self, QPointF* pos) {
+int QChart_WindowFrameSectionAt(const QChart* self, const QPointF* pos) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return static_cast<int>(vqchart->windowFrameSectionAt(*pos));
@@ -892,7 +892,7 @@ int QChart_WindowFrameSectionAt(const QChart* self, QPointF* pos) {
 }
 
 // Base class handler implementation
-int QChart_QBaseWindowFrameSectionAt(const QChart* self, QPointF* pos) {
+int QChart_QBaseWindowFrameSectionAt(const QChart* self, const QPointF* pos) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_WindowFrameSectionAt_IsBase(true);
@@ -1520,7 +1520,7 @@ void QChart_OnCustomEvent(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChart_ConnectNotify(QChart* self, QMetaMethod* signal) {
+void QChart_ConnectNotify(QChart* self, const QMetaMethod* signal) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->connectNotify(*signal);
@@ -1530,7 +1530,7 @@ void QChart_ConnectNotify(QChart* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QChart_QBaseConnectNotify(QChart* self, QMetaMethod* signal) {
+void QChart_QBaseConnectNotify(QChart* self, const QMetaMethod* signal) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_ConnectNotify_IsBase(true);
@@ -1549,7 +1549,7 @@ void QChart_OnConnectNotify(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChart_DisconnectNotify(QChart* self, QMetaMethod* signal) {
+void QChart_DisconnectNotify(QChart* self, const QMetaMethod* signal) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->disconnectNotify(*signal);
@@ -1559,7 +1559,7 @@ void QChart_DisconnectNotify(QChart* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QChart_QBaseDisconnectNotify(QChart* self, QMetaMethod* signal) {
+void QChart_QBaseDisconnectNotify(QChart* self, const QMetaMethod* signal) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_DisconnectNotify_IsBase(true);
@@ -1607,7 +1607,7 @@ void QChart_OnAdvance(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChart_Contains(const QChart* self, QPointF* point) {
+bool QChart_Contains(const QChart* self, const QPointF* point) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return vqchart->contains(*point);
@@ -1617,7 +1617,7 @@ bool QChart_Contains(const QChart* self, QPointF* point) {
 }
 
 // Base class handler implementation
-bool QChart_QBaseContains(const QChart* self, QPointF* point) {
+bool QChart_QBaseContains(const QChart* self, const QPointF* point) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_Contains_IsBase(true);
@@ -1636,7 +1636,7 @@ void QChart_OnContains(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChart_CollidesWithItem(const QChart* self, QGraphicsItem* other, int mode) {
+bool QChart_CollidesWithItem(const QChart* self, const QGraphicsItem* other, int mode) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return vqchart->collidesWithItem(other, static_cast<Qt::ItemSelectionMode>(mode));
@@ -1646,7 +1646,7 @@ bool QChart_CollidesWithItem(const QChart* self, QGraphicsItem* other, int mode)
 }
 
 // Base class handler implementation
-bool QChart_QBaseCollidesWithItem(const QChart* self, QGraphicsItem* other, int mode) {
+bool QChart_QBaseCollidesWithItem(const QChart* self, const QGraphicsItem* other, int mode) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_CollidesWithItem_IsBase(true);
@@ -1665,7 +1665,7 @@ void QChart_OnCollidesWithItem(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChart_CollidesWithPath(const QChart* self, QPainterPath* path, int mode) {
+bool QChart_CollidesWithPath(const QChart* self, const QPainterPath* path, int mode) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return vqchart->collidesWithPath(*path, static_cast<Qt::ItemSelectionMode>(mode));
@@ -1675,7 +1675,7 @@ bool QChart_CollidesWithPath(const QChart* self, QPainterPath* path, int mode) {
 }
 
 // Base class handler implementation
-bool QChart_QBaseCollidesWithPath(const QChart* self, QPainterPath* path, int mode) {
+bool QChart_QBaseCollidesWithPath(const QChart* self, const QPainterPath* path, int mode) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_CollidesWithPath_IsBase(true);
@@ -1694,7 +1694,7 @@ void QChart_OnCollidesWithPath(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChart_IsObscuredBy(const QChart* self, QGraphicsItem* item) {
+bool QChart_IsObscuredBy(const QChart* self, const QGraphicsItem* item) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return vqchart->isObscuredBy(item);
@@ -1704,7 +1704,7 @@ bool QChart_IsObscuredBy(const QChart* self, QGraphicsItem* item) {
 }
 
 // Base class handler implementation
-bool QChart_QBaseIsObscuredBy(const QChart* self, QGraphicsItem* item) {
+bool QChart_QBaseIsObscuredBy(const QChart* self, const QGraphicsItem* item) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_IsObscuredBy_IsBase(true);
@@ -2243,7 +2243,7 @@ void QChart_OnSupportsExtension(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QChart_SetExtension(QChart* self, int extension, QVariant* variant) {
+void QChart_SetExtension(QChart* self, int extension, const QVariant* variant) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setExtension(static_cast<VirtualQChart::Extension>(extension), *variant);
@@ -2253,7 +2253,7 @@ void QChart_SetExtension(QChart* self, int extension, QVariant* variant) {
 }
 
 // Base class handler implementation
-void QChart_QBaseSetExtension(QChart* self, int extension, QVariant* variant) {
+void QChart_QBaseSetExtension(QChart* self, int extension, const QVariant* variant) {
     auto* vqchart = dynamic_cast<VirtualQChart*>(self);
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_SetExtension_IsBase(true);
@@ -2272,7 +2272,7 @@ void QChart_OnSetExtension(QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QChart_Extension(const QChart* self, QVariant* variant) {
+QVariant* QChart_Extension(const QChart* self, const QVariant* variant) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return new QVariant(vqchart->extension(*variant));
@@ -2281,7 +2281,7 @@ QVariant* QChart_Extension(const QChart* self, QVariant* variant) {
 }
 
 // Base class handler implementation
-QVariant* QChart_QBaseExtension(const QChart* self, QVariant* variant) {
+QVariant* QChart_QBaseExtension(const QChart* self, const QVariant* variant) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_Extension_IsBase(true);
@@ -2444,7 +2444,7 @@ void QChart_OnReceivers(const QChart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QChart_IsSignalConnected(const QChart* self, QMetaMethod* signal) {
+bool QChart_IsSignalConnected(const QChart* self, const QMetaMethod* signal) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         return vqchart->isSignalConnected(*signal);
@@ -2454,7 +2454,7 @@ bool QChart_IsSignalConnected(const QChart* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QChart_QBaseIsSignalConnected(const QChart* self, QMetaMethod* signal) {
+bool QChart_QBaseIsSignalConnected(const QChart* self, const QMetaMethod* signal) {
     auto* vqchart = const_cast<VirtualQChart*>(dynamic_cast<const VirtualQChart*>(self));
     if (vqchart && vqchart->isVirtualQChart) {
         vqchart->setQChart_IsSignalConnected_IsBase(true);

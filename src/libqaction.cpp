@@ -22,12 +22,12 @@ QAction* QAction_new() {
     return new VirtualQAction();
 }
 
-QAction* QAction_new2(libqt_string text) {
+QAction* QAction_new2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(text_QString);
 }
 
-QAction* QAction_new3(QIcon* icon, libqt_string text) {
+QAction* QAction_new3(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(*icon, text_QString);
 }
@@ -36,12 +36,12 @@ QAction* QAction_new4(QObject* parent) {
     return new VirtualQAction(parent);
 }
 
-QAction* QAction_new5(libqt_string text, QObject* parent) {
+QAction* QAction_new5(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(text_QString, parent);
 }
 
-QAction* QAction_new6(QIcon* icon, libqt_string text, QObject* parent) {
+QAction* QAction_new6(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(*icon, text_QString, parent);
 }
@@ -97,12 +97,12 @@ libqt_string QAction_Tr(const char* s) {
 libqt_list /* of QObject* */ QAction_AssociatedObjects(const QAction* self) {
     QList<QObject*> _ret = self->associatedObjects();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QObject** _arr = static_cast<QObject**>(malloc(sizeof(QObject*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QObject** _arr = static_cast<QObject**>(malloc(sizeof(QObject*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -115,7 +115,7 @@ QActionGroup* QAction_ActionGroup(const QAction* self) {
     return self->actionGroup();
 }
 
-void QAction_SetIcon(QAction* self, QIcon* icon) {
+void QAction_SetIcon(QAction* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
@@ -123,7 +123,7 @@ QIcon* QAction_Icon(const QAction* self) {
     return new QIcon(self->icon());
 }
 
-void QAction_SetText(QAction* self, libqt_string text) {
+void QAction_SetText(QAction* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -140,7 +140,7 @@ libqt_string QAction_Text(const QAction* self) {
     return _str;
 }
 
-void QAction_SetIconText(QAction* self, libqt_string text) {
+void QAction_SetIconText(QAction* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setIconText(text_QString);
 }
@@ -157,7 +157,7 @@ libqt_string QAction_IconText(const QAction* self) {
     return _str;
 }
 
-void QAction_SetToolTip(QAction* self, libqt_string tip) {
+void QAction_SetToolTip(QAction* self, const libqt_string tip) {
     QString tip_QString = QString::fromUtf8(tip.data, tip.len);
     self->setToolTip(tip_QString);
 }
@@ -174,7 +174,7 @@ libqt_string QAction_ToolTip(const QAction* self) {
     return _str;
 }
 
-void QAction_SetStatusTip(QAction* self, libqt_string statusTip) {
+void QAction_SetStatusTip(QAction* self, const libqt_string statusTip) {
     QString statusTip_QString = QString::fromUtf8(statusTip.data, statusTip.len);
     self->setStatusTip(statusTip_QString);
 }
@@ -191,7 +191,7 @@ libqt_string QAction_StatusTip(const QAction* self) {
     return _str;
 }
 
-void QAction_SetWhatsThis(QAction* self, libqt_string what) {
+void QAction_SetWhatsThis(QAction* self, const libqt_string what) {
     QString what_QString = QString::fromUtf8(what.data, what.len);
     self->setWhatsThis(what_QString);
 }
@@ -224,7 +224,7 @@ bool QAction_IsSeparator(const QAction* self) {
     return self->isSeparator();
 }
 
-void QAction_SetShortcut(QAction* self, QKeySequence* shortcut) {
+void QAction_SetShortcut(QAction* self, const QKeySequence* shortcut) {
     self->setShortcut(*shortcut);
 }
 
@@ -232,7 +232,7 @@ QKeySequence* QAction_Shortcut(const QAction* self) {
     return new QKeySequence(self->shortcut());
 }
 
-void QAction_SetShortcuts(QAction* self, libqt_list /* of QKeySequence* */ shortcuts) {
+void QAction_SetShortcuts(QAction* self, const libqt_list /* of QKeySequence* */ shortcuts) {
     QList<QKeySequence> shortcuts_QList;
     shortcuts_QList.reserve(shortcuts.len);
     QKeySequence** shortcuts_arr = static_cast<QKeySequence**>(shortcuts.data.ptr);
@@ -249,12 +249,12 @@ void QAction_SetShortcutsWithShortcuts(QAction* self, int shortcuts) {
 libqt_list /* of QKeySequence* */ QAction_Shortcuts(const QAction* self) {
     QList<QKeySequence> _ret = self->shortcuts();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QKeySequence** _arr = static_cast<QKeySequence**>(malloc(sizeof(QKeySequence*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QKeySequence** _arr = static_cast<QKeySequence**>(malloc(sizeof(QKeySequence*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QKeySequence(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -275,7 +275,7 @@ bool QAction_AutoRepeat(const QAction* self) {
     return self->autoRepeat();
 }
 
-void QAction_SetFont(QAction* self, QFont* font) {
+void QAction_SetFont(QAction* self, const QFont* font) {
     self->setFont(*font);
 }
 
@@ -295,7 +295,7 @@ QVariant* QAction_Data(const QAction* self) {
     return new QVariant(self->data());
 }
 
-void QAction_SetData(QAction* self, QVariant* varVal) {
+void QAction_SetData(QAction* self, const QVariant* varVal) {
     self->setData(*varVal);
 }
 
@@ -641,7 +641,7 @@ void QAction_OnCustomEvent(QAction* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAction_ConnectNotify(QAction* self, QMetaMethod* signal) {
+void QAction_ConnectNotify(QAction* self, const QMetaMethod* signal) {
     auto* vqaction = dynamic_cast<VirtualQAction*>(self);
     if (vqaction && vqaction->isVirtualQAction) {
         vqaction->connectNotify(*signal);
@@ -651,7 +651,7 @@ void QAction_ConnectNotify(QAction* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAction_QBaseConnectNotify(QAction* self, QMetaMethod* signal) {
+void QAction_QBaseConnectNotify(QAction* self, const QMetaMethod* signal) {
     auto* vqaction = dynamic_cast<VirtualQAction*>(self);
     if (vqaction && vqaction->isVirtualQAction) {
         vqaction->setQAction_ConnectNotify_IsBase(true);
@@ -670,7 +670,7 @@ void QAction_OnConnectNotify(QAction* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAction_DisconnectNotify(QAction* self, QMetaMethod* signal) {
+void QAction_DisconnectNotify(QAction* self, const QMetaMethod* signal) {
     auto* vqaction = dynamic_cast<VirtualQAction*>(self);
     if (vqaction && vqaction->isVirtualQAction) {
         vqaction->disconnectNotify(*signal);
@@ -680,7 +680,7 @@ void QAction_DisconnectNotify(QAction* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAction_QBaseDisconnectNotify(QAction* self, QMetaMethod* signal) {
+void QAction_QBaseDisconnectNotify(QAction* self, const QMetaMethod* signal) {
     auto* vqaction = dynamic_cast<VirtualQAction*>(self);
     if (vqaction && vqaction->isVirtualQAction) {
         vqaction->setQAction_DisconnectNotify_IsBase(true);
@@ -786,7 +786,7 @@ void QAction_OnReceivers(const QAction* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAction_IsSignalConnected(const QAction* self, QMetaMethod* signal) {
+bool QAction_IsSignalConnected(const QAction* self, const QMetaMethod* signal) {
     auto* vqaction = const_cast<VirtualQAction*>(dynamic_cast<const VirtualQAction*>(self));
     if (vqaction && vqaction->isVirtualQAction) {
         return vqaction->isSignalConnected(*signal);
@@ -796,7 +796,7 @@ bool QAction_IsSignalConnected(const QAction* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QAction_QBaseIsSignalConnected(const QAction* self, QMetaMethod* signal) {
+bool QAction_QBaseIsSignalConnected(const QAction* self, const QMetaMethod* signal) {
     auto* vqaction = const_cast<VirtualQAction*>(dynamic_cast<const VirtualQAction*>(self));
     if (vqaction && vqaction->isVirtualQAction) {
         vqaction->setQAction_IsSignalConnected_IsBase(true);

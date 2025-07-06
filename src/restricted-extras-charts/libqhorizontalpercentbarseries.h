@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractbarseries.h"
-#include "libqabstractseries.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qhorizontalpercentbarseries-qtcharts.html
 
 /// q_horizontalpercentbarseries_new constructs a new QHorizontalPercentBarSeries object.
@@ -644,7 +637,7 @@ QThread* q_horizontalpercentbarseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QHorizontalPercentBarSeries* self, QThread* thread ```
-void q_horizontalpercentbarseries_move_to_thread(void* self, void* thread);
+bool q_horizontalpercentbarseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -659,6 +652,13 @@ int32_t q_horizontalpercentbarseries_start_timer(void* self, int interval);
 ///
 /// ``` QHorizontalPercentBarSeries* self, int id ```
 void q_horizontalpercentbarseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QHorizontalPercentBarSeries* self, enum Qt__TimerId id ```
+void q_horizontalpercentbarseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -799,6 +799,13 @@ bool q_horizontalpercentbarseries_inherits(void* self, const char* classname);
 ///
 /// ``` QHorizontalPercentBarSeries* self ```
 void q_horizontalpercentbarseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QHorizontalPercentBarSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_horizontalpercentbarseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

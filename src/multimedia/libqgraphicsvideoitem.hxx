@@ -179,8 +179,8 @@ class VirtualQGraphicsVideoItem final : public QGraphicsVideoItem {
     mutable bool qgraphicsvideoitem_preparegeometrychange_isbase = false;
 
   public:
-    VirtualQGraphicsVideoItem() : QGraphicsVideoItem(){};
-    VirtualQGraphicsVideoItem(QGraphicsItem* parent) : QGraphicsVideoItem(parent){};
+    VirtualQGraphicsVideoItem() : QGraphicsVideoItem() {};
+    VirtualQGraphicsVideoItem(QGraphicsItem* parent) : QGraphicsVideoItem(parent) {};
 
     ~VirtualQGraphicsVideoItem() {
         qgraphicsvideoitem_metacall_callback = nullptr;
@@ -1086,18 +1086,18 @@ class VirtualQGraphicsVideoItem final : public QGraphicsVideoItem {
     // Friend functions
     friend void QGraphicsVideoItem_TimerEvent(QGraphicsVideoItem* self, QTimerEvent* event);
     friend void QGraphicsVideoItem_QBaseTimerEvent(QGraphicsVideoItem* self, QTimerEvent* event);
-    friend QVariant* QGraphicsVideoItem_ItemChange(QGraphicsVideoItem* self, int change, QVariant* value);
-    friend QVariant* QGraphicsVideoItem_QBaseItemChange(QGraphicsVideoItem* self, int change, QVariant* value);
+    friend QVariant* QGraphicsVideoItem_ItemChange(QGraphicsVideoItem* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsVideoItem_QBaseItemChange(QGraphicsVideoItem* self, int change, const QVariant* value);
     friend bool QGraphicsVideoItem_Event(QGraphicsVideoItem* self, QEvent* ev);
     friend bool QGraphicsVideoItem_QBaseEvent(QGraphicsVideoItem* self, QEvent* ev);
     friend void QGraphicsVideoItem_ChildEvent(QGraphicsVideoItem* self, QChildEvent* event);
     friend void QGraphicsVideoItem_QBaseChildEvent(QGraphicsVideoItem* self, QChildEvent* event);
     friend void QGraphicsVideoItem_CustomEvent(QGraphicsVideoItem* self, QEvent* event);
     friend void QGraphicsVideoItem_QBaseCustomEvent(QGraphicsVideoItem* self, QEvent* event);
-    friend void QGraphicsVideoItem_ConnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal);
-    friend void QGraphicsVideoItem_QBaseConnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal);
-    friend void QGraphicsVideoItem_DisconnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal);
-    friend void QGraphicsVideoItem_QBaseDisconnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal);
+    friend void QGraphicsVideoItem_ConnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal);
+    friend void QGraphicsVideoItem_QBaseConnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal);
+    friend void QGraphicsVideoItem_DisconnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal);
+    friend void QGraphicsVideoItem_QBaseDisconnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal);
     friend bool QGraphicsVideoItem_SceneEventFilter(QGraphicsVideoItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsVideoItem_QBaseSceneEventFilter(QGraphicsVideoItem* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsVideoItem_SceneEvent(QGraphicsVideoItem* self, QEvent* event);
@@ -1142,10 +1142,10 @@ class VirtualQGraphicsVideoItem final : public QGraphicsVideoItem {
     friend QVariant* QGraphicsVideoItem_QBaseInputMethodQuery(const QGraphicsVideoItem* self, int query);
     friend bool QGraphicsVideoItem_SupportsExtension(const QGraphicsVideoItem* self, int extension);
     friend bool QGraphicsVideoItem_QBaseSupportsExtension(const QGraphicsVideoItem* self, int extension);
-    friend void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant);
-    friend void QGraphicsVideoItem_QBaseSetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsVideoItem_Extension(const QGraphicsVideoItem* self, QVariant* variant);
-    friend QVariant* QGraphicsVideoItem_QBaseExtension(const QGraphicsVideoItem* self, QVariant* variant);
+    friend void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, const QVariant* variant);
+    friend void QGraphicsVideoItem_QBaseSetExtension(QGraphicsVideoItem* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsVideoItem_Extension(const QGraphicsVideoItem* self, const QVariant* variant);
+    friend QVariant* QGraphicsVideoItem_QBaseExtension(const QGraphicsVideoItem* self, const QVariant* variant);
     friend void QGraphicsVideoItem_UpdateMicroFocus(QGraphicsVideoItem* self);
     friend void QGraphicsVideoItem_QBaseUpdateMicroFocus(QGraphicsVideoItem* self);
     friend QObject* QGraphicsVideoItem_Sender(const QGraphicsVideoItem* self);
@@ -1154,8 +1154,8 @@ class VirtualQGraphicsVideoItem final : public QGraphicsVideoItem {
     friend int QGraphicsVideoItem_QBaseSenderSignalIndex(const QGraphicsVideoItem* self);
     friend int QGraphicsVideoItem_Receivers(const QGraphicsVideoItem* self, const char* signal);
     friend int QGraphicsVideoItem_QBaseReceivers(const QGraphicsVideoItem* self, const char* signal);
-    friend bool QGraphicsVideoItem_IsSignalConnected(const QGraphicsVideoItem* self, QMetaMethod* signal);
-    friend bool QGraphicsVideoItem_QBaseIsSignalConnected(const QGraphicsVideoItem* self, QMetaMethod* signal);
+    friend bool QGraphicsVideoItem_IsSignalConnected(const QGraphicsVideoItem* self, const QMetaMethod* signal);
+    friend bool QGraphicsVideoItem_QBaseIsSignalConnected(const QGraphicsVideoItem* self, const QMetaMethod* signal);
     friend void QGraphicsVideoItem_AddToIndex(QGraphicsVideoItem* self);
     friend void QGraphicsVideoItem_QBaseAddToIndex(QGraphicsVideoItem* self);
     friend void QGraphicsVideoItem_RemoveFromIndex(QGraphicsVideoItem* self);

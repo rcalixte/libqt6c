@@ -12,21 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractspinbox.h"
-#include "libqevent.h"
-#include "libqlineedit.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qspinbox.html
 
 /// q_spinbox_new constructs a new QSpinBox object.
@@ -2123,6 +2108,13 @@ QWidget* q_spinbox_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QSpinBox* self, QPointF* p ```
+QWidget* q_spinbox_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QSpinBox* self, enum Qt__WidgetAttribute param1 ```
@@ -2434,7 +2426,7 @@ QThread* q_spinbox_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSpinBox* self, QThread* thread ```
-void q_spinbox_move_to_thread(void* self, void* thread);
+bool q_spinbox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2449,6 +2441,13 @@ int32_t q_spinbox_start_timer(void* self, int interval);
 ///
 /// ``` QSpinBox* self, int id ```
 void q_spinbox_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSpinBox* self, enum Qt__TimerId id ```
+void q_spinbox_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2585,6 +2584,13 @@ void q_spinbox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSpinBox* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_spinbox_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSpinBox* self, int interval, enum Qt__TimerType timerType ```
@@ -2701,6 +2707,13 @@ int32_t q_spinbox_depth(void* self);
 ///
 ///
 double q_spinbox_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_spinbox_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4348,6 +4361,33 @@ bool q_spinbox_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QSpinBox* self, bool (*slot)(QSpinBox*, QMetaMethod*) ```
 void q_spinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_spinbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_spinbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QSpinBox* self, double (*slot)(QSpinBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_spinbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -6442,6 +6482,13 @@ QWidget* q_doublespinbox_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QDoubleSpinBox* self, QPointF* p ```
+QWidget* q_doublespinbox_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QDoubleSpinBox* self, enum Qt__WidgetAttribute param1 ```
@@ -6753,7 +6800,7 @@ QThread* q_doublespinbox_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDoubleSpinBox* self, QThread* thread ```
-void q_doublespinbox_move_to_thread(void* self, void* thread);
+bool q_doublespinbox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -6768,6 +6815,13 @@ int32_t q_doublespinbox_start_timer(void* self, int interval);
 ///
 /// ``` QDoubleSpinBox* self, int id ```
 void q_doublespinbox_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDoubleSpinBox* self, enum Qt__TimerId id ```
+void q_doublespinbox_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -6904,6 +6958,13 @@ void q_doublespinbox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDoubleSpinBox* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_doublespinbox_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QDoubleSpinBox* self, int interval, enum Qt__TimerType timerType ```
@@ -7020,6 +7081,13 @@ int32_t q_doublespinbox_depth(void* self);
 ///
 ///
 double q_doublespinbox_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_doublespinbox_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -8694,6 +8762,33 @@ bool q_doublespinbox_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QDoubleSpinBox* self, bool (*slot)(QDoubleSpinBox*, QMetaMethod*) ```
 void q_doublespinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QDoubleSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_doublespinbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QDoubleSpinBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_doublespinbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QDoubleSpinBox* self, double (*slot)(QDoubleSpinBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_doublespinbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

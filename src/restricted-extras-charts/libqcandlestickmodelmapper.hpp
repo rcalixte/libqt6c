@@ -63,12 +63,12 @@ void QCandlestickModelMapper_QBaseChildEvent(QCandlestickModelMapper* self, QChi
 void QCandlestickModelMapper_CustomEvent(QCandlestickModelMapper* self, QEvent* event);
 void QCandlestickModelMapper_OnCustomEvent(QCandlestickModelMapper* self, intptr_t slot);
 void QCandlestickModelMapper_QBaseCustomEvent(QCandlestickModelMapper* self, QEvent* event);
-void QCandlestickModelMapper_ConnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
+void QCandlestickModelMapper_ConnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
 void QCandlestickModelMapper_OnConnectNotify(QCandlestickModelMapper* self, intptr_t slot);
-void QCandlestickModelMapper_QBaseConnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
-void QCandlestickModelMapper_DisconnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
+void QCandlestickModelMapper_QBaseConnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
+void QCandlestickModelMapper_DisconnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
 void QCandlestickModelMapper_OnDisconnectNotify(QCandlestickModelMapper* self, intptr_t slot);
-void QCandlestickModelMapper_QBaseDisconnectNotify(QCandlestickModelMapper* self, QMetaMethod* signal);
+void QCandlestickModelMapper_QBaseDisconnectNotify(QCandlestickModelMapper* self, const QMetaMethod* signal);
 void QCandlestickModelMapper_SetTimestamp(QCandlestickModelMapper* self, int timestamp);
 void QCandlestickModelMapper_OnSetTimestamp(QCandlestickModelMapper* self, intptr_t slot);
 void QCandlestickModelMapper_QBaseSetTimestamp(QCandlestickModelMapper* self, int timestamp);
@@ -120,9 +120,9 @@ int QCandlestickModelMapper_QBaseSenderSignalIndex(const QCandlestickModelMapper
 int QCandlestickModelMapper_Receivers(const QCandlestickModelMapper* self, const char* signal);
 void QCandlestickModelMapper_OnReceivers(const QCandlestickModelMapper* self, intptr_t slot);
 int QCandlestickModelMapper_QBaseReceivers(const QCandlestickModelMapper* self, const char* signal);
-bool QCandlestickModelMapper_IsSignalConnected(const QCandlestickModelMapper* self, QMetaMethod* signal);
+bool QCandlestickModelMapper_IsSignalConnected(const QCandlestickModelMapper* self, const QMetaMethod* signal);
 void QCandlestickModelMapper_OnIsSignalConnected(const QCandlestickModelMapper* self, intptr_t slot);
-bool QCandlestickModelMapper_QBaseIsSignalConnected(const QCandlestickModelMapper* self, QMetaMethod* signal);
+bool QCandlestickModelMapper_QBaseIsSignalConnected(const QCandlestickModelMapper* self, const QMetaMethod* signal);
 void QCandlestickModelMapper_Delete(QCandlestickModelMapper* self);
 
 #ifdef __cplusplus

@@ -12,23 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqapplication.h"
-#include "libqevent.h"
-#include "libqfontmetrics.h"
-#include "libqicon.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqpalette.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyle.h"
-#include "libqstyleoption.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qcommonstyle.html
 
 /// q_commonstyle_new constructs a new QCommonStyle object.
@@ -616,7 +599,7 @@ QThread* q_commonstyle_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCommonStyle* self, QThread* thread ```
-void q_commonstyle_move_to_thread(void* self, void* thread);
+bool q_commonstyle_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -631,6 +614,13 @@ int32_t q_commonstyle_start_timer(void* self, int interval);
 ///
 /// ``` QCommonStyle* self, int id ```
 void q_commonstyle_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCommonStyle* self, enum Qt__TimerId id ```
+void q_commonstyle_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -771,6 +761,13 @@ bool q_commonstyle_inherits(void* self, const char* classname);
 ///
 /// ``` QCommonStyle* self ```
 void q_commonstyle_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCommonStyle* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_commonstyle_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

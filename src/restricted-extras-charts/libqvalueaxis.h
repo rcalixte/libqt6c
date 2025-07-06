@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html
 
 /// q_valueaxis_new constructs a new QValueAxis object.
@@ -1201,7 +1195,7 @@ QThread* q_valueaxis_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QValueAxis* self, QThread* thread ```
-void q_valueaxis_move_to_thread(void* self, void* thread);
+bool q_valueaxis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1216,6 +1210,13 @@ int32_t q_valueaxis_start_timer(void* self, int interval);
 ///
 /// ``` QValueAxis* self, int id ```
 void q_valueaxis_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QValueAxis* self, enum Qt__TimerId id ```
+void q_valueaxis_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1356,6 +1357,13 @@ bool q_valueaxis_inherits(void* self, const char* classname);
 ///
 /// ``` QValueAxis* self ```
 void q_valueaxis_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QValueAxis* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_valueaxis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

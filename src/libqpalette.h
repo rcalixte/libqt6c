@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbrush.h"
-#include "libqcolor.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qpalette.html
 
 /// q_palette_new constructs a new QPalette object.
@@ -233,6 +229,11 @@ const QBrush* q_palette_link_visited(void* self);
 /// ``` QPalette* self ```
 const QBrush* q_palette_placeholder_text(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#accent)
+///
+/// ``` QPalette* self ```
+const QBrush* q_palette_accent(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator==)
 ///
 /// ``` QPalette* self, QPalette* p ```
@@ -309,7 +310,8 @@ typedef enum {
     QPALETTE_COLORROLE_TOOLTIPBASE = 18,
     QPALETTE_COLORROLE_TOOLTIPTEXT = 19,
     QPALETTE_COLORROLE_PLACEHOLDERTEXT = 20,
-    QPALETTE_COLORROLE_NCOLORROLES = 21
+    QPALETTE_COLORROLE_ACCENT = 21,
+    QPALETTE_COLORROLE_NCOLORROLES = 22
 } QPalette__ColorRole;
 
 #endif

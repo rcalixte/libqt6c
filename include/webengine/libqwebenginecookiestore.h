@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmetaobject.h"
-#include "../network/libqnetworkcookie.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginecookiestore.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -176,7 +170,7 @@ QThread* q_webenginecookiestore_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineCookieStore* self, QThread* thread ```
-void q_webenginecookiestore_move_to_thread(void* self, void* thread);
+bool q_webenginecookiestore_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -191,6 +185,13 @@ int32_t q_webenginecookiestore_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineCookieStore* self, int id ```
 void q_webenginecookiestore_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineCookieStore* self, enum Qt__TimerId id ```
+void q_webenginecookiestore_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -334,6 +335,13 @@ void q_webenginecookiestore_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineCookieStore* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webenginecookiestore_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QWebEngineCookieStore* self, int interval, enum Qt__TimerType timerType ```
@@ -382,5 +390,24 @@ void q_webenginecookiestore_on_object_name_changed(void* self, void (*slot)(void
 ///
 /// ``` QWebEngineCookieStore* self ```
 void q_webenginecookiestore_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html
+
+/// q_webenginecookiestore__filterrequest_new constructs a new QWebEngineCookieStore::FilterRequest object.
+///
+/// ``` QWebEngineCookieStore__FilterRequest* param1 ```
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore__filterrequest.html#operator=)
+///
+/// ``` QWebEngineCookieStore__FilterRequest* self, QWebEngineCookieStore__FilterRequest* param1 ```
+void q_webenginecookiestore__filterrequest_operator_assign(void* self, void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore::filterrequest.html#dtor.QWebEngineCookieStore::FilterRequest)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QWebEngineCookieStore__FilterRequest* self ```
+void q_webenginecookiestore__filterrequest_delete(void* self);
 
 #endif

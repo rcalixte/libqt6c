@@ -12,15 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpixmap.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqtransform.h"
-
 /// https://doc.qt.io/qt-6/qscreen.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -404,7 +395,7 @@ QThread* q_screen_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QScreen* self, QThread* thread ```
-void q_screen_move_to_thread(void* self, void* thread);
+bool q_screen_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -419,6 +410,13 @@ int32_t q_screen_start_timer(void* self, int interval);
 ///
 /// ``` QScreen* self, int id ```
 void q_screen_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QScreen* self, enum Qt__TimerId id ```
+void q_screen_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -559,6 +557,13 @@ bool q_screen_inherits(void* self, const char* classname);
 ///
 /// ``` QScreen* self ```
 void q_screen_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QScreen* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_screen_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

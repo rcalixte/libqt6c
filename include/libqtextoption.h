@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-
 /// https://doc.qt.io/qt-6/qtextoption.html
 
 /// q_textoption_new constructs a new QTextOption object.

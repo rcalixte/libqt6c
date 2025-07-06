@@ -145,8 +145,8 @@ class VirtualQBoxLayout final : public QBoxLayout {
     mutable bool qboxlayout_issignalconnected_isbase = false;
 
   public:
-    VirtualQBoxLayout(QBoxLayout::Direction param1) : QBoxLayout(param1){};
-    VirtualQBoxLayout(QBoxLayout::Direction param1, QWidget* parent) : QBoxLayout(param1, parent){};
+    VirtualQBoxLayout(QBoxLayout::Direction param1) : QBoxLayout(param1) {};
+    VirtualQBoxLayout(QBoxLayout::Direction param1, QWidget* parent) : QBoxLayout(param1, parent) {};
 
     ~VirtualQBoxLayout() {
         qboxlayout_metacall_callback = nullptr;
@@ -853,10 +853,10 @@ class VirtualQBoxLayout final : public QBoxLayout {
     friend void QBoxLayout_QBaseTimerEvent(QBoxLayout* self, QTimerEvent* event);
     friend void QBoxLayout_CustomEvent(QBoxLayout* self, QEvent* event);
     friend void QBoxLayout_QBaseCustomEvent(QBoxLayout* self, QEvent* event);
-    friend void QBoxLayout_ConnectNotify(QBoxLayout* self, QMetaMethod* signal);
-    friend void QBoxLayout_QBaseConnectNotify(QBoxLayout* self, QMetaMethod* signal);
-    friend void QBoxLayout_DisconnectNotify(QBoxLayout* self, QMetaMethod* signal);
-    friend void QBoxLayout_QBaseDisconnectNotify(QBoxLayout* self, QMetaMethod* signal);
+    friend void QBoxLayout_ConnectNotify(QBoxLayout* self, const QMetaMethod* signal);
+    friend void QBoxLayout_QBaseConnectNotify(QBoxLayout* self, const QMetaMethod* signal);
+    friend void QBoxLayout_DisconnectNotify(QBoxLayout* self, const QMetaMethod* signal);
+    friend void QBoxLayout_QBaseDisconnectNotify(QBoxLayout* self, const QMetaMethod* signal);
     friend void QBoxLayout_WidgetEvent(QBoxLayout* self, QEvent* param1);
     friend void QBoxLayout_QBaseWidgetEvent(QBoxLayout* self, QEvent* param1);
     friend void QBoxLayout_AddChildLayout(QBoxLayout* self, QLayout* l);
@@ -865,16 +865,16 @@ class VirtualQBoxLayout final : public QBoxLayout {
     friend void QBoxLayout_QBaseAddChildWidget(QBoxLayout* self, QWidget* w);
     friend bool QBoxLayout_AdoptLayout(QBoxLayout* self, QLayout* layout);
     friend bool QBoxLayout_QBaseAdoptLayout(QBoxLayout* self, QLayout* layout);
-    friend QRect* QBoxLayout_AlignmentRect(const QBoxLayout* self, QRect* param1);
-    friend QRect* QBoxLayout_QBaseAlignmentRect(const QBoxLayout* self, QRect* param1);
+    friend QRect* QBoxLayout_AlignmentRect(const QBoxLayout* self, const QRect* param1);
+    friend QRect* QBoxLayout_QBaseAlignmentRect(const QBoxLayout* self, const QRect* param1);
     friend QObject* QBoxLayout_Sender(const QBoxLayout* self);
     friend QObject* QBoxLayout_QBaseSender(const QBoxLayout* self);
     friend int QBoxLayout_SenderSignalIndex(const QBoxLayout* self);
     friend int QBoxLayout_QBaseSenderSignalIndex(const QBoxLayout* self);
     friend int QBoxLayout_Receivers(const QBoxLayout* self, const char* signal);
     friend int QBoxLayout_QBaseReceivers(const QBoxLayout* self, const char* signal);
-    friend bool QBoxLayout_IsSignalConnected(const QBoxLayout* self, QMetaMethod* signal);
-    friend bool QBoxLayout_QBaseIsSignalConnected(const QBoxLayout* self, QMetaMethod* signal);
+    friend bool QBoxLayout_IsSignalConnected(const QBoxLayout* self, const QMetaMethod* signal);
+    friend bool QBoxLayout_QBaseIsSignalConnected(const QBoxLayout* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QHBoxLayout so that we can call protected methods
@@ -1012,8 +1012,8 @@ class VirtualQHBoxLayout final : public QHBoxLayout {
     mutable bool qhboxlayout_issignalconnected_isbase = false;
 
   public:
-    VirtualQHBoxLayout(QWidget* parent) : QHBoxLayout(parent){};
-    VirtualQHBoxLayout() : QHBoxLayout(){};
+    VirtualQHBoxLayout(QWidget* parent) : QHBoxLayout(parent) {};
+    VirtualQHBoxLayout() : QHBoxLayout() {};
 
     ~VirtualQHBoxLayout() {
         qhboxlayout_metacall_callback = nullptr;
@@ -1720,10 +1720,10 @@ class VirtualQHBoxLayout final : public QHBoxLayout {
     friend void QHBoxLayout_QBaseTimerEvent(QHBoxLayout* self, QTimerEvent* event);
     friend void QHBoxLayout_CustomEvent(QHBoxLayout* self, QEvent* event);
     friend void QHBoxLayout_QBaseCustomEvent(QHBoxLayout* self, QEvent* event);
-    friend void QHBoxLayout_ConnectNotify(QHBoxLayout* self, QMetaMethod* signal);
-    friend void QHBoxLayout_QBaseConnectNotify(QHBoxLayout* self, QMetaMethod* signal);
-    friend void QHBoxLayout_DisconnectNotify(QHBoxLayout* self, QMetaMethod* signal);
-    friend void QHBoxLayout_QBaseDisconnectNotify(QHBoxLayout* self, QMetaMethod* signal);
+    friend void QHBoxLayout_ConnectNotify(QHBoxLayout* self, const QMetaMethod* signal);
+    friend void QHBoxLayout_QBaseConnectNotify(QHBoxLayout* self, const QMetaMethod* signal);
+    friend void QHBoxLayout_DisconnectNotify(QHBoxLayout* self, const QMetaMethod* signal);
+    friend void QHBoxLayout_QBaseDisconnectNotify(QHBoxLayout* self, const QMetaMethod* signal);
     friend void QHBoxLayout_WidgetEvent(QHBoxLayout* self, QEvent* param1);
     friend void QHBoxLayout_QBaseWidgetEvent(QHBoxLayout* self, QEvent* param1);
     friend void QHBoxLayout_AddChildLayout(QHBoxLayout* self, QLayout* l);
@@ -1732,16 +1732,16 @@ class VirtualQHBoxLayout final : public QHBoxLayout {
     friend void QHBoxLayout_QBaseAddChildWidget(QHBoxLayout* self, QWidget* w);
     friend bool QHBoxLayout_AdoptLayout(QHBoxLayout* self, QLayout* layout);
     friend bool QHBoxLayout_QBaseAdoptLayout(QHBoxLayout* self, QLayout* layout);
-    friend QRect* QHBoxLayout_AlignmentRect(const QHBoxLayout* self, QRect* param1);
-    friend QRect* QHBoxLayout_QBaseAlignmentRect(const QHBoxLayout* self, QRect* param1);
+    friend QRect* QHBoxLayout_AlignmentRect(const QHBoxLayout* self, const QRect* param1);
+    friend QRect* QHBoxLayout_QBaseAlignmentRect(const QHBoxLayout* self, const QRect* param1);
     friend QObject* QHBoxLayout_Sender(const QHBoxLayout* self);
     friend QObject* QHBoxLayout_QBaseSender(const QHBoxLayout* self);
     friend int QHBoxLayout_SenderSignalIndex(const QHBoxLayout* self);
     friend int QHBoxLayout_QBaseSenderSignalIndex(const QHBoxLayout* self);
     friend int QHBoxLayout_Receivers(const QHBoxLayout* self, const char* signal);
     friend int QHBoxLayout_QBaseReceivers(const QHBoxLayout* self, const char* signal);
-    friend bool QHBoxLayout_IsSignalConnected(const QHBoxLayout* self, QMetaMethod* signal);
-    friend bool QHBoxLayout_QBaseIsSignalConnected(const QHBoxLayout* self, QMetaMethod* signal);
+    friend bool QHBoxLayout_IsSignalConnected(const QHBoxLayout* self, const QMetaMethod* signal);
+    friend bool QHBoxLayout_QBaseIsSignalConnected(const QHBoxLayout* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QVBoxLayout so that we can call protected methods
@@ -1879,8 +1879,8 @@ class VirtualQVBoxLayout final : public QVBoxLayout {
     mutable bool qvboxlayout_issignalconnected_isbase = false;
 
   public:
-    VirtualQVBoxLayout(QWidget* parent) : QVBoxLayout(parent){};
-    VirtualQVBoxLayout() : QVBoxLayout(){};
+    VirtualQVBoxLayout(QWidget* parent) : QVBoxLayout(parent) {};
+    VirtualQVBoxLayout() : QVBoxLayout() {};
 
     ~VirtualQVBoxLayout() {
         qvboxlayout_metacall_callback = nullptr;
@@ -2587,10 +2587,10 @@ class VirtualQVBoxLayout final : public QVBoxLayout {
     friend void QVBoxLayout_QBaseTimerEvent(QVBoxLayout* self, QTimerEvent* event);
     friend void QVBoxLayout_CustomEvent(QVBoxLayout* self, QEvent* event);
     friend void QVBoxLayout_QBaseCustomEvent(QVBoxLayout* self, QEvent* event);
-    friend void QVBoxLayout_ConnectNotify(QVBoxLayout* self, QMetaMethod* signal);
-    friend void QVBoxLayout_QBaseConnectNotify(QVBoxLayout* self, QMetaMethod* signal);
-    friend void QVBoxLayout_DisconnectNotify(QVBoxLayout* self, QMetaMethod* signal);
-    friend void QVBoxLayout_QBaseDisconnectNotify(QVBoxLayout* self, QMetaMethod* signal);
+    friend void QVBoxLayout_ConnectNotify(QVBoxLayout* self, const QMetaMethod* signal);
+    friend void QVBoxLayout_QBaseConnectNotify(QVBoxLayout* self, const QMetaMethod* signal);
+    friend void QVBoxLayout_DisconnectNotify(QVBoxLayout* self, const QMetaMethod* signal);
+    friend void QVBoxLayout_QBaseDisconnectNotify(QVBoxLayout* self, const QMetaMethod* signal);
     friend void QVBoxLayout_WidgetEvent(QVBoxLayout* self, QEvent* param1);
     friend void QVBoxLayout_QBaseWidgetEvent(QVBoxLayout* self, QEvent* param1);
     friend void QVBoxLayout_AddChildLayout(QVBoxLayout* self, QLayout* l);
@@ -2599,16 +2599,16 @@ class VirtualQVBoxLayout final : public QVBoxLayout {
     friend void QVBoxLayout_QBaseAddChildWidget(QVBoxLayout* self, QWidget* w);
     friend bool QVBoxLayout_AdoptLayout(QVBoxLayout* self, QLayout* layout);
     friend bool QVBoxLayout_QBaseAdoptLayout(QVBoxLayout* self, QLayout* layout);
-    friend QRect* QVBoxLayout_AlignmentRect(const QVBoxLayout* self, QRect* param1);
-    friend QRect* QVBoxLayout_QBaseAlignmentRect(const QVBoxLayout* self, QRect* param1);
+    friend QRect* QVBoxLayout_AlignmentRect(const QVBoxLayout* self, const QRect* param1);
+    friend QRect* QVBoxLayout_QBaseAlignmentRect(const QVBoxLayout* self, const QRect* param1);
     friend QObject* QVBoxLayout_Sender(const QVBoxLayout* self);
     friend QObject* QVBoxLayout_QBaseSender(const QVBoxLayout* self);
     friend int QVBoxLayout_SenderSignalIndex(const QVBoxLayout* self);
     friend int QVBoxLayout_QBaseSenderSignalIndex(const QVBoxLayout* self);
     friend int QVBoxLayout_Receivers(const QVBoxLayout* self, const char* signal);
     friend int QVBoxLayout_QBaseReceivers(const QVBoxLayout* self, const char* signal);
-    friend bool QVBoxLayout_IsSignalConnected(const QVBoxLayout* self, QMetaMethod* signal);
-    friend bool QVBoxLayout_QBaseIsSignalConnected(const QVBoxLayout* self, QMetaMethod* signal);
+    friend bool QVBoxLayout_IsSignalConnected(const QVBoxLayout* self, const QMetaMethod* signal);
+    friend bool QVBoxLayout_QBaseIsSignalConnected(const QVBoxLayout* self, const QMetaMethod* signal);
 };
 
 #endif

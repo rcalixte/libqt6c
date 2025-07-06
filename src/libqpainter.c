@@ -910,6 +910,14 @@ void q_painter_delete(void* self) {
     QPainter_Delete((QPainter*)(self));
 }
 
+QPainter__PixmapFragment* q_painter__pixmapfragment_new() {
+    return QPainter__PixmapFragment_new();
+}
+
+QPainter__PixmapFragment* q_painter__pixmapfragment_new2(void* param1) {
+    return QPainter__PixmapFragment_new2((QPainter__PixmapFragment*)param1);
+}
+
 QPainter__PixmapFragment* q_painter__pixmapfragment_create(void* pos, void* sourceRect) {
     return QPainter__PixmapFragment_Create((QPointF*)pos, (QRectF*)sourceRect);
 }

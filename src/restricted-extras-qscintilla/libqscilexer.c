@@ -568,6 +568,42 @@ bool q_scilexer_qbase_write_properties(void* self, void* qs, const char* prefix)
     return QsciLexer_QBaseWriteProperties((QsciLexer*)self, (QSettings*)qs, qstring(prefix));
 }
 
+char* q_scilexer_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexer_TextAsBytes((QsciLexer*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexer_on_text_as_bytes(void* self, char* (*slot)(void*, const char*)) {
+    QsciLexer_OnTextAsBytes((QsciLexer*)self, (intptr_t)slot);
+}
+
+char* q_scilexer_qbase_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexer_QBaseTextAsBytes((QsciLexer*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_scilexer_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexer_BytesAsText((QsciLexer*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexer_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int)) {
+    QsciLexer_OnBytesAsText((QsciLexer*)self, (intptr_t)slot);
+}
+
+const char* q_scilexer_qbase_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexer_QBaseBytesAsText((QsciLexer*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 const char* q_scilexer_tr2(const char* s, const char* c) {
     libqt_string _str = QsciLexer_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -625,8 +661,8 @@ QThread* q_scilexer_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_scilexer_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_scilexer_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_scilexer_start_timer(void* self, int interval) {
@@ -635,6 +671,10 @@ int32_t q_scilexer_start_timer(void* self, int interval) {
 
 void q_scilexer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_scilexer_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexer_children(void* self) {
@@ -727,6 +767,10 @@ bool q_scilexer_inherits(void* self, const char* classname) {
 
 void q_scilexer_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_scilexer_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_scilexer_start_timer2(void* self, int interval, int64_t timerType) {

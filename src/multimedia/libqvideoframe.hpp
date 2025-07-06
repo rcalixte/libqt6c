@@ -28,27 +28,14 @@ typedef struct QVideoFrameFormat QVideoFrameFormat;
 typedef struct QVideoFrame__PaintOptions QVideoFrame__PaintOptions;
 #endif
 
-#ifdef __cplusplus
-typedef QVideoFrame::HandleType HandleType;                           // C++ enum
-typedef QVideoFrame::MapMode MapMode;                                 // C++ enum
-typedef QVideoFrame::PaintOptions::PaintFlag PaintOptionsPaintFlag;   // C++ enum
-typedef QVideoFrame::PaintOptions::PaintFlags PaintOptionsPaintFlags; // C++ QFlags
-typedef QVideoFrame::RotationAngle RotationAngle;                     // C++ enum
-#else
-typedef int HandleType;             // C ABI enum
-typedef int MapMode;                // C ABI enum
-typedef int PaintOptionsPaintFlag;  // C ABI enum
-typedef int PaintOptionsPaintFlags; // C ABI QFlags
-typedef int RotationAngle;          // C ABI enum
-#endif
-
 QVideoFrame* QVideoFrame_new();
-QVideoFrame* QVideoFrame_new2(QVideoFrameFormat* format);
-QVideoFrame* QVideoFrame_new3(QVideoFrame* other);
+QVideoFrame* QVideoFrame_new2(const QVideoFrameFormat* format);
+QVideoFrame* QVideoFrame_new3(const QImage* image);
+QVideoFrame* QVideoFrame_new4(const QVideoFrame* other);
 void QVideoFrame_Swap(QVideoFrame* self, QVideoFrame* other);
-void QVideoFrame_OperatorAssign(QVideoFrame* self, QVideoFrame* other);
-bool QVideoFrame_OperatorEqual(const QVideoFrame* self, QVideoFrame* other);
-bool QVideoFrame_OperatorNotEqual(const QVideoFrame* self, QVideoFrame* other);
+void QVideoFrame_OperatorAssign(QVideoFrame* self, const QVideoFrame* other);
+bool QVideoFrame_OperatorEqual(const QVideoFrame* self, const QVideoFrame* other);
+bool QVideoFrame_OperatorNotEqual(const QVideoFrame* self, const QVideoFrame* other);
 bool QVideoFrame_IsValid(const QVideoFrame* self);
 int QVideoFrame_PixelFormat(const QVideoFrame* self);
 QVideoFrameFormat* QVideoFrame_SurfaceFormat(const QVideoFrame* self);
@@ -71,17 +58,21 @@ long long QVideoFrame_StartTime(const QVideoFrame* self);
 void QVideoFrame_SetStartTime(QVideoFrame* self, long long time);
 long long QVideoFrame_EndTime(const QVideoFrame* self);
 void QVideoFrame_SetEndTime(QVideoFrame* self, long long time);
-void QVideoFrame_SetRotationAngle(QVideoFrame* self, int rotationAngle);
+void QVideoFrame_SetRotationAngle(QVideoFrame* self, int angle);
 int QVideoFrame_RotationAngle(const QVideoFrame* self);
+void QVideoFrame_SetRotation(QVideoFrame* self, int angle);
+int QVideoFrame_Rotation(const QVideoFrame* self);
 void QVideoFrame_SetMirrored(QVideoFrame* self, bool mirrored);
 bool QVideoFrame_Mirrored(const QVideoFrame* self);
+void QVideoFrame_SetStreamFrameRate(QVideoFrame* self, double rate);
+double QVideoFrame_StreamFrameRate(const QVideoFrame* self);
 QImage* QVideoFrame_ToImage(const QVideoFrame* self);
 libqt_string QVideoFrame_SubtitleText(const QVideoFrame* self);
-void QVideoFrame_SetSubtitleText(QVideoFrame* self, libqt_string text);
-void QVideoFrame_Paint(QVideoFrame* self, QPainter* painter, QRectF* rect, QVideoFrame__PaintOptions* options);
+void QVideoFrame_SetSubtitleText(QVideoFrame* self, const libqt_string text);
+void QVideoFrame_Paint(QVideoFrame* self, QPainter* painter, const QRectF* rect, const QVideoFrame__PaintOptions* options);
 void QVideoFrame_Delete(QVideoFrame* self);
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new(QVideoFrame__PaintOptions* other);
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new(const QVideoFrame__PaintOptions* other);
 QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new2(QVideoFrame__PaintOptions* other);
 void QVideoFrame__PaintOptions_CopyAssign(QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other);
 void QVideoFrame__PaintOptions_MoveAssign(QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other);

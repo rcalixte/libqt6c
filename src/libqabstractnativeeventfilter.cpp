@@ -9,7 +9,7 @@ QAbstractNativeEventFilter* QAbstractNativeEventFilter_new() {
 }
 
 // Derived class handler implementation
-bool QAbstractNativeEventFilter_NativeEventFilter(QAbstractNativeEventFilter* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractNativeEventFilter_NativeEventFilter(QAbstractNativeEventFilter* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractnativeeventfilter = dynamic_cast<VirtualQAbstractNativeEventFilter*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractnativeeventfilter && vqabstractnativeeventfilter->isVirtualQAbstractNativeEventFilter) {
@@ -20,7 +20,7 @@ bool QAbstractNativeEventFilter_NativeEventFilter(QAbstractNativeEventFilter* se
 }
 
 // Base class handler implementation
-bool QAbstractNativeEventFilter_QBaseNativeEventFilter(QAbstractNativeEventFilter* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractNativeEventFilter_QBaseNativeEventFilter(QAbstractNativeEventFilter* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractnativeeventfilter = dynamic_cast<VirtualQAbstractNativeEventFilter*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractnativeeventfilter && vqabstractnativeeventfilter->isVirtualQAbstractNativeEventFilter) {

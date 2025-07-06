@@ -18,7 +18,7 @@ QInputDevice* QInputDevice_new() {
     return new VirtualQInputDevice();
 }
 
-QInputDevice* QInputDevice_new2(libqt_string name, long long systemId, int typeVal) {
+QInputDevice* QInputDevice_new2(const libqt_string name, long long systemId, int typeVal) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(typeVal));
 }
@@ -27,13 +27,13 @@ QInputDevice* QInputDevice_new3(QObject* parent) {
     return new VirtualQInputDevice(parent);
 }
 
-QInputDevice* QInputDevice_new4(libqt_string name, long long systemId, int typeVal, libqt_string seatName) {
+QInputDevice* QInputDevice_new4(const libqt_string name, long long systemId, int typeVal, const libqt_string seatName) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
     return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(typeVal), seatName_QString);
 }
 
-QInputDevice* QInputDevice_new5(libqt_string name, long long systemId, int typeVal, libqt_string seatName, QObject* parent) {
+QInputDevice* QInputDevice_new5(const libqt_string name, long long systemId, int typeVal, const libqt_string seatName, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
     return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(typeVal), seatName_QString, parent);
@@ -132,10 +132,10 @@ QRect* QInputDevice_AvailableVirtualGeometry(const QInputDevice* self) {
 }
 
 libqt_list /* of libqt_string */ QInputDevice_SeatNames() {
-    QStringList _ret = QInputDevice::seatNames();
+    QList<QString> _ret = QInputDevice::seatNames();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -147,7 +147,7 @@ libqt_list /* of libqt_string */ QInputDevice_SeatNames() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -155,12 +155,12 @@ libqt_list /* of libqt_string */ QInputDevice_SeatNames() {
 libqt_list /* of QInputDevice* */ QInputDevice_Devices() {
     QList<const QInputDevice*> _ret = QInputDevice::devices();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QInputDevice** _arr = static_cast<QInputDevice**>(malloc(sizeof(QInputDevice*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QInputDevice** _arr = static_cast<QInputDevice**>(malloc(sizeof(QInputDevice*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = (QInputDevice*)_ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -169,7 +169,7 @@ QInputDevice* QInputDevice_PrimaryKeyboard() {
     return (QInputDevice*)QInputDevice::primaryKeyboard();
 }
 
-bool QInputDevice_OperatorEqual(const QInputDevice* self, QInputDevice* other) {
+bool QInputDevice_OperatorEqual(const QInputDevice* self, const QInputDevice* other) {
     return (*self == *other);
 }
 
@@ -209,7 +209,7 @@ libqt_string QInputDevice_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-QInputDevice* QInputDevice_PrimaryKeyboard1(libqt_string seatName) {
+QInputDevice* QInputDevice_PrimaryKeyboard1(const libqt_string seatName) {
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
     return (QInputDevice*)QInputDevice::primaryKeyboard(seatName_QString);
 }
@@ -360,7 +360,7 @@ void QInputDevice_OnCustomEvent(QInputDevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QInputDevice_ConnectNotify(QInputDevice* self, QMetaMethod* signal) {
+void QInputDevice_ConnectNotify(QInputDevice* self, const QMetaMethod* signal) {
     auto* vqinputdevice = dynamic_cast<VirtualQInputDevice*>(self);
     if (vqinputdevice && vqinputdevice->isVirtualQInputDevice) {
         vqinputdevice->connectNotify(*signal);
@@ -370,7 +370,7 @@ void QInputDevice_ConnectNotify(QInputDevice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QInputDevice_QBaseConnectNotify(QInputDevice* self, QMetaMethod* signal) {
+void QInputDevice_QBaseConnectNotify(QInputDevice* self, const QMetaMethod* signal) {
     auto* vqinputdevice = dynamic_cast<VirtualQInputDevice*>(self);
     if (vqinputdevice && vqinputdevice->isVirtualQInputDevice) {
         vqinputdevice->setQInputDevice_ConnectNotify_IsBase(true);
@@ -389,7 +389,7 @@ void QInputDevice_OnConnectNotify(QInputDevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QInputDevice_DisconnectNotify(QInputDevice* self, QMetaMethod* signal) {
+void QInputDevice_DisconnectNotify(QInputDevice* self, const QMetaMethod* signal) {
     auto* vqinputdevice = dynamic_cast<VirtualQInputDevice*>(self);
     if (vqinputdevice && vqinputdevice->isVirtualQInputDevice) {
         vqinputdevice->disconnectNotify(*signal);
@@ -399,7 +399,7 @@ void QInputDevice_DisconnectNotify(QInputDevice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QInputDevice_QBaseDisconnectNotify(QInputDevice* self, QMetaMethod* signal) {
+void QInputDevice_QBaseDisconnectNotify(QInputDevice* self, const QMetaMethod* signal) {
     auto* vqinputdevice = dynamic_cast<VirtualQInputDevice*>(self);
     if (vqinputdevice && vqinputdevice->isVirtualQInputDevice) {
         vqinputdevice->setQInputDevice_DisconnectNotify_IsBase(true);
@@ -505,7 +505,7 @@ void QInputDevice_OnReceivers(const QInputDevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QInputDevice_IsSignalConnected(const QInputDevice* self, QMetaMethod* signal) {
+bool QInputDevice_IsSignalConnected(const QInputDevice* self, const QMetaMethod* signal) {
     auto* vqinputdevice = const_cast<VirtualQInputDevice*>(dynamic_cast<const VirtualQInputDevice*>(self));
     if (vqinputdevice && vqinputdevice->isVirtualQInputDevice) {
         return vqinputdevice->isSignalConnected(*signal);
@@ -515,7 +515,7 @@ bool QInputDevice_IsSignalConnected(const QInputDevice* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QInputDevice_QBaseIsSignalConnected(const QInputDevice* self, QMetaMethod* signal) {
+bool QInputDevice_QBaseIsSignalConnected(const QInputDevice* self, const QMetaMethod* signal) {
     auto* vqinputdevice = const_cast<VirtualQInputDevice*>(dynamic_cast<const VirtualQInputDevice*>(self));
     if (vqinputdevice && vqinputdevice->isVirtualQInputDevice) {
         vqinputdevice->setQInputDevice_IsSignalConnected_IsBase(true);

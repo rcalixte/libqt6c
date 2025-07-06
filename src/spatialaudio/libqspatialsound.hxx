@@ -61,7 +61,7 @@ class VirtualQSpatialSound final : public QSpatialSound {
     mutable bool qspatialsound_issignalconnected_isbase = false;
 
   public:
-    VirtualQSpatialSound(QAudioEngine* engine) : QSpatialSound(engine){};
+    VirtualQSpatialSound(QAudioEngine* engine) : QSpatialSound(engine) {};
 
     ~VirtualQSpatialSound() {
         qspatialsound_metacall_callback = nullptr;
@@ -293,18 +293,18 @@ class VirtualQSpatialSound final : public QSpatialSound {
     friend void QSpatialSound_QBaseChildEvent(QSpatialSound* self, QChildEvent* event);
     friend void QSpatialSound_CustomEvent(QSpatialSound* self, QEvent* event);
     friend void QSpatialSound_QBaseCustomEvent(QSpatialSound* self, QEvent* event);
-    friend void QSpatialSound_ConnectNotify(QSpatialSound* self, QMetaMethod* signal);
-    friend void QSpatialSound_QBaseConnectNotify(QSpatialSound* self, QMetaMethod* signal);
-    friend void QSpatialSound_DisconnectNotify(QSpatialSound* self, QMetaMethod* signal);
-    friend void QSpatialSound_QBaseDisconnectNotify(QSpatialSound* self, QMetaMethod* signal);
+    friend void QSpatialSound_ConnectNotify(QSpatialSound* self, const QMetaMethod* signal);
+    friend void QSpatialSound_QBaseConnectNotify(QSpatialSound* self, const QMetaMethod* signal);
+    friend void QSpatialSound_DisconnectNotify(QSpatialSound* self, const QMetaMethod* signal);
+    friend void QSpatialSound_QBaseDisconnectNotify(QSpatialSound* self, const QMetaMethod* signal);
     friend QObject* QSpatialSound_Sender(const QSpatialSound* self);
     friend QObject* QSpatialSound_QBaseSender(const QSpatialSound* self);
     friend int QSpatialSound_SenderSignalIndex(const QSpatialSound* self);
     friend int QSpatialSound_QBaseSenderSignalIndex(const QSpatialSound* self);
     friend int QSpatialSound_Receivers(const QSpatialSound* self, const char* signal);
     friend int QSpatialSound_QBaseReceivers(const QSpatialSound* self, const char* signal);
-    friend bool QSpatialSound_IsSignalConnected(const QSpatialSound* self, QMetaMethod* signal);
-    friend bool QSpatialSound_QBaseIsSignalConnected(const QSpatialSound* self, QMetaMethod* signal);
+    friend bool QSpatialSound_IsSignalConnected(const QSpatialSound* self, const QMetaMethod* signal);
+    friend bool QSpatialSound_QBaseIsSignalConnected(const QSpatialSound* self, const QMetaMethod* signal);
 };
 
 #endif

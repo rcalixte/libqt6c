@@ -6,7 +6,7 @@
 #include "libqlockfile.hpp"
 #include "libqlockfile.hxx"
 
-QLockFile* QLockFile_new(libqt_string fileName) {
+QLockFile* QLockFile_new(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QLockFile(fileName_QString);
 }
@@ -27,8 +27,8 @@ bool QLockFile_Lock(QLockFile* self) {
     return self->lock();
 }
 
-bool QLockFile_TryLock(QLockFile* self) {
-    return self->tryLock();
+bool QLockFile_TryLock(QLockFile* self, int timeout) {
+    return self->tryLock(static_cast<int>(timeout));
 }
 
 void QLockFile_Unlock(QLockFile* self) {
@@ -43,6 +43,10 @@ int QLockFile_StaleLockTime(const QLockFile* self) {
     return self->staleLockTime();
 }
 
+bool QLockFile_TryLock2(QLockFile* self) {
+    return self->tryLock();
+}
+
 bool QLockFile_IsLocked(const QLockFile* self) {
     return self->isLocked();
 }
@@ -53,10 +57,6 @@ bool QLockFile_RemoveStaleLockFile(QLockFile* self) {
 
 int QLockFile_Error(const QLockFile* self) {
     return static_cast<int>(self->error());
-}
-
-bool QLockFile_TryLock1(QLockFile* self, int timeout) {
-    return self->tryLock(static_cast<int>(timeout));
 }
 
 void QLockFile_Delete(QLockFile* self) {

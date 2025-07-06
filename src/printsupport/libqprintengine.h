@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qprintengine.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#setProperty)

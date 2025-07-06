@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqiodevice.h"
-
 /// https://doc.qt.io/qt-6/qcborstreamwriter.html
 
 /// q_cborstreamwriter_new constructs a new QCborStreamWriter object.

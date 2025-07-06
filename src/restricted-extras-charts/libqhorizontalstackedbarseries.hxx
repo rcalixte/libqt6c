@@ -64,8 +64,8 @@ class VirtualQHorizontalStackedBarSeries final : public QHorizontalStackedBarSer
     mutable bool qhorizontalstackedbarseries_issignalconnected_isbase = false;
 
   public:
-    VirtualQHorizontalStackedBarSeries() : QHorizontalStackedBarSeries(){};
-    VirtualQHorizontalStackedBarSeries(QObject* parent) : QHorizontalStackedBarSeries(parent){};
+    VirtualQHorizontalStackedBarSeries() : QHorizontalStackedBarSeries() {};
+    VirtualQHorizontalStackedBarSeries(QObject* parent) : QHorizontalStackedBarSeries(parent) {};
 
     ~VirtualQHorizontalStackedBarSeries() {
         qhorizontalstackedbarseries_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQHorizontalStackedBarSeries final : public QHorizontalStackedBarSer
     friend void QHorizontalStackedBarSeries_QBaseChildEvent(QHorizontalStackedBarSeries* self, QChildEvent* event);
     friend void QHorizontalStackedBarSeries_CustomEvent(QHorizontalStackedBarSeries* self, QEvent* event);
     friend void QHorizontalStackedBarSeries_QBaseCustomEvent(QHorizontalStackedBarSeries* self, QEvent* event);
-    friend void QHorizontalStackedBarSeries_ConnectNotify(QHorizontalStackedBarSeries* self, QMetaMethod* signal);
-    friend void QHorizontalStackedBarSeries_QBaseConnectNotify(QHorizontalStackedBarSeries* self, QMetaMethod* signal);
-    friend void QHorizontalStackedBarSeries_DisconnectNotify(QHorizontalStackedBarSeries* self, QMetaMethod* signal);
-    friend void QHorizontalStackedBarSeries_QBaseDisconnectNotify(QHorizontalStackedBarSeries* self, QMetaMethod* signal);
+    friend void QHorizontalStackedBarSeries_ConnectNotify(QHorizontalStackedBarSeries* self, const QMetaMethod* signal);
+    friend void QHorizontalStackedBarSeries_QBaseConnectNotify(QHorizontalStackedBarSeries* self, const QMetaMethod* signal);
+    friend void QHorizontalStackedBarSeries_DisconnectNotify(QHorizontalStackedBarSeries* self, const QMetaMethod* signal);
+    friend void QHorizontalStackedBarSeries_QBaseDisconnectNotify(QHorizontalStackedBarSeries* self, const QMetaMethod* signal);
     friend QObject* QHorizontalStackedBarSeries_Sender(const QHorizontalStackedBarSeries* self);
     friend QObject* QHorizontalStackedBarSeries_QBaseSender(const QHorizontalStackedBarSeries* self);
     friend int QHorizontalStackedBarSeries_SenderSignalIndex(const QHorizontalStackedBarSeries* self);
     friend int QHorizontalStackedBarSeries_QBaseSenderSignalIndex(const QHorizontalStackedBarSeries* self);
     friend int QHorizontalStackedBarSeries_Receivers(const QHorizontalStackedBarSeries* self, const char* signal);
     friend int QHorizontalStackedBarSeries_QBaseReceivers(const QHorizontalStackedBarSeries* self, const char* signal);
-    friend bool QHorizontalStackedBarSeries_IsSignalConnected(const QHorizontalStackedBarSeries* self, QMetaMethod* signal);
-    friend bool QHorizontalStackedBarSeries_QBaseIsSignalConnected(const QHorizontalStackedBarSeries* self, QMetaMethod* signal);
+    friend bool QHorizontalStackedBarSeries_IsSignalConnected(const QHorizontalStackedBarSeries* self, const QMetaMethod* signal);
+    friend bool QHorizontalStackedBarSeries_QBaseIsSignalConnected(const QHorizontalStackedBarSeries* self, const QMetaMethod* signal);
 };
 
 #endif

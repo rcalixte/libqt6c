@@ -31,12 +31,6 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QLayout::SizeConstraint SizeConstraint; // C++ enum
-#else
-typedef int SizeConstraint; // C ABI enum
-#endif
-
 QLayout* QLayout_new(QWidget* parent);
 QLayout* QLayout_new2();
 QMetaObject* QLayout_MetaObject(const QLayout* self);
@@ -52,7 +46,7 @@ void QLayout_SetSpacing(QLayout* self, int spacing);
 void QLayout_OnSetSpacing(QLayout* self, intptr_t slot);
 void QLayout_QBaseSetSpacing(QLayout* self, int spacing);
 void QLayout_SetContentsMargins(QLayout* self, int left, int top, int right, int bottom);
-void QLayout_SetContentsMarginsWithMargins(QLayout* self, QMargins* margins);
+void QLayout_SetContentsMarginsWithMargins(QLayout* self, const QMargins* margins);
 void QLayout_UnsetContentsMargins(QLayout* self);
 void QLayout_GetContentsMargins(const QLayout* self, int* left, int* top, int* right, int* bottom);
 QMargins* QLayout_ContentsMargins(const QLayout* self);
@@ -87,21 +81,21 @@ QSize* QLayout_QBaseMinimumSize(const QLayout* self);
 QSize* QLayout_MaximumSize(const QLayout* self);
 void QLayout_OnMaximumSize(const QLayout* self, intptr_t slot);
 QSize* QLayout_QBaseMaximumSize(const QLayout* self);
-void QLayout_SetGeometry(QLayout* self, QRect* geometry);
+void QLayout_SetGeometry(QLayout* self, const QRect* geometry);
 void QLayout_OnSetGeometry(QLayout* self, intptr_t slot);
-void QLayout_QBaseSetGeometry(QLayout* self, QRect* geometry);
+void QLayout_QBaseSetGeometry(QLayout* self, const QRect* geometry);
 QLayoutItem* QLayout_ItemAt(const QLayout* self, int index);
 void QLayout_OnItemAt(const QLayout* self, intptr_t slot);
 QLayoutItem* QLayout_QBaseItemAt(const QLayout* self, int index);
 QLayoutItem* QLayout_TakeAt(QLayout* self, int index);
 void QLayout_OnTakeAt(QLayout* self, intptr_t slot);
 QLayoutItem* QLayout_QBaseTakeAt(QLayout* self, int index);
-int QLayout_IndexOf(const QLayout* self, QWidget* param1);
+int QLayout_IndexOf(const QLayout* self, const QWidget* param1);
 void QLayout_OnIndexOf(const QLayout* self, intptr_t slot);
-int QLayout_QBaseIndexOf(const QLayout* self, QWidget* param1);
-int QLayout_IndexOfWithQLayoutItem(const QLayout* self, QLayoutItem* param1);
+int QLayout_QBaseIndexOf(const QLayout* self, const QWidget* param1);
+int QLayout_IndexOfWithQLayoutItem(const QLayout* self, const QLayoutItem* param1);
 void QLayout_OnIndexOfWithQLayoutItem(const QLayout* self, intptr_t slot);
-int QLayout_QBaseIndexOfWithQLayoutItem(const QLayout* self, QLayoutItem* param1);
+int QLayout_QBaseIndexOfWithQLayoutItem(const QLayout* self, const QLayoutItem* param1);
 int QLayout_Count(const QLayout* self);
 void QLayout_OnCount(const QLayout* self, intptr_t slot);
 int QLayout_QBaseCount(const QLayout* self);
@@ -124,7 +118,7 @@ void QLayout_OnLayout(QLayout* self, intptr_t slot);
 QLayout* QLayout_QBaseLayout(QLayout* self);
 void QLayout_SetEnabled(QLayout* self, bool enabled);
 bool QLayout_IsEnabled(const QLayout* self);
-QSize* QLayout_ClosestAcceptableSize(QWidget* w, QSize* s);
+QSize* QLayout_ClosestAcceptableSize(const QWidget* w, const QSize* s);
 void QLayout_ChildEvent(QLayout* self, QChildEvent* e);
 void QLayout_OnChildEvent(QLayout* self, intptr_t slot);
 void QLayout_QBaseChildEvent(QLayout* self, QChildEvent* e);
@@ -142,12 +136,12 @@ void QLayout_QBaseTimerEvent(QLayout* self, QTimerEvent* event);
 void QLayout_CustomEvent(QLayout* self, QEvent* event);
 void QLayout_OnCustomEvent(QLayout* self, intptr_t slot);
 void QLayout_QBaseCustomEvent(QLayout* self, QEvent* event);
-void QLayout_ConnectNotify(QLayout* self, QMetaMethod* signal);
+void QLayout_ConnectNotify(QLayout* self, const QMetaMethod* signal);
 void QLayout_OnConnectNotify(QLayout* self, intptr_t slot);
-void QLayout_QBaseConnectNotify(QLayout* self, QMetaMethod* signal);
-void QLayout_DisconnectNotify(QLayout* self, QMetaMethod* signal);
+void QLayout_QBaseConnectNotify(QLayout* self, const QMetaMethod* signal);
+void QLayout_DisconnectNotify(QLayout* self, const QMetaMethod* signal);
 void QLayout_OnDisconnectNotify(QLayout* self, intptr_t slot);
-void QLayout_QBaseDisconnectNotify(QLayout* self, QMetaMethod* signal);
+void QLayout_QBaseDisconnectNotify(QLayout* self, const QMetaMethod* signal);
 QSize* QLayout_SizeHint(const QLayout* self);
 void QLayout_OnSizeHint(const QLayout* self, intptr_t slot);
 QSize* QLayout_QBaseSizeHint(const QLayout* self);
@@ -178,9 +172,9 @@ void QLayout_QBaseAddChildWidget(QLayout* self, QWidget* w);
 bool QLayout_AdoptLayout(QLayout* self, QLayout* layout);
 void QLayout_OnAdoptLayout(QLayout* self, intptr_t slot);
 bool QLayout_QBaseAdoptLayout(QLayout* self, QLayout* layout);
-QRect* QLayout_AlignmentRect(const QLayout* self, QRect* param1);
+QRect* QLayout_AlignmentRect(const QLayout* self, const QRect* param1);
 void QLayout_OnAlignmentRect(const QLayout* self, intptr_t slot);
-QRect* QLayout_QBaseAlignmentRect(const QLayout* self, QRect* param1);
+QRect* QLayout_QBaseAlignmentRect(const QLayout* self, const QRect* param1);
 QObject* QLayout_Sender(const QLayout* self);
 void QLayout_OnSender(const QLayout* self, intptr_t slot);
 QObject* QLayout_QBaseSender(const QLayout* self);
@@ -190,9 +184,9 @@ int QLayout_QBaseSenderSignalIndex(const QLayout* self);
 int QLayout_Receivers(const QLayout* self, const char* signal);
 void QLayout_OnReceivers(const QLayout* self, intptr_t slot);
 int QLayout_QBaseReceivers(const QLayout* self, const char* signal);
-bool QLayout_IsSignalConnected(const QLayout* self, QMetaMethod* signal);
+bool QLayout_IsSignalConnected(const QLayout* self, const QMetaMethod* signal);
 void QLayout_OnIsSignalConnected(const QLayout* self, intptr_t slot);
-bool QLayout_QBaseIsSignalConnected(const QLayout* self, QMetaMethod* signal);
+bool QLayout_QBaseIsSignalConnected(const QLayout* self, const QMetaMethod* signal);
 void QLayout_Delete(QLayout* self);
 
 #ifdef __cplusplus

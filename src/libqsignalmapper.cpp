@@ -72,7 +72,7 @@ void QSignalMapper_SetMapping(QSignalMapper* self, QObject* sender, int id) {
     self->setMapping(sender, static_cast<int>(id));
 }
 
-void QSignalMapper_SetMapping2(QSignalMapper* self, QObject* sender, libqt_string text) {
+void QSignalMapper_SetMapping2(QSignalMapper* self, QObject* sender, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setMapping(sender, text_QString);
 }
@@ -89,7 +89,7 @@ QObject* QSignalMapper_Mapping(const QSignalMapper* self, int id) {
     return self->mapping(static_cast<int>(id));
 }
 
-QObject* QSignalMapper_MappingWithText(const QSignalMapper* self, libqt_string text) {
+QObject* QSignalMapper_MappingWithText(const QSignalMapper* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->mapping(text_QString);
 }
@@ -110,7 +110,7 @@ void QSignalMapper_Connect_MappedInt(QSignalMapper* self, intptr_t slot) {
     });
 }
 
-void QSignalMapper_MappedString(QSignalMapper* self, libqt_string param1) {
+void QSignalMapper_MappedString(QSignalMapper* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->mappedString(param1_QString);
 }
@@ -321,7 +321,7 @@ void QSignalMapper_OnCustomEvent(QSignalMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSignalMapper_ConnectNotify(QSignalMapper* self, QMetaMethod* signal) {
+void QSignalMapper_ConnectNotify(QSignalMapper* self, const QMetaMethod* signal) {
     auto* vqsignalmapper = dynamic_cast<VirtualQSignalMapper*>(self);
     if (vqsignalmapper && vqsignalmapper->isVirtualQSignalMapper) {
         vqsignalmapper->connectNotify(*signal);
@@ -331,7 +331,7 @@ void QSignalMapper_ConnectNotify(QSignalMapper* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSignalMapper_QBaseConnectNotify(QSignalMapper* self, QMetaMethod* signal) {
+void QSignalMapper_QBaseConnectNotify(QSignalMapper* self, const QMetaMethod* signal) {
     auto* vqsignalmapper = dynamic_cast<VirtualQSignalMapper*>(self);
     if (vqsignalmapper && vqsignalmapper->isVirtualQSignalMapper) {
         vqsignalmapper->setQSignalMapper_ConnectNotify_IsBase(true);
@@ -350,7 +350,7 @@ void QSignalMapper_OnConnectNotify(QSignalMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSignalMapper_DisconnectNotify(QSignalMapper* self, QMetaMethod* signal) {
+void QSignalMapper_DisconnectNotify(QSignalMapper* self, const QMetaMethod* signal) {
     auto* vqsignalmapper = dynamic_cast<VirtualQSignalMapper*>(self);
     if (vqsignalmapper && vqsignalmapper->isVirtualQSignalMapper) {
         vqsignalmapper->disconnectNotify(*signal);
@@ -360,7 +360,7 @@ void QSignalMapper_DisconnectNotify(QSignalMapper* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSignalMapper_QBaseDisconnectNotify(QSignalMapper* self, QMetaMethod* signal) {
+void QSignalMapper_QBaseDisconnectNotify(QSignalMapper* self, const QMetaMethod* signal) {
     auto* vqsignalmapper = dynamic_cast<VirtualQSignalMapper*>(self);
     if (vqsignalmapper && vqsignalmapper->isVirtualQSignalMapper) {
         vqsignalmapper->setQSignalMapper_DisconnectNotify_IsBase(true);
@@ -466,7 +466,7 @@ void QSignalMapper_OnReceivers(const QSignalMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSignalMapper_IsSignalConnected(const QSignalMapper* self, QMetaMethod* signal) {
+bool QSignalMapper_IsSignalConnected(const QSignalMapper* self, const QMetaMethod* signal) {
     auto* vqsignalmapper = const_cast<VirtualQSignalMapper*>(dynamic_cast<const VirtualQSignalMapper*>(self));
     if (vqsignalmapper && vqsignalmapper->isVirtualQSignalMapper) {
         return vqsignalmapper->isSignalConnected(*signal);
@@ -476,7 +476,7 @@ bool QSignalMapper_IsSignalConnected(const QSignalMapper* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QSignalMapper_QBaseIsSignalConnected(const QSignalMapper* self, QMetaMethod* signal) {
+bool QSignalMapper_QBaseIsSignalConnected(const QSignalMapper* self, const QMetaMethod* signal) {
     auto* vqsignalmapper = const_cast<VirtualQSignalMapper*>(dynamic_cast<const VirtualQSignalMapper*>(self));
     if (vqsignalmapper && vqsignalmapper->isVirtualQSignalMapper) {
         vqsignalmapper->setQSignalMapper_IsSignalConnected_IsBase(true);

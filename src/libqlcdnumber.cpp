@@ -149,7 +149,7 @@ int QLCDNumber_IntValue(const QLCDNumber* self) {
     return self->intValue();
 }
 
-void QLCDNumber_Display(QLCDNumber* self, libqt_string str) {
+void QLCDNumber_Display(QLCDNumber* self, const libqt_string str) {
     QString str_QString = QString::fromUtf8(str.data, str.len);
     self->display(str_QString);
 }
@@ -1204,7 +1204,7 @@ void QLCDNumber_OnHideEvent(QLCDNumber* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLCDNumber_NativeEvent(QLCDNumber* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QLCDNumber_NativeEvent(QLCDNumber* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlcdnumber = dynamic_cast<VirtualQLCDNumber*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
@@ -1215,7 +1215,7 @@ bool QLCDNumber_NativeEvent(QLCDNumber* self, libqt_string eventType, void* mess
 }
 
 // Base class handler implementation
-bool QLCDNumber_QBaseNativeEvent(QLCDNumber* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QLCDNumber_QBaseNativeEvent(QLCDNumber* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqlcdnumber = dynamic_cast<VirtualQLCDNumber*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
@@ -1554,7 +1554,7 @@ void QLCDNumber_OnCustomEvent(QLCDNumber* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLCDNumber_ConnectNotify(QLCDNumber* self, QMetaMethod* signal) {
+void QLCDNumber_ConnectNotify(QLCDNumber* self, const QMetaMethod* signal) {
     auto* vqlcdnumber = dynamic_cast<VirtualQLCDNumber*>(self);
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         vqlcdnumber->connectNotify(*signal);
@@ -1564,7 +1564,7 @@ void QLCDNumber_ConnectNotify(QLCDNumber* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLCDNumber_QBaseConnectNotify(QLCDNumber* self, QMetaMethod* signal) {
+void QLCDNumber_QBaseConnectNotify(QLCDNumber* self, const QMetaMethod* signal) {
     auto* vqlcdnumber = dynamic_cast<VirtualQLCDNumber*>(self);
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         vqlcdnumber->setQLCDNumber_ConnectNotify_IsBase(true);
@@ -1583,7 +1583,7 @@ void QLCDNumber_OnConnectNotify(QLCDNumber* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLCDNumber_DisconnectNotify(QLCDNumber* self, QMetaMethod* signal) {
+void QLCDNumber_DisconnectNotify(QLCDNumber* self, const QMetaMethod* signal) {
     auto* vqlcdnumber = dynamic_cast<VirtualQLCDNumber*>(self);
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         vqlcdnumber->disconnectNotify(*signal);
@@ -1593,7 +1593,7 @@ void QLCDNumber_DisconnectNotify(QLCDNumber* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLCDNumber_QBaseDisconnectNotify(QLCDNumber* self, QMetaMethod* signal) {
+void QLCDNumber_QBaseDisconnectNotify(QLCDNumber* self, const QMetaMethod* signal) {
     auto* vqlcdnumber = dynamic_cast<VirtualQLCDNumber*>(self);
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         vqlcdnumber->setQLCDNumber_DisconnectNotify_IsBase(true);
@@ -1873,7 +1873,7 @@ void QLCDNumber_OnReceivers(const QLCDNumber* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLCDNumber_IsSignalConnected(const QLCDNumber* self, QMetaMethod* signal) {
+bool QLCDNumber_IsSignalConnected(const QLCDNumber* self, const QMetaMethod* signal) {
     auto* vqlcdnumber = const_cast<VirtualQLCDNumber*>(dynamic_cast<const VirtualQLCDNumber*>(self));
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         return vqlcdnumber->isSignalConnected(*signal);
@@ -1883,7 +1883,7 @@ bool QLCDNumber_IsSignalConnected(const QLCDNumber* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QLCDNumber_QBaseIsSignalConnected(const QLCDNumber* self, QMetaMethod* signal) {
+bool QLCDNumber_QBaseIsSignalConnected(const QLCDNumber* self, const QMetaMethod* signal) {
     auto* vqlcdnumber = const_cast<VirtualQLCDNumber*>(dynamic_cast<const VirtualQLCDNumber*>(self));
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         vqlcdnumber->setQLCDNumber_IsSignalConnected_IsBase(true);
@@ -1898,6 +1898,35 @@ void QLCDNumber_OnIsSignalConnected(const QLCDNumber* self, intptr_t slot) {
     auto* vqlcdnumber = const_cast<VirtualQLCDNumber*>(dynamic_cast<const VirtualQLCDNumber*>(self));
     if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
         vqlcdnumber->setQLCDNumber_IsSignalConnected_Callback(reinterpret_cast<VirtualQLCDNumber::QLCDNumber_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QLCDNumber_GetDecodedMetricF(const QLCDNumber* self, int metricA, int metricB) {
+    auto* vqlcdnumber = const_cast<VirtualQLCDNumber*>(dynamic_cast<const VirtualQLCDNumber*>(self));
+    if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
+        return vqlcdnumber->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQLCDNumber*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QLCDNumber_QBaseGetDecodedMetricF(const QLCDNumber* self, int metricA, int metricB) {
+    auto* vqlcdnumber = const_cast<VirtualQLCDNumber*>(dynamic_cast<const VirtualQLCDNumber*>(self));
+    if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
+        vqlcdnumber->setQLCDNumber_GetDecodedMetricF_IsBase(true);
+        return vqlcdnumber->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQLCDNumber*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QLCDNumber_OnGetDecodedMetricF(const QLCDNumber* self, intptr_t slot) {
+    auto* vqlcdnumber = const_cast<VirtualQLCDNumber*>(dynamic_cast<const VirtualQLCDNumber*>(self));
+    if (vqlcdnumber && vqlcdnumber->isVirtualQLCDNumber) {
+        vqlcdnumber->setQLCDNumber_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQLCDNumber::QLCDNumber_GetDecodedMetricF_Callback>(slot));
     }
 }
 

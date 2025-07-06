@@ -62,23 +62,59 @@ QVariant* q_variant_new10(float f) {
     return QVariant_new10(f);
 }
 
-QVariant* q_variant_new11(const char* str) {
-    return QVariant_new11(str);
+QVariant* q_variant_new11(void* qchar) {
+    return QVariant_new11((QChar*)qchar);
 }
 
-QVariant* q_variant_new12(const char* bytearray) {
-    return QVariant_new12(qstring(bytearray));
+QVariant* q_variant_new12(void* date) {
+    return QVariant_new12((QDate*)date);
 }
 
-QVariant* q_variant_new13(void* bitarray) {
-    return QVariant_new13((QBitArray*)bitarray);
+QVariant* q_variant_new13(void* time) {
+    return QVariant_new13((QTime*)time);
 }
 
-QVariant* q_variant_new14(const char* stringVal) {
-    return QVariant_new14(qstring(stringVal));
+QVariant* q_variant_new14(void* bitarray) {
+    return QVariant_new14((QBitArray*)bitarray);
 }
 
-QVariant* q_variant_new15(const char* stringlist[]) {
+QVariant* q_variant_new15(const char* bytearray) {
+    return QVariant_new15(qstring(bytearray));
+}
+
+QVariant* q_variant_new16(void* datetime) {
+    return QVariant_new16((QDateTime*)datetime);
+}
+
+QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash) {
+    return QVariant_new17(hash);
+}
+
+QVariant* q_variant_new18(void* jsonArray) {
+    return QVariant_new18((QJsonArray*)jsonArray);
+}
+
+QVariant* q_variant_new19(void* jsonObject) {
+    return QVariant_new19((QJsonObject*)jsonObject);
+}
+
+QVariant* q_variant_new20(void* locale) {
+    return QVariant_new20((QLocale*)locale);
+}
+
+QVariant* q_variant_new21(libqt_map /* of const char* to QVariant* */ mapVal) {
+    return QVariant_new21(mapVal);
+}
+
+QVariant* q_variant_new22(void* re) {
+    return QVariant_new22((QRegularExpression*)re);
+}
+
+QVariant* q_variant_new23(const char* stringVal) {
+    return QVariant_new23(qstring(stringVal));
+}
+
+QVariant* q_variant_new24(const char* stringlist[]) {
     size_t stringlist_len = libqt_strv_length(stringlist);
     libqt_string* stringlist_qstr = malloc(stringlist_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < stringlist_len; ++_i) {
@@ -86,115 +122,27 @@ QVariant* q_variant_new15(const char* stringlist[]) {
     }
     libqt_list stringlist_list = qlist(stringlist_qstr, stringlist_len);
 
-    return QVariant_new15(stringlist_list);
+    return QVariant_new24(stringlist_list);
 }
 
-QVariant* q_variant_new16(void* qchar) {
-    return QVariant_new16((QChar*)qchar);
+QVariant* q_variant_new25(void* url) {
+    return QVariant_new25((QUrl*)url);
 }
 
-QVariant* q_variant_new17(void* date) {
-    return QVariant_new17((QDate*)date);
+QVariant* q_variant_new26(void* size) {
+    return QVariant_new26((QSize*)size);
 }
 
-QVariant* q_variant_new18(void* time) {
-    return QVariant_new18((QTime*)time);
+QVariant* q_variant_new27(void* pt) {
+    return QVariant_new27((QPoint*)pt);
 }
 
-QVariant* q_variant_new19(void* datetime) {
-    return QVariant_new19((QDateTime*)datetime);
+QVariant* q_variant_new28(int64_t typeVal) {
+    return QVariant_new28(typeVal);
 }
 
-QVariant* q_variant_new20(libqt_map /* of const char* to QVariant* */ mapVal) {
-    return QVariant_new20(mapVal);
-}
-
-QVariant* q_variant_new21(libqt_map /* of const char* to QVariant* */ hash) {
-    return QVariant_new21(hash);
-}
-
-QVariant* q_variant_new22(void* size) {
-    return QVariant_new22((QSize*)size);
-}
-
-QVariant* q_variant_new23(void* size) {
-    return QVariant_new23((QSizeF*)size);
-}
-
-QVariant* q_variant_new24(void* pt) {
-    return QVariant_new24((QPoint*)pt);
-}
-
-QVariant* q_variant_new25(void* pt) {
-    return QVariant_new25((QPointF*)pt);
-}
-
-QVariant* q_variant_new26(void* line) {
-    return QVariant_new26((QLine*)line);
-}
-
-QVariant* q_variant_new27(void* line) {
-    return QVariant_new27((QLineF*)line);
-}
-
-QVariant* q_variant_new28(void* rect) {
-    return QVariant_new28((QRect*)rect);
-}
-
-QVariant* q_variant_new29(void* rect) {
-    return QVariant_new29((QRectF*)rect);
-}
-
-QVariant* q_variant_new30(void* locale) {
-    return QVariant_new30((QLocale*)locale);
-}
-
-QVariant* q_variant_new31(void* re) {
-    return QVariant_new31((QRegularExpression*)re);
-}
-
-QVariant* q_variant_new32(void* easing) {
-    return QVariant_new32((QEasingCurve*)easing);
-}
-
-QVariant* q_variant_new33(void* uuid) {
-    return QVariant_new33((QUuid*)uuid);
-}
-
-QVariant* q_variant_new34(void* url) {
-    return QVariant_new34((QUrl*)url);
-}
-
-QVariant* q_variant_new35(void* jsonValue) {
-    return QVariant_new35((QJsonValue*)jsonValue);
-}
-
-QVariant* q_variant_new36(void* jsonObject) {
-    return QVariant_new36((QJsonObject*)jsonObject);
-}
-
-QVariant* q_variant_new37(void* jsonArray) {
-    return QVariant_new37((QJsonArray*)jsonArray);
-}
-
-QVariant* q_variant_new38(void* jsonDocument) {
-    return QVariant_new38((QJsonDocument*)jsonDocument);
-}
-
-QVariant* q_variant_new39(void* modelIndex) {
-    return QVariant_new39((QModelIndex*)modelIndex);
-}
-
-QVariant* q_variant_new40(void* modelIndex) {
-    return QVariant_new40((QPersistentModelIndex*)modelIndex);
-}
-
-QVariant* q_variant_new41(int64_t typeVal) {
-    return QVariant_new41(typeVal);
-}
-
-QVariant* q_variant_new42(void* typeVal, void* copyVal) {
-    return QVariant_new42((QMetaType*)typeVal, copyVal);
+QVariant* q_variant_new29(void* typeVal, void* copyVal) {
+    return QVariant_new29((QMetaType*)typeVal, copyVal);
 }
 
 void q_variant_operator_assign(void* self, void* other) {
@@ -462,6 +410,10 @@ void q_variant_set_value(void* self, void* avalue) {
     QVariant_SetValue((QVariant*)self, (QVariant*)avalue);
 }
 
+QVariant* q_variant_from_meta_type(void* typeVal) {
+    return QVariant_FromMetaType((QMetaType*)typeVal);
+}
+
 QPartialOrdering* q_variant_compare(void* lhs, void* rhs) {
     return QVariant_Compare((QVariant*)lhs, (QVariant*)rhs);
 }
@@ -494,30 +446,10 @@ double q_variant_to_real1(void* self, bool* ok) {
     return QVariant_ToReal1((QVariant*)self, (bool*)ok);
 }
 
+QVariant* q_variant_from_meta_type2(void* typeVal, void* copyVal) {
+    return QVariant_FromMetaType2((QMetaType*)typeVal, copyVal);
+}
+
 void q_variant_delete(void* self) {
     QVariant_Delete((QVariant*)(self));
-}
-
-QVariantConstPointer* q_variantconstpointer_new(void* variant) {
-    return QVariantConstPointer_new((QVariant*)variant);
-}
-
-QVariantConstPointer* q_variantconstpointer_new2(void* param1) {
-    return QVariantConstPointer_new2((QVariantConstPointer*)param1);
-}
-
-QVariant* q_variantconstpointer_operator_multiply(void* self) {
-    return QVariantConstPointer_OperatorMultiply((QVariantConstPointer*)self);
-}
-
-const QVariant* q_variantconstpointer_operator_minus_greater(void* self) {
-    return QVariantConstPointer_OperatorMinusGreater((QVariantConstPointer*)self);
-}
-
-void q_variantconstpointer_operator_assign(void* self, void* param1) {
-    QVariantConstPointer_OperatorAssign((QVariantConstPointer*)self, (QVariantConstPointer*)param1);
-}
-
-void q_variantconstpointer_delete(void* self) {
-    QVariantConstPointer_Delete((QVariantConstPointer*)(self));
 }

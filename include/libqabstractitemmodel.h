@@ -12,26 +12,12 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qmodelroledata.html
 
 /// q_modelroledata_new constructs a new QModelRoleData object.
 ///
 /// ``` int role ```
 QModelRoleData* q_modelroledata_new(int role);
-
-/// q_modelroledata_new2 constructs a new QModelRoleData object.
-///
-/// ``` QModelRoleData* param1 ```
-QModelRoleData* q_modelroledata_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmodelroledata.html#role)
 ///
@@ -251,21 +237,6 @@ const QAbstractItemModel* q_modelindex_model(void* self);
 /// ``` QModelIndex* self ```
 bool q_modelindex_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmodelindex.html#operator==)
-///
-/// ``` QModelIndex* self, QModelIndex* other ```
-bool q_modelindex_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmodelindex.html#operator!=)
-///
-/// ``` QModelIndex* self, QModelIndex* other ```
-bool q_modelindex_operator_not_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qmodelindex.html#operator<)
-///
-/// ``` QModelIndex* self, QModelIndex* other ```
-bool q_modelindex_operator_lesser(void* self, void* other);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qmodelindex.html#data)
 ///
 /// ``` QModelIndex* self, int role ```
@@ -295,21 +266,6 @@ QPersistentModelIndex* q_persistentmodelindex_new2(void* index);
 /// ``` QPersistentModelIndex* other ```
 QPersistentModelIndex* q_persistentmodelindex_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator<)
-///
-/// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
-bool q_persistentmodelindex_operator_lesser(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator==)
-///
-/// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
-bool q_persistentmodelindex_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator!=)
-///
-/// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
-bool q_persistentmodelindex_operator_not_equal(void* self, void* other);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator=)
 ///
 /// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
@@ -319,16 +275,6 @@ void q_persistentmodelindex_operator_assign(void* self, void* other);
 ///
 /// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
 void q_persistentmodelindex_swap(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator==)
-///
-/// ``` QPersistentModelIndex* self, QModelIndex* other ```
-bool q_persistentmodelindex_operator_equal_with_other(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator!=)
-///
-/// ``` QPersistentModelIndex* self, QModelIndex* other ```
-bool q_persistentmodelindex_operator_not_equal_with_other(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator=)
 ///
@@ -1802,7 +1748,7 @@ QThread* q_abstractitemmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractItemModel* self, QThread* thread ```
-void q_abstractitemmodel_move_to_thread(void* self, void* thread);
+bool q_abstractitemmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1817,6 +1763,13 @@ int32_t q_abstractitemmodel_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractItemModel* self, int id ```
 void q_abstractitemmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractItemModel* self, enum Qt__TimerId id ```
+void q_abstractitemmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1950,6 +1903,13 @@ bool q_abstractitemmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractItemModel* self ```
 void q_abstractitemmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractItemModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstractitemmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2856,7 +2816,7 @@ QThread* q_abstracttablemodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractTableModel* self, QThread* thread ```
-void q_abstracttablemodel_move_to_thread(void* self, void* thread);
+bool q_abstracttablemodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2871,6 +2831,13 @@ int32_t q_abstracttablemodel_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractTableModel* self, int id ```
 void q_abstracttablemodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractTableModel* self, enum Qt__TimerId id ```
+void q_abstracttablemodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3004,6 +2971,13 @@ bool q_abstracttablemodel_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractTableModel* self ```
 void q_abstracttablemodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractTableModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstracttablemodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -5340,7 +5314,7 @@ QThread* q_abstractlistmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAbstractListModel* self, QThread* thread ```
-void q_abstractlistmodel_move_to_thread(void* self, void* thread);
+bool q_abstractlistmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -5355,6 +5329,13 @@ int32_t q_abstractlistmodel_start_timer(void* self, int interval);
 ///
 /// ``` QAbstractListModel* self, int id ```
 void q_abstractlistmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAbstractListModel* self, enum Qt__TimerId id ```
+void q_abstractlistmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -5488,6 +5469,13 @@ bool q_abstractlistmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QAbstractListModel* self ```
 void q_abstractlistmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAbstractListModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_abstractlistmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

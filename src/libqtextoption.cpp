@@ -14,11 +14,11 @@ QTextOption* QTextOption_new2(int alignment) {
     return new QTextOption(static_cast<Qt::Alignment>(alignment));
 }
 
-QTextOption* QTextOption_new3(QTextOption* o) {
+QTextOption* QTextOption_new3(const QTextOption* o) {
     return new QTextOption(*o);
 }
 
-void QTextOption_OperatorAssign(QTextOption* self, QTextOption* o) {
+void QTextOption_OperatorAssign(QTextOption* self, const QTextOption* o) {
     self->operator=(*o);
 }
 
@@ -62,8 +62,8 @@ double QTextOption_TabStopDistance(const QTextOption* self) {
     return static_cast<double>(self->tabStopDistance());
 }
 
-void QTextOption_SetTabArray(QTextOption* self, libqt_list /* of double */ tabStops) {
-    QList<qreal> tabStops_QList;
+void QTextOption_SetTabArray(QTextOption* self, const libqt_list /* of double */ tabStops) {
+    QList<double> tabStops_QList;
     tabStops_QList.reserve(tabStops.len);
     double* tabStops_arr = static_cast<double*>(tabStops.data.doubles);
     for (size_t i = 0; i < tabStops.len; ++i) {
@@ -73,19 +73,19 @@ void QTextOption_SetTabArray(QTextOption* self, libqt_list /* of double */ tabSt
 }
 
 libqt_list /* of double */ QTextOption_TabArray(const QTextOption* self) {
-    QList<qreal> _ret = self->tabArray();
+    QList<double> _ret = self->tabArray();
     // Convert QList<> from C++ memory to manually-managed C memory
-    double* _arr = static_cast<double*>(malloc(sizeof(double) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    double* _arr = static_cast<double*>(malloc(sizeof(double) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.doubles = _arr;
     return _out;
 }
 
-void QTextOption_SetTabs(QTextOption* self, libqt_list /* of QTextOption__Tab* */ tabStops) {
+void QTextOption_SetTabs(QTextOption* self, const libqt_list /* of QTextOption__Tab* */ tabStops) {
     QList<QTextOption::Tab> tabStops_QList;
     tabStops_QList.reserve(tabStops.len);
     QTextOption__Tab** tabStops_arr = static_cast<QTextOption__Tab**>(tabStops.data.ptr);
@@ -98,12 +98,12 @@ void QTextOption_SetTabs(QTextOption* self, libqt_list /* of QTextOption__Tab* *
 libqt_list /* of QTextOption__Tab* */ QTextOption_Tabs(const QTextOption* self) {
     QList<QTextOption::Tab> _ret = self->tabs();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTextOption__Tab** _arr = static_cast<QTextOption__Tab**>(malloc(sizeof(QTextOption__Tab*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTextOption__Tab** _arr = static_cast<QTextOption__Tab**>(malloc(sizeof(QTextOption__Tab*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QTextOption::Tab(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -120,7 +120,7 @@ void QTextOption_Delete(QTextOption* self) {
     delete self;
 }
 
-QTextOption__Tab* QTextOption__Tab_new(QTextOption__Tab* other) {
+QTextOption__Tab* QTextOption__Tab_new(const QTextOption__Tab* other) {
     return new QTextOption::Tab(*other);
 }
 
@@ -148,11 +148,11 @@ void QTextOption__Tab_MoveAssign(QTextOption__Tab* self, QTextOption__Tab* other
     *self = std::move(*other);
 }
 
-bool QTextOption__Tab_OperatorEqual(const QTextOption__Tab* self, QTextOption__Tab* other) {
+bool QTextOption__Tab_OperatorEqual(const QTextOption__Tab* self, const QTextOption__Tab* other) {
     return (*self == *other);
 }
 
-bool QTextOption__Tab_OperatorNotEqual(const QTextOption__Tab* self, QTextOption__Tab* other) {
+bool QTextOption__Tab_OperatorNotEqual(const QTextOption__Tab* self, const QTextOption__Tab* other) {
     return (*self != *other);
 }
 

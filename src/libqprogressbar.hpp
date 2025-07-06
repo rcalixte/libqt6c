@@ -52,12 +52,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QProgressBar::Direction Direction; // C++ enum
-#else
-typedef int Direction; // C ABI enum
-#endif
-
 QProgressBar* QProgressBar_new(QWidget* parent);
 QProgressBar* QProgressBar_new2();
 QMetaObject* QProgressBar_MetaObject(const QProgressBar* self);
@@ -87,7 +81,7 @@ void QProgressBar_SetInvertedAppearance(QProgressBar* self, bool invert);
 bool QProgressBar_InvertedAppearance(const QProgressBar* self);
 void QProgressBar_SetTextDirection(QProgressBar* self, int textDirection);
 int QProgressBar_TextDirection(const QProgressBar* self);
-void QProgressBar_SetFormat(QProgressBar* self, libqt_string format);
+void QProgressBar_SetFormat(QProgressBar* self, const libqt_string format);
 void QProgressBar_ResetFormat(QProgressBar* self);
 libqt_string QProgressBar_Format(const QProgressBar* self);
 void QProgressBar_Reset(QProgressBar* self);
@@ -193,9 +187,9 @@ void QProgressBar_QBaseShowEvent(QProgressBar* self, QShowEvent* event);
 void QProgressBar_HideEvent(QProgressBar* self, QHideEvent* event);
 void QProgressBar_OnHideEvent(QProgressBar* self, intptr_t slot);
 void QProgressBar_QBaseHideEvent(QProgressBar* self, QHideEvent* event);
-bool QProgressBar_NativeEvent(QProgressBar* self, libqt_string eventType, void* message, intptr_t* result);
+bool QProgressBar_NativeEvent(QProgressBar* self, const libqt_string eventType, void* message, intptr_t* result);
 void QProgressBar_OnNativeEvent(QProgressBar* self, intptr_t slot);
-bool QProgressBar_QBaseNativeEvent(QProgressBar* self, libqt_string eventType, void* message, intptr_t* result);
+bool QProgressBar_QBaseNativeEvent(QProgressBar* self, const libqt_string eventType, void* message, intptr_t* result);
 void QProgressBar_ChangeEvent(QProgressBar* self, QEvent* param1);
 void QProgressBar_OnChangeEvent(QProgressBar* self, intptr_t slot);
 void QProgressBar_QBaseChangeEvent(QProgressBar* self, QEvent* param1);
@@ -232,12 +226,12 @@ void QProgressBar_QBaseChildEvent(QProgressBar* self, QChildEvent* event);
 void QProgressBar_CustomEvent(QProgressBar* self, QEvent* event);
 void QProgressBar_OnCustomEvent(QProgressBar* self, intptr_t slot);
 void QProgressBar_QBaseCustomEvent(QProgressBar* self, QEvent* event);
-void QProgressBar_ConnectNotify(QProgressBar* self, QMetaMethod* signal);
+void QProgressBar_ConnectNotify(QProgressBar* self, const QMetaMethod* signal);
 void QProgressBar_OnConnectNotify(QProgressBar* self, intptr_t slot);
-void QProgressBar_QBaseConnectNotify(QProgressBar* self, QMetaMethod* signal);
-void QProgressBar_DisconnectNotify(QProgressBar* self, QMetaMethod* signal);
+void QProgressBar_QBaseConnectNotify(QProgressBar* self, const QMetaMethod* signal);
+void QProgressBar_DisconnectNotify(QProgressBar* self, const QMetaMethod* signal);
 void QProgressBar_OnDisconnectNotify(QProgressBar* self, intptr_t slot);
-void QProgressBar_QBaseDisconnectNotify(QProgressBar* self, QMetaMethod* signal);
+void QProgressBar_QBaseDisconnectNotify(QProgressBar* self, const QMetaMethod* signal);
 void QProgressBar_UpdateMicroFocus(QProgressBar* self);
 void QProgressBar_OnUpdateMicroFocus(QProgressBar* self, intptr_t slot);
 void QProgressBar_QBaseUpdateMicroFocus(QProgressBar* self);
@@ -262,9 +256,12 @@ int QProgressBar_QBaseSenderSignalIndex(const QProgressBar* self);
 int QProgressBar_Receivers(const QProgressBar* self, const char* signal);
 void QProgressBar_OnReceivers(const QProgressBar* self, intptr_t slot);
 int QProgressBar_QBaseReceivers(const QProgressBar* self, const char* signal);
-bool QProgressBar_IsSignalConnected(const QProgressBar* self, QMetaMethod* signal);
+bool QProgressBar_IsSignalConnected(const QProgressBar* self, const QMetaMethod* signal);
 void QProgressBar_OnIsSignalConnected(const QProgressBar* self, intptr_t slot);
-bool QProgressBar_QBaseIsSignalConnected(const QProgressBar* self, QMetaMethod* signal);
+bool QProgressBar_QBaseIsSignalConnected(const QProgressBar* self, const QMetaMethod* signal);
+double QProgressBar_GetDecodedMetricF(const QProgressBar* self, int metricA, int metricB);
+void QProgressBar_OnGetDecodedMetricF(const QProgressBar* self, intptr_t slot);
+double QProgressBar_QBaseGetDecodedMetricF(const QProgressBar* self, int metricA, int metricB);
 void QProgressBar_Delete(QProgressBar* self);
 
 #ifdef __cplusplus

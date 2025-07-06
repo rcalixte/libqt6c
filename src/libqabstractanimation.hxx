@@ -73,8 +73,8 @@ class VirtualQAbstractAnimation final : public QAbstractAnimation {
     mutable bool qabstractanimation_issignalconnected_isbase = false;
 
   public:
-    VirtualQAbstractAnimation() : QAbstractAnimation(){};
-    VirtualQAbstractAnimation(QObject* parent) : QAbstractAnimation(parent){};
+    VirtualQAbstractAnimation() : QAbstractAnimation() {};
+    VirtualQAbstractAnimation(QObject* parent) : QAbstractAnimation(parent) {};
 
     ~VirtualQAbstractAnimation() {
         qabstractanimation_metacall_callback = nullptr;
@@ -374,18 +374,18 @@ class VirtualQAbstractAnimation final : public QAbstractAnimation {
     friend void QAbstractAnimation_QBaseChildEvent(QAbstractAnimation* self, QChildEvent* event);
     friend void QAbstractAnimation_CustomEvent(QAbstractAnimation* self, QEvent* event);
     friend void QAbstractAnimation_QBaseCustomEvent(QAbstractAnimation* self, QEvent* event);
-    friend void QAbstractAnimation_ConnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
-    friend void QAbstractAnimation_QBaseConnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
-    friend void QAbstractAnimation_DisconnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
-    friend void QAbstractAnimation_QBaseDisconnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
+    friend void QAbstractAnimation_ConnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
+    friend void QAbstractAnimation_QBaseConnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
+    friend void QAbstractAnimation_DisconnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
+    friend void QAbstractAnimation_QBaseDisconnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
     friend QObject* QAbstractAnimation_Sender(const QAbstractAnimation* self);
     friend QObject* QAbstractAnimation_QBaseSender(const QAbstractAnimation* self);
     friend int QAbstractAnimation_SenderSignalIndex(const QAbstractAnimation* self);
     friend int QAbstractAnimation_QBaseSenderSignalIndex(const QAbstractAnimation* self);
     friend int QAbstractAnimation_Receivers(const QAbstractAnimation* self, const char* signal);
     friend int QAbstractAnimation_QBaseReceivers(const QAbstractAnimation* self, const char* signal);
-    friend bool QAbstractAnimation_IsSignalConnected(const QAbstractAnimation* self, QMetaMethod* signal);
-    friend bool QAbstractAnimation_QBaseIsSignalConnected(const QAbstractAnimation* self, QMetaMethod* signal);
+    friend bool QAbstractAnimation_IsSignalConnected(const QAbstractAnimation* self, const QMetaMethod* signal);
+    friend bool QAbstractAnimation_QBaseIsSignalConnected(const QAbstractAnimation* self, const QMetaMethod* signal);
 };
 
 // This class is a subclass of QAnimationDriver so that we can call protected methods
@@ -454,8 +454,8 @@ class VirtualQAnimationDriver final : public QAnimationDriver {
     mutable bool qanimationdriver_issignalconnected_isbase = false;
 
   public:
-    VirtualQAnimationDriver() : QAnimationDriver(){};
-    VirtualQAnimationDriver(QObject* parent) : QAnimationDriver(parent){};
+    VirtualQAnimationDriver() : QAnimationDriver() {};
+    VirtualQAnimationDriver(QObject* parent) : QAnimationDriver(parent) {};
 
     ~VirtualQAnimationDriver() {
         qanimationdriver_metacall_callback = nullptr;
@@ -767,10 +767,10 @@ class VirtualQAnimationDriver final : public QAnimationDriver {
     friend void QAnimationDriver_QBaseChildEvent(QAnimationDriver* self, QChildEvent* event);
     friend void QAnimationDriver_CustomEvent(QAnimationDriver* self, QEvent* event);
     friend void QAnimationDriver_QBaseCustomEvent(QAnimationDriver* self, QEvent* event);
-    friend void QAnimationDriver_ConnectNotify(QAnimationDriver* self, QMetaMethod* signal);
-    friend void QAnimationDriver_QBaseConnectNotify(QAnimationDriver* self, QMetaMethod* signal);
-    friend void QAnimationDriver_DisconnectNotify(QAnimationDriver* self, QMetaMethod* signal);
-    friend void QAnimationDriver_QBaseDisconnectNotify(QAnimationDriver* self, QMetaMethod* signal);
+    friend void QAnimationDriver_ConnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
+    friend void QAnimationDriver_QBaseConnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
+    friend void QAnimationDriver_DisconnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
+    friend void QAnimationDriver_QBaseDisconnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
     friend void QAnimationDriver_AdvanceAnimation(QAnimationDriver* self);
     friend void QAnimationDriver_QBaseAdvanceAnimation(QAnimationDriver* self);
     friend QObject* QAnimationDriver_Sender(const QAnimationDriver* self);
@@ -779,8 +779,8 @@ class VirtualQAnimationDriver final : public QAnimationDriver {
     friend int QAnimationDriver_QBaseSenderSignalIndex(const QAnimationDriver* self);
     friend int QAnimationDriver_Receivers(const QAnimationDriver* self, const char* signal);
     friend int QAnimationDriver_QBaseReceivers(const QAnimationDriver* self, const char* signal);
-    friend bool QAnimationDriver_IsSignalConnected(const QAnimationDriver* self, QMetaMethod* signal);
-    friend bool QAnimationDriver_QBaseIsSignalConnected(const QAnimationDriver* self, QMetaMethod* signal);
+    friend bool QAnimationDriver_IsSignalConnected(const QAnimationDriver* self, const QMetaMethod* signal);
+    friend bool QAnimationDriver_QBaseIsSignalConnected(const QAnimationDriver* self, const QMetaMethod* signal);
 };
 
 #endif

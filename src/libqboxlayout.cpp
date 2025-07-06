@@ -611,7 +611,7 @@ void QBoxLayout_OnCount(const QBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxLayout_SetGeometry(QBoxLayout* self, QRect* geometry) {
+void QBoxLayout_SetGeometry(QBoxLayout* self, const QRect* geometry) {
     auto* vqboxlayout = dynamic_cast<VirtualQBoxLayout*>(self);
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setGeometry(*geometry);
@@ -621,7 +621,7 @@ void QBoxLayout_SetGeometry(QBoxLayout* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QBoxLayout_QBaseSetGeometry(QBoxLayout* self, QRect* geometry) {
+void QBoxLayout_QBaseSetGeometry(QBoxLayout* self, const QRect* geometry) {
     auto* vqboxlayout = dynamic_cast<VirtualQBoxLayout*>(self);
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setQBoxLayout_SetGeometry_IsBase(true);
@@ -669,7 +669,7 @@ void QBoxLayout_OnGeometry(const QBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QBoxLayout_IndexOf(const QBoxLayout* self, QWidget* param1) {
+int QBoxLayout_IndexOf(const QBoxLayout* self, const QWidget* param1) {
     auto* vqboxlayout = const_cast<VirtualQBoxLayout*>(dynamic_cast<const VirtualQBoxLayout*>(self));
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         return vqboxlayout->indexOf(param1);
@@ -679,7 +679,7 @@ int QBoxLayout_IndexOf(const QBoxLayout* self, QWidget* param1) {
 }
 
 // Base class handler implementation
-int QBoxLayout_QBaseIndexOf(const QBoxLayout* self, QWidget* param1) {
+int QBoxLayout_QBaseIndexOf(const QBoxLayout* self, const QWidget* param1) {
     auto* vqboxlayout = const_cast<VirtualQBoxLayout*>(dynamic_cast<const VirtualQBoxLayout*>(self));
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setQBoxLayout_IndexOf_IsBase(true);
@@ -959,7 +959,7 @@ void QBoxLayout_OnCustomEvent(QBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxLayout_ConnectNotify(QBoxLayout* self, QMetaMethod* signal) {
+void QBoxLayout_ConnectNotify(QBoxLayout* self, const QMetaMethod* signal) {
     auto* vqboxlayout = dynamic_cast<VirtualQBoxLayout*>(self);
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->connectNotify(*signal);
@@ -969,7 +969,7 @@ void QBoxLayout_ConnectNotify(QBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBoxLayout_QBaseConnectNotify(QBoxLayout* self, QMetaMethod* signal) {
+void QBoxLayout_QBaseConnectNotify(QBoxLayout* self, const QMetaMethod* signal) {
     auto* vqboxlayout = dynamic_cast<VirtualQBoxLayout*>(self);
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setQBoxLayout_ConnectNotify_IsBase(true);
@@ -988,7 +988,7 @@ void QBoxLayout_OnConnectNotify(QBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxLayout_DisconnectNotify(QBoxLayout* self, QMetaMethod* signal) {
+void QBoxLayout_DisconnectNotify(QBoxLayout* self, const QMetaMethod* signal) {
     auto* vqboxlayout = dynamic_cast<VirtualQBoxLayout*>(self);
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->disconnectNotify(*signal);
@@ -998,7 +998,7 @@ void QBoxLayout_DisconnectNotify(QBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBoxLayout_QBaseDisconnectNotify(QBoxLayout* self, QMetaMethod* signal) {
+void QBoxLayout_QBaseDisconnectNotify(QBoxLayout* self, const QMetaMethod* signal) {
     auto* vqboxlayout = dynamic_cast<VirtualQBoxLayout*>(self);
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setQBoxLayout_DisconnectNotify_IsBase(true);
@@ -1191,7 +1191,7 @@ void QBoxLayout_OnAdoptLayout(QBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QBoxLayout_AlignmentRect(const QBoxLayout* self, QRect* param1) {
+QRect* QBoxLayout_AlignmentRect(const QBoxLayout* self, const QRect* param1) {
     auto* vqboxlayout = const_cast<VirtualQBoxLayout*>(dynamic_cast<const VirtualQBoxLayout*>(self));
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         return new QRect(vqboxlayout->alignmentRect(*param1));
@@ -1200,7 +1200,7 @@ QRect* QBoxLayout_AlignmentRect(const QBoxLayout* self, QRect* param1) {
 }
 
 // Base class handler implementation
-QRect* QBoxLayout_QBaseAlignmentRect(const QBoxLayout* self, QRect* param1) {
+QRect* QBoxLayout_QBaseAlignmentRect(const QBoxLayout* self, const QRect* param1) {
     auto* vqboxlayout = const_cast<VirtualQBoxLayout*>(dynamic_cast<const VirtualQBoxLayout*>(self));
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setQBoxLayout_AlignmentRect_IsBase(true);
@@ -1305,7 +1305,7 @@ void QBoxLayout_OnReceivers(const QBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBoxLayout_IsSignalConnected(const QBoxLayout* self, QMetaMethod* signal) {
+bool QBoxLayout_IsSignalConnected(const QBoxLayout* self, const QMetaMethod* signal) {
     auto* vqboxlayout = const_cast<VirtualQBoxLayout*>(dynamic_cast<const VirtualQBoxLayout*>(self));
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         return vqboxlayout->isSignalConnected(*signal);
@@ -1315,7 +1315,7 @@ bool QBoxLayout_IsSignalConnected(const QBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QBoxLayout_QBaseIsSignalConnected(const QBoxLayout* self, QMetaMethod* signal) {
+bool QBoxLayout_QBaseIsSignalConnected(const QBoxLayout* self, const QMetaMethod* signal) {
     auto* vqboxlayout = const_cast<VirtualQBoxLayout*>(dynamic_cast<const VirtualQBoxLayout*>(self));
     if (vqboxlayout && vqboxlayout->isVirtualQBoxLayout) {
         vqboxlayout->setQBoxLayout_IsSignalConnected_IsBase(true);
@@ -1824,7 +1824,7 @@ void QHBoxLayout_OnCount(const QHBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHBoxLayout_SetGeometry(QHBoxLayout* self, QRect* geometry) {
+void QHBoxLayout_SetGeometry(QHBoxLayout* self, const QRect* geometry) {
     auto* vqhboxlayout = dynamic_cast<VirtualQHBoxLayout*>(self);
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setGeometry(*geometry);
@@ -1834,7 +1834,7 @@ void QHBoxLayout_SetGeometry(QHBoxLayout* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QHBoxLayout_QBaseSetGeometry(QHBoxLayout* self, QRect* geometry) {
+void QHBoxLayout_QBaseSetGeometry(QHBoxLayout* self, const QRect* geometry) {
     auto* vqhboxlayout = dynamic_cast<VirtualQHBoxLayout*>(self);
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setQHBoxLayout_SetGeometry_IsBase(true);
@@ -1882,7 +1882,7 @@ void QHBoxLayout_OnGeometry(const QHBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QHBoxLayout_IndexOf(const QHBoxLayout* self, QWidget* param1) {
+int QHBoxLayout_IndexOf(const QHBoxLayout* self, const QWidget* param1) {
     auto* vqhboxlayout = const_cast<VirtualQHBoxLayout*>(dynamic_cast<const VirtualQHBoxLayout*>(self));
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         return vqhboxlayout->indexOf(param1);
@@ -1892,7 +1892,7 @@ int QHBoxLayout_IndexOf(const QHBoxLayout* self, QWidget* param1) {
 }
 
 // Base class handler implementation
-int QHBoxLayout_QBaseIndexOf(const QHBoxLayout* self, QWidget* param1) {
+int QHBoxLayout_QBaseIndexOf(const QHBoxLayout* self, const QWidget* param1) {
     auto* vqhboxlayout = const_cast<VirtualQHBoxLayout*>(dynamic_cast<const VirtualQHBoxLayout*>(self));
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setQHBoxLayout_IndexOf_IsBase(true);
@@ -2172,7 +2172,7 @@ void QHBoxLayout_OnCustomEvent(QHBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHBoxLayout_ConnectNotify(QHBoxLayout* self, QMetaMethod* signal) {
+void QHBoxLayout_ConnectNotify(QHBoxLayout* self, const QMetaMethod* signal) {
     auto* vqhboxlayout = dynamic_cast<VirtualQHBoxLayout*>(self);
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->connectNotify(*signal);
@@ -2182,7 +2182,7 @@ void QHBoxLayout_ConnectNotify(QHBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QHBoxLayout_QBaseConnectNotify(QHBoxLayout* self, QMetaMethod* signal) {
+void QHBoxLayout_QBaseConnectNotify(QHBoxLayout* self, const QMetaMethod* signal) {
     auto* vqhboxlayout = dynamic_cast<VirtualQHBoxLayout*>(self);
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setQHBoxLayout_ConnectNotify_IsBase(true);
@@ -2201,7 +2201,7 @@ void QHBoxLayout_OnConnectNotify(QHBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHBoxLayout_DisconnectNotify(QHBoxLayout* self, QMetaMethod* signal) {
+void QHBoxLayout_DisconnectNotify(QHBoxLayout* self, const QMetaMethod* signal) {
     auto* vqhboxlayout = dynamic_cast<VirtualQHBoxLayout*>(self);
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->disconnectNotify(*signal);
@@ -2211,7 +2211,7 @@ void QHBoxLayout_DisconnectNotify(QHBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QHBoxLayout_QBaseDisconnectNotify(QHBoxLayout* self, QMetaMethod* signal) {
+void QHBoxLayout_QBaseDisconnectNotify(QHBoxLayout* self, const QMetaMethod* signal) {
     auto* vqhboxlayout = dynamic_cast<VirtualQHBoxLayout*>(self);
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setQHBoxLayout_DisconnectNotify_IsBase(true);
@@ -2404,7 +2404,7 @@ void QHBoxLayout_OnAdoptLayout(QHBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QHBoxLayout_AlignmentRect(const QHBoxLayout* self, QRect* param1) {
+QRect* QHBoxLayout_AlignmentRect(const QHBoxLayout* self, const QRect* param1) {
     auto* vqhboxlayout = const_cast<VirtualQHBoxLayout*>(dynamic_cast<const VirtualQHBoxLayout*>(self));
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         return new QRect(vqhboxlayout->alignmentRect(*param1));
@@ -2413,7 +2413,7 @@ QRect* QHBoxLayout_AlignmentRect(const QHBoxLayout* self, QRect* param1) {
 }
 
 // Base class handler implementation
-QRect* QHBoxLayout_QBaseAlignmentRect(const QHBoxLayout* self, QRect* param1) {
+QRect* QHBoxLayout_QBaseAlignmentRect(const QHBoxLayout* self, const QRect* param1) {
     auto* vqhboxlayout = const_cast<VirtualQHBoxLayout*>(dynamic_cast<const VirtualQHBoxLayout*>(self));
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setQHBoxLayout_AlignmentRect_IsBase(true);
@@ -2518,7 +2518,7 @@ void QHBoxLayout_OnReceivers(const QHBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHBoxLayout_IsSignalConnected(const QHBoxLayout* self, QMetaMethod* signal) {
+bool QHBoxLayout_IsSignalConnected(const QHBoxLayout* self, const QMetaMethod* signal) {
     auto* vqhboxlayout = const_cast<VirtualQHBoxLayout*>(dynamic_cast<const VirtualQHBoxLayout*>(self));
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         return vqhboxlayout->isSignalConnected(*signal);
@@ -2528,7 +2528,7 @@ bool QHBoxLayout_IsSignalConnected(const QHBoxLayout* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QHBoxLayout_QBaseIsSignalConnected(const QHBoxLayout* self, QMetaMethod* signal) {
+bool QHBoxLayout_QBaseIsSignalConnected(const QHBoxLayout* self, const QMetaMethod* signal) {
     auto* vqhboxlayout = const_cast<VirtualQHBoxLayout*>(dynamic_cast<const VirtualQHBoxLayout*>(self));
     if (vqhboxlayout && vqhboxlayout->isVirtualQHBoxLayout) {
         vqhboxlayout->setQHBoxLayout_IsSignalConnected_IsBase(true);
@@ -3037,7 +3037,7 @@ void QVBoxLayout_OnCount(const QVBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVBoxLayout_SetGeometry(QVBoxLayout* self, QRect* geometry) {
+void QVBoxLayout_SetGeometry(QVBoxLayout* self, const QRect* geometry) {
     auto* vqvboxlayout = dynamic_cast<VirtualQVBoxLayout*>(self);
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setGeometry(*geometry);
@@ -3047,7 +3047,7 @@ void QVBoxLayout_SetGeometry(QVBoxLayout* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QVBoxLayout_QBaseSetGeometry(QVBoxLayout* self, QRect* geometry) {
+void QVBoxLayout_QBaseSetGeometry(QVBoxLayout* self, const QRect* geometry) {
     auto* vqvboxlayout = dynamic_cast<VirtualQVBoxLayout*>(self);
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setQVBoxLayout_SetGeometry_IsBase(true);
@@ -3095,7 +3095,7 @@ void QVBoxLayout_OnGeometry(const QVBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QVBoxLayout_IndexOf(const QVBoxLayout* self, QWidget* param1) {
+int QVBoxLayout_IndexOf(const QVBoxLayout* self, const QWidget* param1) {
     auto* vqvboxlayout = const_cast<VirtualQVBoxLayout*>(dynamic_cast<const VirtualQVBoxLayout*>(self));
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         return vqvboxlayout->indexOf(param1);
@@ -3105,7 +3105,7 @@ int QVBoxLayout_IndexOf(const QVBoxLayout* self, QWidget* param1) {
 }
 
 // Base class handler implementation
-int QVBoxLayout_QBaseIndexOf(const QVBoxLayout* self, QWidget* param1) {
+int QVBoxLayout_QBaseIndexOf(const QVBoxLayout* self, const QWidget* param1) {
     auto* vqvboxlayout = const_cast<VirtualQVBoxLayout*>(dynamic_cast<const VirtualQVBoxLayout*>(self));
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setQVBoxLayout_IndexOf_IsBase(true);
@@ -3385,7 +3385,7 @@ void QVBoxLayout_OnCustomEvent(QVBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVBoxLayout_ConnectNotify(QVBoxLayout* self, QMetaMethod* signal) {
+void QVBoxLayout_ConnectNotify(QVBoxLayout* self, const QMetaMethod* signal) {
     auto* vqvboxlayout = dynamic_cast<VirtualQVBoxLayout*>(self);
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->connectNotify(*signal);
@@ -3395,7 +3395,7 @@ void QVBoxLayout_ConnectNotify(QVBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QVBoxLayout_QBaseConnectNotify(QVBoxLayout* self, QMetaMethod* signal) {
+void QVBoxLayout_QBaseConnectNotify(QVBoxLayout* self, const QMetaMethod* signal) {
     auto* vqvboxlayout = dynamic_cast<VirtualQVBoxLayout*>(self);
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setQVBoxLayout_ConnectNotify_IsBase(true);
@@ -3414,7 +3414,7 @@ void QVBoxLayout_OnConnectNotify(QVBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QVBoxLayout_DisconnectNotify(QVBoxLayout* self, QMetaMethod* signal) {
+void QVBoxLayout_DisconnectNotify(QVBoxLayout* self, const QMetaMethod* signal) {
     auto* vqvboxlayout = dynamic_cast<VirtualQVBoxLayout*>(self);
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->disconnectNotify(*signal);
@@ -3424,7 +3424,7 @@ void QVBoxLayout_DisconnectNotify(QVBoxLayout* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QVBoxLayout_QBaseDisconnectNotify(QVBoxLayout* self, QMetaMethod* signal) {
+void QVBoxLayout_QBaseDisconnectNotify(QVBoxLayout* self, const QMetaMethod* signal) {
     auto* vqvboxlayout = dynamic_cast<VirtualQVBoxLayout*>(self);
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setQVBoxLayout_DisconnectNotify_IsBase(true);
@@ -3617,7 +3617,7 @@ void QVBoxLayout_OnAdoptLayout(QVBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QVBoxLayout_AlignmentRect(const QVBoxLayout* self, QRect* param1) {
+QRect* QVBoxLayout_AlignmentRect(const QVBoxLayout* self, const QRect* param1) {
     auto* vqvboxlayout = const_cast<VirtualQVBoxLayout*>(dynamic_cast<const VirtualQVBoxLayout*>(self));
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         return new QRect(vqvboxlayout->alignmentRect(*param1));
@@ -3626,7 +3626,7 @@ QRect* QVBoxLayout_AlignmentRect(const QVBoxLayout* self, QRect* param1) {
 }
 
 // Base class handler implementation
-QRect* QVBoxLayout_QBaseAlignmentRect(const QVBoxLayout* self, QRect* param1) {
+QRect* QVBoxLayout_QBaseAlignmentRect(const QVBoxLayout* self, const QRect* param1) {
     auto* vqvboxlayout = const_cast<VirtualQVBoxLayout*>(dynamic_cast<const VirtualQVBoxLayout*>(self));
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setQVBoxLayout_AlignmentRect_IsBase(true);
@@ -3731,7 +3731,7 @@ void QVBoxLayout_OnReceivers(const QVBoxLayout* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QVBoxLayout_IsSignalConnected(const QVBoxLayout* self, QMetaMethod* signal) {
+bool QVBoxLayout_IsSignalConnected(const QVBoxLayout* self, const QMetaMethod* signal) {
     auto* vqvboxlayout = const_cast<VirtualQVBoxLayout*>(dynamic_cast<const VirtualQVBoxLayout*>(self));
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         return vqvboxlayout->isSignalConnected(*signal);
@@ -3741,7 +3741,7 @@ bool QVBoxLayout_IsSignalConnected(const QVBoxLayout* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QVBoxLayout_QBaseIsSignalConnected(const QVBoxLayout* self, QMetaMethod* signal) {
+bool QVBoxLayout_QBaseIsSignalConnected(const QVBoxLayout* self, const QMetaMethod* signal) {
     auto* vqvboxlayout = const_cast<VirtualQVBoxLayout*>(dynamic_cast<const VirtualQVBoxLayout*>(self));
     if (vqvboxlayout && vqvboxlayout->isVirtualQVBoxLayout) {
         vqvboxlayout->setQVBoxLayout_IsSignalConnected_IsBase(true);

@@ -12,9 +12,11 @@
 #include <QFocusEvent>
 #include <QHideEvent>
 #include <QInputMethodEvent>
+#include <QKeyCombination>
 #include <QKeyEvent>
 #include <QKeySequence>
 #include <QKeySequenceEdit>
+#include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
 #include <QMouseEvent>
@@ -48,11 +50,11 @@ QKeySequenceEdit* QKeySequenceEdit_new2() {
     return new VirtualQKeySequenceEdit();
 }
 
-QKeySequenceEdit* QKeySequenceEdit_new3(QKeySequence* keySequence) {
+QKeySequenceEdit* QKeySequenceEdit_new3(const QKeySequence* keySequence) {
     return new VirtualQKeySequenceEdit(*keySequence);
 }
 
-QKeySequenceEdit* QKeySequenceEdit_new4(QKeySequence* keySequence, QWidget* parent) {
+QKeySequenceEdit* QKeySequenceEdit_new4(const QKeySequence* keySequence, QWidget* parent) {
     return new VirtualQKeySequenceEdit(*keySequence, parent);
 }
 
@@ -108,6 +110,10 @@ QKeySequence* QKeySequenceEdit_KeySequence(const QKeySequenceEdit* self) {
     return new QKeySequence(self->keySequence());
 }
 
+ptrdiff_t QKeySequenceEdit_MaximumSequenceLength(const QKeySequenceEdit* self) {
+    return static_cast<ptrdiff_t>(self->maximumSequenceLength());
+}
+
 void QKeySequenceEdit_SetClearButtonEnabled(QKeySequenceEdit* self, bool enable) {
     self->setClearButtonEnabled(enable);
 }
@@ -116,12 +122,39 @@ bool QKeySequenceEdit_IsClearButtonEnabled(const QKeySequenceEdit* self) {
     return self->isClearButtonEnabled();
 }
 
-void QKeySequenceEdit_SetKeySequence(QKeySequenceEdit* self, QKeySequence* keySequence) {
+void QKeySequenceEdit_SetFinishingKeyCombinations(QKeySequenceEdit* self, const libqt_list /* of QKeyCombination* */ finishingKeyCombinations) {
+    QList<QKeyCombination> finishingKeyCombinations_QList;
+    finishingKeyCombinations_QList.reserve(finishingKeyCombinations.len);
+    QKeyCombination** finishingKeyCombinations_arr = static_cast<QKeyCombination**>(finishingKeyCombinations.data.ptr);
+    for (size_t i = 0; i < finishingKeyCombinations.len; ++i) {
+        finishingKeyCombinations_QList.push_back(*(finishingKeyCombinations_arr[i]));
+    }
+    self->setFinishingKeyCombinations(finishingKeyCombinations_QList);
+}
+
+libqt_list /* of QKeyCombination* */ QKeySequenceEdit_FinishingKeyCombinations(const QKeySequenceEdit* self) {
+    QList<QKeyCombination> _ret = self->finishingKeyCombinations();
+    // Convert QList<> from C++ memory to manually-managed C memory
+    QKeyCombination** _arr = static_cast<QKeyCombination**>(malloc(sizeof(QKeyCombination*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
+        _arr[i] = new QKeyCombination(_ret[i]);
+    }
+    libqt_list _out;
+    _out.len = _ret.size();
+    _out.data.ptr = static_cast<void*>(_arr);
+    return _out;
+}
+
+void QKeySequenceEdit_SetKeySequence(QKeySequenceEdit* self, const QKeySequence* keySequence) {
     self->setKeySequence(*keySequence);
 }
 
 void QKeySequenceEdit_Clear(QKeySequenceEdit* self) {
     self->clear();
+}
+
+void QKeySequenceEdit_SetMaximumSequenceLength(QKeySequenceEdit* self, ptrdiff_t count) {
+    self->setMaximumSequenceLength((qsizetype)(count));
 }
 
 void QKeySequenceEdit_EditingFinished(QKeySequenceEdit* self) {
@@ -135,7 +168,7 @@ void QKeySequenceEdit_Connect_EditingFinished(QKeySequenceEdit* self, intptr_t s
     });
 }
 
-void QKeySequenceEdit_KeySequenceChanged(QKeySequenceEdit* self, QKeySequence* keySequence) {
+void QKeySequenceEdit_KeySequenceChanged(QKeySequenceEdit* self, const QKeySequence* keySequence) {
     self->keySequenceChanged(*keySequence);
 }
 
@@ -1131,7 +1164,7 @@ void QKeySequenceEdit_OnHideEvent(QKeySequenceEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QKeySequenceEdit_NativeEvent(QKeySequenceEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QKeySequenceEdit_NativeEvent(QKeySequenceEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqkeysequenceedit = dynamic_cast<VirtualQKeySequenceEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
@@ -1142,7 +1175,7 @@ bool QKeySequenceEdit_NativeEvent(QKeySequenceEdit* self, libqt_string eventType
 }
 
 // Base class handler implementation
-bool QKeySequenceEdit_QBaseNativeEvent(QKeySequenceEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QKeySequenceEdit_QBaseNativeEvent(QKeySequenceEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqkeysequenceedit = dynamic_cast<VirtualQKeySequenceEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
@@ -1481,7 +1514,7 @@ void QKeySequenceEdit_OnCustomEvent(QKeySequenceEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QKeySequenceEdit_ConnectNotify(QKeySequenceEdit* self, QMetaMethod* signal) {
+void QKeySequenceEdit_ConnectNotify(QKeySequenceEdit* self, const QMetaMethod* signal) {
     auto* vqkeysequenceedit = dynamic_cast<VirtualQKeySequenceEdit*>(self);
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         vqkeysequenceedit->connectNotify(*signal);
@@ -1491,7 +1524,7 @@ void QKeySequenceEdit_ConnectNotify(QKeySequenceEdit* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QKeySequenceEdit_QBaseConnectNotify(QKeySequenceEdit* self, QMetaMethod* signal) {
+void QKeySequenceEdit_QBaseConnectNotify(QKeySequenceEdit* self, const QMetaMethod* signal) {
     auto* vqkeysequenceedit = dynamic_cast<VirtualQKeySequenceEdit*>(self);
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         vqkeysequenceedit->setQKeySequenceEdit_ConnectNotify_IsBase(true);
@@ -1510,7 +1543,7 @@ void QKeySequenceEdit_OnConnectNotify(QKeySequenceEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QKeySequenceEdit_DisconnectNotify(QKeySequenceEdit* self, QMetaMethod* signal) {
+void QKeySequenceEdit_DisconnectNotify(QKeySequenceEdit* self, const QMetaMethod* signal) {
     auto* vqkeysequenceedit = dynamic_cast<VirtualQKeySequenceEdit*>(self);
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         vqkeysequenceedit->disconnectNotify(*signal);
@@ -1520,7 +1553,7 @@ void QKeySequenceEdit_DisconnectNotify(QKeySequenceEdit* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QKeySequenceEdit_QBaseDisconnectNotify(QKeySequenceEdit* self, QMetaMethod* signal) {
+void QKeySequenceEdit_QBaseDisconnectNotify(QKeySequenceEdit* self, const QMetaMethod* signal) {
     auto* vqkeysequenceedit = dynamic_cast<VirtualQKeySequenceEdit*>(self);
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         vqkeysequenceedit->setQKeySequenceEdit_DisconnectNotify_IsBase(true);
@@ -1771,7 +1804,7 @@ void QKeySequenceEdit_OnReceivers(const QKeySequenceEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QKeySequenceEdit_IsSignalConnected(const QKeySequenceEdit* self, QMetaMethod* signal) {
+bool QKeySequenceEdit_IsSignalConnected(const QKeySequenceEdit* self, const QMetaMethod* signal) {
     auto* vqkeysequenceedit = const_cast<VirtualQKeySequenceEdit*>(dynamic_cast<const VirtualQKeySequenceEdit*>(self));
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         return vqkeysequenceedit->isSignalConnected(*signal);
@@ -1781,7 +1814,7 @@ bool QKeySequenceEdit_IsSignalConnected(const QKeySequenceEdit* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QKeySequenceEdit_QBaseIsSignalConnected(const QKeySequenceEdit* self, QMetaMethod* signal) {
+bool QKeySequenceEdit_QBaseIsSignalConnected(const QKeySequenceEdit* self, const QMetaMethod* signal) {
     auto* vqkeysequenceedit = const_cast<VirtualQKeySequenceEdit*>(dynamic_cast<const VirtualQKeySequenceEdit*>(self));
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         vqkeysequenceedit->setQKeySequenceEdit_IsSignalConnected_IsBase(true);
@@ -1796,6 +1829,35 @@ void QKeySequenceEdit_OnIsSignalConnected(const QKeySequenceEdit* self, intptr_t
     auto* vqkeysequenceedit = const_cast<VirtualQKeySequenceEdit*>(dynamic_cast<const VirtualQKeySequenceEdit*>(self));
     if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
         vqkeysequenceedit->setQKeySequenceEdit_IsSignalConnected_Callback(reinterpret_cast<VirtualQKeySequenceEdit::QKeySequenceEdit_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QKeySequenceEdit_GetDecodedMetricF(const QKeySequenceEdit* self, int metricA, int metricB) {
+    auto* vqkeysequenceedit = const_cast<VirtualQKeySequenceEdit*>(dynamic_cast<const VirtualQKeySequenceEdit*>(self));
+    if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
+        return vqkeysequenceedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQKeySequenceEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QKeySequenceEdit_QBaseGetDecodedMetricF(const QKeySequenceEdit* self, int metricA, int metricB) {
+    auto* vqkeysequenceedit = const_cast<VirtualQKeySequenceEdit*>(dynamic_cast<const VirtualQKeySequenceEdit*>(self));
+    if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
+        vqkeysequenceedit->setQKeySequenceEdit_GetDecodedMetricF_IsBase(true);
+        return vqkeysequenceedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQKeySequenceEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QKeySequenceEdit_OnGetDecodedMetricF(const QKeySequenceEdit* self, intptr_t slot) {
+    auto* vqkeysequenceedit = const_cast<VirtualQKeySequenceEdit*>(dynamic_cast<const VirtualQKeySequenceEdit*>(self));
+    if (vqkeysequenceedit && vqkeysequenceedit->isVirtualQKeySequenceEdit) {
+        vqkeysequenceedit->setQKeySequenceEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQKeySequenceEdit::QKeySequenceEdit_GetDecodedMetricF_Callback>(slot));
     }
 }
 

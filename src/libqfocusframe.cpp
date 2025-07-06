@@ -1115,7 +1115,7 @@ void QFocusFrame_OnHideEvent(QFocusFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFocusFrame_NativeEvent(QFocusFrame* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFocusFrame_NativeEvent(QFocusFrame* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqfocusframe = dynamic_cast<VirtualQFocusFrame*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
@@ -1126,7 +1126,7 @@ bool QFocusFrame_NativeEvent(QFocusFrame* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QFocusFrame_QBaseNativeEvent(QFocusFrame* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFocusFrame_QBaseNativeEvent(QFocusFrame* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqfocusframe = dynamic_cast<VirtualQFocusFrame*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
@@ -1465,7 +1465,7 @@ void QFocusFrame_OnCustomEvent(QFocusFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFocusFrame_ConnectNotify(QFocusFrame* self, QMetaMethod* signal) {
+void QFocusFrame_ConnectNotify(QFocusFrame* self, const QMetaMethod* signal) {
     auto* vqfocusframe = dynamic_cast<VirtualQFocusFrame*>(self);
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         vqfocusframe->connectNotify(*signal);
@@ -1475,7 +1475,7 @@ void QFocusFrame_ConnectNotify(QFocusFrame* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFocusFrame_QBaseConnectNotify(QFocusFrame* self, QMetaMethod* signal) {
+void QFocusFrame_QBaseConnectNotify(QFocusFrame* self, const QMetaMethod* signal) {
     auto* vqfocusframe = dynamic_cast<VirtualQFocusFrame*>(self);
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         vqfocusframe->setQFocusFrame_ConnectNotify_IsBase(true);
@@ -1494,7 +1494,7 @@ void QFocusFrame_OnConnectNotify(QFocusFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFocusFrame_DisconnectNotify(QFocusFrame* self, QMetaMethod* signal) {
+void QFocusFrame_DisconnectNotify(QFocusFrame* self, const QMetaMethod* signal) {
     auto* vqfocusframe = dynamic_cast<VirtualQFocusFrame*>(self);
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         vqfocusframe->disconnectNotify(*signal);
@@ -1504,7 +1504,7 @@ void QFocusFrame_DisconnectNotify(QFocusFrame* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFocusFrame_QBaseDisconnectNotify(QFocusFrame* self, QMetaMethod* signal) {
+void QFocusFrame_QBaseDisconnectNotify(QFocusFrame* self, const QMetaMethod* signal) {
     auto* vqfocusframe = dynamic_cast<VirtualQFocusFrame*>(self);
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         vqfocusframe->setQFocusFrame_DisconnectNotify_IsBase(true);
@@ -1755,7 +1755,7 @@ void QFocusFrame_OnReceivers(const QFocusFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFocusFrame_IsSignalConnected(const QFocusFrame* self, QMetaMethod* signal) {
+bool QFocusFrame_IsSignalConnected(const QFocusFrame* self, const QMetaMethod* signal) {
     auto* vqfocusframe = const_cast<VirtualQFocusFrame*>(dynamic_cast<const VirtualQFocusFrame*>(self));
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         return vqfocusframe->isSignalConnected(*signal);
@@ -1765,7 +1765,7 @@ bool QFocusFrame_IsSignalConnected(const QFocusFrame* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QFocusFrame_QBaseIsSignalConnected(const QFocusFrame* self, QMetaMethod* signal) {
+bool QFocusFrame_QBaseIsSignalConnected(const QFocusFrame* self, const QMetaMethod* signal) {
     auto* vqfocusframe = const_cast<VirtualQFocusFrame*>(dynamic_cast<const VirtualQFocusFrame*>(self));
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         vqfocusframe->setQFocusFrame_IsSignalConnected_IsBase(true);
@@ -1780,6 +1780,35 @@ void QFocusFrame_OnIsSignalConnected(const QFocusFrame* self, intptr_t slot) {
     auto* vqfocusframe = const_cast<VirtualQFocusFrame*>(dynamic_cast<const VirtualQFocusFrame*>(self));
     if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
         vqfocusframe->setQFocusFrame_IsSignalConnected_Callback(reinterpret_cast<VirtualQFocusFrame::QFocusFrame_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QFocusFrame_GetDecodedMetricF(const QFocusFrame* self, int metricA, int metricB) {
+    auto* vqfocusframe = const_cast<VirtualQFocusFrame*>(dynamic_cast<const VirtualQFocusFrame*>(self));
+    if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
+        return vqfocusframe->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFocusFrame*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QFocusFrame_QBaseGetDecodedMetricF(const QFocusFrame* self, int metricA, int metricB) {
+    auto* vqfocusframe = const_cast<VirtualQFocusFrame*>(dynamic_cast<const VirtualQFocusFrame*>(self));
+    if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
+        vqfocusframe->setQFocusFrame_GetDecodedMetricF_IsBase(true);
+        return vqfocusframe->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFocusFrame*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QFocusFrame_OnGetDecodedMetricF(const QFocusFrame* self, intptr_t slot) {
+    auto* vqfocusframe = const_cast<VirtualQFocusFrame*>(dynamic_cast<const VirtualQFocusFrame*>(self));
+    if (vqfocusframe && vqfocusframe->isVirtualQFocusFrame) {
+        vqfocusframe->setQFocusFrame_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQFocusFrame::QFocusFrame_GetDecodedMetricF_Callback>(slot));
     }
 }
 

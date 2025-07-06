@@ -278,16 +278,16 @@ bool q_metaobject_invoke_method2(void* obj, const char* member, void* retVal) {
     return QMetaObject_InvokeMethod2((QObject*)obj, member, (QGenericReturnArgument*)retVal);
 }
 
-bool q_metaobject_invoke_method3(void* obj, const char* member, int64_t typeVal) {
-    return QMetaObject_InvokeMethod3((QObject*)obj, member, typeVal);
+bool q_metaobject_invoke_method3(void* obj, const char* member, int64_t typeVal, void* val0) {
+    return QMetaObject_InvokeMethod3((QObject*)obj, member, typeVal, (QGenericArgument*)val0);
 }
 
-bool q_metaobject_invoke_method4(void* obj, const char* member) {
-    return QMetaObject_InvokeMethod4((QObject*)obj, member);
+bool q_metaobject_invoke_method4(void* obj, const char* member, void* val0) {
+    return QMetaObject_InvokeMethod4((QObject*)obj, member, (QGenericArgument*)val0);
 }
 
-QObject* q_metaobject_new_instance(void* self) {
-    return QMetaObject_NewInstance((QMetaObject*)self);
+QObject* q_metaobject_new_instance(void* self, void* val0) {
+    return QMetaObject_NewInstance((QMetaObject*)self, (QGenericArgument*)val0);
 }
 
 int32_t q_metaobject_static_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -393,10 +393,6 @@ bool q_metaobject_invoke_method132(void* obj, const char* member, void* retVal, 
     return QMetaObject_InvokeMethod132((QObject*)obj, member, (QGenericReturnArgument*)retVal, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
 }
 
-bool q_metaobject_invoke_method43(void* obj, const char* member, int64_t typeVal, void* val0) {
-    return QMetaObject_InvokeMethod43((QObject*)obj, member, typeVal, (QGenericArgument*)val0);
-}
-
 bool q_metaobject_invoke_method53(void* obj, const char* member, int64_t typeVal, void* val0, void* val1) {
     return QMetaObject_InvokeMethod53((QObject*)obj, member, typeVal, (QGenericArgument*)val0, (QGenericArgument*)val1);
 }
@@ -433,12 +429,8 @@ bool q_metaobject_invoke_method133(void* obj, const char* member, int64_t typeVa
     return QMetaObject_InvokeMethod133((QObject*)obj, member, typeVal, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
 }
 
-bool q_metaobject_invoke_method32(void* obj, const char* member, void* val0) {
-    return QMetaObject_InvokeMethod32((QObject*)obj, member, (QGenericArgument*)val0);
-}
-
-bool q_metaobject_invoke_method44(void* obj, const char* member, void* val0, void* val1) {
-    return QMetaObject_InvokeMethod44((QObject*)obj, member, (QGenericArgument*)val0, (QGenericArgument*)val1);
+bool q_metaobject_invoke_method43(void* obj, const char* member, void* val0, void* val1) {
+    return QMetaObject_InvokeMethod43((QObject*)obj, member, (QGenericArgument*)val0, (QGenericArgument*)val1);
 }
 
 bool q_metaobject_invoke_method54(void* obj, const char* member, void* val0, void* val1, void* val2) {
@@ -471,10 +463,6 @@ bool q_metaobject_invoke_method114(void* obj, const char* member, void* val0, vo
 
 bool q_metaobject_invoke_method124(void* obj, const char* member, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9) {
     return QMetaObject_InvokeMethod124((QObject*)obj, member, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
-}
-
-QObject* q_metaobject_new_instance1(void* self, void* val0) {
-    return QMetaObject_NewInstance1((QMetaObject*)self, (QGenericArgument*)val0);
 }
 
 QObject* q_metaobject_new_instance2(void* self, void* val0, void* val1) {

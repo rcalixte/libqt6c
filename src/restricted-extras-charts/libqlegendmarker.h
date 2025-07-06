@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqbrush.h"
-#include "../libqfont.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qlegendmarker-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -293,7 +285,7 @@ QThread* q_legendmarker_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QLegendMarker* self, QThread* thread ```
-void q_legendmarker_move_to_thread(void* self, void* thread);
+bool q_legendmarker_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -308,6 +300,13 @@ int32_t q_legendmarker_start_timer(void* self, int interval);
 ///
 /// ``` QLegendMarker* self, int id ```
 void q_legendmarker_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QLegendMarker* self, enum Qt__TimerId id ```
+void q_legendmarker_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -448,6 +447,13 @@ bool q_legendmarker_inherits(void* self, const char* classname);
 ///
 /// ``` QLegendMarker* self ```
 void q_legendmarker_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QLegendMarker* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_legendmarker_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

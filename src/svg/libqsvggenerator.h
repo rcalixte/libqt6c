@@ -12,21 +12,17 @@
 
 #include "../qtlibc.h"
 
-#include "../libqiodevice.h"
-#include "../libqpaintdevice.h"
-#include "../libqpaintengine.h"
-#include "../libqpainter.h"
-#include "../libqpoint.h"
-#include "../libqrect.h"
-#include "../libqsize.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsvggenerator.html
 
 /// q_svggenerator_new constructs a new QSvgGenerator object.
 ///
 ///
 QSvgGenerator* q_svggenerator_new();
+
+/// q_svggenerator_new2 constructs a new QSvgGenerator object.
+///
+/// ``` enum QSvgGenerator__SvgVersion version ```
+QSvgGenerator* q_svggenerator_new2(int64_t version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#title)
 ///
@@ -107,6 +103,11 @@ void q_svggenerator_set_resolution(void* self, int dpi);
 ///
 /// ``` QSvgGenerator* self ```
 int32_t q_svggenerator_resolution(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#svgVersion)
+///
+/// ``` QSvgGenerator* self ```
+int64_t q_svggenerator_svg_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
 ///
@@ -246,6 +247,13 @@ double q_svggenerator_device_pixel_ratio_f_scale();
 
 /// Inherited from QPaintDevice
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_svggenerator_encode_metric_f(int64_t metric, double value);
+
+/// Inherited from QPaintDevice
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
 ///
 /// Wrapper to allow calling virtual or protected method
@@ -352,11 +360,45 @@ QPainter* q_svggenerator_qbase_shared_painter(void* self);
 /// ``` QSvgGenerator* self, QPainter* (*slot)() ```
 void q_svggenerator_on_shared_painter(void* self, QPainter* (*slot)());
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_svggenerator_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QSvgGenerator* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_svggenerator_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QSvgGenerator* self, double (*slot)(QSvgGenerator*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_svggenerator_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#dtor.QSvgGenerator)
 ///
 /// Delete this object from C++ memory.
 ///
 /// ``` QSvgGenerator* self ```
 void q_svggenerator_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qsvggenerator.html#types
+
+typedef enum {
+    QSVGGENERATOR_SVGVERSION_SVGTINY12 = 0,
+    QSVGGENERATOR_SVGVERSION_SVG11 = 1
+} QSvgGenerator__SvgVersion;
 
 #endif

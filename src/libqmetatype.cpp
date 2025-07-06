@@ -9,7 +9,7 @@
 #include "libqmetatype.hpp"
 #include "libqmetatype.hxx"
 
-QMetaType* QMetaType_new(QMetaType* other) {
+QMetaType* QMetaType_new(const QMetaType* other) {
     return new QMetaType(*other);
 }
 
@@ -25,7 +25,7 @@ QMetaType* QMetaType_new4() {
     return new QMetaType();
 }
 
-QMetaType* QMetaType_new5(QMetaType* param1) {
+QMetaType* QMetaType_new5(const QMetaType* param1) {
     return new QMetaType(*param1);
 }
 
@@ -37,7 +37,7 @@ void QMetaType_MoveAssign(QMetaType* self, QMetaType* other) {
     *self = std::move(*other);
 }
 
-void QMetaType_RegisterNormalizedTypedef(libqt_string normalizedTypeName, QMetaType* typeVal) {
+void QMetaType_RegisterNormalizedTypedef(const libqt_string normalizedTypeName, QMetaType* typeVal) {
     QByteArray normalizedTypeName_QByteArray(normalizedTypeName.data, normalizedTypeName.len);
     QMetaType::registerNormalizedTypedef(normalizedTypeName_QByteArray, *typeVal);
 }
@@ -46,7 +46,7 @@ int QMetaType_Type(const char* typeName) {
     return QMetaType::type(typeName);
 }
 
-int QMetaType_TypeWithTypeName(libqt_string typeName) {
+int QMetaType_TypeWithTypeName(const libqt_string typeName) {
     QByteArray typeName_QByteArray(typeName.data, typeName.len);
     return QMetaType::type(typeName_QByteArray);
 }
@@ -93,6 +93,10 @@ bool QMetaType_IsValid(const QMetaType* self) {
 
 bool QMetaType_IsRegistered2(const QMetaType* self) {
     return self->isRegistered();
+}
+
+void QMetaType_RegisterType(const QMetaType* self) {
+    self->registerType();
 }
 
 int QMetaType_Id(const QMetaType* self) {
@@ -143,6 +147,22 @@ bool QMetaType_Equals(const QMetaType* self, const void* lhs, const void* rhs) {
     return self->equals(lhs, rhs);
 }
 
+bool QMetaType_IsDefaultConstructible(const QMetaType* self) {
+    return self->isDefaultConstructible();
+}
+
+bool QMetaType_IsCopyConstructible(const QMetaType* self) {
+    return self->isCopyConstructible();
+}
+
+bool QMetaType_IsMoveConstructible(const QMetaType* self) {
+    return self->isMoveConstructible();
+}
+
+bool QMetaType_IsDestructible(const QMetaType* self) {
+    return self->isDestructible();
+}
+
 bool QMetaType_IsEqualityComparable(const QMetaType* self) {
     return self->isEqualityComparable();
 }
@@ -169,6 +189,10 @@ bool QMetaType_Save2(QDataStream* stream, int typeVal, const void* data) {
 
 bool QMetaType_Load2(QDataStream* stream, int typeVal, void* data) {
     return QMetaType::load(*stream, static_cast<int>(typeVal), data);
+}
+
+QMetaType* QMetaType_UnderlyingType(const QMetaType* self) {
+    return new QMetaType(self->underlyingType());
 }
 
 QMetaType* QMetaType_FromName(QByteArrayView* name) {

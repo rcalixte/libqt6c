@@ -367,7 +367,7 @@ void QPauseAnimation_OnCustomEvent(QPauseAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPauseAnimation_ConnectNotify(QPauseAnimation* self, QMetaMethod* signal) {
+void QPauseAnimation_ConnectNotify(QPauseAnimation* self, const QMetaMethod* signal) {
     auto* vqpauseanimation = dynamic_cast<VirtualQPauseAnimation*>(self);
     if (vqpauseanimation && vqpauseanimation->isVirtualQPauseAnimation) {
         vqpauseanimation->connectNotify(*signal);
@@ -377,7 +377,7 @@ void QPauseAnimation_ConnectNotify(QPauseAnimation* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPauseAnimation_QBaseConnectNotify(QPauseAnimation* self, QMetaMethod* signal) {
+void QPauseAnimation_QBaseConnectNotify(QPauseAnimation* self, const QMetaMethod* signal) {
     auto* vqpauseanimation = dynamic_cast<VirtualQPauseAnimation*>(self);
     if (vqpauseanimation && vqpauseanimation->isVirtualQPauseAnimation) {
         vqpauseanimation->setQPauseAnimation_ConnectNotify_IsBase(true);
@@ -396,7 +396,7 @@ void QPauseAnimation_OnConnectNotify(QPauseAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPauseAnimation_DisconnectNotify(QPauseAnimation* self, QMetaMethod* signal) {
+void QPauseAnimation_DisconnectNotify(QPauseAnimation* self, const QMetaMethod* signal) {
     auto* vqpauseanimation = dynamic_cast<VirtualQPauseAnimation*>(self);
     if (vqpauseanimation && vqpauseanimation->isVirtualQPauseAnimation) {
         vqpauseanimation->disconnectNotify(*signal);
@@ -406,7 +406,7 @@ void QPauseAnimation_DisconnectNotify(QPauseAnimation* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QPauseAnimation_QBaseDisconnectNotify(QPauseAnimation* self, QMetaMethod* signal) {
+void QPauseAnimation_QBaseDisconnectNotify(QPauseAnimation* self, const QMetaMethod* signal) {
     auto* vqpauseanimation = dynamic_cast<VirtualQPauseAnimation*>(self);
     if (vqpauseanimation && vqpauseanimation->isVirtualQPauseAnimation) {
         vqpauseanimation->setQPauseAnimation_DisconnectNotify_IsBase(true);
@@ -512,7 +512,7 @@ void QPauseAnimation_OnReceivers(const QPauseAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPauseAnimation_IsSignalConnected(const QPauseAnimation* self, QMetaMethod* signal) {
+bool QPauseAnimation_IsSignalConnected(const QPauseAnimation* self, const QMetaMethod* signal) {
     auto* vqpauseanimation = const_cast<VirtualQPauseAnimation*>(dynamic_cast<const VirtualQPauseAnimation*>(self));
     if (vqpauseanimation && vqpauseanimation->isVirtualQPauseAnimation) {
         return vqpauseanimation->isSignalConnected(*signal);
@@ -522,7 +522,7 @@ bool QPauseAnimation_IsSignalConnected(const QPauseAnimation* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QPauseAnimation_QBaseIsSignalConnected(const QPauseAnimation* self, QMetaMethod* signal) {
+bool QPauseAnimation_QBaseIsSignalConnected(const QPauseAnimation* self, const QMetaMethod* signal) {
     auto* vqpauseanimation = const_cast<VirtualQPauseAnimation*>(dynamic_cast<const VirtualQPauseAnimation*>(self));
     if (vqpauseanimation && vqpauseanimation->isVirtualQPauseAnimation) {
         vqpauseanimation->setQPauseAnimation_IsSignalConnected_IsBase(true);

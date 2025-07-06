@@ -71,17 +71,17 @@ libqt_string QCategoryAxis_Tr(const char* s) {
     return _str;
 }
 
-void QCategoryAxis_Append(QCategoryAxis* self, libqt_string label, double categoryEndValue) {
+void QCategoryAxis_Append(QCategoryAxis* self, const libqt_string label, double categoryEndValue) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     self->append(label_QString, static_cast<qreal>(categoryEndValue));
 }
 
-void QCategoryAxis_Remove(QCategoryAxis* self, libqt_string label) {
+void QCategoryAxis_Remove(QCategoryAxis* self, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     self->remove(label_QString);
 }
 
-void QCategoryAxis_ReplaceLabel(QCategoryAxis* self, libqt_string oldLabel, libqt_string newLabel) {
+void QCategoryAxis_ReplaceLabel(QCategoryAxis* self, const libqt_string oldLabel, const libqt_string newLabel) {
     QString oldLabel_QString = QString::fromUtf8(oldLabel.data, oldLabel.len);
     QString newLabel_QString = QString::fromUtf8(newLabel.data, newLabel.len);
     self->replaceLabel(oldLabel_QString, newLabel_QString);
@@ -95,16 +95,16 @@ void QCategoryAxis_SetStartValue(QCategoryAxis* self, double min) {
     self->setStartValue(static_cast<qreal>(min));
 }
 
-double QCategoryAxis_EndValue(const QCategoryAxis* self, libqt_string categoryLabel) {
+double QCategoryAxis_EndValue(const QCategoryAxis* self, const libqt_string categoryLabel) {
     QString categoryLabel_QString = QString::fromUtf8(categoryLabel.data, categoryLabel.len);
     return static_cast<double>(self->endValue(categoryLabel_QString));
 }
 
 libqt_list /* of libqt_string */ QCategoryAxis_CategoriesLabels(QCategoryAxis* self) {
-    QStringList _ret = self->categoriesLabels();
+    QList<QString> _ret = self->categoriesLabels();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -116,7 +116,7 @@ libqt_list /* of libqt_string */ QCategoryAxis_CategoriesLabels(QCategoryAxis* s
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -180,7 +180,7 @@ libqt_string QCategoryAxis_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-double QCategoryAxis_StartValue1(const QCategoryAxis* self, libqt_string categoryLabel) {
+double QCategoryAxis_StartValue1(const QCategoryAxis* self, const libqt_string categoryLabel) {
     QString categoryLabel_QString = QString::fromUtf8(categoryLabel.data, categoryLabel.len);
     return static_cast<double>(self->startValue(categoryLabel_QString));
 }
@@ -360,7 +360,7 @@ void QCategoryAxis_OnCustomEvent(QCategoryAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCategoryAxis_ConnectNotify(QCategoryAxis* self, QMetaMethod* signal) {
+void QCategoryAxis_ConnectNotify(QCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqcategoryaxis = dynamic_cast<VirtualQCategoryAxis*>(self);
     if (vqcategoryaxis && vqcategoryaxis->isVirtualQCategoryAxis) {
         vqcategoryaxis->connectNotify(*signal);
@@ -370,7 +370,7 @@ void QCategoryAxis_ConnectNotify(QCategoryAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QCategoryAxis_QBaseConnectNotify(QCategoryAxis* self, QMetaMethod* signal) {
+void QCategoryAxis_QBaseConnectNotify(QCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqcategoryaxis = dynamic_cast<VirtualQCategoryAxis*>(self);
     if (vqcategoryaxis && vqcategoryaxis->isVirtualQCategoryAxis) {
         vqcategoryaxis->setQCategoryAxis_ConnectNotify_IsBase(true);
@@ -389,7 +389,7 @@ void QCategoryAxis_OnConnectNotify(QCategoryAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCategoryAxis_DisconnectNotify(QCategoryAxis* self, QMetaMethod* signal) {
+void QCategoryAxis_DisconnectNotify(QCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqcategoryaxis = dynamic_cast<VirtualQCategoryAxis*>(self);
     if (vqcategoryaxis && vqcategoryaxis->isVirtualQCategoryAxis) {
         vqcategoryaxis->disconnectNotify(*signal);
@@ -399,7 +399,7 @@ void QCategoryAxis_DisconnectNotify(QCategoryAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QCategoryAxis_QBaseDisconnectNotify(QCategoryAxis* self, QMetaMethod* signal) {
+void QCategoryAxis_QBaseDisconnectNotify(QCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqcategoryaxis = dynamic_cast<VirtualQCategoryAxis*>(self);
     if (vqcategoryaxis && vqcategoryaxis->isVirtualQCategoryAxis) {
         vqcategoryaxis->setQCategoryAxis_DisconnectNotify_IsBase(true);
@@ -505,7 +505,7 @@ void QCategoryAxis_OnReceivers(const QCategoryAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCategoryAxis_IsSignalConnected(const QCategoryAxis* self, QMetaMethod* signal) {
+bool QCategoryAxis_IsSignalConnected(const QCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqcategoryaxis = const_cast<VirtualQCategoryAxis*>(dynamic_cast<const VirtualQCategoryAxis*>(self));
     if (vqcategoryaxis && vqcategoryaxis->isVirtualQCategoryAxis) {
         return vqcategoryaxis->isSignalConnected(*signal);
@@ -515,7 +515,7 @@ bool QCategoryAxis_IsSignalConnected(const QCategoryAxis* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QCategoryAxis_QBaseIsSignalConnected(const QCategoryAxis* self, QMetaMethod* signal) {
+bool QCategoryAxis_QBaseIsSignalConnected(const QCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqcategoryaxis = const_cast<VirtualQCategoryAxis*>(dynamic_cast<const VirtualQCategoryAxis*>(self));
     if (vqcategoryaxis && vqcategoryaxis->isVirtualQCategoryAxis) {
         vqcategoryaxis->setQCategoryAxis_IsSignalConnected_IsBase(true);

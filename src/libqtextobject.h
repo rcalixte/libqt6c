@@ -12,17 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqglyphrun.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqtextformat.h"
-#include "libqtextcursor.h"
-#include "libqtextdocument.h"
-#include "libqtextlayout.h"
-#include "libqtextlist.h"
-
 /// https://doc.qt.io/qt-6/qtextobject.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -146,7 +135,7 @@ QThread* q_textobject_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTextObject* self, QThread* thread ```
-void q_textobject_move_to_thread(void* self, void* thread);
+bool q_textobject_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -161,6 +150,13 @@ int32_t q_textobject_start_timer(void* self, int interval);
 ///
 /// ``` QTextObject* self, int id ```
 void q_textobject_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTextObject* self, enum Qt__TimerId id ```
+void q_textobject_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -301,6 +297,13 @@ bool q_textobject_inherits(void* self, const char* classname);
 ///
 /// ``` QTextObject* self ```
 void q_textobject_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTextObject* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_textobject_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -477,7 +480,7 @@ QThread* q_textblockgroup_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTextBlockGroup* self, QThread* thread ```
-void q_textblockgroup_move_to_thread(void* self, void* thread);
+bool q_textblockgroup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -492,6 +495,13 @@ int32_t q_textblockgroup_start_timer(void* self, int interval);
 ///
 /// ``` QTextBlockGroup* self, int id ```
 void q_textblockgroup_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTextBlockGroup* self, enum Qt__TimerId id ```
+void q_textblockgroup_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -635,6 +645,13 @@ void q_textblockgroup_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTextBlockGroup* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_textblockgroup_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QTextBlockGroup* self, int interval, enum Qt__TimerType timerType ```
@@ -774,16 +791,6 @@ libqt_list /* of QTextFrame* */ q_textframe_child_frames(void* self);
 /// ``` QTextFrame* self ```
 QTextFrame* q_textframe_parent_frame(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#begin)
-///
-/// ``` QTextFrame* self ```
-QTextFrame__iterator* q_textframe_begin(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#end)
-///
-/// ``` QTextFrame* self ```
-QTextFrame__iterator* q_textframe_end(void* self);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -883,7 +890,7 @@ QThread* q_textframe_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTextFrame* self, QThread* thread ```
-void q_textframe_move_to_thread(void* self, void* thread);
+bool q_textframe_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -898,6 +905,13 @@ int32_t q_textframe_start_timer(void* self, int interval);
 ///
 /// ``` QTextFrame* self, int id ```
 void q_textframe_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTextFrame* self, enum Qt__TimerId id ```
+void q_textframe_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1038,6 +1052,13 @@ bool q_textframe_inherits(void* self, const char* classname);
 ///
 /// ``` QTextFrame* self ```
 void q_textframe_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTextFrame* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_textframe_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1595,16 +1616,6 @@ void q_textblock_set_line_count(void* self, int count);
 /// ``` QTextBlock* self ```
 int32_t q_textblock_line_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#begin)
-///
-/// ``` QTextBlock* self ```
-QTextBlock__iterator* q_textblock_begin(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#end)
-///
-/// ``` QTextBlock* self ```
-QTextBlock__iterator* q_textblock_end(void* self);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#next)
 ///
 /// ``` QTextBlock* self ```
@@ -1715,173 +1726,5 @@ libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs2(void* self, int from, 
 ///
 /// ``` QTextFragment* self ```
 void q_textfragment_delete(void* self);
-
-/// https://doc.qt.io/qt-6/qtextframe-iterator.html
-
-/// q_textframe__iterator_new constructs a new QTextFrame::iterator object.
-///
-/// ``` QTextFrame__iterator* other ```
-QTextFrame__iterator* q_textframe__iterator_new(void* other);
-
-/// q_textframe__iterator_new2 constructs a new QTextFrame::iterator object and invalidates the source QTextFrame::iterator object.
-///
-/// ``` QTextFrame__iterator* other ```
-QTextFrame__iterator* q_textframe__iterator_new2(void* other);
-
-/// q_textframe__iterator_new3 constructs a new QTextFrame::iterator object.
-///
-///
-QTextFrame__iterator* q_textframe__iterator_new3();
-
-/// q_textframe__iterator_new4 constructs a new QTextFrame::iterator object.
-///
-/// ``` QTextFrame__iterator* param1 ```
-QTextFrame__iterator* q_textframe__iterator_new4(void* param1);
-
-/// q_textframe__iterator_copy_assign shallow copies `other` into `self`.
-///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* other ```
-void q_textframe__iterator_copy_assign(void* self, void* other);
-
-/// q_textframe__iterator_move_assign moves `other` into `self` and invalidates `other`.
-///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* other ```
-void q_textframe__iterator_move_assign(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#parentFrame)
-///
-/// ``` QTextFrame__iterator* self ```
-QTextFrame* q_textframe__iterator_parent_frame(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#currentFrame)
-///
-/// ``` QTextFrame__iterator* self ```
-QTextFrame* q_textframe__iterator_current_frame(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#currentBlock)
-///
-/// ``` QTextFrame__iterator* self ```
-QTextBlock* q_textframe__iterator_current_block(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#atEnd)
-///
-/// ``` QTextFrame__iterator* self ```
-bool q_textframe__iterator_at_end(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator==)
-///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* o ```
-bool q_textframe__iterator_operator_equal(void* self, void* o);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator!=)
-///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* o ```
-bool q_textframe__iterator_operator_not_equal(void* self, void* o);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator++)
-///
-/// ``` QTextFrame__iterator* self ```
-QTextFrame__iterator* q_textframe__iterator_operator_plus_plus(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator++)
-///
-/// ``` QTextFrame__iterator* self, int param1 ```
-QTextFrame__iterator* q_textframe__iterator_operator_plus_plus_with_int(void* self, int param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator--)
-///
-/// ``` QTextFrame__iterator* self ```
-QTextFrame__iterator* q_textframe__iterator_operator_minus_minus(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator--)
-///
-/// ``` QTextFrame__iterator* self, int param1 ```
-QTextFrame__iterator* q_textframe__iterator_operator_minus_minus_with_int(void* self, int param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe::iterator.html#dtor.QTextFrame::iterator)
-///
-/// Delete this object from C++ memory.
-///
-/// ``` QTextFrame__iterator* self ```
-void q_textframe__iterator_delete(void* self);
-
-/// https://doc.qt.io/qt-6/qtextblock-iterator.html
-
-/// q_textblock__iterator_new constructs a new QTextBlock::iterator object.
-///
-/// ``` QTextBlock__iterator* other ```
-QTextBlock__iterator* q_textblock__iterator_new(void* other);
-
-/// q_textblock__iterator_new2 constructs a new QTextBlock::iterator object and invalidates the source QTextBlock::iterator object.
-///
-/// ``` QTextBlock__iterator* other ```
-QTextBlock__iterator* q_textblock__iterator_new2(void* other);
-
-/// q_textblock__iterator_new3 constructs a new QTextBlock::iterator object.
-///
-///
-QTextBlock__iterator* q_textblock__iterator_new3();
-
-/// q_textblock__iterator_new4 constructs a new QTextBlock::iterator object.
-///
-/// ``` QTextBlock__iterator* param1 ```
-QTextBlock__iterator* q_textblock__iterator_new4(void* param1);
-
-/// q_textblock__iterator_copy_assign shallow copies `other` into `self`.
-///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* other ```
-void q_textblock__iterator_copy_assign(void* self, void* other);
-
-/// q_textblock__iterator_move_assign moves `other` into `self` and invalidates `other`.
-///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* other ```
-void q_textblock__iterator_move_assign(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#fragment)
-///
-/// ``` QTextBlock__iterator* self ```
-QTextFragment* q_textblock__iterator_fragment(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#atEnd)
-///
-/// ``` QTextBlock__iterator* self ```
-bool q_textblock__iterator_at_end(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator==)
-///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* o ```
-bool q_textblock__iterator_operator_equal(void* self, void* o);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator!=)
-///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* o ```
-bool q_textblock__iterator_operator_not_equal(void* self, void* o);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator++)
-///
-/// ``` QTextBlock__iterator* self ```
-QTextBlock__iterator* q_textblock__iterator_operator_plus_plus(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator++)
-///
-/// ``` QTextBlock__iterator* self, int param1 ```
-QTextBlock__iterator* q_textblock__iterator_operator_plus_plus_with_int(void* self, int param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator--)
-///
-/// ``` QTextBlock__iterator* self ```
-QTextBlock__iterator* q_textblock__iterator_operator_minus_minus(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator--)
-///
-/// ``` QTextBlock__iterator* self, int param1 ```
-QTextBlock__iterator* q_textblock__iterator_operator_minus_minus_with_int(void* self, int param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock::iterator.html#dtor.QTextBlock::iterator)
-///
-/// Delete this object from C++ memory.
-///
-/// ``` QTextBlock__iterator* self ```
-void q_textblock__iterator_delete(void* self);
 
 #endif

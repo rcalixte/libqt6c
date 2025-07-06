@@ -278,24 +278,24 @@ const char* q_locale_date_time_format(void* self) {
     return _ret;
 }
 
-QDate* q_locale_to_date(void* self, const char* stringVal) {
-    return QLocale_ToDate((QLocale*)self, qstring(stringVal));
-}
-
 QTime* q_locale_to_time(void* self, const char* stringVal) {
     return QLocale_ToTime((QLocale*)self, qstring(stringVal));
 }
 
-QDateTime* q_locale_to_date_time(void* self, const char* stringVal) {
-    return QLocale_ToDateTime((QLocale*)self, qstring(stringVal));
+QTime* q_locale_to_time2(void* self, const char* stringVal, const char* format) {
+    return QLocale_ToTime2((QLocale*)self, qstring(stringVal), qstring(format));
+}
+
+QDate* q_locale_to_date(void* self, const char* stringVal) {
+    return QLocale_ToDate((QLocale*)self, qstring(stringVal));
 }
 
 QDate* q_locale_to_date2(void* self, const char* stringVal, const char* format) {
     return QLocale_ToDate2((QLocale*)self, qstring(stringVal), qstring(format));
 }
 
-QTime* q_locale_to_time2(void* self, const char* stringVal, const char* format) {
-    return QLocale_ToTime2((QLocale*)self, qstring(stringVal), qstring(format));
+QDateTime* q_locale_to_date_time(void* self, const char* stringVal) {
+    return QLocale_ToDateTime((QLocale*)self, qstring(stringVal));
 }
 
 QDateTime* q_locale_to_date_time2(void* self, const char* stringVal, const char* format) {
@@ -306,12 +306,12 @@ QDate* q_locale_to_date3(void* self, const char* stringVal, int64_t format, void
     return QLocale_ToDate3((QLocale*)self, qstring(stringVal), format, (QCalendar*)cal);
 }
 
-QDateTime* q_locale_to_date_time3(void* self, const char* stringVal, int64_t format, void* cal) {
-    return QLocale_ToDateTime3((QLocale*)self, qstring(stringVal), format, (QCalendar*)cal);
-}
-
 QDate* q_locale_to_date4(void* self, const char* stringVal, const char* format, void* cal) {
     return QLocale_ToDate4((QLocale*)self, qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
+QDateTime* q_locale_to_date_time3(void* self, const char* stringVal, int64_t format, void* cal) {
+    return QLocale_ToDateTime3((QLocale*)self, qstring(stringVal), format, (QCalendar*)cal);
 }
 
 QDateTime* q_locale_to_date_time4(void* self, const char* stringVal, const char* format, void* cal) {
@@ -635,6 +635,20 @@ const char* q_locale_create_separated_list(void* self, const char* strl[]) {
     return _ret;
 }
 
+const char* q_locale_name1(void* self, int64_t separator) {
+    libqt_string _str = QLocale_Name1((QLocale*)self, separator);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_locale_bcp47_name1(void* self, int64_t separator) {
+    libqt_string _str = QLocale_Bcp47Name1((QLocale*)self, separator);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 short q_locale_to_short2(void* self, const char* s, bool* ok) {
     return QLocale_ToShort2((QLocale*)self, qstring(s), (bool*)ok);
 }
@@ -745,16 +759,48 @@ const char* q_locale_date_time_format1(void* self, int64_t format) {
     return _ret;
 }
 
-QDate* q_locale_to_date22(void* self, const char* stringVal, int64_t param2) {
-    return QLocale_ToDate22((QLocale*)self, qstring(stringVal), param2);
-}
-
 QTime* q_locale_to_time22(void* self, const char* stringVal, int64_t param2) {
     return QLocale_ToTime22((QLocale*)self, qstring(stringVal), param2);
 }
 
+QDate* q_locale_to_date22(void* self, const char* stringVal, int64_t param2) {
+    return QLocale_ToDate22((QLocale*)self, qstring(stringVal), param2);
+}
+
+QDate* q_locale_to_date32(void* self, const char* stringVal, int64_t param2, int baseYear) {
+    return QLocale_ToDate32((QLocale*)self, qstring(stringVal), param2, baseYear);
+}
+
+QDate* q_locale_to_date33(void* self, const char* stringVal, const char* format, int baseYear) {
+    return QLocale_ToDate33((QLocale*)self, qstring(stringVal), qstring(format), baseYear);
+}
+
 QDateTime* q_locale_to_date_time22(void* self, const char* stringVal, int64_t format) {
     return QLocale_ToDateTime22((QLocale*)self, qstring(stringVal), format);
+}
+
+QDateTime* q_locale_to_date_time32(void* self, const char* stringVal, int64_t format, int baseYear) {
+    return QLocale_ToDateTime32((QLocale*)self, qstring(stringVal), format, baseYear);
+}
+
+QDateTime* q_locale_to_date_time33(void* self, const char* stringVal, const char* format, int baseYear) {
+    return QLocale_ToDateTime33((QLocale*)self, qstring(stringVal), qstring(format), baseYear);
+}
+
+QDate* q_locale_to_date42(void* self, const char* stringVal, int64_t format, void* cal, int baseYear) {
+    return QLocale_ToDate42((QLocale*)self, qstring(stringVal), format, (QCalendar*)cal, baseYear);
+}
+
+QDate* q_locale_to_date43(void* self, const char* stringVal, const char* format, void* cal, int baseYear) {
+    return QLocale_ToDate43((QLocale*)self, qstring(stringVal), qstring(format), (QCalendar*)cal, baseYear);
+}
+
+QDateTime* q_locale_to_date_time42(void* self, const char* stringVal, int64_t format, void* cal, int baseYear) {
+    return QLocale_ToDateTime42((QLocale*)self, qstring(stringVal), format, (QCalendar*)cal, baseYear);
+}
+
+QDateTime* q_locale_to_date_time43(void* self, const char* stringVal, const char* format, void* cal, int baseYear) {
+    return QLocale_ToDateTime43((QLocale*)self, qstring(stringVal), qstring(format), (QCalendar*)cal, baseYear);
 }
 
 const char* q_locale_month_name2(void* self, int param1, int64_t format) {
@@ -873,6 +919,21 @@ const char* q_locale_formatted_data_size3(void* self, long long bytes, int preci
     libqt_string _str = QLocale_FormattedDataSize3((QLocale*)self, bytes, precision, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
+    return _ret;
+}
+
+const char** q_locale_ui_languages1(void* self, int64_t separator) {
+    libqt_list _arr = QLocale_UiLanguages1((QLocale*)self, separator);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
     return _ret;
 }
 

@@ -26,14 +26,6 @@ typedef struct QTimeLine QTimeLine;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-#ifdef __cplusplus
-typedef QTimeLine::Direction Direction; // C++ enum
-typedef QTimeLine::State State;         // C++ enum
-#else
-typedef int Direction; // C ABI enum
-typedef int State;     // C ABI enum
-#endif
-
 QTimeLine* QTimeLine_new();
 QTimeLine* QTimeLine_new2(int duration);
 QTimeLine* QTimeLine_new3(int duration, QObject* parent);
@@ -58,7 +50,7 @@ void QTimeLine_SetFrameRange(QTimeLine* self, int startFrame, int endFrame);
 int QTimeLine_UpdateInterval(const QTimeLine* self);
 void QTimeLine_SetUpdateInterval(QTimeLine* self, int interval);
 QEasingCurve* QTimeLine_EasingCurve(const QTimeLine* self);
-void QTimeLine_SetEasingCurve(QTimeLine* self, QEasingCurve* curve);
+void QTimeLine_SetEasingCurve(QTimeLine* self, const QEasingCurve* curve);
 int QTimeLine_CurrentTime(const QTimeLine* self);
 int QTimeLine_CurrentFrame(const QTimeLine* self);
 double QTimeLine_CurrentValue(const QTimeLine* self);
@@ -89,12 +81,12 @@ void QTimeLine_QBaseChildEvent(QTimeLine* self, QChildEvent* event);
 void QTimeLine_CustomEvent(QTimeLine* self, QEvent* event);
 void QTimeLine_OnCustomEvent(QTimeLine* self, intptr_t slot);
 void QTimeLine_QBaseCustomEvent(QTimeLine* self, QEvent* event);
-void QTimeLine_ConnectNotify(QTimeLine* self, QMetaMethod* signal);
+void QTimeLine_ConnectNotify(QTimeLine* self, const QMetaMethod* signal);
 void QTimeLine_OnConnectNotify(QTimeLine* self, intptr_t slot);
-void QTimeLine_QBaseConnectNotify(QTimeLine* self, QMetaMethod* signal);
-void QTimeLine_DisconnectNotify(QTimeLine* self, QMetaMethod* signal);
+void QTimeLine_QBaseConnectNotify(QTimeLine* self, const QMetaMethod* signal);
+void QTimeLine_DisconnectNotify(QTimeLine* self, const QMetaMethod* signal);
 void QTimeLine_OnDisconnectNotify(QTimeLine* self, intptr_t slot);
-void QTimeLine_QBaseDisconnectNotify(QTimeLine* self, QMetaMethod* signal);
+void QTimeLine_QBaseDisconnectNotify(QTimeLine* self, const QMetaMethod* signal);
 QObject* QTimeLine_Sender(const QTimeLine* self);
 void QTimeLine_OnSender(const QTimeLine* self, intptr_t slot);
 QObject* QTimeLine_QBaseSender(const QTimeLine* self);
@@ -104,9 +96,9 @@ int QTimeLine_QBaseSenderSignalIndex(const QTimeLine* self);
 int QTimeLine_Receivers(const QTimeLine* self, const char* signal);
 void QTimeLine_OnReceivers(const QTimeLine* self, intptr_t slot);
 int QTimeLine_QBaseReceivers(const QTimeLine* self, const char* signal);
-bool QTimeLine_IsSignalConnected(const QTimeLine* self, QMetaMethod* signal);
+bool QTimeLine_IsSignalConnected(const QTimeLine* self, const QMetaMethod* signal);
 void QTimeLine_OnIsSignalConnected(const QTimeLine* self, intptr_t slot);
-bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, QMetaMethod* signal);
+bool QTimeLine_QBaseIsSignalConnected(const QTimeLine* self, const QMetaMethod* signal);
 void QTimeLine_Connect_ValueChanged(QTimeLine* self, intptr_t slot);
 void QTimeLine_Connect_FrameChanged(QTimeLine* self, intptr_t slot);
 void QTimeLine_Connect_StateChanged(QTimeLine* self, intptr_t slot);

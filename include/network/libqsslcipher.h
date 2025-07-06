@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsslcipher.html
 
 /// q_sslcipher_new constructs a new QSslCipher object.

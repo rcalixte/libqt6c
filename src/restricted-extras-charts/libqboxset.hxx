@@ -61,12 +61,12 @@ class VirtualQBoxSet final : public QBoxSet {
     mutable bool qboxset_issignalconnected_isbase = false;
 
   public:
-    VirtualQBoxSet() : QBoxSet(){};
-    VirtualQBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue) : QBoxSet(le, lq, m, uq, ue){};
-    VirtualQBoxSet(const QString label) : QBoxSet(label){};
-    VirtualQBoxSet(const QString label, QObject* parent) : QBoxSet(label, parent){};
-    VirtualQBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label) : QBoxSet(le, lq, m, uq, ue, label){};
-    VirtualQBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label, QObject* parent) : QBoxSet(le, lq, m, uq, ue, label, parent){};
+    VirtualQBoxSet() : QBoxSet() {};
+    VirtualQBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue) : QBoxSet(le, lq, m, uq, ue) {};
+    VirtualQBoxSet(const QString label) : QBoxSet(label) {};
+    VirtualQBoxSet(const QString label, QObject* parent) : QBoxSet(label, parent) {};
+    VirtualQBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label) : QBoxSet(le, lq, m, uq, ue, label) {};
+    VirtualQBoxSet(const qreal le, const qreal lq, const qreal m, const qreal uq, const qreal ue, const QString label, QObject* parent) : QBoxSet(le, lq, m, uq, ue, label, parent) {};
 
     ~VirtualQBoxSet() {
         qboxset_metacall_callback = nullptr;
@@ -298,18 +298,18 @@ class VirtualQBoxSet final : public QBoxSet {
     friend void QBoxSet_QBaseChildEvent(QBoxSet* self, QChildEvent* event);
     friend void QBoxSet_CustomEvent(QBoxSet* self, QEvent* event);
     friend void QBoxSet_QBaseCustomEvent(QBoxSet* self, QEvent* event);
-    friend void QBoxSet_ConnectNotify(QBoxSet* self, QMetaMethod* signal);
-    friend void QBoxSet_QBaseConnectNotify(QBoxSet* self, QMetaMethod* signal);
-    friend void QBoxSet_DisconnectNotify(QBoxSet* self, QMetaMethod* signal);
-    friend void QBoxSet_QBaseDisconnectNotify(QBoxSet* self, QMetaMethod* signal);
+    friend void QBoxSet_ConnectNotify(QBoxSet* self, const QMetaMethod* signal);
+    friend void QBoxSet_QBaseConnectNotify(QBoxSet* self, const QMetaMethod* signal);
+    friend void QBoxSet_DisconnectNotify(QBoxSet* self, const QMetaMethod* signal);
+    friend void QBoxSet_QBaseDisconnectNotify(QBoxSet* self, const QMetaMethod* signal);
     friend QObject* QBoxSet_Sender(const QBoxSet* self);
     friend QObject* QBoxSet_QBaseSender(const QBoxSet* self);
     friend int QBoxSet_SenderSignalIndex(const QBoxSet* self);
     friend int QBoxSet_QBaseSenderSignalIndex(const QBoxSet* self);
     friend int QBoxSet_Receivers(const QBoxSet* self, const char* signal);
     friend int QBoxSet_QBaseReceivers(const QBoxSet* self, const char* signal);
-    friend bool QBoxSet_IsSignalConnected(const QBoxSet* self, QMetaMethod* signal);
-    friend bool QBoxSet_QBaseIsSignalConnected(const QBoxSet* self, QMetaMethod* signal);
+    friend bool QBoxSet_IsSignalConnected(const QBoxSet* self, const QMetaMethod* signal);
+    friend bool QBoxSet_QBaseIsSignalConnected(const QBoxSet* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -184,9 +184,9 @@ void QPrintPreviewDialog_QBaseDropEvent(QPrintPreviewDialog* self, QDropEvent* e
 void QPrintPreviewDialog_HideEvent(QPrintPreviewDialog* self, QHideEvent* event);
 void QPrintPreviewDialog_OnHideEvent(QPrintPreviewDialog* self, intptr_t slot);
 void QPrintPreviewDialog_QBaseHideEvent(QPrintPreviewDialog* self, QHideEvent* event);
-bool QPrintPreviewDialog_NativeEvent(QPrintPreviewDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QPrintPreviewDialog_NativeEvent(QPrintPreviewDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QPrintPreviewDialog_OnNativeEvent(QPrintPreviewDialog* self, intptr_t slot);
-bool QPrintPreviewDialog_QBaseNativeEvent(QPrintPreviewDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QPrintPreviewDialog_QBaseNativeEvent(QPrintPreviewDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QPrintPreviewDialog_ChangeEvent(QPrintPreviewDialog* self, QEvent* param1);
 void QPrintPreviewDialog_OnChangeEvent(QPrintPreviewDialog* self, intptr_t slot);
 void QPrintPreviewDialog_QBaseChangeEvent(QPrintPreviewDialog* self, QEvent* param1);
@@ -220,12 +220,12 @@ void QPrintPreviewDialog_QBaseChildEvent(QPrintPreviewDialog* self, QChildEvent*
 void QPrintPreviewDialog_CustomEvent(QPrintPreviewDialog* self, QEvent* event);
 void QPrintPreviewDialog_OnCustomEvent(QPrintPreviewDialog* self, intptr_t slot);
 void QPrintPreviewDialog_QBaseCustomEvent(QPrintPreviewDialog* self, QEvent* event);
-void QPrintPreviewDialog_ConnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal);
+void QPrintPreviewDialog_ConnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal);
 void QPrintPreviewDialog_OnConnectNotify(QPrintPreviewDialog* self, intptr_t slot);
-void QPrintPreviewDialog_QBaseConnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal);
-void QPrintPreviewDialog_DisconnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal);
+void QPrintPreviewDialog_QBaseConnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal);
+void QPrintPreviewDialog_DisconnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal);
 void QPrintPreviewDialog_OnDisconnectNotify(QPrintPreviewDialog* self, intptr_t slot);
-void QPrintPreviewDialog_QBaseDisconnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal);
+void QPrintPreviewDialog_QBaseDisconnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal);
 void QPrintPreviewDialog_AdjustPosition(QPrintPreviewDialog* self, QWidget* param1);
 void QPrintPreviewDialog_OnAdjustPosition(QPrintPreviewDialog* self, intptr_t slot);
 void QPrintPreviewDialog_QBaseAdjustPosition(QPrintPreviewDialog* self, QWidget* param1);
@@ -253,9 +253,12 @@ int QPrintPreviewDialog_QBaseSenderSignalIndex(const QPrintPreviewDialog* self);
 int QPrintPreviewDialog_Receivers(const QPrintPreviewDialog* self, const char* signal);
 void QPrintPreviewDialog_OnReceivers(const QPrintPreviewDialog* self, intptr_t slot);
 int QPrintPreviewDialog_QBaseReceivers(const QPrintPreviewDialog* self, const char* signal);
-bool QPrintPreviewDialog_IsSignalConnected(const QPrintPreviewDialog* self, QMetaMethod* signal);
+bool QPrintPreviewDialog_IsSignalConnected(const QPrintPreviewDialog* self, const QMetaMethod* signal);
 void QPrintPreviewDialog_OnIsSignalConnected(const QPrintPreviewDialog* self, intptr_t slot);
-bool QPrintPreviewDialog_QBaseIsSignalConnected(const QPrintPreviewDialog* self, QMetaMethod* signal);
+bool QPrintPreviewDialog_QBaseIsSignalConnected(const QPrintPreviewDialog* self, const QMetaMethod* signal);
+double QPrintPreviewDialog_GetDecodedMetricF(const QPrintPreviewDialog* self, int metricA, int metricB);
+void QPrintPreviewDialog_OnGetDecodedMetricF(const QPrintPreviewDialog* self, intptr_t slot);
+double QPrintPreviewDialog_QBaseGetDecodedMetricF(const QPrintPreviewDialog* self, int metricA, int metricB);
 void QPrintPreviewDialog_Delete(QPrintPreviewDialog* self);
 
 #ifdef __cplusplus

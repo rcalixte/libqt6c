@@ -51,7 +51,7 @@ QProgressDialog* QProgressDialog_new2() {
     return new VirtualQProgressDialog();
 }
 
-QProgressDialog* QProgressDialog_new3(libqt_string labelText, libqt_string cancelButtonText, int minimum, int maximum) {
+QProgressDialog* QProgressDialog_new3(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     QString cancelButtonText_QString = QString::fromUtf8(cancelButtonText.data, cancelButtonText.len);
     return new VirtualQProgressDialog(labelText_QString, cancelButtonText_QString, static_cast<int>(minimum), static_cast<int>(maximum));
@@ -61,13 +61,13 @@ QProgressDialog* QProgressDialog_new4(QWidget* parent, int flags) {
     return new VirtualQProgressDialog(parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QProgressDialog* QProgressDialog_new5(libqt_string labelText, libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent) {
+QProgressDialog* QProgressDialog_new5(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     QString cancelButtonText_QString = QString::fromUtf8(cancelButtonText.data, cancelButtonText.len);
     return new VirtualQProgressDialog(labelText_QString, cancelButtonText_QString, static_cast<int>(minimum), static_cast<int>(maximum), parent);
 }
 
-QProgressDialog* QProgressDialog_new6(libqt_string labelText, libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent, int flags) {
+QProgressDialog* QProgressDialog_new6(const libqt_string labelText, const libqt_string cancelButtonText, int minimum, int maximum, QWidget* parent, int flags) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     QString cancelButtonText_QString = QString::fromUtf8(cancelButtonText.data, cancelButtonText.len);
     return new VirtualQProgressDialog(labelText_QString, cancelButtonText_QString, static_cast<int>(minimum), static_cast<int>(maximum), parent, static_cast<Qt::WindowFlags>(flags));
@@ -205,12 +205,12 @@ void QProgressDialog_SetValue(QProgressDialog* self, int progress) {
     self->setValue(static_cast<int>(progress));
 }
 
-void QProgressDialog_SetLabelText(QProgressDialog* self, libqt_string text) {
+void QProgressDialog_SetLabelText(QProgressDialog* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setLabelText(text_QString);
 }
 
-void QProgressDialog_SetCancelButtonText(QProgressDialog* self, libqt_string text) {
+void QProgressDialog_SetCancelButtonText(QProgressDialog* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setCancelButtonText(text_QString);
 }
@@ -1386,7 +1386,7 @@ void QProgressDialog_OnHideEvent(QProgressDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QProgressDialog_NativeEvent(QProgressDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QProgressDialog_NativeEvent(QProgressDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqprogressdialog = dynamic_cast<VirtualQProgressDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
@@ -1397,7 +1397,7 @@ bool QProgressDialog_NativeEvent(QProgressDialog* self, libqt_string eventType, 
 }
 
 // Base class handler implementation
-bool QProgressDialog_QBaseNativeEvent(QProgressDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QProgressDialog_QBaseNativeEvent(QProgressDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqprogressdialog = dynamic_cast<VirtualQProgressDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
@@ -1707,7 +1707,7 @@ void QProgressDialog_OnCustomEvent(QProgressDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProgressDialog_ConnectNotify(QProgressDialog* self, QMetaMethod* signal) {
+void QProgressDialog_ConnectNotify(QProgressDialog* self, const QMetaMethod* signal) {
     auto* vqprogressdialog = dynamic_cast<VirtualQProgressDialog*>(self);
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         vqprogressdialog->connectNotify(*signal);
@@ -1717,7 +1717,7 @@ void QProgressDialog_ConnectNotify(QProgressDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QProgressDialog_QBaseConnectNotify(QProgressDialog* self, QMetaMethod* signal) {
+void QProgressDialog_QBaseConnectNotify(QProgressDialog* self, const QMetaMethod* signal) {
     auto* vqprogressdialog = dynamic_cast<VirtualQProgressDialog*>(self);
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         vqprogressdialog->setQProgressDialog_ConnectNotify_IsBase(true);
@@ -1736,7 +1736,7 @@ void QProgressDialog_OnConnectNotify(QProgressDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProgressDialog_DisconnectNotify(QProgressDialog* self, QMetaMethod* signal) {
+void QProgressDialog_DisconnectNotify(QProgressDialog* self, const QMetaMethod* signal) {
     auto* vqprogressdialog = dynamic_cast<VirtualQProgressDialog*>(self);
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         vqprogressdialog->disconnectNotify(*signal);
@@ -1746,7 +1746,7 @@ void QProgressDialog_DisconnectNotify(QProgressDialog* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QProgressDialog_QBaseDisconnectNotify(QProgressDialog* self, QMetaMethod* signal) {
+void QProgressDialog_QBaseDisconnectNotify(QProgressDialog* self, const QMetaMethod* signal) {
     auto* vqprogressdialog = dynamic_cast<VirtualQProgressDialog*>(self);
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         vqprogressdialog->setQProgressDialog_DisconnectNotify_IsBase(true);
@@ -2055,7 +2055,7 @@ void QProgressDialog_OnReceivers(const QProgressDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QProgressDialog_IsSignalConnected(const QProgressDialog* self, QMetaMethod* signal) {
+bool QProgressDialog_IsSignalConnected(const QProgressDialog* self, const QMetaMethod* signal) {
     auto* vqprogressdialog = const_cast<VirtualQProgressDialog*>(dynamic_cast<const VirtualQProgressDialog*>(self));
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         return vqprogressdialog->isSignalConnected(*signal);
@@ -2065,7 +2065,7 @@ bool QProgressDialog_IsSignalConnected(const QProgressDialog* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QProgressDialog_QBaseIsSignalConnected(const QProgressDialog* self, QMetaMethod* signal) {
+bool QProgressDialog_QBaseIsSignalConnected(const QProgressDialog* self, const QMetaMethod* signal) {
     auto* vqprogressdialog = const_cast<VirtualQProgressDialog*>(dynamic_cast<const VirtualQProgressDialog*>(self));
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         vqprogressdialog->setQProgressDialog_IsSignalConnected_IsBase(true);
@@ -2080,6 +2080,35 @@ void QProgressDialog_OnIsSignalConnected(const QProgressDialog* self, intptr_t s
     auto* vqprogressdialog = const_cast<VirtualQProgressDialog*>(dynamic_cast<const VirtualQProgressDialog*>(self));
     if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
         vqprogressdialog->setQProgressDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQProgressDialog::QProgressDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QProgressDialog_GetDecodedMetricF(const QProgressDialog* self, int metricA, int metricB) {
+    auto* vqprogressdialog = const_cast<VirtualQProgressDialog*>(dynamic_cast<const VirtualQProgressDialog*>(self));
+    if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
+        return vqprogressdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQProgressDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QProgressDialog_QBaseGetDecodedMetricF(const QProgressDialog* self, int metricA, int metricB) {
+    auto* vqprogressdialog = const_cast<VirtualQProgressDialog*>(dynamic_cast<const VirtualQProgressDialog*>(self));
+    if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
+        vqprogressdialog->setQProgressDialog_GetDecodedMetricF_IsBase(true);
+        return vqprogressdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQProgressDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QProgressDialog_OnGetDecodedMetricF(const QProgressDialog* self, intptr_t slot) {
+    auto* vqprogressdialog = const_cast<VirtualQProgressDialog*>(dynamic_cast<const VirtualQProgressDialog*>(self));
+    if (vqprogressdialog && vqprogressdialog->isVirtualQProgressDialog) {
+        vqprogressdialog->setQProgressDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQProgressDialog::QProgressDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -291,10 +291,6 @@ QTextCharFormat* q_textcharformat_new() {
     return QTextCharFormat_new();
 }
 
-QTextCharFormat* q_textcharformat_new2(void* param1) {
-    return QTextCharFormat_new2((QTextCharFormat*)param1);
-}
-
 bool q_textcharformat_is_valid(void* self) {
     return QTextCharFormat_IsValid((QTextCharFormat*)self);
 }
@@ -815,10 +811,6 @@ QTextBlockFormat* q_textblockformat_new() {
     return QTextBlockFormat_new();
 }
 
-QTextBlockFormat* q_textblockformat_new2(void* param1) {
-    return QTextBlockFormat_new2((QTextBlockFormat*)param1);
-}
-
 bool q_textblockformat_is_valid(void* self) {
     return QTextBlockFormat_IsValid((QTextBlockFormat*)self);
 }
@@ -1148,10 +1140,6 @@ QTextListFormat* q_textlistformat_new() {
     return QTextListFormat_new();
 }
 
-QTextListFormat* q_textlistformat_new2(void* param1) {
-    return QTextListFormat_new2((QTextListFormat*)param1);
-}
-
 bool q_textlistformat_is_valid(void* self) {
     return QTextListFormat_IsValid((QTextListFormat*)self);
 }
@@ -1192,6 +1180,14 @@ const char* q_textlistformat_number_suffix(void* self) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+void q_textlistformat_set_start(void* self, int indent) {
+    QTextListFormat_SetStart((QTextListFormat*)self, indent);
+}
+
+int32_t q_textlistformat_start(void* self) {
+    return QTextListFormat_Start((QTextListFormat*)self);
 }
 
 void q_textlistformat_operator_assign(void* self, void* rhs) {
@@ -1427,6 +1423,14 @@ void q_textimageformat_set_width(void* self, double width) {
 
 double q_textimageformat_width(void* self) {
     return QTextImageFormat_Width((QTextImageFormat*)self);
+}
+
+void q_textimageformat_set_maximum_width(void* self, void* maxWidth) {
+    QTextImageFormat_SetMaximumWidth((QTextImageFormat*)self, (QTextLength*)maxWidth);
+}
+
+QTextLength* q_textimageformat_maximum_width(void* self) {
+    return QTextImageFormat_MaximumWidth((QTextImageFormat*)self);
 }
 
 void q_textimageformat_set_height(void* self, double height) {
@@ -1963,10 +1967,6 @@ void q_textimageformat_delete(void* self) {
 
 QTextFrameFormat* q_textframeformat_new() {
     return QTextFrameFormat_new();
-}
-
-QTextFrameFormat* q_textframeformat_new2(void* param1) {
-    return QTextFrameFormat_new2((QTextFrameFormat*)param1);
 }
 
 bool q_textframeformat_is_valid(void* self) {

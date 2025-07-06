@@ -37,10 +37,10 @@ class VirtualQUndoCommand final : public QUndoCommand {
     mutable bool qundocommand_mergewith_isbase = false;
 
   public:
-    VirtualQUndoCommand() : QUndoCommand(){};
-    VirtualQUndoCommand(const QString& text) : QUndoCommand(text){};
-    VirtualQUndoCommand(QUndoCommand* parent) : QUndoCommand(parent){};
-    VirtualQUndoCommand(const QString& text, QUndoCommand* parent) : QUndoCommand(text, parent){};
+    VirtualQUndoCommand() : QUndoCommand() {};
+    VirtualQUndoCommand(const QString& text) : QUndoCommand(text) {};
+    VirtualQUndoCommand(QUndoCommand* parent) : QUndoCommand(parent) {};
+    VirtualQUndoCommand(const QString& text, QUndoCommand* parent) : QUndoCommand(text, parent) {};
 
     ~VirtualQUndoCommand() {
         qundocommand_undo_callback = nullptr;
@@ -165,8 +165,8 @@ class VirtualQUndoStack final : public QUndoStack {
     mutable bool qundostack_issignalconnected_isbase = false;
 
   public:
-    VirtualQUndoStack() : QUndoStack(){};
-    VirtualQUndoStack(QObject* parent) : QUndoStack(parent){};
+    VirtualQUndoStack() : QUndoStack() {};
+    VirtualQUndoStack(QObject* parent) : QUndoStack(parent) {};
 
     ~VirtualQUndoStack() {
         qundostack_metacall_callback = nullptr;
@@ -398,18 +398,18 @@ class VirtualQUndoStack final : public QUndoStack {
     friend void QUndoStack_QBaseChildEvent(QUndoStack* self, QChildEvent* event);
     friend void QUndoStack_CustomEvent(QUndoStack* self, QEvent* event);
     friend void QUndoStack_QBaseCustomEvent(QUndoStack* self, QEvent* event);
-    friend void QUndoStack_ConnectNotify(QUndoStack* self, QMetaMethod* signal);
-    friend void QUndoStack_QBaseConnectNotify(QUndoStack* self, QMetaMethod* signal);
-    friend void QUndoStack_DisconnectNotify(QUndoStack* self, QMetaMethod* signal);
-    friend void QUndoStack_QBaseDisconnectNotify(QUndoStack* self, QMetaMethod* signal);
+    friend void QUndoStack_ConnectNotify(QUndoStack* self, const QMetaMethod* signal);
+    friend void QUndoStack_QBaseConnectNotify(QUndoStack* self, const QMetaMethod* signal);
+    friend void QUndoStack_DisconnectNotify(QUndoStack* self, const QMetaMethod* signal);
+    friend void QUndoStack_QBaseDisconnectNotify(QUndoStack* self, const QMetaMethod* signal);
     friend QObject* QUndoStack_Sender(const QUndoStack* self);
     friend QObject* QUndoStack_QBaseSender(const QUndoStack* self);
     friend int QUndoStack_SenderSignalIndex(const QUndoStack* self);
     friend int QUndoStack_QBaseSenderSignalIndex(const QUndoStack* self);
     friend int QUndoStack_Receivers(const QUndoStack* self, const char* signal);
     friend int QUndoStack_QBaseReceivers(const QUndoStack* self, const char* signal);
-    friend bool QUndoStack_IsSignalConnected(const QUndoStack* self, QMetaMethod* signal);
-    friend bool QUndoStack_QBaseIsSignalConnected(const QUndoStack* self, QMetaMethod* signal);
+    friend bool QUndoStack_IsSignalConnected(const QUndoStack* self, const QMetaMethod* signal);
+    friend bool QUndoStack_QBaseIsSignalConnected(const QUndoStack* self, const QMetaMethod* signal);
 };
 
 #endif

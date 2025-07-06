@@ -11,10 +11,12 @@
 #include "libqrect.hpp"
 #include "libqregion.hpp"
 #include "libqscreen.hpp"
+#include "libqshortcut.hpp"
 #include "libqsize.hpp"
 #include <string.h>
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
+#include "libqwindow.hpp"
 #include "libqcoreevent.hpp"
 #include "libqevent.hpp"
 #include "libqevent.h"
@@ -4402,8 +4404,20 @@ QShortcutEvent* q_shortcutevent_new(void* key, int id) {
     return QShortcutEvent_new((QKeySequence*)key, id);
 }
 
-QShortcutEvent* q_shortcutevent_new2(void* key, int id, bool ambiguous) {
-    return QShortcutEvent_new2((QKeySequence*)key, id, ambiguous);
+QShortcutEvent* q_shortcutevent_new2(void* key) {
+    return QShortcutEvent_new2((QKeySequence*)key);
+}
+
+QShortcutEvent* q_shortcutevent_new3(void* key, int id, bool ambiguous) {
+    return QShortcutEvent_new3((QKeySequence*)key, id, ambiguous);
+}
+
+QShortcutEvent* q_shortcutevent_new4(void* key, void* shortcut) {
+    return QShortcutEvent_new4((QKeySequence*)key, (QShortcut*)shortcut);
+}
+
+QShortcutEvent* q_shortcutevent_new5(void* key, void* shortcut, bool ambiguous) {
+    return QShortcutEvent_new5((QKeySequence*)key, (QShortcut*)shortcut, ambiguous);
 }
 
 QShortcutEvent* q_shortcutevent_clone(void* self) {
@@ -5136,16 +5150,88 @@ void q_applicationstatechangeevent_delete(void* self) {
     QApplicationStateChangeEvent_Delete((QApplicationStateChangeEvent*)(self));
 }
 
+QChildWindowEvent* q_childwindowevent_new(int64_t typeVal, void* childWindow) {
+    return QChildWindowEvent_new(typeVal, (QWindow*)childWindow);
+}
+
+QChildWindowEvent* q_childwindowevent_clone(void* self) {
+    return QChildWindowEvent_Clone((QChildWindowEvent*)self);
+}
+
+void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*slot)()) {
+    QChildWindowEvent_OnClone((QChildWindowEvent*)self, (intptr_t)slot);
+}
+
+QChildWindowEvent* q_childwindowevent_qbase_clone(void* self) {
+    return QChildWindowEvent_QBaseClone((QChildWindowEvent*)self);
+}
+
+QWindow* q_childwindowevent_child(void* self) {
+    return QChildWindowEvent_Child((QChildWindowEvent*)self);
+}
+
+int64_t q_childwindowevent_type(void* self) {
+    return QEvent_Type((QEvent*)self);
+}
+
+bool q_childwindowevent_spontaneous(void* self) {
+    return QEvent_Spontaneous((QEvent*)self);
+}
+
+bool q_childwindowevent_is_accepted(void* self) {
+    return QEvent_IsAccepted((QEvent*)self);
+}
+
+void q_childwindowevent_accept(void* self) {
+    QEvent_Accept((QEvent*)self);
+}
+
+void q_childwindowevent_ignore(void* self) {
+    QEvent_Ignore((QEvent*)self);
+}
+
+bool q_childwindowevent_is_input_event(void* self) {
+    return QEvent_IsInputEvent((QEvent*)self);
+}
+
+bool q_childwindowevent_is_pointer_event(void* self) {
+    return QEvent_IsPointerEvent((QEvent*)self);
+}
+
+bool q_childwindowevent_is_single_point_event(void* self) {
+    return QEvent_IsSinglePointEvent((QEvent*)self);
+}
+
+int32_t q_childwindowevent_register_event_type() {
+    return QEvent_RegisterEventType();
+}
+
+int32_t q_childwindowevent_register_event_type1(int hint) {
+    return QEvent_RegisterEventType1(hint);
+}
+
+void q_childwindowevent_set_accepted(void* self, bool accepted) {
+    QChildWindowEvent_SetAccepted((QChildWindowEvent*)self, accepted);
+}
+
+void q_childwindowevent_qbase_set_accepted(void* self, bool accepted) {
+    QChildWindowEvent_QBaseSetAccepted((QChildWindowEvent*)self, accepted);
+}
+
+void q_childwindowevent_on_set_accepted(void* self, void (*slot)(void*, bool)) {
+    QChildWindowEvent_OnSetAccepted((QChildWindowEvent*)self, (intptr_t)slot);
+}
+
+void q_childwindowevent_delete(void* self) {
+    QChildWindowEvent_Delete((QChildWindowEvent*)(self));
+}
+
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int64_t typ, int s, int l, void* val) {
     return QInputMethodEvent__Attribute_new(typ, s, l, (QVariant*)val);
 }
 
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int64_t typ, int s, int l) {
     return QInputMethodEvent__Attribute_new2(typ, s, l);
-}
-
-QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new3(void* param1) {
-    return QInputMethodEvent__Attribute_new3((QInputMethodEvent__Attribute*)param1);
 }
 
 void q_inputmethodevent__attribute_operator_assign(void* self, void* param1) {

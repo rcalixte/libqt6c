@@ -12,21 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractfileiconprovider.h"
-#include "libqabstractitemmodel.h"
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqdatetime.h"
-#include "libqdir.h"
-#include "libqfileinfo.h"
-#include "libqicon.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qfilesystemmodel.html
 
 /// q_filesystemmodel_new constructs a new QFileSystemModel object.
@@ -567,6 +552,11 @@ const char* q_filesystemmodel_type(void* self, void* index);
 /// ``` QFileSystemModel* self, QModelIndex* index ```
 QDateTime* q_filesystemmodel_last_modified(void* self, void* index);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#lastModified)
+///
+/// ``` QFileSystemModel* self, QModelIndex* index, QTimeZone* tz ```
+QDateTime* q_filesystemmodel_last_modified2(void* self, void* index, void* tz);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#mkdir)
 ///
 /// ``` QFileSystemModel* self, QModelIndex* parent, const char* name ```
@@ -950,7 +940,7 @@ QThread* q_filesystemmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QFileSystemModel* self, QThread* thread ```
-void q_filesystemmodel_move_to_thread(void* self, void* thread);
+bool q_filesystemmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -965,6 +955,13 @@ int32_t q_filesystemmodel_start_timer(void* self, int interval);
 ///
 /// ``` QFileSystemModel* self, int id ```
 void q_filesystemmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QFileSystemModel* self, enum Qt__TimerId id ```
+void q_filesystemmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1098,6 +1095,13 @@ bool q_filesystemmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QFileSystemModel* self ```
 void q_filesystemmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QFileSystemModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_filesystemmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2576,6 +2580,7 @@ void q_filesystemmodel_delete(void* self);
 
 typedef enum {
     QFILESYSTEMMODEL_ROLES_FILEICONROLE = 1,
+    QFILESYSTEMMODEL_ROLES_FILEINFOROLE = 252,
     QFILESYSTEMMODEL_ROLES_FILEPATHROLE = 257,
     QFILESYSTEMMODEL_ROLES_FILENAMEROLE = 258,
     QFILESYSTEMMODEL_ROLES_FILEPERMISSIONS = 259

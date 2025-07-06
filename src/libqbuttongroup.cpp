@@ -89,12 +89,12 @@ void QButtonGroup_RemoveButton(QButtonGroup* self, QAbstractButton* param1) {
 libqt_list /* of QAbstractButton* */ QButtonGroup_Buttons(const QButtonGroup* self) {
     QList<QAbstractButton*> _ret = self->buttons();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractButton** _arr = static_cast<QAbstractButton**>(malloc(sizeof(QAbstractButton*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractButton** _arr = static_cast<QAbstractButton**>(malloc(sizeof(QAbstractButton*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -391,7 +391,7 @@ void QButtonGroup_OnCustomEvent(QButtonGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QButtonGroup_ConnectNotify(QButtonGroup* self, QMetaMethod* signal) {
+void QButtonGroup_ConnectNotify(QButtonGroup* self, const QMetaMethod* signal) {
     auto* vqbuttongroup = dynamic_cast<VirtualQButtonGroup*>(self);
     if (vqbuttongroup && vqbuttongroup->isVirtualQButtonGroup) {
         vqbuttongroup->connectNotify(*signal);
@@ -401,7 +401,7 @@ void QButtonGroup_ConnectNotify(QButtonGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QButtonGroup_QBaseConnectNotify(QButtonGroup* self, QMetaMethod* signal) {
+void QButtonGroup_QBaseConnectNotify(QButtonGroup* self, const QMetaMethod* signal) {
     auto* vqbuttongroup = dynamic_cast<VirtualQButtonGroup*>(self);
     if (vqbuttongroup && vqbuttongroup->isVirtualQButtonGroup) {
         vqbuttongroup->setQButtonGroup_ConnectNotify_IsBase(true);
@@ -420,7 +420,7 @@ void QButtonGroup_OnConnectNotify(QButtonGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QButtonGroup_DisconnectNotify(QButtonGroup* self, QMetaMethod* signal) {
+void QButtonGroup_DisconnectNotify(QButtonGroup* self, const QMetaMethod* signal) {
     auto* vqbuttongroup = dynamic_cast<VirtualQButtonGroup*>(self);
     if (vqbuttongroup && vqbuttongroup->isVirtualQButtonGroup) {
         vqbuttongroup->disconnectNotify(*signal);
@@ -430,7 +430,7 @@ void QButtonGroup_DisconnectNotify(QButtonGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QButtonGroup_QBaseDisconnectNotify(QButtonGroup* self, QMetaMethod* signal) {
+void QButtonGroup_QBaseDisconnectNotify(QButtonGroup* self, const QMetaMethod* signal) {
     auto* vqbuttongroup = dynamic_cast<VirtualQButtonGroup*>(self);
     if (vqbuttongroup && vqbuttongroup->isVirtualQButtonGroup) {
         vqbuttongroup->setQButtonGroup_DisconnectNotify_IsBase(true);
@@ -536,7 +536,7 @@ void QButtonGroup_OnReceivers(const QButtonGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QButtonGroup_IsSignalConnected(const QButtonGroup* self, QMetaMethod* signal) {
+bool QButtonGroup_IsSignalConnected(const QButtonGroup* self, const QMetaMethod* signal) {
     auto* vqbuttongroup = const_cast<VirtualQButtonGroup*>(dynamic_cast<const VirtualQButtonGroup*>(self));
     if (vqbuttongroup && vqbuttongroup->isVirtualQButtonGroup) {
         return vqbuttongroup->isSignalConnected(*signal);
@@ -546,7 +546,7 @@ bool QButtonGroup_IsSignalConnected(const QButtonGroup* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QButtonGroup_QBaseIsSignalConnected(const QButtonGroup* self, QMetaMethod* signal) {
+bool QButtonGroup_QBaseIsSignalConnected(const QButtonGroup* self, const QMetaMethod* signal) {
     auto* vqbuttongroup = const_cast<VirtualQButtonGroup*>(dynamic_cast<const VirtualQButtonGroup*>(self));
     if (vqbuttongroup && vqbuttongroup->isVirtualQButtonGroup) {
         vqbuttongroup->setQButtonGroup_IsSignalConnected_IsBase(true);

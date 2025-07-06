@@ -12,31 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqaction.h"
-#include "../libqevent.h"
-#include "../libqicon.h"
-#include "../libqmenu.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpagelayout.h"
-#include "../libqpageranges.h"
-#include "../libqpaintdevice.h"
-#include "../libqpaintengine.h"
-#include "../libqpainter.h"
-#include "../libqpoint.h"
-#include "../printsupport/libqprinter.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "../libqvariant.h"
-#include "libqwebenginecontextmenurequest.h"
-#include "libqwebenginehistory.h"
-#include "libqwebenginehttprequest.h"
-#include "libqwebenginepage.h"
-#include "libqwebengineprofile.h"
-#include "libqwebenginesettings.h"
-#include "../libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qwebengineview.html
 
 /// q_webengineview_new constructs a new QWebEngineView object.
@@ -363,6 +338,16 @@ void q_webengineview_print_requested(void* self);
 ///
 /// ``` QWebEngineView* self, void (*slot)(QWebEngineView*) ```
 void q_webengineview_on_print_requested(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printRequestedByFrame)
+///
+/// ``` QWebEngineView* self, QWebEngineFrame* frame ```
+void q_webengineview_print_requested_by_frame(void* self, void* frame);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printRequestedByFrame)
+///
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, QWebEngineFrame*) ```
+void q_webengineview_on_print_requested_by_frame(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printFinished)
 ///
@@ -2251,6 +2236,13 @@ QWidget* q_webengineview_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QWebEngineView* self, QPointF* p ```
+QWidget* q_webengineview_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QWebEngineView* self, enum Qt__WidgetAttribute param1 ```
@@ -2562,7 +2554,7 @@ QThread* q_webengineview_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineView* self, QThread* thread ```
-void q_webengineview_move_to_thread(void* self, void* thread);
+bool q_webengineview_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2577,6 +2569,13 @@ int32_t q_webengineview_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineView* self, int id ```
 void q_webengineview_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineView* self, enum Qt__TimerId id ```
+void q_webengineview_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2713,6 +2712,13 @@ void q_webengineview_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineView* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webengineview_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QWebEngineView* self, int interval, enum Qt__TimerType timerType ```
@@ -2829,6 +2835,13 @@ int32_t q_webengineview_depth(void* self);
 ///
 ///
 double q_webengineview_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_webengineview_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -4071,6 +4084,33 @@ bool q_webengineview_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QWebEngineView* self, bool (*slot)(QWebEngineView*, QMetaMethod*) ```
 void q_webengineview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QWebEngineView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_webengineview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QWebEngineView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_webengineview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QWebEngineView* self, double (*slot)(QWebEngineView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_webengineview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

@@ -25,14 +25,8 @@ typedef struct QPoint QPoint;
 typedef struct QRect QRect;
 #endif
 
-#ifdef __cplusplus
-typedef QPicture::DataPtr DataPtr; // C++ QFlags
-#else
-
-#endif
-
 QPicture* QPicture_new();
-QPicture* QPicture_new2(QPicture* param1);
+QPicture* QPicture_new2(const QPicture* param1);
 QPicture* QPicture_new3(int formatVersion);
 bool QPicture_IsNull(const QPicture* self);
 int QPicture_DevType(const QPicture* self);
@@ -45,12 +39,12 @@ void QPicture_OnSetData(QPicture* self, intptr_t slot);
 void QPicture_QBaseSetData(QPicture* self, const char* data, unsigned int size);
 bool QPicture_Play(QPicture* self, QPainter* p);
 bool QPicture_Load(QPicture* self, QIODevice* dev);
-bool QPicture_LoadWithFileName(QPicture* self, libqt_string fileName);
+bool QPicture_LoadWithFileName(QPicture* self, const libqt_string fileName);
 bool QPicture_Save(QPicture* self, QIODevice* dev);
-bool QPicture_SaveWithFileName(QPicture* self, libqt_string fileName);
+bool QPicture_SaveWithFileName(QPicture* self, const libqt_string fileName);
 QRect* QPicture_BoundingRect(const QPicture* self);
-void QPicture_SetBoundingRect(QPicture* self, QRect* r);
-void QPicture_OperatorAssign(QPicture* self, QPicture* p);
+void QPicture_SetBoundingRect(QPicture* self, const QRect* r);
+void QPicture_OperatorAssign(QPicture* self, const QPicture* p);
 void QPicture_Swap(QPicture* self, QPicture* other);
 void QPicture_Detach(QPicture* self);
 bool QPicture_IsDetached(const QPicture* self);
@@ -69,6 +63,9 @@ QPaintDevice* QPicture_QBaseRedirected(const QPicture* self, QPoint* offset);
 QPainter* QPicture_SharedPainter(const QPicture* self);
 void QPicture_OnSharedPainter(const QPicture* self, intptr_t slot);
 QPainter* QPicture_QBaseSharedPainter(const QPicture* self);
+double QPicture_GetDecodedMetricF(const QPicture* self, int metricA, int metricB);
+void QPicture_OnGetDecodedMetricF(const QPicture* self, intptr_t slot);
+double QPicture_QBaseGetDecodedMetricF(const QPicture* self, int metricA, int metricB);
 void QPicture_Delete(QPicture* self);
 
 #ifdef __cplusplus

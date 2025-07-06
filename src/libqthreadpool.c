@@ -1,4 +1,5 @@
 #include "libqevent.hpp"
+#include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
 #include "libqrunnable.hpp"
@@ -103,8 +104,12 @@ void q_threadpool_release_thread(void* self) {
     QThreadPool_ReleaseThread((QThreadPool*)self);
 }
 
-bool q_threadpool_wait_for_done(void* self) {
-    return QThreadPool_WaitForDone((QThreadPool*)self);
+bool q_threadpool_wait_for_done(void* self, int msecs) {
+    return QThreadPool_WaitForDone((QThreadPool*)self, msecs);
+}
+
+bool q_threadpool_wait_for_done2(void* self) {
+    return QThreadPool_WaitForDone2((QThreadPool*)self);
 }
 
 void q_threadpool_clear(void* self) {
@@ -137,8 +142,8 @@ void q_threadpool_start2(void* self, void* runnable, int priority) {
     QThreadPool_Start2((QThreadPool*)self, (QRunnable*)runnable, priority);
 }
 
-bool q_threadpool_wait_for_done1(void* self, int msecs) {
-    return QThreadPool_WaitForDone1((QThreadPool*)self, msecs);
+bool q_threadpool_wait_for_done1(void* self, void* deadline) {
+    return QThreadPool_WaitForDone1((QThreadPool*)self, (QDeadlineTimer*)deadline);
 }
 
 const char* q_threadpool_object_name(void* self) {
@@ -176,8 +181,8 @@ QThread* q_threadpool_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_threadpool_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_threadpool_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_threadpool_start_timer(void* self, int interval) {
@@ -186,6 +191,10 @@ int32_t q_threadpool_start_timer(void* self, int interval) {
 
 void q_threadpool_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_threadpool_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_threadpool_children(void* self) {
@@ -278,6 +287,10 @@ bool q_threadpool_inherits(void* self, const char* classname) {
 
 void q_threadpool_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_threadpool_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_threadpool_start_timer2(void* self, int interval, int64_t timerType) {

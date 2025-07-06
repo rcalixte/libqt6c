@@ -94,10 +94,35 @@ const char* q_bytearrayview_sliced(void* self, int64_t pos);
 /// ``` QByteArrayView* self, int64_t pos, int64_t n ```
 const char* q_bytearrayview_sliced2(void* self, int64_t pos, int64_t n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#slice)
+///
+/// ``` QByteArrayView* self, int64_t pos ```
+const char* q_bytearrayview_slice(void* self, int64_t pos);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#slice)
+///
+/// ``` QByteArrayView* self, int64_t pos, int64_t n ```
+const char* q_bytearrayview_slice2(void* self, int64_t pos, int64_t n);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#chopped)
 ///
 /// ``` QByteArrayView* self, int64_t lenVal ```
 const char* q_bytearrayview_chopped(void* self, int64_t lenVal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#left)
+///
+/// ``` QByteArrayView* self, int64_t n ```
+const char* q_bytearrayview_left(void* self, int64_t n);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#right)
+///
+/// ``` QByteArrayView* self, int64_t n ```
+const char* q_bytearrayview_right(void* self, int64_t n);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#mid)
+///
+/// ``` QByteArrayView* self, int64_t pos ```
+const char* q_bytearrayview_mid(void* self, int64_t pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#truncate)
 ///
@@ -274,6 +299,11 @@ char q_bytearrayview_front(void* self);
 /// ``` QByteArrayView* self ```
 char q_bytearrayview_back(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#max_size)
+///
+/// ``` QByteArrayView* self ```
+int64_t q_bytearrayview_max_size(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#isNull)
 ///
 /// ``` QByteArrayView* self ```
@@ -298,6 +328,16 @@ char q_bytearrayview_first2(void* self);
 ///
 /// ``` QByteArrayView* self ```
 char q_bytearrayview_last2(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#maxSize)
+///
+///
+int64_t q_bytearrayview_max_size2();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#mid)
+///
+/// ``` QByteArrayView* self, int64_t pos, int64_t n ```
+const char* q_bytearrayview_mid2(void* self, int64_t pos, int64_t n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#toShort)
 ///

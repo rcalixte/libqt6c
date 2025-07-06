@@ -51,22 +51,22 @@ QPushButton* QPushButton_new2() {
     return new VirtualQPushButton();
 }
 
-QPushButton* QPushButton_new3(libqt_string text) {
+QPushButton* QPushButton_new3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(text_QString);
 }
 
-QPushButton* QPushButton_new4(QIcon* icon, libqt_string text) {
+QPushButton* QPushButton_new4(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(*icon, text_QString);
 }
 
-QPushButton* QPushButton_new5(libqt_string text, QWidget* parent) {
+QPushButton* QPushButton_new5(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(text_QString, parent);
 }
 
-QPushButton* QPushButton_new6(QIcon* icon, libqt_string text, QWidget* parent) {
+QPushButton* QPushButton_new6(const QIcon* icon, const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPushButton(*icon, text_QString, parent);
 }
@@ -441,7 +441,7 @@ void QPushButton_OnInitStyleOption(const QPushButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPushButton_HitButton(const QPushButton* self, QPoint* pos) {
+bool QPushButton_HitButton(const QPushButton* self, const QPoint* pos) {
     auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         return vqpushbutton->hitButton(*pos);
@@ -451,7 +451,7 @@ bool QPushButton_HitButton(const QPushButton* self, QPoint* pos) {
 }
 
 // Base class handler implementation
-bool QPushButton_QBaseHitButton(const QPushButton* self, QPoint* pos) {
+bool QPushButton_QBaseHitButton(const QPushButton* self, const QPoint* pos) {
     auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->setQPushButton_HitButton_IsBase(true);
@@ -1282,7 +1282,7 @@ void QPushButton_OnHideEvent(QPushButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPushButton_NativeEvent(QPushButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPushButton_NativeEvent(QPushButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqpushbutton = dynamic_cast<VirtualQPushButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
@@ -1293,7 +1293,7 @@ bool QPushButton_NativeEvent(QPushButton* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QPushButton_QBaseNativeEvent(QPushButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPushButton_QBaseNativeEvent(QPushButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqpushbutton = dynamic_cast<VirtualQPushButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
@@ -1603,7 +1603,7 @@ void QPushButton_OnCustomEvent(QPushButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPushButton_ConnectNotify(QPushButton* self, QMetaMethod* signal) {
+void QPushButton_ConnectNotify(QPushButton* self, const QMetaMethod* signal) {
     auto* vqpushbutton = dynamic_cast<VirtualQPushButton*>(self);
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->connectNotify(*signal);
@@ -1613,7 +1613,7 @@ void QPushButton_ConnectNotify(QPushButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPushButton_QBaseConnectNotify(QPushButton* self, QMetaMethod* signal) {
+void QPushButton_QBaseConnectNotify(QPushButton* self, const QMetaMethod* signal) {
     auto* vqpushbutton = dynamic_cast<VirtualQPushButton*>(self);
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->setQPushButton_ConnectNotify_IsBase(true);
@@ -1632,7 +1632,7 @@ void QPushButton_OnConnectNotify(QPushButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPushButton_DisconnectNotify(QPushButton* self, QMetaMethod* signal) {
+void QPushButton_DisconnectNotify(QPushButton* self, const QMetaMethod* signal) {
     auto* vqpushbutton = dynamic_cast<VirtualQPushButton*>(self);
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->disconnectNotify(*signal);
@@ -1642,7 +1642,7 @@ void QPushButton_DisconnectNotify(QPushButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPushButton_QBaseDisconnectNotify(QPushButton* self, QMetaMethod* signal) {
+void QPushButton_QBaseDisconnectNotify(QPushButton* self, const QMetaMethod* signal) {
     auto* vqpushbutton = dynamic_cast<VirtualQPushButton*>(self);
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->setQPushButton_DisconnectNotify_IsBase(true);
@@ -1893,7 +1893,7 @@ void QPushButton_OnReceivers(const QPushButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPushButton_IsSignalConnected(const QPushButton* self, QMetaMethod* signal) {
+bool QPushButton_IsSignalConnected(const QPushButton* self, const QMetaMethod* signal) {
     auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         return vqpushbutton->isSignalConnected(*signal);
@@ -1903,7 +1903,7 @@ bool QPushButton_IsSignalConnected(const QPushButton* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QPushButton_QBaseIsSignalConnected(const QPushButton* self, QMetaMethod* signal) {
+bool QPushButton_QBaseIsSignalConnected(const QPushButton* self, const QMetaMethod* signal) {
     auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->setQPushButton_IsSignalConnected_IsBase(true);
@@ -1918,6 +1918,35 @@ void QPushButton_OnIsSignalConnected(const QPushButton* self, intptr_t slot) {
     auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
     if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
         vqpushbutton->setQPushButton_IsSignalConnected_Callback(reinterpret_cast<VirtualQPushButton::QPushButton_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPushButton_GetDecodedMetricF(const QPushButton* self, int metricA, int metricB) {
+    auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
+    if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
+        return vqpushbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPushButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPushButton_QBaseGetDecodedMetricF(const QPushButton* self, int metricA, int metricB) {
+    auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
+    if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
+        vqpushbutton->setQPushButton_GetDecodedMetricF_IsBase(true);
+        return vqpushbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPushButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPushButton_OnGetDecodedMetricF(const QPushButton* self, intptr_t slot) {
+    auto* vqpushbutton = const_cast<VirtualQPushButton*>(dynamic_cast<const VirtualQPushButton*>(self));
+    if (vqpushbutton && vqpushbutton->isVirtualQPushButton) {
+        vqpushbutton->setQPushButton_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPushButton::QPushButton_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -51,6 +51,10 @@ QThread* q_thread_current_thread() {
     return QThread_CurrentThread();
 }
 
+bool q_thread_is_main_thread() {
+    return QThread_IsMainThread();
+}
+
 int32_t q_thread_ideal_thread_count() {
     return QThread_IdealThreadCount();
 }
@@ -113,6 +117,10 @@ bool q_thread_qbase_event(void* self, void* event) {
 
 int32_t q_thread_loop_level(void* self) {
     return QThread_LoopLevel((QThread*)self);
+}
+
+bool q_thread_is_current_thread(void* self) {
+    return QThread_IsCurrentThread((QThread*)self);
 }
 
 void q_thread_start(void* self) {
@@ -236,8 +244,8 @@ QThread* q_thread_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_thread_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_thread_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_thread_start_timer(void* self, int interval) {
@@ -246,6 +254,10 @@ int32_t q_thread_start_timer(void* self, int interval) {
 
 void q_thread_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_thread_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_thread_children(void* self) {
@@ -338,6 +350,10 @@ bool q_thread_inherits(void* self, const char* classname) {
 
 void q_thread_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_thread_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_thread_start_timer2(void* self, int interval, int64_t timerType) {

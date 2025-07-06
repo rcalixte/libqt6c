@@ -55,14 +55,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QFontComboBox::FontFilter FontFilter;   // C++ enum
-typedef QFontComboBox::FontFilters FontFilters; // C++ QFlags
-#else
-typedef int FontFilter;  // C ABI enum
-typedef int FontFilters; // C ABI QFlags
-#endif
-
 QFontComboBox* QFontComboBox_new(QWidget* parent);
 QFontComboBox* QFontComboBox_new2();
 QMetaObject* QFontComboBox_MetaObject(const QFontComboBox* self);
@@ -79,13 +71,13 @@ QFont* QFontComboBox_CurrentFont(const QFontComboBox* self);
 QSize* QFontComboBox_SizeHint(const QFontComboBox* self);
 void QFontComboBox_OnSizeHint(const QFontComboBox* self, intptr_t slot);
 QSize* QFontComboBox_QBaseSizeHint(const QFontComboBox* self);
-void QFontComboBox_SetSampleTextForSystem(QFontComboBox* self, int writingSystem, libqt_string sampleText);
+void QFontComboBox_SetSampleTextForSystem(QFontComboBox* self, int writingSystem, const libqt_string sampleText);
 libqt_string QFontComboBox_SampleTextForSystem(const QFontComboBox* self, int writingSystem);
-void QFontComboBox_SetSampleTextForFont(QFontComboBox* self, libqt_string fontFamily, libqt_string sampleText);
-libqt_string QFontComboBox_SampleTextForFont(const QFontComboBox* self, libqt_string fontFamily);
-void QFontComboBox_SetDisplayFont(QFontComboBox* self, libqt_string fontFamily, QFont* font);
-void QFontComboBox_SetCurrentFont(QFontComboBox* self, QFont* f);
-void QFontComboBox_CurrentFontChanged(QFontComboBox* self, QFont* f);
+void QFontComboBox_SetSampleTextForFont(QFontComboBox* self, const libqt_string fontFamily, const libqt_string sampleText);
+libqt_string QFontComboBox_SampleTextForFont(const QFontComboBox* self, const libqt_string fontFamily);
+void QFontComboBox_SetDisplayFont(QFontComboBox* self, const libqt_string fontFamily, const QFont* font);
+void QFontComboBox_SetCurrentFont(QFontComboBox* self, const QFont* f);
+void QFontComboBox_CurrentFontChanged(QFontComboBox* self, const QFont* f);
 void QFontComboBox_Connect_CurrentFontChanged(QFontComboBox* self, intptr_t slot);
 bool QFontComboBox_Event(QFontComboBox* self, QEvent* e);
 void QFontComboBox_OnEvent(QFontComboBox* self, intptr_t slot);
@@ -203,9 +195,9 @@ void QFontComboBox_QBaseDragLeaveEvent(QFontComboBox* self, QDragLeaveEvent* eve
 void QFontComboBox_DropEvent(QFontComboBox* self, QDropEvent* event);
 void QFontComboBox_OnDropEvent(QFontComboBox* self, intptr_t slot);
 void QFontComboBox_QBaseDropEvent(QFontComboBox* self, QDropEvent* event);
-bool QFontComboBox_NativeEvent(QFontComboBox* self, libqt_string eventType, void* message, intptr_t* result);
+bool QFontComboBox_NativeEvent(QFontComboBox* self, const libqt_string eventType, void* message, intptr_t* result);
 void QFontComboBox_OnNativeEvent(QFontComboBox* self, intptr_t slot);
-bool QFontComboBox_QBaseNativeEvent(QFontComboBox* self, libqt_string eventType, void* message, intptr_t* result);
+bool QFontComboBox_QBaseNativeEvent(QFontComboBox* self, const libqt_string eventType, void* message, intptr_t* result);
 int QFontComboBox_Metric(const QFontComboBox* self, int param1);
 void QFontComboBox_OnMetric(const QFontComboBox* self, intptr_t slot);
 int QFontComboBox_QBaseMetric(const QFontComboBox* self, int param1);
@@ -233,12 +225,12 @@ void QFontComboBox_QBaseChildEvent(QFontComboBox* self, QChildEvent* event);
 void QFontComboBox_CustomEvent(QFontComboBox* self, QEvent* event);
 void QFontComboBox_OnCustomEvent(QFontComboBox* self, intptr_t slot);
 void QFontComboBox_QBaseCustomEvent(QFontComboBox* self, QEvent* event);
-void QFontComboBox_ConnectNotify(QFontComboBox* self, QMetaMethod* signal);
+void QFontComboBox_ConnectNotify(QFontComboBox* self, const QMetaMethod* signal);
 void QFontComboBox_OnConnectNotify(QFontComboBox* self, intptr_t slot);
-void QFontComboBox_QBaseConnectNotify(QFontComboBox* self, QMetaMethod* signal);
-void QFontComboBox_DisconnectNotify(QFontComboBox* self, QMetaMethod* signal);
+void QFontComboBox_QBaseConnectNotify(QFontComboBox* self, const QMetaMethod* signal);
+void QFontComboBox_DisconnectNotify(QFontComboBox* self, const QMetaMethod* signal);
 void QFontComboBox_OnDisconnectNotify(QFontComboBox* self, intptr_t slot);
-void QFontComboBox_QBaseDisconnectNotify(QFontComboBox* self, QMetaMethod* signal);
+void QFontComboBox_QBaseDisconnectNotify(QFontComboBox* self, const QMetaMethod* signal);
 void QFontComboBox_UpdateMicroFocus(QFontComboBox* self);
 void QFontComboBox_OnUpdateMicroFocus(QFontComboBox* self, intptr_t slot);
 void QFontComboBox_QBaseUpdateMicroFocus(QFontComboBox* self);
@@ -263,9 +255,12 @@ int QFontComboBox_QBaseSenderSignalIndex(const QFontComboBox* self);
 int QFontComboBox_Receivers(const QFontComboBox* self, const char* signal);
 void QFontComboBox_OnReceivers(const QFontComboBox* self, intptr_t slot);
 int QFontComboBox_QBaseReceivers(const QFontComboBox* self, const char* signal);
-bool QFontComboBox_IsSignalConnected(const QFontComboBox* self, QMetaMethod* signal);
+bool QFontComboBox_IsSignalConnected(const QFontComboBox* self, const QMetaMethod* signal);
 void QFontComboBox_OnIsSignalConnected(const QFontComboBox* self, intptr_t slot);
-bool QFontComboBox_QBaseIsSignalConnected(const QFontComboBox* self, QMetaMethod* signal);
+bool QFontComboBox_QBaseIsSignalConnected(const QFontComboBox* self, const QMetaMethod* signal);
+double QFontComboBox_GetDecodedMetricF(const QFontComboBox* self, int metricA, int metricB);
+void QFontComboBox_OnGetDecodedMetricF(const QFontComboBox* self, intptr_t slot);
+double QFontComboBox_QBaseGetDecodedMetricF(const QFontComboBox* self, int metricA, int metricB);
 void QFontComboBox_Delete(QFontComboBox* self);
 
 #ifdef __cplusplus

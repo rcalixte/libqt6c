@@ -77,12 +77,12 @@ void QVBoxPlotModelMapper_QBaseChildEvent(QVBoxPlotModelMapper* self, QChildEven
 void QVBoxPlotModelMapper_CustomEvent(QVBoxPlotModelMapper* self, QEvent* event);
 void QVBoxPlotModelMapper_OnCustomEvent(QVBoxPlotModelMapper* self, intptr_t slot);
 void QVBoxPlotModelMapper_QBaseCustomEvent(QVBoxPlotModelMapper* self, QEvent* event);
-void QVBoxPlotModelMapper_ConnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal);
+void QVBoxPlotModelMapper_ConnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal);
 void QVBoxPlotModelMapper_OnConnectNotify(QVBoxPlotModelMapper* self, intptr_t slot);
-void QVBoxPlotModelMapper_QBaseConnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal);
-void QVBoxPlotModelMapper_DisconnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal);
+void QVBoxPlotModelMapper_QBaseConnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal);
+void QVBoxPlotModelMapper_DisconnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal);
 void QVBoxPlotModelMapper_OnDisconnectNotify(QVBoxPlotModelMapper* self, intptr_t slot);
-void QVBoxPlotModelMapper_QBaseDisconnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal);
+void QVBoxPlotModelMapper_QBaseDisconnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal);
 int QVBoxPlotModelMapper_First(const QVBoxPlotModelMapper* self);
 void QVBoxPlotModelMapper_OnFirst(const QVBoxPlotModelMapper* self, intptr_t slot);
 int QVBoxPlotModelMapper_QBaseFirst(const QVBoxPlotModelMapper* self);
@@ -122,9 +122,9 @@ int QVBoxPlotModelMapper_QBaseSenderSignalIndex(const QVBoxPlotModelMapper* self
 int QVBoxPlotModelMapper_Receivers(const QVBoxPlotModelMapper* self, const char* signal);
 void QVBoxPlotModelMapper_OnReceivers(const QVBoxPlotModelMapper* self, intptr_t slot);
 int QVBoxPlotModelMapper_QBaseReceivers(const QVBoxPlotModelMapper* self, const char* signal);
-bool QVBoxPlotModelMapper_IsSignalConnected(const QVBoxPlotModelMapper* self, QMetaMethod* signal);
+bool QVBoxPlotModelMapper_IsSignalConnected(const QVBoxPlotModelMapper* self, const QMetaMethod* signal);
 void QVBoxPlotModelMapper_OnIsSignalConnected(const QVBoxPlotModelMapper* self, intptr_t slot);
-bool QVBoxPlotModelMapper_QBaseIsSignalConnected(const QVBoxPlotModelMapper* self, QMetaMethod* signal);
+bool QVBoxPlotModelMapper_QBaseIsSignalConnected(const QVBoxPlotModelMapper* self, const QMetaMethod* signal);
 void QVBoxPlotModelMapper_Delete(QVBoxPlotModelMapper* self);
 
 #ifdef __cplusplus

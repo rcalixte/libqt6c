@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "libqxymodelmapper.h"
-#include "libqxyseries.h"
-
 /// https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html
 
 /// q_vxymodelmapper_new constructs a new QVXYModelMapper object.
@@ -249,7 +241,7 @@ QThread* q_vxymodelmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QVXYModelMapper* self, QThread* thread ```
-void q_vxymodelmapper_move_to_thread(void* self, void* thread);
+bool q_vxymodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -264,6 +256,13 @@ int32_t q_vxymodelmapper_start_timer(void* self, int interval);
 ///
 /// ``` QVXYModelMapper* self, int id ```
 void q_vxymodelmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QVXYModelMapper* self, enum Qt__TimerId id ```
+void q_vxymodelmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -404,6 +403,13 @@ bool q_vxymodelmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QVXYModelMapper* self ```
 void q_vxymodelmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QVXYModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_vxymodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

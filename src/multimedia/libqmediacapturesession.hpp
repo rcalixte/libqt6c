@@ -16,6 +16,7 @@ extern "C" {
 
 #ifdef __cplusplus
 #else
+typedef struct QAudioBufferInput QAudioBufferInput;
 typedef struct QAudioInput QAudioInput;
 typedef struct QAudioOutput QAudioOutput;
 typedef struct QCamera QCamera;
@@ -27,8 +28,11 @@ typedef struct QMediaRecorder QMediaRecorder;
 typedef struct QMetaMethod QMetaMethod;
 typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
+typedef struct QScreenCapture QScreenCapture;
 typedef struct QTimerEvent QTimerEvent;
+typedef struct QVideoFrameInput QVideoFrameInput;
 typedef struct QVideoSink QVideoSink;
+typedef struct QWindowCapture QWindowCapture;
 #endif
 
 QMediaCaptureSession* QMediaCaptureSession_new();
@@ -41,10 +45,18 @@ int QMediaCaptureSession_QBaseMetacall(QMediaCaptureSession* self, int param1, i
 libqt_string QMediaCaptureSession_Tr(const char* s);
 QAudioInput* QMediaCaptureSession_AudioInput(const QMediaCaptureSession* self);
 void QMediaCaptureSession_SetAudioInput(QMediaCaptureSession* self, QAudioInput* input);
+QAudioBufferInput* QMediaCaptureSession_AudioBufferInput(const QMediaCaptureSession* self);
+void QMediaCaptureSession_SetAudioBufferInput(QMediaCaptureSession* self, QAudioBufferInput* input);
 QCamera* QMediaCaptureSession_Camera(const QMediaCaptureSession* self);
 void QMediaCaptureSession_SetCamera(QMediaCaptureSession* self, QCamera* camera);
 QImageCapture* QMediaCaptureSession_ImageCapture(QMediaCaptureSession* self);
 void QMediaCaptureSession_SetImageCapture(QMediaCaptureSession* self, QImageCapture* imageCapture);
+QScreenCapture* QMediaCaptureSession_ScreenCapture(QMediaCaptureSession* self);
+void QMediaCaptureSession_SetScreenCapture(QMediaCaptureSession* self, QScreenCapture* screenCapture);
+QWindowCapture* QMediaCaptureSession_WindowCapture(QMediaCaptureSession* self);
+void QMediaCaptureSession_SetWindowCapture(QMediaCaptureSession* self, QWindowCapture* windowCapture);
+QVideoFrameInput* QMediaCaptureSession_VideoFrameInput(const QMediaCaptureSession* self);
+void QMediaCaptureSession_SetVideoFrameInput(QMediaCaptureSession* self, QVideoFrameInput* input);
 QMediaRecorder* QMediaCaptureSession_Recorder(QMediaCaptureSession* self);
 void QMediaCaptureSession_SetRecorder(QMediaCaptureSession* self, QMediaRecorder* recorder);
 void QMediaCaptureSession_SetVideoOutput(QMediaCaptureSession* self, QObject* output);
@@ -55,8 +67,16 @@ void QMediaCaptureSession_SetAudioOutput(QMediaCaptureSession* self, QAudioOutpu
 QAudioOutput* QMediaCaptureSession_AudioOutput(const QMediaCaptureSession* self);
 void QMediaCaptureSession_AudioInputChanged(QMediaCaptureSession* self);
 void QMediaCaptureSession_Connect_AudioInputChanged(QMediaCaptureSession* self, intptr_t slot);
+void QMediaCaptureSession_AudioBufferInputChanged(QMediaCaptureSession* self);
+void QMediaCaptureSession_Connect_AudioBufferInputChanged(QMediaCaptureSession* self, intptr_t slot);
 void QMediaCaptureSession_CameraChanged(QMediaCaptureSession* self);
 void QMediaCaptureSession_Connect_CameraChanged(QMediaCaptureSession* self, intptr_t slot);
+void QMediaCaptureSession_ScreenCaptureChanged(QMediaCaptureSession* self);
+void QMediaCaptureSession_Connect_ScreenCaptureChanged(QMediaCaptureSession* self, intptr_t slot);
+void QMediaCaptureSession_WindowCaptureChanged(QMediaCaptureSession* self);
+void QMediaCaptureSession_Connect_WindowCaptureChanged(QMediaCaptureSession* self, intptr_t slot);
+void QMediaCaptureSession_VideoFrameInputChanged(QMediaCaptureSession* self);
+void QMediaCaptureSession_Connect_VideoFrameInputChanged(QMediaCaptureSession* self, intptr_t slot);
 void QMediaCaptureSession_ImageCaptureChanged(QMediaCaptureSession* self);
 void QMediaCaptureSession_Connect_ImageCaptureChanged(QMediaCaptureSession* self, intptr_t slot);
 void QMediaCaptureSession_RecorderChanged(QMediaCaptureSession* self);
@@ -82,12 +102,12 @@ void QMediaCaptureSession_QBaseChildEvent(QMediaCaptureSession* self, QChildEven
 void QMediaCaptureSession_CustomEvent(QMediaCaptureSession* self, QEvent* event);
 void QMediaCaptureSession_OnCustomEvent(QMediaCaptureSession* self, intptr_t slot);
 void QMediaCaptureSession_QBaseCustomEvent(QMediaCaptureSession* self, QEvent* event);
-void QMediaCaptureSession_ConnectNotify(QMediaCaptureSession* self, QMetaMethod* signal);
+void QMediaCaptureSession_ConnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal);
 void QMediaCaptureSession_OnConnectNotify(QMediaCaptureSession* self, intptr_t slot);
-void QMediaCaptureSession_QBaseConnectNotify(QMediaCaptureSession* self, QMetaMethod* signal);
-void QMediaCaptureSession_DisconnectNotify(QMediaCaptureSession* self, QMetaMethod* signal);
+void QMediaCaptureSession_QBaseConnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal);
+void QMediaCaptureSession_DisconnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal);
 void QMediaCaptureSession_OnDisconnectNotify(QMediaCaptureSession* self, intptr_t slot);
-void QMediaCaptureSession_QBaseDisconnectNotify(QMediaCaptureSession* self, QMetaMethod* signal);
+void QMediaCaptureSession_QBaseDisconnectNotify(QMediaCaptureSession* self, const QMetaMethod* signal);
 QObject* QMediaCaptureSession_Sender(const QMediaCaptureSession* self);
 void QMediaCaptureSession_OnSender(const QMediaCaptureSession* self, intptr_t slot);
 QObject* QMediaCaptureSession_QBaseSender(const QMediaCaptureSession* self);
@@ -97,9 +117,9 @@ int QMediaCaptureSession_QBaseSenderSignalIndex(const QMediaCaptureSession* self
 int QMediaCaptureSession_Receivers(const QMediaCaptureSession* self, const char* signal);
 void QMediaCaptureSession_OnReceivers(const QMediaCaptureSession* self, intptr_t slot);
 int QMediaCaptureSession_QBaseReceivers(const QMediaCaptureSession* self, const char* signal);
-bool QMediaCaptureSession_IsSignalConnected(const QMediaCaptureSession* self, QMetaMethod* signal);
+bool QMediaCaptureSession_IsSignalConnected(const QMediaCaptureSession* self, const QMetaMethod* signal);
 void QMediaCaptureSession_OnIsSignalConnected(const QMediaCaptureSession* self, intptr_t slot);
-bool QMediaCaptureSession_QBaseIsSignalConnected(const QMediaCaptureSession* self, QMetaMethod* signal);
+bool QMediaCaptureSession_QBaseIsSignalConnected(const QMediaCaptureSession* self, const QMetaMethod* signal);
 void QMediaCaptureSession_Delete(QMediaCaptureSession* self);
 
 #ifdef __cplusplus

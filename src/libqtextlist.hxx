@@ -73,7 +73,7 @@ class VirtualQTextList final : public QTextList {
     mutable bool qtextlist_issignalconnected_isbase = false;
 
   public:
-    VirtualQTextList(QTextDocument* doc) : QTextList(doc){};
+    VirtualQTextList(QTextDocument* doc) : QTextList(doc) {};
 
     ~VirtualQTextList() {
         qtextlist_metacall_callback = nullptr;
@@ -378,22 +378,22 @@ class VirtualQTextList final : public QTextList {
     }
 
     // Friend functions
-    friend void QTextList_BlockInserted(QTextList* self, QTextBlock* block);
-    friend void QTextList_QBaseBlockInserted(QTextList* self, QTextBlock* block);
-    friend void QTextList_BlockRemoved(QTextList* self, QTextBlock* block);
-    friend void QTextList_QBaseBlockRemoved(QTextList* self, QTextBlock* block);
-    friend void QTextList_BlockFormatChanged(QTextList* self, QTextBlock* block);
-    friend void QTextList_QBaseBlockFormatChanged(QTextList* self, QTextBlock* block);
+    friend void QTextList_BlockInserted(QTextList* self, const QTextBlock* block);
+    friend void QTextList_QBaseBlockInserted(QTextList* self, const QTextBlock* block);
+    friend void QTextList_BlockRemoved(QTextList* self, const QTextBlock* block);
+    friend void QTextList_QBaseBlockRemoved(QTextList* self, const QTextBlock* block);
+    friend void QTextList_BlockFormatChanged(QTextList* self, const QTextBlock* block);
+    friend void QTextList_QBaseBlockFormatChanged(QTextList* self, const QTextBlock* block);
     friend void QTextList_TimerEvent(QTextList* self, QTimerEvent* event);
     friend void QTextList_QBaseTimerEvent(QTextList* self, QTimerEvent* event);
     friend void QTextList_ChildEvent(QTextList* self, QChildEvent* event);
     friend void QTextList_QBaseChildEvent(QTextList* self, QChildEvent* event);
     friend void QTextList_CustomEvent(QTextList* self, QEvent* event);
     friend void QTextList_QBaseCustomEvent(QTextList* self, QEvent* event);
-    friend void QTextList_ConnectNotify(QTextList* self, QMetaMethod* signal);
-    friend void QTextList_QBaseConnectNotify(QTextList* self, QMetaMethod* signal);
-    friend void QTextList_DisconnectNotify(QTextList* self, QMetaMethod* signal);
-    friend void QTextList_QBaseDisconnectNotify(QTextList* self, QMetaMethod* signal);
+    friend void QTextList_ConnectNotify(QTextList* self, const QMetaMethod* signal);
+    friend void QTextList_QBaseConnectNotify(QTextList* self, const QMetaMethod* signal);
+    friend void QTextList_DisconnectNotify(QTextList* self, const QMetaMethod* signal);
+    friend void QTextList_QBaseDisconnectNotify(QTextList* self, const QMetaMethod* signal);
     friend libqt_list /* of QTextBlock* */ QTextList_BlockList(const QTextList* self);
     friend libqt_list /* of QTextBlock* */ QTextList_QBaseBlockList(const QTextList* self);
     friend QObject* QTextList_Sender(const QTextList* self);
@@ -402,8 +402,8 @@ class VirtualQTextList final : public QTextList {
     friend int QTextList_QBaseSenderSignalIndex(const QTextList* self);
     friend int QTextList_Receivers(const QTextList* self, const char* signal);
     friend int QTextList_QBaseReceivers(const QTextList* self, const char* signal);
-    friend bool QTextList_IsSignalConnected(const QTextList* self, QMetaMethod* signal);
-    friend bool QTextList_QBaseIsSignalConnected(const QTextList* self, QMetaMethod* signal);
+    friend bool QTextList_IsSignalConnected(const QTextList* self, const QMetaMethod* signal);
+    friend bool QTextList_QBaseIsSignalConnected(const QTextList* self, const QMetaMethod* signal);
 };
 
 #endif

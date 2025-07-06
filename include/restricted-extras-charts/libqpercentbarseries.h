@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractbarseries.h"
-#include "libqabstractseries.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpercentbarseries-qtcharts.html
 
 /// q_percentbarseries_new constructs a new QPercentBarSeries object.
@@ -644,7 +637,7 @@ QThread* q_percentbarseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPercentBarSeries* self, QThread* thread ```
-void q_percentbarseries_move_to_thread(void* self, void* thread);
+bool q_percentbarseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -659,6 +652,13 @@ int32_t q_percentbarseries_start_timer(void* self, int interval);
 ///
 /// ``` QPercentBarSeries* self, int id ```
 void q_percentbarseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPercentBarSeries* self, enum Qt__TimerId id ```
+void q_percentbarseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -799,6 +799,13 @@ bool q_percentbarseries_inherits(void* self, const char* classname);
 ///
 /// ``` QPercentBarSeries* self ```
 void q_percentbarseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPercentBarSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_percentbarseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -194,6 +194,13 @@ char* q_rawfont_font_table(void* self, const char* tagName) {
     return _ret;
 }
 
+char* q_rawfont_font_table_with_tag(void* self, void* tag) {
+    libqt_string _str = QRawFont_FontTableWithTag((QRawFont*)self, (QFont__Tag*)tag);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 QRawFont* q_rawfont_from_font(void* font) {
     return QRawFont_FromFont((QFont*)font);
 }

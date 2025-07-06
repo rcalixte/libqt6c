@@ -67,8 +67,8 @@ class VirtualQBarLegendMarker final : public QBarLegendMarker {
     mutable bool qbarlegendmarker_issignalconnected_isbase = false;
 
   public:
-    VirtualQBarLegendMarker(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend) : QBarLegendMarker(series, barset, legend){};
-    VirtualQBarLegendMarker(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend, QObject* parent) : QBarLegendMarker(series, barset, legend, parent){};
+    VirtualQBarLegendMarker(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend) : QBarLegendMarker(series, barset, legend) {};
+    VirtualQBarLegendMarker(QAbstractBarSeries* series, QBarSet* barset, QLegend* legend, QObject* parent) : QBarLegendMarker(series, barset, legend, parent) {};
 
     ~VirtualQBarLegendMarker() {
         qbarlegendmarker_metacall_callback = nullptr;
@@ -332,18 +332,18 @@ class VirtualQBarLegendMarker final : public QBarLegendMarker {
     friend void QBarLegendMarker_QBaseChildEvent(QBarLegendMarker* self, QChildEvent* event);
     friend void QBarLegendMarker_CustomEvent(QBarLegendMarker* self, QEvent* event);
     friend void QBarLegendMarker_QBaseCustomEvent(QBarLegendMarker* self, QEvent* event);
-    friend void QBarLegendMarker_ConnectNotify(QBarLegendMarker* self, QMetaMethod* signal);
-    friend void QBarLegendMarker_QBaseConnectNotify(QBarLegendMarker* self, QMetaMethod* signal);
-    friend void QBarLegendMarker_DisconnectNotify(QBarLegendMarker* self, QMetaMethod* signal);
-    friend void QBarLegendMarker_QBaseDisconnectNotify(QBarLegendMarker* self, QMetaMethod* signal);
+    friend void QBarLegendMarker_ConnectNotify(QBarLegendMarker* self, const QMetaMethod* signal);
+    friend void QBarLegendMarker_QBaseConnectNotify(QBarLegendMarker* self, const QMetaMethod* signal);
+    friend void QBarLegendMarker_DisconnectNotify(QBarLegendMarker* self, const QMetaMethod* signal);
+    friend void QBarLegendMarker_QBaseDisconnectNotify(QBarLegendMarker* self, const QMetaMethod* signal);
     friend QObject* QBarLegendMarker_Sender(const QBarLegendMarker* self);
     friend QObject* QBarLegendMarker_QBaseSender(const QBarLegendMarker* self);
     friend int QBarLegendMarker_SenderSignalIndex(const QBarLegendMarker* self);
     friend int QBarLegendMarker_QBaseSenderSignalIndex(const QBarLegendMarker* self);
     friend int QBarLegendMarker_Receivers(const QBarLegendMarker* self, const char* signal);
     friend int QBarLegendMarker_QBaseReceivers(const QBarLegendMarker* self, const char* signal);
-    friend bool QBarLegendMarker_IsSignalConnected(const QBarLegendMarker* self, QMetaMethod* signal);
-    friend bool QBarLegendMarker_QBaseIsSignalConnected(const QBarLegendMarker* self, QMetaMethod* signal);
+    friend bool QBarLegendMarker_IsSignalConnected(const QBarLegendMarker* self, const QMetaMethod* signal);
+    friend bool QBarLegendMarker_QBaseIsSignalConnected(const QBarLegendMarker* self, const QMetaMethod* signal);
 };
 
 #endif

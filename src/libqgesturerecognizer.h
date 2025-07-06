@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqgesture.h"
-#include "libqobject.h"
-
 /// https://doc.qt.io/qt-6/qgesturerecognizer.html
 
 /// q_gesturerecognizer_new constructs a new QGestureRecognizer object.

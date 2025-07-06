@@ -91,8 +91,8 @@ class VirtualQVPieModelMapper final : public QVPieModelMapper {
     mutable bool qvpiemodelmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQVPieModelMapper() : QVPieModelMapper(){};
-    VirtualQVPieModelMapper(QObject* parent) : QVPieModelMapper(parent){};
+    VirtualQVPieModelMapper() : QVPieModelMapper() {};
+    VirtualQVPieModelMapper(QObject* parent) : QVPieModelMapper(parent) {};
 
     ~VirtualQVPieModelMapper() {
         qvpiemodelmapper_metacall_callback = nullptr;
@@ -489,10 +489,10 @@ class VirtualQVPieModelMapper final : public QVPieModelMapper {
     friend void QVPieModelMapper_QBaseChildEvent(QVPieModelMapper* self, QChildEvent* event);
     friend void QVPieModelMapper_CustomEvent(QVPieModelMapper* self, QEvent* event);
     friend void QVPieModelMapper_QBaseCustomEvent(QVPieModelMapper* self, QEvent* event);
-    friend void QVPieModelMapper_ConnectNotify(QVPieModelMapper* self, QMetaMethod* signal);
-    friend void QVPieModelMapper_QBaseConnectNotify(QVPieModelMapper* self, QMetaMethod* signal);
-    friend void QVPieModelMapper_DisconnectNotify(QVPieModelMapper* self, QMetaMethod* signal);
-    friend void QVPieModelMapper_QBaseDisconnectNotify(QVPieModelMapper* self, QMetaMethod* signal);
+    friend void QVPieModelMapper_ConnectNotify(QVPieModelMapper* self, const QMetaMethod* signal);
+    friend void QVPieModelMapper_QBaseConnectNotify(QVPieModelMapper* self, const QMetaMethod* signal);
+    friend void QVPieModelMapper_DisconnectNotify(QVPieModelMapper* self, const QMetaMethod* signal);
+    friend void QVPieModelMapper_QBaseDisconnectNotify(QVPieModelMapper* self, const QMetaMethod* signal);
     friend int QVPieModelMapper_First(const QVPieModelMapper* self);
     friend int QVPieModelMapper_QBaseFirst(const QVPieModelMapper* self);
     friend void QVPieModelMapper_SetFirst(QVPieModelMapper* self, int first);
@@ -519,8 +519,8 @@ class VirtualQVPieModelMapper final : public QVPieModelMapper {
     friend int QVPieModelMapper_QBaseSenderSignalIndex(const QVPieModelMapper* self);
     friend int QVPieModelMapper_Receivers(const QVPieModelMapper* self, const char* signal);
     friend int QVPieModelMapper_QBaseReceivers(const QVPieModelMapper* self, const char* signal);
-    friend bool QVPieModelMapper_IsSignalConnected(const QVPieModelMapper* self, QMetaMethod* signal);
-    friend bool QVPieModelMapper_QBaseIsSignalConnected(const QVPieModelMapper* self, QMetaMethod* signal);
+    friend bool QVPieModelMapper_IsSignalConnected(const QVPieModelMapper* self, const QMetaMethod* signal);
+    friend bool QVPieModelMapper_QBaseIsSignalConnected(const QVPieModelMapper* self, const QMetaMethod* signal);
 };
 
 #endif

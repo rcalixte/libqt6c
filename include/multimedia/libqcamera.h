@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqcameradevice.h"
-#include "../libqevent.h"
-#include "libqmediacapturesession.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpoint.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcamera.html
 
 /// q_camera_new constructs a new QCamera object.
@@ -704,7 +696,7 @@ QThread* q_camera_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCamera* self, QThread* thread ```
-void q_camera_move_to_thread(void* self, void* thread);
+bool q_camera_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -719,6 +711,13 @@ int32_t q_camera_start_timer(void* self, int interval);
 ///
 /// ``` QCamera* self, int id ```
 void q_camera_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCamera* self, enum Qt__TimerId id ```
+void q_camera_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -859,6 +858,13 @@ bool q_camera_inherits(void* self, const char* classname);
 ///
 /// ``` QCamera* self ```
 void q_camera_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCamera* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_camera_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmargins.h"
-#include "libqpagelayout.h"
-#include "libqpageranges.h"
-#include "libqpagesize.h"
-#include "libqpaintdevice.h"
-
 /// https://doc.qt.io/qt-6/qpagedpaintdevice.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#newPage)
@@ -172,6 +166,13 @@ int32_t q_pagedpaintdevice_depth(void* self);
 ///
 double q_pagedpaintdevice_device_pixel_ratio_f_scale();
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_pagedpaintdevice_encode_metric_f(int64_t metric, double value);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#dtor.QPagedPaintDevice)
 ///
 /// Delete this object from C++ memory.
@@ -184,7 +185,8 @@ void q_pagedpaintdevice_delete(void* self);
 typedef enum {
     QPAGEDPAINTDEVICE_PDFVERSION_PDFVERSION_1_4 = 0,
     QPAGEDPAINTDEVICE_PDFVERSION_PDFVERSION_A1B = 1,
-    QPAGEDPAINTDEVICE_PDFVERSION_PDFVERSION_1_6 = 2
+    QPAGEDPAINTDEVICE_PDFVERSION_PDFVERSION_1_6 = 2,
+    QPAGEDPAINTDEVICE_PDFVERSION_PDFVERSION_X4 = 3
 } QPagedPaintDevice__PdfVersion;
 
 #endif

@@ -153,28 +153,28 @@ bool q_metamethod_invoke2(void* self, void* object, void* returnValue) {
     return QMetaMethod_Invoke2((QMetaMethod*)self, (QObject*)object, (QGenericReturnArgument*)returnValue);
 }
 
-bool q_metamethod_invoke3(void* self, void* object, int64_t connectionType) {
-    return QMetaMethod_Invoke3((QMetaMethod*)self, (QObject*)object, connectionType);
+bool q_metamethod_invoke3(void* self, void* object, int64_t connectionType, void* val0) {
+    return QMetaMethod_Invoke3((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericArgument*)val0);
 }
 
-bool q_metamethod_invoke_with_object(void* self, void* object) {
-    return QMetaMethod_InvokeWithObject((QMetaMethod*)self, (QObject*)object);
+bool q_metamethod_invoke4(void* self, void* object, void* val0) {
+    return QMetaMethod_Invoke4((QMetaMethod*)self, (QObject*)object, (QGenericArgument*)val0);
 }
 
 bool q_metamethod_invoke_on_gadget(void* self, void* gadget, void* returnValue) {
     return QMetaMethod_InvokeOnGadget((QMetaMethod*)self, gadget, (QGenericReturnArgument*)returnValue);
 }
 
-bool q_metamethod_invoke_on_gadget_with_gadget(void* self, void* gadget) {
-    return QMetaMethod_InvokeOnGadgetWithGadget((QMetaMethod*)self, gadget);
+bool q_metamethod_invoke_on_gadget2(void* self, void* gadget, void* val0) {
+    return QMetaMethod_InvokeOnGadget2((QMetaMethod*)self, gadget, (QGenericArgument*)val0);
 }
 
 bool q_metamethod_is_valid(void* self) {
     return QMetaMethod_IsValid((QMetaMethod*)self);
 }
 
-bool q_metamethod_invoke4(void* self, void* object, int64_t connectionType, void* returnValue, void* val0) {
-    return QMetaMethod_Invoke4((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0);
+bool q_metamethod_invoke42(void* self, void* object, int64_t connectionType, void* returnValue, void* val0) {
+    return QMetaMethod_Invoke42((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0);
 }
 
 bool q_metamethod_invoke5(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1) {
@@ -217,8 +217,8 @@ bool q_metamethod_invoke32(void* self, void* object, void* returnValue, void* va
     return QMetaMethod_Invoke32((QMetaMethod*)self, (QObject*)object, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0);
 }
 
-bool q_metamethod_invoke42(void* self, void* object, void* returnValue, void* val0, void* val1) {
-    return QMetaMethod_Invoke42((QMetaMethod*)self, (QObject*)object, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0, (QGenericArgument*)val1);
+bool q_metamethod_invoke43(void* self, void* object, void* returnValue, void* val0, void* val1) {
+    return QMetaMethod_Invoke43((QMetaMethod*)self, (QObject*)object, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0, (QGenericArgument*)val1);
 }
 
 bool q_metamethod_invoke52(void* self, void* object, void* returnValue, void* val0, void* val1, void* val2) {
@@ -253,12 +253,8 @@ bool q_metamethod_invoke122(void* self, void* object, void* returnValue, void* v
     return QMetaMethod_Invoke122((QMetaMethod*)self, (QObject*)object, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
 }
 
-bool q_metamethod_invoke33(void* self, void* object, int64_t connectionType, void* val0) {
-    return QMetaMethod_Invoke33((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericArgument*)val0);
-}
-
-bool q_metamethod_invoke43(void* self, void* object, int64_t connectionType, void* val0, void* val1) {
-    return QMetaMethod_Invoke43((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericArgument*)val0, (QGenericArgument*)val1);
+bool q_metamethod_invoke44(void* self, void* object, int64_t connectionType, void* val0, void* val1) {
+    return QMetaMethod_Invoke44((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericArgument*)val0, (QGenericArgument*)val1);
 }
 
 bool q_metamethod_invoke53(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2) {
@@ -293,16 +289,12 @@ bool q_metamethod_invoke123(void* self, void* object, int64_t connectionType, vo
     return QMetaMethod_Invoke123((QMetaMethod*)self, (QObject*)object, connectionType, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
 }
 
-bool q_metamethod_invoke22(void* self, void* object, void* val0) {
-    return QMetaMethod_Invoke22((QMetaMethod*)self, (QObject*)object, (QGenericArgument*)val0);
+bool q_metamethod_invoke33(void* self, void* object, void* val0, void* val1) {
+    return QMetaMethod_Invoke33((QMetaMethod*)self, (QObject*)object, (QGenericArgument*)val0, (QGenericArgument*)val1);
 }
 
-bool q_metamethod_invoke34(void* self, void* object, void* val0, void* val1) {
-    return QMetaMethod_Invoke34((QMetaMethod*)self, (QObject*)object, (QGenericArgument*)val0, (QGenericArgument*)val1);
-}
-
-bool q_metamethod_invoke44(void* self, void* object, void* val0, void* val1, void* val2) {
-    return QMetaMethod_Invoke44((QMetaMethod*)self, (QObject*)object, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2);
+bool q_metamethod_invoke45(void* self, void* object, void* val0, void* val1, void* val2) {
+    return QMetaMethod_Invoke45((QMetaMethod*)self, (QObject*)object, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2);
 }
 
 bool q_metamethod_invoke54(void* self, void* object, void* val0, void* val1, void* val2, void* val3) {
@@ -371,10 +363,6 @@ bool q_metamethod_invoke_on_gadget11(void* self, void* gadget, void* returnValue
 
 bool q_metamethod_invoke_on_gadget12(void* self, void* gadget, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9) {
     return QMetaMethod_InvokeOnGadget12((QMetaMethod*)self, gadget, (QGenericReturnArgument*)returnValue, (QGenericArgument*)val0, (QGenericArgument*)val1, (QGenericArgument*)val2, (QGenericArgument*)val3, (QGenericArgument*)val4, (QGenericArgument*)val5, (QGenericArgument*)val6, (QGenericArgument*)val7, (QGenericArgument*)val8, (QGenericArgument*)val9);
-}
-
-bool q_metamethod_invoke_on_gadget2(void* self, void* gadget, void* val0) {
-    return QMetaMethod_InvokeOnGadget2((QMetaMethod*)self, gadget, (QGenericArgument*)val0);
 }
 
 bool q_metamethod_invoke_on_gadget32(void* self, void* gadget, void* val0, void* val1) {
@@ -447,6 +435,10 @@ const char* q_metaenum_name(void* self) {
 
 const char* q_metaenum_enum_name(void* self) {
     return QMetaEnum_EnumName((QMetaEnum*)self);
+}
+
+QMetaType* q_metaenum_meta_type(void* self) {
+    return QMetaEnum_MetaType((QMetaEnum*)self);
 }
 
 bool q_metaenum_is_flag(void* self) {
@@ -694,6 +686,10 @@ QMetaClassInfo* q_metaclassinfo_new2(void* other) {
 
 QMetaClassInfo* q_metaclassinfo_new3() {
     return QMetaClassInfo_new3();
+}
+
+QMetaClassInfo* q_metaclassinfo_new4(void* param1) {
+    return QMetaClassInfo_new4((QMetaClassInfo*)param1);
 }
 
 void q_metaclassinfo_copy_assign(void* self, void* other) {

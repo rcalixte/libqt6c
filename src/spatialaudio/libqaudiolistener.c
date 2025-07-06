@@ -82,8 +82,8 @@ QThread* q_audiolistener_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_audiolistener_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_audiolistener_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_audiolistener_start_timer(void* self, int interval) {
@@ -92,6 +92,10 @@ int32_t q_audiolistener_start_timer(void* self, int interval) {
 
 void q_audiolistener_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_audiolistener_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_audiolistener_children(void* self) {
@@ -198,6 +202,10 @@ const char* q_audiolistener_tr3(const char* s, const char* c, int n) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+bool q_audiolistener_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_audiolistener_start_timer2(void* self, int interval, int64_t timerType) {

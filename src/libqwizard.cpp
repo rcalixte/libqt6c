@@ -127,12 +127,12 @@ bool QWizard_HasVisitedPage(const QWizard* self, int id) {
 libqt_list /* of int */ QWizard_VisitedIds(const QWizard* self) {
     QList<int> _ret = self->visitedIds();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
@@ -140,12 +140,12 @@ libqt_list /* of int */ QWizard_VisitedIds(const QWizard* self) {
 libqt_list /* of int */ QWizard_PageIds(const QWizard* self) {
     QList<int> _ret = self->pageIds();
     // Convert QList<> from C++ memory to manually-managed C memory
-    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    int* _arr = static_cast<int*>(malloc(sizeof(int) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ints = _arr;
     return _out;
 }
@@ -166,12 +166,12 @@ int QWizard_CurrentId(const QWizard* self) {
     return self->currentId();
 }
 
-void QWizard_SetField(QWizard* self, libqt_string name, QVariant* value) {
+void QWizard_SetField(QWizard* self, const libqt_string name, const QVariant* value) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setField(name_QString, *value);
 }
 
-QVariant* QWizard_Field(const QWizard* self, libqt_string name) {
+QVariant* QWizard_Field(const QWizard* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QVariant(self->field(name_QString));
 }
@@ -200,7 +200,7 @@ int QWizard_Options(const QWizard* self) {
     return static_cast<int>(self->options());
 }
 
-void QWizard_SetButtonText(QWizard* self, int which, libqt_string text) {
+void QWizard_SetButtonText(QWizard* self, int which, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setButtonText(static_cast<QWizard::WizardButton>(which), text_QString);
 }
@@ -217,7 +217,7 @@ libqt_string QWizard_ButtonText(const QWizard* self, int which) {
     return _str;
 }
 
-void QWizard_SetButtonLayout(QWizard* self, libqt_list /* of int */ layout) {
+void QWizard_SetButtonLayout(QWizard* self, const libqt_list /* of int */ layout) {
     QList<QWizard::WizardButton> layout_QList;
     layout_QList.reserve(layout.len);
     int* layout_arr = static_cast<int*>(layout.data.ints);
@@ -251,7 +251,7 @@ int QWizard_SubTitleFormat(const QWizard* self) {
     return static_cast<int>(self->subTitleFormat());
 }
 
-void QWizard_SetPixmap(QWizard* self, int which, QPixmap* pixmap) {
+void QWizard_SetPixmap(QWizard* self, int which, const QPixmap* pixmap) {
     self->setPixmap(static_cast<QWizard::WizardPixmap>(which), *pixmap);
 }
 
@@ -1593,7 +1593,7 @@ void QWizard_OnHideEvent(QWizard* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWizard_NativeEvent(QWizard* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWizard_NativeEvent(QWizard* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwizard = dynamic_cast<VirtualQWizard*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwizard && vqwizard->isVirtualQWizard) {
@@ -1604,7 +1604,7 @@ bool QWizard_NativeEvent(QWizard* self, libqt_string eventType, void* message, i
 }
 
 // Base class handler implementation
-bool QWizard_QBaseNativeEvent(QWizard* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWizard_QBaseNativeEvent(QWizard* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwizard = dynamic_cast<VirtualQWizard*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwizard && vqwizard->isVirtualQWizard) {
@@ -1943,7 +1943,7 @@ void QWizard_OnCustomEvent(QWizard* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizard_ConnectNotify(QWizard* self, QMetaMethod* signal) {
+void QWizard_ConnectNotify(QWizard* self, const QMetaMethod* signal) {
     auto* vqwizard = dynamic_cast<VirtualQWizard*>(self);
     if (vqwizard && vqwizard->isVirtualQWizard) {
         vqwizard->connectNotify(*signal);
@@ -1953,7 +1953,7 @@ void QWizard_ConnectNotify(QWizard* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWizard_QBaseConnectNotify(QWizard* self, QMetaMethod* signal) {
+void QWizard_QBaseConnectNotify(QWizard* self, const QMetaMethod* signal) {
     auto* vqwizard = dynamic_cast<VirtualQWizard*>(self);
     if (vqwizard && vqwizard->isVirtualQWizard) {
         vqwizard->setQWizard_ConnectNotify_IsBase(true);
@@ -1972,7 +1972,7 @@ void QWizard_OnConnectNotify(QWizard* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizard_DisconnectNotify(QWizard* self, QMetaMethod* signal) {
+void QWizard_DisconnectNotify(QWizard* self, const QMetaMethod* signal) {
     auto* vqwizard = dynamic_cast<VirtualQWizard*>(self);
     if (vqwizard && vqwizard->isVirtualQWizard) {
         vqwizard->disconnectNotify(*signal);
@@ -1982,7 +1982,7 @@ void QWizard_DisconnectNotify(QWizard* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWizard_QBaseDisconnectNotify(QWizard* self, QMetaMethod* signal) {
+void QWizard_QBaseDisconnectNotify(QWizard* self, const QMetaMethod* signal) {
     auto* vqwizard = dynamic_cast<VirtualQWizard*>(self);
     if (vqwizard && vqwizard->isVirtualQWizard) {
         vqwizard->setQWizard_DisconnectNotify_IsBase(true);
@@ -2262,7 +2262,7 @@ void QWizard_OnReceivers(const QWizard* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWizard_IsSignalConnected(const QWizard* self, QMetaMethod* signal) {
+bool QWizard_IsSignalConnected(const QWizard* self, const QMetaMethod* signal) {
     auto* vqwizard = const_cast<VirtualQWizard*>(dynamic_cast<const VirtualQWizard*>(self));
     if (vqwizard && vqwizard->isVirtualQWizard) {
         return vqwizard->isSignalConnected(*signal);
@@ -2272,7 +2272,7 @@ bool QWizard_IsSignalConnected(const QWizard* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QWizard_QBaseIsSignalConnected(const QWizard* self, QMetaMethod* signal) {
+bool QWizard_QBaseIsSignalConnected(const QWizard* self, const QMetaMethod* signal) {
     auto* vqwizard = const_cast<VirtualQWizard*>(dynamic_cast<const VirtualQWizard*>(self));
     if (vqwizard && vqwizard->isVirtualQWizard) {
         vqwizard->setQWizard_IsSignalConnected_IsBase(true);
@@ -2287,6 +2287,35 @@ void QWizard_OnIsSignalConnected(const QWizard* self, intptr_t slot) {
     auto* vqwizard = const_cast<VirtualQWizard*>(dynamic_cast<const VirtualQWizard*>(self));
     if (vqwizard && vqwizard->isVirtualQWizard) {
         vqwizard->setQWizard_IsSignalConnected_Callback(reinterpret_cast<VirtualQWizard::QWizard_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QWizard_GetDecodedMetricF(const QWizard* self, int metricA, int metricB) {
+    auto* vqwizard = const_cast<VirtualQWizard*>(dynamic_cast<const VirtualQWizard*>(self));
+    if (vqwizard && vqwizard->isVirtualQWizard) {
+        return vqwizard->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWizard*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QWizard_QBaseGetDecodedMetricF(const QWizard* self, int metricA, int metricB) {
+    auto* vqwizard = const_cast<VirtualQWizard*>(dynamic_cast<const VirtualQWizard*>(self));
+    if (vqwizard && vqwizard->isVirtualQWizard) {
+        vqwizard->setQWizard_GetDecodedMetricF_IsBase(true);
+        return vqwizard->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWizard*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QWizard_OnGetDecodedMetricF(const QWizard* self, intptr_t slot) {
+    auto* vqwizard = const_cast<VirtualQWizard*>(dynamic_cast<const VirtualQWizard*>(self));
+    if (vqwizard && vqwizard->isVirtualQWizard) {
+        vqwizard->setQWizard_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQWizard::QWizard_GetDecodedMetricF_Callback>(slot));
     }
 }
 
@@ -2350,7 +2379,7 @@ libqt_string QWizardPage_Tr(const char* s) {
     return _str;
 }
 
-void QWizardPage_SetTitle(QWizardPage* self, libqt_string title) {
+void QWizardPage_SetTitle(QWizardPage* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -2367,7 +2396,7 @@ libqt_string QWizardPage_Title(const QWizardPage* self) {
     return _str;
 }
 
-void QWizardPage_SetSubTitle(QWizardPage* self, libqt_string subTitle) {
+void QWizardPage_SetSubTitle(QWizardPage* self, const libqt_string subTitle) {
     QString subTitle_QString = QString::fromUtf8(subTitle.data, subTitle.len);
     self->setSubTitle(subTitle_QString);
 }
@@ -2384,7 +2413,7 @@ libqt_string QWizardPage_SubTitle(const QWizardPage* self) {
     return _str;
 }
 
-void QWizardPage_SetPixmap(QWizardPage* self, int which, QPixmap* pixmap) {
+void QWizardPage_SetPixmap(QWizardPage* self, int which, const QPixmap* pixmap) {
     self->setPixmap(static_cast<QWizard::WizardPixmap>(which), *pixmap);
 }
 
@@ -2408,7 +2437,7 @@ bool QWizardPage_IsCommitPage(const QWizardPage* self) {
     return self->isCommitPage();
 }
 
-void QWizardPage_SetButtonText(QWizardPage* self, int which, libqt_string text) {
+void QWizardPage_SetButtonText(QWizardPage* self, int which, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setButtonText(static_cast<QWizard::WizardButton>(which), text_QString);
 }
@@ -3534,7 +3563,7 @@ void QWizardPage_OnHideEvent(QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWizardPage_NativeEvent(QWizardPage* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWizardPage_NativeEvent(QWizardPage* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -3545,7 +3574,7 @@ bool QWizardPage_NativeEvent(QWizardPage* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QWizardPage_QBaseNativeEvent(QWizardPage* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QWizardPage_QBaseNativeEvent(QWizardPage* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -3913,7 +3942,7 @@ void QWizardPage_OnCustomEvent(QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizardPage_ConnectNotify(QWizardPage* self, QMetaMethod* signal) {
+void QWizardPage_ConnectNotify(QWizardPage* self, const QMetaMethod* signal) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         vqwizardpage->connectNotify(*signal);
@@ -3923,7 +3952,7 @@ void QWizardPage_ConnectNotify(QWizardPage* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWizardPage_QBaseConnectNotify(QWizardPage* self, QMetaMethod* signal) {
+void QWizardPage_QBaseConnectNotify(QWizardPage* self, const QMetaMethod* signal) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         vqwizardpage->setQWizardPage_ConnectNotify_IsBase(true);
@@ -3942,7 +3971,7 @@ void QWizardPage_OnConnectNotify(QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizardPage_DisconnectNotify(QWizardPage* self, QMetaMethod* signal) {
+void QWizardPage_DisconnectNotify(QWizardPage* self, const QMetaMethod* signal) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         vqwizardpage->disconnectNotify(*signal);
@@ -3952,7 +3981,7 @@ void QWizardPage_DisconnectNotify(QWizardPage* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QWizardPage_QBaseDisconnectNotify(QWizardPage* self, QMetaMethod* signal) {
+void QWizardPage_QBaseDisconnectNotify(QWizardPage* self, const QMetaMethod* signal) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         vqwizardpage->setQWizardPage_DisconnectNotify_IsBase(true);
@@ -3971,7 +4000,7 @@ void QWizardPage_OnDisconnectNotify(QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizardPage_SetField(QWizardPage* self, libqt_string name, QVariant* value) {
+void QWizardPage_SetField(QWizardPage* self, const libqt_string name, const QVariant* value) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -3982,7 +4011,7 @@ void QWizardPage_SetField(QWizardPage* self, libqt_string name, QVariant* value)
 }
 
 // Base class handler implementation
-void QWizardPage_QBaseSetField(QWizardPage* self, libqt_string name, QVariant* value) {
+void QWizardPage_QBaseSetField(QWizardPage* self, const libqt_string name, const QVariant* value) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4002,7 +4031,7 @@ void QWizardPage_OnSetField(QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QWizardPage_Field(const QWizardPage* self, libqt_string name) {
+QVariant* QWizardPage_Field(const QWizardPage* self, const libqt_string name) {
     auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4012,7 +4041,7 @@ QVariant* QWizardPage_Field(const QWizardPage* self, libqt_string name) {
 }
 
 // Base class handler implementation
-QVariant* QWizardPage_QBaseField(const QWizardPage* self, libqt_string name) {
+QVariant* QWizardPage_QBaseField(const QWizardPage* self, const libqt_string name) {
     auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4031,7 +4060,7 @@ void QWizardPage_OnField(const QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizardPage_RegisterField(QWizardPage* self, libqt_string name, QWidget* widget) {
+void QWizardPage_RegisterField(QWizardPage* self, const libqt_string name, QWidget* widget) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4042,7 +4071,7 @@ void QWizardPage_RegisterField(QWizardPage* self, libqt_string name, QWidget* wi
 }
 
 // Base class handler implementation
-void QWizardPage_QBaseRegisterField(QWizardPage* self, libqt_string name, QWidget* widget) {
+void QWizardPage_QBaseRegisterField(QWizardPage* self, const libqt_string name, QWidget* widget) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4091,7 +4120,7 @@ void QWizardPage_OnWizard(const QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizardPage_RegisterField3(QWizardPage* self, libqt_string name, QWidget* widget, const char* property) {
+void QWizardPage_RegisterField3(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4102,7 +4131,7 @@ void QWizardPage_RegisterField3(QWizardPage* self, libqt_string name, QWidget* w
 }
 
 // Base class handler implementation
-void QWizardPage_QBaseRegisterField3(QWizardPage* self, libqt_string name, QWidget* widget, const char* property) {
+void QWizardPage_QBaseRegisterField3(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4122,7 +4151,7 @@ void QWizardPage_OnRegisterField3(QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWizardPage_RegisterField4(QWizardPage* self, libqt_string name, QWidget* widget, const char* property, const char* changedSignal) {
+void QWizardPage_RegisterField4(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property, const char* changedSignal) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4133,7 +4162,7 @@ void QWizardPage_RegisterField4(QWizardPage* self, libqt_string name, QWidget* w
 }
 
 // Base class handler implementation
-void QWizardPage_QBaseRegisterField4(QWizardPage* self, libqt_string name, QWidget* widget, const char* property, const char* changedSignal) {
+void QWizardPage_QBaseRegisterField4(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property, const char* changedSignal) {
     auto* vqwizardpage = dynamic_cast<VirtualQWizardPage*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
@@ -4385,7 +4414,7 @@ void QWizardPage_OnReceivers(const QWizardPage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QWizardPage_IsSignalConnected(const QWizardPage* self, QMetaMethod* signal) {
+bool QWizardPage_IsSignalConnected(const QWizardPage* self, const QMetaMethod* signal) {
     auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         return vqwizardpage->isSignalConnected(*signal);
@@ -4395,7 +4424,7 @@ bool QWizardPage_IsSignalConnected(const QWizardPage* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QWizardPage_QBaseIsSignalConnected(const QWizardPage* self, QMetaMethod* signal) {
+bool QWizardPage_QBaseIsSignalConnected(const QWizardPage* self, const QMetaMethod* signal) {
     auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         vqwizardpage->setQWizardPage_IsSignalConnected_IsBase(true);
@@ -4410,6 +4439,35 @@ void QWizardPage_OnIsSignalConnected(const QWizardPage* self, intptr_t slot) {
     auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
     if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
         vqwizardpage->setQWizardPage_IsSignalConnected_Callback(reinterpret_cast<VirtualQWizardPage::QWizardPage_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QWizardPage_GetDecodedMetricF(const QWizardPage* self, int metricA, int metricB) {
+    auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
+    if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
+        return vqwizardpage->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWizardPage*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QWizardPage_QBaseGetDecodedMetricF(const QWizardPage* self, int metricA, int metricB) {
+    auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
+    if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
+        vqwizardpage->setQWizardPage_GetDecodedMetricF_IsBase(true);
+        return vqwizardpage->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQWizardPage*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QWizardPage_OnGetDecodedMetricF(const QWizardPage* self, intptr_t slot) {
+    auto* vqwizardpage = const_cast<VirtualQWizardPage*>(dynamic_cast<const VirtualQWizardPage*>(self));
+    if (vqwizardpage && vqwizardpage->isVirtualQWizardPage) {
+        vqwizardpage->setQWizardPage_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQWizardPage::QWizardPage_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqsettings.h"
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran77.html
 
 /// q_scilexerfortran77_new constructs a new QsciLexerFortran77 object.
@@ -388,7 +380,7 @@ QThread* q_scilexerfortran77_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QsciLexerFortran77* self, QThread* thread ```
-void q_scilexerfortran77_move_to_thread(void* self, void* thread);
+bool q_scilexerfortran77_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -403,6 +395,13 @@ int32_t q_scilexerfortran77_start_timer(void* self, int interval);
 ///
 /// ``` QsciLexerFortran77* self, int id ```
 void q_scilexerfortran77_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QsciLexerFortran77* self, enum Qt__TimerId id ```
+void q_scilexerfortran77_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -543,6 +542,13 @@ bool q_scilexerfortran77_inherits(void* self, const char* classname);
 ///
 /// ``` QsciLexerFortran77* self ```
 void q_scilexerfortran77_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QsciLexerFortran77* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_scilexerfortran77_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1442,6 +1448,60 @@ void q_scilexerfortran77_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// ``` QsciLexerFortran77* self, void (*slot)(QsciLexerFortran77*, QMetaMethod*) ```
 void q_scilexerfortran77_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerFortran77* self, const char* text ```
+char* q_scilexerfortran77_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerFortran77* self, const char* text ```
+char* q_scilexerfortran77_qbase_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerFortran77* self, char* (*slot)(QsciLexerFortran77*, const char*) ```
+void q_scilexerfortran77_on_text_as_bytes(void* self, char* (*slot)(void*, const char*));
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciLexerFortran77* self, const char* bytes, int size ```
+const char* q_scilexerfortran77_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciLexerFortran77* self, const char* bytes, int size ```
+const char* q_scilexerfortran77_qbase_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciLexer
+///
+/// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciLexerFortran77* self, const char* (*slot)(QsciLexerFortran77*, const char*, int) ```
+void q_scilexerfortran77_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int));
 
 /// Inherited from QObject
 ///

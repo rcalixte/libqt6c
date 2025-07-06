@@ -20,7 +20,7 @@ QPropertyAnimation* QPropertyAnimation_new() {
     return new VirtualQPropertyAnimation();
 }
 
-QPropertyAnimation* QPropertyAnimation_new2(QObject* target, libqt_string propertyName) {
+QPropertyAnimation* QPropertyAnimation_new2(QObject* target, const libqt_string propertyName) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     return new VirtualQPropertyAnimation(target, propertyName_QByteArray);
 }
@@ -29,7 +29,7 @@ QPropertyAnimation* QPropertyAnimation_new3(QObject* parent) {
     return new VirtualQPropertyAnimation(parent);
 }
 
-QPropertyAnimation* QPropertyAnimation_new4(QObject* target, libqt_string propertyName, QObject* parent) {
+QPropertyAnimation* QPropertyAnimation_new4(QObject* target, const libqt_string propertyName, QObject* parent) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     return new VirtualQPropertyAnimation(target, propertyName_QByteArray, parent);
 }
@@ -100,7 +100,7 @@ libqt_string QPropertyAnimation_PropertyName(const QPropertyAnimation* self) {
     return _str;
 }
 
-void QPropertyAnimation_SetPropertyName(QPropertyAnimation* self, libqt_string propertyName) {
+void QPropertyAnimation_SetPropertyName(QPropertyAnimation* self, const libqt_string propertyName) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     self->setPropertyName(propertyName_QByteArray);
 }
@@ -159,7 +159,7 @@ void QPropertyAnimation_OnEvent(QPropertyAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPropertyAnimation_UpdateCurrentValue(QPropertyAnimation* self, QVariant* value) {
+void QPropertyAnimation_UpdateCurrentValue(QPropertyAnimation* self, const QVariant* value) {
     auto* vqpropertyanimation = dynamic_cast<VirtualQPropertyAnimation*>(self);
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->updateCurrentValue(*value);
@@ -169,7 +169,7 @@ void QPropertyAnimation_UpdateCurrentValue(QPropertyAnimation* self, QVariant* v
 }
 
 // Base class handler implementation
-void QPropertyAnimation_QBaseUpdateCurrentValue(QPropertyAnimation* self, QVariant* value) {
+void QPropertyAnimation_QBaseUpdateCurrentValue(QPropertyAnimation* self, const QVariant* value) {
     auto* vqpropertyanimation = dynamic_cast<VirtualQPropertyAnimation*>(self);
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->setQPropertyAnimation_UpdateCurrentValue_IsBase(true);
@@ -275,7 +275,7 @@ void QPropertyAnimation_OnUpdateCurrentTime(QPropertyAnimation* self, intptr_t s
 }
 
 // Derived class handler implementation
-QVariant* QPropertyAnimation_Interpolated(const QPropertyAnimation* self, QVariant* from, QVariant* to, double progress) {
+QVariant* QPropertyAnimation_Interpolated(const QPropertyAnimation* self, const QVariant* from, const QVariant* to, double progress) {
     auto* vqpropertyanimation = const_cast<VirtualQPropertyAnimation*>(dynamic_cast<const VirtualQPropertyAnimation*>(self));
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         return new QVariant(vqpropertyanimation->interpolated(*from, *to, static_cast<qreal>(progress)));
@@ -284,7 +284,7 @@ QVariant* QPropertyAnimation_Interpolated(const QPropertyAnimation* self, QVaria
 }
 
 // Base class handler implementation
-QVariant* QPropertyAnimation_QBaseInterpolated(const QPropertyAnimation* self, QVariant* from, QVariant* to, double progress) {
+QVariant* QPropertyAnimation_QBaseInterpolated(const QPropertyAnimation* self, const QVariant* from, const QVariant* to, double progress) {
     auto* vqpropertyanimation = const_cast<VirtualQPropertyAnimation*>(dynamic_cast<const VirtualQPropertyAnimation*>(self));
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->setQPropertyAnimation_Interpolated_IsBase(true);
@@ -447,7 +447,7 @@ void QPropertyAnimation_OnCustomEvent(QPropertyAnimation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPropertyAnimation_ConnectNotify(QPropertyAnimation* self, QMetaMethod* signal) {
+void QPropertyAnimation_ConnectNotify(QPropertyAnimation* self, const QMetaMethod* signal) {
     auto* vqpropertyanimation = dynamic_cast<VirtualQPropertyAnimation*>(self);
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->connectNotify(*signal);
@@ -457,7 +457,7 @@ void QPropertyAnimation_ConnectNotify(QPropertyAnimation* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QPropertyAnimation_QBaseConnectNotify(QPropertyAnimation* self, QMetaMethod* signal) {
+void QPropertyAnimation_QBaseConnectNotify(QPropertyAnimation* self, const QMetaMethod* signal) {
     auto* vqpropertyanimation = dynamic_cast<VirtualQPropertyAnimation*>(self);
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->setQPropertyAnimation_ConnectNotify_IsBase(true);
@@ -476,7 +476,7 @@ void QPropertyAnimation_OnConnectNotify(QPropertyAnimation* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QPropertyAnimation_DisconnectNotify(QPropertyAnimation* self, QMetaMethod* signal) {
+void QPropertyAnimation_DisconnectNotify(QPropertyAnimation* self, const QMetaMethod* signal) {
     auto* vqpropertyanimation = dynamic_cast<VirtualQPropertyAnimation*>(self);
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->disconnectNotify(*signal);
@@ -486,7 +486,7 @@ void QPropertyAnimation_DisconnectNotify(QPropertyAnimation* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QPropertyAnimation_QBaseDisconnectNotify(QPropertyAnimation* self, QMetaMethod* signal) {
+void QPropertyAnimation_QBaseDisconnectNotify(QPropertyAnimation* self, const QMetaMethod* signal) {
     auto* vqpropertyanimation = dynamic_cast<VirtualQPropertyAnimation*>(self);
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->setQPropertyAnimation_DisconnectNotify_IsBase(true);
@@ -592,7 +592,7 @@ void QPropertyAnimation_OnReceivers(const QPropertyAnimation* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QPropertyAnimation_IsSignalConnected(const QPropertyAnimation* self, QMetaMethod* signal) {
+bool QPropertyAnimation_IsSignalConnected(const QPropertyAnimation* self, const QMetaMethod* signal) {
     auto* vqpropertyanimation = const_cast<VirtualQPropertyAnimation*>(dynamic_cast<const VirtualQPropertyAnimation*>(self));
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         return vqpropertyanimation->isSignalConnected(*signal);
@@ -602,7 +602,7 @@ bool QPropertyAnimation_IsSignalConnected(const QPropertyAnimation* self, QMetaM
 }
 
 // Base class handler implementation
-bool QPropertyAnimation_QBaseIsSignalConnected(const QPropertyAnimation* self, QMetaMethod* signal) {
+bool QPropertyAnimation_QBaseIsSignalConnected(const QPropertyAnimation* self, const QMetaMethod* signal) {
     auto* vqpropertyanimation = const_cast<VirtualQPropertyAnimation*>(dynamic_cast<const VirtualQPropertyAnimation*>(self));
     if (vqpropertyanimation && vqpropertyanimation->isVirtualQPropertyAnimation) {
         vqpropertyanimation->setQPropertyAnimation_IsSignalConnected_IsBase(true);

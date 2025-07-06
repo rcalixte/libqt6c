@@ -76,8 +76,8 @@ class VirtualQLineSeries final : public QLineSeries {
     mutable bool qlineseries_issignalconnected_isbase = false;
 
   public:
-    VirtualQLineSeries() : QLineSeries(){};
-    VirtualQLineSeries(QObject* parent) : QLineSeries(parent){};
+    VirtualQLineSeries() : QLineSeries() {};
+    VirtualQLineSeries(QObject* parent) : QLineSeries(parent) {};
 
     ~VirtualQLineSeries() {
         qlineseries_metacall_callback = nullptr;
@@ -398,18 +398,18 @@ class VirtualQLineSeries final : public QLineSeries {
     friend void QLineSeries_QBaseChildEvent(QLineSeries* self, QChildEvent* event);
     friend void QLineSeries_CustomEvent(QLineSeries* self, QEvent* event);
     friend void QLineSeries_QBaseCustomEvent(QLineSeries* self, QEvent* event);
-    friend void QLineSeries_ConnectNotify(QLineSeries* self, QMetaMethod* signal);
-    friend void QLineSeries_QBaseConnectNotify(QLineSeries* self, QMetaMethod* signal);
-    friend void QLineSeries_DisconnectNotify(QLineSeries* self, QMetaMethod* signal);
-    friend void QLineSeries_QBaseDisconnectNotify(QLineSeries* self, QMetaMethod* signal);
+    friend void QLineSeries_ConnectNotify(QLineSeries* self, const QMetaMethod* signal);
+    friend void QLineSeries_QBaseConnectNotify(QLineSeries* self, const QMetaMethod* signal);
+    friend void QLineSeries_DisconnectNotify(QLineSeries* self, const QMetaMethod* signal);
+    friend void QLineSeries_QBaseDisconnectNotify(QLineSeries* self, const QMetaMethod* signal);
     friend QObject* QLineSeries_Sender(const QLineSeries* self);
     friend QObject* QLineSeries_QBaseSender(const QLineSeries* self);
     friend int QLineSeries_SenderSignalIndex(const QLineSeries* self);
     friend int QLineSeries_QBaseSenderSignalIndex(const QLineSeries* self);
     friend int QLineSeries_Receivers(const QLineSeries* self, const char* signal);
     friend int QLineSeries_QBaseReceivers(const QLineSeries* self, const char* signal);
-    friend bool QLineSeries_IsSignalConnected(const QLineSeries* self, QMetaMethod* signal);
-    friend bool QLineSeries_QBaseIsSignalConnected(const QLineSeries* self, QMetaMethod* signal);
+    friend bool QLineSeries_IsSignalConnected(const QLineSeries* self, const QMetaMethod* signal);
+    friend bool QLineSeries_QBaseIsSignalConnected(const QLineSeries* self, const QMetaMethod* signal);
 };
 
 #endif

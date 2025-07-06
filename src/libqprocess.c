@@ -28,14 +28,6 @@ void q_processenvironment_swap(void* self, void* other) {
     QProcessEnvironment_Swap((QProcessEnvironment*)self, (QProcessEnvironment*)other);
 }
 
-bool q_processenvironment_operator_equal(void* self, void* other) {
-    return QProcessEnvironment_OperatorEqual((QProcessEnvironment*)self, (QProcessEnvironment*)other);
-}
-
-bool q_processenvironment_operator_not_equal(void* self, void* other) {
-    return QProcessEnvironment_OperatorNotEqual((QProcessEnvironment*)self, (QProcessEnvironment*)other);
-}
-
 bool q_processenvironment_is_empty(void* self) {
     return QProcessEnvironment_IsEmpty((QProcessEnvironment*)self);
 }
@@ -261,6 +253,22 @@ void q_process_set_standard_error_file(void* self, const char* fileName) {
 
 void q_process_set_standard_output_process(void* self, void* destination) {
     QProcess_SetStandardOutputProcess((QProcess*)self, (QProcess*)destination);
+}
+
+void q_process_fail_child_process_modifier(void* self, const char* description) {
+    QProcess_FailChildProcessModifier((QProcess*)self, description);
+}
+
+QProcess__UnixProcessParameters* q_process_unix_process_parameters(void* self) {
+    return QProcess_UnixProcessParameters((QProcess*)self);
+}
+
+void q_process_set_unix_process_parameters(void* self, void* params) {
+    QProcess_SetUnixProcessParameters((QProcess*)self, (QProcess__UnixProcessParameters*)params);
+}
+
+void q_process_set_unix_process_parameters_with_flags_only(void* self, int64_t flagsOnly) {
+    QProcess_SetUnixProcessParametersWithFlagsOnly((QProcess*)self, flagsOnly);
 }
 
 const char* q_process_working_directory(void* self) {
@@ -553,6 +561,10 @@ void q_process_set_standard_error_file2(void* self, const char* fileName, int64_
     QProcess_SetStandardErrorFile2((QProcess*)self, qstring(fileName), mode);
 }
 
+void q_process_fail_child_process_modifier2(void* self, const char* description, int errorVal) {
+    QProcess_FailChildProcessModifier2((QProcess*)self, description, errorVal);
+}
+
 bool q_process_wait_for_started1(void* self, int msecs) {
     return QProcess_WaitForStarted1((QProcess*)self, msecs);
 }
@@ -838,8 +850,8 @@ QThread* q_process_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_process_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_process_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_process_start_timer(void* self, int interval) {
@@ -848,6 +860,10 @@ int32_t q_process_start_timer(void* self, int interval) {
 
 void q_process_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_process_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_process_children(void* self) {
@@ -940,6 +956,10 @@ bool q_process_inherits(void* self, const char* classname) {
 
 void q_process_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_process_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_process_start_timer2(void* self, int interval, int64_t timerType) {
@@ -1248,4 +1268,24 @@ void q_process_on_object_name_changed(void* self, void (*slot)(void*, const char
 
 void q_process_delete(void* self) {
     QProcess_Delete((QProcess*)(self));
+}
+
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new(void* other) {
+    return QProcess__UnixProcessParameters_new((QProcess__UnixProcessParameters*)other);
+}
+
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other) {
+    return QProcess__UnixProcessParameters_new2((QProcess__UnixProcessParameters*)other);
+}
+
+void q_process__unixprocessparameters_copy_assign(void* self, void* other) {
+    QProcess__UnixProcessParameters_CopyAssign((QProcess__UnixProcessParameters*)self, (QProcess__UnixProcessParameters*)other);
+}
+
+void q_process__unixprocessparameters_move_assign(void* self, void* other) {
+    QProcess__UnixProcessParameters_MoveAssign((QProcess__UnixProcessParameters*)self, (QProcess__UnixProcessParameters*)other);
+}
+
+void q_process__unixprocessparameters_delete(void* self) {
+    QProcess__UnixProcessParameters_Delete((QProcess__UnixProcessParameters*)(self));
 }

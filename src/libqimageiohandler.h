@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqiodevice.h"
-#include "libqimage.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qimageiohandler.html
 
 /// q_imageiohandler_new constructs a new QImageIOHandler object.
@@ -315,16 +305,6 @@ void q_imageiohandler_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qimageioplugin.html
 
-/// q_imageioplugin_new constructs a new QImageIOPlugin object.
-///
-///
-QImageIOPlugin* q_imageioplugin_new();
-
-/// q_imageioplugin_new2 constructs a new QImageIOPlugin object.
-///
-/// ``` QObject* parent ```
-QImageIOPlugin* q_imageioplugin_new2(void* parent);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// ``` QImageIOPlugin* self ```
@@ -336,16 +316,6 @@ void* q_imageioplugin_metacast(void* self, const char* param1);
 /// ``` QImageIOPlugin* self, enum QMetaObject__Call param1, int param2, void* param3 ```
 int32_t q_imageioplugin_metacall(void* self, int64_t param1, int param2, void* param3);
 
-/// Allows for overriding the related default method
-///
-/// ``` QImageIOPlugin* self, int32_t (*slot)(QImageIOPlugin*, enum QMetaObject__Call, int, void*) ```
-void q_imageioplugin_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
-
-/// Base class method implementation
-///
-/// ``` QImageIOPlugin* self, enum QMetaObject__Call param1, int param2, void* param3 ```
-int32_t q_imageioplugin_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s ```
@@ -356,38 +326,10 @@ const char* q_imageioplugin_tr(const char* s);
 /// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
 int64_t q_imageioplugin_capabilities(void* self, void* device, const char* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QImageIOPlugin* self, int64_t (*slot)(QImageIOPlugin*, QIODevice*, const char*) ```
-void q_imageioplugin_on_capabilities(void* self, int64_t (*slot)(void*, void*, const char*));
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#capabilities)
-///
-/// Base class method implementation
-///
-/// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
-int64_t q_imageioplugin_qbase_capabilities(void* self, void* device, const char* format);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#create)
 ///
 /// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
 QImageIOHandler* q_imageioplugin_create(void* self, void* device, const char* format);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#create)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QImageIOPlugin* self, QImageIOHandler* (*slot)(QImageIOPlugin*, QIODevice*, const char*) ```
-void q_imageioplugin_on_create(void* self, QImageIOHandler* (*slot)(void*, void*, const char*));
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qimageioplugin.html#create)
-///
-/// Base class method implementation
-///
-/// ``` QImageIOPlugin* self, QIODevice* device, const char* format ```
-QImageIOHandler* q_imageioplugin_qbase_create(void* self, void* device, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -398,6 +340,20 @@ const char* q_imageioplugin_tr2(const char* s, const char* c);
 ///
 /// ``` const char* s, const char* c, int n ```
 const char* q_imageioplugin_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
+///
+/// ``` QImageIOPlugin* self, QEvent* event ```
+bool q_imageioplugin_event(void* self, void* event);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
+///
+/// ``` QImageIOPlugin* self, QObject* watched, QEvent* event ```
+bool q_imageioplugin_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -460,7 +416,7 @@ QThread* q_imageioplugin_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QImageIOPlugin* self, QThread* thread ```
-void q_imageioplugin_move_to_thread(void* self, void* thread);
+bool q_imageioplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -475,6 +431,13 @@ int32_t q_imageioplugin_start_timer(void* self, int interval);
 ///
 /// ``` QImageIOPlugin* self, int id ```
 void q_imageioplugin_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QImageIOPlugin* self, enum Qt__TimerId id ```
+void q_imageioplugin_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -618,6 +581,13 @@ void q_imageioplugin_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QImageIOPlugin* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_imageioplugin_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QImageIOPlugin* self, int interval, enum Qt__TimerType timerType ```
@@ -650,303 +620,6 @@ void q_imageioplugin_destroyed1(void* self, void* param1);
 ///
 /// ``` QImageIOPlugin* self, void (*slot)(QObject*, QObject*) ```
 void q_imageioplugin_on_destroyed1(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QEvent* event ```
-bool q_imageioplugin_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QEvent* event ```
-bool q_imageioplugin_qbase_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, bool (*slot)(QImageIOPlugin*, QEvent*) ```
-void q_imageioplugin_on_event(void* self, bool (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QObject* watched, QEvent* event ```
-bool q_imageioplugin_event_filter(void* self, void* watched, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QObject* watched, QEvent* event ```
-bool q_imageioplugin_qbase_event_filter(void* self, void* watched, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, bool (*slot)(QImageIOPlugin*, QObject*, QEvent*) ```
-void q_imageioplugin_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QTimerEvent* event ```
-void q_imageioplugin_timer_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QTimerEvent* event ```
-void q_imageioplugin_qbase_timer_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#timerEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, void (*slot)(QImageIOPlugin*, QTimerEvent*) ```
-void q_imageioplugin_on_timer_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QChildEvent* event ```
-void q_imageioplugin_child_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QChildEvent* event ```
-void q_imageioplugin_qbase_child_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#childEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, void (*slot)(QImageIOPlugin*, QChildEvent*) ```
-void q_imageioplugin_on_child_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QEvent* event ```
-void q_imageioplugin_custom_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QEvent* event ```
-void q_imageioplugin_qbase_custom_event(void* self, void* event);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#customEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, void (*slot)(QImageIOPlugin*, QEvent*) ```
-void q_imageioplugin_on_custom_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QMetaMethod* signal ```
-void q_imageioplugin_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QMetaMethod* signal ```
-void q_imageioplugin_qbase_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, void (*slot)(QImageIOPlugin*, QMetaMethod*) ```
-void q_imageioplugin_on_connect_notify(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QMetaMethod* signal ```
-void q_imageioplugin_disconnect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QMetaMethod* signal ```
-void q_imageioplugin_qbase_disconnect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, void (*slot)(QImageIOPlugin*, QMetaMethod*) ```
-void q_imageioplugin_on_disconnect_notify(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self ```
-QObject* q_imageioplugin_sender(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self ```
-QObject* q_imageioplugin_qbase_sender(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#sender)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QObject* (*slot)() ```
-void q_imageioplugin_on_sender(void* self, QObject* (*slot)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self ```
-int32_t q_imageioplugin_sender_signal_index(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self ```
-int32_t q_imageioplugin_qbase_sender_signal_index(void* self);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, int32_t (*slot)() ```
-void q_imageioplugin_on_sender_signal_index(void* self, int32_t (*slot)());
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, const char* signal ```
-int32_t q_imageioplugin_receivers(void* self, const char* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, const char* signal ```
-int32_t q_imageioplugin_qbase_receivers(void* self, const char* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#receivers)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, int32_t (*slot)(QImageIOPlugin*, const char*) ```
-void q_imageioplugin_on_receivers(void* self, int32_t (*slot)(void*, const char*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QMetaMethod* signal ```
-bool q_imageioplugin_is_signal_connected(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, QMetaMethod* signal ```
-bool q_imageioplugin_qbase_is_signal_connected(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QImageIOPlugin* self, bool (*slot)(QImageIOPlugin*, QMetaMethod*) ```
-void q_imageioplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
 /// Inherited from QObject
 ///

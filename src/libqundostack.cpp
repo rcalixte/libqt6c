@@ -18,7 +18,7 @@ QUndoCommand* QUndoCommand_new() {
     return new VirtualQUndoCommand();
 }
 
-QUndoCommand* QUndoCommand_new2(libqt_string text) {
+QUndoCommand* QUndoCommand_new2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQUndoCommand(text_QString);
 }
@@ -27,7 +27,7 @@ QUndoCommand* QUndoCommand_new3(QUndoCommand* parent) {
     return new VirtualQUndoCommand(parent);
 }
 
-QUndoCommand* QUndoCommand_new4(libqt_string text, QUndoCommand* parent) {
+QUndoCommand* QUndoCommand_new4(const libqt_string text, QUndoCommand* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQUndoCommand(text_QString, parent);
 }
@@ -56,7 +56,7 @@ libqt_string QUndoCommand_ActionText(const QUndoCommand* self) {
     return _str;
 }
 
-void QUndoCommand_SetText(QUndoCommand* self, libqt_string text) {
+void QUndoCommand_SetText(QUndoCommand* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -165,7 +165,7 @@ void QUndoCommand_OnId(const QUndoCommand* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QUndoCommand_MergeWith(QUndoCommand* self, QUndoCommand* other) {
+bool QUndoCommand_MergeWith(QUndoCommand* self, const QUndoCommand* other) {
     auto* vqundocommand = dynamic_cast<VirtualQUndoCommand*>(self);
     if (vqundocommand && vqundocommand->isVirtualQUndoCommand) {
         return vqundocommand->mergeWith(other);
@@ -175,7 +175,7 @@ bool QUndoCommand_MergeWith(QUndoCommand* self, QUndoCommand* other) {
 }
 
 // Base class handler implementation
-bool QUndoCommand_QBaseMergeWith(QUndoCommand* self, QUndoCommand* other) {
+bool QUndoCommand_QBaseMergeWith(QUndoCommand* self, const QUndoCommand* other) {
     auto* vqundocommand = dynamic_cast<VirtualQUndoCommand*>(self);
     if (vqundocommand && vqundocommand->isVirtualQUndoCommand) {
         vqundocommand->setQUndoCommand_MergeWith_IsBase(true);
@@ -333,7 +333,7 @@ int QUndoStack_CleanIndex(const QUndoStack* self) {
     return self->cleanIndex();
 }
 
-void QUndoStack_BeginMacro(QUndoStack* self, libqt_string text) {
+void QUndoStack_BeginMacro(QUndoStack* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->beginMacro(text_QString);
 }
@@ -426,7 +426,7 @@ void QUndoStack_Connect_CanRedoChanged(QUndoStack* self, intptr_t slot) {
     });
 }
 
-void QUndoStack_UndoTextChanged(QUndoStack* self, libqt_string undoText) {
+void QUndoStack_UndoTextChanged(QUndoStack* self, const libqt_string undoText) {
     QString undoText_QString = QString::fromUtf8(undoText.data, undoText.len);
     self->undoTextChanged(undoText_QString);
 }
@@ -447,7 +447,7 @@ void QUndoStack_Connect_UndoTextChanged(QUndoStack* self, intptr_t slot) {
     });
 }
 
-void QUndoStack_RedoTextChanged(QUndoStack* self, libqt_string redoText) {
+void QUndoStack_RedoTextChanged(QUndoStack* self, const libqt_string redoText) {
     QString redoText_QString = QString::fromUtf8(redoText.data, redoText.len);
     self->redoTextChanged(redoText_QString);
 }
@@ -492,12 +492,12 @@ libqt_string QUndoStack_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-QAction* QUndoStack_CreateUndoAction2(const QUndoStack* self, QObject* parent, libqt_string prefix) {
+QAction* QUndoStack_CreateUndoAction2(const QUndoStack* self, QObject* parent, const libqt_string prefix) {
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     return self->createUndoAction(parent, prefix_QString);
 }
 
-QAction* QUndoStack_CreateRedoAction2(const QUndoStack* self, QObject* parent, libqt_string prefix) {
+QAction* QUndoStack_CreateRedoAction2(const QUndoStack* self, QObject* parent, const libqt_string prefix) {
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     return self->createRedoAction(parent, prefix_QString);
 }
@@ -652,7 +652,7 @@ void QUndoStack_OnCustomEvent(QUndoStack* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QUndoStack_ConnectNotify(QUndoStack* self, QMetaMethod* signal) {
+void QUndoStack_ConnectNotify(QUndoStack* self, const QMetaMethod* signal) {
     auto* vqundostack = dynamic_cast<VirtualQUndoStack*>(self);
     if (vqundostack && vqundostack->isVirtualQUndoStack) {
         vqundostack->connectNotify(*signal);
@@ -662,7 +662,7 @@ void QUndoStack_ConnectNotify(QUndoStack* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QUndoStack_QBaseConnectNotify(QUndoStack* self, QMetaMethod* signal) {
+void QUndoStack_QBaseConnectNotify(QUndoStack* self, const QMetaMethod* signal) {
     auto* vqundostack = dynamic_cast<VirtualQUndoStack*>(self);
     if (vqundostack && vqundostack->isVirtualQUndoStack) {
         vqundostack->setQUndoStack_ConnectNotify_IsBase(true);
@@ -681,7 +681,7 @@ void QUndoStack_OnConnectNotify(QUndoStack* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QUndoStack_DisconnectNotify(QUndoStack* self, QMetaMethod* signal) {
+void QUndoStack_DisconnectNotify(QUndoStack* self, const QMetaMethod* signal) {
     auto* vqundostack = dynamic_cast<VirtualQUndoStack*>(self);
     if (vqundostack && vqundostack->isVirtualQUndoStack) {
         vqundostack->disconnectNotify(*signal);
@@ -691,7 +691,7 @@ void QUndoStack_DisconnectNotify(QUndoStack* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QUndoStack_QBaseDisconnectNotify(QUndoStack* self, QMetaMethod* signal) {
+void QUndoStack_QBaseDisconnectNotify(QUndoStack* self, const QMetaMethod* signal) {
     auto* vqundostack = dynamic_cast<VirtualQUndoStack*>(self);
     if (vqundostack && vqundostack->isVirtualQUndoStack) {
         vqundostack->setQUndoStack_DisconnectNotify_IsBase(true);
@@ -797,7 +797,7 @@ void QUndoStack_OnReceivers(const QUndoStack* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QUndoStack_IsSignalConnected(const QUndoStack* self, QMetaMethod* signal) {
+bool QUndoStack_IsSignalConnected(const QUndoStack* self, const QMetaMethod* signal) {
     auto* vqundostack = const_cast<VirtualQUndoStack*>(dynamic_cast<const VirtualQUndoStack*>(self));
     if (vqundostack && vqundostack->isVirtualQUndoStack) {
         return vqundostack->isSignalConnected(*signal);
@@ -807,7 +807,7 @@ bool QUndoStack_IsSignalConnected(const QUndoStack* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QUndoStack_QBaseIsSignalConnected(const QUndoStack* self, QMetaMethod* signal) {
+bool QUndoStack_QBaseIsSignalConnected(const QUndoStack* self, const QMetaMethod* signal) {
     auto* vqundostack = const_cast<VirtualQUndoStack*>(dynamic_cast<const VirtualQUndoStack*>(self));
     if (vqundostack && vqundostack->isVirtualQUndoStack) {
         vqundostack->setQUndoStack_IsSignalConnected_IsBase(true);

@@ -12,9 +12,17 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qipv6address.html
+
+/// q_ipv6address_new constructs a new QIPv6Address object.
+///
+///
+QIPv6Address* q_ipv6address_new();
+
+/// q_ipv6address_new2 constructs a new QIPv6Address object.
+///
+/// ``` QIPv6Address* param1 ```
+QIPv6Address* q_ipv6address_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qipv6address.html#operator[])
 ///
@@ -209,6 +217,11 @@ bool q_hostaddress_is_multicast(void* self);
 ///
 /// ``` QHostAddress* self ```
 bool q_hostaddress_is_broadcast(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#isPrivateUse)
+///
+/// ``` QHostAddress* self ```
+bool q_hostaddress_is_private_use(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#parseSubnet)
 ///

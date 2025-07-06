@@ -271,7 +271,7 @@ void QGraphicsTransform_OnCustomEvent(QGraphicsTransform* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsTransform_ConnectNotify(QGraphicsTransform* self, QMetaMethod* signal) {
+void QGraphicsTransform_ConnectNotify(QGraphicsTransform* self, const QMetaMethod* signal) {
     auto* vqgraphicstransform = dynamic_cast<VirtualQGraphicsTransform*>(self);
     if (vqgraphicstransform && vqgraphicstransform->isVirtualQGraphicsTransform) {
         vqgraphicstransform->connectNotify(*signal);
@@ -281,7 +281,7 @@ void QGraphicsTransform_ConnectNotify(QGraphicsTransform* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QGraphicsTransform_QBaseConnectNotify(QGraphicsTransform* self, QMetaMethod* signal) {
+void QGraphicsTransform_QBaseConnectNotify(QGraphicsTransform* self, const QMetaMethod* signal) {
     auto* vqgraphicstransform = dynamic_cast<VirtualQGraphicsTransform*>(self);
     if (vqgraphicstransform && vqgraphicstransform->isVirtualQGraphicsTransform) {
         vqgraphicstransform->setQGraphicsTransform_ConnectNotify_IsBase(true);
@@ -300,7 +300,7 @@ void QGraphicsTransform_OnConnectNotify(QGraphicsTransform* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QGraphicsTransform_DisconnectNotify(QGraphicsTransform* self, QMetaMethod* signal) {
+void QGraphicsTransform_DisconnectNotify(QGraphicsTransform* self, const QMetaMethod* signal) {
     auto* vqgraphicstransform = dynamic_cast<VirtualQGraphicsTransform*>(self);
     if (vqgraphicstransform && vqgraphicstransform->isVirtualQGraphicsTransform) {
         vqgraphicstransform->disconnectNotify(*signal);
@@ -310,7 +310,7 @@ void QGraphicsTransform_DisconnectNotify(QGraphicsTransform* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QGraphicsTransform_QBaseDisconnectNotify(QGraphicsTransform* self, QMetaMethod* signal) {
+void QGraphicsTransform_QBaseDisconnectNotify(QGraphicsTransform* self, const QMetaMethod* signal) {
     auto* vqgraphicstransform = dynamic_cast<VirtualQGraphicsTransform*>(self);
     if (vqgraphicstransform && vqgraphicstransform->isVirtualQGraphicsTransform) {
         vqgraphicstransform->setQGraphicsTransform_DisconnectNotify_IsBase(true);
@@ -445,7 +445,7 @@ void QGraphicsTransform_OnReceivers(const QGraphicsTransform* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QGraphicsTransform_IsSignalConnected(const QGraphicsTransform* self, QMetaMethod* signal) {
+bool QGraphicsTransform_IsSignalConnected(const QGraphicsTransform* self, const QMetaMethod* signal) {
     auto* vqgraphicstransform = const_cast<VirtualQGraphicsTransform*>(dynamic_cast<const VirtualQGraphicsTransform*>(self));
     if (vqgraphicstransform && vqgraphicstransform->isVirtualQGraphicsTransform) {
         return vqgraphicstransform->isSignalConnected(*signal);
@@ -455,7 +455,7 @@ bool QGraphicsTransform_IsSignalConnected(const QGraphicsTransform* self, QMetaM
 }
 
 // Base class handler implementation
-bool QGraphicsTransform_QBaseIsSignalConnected(const QGraphicsTransform* self, QMetaMethod* signal) {
+bool QGraphicsTransform_QBaseIsSignalConnected(const QGraphicsTransform* self, const QMetaMethod* signal) {
     auto* vqgraphicstransform = const_cast<VirtualQGraphicsTransform*>(dynamic_cast<const VirtualQGraphicsTransform*>(self));
     if (vqgraphicstransform && vqgraphicstransform->isVirtualQGraphicsTransform) {
         vqgraphicstransform->setQGraphicsTransform_IsSignalConnected_IsBase(true);
@@ -537,7 +537,7 @@ QVector3D* QGraphicsScale_Origin(const QGraphicsScale* self) {
     return new QVector3D(self->origin());
 }
 
-void QGraphicsScale_SetOrigin(QGraphicsScale* self, QVector3D* point) {
+void QGraphicsScale_SetOrigin(QGraphicsScale* self, const QVector3D* point) {
     self->setOrigin(*point);
 }
 
@@ -819,7 +819,7 @@ void QGraphicsScale_OnCustomEvent(QGraphicsScale* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsScale_ConnectNotify(QGraphicsScale* self, QMetaMethod* signal) {
+void QGraphicsScale_ConnectNotify(QGraphicsScale* self, const QMetaMethod* signal) {
     auto* vqgraphicsscale = dynamic_cast<VirtualQGraphicsScale*>(self);
     if (vqgraphicsscale && vqgraphicsscale->isVirtualQGraphicsScale) {
         vqgraphicsscale->connectNotify(*signal);
@@ -829,7 +829,7 @@ void QGraphicsScale_ConnectNotify(QGraphicsScale* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGraphicsScale_QBaseConnectNotify(QGraphicsScale* self, QMetaMethod* signal) {
+void QGraphicsScale_QBaseConnectNotify(QGraphicsScale* self, const QMetaMethod* signal) {
     auto* vqgraphicsscale = dynamic_cast<VirtualQGraphicsScale*>(self);
     if (vqgraphicsscale && vqgraphicsscale->isVirtualQGraphicsScale) {
         vqgraphicsscale->setQGraphicsScale_ConnectNotify_IsBase(true);
@@ -848,7 +848,7 @@ void QGraphicsScale_OnConnectNotify(QGraphicsScale* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsScale_DisconnectNotify(QGraphicsScale* self, QMetaMethod* signal) {
+void QGraphicsScale_DisconnectNotify(QGraphicsScale* self, const QMetaMethod* signal) {
     auto* vqgraphicsscale = dynamic_cast<VirtualQGraphicsScale*>(self);
     if (vqgraphicsscale && vqgraphicsscale->isVirtualQGraphicsScale) {
         vqgraphicsscale->disconnectNotify(*signal);
@@ -858,7 +858,7 @@ void QGraphicsScale_DisconnectNotify(QGraphicsScale* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QGraphicsScale_QBaseDisconnectNotify(QGraphicsScale* self, QMetaMethod* signal) {
+void QGraphicsScale_QBaseDisconnectNotify(QGraphicsScale* self, const QMetaMethod* signal) {
     auto* vqgraphicsscale = dynamic_cast<VirtualQGraphicsScale*>(self);
     if (vqgraphicsscale && vqgraphicsscale->isVirtualQGraphicsScale) {
         vqgraphicsscale->setQGraphicsScale_DisconnectNotify_IsBase(true);
@@ -993,7 +993,7 @@ void QGraphicsScale_OnReceivers(const QGraphicsScale* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGraphicsScale_IsSignalConnected(const QGraphicsScale* self, QMetaMethod* signal) {
+bool QGraphicsScale_IsSignalConnected(const QGraphicsScale* self, const QMetaMethod* signal) {
     auto* vqgraphicsscale = const_cast<VirtualQGraphicsScale*>(dynamic_cast<const VirtualQGraphicsScale*>(self));
     if (vqgraphicsscale && vqgraphicsscale->isVirtualQGraphicsScale) {
         return vqgraphicsscale->isSignalConnected(*signal);
@@ -1003,7 +1003,7 @@ bool QGraphicsScale_IsSignalConnected(const QGraphicsScale* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QGraphicsScale_QBaseIsSignalConnected(const QGraphicsScale* self, QMetaMethod* signal) {
+bool QGraphicsScale_QBaseIsSignalConnected(const QGraphicsScale* self, const QMetaMethod* signal) {
     auto* vqgraphicsscale = const_cast<VirtualQGraphicsScale*>(dynamic_cast<const VirtualQGraphicsScale*>(self));
     if (vqgraphicsscale && vqgraphicsscale->isVirtualQGraphicsScale) {
         vqgraphicsscale->setQGraphicsScale_IsSignalConnected_IsBase(true);
@@ -1085,7 +1085,7 @@ QVector3D* QGraphicsRotation_Origin(const QGraphicsRotation* self) {
     return new QVector3D(self->origin());
 }
 
-void QGraphicsRotation_SetOrigin(QGraphicsRotation* self, QVector3D* point) {
+void QGraphicsRotation_SetOrigin(QGraphicsRotation* self, const QVector3D* point) {
     self->setOrigin(*point);
 }
 
@@ -1101,7 +1101,7 @@ QVector3D* QGraphicsRotation_Axis(const QGraphicsRotation* self) {
     return new QVector3D(self->axis());
 }
 
-void QGraphicsRotation_SetAxis(QGraphicsRotation* self, QVector3D* axis) {
+void QGraphicsRotation_SetAxis(QGraphicsRotation* self, const QVector3D* axis) {
     self->setAxis(*axis);
 }
 
@@ -1341,7 +1341,7 @@ void QGraphicsRotation_OnCustomEvent(QGraphicsRotation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsRotation_ConnectNotify(QGraphicsRotation* self, QMetaMethod* signal) {
+void QGraphicsRotation_ConnectNotify(QGraphicsRotation* self, const QMetaMethod* signal) {
     auto* vqgraphicsrotation = dynamic_cast<VirtualQGraphicsRotation*>(self);
     if (vqgraphicsrotation && vqgraphicsrotation->isVirtualQGraphicsRotation) {
         vqgraphicsrotation->connectNotify(*signal);
@@ -1351,7 +1351,7 @@ void QGraphicsRotation_ConnectNotify(QGraphicsRotation* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QGraphicsRotation_QBaseConnectNotify(QGraphicsRotation* self, QMetaMethod* signal) {
+void QGraphicsRotation_QBaseConnectNotify(QGraphicsRotation* self, const QMetaMethod* signal) {
     auto* vqgraphicsrotation = dynamic_cast<VirtualQGraphicsRotation*>(self);
     if (vqgraphicsrotation && vqgraphicsrotation->isVirtualQGraphicsRotation) {
         vqgraphicsrotation->setQGraphicsRotation_ConnectNotify_IsBase(true);
@@ -1370,7 +1370,7 @@ void QGraphicsRotation_OnConnectNotify(QGraphicsRotation* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsRotation_DisconnectNotify(QGraphicsRotation* self, QMetaMethod* signal) {
+void QGraphicsRotation_DisconnectNotify(QGraphicsRotation* self, const QMetaMethod* signal) {
     auto* vqgraphicsrotation = dynamic_cast<VirtualQGraphicsRotation*>(self);
     if (vqgraphicsrotation && vqgraphicsrotation->isVirtualQGraphicsRotation) {
         vqgraphicsrotation->disconnectNotify(*signal);
@@ -1380,7 +1380,7 @@ void QGraphicsRotation_DisconnectNotify(QGraphicsRotation* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QGraphicsRotation_QBaseDisconnectNotify(QGraphicsRotation* self, QMetaMethod* signal) {
+void QGraphicsRotation_QBaseDisconnectNotify(QGraphicsRotation* self, const QMetaMethod* signal) {
     auto* vqgraphicsrotation = dynamic_cast<VirtualQGraphicsRotation*>(self);
     if (vqgraphicsrotation && vqgraphicsrotation->isVirtualQGraphicsRotation) {
         vqgraphicsrotation->setQGraphicsRotation_DisconnectNotify_IsBase(true);
@@ -1515,7 +1515,7 @@ void QGraphicsRotation_OnReceivers(const QGraphicsRotation* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QGraphicsRotation_IsSignalConnected(const QGraphicsRotation* self, QMetaMethod* signal) {
+bool QGraphicsRotation_IsSignalConnected(const QGraphicsRotation* self, const QMetaMethod* signal) {
     auto* vqgraphicsrotation = const_cast<VirtualQGraphicsRotation*>(dynamic_cast<const VirtualQGraphicsRotation*>(self));
     if (vqgraphicsrotation && vqgraphicsrotation->isVirtualQGraphicsRotation) {
         return vqgraphicsrotation->isSignalConnected(*signal);
@@ -1525,7 +1525,7 @@ bool QGraphicsRotation_IsSignalConnected(const QGraphicsRotation* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QGraphicsRotation_QBaseIsSignalConnected(const QGraphicsRotation* self, QMetaMethod* signal) {
+bool QGraphicsRotation_QBaseIsSignalConnected(const QGraphicsRotation* self, const QMetaMethod* signal) {
     auto* vqgraphicsrotation = const_cast<VirtualQGraphicsRotation*>(dynamic_cast<const VirtualQGraphicsRotation*>(self));
     if (vqgraphicsrotation && vqgraphicsrotation->isVirtualQGraphicsRotation) {
         vqgraphicsrotation->setQGraphicsRotation_IsSignalConnected_IsBase(true);

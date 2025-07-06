@@ -1,8 +1,10 @@
 #include "libqabstracteventdispatcher.hpp"
 #include "libqabstractnativeeventfilter.hpp"
 #include "libqevent.hpp"
+#include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobject.hpp"
+#include "libqpermissions.hpp"
 #include <string.h>
 #include "libqtranslator.hpp"
 #include "libqcoreevent.hpp"
@@ -135,6 +137,10 @@ void q_coreapplication_process_events2(int64_t flags, int maxtime) {
     QCoreApplication_ProcessEvents2(flags, maxtime);
 }
 
+void q_coreapplication_process_events3(int64_t flags, void* deadline) {
+    QCoreApplication_ProcessEvents3(flags, (QDeadlineTimer*)deadline);
+}
+
 bool q_coreapplication_send_event(void* receiver, void* event) {
     return QCoreApplication_SendEvent((QObject*)receiver, (QEvent*)event);
 }
@@ -195,6 +201,10 @@ const char* q_coreapplication_application_file_path() {
 
 long long q_coreapplication_application_pid() {
     return QCoreApplication_ApplicationPid();
+}
+
+int64_t q_coreapplication_check_permission(void* self, void* permission) {
+    return QCoreApplication_CheckPermission((QCoreApplication*)self, (QPermission*)permission);
 }
 
 void q_coreapplication_set_library_paths(const char* libraryPaths[]) {
@@ -424,8 +434,8 @@ QThread* q_coreapplication_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_coreapplication_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_coreapplication_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_coreapplication_start_timer(void* self, int interval) {
@@ -434,6 +444,10 @@ int32_t q_coreapplication_start_timer(void* self, int interval) {
 
 void q_coreapplication_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_coreapplication_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_coreapplication_children(void* self) {
@@ -526,6 +540,10 @@ bool q_coreapplication_inherits(void* self, const char* classname) {
 
 void q_coreapplication_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_coreapplication_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_coreapplication_start_timer2(void* self, int interval, int64_t timerType) {

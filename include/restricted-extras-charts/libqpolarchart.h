@@ -12,25 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractaxis.h"
-#include "libqabstractseries.h"
-#include "libqchart.h"
-#include "../libqevent.h"
-#include "../libqgraphicsitem.h"
-#include "../libqgraphicslayoutitem.h"
-#include "../libqgraphicswidget.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpainter.h"
-#include "../libqpainterpath.h"
-#include "../libqpoint.h"
-#include "../libqrect.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqstyleoption.h"
-#include "../libqvariant.h"
-#include "../libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qpolarchart-qtcharts.html
 
 /// q_polarchart_new constructs a new QPolarChart object.
@@ -1255,7 +1236,7 @@ QThread* q_polarchart_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPolarChart* self, QThread* thread ```
-void q_polarchart_move_to_thread(void* self, void* thread);
+bool q_polarchart_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1270,6 +1251,13 @@ int32_t q_polarchart_start_timer(void* self, int interval);
 ///
 /// ``` QPolarChart* self, int id ```
 void q_polarchart_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPolarChart* self, enum Qt__TimerId id ```
+void q_polarchart_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1410,6 +1398,13 @@ bool q_polarchart_inherits(void* self, const char* classname);
 ///
 /// ``` QPolarChart* self ```
 void q_polarchart_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPolarChart* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_polarchart_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

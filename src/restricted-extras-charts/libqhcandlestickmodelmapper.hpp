@@ -82,12 +82,12 @@ void QHCandlestickModelMapper_QBaseChildEvent(QHCandlestickModelMapper* self, QC
 void QHCandlestickModelMapper_CustomEvent(QHCandlestickModelMapper* self, QEvent* event);
 void QHCandlestickModelMapper_OnCustomEvent(QHCandlestickModelMapper* self, intptr_t slot);
 void QHCandlestickModelMapper_QBaseCustomEvent(QHCandlestickModelMapper* self, QEvent* event);
-void QHCandlestickModelMapper_ConnectNotify(QHCandlestickModelMapper* self, QMetaMethod* signal);
+void QHCandlestickModelMapper_ConnectNotify(QHCandlestickModelMapper* self, const QMetaMethod* signal);
 void QHCandlestickModelMapper_OnConnectNotify(QHCandlestickModelMapper* self, intptr_t slot);
-void QHCandlestickModelMapper_QBaseConnectNotify(QHCandlestickModelMapper* self, QMetaMethod* signal);
-void QHCandlestickModelMapper_DisconnectNotify(QHCandlestickModelMapper* self, QMetaMethod* signal);
+void QHCandlestickModelMapper_QBaseConnectNotify(QHCandlestickModelMapper* self, const QMetaMethod* signal);
+void QHCandlestickModelMapper_DisconnectNotify(QHCandlestickModelMapper* self, const QMetaMethod* signal);
 void QHCandlestickModelMapper_OnDisconnectNotify(QHCandlestickModelMapper* self, intptr_t slot);
-void QHCandlestickModelMapper_QBaseDisconnectNotify(QHCandlestickModelMapper* self, QMetaMethod* signal);
+void QHCandlestickModelMapper_QBaseDisconnectNotify(QHCandlestickModelMapper* self, const QMetaMethod* signal);
 void QHCandlestickModelMapper_SetTimestamp(QHCandlestickModelMapper* self, int timestamp);
 void QHCandlestickModelMapper_OnSetTimestamp(QHCandlestickModelMapper* self, intptr_t slot);
 void QHCandlestickModelMapper_QBaseSetTimestamp(QHCandlestickModelMapper* self, int timestamp);
@@ -139,9 +139,9 @@ int QHCandlestickModelMapper_QBaseSenderSignalIndex(const QHCandlestickModelMapp
 int QHCandlestickModelMapper_Receivers(const QHCandlestickModelMapper* self, const char* signal);
 void QHCandlestickModelMapper_OnReceivers(const QHCandlestickModelMapper* self, intptr_t slot);
 int QHCandlestickModelMapper_QBaseReceivers(const QHCandlestickModelMapper* self, const char* signal);
-bool QHCandlestickModelMapper_IsSignalConnected(const QHCandlestickModelMapper* self, QMetaMethod* signal);
+bool QHCandlestickModelMapper_IsSignalConnected(const QHCandlestickModelMapper* self, const QMetaMethod* signal);
 void QHCandlestickModelMapper_OnIsSignalConnected(const QHCandlestickModelMapper* self, intptr_t slot);
-bool QHCandlestickModelMapper_QBaseIsSignalConnected(const QHCandlestickModelMapper* self, QMetaMethod* signal);
+bool QHCandlestickModelMapper_QBaseIsSignalConnected(const QHCandlestickModelMapper* self, const QMetaMethod* signal);
 void QHCandlestickModelMapper_Delete(QHCandlestickModelMapper* self);
 
 #ifdef __cplusplus

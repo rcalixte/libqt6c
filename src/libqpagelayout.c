@@ -156,6 +156,26 @@ void q_pagelayout_set_page_size2(void* self, void* pageSize, void* minMargins) {
     QPageLayout_SetPageSize2((QPageLayout*)self, (QPageSize*)pageSize, (QMarginsF*)minMargins);
 }
 
+bool q_pagelayout_set_margins2(void* self, void* margins, int64_t outOfBoundsPolicy) {
+    return QPageLayout_SetMargins2((QPageLayout*)self, (QMarginsF*)margins, outOfBoundsPolicy);
+}
+
+bool q_pagelayout_set_left_margin2(void* self, double leftMargin, int64_t outOfBoundsPolicy) {
+    return QPageLayout_SetLeftMargin2((QPageLayout*)self, leftMargin, outOfBoundsPolicy);
+}
+
+bool q_pagelayout_set_right_margin2(void* self, double rightMargin, int64_t outOfBoundsPolicy) {
+    return QPageLayout_SetRightMargin2((QPageLayout*)self, rightMargin, outOfBoundsPolicy);
+}
+
+bool q_pagelayout_set_top_margin2(void* self, double topMargin, int64_t outOfBoundsPolicy) {
+    return QPageLayout_SetTopMargin2((QPageLayout*)self, topMargin, outOfBoundsPolicy);
+}
+
+bool q_pagelayout_set_bottom_margin2(void* self, double bottomMargin, int64_t outOfBoundsPolicy) {
+    return QPageLayout_SetBottomMargin2((QPageLayout*)self, bottomMargin, outOfBoundsPolicy);
+}
+
 void q_pagelayout_delete(void* self) {
     QPageLayout_Delete((QPageLayout*)(self));
 }

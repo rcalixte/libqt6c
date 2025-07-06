@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qstylehints.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -105,6 +100,11 @@ int32_t q_stylehints_keyboard_input_interval(void* self);
 /// ``` QStyleHints* self ```
 int32_t q_stylehints_keyboard_auto_repeat_rate(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#keyboardAutoRepeatRateF)
+///
+/// ``` QStyleHints* self ```
+double q_stylehints_keyboard_auto_repeat_rate_f(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#setCursorFlashTime)
 ///
 /// ``` QStyleHints* self, int cursorFlashTime ```
@@ -134,6 +134,16 @@ bool q_stylehints_show_shortcuts_in_context_menus(void* self);
 ///
 /// ``` QStyleHints* self, bool showShortcutsInContextMenus ```
 void q_stylehints_set_show_shortcuts_in_context_menus(void* self, bool showShortcutsInContextMenus);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTrigger)
+///
+/// ``` QStyleHints* self ```
+int64_t q_stylehints_context_menu_trigger(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#setContextMenuTrigger)
+///
+/// ``` QStyleHints* self, enum Qt__ContextMenuTrigger contextMenuTrigger ```
+void q_stylehints_set_context_menu_trigger(void* self, int64_t contextMenuTrigger);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#passwordMaskDelay)
 ///
@@ -204,6 +214,21 @@ void q_stylehints_set_mouse_quick_selection_threshold(void* self, int threshold)
 ///
 /// ``` QStyleHints* self ```
 int32_t q_stylehints_mouse_quick_selection_threshold(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#colorScheme)
+///
+/// ``` QStyleHints* self ```
+int64_t q_stylehints_color_scheme(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#setColorScheme)
+///
+/// ``` QStyleHints* self, enum Qt__ColorScheme scheme ```
+void q_stylehints_set_color_scheme(void* self, int64_t scheme);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#unsetColorScheme)
+///
+/// ``` QStyleHints* self ```
+void q_stylehints_unset_color_scheme(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#cursorFlashTimeChanged)
 ///
@@ -295,6 +320,16 @@ void q_stylehints_show_shortcuts_in_context_menus_changed(void* self, bool param
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, bool) ```
 void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*slot)(void*, bool));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTriggerChanged)
+///
+/// ``` QStyleHints* self, enum Qt__ContextMenuTrigger contextMenuTrigger ```
+void q_stylehints_context_menu_trigger_changed(void* self, int64_t contextMenuTrigger);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTriggerChanged)
+///
+/// ``` QStyleHints* self, void (*slot)(QStyleHints*, enum Qt__ContextMenuTrigger) ```
+void q_stylehints_on_context_menu_trigger_changed(void* self, void (*slot)(void*, int64_t));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#wheelScrollLinesChanged)
 ///
 /// ``` QStyleHints* self, int scrollLines ```
@@ -314,6 +349,16 @@ void q_stylehints_mouse_quick_selection_threshold_changed(void* self, int thresh
 ///
 /// ``` QStyleHints* self, void (*slot)(QStyleHints*, int) ```
 void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*slot)(void*, int));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#colorSchemeChanged)
+///
+/// ``` QStyleHints* self, enum Qt__ColorScheme colorScheme ```
+void q_stylehints_color_scheme_changed(void* self, int64_t colorScheme);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#colorSchemeChanged)
+///
+/// ``` QStyleHints* self, void (*slot)(QStyleHints*, enum Qt__ColorScheme) ```
+void q_stylehints_on_color_scheme_changed(void* self, void (*slot)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -400,7 +445,7 @@ QThread* q_stylehints_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QStyleHints* self, QThread* thread ```
-void q_stylehints_move_to_thread(void* self, void* thread);
+bool q_stylehints_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -415,6 +460,13 @@ int32_t q_stylehints_start_timer(void* self, int interval);
 ///
 /// ``` QStyleHints* self, int id ```
 void q_stylehints_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QStyleHints* self, enum Qt__TimerId id ```
+void q_stylehints_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -555,6 +607,13 @@ bool q_stylehints_inherits(void* self, const char* classname);
 ///
 /// ``` QStyleHints* self ```
 void q_stylehints_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QStyleHints* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_stylehints_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

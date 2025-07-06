@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqiodevice.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qxmlstreamattribute.html
 
 /// q_xmlstreamattribute_new constructs a new QXmlStreamAttribute object.
@@ -42,27 +39,46 @@ QXmlStreamAttribute* q_xmlstreamattribute_new4(void* param1);
 /// ``` QXmlStreamAttribute* self ```
 bool q_xmlstreamattribute_is_default(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattribute.html#operator==)
-///
-/// ``` QXmlStreamAttribute* self, QXmlStreamAttribute* other ```
-bool q_xmlstreamattribute_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattribute.html#operator!=)
-///
-/// ``` QXmlStreamAttribute* self, QXmlStreamAttribute* other ```
-bool q_xmlstreamattribute_operator_not_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattribute.html#operator=)
-///
-/// ``` QXmlStreamAttribute* self, QXmlStreamAttribute* param1 ```
-void q_xmlstreamattribute_operator_assign(void* self, void* param1);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattribute.html#dtor.QXmlStreamAttribute)
 ///
 /// Delete this object from C++ memory.
 ///
 /// ``` QXmlStreamAttribute* self ```
 void q_xmlstreamattribute_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qxmlstreamattributes.html
+
+/// q_xmlstreamattributes_new constructs a new QXmlStreamAttributes object.
+///
+///
+QXmlStreamAttributes* q_xmlstreamattributes_new();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattributes.html#append)
+///
+/// ``` QXmlStreamAttributes* self, const char* namespaceUri, const char* name, const char* value ```
+void q_xmlstreamattributes_append(void* self, const char* namespaceUri, const char* name, const char* value);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattributes.html#append)
+///
+/// ``` QXmlStreamAttributes* self, const char* qualifiedName, const char* value ```
+void q_xmlstreamattributes_append2(void* self, const char* qualifiedName, const char* value);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattributes.html#hasAttribute)
+///
+/// ``` QXmlStreamAttributes* self, char* qualifiedName ```
+bool q_xmlstreamattributes_has_attribute(void* self, char* qualifiedName);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattributes.html#hasAttribute)
+///
+/// ``` QXmlStreamAttributes* self, char* namespaceUri, char* name ```
+bool q_xmlstreamattributes_has_attribute2(void* self, char* namespaceUri, char* name);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamattributes.html#dtor.QXmlStreamAttributes)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QXmlStreamAttributes* self ```
+void q_xmlstreamattributes_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html
 
@@ -76,15 +92,10 @@ QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new();
 /// ``` const char* prefix, const char* namespaceUri ```
 QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new2(const char* prefix, const char* namespaceUri);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#operator==)
+/// q_xmlstreamnamespacedeclaration_new3 constructs a new QXmlStreamNamespaceDeclaration object.
 ///
-/// ``` QXmlStreamNamespaceDeclaration* self, QXmlStreamNamespaceDeclaration* other ```
-bool q_xmlstreamnamespacedeclaration_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#operator!=)
-///
-/// ``` QXmlStreamNamespaceDeclaration* self, QXmlStreamNamespaceDeclaration* other ```
-bool q_xmlstreamnamespacedeclaration_operator_not_equal(void* self, void* other);
+/// ``` QXmlStreamNamespaceDeclaration* param1 ```
+QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new3(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#dtor.QXmlStreamNamespaceDeclaration)
 ///
@@ -100,15 +111,10 @@ void q_xmlstreamnamespacedeclaration_delete(void* self);
 ///
 QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#operator==)
+/// q_xmlstreamnotationdeclaration_new2 constructs a new QXmlStreamNotationDeclaration object.
 ///
-/// ``` QXmlStreamNotationDeclaration* self, QXmlStreamNotationDeclaration* other ```
-bool q_xmlstreamnotationdeclaration_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#operator!=)
-///
-/// ``` QXmlStreamNotationDeclaration* self, QXmlStreamNotationDeclaration* other ```
-bool q_xmlstreamnotationdeclaration_operator_not_equal(void* self, void* other);
+/// ``` QXmlStreamNotationDeclaration* param1 ```
+QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#dtor.QXmlStreamNotationDeclaration)
 ///
@@ -124,15 +130,10 @@ void q_xmlstreamnotationdeclaration_delete(void* self);
 ///
 QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#operator==)
+/// q_xmlstreamentitydeclaration_new2 constructs a new QXmlStreamEntityDeclaration object.
 ///
-/// ``` QXmlStreamEntityDeclaration* self, QXmlStreamEntityDeclaration* other ```
-bool q_xmlstreamentitydeclaration_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#operator!=)
-///
-/// ``` QXmlStreamEntityDeclaration* self, QXmlStreamEntityDeclaration* other ```
-bool q_xmlstreamentitydeclaration_operator_not_equal(void* self, void* other);
+/// ``` QXmlStreamEntityDeclaration* param1 ```
+QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#dtor.QXmlStreamEntityDeclaration)
 ///
@@ -143,15 +144,48 @@ void q_xmlstreamentitydeclaration_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qxmlstreamentityresolver.html
 
+/// q_xmlstreamentityresolver_new constructs a new QXmlStreamEntityResolver object.
+///
+///
+QXmlStreamEntityResolver* q_xmlstreamentityresolver_new();
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
 ///
 /// ``` QXmlStreamEntityResolver* self, const char* publicId, const char* systemId ```
 const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* publicId, const char* systemId);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QXmlStreamEntityResolver* self, const char* (*slot)(QXmlStreamEntityResolver*, const char*, const char*) ```
+void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*slot)(void*, const char*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveEntity)
+///
+/// Base class method implementation
+///
+/// ``` QXmlStreamEntityResolver* self, const char* publicId, const char* systemId ```
+const char* q_xmlstreamentityresolver_qbase_resolve_entity(void* self, const char* publicId, const char* systemId);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
 ///
 /// ``` QXmlStreamEntityResolver* self, const char* name ```
 const char* q_xmlstreamentityresolver_resolve_undeclared_entity(void* self, const char* name);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QXmlStreamEntityResolver* self, const char* (*slot)(QXmlStreamEntityResolver*, const char*) ```
+void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const char* (*slot)(void*, const char*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#resolveUndeclaredEntity)
+///
+/// Base class method implementation
+///
+/// ``` QXmlStreamEntityResolver* self, const char* name ```
+const char* q_xmlstreamentityresolver_qbase_resolve_undeclared_entity(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamentityresolver.html#dtor.QXmlStreamEntityResolver)
 ///
@@ -174,18 +208,8 @@ QXmlStreamReader* q_xmlstreamreader_new2(void* device);
 
 /// q_xmlstreamreader_new3 constructs a new QXmlStreamReader object.
 ///
-/// ``` const char* data ```
-QXmlStreamReader* q_xmlstreamreader_new3(const char* data);
-
-/// q_xmlstreamreader_new4 constructs a new QXmlStreamReader object.
-///
-/// ``` const char* data ```
-QXmlStreamReader* q_xmlstreamreader_new4(const char* data);
-
-/// q_xmlstreamreader_new5 constructs a new QXmlStreamReader object.
-///
-/// ``` const char* data ```
-QXmlStreamReader* q_xmlstreamreader_new5(const char* data);
+/// ``` char* data ```
+QXmlStreamReader* q_xmlstreamreader_new3(char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#setDevice)
 ///
@@ -199,18 +223,8 @@ QIODevice* q_xmlstreamreader_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#addData)
 ///
-/// ``` QXmlStreamReader* self, const char* data ```
-void q_xmlstreamreader_add_data(void* self, const char* data);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#addData)
-///
-/// ``` QXmlStreamReader* self, const char* data ```
-void q_xmlstreamreader_add_data_with_data(void* self, const char* data);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#addData)
-///
-/// ``` QXmlStreamReader* self, const char* data ```
-void q_xmlstreamreader_add_data2(void* self, const char* data);
+/// ``` QXmlStreamReader* self, char* data ```
+void q_xmlstreamreader_add_data(void* self, char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#clear)
 ///
@@ -317,6 +331,11 @@ bool q_xmlstreamreader_is_processing_instruction(void* self);
 /// ``` QXmlStreamReader* self ```
 bool q_xmlstreamreader_is_standalone_document(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#hasStandaloneDeclaration)
+///
+/// ``` QXmlStreamReader* self ```
+bool q_xmlstreamreader_has_standalone_declaration(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#lineNumber)
 ///
 /// ``` QXmlStreamReader* self ```
@@ -331,6 +350,11 @@ long long q_xmlstreamreader_column_number(void* self);
 ///
 /// ``` QXmlStreamReader* self ```
 long long q_xmlstreamreader_character_offset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#attributes)
+///
+/// ``` QXmlStreamReader* self ```
+QXmlStreamAttributes* q_xmlstreamreader_attributes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#readElementText)
 ///
@@ -463,58 +487,63 @@ int32_t q_xmlstreamwriter_auto_formatting_indent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeAttribute)
 ///
-/// ``` QXmlStreamWriter* self, const char* qualifiedName, const char* value ```
-void q_xmlstreamwriter_write_attribute(void* self, const char* qualifiedName, const char* value);
+/// ``` QXmlStreamWriter* self, char* qualifiedName, char* value ```
+void q_xmlstreamwriter_write_attribute(void* self, char* qualifiedName, char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeAttribute)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri, const char* name, const char* value ```
-void q_xmlstreamwriter_write_attribute2(void* self, const char* namespaceUri, const char* name, const char* value);
+/// ``` QXmlStreamWriter* self, char* namespaceUri, char* name, char* value ```
+void q_xmlstreamwriter_write_attribute2(void* self, char* namespaceUri, char* name, char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeAttribute)
 ///
 /// ``` QXmlStreamWriter* self, QXmlStreamAttribute* attribute ```
 void q_xmlstreamwriter_write_attribute_with_attribute(void* self, void* attribute);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeAttributes)
+///
+/// ``` QXmlStreamWriter* self, QXmlStreamAttributes* attributes ```
+void q_xmlstreamwriter_write_attributes(void* self, void* attributes);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeCDATA)
 ///
-/// ``` QXmlStreamWriter* self, const char* text ```
-void q_xmlstreamwriter_write_c_d_a_t_a(void* self, const char* text);
+/// ``` QXmlStreamWriter* self, char* text ```
+void q_xmlstreamwriter_write_c_d_a_t_a(void* self, char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeCharacters)
 ///
-/// ``` QXmlStreamWriter* self, const char* text ```
-void q_xmlstreamwriter_write_characters(void* self, const char* text);
+/// ``` QXmlStreamWriter* self, char* text ```
+void q_xmlstreamwriter_write_characters(void* self, char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeComment)
 ///
-/// ``` QXmlStreamWriter* self, const char* text ```
-void q_xmlstreamwriter_write_comment(void* self, const char* text);
+/// ``` QXmlStreamWriter* self, char* text ```
+void q_xmlstreamwriter_write_comment(void* self, char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeDTD)
 ///
-/// ``` QXmlStreamWriter* self, const char* dtd ```
-void q_xmlstreamwriter_write_d_t_d(void* self, const char* dtd);
+/// ``` QXmlStreamWriter* self, char* dtd ```
+void q_xmlstreamwriter_write_d_t_d(void* self, char* dtd);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeEmptyElement)
 ///
-/// ``` QXmlStreamWriter* self, const char* qualifiedName ```
-void q_xmlstreamwriter_write_empty_element(void* self, const char* qualifiedName);
+/// ``` QXmlStreamWriter* self, char* qualifiedName ```
+void q_xmlstreamwriter_write_empty_element(void* self, char* qualifiedName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeEmptyElement)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri, const char* name ```
-void q_xmlstreamwriter_write_empty_element2(void* self, const char* namespaceUri, const char* name);
+/// ``` QXmlStreamWriter* self, char* namespaceUri, char* name ```
+void q_xmlstreamwriter_write_empty_element2(void* self, char* namespaceUri, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeTextElement)
 ///
-/// ``` QXmlStreamWriter* self, const char* qualifiedName, const char* text ```
-void q_xmlstreamwriter_write_text_element(void* self, const char* qualifiedName, const char* text);
+/// ``` QXmlStreamWriter* self, char* qualifiedName, char* text ```
+void q_xmlstreamwriter_write_text_element(void* self, char* qualifiedName, char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeTextElement)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri, const char* name, const char* text ```
-void q_xmlstreamwriter_write_text_element2(void* self, const char* namespaceUri, const char* name, const char* text);
+/// ``` QXmlStreamWriter* self, char* namespaceUri, char* name, char* text ```
+void q_xmlstreamwriter_write_text_element2(void* self, char* namespaceUri, char* name, char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeEndDocument)
 ///
@@ -528,23 +557,23 @@ void q_xmlstreamwriter_write_end_element(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeEntityReference)
 ///
-/// ``` QXmlStreamWriter* self, const char* name ```
-void q_xmlstreamwriter_write_entity_reference(void* self, const char* name);
+/// ``` QXmlStreamWriter* self, char* name ```
+void q_xmlstreamwriter_write_entity_reference(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeNamespace)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri ```
-void q_xmlstreamwriter_write_namespace(void* self, const char* namespaceUri);
+/// ``` QXmlStreamWriter* self, char* namespaceUri ```
+void q_xmlstreamwriter_write_namespace(void* self, char* namespaceUri);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeDefaultNamespace)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri ```
-void q_xmlstreamwriter_write_default_namespace(void* self, const char* namespaceUri);
+/// ``` QXmlStreamWriter* self, char* namespaceUri ```
+void q_xmlstreamwriter_write_default_namespace(void* self, char* namespaceUri);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeProcessingInstruction)
 ///
-/// ``` QXmlStreamWriter* self, const char* target ```
-void q_xmlstreamwriter_write_processing_instruction(void* self, const char* target);
+/// ``` QXmlStreamWriter* self, char* target ```
+void q_xmlstreamwriter_write_processing_instruction(void* self, char* target);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartDocument)
 ///
@@ -553,23 +582,23 @@ void q_xmlstreamwriter_write_start_document(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartDocument)
 ///
-/// ``` QXmlStreamWriter* self, const char* version ```
-void q_xmlstreamwriter_write_start_document_with_version(void* self, const char* version);
+/// ``` QXmlStreamWriter* self, char* version ```
+void q_xmlstreamwriter_write_start_document_with_version(void* self, char* version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartDocument)
 ///
-/// ``` QXmlStreamWriter* self, const char* version, bool standalone ```
-void q_xmlstreamwriter_write_start_document2(void* self, const char* version, bool standalone);
+/// ``` QXmlStreamWriter* self, char* version, bool standalone ```
+void q_xmlstreamwriter_write_start_document2(void* self, char* version, bool standalone);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartElement)
 ///
-/// ``` QXmlStreamWriter* self, const char* qualifiedName ```
-void q_xmlstreamwriter_write_start_element(void* self, const char* qualifiedName);
+/// ``` QXmlStreamWriter* self, char* qualifiedName ```
+void q_xmlstreamwriter_write_start_element(void* self, char* qualifiedName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartElement)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri, const char* name ```
-void q_xmlstreamwriter_write_start_element2(void* self, const char* namespaceUri, const char* name);
+/// ``` QXmlStreamWriter* self, char* namespaceUri, char* name ```
+void q_xmlstreamwriter_write_start_element2(void* self, char* namespaceUri, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeCurrentToken)
 ///
@@ -583,13 +612,13 @@ bool q_xmlstreamwriter_has_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeNamespace)
 ///
-/// ``` QXmlStreamWriter* self, const char* namespaceUri, const char* prefix ```
-void q_xmlstreamwriter_write_namespace2(void* self, const char* namespaceUri, const char* prefix);
+/// ``` QXmlStreamWriter* self, char* namespaceUri, char* prefix ```
+void q_xmlstreamwriter_write_namespace2(void* self, char* namespaceUri, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeProcessingInstruction)
 ///
-/// ``` QXmlStreamWriter* self, const char* target, const char* data ```
-void q_xmlstreamwriter_write_processing_instruction2(void* self, const char* target, const char* data);
+/// ``` QXmlStreamWriter* self, char* target, char* data ```
+void q_xmlstreamwriter_write_processing_instruction2(void* self, char* target, char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#dtor.QXmlStreamWriter)
 ///

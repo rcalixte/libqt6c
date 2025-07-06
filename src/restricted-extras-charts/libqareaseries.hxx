@@ -64,10 +64,10 @@ class VirtualQAreaSeries final : public QAreaSeries {
     mutable bool qareaseries_issignalconnected_isbase = false;
 
   public:
-    VirtualQAreaSeries() : QAreaSeries(){};
-    VirtualQAreaSeries(QLineSeries* upperSeries) : QAreaSeries(upperSeries){};
-    VirtualQAreaSeries(QObject* parent) : QAreaSeries(parent){};
-    VirtualQAreaSeries(QLineSeries* upperSeries, QLineSeries* lowerSeries) : QAreaSeries(upperSeries, lowerSeries){};
+    VirtualQAreaSeries() : QAreaSeries() {};
+    VirtualQAreaSeries(QLineSeries* upperSeries) : QAreaSeries(upperSeries) {};
+    VirtualQAreaSeries(QObject* parent) : QAreaSeries(parent) {};
+    VirtualQAreaSeries(QLineSeries* upperSeries, QLineSeries* lowerSeries) : QAreaSeries(upperSeries, lowerSeries) {};
 
     ~VirtualQAreaSeries() {
         qareaseries_metacall_callback = nullptr;
@@ -315,18 +315,18 @@ class VirtualQAreaSeries final : public QAreaSeries {
     friend void QAreaSeries_QBaseChildEvent(QAreaSeries* self, QChildEvent* event);
     friend void QAreaSeries_CustomEvent(QAreaSeries* self, QEvent* event);
     friend void QAreaSeries_QBaseCustomEvent(QAreaSeries* self, QEvent* event);
-    friend void QAreaSeries_ConnectNotify(QAreaSeries* self, QMetaMethod* signal);
-    friend void QAreaSeries_QBaseConnectNotify(QAreaSeries* self, QMetaMethod* signal);
-    friend void QAreaSeries_DisconnectNotify(QAreaSeries* self, QMetaMethod* signal);
-    friend void QAreaSeries_QBaseDisconnectNotify(QAreaSeries* self, QMetaMethod* signal);
+    friend void QAreaSeries_ConnectNotify(QAreaSeries* self, const QMetaMethod* signal);
+    friend void QAreaSeries_QBaseConnectNotify(QAreaSeries* self, const QMetaMethod* signal);
+    friend void QAreaSeries_DisconnectNotify(QAreaSeries* self, const QMetaMethod* signal);
+    friend void QAreaSeries_QBaseDisconnectNotify(QAreaSeries* self, const QMetaMethod* signal);
     friend QObject* QAreaSeries_Sender(const QAreaSeries* self);
     friend QObject* QAreaSeries_QBaseSender(const QAreaSeries* self);
     friend int QAreaSeries_SenderSignalIndex(const QAreaSeries* self);
     friend int QAreaSeries_QBaseSenderSignalIndex(const QAreaSeries* self);
     friend int QAreaSeries_Receivers(const QAreaSeries* self, const char* signal);
     friend int QAreaSeries_QBaseReceivers(const QAreaSeries* self, const char* signal);
-    friend bool QAreaSeries_IsSignalConnected(const QAreaSeries* self, QMetaMethod* signal);
-    friend bool QAreaSeries_QBaseIsSignalConnected(const QAreaSeries* self, QMetaMethod* signal);
+    friend bool QAreaSeries_IsSignalConnected(const QAreaSeries* self, const QMetaMethod* signal);
+    friend bool QAreaSeries_QBaseIsSignalConnected(const QAreaSeries* self, const QMetaMethod* signal);
 };
 
 #endif

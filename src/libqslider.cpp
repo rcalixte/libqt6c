@@ -1190,7 +1190,7 @@ void QSlider_OnHideEvent(QSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSlider_NativeEvent(QSlider* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSlider_NativeEvent(QSlider* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqslider = dynamic_cast<VirtualQSlider*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqslider && vqslider->isVirtualQSlider) {
@@ -1201,7 +1201,7 @@ bool QSlider_NativeEvent(QSlider* self, libqt_string eventType, void* message, i
 }
 
 // Base class handler implementation
-bool QSlider_QBaseNativeEvent(QSlider* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSlider_QBaseNativeEvent(QSlider* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqslider = dynamic_cast<VirtualQSlider*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqslider && vqslider->isVirtualQSlider) {
@@ -1511,7 +1511,7 @@ void QSlider_OnCustomEvent(QSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSlider_ConnectNotify(QSlider* self, QMetaMethod* signal) {
+void QSlider_ConnectNotify(QSlider* self, const QMetaMethod* signal) {
     auto* vqslider = dynamic_cast<VirtualQSlider*>(self);
     if (vqslider && vqslider->isVirtualQSlider) {
         vqslider->connectNotify(*signal);
@@ -1521,7 +1521,7 @@ void QSlider_ConnectNotify(QSlider* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSlider_QBaseConnectNotify(QSlider* self, QMetaMethod* signal) {
+void QSlider_QBaseConnectNotify(QSlider* self, const QMetaMethod* signal) {
     auto* vqslider = dynamic_cast<VirtualQSlider*>(self);
     if (vqslider && vqslider->isVirtualQSlider) {
         vqslider->setQSlider_ConnectNotify_IsBase(true);
@@ -1540,7 +1540,7 @@ void QSlider_OnConnectNotify(QSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSlider_DisconnectNotify(QSlider* self, QMetaMethod* signal) {
+void QSlider_DisconnectNotify(QSlider* self, const QMetaMethod* signal) {
     auto* vqslider = dynamic_cast<VirtualQSlider*>(self);
     if (vqslider && vqslider->isVirtualQSlider) {
         vqslider->disconnectNotify(*signal);
@@ -1550,7 +1550,7 @@ void QSlider_DisconnectNotify(QSlider* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSlider_QBaseDisconnectNotify(QSlider* self, QMetaMethod* signal) {
+void QSlider_QBaseDisconnectNotify(QSlider* self, const QMetaMethod* signal) {
     auto* vqslider = dynamic_cast<VirtualQSlider*>(self);
     if (vqslider && vqslider->isVirtualQSlider) {
         vqslider->setQSlider_DisconnectNotify_IsBase(true);
@@ -1859,7 +1859,7 @@ void QSlider_OnReceivers(const QSlider* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSlider_IsSignalConnected(const QSlider* self, QMetaMethod* signal) {
+bool QSlider_IsSignalConnected(const QSlider* self, const QMetaMethod* signal) {
     auto* vqslider = const_cast<VirtualQSlider*>(dynamic_cast<const VirtualQSlider*>(self));
     if (vqslider && vqslider->isVirtualQSlider) {
         return vqslider->isSignalConnected(*signal);
@@ -1869,7 +1869,7 @@ bool QSlider_IsSignalConnected(const QSlider* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSlider_QBaseIsSignalConnected(const QSlider* self, QMetaMethod* signal) {
+bool QSlider_QBaseIsSignalConnected(const QSlider* self, const QMetaMethod* signal) {
     auto* vqslider = const_cast<VirtualQSlider*>(dynamic_cast<const VirtualQSlider*>(self));
     if (vqslider && vqslider->isVirtualQSlider) {
         vqslider->setQSlider_IsSignalConnected_IsBase(true);
@@ -1884,6 +1884,35 @@ void QSlider_OnIsSignalConnected(const QSlider* self, intptr_t slot) {
     auto* vqslider = const_cast<VirtualQSlider*>(dynamic_cast<const VirtualQSlider*>(self));
     if (vqslider && vqslider->isVirtualQSlider) {
         vqslider->setQSlider_IsSignalConnected_Callback(reinterpret_cast<VirtualQSlider::QSlider_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSlider_GetDecodedMetricF(const QSlider* self, int metricA, int metricB) {
+    auto* vqslider = const_cast<VirtualQSlider*>(dynamic_cast<const VirtualQSlider*>(self));
+    if (vqslider && vqslider->isVirtualQSlider) {
+        return vqslider->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSlider*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSlider_QBaseGetDecodedMetricF(const QSlider* self, int metricA, int metricB) {
+    auto* vqslider = const_cast<VirtualQSlider*>(dynamic_cast<const VirtualQSlider*>(self));
+    if (vqslider && vqslider->isVirtualQSlider) {
+        vqslider->setQSlider_GetDecodedMetricF_IsBase(true);
+        return vqslider->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSlider*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSlider_OnGetDecodedMetricF(const QSlider* self, intptr_t slot) {
+    auto* vqslider = const_cast<VirtualQSlider*>(dynamic_cast<const VirtualQSlider*>(self));
+    if (vqslider && vqslider->isVirtualQSlider) {
+        vqslider->setQSlider_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSlider::QSlider_GetDecodedMetricF_Callback>(slot));
     }
 }
 

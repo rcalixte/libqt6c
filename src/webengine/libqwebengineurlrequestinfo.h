@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#resourceType)
@@ -45,6 +43,11 @@ QUrl* q_webengineurlrequestinfo_initiator(void* self);
 ///
 /// ``` QWebEngineUrlRequestInfo* self ```
 char* q_webengineurlrequestinfo_request_method(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestBody)
+///
+/// ``` QWebEngineUrlRequestInfo* self ```
+QIODevice* q_webengineurlrequestinfo_request_body(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#changed)
 ///
@@ -89,7 +92,8 @@ typedef enum {
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEPLUGINRESOURCE = 17,
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPENAVIGATIONPRELOADMAINFRAME = 19,
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPENAVIGATIONPRELOADSUBFRAME = 20,
-    QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPELAST = 20,
+    QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEJSON = 21,
+    QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPELAST = 21,
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEWEBSOCKET = 254,
     QWEBENGINEURLREQUESTINFO_RESOURCETYPE_RESOURCETYPEUNKNOWN = 255
 } QWebEngineUrlRequestInfo__ResourceType;

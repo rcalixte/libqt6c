@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqlayout.h"
-#include "libqlayoutitem.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qformlayout.html
 
 /// q_formlayout_new constructs a new QFormLayout object.
@@ -800,7 +790,7 @@ QThread* q_formlayout_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QFormLayout* self, QThread* thread ```
-void q_formlayout_move_to_thread(void* self, void* thread);
+bool q_formlayout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -815,6 +805,13 @@ int32_t q_formlayout_start_timer(void* self, int interval);
 ///
 /// ``` QFormLayout* self, int id ```
 void q_formlayout_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QFormLayout* self, enum Qt__TimerId id ```
+void q_formlayout_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -955,6 +952,13 @@ bool q_formlayout_inherits(void* self, const char* classname);
 ///
 /// ``` QFormLayout* self ```
 void q_formlayout_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QFormLayout* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_formlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1715,6 +1719,25 @@ void q_formlayout_on_object_name_changed(void* self, void (*slot)(void*, const c
 ///
 /// ``` QFormLayout* self ```
 void q_formlayout_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qformlayout-takerowresult.html
+
+/// q_formlayout__takerowresult_new constructs a new QFormLayout::TakeRowResult object.
+///
+///
+QFormLayout__TakeRowResult* q_formlayout__takerowresult_new();
+
+/// q_formlayout__takerowresult_new2 constructs a new QFormLayout::TakeRowResult object.
+///
+/// ``` QFormLayout__TakeRowResult* param1 ```
+QFormLayout__TakeRowResult* q_formlayout__takerowresult_new2(void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout::takerowresult.html#dtor.QFormLayout::TakeRowResult)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QFormLayout__TakeRowResult* self ```
+void q_formlayout__takerowresult_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qformlayout.html#types
 

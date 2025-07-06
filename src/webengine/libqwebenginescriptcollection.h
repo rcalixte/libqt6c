@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "libqwebenginescript.h"
-
 /// https://doc.qt.io/qt-6/qwebenginescriptcollection.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#isEmpty)

@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "libqwebengineurlrequestinfo.h"
-
 /// https://doc.qt.io/qt-6/qwebengineurlrequestinterceptor.html
 
 /// q_webengineurlrequestinterceptor_new constructs a new QWebEngineUrlRequestInterceptor object.
@@ -146,7 +140,7 @@ QThread* q_webengineurlrequestinterceptor_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineUrlRequestInterceptor* self, QThread* thread ```
-void q_webengineurlrequestinterceptor_move_to_thread(void* self, void* thread);
+bool q_webengineurlrequestinterceptor_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -161,6 +155,13 @@ int32_t q_webengineurlrequestinterceptor_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineUrlRequestInterceptor* self, int id ```
 void q_webengineurlrequestinterceptor_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineUrlRequestInterceptor* self, enum Qt__TimerId id ```
+void q_webengineurlrequestinterceptor_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -301,6 +302,13 @@ bool q_webengineurlrequestinterceptor_inherits(void* self, const char* classname
 ///
 /// ``` QWebEngineUrlRequestInterceptor* self ```
 void q_webengineurlrequestinterceptor_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineUrlRequestInterceptor* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webengineurlrequestinterceptor_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

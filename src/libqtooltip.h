@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfont.h"
-#include "libqpalette.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qtooltip.html
 
 /// q_tooltip_new constructs a new QToolTip object.

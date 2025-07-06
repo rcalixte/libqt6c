@@ -251,9 +251,9 @@ class VirtualQGraphicsWidget final : public QGraphicsWidget {
     mutable bool qgraphicswidget_setownedbylayout_isbase = false;
 
   public:
-    VirtualQGraphicsWidget() : QGraphicsWidget(){};
-    VirtualQGraphicsWidget(QGraphicsItem* parent) : QGraphicsWidget(parent){};
-    VirtualQGraphicsWidget(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QGraphicsWidget(parent, wFlags){};
+    VirtualQGraphicsWidget() : QGraphicsWidget() {};
+    VirtualQGraphicsWidget(QGraphicsItem* parent) : QGraphicsWidget(parent) {};
+    VirtualQGraphicsWidget(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QGraphicsWidget(parent, wFlags) {};
 
     ~VirtualQGraphicsWidget() {
         qgraphicswidget_metacall_callback = nullptr;
@@ -1590,20 +1590,20 @@ class VirtualQGraphicsWidget final : public QGraphicsWidget {
     // Friend functions
     friend void QGraphicsWidget_InitStyleOption(const QGraphicsWidget* self, QStyleOption* option);
     friend void QGraphicsWidget_QBaseInitStyleOption(const QGraphicsWidget* self, QStyleOption* option);
-    friend QSizeF* QGraphicsWidget_SizeHint(const QGraphicsWidget* self, int which, QSizeF* constraint);
-    friend QSizeF* QGraphicsWidget_QBaseSizeHint(const QGraphicsWidget* self, int which, QSizeF* constraint);
+    friend QSizeF* QGraphicsWidget_SizeHint(const QGraphicsWidget* self, int which, const QSizeF* constraint);
+    friend QSizeF* QGraphicsWidget_QBaseSizeHint(const QGraphicsWidget* self, int which, const QSizeF* constraint);
     friend void QGraphicsWidget_UpdateGeometry(QGraphicsWidget* self);
     friend void QGraphicsWidget_QBaseUpdateGeometry(QGraphicsWidget* self);
-    friend QVariant* QGraphicsWidget_ItemChange(QGraphicsWidget* self, int change, QVariant* value);
-    friend QVariant* QGraphicsWidget_QBaseItemChange(QGraphicsWidget* self, int change, QVariant* value);
-    friend QVariant* QGraphicsWidget_PropertyChange(QGraphicsWidget* self, libqt_string propertyName, QVariant* value);
-    friend QVariant* QGraphicsWidget_QBasePropertyChange(QGraphicsWidget* self, libqt_string propertyName, QVariant* value);
+    friend QVariant* QGraphicsWidget_ItemChange(QGraphicsWidget* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsWidget_QBaseItemChange(QGraphicsWidget* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsWidget_PropertyChange(QGraphicsWidget* self, const libqt_string propertyName, const QVariant* value);
+    friend QVariant* QGraphicsWidget_QBasePropertyChange(QGraphicsWidget* self, const libqt_string propertyName, const QVariant* value);
     friend bool QGraphicsWidget_SceneEvent(QGraphicsWidget* self, QEvent* event);
     friend bool QGraphicsWidget_QBaseSceneEvent(QGraphicsWidget* self, QEvent* event);
     friend bool QGraphicsWidget_WindowFrameEvent(QGraphicsWidget* self, QEvent* e);
     friend bool QGraphicsWidget_QBaseWindowFrameEvent(QGraphicsWidget* self, QEvent* e);
-    friend int QGraphicsWidget_WindowFrameSectionAt(const QGraphicsWidget* self, QPointF* pos);
-    friend int QGraphicsWidget_QBaseWindowFrameSectionAt(const QGraphicsWidget* self, QPointF* pos);
+    friend int QGraphicsWidget_WindowFrameSectionAt(const QGraphicsWidget* self, const QPointF* pos);
+    friend int QGraphicsWidget_QBaseWindowFrameSectionAt(const QGraphicsWidget* self, const QPointF* pos);
     friend bool QGraphicsWidget_Event(QGraphicsWidget* self, QEvent* event);
     friend bool QGraphicsWidget_QBaseEvent(QGraphicsWidget* self, QEvent* event);
     friend void QGraphicsWidget_ChangeEvent(QGraphicsWidget* self, QEvent* event);
@@ -1644,10 +1644,10 @@ class VirtualQGraphicsWidget final : public QGraphicsWidget {
     friend void QGraphicsWidget_QBaseChildEvent(QGraphicsWidget* self, QChildEvent* event);
     friend void QGraphicsWidget_CustomEvent(QGraphicsWidget* self, QEvent* event);
     friend void QGraphicsWidget_QBaseCustomEvent(QGraphicsWidget* self, QEvent* event);
-    friend void QGraphicsWidget_ConnectNotify(QGraphicsWidget* self, QMetaMethod* signal);
-    friend void QGraphicsWidget_QBaseConnectNotify(QGraphicsWidget* self, QMetaMethod* signal);
-    friend void QGraphicsWidget_DisconnectNotify(QGraphicsWidget* self, QMetaMethod* signal);
-    friend void QGraphicsWidget_QBaseDisconnectNotify(QGraphicsWidget* self, QMetaMethod* signal);
+    friend void QGraphicsWidget_ConnectNotify(QGraphicsWidget* self, const QMetaMethod* signal);
+    friend void QGraphicsWidget_QBaseConnectNotify(QGraphicsWidget* self, const QMetaMethod* signal);
+    friend void QGraphicsWidget_DisconnectNotify(QGraphicsWidget* self, const QMetaMethod* signal);
+    friend void QGraphicsWidget_QBaseDisconnectNotify(QGraphicsWidget* self, const QMetaMethod* signal);
     friend bool QGraphicsWidget_SceneEventFilter(QGraphicsWidget* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsWidget_QBaseSceneEventFilter(QGraphicsWidget* self, QGraphicsItem* watched, QEvent* event);
     friend void QGraphicsWidget_ContextMenuEvent(QGraphicsWidget* self, QGraphicsSceneContextMenuEvent* event);
@@ -1682,10 +1682,10 @@ class VirtualQGraphicsWidget final : public QGraphicsWidget {
     friend QVariant* QGraphicsWidget_QBaseInputMethodQuery(const QGraphicsWidget* self, int query);
     friend bool QGraphicsWidget_SupportsExtension(const QGraphicsWidget* self, int extension);
     friend bool QGraphicsWidget_QBaseSupportsExtension(const QGraphicsWidget* self, int extension);
-    friend void QGraphicsWidget_SetExtension(QGraphicsWidget* self, int extension, QVariant* variant);
-    friend void QGraphicsWidget_QBaseSetExtension(QGraphicsWidget* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsWidget_Extension(const QGraphicsWidget* self, QVariant* variant);
-    friend QVariant* QGraphicsWidget_QBaseExtension(const QGraphicsWidget* self, QVariant* variant);
+    friend void QGraphicsWidget_SetExtension(QGraphicsWidget* self, int extension, const QVariant* variant);
+    friend void QGraphicsWidget_QBaseSetExtension(QGraphicsWidget* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsWidget_Extension(const QGraphicsWidget* self, const QVariant* variant);
+    friend QVariant* QGraphicsWidget_QBaseExtension(const QGraphicsWidget* self, const QVariant* variant);
     friend void QGraphicsWidget_UpdateMicroFocus(QGraphicsWidget* self);
     friend void QGraphicsWidget_QBaseUpdateMicroFocus(QGraphicsWidget* self);
     friend QObject* QGraphicsWidget_Sender(const QGraphicsWidget* self);
@@ -1694,8 +1694,8 @@ class VirtualQGraphicsWidget final : public QGraphicsWidget {
     friend int QGraphicsWidget_QBaseSenderSignalIndex(const QGraphicsWidget* self);
     friend int QGraphicsWidget_Receivers(const QGraphicsWidget* self, const char* signal);
     friend int QGraphicsWidget_QBaseReceivers(const QGraphicsWidget* self, const char* signal);
-    friend bool QGraphicsWidget_IsSignalConnected(const QGraphicsWidget* self, QMetaMethod* signal);
-    friend bool QGraphicsWidget_QBaseIsSignalConnected(const QGraphicsWidget* self, QMetaMethod* signal);
+    friend bool QGraphicsWidget_IsSignalConnected(const QGraphicsWidget* self, const QMetaMethod* signal);
+    friend bool QGraphicsWidget_QBaseIsSignalConnected(const QGraphicsWidget* self, const QMetaMethod* signal);
     friend void QGraphicsWidget_AddToIndex(QGraphicsWidget* self);
     friend void QGraphicsWidget_QBaseAddToIndex(QGraphicsWidget* self);
     friend void QGraphicsWidget_RemoveFromIndex(QGraphicsWidget* self);

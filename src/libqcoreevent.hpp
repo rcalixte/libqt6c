@@ -23,14 +23,6 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-#ifdef __cplusplus
-typedef QEvent::QtGadgetHelper QtGadgetHelper; // C++ QFlags
-typedef QEvent::Type Type;                     // C++ enum
-#else
-typedef unsigned char Type;  // C ABI enum
-typedef void QtGadgetHelper; // C ABI QFlags
-#endif
-
 QEvent* QEvent_new(int typeVal);
 int QEvent_Type(const QEvent* self);
 bool QEvent_Spontaneous(const QEvent* self);
@@ -51,10 +43,12 @@ int QEvent_RegisterEventType1(int hint);
 void QEvent_Delete(QEvent* self);
 
 QTimerEvent* QTimerEvent_new(int timerId);
+QTimerEvent* QTimerEvent_new2(int timerId);
 QTimerEvent* QTimerEvent_Clone(const QTimerEvent* self);
 void QTimerEvent_OnClone(const QTimerEvent* self, intptr_t slot);
 QTimerEvent* QTimerEvent_QBaseClone(const QTimerEvent* self);
 int QTimerEvent_TimerId(const QTimerEvent* self);
+int QTimerEvent_Id(const QTimerEvent* self);
 void QTimerEvent_SetAccepted(QTimerEvent* self, bool accepted);
 void QTimerEvent_OnSetAccepted(QTimerEvent* self, intptr_t slot);
 void QTimerEvent_QBaseSetAccepted(QTimerEvent* self, bool accepted);
@@ -73,7 +67,7 @@ void QChildEvent_OnSetAccepted(QChildEvent* self, intptr_t slot);
 void QChildEvent_QBaseSetAccepted(QChildEvent* self, bool accepted);
 void QChildEvent_Delete(QChildEvent* self);
 
-QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_new(libqt_string name);
+QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_new(const libqt_string name);
 QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_Clone(const QDynamicPropertyChangeEvent* self);
 void QDynamicPropertyChangeEvent_OnClone(const QDynamicPropertyChangeEvent* self, intptr_t slot);
 QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_QBaseClone(const QDynamicPropertyChangeEvent* self);

@@ -12,16 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqbrush.h"
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include <string.h>
-#include "libqxyseries.h"
-
 /// https://doc.qt.io/qt-6/qlineseries-qtcharts.html
 
 /// q_lineseries_new constructs a new QLineSeries object.
@@ -1207,7 +1197,7 @@ QThread* q_lineseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QLineSeries* self, QThread* thread ```
-void q_lineseries_move_to_thread(void* self, void* thread);
+bool q_lineseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1222,6 +1212,13 @@ int32_t q_lineseries_start_timer(void* self, int interval);
 ///
 /// ``` QLineSeries* self, int id ```
 void q_lineseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QLineSeries* self, enum Qt__TimerId id ```
+void q_lineseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1362,6 +1359,13 @@ bool q_lineseries_inherits(void* self, const char* classname);
 ///
 /// ``` QLineSeries* self ```
 void q_lineseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QLineSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_lineseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

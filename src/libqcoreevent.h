@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqobject.h"
-
 /// https://doc.qt.io/qt-6/qevent.html
 
 /// q_event_new constructs a new QEvent object.
@@ -124,6 +121,11 @@ void q_event_delete(void* self);
 /// ``` int timerId ```
 QTimerEvent* q_timerevent_new(int timerId);
 
+/// q_timerevent_new2 constructs a new QTimerEvent object.
+///
+/// ``` enum Qt__TimerId timerId ```
+QTimerEvent* q_timerevent_new2(int64_t timerId);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimerevent.html#clone)
 ///
 /// ``` QTimerEvent* self ```
@@ -147,6 +149,11 @@ QTimerEvent* q_timerevent_qbase_clone(void* self);
 ///
 /// ``` QTimerEvent* self ```
 int32_t q_timerevent_timer_id(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimerevent.html#id)
+///
+/// ``` QTimerEvent* self ```
+int64_t q_timerevent_id(void* self);
 
 /// Inherited from QEvent
 ///
@@ -711,6 +718,11 @@ typedef enum {
     QEVENT_TYPE_POINTER = 218,
     QEVENT_TYPE_TABLETTRACKINGCHANGE = 219,
     QEVENT_TYPE_WINDOWABOUTTOCHANGEINTERNAL = 221,
+    QEVENT_TYPE_DEVICEPIXELRATIOCHANGE = 222,
+    QEVENT_TYPE_CHILDWINDOWADDED = 223,
+    QEVENT_TYPE_CHILDWINDOWREMOVED = 224,
+    QEVENT_TYPE_PARENTWINDOWABOUTTOCHANGE = 225,
+    QEVENT_TYPE_PARENTWINDOWCHANGE = 226,
     QEVENT_TYPE_USER = 1000,
     QEVENT_TYPE_MAXUSER = 65535
 } QEvent__Type;

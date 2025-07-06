@@ -130,10 +130,10 @@ class VirtualQTemporaryFile final : public QTemporaryFile {
     mutable bool qtemporaryfile_issignalconnected_isbase = false;
 
   public:
-    VirtualQTemporaryFile() : QTemporaryFile(){};
-    VirtualQTemporaryFile(const QString& templateName) : QTemporaryFile(templateName){};
-    VirtualQTemporaryFile(QObject* parent) : QTemporaryFile(parent){};
-    VirtualQTemporaryFile(const QString& templateName, QObject* parent) : QTemporaryFile(templateName, parent){};
+    VirtualQTemporaryFile() : QTemporaryFile() {};
+    VirtualQTemporaryFile(const QString& templateName) : QTemporaryFile(templateName) {};
+    VirtualQTemporaryFile(QObject* parent) : QTemporaryFile(parent) {};
+    VirtualQTemporaryFile(const QString& templateName, QObject* parent) : QTemporaryFile(templateName, parent) {};
 
     ~VirtualQTemporaryFile() {
         qtemporaryfile_metacall_callback = nullptr;
@@ -279,7 +279,7 @@ class VirtualQTemporaryFile final : public QTemporaryFile {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool open(QIODeviceBase::OpenMode flags) override {
+    virtual bool open(QFlags<QIODeviceBase::OpenModeFlag> flags) override {
         if (qtemporaryfile_openwithflags_isbase) {
             qtemporaryfile_openwithflags_isbase = false;
             return QTemporaryFile::open(flags);
@@ -776,22 +776,22 @@ class VirtualQTemporaryFile final : public QTemporaryFile {
     friend void QTemporaryFile_QBaseChildEvent(QTemporaryFile* self, QChildEvent* event);
     friend void QTemporaryFile_CustomEvent(QTemporaryFile* self, QEvent* event);
     friend void QTemporaryFile_QBaseCustomEvent(QTemporaryFile* self, QEvent* event);
-    friend void QTemporaryFile_ConnectNotify(QTemporaryFile* self, QMetaMethod* signal);
-    friend void QTemporaryFile_QBaseConnectNotify(QTemporaryFile* self, QMetaMethod* signal);
-    friend void QTemporaryFile_DisconnectNotify(QTemporaryFile* self, QMetaMethod* signal);
-    friend void QTemporaryFile_QBaseDisconnectNotify(QTemporaryFile* self, QMetaMethod* signal);
+    friend void QTemporaryFile_ConnectNotify(QTemporaryFile* self, const QMetaMethod* signal);
+    friend void QTemporaryFile_QBaseConnectNotify(QTemporaryFile* self, const QMetaMethod* signal);
+    friend void QTemporaryFile_DisconnectNotify(QTemporaryFile* self, const QMetaMethod* signal);
+    friend void QTemporaryFile_QBaseDisconnectNotify(QTemporaryFile* self, const QMetaMethod* signal);
     friend void QTemporaryFile_SetOpenMode(QTemporaryFile* self, int openMode);
     friend void QTemporaryFile_QBaseSetOpenMode(QTemporaryFile* self, int openMode);
-    friend void QTemporaryFile_SetErrorString(QTemporaryFile* self, libqt_string errorString);
-    friend void QTemporaryFile_QBaseSetErrorString(QTemporaryFile* self, libqt_string errorString);
+    friend void QTemporaryFile_SetErrorString(QTemporaryFile* self, const libqt_string errorString);
+    friend void QTemporaryFile_QBaseSetErrorString(QTemporaryFile* self, const libqt_string errorString);
     friend QObject* QTemporaryFile_Sender(const QTemporaryFile* self);
     friend QObject* QTemporaryFile_QBaseSender(const QTemporaryFile* self);
     friend int QTemporaryFile_SenderSignalIndex(const QTemporaryFile* self);
     friend int QTemporaryFile_QBaseSenderSignalIndex(const QTemporaryFile* self);
     friend int QTemporaryFile_Receivers(const QTemporaryFile* self, const char* signal);
     friend int QTemporaryFile_QBaseReceivers(const QTemporaryFile* self, const char* signal);
-    friend bool QTemporaryFile_IsSignalConnected(const QTemporaryFile* self, QMetaMethod* signal);
-    friend bool QTemporaryFile_QBaseIsSignalConnected(const QTemporaryFile* self, QMetaMethod* signal);
+    friend bool QTemporaryFile_IsSignalConnected(const QTemporaryFile* self, const QMetaMethod* signal);
+    friend bool QTemporaryFile_QBaseIsSignalConnected(const QTemporaryFile* self, const QMetaMethod* signal);
 };
 
 #endif

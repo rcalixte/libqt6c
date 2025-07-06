@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqdatetime.h"
-#include "../libqiodevice.h"
-#include "libqsslcertificateextension.h"
-#include "libqsslerror.h"
-#include "libqsslkey.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsslcertificate.html
 
 /// q_sslcertificate_new constructs a new QSslCertificate object.

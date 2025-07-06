@@ -91,8 +91,8 @@ class VirtualQHBoxPlotModelMapper final : public QHBoxPlotModelMapper {
     mutable bool qhboxplotmodelmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQHBoxPlotModelMapper() : QHBoxPlotModelMapper(){};
-    VirtualQHBoxPlotModelMapper(QObject* parent) : QHBoxPlotModelMapper(parent){};
+    VirtualQHBoxPlotModelMapper() : QHBoxPlotModelMapper() {};
+    VirtualQHBoxPlotModelMapper(QObject* parent) : QHBoxPlotModelMapper(parent) {};
 
     ~VirtualQHBoxPlotModelMapper() {
         qhboxplotmodelmapper_metacall_callback = nullptr;
@@ -489,10 +489,10 @@ class VirtualQHBoxPlotModelMapper final : public QHBoxPlotModelMapper {
     friend void QHBoxPlotModelMapper_QBaseChildEvent(QHBoxPlotModelMapper* self, QChildEvent* event);
     friend void QHBoxPlotModelMapper_CustomEvent(QHBoxPlotModelMapper* self, QEvent* event);
     friend void QHBoxPlotModelMapper_QBaseCustomEvent(QHBoxPlotModelMapper* self, QEvent* event);
-    friend void QHBoxPlotModelMapper_ConnectNotify(QHBoxPlotModelMapper* self, QMetaMethod* signal);
-    friend void QHBoxPlotModelMapper_QBaseConnectNotify(QHBoxPlotModelMapper* self, QMetaMethod* signal);
-    friend void QHBoxPlotModelMapper_DisconnectNotify(QHBoxPlotModelMapper* self, QMetaMethod* signal);
-    friend void QHBoxPlotModelMapper_QBaseDisconnectNotify(QHBoxPlotModelMapper* self, QMetaMethod* signal);
+    friend void QHBoxPlotModelMapper_ConnectNotify(QHBoxPlotModelMapper* self, const QMetaMethod* signal);
+    friend void QHBoxPlotModelMapper_QBaseConnectNotify(QHBoxPlotModelMapper* self, const QMetaMethod* signal);
+    friend void QHBoxPlotModelMapper_DisconnectNotify(QHBoxPlotModelMapper* self, const QMetaMethod* signal);
+    friend void QHBoxPlotModelMapper_QBaseDisconnectNotify(QHBoxPlotModelMapper* self, const QMetaMethod* signal);
     friend int QHBoxPlotModelMapper_First(const QHBoxPlotModelMapper* self);
     friend int QHBoxPlotModelMapper_QBaseFirst(const QHBoxPlotModelMapper* self);
     friend void QHBoxPlotModelMapper_SetFirst(QHBoxPlotModelMapper* self, int first);
@@ -519,8 +519,8 @@ class VirtualQHBoxPlotModelMapper final : public QHBoxPlotModelMapper {
     friend int QHBoxPlotModelMapper_QBaseSenderSignalIndex(const QHBoxPlotModelMapper* self);
     friend int QHBoxPlotModelMapper_Receivers(const QHBoxPlotModelMapper* self, const char* signal);
     friend int QHBoxPlotModelMapper_QBaseReceivers(const QHBoxPlotModelMapper* self, const char* signal);
-    friend bool QHBoxPlotModelMapper_IsSignalConnected(const QHBoxPlotModelMapper* self, QMetaMethod* signal);
-    friend bool QHBoxPlotModelMapper_QBaseIsSignalConnected(const QHBoxPlotModelMapper* self, QMetaMethod* signal);
+    friend bool QHBoxPlotModelMapper_IsSignalConnected(const QHBoxPlotModelMapper* self, const QMetaMethod* signal);
+    friend bool QHBoxPlotModelMapper_QBaseIsSignalConnected(const QHBoxPlotModelMapper* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -23,7 +23,7 @@ QVector3D* QAudioListener_Position(const QAudioListener* self) {
     return new QVector3D(self->position());
 }
 
-void QAudioListener_SetRotation(QAudioListener* self, QQuaternion* q) {
+void QAudioListener_SetRotation(QAudioListener* self, const QQuaternion* q) {
     self->setRotation(*q);
 }
 
@@ -210,7 +210,7 @@ void QAudioListener_OnCustomEvent(QAudioListener* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioListener_ConnectNotify(QAudioListener* self, QMetaMethod* signal) {
+void QAudioListener_ConnectNotify(QAudioListener* self, const QMetaMethod* signal) {
     auto* vqaudiolistener = dynamic_cast<VirtualQAudioListener*>(self);
     if (vqaudiolistener && vqaudiolistener->isVirtualQAudioListener) {
         vqaudiolistener->connectNotify(*signal);
@@ -220,7 +220,7 @@ void QAudioListener_ConnectNotify(QAudioListener* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioListener_QBaseConnectNotify(QAudioListener* self, QMetaMethod* signal) {
+void QAudioListener_QBaseConnectNotify(QAudioListener* self, const QMetaMethod* signal) {
     auto* vqaudiolistener = dynamic_cast<VirtualQAudioListener*>(self);
     if (vqaudiolistener && vqaudiolistener->isVirtualQAudioListener) {
         vqaudiolistener->setQAudioListener_ConnectNotify_IsBase(true);
@@ -239,7 +239,7 @@ void QAudioListener_OnConnectNotify(QAudioListener* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioListener_DisconnectNotify(QAudioListener* self, QMetaMethod* signal) {
+void QAudioListener_DisconnectNotify(QAudioListener* self, const QMetaMethod* signal) {
     auto* vqaudiolistener = dynamic_cast<VirtualQAudioListener*>(self);
     if (vqaudiolistener && vqaudiolistener->isVirtualQAudioListener) {
         vqaudiolistener->disconnectNotify(*signal);
@@ -249,7 +249,7 @@ void QAudioListener_DisconnectNotify(QAudioListener* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QAudioListener_QBaseDisconnectNotify(QAudioListener* self, QMetaMethod* signal) {
+void QAudioListener_QBaseDisconnectNotify(QAudioListener* self, const QMetaMethod* signal) {
     auto* vqaudiolistener = dynamic_cast<VirtualQAudioListener*>(self);
     if (vqaudiolistener && vqaudiolistener->isVirtualQAudioListener) {
         vqaudiolistener->setQAudioListener_DisconnectNotify_IsBase(true);
@@ -355,7 +355,7 @@ void QAudioListener_OnReceivers(const QAudioListener* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAudioListener_IsSignalConnected(const QAudioListener* self, QMetaMethod* signal) {
+bool QAudioListener_IsSignalConnected(const QAudioListener* self, const QMetaMethod* signal) {
     auto* vqaudiolistener = const_cast<VirtualQAudioListener*>(dynamic_cast<const VirtualQAudioListener*>(self));
     if (vqaudiolistener && vqaudiolistener->isVirtualQAudioListener) {
         return vqaudiolistener->isSignalConnected(*signal);
@@ -365,7 +365,7 @@ bool QAudioListener_IsSignalConnected(const QAudioListener* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QAudioListener_QBaseIsSignalConnected(const QAudioListener* self, QMetaMethod* signal) {
+bool QAudioListener_QBaseIsSignalConnected(const QAudioListener* self, const QMetaMethod* signal) {
     auto* vqaudiolistener = const_cast<VirtualQAudioListener*>(dynamic_cast<const VirtualQAudioListener*>(self));
     if (vqaudiolistener && vqaudiolistener->isVirtualQAudioListener) {
         vqaudiolistener->setQAudioListener_IsSignalConnected_IsBase(true);

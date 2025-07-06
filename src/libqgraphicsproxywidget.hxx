@@ -254,9 +254,9 @@ class VirtualQGraphicsProxyWidget final : public QGraphicsProxyWidget {
     mutable bool qgraphicsproxywidget_setownedbylayout_isbase = false;
 
   public:
-    VirtualQGraphicsProxyWidget() : QGraphicsProxyWidget(){};
-    VirtualQGraphicsProxyWidget(QGraphicsItem* parent) : QGraphicsProxyWidget(parent){};
-    VirtualQGraphicsProxyWidget(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QGraphicsProxyWidget(parent, wFlags){};
+    VirtualQGraphicsProxyWidget() : QGraphicsProxyWidget() {};
+    VirtualQGraphicsProxyWidget(QGraphicsItem* parent) : QGraphicsProxyWidget(parent) {};
+    VirtualQGraphicsProxyWidget(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QGraphicsProxyWidget(parent, wFlags) {};
 
     ~VirtualQGraphicsProxyWidget() {
         qgraphicsproxywidget_metacall_callback = nullptr;
@@ -1609,8 +1609,8 @@ class VirtualQGraphicsProxyWidget final : public QGraphicsProxyWidget {
     }
 
     // Friend functions
-    friend QVariant* QGraphicsProxyWidget_ItemChange(QGraphicsProxyWidget* self, int change, QVariant* value);
-    friend QVariant* QGraphicsProxyWidget_QBaseItemChange(QGraphicsProxyWidget* self, int change, QVariant* value);
+    friend QVariant* QGraphicsProxyWidget_ItemChange(QGraphicsProxyWidget* self, int change, const QVariant* value);
+    friend QVariant* QGraphicsProxyWidget_QBaseItemChange(QGraphicsProxyWidget* self, int change, const QVariant* value);
     friend bool QGraphicsProxyWidget_Event(QGraphicsProxyWidget* self, QEvent* event);
     friend bool QGraphicsProxyWidget_QBaseEvent(QGraphicsProxyWidget* self, QEvent* event);
     friend bool QGraphicsProxyWidget_EventFilter(QGraphicsProxyWidget* self, QObject* object, QEvent* event);
@@ -1663,22 +1663,22 @@ class VirtualQGraphicsProxyWidget final : public QGraphicsProxyWidget {
     friend QVariant* QGraphicsProxyWidget_QBaseInputMethodQuery(const QGraphicsProxyWidget* self, int query);
     friend void QGraphicsProxyWidget_InputMethodEvent(QGraphicsProxyWidget* self, QInputMethodEvent* event);
     friend void QGraphicsProxyWidget_QBaseInputMethodEvent(QGraphicsProxyWidget* self, QInputMethodEvent* event);
-    friend QSizeF* QGraphicsProxyWidget_SizeHint(const QGraphicsProxyWidget* self, int which, QSizeF* constraint);
-    friend QSizeF* QGraphicsProxyWidget_QBaseSizeHint(const QGraphicsProxyWidget* self, int which, QSizeF* constraint);
+    friend QSizeF* QGraphicsProxyWidget_SizeHint(const QGraphicsProxyWidget* self, int which, const QSizeF* constraint);
+    friend QSizeF* QGraphicsProxyWidget_QBaseSizeHint(const QGraphicsProxyWidget* self, int which, const QSizeF* constraint);
     friend void QGraphicsProxyWidget_ResizeEvent(QGraphicsProxyWidget* self, QGraphicsSceneResizeEvent* event);
     friend void QGraphicsProxyWidget_QBaseResizeEvent(QGraphicsProxyWidget* self, QGraphicsSceneResizeEvent* event);
     friend void QGraphicsProxyWidget_InitStyleOption(const QGraphicsProxyWidget* self, QStyleOption* option);
     friend void QGraphicsProxyWidget_QBaseInitStyleOption(const QGraphicsProxyWidget* self, QStyleOption* option);
     friend void QGraphicsProxyWidget_UpdateGeometry(QGraphicsProxyWidget* self);
     friend void QGraphicsProxyWidget_QBaseUpdateGeometry(QGraphicsProxyWidget* self);
-    friend QVariant* QGraphicsProxyWidget_PropertyChange(QGraphicsProxyWidget* self, libqt_string propertyName, QVariant* value);
-    friend QVariant* QGraphicsProxyWidget_QBasePropertyChange(QGraphicsProxyWidget* self, libqt_string propertyName, QVariant* value);
+    friend QVariant* QGraphicsProxyWidget_PropertyChange(QGraphicsProxyWidget* self, const libqt_string propertyName, const QVariant* value);
+    friend QVariant* QGraphicsProxyWidget_QBasePropertyChange(QGraphicsProxyWidget* self, const libqt_string propertyName, const QVariant* value);
     friend bool QGraphicsProxyWidget_SceneEvent(QGraphicsProxyWidget* self, QEvent* event);
     friend bool QGraphicsProxyWidget_QBaseSceneEvent(QGraphicsProxyWidget* self, QEvent* event);
     friend bool QGraphicsProxyWidget_WindowFrameEvent(QGraphicsProxyWidget* self, QEvent* e);
     friend bool QGraphicsProxyWidget_QBaseWindowFrameEvent(QGraphicsProxyWidget* self, QEvent* e);
-    friend int QGraphicsProxyWidget_WindowFrameSectionAt(const QGraphicsProxyWidget* self, QPointF* pos);
-    friend int QGraphicsProxyWidget_QBaseWindowFrameSectionAt(const QGraphicsProxyWidget* self, QPointF* pos);
+    friend int QGraphicsProxyWidget_WindowFrameSectionAt(const QGraphicsProxyWidget* self, const QPointF* pos);
+    friend int QGraphicsProxyWidget_QBaseWindowFrameSectionAt(const QGraphicsProxyWidget* self, const QPointF* pos);
     friend void QGraphicsProxyWidget_ChangeEvent(QGraphicsProxyWidget* self, QEvent* event);
     friend void QGraphicsProxyWidget_QBaseChangeEvent(QGraphicsProxyWidget* self, QEvent* event);
     friend void QGraphicsProxyWidget_CloseEvent(QGraphicsProxyWidget* self, QCloseEvent* event);
@@ -1697,20 +1697,20 @@ class VirtualQGraphicsProxyWidget final : public QGraphicsProxyWidget {
     friend void QGraphicsProxyWidget_QBaseChildEvent(QGraphicsProxyWidget* self, QChildEvent* event);
     friend void QGraphicsProxyWidget_CustomEvent(QGraphicsProxyWidget* self, QEvent* event);
     friend void QGraphicsProxyWidget_QBaseCustomEvent(QGraphicsProxyWidget* self, QEvent* event);
-    friend void QGraphicsProxyWidget_ConnectNotify(QGraphicsProxyWidget* self, QMetaMethod* signal);
-    friend void QGraphicsProxyWidget_QBaseConnectNotify(QGraphicsProxyWidget* self, QMetaMethod* signal);
-    friend void QGraphicsProxyWidget_DisconnectNotify(QGraphicsProxyWidget* self, QMetaMethod* signal);
-    friend void QGraphicsProxyWidget_QBaseDisconnectNotify(QGraphicsProxyWidget* self, QMetaMethod* signal);
+    friend void QGraphicsProxyWidget_ConnectNotify(QGraphicsProxyWidget* self, const QMetaMethod* signal);
+    friend void QGraphicsProxyWidget_QBaseConnectNotify(QGraphicsProxyWidget* self, const QMetaMethod* signal);
+    friend void QGraphicsProxyWidget_DisconnectNotify(QGraphicsProxyWidget* self, const QMetaMethod* signal);
+    friend void QGraphicsProxyWidget_QBaseDisconnectNotify(QGraphicsProxyWidget* self, const QMetaMethod* signal);
     friend bool QGraphicsProxyWidget_SceneEventFilter(QGraphicsProxyWidget* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsProxyWidget_QBaseSceneEventFilter(QGraphicsProxyWidget* self, QGraphicsItem* watched, QEvent* event);
     friend bool QGraphicsProxyWidget_SupportsExtension(const QGraphicsProxyWidget* self, int extension);
     friend bool QGraphicsProxyWidget_QBaseSupportsExtension(const QGraphicsProxyWidget* self, int extension);
-    friend void QGraphicsProxyWidget_SetExtension(QGraphicsProxyWidget* self, int extension, QVariant* variant);
-    friend void QGraphicsProxyWidget_QBaseSetExtension(QGraphicsProxyWidget* self, int extension, QVariant* variant);
-    friend QVariant* QGraphicsProxyWidget_Extension(const QGraphicsProxyWidget* self, QVariant* variant);
-    friend QVariant* QGraphicsProxyWidget_QBaseExtension(const QGraphicsProxyWidget* self, QVariant* variant);
-    friend QGraphicsProxyWidget* QGraphicsProxyWidget_NewProxyWidget(QGraphicsProxyWidget* self, QWidget* param1);
-    friend QGraphicsProxyWidget* QGraphicsProxyWidget_QBaseNewProxyWidget(QGraphicsProxyWidget* self, QWidget* param1);
+    friend void QGraphicsProxyWidget_SetExtension(QGraphicsProxyWidget* self, int extension, const QVariant* variant);
+    friend void QGraphicsProxyWidget_QBaseSetExtension(QGraphicsProxyWidget* self, int extension, const QVariant* variant);
+    friend QVariant* QGraphicsProxyWidget_Extension(const QGraphicsProxyWidget* self, const QVariant* variant);
+    friend QVariant* QGraphicsProxyWidget_QBaseExtension(const QGraphicsProxyWidget* self, const QVariant* variant);
+    friend QGraphicsProxyWidget* QGraphicsProxyWidget_NewProxyWidget(QGraphicsProxyWidget* self, const QWidget* param1);
+    friend QGraphicsProxyWidget* QGraphicsProxyWidget_QBaseNewProxyWidget(QGraphicsProxyWidget* self, const QWidget* param1);
     friend void QGraphicsProxyWidget_UpdateMicroFocus(QGraphicsProxyWidget* self);
     friend void QGraphicsProxyWidget_QBaseUpdateMicroFocus(QGraphicsProxyWidget* self);
     friend QObject* QGraphicsProxyWidget_Sender(const QGraphicsProxyWidget* self);
@@ -1719,8 +1719,8 @@ class VirtualQGraphicsProxyWidget final : public QGraphicsProxyWidget {
     friend int QGraphicsProxyWidget_QBaseSenderSignalIndex(const QGraphicsProxyWidget* self);
     friend int QGraphicsProxyWidget_Receivers(const QGraphicsProxyWidget* self, const char* signal);
     friend int QGraphicsProxyWidget_QBaseReceivers(const QGraphicsProxyWidget* self, const char* signal);
-    friend bool QGraphicsProxyWidget_IsSignalConnected(const QGraphicsProxyWidget* self, QMetaMethod* signal);
-    friend bool QGraphicsProxyWidget_QBaseIsSignalConnected(const QGraphicsProxyWidget* self, QMetaMethod* signal);
+    friend bool QGraphicsProxyWidget_IsSignalConnected(const QGraphicsProxyWidget* self, const QMetaMethod* signal);
+    friend bool QGraphicsProxyWidget_QBaseIsSignalConnected(const QGraphicsProxyWidget* self, const QMetaMethod* signal);
     friend void QGraphicsProxyWidget_AddToIndex(QGraphicsProxyWidget* self);
     friend void QGraphicsProxyWidget_QBaseAddToIndex(QGraphicsProxyWidget* self);
     friend void QGraphicsProxyWidget_RemoveFromIndex(QGraphicsProxyWidget* self);

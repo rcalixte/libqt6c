@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbytearrayview.h"
-#include "libqchar.h"
-#include "libqiodevice.h"
-#include "libqiodevicebase.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qdebug.html
 
 /// q_debug_new constructs a new QDebug object.
@@ -84,6 +78,16 @@ bool q_debug_auto_insert_spaces(void* self);
 ///
 /// ``` QDebug* self, bool b ```
 void q_debug_set_auto_insert_spaces(void* self, bool b);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#quoteStrings)
+///
+/// ``` QDebug* self ```
+bool q_debug_quote_strings(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#setQuoteStrings)
+///
+/// ``` QDebug* self, bool b ```
+void q_debug_set_quote_strings(void* self, bool b);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#quote)
 ///

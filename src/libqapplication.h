@@ -12,19 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqcoreapplication.h"
-#include "libqfont.h"
-#include "libqfontmetrics.h"
-#include "libqguiapplication.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpalette.h"
-#include "libqpoint.h"
-#include <string.h>
-#include "libqstyle.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qapplication.html
 
 /// q_application_new constructs a new QApplication object.
@@ -311,6 +298,11 @@ void q_application_on_focus_changed(void* self, void (*slot)(void*, void*, void*
 /// ``` QApplication* self ```
 const char* q_application_style_sheet(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#autoSipEnabled)
+///
+/// ``` QApplication* self ```
+bool q_application_auto_sip_enabled(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyleSheet)
 ///
 /// ``` QApplication* self, const char* sheet ```
@@ -320,11 +312,6 @@ void q_application_set_style_sheet(void* self, const char* sheet);
 ///
 /// ``` QApplication* self, bool enabled ```
 void q_application_set_auto_sip_enabled(void* self, bool enabled);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#autoSipEnabled)
-///
-/// ``` QApplication* self ```
-bool q_application_auto_sip_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#closeAllWindows)
 ///
@@ -398,6 +385,13 @@ void q_application_set_application_display_name(const char* name);
 ///
 ///
 const char* q_application_application_display_name();
+
+/// Inherited from QGuiApplication
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber)
+///
+/// ``` QApplication* self, long long number ```
+void q_application_set_badge_number(void* self, long long number);
 
 /// Inherited from QGuiApplication
 ///
@@ -989,6 +983,13 @@ void q_application_process_events2(int64_t flags, int maxtime);
 
 /// Inherited from QCoreApplication
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
+///
+/// ``` int flags, QDeadlineTimer* deadline ```
+void q_application_process_events3(int64_t flags, void* deadline);
+
+/// Inherited from QCoreApplication
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
 ///
 /// ``` QObject* receiver, QEvent* event ```
@@ -1063,6 +1064,13 @@ const char* q_application_application_file_path();
 ///
 ///
 long long q_application_application_pid();
+
+/// Inherited from QCoreApplication
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
+///
+/// ``` QApplication* self, QPermission* permission ```
+int64_t q_application_check_permission(void* self, void* permission);
 
 /// Inherited from QCoreApplication
 ///
@@ -1349,7 +1357,7 @@ QThread* q_application_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QApplication* self, QThread* thread ```
-void q_application_move_to_thread(void* self, void* thread);
+bool q_application_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1364,6 +1372,13 @@ int32_t q_application_start_timer(void* self, int interval);
 ///
 /// ``` QApplication* self, int id ```
 void q_application_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QApplication* self, enum Qt__TimerId id ```
+void q_application_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1504,6 +1519,13 @@ bool q_application_inherits(void* self, const char* classname);
 ///
 /// ``` QApplication* self ```
 void q_application_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QApplication* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_application_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

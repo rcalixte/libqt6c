@@ -31,13 +31,13 @@ void q_readwritelock_lock_for_read(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForRead)
 ///
-/// ``` QReadWriteLock* self ```
-bool q_readwritelock_try_lock_for_read(void* self);
+/// ``` QReadWriteLock* self, int timeout ```
+bool q_readwritelock_try_lock_for_read(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForRead)
 ///
-/// ``` QReadWriteLock* self, int timeout ```
-bool q_readwritelock_try_lock_for_read_with_timeout(void* self, int timeout);
+/// ``` QReadWriteLock* self ```
+bool q_readwritelock_try_lock_for_read2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#lockForWrite)
 ///
@@ -46,18 +46,28 @@ void q_readwritelock_lock_for_write(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForWrite)
 ///
-/// ``` QReadWriteLock* self ```
-bool q_readwritelock_try_lock_for_write(void* self);
+/// ``` QReadWriteLock* self, int timeout ```
+bool q_readwritelock_try_lock_for_write(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForWrite)
 ///
-/// ``` QReadWriteLock* self, int timeout ```
-bool q_readwritelock_try_lock_for_write_with_timeout(void* self, int timeout);
+/// ``` QReadWriteLock* self ```
+bool q_readwritelock_try_lock_for_write2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#unlock)
 ///
 /// ``` QReadWriteLock* self ```
 void q_readwritelock_unlock(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForRead)
+///
+/// ``` QReadWriteLock* self, QDeadlineTimer* timeout ```
+bool q_readwritelock_try_lock_for_read1(void* self, void* timeout);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForWrite)
+///
+/// ``` QReadWriteLock* self, QDeadlineTimer* timeout ```
+bool q_readwritelock_try_lock_for_write1(void* self, void* timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#dtor.QReadWriteLock)
 ///

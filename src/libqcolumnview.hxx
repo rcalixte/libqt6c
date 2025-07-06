@@ -138,6 +138,7 @@ class VirtualQColumnView final : public QColumnView {
     using QColumnView_SenderSignalIndex_Callback = int (*)();
     using QColumnView_Receivers_Callback = int (*)(const QColumnView*, const char*);
     using QColumnView_IsSignalConnected_Callback = bool (*)(const QColumnView*, QMetaMethod*);
+    using QColumnView_GetDecodedMetricF_Callback = double (*)(const QColumnView*, int, int);
 
   protected:
     // Instance callback storage
@@ -258,6 +259,7 @@ class VirtualQColumnView final : public QColumnView {
     QColumnView_SenderSignalIndex_Callback qcolumnview_sendersignalindex_callback = nullptr;
     QColumnView_Receivers_Callback qcolumnview_receivers_callback = nullptr;
     QColumnView_IsSignalConnected_Callback qcolumnview_issignalconnected_callback = nullptr;
+    QColumnView_GetDecodedMetricF_Callback qcolumnview_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qcolumnview_metacall_isbase = false;
@@ -377,10 +379,11 @@ class VirtualQColumnView final : public QColumnView {
     mutable bool qcolumnview_sendersignalindex_isbase = false;
     mutable bool qcolumnview_receivers_isbase = false;
     mutable bool qcolumnview_issignalconnected_isbase = false;
+    mutable bool qcolumnview_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQColumnView(QWidget* parent) : QColumnView(parent){};
-    VirtualQColumnView() : QColumnView(){};
+    VirtualQColumnView(QWidget* parent) : QColumnView(parent) {};
+    VirtualQColumnView() : QColumnView() {};
 
     ~VirtualQColumnView() {
         qcolumnview_metacall_callback = nullptr;
@@ -500,6 +503,7 @@ class VirtualQColumnView final : public QColumnView {
         qcolumnview_sendersignalindex_callback = nullptr;
         qcolumnview_receivers_callback = nullptr;
         qcolumnview_issignalconnected_callback = nullptr;
+        qcolumnview_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -620,6 +624,7 @@ class VirtualQColumnView final : public QColumnView {
     inline void setQColumnView_SenderSignalIndex_Callback(QColumnView_SenderSignalIndex_Callback cb) { qcolumnview_sendersignalindex_callback = cb; }
     inline void setQColumnView_Receivers_Callback(QColumnView_Receivers_Callback cb) { qcolumnview_receivers_callback = cb; }
     inline void setQColumnView_IsSignalConnected_Callback(QColumnView_IsSignalConnected_Callback cb) { qcolumnview_issignalconnected_callback = cb; }
+    inline void setQColumnView_GetDecodedMetricF_Callback(QColumnView_GetDecodedMetricF_Callback cb) { qcolumnview_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQColumnView_Metacall_IsBase(bool value) const { qcolumnview_metacall_isbase = value; }
@@ -739,6 +744,7 @@ class VirtualQColumnView final : public QColumnView {
     inline void setQColumnView_SenderSignalIndex_IsBase(bool value) const { qcolumnview_sendersignalindex_isbase = value; }
     inline void setQColumnView_Receivers_IsBase(bool value) const { qcolumnview_receivers_isbase = value; }
     inline void setQColumnView_IsSignalConnected_IsBase(bool value) const { qcolumnview_issignalconnected_isbase = value; }
+    inline void setQColumnView_GetDecodedMetricF_IsBase(bool value) const { qcolumnview_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1174,13 +1180,13 @@ class VirtualQColumnView final : public QColumnView {
             // Cast returned reference into pointer
             QModelIndex* cbval2 = const_cast<QModelIndex*>(&bottomRight_ret);
             const QList<int>& roles_ret = roles;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.length()));
-            for (size_t i = 0; i < roles_ret.length(); ++i) {
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            int* roles_arr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
+            for (size_t i = 0; i < roles_ret.size(); ++i) {
                 roles_arr[i] = roles_ret[i];
             }
             libqt_list roles_out;
-            roles_out.len = roles_ret.length();
+            roles_out.len = roles_ret.size();
             roles_out.data.ints = roles_arr;
             libqt_list /* of int */ cbval3 = roles_out;
 
@@ -1363,13 +1369,13 @@ class VirtualQColumnView final : public QColumnView {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList selectedIndexes() const override {
+    virtual QList<QModelIndex> selectedIndexes() const override {
         if (qcolumnview_selectedindexes_isbase) {
             qcolumnview_selectedindexes_isbase = false;
             return QColumnView::selectedIndexes();
         } else if (qcolumnview_selectedindexes_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qcolumnview_selectedindexes_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -2456,35 +2462,51 @@ class VirtualQColumnView final : public QColumnView {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qcolumnview_getdecodedmetricf_isbase) {
+            qcolumnview_getdecodedmetricf_isbase = false;
+            return QColumnView::getDecodedMetricF(metricA, metricB);
+        } else if (qcolumnview_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qcolumnview_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QColumnView::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
-    friend bool QColumnView_IsIndexHidden(const QColumnView* self, QModelIndex* index);
-    friend bool QColumnView_QBaseIsIndexHidden(const QColumnView* self, QModelIndex* index);
+    friend bool QColumnView_IsIndexHidden(const QColumnView* self, const QModelIndex* index);
+    friend bool QColumnView_QBaseIsIndexHidden(const QColumnView* self, const QModelIndex* index);
     friend QModelIndex* QColumnView_MoveCursor(QColumnView* self, int cursorAction, int modifiers);
     friend QModelIndex* QColumnView_QBaseMoveCursor(QColumnView* self, int cursorAction, int modifiers);
     friend void QColumnView_ResizeEvent(QColumnView* self, QResizeEvent* event);
     friend void QColumnView_QBaseResizeEvent(QColumnView* self, QResizeEvent* event);
-    friend void QColumnView_SetSelection(QColumnView* self, QRect* rect, int command);
-    friend void QColumnView_QBaseSetSelection(QColumnView* self, QRect* rect, int command);
-    friend QRegion* QColumnView_VisualRegionForSelection(const QColumnView* self, QItemSelection* selection);
-    friend QRegion* QColumnView_QBaseVisualRegionForSelection(const QColumnView* self, QItemSelection* selection);
+    friend void QColumnView_SetSelection(QColumnView* self, const QRect* rect, int command);
+    friend void QColumnView_QBaseSetSelection(QColumnView* self, const QRect* rect, int command);
+    friend QRegion* QColumnView_VisualRegionForSelection(const QColumnView* self, const QItemSelection* selection);
+    friend QRegion* QColumnView_QBaseVisualRegionForSelection(const QColumnView* self, const QItemSelection* selection);
     friend int QColumnView_HorizontalOffset(const QColumnView* self);
     friend int QColumnView_QBaseHorizontalOffset(const QColumnView* self);
     friend int QColumnView_VerticalOffset(const QColumnView* self);
     friend int QColumnView_QBaseVerticalOffset(const QColumnView* self);
-    friend void QColumnView_RowsInserted(QColumnView* self, QModelIndex* parent, int start, int end);
-    friend void QColumnView_QBaseRowsInserted(QColumnView* self, QModelIndex* parent, int start, int end);
-    friend void QColumnView_CurrentChanged(QColumnView* self, QModelIndex* current, QModelIndex* previous);
-    friend void QColumnView_QBaseCurrentChanged(QColumnView* self, QModelIndex* current, QModelIndex* previous);
+    friend void QColumnView_RowsInserted(QColumnView* self, const QModelIndex* parent, int start, int end);
+    friend void QColumnView_QBaseRowsInserted(QColumnView* self, const QModelIndex* parent, int start, int end);
+    friend void QColumnView_CurrentChanged(QColumnView* self, const QModelIndex* current, const QModelIndex* previous);
+    friend void QColumnView_QBaseCurrentChanged(QColumnView* self, const QModelIndex* current, const QModelIndex* previous);
     friend void QColumnView_ScrollContentsBy(QColumnView* self, int dx, int dy);
     friend void QColumnView_QBaseScrollContentsBy(QColumnView* self, int dx, int dy);
-    friend QAbstractItemView* QColumnView_CreateColumn(QColumnView* self, QModelIndex* rootIndex);
-    friend QAbstractItemView* QColumnView_QBaseCreateColumn(QColumnView* self, QModelIndex* rootIndex);
-    friend void QColumnView_DataChanged(QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QColumnView_QBaseDataChanged(QColumnView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles);
-    friend void QColumnView_RowsAboutToBeRemoved(QColumnView* self, QModelIndex* parent, int start, int end);
-    friend void QColumnView_QBaseRowsAboutToBeRemoved(QColumnView* self, QModelIndex* parent, int start, int end);
-    friend void QColumnView_SelectionChanged(QColumnView* self, QItemSelection* selected, QItemSelection* deselected);
-    friend void QColumnView_QBaseSelectionChanged(QColumnView* self, QItemSelection* selected, QItemSelection* deselected);
+    friend QAbstractItemView* QColumnView_CreateColumn(QColumnView* self, const QModelIndex* rootIndex);
+    friend QAbstractItemView* QColumnView_QBaseCreateColumn(QColumnView* self, const QModelIndex* rootIndex);
+    friend void QColumnView_DataChanged(QColumnView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QColumnView_QBaseDataChanged(QColumnView* self, const QModelIndex* topLeft, const QModelIndex* bottomRight, const libqt_list /* of int */ roles);
+    friend void QColumnView_RowsAboutToBeRemoved(QColumnView* self, const QModelIndex* parent, int start, int end);
+    friend void QColumnView_QBaseRowsAboutToBeRemoved(QColumnView* self, const QModelIndex* parent, int start, int end);
+    friend void QColumnView_SelectionChanged(QColumnView* self, const QItemSelection* selected, const QItemSelection* deselected);
+    friend void QColumnView_QBaseSelectionChanged(QColumnView* self, const QItemSelection* selected, const QItemSelection* deselected);
     friend void QColumnView_UpdateEditorData(QColumnView* self);
     friend void QColumnView_QBaseUpdateEditorData(QColumnView* self);
     friend void QColumnView_UpdateEditorGeometries(QColumnView* self);
@@ -2507,10 +2529,10 @@ class VirtualQColumnView final : public QColumnView {
     friend void QColumnView_QBaseEditorDestroyed(QColumnView* self, QObject* editor);
     friend libqt_list /* of QModelIndex* */ QColumnView_SelectedIndexes(const QColumnView* self);
     friend libqt_list /* of QModelIndex* */ QColumnView_QBaseSelectedIndexes(const QColumnView* self);
-    friend bool QColumnView_Edit2(QColumnView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend bool QColumnView_QBaseEdit2(QColumnView* self, QModelIndex* index, int trigger, QEvent* event);
-    friend int QColumnView_SelectionCommand(const QColumnView* self, QModelIndex* index, QEvent* event);
-    friend int QColumnView_QBaseSelectionCommand(const QColumnView* self, QModelIndex* index, QEvent* event);
+    friend bool QColumnView_Edit2(QColumnView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend bool QColumnView_QBaseEdit2(QColumnView* self, const QModelIndex* index, int trigger, QEvent* event);
+    friend int QColumnView_SelectionCommand(const QColumnView* self, const QModelIndex* index, const QEvent* event);
+    friend int QColumnView_QBaseSelectionCommand(const QColumnView* self, const QModelIndex* index, const QEvent* event);
     friend void QColumnView_StartDrag(QColumnView* self, int supportedActions);
     friend void QColumnView_QBaseStartDrag(QColumnView* self, int supportedActions);
     friend void QColumnView_InitViewItemOption(const QColumnView* self, QStyleOptionViewItem* option);
@@ -2579,8 +2601,8 @@ class VirtualQColumnView final : public QColumnView {
     friend void QColumnView_QBaseShowEvent(QColumnView* self, QShowEvent* event);
     friend void QColumnView_HideEvent(QColumnView* self, QHideEvent* event);
     friend void QColumnView_QBaseHideEvent(QColumnView* self, QHideEvent* event);
-    friend bool QColumnView_NativeEvent(QColumnView* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QColumnView_QBaseNativeEvent(QColumnView* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QColumnView_NativeEvent(QColumnView* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QColumnView_QBaseNativeEvent(QColumnView* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QColumnView_Metric(const QColumnView* self, int param1);
     friend int QColumnView_QBaseMetric(const QColumnView* self, int param1);
     friend void QColumnView_InitPainter(const QColumnView* self, QPainter* painter);
@@ -2593,10 +2615,10 @@ class VirtualQColumnView final : public QColumnView {
     friend void QColumnView_QBaseChildEvent(QColumnView* self, QChildEvent* event);
     friend void QColumnView_CustomEvent(QColumnView* self, QEvent* event);
     friend void QColumnView_QBaseCustomEvent(QColumnView* self, QEvent* event);
-    friend void QColumnView_ConnectNotify(QColumnView* self, QMetaMethod* signal);
-    friend void QColumnView_QBaseConnectNotify(QColumnView* self, QMetaMethod* signal);
-    friend void QColumnView_DisconnectNotify(QColumnView* self, QMetaMethod* signal);
-    friend void QColumnView_QBaseDisconnectNotify(QColumnView* self, QMetaMethod* signal);
+    friend void QColumnView_ConnectNotify(QColumnView* self, const QMetaMethod* signal);
+    friend void QColumnView_QBaseConnectNotify(QColumnView* self, const QMetaMethod* signal);
+    friend void QColumnView_DisconnectNotify(QColumnView* self, const QMetaMethod* signal);
+    friend void QColumnView_QBaseDisconnectNotify(QColumnView* self, const QMetaMethod* signal);
     friend void QColumnView_InitializeColumn(const QColumnView* self, QAbstractItemView* column);
     friend void QColumnView_QBaseInitializeColumn(const QColumnView* self, QAbstractItemView* column);
     friend int QColumnView_State(const QColumnView* self);
@@ -2607,8 +2629,8 @@ class VirtualQColumnView final : public QColumnView {
     friend void QColumnView_QBaseScheduleDelayedItemsLayout(QColumnView* self);
     friend void QColumnView_ExecuteDelayedItemsLayout(QColumnView* self);
     friend void QColumnView_QBaseExecuteDelayedItemsLayout(QColumnView* self);
-    friend void QColumnView_SetDirtyRegion(QColumnView* self, QRegion* region);
-    friend void QColumnView_QBaseSetDirtyRegion(QColumnView* self, QRegion* region);
+    friend void QColumnView_SetDirtyRegion(QColumnView* self, const QRegion* region);
+    friend void QColumnView_QBaseSetDirtyRegion(QColumnView* self, const QRegion* region);
     friend void QColumnView_ScrollDirtyRegion(QColumnView* self, int dx, int dy);
     friend void QColumnView_QBaseScrollDirtyRegion(QColumnView* self, int dx, int dy);
     friend QPoint* QColumnView_DirtyRegionOffset(const QColumnView* self);
@@ -2643,8 +2665,10 @@ class VirtualQColumnView final : public QColumnView {
     friend int QColumnView_QBaseSenderSignalIndex(const QColumnView* self);
     friend int QColumnView_Receivers(const QColumnView* self, const char* signal);
     friend int QColumnView_QBaseReceivers(const QColumnView* self, const char* signal);
-    friend bool QColumnView_IsSignalConnected(const QColumnView* self, QMetaMethod* signal);
-    friend bool QColumnView_QBaseIsSignalConnected(const QColumnView* self, QMetaMethod* signal);
+    friend bool QColumnView_IsSignalConnected(const QColumnView* self, const QMetaMethod* signal);
+    friend bool QColumnView_QBaseIsSignalConnected(const QColumnView* self, const QMetaMethod* signal);
+    friend double QColumnView_GetDecodedMetricF(const QColumnView* self, int metricA, int metricB);
+    friend double QColumnView_QBaseGetDecodedMetricF(const QColumnView* self, int metricA, int metricB);
 };
 
 #endif

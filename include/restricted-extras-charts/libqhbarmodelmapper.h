@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractbarseries.h"
-#include "../libqabstractitemmodel.h"
-#include "libqbarmodelmapper.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qhbarmodelmapper-qtcharts.html
 
 /// q_hbarmodelmapper_new constructs a new QHBarModelMapper object.
@@ -249,7 +241,7 @@ QThread* q_hbarmodelmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QHBarModelMapper* self, QThread* thread ```
-void q_hbarmodelmapper_move_to_thread(void* self, void* thread);
+bool q_hbarmodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -264,6 +256,13 @@ int32_t q_hbarmodelmapper_start_timer(void* self, int interval);
 ///
 /// ``` QHBarModelMapper* self, int id ```
 void q_hbarmodelmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QHBarModelMapper* self, enum Qt__TimerId id ```
+void q_hbarmodelmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -404,6 +403,13 @@ bool q_hbarmodelmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QHBarModelMapper* self ```
 void q_hbarmodelmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QHBarModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_hbarmodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

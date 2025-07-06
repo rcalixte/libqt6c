@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioengine.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqquaternion.h"
-#include "../libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qaudiolistener.html
 
 /// q_audiolistener_new constructs a new QAudioListener object.
@@ -131,7 +124,7 @@ QThread* q_audiolistener_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAudioListener* self, QThread* thread ```
-void q_audiolistener_move_to_thread(void* self, void* thread);
+bool q_audiolistener_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -146,6 +139,13 @@ int32_t q_audiolistener_start_timer(void* self, int interval);
 ///
 /// ``` QAudioListener* self, int id ```
 void q_audiolistener_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAudioListener* self, enum Qt__TimerId id ```
+void q_audiolistener_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -300,6 +300,13 @@ const char* q_audiolistener_tr2(const char* s, const char* c);
 ///
 /// ``` const char* s, const char* c, int n ```
 const char* q_audiolistener_tr3(const char* s, const char* c, int n);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAudioListener* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_audiolistener_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -12,19 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmargins.h"
-#include "../libqpagelayout.h"
-#include "../libqpageranges.h"
-#include "../libqpagesize.h"
-#include "../libqpagedpaintdevice.h"
-#include "../libqpaintdevice.h"
-#include "../libqpaintengine.h"
-#include "../libqpainter.h"
-#include "../libqpoint.h"
-#include "../printsupport/libqprintengine.h"
-#include "../printsupport/libqprinter.h"
-#include "../libqrect.h"
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html
 
 /// q_sciprinter_new constructs a new QsciPrinter object.
@@ -576,6 +563,13 @@ int32_t q_sciprinter_depth(void* self);
 ///
 double q_sciprinter_device_pixel_ratio_f_scale();
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_sciprinter_encode_metric_f(int64_t metric, double value);
+
 /// Inherited from QPrinter
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#devType)
@@ -926,6 +920,33 @@ void q_sciprinter_qbase_set_engines(void* self, void* printEngine, void* paintEn
 ///
 /// ``` QsciPrinter* self, void (*slot)(QsciPrinter*, QPrintEngine*, QPaintEngine*) ```
 void q_sciprinter_on_set_engines(void* self, void (*slot)(void*, void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_sciprinter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QsciPrinter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_sciprinter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QsciPrinter* self, double (*slot)(QsciPrinter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_sciprinter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///

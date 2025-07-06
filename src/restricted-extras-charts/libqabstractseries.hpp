@@ -24,18 +24,12 @@ typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
 #endif
 
-#ifdef __cplusplus
-typedef QAbstractSeries::SeriesType SeriesType; // C++ enum
-#else
-typedef int SeriesType; // C ABI enum
-#endif
-
 QMetaObject* QAbstractSeries_MetaObject(const QAbstractSeries* self);
 void* QAbstractSeries_Metacast(QAbstractSeries* self, const char* param1);
 int QAbstractSeries_Metacall(QAbstractSeries* self, int param1, int param2, void** param3);
 libqt_string QAbstractSeries_Tr(const char* s);
 int QAbstractSeries_Type(const QAbstractSeries* self);
-void QAbstractSeries_SetName(QAbstractSeries* self, libqt_string name);
+void QAbstractSeries_SetName(QAbstractSeries* self, const libqt_string name);
 libqt_string QAbstractSeries_Name(const QAbstractSeries* self);
 void QAbstractSeries_SetVisible(QAbstractSeries* self);
 bool QAbstractSeries_IsVisible(const QAbstractSeries* self);

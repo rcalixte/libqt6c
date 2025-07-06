@@ -180,6 +180,10 @@ double q_picture_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
+int32_t q_picture_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
 void q_picture_init_painter(void* self, void* painter) {
     QPicture_InitPainter((QPicture*)self, (QPainter*)painter);
 }
@@ -214,6 +218,18 @@ QPainter* q_picture_qbase_shared_painter(void* self) {
 
 void q_picture_on_shared_painter(void* self, QPainter* (*slot)()) {
     QPicture_OnSharedPainter((QPicture*)self, (intptr_t)slot);
+}
+
+double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPicture_GetDecodedMetricF((QPicture*)self, metricA, metricB);
+}
+
+double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPicture_QBaseGetDecodedMetricF((QPicture*)self, metricA, metricB);
+}
+
+void q_picture_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QPicture_OnGetDecodedMetricF((QPicture*)self, (intptr_t)slot);
 }
 
 void q_picture_delete(void* self) {

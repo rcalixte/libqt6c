@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qsharedmemory.html
 
 /// q_sharedmemory_new constructs a new QSharedMemory object.
@@ -26,18 +21,28 @@ QSharedMemory* q_sharedmemory_new();
 
 /// q_sharedmemory_new2 constructs a new QSharedMemory object.
 ///
-/// ``` const char* key ```
-QSharedMemory* q_sharedmemory_new2(const char* key);
+/// ``` QNativeIpcKey* key ```
+QSharedMemory* q_sharedmemory_new2(void* key);
 
 /// q_sharedmemory_new3 constructs a new QSharedMemory object.
 ///
-/// ``` QObject* parent ```
-QSharedMemory* q_sharedmemory_new3(void* parent);
+/// ``` const char* key ```
+QSharedMemory* q_sharedmemory_new3(const char* key);
 
 /// q_sharedmemory_new4 constructs a new QSharedMemory object.
 ///
+/// ``` QObject* parent ```
+QSharedMemory* q_sharedmemory_new4(void* parent);
+
+/// q_sharedmemory_new5 constructs a new QSharedMemory object.
+///
+/// ``` QNativeIpcKey* key, QObject* parent ```
+QSharedMemory* q_sharedmemory_new5(void* key, void* parent);
+
+/// q_sharedmemory_new6 constructs a new QSharedMemory object.
+///
 /// ``` const char* key, QObject* parent ```
-QSharedMemory* q_sharedmemory_new4(const char* key, void* parent);
+QSharedMemory* q_sharedmemory_new6(const char* key, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -77,13 +82,23 @@ const char* q_sharedmemory_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#setNativeKey)
 ///
+/// ``` QSharedMemory* self, QNativeIpcKey* key ```
+void q_sharedmemory_set_native_key(void* self, void* key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#setNativeKey)
+///
 /// ``` QSharedMemory* self, const char* key ```
-void q_sharedmemory_set_native_key(void* self, const char* key);
+void q_sharedmemory_set_native_key_with_key(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#nativeKey)
 ///
 /// ``` QSharedMemory* self ```
 const char* q_sharedmemory_native_key(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#nativeIpcKey)
+///
+/// ``` QSharedMemory* self ```
+QNativeIpcKey* q_sharedmemory_native_ipc_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#create)
 ///
@@ -145,6 +160,21 @@ int64_t q_sharedmemory_error(void* self);
 /// ``` QSharedMemory* self ```
 const char* q_sharedmemory_error_string(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#isKeyTypeSupported)
+///
+/// ``` enum QNativeIpcKey__Type typeVal ```
+bool q_sharedmemory_is_key_type_supported(int64_t typeVal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#platformSafeKey)
+///
+/// ``` const char* key ```
+QNativeIpcKey* q_sharedmemory_platform_safe_key(const char* key);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#legacyNativeKey)
+///
+/// ``` const char* key ```
+QNativeIpcKey* q_sharedmemory_legacy_native_key(const char* key);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -155,6 +185,11 @@ const char* q_sharedmemory_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_sharedmemory_tr3(const char* s, const char* c, int n);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#setNativeKey)
+///
+/// ``` QSharedMemory* self, const char* key, enum QNativeIpcKey__Type typeVal ```
+void q_sharedmemory_set_native_key2(void* self, const char* key, int64_t typeVal);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#create)
 ///
 /// ``` QSharedMemory* self, int64_t size, enum QSharedMemory__AccessMode mode ```
@@ -164,6 +199,16 @@ bool q_sharedmemory_create2(void* self, int64_t size, int64_t mode);
 ///
 /// ``` QSharedMemory* self, enum QSharedMemory__AccessMode mode ```
 bool q_sharedmemory_attach1(void* self, int64_t mode);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#platformSafeKey)
+///
+/// ``` const char* key, enum QNativeIpcKey__Type typeVal ```
+QNativeIpcKey* q_sharedmemory_platform_safe_key2(const char* key, int64_t typeVal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qsharedmemory.html#legacyNativeKey)
+///
+/// ``` const char* key, enum QNativeIpcKey__Type typeVal ```
+QNativeIpcKey* q_sharedmemory_legacy_native_key2(const char* key, int64_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -226,7 +271,7 @@ QThread* q_sharedmemory_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSharedMemory* self, QThread* thread ```
-void q_sharedmemory_move_to_thread(void* self, void* thread);
+bool q_sharedmemory_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -241,6 +286,13 @@ int32_t q_sharedmemory_start_timer(void* self, int interval);
 ///
 /// ``` QSharedMemory* self, int id ```
 void q_sharedmemory_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSharedMemory* self, enum Qt__TimerId id ```
+void q_sharedmemory_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -381,6 +433,13 @@ bool q_sharedmemory_inherits(void* self, const char* classname);
 ///
 /// ``` QSharedMemory* self ```
 void q_sharedmemory_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSharedMemory* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_sharedmemory_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

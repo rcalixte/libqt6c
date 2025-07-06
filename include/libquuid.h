@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqbytearrayview.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/quuid.html
 
 /// q_uuid_new constructs a new QUuid object.
@@ -40,13 +36,23 @@ QUuid* q_uuid_new4(uint32_t l, unsigned short w1, unsigned short w2, unsigned ch
 
 /// q_uuid_new5 constructs a new QUuid object.
 ///
-/// ``` char* stringVal ```
-QUuid* q_uuid_new5(char* stringVal);
+/// ``` QUuid__Id128Bytes* id128 ```
+QUuid* q_uuid_new5(void* id128);
 
 /// q_uuid_new6 constructs a new QUuid object.
 ///
+/// ``` char* stringVal ```
+QUuid* q_uuid_new6(char* stringVal);
+
+/// q_uuid_new7 constructs a new QUuid object.
+///
 /// ``` QUuid* param1 ```
-QUuid* q_uuid_new6(void* param1);
+QUuid* q_uuid_new7(void* param1);
+
+/// q_uuid_new8 constructs a new QUuid object.
+///
+/// ``` QUuid__Id128Bytes* id128, enum QSysInfo__Endian order ```
+QUuid* q_uuid_new8(void* id128, int64_t order);
 
 /// q_uuid_copy_assign shallow copies `other` into `self`.
 ///
@@ -73,10 +79,20 @@ const char* q_uuid_to_string(void* self);
 /// ``` QUuid* self ```
 char* q_uuid_to_byte_array(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toBytes)
+///
+/// ``` QUuid* self ```
+QUuid__Id128Bytes* q_uuid_to_bytes(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toRfc4122)
 ///
 /// ``` QUuid* self ```
 char* q_uuid_to_rfc4122(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromBytes)
+///
+/// ``` void* bytes ```
+QUuid* q_uuid_from_bytes(void* bytes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromRfc4122)
 ///
@@ -88,35 +104,10 @@ QUuid* q_uuid_from_rfc4122(const char* param1);
 /// ``` QUuid* self ```
 bool q_uuid_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#operator==)
-///
-/// ``` QUuid* self, QUuid* orig ```
-bool q_uuid_operator_equal(void* self, void* orig);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#operator!=)
-///
-/// ``` QUuid* self, QUuid* orig ```
-bool q_uuid_operator_not_equal(void* self, void* orig);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#operator<)
-///
-/// ``` QUuid* self, QUuid* other ```
-bool q_uuid_operator_lesser(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#operator>)
-///
-/// ``` QUuid* self, QUuid* other ```
-bool q_uuid_operator_greater(void* self, void* other);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuid)
 ///
 ///
 QUuid* q_uuid_create_uuid();
-
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuidV3)
-///
-/// ``` QUuid* ns, const char* baseData ```
-QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuidV5)
 ///
@@ -126,12 +117,7 @@ QUuid* q_uuid_create_uuid_v5(void* ns, const char* baseData);
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuidV3)
 ///
 /// ``` QUuid* ns, const char* baseData ```
-QUuid* q_uuid_create_uuid_v32(void* ns, const char* baseData);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#createUuidV5)
-///
-/// ``` QUuid* ns, const char* baseData ```
-QUuid* q_uuid_create_uuid_v52(void* ns, const char* baseData);
+QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#variant)
 ///
@@ -153,12 +139,46 @@ const char* q_uuid_to_string1(void* self, int64_t mode);
 /// ``` QUuid* self, enum QUuid__StringFormat mode ```
 char* q_uuid_to_byte_array1(void* self, int64_t mode);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toBytes)
+///
+/// ``` QUuid* self, enum QSysInfo__Endian order ```
+QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int64_t order);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromBytes)
+///
+/// ``` void* bytes, enum QSysInfo__Endian order ```
+QUuid* q_uuid_from_bytes2(void* bytes, int64_t order);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#dtor.QUuid)
 ///
 /// Delete this object from C++ memory.
 ///
 /// ``` QUuid* self ```
 void q_uuid_delete(void* self);
+
+/// https://doc.qt.io/qt-6/quuid-id128bytes.html
+
+/// q_uuid__id128bytes_new constructs a new QUuid::Id128Bytes object.
+///
+///
+QUuid__Id128Bytes* q_uuid__id128bytes_new();
+
+/// q_uuid__id128bytes_new2 constructs a new QUuid::Id128Bytes object.
+///
+/// ``` QUuid__Id128Bytes* param1 ```
+QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid__id128bytes.html#operator QByteArrayView)
+///
+/// ``` QUuid__Id128Bytes* self ```
+const char* q_uuid__id128bytes_to_q_byte_array_view(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid::id128bytes.html#dtor.QUuid::Id128Bytes)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QUuid__Id128Bytes* self ```
+void q_uuid__id128bytes_delete(void* self);
 
 /// https://doc.qt.io/qt-6/quuid.html#types
 

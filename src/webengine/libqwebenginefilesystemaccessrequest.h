@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html
 
 /// q_webenginefilesystemaccessrequest_new constructs a new QWebEngineFileSystemAccessRequest object.

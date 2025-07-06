@@ -31,23 +31,23 @@ QDeadlineTimer* q_deadlinetimer_new3();
 
 /// q_deadlinetimer_new4 constructs a new QDeadlineTimer object.
 ///
-/// ``` enum QDeadlineTimer__ForeverConstant param1 ```
-QDeadlineTimer* q_deadlinetimer_new4(int64_t param1);
+/// ``` enum Qt__TimerType type_ ```
+QDeadlineTimer* q_deadlinetimer_new4(int64_t type_);
 
 /// q_deadlinetimer_new5 constructs a new QDeadlineTimer object.
 ///
-/// ``` long long msecs ```
-QDeadlineTimer* q_deadlinetimer_new5(long long msecs);
+/// ``` enum QDeadlineTimer__ForeverConstant param1 ```
+QDeadlineTimer* q_deadlinetimer_new5(int64_t param1);
 
 /// q_deadlinetimer_new6 constructs a new QDeadlineTimer object.
 ///
-/// ``` QDeadlineTimer* param1 ```
-QDeadlineTimer* q_deadlinetimer_new6(void* param1);
+/// ``` long long msecs ```
+QDeadlineTimer* q_deadlinetimer_new6(long long msecs);
 
 /// q_deadlinetimer_new7 constructs a new QDeadlineTimer object.
 ///
-/// ``` enum Qt__TimerType type_ ```
-QDeadlineTimer* q_deadlinetimer_new7(int64_t type_);
+/// ``` QDeadlineTimer* param1 ```
+QDeadlineTimer* q_deadlinetimer_new7(void* param1);
 
 /// q_deadlinetimer_new8 constructs a new QDeadlineTimer object.
 ///
@@ -153,11 +153,6 @@ QDeadlineTimer* q_deadlinetimer_operator_plus_assign(void* self, long long msecs
 ///
 /// ``` QDeadlineTimer* self, long long msecs ```
 QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, long long msecs);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator=)
-///
-/// ``` QDeadlineTimer* self, QDeadlineTimer* param1 ```
-void q_deadlinetimer_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#setRemainingTime)
 ///

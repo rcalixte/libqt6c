@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbytearrayview.h"
-#include "libqchar.h"
-#include "libqstringconverter_base.h"
-
 /// https://doc.qt.io/qt-6/qstringencoder.html
 
 /// q_stringencoder_new constructs a new QStringEncoder object.
@@ -30,8 +26,8 @@ QStringEncoder* q_stringencoder_new2(int64_t encoding);
 
 /// q_stringencoder_new3 constructs a new QStringEncoder object.
 ///
-/// ``` const char* name ```
-QStringEncoder* q_stringencoder_new3(const char* name);
+/// ``` char* name ```
+QStringEncoder* q_stringencoder_new3(char* name);
 
 /// q_stringencoder_new4 constructs a new QStringEncoder object.
 ///
@@ -40,8 +36,8 @@ QStringEncoder* q_stringencoder_new4(int64_t encoding, int64_t flags);
 
 /// q_stringencoder_new5 constructs a new QStringEncoder object.
 ///
-/// ``` const char* name, int flags ```
-QStringEncoder* q_stringencoder_new5(const char* name, int64_t flags);
+/// ``` char* name, int flags ```
+QStringEncoder* q_stringencoder_new5(char* name, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
 ///
@@ -83,6 +79,13 @@ const char* q_stringencoder_name(void* self);
 /// ``` enum QStringConverter__Encoding e ```
 const char* q_stringencoder_name_for_encoding(int64_t e);
 
+/// Inherited from QStringConverter
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
+///
+///
+const char** q_stringencoder_available_codecs();
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringencoder.html#dtor.QStringEncoder)
 ///
 /// Delete this object from C++ memory.
@@ -104,8 +107,8 @@ QStringDecoder* q_stringdecoder_new2();
 
 /// q_stringdecoder_new3 constructs a new QStringDecoder object.
 ///
-/// ``` const char* name ```
-QStringDecoder* q_stringdecoder_new3(const char* name);
+/// ``` char* name ```
+QStringDecoder* q_stringdecoder_new3(char* name);
 
 /// q_stringdecoder_new4 constructs a new QStringDecoder object.
 ///
@@ -114,8 +117,8 @@ QStringDecoder* q_stringdecoder_new4(int64_t encoding, int64_t flags);
 
 /// q_stringdecoder_new5 constructs a new QStringDecoder object.
 ///
-/// ``` const char* name, int f ```
-QStringDecoder* q_stringdecoder_new5(const char* name, int64_t f);
+/// ``` char* name, int f ```
+QStringDecoder* q_stringdecoder_new5(char* name, int64_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
 ///
@@ -166,6 +169,13 @@ const char* q_stringdecoder_name(void* self);
 ///
 /// ``` enum QStringConverter__Encoding e ```
 const char* q_stringdecoder_name_for_encoding(int64_t e);
+
+/// Inherited from QStringConverter
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
+///
+///
+const char** q_stringdecoder_available_codecs();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringdecoder.html#dtor.QStringDecoder)
 ///

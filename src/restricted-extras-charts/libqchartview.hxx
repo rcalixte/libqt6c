@@ -85,6 +85,7 @@ class VirtualQChartView final : public QChartView {
     using QChartView_SenderSignalIndex_Callback = int (*)();
     using QChartView_Receivers_Callback = int (*)(const QChartView*, const char*);
     using QChartView_IsSignalConnected_Callback = bool (*)(const QChartView*, QMetaMethod*);
+    using QChartView_GetDecodedMetricF_Callback = double (*)(const QChartView*, int, int);
 
   protected:
     // Instance callback storage
@@ -155,6 +156,7 @@ class VirtualQChartView final : public QChartView {
     QChartView_SenderSignalIndex_Callback qchartview_sendersignalindex_callback = nullptr;
     QChartView_Receivers_Callback qchartview_receivers_callback = nullptr;
     QChartView_IsSignalConnected_Callback qchartview_issignalconnected_callback = nullptr;
+    QChartView_GetDecodedMetricF_Callback qchartview_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qchartview_metacall_isbase = false;
@@ -224,12 +226,13 @@ class VirtualQChartView final : public QChartView {
     mutable bool qchartview_sendersignalindex_isbase = false;
     mutable bool qchartview_receivers_isbase = false;
     mutable bool qchartview_issignalconnected_isbase = false;
+    mutable bool qchartview_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQChartView(QWidget* parent) : QChartView(parent){};
-    VirtualQChartView() : QChartView(){};
-    VirtualQChartView(QChart* chart) : QChartView(chart){};
-    VirtualQChartView(QChart* chart, QWidget* parent) : QChartView(chart, parent){};
+    VirtualQChartView(QWidget* parent) : QChartView(parent) {};
+    VirtualQChartView() : QChartView() {};
+    VirtualQChartView(QChart* chart) : QChartView(chart) {};
+    VirtualQChartView(QChart* chart, QWidget* parent) : QChartView(chart, parent) {};
 
     ~VirtualQChartView() {
         qchartview_metacall_callback = nullptr;
@@ -299,6 +302,7 @@ class VirtualQChartView final : public QChartView {
         qchartview_sendersignalindex_callback = nullptr;
         qchartview_receivers_callback = nullptr;
         qchartview_issignalconnected_callback = nullptr;
+        qchartview_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -369,6 +373,7 @@ class VirtualQChartView final : public QChartView {
     inline void setQChartView_SenderSignalIndex_Callback(QChartView_SenderSignalIndex_Callback cb) { qchartview_sendersignalindex_callback = cb; }
     inline void setQChartView_Receivers_Callback(QChartView_Receivers_Callback cb) { qchartview_receivers_callback = cb; }
     inline void setQChartView_IsSignalConnected_Callback(QChartView_IsSignalConnected_Callback cb) { qchartview_issignalconnected_callback = cb; }
+    inline void setQChartView_GetDecodedMetricF_Callback(QChartView_GetDecodedMetricF_Callback cb) { qchartview_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQChartView_Metacall_IsBase(bool value) const { qchartview_metacall_isbase = value; }
@@ -438,6 +443,7 @@ class VirtualQChartView final : public QChartView {
     inline void setQChartView_SenderSignalIndex_IsBase(bool value) const { qchartview_sendersignalindex_isbase = value; }
     inline void setQChartView_Receivers_IsBase(bool value) const { qchartview_receivers_isbase = value; }
     inline void setQChartView_IsSignalConnected_IsBase(bool value) const { qchartview_issignalconnected_isbase = value; }
+    inline void setQChartView_GetDecodedMetricF_IsBase(bool value) const { qchartview_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1399,6 +1405,22 @@ class VirtualQChartView final : public QChartView {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qchartview_getdecodedmetricf_isbase) {
+            qchartview_getdecodedmetricf_isbase = false;
+            return QChartView::getDecodedMetricF(metricA, metricB);
+        } else if (qchartview_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qchartview_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QChartView::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QChartView_ResizeEvent(QChartView* self, QResizeEvent* event);
     friend void QChartView_QBaseResizeEvent(QChartView* self, QResizeEvent* event);
@@ -1446,10 +1468,10 @@ class VirtualQChartView final : public QChartView {
     friend void QChartView_QBaseShowEvent(QChartView* self, QShowEvent* event);
     friend void QChartView_InputMethodEvent(QChartView* self, QInputMethodEvent* event);
     friend void QChartView_QBaseInputMethodEvent(QChartView* self, QInputMethodEvent* event);
-    friend void QChartView_DrawBackground(QChartView* self, QPainter* painter, QRectF* rect);
-    friend void QChartView_QBaseDrawBackground(QChartView* self, QPainter* painter, QRectF* rect);
-    friend void QChartView_DrawForeground(QChartView* self, QPainter* painter, QRectF* rect);
-    friend void QChartView_QBaseDrawForeground(QChartView* self, QPainter* painter, QRectF* rect);
+    friend void QChartView_DrawBackground(QChartView* self, QPainter* painter, const QRectF* rect);
+    friend void QChartView_QBaseDrawBackground(QChartView* self, QPainter* painter, const QRectF* rect);
+    friend void QChartView_DrawForeground(QChartView* self, QPainter* painter, const QRectF* rect);
+    friend void QChartView_QBaseDrawForeground(QChartView* self, QPainter* painter, const QRectF* rect);
     friend bool QChartView_EventFilter(QChartView* self, QObject* param1, QEvent* param2);
     friend bool QChartView_QBaseEventFilter(QChartView* self, QObject* param1, QEvent* param2);
     friend QSize* QChartView_ViewportSizeHint(const QChartView* self);
@@ -1472,8 +1494,8 @@ class VirtualQChartView final : public QChartView {
     friend void QChartView_QBaseActionEvent(QChartView* self, QActionEvent* event);
     friend void QChartView_HideEvent(QChartView* self, QHideEvent* event);
     friend void QChartView_QBaseHideEvent(QChartView* self, QHideEvent* event);
-    friend bool QChartView_NativeEvent(QChartView* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QChartView_QBaseNativeEvent(QChartView* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QChartView_NativeEvent(QChartView* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QChartView_QBaseNativeEvent(QChartView* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QChartView_Metric(const QChartView* self, int param1);
     friend int QChartView_QBaseMetric(const QChartView* self, int param1);
     friend void QChartView_InitPainter(const QChartView* self, QPainter* painter);
@@ -1488,10 +1510,10 @@ class VirtualQChartView final : public QChartView {
     friend void QChartView_QBaseChildEvent(QChartView* self, QChildEvent* event);
     friend void QChartView_CustomEvent(QChartView* self, QEvent* event);
     friend void QChartView_QBaseCustomEvent(QChartView* self, QEvent* event);
-    friend void QChartView_ConnectNotify(QChartView* self, QMetaMethod* signal);
-    friend void QChartView_QBaseConnectNotify(QChartView* self, QMetaMethod* signal);
-    friend void QChartView_DisconnectNotify(QChartView* self, QMetaMethod* signal);
-    friend void QChartView_QBaseDisconnectNotify(QChartView* self, QMetaMethod* signal);
+    friend void QChartView_ConnectNotify(QChartView* self, const QMetaMethod* signal);
+    friend void QChartView_QBaseConnectNotify(QChartView* self, const QMetaMethod* signal);
+    friend void QChartView_DisconnectNotify(QChartView* self, const QMetaMethod* signal);
+    friend void QChartView_QBaseDisconnectNotify(QChartView* self, const QMetaMethod* signal);
     friend void QChartView_SetViewportMargins(QChartView* self, int left, int top, int right, int bottom);
     friend void QChartView_QBaseSetViewportMargins(QChartView* self, int left, int top, int right, int bottom);
     friend QMargins* QChartView_ViewportMargins(const QChartView* self);
@@ -1514,8 +1536,10 @@ class VirtualQChartView final : public QChartView {
     friend int QChartView_QBaseSenderSignalIndex(const QChartView* self);
     friend int QChartView_Receivers(const QChartView* self, const char* signal);
     friend int QChartView_QBaseReceivers(const QChartView* self, const char* signal);
-    friend bool QChartView_IsSignalConnected(const QChartView* self, QMetaMethod* signal);
-    friend bool QChartView_QBaseIsSignalConnected(const QChartView* self, QMetaMethod* signal);
+    friend bool QChartView_IsSignalConnected(const QChartView* self, const QMetaMethod* signal);
+    friend bool QChartView_QBaseIsSignalConnected(const QChartView* self, const QMetaMethod* signal);
+    friend double QChartView_GetDecodedMetricF(const QChartView* self, int metricA, int metricB);
+    friend double QChartView_QBaseGetDecodedMetricF(const QChartView* self, int metricA, int metricB);
 };
 
 #endif

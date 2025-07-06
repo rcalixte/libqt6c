@@ -3,6 +3,14 @@
 #include "libqproperty.hpp"
 #include "libqproperty.h"
 
+QScopedPropertyUpdateGroup* q_scopedpropertyupdategroup_new() {
+    return QScopedPropertyUpdateGroup_new();
+}
+
+void q_scopedpropertyupdategroup_delete(void* self) {
+    QScopedPropertyUpdateGroup_Delete((QScopedPropertyUpdateGroup*)(self));
+}
+
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new(void* other) {
     return QPropertyBindingSourceLocation_new((QPropertyBindingSourceLocation*)other);
 }

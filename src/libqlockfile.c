@@ -17,8 +17,8 @@ bool q_lockfile_lock(void* self) {
     return QLockFile_Lock((QLockFile*)self);
 }
 
-bool q_lockfile_try_lock(void* self) {
-    return QLockFile_TryLock((QLockFile*)self);
+bool q_lockfile_try_lock(void* self, int timeout) {
+    return QLockFile_TryLock((QLockFile*)self, timeout);
 }
 
 void q_lockfile_unlock(void* self) {
@@ -33,6 +33,10 @@ int32_t q_lockfile_stale_lock_time(void* self) {
     return QLockFile_StaleLockTime((QLockFile*)self);
 }
 
+bool q_lockfile_try_lock2(void* self) {
+    return QLockFile_TryLock2((QLockFile*)self);
+}
+
 bool q_lockfile_is_locked(void* self) {
     return QLockFile_IsLocked((QLockFile*)self);
 }
@@ -43,10 +47,6 @@ bool q_lockfile_remove_stale_lock_file(void* self) {
 
 int64_t q_lockfile_error(void* self) {
     return QLockFile_Error((QLockFile*)self);
-}
-
-bool q_lockfile_try_lock1(void* self, int timeout) {
-    return QLockFile_TryLock1((QLockFile*)self, timeout);
 }
 
 void q_lockfile_delete(void* self) {

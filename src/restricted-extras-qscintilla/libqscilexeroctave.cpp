@@ -1,3 +1,4 @@
+#include <QByteArray>
 #include <QChildEvent>
 #include <QColor>
 #include <QEvent>
@@ -215,10 +216,10 @@ void QsciLexerOctave_OnAutoCompletionFillups(const QsciLexerOctave* self, intptr
 libqt_list /* of libqt_string */ QsciLexerOctave_AutoCompletionWordSeparators(const QsciLexerOctave* self) {
     auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
-        QStringList _ret = vqscilexeroctave->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexeroctave->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -230,14 +231,14 @@ libqt_list /* of libqt_string */ QsciLexerOctave_AutoCompletionWordSeparators(co
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerOctave*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerOctave*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -249,7 +250,7 @@ libqt_list /* of libqt_string */ QsciLexerOctave_AutoCompletionWordSeparators(co
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -260,10 +261,10 @@ libqt_list /* of libqt_string */ QsciLexerOctave_QBaseAutoCompletionWordSeparato
     auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_AutoCompletionWordSeparators_IsBase(true);
-        QStringList _ret = vqscilexeroctave->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexeroctave->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -275,14 +276,14 @@ libqt_list /* of libqt_string */ QsciLexerOctave_QBaseAutoCompletionWordSeparato
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerOctave*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerOctave*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -294,7 +295,7 @@ libqt_list /* of libqt_string */ QsciLexerOctave_QBaseAutoCompletionWordSeparato
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1008,7 +1009,7 @@ void QsciLexerOctave_OnSetAutoIndentStyle(QsciLexerOctave* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-void QsciLexerOctave_SetColor(QsciLexerOctave* self, QColor* c, int style) {
+void QsciLexerOctave_SetColor(QsciLexerOctave* self, const QColor* c, int style) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setColor(*c, static_cast<int>(style));
@@ -1018,7 +1019,7 @@ void QsciLexerOctave_SetColor(QsciLexerOctave* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerOctave_QBaseSetColor(QsciLexerOctave* self, QColor* c, int style) {
+void QsciLexerOctave_QBaseSetColor(QsciLexerOctave* self, const QColor* c, int style) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_SetColor_IsBase(true);
@@ -1066,7 +1067,7 @@ void QsciLexerOctave_OnSetEolFill(QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerOctave_SetFont(QsciLexerOctave* self, QFont* f, int style) {
+void QsciLexerOctave_SetFont(QsciLexerOctave* self, const QFont* f, int style) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setFont(*f, static_cast<int>(style));
@@ -1076,7 +1077,7 @@ void QsciLexerOctave_SetFont(QsciLexerOctave* self, QFont* f, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerOctave_QBaseSetFont(QsciLexerOctave* self, QFont* f, int style) {
+void QsciLexerOctave_QBaseSetFont(QsciLexerOctave* self, const QFont* f, int style) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_SetFont_IsBase(true);
@@ -1095,7 +1096,7 @@ void QsciLexerOctave_OnSetFont(QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerOctave_SetPaper(QsciLexerOctave* self, QColor* c, int style) {
+void QsciLexerOctave_SetPaper(QsciLexerOctave* self, const QColor* c, int style) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setPaper(*c, static_cast<int>(style));
@@ -1105,7 +1106,7 @@ void QsciLexerOctave_SetPaper(QsciLexerOctave* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerOctave_QBaseSetPaper(QsciLexerOctave* self, QColor* c, int style) {
+void QsciLexerOctave_QBaseSetPaper(QsciLexerOctave* self, const QColor* c, int style) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_SetPaper_IsBase(true);
@@ -1124,7 +1125,7 @@ void QsciLexerOctave_OnSetPaper(QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerOctave_ReadProperties(QsciLexerOctave* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerOctave_ReadProperties(QsciLexerOctave* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
@@ -1135,7 +1136,7 @@ bool QsciLexerOctave_ReadProperties(QsciLexerOctave* self, QSettings* qs, libqt_
 }
 
 // Base class handler implementation
-bool QsciLexerOctave_QBaseReadProperties(QsciLexerOctave* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerOctave_QBaseReadProperties(QsciLexerOctave* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
@@ -1155,7 +1156,7 @@ void QsciLexerOctave_OnReadProperties(QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerOctave_WriteProperties(const QsciLexerOctave* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerOctave_WriteProperties(const QsciLexerOctave* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
@@ -1166,7 +1167,7 @@ bool QsciLexerOctave_WriteProperties(const QsciLexerOctave* self, QSettings* qs,
 }
 
 // Base class handler implementation
-bool QsciLexerOctave_QBaseWriteProperties(const QsciLexerOctave* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerOctave_QBaseWriteProperties(const QsciLexerOctave* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
@@ -1331,7 +1332,7 @@ void QsciLexerOctave_OnCustomEvent(QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerOctave_ConnectNotify(QsciLexerOctave* self, QMetaMethod* signal) {
+void QsciLexerOctave_ConnectNotify(QsciLexerOctave* self, const QMetaMethod* signal) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->connectNotify(*signal);
@@ -1341,7 +1342,7 @@ void QsciLexerOctave_ConnectNotify(QsciLexerOctave* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QsciLexerOctave_QBaseConnectNotify(QsciLexerOctave* self, QMetaMethod* signal) {
+void QsciLexerOctave_QBaseConnectNotify(QsciLexerOctave* self, const QMetaMethod* signal) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_ConnectNotify_IsBase(true);
@@ -1360,7 +1361,7 @@ void QsciLexerOctave_OnConnectNotify(QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerOctave_DisconnectNotify(QsciLexerOctave* self, QMetaMethod* signal) {
+void QsciLexerOctave_DisconnectNotify(QsciLexerOctave* self, const QMetaMethod* signal) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->disconnectNotify(*signal);
@@ -1370,7 +1371,7 @@ void QsciLexerOctave_DisconnectNotify(QsciLexerOctave* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QsciLexerOctave_QBaseDisconnectNotify(QsciLexerOctave* self, QMetaMethod* signal) {
+void QsciLexerOctave_QBaseDisconnectNotify(QsciLexerOctave* self, const QMetaMethod* signal) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_DisconnectNotify_IsBase(true);
@@ -1385,6 +1386,122 @@ void QsciLexerOctave_OnDisconnectNotify(QsciLexerOctave* self, intptr_t slot) {
     auto* vqscilexeroctave = dynamic_cast<VirtualQsciLexerOctave*>(self);
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_DisconnectNotify_Callback(reinterpret_cast<VirtualQsciLexerOctave::QsciLexerOctave_DisconnectNotify_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerOctave_TextAsBytes(const QsciLexerOctave* self, const libqt_string text) {
+    auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
+        QByteArray _qb = vqscilexeroctave->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerOctave*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerOctave_QBaseTextAsBytes(const QsciLexerOctave* self, const libqt_string text) {
+    auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
+        vqscilexeroctave->setQsciLexerOctave_TextAsBytes_IsBase(true);
+        QByteArray _qb = vqscilexeroctave->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerOctave*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerOctave_OnTextAsBytes(const QsciLexerOctave* self, intptr_t slot) {
+    auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
+    if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
+        vqscilexeroctave->setQsciLexerOctave_TextAsBytes_Callback(reinterpret_cast<VirtualQsciLexerOctave::QsciLexerOctave_TextAsBytes_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerOctave_BytesAsText(const QsciLexerOctave* self, const char* bytes, int size) {
+    auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
+    if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
+        QString _ret = vqscilexeroctave->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerOctave*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerOctave_QBaseBytesAsText(const QsciLexerOctave* self, const char* bytes, int size) {
+    auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
+    if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
+        vqscilexeroctave->setQsciLexerOctave_BytesAsText_IsBase(true);
+        QString _ret = vqscilexeroctave->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerOctave*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerOctave_OnBytesAsText(const QsciLexerOctave* self, intptr_t slot) {
+    auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
+    if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
+        vqscilexeroctave->setQsciLexerOctave_BytesAsText_Callback(reinterpret_cast<VirtualQsciLexerOctave::QsciLexerOctave_BytesAsText_Callback>(slot));
     }
 }
 
@@ -1476,7 +1593,7 @@ void QsciLexerOctave_OnReceivers(const QsciLexerOctave* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerOctave_IsSignalConnected(const QsciLexerOctave* self, QMetaMethod* signal) {
+bool QsciLexerOctave_IsSignalConnected(const QsciLexerOctave* self, const QMetaMethod* signal) {
     auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         return vqscilexeroctave->isSignalConnected(*signal);
@@ -1486,7 +1603,7 @@ bool QsciLexerOctave_IsSignalConnected(const QsciLexerOctave* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QsciLexerOctave_QBaseIsSignalConnected(const QsciLexerOctave* self, QMetaMethod* signal) {
+bool QsciLexerOctave_QBaseIsSignalConnected(const QsciLexerOctave* self, const QMetaMethod* signal) {
     auto* vqscilexeroctave = const_cast<VirtualQsciLexerOctave*>(dynamic_cast<const VirtualQsciLexerOctave*>(self));
     if (vqscilexeroctave && vqscilexeroctave->isVirtualQsciLexerOctave) {
         vqscilexeroctave->setQsciLexerOctave_IsSignalConnected_IsBase(true);

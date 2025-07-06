@@ -1262,7 +1262,7 @@ void QMdiSubWindow_OnDropEvent(QMdiSubWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMdiSubWindow_NativeEvent(QMdiSubWindow* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMdiSubWindow_NativeEvent(QMdiSubWindow* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmdisubwindow = dynamic_cast<VirtualQMdiSubWindow*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
@@ -1273,7 +1273,7 @@ bool QMdiSubWindow_NativeEvent(QMdiSubWindow* self, libqt_string eventType, void
 }
 
 // Base class handler implementation
-bool QMdiSubWindow_QBaseNativeEvent(QMdiSubWindow* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMdiSubWindow_QBaseNativeEvent(QMdiSubWindow* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmdisubwindow = dynamic_cast<VirtualQMdiSubWindow*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
@@ -1525,7 +1525,7 @@ void QMdiSubWindow_OnCustomEvent(QMdiSubWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMdiSubWindow_ConnectNotify(QMdiSubWindow* self, QMetaMethod* signal) {
+void QMdiSubWindow_ConnectNotify(QMdiSubWindow* self, const QMetaMethod* signal) {
     auto* vqmdisubwindow = dynamic_cast<VirtualQMdiSubWindow*>(self);
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         vqmdisubwindow->connectNotify(*signal);
@@ -1535,7 +1535,7 @@ void QMdiSubWindow_ConnectNotify(QMdiSubWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMdiSubWindow_QBaseConnectNotify(QMdiSubWindow* self, QMetaMethod* signal) {
+void QMdiSubWindow_QBaseConnectNotify(QMdiSubWindow* self, const QMetaMethod* signal) {
     auto* vqmdisubwindow = dynamic_cast<VirtualQMdiSubWindow*>(self);
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         vqmdisubwindow->setQMdiSubWindow_ConnectNotify_IsBase(true);
@@ -1554,7 +1554,7 @@ void QMdiSubWindow_OnConnectNotify(QMdiSubWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMdiSubWindow_DisconnectNotify(QMdiSubWindow* self, QMetaMethod* signal) {
+void QMdiSubWindow_DisconnectNotify(QMdiSubWindow* self, const QMetaMethod* signal) {
     auto* vqmdisubwindow = dynamic_cast<VirtualQMdiSubWindow*>(self);
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         vqmdisubwindow->disconnectNotify(*signal);
@@ -1564,7 +1564,7 @@ void QMdiSubWindow_DisconnectNotify(QMdiSubWindow* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMdiSubWindow_QBaseDisconnectNotify(QMdiSubWindow* self, QMetaMethod* signal) {
+void QMdiSubWindow_QBaseDisconnectNotify(QMdiSubWindow* self, const QMetaMethod* signal) {
     auto* vqmdisubwindow = dynamic_cast<VirtualQMdiSubWindow*>(self);
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         vqmdisubwindow->setQMdiSubWindow_DisconnectNotify_IsBase(true);
@@ -1815,7 +1815,7 @@ void QMdiSubWindow_OnReceivers(const QMdiSubWindow* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMdiSubWindow_IsSignalConnected(const QMdiSubWindow* self, QMetaMethod* signal) {
+bool QMdiSubWindow_IsSignalConnected(const QMdiSubWindow* self, const QMetaMethod* signal) {
     auto* vqmdisubwindow = const_cast<VirtualQMdiSubWindow*>(dynamic_cast<const VirtualQMdiSubWindow*>(self));
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         return vqmdisubwindow->isSignalConnected(*signal);
@@ -1825,7 +1825,7 @@ bool QMdiSubWindow_IsSignalConnected(const QMdiSubWindow* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QMdiSubWindow_QBaseIsSignalConnected(const QMdiSubWindow* self, QMetaMethod* signal) {
+bool QMdiSubWindow_QBaseIsSignalConnected(const QMdiSubWindow* self, const QMetaMethod* signal) {
     auto* vqmdisubwindow = const_cast<VirtualQMdiSubWindow*>(dynamic_cast<const VirtualQMdiSubWindow*>(self));
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         vqmdisubwindow->setQMdiSubWindow_IsSignalConnected_IsBase(true);
@@ -1840,6 +1840,35 @@ void QMdiSubWindow_OnIsSignalConnected(const QMdiSubWindow* self, intptr_t slot)
     auto* vqmdisubwindow = const_cast<VirtualQMdiSubWindow*>(dynamic_cast<const VirtualQMdiSubWindow*>(self));
     if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
         vqmdisubwindow->setQMdiSubWindow_IsSignalConnected_Callback(reinterpret_cast<VirtualQMdiSubWindow::QMdiSubWindow_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QMdiSubWindow_GetDecodedMetricF(const QMdiSubWindow* self, int metricA, int metricB) {
+    auto* vqmdisubwindow = const_cast<VirtualQMdiSubWindow*>(dynamic_cast<const VirtualQMdiSubWindow*>(self));
+    if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
+        return vqmdisubwindow->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMdiSubWindow*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QMdiSubWindow_QBaseGetDecodedMetricF(const QMdiSubWindow* self, int metricA, int metricB) {
+    auto* vqmdisubwindow = const_cast<VirtualQMdiSubWindow*>(dynamic_cast<const VirtualQMdiSubWindow*>(self));
+    if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
+        vqmdisubwindow->setQMdiSubWindow_GetDecodedMetricF_IsBase(true);
+        return vqmdisubwindow->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMdiSubWindow*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QMdiSubWindow_OnGetDecodedMetricF(const QMdiSubWindow* self, intptr_t slot) {
+    auto* vqmdisubwindow = const_cast<VirtualQMdiSubWindow*>(dynamic_cast<const VirtualQMdiSubWindow*>(self));
+    if (vqmdisubwindow && vqmdisubwindow->isVirtualQMdiSubWindow) {
+        vqmdisubwindow->setQMdiSubWindow_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQMdiSubWindow::QMdiSubWindow_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -58,6 +58,14 @@ void q_debug_set_auto_insert_spaces(void* self, bool b) {
     QDebug_SetAutoInsertSpaces((QDebug*)self, b);
 }
 
+bool q_debug_quote_strings(void* self) {
+    return QDebug_QuoteStrings((QDebug*)self);
+}
+
+void q_debug_set_quote_strings(void* self, bool b) {
+    QDebug_SetQuoteStrings((QDebug*)self, b);
+}
+
 QDebug* q_debug_quote(void* self) {
     return QDebug_Quote((QDebug*)self);
 }

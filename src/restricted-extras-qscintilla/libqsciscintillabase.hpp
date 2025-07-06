@@ -62,10 +62,6 @@ typedef struct QWidget QWidget;
 typedef struct QsciScintillaBase QsciScintillaBase;
 #endif
 
-#ifndef __cplusplus
-typedef libqt_string ScintillaBytes; // C ABI QFlags
-#endif
-
 QsciScintillaBase* QsciScintillaBase_new(QWidget* parent);
 QsciScintillaBase* QsciScintillaBase_new2();
 QMetaObject* QsciScintillaBase_MetaObject(const QsciScintillaBase* self);
@@ -85,11 +81,11 @@ long QsciScintillaBase_SendScintilla5(const QsciScintillaBase* self, unsigned in
 long QsciScintillaBase_SendScintilla6(const QsciScintillaBase* self, unsigned int msg, long wParam);
 long QsciScintillaBase_SendScintilla7(const QsciScintillaBase* self, unsigned int msg, int wParam);
 long QsciScintillaBase_SendScintilla8(const QsciScintillaBase* self, unsigned int msg, long cpMin, long cpMax, char* lpstrText);
-long QsciScintillaBase_SendScintilla9(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QColor* col);
-long QsciScintillaBase_SendScintilla10(const QsciScintillaBase* self, unsigned int msg, QColor* col);
-long QsciScintillaBase_SendScintilla11(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QPainter* hdc, QRect* rc, long cpMin, long cpMax);
-long QsciScintillaBase_SendScintilla12(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QPixmap* lParam);
-long QsciScintillaBase_SendScintilla13(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QImage* lParam);
+long QsciScintillaBase_SendScintilla9(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, const QColor* col);
+long QsciScintillaBase_SendScintilla10(const QsciScintillaBase* self, unsigned int msg, const QColor* col);
+long QsciScintillaBase_SendScintilla11(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QPainter* hdc, const QRect* rc, long cpMin, long cpMax);
+long QsciScintillaBase_SendScintilla12(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, const QPixmap* lParam);
+long QsciScintillaBase_SendScintilla13(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, const QImage* lParam);
 void* QsciScintillaBase_SendScintillaPtrResult(const QsciScintillaBase* self, unsigned int msg);
 int QsciScintillaBase_CommandKey(int qt_key, int* modifiers);
 void QsciScintillaBase_QSCN_SELCHANGED(QsciScintillaBase* self, bool yes);
@@ -122,21 +118,21 @@ void QsciScintillaBase_SCN_PAINTED(QsciScintillaBase* self);
 void QsciScintillaBase_SCN_SAVEPOINTLEFT(QsciScintillaBase* self);
 void QsciScintillaBase_SCN_SAVEPOINTREACHED(QsciScintillaBase* self);
 void QsciScintillaBase_SCN_STYLENEEDED(QsciScintillaBase* self, int position);
-void QsciScintillaBase_SCN_URIDROPPED(QsciScintillaBase* self, QUrl* url);
+void QsciScintillaBase_SCN_URIDROPPED(QsciScintillaBase* self, const QUrl* url);
 void QsciScintillaBase_SCN_UPDATEUI(QsciScintillaBase* self, int updated);
 void QsciScintillaBase_SCN_USERLISTSELECTION(QsciScintillaBase* self, const char* selection, int id, int ch, int method, int position);
 void QsciScintillaBase_SCN_USERLISTSELECTION2(QsciScintillaBase* self, const char* selection, int id, int ch, int method);
 void QsciScintillaBase_SCN_USERLISTSELECTION3(QsciScintillaBase* self, const char* selection, int id);
 void QsciScintillaBase_SCN_ZOOM(QsciScintillaBase* self);
-bool QsciScintillaBase_CanInsertFromMimeData(const QsciScintillaBase* self, QMimeData* source);
+bool QsciScintillaBase_CanInsertFromMimeData(const QsciScintillaBase* self, const QMimeData* source);
 void QsciScintillaBase_OnCanInsertFromMimeData(const QsciScintillaBase* self, intptr_t slot);
-bool QsciScintillaBase_QBaseCanInsertFromMimeData(const QsciScintillaBase* self, QMimeData* source);
-libqt_string QsciScintillaBase_FromMimeData(const QsciScintillaBase* self, QMimeData* source, bool* rectangular);
+bool QsciScintillaBase_QBaseCanInsertFromMimeData(const QsciScintillaBase* self, const QMimeData* source);
+libqt_string QsciScintillaBase_FromMimeData(const QsciScintillaBase* self, const QMimeData* source, bool* rectangular);
 void QsciScintillaBase_OnFromMimeData(const QsciScintillaBase* self, intptr_t slot);
-libqt_string QsciScintillaBase_QBaseFromMimeData(const QsciScintillaBase* self, QMimeData* source, bool* rectangular);
-QMimeData* QsciScintillaBase_ToMimeData(const QsciScintillaBase* self, libqt_string text, bool rectangular);
+libqt_string QsciScintillaBase_QBaseFromMimeData(const QsciScintillaBase* self, const QMimeData* source, bool* rectangular);
+QMimeData* QsciScintillaBase_ToMimeData(const QsciScintillaBase* self, const libqt_string text, bool rectangular);
 void QsciScintillaBase_OnToMimeData(const QsciScintillaBase* self, intptr_t slot);
-QMimeData* QsciScintillaBase_QBaseToMimeData(const QsciScintillaBase* self, libqt_string text, bool rectangular);
+QMimeData* QsciScintillaBase_QBaseToMimeData(const QsciScintillaBase* self, const libqt_string text, bool rectangular);
 void QsciScintillaBase_ChangeEvent(QsciScintillaBase* self, QEvent* e);
 void QsciScintillaBase_OnChangeEvent(QsciScintillaBase* self, intptr_t slot);
 void QsciScintillaBase_QBaseChangeEvent(QsciScintillaBase* self, QEvent* e);
@@ -264,9 +260,9 @@ void QsciScintillaBase_QBaseShowEvent(QsciScintillaBase* self, QShowEvent* event
 void QsciScintillaBase_HideEvent(QsciScintillaBase* self, QHideEvent* event);
 void QsciScintillaBase_OnHideEvent(QsciScintillaBase* self, intptr_t slot);
 void QsciScintillaBase_QBaseHideEvent(QsciScintillaBase* self, QHideEvent* event);
-bool QsciScintillaBase_NativeEvent(QsciScintillaBase* self, libqt_string eventType, void* message, intptr_t* result);
+bool QsciScintillaBase_NativeEvent(QsciScintillaBase* self, const libqt_string eventType, void* message, intptr_t* result);
 void QsciScintillaBase_OnNativeEvent(QsciScintillaBase* self, intptr_t slot);
-bool QsciScintillaBase_QBaseNativeEvent(QsciScintillaBase* self, libqt_string eventType, void* message, intptr_t* result);
+bool QsciScintillaBase_QBaseNativeEvent(QsciScintillaBase* self, const libqt_string eventType, void* message, intptr_t* result);
 int QsciScintillaBase_Metric(const QsciScintillaBase* self, int param1);
 void QsciScintillaBase_OnMetric(const QsciScintillaBase* self, intptr_t slot);
 int QsciScintillaBase_QBaseMetric(const QsciScintillaBase* self, int param1);
@@ -291,12 +287,12 @@ void QsciScintillaBase_QBaseChildEvent(QsciScintillaBase* self, QChildEvent* eve
 void QsciScintillaBase_CustomEvent(QsciScintillaBase* self, QEvent* event);
 void QsciScintillaBase_OnCustomEvent(QsciScintillaBase* self, intptr_t slot);
 void QsciScintillaBase_QBaseCustomEvent(QsciScintillaBase* self, QEvent* event);
-void QsciScintillaBase_ConnectNotify(QsciScintillaBase* self, QMetaMethod* signal);
+void QsciScintillaBase_ConnectNotify(QsciScintillaBase* self, const QMetaMethod* signal);
 void QsciScintillaBase_OnConnectNotify(QsciScintillaBase* self, intptr_t slot);
-void QsciScintillaBase_QBaseConnectNotify(QsciScintillaBase* self, QMetaMethod* signal);
-void QsciScintillaBase_DisconnectNotify(QsciScintillaBase* self, QMetaMethod* signal);
+void QsciScintillaBase_QBaseConnectNotify(QsciScintillaBase* self, const QMetaMethod* signal);
+void QsciScintillaBase_DisconnectNotify(QsciScintillaBase* self, const QMetaMethod* signal);
 void QsciScintillaBase_OnDisconnectNotify(QsciScintillaBase* self, intptr_t slot);
-void QsciScintillaBase_QBaseDisconnectNotify(QsciScintillaBase* self, QMetaMethod* signal);
+void QsciScintillaBase_QBaseDisconnectNotify(QsciScintillaBase* self, const QMetaMethod* signal);
 void QsciScintillaBase_SetScrollBars(QsciScintillaBase* self);
 void QsciScintillaBase_OnSetScrollBars(QsciScintillaBase* self, intptr_t slot);
 void QsciScintillaBase_QBaseSetScrollBars(QsciScintillaBase* self);
@@ -336,9 +332,12 @@ int QsciScintillaBase_QBaseSenderSignalIndex(const QsciScintillaBase* self);
 int QsciScintillaBase_Receivers(const QsciScintillaBase* self, const char* signal);
 void QsciScintillaBase_OnReceivers(const QsciScintillaBase* self, intptr_t slot);
 int QsciScintillaBase_QBaseReceivers(const QsciScintillaBase* self, const char* signal);
-bool QsciScintillaBase_IsSignalConnected(const QsciScintillaBase* self, QMetaMethod* signal);
+bool QsciScintillaBase_IsSignalConnected(const QsciScintillaBase* self, const QMetaMethod* signal);
 void QsciScintillaBase_OnIsSignalConnected(const QsciScintillaBase* self, intptr_t slot);
-bool QsciScintillaBase_QBaseIsSignalConnected(const QsciScintillaBase* self, QMetaMethod* signal);
+bool QsciScintillaBase_QBaseIsSignalConnected(const QsciScintillaBase* self, const QMetaMethod* signal);
+double QsciScintillaBase_GetDecodedMetricF(const QsciScintillaBase* self, int metricA, int metricB);
+void QsciScintillaBase_OnGetDecodedMetricF(const QsciScintillaBase* self, intptr_t slot);
+double QsciScintillaBase_QBaseGetDecodedMetricF(const QsciScintillaBase* self, int metricA, int metricB);
 void QsciScintillaBase_Delete(QsciScintillaBase* self);
 
 #ifdef __cplusplus

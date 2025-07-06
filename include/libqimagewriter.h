@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqiodevice.h"
-#include "libqimage.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qimagewriter.html
 
 /// q_imagewriter_new constructs a new QImageWriter object.

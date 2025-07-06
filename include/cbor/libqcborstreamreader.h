@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqcborcommon.h"
-#include "../libqiodevice.h"
-
 /// https://doc.qt.io/qt-6/qcborstreamreader.html
 
 /// q_cborstreamreader_new constructs a new QCborStreamReader object.
@@ -242,6 +239,21 @@ bool q_cborstreamreader_enter_container(void* self);
 /// ``` QCborStreamReader* self ```
 bool q_cborstreamreader_leave_container(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#readAndAppendToString)
+///
+/// ``` QCborStreamReader* self, const char* dst ```
+bool q_cborstreamreader_read_and_append_to_string(void* self, const char* dst);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#readAndAppendToUtf8String)
+///
+/// ``` QCborStreamReader* self, char* dst ```
+bool q_cborstreamreader_read_and_append_to_utf8_string(void* self, char* dst);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#readAndAppendToByteArray)
+///
+/// ``` QCborStreamReader* self, char* dst ```
+bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#currentStringChunkSize)
 ///
 /// ``` QCborStreamReader* self ```
@@ -286,6 +298,21 @@ double q_cborstreamreader_to_double(void* self);
 ///
 /// ``` QCborStreamReader* self ```
 long long q_cborstreamreader_to_integer(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllString)
+///
+/// ``` QCborStreamReader* self ```
+const char* q_cborstreamreader_read_all_string(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllUtf8String)
+///
+/// ``` QCborStreamReader* self ```
+char* q_cborstreamreader_read_all_utf8_string(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllByteArray)
+///
+/// ``` QCborStreamReader* self ```
+char* q_cborstreamreader_read_all_byte_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#next)
 ///

@@ -15,7 +15,7 @@ QsciMacro* QsciMacro_new(QsciScintilla* parent) {
     return new VirtualQsciMacro(parent);
 }
 
-QsciMacro* QsciMacro_new2(libqt_string asc, QsciScintilla* parent) {
+QsciMacro* QsciMacro_new2(const libqt_string asc, QsciScintilla* parent) {
     QString asc_QString = QString::fromUtf8(asc.data, asc.len);
     return new VirtualQsciMacro(asc_QString, parent);
 }
@@ -72,7 +72,7 @@ void QsciMacro_Clear(QsciMacro* self) {
     self->clear();
 }
 
-bool QsciMacro_Load(QsciMacro* self, libqt_string asc) {
+bool QsciMacro_Load(QsciMacro* self, const libqt_string asc) {
     QString asc_QString = QString::fromUtf8(asc.data, asc.len);
     return self->load(asc_QString);
 }
@@ -346,7 +346,7 @@ void QsciMacro_OnCustomEvent(QsciMacro* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciMacro_ConnectNotify(QsciMacro* self, QMetaMethod* signal) {
+void QsciMacro_ConnectNotify(QsciMacro* self, const QMetaMethod* signal) {
     auto* vqscimacro = dynamic_cast<VirtualQsciMacro*>(self);
     if (vqscimacro && vqscimacro->isVirtualQsciMacro) {
         vqscimacro->connectNotify(*signal);
@@ -356,7 +356,7 @@ void QsciMacro_ConnectNotify(QsciMacro* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QsciMacro_QBaseConnectNotify(QsciMacro* self, QMetaMethod* signal) {
+void QsciMacro_QBaseConnectNotify(QsciMacro* self, const QMetaMethod* signal) {
     auto* vqscimacro = dynamic_cast<VirtualQsciMacro*>(self);
     if (vqscimacro && vqscimacro->isVirtualQsciMacro) {
         vqscimacro->setQsciMacro_ConnectNotify_IsBase(true);
@@ -375,7 +375,7 @@ void QsciMacro_OnConnectNotify(QsciMacro* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciMacro_DisconnectNotify(QsciMacro* self, QMetaMethod* signal) {
+void QsciMacro_DisconnectNotify(QsciMacro* self, const QMetaMethod* signal) {
     auto* vqscimacro = dynamic_cast<VirtualQsciMacro*>(self);
     if (vqscimacro && vqscimacro->isVirtualQsciMacro) {
         vqscimacro->disconnectNotify(*signal);
@@ -385,7 +385,7 @@ void QsciMacro_DisconnectNotify(QsciMacro* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QsciMacro_QBaseDisconnectNotify(QsciMacro* self, QMetaMethod* signal) {
+void QsciMacro_QBaseDisconnectNotify(QsciMacro* self, const QMetaMethod* signal) {
     auto* vqscimacro = dynamic_cast<VirtualQsciMacro*>(self);
     if (vqscimacro && vqscimacro->isVirtualQsciMacro) {
         vqscimacro->setQsciMacro_DisconnectNotify_IsBase(true);
@@ -491,7 +491,7 @@ void QsciMacro_OnReceivers(const QsciMacro* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciMacro_IsSignalConnected(const QsciMacro* self, QMetaMethod* signal) {
+bool QsciMacro_IsSignalConnected(const QsciMacro* self, const QMetaMethod* signal) {
     auto* vqscimacro = const_cast<VirtualQsciMacro*>(dynamic_cast<const VirtualQsciMacro*>(self));
     if (vqscimacro && vqscimacro->isVirtualQsciMacro) {
         return vqscimacro->isSignalConnected(*signal);
@@ -501,7 +501,7 @@ bool QsciMacro_IsSignalConnected(const QsciMacro* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QsciMacro_QBaseIsSignalConnected(const QsciMacro* self, QMetaMethod* signal) {
+bool QsciMacro_QBaseIsSignalConnected(const QsciMacro* self, const QMetaMethod* signal) {
     auto* vqscimacro = const_cast<VirtualQsciMacro*>(dynamic_cast<const VirtualQsciMacro*>(self));
     if (vqscimacro && vqscimacro->isVirtualQsciMacro) {
         vqscimacro->setQsciMacro_IsSignalConnected_IsBase(true);

@@ -27,6 +27,7 @@
 #include <QPainter>
 #include <QPdfDocument>
 #include <QPdfPageNavigator>
+#include <QPdfSearchModel>
 #include <QPdfView>
 #include <QPoint>
 #include <QResizeEvent>
@@ -109,6 +110,18 @@ QPdfDocument* QPdfView_Document(const QPdfView* self) {
     return self->document();
 }
 
+QPdfSearchModel* QPdfView_SearchModel(const QPdfView* self) {
+    return self->searchModel();
+}
+
+void QPdfView_SetSearchModel(QPdfView* self, QPdfSearchModel* searchModel) {
+    self->setSearchModel(searchModel);
+}
+
+int QPdfView_CurrentSearchResultIndex(const QPdfView* self) {
+    return self->currentSearchResultIndex();
+}
+
 QPdfPageNavigator* QPdfView_PageNavigator(const QPdfView* self) {
     return self->pageNavigator();
 }
@@ -151,6 +164,10 @@ void QPdfView_SetZoomMode(QPdfView* self, int mode) {
 
 void QPdfView_SetZoomFactor(QPdfView* self, double factor) {
     self->setZoomFactor(static_cast<qreal>(factor));
+}
+
+void QPdfView_SetCurrentSearchResultIndex(QPdfView* self, int currentResult) {
+    self->setCurrentSearchResultIndex(static_cast<int>(currentResult));
 }
 
 void QPdfView_DocumentChanged(QPdfView* self, QPdfDocument* document) {
@@ -221,6 +238,30 @@ void QPdfView_Connect_DocumentMarginsChanged(QPdfView* self, intptr_t slot) {
     void (*slotFunc)(QPdfView*, QMargins*) = reinterpret_cast<void (*)(QPdfView*, QMargins*)>(slot);
     QPdfView::connect(self, &QPdfView::documentMarginsChanged, [self, slotFunc](QMargins documentMargins) {
         QMargins* sigval1 = new QMargins(documentMargins);
+        slotFunc(self, sigval1);
+    });
+}
+
+void QPdfView_SearchModelChanged(QPdfView* self, QPdfSearchModel* searchModel) {
+    self->searchModelChanged(searchModel);
+}
+
+void QPdfView_Connect_SearchModelChanged(QPdfView* self, intptr_t slot) {
+    void (*slotFunc)(QPdfView*, QPdfSearchModel*) = reinterpret_cast<void (*)(QPdfView*, QPdfSearchModel*)>(slot);
+    QPdfView::connect(self, &QPdfView::searchModelChanged, [self, slotFunc](QPdfSearchModel* searchModel) {
+        QPdfSearchModel* sigval1 = searchModel;
+        slotFunc(self, sigval1);
+    });
+}
+
+void QPdfView_CurrentSearchResultIndexChanged(QPdfView* self, int currentResult) {
+    self->currentSearchResultIndexChanged(static_cast<int>(currentResult));
+}
+
+void QPdfView_Connect_CurrentSearchResultIndexChanged(QPdfView* self, intptr_t slot) {
+    void (*slotFunc)(QPdfView*, int) = reinterpret_cast<void (*)(QPdfView*, int)>(slot);
+    QPdfView::connect(self, &QPdfView::currentSearchResultIndexChanged, [self, slotFunc](int currentResult) {
+        int sigval1 = currentResult;
         slotFunc(self, sigval1);
     });
 }
@@ -333,6 +374,93 @@ void QPdfView_OnScrollContentsBy(QPdfView* self, intptr_t slot) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->setQPdfView_ScrollContentsBy_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_ScrollContentsBy_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+void QPdfView_MousePressEvent(QPdfView* self, QMouseEvent* event) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->mousePressEvent(event);
+    } else {
+        ((VirtualQPdfView*)self)->mousePressEvent(event);
+    }
+}
+
+// Base class handler implementation
+void QPdfView_QBaseMousePressEvent(QPdfView* self, QMouseEvent* event) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_MousePressEvent_IsBase(true);
+        vqpdfview->mousePressEvent(event);
+    } else {
+        ((VirtualQPdfView*)self)->mousePressEvent(event);
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPdfView_OnMousePressEvent(QPdfView* self, intptr_t slot) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_MousePressEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MousePressEvent_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+void QPdfView_MouseMoveEvent(QPdfView* self, QMouseEvent* event) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->mouseMoveEvent(event);
+    } else {
+        ((VirtualQPdfView*)self)->mouseMoveEvent(event);
+    }
+}
+
+// Base class handler implementation
+void QPdfView_QBaseMouseMoveEvent(QPdfView* self, QMouseEvent* event) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_MouseMoveEvent_IsBase(true);
+        vqpdfview->mouseMoveEvent(event);
+    } else {
+        ((VirtualQPdfView*)self)->mouseMoveEvent(event);
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPdfView_OnMouseMoveEvent(QPdfView* self, intptr_t slot) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_MouseMoveEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MouseMoveEvent_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+void QPdfView_MouseReleaseEvent(QPdfView* self, QMouseEvent* event) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->mouseReleaseEvent(event);
+    } else {
+        ((VirtualQPdfView*)self)->mouseReleaseEvent(event);
+    }
+}
+
+// Base class handler implementation
+void QPdfView_QBaseMouseReleaseEvent(QPdfView* self, QMouseEvent* event) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_MouseReleaseEvent_IsBase(true);
+        vqpdfview->mouseReleaseEvent(event);
+    } else {
+        ((VirtualQPdfView*)self)->mouseReleaseEvent(event);
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPdfView_OnMouseReleaseEvent(QPdfView* self, intptr_t slot) {
+    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_MouseReleaseEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MouseReleaseEvent_Callback>(slot));
     }
 }
 
@@ -511,64 +639,6 @@ void QPdfView_OnViewportEvent(QPdfView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfView_MousePressEvent(QPdfView* self, QMouseEvent* param1) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->mousePressEvent(param1);
-    } else {
-        ((VirtualQPdfView*)self)->mousePressEvent(param1);
-    }
-}
-
-// Base class handler implementation
-void QPdfView_QBaseMousePressEvent(QPdfView* self, QMouseEvent* param1) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->setQPdfView_MousePressEvent_IsBase(true);
-        vqpdfview->mousePressEvent(param1);
-    } else {
-        ((VirtualQPdfView*)self)->mousePressEvent(param1);
-    }
-}
-
-// Auxiliary method to allow providing re-implementation
-void QPdfView_OnMousePressEvent(QPdfView* self, intptr_t slot) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->setQPdfView_MousePressEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MousePressEvent_Callback>(slot));
-    }
-}
-
-// Derived class handler implementation
-void QPdfView_MouseReleaseEvent(QPdfView* self, QMouseEvent* param1) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->mouseReleaseEvent(param1);
-    } else {
-        ((VirtualQPdfView*)self)->mouseReleaseEvent(param1);
-    }
-}
-
-// Base class handler implementation
-void QPdfView_QBaseMouseReleaseEvent(QPdfView* self, QMouseEvent* param1) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->setQPdfView_MouseReleaseEvent_IsBase(true);
-        vqpdfview->mouseReleaseEvent(param1);
-    } else {
-        ((VirtualQPdfView*)self)->mouseReleaseEvent(param1);
-    }
-}
-
-// Auxiliary method to allow providing re-implementation
-void QPdfView_OnMouseReleaseEvent(QPdfView* self, intptr_t slot) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->setQPdfView_MouseReleaseEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MouseReleaseEvent_Callback>(slot));
-    }
-}
-
-// Derived class handler implementation
 void QPdfView_MouseDoubleClickEvent(QPdfView* self, QMouseEvent* param1) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
@@ -594,35 +664,6 @@ void QPdfView_OnMouseDoubleClickEvent(QPdfView* self, intptr_t slot) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->setQPdfView_MouseDoubleClickEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MouseDoubleClickEvent_Callback>(slot));
-    }
-}
-
-// Derived class handler implementation
-void QPdfView_MouseMoveEvent(QPdfView* self, QMouseEvent* param1) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->mouseMoveEvent(param1);
-    } else {
-        ((VirtualQPdfView*)self)->mouseMoveEvent(param1);
-    }
-}
-
-// Base class handler implementation
-void QPdfView_QBaseMouseMoveEvent(QPdfView* self, QMouseEvent* param1) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->setQPdfView_MouseMoveEvent_IsBase(true);
-        vqpdfview->mouseMoveEvent(param1);
-    } else {
-        ((VirtualQPdfView*)self)->mouseMoveEvent(param1);
-    }
-}
-
-// Auxiliary method to allow providing re-implementation
-void QPdfView_OnMouseMoveEvent(QPdfView* self, intptr_t slot) {
-    auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
-    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
-        vqpdfview->setQPdfView_MouseMoveEvent_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_MouseMoveEvent_Callback>(slot));
     }
 }
 
@@ -1379,7 +1420,7 @@ void QPdfView_OnHideEvent(QPdfView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfView_NativeEvent(QPdfView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPdfView_NativeEvent(QPdfView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
@@ -1390,7 +1431,7 @@ bool QPdfView_NativeEvent(QPdfView* self, libqt_string eventType, void* message,
 }
 
 // Base class handler implementation
-bool QPdfView_QBaseNativeEvent(QPdfView* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPdfView_QBaseNativeEvent(QPdfView* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
@@ -1700,7 +1741,7 @@ void QPdfView_OnCustomEvent(QPdfView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfView_ConnectNotify(QPdfView* self, QMetaMethod* signal) {
+void QPdfView_ConnectNotify(QPdfView* self, const QMetaMethod* signal) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->connectNotify(*signal);
@@ -1710,7 +1751,7 @@ void QPdfView_ConnectNotify(QPdfView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPdfView_QBaseConnectNotify(QPdfView* self, QMetaMethod* signal) {
+void QPdfView_QBaseConnectNotify(QPdfView* self, const QMetaMethod* signal) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->setQPdfView_ConnectNotify_IsBase(true);
@@ -1729,7 +1770,7 @@ void QPdfView_OnConnectNotify(QPdfView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfView_DisconnectNotify(QPdfView* self, QMetaMethod* signal) {
+void QPdfView_DisconnectNotify(QPdfView* self, const QMetaMethod* signal) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->disconnectNotify(*signal);
@@ -1739,7 +1780,7 @@ void QPdfView_DisconnectNotify(QPdfView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPdfView_QBaseDisconnectNotify(QPdfView* self, QMetaMethod* signal) {
+void QPdfView_QBaseDisconnectNotify(QPdfView* self, const QMetaMethod* signal) {
     auto* vqpdfview = dynamic_cast<VirtualQPdfView*>(self);
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->setQPdfView_DisconnectNotify_IsBase(true);
@@ -2075,7 +2116,7 @@ void QPdfView_OnReceivers(const QPdfView* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfView_IsSignalConnected(const QPdfView* self, QMetaMethod* signal) {
+bool QPdfView_IsSignalConnected(const QPdfView* self, const QMetaMethod* signal) {
     auto* vqpdfview = const_cast<VirtualQPdfView*>(dynamic_cast<const VirtualQPdfView*>(self));
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         return vqpdfview->isSignalConnected(*signal);
@@ -2085,7 +2126,7 @@ bool QPdfView_IsSignalConnected(const QPdfView* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QPdfView_QBaseIsSignalConnected(const QPdfView* self, QMetaMethod* signal) {
+bool QPdfView_QBaseIsSignalConnected(const QPdfView* self, const QMetaMethod* signal) {
     auto* vqpdfview = const_cast<VirtualQPdfView*>(dynamic_cast<const VirtualQPdfView*>(self));
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->setQPdfView_IsSignalConnected_IsBase(true);
@@ -2100,6 +2141,35 @@ void QPdfView_OnIsSignalConnected(const QPdfView* self, intptr_t slot) {
     auto* vqpdfview = const_cast<VirtualQPdfView*>(dynamic_cast<const VirtualQPdfView*>(self));
     if (vqpdfview && vqpdfview->isVirtualQPdfView) {
         vqpdfview->setQPdfView_IsSignalConnected_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPdfView_GetDecodedMetricF(const QPdfView* self, int metricA, int metricB) {
+    auto* vqpdfview = const_cast<VirtualQPdfView*>(dynamic_cast<const VirtualQPdfView*>(self));
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        return vqpdfview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPdfView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPdfView_QBaseGetDecodedMetricF(const QPdfView* self, int metricA, int metricB) {
+    auto* vqpdfview = const_cast<VirtualQPdfView*>(dynamic_cast<const VirtualQPdfView*>(self));
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_GetDecodedMetricF_IsBase(true);
+        return vqpdfview->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPdfView*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPdfView_OnGetDecodedMetricF(const QPdfView* self, intptr_t slot) {
+    auto* vqpdfview = const_cast<VirtualQPdfView*>(dynamic_cast<const VirtualQPdfView*>(self));
+    if (vqpdfview && vqpdfview->isVirtualQPdfView) {
+        vqpdfview->setQPdfView_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPdfView::QPdfView_GetDecodedMetricF_Callback>(slot));
     }
 }
 

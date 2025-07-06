@@ -85,6 +85,7 @@ class VirtualQSpinBox final : public QSpinBox {
     using QSpinBox_SenderSignalIndex_Callback = int (*)();
     using QSpinBox_Receivers_Callback = int (*)(const QSpinBox*, const char*);
     using QSpinBox_IsSignalConnected_Callback = bool (*)(const QSpinBox*, QMetaMethod*);
+    using QSpinBox_GetDecodedMetricF_Callback = double (*)(const QSpinBox*, int, int);
 
   protected:
     // Instance callback storage
@@ -155,6 +156,7 @@ class VirtualQSpinBox final : public QSpinBox {
     QSpinBox_SenderSignalIndex_Callback qspinbox_sendersignalindex_callback = nullptr;
     QSpinBox_Receivers_Callback qspinbox_receivers_callback = nullptr;
     QSpinBox_IsSignalConnected_Callback qspinbox_issignalconnected_callback = nullptr;
+    QSpinBox_GetDecodedMetricF_Callback qspinbox_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qspinbox_metacall_isbase = false;
@@ -224,10 +226,11 @@ class VirtualQSpinBox final : public QSpinBox {
     mutable bool qspinbox_sendersignalindex_isbase = false;
     mutable bool qspinbox_receivers_isbase = false;
     mutable bool qspinbox_issignalconnected_isbase = false;
+    mutable bool qspinbox_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQSpinBox(QWidget* parent) : QSpinBox(parent){};
-    VirtualQSpinBox() : QSpinBox(){};
+    VirtualQSpinBox(QWidget* parent) : QSpinBox(parent) {};
+    VirtualQSpinBox() : QSpinBox() {};
 
     ~VirtualQSpinBox() {
         qspinbox_metacall_callback = nullptr;
@@ -297,6 +300,7 @@ class VirtualQSpinBox final : public QSpinBox {
         qspinbox_sendersignalindex_callback = nullptr;
         qspinbox_receivers_callback = nullptr;
         qspinbox_issignalconnected_callback = nullptr;
+        qspinbox_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -367,6 +371,7 @@ class VirtualQSpinBox final : public QSpinBox {
     inline void setQSpinBox_SenderSignalIndex_Callback(QSpinBox_SenderSignalIndex_Callback cb) { qspinbox_sendersignalindex_callback = cb; }
     inline void setQSpinBox_Receivers_Callback(QSpinBox_Receivers_Callback cb) { qspinbox_receivers_callback = cb; }
     inline void setQSpinBox_IsSignalConnected_Callback(QSpinBox_IsSignalConnected_Callback cb) { qspinbox_issignalconnected_callback = cb; }
+    inline void setQSpinBox_GetDecodedMetricF_Callback(QSpinBox_GetDecodedMetricF_Callback cb) { qspinbox_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQSpinBox_Metacall_IsBase(bool value) const { qspinbox_metacall_isbase = value; }
@@ -436,6 +441,7 @@ class VirtualQSpinBox final : public QSpinBox {
     inline void setQSpinBox_SenderSignalIndex_IsBase(bool value) const { qspinbox_sendersignalindex_isbase = value; }
     inline void setQSpinBox_Receivers_IsBase(bool value) const { qspinbox_receivers_isbase = value; }
     inline void setQSpinBox_IsSignalConnected_IsBase(bool value) const { qspinbox_issignalconnected_isbase = value; }
+    inline void setQSpinBox_GetDecodedMetricF_IsBase(bool value) const { qspinbox_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1413,13 +1419,29 @@ class VirtualQSpinBox final : public QSpinBox {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qspinbox_getdecodedmetricf_isbase) {
+            qspinbox_getdecodedmetricf_isbase = false;
+            return QSpinBox::getDecodedMetricF(metricA, metricB);
+        } else if (qspinbox_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qspinbox_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QSpinBox::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QSpinBox_Event(QSpinBox* self, QEvent* event);
     friend bool QSpinBox_QBaseEvent(QSpinBox* self, QEvent* event);
     friend int QSpinBox_Validate(const QSpinBox* self, libqt_string input, int* pos);
     friend int QSpinBox_QBaseValidate(const QSpinBox* self, libqt_string input, int* pos);
-    friend int QSpinBox_ValueFromText(const QSpinBox* self, libqt_string text);
-    friend int QSpinBox_QBaseValueFromText(const QSpinBox* self, libqt_string text);
+    friend int QSpinBox_ValueFromText(const QSpinBox* self, const libqt_string text);
+    friend int QSpinBox_QBaseValueFromText(const QSpinBox* self, const libqt_string text);
     friend libqt_string QSpinBox_TextFromValue(const QSpinBox* self, int val);
     friend libqt_string QSpinBox_QBaseTextFromValue(const QSpinBox* self, int val);
     friend void QSpinBox_Fixup(const QSpinBox* self, libqt_string str);
@@ -1480,8 +1502,8 @@ class VirtualQSpinBox final : public QSpinBox {
     friend void QSpinBox_QBaseDragLeaveEvent(QSpinBox* self, QDragLeaveEvent* event);
     friend void QSpinBox_DropEvent(QSpinBox* self, QDropEvent* event);
     friend void QSpinBox_QBaseDropEvent(QSpinBox* self, QDropEvent* event);
-    friend bool QSpinBox_NativeEvent(QSpinBox* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QSpinBox_QBaseNativeEvent(QSpinBox* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QSpinBox_NativeEvent(QSpinBox* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QSpinBox_QBaseNativeEvent(QSpinBox* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QSpinBox_Metric(const QSpinBox* self, int param1);
     friend int QSpinBox_QBaseMetric(const QSpinBox* self, int param1);
     friend void QSpinBox_InitPainter(const QSpinBox* self, QPainter* painter);
@@ -1498,10 +1520,10 @@ class VirtualQSpinBox final : public QSpinBox {
     friend void QSpinBox_QBaseChildEvent(QSpinBox* self, QChildEvent* event);
     friend void QSpinBox_CustomEvent(QSpinBox* self, QEvent* event);
     friend void QSpinBox_QBaseCustomEvent(QSpinBox* self, QEvent* event);
-    friend void QSpinBox_ConnectNotify(QSpinBox* self, QMetaMethod* signal);
-    friend void QSpinBox_QBaseConnectNotify(QSpinBox* self, QMetaMethod* signal);
-    friend void QSpinBox_DisconnectNotify(QSpinBox* self, QMetaMethod* signal);
-    friend void QSpinBox_QBaseDisconnectNotify(QSpinBox* self, QMetaMethod* signal);
+    friend void QSpinBox_ConnectNotify(QSpinBox* self, const QMetaMethod* signal);
+    friend void QSpinBox_QBaseConnectNotify(QSpinBox* self, const QMetaMethod* signal);
+    friend void QSpinBox_DisconnectNotify(QSpinBox* self, const QMetaMethod* signal);
+    friend void QSpinBox_QBaseDisconnectNotify(QSpinBox* self, const QMetaMethod* signal);
     friend QLineEdit* QSpinBox_LineEdit(const QSpinBox* self);
     friend QLineEdit* QSpinBox_QBaseLineEdit(const QSpinBox* self);
     friend void QSpinBox_SetLineEdit(QSpinBox* self, QLineEdit* edit);
@@ -1522,8 +1544,10 @@ class VirtualQSpinBox final : public QSpinBox {
     friend int QSpinBox_QBaseSenderSignalIndex(const QSpinBox* self);
     friend int QSpinBox_Receivers(const QSpinBox* self, const char* signal);
     friend int QSpinBox_QBaseReceivers(const QSpinBox* self, const char* signal);
-    friend bool QSpinBox_IsSignalConnected(const QSpinBox* self, QMetaMethod* signal);
-    friend bool QSpinBox_QBaseIsSignalConnected(const QSpinBox* self, QMetaMethod* signal);
+    friend bool QSpinBox_IsSignalConnected(const QSpinBox* self, const QMetaMethod* signal);
+    friend bool QSpinBox_QBaseIsSignalConnected(const QSpinBox* self, const QMetaMethod* signal);
+    friend double QSpinBox_GetDecodedMetricF(const QSpinBox* self, int metricA, int metricB);
+    friend double QSpinBox_QBaseGetDecodedMetricF(const QSpinBox* self, int metricA, int metricB);
 };
 
 // This class is a subclass of QDoubleSpinBox so that we can call protected methods
@@ -1601,6 +1625,7 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     using QDoubleSpinBox_SenderSignalIndex_Callback = int (*)();
     using QDoubleSpinBox_Receivers_Callback = int (*)(const QDoubleSpinBox*, const char*);
     using QDoubleSpinBox_IsSignalConnected_Callback = bool (*)(const QDoubleSpinBox*, QMetaMethod*);
+    using QDoubleSpinBox_GetDecodedMetricF_Callback = double (*)(const QDoubleSpinBox*, int, int);
 
   protected:
     // Instance callback storage
@@ -1671,6 +1696,7 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     QDoubleSpinBox_SenderSignalIndex_Callback qdoublespinbox_sendersignalindex_callback = nullptr;
     QDoubleSpinBox_Receivers_Callback qdoublespinbox_receivers_callback = nullptr;
     QDoubleSpinBox_IsSignalConnected_Callback qdoublespinbox_issignalconnected_callback = nullptr;
+    QDoubleSpinBox_GetDecodedMetricF_Callback qdoublespinbox_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qdoublespinbox_metacall_isbase = false;
@@ -1740,10 +1766,11 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     mutable bool qdoublespinbox_sendersignalindex_isbase = false;
     mutable bool qdoublespinbox_receivers_isbase = false;
     mutable bool qdoublespinbox_issignalconnected_isbase = false;
+    mutable bool qdoublespinbox_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQDoubleSpinBox(QWidget* parent) : QDoubleSpinBox(parent){};
-    VirtualQDoubleSpinBox() : QDoubleSpinBox(){};
+    VirtualQDoubleSpinBox(QWidget* parent) : QDoubleSpinBox(parent) {};
+    VirtualQDoubleSpinBox() : QDoubleSpinBox() {};
 
     ~VirtualQDoubleSpinBox() {
         qdoublespinbox_metacall_callback = nullptr;
@@ -1813,6 +1840,7 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
         qdoublespinbox_sendersignalindex_callback = nullptr;
         qdoublespinbox_receivers_callback = nullptr;
         qdoublespinbox_issignalconnected_callback = nullptr;
+        qdoublespinbox_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -1883,6 +1911,7 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     inline void setQDoubleSpinBox_SenderSignalIndex_Callback(QDoubleSpinBox_SenderSignalIndex_Callback cb) { qdoublespinbox_sendersignalindex_callback = cb; }
     inline void setQDoubleSpinBox_Receivers_Callback(QDoubleSpinBox_Receivers_Callback cb) { qdoublespinbox_receivers_callback = cb; }
     inline void setQDoubleSpinBox_IsSignalConnected_Callback(QDoubleSpinBox_IsSignalConnected_Callback cb) { qdoublespinbox_issignalconnected_callback = cb; }
+    inline void setQDoubleSpinBox_GetDecodedMetricF_Callback(QDoubleSpinBox_GetDecodedMetricF_Callback cb) { qdoublespinbox_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQDoubleSpinBox_Metacall_IsBase(bool value) const { qdoublespinbox_metacall_isbase = value; }
@@ -1952,6 +1981,7 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     inline void setQDoubleSpinBox_SenderSignalIndex_IsBase(bool value) const { qdoublespinbox_sendersignalindex_isbase = value; }
     inline void setQDoubleSpinBox_Receivers_IsBase(bool value) const { qdoublespinbox_receivers_isbase = value; }
     inline void setQDoubleSpinBox_IsSignalConnected_IsBase(bool value) const { qdoublespinbox_issignalconnected_isbase = value; }
+    inline void setQDoubleSpinBox_GetDecodedMetricF_IsBase(bool value) const { qdoublespinbox_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -2929,6 +2959,22 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qdoublespinbox_getdecodedmetricf_isbase) {
+            qdoublespinbox_getdecodedmetricf_isbase = false;
+            return QDoubleSpinBox::getDecodedMetricF(metricA, metricB);
+        } else if (qdoublespinbox_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qdoublespinbox_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QDoubleSpinBox::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QDoubleSpinBox_ResizeEvent(QDoubleSpinBox* self, QResizeEvent* event);
     friend void QDoubleSpinBox_QBaseResizeEvent(QDoubleSpinBox* self, QResizeEvent* event);
@@ -2986,8 +3032,8 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     friend void QDoubleSpinBox_QBaseDragLeaveEvent(QDoubleSpinBox* self, QDragLeaveEvent* event);
     friend void QDoubleSpinBox_DropEvent(QDoubleSpinBox* self, QDropEvent* event);
     friend void QDoubleSpinBox_QBaseDropEvent(QDoubleSpinBox* self, QDropEvent* event);
-    friend bool QDoubleSpinBox_NativeEvent(QDoubleSpinBox* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QDoubleSpinBox_QBaseNativeEvent(QDoubleSpinBox* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QDoubleSpinBox_NativeEvent(QDoubleSpinBox* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QDoubleSpinBox_QBaseNativeEvent(QDoubleSpinBox* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QDoubleSpinBox_Metric(const QDoubleSpinBox* self, int param1);
     friend int QDoubleSpinBox_QBaseMetric(const QDoubleSpinBox* self, int param1);
     friend void QDoubleSpinBox_InitPainter(const QDoubleSpinBox* self, QPainter* painter);
@@ -3004,10 +3050,10 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     friend void QDoubleSpinBox_QBaseChildEvent(QDoubleSpinBox* self, QChildEvent* event);
     friend void QDoubleSpinBox_CustomEvent(QDoubleSpinBox* self, QEvent* event);
     friend void QDoubleSpinBox_QBaseCustomEvent(QDoubleSpinBox* self, QEvent* event);
-    friend void QDoubleSpinBox_ConnectNotify(QDoubleSpinBox* self, QMetaMethod* signal);
-    friend void QDoubleSpinBox_QBaseConnectNotify(QDoubleSpinBox* self, QMetaMethod* signal);
-    friend void QDoubleSpinBox_DisconnectNotify(QDoubleSpinBox* self, QMetaMethod* signal);
-    friend void QDoubleSpinBox_QBaseDisconnectNotify(QDoubleSpinBox* self, QMetaMethod* signal);
+    friend void QDoubleSpinBox_ConnectNotify(QDoubleSpinBox* self, const QMetaMethod* signal);
+    friend void QDoubleSpinBox_QBaseConnectNotify(QDoubleSpinBox* self, const QMetaMethod* signal);
+    friend void QDoubleSpinBox_DisconnectNotify(QDoubleSpinBox* self, const QMetaMethod* signal);
+    friend void QDoubleSpinBox_QBaseDisconnectNotify(QDoubleSpinBox* self, const QMetaMethod* signal);
     friend QLineEdit* QDoubleSpinBox_LineEdit(const QDoubleSpinBox* self);
     friend QLineEdit* QDoubleSpinBox_QBaseLineEdit(const QDoubleSpinBox* self);
     friend void QDoubleSpinBox_SetLineEdit(QDoubleSpinBox* self, QLineEdit* edit);
@@ -3028,8 +3074,10 @@ class VirtualQDoubleSpinBox final : public QDoubleSpinBox {
     friend int QDoubleSpinBox_QBaseSenderSignalIndex(const QDoubleSpinBox* self);
     friend int QDoubleSpinBox_Receivers(const QDoubleSpinBox* self, const char* signal);
     friend int QDoubleSpinBox_QBaseReceivers(const QDoubleSpinBox* self, const char* signal);
-    friend bool QDoubleSpinBox_IsSignalConnected(const QDoubleSpinBox* self, QMetaMethod* signal);
-    friend bool QDoubleSpinBox_QBaseIsSignalConnected(const QDoubleSpinBox* self, QMetaMethod* signal);
+    friend bool QDoubleSpinBox_IsSignalConnected(const QDoubleSpinBox* self, const QMetaMethod* signal);
+    friend bool QDoubleSpinBox_QBaseIsSignalConnected(const QDoubleSpinBox* self, const QMetaMethod* signal);
+    friend double QDoubleSpinBox_GetDecodedMetricF(const QDoubleSpinBox* self, int metricA, int metricB);
+    friend double QDoubleSpinBox_QBaseGetDecodedMetricF(const QDoubleSpinBox* self, int metricA, int metricB);
 };
 
 #endif

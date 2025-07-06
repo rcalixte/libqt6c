@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../network/libqsslcertificate.h"
-#include "../network/libqsslkey.h"
-
 /// https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#add)

@@ -22,14 +22,6 @@ void q_easingcurve_swap(void* self, void* other) {
     QEasingCurve_Swap((QEasingCurve*)self, (QEasingCurve*)other);
 }
 
-bool q_easingcurve_operator_equal(void* self, void* other) {
-    return QEasingCurve_OperatorEqual((QEasingCurve*)self, (QEasingCurve*)other);
-}
-
-bool q_easingcurve_operator_not_equal(void* self, void* other) {
-    return QEasingCurve_OperatorNotEqual((QEasingCurve*)self, (QEasingCurve*)other);
-}
-
 double q_easingcurve_amplitude(void* self) {
     return QEasingCurve_Amplitude((QEasingCurve*)self);
 }

@@ -27,6 +27,10 @@ bool q_libraryinfo_is_debug_build() {
     return QLibraryInfo_IsDebugBuild();
 }
 
+bool q_libraryinfo_is_shared_build() {
+    return QLibraryInfo_IsSharedBuild();
+}
+
 QVersionNumber* q_libraryinfo_version() {
     return QLibraryInfo_Version();
 }
@@ -35,6 +39,21 @@ const char* q_libraryinfo_path(int64_t p) {
     libqt_string _str = QLibraryInfo_Path(p);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
+    return _ret;
+}
+
+const char** q_libraryinfo_paths(int64_t p) {
+    libqt_list _arr = QLibraryInfo_Paths(p);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
     return _ret;
 }
 

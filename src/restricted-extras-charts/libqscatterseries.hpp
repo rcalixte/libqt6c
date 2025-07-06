@@ -30,12 +30,6 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QXYSeries QXYSeries;
 #endif
 
-#ifdef __cplusplus
-typedef QScatterSeries::MarkerShape MarkerShape; // C++ enum
-#else
-typedef int MarkerShape; // C ABI enum
-#endif
-
 QScatterSeries* QScatterSeries_new();
 QScatterSeries* QScatterSeries_new2(QObject* parent);
 QMetaObject* QScatterSeries_MetaObject(const QScatterSeries* self);
@@ -47,20 +41,20 @@ libqt_string QScatterSeries_Tr(const char* s);
 int QScatterSeries_Type(const QScatterSeries* self);
 void QScatterSeries_OnType(const QScatterSeries* self, intptr_t slot);
 int QScatterSeries_QBaseType(const QScatterSeries* self);
-void QScatterSeries_SetPen(QScatterSeries* self, QPen* pen);
+void QScatterSeries_SetPen(QScatterSeries* self, const QPen* pen);
 void QScatterSeries_OnSetPen(QScatterSeries* self, intptr_t slot);
-void QScatterSeries_QBaseSetPen(QScatterSeries* self, QPen* pen);
-void QScatterSeries_SetBrush(QScatterSeries* self, QBrush* brush);
+void QScatterSeries_QBaseSetPen(QScatterSeries* self, const QPen* pen);
+void QScatterSeries_SetBrush(QScatterSeries* self, const QBrush* brush);
 void QScatterSeries_OnSetBrush(QScatterSeries* self, intptr_t slot);
-void QScatterSeries_QBaseSetBrush(QScatterSeries* self, QBrush* brush);
+void QScatterSeries_QBaseSetBrush(QScatterSeries* self, const QBrush* brush);
 QBrush* QScatterSeries_Brush(const QScatterSeries* self);
-void QScatterSeries_SetColor(QScatterSeries* self, QColor* color);
+void QScatterSeries_SetColor(QScatterSeries* self, const QColor* color);
 void QScatterSeries_OnSetColor(QScatterSeries* self, intptr_t slot);
-void QScatterSeries_QBaseSetColor(QScatterSeries* self, QColor* color);
+void QScatterSeries_QBaseSetColor(QScatterSeries* self, const QColor* color);
 QColor* QScatterSeries_Color(const QScatterSeries* self);
 void QScatterSeries_OnColor(const QScatterSeries* self, intptr_t slot);
 QColor* QScatterSeries_QBaseColor(const QScatterSeries* self);
-void QScatterSeries_SetBorderColor(QScatterSeries* self, QColor* color);
+void QScatterSeries_SetBorderColor(QScatterSeries* self, const QColor* color);
 QColor* QScatterSeries_BorderColor(const QScatterSeries* self);
 int QScatterSeries_MarkerShape(const QScatterSeries* self);
 void QScatterSeries_SetMarkerShape(QScatterSeries* self, int shape);
@@ -91,12 +85,12 @@ void QScatterSeries_QBaseChildEvent(QScatterSeries* self, QChildEvent* event);
 void QScatterSeries_CustomEvent(QScatterSeries* self, QEvent* event);
 void QScatterSeries_OnCustomEvent(QScatterSeries* self, intptr_t slot);
 void QScatterSeries_QBaseCustomEvent(QScatterSeries* self, QEvent* event);
-void QScatterSeries_ConnectNotify(QScatterSeries* self, QMetaMethod* signal);
+void QScatterSeries_ConnectNotify(QScatterSeries* self, const QMetaMethod* signal);
 void QScatterSeries_OnConnectNotify(QScatterSeries* self, intptr_t slot);
-void QScatterSeries_QBaseConnectNotify(QScatterSeries* self, QMetaMethod* signal);
-void QScatterSeries_DisconnectNotify(QScatterSeries* self, QMetaMethod* signal);
+void QScatterSeries_QBaseConnectNotify(QScatterSeries* self, const QMetaMethod* signal);
+void QScatterSeries_DisconnectNotify(QScatterSeries* self, const QMetaMethod* signal);
 void QScatterSeries_OnDisconnectNotify(QScatterSeries* self, intptr_t slot);
-void QScatterSeries_QBaseDisconnectNotify(QScatterSeries* self, QMetaMethod* signal);
+void QScatterSeries_QBaseDisconnectNotify(QScatterSeries* self, const QMetaMethod* signal);
 QObject* QScatterSeries_Sender(const QScatterSeries* self);
 void QScatterSeries_OnSender(const QScatterSeries* self, intptr_t slot);
 QObject* QScatterSeries_QBaseSender(const QScatterSeries* self);
@@ -106,9 +100,9 @@ int QScatterSeries_QBaseSenderSignalIndex(const QScatterSeries* self);
 int QScatterSeries_Receivers(const QScatterSeries* self, const char* signal);
 void QScatterSeries_OnReceivers(const QScatterSeries* self, intptr_t slot);
 int QScatterSeries_QBaseReceivers(const QScatterSeries* self, const char* signal);
-bool QScatterSeries_IsSignalConnected(const QScatterSeries* self, QMetaMethod* signal);
+bool QScatterSeries_IsSignalConnected(const QScatterSeries* self, const QMetaMethod* signal);
 void QScatterSeries_OnIsSignalConnected(const QScatterSeries* self, intptr_t slot);
-bool QScatterSeries_QBaseIsSignalConnected(const QScatterSeries* self, QMetaMethod* signal);
+bool QScatterSeries_QBaseIsSignalConnected(const QScatterSeries* self, const QMetaMethod* signal);
 void QScatterSeries_Delete(QScatterSeries* self);
 
 #ifdef __cplusplus

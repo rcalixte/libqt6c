@@ -12,17 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "../libqevent.h"
-#include "../libqdatastream.h"
-#include "../libqmetaobject.h"
-#include "../libqmimedata.h"
-#include "../libqobject.h"
-#include "libqpdfdocument.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qpdfbookmarkmodel.html
 
 /// q_pdfbookmarkmodel_new constructs a new QPdfBookmarkModel object.
@@ -490,7 +479,7 @@ QThread* q_pdfbookmarkmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPdfBookmarkModel* self, QThread* thread ```
-void q_pdfbookmarkmodel_move_to_thread(void* self, void* thread);
+bool q_pdfbookmarkmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -505,6 +494,13 @@ int32_t q_pdfbookmarkmodel_start_timer(void* self, int interval);
 ///
 /// ``` QPdfBookmarkModel* self, int id ```
 void q_pdfbookmarkmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPdfBookmarkModel* self, enum Qt__TimerId id ```
+void q_pdfbookmarkmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -638,6 +634,13 @@ bool q_pdfbookmarkmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QPdfBookmarkModel* self ```
 void q_pdfbookmarkmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPdfBookmarkModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pdfbookmarkmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

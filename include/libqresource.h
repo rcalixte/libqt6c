@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdatetime.h"
-#include "libqlocale.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qresource.html
 
 /// q_resource_new constructs a new QResource object.

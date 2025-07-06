@@ -63,7 +63,7 @@ void QFutureWatcherBase_ProgressRangeChanged(QFutureWatcherBase* self, int minim
 void QFutureWatcherBase_Connect_ProgressRangeChanged(QFutureWatcherBase* self, intptr_t slot);
 void QFutureWatcherBase_ProgressValueChanged(QFutureWatcherBase* self, int progressValue);
 void QFutureWatcherBase_Connect_ProgressValueChanged(QFutureWatcherBase* self, intptr_t slot);
-void QFutureWatcherBase_ProgressTextChanged(QFutureWatcherBase* self, libqt_string progressText);
+void QFutureWatcherBase_ProgressTextChanged(QFutureWatcherBase* self, const libqt_string progressText);
 void QFutureWatcherBase_Connect_ProgressTextChanged(QFutureWatcherBase* self, intptr_t slot);
 void QFutureWatcherBase_Cancel(QFutureWatcherBase* self);
 void QFutureWatcherBase_SetSuspended(QFutureWatcherBase* self, bool suspendVal);

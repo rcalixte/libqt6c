@@ -401,7 +401,7 @@ void QVCandlestickModelMapper_OnCustomEvent(QVCandlestickModelMapper* self, intp
 }
 
 // Derived class handler implementation
-void QVCandlestickModelMapper_ConnectNotify(QVCandlestickModelMapper* self, QMetaMethod* signal) {
+void QVCandlestickModelMapper_ConnectNotify(QVCandlestickModelMapper* self, const QMetaMethod* signal) {
     auto* vqvcandlestickmodelmapper = dynamic_cast<VirtualQVCandlestickModelMapper*>(self);
     if (vqvcandlestickmodelmapper && vqvcandlestickmodelmapper->isVirtualQVCandlestickModelMapper) {
         vqvcandlestickmodelmapper->connectNotify(*signal);
@@ -411,7 +411,7 @@ void QVCandlestickModelMapper_ConnectNotify(QVCandlestickModelMapper* self, QMet
 }
 
 // Base class handler implementation
-void QVCandlestickModelMapper_QBaseConnectNotify(QVCandlestickModelMapper* self, QMetaMethod* signal) {
+void QVCandlestickModelMapper_QBaseConnectNotify(QVCandlestickModelMapper* self, const QMetaMethod* signal) {
     auto* vqvcandlestickmodelmapper = dynamic_cast<VirtualQVCandlestickModelMapper*>(self);
     if (vqvcandlestickmodelmapper && vqvcandlestickmodelmapper->isVirtualQVCandlestickModelMapper) {
         vqvcandlestickmodelmapper->setQVCandlestickModelMapper_ConnectNotify_IsBase(true);
@@ -430,7 +430,7 @@ void QVCandlestickModelMapper_OnConnectNotify(QVCandlestickModelMapper* self, in
 }
 
 // Derived class handler implementation
-void QVCandlestickModelMapper_DisconnectNotify(QVCandlestickModelMapper* self, QMetaMethod* signal) {
+void QVCandlestickModelMapper_DisconnectNotify(QVCandlestickModelMapper* self, const QMetaMethod* signal) {
     auto* vqvcandlestickmodelmapper = dynamic_cast<VirtualQVCandlestickModelMapper*>(self);
     if (vqvcandlestickmodelmapper && vqvcandlestickmodelmapper->isVirtualQVCandlestickModelMapper) {
         vqvcandlestickmodelmapper->disconnectNotify(*signal);
@@ -440,7 +440,7 @@ void QVCandlestickModelMapper_DisconnectNotify(QVCandlestickModelMapper* self, Q
 }
 
 // Base class handler implementation
-void QVCandlestickModelMapper_QBaseDisconnectNotify(QVCandlestickModelMapper* self, QMetaMethod* signal) {
+void QVCandlestickModelMapper_QBaseDisconnectNotify(QVCandlestickModelMapper* self, const QMetaMethod* signal) {
     auto* vqvcandlestickmodelmapper = dynamic_cast<VirtualQVCandlestickModelMapper*>(self);
     if (vqvcandlestickmodelmapper && vqvcandlestickmodelmapper->isVirtualQVCandlestickModelMapper) {
         vqvcandlestickmodelmapper->setQVCandlestickModelMapper_DisconnectNotify_IsBase(true);
@@ -952,7 +952,7 @@ void QVCandlestickModelMapper_OnReceivers(const QVCandlestickModelMapper* self, 
 }
 
 // Derived class handler implementation
-bool QVCandlestickModelMapper_IsSignalConnected(const QVCandlestickModelMapper* self, QMetaMethod* signal) {
+bool QVCandlestickModelMapper_IsSignalConnected(const QVCandlestickModelMapper* self, const QMetaMethod* signal) {
     auto* vqvcandlestickmodelmapper = const_cast<VirtualQVCandlestickModelMapper*>(dynamic_cast<const VirtualQVCandlestickModelMapper*>(self));
     if (vqvcandlestickmodelmapper && vqvcandlestickmodelmapper->isVirtualQVCandlestickModelMapper) {
         return vqvcandlestickmodelmapper->isSignalConnected(*signal);
@@ -962,7 +962,7 @@ bool QVCandlestickModelMapper_IsSignalConnected(const QVCandlestickModelMapper* 
 }
 
 // Base class handler implementation
-bool QVCandlestickModelMapper_QBaseIsSignalConnected(const QVCandlestickModelMapper* self, QMetaMethod* signal) {
+bool QVCandlestickModelMapper_QBaseIsSignalConnected(const QVCandlestickModelMapper* self, const QMetaMethod* signal) {
     auto* vqvcandlestickmodelmapper = const_cast<VirtualQVCandlestickModelMapper*>(dynamic_cast<const VirtualQVCandlestickModelMapper*>(self));
     if (vqvcandlestickmodelmapper && vqvcandlestickmodelmapper->isVirtualQVCandlestickModelMapper) {
         vqvcandlestickmodelmapper->setQVCandlestickModelMapper_IsSignalConnected_IsBase(true);

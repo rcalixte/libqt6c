@@ -61,10 +61,10 @@ class VirtualQWebEngineProfile final : public QWebEngineProfile {
     mutable bool qwebengineprofile_issignalconnected_isbase = false;
 
   public:
-    VirtualQWebEngineProfile() : QWebEngineProfile(){};
-    VirtualQWebEngineProfile(const QString& name) : QWebEngineProfile(name){};
-    VirtualQWebEngineProfile(QObject* parent) : QWebEngineProfile(parent){};
-    VirtualQWebEngineProfile(const QString& name, QObject* parent) : QWebEngineProfile(name, parent){};
+    VirtualQWebEngineProfile() : QWebEngineProfile() {};
+    VirtualQWebEngineProfile(const QString& name) : QWebEngineProfile(name) {};
+    VirtualQWebEngineProfile(QObject* parent) : QWebEngineProfile(parent) {};
+    VirtualQWebEngineProfile(const QString& name, QObject* parent) : QWebEngineProfile(name, parent) {};
 
     ~VirtualQWebEngineProfile() {
         qwebengineprofile_metacall_callback = nullptr;
@@ -296,18 +296,18 @@ class VirtualQWebEngineProfile final : public QWebEngineProfile {
     friend void QWebEngineProfile_QBaseChildEvent(QWebEngineProfile* self, QChildEvent* event);
     friend void QWebEngineProfile_CustomEvent(QWebEngineProfile* self, QEvent* event);
     friend void QWebEngineProfile_QBaseCustomEvent(QWebEngineProfile* self, QEvent* event);
-    friend void QWebEngineProfile_ConnectNotify(QWebEngineProfile* self, QMetaMethod* signal);
-    friend void QWebEngineProfile_QBaseConnectNotify(QWebEngineProfile* self, QMetaMethod* signal);
-    friend void QWebEngineProfile_DisconnectNotify(QWebEngineProfile* self, QMetaMethod* signal);
-    friend void QWebEngineProfile_QBaseDisconnectNotify(QWebEngineProfile* self, QMetaMethod* signal);
+    friend void QWebEngineProfile_ConnectNotify(QWebEngineProfile* self, const QMetaMethod* signal);
+    friend void QWebEngineProfile_QBaseConnectNotify(QWebEngineProfile* self, const QMetaMethod* signal);
+    friend void QWebEngineProfile_DisconnectNotify(QWebEngineProfile* self, const QMetaMethod* signal);
+    friend void QWebEngineProfile_QBaseDisconnectNotify(QWebEngineProfile* self, const QMetaMethod* signal);
     friend QObject* QWebEngineProfile_Sender(const QWebEngineProfile* self);
     friend QObject* QWebEngineProfile_QBaseSender(const QWebEngineProfile* self);
     friend int QWebEngineProfile_SenderSignalIndex(const QWebEngineProfile* self);
     friend int QWebEngineProfile_QBaseSenderSignalIndex(const QWebEngineProfile* self);
     friend int QWebEngineProfile_Receivers(const QWebEngineProfile* self, const char* signal);
     friend int QWebEngineProfile_QBaseReceivers(const QWebEngineProfile* self, const char* signal);
-    friend bool QWebEngineProfile_IsSignalConnected(const QWebEngineProfile* self, QMetaMethod* signal);
-    friend bool QWebEngineProfile_QBaseIsSignalConnected(const QWebEngineProfile* self, QMetaMethod* signal);
+    friend bool QWebEngineProfile_IsSignalConnected(const QWebEngineProfile* self, const QMetaMethod* signal);
+    friend bool QWebEngineProfile_QBaseIsSignalConnected(const QWebEngineProfile* self, const QMetaMethod* signal);
 };
 
 #endif

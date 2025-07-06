@@ -11,7 +11,6 @@
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
 #include "qtlibc.h"
-#include "libqvariant.h"
 
 /// https://doc.qt.io/qt-6/qsequentialiterable.html#types
 

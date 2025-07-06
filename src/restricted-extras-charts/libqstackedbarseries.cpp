@@ -269,7 +269,7 @@ void QStackedBarSeries_OnCustomEvent(QStackedBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStackedBarSeries_ConnectNotify(QStackedBarSeries* self, QMetaMethod* signal) {
+void QStackedBarSeries_ConnectNotify(QStackedBarSeries* self, const QMetaMethod* signal) {
     auto* vqstackedbarseries = dynamic_cast<VirtualQStackedBarSeries*>(self);
     if (vqstackedbarseries && vqstackedbarseries->isVirtualQStackedBarSeries) {
         vqstackedbarseries->connectNotify(*signal);
@@ -279,7 +279,7 @@ void QStackedBarSeries_ConnectNotify(QStackedBarSeries* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QStackedBarSeries_QBaseConnectNotify(QStackedBarSeries* self, QMetaMethod* signal) {
+void QStackedBarSeries_QBaseConnectNotify(QStackedBarSeries* self, const QMetaMethod* signal) {
     auto* vqstackedbarseries = dynamic_cast<VirtualQStackedBarSeries*>(self);
     if (vqstackedbarseries && vqstackedbarseries->isVirtualQStackedBarSeries) {
         vqstackedbarseries->setQStackedBarSeries_ConnectNotify_IsBase(true);
@@ -298,7 +298,7 @@ void QStackedBarSeries_OnConnectNotify(QStackedBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QStackedBarSeries_DisconnectNotify(QStackedBarSeries* self, QMetaMethod* signal) {
+void QStackedBarSeries_DisconnectNotify(QStackedBarSeries* self, const QMetaMethod* signal) {
     auto* vqstackedbarseries = dynamic_cast<VirtualQStackedBarSeries*>(self);
     if (vqstackedbarseries && vqstackedbarseries->isVirtualQStackedBarSeries) {
         vqstackedbarseries->disconnectNotify(*signal);
@@ -308,7 +308,7 @@ void QStackedBarSeries_DisconnectNotify(QStackedBarSeries* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QStackedBarSeries_QBaseDisconnectNotify(QStackedBarSeries* self, QMetaMethod* signal) {
+void QStackedBarSeries_QBaseDisconnectNotify(QStackedBarSeries* self, const QMetaMethod* signal) {
     auto* vqstackedbarseries = dynamic_cast<VirtualQStackedBarSeries*>(self);
     if (vqstackedbarseries && vqstackedbarseries->isVirtualQStackedBarSeries) {
         vqstackedbarseries->setQStackedBarSeries_DisconnectNotify_IsBase(true);
@@ -414,7 +414,7 @@ void QStackedBarSeries_OnReceivers(const QStackedBarSeries* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QStackedBarSeries_IsSignalConnected(const QStackedBarSeries* self, QMetaMethod* signal) {
+bool QStackedBarSeries_IsSignalConnected(const QStackedBarSeries* self, const QMetaMethod* signal) {
     auto* vqstackedbarseries = const_cast<VirtualQStackedBarSeries*>(dynamic_cast<const VirtualQStackedBarSeries*>(self));
     if (vqstackedbarseries && vqstackedbarseries->isVirtualQStackedBarSeries) {
         return vqstackedbarseries->isSignalConnected(*signal);
@@ -424,7 +424,7 @@ bool QStackedBarSeries_IsSignalConnected(const QStackedBarSeries* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QStackedBarSeries_QBaseIsSignalConnected(const QStackedBarSeries* self, QMetaMethod* signal) {
+bool QStackedBarSeries_QBaseIsSignalConnected(const QStackedBarSeries* self, const QMetaMethod* signal) {
     auto* vqstackedbarseries = const_cast<VirtualQStackedBarSeries*>(dynamic_cast<const VirtualQStackedBarSeries*>(self));
     if (vqstackedbarseries && vqstackedbarseries->isVirtualQStackedBarSeries) {
         vqstackedbarseries->setQStackedBarSeries_IsSignalConnected_IsBase(true);

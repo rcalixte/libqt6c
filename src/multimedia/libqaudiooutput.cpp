@@ -17,7 +17,7 @@ QAudioOutput* QAudioOutput_new() {
     return new VirtualQAudioOutput();
 }
 
-QAudioOutput* QAudioOutput_new2(QAudioDevice* device) {
+QAudioOutput* QAudioOutput_new2(const QAudioDevice* device) {
     return new VirtualQAudioOutput(*device);
 }
 
@@ -25,7 +25,7 @@ QAudioOutput* QAudioOutput_new3(QObject* parent) {
     return new VirtualQAudioOutput(parent);
 }
 
-QAudioOutput* QAudioOutput_new4(QAudioDevice* device, QObject* parent) {
+QAudioOutput* QAudioOutput_new4(const QAudioDevice* device, QObject* parent) {
     return new VirtualQAudioOutput(*device, parent);
 }
 
@@ -89,7 +89,7 @@ bool QAudioOutput_IsMuted(const QAudioOutput* self) {
     return self->isMuted();
 }
 
-void QAudioOutput_SetDevice(QAudioOutput* self, QAudioDevice* device) {
+void QAudioOutput_SetDevice(QAudioOutput* self, const QAudioDevice* device) {
     self->setDevice(*device);
 }
 
@@ -306,7 +306,7 @@ void QAudioOutput_OnCustomEvent(QAudioOutput* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioOutput_ConnectNotify(QAudioOutput* self, QMetaMethod* signal) {
+void QAudioOutput_ConnectNotify(QAudioOutput* self, const QMetaMethod* signal) {
     auto* vqaudiooutput = dynamic_cast<VirtualQAudioOutput*>(self);
     if (vqaudiooutput && vqaudiooutput->isVirtualQAudioOutput) {
         vqaudiooutput->connectNotify(*signal);
@@ -316,7 +316,7 @@ void QAudioOutput_ConnectNotify(QAudioOutput* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioOutput_QBaseConnectNotify(QAudioOutput* self, QMetaMethod* signal) {
+void QAudioOutput_QBaseConnectNotify(QAudioOutput* self, const QMetaMethod* signal) {
     auto* vqaudiooutput = dynamic_cast<VirtualQAudioOutput*>(self);
     if (vqaudiooutput && vqaudiooutput->isVirtualQAudioOutput) {
         vqaudiooutput->setQAudioOutput_ConnectNotify_IsBase(true);
@@ -335,7 +335,7 @@ void QAudioOutput_OnConnectNotify(QAudioOutput* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioOutput_DisconnectNotify(QAudioOutput* self, QMetaMethod* signal) {
+void QAudioOutput_DisconnectNotify(QAudioOutput* self, const QMetaMethod* signal) {
     auto* vqaudiooutput = dynamic_cast<VirtualQAudioOutput*>(self);
     if (vqaudiooutput && vqaudiooutput->isVirtualQAudioOutput) {
         vqaudiooutput->disconnectNotify(*signal);
@@ -345,7 +345,7 @@ void QAudioOutput_DisconnectNotify(QAudioOutput* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioOutput_QBaseDisconnectNotify(QAudioOutput* self, QMetaMethod* signal) {
+void QAudioOutput_QBaseDisconnectNotify(QAudioOutput* self, const QMetaMethod* signal) {
     auto* vqaudiooutput = dynamic_cast<VirtualQAudioOutput*>(self);
     if (vqaudiooutput && vqaudiooutput->isVirtualQAudioOutput) {
         vqaudiooutput->setQAudioOutput_DisconnectNotify_IsBase(true);
@@ -451,7 +451,7 @@ void QAudioOutput_OnReceivers(const QAudioOutput* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAudioOutput_IsSignalConnected(const QAudioOutput* self, QMetaMethod* signal) {
+bool QAudioOutput_IsSignalConnected(const QAudioOutput* self, const QMetaMethod* signal) {
     auto* vqaudiooutput = const_cast<VirtualQAudioOutput*>(dynamic_cast<const VirtualQAudioOutput*>(self));
     if (vqaudiooutput && vqaudiooutput->isVirtualQAudioOutput) {
         return vqaudiooutput->isSignalConnected(*signal);
@@ -461,7 +461,7 @@ bool QAudioOutput_IsSignalConnected(const QAudioOutput* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QAudioOutput_QBaseIsSignalConnected(const QAudioOutput* self, QMetaMethod* signal) {
+bool QAudioOutput_QBaseIsSignalConnected(const QAudioOutput* self, const QMetaMethod* signal) {
     auto* vqaudiooutput = const_cast<VirtualQAudioOutput*>(dynamic_cast<const VirtualQAudioOutput*>(self));
     if (vqaudiooutput && vqaudiooutput->isVirtualQAudioOutput) {
         vqaudiooutput->setQAudioOutput_IsSignalConnected_IsBase(true);

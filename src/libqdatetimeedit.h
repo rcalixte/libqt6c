@@ -12,24 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractspinbox.h"
-#include "libqevent.h"
-#include "libqcalendar.h"
-#include "libqcalendarwidget.h"
-#include "libqdatetime.h"
-#include "libqlineedit.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qdatetimeedit.html
 
 /// q_datetimeedit_new constructs a new QDateTimeEdit object.
@@ -312,6 +294,16 @@ int64_t q_datetimeedit_time_spec(void* self);
 ///
 /// ``` QDateTimeEdit* self, enum Qt__TimeSpec spec ```
 void q_datetimeedit_set_time_spec(void* self, int64_t spec);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
+///
+/// ``` QDateTimeEdit* self ```
+QTimeZone* q_datetimeedit_time_zone(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#setTimeZone)
+///
+/// ``` QDateTimeEdit* self, QTimeZone* zone ```
+void q_datetimeedit_set_time_zone(void* self, void* zone);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
@@ -2515,6 +2507,13 @@ QWidget* q_datetimeedit_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QDateTimeEdit* self, QPointF* p ```
+QWidget* q_datetimeedit_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QDateTimeEdit* self, enum Qt__WidgetAttribute param1 ```
@@ -2826,7 +2825,7 @@ QThread* q_datetimeedit_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDateTimeEdit* self, QThread* thread ```
-void q_datetimeedit_move_to_thread(void* self, void* thread);
+bool q_datetimeedit_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2841,6 +2840,13 @@ int32_t q_datetimeedit_start_timer(void* self, int interval);
 ///
 /// ``` QDateTimeEdit* self, int id ```
 void q_datetimeedit_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDateTimeEdit* self, enum Qt__TimerId id ```
+void q_datetimeedit_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2977,6 +2983,13 @@ void q_datetimeedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDateTimeEdit* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_datetimeedit_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QDateTimeEdit* self, int interval, enum Qt__TimerType timerType ```
@@ -3093,6 +3106,13 @@ int32_t q_datetimeedit_depth(void* self);
 ///
 ///
 double q_datetimeedit_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_datetimeedit_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4444,6 +4464,33 @@ bool q_datetimeedit_qbase_is_signal_connected(void* self, void* signal);
 /// ``` QDateTimeEdit* self, bool (*slot)(QDateTimeEdit*, QMetaMethod*) ```
 void q_datetimeedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_datetimeedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QDateTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_datetimeedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QDateTimeEdit* self, double (*slot)(QDateTimeEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
@@ -4828,6 +4875,20 @@ int64_t q_timeedit_time_spec(void* self);
 ///
 /// ``` QTimeEdit* self, enum Qt__TimeSpec spec ```
 void q_timeedit_set_time_spec(void* self, int64_t spec);
+
+/// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
+///
+/// ``` QTimeEdit* self ```
+QTimeZone* q_timeedit_time_zone(void* self);
+
+/// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#setTimeZone)
+///
+/// ``` QTimeEdit* self, QTimeZone* zone ```
+void q_timeedit_set_time_zone(void* self, void* zone);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -6735,6 +6796,13 @@ QWidget* q_timeedit_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QTimeEdit* self, QPointF* p ```
+QWidget* q_timeedit_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QTimeEdit* self, enum Qt__WidgetAttribute param1 ```
@@ -7046,7 +7114,7 @@ QThread* q_timeedit_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QTimeEdit* self, QThread* thread ```
-void q_timeedit_move_to_thread(void* self, void* thread);
+bool q_timeedit_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -7061,6 +7129,13 @@ int32_t q_timeedit_start_timer(void* self, int interval);
 ///
 /// ``` QTimeEdit* self, int id ```
 void q_timeedit_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QTimeEdit* self, enum Qt__TimerId id ```
+void q_timeedit_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -7197,6 +7272,13 @@ void q_timeedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QTimeEdit* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_timeedit_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QTimeEdit* self, int interval, enum Qt__TimerType timerType ```
@@ -7313,6 +7395,13 @@ int32_t q_timeedit_depth(void* self);
 ///
 ///
 double q_timeedit_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_timeedit_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9096,6 +9185,33 @@ bool q_timeedit_qbase_is_signal_connected(void* self, void* signal);
 /// ``` QTimeEdit* self, bool (*slot)(QTimeEdit*, QMetaMethod*) ```
 void q_timeedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_timeedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QTimeEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_timeedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QTimeEdit* self, double (*slot)(QTimeEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_timeedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
@@ -9480,6 +9596,20 @@ int64_t q_dateedit_time_spec(void* self);
 ///
 /// ``` QDateEdit* self, enum Qt__TimeSpec spec ```
 void q_dateedit_set_time_spec(void* self, int64_t spec);
+
+/// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
+///
+/// ``` QDateEdit* self ```
+QTimeZone* q_dateedit_time_zone(void* self);
+
+/// Inherited from QDateTimeEdit
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#setTimeZone)
+///
+/// ``` QDateEdit* self, QTimeZone* zone ```
+void q_dateedit_set_time_zone(void* self, void* zone);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -11387,6 +11517,13 @@ QWidget* q_dateedit_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QDateEdit* self, QPointF* p ```
+QWidget* q_dateedit_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QDateEdit* self, enum Qt__WidgetAttribute param1 ```
@@ -11698,7 +11835,7 @@ QThread* q_dateedit_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDateEdit* self, QThread* thread ```
-void q_dateedit_move_to_thread(void* self, void* thread);
+bool q_dateedit_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -11713,6 +11850,13 @@ int32_t q_dateedit_start_timer(void* self, int interval);
 ///
 /// ``` QDateEdit* self, int id ```
 void q_dateedit_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDateEdit* self, enum Qt__TimerId id ```
+void q_dateedit_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -11849,6 +11993,13 @@ void q_dateedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDateEdit* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_dateedit_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QDateEdit* self, int interval, enum Qt__TimerType timerType ```
@@ -11965,6 +12116,13 @@ int32_t q_dateedit_depth(void* self);
 ///
 ///
 double q_dateedit_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_dateedit_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -13747,6 +13905,33 @@ bool q_dateedit_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QDateEdit* self, bool (*slot)(QDateEdit*, QMetaMethod*) ```
 void q_dateedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QDateEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_dateedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QDateEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_dateedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QDateEdit* self, double (*slot)(QDateEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_dateedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

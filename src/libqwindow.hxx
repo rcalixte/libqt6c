@@ -136,9 +136,9 @@ class VirtualQWindow final : public QWindow {
     mutable bool qwindow_issignalconnected_isbase = false;
 
   public:
-    VirtualQWindow() : QWindow(){};
-    VirtualQWindow(QWindow* parent) : QWindow(parent){};
-    VirtualQWindow(QScreen* screen) : QWindow(screen){};
+    VirtualQWindow() : QWindow() {};
+    VirtualQWindow(QWindow* parent) : QWindow(parent) {};
+    VirtualQWindow(QScreen* screen) : QWindow(screen) {};
 
     ~VirtualQWindow() {
         qwindow_metacall_callback = nullptr;
@@ -834,18 +834,18 @@ class VirtualQWindow final : public QWindow {
     friend void QWindow_QBaseTouchEvent(QWindow* self, QTouchEvent* param1);
     friend void QWindow_TabletEvent(QWindow* self, QTabletEvent* param1);
     friend void QWindow_QBaseTabletEvent(QWindow* self, QTabletEvent* param1);
-    friend bool QWindow_NativeEvent(QWindow* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QWindow_QBaseNativeEvent(QWindow* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QWindow_NativeEvent(QWindow* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QWindow_QBaseNativeEvent(QWindow* self, const libqt_string eventType, void* message, intptr_t* result);
     friend void QWindow_TimerEvent(QWindow* self, QTimerEvent* event);
     friend void QWindow_QBaseTimerEvent(QWindow* self, QTimerEvent* event);
     friend void QWindow_ChildEvent(QWindow* self, QChildEvent* event);
     friend void QWindow_QBaseChildEvent(QWindow* self, QChildEvent* event);
     friend void QWindow_CustomEvent(QWindow* self, QEvent* event);
     friend void QWindow_QBaseCustomEvent(QWindow* self, QEvent* event);
-    friend void QWindow_ConnectNotify(QWindow* self, QMetaMethod* signal);
-    friend void QWindow_QBaseConnectNotify(QWindow* self, QMetaMethod* signal);
-    friend void QWindow_DisconnectNotify(QWindow* self, QMetaMethod* signal);
-    friend void QWindow_QBaseDisconnectNotify(QWindow* self, QMetaMethod* signal);
+    friend void QWindow_ConnectNotify(QWindow* self, const QMetaMethod* signal);
+    friend void QWindow_QBaseConnectNotify(QWindow* self, const QMetaMethod* signal);
+    friend void QWindow_DisconnectNotify(QWindow* self, const QMetaMethod* signal);
+    friend void QWindow_QBaseDisconnectNotify(QWindow* self, const QMetaMethod* signal);
     friend void* QWindow_ResolveInterface(const QWindow* self, const char* name, int revision);
     friend void* QWindow_QBaseResolveInterface(const QWindow* self, const char* name, int revision);
     friend QObject* QWindow_Sender(const QWindow* self);
@@ -854,8 +854,8 @@ class VirtualQWindow final : public QWindow {
     friend int QWindow_QBaseSenderSignalIndex(const QWindow* self);
     friend int QWindow_Receivers(const QWindow* self, const char* signal);
     friend int QWindow_QBaseReceivers(const QWindow* self, const char* signal);
-    friend bool QWindow_IsSignalConnected(const QWindow* self, QMetaMethod* signal);
-    friend bool QWindow_QBaseIsSignalConnected(const QWindow* self, QMetaMethod* signal);
+    friend bool QWindow_IsSignalConnected(const QWindow* self, const QMetaMethod* signal);
+    friend bool QWindow_QBaseIsSignalConnected(const QWindow* self, const QMetaMethod* signal);
 };
 
 #endif

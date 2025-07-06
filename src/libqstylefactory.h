@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-#include "libqstyle.h"
-
 /// https://doc.qt.io/qt-6/qstylefactory.html
 
 /// q_stylefactory_new constructs a new QStyleFactory object.

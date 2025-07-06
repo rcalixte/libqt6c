@@ -12,18 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractseries.h"
-#include "../libqbrush.h"
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "libqlineseries.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include "../libqpoint.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qareaseries-qtcharts.html
 
 /// q_areaseries_new constructs a new QAreaSeries object.
@@ -595,7 +583,7 @@ QThread* q_areaseries_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAreaSeries* self, QThread* thread ```
-void q_areaseries_move_to_thread(void* self, void* thread);
+bool q_areaseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -610,6 +598,13 @@ int32_t q_areaseries_start_timer(void* self, int interval);
 ///
 /// ``` QAreaSeries* self, int id ```
 void q_areaseries_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAreaSeries* self, enum Qt__TimerId id ```
+void q_areaseries_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -750,6 +745,13 @@ bool q_areaseries_inherits(void* self, const char* classname);
 ///
 /// ``` QAreaSeries* self ```
 void q_areaseries_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAreaSeries* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_areaseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

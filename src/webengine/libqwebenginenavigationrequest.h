@@ -12,11 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginenavigationrequest.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -44,6 +39,11 @@ QUrl* q_webenginenavigationrequest_url(void* self);
 ///
 /// ``` QWebEngineNavigationRequest* self ```
 bool q_webenginenavigationrequest_is_main_frame(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#hasFormData)
+///
+/// ``` QWebEngineNavigationRequest* self ```
+bool q_webenginenavigationrequest_has_form_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenavigationrequest.html#navigationType)
 ///
@@ -155,7 +155,7 @@ QThread* q_webenginenavigationrequest_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineNavigationRequest* self, QThread* thread ```
-void q_webenginenavigationrequest_move_to_thread(void* self, void* thread);
+bool q_webenginenavigationrequest_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -170,6 +170,13 @@ int32_t q_webenginenavigationrequest_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineNavigationRequest* self, int id ```
 void q_webenginenavigationrequest_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineNavigationRequest* self, enum Qt__TimerId id ```
+void q_webenginenavigationrequest_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -310,6 +317,13 @@ bool q_webenginenavigationrequest_inherits(void* self, const char* classname);
 ///
 /// ``` QWebEngineNavigationRequest* self ```
 void q_webenginenavigationrequest_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineNavigationRequest* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webenginenavigationrequest_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

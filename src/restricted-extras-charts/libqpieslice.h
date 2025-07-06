@@ -12,16 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqbrush.h"
-#include "../libqevent.h"
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include "libqpieseries.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpieslice-qtcharts.html
 
 /// q_pieslice_new constructs a new QPieSlice object.
@@ -511,7 +501,7 @@ QThread* q_pieslice_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPieSlice* self, QThread* thread ```
-void q_pieslice_move_to_thread(void* self, void* thread);
+bool q_pieslice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -526,6 +516,13 @@ int32_t q_pieslice_start_timer(void* self, int interval);
 ///
 /// ``` QPieSlice* self, int id ```
 void q_pieslice_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPieSlice* self, enum Qt__TimerId id ```
+void q_pieslice_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -666,6 +663,13 @@ bool q_pieslice_inherits(void* self, const char* classname);
 ///
 /// ``` QPieSlice* self ```
 void q_pieslice_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPieSlice* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pieslice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

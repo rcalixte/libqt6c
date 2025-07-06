@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqurl.h"
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qnetworkproxyquery.html
 
 /// q_networkproxyquery_new constructs a new QNetworkProxyQuery object.
@@ -291,6 +287,16 @@ void q_networkproxy_set_application_proxy(void* proxy);
 ///
 ///
 QNetworkProxy* q_networkproxy_application_proxy();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#headers)
+///
+/// ``` QNetworkProxy* self ```
+QHttpHeaders* q_networkproxy_headers(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#setHeaders)
+///
+/// ``` QNetworkProxy* self, QHttpHeaders* newHeaders ```
+void q_networkproxy_set_headers(void* self, void* newHeaders);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#header)
 ///

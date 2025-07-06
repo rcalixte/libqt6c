@@ -8,9 +8,10 @@ typedef struct QAbstractAnimation QAbstractAnimation;
 typedef struct QAbstractAxis QAbstractAxis;
 typedef struct QAbstractBarSeries QAbstractBarSeries;
 typedef struct QAbstractButton QAbstractButton;
-typedef struct QAbstractConcatenable QAbstractConcatenable;
 typedef struct QAbstractEventDispatcher QAbstractEventDispatcher;
+typedef struct QAbstractEventDispatcherV2 QAbstractEventDispatcherV2;
 typedef struct QAbstractEventDispatcher__TimerInfo QAbstractEventDispatcher__TimerInfo;
+typedef struct QAbstractEventDispatcher__TimerInfoV2 QAbstractEventDispatcher__TimerInfoV2;
 typedef struct QAbstractFileIconProvider QAbstractFileIconProvider;
 typedef struct QAbstractGraphicsShapeItem QAbstractGraphicsShapeItem;
 typedef struct QAbstractItemDelegate QAbstractItemDelegate;
@@ -31,9 +32,13 @@ typedef struct QAbstractTextDocumentLayout QAbstractTextDocumentLayout;
 typedef struct QAbstractTextDocumentLayout__PaintContext QAbstractTextDocumentLayout__PaintContext;
 typedef struct QAbstractTextDocumentLayout__Selection QAbstractTextDocumentLayout__Selection;
 typedef struct QAbstractUndoItem QAbstractUndoItem;
+typedef struct QAbstractVideoBuffer QAbstractVideoBuffer;
+typedef struct QAbstractVideoBuffer__MapData QAbstractVideoBuffer__MapData;
 typedef struct QAccessible QAccessible;
 typedef struct QAccessibleActionInterface QAccessibleActionInterface;
+typedef struct QAccessibleAnnouncementEvent QAccessibleAnnouncementEvent;
 typedef struct QAccessibleApplication QAccessibleApplication;
+typedef struct QAccessibleAttributesInterface QAccessibleAttributesInterface;
 typedef struct QAccessibleBridge QAccessibleBridge;
 typedef struct QAccessibleBridgePlugin QAccessibleBridgePlugin;
 typedef struct QAccessibleEditableTextInterface QAccessibleEditableTextInterface;
@@ -43,6 +48,7 @@ typedef struct QAccessibleImageInterface QAccessibleImageInterface;
 typedef struct QAccessibleInterface QAccessibleInterface;
 typedef struct QAccessibleObject QAccessibleObject;
 typedef struct QAccessiblePlugin QAccessiblePlugin;
+typedef struct QAccessibleSelectionInterface QAccessibleSelectionInterface;
 typedef struct QAccessibleStateChangeEvent QAccessibleStateChangeEvent;
 typedef struct QAccessibleTableCellInterface QAccessibleTableCellInterface;
 typedef struct QAccessibleTableInterface QAccessibleTableInterface;
@@ -72,6 +78,8 @@ typedef struct QAreaLegendMarker QAreaLegendMarker;
 typedef struct QAreaSeries QAreaSeries;
 typedef struct QArrayData QArrayData;
 typedef struct QAudioBuffer QAudioBuffer;
+typedef struct QAudioBufferInput QAudioBufferInput;
+typedef struct QAudioBufferOutput QAudioBufferOutput;
 typedef struct QAudioDecoder QAudioDecoder;
 typedef struct QAudioDevice QAudioDevice;
 typedef struct QAudioEngine QAudioEngine;
@@ -96,6 +104,7 @@ typedef struct QBindingStorage QBindingStorage;
 typedef struct QBitArray QBitArray;
 typedef struct QBitRef QBitRef;
 typedef struct QBitmap QBitmap;
+typedef struct QBluetoothPermission QBluetoothPermission;
 typedef struct QBoxLayout QBoxLayout;
 typedef struct QBoxPlotLegendMarker QBoxPlotLegendMarker;
 typedef struct QBoxPlotModelMapper QBoxPlotModelMapper;
@@ -108,24 +117,23 @@ typedef struct QButtonGroup QButtonGroup;
 typedef struct QByteArrayMatcher QByteArrayMatcher;
 typedef struct QByteArrayView QByteArrayView;
 typedef struct QCalendar QCalendar;
+typedef struct QCalendarPermission QCalendarPermission;
 typedef struct QCalendarWidget QCalendarWidget;
 typedef struct QCalendar__SystemId QCalendar__SystemId;
 typedef struct QCalendar__YearMonthDay QCalendar__YearMonthDay;
 typedef struct QCamera QCamera;
 typedef struct QCameraDevice QCameraDevice;
 typedef struct QCameraFormat QCameraFormat;
+typedef struct QCameraPermission QCameraPermission;
 typedef struct QCandlestickLegendMarker QCandlestickLegendMarker;
 typedef struct QCandlestickModelMapper QCandlestickModelMapper;
 typedef struct QCandlestickSeries QCandlestickSeries;
 typedef struct QCandlestickSet QCandlestickSet;
+typedef struct QCapturableWindow QCapturableWindow;
 typedef struct QCategoryAxis QCategoryAxis;
 typedef struct QCborArray QCborArray;
-typedef struct QCborArray__ConstIterator QCborArray__ConstIterator;
-typedef struct QCborArray__Iterator QCborArray__Iterator;
 typedef struct QCborError QCborError;
 typedef struct QCborMap QCborMap;
-typedef struct QCborMap__ConstIterator QCborMap__ConstIterator;
-typedef struct QCborMap__Iterator QCborMap__Iterator;
 typedef struct QCborParserError QCborParserError;
 typedef struct QCborStreamReader QCborStreamReader;
 typedef struct QCborStreamWriter QCborStreamWriter;
@@ -137,6 +145,8 @@ typedef struct QChart QChart;
 typedef struct QChartView QChartView;
 typedef struct QCheckBox QCheckBox;
 typedef struct QChildEvent QChildEvent;
+typedef struct QChildWindowEvent QChildWindowEvent;
+typedef struct QChronoTimer QChronoTimer;
 typedef struct QClipboard QClipboard;
 typedef struct QCloseEvent QCloseEvent;
 typedef struct QCollator QCollator;
@@ -156,6 +166,7 @@ typedef struct QCommonStyle QCommonStyle;
 typedef struct QCompleter QCompleter;
 typedef struct QConcatenateTablesProxyModel QConcatenateTablesProxyModel;
 typedef struct QConicalGradient QConicalGradient;
+typedef struct QContactsPermission QContactsPermission;
 typedef struct QContextMenuEvent QContextMenuEvent;
 typedef struct QContiguousCacheData QContiguousCacheData;
 typedef struct QCoreApplication QCoreApplication;
@@ -176,13 +187,16 @@ typedef struct QDial QDial;
 typedef struct QDialog QDialog;
 typedef struct QDialogButtonBox QDialogButtonBox;
 typedef struct QDir QDir;
-typedef struct QDirIterator QDirIterator;
+typedef struct QDirListing QDirListing;
+typedef struct QDirListing__DirEntry QDirListing__DirEntry;
+typedef struct QDirListing__sentinel QDirListing__sentinel;
 typedef struct QDnsDomainNameRecord QDnsDomainNameRecord;
 typedef struct QDnsHostAddressRecord QDnsHostAddressRecord;
 typedef struct QDnsLookup QDnsLookup;
 typedef struct QDnsMailExchangeRecord QDnsMailExchangeRecord;
 typedef struct QDnsServiceRecord QDnsServiceRecord;
 typedef struct QDnsTextRecord QDnsTextRecord;
+typedef struct QDnsTlsAssociationRecord QDnsTlsAssociationRecord;
 typedef struct QDockWidget QDockWidget;
 typedef struct QDoubleSpinBox QDoubleSpinBox;
 typedef struct QDoubleValidator QDoubleValidator;
@@ -214,6 +228,7 @@ typedef struct QFileOpenEvent QFileOpenEvent;
 typedef struct QFileSelector QFileSelector;
 typedef struct QFileSystemModel QFileSystemModel;
 typedef struct QFileSystemWatcher QFileSystemWatcher;
+typedef struct QFlag QFlag;
 typedef struct QFocusEvent QFocusEvent;
 typedef struct QFocusFrame QFocusFrame;
 typedef struct QFont QFont;
@@ -223,6 +238,9 @@ typedef struct QFontDialog QFontDialog;
 typedef struct QFontInfo QFontInfo;
 typedef struct QFontMetrics QFontMetrics;
 typedef struct QFontMetricsF QFontMetricsF;
+typedef struct QFont__Tag QFont__Tag;
+typedef struct QFormDataBuilder QFormDataBuilder;
+typedef struct QFormDataPartBuilder QFormDataPartBuilder;
 typedef struct QFormLayout QFormLayout;
 typedef struct QFormLayout__TakeRowResult QFormLayout__TakeRowResult;
 typedef struct QFrame QFrame;
@@ -299,7 +317,9 @@ typedef struct QHostAddress QHostAddress;
 typedef struct QHostInfo QHostInfo;
 typedef struct QHoverEvent QHoverEvent;
 typedef struct QHstsPolicy QHstsPolicy;
+typedef struct QHttp1Configuration QHttp1Configuration;
 typedef struct QHttp2Configuration QHttp2Configuration;
+typedef struct QHttpHeaders QHttpHeaders;
 typedef struct QHttpMultiPart QHttpMultiPart;
 typedef struct QHttpPart QHttpPart;
 typedef struct QIODevice QIODevice;
@@ -317,6 +337,7 @@ typedef struct QImageIOHandler QImageIOHandler;
 typedef struct QImageIOPlugin QImageIOPlugin;
 typedef struct QImageReader QImageReader;
 typedef struct QImageWriter QImageWriter;
+typedef struct QIncompatibleFlag QIncompatibleFlag;
 typedef struct QInputDevice QInputDevice;
 typedef struct QInputDialog QInputDialog;
 typedef struct QInputEvent QInputEvent;
@@ -333,12 +354,8 @@ typedef struct QItemSelection QItemSelection;
 typedef struct QItemSelectionModel QItemSelectionModel;
 typedef struct QItemSelectionRange QItemSelectionRange;
 typedef struct QJsonArray QJsonArray;
-typedef struct QJsonArray__const_iterator QJsonArray__const_iterator;
-typedef struct QJsonArray__iterator QJsonArray__iterator;
 typedef struct QJsonDocument QJsonDocument;
 typedef struct QJsonObject QJsonObject;
-typedef struct QJsonObject__const_iterator QJsonObject__const_iterator;
-typedef struct QJsonObject__iterator QJsonObject__iterator;
 typedef struct QJsonParseError QJsonParseError;
 typedef struct QJsonValue QJsonValue;
 typedef struct QJsonValueConstRef QJsonValueConstRef;
@@ -350,6 +367,8 @@ typedef struct QKeySequenceEdit QKeySequenceEdit;
 typedef struct QLCDNumber QLCDNumber;
 typedef struct QLabel QLabel;
 typedef struct QLatin1Char QLatin1Char;
+typedef struct QLatin1String QLatin1String;
+typedef struct QLatin1StringMatcher QLatin1StringMatcher;
 typedef struct QLayout QLayout;
 typedef struct QLayoutItem QLayoutItem;
 typedef struct QLegend QLegend;
@@ -367,6 +386,7 @@ typedef struct QListWidgetItem QListWidgetItem;
 typedef struct QLocalServer QLocalServer;
 typedef struct QLocalSocket QLocalSocket;
 typedef struct QLocale QLocale;
+typedef struct QLocationPermission QLocationPermission;
 typedef struct QLockFile QLockFile;
 typedef struct QLogValueAxis QLogValueAxis;
 typedef struct QLoggingCategory QLoggingCategory;
@@ -388,11 +408,15 @@ typedef struct QMenu QMenu;
 typedef struct QMenuBar QMenuBar;
 typedef struct QMessageAuthenticationCode QMessageAuthenticationCode;
 typedef struct QMessageBox QMessageBox;
+typedef struct QMessageLogContext QMessageLogContext;
+typedef struct QMessageLogger QMessageLogger;
 typedef struct QMetaAssociation QMetaAssociation;
 typedef struct QMetaClassInfo QMetaClassInfo;
 typedef struct QMetaContainer QMetaContainer;
 typedef struct QMetaEnum QMetaEnum;
 typedef struct QMetaMethod QMetaMethod;
+typedef struct QMetaMethodArgument QMetaMethodArgument;
+typedef struct QMetaMethodReturnArgument QMetaMethodReturnArgument;
 typedef struct QMetaObject QMetaObject;
 typedef struct QMetaObject__Connection QMetaObject__Connection;
 typedef struct QMetaObject__Data QMetaObject__Data;
@@ -401,6 +425,7 @@ typedef struct QMetaProperty QMetaProperty;
 typedef struct QMetaSequence QMetaSequence;
 typedef struct QMetaType QMetaType;
 typedef struct QMethodRawArguments QMethodRawArguments;
+typedef struct QMicrophonePermission QMicrophonePermission;
 typedef struct QMimeData QMimeData;
 typedef struct QMimeDatabase QMimeDatabase;
 typedef struct QMimeType QMimeType;
@@ -412,6 +437,7 @@ typedef struct QMoveEvent QMoveEvent;
 typedef struct QMovie QMovie;
 typedef struct QMutex QMutex;
 typedef struct QNativeGestureEvent QNativeGestureEvent;
+typedef struct QNativeIpcKey QNativeIpcKey;
 typedef struct QNetworkAccessManager QNetworkAccessManager;
 typedef struct QNetworkAddressEntry QNetworkAddressEntry;
 typedef struct QNetworkCacheMetaData QNetworkCacheMetaData;
@@ -426,6 +452,7 @@ typedef struct QNetworkProxyFactory QNetworkProxyFactory;
 typedef struct QNetworkProxyQuery QNetworkProxyQuery;
 typedef struct QNetworkReply QNetworkReply;
 typedef struct QNetworkRequest QNetworkRequest;
+typedef struct QNetworkRequestFactory QNetworkRequestFactory;
 typedef struct QNoDebug QNoDebug;
 typedef struct QObject QObject;
 typedef struct QObjectCleanupHandler QObjectCleanupHandler;
@@ -434,6 +461,7 @@ typedef struct QOcspResponse QOcspResponse;
 typedef struct QOffscreenSurface QOffscreenSurface;
 typedef struct QOperatingSystemVersion QOperatingSystemVersion;
 typedef struct QOperatingSystemVersionBase QOperatingSystemVersionBase;
+typedef struct QOperatingSystemVersionUnexported QOperatingSystemVersionUnexported;
 typedef struct QPageLayout QPageLayout;
 typedef struct QPageRanges QPageRanges;
 typedef struct QPageRanges__Range QPageRanges__Range;
@@ -459,14 +487,18 @@ typedef struct QPdfBookmarkModel QPdfBookmarkModel;
 typedef struct QPdfDocument QPdfDocument;
 typedef struct QPdfDocumentRenderOptions QPdfDocumentRenderOptions;
 typedef struct QPdfLink QPdfLink;
+typedef struct QPdfLinkModel QPdfLinkModel;
+typedef struct QPdfOutputIntent QPdfOutputIntent;
 typedef struct QPdfPageNavigator QPdfPageNavigator;
 typedef struct QPdfPageRenderer QPdfPageRenderer;
+typedef struct QPdfPageSelector QPdfPageSelector;
 typedef struct QPdfSearchModel QPdfSearchModel;
 typedef struct QPdfSelection QPdfSelection;
 typedef struct QPdfView QPdfView;
 typedef struct QPdfWriter QPdfWriter;
 typedef struct QPen QPen;
 typedef struct QPercentBarSeries QPercentBarSeries;
+typedef struct QPermission QPermission;
 typedef struct QPersistentModelIndex QPersistentModelIndex;
 typedef struct QPicture QPicture;
 typedef struct QPieLegendMarker QPieLegendMarker;
@@ -500,6 +532,7 @@ typedef struct QPrinter QPrinter;
 typedef struct QPrinterInfo QPrinterInfo;
 typedef struct QProcess QProcess;
 typedef struct QProcessEnvironment QProcessEnvironment;
+typedef struct QProcess__UnixProcessParameters QProcess__UnixProcessParameters;
 typedef struct QProgressBar QProgressBar;
 typedef struct QProgressDialog QProgressDialog;
 typedef struct QPropertyAnimation QPropertyAnimation;
@@ -511,7 +544,6 @@ typedef struct QPropertyObserverBase QPropertyObserverBase;
 typedef struct QPropertyProxyBindingData QPropertyProxyBindingData;
 typedef struct QProxyStyle QProxyStyle;
 typedef struct QPushButton QPushButton;
-typedef struct QQmlWebChannel QQmlWebChannel;
 typedef struct QQuaternion QQuaternion;
 typedef struct QRadialGradient QRadialGradient;
 typedef struct QRadioButton QRadioButton;
@@ -527,17 +559,20 @@ typedef struct QRecursiveMutex QRecursiveMutex;
 typedef struct QRegion QRegion;
 typedef struct QRegularExpression QRegularExpression;
 typedef struct QRegularExpressionMatch QRegularExpressionMatch;
-typedef struct QRegularExpressionMatchIterator QRegularExpressionMatchIterator;
 typedef struct QRegularExpressionValidator QRegularExpressionValidator;
 typedef struct QResizeEvent QResizeEvent;
 typedef struct QResource QResource;
+typedef struct QRestAccessManager QRestAccessManager;
+typedef struct QRestReply QRestReply;
 typedef struct QRgba64 QRgba64;
 typedef struct QRubberBand QRubberBand;
 typedef struct QRunnable QRunnable;
 typedef struct QSaveFile QSaveFile;
 typedef struct QScatterSeries QScatterSeries;
 typedef struct QScopedPointerPodDeleter QScopedPointerPodDeleter;
+typedef struct QScopedPropertyUpdateGroup QScopedPropertyUpdateGroup;
 typedef struct QScreen QScreen;
+typedef struct QScreenCapture QScreenCapture;
 typedef struct QScreenOrientationChangeEvent QScreenOrientationChangeEvent;
 typedef struct QScrollArea QScrollArea;
 typedef struct QScrollBar QScrollBar;
@@ -649,6 +684,7 @@ typedef struct QSvgRenderer QSvgRenderer;
 typedef struct QSvgWidget QSvgWidget;
 typedef struct QSwipeGesture QSwipeGesture;
 typedef struct QSyntaxHighlighter QSyntaxHighlighter;
+typedef struct QSysInfo QSysInfo;
 typedef struct QSystemSemaphore QSystemSemaphore;
 typedef struct QSystemTrayIcon QSystemTrayIcon;
 typedef struct QTabBar QTabBar;
@@ -669,7 +705,6 @@ typedef struct QTextBlock QTextBlock;
 typedef struct QTextBlockFormat QTextBlockFormat;
 typedef struct QTextBlockGroup QTextBlockGroup;
 typedef struct QTextBlockUserData QTextBlockUserData;
-typedef struct QTextBlock__iterator QTextBlock__iterator;
 typedef struct QTextBoundaryFinder QTextBoundaryFinder;
 typedef struct QTextBrowser QTextBrowser;
 typedef struct QTextCharFormat QTextCharFormat;
@@ -684,7 +719,6 @@ typedef struct QTextFragment QTextFragment;
 typedef struct QTextFrame QTextFrame;
 typedef struct QTextFrameFormat QTextFrameFormat;
 typedef struct QTextFrameLayoutData QTextFrameLayoutData;
-typedef struct QTextFrame__iterator QTextFrame__iterator;
 typedef struct QTextImageFormat QTextImageFormat;
 typedef struct QTextInlineObject QTextInlineObject;
 typedef struct QTextItem QTextItem;
@@ -726,7 +760,6 @@ typedef struct QTransposeProxyModel QTransposeProxyModel;
 typedef struct QTreeView QTreeView;
 typedef struct QTreeWidget QTreeWidget;
 typedef struct QTreeWidgetItem QTreeWidgetItem;
-typedef struct QTreeWidgetItemIterator QTreeWidgetItemIterator;
 typedef struct QTypeRevision QTypeRevision;
 typedef struct QUdpSocket QUdpSocket;
 typedef struct QUndoCommand QUndoCommand;
@@ -739,6 +772,7 @@ typedef struct QUntypedPropertyData QUntypedPropertyData;
 typedef struct QUrl QUrl;
 typedef struct QUrlQuery QUrlQuery;
 typedef struct QUuid QUuid;
+typedef struct QUuid__Id128Bytes QUuid__Id128Bytes;
 typedef struct QVBarModelMapper QVBarModelMapper;
 typedef struct QVBoxLayout QVBoxLayout;
 typedef struct QVBoxPlotModelMapper QVBoxPlotModelMapper;
@@ -750,13 +784,13 @@ typedef struct QValidator QValidator;
 typedef struct QValueAxis QValueAxis;
 typedef struct QVariant QVariant;
 typedef struct QVariantAnimation QVariantAnimation;
-typedef struct QVariantConstPointer QVariantConstPointer;
 typedef struct QVector2D QVector2D;
 typedef struct QVector3D QVector3D;
 typedef struct QVector4D QVector4D;
 typedef struct QVersionNumber QVersionNumber;
 typedef struct QVideoFrame QVideoFrame;
 typedef struct QVideoFrameFormat QVideoFrameFormat;
+typedef struct QVideoFrameInput QVideoFrameInput;
 typedef struct QVideoFrame__PaintOptions QVideoFrame__PaintOptions;
 typedef struct QVideoSink QVideoSink;
 typedef struct QVideoWidget QVideoWidget;
@@ -767,13 +801,17 @@ typedef struct QWebChannelAbstractTransport QWebChannelAbstractTransport;
 typedef struct QWebEngineCertificateError QWebEngineCertificateError;
 typedef struct QWebEngineClientCertificateSelection QWebEngineClientCertificateSelection;
 typedef struct QWebEngineClientCertificateStore QWebEngineClientCertificateStore;
+typedef struct QWebEngineClientHints QWebEngineClientHints;
 typedef struct QWebEngineContextMenuRequest QWebEngineContextMenuRequest;
 typedef struct QWebEngineCookieStore QWebEngineCookieStore;
 typedef struct QWebEngineCookieStore__FilterRequest QWebEngineCookieStore__FilterRequest;
+typedef struct QWebEngineDesktopMediaRequest QWebEngineDesktopMediaRequest;
 typedef struct QWebEngineDownloadRequest QWebEngineDownloadRequest;
 typedef struct QWebEngineFileSystemAccessRequest QWebEngineFileSystemAccessRequest;
 typedef struct QWebEngineFindTextResult QWebEngineFindTextResult;
+typedef struct QWebEngineFrame QWebEngineFrame;
 typedef struct QWebEngineFullScreenRequest QWebEngineFullScreenRequest;
+typedef struct QWebEngineGlobalSettings__DnsMode QWebEngineGlobalSettings__DnsMode;
 typedef struct QWebEngineHistory QWebEngineHistory;
 typedef struct QWebEngineHistoryItem QWebEngineHistoryItem;
 typedef struct QWebEngineHistoryModel QWebEngineHistoryModel;
@@ -783,6 +821,7 @@ typedef struct QWebEngineNavigationRequest QWebEngineNavigationRequest;
 typedef struct QWebEngineNewWindowRequest QWebEngineNewWindowRequest;
 typedef struct QWebEngineNotification QWebEngineNotification;
 typedef struct QWebEnginePage QWebEnginePage;
+typedef struct QWebEnginePermission QWebEnginePermission;
 typedef struct QWebEngineProfile QWebEngineProfile;
 typedef struct QWebEngineQuotaRequest QWebEngineQuotaRequest;
 typedef struct QWebEngineRegisterProtocolHandlerRequest QWebEngineRegisterProtocolHandlerRequest;
@@ -795,6 +834,8 @@ typedef struct QWebEngineUrlRequestJob QWebEngineUrlRequestJob;
 typedef struct QWebEngineUrlScheme QWebEngineUrlScheme;
 typedef struct QWebEngineUrlSchemeHandler QWebEngineUrlSchemeHandler;
 typedef struct QWebEngineView QWebEngineView;
+typedef struct QWebEngineWebAuthPinRequest QWebEngineWebAuthPinRequest;
+typedef struct QWebEngineWebAuthUxRequest QWebEngineWebAuthUxRequest;
 typedef struct QWhatsThis QWhatsThis;
 typedef struct QWhatsThisClickedEvent QWhatsThisClickedEvent;
 typedef struct QWheelEvent QWheelEvent;
@@ -804,6 +845,7 @@ typedef struct QWidgetData QWidgetData;
 typedef struct QWidgetItem QWidgetItem;
 typedef struct QWidgetItemV2 QWidgetItemV2;
 typedef struct QWindow QWindow;
+typedef struct QWindowCapture QWindowCapture;
 typedef struct QWindowStateChangeEvent QWindowStateChangeEvent;
 typedef struct QWizard QWizard;
 typedef struct QWizardPage QWizardPage;
@@ -812,6 +854,7 @@ typedef struct QXYLegendMarker QXYLegendMarker;
 typedef struct QXYModelMapper QXYModelMapper;
 typedef struct QXYSeries QXYSeries;
 typedef struct QXmlStreamAttribute QXmlStreamAttribute;
+typedef struct QXmlStreamAttributes QXmlStreamAttributes;
 typedef struct QXmlStreamEntityDeclaration QXmlStreamEntityDeclaration;
 typedef struct QXmlStreamEntityResolver QXmlStreamEntityResolver;
 typedef struct QXmlStreamNamespaceDeclaration QXmlStreamNamespaceDeclaration;
@@ -825,6 +868,7 @@ typedef struct QsciCommandSet QsciCommandSet;
 typedef struct QsciDocument QsciDocument;
 typedef struct QsciLexer QsciLexer;
 typedef struct QsciLexerAVS QsciLexerAVS;
+typedef struct QsciLexerAsm QsciLexerAsm;
 typedef struct QsciLexerBash QsciLexerBash;
 typedef struct QsciLexerBatch QsciLexerBatch;
 typedef struct QsciLexerCMake QsciLexerCMake;
@@ -839,14 +883,18 @@ typedef struct QsciLexerEDIFACT QsciLexerEDIFACT;
 typedef struct QsciLexerFortran QsciLexerFortran;
 typedef struct QsciLexerFortran77 QsciLexerFortran77;
 typedef struct QsciLexerHTML QsciLexerHTML;
+typedef struct QsciLexerHex QsciLexerHex;
 typedef struct QsciLexerIDL QsciLexerIDL;
+typedef struct QsciLexerIntelHex QsciLexerIntelHex;
 typedef struct QsciLexerJSON QsciLexerJSON;
 typedef struct QsciLexerJava QsciLexerJava;
 typedef struct QsciLexerJavaScript QsciLexerJavaScript;
 typedef struct QsciLexerLua QsciLexerLua;
+typedef struct QsciLexerMASM QsciLexerMASM;
 typedef struct QsciLexerMakefile QsciLexerMakefile;
 typedef struct QsciLexerMarkdown QsciLexerMarkdown;
 typedef struct QsciLexerMatlab QsciLexerMatlab;
+typedef struct QsciLexerNASM QsciLexerNASM;
 typedef struct QsciLexerOctave QsciLexerOctave;
 typedef struct QsciLexerPO QsciLexerPO;
 typedef struct QsciLexerPOV QsciLexerPOV;
@@ -857,9 +905,11 @@ typedef struct QsciLexerProperties QsciLexerProperties;
 typedef struct QsciLexerPython QsciLexerPython;
 typedef struct QsciLexerRuby QsciLexerRuby;
 typedef struct QsciLexerSQL QsciLexerSQL;
+typedef struct QsciLexerSRec QsciLexerSRec;
 typedef struct QsciLexerSpice QsciLexerSpice;
 typedef struct QsciLexerTCL QsciLexerTCL;
 typedef struct QsciLexerTeX QsciLexerTeX;
+typedef struct QsciLexerTekHex QsciLexerTekHex;
 typedef struct QsciLexerVHDL QsciLexerVHDL;
 typedef struct QsciLexerVerilog QsciLexerVerilog;
 typedef struct QsciLexerXML QsciLexerXML;
@@ -870,780 +920,8 @@ typedef struct QsciScintilla QsciScintilla;
 typedef struct QsciScintillaBase QsciScintillaBase;
 typedef struct QsciStyle QsciStyle;
 typedef struct QsciStyledText QsciStyledText;
+typedef struct partial_ordering partial_ordering;
 typedef struct qfloat16 qfloat16;
-typedef QCborValue* ConstIteratorvalue_type;                                   // C ABI QFlags
-typedef QCborValue* Iteratorvalue_type;                                        // C ABI QFlags
-typedef QCborValue* key_type;                                                  // C ABI QFlags
-typedef QCborValue* mapped_type;                                               // C ABI QFlags
-typedef QCborValueRef* ConstIteratorpointer;                                   // C ABI QFlags
-typedef QCborValueRef* ConstIteratorreference;                                 // C ABI QFlags
-typedef QCborValueRef* Iteratorpointer;                                        // C ABI QFlags
-typedef QCborValueRef* Iteratorreference;                                      // C ABI QFlags
-typedef QDtlsClientVerifier__GeneratorParameters* GeneratorParameters;         // C ABI QFlags
-typedef QEventPoint* TouchPoint;                                               // C ABI QFlags
-typedef QJsonArray__const_iterator* ConstIterator;                             // C ABI QFlags
-typedef QJsonArray__iterator* Iterator;                                        // C ABI QFlags
-typedef QJsonValue* iteratorvalue_type;                                        // C ABI QFlags
-typedef QJsonValueRef* iteratorpointer;                                        // C ABI QFlags
-typedef QJsonValueRef* iteratorreference;                                      // C ABI QFlags
-typedef QVariantConstPointer* pointer;                                         // C ABI QFlags
-typedef int AcceptMode;                                                        // C ABI enum
-typedef int Access;                                                            // C ABI enum
-typedef int AccessFlag;                                                        // C ABI enum
-typedef int AccessFlags;                                                       // C ABI QFlags
-typedef int AccessMode;                                                        // C ABI enum
-typedef int AceProcessingOptions;                                              // C ABI QFlags
-typedef int Action;                                                            // C ABI enum
-typedef int ActionEvent;                                                       // C ABI enum
-typedef int ActionPosition;                                                    // C ABI enum
-typedef int ActivationReason;                                                  // C ABI enum
-typedef int AlertLevel;                                                        // C ABI enum
-typedef int AlertType;                                                         // C ABI enum
-typedef int Algorithm;                                                         // C ABI enum
-typedef int Alignment;                                                         // C ABI QFlags
-typedef int AlignmentFlag;                                                     // C ABI enum
-typedef int AllocationOption;                                                  // C ABI enum
-typedef int AlphaPosition;                                                     // C ABI enum
-typedef int AlphaPremultiplied;                                                // C ABI enum
-typedef int AlphaUsage;                                                        // C ABI enum
-typedef int AlternativeNameEntryType;                                          // C ABI enum
-typedef int AncestorMode;                                                      // C ABI enum
-typedef int AnchorPoint;                                                       // C ABI enum
-typedef int AnimationOption;                                                   // C ABI enum
-typedef int AnimationOptions;                                                  // C ABI QFlags
-typedef int AnnotationDisplay;                                                 // C ABI enum
-typedef int AntialiasingType;                                                  // C ABI enum
-typedef int ApplicationAttribute;                                              // C ABI enum
-typedef int ApplicationState;                                                  // C ABI enum
-typedef int ApplicationStates;                                                 // C ABI QFlags
-typedef int AreaOption;                                                        // C ABI enum
-typedef int AreaOptions;                                                       // C ABI QFlags
-typedef int ArrayOption;                                                       // C ABI enum
-typedef int ArrayOptions;                                                      // C ABI QFlags
-typedef int ArrowType;                                                         // C ABI enum
-typedef int AspectRatioMode;                                                   // C ABI enum
-typedef int Attribute;                                                         // C ABI enum
-typedef int AttributeType;                                                     // C ABI enum
-typedef int Attributes;                                                        // C ABI enum
-typedef int AudioChannelPosition;                                              // C ABI enum
-typedef int AudioCodec;                                                        // C ABI enum
-typedef int AutoCompletionSource;                                              // C ABI enum
-typedef int AutoCompletionUseSingle;                                           // C ABI enum
-typedef int AutoFormatting;                                                    // C ABI QFlags
-typedef int AutoFormattingFlag;                                                // C ABI enum
-typedef int Axis;                                                              // C ABI enum
-typedef int AxisLabelsPosition;                                                // C ABI enum
-typedef int AxisType;                                                          // C ABI enum
-typedef int AxisTypes;                                                         // C ABI QFlags
-typedef int BGMode;                                                            // C ABI enum
-typedef int BindFlag;                                                          // C ABI enum
-typedef int BindMode;                                                          // C ABI QFlags
-typedef int BindableWarningsReason;                                            // C ABI enum
-typedef int BlurHint;                                                          // C ABI enum
-typedef int BlurHints;                                                         // C ABI QFlags
-typedef int BorderStyle;                                                       // C ABI enum
-typedef int BoundaryReason;                                                    // C ABI enum
-typedef int BoundaryReasons;                                                   // C ABI QFlags
-typedef int BoundaryType;                                                      // C ABI enum
-typedef int BraceMatch;                                                        // C ABI enum
-typedef int BrushStyle;                                                        // C ABI enum
-typedef int Button;                                                            // C ABI QFlags
-typedef int ButtonFeature;                                                     // C ABI enum
-typedef int ButtonFeatures;                                                    // C ABI QFlags
-typedef int ButtonLayout;                                                      // C ABI enum
-typedef int ButtonPosition;                                                    // C ABI enum
-typedef int ButtonRole;                                                        // C ABI enum
-typedef int ButtonSymbols;                                                     // C ABI enum
-typedef int ByteOrder;                                                         // C ABI enum
-typedef int CacheLoadControl;                                                  // C ABI enum
-typedef int CacheMode;                                                         // C ABI QFlags
-typedef int CacheMode;                                                         // C ABI enum
-typedef int CacheModeFlag;                                                     // C ABI enum
-typedef int Call;                                                              // C ABI enum
-typedef int CallTipsPosition;                                                  // C ABI enum
-typedef int CallTipsStyle;                                                     // C ABI enum
-typedef int Callback;                                                          // C ABI enum
-typedef int CancelMode;                                                        // C ABI enum
-typedef int Capabilities;                                                      // C ABI QFlags
-typedef int Capability;                                                        // C ABI enum
-typedef int Capitalization;                                                    // C ABI enum
-typedef int CaseSensitivity;                                                   // C ABI enum
-typedef int Category;                                                          // C ABI enum
-typedef int ChangeFlag;                                                        // C ABI enum
-typedef int ChangeFlags;                                                       // C ABI QFlags
-typedef int ChartTheme;                                                        // C ABI enum
-typedef int ChartType;                                                         // C ABI enum
-typedef int CheckIndexOption;                                                  // C ABI enum
-typedef int CheckIndexOptions;                                                 // C ABI QFlags
-typedef int CheckState;                                                        // C ABI enum
-typedef int CheckType;                                                         // C ABI enum
-typedef int ChecksumType;                                                      // C ABI enum
-typedef int ChildIndicatorPolicy;                                              // C ABI enum
-typedef int ClipOperation;                                                     // C ABI enum
-typedef int ClockType;                                                         // C ABI enum
-typedef int Code;                                                              // C ABI enum
-typedef int ColorDialogOption;                                                 // C ABI enum
-typedef int ColorDialogOptions;                                                // C ABI QFlags
-typedef int ColorGroup;                                                        // C ABI enum
-typedef int ColorMode;                                                         // C ABI enum
-typedef int ColorModel;                                                        // C ABI enum
-typedef int ColorRange;                                                        // C ABI enum
-typedef int ColorRole;                                                         // C ABI enum
-typedef int ColorSpace;                                                        // C ABI enum
-typedef int ColorTransfer;                                                     // C ABI enum
-typedef int CombiningClass;                                                    // C ABI enum
-typedef int Command;                                                           // C ABI enum
-typedef int CompletionMode;                                                    // C ABI enum
-typedef int ComplexControl;                                                    // C ABI enum
-typedef int ComponentFormattingOptions;                                        // C ABI QFlags
-typedef int CompositionMode;                                                   // C ABI enum
-typedef int Compression;                                                       // C ABI enum
-typedef int ConnectionType;                                                    // C ABI enum
-typedef int ContentType;                                                       // C ABI enum
-typedef int ContentsType;                                                      // C ABI enum
-typedef int ContextMenuPolicy;                                                 // C ABI enum
-typedef int ControlElement;                                                    // C ABI enum
-typedef int ControlType;                                                       // C ABI enum
-typedef int ControlTypes;                                                      // C ABI QFlags
-typedef int ConversionMode;                                                    // C ABI QFlags
-typedef int ConversionMode;                                                    // C ABI enum
-typedef int ConversionModeFlag;                                                // C ABI enum
-typedef int CoordinateMode;                                                    // C ABI enum
-typedef int CoordinateSystem;                                                  // C ABI enum
-typedef int Corner;                                                            // C ABI enum
-typedef int CornerWidget;                                                      // C ABI enum
-typedef int CornerWidgets;                                                     // C ABI QFlags
-typedef int CorrectionMode;                                                    // C ABI enum
-typedef int CurrencySymbolFormat;                                              // C ABI enum
-typedef int CursorAction;                                                      // C ABI enum
-typedef int CursorMode;                                                        // C ABI enum
-typedef int CursorMoveStyle;                                                   // C ABI enum
-typedef int CursorPosition;                                                    // C ABI enum
-typedef int CursorShape;                                                       // C ABI enum
-typedef int DataSizeFormat;                                                    // C ABI enum
-typedef int DataSizeFormats;                                                   // C ABI QFlags
-typedef int DateFormat;                                                        // C ABI enum
-typedef int DayOfWeek;                                                         // C ABI enum
-typedef int Decomposition;                                                     // C ABI enum
-typedef int DeletionPolicy;                                                    // C ABI enum
-typedef int Deprecated_t;                                                      // C ABI enum
-typedef int DescriptorType;                                                    // C ABI QFlags
-typedef int DestinationType;                                                   // C ABI enum
-typedef int DeviceType;                                                        // C ABI enum
-typedef int DeviceTypes;                                                       // C ABI QFlags
-typedef int DiagnosticNotationOption;                                          // C ABI enum
-typedef int DiagnosticNotationOptions;                                         // C ABI QFlags
-typedef int DialogCode;                                                        // C ABI enum
-typedef int DialogLabel;                                                       // C ABI enum
-typedef int Direction;                                                         // C ABI enum
-typedef int DirtyFlag;                                                         // C ABI enum
-typedef int DirtyFlags;                                                        // C ABI QFlags
-typedef int DistanceModel;                                                     // C ABI enum
-typedef int DockOption;                                                        // C ABI enum
-typedef int DockOptions;                                                       // C ABI QFlags
-typedef int DockPosition;                                                      // C ABI enum
-typedef int DockWidgetArea;                                                    // C ABI enum
-typedef int DockWidgetAreaSizes;                                               // C ABI enum
-typedef int DockWidgetAreas;                                                   // C ABI QFlags
-typedef int DockWidgetFeature;                                                 // C ABI enum
-typedef int DockWidgetFeatures;                                                // C ABI QFlags
-typedef int DownloadInterruptReason;                                           // C ABI enum
-typedef int DownloadState;                                                     // C ABI enum
-typedef int DragDropMode;                                                      // C ABI enum
-typedef int DragMode;                                                          // C ABI enum
-typedef int DrawingHint;                                                       // C ABI enum
-typedef int DrawingHints;                                                      // C ABI QFlags
-typedef int DropAction;                                                        // C ABI enum
-typedef int DropActions;                                                       // C ABI QFlags
-typedef int DropIndicatorPosition;                                             // C ABI enum
-typedef int DuplexMode;                                                        // C ABI enum
-typedef int EchoMode;                                                          // C ABI enum
-typedef int Edge;                                                              // C ABI enum
-typedef int EdgeMode;                                                          // C ABI enum
-typedef int Edges;                                                             // C ABI QFlags
-typedef int EditFlag;                                                          // C ABI enum
-typedef int EditFlags;                                                         // C ABI QFlags
-typedef int EditTrigger;                                                       // C ABI enum
-typedef int EditTriggers;                                                      // C ABI QFlags
-typedef int ElementType;                                                       // C ABI enum
-typedef int Encoding;                                                          // C ABI enum
-typedef int EncodingFormat;                                                    // C ABI enum
-typedef int EncodingMode;                                                      // C ABI enum
-typedef int EncodingOption;                                                    // C ABI enum
-typedef int EncodingOptions;                                                   // C ABI QFlags
-typedef int EndEditHint;                                                       // C ABI enum
-typedef int EnterKeyType;                                                      // C ABI enum
-typedef int EolMode;                                                           // C ABI enum
-typedef int Error;                                                             // C ABI enum
-typedef int ErrorDomain;                                                       // C ABI enum
-typedef int Event;                                                             // C ABI enum
-typedef int EventPriority;                                                     // C ABI enum
-typedef int ExclusionPolicy;                                                   // C ABI enum
-typedef int ExitStatus;                                                        // C ABI enum
-typedef int ExposureMode;                                                      // C ABI enum
-typedef int Extension;                                                         // C ABI enum
-typedef int Feature;                                                           // C ABI enum
-typedef int Features;                                                          // C ABI QFlags
-typedef int FieldAlignment;                                                    // C ABI enum
-typedef int FieldGrowthPolicy;                                                 // C ABI enum
-typedef int FileError;                                                         // C ABI enum
-typedef int FileFormat;                                                        // C ABI enum
-typedef int FileHandleFlag;                                                    // C ABI enum
-typedef int FileHandleFlags;                                                   // C ABI QFlags
-typedef int FileMode;                                                          // C ABI enum
-typedef int FileSelectionMode;                                                 // C ABI enum
-typedef int FileTime;                                                          // C ABI enum
-typedef int FillRule;                                                          // C ABI enum
-typedef int Filter;                                                            // C ABI enum
-typedef int Filters;                                                           // C ABI QFlags
-typedef int FindChildOption;                                                   // C ABI enum
-typedef int FindChildOptions;                                                  // C ABI QFlags
-typedef int FindFlag;                                                          // C ABI enum
-typedef int FindFlags;                                                         // C ABI QFlags
-typedef int Flag;                                                              // C ABI enum
-typedef int Flags;                                                             // C ABI QFlags
-typedef int FlashMode;                                                         // C ABI enum
-typedef int FloatingPointPrecision;                                            // C ABI enum
-typedef int FloatingPointPrecisionOption;                                      // C ABI enum
-typedef int Flow;                                                              // C ABI enum
-typedef int FocusMode;                                                         // C ABI enum
-typedef int FocusPolicy;                                                       // C ABI enum
-typedef int FocusReason;                                                       // C ABI enum
-typedef int FoldStyle;                                                         // C ABI enum
-typedef int FontDialogOption;                                                  // C ABI enum
-typedef int FontDialogOptions;                                                 // C ABI QFlags
-typedef int FontFamily;                                                        // C ABI enum
-typedef int FontFilter;                                                        // C ABI enum
-typedef int FontFilters;                                                       // C ABI QFlags
-typedef int FontPropertiesInheritanceBehavior;                                 // C ABI enum
-typedef int FontSize;                                                          // C ABI enum
-typedef int ForeverConstant;                                                   // C ABI enum
-typedef int Format;                                                            // C ABI enum
-typedef int FormatOption;                                                      // C ABI enum
-typedef int FormatOptions;                                                     // C ABI QFlags
-typedef int FormatType;                                                        // C ABI enum
-typedef int FrameFeature;                                                      // C ABI enum
-typedef int FrameFeatures;                                                     // C ABI QFlags
-typedef int FrameRates;                                                        // C ABI enum
-typedef int GestureCancelPolicy;                                               // C ABI enum
-typedef int GestureFlag;                                                       // C ABI enum
-typedef int GestureFlags;                                                      // C ABI QFlags
-typedef int GestureState;                                                      // C ABI enum
-typedef int GestureType;                                                       // C ABI enum
-typedef int GlobalColor;                                                       // C ABI enum
-typedef int GlyphRunFlag;                                                      // C ABI enum
-typedef int GlyphRunFlags;                                                     // C ABI QFlags
-typedef int GrabTransition;                                                    // C ABI enum
-typedef int GraphicsItemChange;                                                // C ABI enum
-typedef int GraphicsItemFlag;                                                  // C ABI enum
-typedef int GraphicsItemFlags;                                                 // C ABI QFlags
-typedef int GrowthPosition;                                                    // C ABI enum
-typedef int HandleType;                                                        // C ABI enum
-typedef int HandshakeState;                                                    // C ABI enum
-typedef int HighDpiScaleFactorRoundingPolicy;                                  // C ABI enum
-typedef int HintReturnType;                                                    // C ABI enum
-typedef int HintingPreference;                                                 // C ABI enum
-typedef int HitTestAccuracy;                                                   // C ABI enum
-typedef int HorizontalHeaderFormat;                                            // C ABI enum
-typedef int HostInfoError;                                                     // C ABI enum
-typedef int HttpCacheType;                                                     // C ABI enum
-typedef int Icon;                                                              // C ABI enum
-typedef int IconEngineHook;                                                    // C ABI enum
-typedef int IconType;                                                          // C ABI enum
-typedef int ImageConversionFlag;                                               // C ABI enum
-typedef int ImageConversionFlags;                                              // C ABI QFlags
-typedef int ImageOption;                                                       // C ABI enum
-typedef int ImageReaderError;                                                  // C ABI enum
-typedef int ImageWriterError;                                                  // C ABI enum
-typedef int ImplementedClass;                                                  // C ABI enum
-typedef int IndentationWarning;                                                // C ABI enum
-typedef int IndicatorStyle;                                                    // C ABI enum
-typedef int Initialization;                                                    // C ABI enum
-typedef int InjectionPoint;                                                    // C ABI enum
-typedef int Input;                                                             // C ABI enum
-typedef int InputChannelMode;                                                  // C ABI enum
-typedef int InputDialogOption;                                                 // C ABI enum
-typedef int InputDialogOptions;                                                // C ABI QFlags
-typedef int InputMethodHint;                                                   // C ABI enum
-typedef int InputMethodHints;                                                  // C ABI QFlags
-typedef int InputMethodQueries;                                                // C ABI QFlags
-typedef int InputMethodQuery;                                                  // C ABI enum
-typedef int InputMode;                                                         // C ABI enum
-typedef int InsertPolicy;                                                      // C ABI enum
-typedef int InterfaceFlag;                                                     // C ABI enum
-typedef int InterfaceFlags;                                                    // C ABI QFlags
-typedef int InterfaceType;                                                     // C ABI enum
-typedef int InterpolationMode;                                                 // C ABI enum
-typedef int IntersectType;                                                     // C ABI QFlags
-typedef int IntersectionType;                                                  // C ABI enum
-typedef int InvertMode;                                                        // C ABI enum
-typedef int ItemDataRole;                                                      // C ABI enum
-typedef int ItemFlag;                                                          // C ABI enum
-typedef int ItemFlags;                                                         // C ABI QFlags
-typedef int ItemIndexMethod;                                                   // C ABI enum
-typedef int ItemRole;                                                          // C ABI enum
-typedef int ItemSelectionMode;                                                 // C ABI enum
-typedef int ItemSelectionOperation;                                            // C ABI enum
-typedef int ItemType;                                                          // C ABI enum
-typedef int IteratorFlag;                                                      // C ABI enum
-typedef int IteratorFlags;                                                     // C ABI QFlags
-typedef int JavaScriptConsoleMessageLevel;                                     // C ABI enum
-typedef int JoiningType;                                                       // C ABI enum
-typedef int JsonFormat;                                                        // C ABI enum
-typedef int Key;                                                               // C ABI enum
-typedef int KeyAlgorithm;                                                      // C ABI enum
-typedef int KeyType;                                                           // C ABI enum
-typedef int KeyboardModifier;                                                  // C ABI enum
-typedef int KeyboardModifiers;                                                 // C ABI QFlags
-typedef int KnownHeaders;                                                      // C ABI enum
-typedef int LabelPosition;                                                     // C ABI enum
-typedef int LabelsPosition;                                                    // C ABI enum
-typedef int LanguageCodeType;                                                  // C ABI enum
-typedef int LanguageCodeTypes;                                                 // C ABI QFlags
-typedef int LayoutChangeHint;                                                  // C ABI enum
-typedef int LayoutDirection;                                                   // C ABI enum
-typedef int LayoutFlag;                                                        // C ABI enum
-typedef int LayoutFlags;                                                       // C ABI QFlags
-typedef int LayoutMode;                                                        // C ABI enum
-typedef int LegendMarkerType;                                                  // C ABI enum
-typedef int LibraryLocation;                                                   // C ABI QFlags
-typedef int LibraryPath;                                                       // C ABI enum
-typedef int LifecycleState;                                                    // C ABI enum
-typedef int LineHeightTypes;                                                   // C ABI enum
-typedef int LineWrapMode;                                                      // C ABI enum
-typedef int LoadControl;                                                       // C ABI enum
-typedef int LoadHint;                                                          // C ABI enum
-typedef int LoadHints;                                                         // C ABI QFlags
-typedef int LoadStatus;                                                        // C ABI enum
-typedef int LocalSocketError;                                                  // C ABI enum
-typedef int LocalSocketState;                                                  // C ABI enum
-typedef int LocateOption;                                                      // C ABI enum
-typedef int LocateOptions;                                                     // C ABI QFlags
-typedef int LockError;                                                         // C ABI enum
-typedef int Loop;                                                              // C ABI enum
-typedef int Loops;                                                             // C ABI enum
-typedef int MapMode;                                                           // C ABI enum
-typedef int MarginType;                                                        // C ABI enum
-typedef int MarkdownFeature;                                                   // C ABI enum
-typedef int MarkdownFeatures;                                                  // C ABI QFlags
-typedef int MarkerShape;                                                       // C ABI enum
-typedef int MarkerSymbol;                                                      // C ABI enum
-typedef int MarkerType;                                                        // C ABI enum
-typedef int MaskMode;                                                          // C ABI enum
-typedef int MatchFlag;                                                         // C ABI enum
-typedef int MatchFlags;                                                        // C ABI QFlags
-typedef int MatchMode;                                                         // C ABI enum
-typedef int MatchOption;                                                       // C ABI enum
-typedef int MatchOptions;                                                      // C ABI QFlags
-typedef int MatchType;                                                         // C ABI enum
-typedef int Material;                                                          // C ABI enum
-typedef int MeasurementSystem;                                                 // C ABI enum
-typedef int MediaFlag;                                                         // C ABI enum
-typedef int MediaFlags;                                                        // C ABI QFlags
-typedef int MediaStatus;                                                       // C ABI enum
-typedef int MediaType;                                                         // C ABI enum
-typedef int MemoryMapFlag;                                                     // C ABI enum
-typedef int MemoryMapFlags;                                                    // C ABI QFlags
-typedef int MenuItemType;                                                      // C ABI enum
-typedef int MenuRole;                                                          // C ABI enum
-typedef int MessageIcon;                                                       // C ABI enum
-typedef int MetaDataField;                                                     // C ABI enum
-typedef int MetaInformation;                                                   // C ABI enum
-typedef int Method;                                                            // C ABI enum
-typedef int MethodType;                                                        // C ABI enum
-typedef int Mode;                                                              // C ABI enum
-typedef int ModelChangeType;                                                   // C ABI enum
-typedef int ModelSorting;                                                      // C ABI enum
-typedef int Modifier;                                                          // C ABI enum
-typedef int Modifiers;                                                         // C ABI QFlags
-typedef int MouseButton;                                                       // C ABI enum
-typedef int MouseButtons;                                                      // C ABI QFlags
-typedef int MouseEventFlag;                                                    // C ABI enum
-typedef int MouseEventFlags;                                                   // C ABI QFlags
-typedef int MouseEventSource;                                                  // C ABI enum
-typedef int MoveMode;                                                          // C ABI enum
-typedef int MoveOperation;                                                     // C ABI enum
-typedef int Movement;                                                          // C ABI enum
-typedef int MovieState;                                                        // C ABI enum
-typedef int NameFormat;                                                        // C ABI enum
-typedef int NameType;                                                          // C ABI enum
-typedef int NamedColorSpace;                                                   // C ABI enum
-typedef int NativeGestureType;                                                 // C ABI enum
-typedef int NavigationMode;                                                    // C ABI enum
-typedef int NavigationRequestAction;                                           // C ABI enum
-typedef int NavigationType;                                                    // C ABI enum
-typedef int NetworkError;                                                      // C ABI enum
-typedef int NetworkLayerProtocol;                                              // C ABI QFlags
-typedef int NetworkLayerProtocol;                                              // C ABI enum
-typedef int NextProtocolNegotiationStatus;                                     // C ABI enum
-typedef int Notation;                                                          // C ABI enum
-typedef int NumberFlag;                                                        // C ABI enum
-typedef int NumberFlags;                                                       // C ABI QFlags
-typedef int NumberOption;                                                      // C ABI enum
-typedef int NumberOptions;                                                     // C ABI QFlags
-typedef int OSType;                                                            // C ABI enum
-typedef int ObjectTypes;                                                       // C ABI enum
-typedef int ObserverTag;                                                       // C ABI enum
-typedef int OpenGLContextProfile;                                              // C ABI enum
-typedef int OpenMode;                                                          // C ABI QFlags
-typedef int OpenModeFlag;                                                      // C ABI enum
-typedef int Operation;                                                         // C ABI enum
-typedef int OptimizationFlag;                                                  // C ABI enum
-typedef int OptimizationFlags;                                                 // C ABI QFlags
-typedef int Option;                                                            // C ABI enum
-typedef int OptionType;                                                        // C ABI enum
-typedef int Options;                                                           // C ABI QFlags
-typedef int OptionsAfterPositionalArgumentsMode;                               // C ABI enum
-typedef int Orientation;                                                       // C ABI enum
-typedef int Orientations;                                                      // C ABI QFlags
-typedef int OutputFormat;                                                      // C ABI enum
-typedef int OutputMode;                                                        // C ABI enum
-typedef int OvershootPolicy;                                                   // C ABI enum
-typedef int PageBreakFlag;                                                     // C ABI enum
-typedef int PageBreakFlags;                                                    // C ABI QFlags
-typedef int PageMode;                                                          // C ABI enum
-typedef int PageModelRole;                                                     // C ABI enum
-typedef int PageOrder;                                                         // C ABI enum
-typedef int PageSizeId;                                                        // C ABI enum
-typedef int PaintDeviceFlags;                                                  // C ABI enum
-typedef int PaintDeviceMetric;                                                 // C ABI enum
-typedef int PaintEngineFeature;                                                // C ABI enum
-typedef int PaintEngineFeatures;                                               // C ABI QFlags
-typedef int PaintOptionsPaintFlag;                                             // C ABI enum
-typedef int PaintOptionsPaintFlags;                                            // C ABI QFlags
-typedef int PanelModality;                                                     // C ABI enum
-typedef int PaperSource;                                                       // C ABI enum
-typedef int ParseError;                                                        // C ABI enum
-typedef int ParsingMode;                                                       // C ABI enum
-typedef int PatternOption;                                                     // C ABI enum
-typedef int PatternOptions;                                                    // C ABI QFlags
-typedef int PatternSyntax;                                                     // C ABI enum
-typedef int PauseMode;                                                         // C ABI enum
-typedef int PauseModes;                                                        // C ABI QFlags
-typedef int PdfVersion;                                                        // C ABI enum
-typedef int PeerVerifyMode;                                                    // C ABI enum
-typedef int PenCapStyle;                                                       // C ABI enum
-typedef int PenJoinStyle;                                                      // C ABI enum
-typedef int PenStyle;                                                          // C ABI enum
-typedef int PerformanceHint;                                                   // C ABI enum
-typedef int Permission;                                                        // C ABI enum
-typedef int PermissionPolicy;                                                  // C ABI enum
-typedef int Permissions;                                                       // C ABI QFlags
-typedef int PersistentCookiesPolicy;                                           // C ABI enum
-typedef int PixelFormat;                                                       // C ABI enum
-typedef int PixelMetric;                                                       // C ABI enum
-typedef int PixmapFragmentHint;                                                // C ABI enum
-typedef int PixmapFragmentHints;                                               // C ABI QFlags
-typedef int PixmapPadMode;                                                     // C ABI enum
-typedef int PlaybackState;                                                     // C ABI enum
-typedef int PointConfiguration;                                                // C ABI enum
-typedef int PointerType;                                                       // C ABI enum
-typedef int PointerTypes;                                                      // C ABI QFlags
-typedef int PolarOrientation;                                                  // C ABI enum
-typedef int PolarOrientations;                                                 // C ABI QFlags
-typedef int Policy;                                                            // C ABI enum
-typedef int PolicyFlag;                                                        // C ABI enum
-typedef int PolicyFlags;                                                       // C ABI QFlags
-typedef int PolygonDrawMode;                                                   // C ABI enum
-typedef int Position;                                                          // C ABI enum
-typedef int Preset;                                                            // C ABI enum
-typedef int Primaries;                                                         // C ABI enum
-typedef int PrimitiveElement;                                                  // C ABI enum
-typedef int PrintDialogOption;                                                 // C ABI enum
-typedef int PrintDialogOptions;                                                // C ABI QFlags
-typedef int PrintEnginePropertyKey;                                            // C ABI enum
-typedef int PrintRange;                                                        // C ABI enum
-typedef int PrinterMode;                                                       // C ABI enum
-typedef int PrinterState;                                                      // C ABI enum
-typedef int Priority;                                                          // C ABI enum
-typedef int ProcessChannel;                                                    // C ABI enum
-typedef int ProcessChannelMode;                                                // C ABI enum
-typedef int ProcessError;                                                      // C ABI enum
-typedef int ProcessEventsFlag;                                                 // C ABI enum
-typedef int ProcessEventsFlags;                                                // C ABI QFlags
-typedef int ProcessState;                                                      // C ABI enum
-typedef int Property;                                                          // C ABI enum
-typedef int ProxyType;                                                         // C ABI enum
-typedef int QCborKnownTags;                                                    // C ABI enum
-typedef int QContainerImplHelperCutResult;                                     // C ABI enum
-typedef int QOcspCertificateStatus;                                            // C ABI enum
-typedef int QOcspRevocationReason;                                             // C ABI enum
-typedef int Quality;                                                           // C ABI enum
-typedef int QueryType;                                                         // C ABI enum
-typedef int QuotationStyle;                                                    // C ABI enum
-typedef int RawForm;                                                           // C ABI enum
-typedef int Reachability;                                                      // C ABI enum
-typedef int ReadElementTextBehaviour;                                          // C ABI enum
-typedef int RealNumberNotation;                                                // C ABI enum
-typedef int Reason;                                                            // C ABI enum
-typedef int RecorderState;                                                     // C ABI enum
-typedef int RecursionMode;                                                     // C ABI enum
-typedef int RedirectPolicy;                                                    // C ABI enum
-typedef int ReferrerPolicy;                                                    // C ABI enum
-typedef int RegionType;                                                        // C ABI enum
-typedef int Relation;                                                          // C ABI QFlags
-typedef int RelationFlag;                                                      // C ABI enum
-typedef int RelayoutType;                                                      // C ABI enum
-typedef int RenderFlag;                                                        // C ABI enum
-typedef int RenderFlags;                                                       // C ABI QFlags
-typedef int RenderHint;                                                        // C ABI enum
-typedef int RenderHints;                                                       // C ABI QFlags
-typedef int RenderMode;                                                        // C ABI enum
-typedef int RenderProcessTerminationStatus;                                    // C ABI enum
-typedef int RenderableType;                                                    // C ABI enum
-typedef int RequestSoftwareInputPanel;                                         // C ABI enum
-typedef int ResizeMode;                                                        // C ABI enum
-typedef int ResolveFlags;                                                      // C ABI enum
-typedef int ResolveProperties;                                                 // C ABI enum
-typedef int ResourceType;                                                      // C ABI enum
-typedef int RestartHint;                                                       // C ABI enum
-typedef int Result;                                                            // C ABI QFlags
-typedef int ResultFlag;                                                        // C ABI enum
-typedef int ReturnByValueConstant;                                             // C ABI enum
-typedef int Role;                                                              // C ABI enum
-typedef int Roles;                                                             // C ABI enum
-typedef int Rotation;                                                          // C ABI enum
-typedef int RotationAngle;                                                     // C ABI enum
-typedef int RowWrapPolicy;                                                     // C ABI enum
-typedef int RubberBand;                                                        // C ABI enum
-typedef int RubberBands;                                                       // C ABI QFlags
-typedef int SameSite;                                                          // C ABI enum
-typedef int SavePageFormat;                                                    // C ABI enum
-typedef int SceneLayer;                                                        // C ABI enum
-typedef int SceneLayers;                                                       // C ABI QFlags
-typedef int Scope;                                                             // C ABI enum
-typedef int ScreenOrientation;                                                 // C ABI enum
-typedef int ScreenOrientations;                                                // C ABI QFlags
-typedef int Script;                                                            // C ABI enum
-typedef int ScriptWorldId;                                                     // C ABI enum
-typedef int ScrollBarPolicy;                                                   // C ABI enum
-typedef int ScrollHint;                                                        // C ABI enum
-typedef int ScrollMetric;                                                      // C ABI enum
-typedef int ScrollMode;                                                        // C ABI enum
-typedef int ScrollPhase;                                                       // C ABI enum
-typedef int ScrollState;                                                       // C ABI enum
-typedef int ScrollerGestureType;                                               // C ABI enum
-typedef int Section;                                                           // C ABI enum
-typedef int SectionPosition;                                                   // C ABI enum
-typedef int Sections;                                                          // C ABI QFlags
-typedef int SegmentStyle;                                                      // C ABI enum
-typedef int SelectedPosition;                                                  // C ABI enum
-typedef int SelectionBehavior;                                                 // C ABI enum
-typedef int SelectionFlag;                                                     // C ABI enum
-typedef int SelectionFlags;                                                    // C ABI QFlags
-typedef int SelectionMode;                                                     // C ABI enum
-typedef int SelectionType;                                                     // C ABI enum
-typedef int SequenceFormat;                                                    // C ABI enum
-typedef int SequenceMatch;                                                     // C ABI enum
-typedef int SeriesType;                                                        // C ABI enum
-typedef int Shadow;                                                            // C ABI enum
-typedef int Shape;                                                             // C ABI enum
-typedef int ShapeMode;                                                         // C ABI enum
-typedef int SharedMemoryError;                                                 // C ABI enum
-typedef int ShortcutContext;                                                   // C ABI enum
-typedef int SingleDashWordOptionMode;                                          // C ABI enum
-typedef int SizeAdjustPolicy;                                                  // C ABI enum
-typedef int SizeConstraint;                                                    // C ABI enum
-typedef int SizeHint;                                                          // C ABI enum
-typedef int SizeMatchPolicy;                                                   // C ABI enum
-typedef int SizeMode;                                                          // C ABI enum
-typedef int SliderAction;                                                      // C ABI enum
-typedef int SliderChange;                                                      // C ABI enum
-typedef int SocketError;                                                       // C ABI enum
-typedef int SocketOption;                                                      // C ABI enum
-typedef int SocketOptions;                                                     // C ABI QFlags
-typedef int SocketState;                                                       // C ABI enum
-typedef int SocketType;                                                        // C ABI enum
-typedef int SortFlag;                                                          // C ABI enum
-typedef int SortFlags;                                                         // C ABI QFlags
-typedef int SortIndicator;                                                     // C ABI enum
-typedef int SortOrder;                                                         // C ABI enum
-typedef int SpacingType;                                                       // C ABI enum
-typedef int Spec;                                                              // C ABI enum
-typedef int SpecialAddress;                                                    // C ABI enum
-typedef int SpecialCharacter;                                                  // C ABI enum
-typedef int SpecialPort;                                                       // C ABI enum
-typedef int SplitBehavior;                                                     // C ABI QFlags
-typedef int SplitBehaviorFlags;                                                // C ABI enum
-typedef int Spread;                                                            // C ABI enum
-typedef int SslError;                                                          // C ABI enum
-typedef int SslMode;                                                           // C ABI enum
-typedef int SslOption;                                                         // C ABI enum
-typedef int SslOptions;                                                        // C ABI QFlags
-typedef int SslProtocol;                                                       // C ABI enum
-typedef int StackingMode;                                                      // C ABI enum
-typedef int Stacks;                                                            // C ABI enum
-typedef int StandardButton;                                                    // C ABI enum
-typedef int StandardButtons;                                                   // C ABI QFlags
-typedef int StandardKey;                                                       // C ABI enum
-typedef int StandardLocation;                                                  // C ABI enum
-typedef int StandardPixmap;                                                    // C ABI enum
-typedef int State;                                                             // C ABI QFlags
-typedef int State;                                                             // C ABI enum
-typedef int StateFlag;                                                         // C ABI enum
-typedef int States;                                                            // C ABI QFlags
-typedef int Status;                                                            // C ABI enum
-typedef int StepEnabled;                                                       // C ABI QFlags
-typedef int StepEnabledFlag;                                                   // C ABI enum
-typedef int StepType;                                                          // C ABI enum
-typedef int Stretch;                                                           // C ABI enum
-typedef int StringFormat;                                                      // C ABI enum
-typedef int StringResultCode;                                                  // C ABI enum
-typedef int Style;                                                             // C ABI enum
-typedef int StyleHint;                                                         // C ABI enum
-typedef int StyleMask;                                                         // C ABI enum
-typedef int StyleOptionType;                                                   // C ABI enum
-typedef int StyleOptionVersion;                                                // C ABI enum
-typedef int StyleStrategy;                                                     // C ABI enum
-typedef int SubControl;                                                        // C ABI enum
-typedef int SubControls;                                                       // C ABI QFlags
-typedef int SubElement;                                                        // C ABI enum
-typedef int SubWindowOption;                                                   // C ABI enum
-typedef int SubWindowOptions;                                                  // C ABI QFlags
-typedef int SubjectInfo;                                                       // C ABI enum
-typedef int SubmitPolicy;                                                      // C ABI enum
-typedef int SupportedFeature;                                                  // C ABI enum
-typedef int SurfaceClass;                                                      // C ABI enum
-typedef int SurfaceEventType;                                                  // C ABI enum
-typedef int SurfaceType;                                                       // C ABI enum
-typedef int SwapBehavior;                                                      // C ABI enum
-typedef int SwipeDirection;                                                    // C ABI enum
-typedef int Syntax;                                                            // C ABI enum
-typedef int System;                                                            // C ABI enum
-typedef int SystemFont;                                                        // C ABI enum
-typedef int SystemSemaphoreError;                                              // C ABI enum
-typedef int TabDrawMode;                                                       // C ABI enum
-typedef int TabFeature;                                                        // C ABI enum
-typedef int TabFeatures;                                                       // C ABI QFlags
-typedef int TabFocusBehavior;                                                  // C ABI enum
-typedef int TabPosition;                                                       // C ABI enum
-typedef int TabShape;                                                          // C ABI enum
-typedef int TabType;                                                           // C ABI enum
-typedef int Text;                                                              // C ABI enum
-typedef int TextBoundaryType;                                                  // C ABI enum
-typedef int TextCase;                                                          // C ABI enum
-typedef int TextElideMode;                                                     // C ABI enum
-typedef int TextFlag;                                                          // C ABI enum
-typedef int TextFormat;                                                        // C ABI enum
-typedef int TextInteractionFlag;                                               // C ABI enum
-typedef int TextInteractionFlags;                                              // C ABI QFlags
-typedef int TickPosition;                                                      // C ABI enum
-typedef int TickType;                                                          // C ABI enum
-typedef int TileRule;                                                          // C ABI enum
-typedef int TimeSpec;                                                          // C ABI enum
-typedef int TimeType;                                                          // C ABI enum
-typedef int TimerType;                                                         // C ABI enum
-typedef int TokenType;                                                         // C ABI enum
-typedef int ToolBarArea;                                                       // C ABI enum
-typedef int ToolBarAreaSizes;                                                  // C ABI enum
-typedef int ToolBarAreas;                                                      // C ABI QFlags
-typedef int ToolBarFeature;                                                    // C ABI enum
-typedef int ToolBarFeatures;                                                   // C ABI QFlags
-typedef int ToolBarPosition;                                                   // C ABI enum
-typedef int ToolButtonFeature;                                                 // C ABI enum
-typedef int ToolButtonFeatures;                                                // C ABI QFlags
-typedef int ToolButtonPopupMode;                                               // C ABI enum
-typedef int ToolButtonStyle;                                                   // C ABI enum
-typedef int TorchMode;                                                         // C ABI enum
-typedef int TouchPointState;                                                   // C ABI enum
-typedef int TouchPointStates;                                                  // C ABI QFlags
-typedef int TransferFunction;                                                  // C ABI enum
-typedef int TransferTimeoutConstant;                                           // C ABI enum
-typedef int Transformation;                                                    // C ABI enum
-typedef int TransformationMode;                                                // C ABI enum
-typedef int TransformationType;                                                // C ABI enum
-typedef int Transformations;                                                   // C ABI QFlags
-typedef int TransportMedium;                                                   // C ABI enum
-typedef int TypeFlag;                                                          // C ABI enum
-typedef int TypeFlags;                                                         // C ABI QFlags
-typedef int TypeInterpretation;                                                // C ABI enum
-typedef int UIEffect;                                                          // C ABI enum
-typedef int UnderlineStyle;                                                    // C ABI enum
-typedef int UnicodeVersion;                                                    // C ABI enum
-typedef int Unit;                                                              // C ABI enum
-typedef int UnknownUrlSchemePolicy;                                            // C ABI enum
-typedef int UserInputResolutionOption;                                         // C ABI enum
-typedef int UserInputResolutionOptions;                                        // C ABI QFlags
-typedef int ValuePositions;                                                    // C ABI enum
-typedef int Variant;                                                           // C ABI enum
-typedef int VerbosityLevel;                                                    // C ABI enum
-typedef int Version;                                                           // C ABI enum
-typedef int VerticalAlignment;                                                 // C ABI enum
-typedef int VerticalHeaderFormat;                                              // C ABI enum
-typedef int VideoCodec;                                                        // C ABI enum
-typedef int ViewItemFeature;                                                   // C ABI enum
-typedef int ViewItemFeatures;                                                  // C ABI QFlags
-typedef int ViewItemPosition;                                                  // C ABI enum
-typedef int ViewMode;                                                          // C ABI enum
-typedef int ViewportAnchor;                                                    // C ABI enum
-typedef int ViewportUpdateMode;                                                // C ABI enum
-typedef int Visibility;                                                        // C ABI enum
-typedef int VolumeScale;                                                       // C ABI enum
-typedef int Wall;                                                              // C ABI enum
-typedef int WebAction;                                                         // C ABI enum
-typedef int WebAttribute;                                                      // C ABI enum
-typedef int WebWindowType;                                                     // C ABI enum
-typedef int Weight;                                                            // C ABI enum
-typedef int WhiteBalanceMode;                                                  // C ABI enum
-typedef int WhiteSpaceMode;                                                    // C ABI enum
-typedef int WhitespaceVisibility;                                              // C ABI enum
-typedef int WidgetAttribute;                                                   // C ABI enum
-typedef int WildcardConversionOption;                                          // C ABI enum
-typedef int WildcardConversionOptions;                                         // C ABI QFlags
-typedef int WindowFlags;                                                       // C ABI QFlags
-typedef int WindowFrameSection;                                                // C ABI enum
-typedef int WindowModality;                                                    // C ABI enum
-typedef int WindowOrder;                                                       // C ABI enum
-typedef int WindowState;                                                       // C ABI enum
-typedef int WindowStates;                                                      // C ABI QFlags
-typedef int WindowType;                                                        // C ABI enum
-typedef int WizardButton;                                                      // C ABI enum
-typedef int WizardOption;                                                      // C ABI enum
-typedef int WizardOptions;                                                     // C ABI QFlags
-typedef int WizardPixmap;                                                      // C ABI enum
-typedef int WizardStyle;                                                       // C ABI enum
-typedef int WrapIndentMode;                                                    // C ABI enum
-typedef int WrapMode;                                                          // C ABI enum
-typedef int WrapVisualFlag;                                                    // C ABI enum
-typedef int WritingSystem;                                                     // C ABI enum
-typedef int YCbCrColorSpace;                                                   // C ABI enum
-typedef int YUVLayout;                                                         // C ABI enum
-typedef int YearRange;                                                         // C ABI enum
-typedef int ZoomMode;                                                          // C ABI enum
-typedef libqt_list /* of QTimeZone__OffsetData* */ OffsetDataList;             // C ABI QFlags
-typedef libqt_map /* of int to QVariant* */ AttributesMap;                     // C ABI QFlags
-typedef libqt_map /* of libqt_string to QVariant* */ SettingsMap;              // C ABI QFlags
-typedef libqt_pair /* tuple of double and QVariant* */ KeyValue;               // C ABI QFlags
-typedef libqt_pair /* tuple of libqt_string and libqt_string */ RawHeader;     // C ABI QFlags
-typedef libqt_pair /* tuple of libqt_string and libqt_string */ RawHeaderPair; // C ABI QFlags
-typedef libqt_pair /* tuple of uint32_t and uint32_t */ WordIndex;             // C ABI QFlags
-typedef libqt_string ScintillaBytes;                                           // C ABI QFlags
-typedef long long difference_type;                                             // C ABI QFlags
-typedef ptrdiff_t ConstIteratordifference_type;                                // C ABI QFlags
-typedef ptrdiff_t Iteratordifference_type;                                     // C ABI QFlags
-typedef ptrdiff_t iteratordifference_type;                                     // C ABI QFlags
-typedef ptrdiff_t size_type;                                                   // C ABI QFlags
-typedef signed char DnsEligibilityStatus;                                      // C ABI enum
-typedef signed char Ordering;                                                  // C ABI enum
-typedef signed char Uncomparable;                                              // C ABI enum
-typedef uint16_t Country;                                                      // C ABI enum
-typedef uint16_t Language;                                                     // C ABI enum
-typedef uint16_t SampleFormat;                                                 // C ABI enum
-typedef uint16_t Territory;                                                    // C ABI QFlags
-typedef uint64_t ResolveMask;                                                  // C ABI QFlags
-typedef uint64_t result_type;                                                  // C ABI QFlags
-typedef unsigned char AddRemoveCapability;                                     // C ABI enum
-typedef unsigned char IteratorCapability;                                      // C ABI enum
-typedef unsigned char QCborSimpleType;                                         // C ABI enum
-typedef unsigned char QDtlsError;                                              // C ABI enum
-typedef unsigned char QMetaContainerInterfacePosition;                         // C ABI enum
-typedef unsigned char Type;                                                    // C ABI enum
-typedef unsigned int AceProcessingOption;                                      // C ABI enum
-typedef unsigned int ChannelConfig;                                            // C ABI enum
-typedef unsigned int ComponentFormattingOption;                                // C ABI enum
-typedef unsigned int Id;                                                       // C ABI QFlags
-typedef unsigned int UrlFormattingOption;                                      // C ABI enum
-typedef unsigned long long QCborNegativeInteger;                               // C ABI enum
-typedef unsigned long long QCborTag;                                           // C ABI enum
-typedef void QtGadgetHelper;                                                   // C ABI QFlags
-typedef void* HANDLE;                                                          // C ABI QFlags
+typedef struct qxp__nonesuch qxp__nonesuch;
+typedef struct strong_ordering strong_ordering;
+typedef struct weak_ordering weak_ordering;

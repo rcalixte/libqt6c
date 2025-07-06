@@ -355,7 +355,7 @@ void QVBoxPlotModelMapper_OnCustomEvent(QVBoxPlotModelMapper* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QVBoxPlotModelMapper_ConnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal) {
+void QVBoxPlotModelMapper_ConnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal) {
     auto* vqvboxplotmodelmapper = dynamic_cast<VirtualQVBoxPlotModelMapper*>(self);
     if (vqvboxplotmodelmapper && vqvboxplotmodelmapper->isVirtualQVBoxPlotModelMapper) {
         vqvboxplotmodelmapper->connectNotify(*signal);
@@ -365,7 +365,7 @@ void QVBoxPlotModelMapper_ConnectNotify(QVBoxPlotModelMapper* self, QMetaMethod*
 }
 
 // Base class handler implementation
-void QVBoxPlotModelMapper_QBaseConnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal) {
+void QVBoxPlotModelMapper_QBaseConnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal) {
     auto* vqvboxplotmodelmapper = dynamic_cast<VirtualQVBoxPlotModelMapper*>(self);
     if (vqvboxplotmodelmapper && vqvboxplotmodelmapper->isVirtualQVBoxPlotModelMapper) {
         vqvboxplotmodelmapper->setQVBoxPlotModelMapper_ConnectNotify_IsBase(true);
@@ -384,7 +384,7 @@ void QVBoxPlotModelMapper_OnConnectNotify(QVBoxPlotModelMapper* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QVBoxPlotModelMapper_DisconnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal) {
+void QVBoxPlotModelMapper_DisconnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal) {
     auto* vqvboxplotmodelmapper = dynamic_cast<VirtualQVBoxPlotModelMapper*>(self);
     if (vqvboxplotmodelmapper && vqvboxplotmodelmapper->isVirtualQVBoxPlotModelMapper) {
         vqvboxplotmodelmapper->disconnectNotify(*signal);
@@ -394,7 +394,7 @@ void QVBoxPlotModelMapper_DisconnectNotify(QVBoxPlotModelMapper* self, QMetaMeth
 }
 
 // Base class handler implementation
-void QVBoxPlotModelMapper_QBaseDisconnectNotify(QVBoxPlotModelMapper* self, QMetaMethod* signal) {
+void QVBoxPlotModelMapper_QBaseDisconnectNotify(QVBoxPlotModelMapper* self, const QMetaMethod* signal) {
     auto* vqvboxplotmodelmapper = dynamic_cast<VirtualQVBoxPlotModelMapper*>(self);
     if (vqvboxplotmodelmapper && vqvboxplotmodelmapper->isVirtualQVBoxPlotModelMapper) {
         vqvboxplotmodelmapper->setQVBoxPlotModelMapper_DisconnectNotify_IsBase(true);
@@ -790,7 +790,7 @@ void QVBoxPlotModelMapper_OnReceivers(const QVBoxPlotModelMapper* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QVBoxPlotModelMapper_IsSignalConnected(const QVBoxPlotModelMapper* self, QMetaMethod* signal) {
+bool QVBoxPlotModelMapper_IsSignalConnected(const QVBoxPlotModelMapper* self, const QMetaMethod* signal) {
     auto* vqvboxplotmodelmapper = const_cast<VirtualQVBoxPlotModelMapper*>(dynamic_cast<const VirtualQVBoxPlotModelMapper*>(self));
     if (vqvboxplotmodelmapper && vqvboxplotmodelmapper->isVirtualQVBoxPlotModelMapper) {
         return vqvboxplotmodelmapper->isSignalConnected(*signal);
@@ -800,7 +800,7 @@ bool QVBoxPlotModelMapper_IsSignalConnected(const QVBoxPlotModelMapper* self, QM
 }
 
 // Base class handler implementation
-bool QVBoxPlotModelMapper_QBaseIsSignalConnected(const QVBoxPlotModelMapper* self, QMetaMethod* signal) {
+bool QVBoxPlotModelMapper_QBaseIsSignalConnected(const QVBoxPlotModelMapper* self, const QMetaMethod* signal) {
     auto* vqvboxplotmodelmapper = const_cast<VirtualQVBoxPlotModelMapper*>(dynamic_cast<const VirtualQVBoxPlotModelMapper*>(self));
     if (vqvboxplotmodelmapper && vqvboxplotmodelmapper->isVirtualQVBoxPlotModelMapper) {
         vqvboxplotmodelmapper->setQVBoxPlotModelMapper_IsSignalConnected_IsBase(true);

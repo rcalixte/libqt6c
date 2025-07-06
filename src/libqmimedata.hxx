@@ -70,7 +70,7 @@ class VirtualQMimeData final : public QMimeData {
     mutable bool qmimedata_issignalconnected_isbase = false;
 
   public:
-    VirtualQMimeData() : QMimeData(){};
+    VirtualQMimeData() : QMimeData() {};
 
     ~VirtualQMimeData() {
         qmimedata_metacall_callback = nullptr;
@@ -165,13 +165,13 @@ class VirtualQMimeData final : public QMimeData {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList formats() const override {
+    virtual QList<QString> formats() const override {
         if (qmimedata_formats_isbase) {
             qmimedata_formats_isbase = false;
             return QMimeData::formats();
         } else if (qmimedata_formats_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qmimedata_formats_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -372,26 +372,26 @@ class VirtualQMimeData final : public QMimeData {
     }
 
     // Friend functions
-    friend QVariant* QMimeData_RetrieveData(const QMimeData* self, libqt_string mimetype, QMetaType* preferredType);
-    friend QVariant* QMimeData_QBaseRetrieveData(const QMimeData* self, libqt_string mimetype, QMetaType* preferredType);
+    friend QVariant* QMimeData_RetrieveData(const QMimeData* self, const libqt_string mimetype, QMetaType* preferredType);
+    friend QVariant* QMimeData_QBaseRetrieveData(const QMimeData* self, const libqt_string mimetype, QMetaType* preferredType);
     friend void QMimeData_TimerEvent(QMimeData* self, QTimerEvent* event);
     friend void QMimeData_QBaseTimerEvent(QMimeData* self, QTimerEvent* event);
     friend void QMimeData_ChildEvent(QMimeData* self, QChildEvent* event);
     friend void QMimeData_QBaseChildEvent(QMimeData* self, QChildEvent* event);
     friend void QMimeData_CustomEvent(QMimeData* self, QEvent* event);
     friend void QMimeData_QBaseCustomEvent(QMimeData* self, QEvent* event);
-    friend void QMimeData_ConnectNotify(QMimeData* self, QMetaMethod* signal);
-    friend void QMimeData_QBaseConnectNotify(QMimeData* self, QMetaMethod* signal);
-    friend void QMimeData_DisconnectNotify(QMimeData* self, QMetaMethod* signal);
-    friend void QMimeData_QBaseDisconnectNotify(QMimeData* self, QMetaMethod* signal);
+    friend void QMimeData_ConnectNotify(QMimeData* self, const QMetaMethod* signal);
+    friend void QMimeData_QBaseConnectNotify(QMimeData* self, const QMetaMethod* signal);
+    friend void QMimeData_DisconnectNotify(QMimeData* self, const QMetaMethod* signal);
+    friend void QMimeData_QBaseDisconnectNotify(QMimeData* self, const QMetaMethod* signal);
     friend QObject* QMimeData_Sender(const QMimeData* self);
     friend QObject* QMimeData_QBaseSender(const QMimeData* self);
     friend int QMimeData_SenderSignalIndex(const QMimeData* self);
     friend int QMimeData_QBaseSenderSignalIndex(const QMimeData* self);
     friend int QMimeData_Receivers(const QMimeData* self, const char* signal);
     friend int QMimeData_QBaseReceivers(const QMimeData* self, const char* signal);
-    friend bool QMimeData_IsSignalConnected(const QMimeData* self, QMetaMethod* signal);
-    friend bool QMimeData_QBaseIsSignalConnected(const QMimeData* self, QMetaMethod* signal);
+    friend bool QMimeData_IsSignalConnected(const QMimeData* self, const QMetaMethod* signal);
+    friend bool QMimeData_QBaseIsSignalConnected(const QMimeData* self, const QMetaMethod* signal);
 };
 
 #endif

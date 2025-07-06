@@ -85,7 +85,7 @@ bool QBoxPlotSeries_Take(QBoxPlotSeries* self, QBoxSet* box) {
     return self->take(box);
 }
 
-bool QBoxPlotSeries_AppendWithBoxes(QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ boxes) {
+bool QBoxPlotSeries_AppendWithBoxes(QBoxPlotSeries* self, const libqt_list /* of QBoxSet* */ boxes) {
     QList<QBoxSet*> boxes_QList;
     boxes_QList.reserve(boxes.len);
     QBoxSet** boxes_arr = static_cast<QBoxSet**>(boxes.data.ptr);
@@ -106,12 +106,12 @@ int QBoxPlotSeries_Count(const QBoxPlotSeries* self) {
 libqt_list /* of QBoxSet* */ QBoxPlotSeries_BoxSets(const QBoxPlotSeries* self) {
     QList<QBoxSet*> _ret = self->boxSets();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QBoxSet** _arr = static_cast<QBoxSet**>(malloc(sizeof(QBoxSet*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QBoxSet** _arr = static_cast<QBoxSet**>(malloc(sizeof(QBoxSet*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -136,7 +136,7 @@ double QBoxPlotSeries_BoxWidth(QBoxPlotSeries* self) {
     return static_cast<double>(self->boxWidth());
 }
 
-void QBoxPlotSeries_SetBrush(QBoxPlotSeries* self, QBrush* brush) {
+void QBoxPlotSeries_SetBrush(QBoxPlotSeries* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -144,7 +144,7 @@ QBrush* QBoxPlotSeries_Brush(const QBoxPlotSeries* self) {
     return new QBrush(self->brush());
 }
 
-void QBoxPlotSeries_SetPen(QBoxPlotSeries* self, QPen* pen) {
+void QBoxPlotSeries_SetPen(QBoxPlotSeries* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -268,7 +268,7 @@ void QBoxPlotSeries_Connect_BoxWidthChanged(QBoxPlotSeries* self, intptr_t slot)
     });
 }
 
-void QBoxPlotSeries_BoxsetsAdded(QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ sets) {
+void QBoxPlotSeries_BoxsetsAdded(QBoxPlotSeries* self, const libqt_list /* of QBoxSet* */ sets) {
     QList<QBoxSet*> sets_QList;
     sets_QList.reserve(sets.len);
     QBoxSet** sets_arr = static_cast<QBoxSet**>(sets.data.ptr);
@@ -282,20 +282,20 @@ void QBoxPlotSeries_Connect_BoxsetsAdded(QBoxPlotSeries* self, intptr_t slot) {
     void (*slotFunc)(QBoxPlotSeries*, libqt_list /* of QBoxSet* */) = reinterpret_cast<void (*)(QBoxPlotSeries*, libqt_list /* of QBoxSet* */)>(slot);
     QBoxPlotSeries::connect(self, &QBoxPlotSeries::boxsetsAdded, [self, slotFunc](const QList<QBoxSet*>& sets) {
         const QList<QBoxSet*>& sets_ret = sets;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QBoxSet** sets_arr = static_cast<QBoxSet**>(malloc(sizeof(QBoxSet*) * sets_ret.length()));
-        for (size_t i = 0; i < sets_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QBoxSet** sets_arr = static_cast<QBoxSet**>(malloc(sizeof(QBoxSet*) * sets_ret.size()));
+        for (size_t i = 0; i < sets_ret.size(); ++i) {
             sets_arr[i] = sets_ret[i];
         }
         libqt_list sets_out;
-        sets_out.len = sets_ret.length();
+        sets_out.len = sets_ret.size();
         sets_out.data.ptr = static_cast<void*>(sets_arr);
         libqt_list /* of QBoxSet* */ sigval1 = sets_out;
         slotFunc(self, sigval1);
     });
 }
 
-void QBoxPlotSeries_BoxsetsRemoved(QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ sets) {
+void QBoxPlotSeries_BoxsetsRemoved(QBoxPlotSeries* self, const libqt_list /* of QBoxSet* */ sets) {
     QList<QBoxSet*> sets_QList;
     sets_QList.reserve(sets.len);
     QBoxSet** sets_arr = static_cast<QBoxSet**>(sets.data.ptr);
@@ -309,13 +309,13 @@ void QBoxPlotSeries_Connect_BoxsetsRemoved(QBoxPlotSeries* self, intptr_t slot) 
     void (*slotFunc)(QBoxPlotSeries*, libqt_list /* of QBoxSet* */) = reinterpret_cast<void (*)(QBoxPlotSeries*, libqt_list /* of QBoxSet* */)>(slot);
     QBoxPlotSeries::connect(self, &QBoxPlotSeries::boxsetsRemoved, [self, slotFunc](const QList<QBoxSet*>& sets) {
         const QList<QBoxSet*>& sets_ret = sets;
-        // Convert QList<> from C++ memory to manually-managed C memory
-        QBoxSet** sets_arr = static_cast<QBoxSet**>(malloc(sizeof(QBoxSet*) * sets_ret.length()));
-        for (size_t i = 0; i < sets_ret.length(); ++i) {
+        // Convert const QList<> from C++ memory to manually-managed C memory
+        QBoxSet** sets_arr = static_cast<QBoxSet**>(malloc(sizeof(QBoxSet*) * sets_ret.size()));
+        for (size_t i = 0; i < sets_ret.size(); ++i) {
             sets_arr[i] = sets_ret[i];
         }
         libqt_list sets_out;
-        sets_out.len = sets_ret.length();
+        sets_out.len = sets_ret.size();
         sets_out.data.ptr = static_cast<void*>(sets_arr);
         libqt_list /* of QBoxSet* */ sigval1 = sets_out;
         slotFunc(self, sigval1);
@@ -521,7 +521,7 @@ void QBoxPlotSeries_OnCustomEvent(QBoxPlotSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxPlotSeries_ConnectNotify(QBoxPlotSeries* self, QMetaMethod* signal) {
+void QBoxPlotSeries_ConnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal) {
     auto* vqboxplotseries = dynamic_cast<VirtualQBoxPlotSeries*>(self);
     if (vqboxplotseries && vqboxplotseries->isVirtualQBoxPlotSeries) {
         vqboxplotseries->connectNotify(*signal);
@@ -531,7 +531,7 @@ void QBoxPlotSeries_ConnectNotify(QBoxPlotSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBoxPlotSeries_QBaseConnectNotify(QBoxPlotSeries* self, QMetaMethod* signal) {
+void QBoxPlotSeries_QBaseConnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal) {
     auto* vqboxplotseries = dynamic_cast<VirtualQBoxPlotSeries*>(self);
     if (vqboxplotseries && vqboxplotseries->isVirtualQBoxPlotSeries) {
         vqboxplotseries->setQBoxPlotSeries_ConnectNotify_IsBase(true);
@@ -550,7 +550,7 @@ void QBoxPlotSeries_OnConnectNotify(QBoxPlotSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBoxPlotSeries_DisconnectNotify(QBoxPlotSeries* self, QMetaMethod* signal) {
+void QBoxPlotSeries_DisconnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal) {
     auto* vqboxplotseries = dynamic_cast<VirtualQBoxPlotSeries*>(self);
     if (vqboxplotseries && vqboxplotseries->isVirtualQBoxPlotSeries) {
         vqboxplotseries->disconnectNotify(*signal);
@@ -560,7 +560,7 @@ void QBoxPlotSeries_DisconnectNotify(QBoxPlotSeries* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QBoxPlotSeries_QBaseDisconnectNotify(QBoxPlotSeries* self, QMetaMethod* signal) {
+void QBoxPlotSeries_QBaseDisconnectNotify(QBoxPlotSeries* self, const QMetaMethod* signal) {
     auto* vqboxplotseries = dynamic_cast<VirtualQBoxPlotSeries*>(self);
     if (vqboxplotseries && vqboxplotseries->isVirtualQBoxPlotSeries) {
         vqboxplotseries->setQBoxPlotSeries_DisconnectNotify_IsBase(true);
@@ -666,7 +666,7 @@ void QBoxPlotSeries_OnReceivers(const QBoxPlotSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBoxPlotSeries_IsSignalConnected(const QBoxPlotSeries* self, QMetaMethod* signal) {
+bool QBoxPlotSeries_IsSignalConnected(const QBoxPlotSeries* self, const QMetaMethod* signal) {
     auto* vqboxplotseries = const_cast<VirtualQBoxPlotSeries*>(dynamic_cast<const VirtualQBoxPlotSeries*>(self));
     if (vqboxplotseries && vqboxplotseries->isVirtualQBoxPlotSeries) {
         return vqboxplotseries->isSignalConnected(*signal);
@@ -676,7 +676,7 @@ bool QBoxPlotSeries_IsSignalConnected(const QBoxPlotSeries* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QBoxPlotSeries_QBaseIsSignalConnected(const QBoxPlotSeries* self, QMetaMethod* signal) {
+bool QBoxPlotSeries_QBaseIsSignalConnected(const QBoxPlotSeries* self, const QMetaMethod* signal) {
     auto* vqboxplotseries = const_cast<VirtualQBoxPlotSeries*>(dynamic_cast<const VirtualQBoxPlotSeries*>(self));
     if (vqboxplotseries && vqboxplotseries->isVirtualQBoxPlotSeries) {
         vqboxplotseries->setQBoxPlotSeries_IsSignalConnected_IsBase(true);

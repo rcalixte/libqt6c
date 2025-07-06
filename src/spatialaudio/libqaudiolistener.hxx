@@ -61,7 +61,7 @@ class VirtualQAudioListener final : public QAudioListener {
     mutable bool qaudiolistener_issignalconnected_isbase = false;
 
   public:
-    VirtualQAudioListener(QAudioEngine* engine) : QAudioListener(engine){};
+    VirtualQAudioListener(QAudioEngine* engine) : QAudioListener(engine) {};
 
     ~VirtualQAudioListener() {
         qaudiolistener_metacall_callback = nullptr;
@@ -293,18 +293,18 @@ class VirtualQAudioListener final : public QAudioListener {
     friend void QAudioListener_QBaseChildEvent(QAudioListener* self, QChildEvent* event);
     friend void QAudioListener_CustomEvent(QAudioListener* self, QEvent* event);
     friend void QAudioListener_QBaseCustomEvent(QAudioListener* self, QEvent* event);
-    friend void QAudioListener_ConnectNotify(QAudioListener* self, QMetaMethod* signal);
-    friend void QAudioListener_QBaseConnectNotify(QAudioListener* self, QMetaMethod* signal);
-    friend void QAudioListener_DisconnectNotify(QAudioListener* self, QMetaMethod* signal);
-    friend void QAudioListener_QBaseDisconnectNotify(QAudioListener* self, QMetaMethod* signal);
+    friend void QAudioListener_ConnectNotify(QAudioListener* self, const QMetaMethod* signal);
+    friend void QAudioListener_QBaseConnectNotify(QAudioListener* self, const QMetaMethod* signal);
+    friend void QAudioListener_DisconnectNotify(QAudioListener* self, const QMetaMethod* signal);
+    friend void QAudioListener_QBaseDisconnectNotify(QAudioListener* self, const QMetaMethod* signal);
     friend QObject* QAudioListener_Sender(const QAudioListener* self);
     friend QObject* QAudioListener_QBaseSender(const QAudioListener* self);
     friend int QAudioListener_SenderSignalIndex(const QAudioListener* self);
     friend int QAudioListener_QBaseSenderSignalIndex(const QAudioListener* self);
     friend int QAudioListener_Receivers(const QAudioListener* self, const char* signal);
     friend int QAudioListener_QBaseReceivers(const QAudioListener* self, const char* signal);
-    friend bool QAudioListener_IsSignalConnected(const QAudioListener* self, QMetaMethod* signal);
-    friend bool QAudioListener_QBaseIsSignalConnected(const QAudioListener* self, QMetaMethod* signal);
+    friend bool QAudioListener_IsSignalConnected(const QAudioListener* self, const QMetaMethod* signal);
+    friend bool QAudioListener_QBaseIsSignalConnected(const QAudioListener* self, const QMetaMethod* signal);
 };
 
 #endif

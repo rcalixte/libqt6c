@@ -45,7 +45,7 @@ QDockWidget* QDockWidget_new(QWidget* parent) {
     return new VirtualQDockWidget(parent);
 }
 
-QDockWidget* QDockWidget_new2(libqt_string title) {
+QDockWidget* QDockWidget_new2(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQDockWidget(title_QString);
 }
@@ -54,12 +54,12 @@ QDockWidget* QDockWidget_new3() {
     return new VirtualQDockWidget();
 }
 
-QDockWidget* QDockWidget_new4(libqt_string title, QWidget* parent) {
+QDockWidget* QDockWidget_new4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQDockWidget(title_QString, parent);
 }
 
-QDockWidget* QDockWidget_new5(libqt_string title, QWidget* parent, int flags) {
+QDockWidget* QDockWidget_new5(const libqt_string title, QWidget* parent, int flags) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQDockWidget(title_QString, parent, static_cast<Qt::WindowFlags>(flags));
 }
@@ -1235,7 +1235,7 @@ void QDockWidget_OnHideEvent(QDockWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDockWidget_NativeEvent(QDockWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDockWidget_NativeEvent(QDockWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdockwidget = dynamic_cast<VirtualQDockWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
@@ -1246,7 +1246,7 @@ bool QDockWidget_NativeEvent(QDockWidget* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QDockWidget_QBaseNativeEvent(QDockWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDockWidget_QBaseNativeEvent(QDockWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdockwidget = dynamic_cast<VirtualQDockWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
@@ -1585,7 +1585,7 @@ void QDockWidget_OnCustomEvent(QDockWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDockWidget_ConnectNotify(QDockWidget* self, QMetaMethod* signal) {
+void QDockWidget_ConnectNotify(QDockWidget* self, const QMetaMethod* signal) {
     auto* vqdockwidget = dynamic_cast<VirtualQDockWidget*>(self);
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         vqdockwidget->connectNotify(*signal);
@@ -1595,7 +1595,7 @@ void QDockWidget_ConnectNotify(QDockWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDockWidget_QBaseConnectNotify(QDockWidget* self, QMetaMethod* signal) {
+void QDockWidget_QBaseConnectNotify(QDockWidget* self, const QMetaMethod* signal) {
     auto* vqdockwidget = dynamic_cast<VirtualQDockWidget*>(self);
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         vqdockwidget->setQDockWidget_ConnectNotify_IsBase(true);
@@ -1614,7 +1614,7 @@ void QDockWidget_OnConnectNotify(QDockWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDockWidget_DisconnectNotify(QDockWidget* self, QMetaMethod* signal) {
+void QDockWidget_DisconnectNotify(QDockWidget* self, const QMetaMethod* signal) {
     auto* vqdockwidget = dynamic_cast<VirtualQDockWidget*>(self);
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         vqdockwidget->disconnectNotify(*signal);
@@ -1624,7 +1624,7 @@ void QDockWidget_DisconnectNotify(QDockWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDockWidget_QBaseDisconnectNotify(QDockWidget* self, QMetaMethod* signal) {
+void QDockWidget_QBaseDisconnectNotify(QDockWidget* self, const QMetaMethod* signal) {
     auto* vqdockwidget = dynamic_cast<VirtualQDockWidget*>(self);
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         vqdockwidget->setQDockWidget_DisconnectNotify_IsBase(true);
@@ -1875,7 +1875,7 @@ void QDockWidget_OnReceivers(const QDockWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDockWidget_IsSignalConnected(const QDockWidget* self, QMetaMethod* signal) {
+bool QDockWidget_IsSignalConnected(const QDockWidget* self, const QMetaMethod* signal) {
     auto* vqdockwidget = const_cast<VirtualQDockWidget*>(dynamic_cast<const VirtualQDockWidget*>(self));
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         return vqdockwidget->isSignalConnected(*signal);
@@ -1885,7 +1885,7 @@ bool QDockWidget_IsSignalConnected(const QDockWidget* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QDockWidget_QBaseIsSignalConnected(const QDockWidget* self, QMetaMethod* signal) {
+bool QDockWidget_QBaseIsSignalConnected(const QDockWidget* self, const QMetaMethod* signal) {
     auto* vqdockwidget = const_cast<VirtualQDockWidget*>(dynamic_cast<const VirtualQDockWidget*>(self));
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         vqdockwidget->setQDockWidget_IsSignalConnected_IsBase(true);
@@ -1900,6 +1900,35 @@ void QDockWidget_OnIsSignalConnected(const QDockWidget* self, intptr_t slot) {
     auto* vqdockwidget = const_cast<VirtualQDockWidget*>(dynamic_cast<const VirtualQDockWidget*>(self));
     if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
         vqdockwidget->setQDockWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQDockWidget::QDockWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QDockWidget_GetDecodedMetricF(const QDockWidget* self, int metricA, int metricB) {
+    auto* vqdockwidget = const_cast<VirtualQDockWidget*>(dynamic_cast<const VirtualQDockWidget*>(self));
+    if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
+        return vqdockwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDockWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QDockWidget_QBaseGetDecodedMetricF(const QDockWidget* self, int metricA, int metricB) {
+    auto* vqdockwidget = const_cast<VirtualQDockWidget*>(dynamic_cast<const VirtualQDockWidget*>(self));
+    if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
+        vqdockwidget->setQDockWidget_GetDecodedMetricF_IsBase(true);
+        return vqdockwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDockWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QDockWidget_OnGetDecodedMetricF(const QDockWidget* self, intptr_t slot) {
+    auto* vqdockwidget = const_cast<VirtualQDockWidget*>(dynamic_cast<const VirtualQDockWidget*>(self));
+    if (vqdockwidget && vqdockwidget->isVirtualQDockWidget) {
+        vqdockwidget->setQDockWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQDockWidget::QDockWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

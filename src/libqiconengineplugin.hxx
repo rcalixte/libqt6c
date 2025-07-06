@@ -64,8 +64,8 @@ class VirtualQIconEnginePlugin final : public QIconEnginePlugin {
     mutable bool qiconengineplugin_issignalconnected_isbase = false;
 
   public:
-    VirtualQIconEnginePlugin() : QIconEnginePlugin(){};
-    VirtualQIconEnginePlugin(QObject* parent) : QIconEnginePlugin(parent){};
+    VirtualQIconEnginePlugin() : QIconEnginePlugin() {};
+    VirtualQIconEnginePlugin(QObject* parent) : QIconEnginePlugin(parent) {};
 
     ~VirtualQIconEnginePlugin() {
         qiconengineplugin_metacall_callback = nullptr;
@@ -320,18 +320,18 @@ class VirtualQIconEnginePlugin final : public QIconEnginePlugin {
     friend void QIconEnginePlugin_QBaseChildEvent(QIconEnginePlugin* self, QChildEvent* event);
     friend void QIconEnginePlugin_CustomEvent(QIconEnginePlugin* self, QEvent* event);
     friend void QIconEnginePlugin_QBaseCustomEvent(QIconEnginePlugin* self, QEvent* event);
-    friend void QIconEnginePlugin_ConnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
-    friend void QIconEnginePlugin_QBaseConnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
-    friend void QIconEnginePlugin_DisconnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
-    friend void QIconEnginePlugin_QBaseDisconnectNotify(QIconEnginePlugin* self, QMetaMethod* signal);
+    friend void QIconEnginePlugin_ConnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
+    friend void QIconEnginePlugin_QBaseConnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
+    friend void QIconEnginePlugin_DisconnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
+    friend void QIconEnginePlugin_QBaseDisconnectNotify(QIconEnginePlugin* self, const QMetaMethod* signal);
     friend QObject* QIconEnginePlugin_Sender(const QIconEnginePlugin* self);
     friend QObject* QIconEnginePlugin_QBaseSender(const QIconEnginePlugin* self);
     friend int QIconEnginePlugin_SenderSignalIndex(const QIconEnginePlugin* self);
     friend int QIconEnginePlugin_QBaseSenderSignalIndex(const QIconEnginePlugin* self);
     friend int QIconEnginePlugin_Receivers(const QIconEnginePlugin* self, const char* signal);
     friend int QIconEnginePlugin_QBaseReceivers(const QIconEnginePlugin* self, const char* signal);
-    friend bool QIconEnginePlugin_IsSignalConnected(const QIconEnginePlugin* self, QMetaMethod* signal);
-    friend bool QIconEnginePlugin_QBaseIsSignalConnected(const QIconEnginePlugin* self, QMetaMethod* signal);
+    friend bool QIconEnginePlugin_IsSignalConnected(const QIconEnginePlugin* self, const QMetaMethod* signal);
+    friend bool QIconEnginePlugin_QBaseIsSignalConnected(const QIconEnginePlugin* self, const QMetaMethod* signal);
 };
 
 #endif

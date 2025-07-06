@@ -61,12 +61,12 @@ class VirtualQAction final : public QAction {
     mutable bool qaction_issignalconnected_isbase = false;
 
   public:
-    VirtualQAction() : QAction(){};
-    VirtualQAction(const QString& text) : QAction(text){};
-    VirtualQAction(const QIcon& icon, const QString& text) : QAction(icon, text){};
-    VirtualQAction(QObject* parent) : QAction(parent){};
-    VirtualQAction(const QString& text, QObject* parent) : QAction(text, parent){};
-    VirtualQAction(const QIcon& icon, const QString& text, QObject* parent) : QAction(icon, text, parent){};
+    VirtualQAction() : QAction() {};
+    VirtualQAction(const QString& text) : QAction(text) {};
+    VirtualQAction(const QIcon& icon, const QString& text) : QAction(icon, text) {};
+    VirtualQAction(QObject* parent) : QAction(parent) {};
+    VirtualQAction(const QString& text, QObject* parent) : QAction(text, parent) {};
+    VirtualQAction(const QIcon& icon, const QString& text, QObject* parent) : QAction(icon, text, parent) {};
 
     ~VirtualQAction() {
         qaction_metacall_callback = nullptr;
@@ -300,18 +300,18 @@ class VirtualQAction final : public QAction {
     friend void QAction_QBaseChildEvent(QAction* self, QChildEvent* event);
     friend void QAction_CustomEvent(QAction* self, QEvent* event);
     friend void QAction_QBaseCustomEvent(QAction* self, QEvent* event);
-    friend void QAction_ConnectNotify(QAction* self, QMetaMethod* signal);
-    friend void QAction_QBaseConnectNotify(QAction* self, QMetaMethod* signal);
-    friend void QAction_DisconnectNotify(QAction* self, QMetaMethod* signal);
-    friend void QAction_QBaseDisconnectNotify(QAction* self, QMetaMethod* signal);
+    friend void QAction_ConnectNotify(QAction* self, const QMetaMethod* signal);
+    friend void QAction_QBaseConnectNotify(QAction* self, const QMetaMethod* signal);
+    friend void QAction_DisconnectNotify(QAction* self, const QMetaMethod* signal);
+    friend void QAction_QBaseDisconnectNotify(QAction* self, const QMetaMethod* signal);
     friend QObject* QAction_Sender(const QAction* self);
     friend QObject* QAction_QBaseSender(const QAction* self);
     friend int QAction_SenderSignalIndex(const QAction* self);
     friend int QAction_QBaseSenderSignalIndex(const QAction* self);
     friend int QAction_Receivers(const QAction* self, const char* signal);
     friend int QAction_QBaseReceivers(const QAction* self, const char* signal);
-    friend bool QAction_IsSignalConnected(const QAction* self, QMetaMethod* signal);
-    friend bool QAction_QBaseIsSignalConnected(const QAction* self, QMetaMethod* signal);
+    friend bool QAction_IsSignalConnected(const QAction* self, const QMetaMethod* signal);
+    friend bool QAction_QBaseIsSignalConnected(const QAction* self, const QMetaMethod* signal);
 };
 
 #endif

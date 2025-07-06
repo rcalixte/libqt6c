@@ -7,13 +7,13 @@
 #include "libqcommandlineoption.hpp"
 #include "libqcommandlineoption.hxx"
 
-QCommandLineOption* QCommandLineOption_new(libqt_string name) {
+QCommandLineOption* QCommandLineOption_new(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QCommandLineOption(name_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new2(libqt_list /* of libqt_string */ names) {
-    QStringList names_QList;
+QCommandLineOption* QCommandLineOption_new2(const libqt_list /* of libqt_string */ names) {
+    QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
     for (size_t i = 0; i < names.len; ++i) {
@@ -23,14 +23,14 @@ QCommandLineOption* QCommandLineOption_new2(libqt_list /* of libqt_string */ nam
     return new QCommandLineOption(names_QList);
 }
 
-QCommandLineOption* QCommandLineOption_new3(libqt_string name, libqt_string description) {
+QCommandLineOption* QCommandLineOption_new3(const libqt_string name, const libqt_string description) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new QCommandLineOption(name_QString, description_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new4(libqt_list /* of libqt_string */ names, libqt_string description) {
-    QStringList names_QList;
+QCommandLineOption* QCommandLineOption_new4(const libqt_list /* of libqt_string */ names, const libqt_string description) {
+    QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
     for (size_t i = 0; i < names.len; ++i) {
@@ -41,18 +41,18 @@ QCommandLineOption* QCommandLineOption_new4(libqt_list /* of libqt_string */ nam
     return new QCommandLineOption(names_QList, description_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new5(QCommandLineOption* other) {
+QCommandLineOption* QCommandLineOption_new5(const QCommandLineOption* other) {
     return new QCommandLineOption(*other);
 }
 
-QCommandLineOption* QCommandLineOption_new6(libqt_string name, libqt_string description, libqt_string valueName) {
+QCommandLineOption* QCommandLineOption_new6(const libqt_string name, const libqt_string description, const libqt_string valueName) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString valueName_QString = QString::fromUtf8(valueName.data, valueName.len);
     return new QCommandLineOption(name_QString, description_QString, valueName_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new7(libqt_string name, libqt_string description, libqt_string valueName, libqt_string defaultValue) {
+QCommandLineOption* QCommandLineOption_new7(const libqt_string name, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString valueName_QString = QString::fromUtf8(valueName.data, valueName.len);
@@ -60,8 +60,8 @@ QCommandLineOption* QCommandLineOption_new7(libqt_string name, libqt_string desc
     return new QCommandLineOption(name_QString, description_QString, valueName_QString, defaultValue_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new8(libqt_list /* of libqt_string */ names, libqt_string description, libqt_string valueName) {
-    QStringList names_QList;
+QCommandLineOption* QCommandLineOption_new8(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName) {
+    QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
     for (size_t i = 0; i < names.len; ++i) {
@@ -73,8 +73,8 @@ QCommandLineOption* QCommandLineOption_new8(libqt_list /* of libqt_string */ nam
     return new QCommandLineOption(names_QList, description_QString, valueName_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new9(libqt_list /* of libqt_string */ names, libqt_string description, libqt_string valueName, libqt_string defaultValue) {
-    QStringList names_QList;
+QCommandLineOption* QCommandLineOption_new9(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue) {
+    QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
     for (size_t i = 0; i < names.len; ++i) {
@@ -87,7 +87,7 @@ QCommandLineOption* QCommandLineOption_new9(libqt_list /* of libqt_string */ nam
     return new QCommandLineOption(names_QList, description_QString, valueName_QString, defaultValue_QString);
 }
 
-void QCommandLineOption_OperatorAssign(QCommandLineOption* self, QCommandLineOption* other) {
+void QCommandLineOption_OperatorAssign(QCommandLineOption* self, const QCommandLineOption* other) {
     self->operator=(*other);
 }
 
@@ -96,10 +96,10 @@ void QCommandLineOption_Swap(QCommandLineOption* self, QCommandLineOption* other
 }
 
 libqt_list /* of libqt_string */ QCommandLineOption_Names(const QCommandLineOption* self) {
-    QStringList _ret = self->names();
+    QList<QString> _ret = self->names();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -111,12 +111,12 @@ libqt_list /* of libqt_string */ QCommandLineOption_Names(const QCommandLineOpti
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QCommandLineOption_SetValueName(QCommandLineOption* self, libqt_string name) {
+void QCommandLineOption_SetValueName(QCommandLineOption* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setValueName(name_QString);
 }
@@ -133,7 +133,7 @@ libqt_string QCommandLineOption_ValueName(const QCommandLineOption* self) {
     return _str;
 }
 
-void QCommandLineOption_SetDescription(QCommandLineOption* self, libqt_string description) {
+void QCommandLineOption_SetDescription(QCommandLineOption* self, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     self->setDescription(description_QString);
 }
@@ -150,13 +150,13 @@ libqt_string QCommandLineOption_Description(const QCommandLineOption* self) {
     return _str;
 }
 
-void QCommandLineOption_SetDefaultValue(QCommandLineOption* self, libqt_string defaultValue) {
+void QCommandLineOption_SetDefaultValue(QCommandLineOption* self, const libqt_string defaultValue) {
     QString defaultValue_QString = QString::fromUtf8(defaultValue.data, defaultValue.len);
     self->setDefaultValue(defaultValue_QString);
 }
 
-void QCommandLineOption_SetDefaultValues(QCommandLineOption* self, libqt_list /* of libqt_string */ defaultValues) {
-    QStringList defaultValues_QList;
+void QCommandLineOption_SetDefaultValues(QCommandLineOption* self, const libqt_list /* of libqt_string */ defaultValues) {
+    QList<QString> defaultValues_QList;
     defaultValues_QList.reserve(defaultValues.len);
     libqt_string* defaultValues_arr = static_cast<libqt_string*>(defaultValues.data.ptr);
     for (size_t i = 0; i < defaultValues.len; ++i) {
@@ -167,10 +167,10 @@ void QCommandLineOption_SetDefaultValues(QCommandLineOption* self, libqt_list /*
 }
 
 libqt_list /* of libqt_string */ QCommandLineOption_DefaultValues(const QCommandLineOption* self) {
-    QStringList _ret = self->defaultValues();
+    QList<QString> _ret = self->defaultValues();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -182,7 +182,7 @@ libqt_list /* of libqt_string */ QCommandLineOption_DefaultValues(const QCommand
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

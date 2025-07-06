@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpixmap.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpixmapcache.html
 
 /// q_pixmapcache_new constructs a new QPixmapCache object.

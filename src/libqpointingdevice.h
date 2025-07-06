@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqeventpoint.h"
-#include "libqinputdevice.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpointingdeviceuniqueid.html
 
 /// q_pointingdeviceuniqueid_new constructs a new QPointingDeviceUniqueId object.
@@ -353,7 +346,7 @@ QThread* q_pointingdevice_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPointingDevice* self, QThread* thread ```
-void q_pointingdevice_move_to_thread(void* self, void* thread);
+bool q_pointingdevice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -368,6 +361,13 @@ int32_t q_pointingdevice_start_timer(void* self, int interval);
 ///
 /// ``` QPointingDevice* self, int id ```
 void q_pointingdevice_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPointingDevice* self, enum Qt__TimerId id ```
+void q_pointingdevice_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -508,6 +508,13 @@ bool q_pointingdevice_inherits(void* self, const char* classname);
 ///
 /// ``` QPointingDevice* self ```
 void q_pointingdevice_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPointingDevice* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pointingdevice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -50,23 +50,23 @@ QCommandLinkButton* QCommandLinkButton_new2() {
     return new VirtualQCommandLinkButton();
 }
 
-QCommandLinkButton* QCommandLinkButton_new3(libqt_string text) {
+QCommandLinkButton* QCommandLinkButton_new3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCommandLinkButton(text_QString);
 }
 
-QCommandLinkButton* QCommandLinkButton_new4(libqt_string text, libqt_string description) {
+QCommandLinkButton* QCommandLinkButton_new4(const libqt_string text, const libqt_string description) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new VirtualQCommandLinkButton(text_QString, description_QString);
 }
 
-QCommandLinkButton* QCommandLinkButton_new5(libqt_string text, QWidget* parent) {
+QCommandLinkButton* QCommandLinkButton_new5(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCommandLinkButton(text_QString, parent);
 }
 
-QCommandLinkButton* QCommandLinkButton_new6(libqt_string text, libqt_string description, QWidget* parent) {
+QCommandLinkButton* QCommandLinkButton_new6(const libqt_string text, const libqt_string description, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new VirtualQCommandLinkButton(text_QString, description_QString, parent);
@@ -132,7 +132,7 @@ libqt_string QCommandLinkButton_Description(const QCommandLinkButton* self) {
     return _str;
 }
 
-void QCommandLinkButton_SetDescription(QCommandLinkButton* self, libqt_string description) {
+void QCommandLinkButton_SetDescription(QCommandLinkButton* self, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     self->setDescription(description_QString);
 }
@@ -452,7 +452,7 @@ void QCommandLinkButton_OnMouseMoveEvent(QCommandLinkButton* self, intptr_t slot
 }
 
 // Derived class handler implementation
-bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, QPoint* pos) {
+bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, const QPoint* pos) {
     auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         return vqcommandlinkbutton->hitButton(*pos);
@@ -462,7 +462,7 @@ bool QCommandLinkButton_HitButton(const QCommandLinkButton* self, QPoint* pos) {
 }
 
 // Base class handler implementation
-bool QCommandLinkButton_QBaseHitButton(const QCommandLinkButton* self, QPoint* pos) {
+bool QCommandLinkButton_QBaseHitButton(const QCommandLinkButton* self, const QPoint* pos) {
     auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->setQCommandLinkButton_HitButton_IsBase(true);
@@ -1264,7 +1264,7 @@ void QCommandLinkButton_OnHideEvent(QCommandLinkButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCommandLinkButton_NativeEvent(QCommandLinkButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QCommandLinkButton_NativeEvent(QCommandLinkButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcommandlinkbutton = dynamic_cast<VirtualQCommandLinkButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
@@ -1275,7 +1275,7 @@ bool QCommandLinkButton_NativeEvent(QCommandLinkButton* self, libqt_string event
 }
 
 // Base class handler implementation
-bool QCommandLinkButton_QBaseNativeEvent(QCommandLinkButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QCommandLinkButton_QBaseNativeEvent(QCommandLinkButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcommandlinkbutton = dynamic_cast<VirtualQCommandLinkButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
@@ -1585,7 +1585,7 @@ void QCommandLinkButton_OnCustomEvent(QCommandLinkButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCommandLinkButton_ConnectNotify(QCommandLinkButton* self, QMetaMethod* signal) {
+void QCommandLinkButton_ConnectNotify(QCommandLinkButton* self, const QMetaMethod* signal) {
     auto* vqcommandlinkbutton = dynamic_cast<VirtualQCommandLinkButton*>(self);
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->connectNotify(*signal);
@@ -1595,7 +1595,7 @@ void QCommandLinkButton_ConnectNotify(QCommandLinkButton* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QCommandLinkButton_QBaseConnectNotify(QCommandLinkButton* self, QMetaMethod* signal) {
+void QCommandLinkButton_QBaseConnectNotify(QCommandLinkButton* self, const QMetaMethod* signal) {
     auto* vqcommandlinkbutton = dynamic_cast<VirtualQCommandLinkButton*>(self);
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->setQCommandLinkButton_ConnectNotify_IsBase(true);
@@ -1614,7 +1614,7 @@ void QCommandLinkButton_OnConnectNotify(QCommandLinkButton* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QCommandLinkButton_DisconnectNotify(QCommandLinkButton* self, QMetaMethod* signal) {
+void QCommandLinkButton_DisconnectNotify(QCommandLinkButton* self, const QMetaMethod* signal) {
     auto* vqcommandlinkbutton = dynamic_cast<VirtualQCommandLinkButton*>(self);
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->disconnectNotify(*signal);
@@ -1624,7 +1624,7 @@ void QCommandLinkButton_DisconnectNotify(QCommandLinkButton* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QCommandLinkButton_QBaseDisconnectNotify(QCommandLinkButton* self, QMetaMethod* signal) {
+void QCommandLinkButton_QBaseDisconnectNotify(QCommandLinkButton* self, const QMetaMethod* signal) {
     auto* vqcommandlinkbutton = dynamic_cast<VirtualQCommandLinkButton*>(self);
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->setQCommandLinkButton_DisconnectNotify_IsBase(true);
@@ -1875,7 +1875,7 @@ void QCommandLinkButton_OnReceivers(const QCommandLinkButton* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QCommandLinkButton_IsSignalConnected(const QCommandLinkButton* self, QMetaMethod* signal) {
+bool QCommandLinkButton_IsSignalConnected(const QCommandLinkButton* self, const QMetaMethod* signal) {
     auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         return vqcommandlinkbutton->isSignalConnected(*signal);
@@ -1885,7 +1885,7 @@ bool QCommandLinkButton_IsSignalConnected(const QCommandLinkButton* self, QMetaM
 }
 
 // Base class handler implementation
-bool QCommandLinkButton_QBaseIsSignalConnected(const QCommandLinkButton* self, QMetaMethod* signal) {
+bool QCommandLinkButton_QBaseIsSignalConnected(const QCommandLinkButton* self, const QMetaMethod* signal) {
     auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->setQCommandLinkButton_IsSignalConnected_IsBase(true);
@@ -1900,6 +1900,35 @@ void QCommandLinkButton_OnIsSignalConnected(const QCommandLinkButton* self, intp
     auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
     if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
         vqcommandlinkbutton->setQCommandLinkButton_IsSignalConnected_Callback(reinterpret_cast<VirtualQCommandLinkButton::QCommandLinkButton_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QCommandLinkButton_GetDecodedMetricF(const QCommandLinkButton* self, int metricA, int metricB) {
+    auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
+    if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
+        return vqcommandlinkbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQCommandLinkButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QCommandLinkButton_QBaseGetDecodedMetricF(const QCommandLinkButton* self, int metricA, int metricB) {
+    auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
+    if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
+        vqcommandlinkbutton->setQCommandLinkButton_GetDecodedMetricF_IsBase(true);
+        return vqcommandlinkbutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQCommandLinkButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QCommandLinkButton_OnGetDecodedMetricF(const QCommandLinkButton* self, intptr_t slot) {
+    auto* vqcommandlinkbutton = const_cast<VirtualQCommandLinkButton*>(dynamic_cast<const VirtualQCommandLinkButton*>(self));
+    if (vqcommandlinkbutton && vqcommandlinkbutton->isVirtualQCommandLinkButton) {
+        vqcommandlinkbutton->setQCommandLinkButton_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQCommandLinkButton::QCommandLinkButton_GetDecodedMetricF_Callback>(slot));
     }
 }
 

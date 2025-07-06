@@ -1,3 +1,4 @@
+#include <string.h>
 #include "libqstringconverter.hpp"
 #include "libqstringconverter_base.hpp"
 #include "libqstringconverter_base.h"
@@ -20,6 +21,21 @@ const char* q_stringconverter_name(void* self) {
 
 const char* q_stringconverter_name_for_encoding(int64_t e) {
     return QStringConverter_NameForEncoding(e);
+}
+
+const char** q_stringconverter_available_codecs() {
+    libqt_list _arr = QStringConverter_AvailableCodecs();
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
+    return _ret;
 }
 
 QStringConverterBase__State* q_stringconverterbase__state_new() {

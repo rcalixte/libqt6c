@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqiodevice.h"
-#include "libqiodevicebase.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qbuffer.html
 
 /// q_buffer_new constructs a new QBuffer object.
@@ -74,8 +67,8 @@ void q_buffer_set_data(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#setData)
 ///
-/// ``` QBuffer* self, const char* data, int lenVal ```
-void q_buffer_set_data2(void* self, const char* data, int lenVal);
+/// ``` QBuffer* self, const char* data, int64_t lenVal ```
+void q_buffer_set_data2(void* self, const char* data, int64_t lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#data)
 ///
@@ -670,7 +663,7 @@ QThread* q_buffer_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QBuffer* self, QThread* thread ```
-void q_buffer_move_to_thread(void* self, void* thread);
+bool q_buffer_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -685,6 +678,13 @@ int32_t q_buffer_start_timer(void* self, int interval);
 ///
 /// ``` QBuffer* self, int id ```
 void q_buffer_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QBuffer* self, enum Qt__TimerId id ```
+void q_buffer_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -825,6 +825,13 @@ bool q_buffer_inherits(void* self, const char* classname);
 ///
 /// ``` QBuffer* self ```
 void q_buffer_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QBuffer* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_buffer_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

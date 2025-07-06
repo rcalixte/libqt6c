@@ -22,14 +22,6 @@ typedef struct QGestureRecognizer QGestureRecognizer;
 typedef struct QObject QObject;
 #endif
 
-#ifdef __cplusplus
-typedef QGestureRecognizer::Result Result;         // C++ QFlags
-typedef QGestureRecognizer::ResultFlag ResultFlag; // C++ enum
-#else
-typedef int Result;     // C ABI QFlags
-typedef int ResultFlag; // C ABI enum
-#endif
-
 QGestureRecognizer* QGestureRecognizer_new();
 QGesture* QGestureRecognizer_Create(QGestureRecognizer* self, QObject* target);
 void QGestureRecognizer_OnCreate(QGestureRecognizer* self, intptr_t slot);
@@ -42,7 +34,7 @@ void QGestureRecognizer_OnReset(QGestureRecognizer* self, intptr_t slot);
 void QGestureRecognizer_QBaseReset(QGestureRecognizer* self, QGesture* state);
 int QGestureRecognizer_RegisterRecognizer(QGestureRecognizer* recognizer);
 void QGestureRecognizer_UnregisterRecognizer(int typeVal);
-void QGestureRecognizer_OperatorAssign(QGestureRecognizer* self, QGestureRecognizer* param1);
+void QGestureRecognizer_OperatorAssign(QGestureRecognizer* self, const QGestureRecognizer* param1);
 void QGestureRecognizer_Delete(QGestureRecognizer* self);
 
 #ifdef __cplusplus

@@ -55,12 +55,12 @@ void QPercentBarSeries_QBaseChildEvent(QPercentBarSeries* self, QChildEvent* eve
 void QPercentBarSeries_CustomEvent(QPercentBarSeries* self, QEvent* event);
 void QPercentBarSeries_OnCustomEvent(QPercentBarSeries* self, intptr_t slot);
 void QPercentBarSeries_QBaseCustomEvent(QPercentBarSeries* self, QEvent* event);
-void QPercentBarSeries_ConnectNotify(QPercentBarSeries* self, QMetaMethod* signal);
+void QPercentBarSeries_ConnectNotify(QPercentBarSeries* self, const QMetaMethod* signal);
 void QPercentBarSeries_OnConnectNotify(QPercentBarSeries* self, intptr_t slot);
-void QPercentBarSeries_QBaseConnectNotify(QPercentBarSeries* self, QMetaMethod* signal);
-void QPercentBarSeries_DisconnectNotify(QPercentBarSeries* self, QMetaMethod* signal);
+void QPercentBarSeries_QBaseConnectNotify(QPercentBarSeries* self, const QMetaMethod* signal);
+void QPercentBarSeries_DisconnectNotify(QPercentBarSeries* self, const QMetaMethod* signal);
 void QPercentBarSeries_OnDisconnectNotify(QPercentBarSeries* self, intptr_t slot);
-void QPercentBarSeries_QBaseDisconnectNotify(QPercentBarSeries* self, QMetaMethod* signal);
+void QPercentBarSeries_QBaseDisconnectNotify(QPercentBarSeries* self, const QMetaMethod* signal);
 QObject* QPercentBarSeries_Sender(const QPercentBarSeries* self);
 void QPercentBarSeries_OnSender(const QPercentBarSeries* self, intptr_t slot);
 QObject* QPercentBarSeries_QBaseSender(const QPercentBarSeries* self);
@@ -70,9 +70,9 @@ int QPercentBarSeries_QBaseSenderSignalIndex(const QPercentBarSeries* self);
 int QPercentBarSeries_Receivers(const QPercentBarSeries* self, const char* signal);
 void QPercentBarSeries_OnReceivers(const QPercentBarSeries* self, intptr_t slot);
 int QPercentBarSeries_QBaseReceivers(const QPercentBarSeries* self, const char* signal);
-bool QPercentBarSeries_IsSignalConnected(const QPercentBarSeries* self, QMetaMethod* signal);
+bool QPercentBarSeries_IsSignalConnected(const QPercentBarSeries* self, const QMetaMethod* signal);
 void QPercentBarSeries_OnIsSignalConnected(const QPercentBarSeries* self, intptr_t slot);
-bool QPercentBarSeries_QBaseIsSignalConnected(const QPercentBarSeries* self, QMetaMethod* signal);
+bool QPercentBarSeries_QBaseIsSignalConnected(const QPercentBarSeries* self, const QMetaMethod* signal);
 void QPercentBarSeries_Delete(QPercentBarSeries* self);
 
 #ifdef __cplusplus

@@ -12,18 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqcborarray.h"
-#include "libqcbormap.h"
-#include "libqcborstreamreader.h"
-#include "libqcborstreamwriter.h"
-#include "../libqdatetime.h"
-#include "../libqjsonvalue.h"
-#include "../libqregularexpression.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "../libquuid.h"
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qcborparsererror.html
 
 /// q_cborparsererror_new constructs a new QCborParserError object.
@@ -389,21 +377,6 @@ QCborValueRef* q_cborvalue_operator_subscript5(void* self, const char* key);
 ///
 /// ``` QCborValue* self, QCborValue* other ```
 int32_t q_cborvalue_compare(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator==)
-///
-/// ``` QCborValue* self, QCborValue* other ```
-bool q_cborvalue_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator!=)
-///
-/// ``` QCborValue* self, QCborValue* other ```
-bool q_cborvalue_operator_not_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator<)
-///
-/// ``` QCborValue* self, QCborValue* other ```
-bool q_cborvalue_operator_lesser(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromVariant)
 ///
@@ -774,21 +747,6 @@ const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, long long 
 /// ``` QCborValueConstRef* self, QCborValue* other ```
 int32_t q_cborvalueconstref_compare(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator==)
-///
-/// ``` QCborValueConstRef* self, QCborValue* other ```
-bool q_cborvalueconstref_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator!=)
-///
-/// ``` QCborValueConstRef* self, QCborValue* other ```
-bool q_cborvalueconstref_operator_not_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator<)
-///
-/// ``` QCborValueConstRef* self, QCborValue* other ```
-bool q_cborvalueconstref_operator_lesser(void* self, void* other);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toVariant)
 ///
 /// ``` QCborValueConstRef* self ```
@@ -1137,21 +1095,6 @@ const QCborValue* q_cborvalueref_operator_subscript5(void* self, long long key);
 ///
 /// ``` QCborValueRef* self, QCborValue* other ```
 int32_t q_cborvalueref_compare(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator==)
-///
-/// ``` QCborValueRef* self, QCborValue* other ```
-bool q_cborvalueref_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator!=)
-///
-/// ``` QCborValueRef* self, QCborValue* other ```
-bool q_cborvalueref_operator_not_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator<)
-///
-/// ``` QCborValueRef* self, QCborValue* other ```
-bool q_cborvalueref_operator_lesser(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toVariant)
 ///

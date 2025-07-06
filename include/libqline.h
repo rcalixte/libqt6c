@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpoint.h"
-
 /// https://doc.qt.io/qt-6/qline.html
 
 /// q_line_new constructs a new QLine object.
@@ -145,16 +143,6 @@ void q_line_set_points(void* self, void* p1, void* p2);
 ///
 /// ``` QLine* self, int x1, int y1, int x2, int y2 ```
 void q_line_set_line(void* self, int x1, int y1, int x2, int y2);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qline.html#operator==)
-///
-/// ``` QLine* self, QLine* d ```
-bool q_line_operator_equal(void* self, void* d);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qline.html#operator!=)
-///
-/// ``` QLine* self, QLine* d ```
-bool q_line_operator_not_equal(void* self, void* d);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qline.html#toLineF)
 ///
@@ -354,16 +342,6 @@ void q_linef_set_points(void* self, void* p1, void* p2);
 ///
 /// ``` QLineF* self, double x1, double y1, double x2, double y2 ```
 void q_linef_set_line(void* self, double x1, double y1, double x2, double y2);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qlinef.html#operator==)
-///
-/// ``` QLineF* self, QLineF* d ```
-bool q_linef_operator_equal(void* self, void* d);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qlinef.html#operator!=)
-///
-/// ``` QLineF* self, QLineF* d ```
-bool q_linef_operator_not_equal(void* self, void* d);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlinef.html#toLine)
 ///

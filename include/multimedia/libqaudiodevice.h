@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioformat.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qaudiodevice.html
 
 /// q_audiodevice_new constructs a new QAudioDevice object.

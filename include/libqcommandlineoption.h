@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcommandlineoption.html
 
 /// q_commandlineoption_new constructs a new QCommandLineOption object.

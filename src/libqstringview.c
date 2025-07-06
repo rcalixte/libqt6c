@@ -81,8 +81,8 @@ int32_t q_stringview_compare_with_q_char(void* self, void* c) {
     return QStringView_CompareWithQChar((QStringView*)self, (QChar*)c);
 }
 
-int32_t q_stringview_compare2(void* self, void* c, int64_t cs) {
-    return QStringView_Compare2((QStringView*)self, (QChar*)c, cs);
+int32_t q_stringview_compare3(void* self, void* c, int64_t cs) {
+    return QStringView_Compare3((QStringView*)self, (QChar*)c, cs);
 }
 
 bool q_stringview_starts_with_with_q_char(void* self, void* c) {
@@ -143,6 +143,14 @@ bool q_stringview_is_right_to_left(void* self) {
 
 bool q_stringview_is_valid_utf16(void* self) {
     return QStringView_IsValidUtf16((QStringView*)self);
+}
+
+bool q_stringview_is_upper(void* self) {
+    return QStringView_IsUpper((QStringView*)self);
+}
+
+bool q_stringview_is_lower(void* self) {
+    return QStringView_IsLower((QStringView*)self);
 }
 
 short q_stringview_to_short(void* self) {
@@ -213,6 +221,10 @@ QChar* q_stringview_back(void* self) {
     return QStringView_Back((QStringView*)self);
 }
 
+int64_t q_stringview_max_size(void* self) {
+    return QStringView_MaxSize((QStringView*)self);
+}
+
 const QChar* q_stringview_const_begin(void* self) {
     return QStringView_ConstBegin((QStringView*)self);
 }
@@ -239,6 +251,10 @@ QChar* q_stringview_first2(void* self) {
 
 QChar* q_stringview_last2(void* self) {
     return QStringView_Last2((QStringView*)self);
+}
+
+int64_t q_stringview_max_size2() {
+    return QStringView_MaxSize2();
 }
 
 int64_t q_stringview_index_of2(void* self, void* c, int64_t from) {

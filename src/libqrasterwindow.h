@@ -12,20 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqaccessible.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintdevicewindow.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqsurface.h"
-#include "libqsurfaceformat.h"
-#include "libqwindow.h"
-
 /// https://doc.qt.io/qt-6/qrasterwindow.html
 
 /// q_rasterwindow_new constructs a new QRasterWindow object.
@@ -101,6 +87,25 @@ void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*
 ///
 /// ``` QRasterWindow* self, QPoint* param1 ```
 QPaintDevice* q_rasterwindow_qbase_redirected(void* self, void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
+///
+/// ``` QRasterWindow* self, QResizeEvent* event ```
+void q_rasterwindow_resize_event(void* self, void* event);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, QResizeEvent*) ```
+void q_rasterwindow_on_resize_event(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#resizeEvent)
+///
+/// Base class method implementation
+///
+/// ``` QRasterWindow* self, QResizeEvent* event ```
+void q_rasterwindow_qbase_resize_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1209,7 +1214,7 @@ QThread* q_rasterwindow_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QRasterWindow* self, QThread* thread ```
-void q_rasterwindow_move_to_thread(void* self, void* thread);
+bool q_rasterwindow_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1224,6 +1229,13 @@ int32_t q_rasterwindow_start_timer(void* self, int interval);
 ///
 /// ``` QRasterWindow* self, int id ```
 void q_rasterwindow_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QRasterWindow* self, enum Qt__TimerId id ```
+void q_rasterwindow_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1350,6 +1362,13 @@ bool q_rasterwindow_inherits(void* self, const char* classname);
 ///
 /// ``` QRasterWindow* self ```
 void q_rasterwindow_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QRasterWindow* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_rasterwindow_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1483,6 +1502,13 @@ int32_t q_rasterwindow_depth(void* self);
 ///
 ///
 double q_rasterwindow_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_rasterwindow_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -1699,33 +1725,6 @@ QObject* q_rasterwindow_qbase_focus_object(void* self);
 ///
 /// ``` QRasterWindow* self, QObject* (*slot)() ```
 void q_rasterwindow_on_focus_object(void* self, QObject* (*slot)());
-
-/// Inherited from QWindow
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QRasterWindow* self, QResizeEvent* param1 ```
-void q_rasterwindow_resize_event(void* self, void* param1);
-
-/// Inherited from QWindow
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QRasterWindow* self, QResizeEvent* param1 ```
-void q_rasterwindow_qbase_resize_event(void* self, void* param1);
-
-/// Inherited from QWindow
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#resizeEvent)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, QResizeEvent*) ```
-void q_rasterwindow_on_resize_event(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
 ///
@@ -2536,6 +2535,33 @@ bool q_rasterwindow_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QRasterWindow* self, bool (*slot)(QRasterWindow*, QMetaMethod*) ```
 void q_rasterwindow_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_rasterwindow_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QRasterWindow* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QRasterWindow* self, double (*slot)(QRasterWindow*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

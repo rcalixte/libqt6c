@@ -103,7 +103,7 @@ QPointF* QGraphicsVideoItem_Offset(const QGraphicsVideoItem* self) {
     return new QPointF(self->offset());
 }
 
-void QGraphicsVideoItem_SetOffset(QGraphicsVideoItem* self, QPointF* offset) {
+void QGraphicsVideoItem_SetOffset(QGraphicsVideoItem* self, const QPointF* offset) {
     self->setOffset(*offset);
 }
 
@@ -111,7 +111,7 @@ QSizeF* QGraphicsVideoItem_Size(const QGraphicsVideoItem* self) {
     return new QSizeF(self->size());
 }
 
-void QGraphicsVideoItem_SetSize(QGraphicsVideoItem* self, QSizeF* size) {
+void QGraphicsVideoItem_SetSize(QGraphicsVideoItem* self, const QSizeF* size) {
     self->setSize(*size);
 }
 
@@ -119,7 +119,7 @@ QSizeF* QGraphicsVideoItem_NativeSize(const QGraphicsVideoItem* self) {
     return new QSizeF(self->nativeSize());
 }
 
-void QGraphicsVideoItem_NativeSizeChanged(QGraphicsVideoItem* self, QSizeF* size) {
+void QGraphicsVideoItem_NativeSizeChanged(QGraphicsVideoItem* self, const QSizeF* size) {
     self->nativeSizeChanged(*size);
 }
 
@@ -187,7 +187,7 @@ void QGraphicsVideoItem_OnBoundingRect(const QGraphicsVideoItem* self, intptr_t 
 }
 
 // Derived class handler implementation
-void QGraphicsVideoItem_Paint(QGraphicsVideoItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QGraphicsVideoItem_Paint(QGraphicsVideoItem* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->paint(painter, option, widget);
@@ -197,7 +197,7 @@ void QGraphicsVideoItem_Paint(QGraphicsVideoItem* self, QPainter* painter, QStyl
 }
 
 // Base class handler implementation
-void QGraphicsVideoItem_QBasePaint(QGraphicsVideoItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget) {
+void QGraphicsVideoItem_QBasePaint(QGraphicsVideoItem* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_Paint_IsBase(true);
@@ -274,7 +274,7 @@ void QGraphicsVideoItem_OnTimerEvent(QGraphicsVideoItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QGraphicsVideoItem_ItemChange(QGraphicsVideoItem* self, int change, QVariant* value) {
+QVariant* QGraphicsVideoItem_ItemChange(QGraphicsVideoItem* self, int change, const QVariant* value) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return new QVariant(vqgraphicsvideoitem->itemChange(static_cast<QGraphicsItem::GraphicsItemChange>(change), *value));
@@ -283,7 +283,7 @@ QVariant* QGraphicsVideoItem_ItemChange(QGraphicsVideoItem* self, int change, QV
 }
 
 // Base class handler implementation
-QVariant* QGraphicsVideoItem_QBaseItemChange(QGraphicsVideoItem* self, int change, QVariant* value) {
+QVariant* QGraphicsVideoItem_QBaseItemChange(QGraphicsVideoItem* self, int change, const QVariant* value) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_ItemChange_IsBase(true);
@@ -417,7 +417,7 @@ void QGraphicsVideoItem_OnCustomEvent(QGraphicsVideoItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsVideoItem_ConnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal) {
+void QGraphicsVideoItem_ConnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->connectNotify(*signal);
@@ -427,7 +427,7 @@ void QGraphicsVideoItem_ConnectNotify(QGraphicsVideoItem* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-void QGraphicsVideoItem_QBaseConnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal) {
+void QGraphicsVideoItem_QBaseConnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_ConnectNotify_IsBase(true);
@@ -446,7 +446,7 @@ void QGraphicsVideoItem_OnConnectNotify(QGraphicsVideoItem* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QGraphicsVideoItem_DisconnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal) {
+void QGraphicsVideoItem_DisconnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->disconnectNotify(*signal);
@@ -456,7 +456,7 @@ void QGraphicsVideoItem_DisconnectNotify(QGraphicsVideoItem* self, QMetaMethod* 
 }
 
 // Base class handler implementation
-void QGraphicsVideoItem_QBaseDisconnectNotify(QGraphicsVideoItem* self, QMetaMethod* signal) {
+void QGraphicsVideoItem_QBaseDisconnectNotify(QGraphicsVideoItem* self, const QMetaMethod* signal) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_DisconnectNotify_IsBase(true);
@@ -533,7 +533,7 @@ void QGraphicsVideoItem_OnShape(const QGraphicsVideoItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGraphicsVideoItem_Contains(const QGraphicsVideoItem* self, QPointF* point) {
+bool QGraphicsVideoItem_Contains(const QGraphicsVideoItem* self, const QPointF* point) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return vqgraphicsvideoitem->contains(*point);
@@ -543,7 +543,7 @@ bool QGraphicsVideoItem_Contains(const QGraphicsVideoItem* self, QPointF* point)
 }
 
 // Base class handler implementation
-bool QGraphicsVideoItem_QBaseContains(const QGraphicsVideoItem* self, QPointF* point) {
+bool QGraphicsVideoItem_QBaseContains(const QGraphicsVideoItem* self, const QPointF* point) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_Contains_IsBase(true);
@@ -562,7 +562,7 @@ void QGraphicsVideoItem_OnContains(const QGraphicsVideoItem* self, intptr_t slot
 }
 
 // Derived class handler implementation
-bool QGraphicsVideoItem_CollidesWithItem(const QGraphicsVideoItem* self, QGraphicsItem* other, int mode) {
+bool QGraphicsVideoItem_CollidesWithItem(const QGraphicsVideoItem* self, const QGraphicsItem* other, int mode) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return vqgraphicsvideoitem->collidesWithItem(other, static_cast<Qt::ItemSelectionMode>(mode));
@@ -572,7 +572,7 @@ bool QGraphicsVideoItem_CollidesWithItem(const QGraphicsVideoItem* self, QGraphi
 }
 
 // Base class handler implementation
-bool QGraphicsVideoItem_QBaseCollidesWithItem(const QGraphicsVideoItem* self, QGraphicsItem* other, int mode) {
+bool QGraphicsVideoItem_QBaseCollidesWithItem(const QGraphicsVideoItem* self, const QGraphicsItem* other, int mode) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_CollidesWithItem_IsBase(true);
@@ -591,7 +591,7 @@ void QGraphicsVideoItem_OnCollidesWithItem(const QGraphicsVideoItem* self, intpt
 }
 
 // Derived class handler implementation
-bool QGraphicsVideoItem_CollidesWithPath(const QGraphicsVideoItem* self, QPainterPath* path, int mode) {
+bool QGraphicsVideoItem_CollidesWithPath(const QGraphicsVideoItem* self, const QPainterPath* path, int mode) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return vqgraphicsvideoitem->collidesWithPath(*path, static_cast<Qt::ItemSelectionMode>(mode));
@@ -601,7 +601,7 @@ bool QGraphicsVideoItem_CollidesWithPath(const QGraphicsVideoItem* self, QPainte
 }
 
 // Base class handler implementation
-bool QGraphicsVideoItem_QBaseCollidesWithPath(const QGraphicsVideoItem* self, QPainterPath* path, int mode) {
+bool QGraphicsVideoItem_QBaseCollidesWithPath(const QGraphicsVideoItem* self, const QPainterPath* path, int mode) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_CollidesWithPath_IsBase(true);
@@ -620,7 +620,7 @@ void QGraphicsVideoItem_OnCollidesWithPath(const QGraphicsVideoItem* self, intpt
 }
 
 // Derived class handler implementation
-bool QGraphicsVideoItem_IsObscuredBy(const QGraphicsVideoItem* self, QGraphicsItem* item) {
+bool QGraphicsVideoItem_IsObscuredBy(const QGraphicsVideoItem* self, const QGraphicsItem* item) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return vqgraphicsvideoitem->isObscuredBy(item);
@@ -630,7 +630,7 @@ bool QGraphicsVideoItem_IsObscuredBy(const QGraphicsVideoItem* self, QGraphicsIt
 }
 
 // Base class handler implementation
-bool QGraphicsVideoItem_QBaseIsObscuredBy(const QGraphicsVideoItem* self, QGraphicsItem* item) {
+bool QGraphicsVideoItem_QBaseIsObscuredBy(const QGraphicsVideoItem* self, const QGraphicsItem* item) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_IsObscuredBy_IsBase(true);
@@ -1314,7 +1314,7 @@ void QGraphicsVideoItem_OnSupportsExtension(const QGraphicsVideoItem* self, intp
 }
 
 // Derived class handler implementation
-void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant) {
+void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, const QVariant* variant) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setExtension(static_cast<VirtualQGraphicsVideoItem::Extension>(extension), *variant);
@@ -1324,7 +1324,7 @@ void QGraphicsVideoItem_SetExtension(QGraphicsVideoItem* self, int extension, QV
 }
 
 // Base class handler implementation
-void QGraphicsVideoItem_QBaseSetExtension(QGraphicsVideoItem* self, int extension, QVariant* variant) {
+void QGraphicsVideoItem_QBaseSetExtension(QGraphicsVideoItem* self, int extension, const QVariant* variant) {
     auto* vqgraphicsvideoitem = dynamic_cast<VirtualQGraphicsVideoItem*>(self);
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_SetExtension_IsBase(true);
@@ -1343,7 +1343,7 @@ void QGraphicsVideoItem_OnSetExtension(QGraphicsVideoItem* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-QVariant* QGraphicsVideoItem_Extension(const QGraphicsVideoItem* self, QVariant* variant) {
+QVariant* QGraphicsVideoItem_Extension(const QGraphicsVideoItem* self, const QVariant* variant) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return new QVariant(vqgraphicsvideoitem->extension(*variant));
@@ -1352,7 +1352,7 @@ QVariant* QGraphicsVideoItem_Extension(const QGraphicsVideoItem* self, QVariant*
 }
 
 // Base class handler implementation
-QVariant* QGraphicsVideoItem_QBaseExtension(const QGraphicsVideoItem* self, QVariant* variant) {
+QVariant* QGraphicsVideoItem_QBaseExtension(const QGraphicsVideoItem* self, const QVariant* variant) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_Extension_IsBase(true);
@@ -1486,7 +1486,7 @@ void QGraphicsVideoItem_OnReceivers(const QGraphicsVideoItem* self, intptr_t slo
 }
 
 // Derived class handler implementation
-bool QGraphicsVideoItem_IsSignalConnected(const QGraphicsVideoItem* self, QMetaMethod* signal) {
+bool QGraphicsVideoItem_IsSignalConnected(const QGraphicsVideoItem* self, const QMetaMethod* signal) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         return vqgraphicsvideoitem->isSignalConnected(*signal);
@@ -1496,7 +1496,7 @@ bool QGraphicsVideoItem_IsSignalConnected(const QGraphicsVideoItem* self, QMetaM
 }
 
 // Base class handler implementation
-bool QGraphicsVideoItem_QBaseIsSignalConnected(const QGraphicsVideoItem* self, QMetaMethod* signal) {
+bool QGraphicsVideoItem_QBaseIsSignalConnected(const QGraphicsVideoItem* self, const QMetaMethod* signal) {
     auto* vqgraphicsvideoitem = const_cast<VirtualQGraphicsVideoItem*>(dynamic_cast<const VirtualQGraphicsVideoItem*>(self));
     if (vqgraphicsvideoitem && vqgraphicsvideoitem->isVirtualQGraphicsVideoItem) {
         vqgraphicsvideoitem->setQGraphicsVideoItem_IsSignalConnected_IsBase(true);

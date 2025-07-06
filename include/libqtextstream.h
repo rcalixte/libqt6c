@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include "libqiodevice.h"
-#include "libqiodevicebase.h"
-#include "libqlocale.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qtextstream.html
 
 /// q_textstream_new constructs a new QTextStream object.

@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqlayout.h"
-#include "libqlayoutitem.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qboxlayout.html
 
 /// q_boxlayout_new constructs a new QBoxLayout object.
@@ -746,7 +736,7 @@ QThread* q_boxlayout_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QBoxLayout* self, QThread* thread ```
-void q_boxlayout_move_to_thread(void* self, void* thread);
+bool q_boxlayout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -761,6 +751,13 @@ int32_t q_boxlayout_start_timer(void* self, int interval);
 ///
 /// ``` QBoxLayout* self, int id ```
 void q_boxlayout_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QBoxLayout* self, enum Qt__TimerId id ```
+void q_boxlayout_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -901,6 +898,13 @@ bool q_boxlayout_inherits(void* self, const char* classname);
 ///
 /// ``` QBoxLayout* self ```
 void q_boxlayout_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QBoxLayout* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_boxlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2099,7 +2103,7 @@ QThread* q_hboxlayout_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QHBoxLayout* self, QThread* thread ```
-void q_hboxlayout_move_to_thread(void* self, void* thread);
+bool q_hboxlayout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2114,6 +2118,13 @@ int32_t q_hboxlayout_start_timer(void* self, int interval);
 ///
 /// ``` QHBoxLayout* self, int id ```
 void q_hboxlayout_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QHBoxLayout* self, enum Qt__TimerId id ```
+void q_hboxlayout_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2254,6 +2265,13 @@ bool q_hboxlayout_inherits(void* self, const char* classname);
 ///
 /// ``` QHBoxLayout* self ```
 void q_hboxlayout_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QHBoxLayout* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_hboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -3857,7 +3875,7 @@ QThread* q_vboxlayout_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QVBoxLayout* self, QThread* thread ```
-void q_vboxlayout_move_to_thread(void* self, void* thread);
+bool q_vboxlayout_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -3872,6 +3890,13 @@ int32_t q_vboxlayout_start_timer(void* self, int interval);
 ///
 /// ``` QVBoxLayout* self, int id ```
 void q_vboxlayout_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QVBoxLayout* self, enum Qt__TimerId id ```
+void q_vboxlayout_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -4012,6 +4037,13 @@ bool q_vboxlayout_inherits(void* self, const char* classname);
 ///
 /// ``` QVBoxLayout* self ```
 void q_vboxlayout_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QVBoxLayout* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_vboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

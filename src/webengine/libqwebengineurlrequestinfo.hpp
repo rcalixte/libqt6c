@@ -16,16 +16,9 @@ extern "C" {
 
 #ifdef __cplusplus
 #else
+typedef struct QIODevice QIODevice;
 typedef struct QUrl QUrl;
 typedef struct QWebEngineUrlRequestInfo QWebEngineUrlRequestInfo;
-#endif
-
-#ifdef __cplusplus
-typedef QWebEngineUrlRequestInfo::NavigationType NavigationType; // C++ enum
-typedef QWebEngineUrlRequestInfo::ResourceType ResourceType;     // C++ enum
-#else
-typedef int NavigationType; // C ABI enum
-typedef int ResourceType;   // C ABI enum
 #endif
 
 int QWebEngineUrlRequestInfo_ResourceType(const QWebEngineUrlRequestInfo* self);
@@ -34,10 +27,11 @@ QUrl* QWebEngineUrlRequestInfo_RequestUrl(const QWebEngineUrlRequestInfo* self);
 QUrl* QWebEngineUrlRequestInfo_FirstPartyUrl(const QWebEngineUrlRequestInfo* self);
 QUrl* QWebEngineUrlRequestInfo_Initiator(const QWebEngineUrlRequestInfo* self);
 libqt_string QWebEngineUrlRequestInfo_RequestMethod(const QWebEngineUrlRequestInfo* self);
+QIODevice* QWebEngineUrlRequestInfo_RequestBody(const QWebEngineUrlRequestInfo* self);
 bool QWebEngineUrlRequestInfo_Changed(const QWebEngineUrlRequestInfo* self);
 void QWebEngineUrlRequestInfo_Block(QWebEngineUrlRequestInfo* self, bool shouldBlock);
-void QWebEngineUrlRequestInfo_Redirect(QWebEngineUrlRequestInfo* self, QUrl* url);
-void QWebEngineUrlRequestInfo_SetHttpHeader(QWebEngineUrlRequestInfo* self, libqt_string name, libqt_string value);
+void QWebEngineUrlRequestInfo_Redirect(QWebEngineUrlRequestInfo* self, const QUrl* url);
+void QWebEngineUrlRequestInfo_SetHttpHeader(QWebEngineUrlRequestInfo* self, const libqt_string name, const libqt_string value);
 
 #ifdef __cplusplus
 } /* extern C */

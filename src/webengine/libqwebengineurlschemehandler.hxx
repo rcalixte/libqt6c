@@ -64,8 +64,8 @@ class VirtualQWebEngineUrlSchemeHandler final : public QWebEngineUrlSchemeHandle
     mutable bool qwebengineurlschemehandler_issignalconnected_isbase = false;
 
   public:
-    VirtualQWebEngineUrlSchemeHandler() : QWebEngineUrlSchemeHandler(){};
-    VirtualQWebEngineUrlSchemeHandler(QObject* parent) : QWebEngineUrlSchemeHandler(parent){};
+    VirtualQWebEngineUrlSchemeHandler() : QWebEngineUrlSchemeHandler() {};
+    VirtualQWebEngineUrlSchemeHandler(QObject* parent) : QWebEngineUrlSchemeHandler(parent) {};
 
     ~VirtualQWebEngineUrlSchemeHandler() {
         qwebengineurlschemehandler_metacall_callback = nullptr;
@@ -309,18 +309,18 @@ class VirtualQWebEngineUrlSchemeHandler final : public QWebEngineUrlSchemeHandle
     friend void QWebEngineUrlSchemeHandler_QBaseChildEvent(QWebEngineUrlSchemeHandler* self, QChildEvent* event);
     friend void QWebEngineUrlSchemeHandler_CustomEvent(QWebEngineUrlSchemeHandler* self, QEvent* event);
     friend void QWebEngineUrlSchemeHandler_QBaseCustomEvent(QWebEngineUrlSchemeHandler* self, QEvent* event);
-    friend void QWebEngineUrlSchemeHandler_ConnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal);
-    friend void QWebEngineUrlSchemeHandler_QBaseConnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal);
-    friend void QWebEngineUrlSchemeHandler_DisconnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal);
-    friend void QWebEngineUrlSchemeHandler_QBaseDisconnectNotify(QWebEngineUrlSchemeHandler* self, QMetaMethod* signal);
+    friend void QWebEngineUrlSchemeHandler_ConnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal);
+    friend void QWebEngineUrlSchemeHandler_QBaseConnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal);
+    friend void QWebEngineUrlSchemeHandler_DisconnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal);
+    friend void QWebEngineUrlSchemeHandler_QBaseDisconnectNotify(QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal);
     friend QObject* QWebEngineUrlSchemeHandler_Sender(const QWebEngineUrlSchemeHandler* self);
     friend QObject* QWebEngineUrlSchemeHandler_QBaseSender(const QWebEngineUrlSchemeHandler* self);
     friend int QWebEngineUrlSchemeHandler_SenderSignalIndex(const QWebEngineUrlSchemeHandler* self);
     friend int QWebEngineUrlSchemeHandler_QBaseSenderSignalIndex(const QWebEngineUrlSchemeHandler* self);
     friend int QWebEngineUrlSchemeHandler_Receivers(const QWebEngineUrlSchemeHandler* self, const char* signal);
     friend int QWebEngineUrlSchemeHandler_QBaseReceivers(const QWebEngineUrlSchemeHandler* self, const char* signal);
-    friend bool QWebEngineUrlSchemeHandler_IsSignalConnected(const QWebEngineUrlSchemeHandler* self, QMetaMethod* signal);
-    friend bool QWebEngineUrlSchemeHandler_QBaseIsSignalConnected(const QWebEngineUrlSchemeHandler* self, QMetaMethod* signal);
+    friend bool QWebEngineUrlSchemeHandler_IsSignalConnected(const QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal);
+    friend bool QWebEngineUrlSchemeHandler_QBaseIsSignalConnected(const QWebEngineUrlSchemeHandler* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -132,8 +132,8 @@ QThread* q_validator_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_validator_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_validator_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_validator_start_timer(void* self, int interval) {
@@ -142,6 +142,10 @@ int32_t q_validator_start_timer(void* self, int interval) {
 
 void q_validator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_validator_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_validator_children(void* self) {
@@ -234,6 +238,10 @@ bool q_validator_inherits(void* self, const char* classname) {
 
 void q_validator_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_validator_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_validator_start_timer2(void* self, int interval, int64_t timerType) {
@@ -564,8 +572,8 @@ QThread* q_intvalidator_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_intvalidator_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_intvalidator_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_intvalidator_start_timer(void* self, int interval) {
@@ -574,6 +582,10 @@ int32_t q_intvalidator_start_timer(void* self, int interval) {
 
 void q_intvalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_intvalidator_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_intvalidator_children(void* self) {
@@ -666,6 +678,10 @@ bool q_intvalidator_inherits(void* self, const char* classname) {
 
 void q_intvalidator_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_intvalidator_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_intvalidator_start_timer2(void* self, int interval, int64_t timerType) {
@@ -1032,8 +1048,8 @@ QThread* q_doublevalidator_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_doublevalidator_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_doublevalidator_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_doublevalidator_start_timer(void* self, int interval) {
@@ -1042,6 +1058,10 @@ int32_t q_doublevalidator_start_timer(void* self, int interval) {
 
 void q_doublevalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_doublevalidator_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_doublevalidator_children(void* self) {
@@ -1134,6 +1154,10 @@ bool q_doublevalidator_inherits(void* self, const char* classname) {
 
 void q_doublevalidator_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_doublevalidator_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_doublevalidator_start_timer2(void* self, int interval, int64_t timerType) {
@@ -1432,8 +1456,8 @@ QThread* q_regularexpressionvalidator_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_regularexpressionvalidator_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_regularexpressionvalidator_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_regularexpressionvalidator_start_timer(void* self, int interval) {
@@ -1442,6 +1466,10 @@ int32_t q_regularexpressionvalidator_start_timer(void* self, int interval) {
 
 void q_regularexpressionvalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_regularexpressionvalidator_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_regularexpressionvalidator_children(void* self) {
@@ -1534,6 +1562,10 @@ bool q_regularexpressionvalidator_inherits(void* self, const char* classname) {
 
 void q_regularexpressionvalidator_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_regularexpressionvalidator_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_regularexpressionvalidator_start_timer2(void* self, int interval, int64_t timerType) {

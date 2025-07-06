@@ -36,11 +36,11 @@ libqt_string QWebEngineCookieStore_Tr(const char* s) {
     return _str;
 }
 
-void QWebEngineCookieStore_SetCookie(QWebEngineCookieStore* self, QNetworkCookie* cookie) {
+void QWebEngineCookieStore_SetCookie(QWebEngineCookieStore* self, const QNetworkCookie* cookie) {
     self->setCookie(*cookie);
 }
 
-void QWebEngineCookieStore_DeleteCookie(QWebEngineCookieStore* self, QNetworkCookie* cookie) {
+void QWebEngineCookieStore_DeleteCookie(QWebEngineCookieStore* self, const QNetworkCookie* cookie) {
     self->deleteCookie(*cookie);
 }
 
@@ -56,7 +56,7 @@ void QWebEngineCookieStore_LoadAllCookies(QWebEngineCookieStore* self) {
     self->loadAllCookies();
 }
 
-void QWebEngineCookieStore_CookieAdded(QWebEngineCookieStore* self, QNetworkCookie* cookie) {
+void QWebEngineCookieStore_CookieAdded(QWebEngineCookieStore* self, const QNetworkCookie* cookie) {
     self->cookieAdded(*cookie);
 }
 
@@ -70,7 +70,7 @@ void QWebEngineCookieStore_Connect_CookieAdded(QWebEngineCookieStore* self, intp
     });
 }
 
-void QWebEngineCookieStore_CookieRemoved(QWebEngineCookieStore* self, QNetworkCookie* cookie) {
+void QWebEngineCookieStore_CookieRemoved(QWebEngineCookieStore* self, const QNetworkCookie* cookie) {
     self->cookieRemoved(*cookie);
 }
 
@@ -108,14 +108,26 @@ libqt_string QWebEngineCookieStore_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QWebEngineCookieStore_SetCookie2(QWebEngineCookieStore* self, QNetworkCookie* cookie, QUrl* origin) {
+void QWebEngineCookieStore_SetCookie2(QWebEngineCookieStore* self, const QNetworkCookie* cookie, const QUrl* origin) {
     self->setCookie(*cookie, *origin);
 }
 
-void QWebEngineCookieStore_DeleteCookie2(QWebEngineCookieStore* self, QNetworkCookie* cookie, QUrl* origin) {
+void QWebEngineCookieStore_DeleteCookie2(QWebEngineCookieStore* self, const QNetworkCookie* cookie, const QUrl* origin) {
     self->deleteCookie(*cookie, *origin);
 }
 
 void QWebEngineCookieStore_Delete(QWebEngineCookieStore* self) {
+    delete self;
+}
+
+QWebEngineCookieStore__FilterRequest* QWebEngineCookieStore__FilterRequest_new(const QWebEngineCookieStore__FilterRequest* param1) {
+    return new QWebEngineCookieStore::FilterRequest(*param1);
+}
+
+void QWebEngineCookieStore__FilterRequest_OperatorAssign(QWebEngineCookieStore__FilterRequest* self, const QWebEngineCookieStore__FilterRequest* param1) {
+    self->operator=(*param1);
+}
+
+void QWebEngineCookieStore__FilterRequest_Delete(QWebEngineCookieStore__FilterRequest* self) {
     delete self;
 }

@@ -20,10 +20,10 @@ libqt_string QStandardPaths_WritableLocation(int typeVal) {
 }
 
 libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int typeVal) {
-    QStringList _ret = QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(typeVal));
+    QList<QString> _ret = QStandardPaths::standardLocations(static_cast<QStandardPaths::StandardLocation>(typeVal));
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -35,12 +35,12 @@ libqt_list /* of libqt_string */ QStandardPaths_StandardLocations(int typeVal) {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_string QStandardPaths_Locate(int typeVal, libqt_string fileName) {
+libqt_string QStandardPaths_Locate(int typeVal, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString _ret = QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -53,12 +53,12 @@ libqt_string QStandardPaths_Locate(int typeVal, libqt_string fileName) {
     return _str;
 }
 
-libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int typeVal, libqt_string fileName) {
+libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int typeVal, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
-    QStringList _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString);
+    QList<QString> _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString);
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -70,7 +70,7 @@ libqt_list /* of libqt_string */ QStandardPaths_LocateAll(int typeVal, libqt_str
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -87,7 +87,7 @@ libqt_string QStandardPaths_DisplayName(int typeVal) {
     return _str;
 }
 
-libqt_string QStandardPaths_FindExecutable(libqt_string executableName) {
+libqt_string QStandardPaths_FindExecutable(const libqt_string executableName) {
     QString executableName_QString = QString::fromUtf8(executableName.data, executableName.len);
     QString _ret = QStandardPaths::findExecutable(executableName_QString);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -108,7 +108,7 @@ bool QStandardPaths_IsTestModeEnabled() {
     return QStandardPaths::isTestModeEnabled();
 }
 
-libqt_string QStandardPaths_Locate3(int typeVal, libqt_string fileName, int options) {
+libqt_string QStandardPaths_Locate3(int typeVal, const libqt_string fileName, int options) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QString _ret = QStandardPaths::locate(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -121,12 +121,12 @@ libqt_string QStandardPaths_Locate3(int typeVal, libqt_string fileName, int opti
     return _str;
 }
 
-libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int typeVal, libqt_string fileName, int options) {
+libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int typeVal, const libqt_string fileName, int options) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
-    QStringList _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
+    QList<QString> _ret = QStandardPaths::locateAll(static_cast<QStandardPaths::StandardLocation>(typeVal), fileName_QString, static_cast<QStandardPaths::LocateOptions>(options));
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -138,14 +138,14 @@ libqt_list /* of libqt_string */ QStandardPaths_LocateAll3(int typeVal, libqt_st
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-libqt_string QStandardPaths_FindExecutable2(libqt_string executableName, libqt_list /* of libqt_string */ paths) {
+libqt_string QStandardPaths_FindExecutable2(const libqt_string executableName, const libqt_list /* of libqt_string */ paths) {
     QString executableName_QString = QString::fromUtf8(executableName.data, executableName.len);
-    QStringList paths_QList;
+    QList<QString> paths_QList;
     paths_QList.reserve(paths.len);
     libqt_string* paths_arr = static_cast<libqt_string*>(paths.data.ptr);
     for (size_t i = 0; i < paths.len; ++i) {

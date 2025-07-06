@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qgenericplugin.html
 
 /// q_genericplugin_new constructs a new QGenericPlugin object.
@@ -145,7 +140,7 @@ QThread* q_genericplugin_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGenericPlugin* self, QThread* thread ```
-void q_genericplugin_move_to_thread(void* self, void* thread);
+bool q_genericplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -160,6 +155,13 @@ int32_t q_genericplugin_start_timer(void* self, int interval);
 ///
 /// ``` QGenericPlugin* self, int id ```
 void q_genericplugin_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGenericPlugin* self, enum Qt__TimerId id ```
+void q_genericplugin_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -300,6 +302,13 @@ bool q_genericplugin_inherits(void* self, const char* classname);
 ///
 /// ``` QGenericPlugin* self ```
 void q_genericplugin_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGenericPlugin* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_genericplugin_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

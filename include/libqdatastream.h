@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqiodevice.h"
-#include "libqiodevicebase.h"
-
 /// https://doc.qt.io/qt-6/qdatastream.html
 
 /// q_datastream_new constructs a new QDataStream object.
@@ -204,11 +201,6 @@ void q_datastream_operator_shift_left_with_quint64(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#operator<<)
 ///
-/// ``` QDataStream* self, bool i ```
-void q_datastream_operator_shift_left_with_bool(void* self, bool i);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#operator<<)
-///
 /// ``` QDataStream* self, float f ```
 void q_datastream_operator_shift_left_with_float(void* self, float f);
 
@@ -227,25 +219,30 @@ void q_datastream_operator_shift_left_with_str(void* self, const char* str);
 /// ``` QDataStream* self, char* param1, uint32_t* lenVal ```
 QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#readBytes)
+///
+/// ``` QDataStream* self, char* param1, long long* lenVal ```
+QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVal);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#readRawData)
 ///
-/// ``` QDataStream* self, char* param1, int lenVal ```
-int32_t q_datastream_read_raw_data(void* self, char* param1, int lenVal);
+/// ``` QDataStream* self, char* param1, long long lenVal ```
+long long q_datastream_read_raw_data(void* self, char* param1, long long lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#writeBytes)
 ///
-/// ``` QDataStream* self, const char* param1, uint32_t lenVal ```
-void q_datastream_write_bytes(void* self, const char* param1, uint32_t lenVal);
+/// ``` QDataStream* self, const char* param1, long long lenVal ```
+void q_datastream_write_bytes(void* self, const char* param1, long long lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#writeRawData)
 ///
-/// ``` QDataStream* self, const char* param1, int lenVal ```
-int32_t q_datastream_write_raw_data(void* self, const char* param1, int lenVal);
+/// ``` QDataStream* self, const char* param1, long long lenVal ```
+long long q_datastream_write_raw_data(void* self, const char* param1, long long lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#skipRawData)
 ///
-/// ``` QDataStream* self, int lenVal ```
-int32_t q_datastream_skip_raw_data(void* self, int lenVal);
+/// ``` QDataStream* self, long long lenVal ```
+long long q_datastream_skip_raw_data(void* self, long long lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#startTransaction)
 ///
@@ -319,7 +316,11 @@ typedef enum {
     QDATASTREAM_VERSION_QT_6_2 = 20,
     QDATASTREAM_VERSION_QT_6_3 = 20,
     QDATASTREAM_VERSION_QT_6_4 = 20,
-    QDATASTREAM_VERSION_QT_DEFAULTCOMPILEDVERSION = 20
+    QDATASTREAM_VERSION_QT_6_5 = 20,
+    QDATASTREAM_VERSION_QT_6_6 = 21,
+    QDATASTREAM_VERSION_QT_6_7 = 22,
+    QDATASTREAM_VERSION_QT_6_8 = 22,
+    QDATASTREAM_VERSION_QT_DEFAULTCOMPILEDVERSION = 22
 } QDataStream__Version;
 
 typedef enum {
@@ -331,7 +332,8 @@ typedef enum {
     QDATASTREAM_STATUS_OK = 0,
     QDATASTREAM_STATUS_READPASTEND = 1,
     QDATASTREAM_STATUS_READCORRUPTDATA = 2,
-    QDATASTREAM_STATUS_WRITEFAILED = 3
+    QDATASTREAM_STATUS_WRITEFAILED = 3,
+    QDATASTREAM_STATUS_SIZELIMITEXCEEDED = 4
 } QDataStream__Status;
 
 typedef enum {

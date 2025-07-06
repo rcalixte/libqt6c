@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqmimetype.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qmediaformat.html
 
 /// q_mediaformat_new constructs a new QMediaFormat object.

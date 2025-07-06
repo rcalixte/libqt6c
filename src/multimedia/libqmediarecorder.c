@@ -1,4 +1,5 @@
 #include "../libqevent.hpp"
+#include "../libqiodevice.hpp"
 #include "libqmediacapturesession.hpp"
 #include "libqmediaformat.hpp"
 #include "libqmediametadata.hpp"
@@ -56,6 +57,14 @@ QUrl* q_mediarecorder_output_location(void* self) {
 
 void q_mediarecorder_set_output_location(void* self, void* location) {
     QMediaRecorder_SetOutputLocation((QMediaRecorder*)self, (QUrl*)location);
+}
+
+void q_mediarecorder_set_output_device(void* self, void* device) {
+    QMediaRecorder_SetOutputDevice((QMediaRecorder*)self, (QIODevice*)device);
+}
+
+QIODevice* q_mediarecorder_output_device(void* self) {
+    return QMediaRecorder_OutputDevice((QMediaRecorder*)self);
 }
 
 QUrl* q_mediarecorder_actual_location(void* self) {
@@ -167,6 +176,14 @@ void q_mediarecorder_set_meta_data(void* self, void* metaData) {
 
 void q_mediarecorder_add_meta_data(void* self, void* metaData) {
     QMediaRecorder_AddMetaData((QMediaRecorder*)self, (QMediaMetaData*)metaData);
+}
+
+bool q_mediarecorder_auto_stop(void* self) {
+    return QMediaRecorder_AutoStop((QMediaRecorder*)self);
+}
+
+void q_mediarecorder_set_auto_stop(void* self, bool autoStop) {
+    QMediaRecorder_SetAutoStop((QMediaRecorder*)self, autoStop);
 }
 
 QMediaCaptureSession* q_mediarecorder_capture_session(void* self) {
@@ -313,6 +330,14 @@ void q_mediarecorder_on_audio_sample_rate_changed(void* self, void (*slot)(void*
     QMediaRecorder_Connect_AudioSampleRateChanged((QMediaRecorder*)self, (intptr_t)slot);
 }
 
+void q_mediarecorder_auto_stop_changed(void* self) {
+    QMediaRecorder_AutoStopChanged((QMediaRecorder*)self);
+}
+
+void q_mediarecorder_on_auto_stop_changed(void* self, void (*slot)(void*)) {
+    QMediaRecorder_Connect_AutoStopChanged((QMediaRecorder*)self, (intptr_t)slot);
+}
+
 const char* q_mediarecorder_tr2(const char* s, const char* c) {
     libqt_string _str = QMediaRecorder_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -362,8 +387,8 @@ QThread* q_mediarecorder_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_mediarecorder_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_mediarecorder_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_mediarecorder_start_timer(void* self, int interval) {
@@ -372,6 +397,10 @@ int32_t q_mediarecorder_start_timer(void* self, int interval) {
 
 void q_mediarecorder_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_mediarecorder_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_mediarecorder_children(void* self) {
@@ -464,6 +493,10 @@ bool q_mediarecorder_inherits(void* self, const char* classname) {
 
 void q_mediarecorder_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_mediarecorder_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_mediarecorder_start_timer2(void* self, int interval, int64_t timerType) {

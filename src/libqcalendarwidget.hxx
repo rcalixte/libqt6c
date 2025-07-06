@@ -78,6 +78,7 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     using QCalendarWidget_SenderSignalIndex_Callback = int (*)();
     using QCalendarWidget_Receivers_Callback = int (*)(const QCalendarWidget*, const char*);
     using QCalendarWidget_IsSignalConnected_Callback = bool (*)(const QCalendarWidget*, QMetaMethod*);
+    using QCalendarWidget_GetDecodedMetricF_Callback = double (*)(const QCalendarWidget*, int, int);
 
   protected:
     // Instance callback storage
@@ -141,6 +142,7 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     QCalendarWidget_SenderSignalIndex_Callback qcalendarwidget_sendersignalindex_callback = nullptr;
     QCalendarWidget_Receivers_Callback qcalendarwidget_receivers_callback = nullptr;
     QCalendarWidget_IsSignalConnected_Callback qcalendarwidget_issignalconnected_callback = nullptr;
+    QCalendarWidget_GetDecodedMetricF_Callback qcalendarwidget_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qcalendarwidget_metacall_isbase = false;
@@ -203,10 +205,11 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     mutable bool qcalendarwidget_sendersignalindex_isbase = false;
     mutable bool qcalendarwidget_receivers_isbase = false;
     mutable bool qcalendarwidget_issignalconnected_isbase = false;
+    mutable bool qcalendarwidget_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQCalendarWidget(QWidget* parent) : QCalendarWidget(parent){};
-    VirtualQCalendarWidget() : QCalendarWidget(){};
+    VirtualQCalendarWidget(QWidget* parent) : QCalendarWidget(parent) {};
+    VirtualQCalendarWidget() : QCalendarWidget() {};
 
     ~VirtualQCalendarWidget() {
         qcalendarwidget_metacall_callback = nullptr;
@@ -269,6 +272,7 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
         qcalendarwidget_sendersignalindex_callback = nullptr;
         qcalendarwidget_receivers_callback = nullptr;
         qcalendarwidget_issignalconnected_callback = nullptr;
+        qcalendarwidget_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -332,6 +336,7 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     inline void setQCalendarWidget_SenderSignalIndex_Callback(QCalendarWidget_SenderSignalIndex_Callback cb) { qcalendarwidget_sendersignalindex_callback = cb; }
     inline void setQCalendarWidget_Receivers_Callback(QCalendarWidget_Receivers_Callback cb) { qcalendarwidget_receivers_callback = cb; }
     inline void setQCalendarWidget_IsSignalConnected_Callback(QCalendarWidget_IsSignalConnected_Callback cb) { qcalendarwidget_issignalconnected_callback = cb; }
+    inline void setQCalendarWidget_GetDecodedMetricF_Callback(QCalendarWidget_GetDecodedMetricF_Callback cb) { qcalendarwidget_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQCalendarWidget_Metacall_IsBase(bool value) const { qcalendarwidget_metacall_isbase = value; }
@@ -394,6 +399,7 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     inline void setQCalendarWidget_SenderSignalIndex_IsBase(bool value) const { qcalendarwidget_sendersignalindex_isbase = value; }
     inline void setQCalendarWidget_Receivers_IsBase(bool value) const { qcalendarwidget_receivers_isbase = value; }
     inline void setQCalendarWidget_IsSignalConnected_IsBase(bool value) const { qcalendarwidget_issignalconnected_isbase = value; }
+    inline void setQCalendarWidget_GetDecodedMetricF_IsBase(bool value) const { qcalendarwidget_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1250,6 +1256,22 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qcalendarwidget_getdecodedmetricf_isbase) {
+            qcalendarwidget_getdecodedmetricf_isbase = false;
+            return QCalendarWidget::getDecodedMetricF(metricA, metricB);
+        } else if (qcalendarwidget_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qcalendarwidget_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QCalendarWidget::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend bool QCalendarWidget_Event(QCalendarWidget* self, QEvent* event);
     friend bool QCalendarWidget_QBaseEvent(QCalendarWidget* self, QEvent* event);
@@ -1261,8 +1283,8 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     friend void QCalendarWidget_QBaseResizeEvent(QCalendarWidget* self, QResizeEvent* event);
     friend void QCalendarWidget_KeyPressEvent(QCalendarWidget* self, QKeyEvent* event);
     friend void QCalendarWidget_QBaseKeyPressEvent(QCalendarWidget* self, QKeyEvent* event);
-    friend void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date);
-    friend void QCalendarWidget_QBasePaintCell(const QCalendarWidget* self, QPainter* painter, QRect* rect, QDate* date);
+    friend void QCalendarWidget_PaintCell(const QCalendarWidget* self, QPainter* painter, const QRect* rect, QDate* date);
+    friend void QCalendarWidget_QBasePaintCell(const QCalendarWidget* self, QPainter* painter, const QRect* rect, QDate* date);
     friend void QCalendarWidget_MouseReleaseEvent(QCalendarWidget* self, QMouseEvent* event);
     friend void QCalendarWidget_QBaseMouseReleaseEvent(QCalendarWidget* self, QMouseEvent* event);
     friend void QCalendarWidget_MouseDoubleClickEvent(QCalendarWidget* self, QMouseEvent* event);
@@ -1305,8 +1327,8 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     friend void QCalendarWidget_QBaseShowEvent(QCalendarWidget* self, QShowEvent* event);
     friend void QCalendarWidget_HideEvent(QCalendarWidget* self, QHideEvent* event);
     friend void QCalendarWidget_QBaseHideEvent(QCalendarWidget* self, QHideEvent* event);
-    friend bool QCalendarWidget_NativeEvent(QCalendarWidget* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QCalendarWidget_QBaseNativeEvent(QCalendarWidget* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QCalendarWidget_NativeEvent(QCalendarWidget* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QCalendarWidget_QBaseNativeEvent(QCalendarWidget* self, const libqt_string eventType, void* message, intptr_t* result);
     friend void QCalendarWidget_ChangeEvent(QCalendarWidget* self, QEvent* param1);
     friend void QCalendarWidget_QBaseChangeEvent(QCalendarWidget* self, QEvent* param1);
     friend int QCalendarWidget_Metric(const QCalendarWidget* self, int param1);
@@ -1327,10 +1349,10 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     friend void QCalendarWidget_QBaseChildEvent(QCalendarWidget* self, QChildEvent* event);
     friend void QCalendarWidget_CustomEvent(QCalendarWidget* self, QEvent* event);
     friend void QCalendarWidget_QBaseCustomEvent(QCalendarWidget* self, QEvent* event);
-    friend void QCalendarWidget_ConnectNotify(QCalendarWidget* self, QMetaMethod* signal);
-    friend void QCalendarWidget_QBaseConnectNotify(QCalendarWidget* self, QMetaMethod* signal);
-    friend void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, QMetaMethod* signal);
-    friend void QCalendarWidget_QBaseDisconnectNotify(QCalendarWidget* self, QMetaMethod* signal);
+    friend void QCalendarWidget_ConnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
+    friend void QCalendarWidget_QBaseConnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
+    friend void QCalendarWidget_DisconnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
+    friend void QCalendarWidget_QBaseDisconnectNotify(QCalendarWidget* self, const QMetaMethod* signal);
     friend void QCalendarWidget_UpdateCell(QCalendarWidget* self, QDate* date);
     friend void QCalendarWidget_QBaseUpdateCell(QCalendarWidget* self, QDate* date);
     friend void QCalendarWidget_UpdateCells(QCalendarWidget* self);
@@ -1351,8 +1373,10 @@ class VirtualQCalendarWidget final : public QCalendarWidget {
     friend int QCalendarWidget_QBaseSenderSignalIndex(const QCalendarWidget* self);
     friend int QCalendarWidget_Receivers(const QCalendarWidget* self, const char* signal);
     friend int QCalendarWidget_QBaseReceivers(const QCalendarWidget* self, const char* signal);
-    friend bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, QMetaMethod* signal);
-    friend bool QCalendarWidget_QBaseIsSignalConnected(const QCalendarWidget* self, QMetaMethod* signal);
+    friend bool QCalendarWidget_IsSignalConnected(const QCalendarWidget* self, const QMetaMethod* signal);
+    friend bool QCalendarWidget_QBaseIsSignalConnected(const QCalendarWidget* self, const QMetaMethod* signal);
+    friend double QCalendarWidget_GetDecodedMetricF(const QCalendarWidget* self, int metricA, int metricB);
+    friend double QCalendarWidget_QBaseGetDecodedMetricF(const QCalendarWidget* self, int metricA, int metricB);
 };
 
 #endif

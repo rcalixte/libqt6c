@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbytearrayview.h"
-
 /// https://doc.qt.io/qt-6/qbytearraymatcher.html
 
 /// q_bytearraymatcher_new constructs a new QByteArrayMatcher object.

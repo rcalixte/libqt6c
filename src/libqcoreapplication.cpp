@@ -2,11 +2,13 @@
 #include <QAbstractNativeEventFilter>
 #include <QChildEvent>
 #include <QCoreApplication>
+#include <QDeadlineTimer>
 #include <QEvent>
 #include <QList>
 #include <QMetaMethod>
 #include <QMetaObject>
 #include <QObject>
+#include <QPermission>
 #include <QString>
 #include <QByteArray>
 #include <cstring>
@@ -73,10 +75,10 @@ libqt_string QCoreApplication_Tr(const char* s) {
 }
 
 libqt_list /* of libqt_string */ QCoreApplication_Arguments() {
-    QStringList _ret = QCoreApplication::arguments();
+    QList<QString> _ret = QCoreApplication::arguments();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -88,7 +90,7 @@ libqt_list /* of libqt_string */ QCoreApplication_Arguments() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -101,7 +103,7 @@ bool QCoreApplication_TestAttribute(int attribute) {
     return QCoreApplication::testAttribute(static_cast<Qt::ApplicationAttribute>(attribute));
 }
 
-void QCoreApplication_SetOrganizationDomain(libqt_string orgDomain) {
+void QCoreApplication_SetOrganizationDomain(const libqt_string orgDomain) {
     QString orgDomain_QString = QString::fromUtf8(orgDomain.data, orgDomain.len);
     QCoreApplication::setOrganizationDomain(orgDomain_QString);
 }
@@ -118,7 +120,7 @@ libqt_string QCoreApplication_OrganizationDomain() {
     return _str;
 }
 
-void QCoreApplication_SetOrganizationName(libqt_string orgName) {
+void QCoreApplication_SetOrganizationName(const libqt_string orgName) {
     QString orgName_QString = QString::fromUtf8(orgName.data, orgName.len);
     QCoreApplication::setOrganizationName(orgName_QString);
 }
@@ -135,7 +137,7 @@ libqt_string QCoreApplication_OrganizationName() {
     return _str;
 }
 
-void QCoreApplication_SetApplicationName(libqt_string application) {
+void QCoreApplication_SetApplicationName(const libqt_string application) {
     QString application_QString = QString::fromUtf8(application.data, application.len);
     QCoreApplication::setApplicationName(application_QString);
 }
@@ -152,7 +154,7 @@ libqt_string QCoreApplication_ApplicationName() {
     return _str;
 }
 
-void QCoreApplication_SetApplicationVersion(libqt_string version) {
+void QCoreApplication_SetApplicationVersion(const libqt_string version) {
     QString version_QString = QString::fromUtf8(version.data, version.len);
     QCoreApplication::setApplicationVersion(version_QString);
 }
@@ -191,6 +193,10 @@ void QCoreApplication_ProcessEvents() {
 
 void QCoreApplication_ProcessEvents2(int flags, int maxtime) {
     QCoreApplication::processEvents(static_cast<QEventLoop::ProcessEventsFlags>(flags), static_cast<int>(maxtime));
+}
+
+void QCoreApplication_ProcessEvents3(int flags, QDeadlineTimer* deadline) {
+    QCoreApplication::processEvents(static_cast<QEventLoop::ProcessEventsFlags>(flags), *deadline);
 }
 
 bool QCoreApplication_SendEvent(QObject* receiver, QEvent* event) {
@@ -253,8 +259,12 @@ long long QCoreApplication_ApplicationPid() {
     return static_cast<long long>(QCoreApplication::applicationPid());
 }
 
-void QCoreApplication_SetLibraryPaths(libqt_list /* of libqt_string */ libraryPaths) {
-    QStringList libraryPaths_QList;
+int QCoreApplication_CheckPermission(QCoreApplication* self, const QPermission* permission) {
+    return static_cast<int>(self->checkPermission(*permission));
+}
+
+void QCoreApplication_SetLibraryPaths(const libqt_list /* of libqt_string */ libraryPaths) {
+    QList<QString> libraryPaths_QList;
     libraryPaths_QList.reserve(libraryPaths.len);
     libqt_string* libraryPaths_arr = static_cast<libqt_string*>(libraryPaths.data.ptr);
     for (size_t i = 0; i < libraryPaths.len; ++i) {
@@ -265,10 +275,10 @@ void QCoreApplication_SetLibraryPaths(libqt_list /* of libqt_string */ libraryPa
 }
 
 libqt_list /* of libqt_string */ QCoreApplication_LibraryPaths() {
-    QStringList _ret = QCoreApplication::libraryPaths();
+    QList<QString> _ret = QCoreApplication::libraryPaths();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -280,17 +290,17 @@ libqt_list /* of libqt_string */ QCoreApplication_LibraryPaths() {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QCoreApplication_AddLibraryPath(libqt_string param1) {
+void QCoreApplication_AddLibraryPath(const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     QCoreApplication::addLibraryPath(param1_QString);
 }
 
-void QCoreApplication_RemoveLibraryPath(libqt_string param1) {
+void QCoreApplication_RemoveLibraryPath(const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     QCoreApplication::removeLibraryPath(param1_QString);
 }
@@ -650,7 +660,7 @@ void QCoreApplication_OnCustomEvent(QCoreApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCoreApplication_ConnectNotify(QCoreApplication* self, QMetaMethod* signal) {
+void QCoreApplication_ConnectNotify(QCoreApplication* self, const QMetaMethod* signal) {
     auto* vqcoreapplication = dynamic_cast<VirtualQCoreApplication*>(self);
     if (vqcoreapplication && vqcoreapplication->isVirtualQCoreApplication) {
         vqcoreapplication->connectNotify(*signal);
@@ -660,7 +670,7 @@ void QCoreApplication_ConnectNotify(QCoreApplication* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QCoreApplication_QBaseConnectNotify(QCoreApplication* self, QMetaMethod* signal) {
+void QCoreApplication_QBaseConnectNotify(QCoreApplication* self, const QMetaMethod* signal) {
     auto* vqcoreapplication = dynamic_cast<VirtualQCoreApplication*>(self);
     if (vqcoreapplication && vqcoreapplication->isVirtualQCoreApplication) {
         vqcoreapplication->setQCoreApplication_ConnectNotify_IsBase(true);
@@ -679,7 +689,7 @@ void QCoreApplication_OnConnectNotify(QCoreApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCoreApplication_DisconnectNotify(QCoreApplication* self, QMetaMethod* signal) {
+void QCoreApplication_DisconnectNotify(QCoreApplication* self, const QMetaMethod* signal) {
     auto* vqcoreapplication = dynamic_cast<VirtualQCoreApplication*>(self);
     if (vqcoreapplication && vqcoreapplication->isVirtualQCoreApplication) {
         vqcoreapplication->disconnectNotify(*signal);
@@ -689,7 +699,7 @@ void QCoreApplication_DisconnectNotify(QCoreApplication* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QCoreApplication_QBaseDisconnectNotify(QCoreApplication* self, QMetaMethod* signal) {
+void QCoreApplication_QBaseDisconnectNotify(QCoreApplication* self, const QMetaMethod* signal) {
     auto* vqcoreapplication = dynamic_cast<VirtualQCoreApplication*>(self);
     if (vqcoreapplication && vqcoreapplication->isVirtualQCoreApplication) {
         vqcoreapplication->setQCoreApplication_DisconnectNotify_IsBase(true);
@@ -824,7 +834,7 @@ void QCoreApplication_OnReceivers(const QCoreApplication* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCoreApplication_IsSignalConnected(const QCoreApplication* self, QMetaMethod* signal) {
+bool QCoreApplication_IsSignalConnected(const QCoreApplication* self, const QMetaMethod* signal) {
     auto* vqcoreapplication = const_cast<VirtualQCoreApplication*>(dynamic_cast<const VirtualQCoreApplication*>(self));
     if (vqcoreapplication && vqcoreapplication->isVirtualQCoreApplication) {
         return vqcoreapplication->isSignalConnected(*signal);
@@ -834,7 +844,7 @@ bool QCoreApplication_IsSignalConnected(const QCoreApplication* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QCoreApplication_QBaseIsSignalConnected(const QCoreApplication* self, QMetaMethod* signal) {
+bool QCoreApplication_QBaseIsSignalConnected(const QCoreApplication* self, const QMetaMethod* signal) {
     auto* vqcoreapplication = const_cast<VirtualQCoreApplication*>(dynamic_cast<const VirtualQCoreApplication*>(self));
     if (vqcoreapplication && vqcoreapplication->isVirtualQCoreApplication) {
         vqcoreapplication->setQCoreApplication_IsSignalConnected_IsBase(true);

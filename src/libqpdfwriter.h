@@ -12,21 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqiodevice.h"
-#include "libqmargins.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpagelayout.h"
-#include "libqpageranges.h"
-#include "libqpagesize.h"
-#include "libqpagedpaintdevice.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpdfwriter.html
 
 /// q_pdfwriter_new constructs a new QPdfWriter object.
@@ -95,6 +80,16 @@ const char* q_pdfwriter_creator(void* self);
 /// ``` QPdfWriter* self, const char* creator ```
 void q_pdfwriter_set_creator(void* self, const char* creator);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#documentId)
+///
+/// ``` QPdfWriter* self ```
+QUuid* q_pdfwriter_document_id(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setDocumentId)
+///
+/// ``` QPdfWriter* self, QUuid* documentId ```
+void q_pdfwriter_set_document_id(void* self, void* documentId);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#newPage)
 ///
 /// ``` QPdfWriter* self ```
@@ -138,6 +133,26 @@ char* q_pdfwriter_document_xmp_metadata(void* self);
 ///
 /// ``` QPdfWriter* self, const char* fileName, const char* data ```
 void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const char* data);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#colorModel)
+///
+/// ``` QPdfWriter* self ```
+int64_t q_pdfwriter_color_model(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setColorModel)
+///
+/// ``` QPdfWriter* self, enum QPdfWriter__ColorModel model ```
+void q_pdfwriter_set_color_model(void* self, int64_t model);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#outputIntent)
+///
+/// ``` QPdfWriter* self ```
+QPdfOutputIntent* q_pdfwriter_output_intent(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setOutputIntent)
+///
+/// ``` QPdfWriter* self, QPdfOutputIntent* intent ```
+void q_pdfwriter_set_output_intent(void* self, void* intent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#paintEngine)
 ///
@@ -253,7 +268,7 @@ QThread* q_pdfwriter_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QPdfWriter* self, QThread* thread ```
-void q_pdfwriter_move_to_thread(void* self, void* thread);
+bool q_pdfwriter_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -268,6 +283,13 @@ int32_t q_pdfwriter_start_timer(void* self, int interval);
 ///
 /// ``` QPdfWriter* self, int id ```
 void q_pdfwriter_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QPdfWriter* self, enum Qt__TimerId id ```
+void q_pdfwriter_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -408,6 +430,13 @@ bool q_pdfwriter_inherits(void* self, const char* classname);
 ///
 /// ``` QPdfWriter* self ```
 void q_pdfwriter_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QPdfWriter* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_pdfwriter_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -555,6 +584,13 @@ int32_t q_pdfwriter_depth(void* self);
 ///
 ///
 double q_pdfwriter_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_pdfwriter_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QObject
 ///
@@ -1096,6 +1132,33 @@ bool q_pdfwriter_qbase_is_signal_connected(void* self, void* signal);
 /// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QMetaMethod*) ```
 void q_pdfwriter_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QPdfWriter* self, double (*slot)(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectNameChanged)
@@ -1111,5 +1174,14 @@ void q_pdfwriter_on_object_name_changed(void* self, void (*slot)(void*, const ch
 ///
 /// ``` QPdfWriter* self ```
 void q_pdfwriter_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qpdfwriter.html#types
+
+typedef enum {
+    QPDFWRITER_COLORMODEL_RGB = 0,
+    QPDFWRITER_COLORMODEL_GRAYSCALE = 1,
+    QPDFWRITER_COLORMODEL_CMYK = 2,
+    QPDFWRITER_COLORMODEL_AUTO = 3
+} QPdfWriter__ColorModel;
 
 #endif

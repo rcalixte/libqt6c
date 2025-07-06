@@ -69,7 +69,7 @@ libqt_string QWebChannelAbstractTransport_Tr(const char* s) {
     return _str;
 }
 
-void QWebChannelAbstractTransport_MessageReceived(QWebChannelAbstractTransport* self, QJsonObject* message, QWebChannelAbstractTransport* transport) {
+void QWebChannelAbstractTransport_MessageReceived(QWebChannelAbstractTransport* self, const QJsonObject* message, QWebChannelAbstractTransport* transport) {
     self->messageReceived(*message, transport);
 }
 
@@ -109,7 +109,7 @@ libqt_string QWebChannelAbstractTransport_Tr3(const char* s, const char* c, int 
 }
 
 // Derived class handler implementation
-void QWebChannelAbstractTransport_SendMessage(QWebChannelAbstractTransport* self, QJsonObject* message) {
+void QWebChannelAbstractTransport_SendMessage(QWebChannelAbstractTransport* self, const QJsonObject* message) {
     auto* vqwebchannelabstracttransport = dynamic_cast<VirtualQWebChannelAbstractTransport*>(self);
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->sendMessage(*message);
@@ -119,7 +119,7 @@ void QWebChannelAbstractTransport_SendMessage(QWebChannelAbstractTransport* self
 }
 
 // Base class handler implementation
-void QWebChannelAbstractTransport_QBaseSendMessage(QWebChannelAbstractTransport* self, QJsonObject* message) {
+void QWebChannelAbstractTransport_QBaseSendMessage(QWebChannelAbstractTransport* self, const QJsonObject* message) {
     auto* vqwebchannelabstracttransport = dynamic_cast<VirtualQWebChannelAbstractTransport*>(self);
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->setQWebChannelAbstractTransport_SendMessage_IsBase(true);
@@ -283,7 +283,7 @@ void QWebChannelAbstractTransport_OnCustomEvent(QWebChannelAbstractTransport* se
 }
 
 // Derived class handler implementation
-void QWebChannelAbstractTransport_ConnectNotify(QWebChannelAbstractTransport* self, QMetaMethod* signal) {
+void QWebChannelAbstractTransport_ConnectNotify(QWebChannelAbstractTransport* self, const QMetaMethod* signal) {
     auto* vqwebchannelabstracttransport = dynamic_cast<VirtualQWebChannelAbstractTransport*>(self);
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->connectNotify(*signal);
@@ -293,7 +293,7 @@ void QWebChannelAbstractTransport_ConnectNotify(QWebChannelAbstractTransport* se
 }
 
 // Base class handler implementation
-void QWebChannelAbstractTransport_QBaseConnectNotify(QWebChannelAbstractTransport* self, QMetaMethod* signal) {
+void QWebChannelAbstractTransport_QBaseConnectNotify(QWebChannelAbstractTransport* self, const QMetaMethod* signal) {
     auto* vqwebchannelabstracttransport = dynamic_cast<VirtualQWebChannelAbstractTransport*>(self);
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->setQWebChannelAbstractTransport_ConnectNotify_IsBase(true);
@@ -312,7 +312,7 @@ void QWebChannelAbstractTransport_OnConnectNotify(QWebChannelAbstractTransport* 
 }
 
 // Derived class handler implementation
-void QWebChannelAbstractTransport_DisconnectNotify(QWebChannelAbstractTransport* self, QMetaMethod* signal) {
+void QWebChannelAbstractTransport_DisconnectNotify(QWebChannelAbstractTransport* self, const QMetaMethod* signal) {
     auto* vqwebchannelabstracttransport = dynamic_cast<VirtualQWebChannelAbstractTransport*>(self);
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->disconnectNotify(*signal);
@@ -322,7 +322,7 @@ void QWebChannelAbstractTransport_DisconnectNotify(QWebChannelAbstractTransport*
 }
 
 // Base class handler implementation
-void QWebChannelAbstractTransport_QBaseDisconnectNotify(QWebChannelAbstractTransport* self, QMetaMethod* signal) {
+void QWebChannelAbstractTransport_QBaseDisconnectNotify(QWebChannelAbstractTransport* self, const QMetaMethod* signal) {
     auto* vqwebchannelabstracttransport = dynamic_cast<VirtualQWebChannelAbstractTransport*>(self);
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->setQWebChannelAbstractTransport_DisconnectNotify_IsBase(true);
@@ -428,7 +428,7 @@ void QWebChannelAbstractTransport_OnReceivers(const QWebChannelAbstractTransport
 }
 
 // Derived class handler implementation
-bool QWebChannelAbstractTransport_IsSignalConnected(const QWebChannelAbstractTransport* self, QMetaMethod* signal) {
+bool QWebChannelAbstractTransport_IsSignalConnected(const QWebChannelAbstractTransport* self, const QMetaMethod* signal) {
     auto* vqwebchannelabstracttransport = const_cast<VirtualQWebChannelAbstractTransport*>(dynamic_cast<const VirtualQWebChannelAbstractTransport*>(self));
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         return vqwebchannelabstracttransport->isSignalConnected(*signal);
@@ -438,7 +438,7 @@ bool QWebChannelAbstractTransport_IsSignalConnected(const QWebChannelAbstractTra
 }
 
 // Base class handler implementation
-bool QWebChannelAbstractTransport_QBaseIsSignalConnected(const QWebChannelAbstractTransport* self, QMetaMethod* signal) {
+bool QWebChannelAbstractTransport_QBaseIsSignalConnected(const QWebChannelAbstractTransport* self, const QMetaMethod* signal) {
     auto* vqwebchannelabstracttransport = const_cast<VirtualQWebChannelAbstractTransport*>(dynamic_cast<const VirtualQWebChannelAbstractTransport*>(self));
     if (vqwebchannelabstracttransport && vqwebchannelabstracttransport->isVirtualQWebChannelAbstractTransport) {
         vqwebchannelabstracttransport->setQWebChannelAbstractTransport_IsSignalConnected_IsBase(true);

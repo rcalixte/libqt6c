@@ -12,19 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqiodevice.h"
-#include "../libqiodevicebase.h"
-#include "../libqmetaobject.h"
-#include "libqnetworkaccessmanager.h"
-#include "libqnetworkrequest.h"
-#include "../libqobject.h"
-#include "libqsslconfiguration.h"
-#include "libqsslerror.h"
-#include "libqsslpresharedkeyauthenticator.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qnetworkreply.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -105,8 +92,8 @@ QVariant* q_networkreply_header(void* self, int64_t header);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#hasRawHeader)
 ///
-/// ``` QNetworkReply* self, const char* headerName ```
-bool q_networkreply_has_raw_header(void* self, const char* headerName);
+/// ``` QNetworkReply* self, char* headerName ```
+bool q_networkreply_has_raw_header(void* self, char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#rawHeaderList)
 ///
@@ -115,13 +102,18 @@ const char** q_networkreply_raw_header_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#rawHeader)
 ///
-/// ``` QNetworkReply* self, const char* headerName ```
-char* q_networkreply_raw_header(void* self, const char* headerName);
+/// ``` QNetworkReply* self, char* headerName ```
+char* q_networkreply_raw_header(void* self, char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#rawHeaderPairs)
 ///
 /// ``` QNetworkReply* self ```
 libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#headers)
+///
+/// ``` QNetworkReply* self ```
+QHttpHeaders* q_networkreply_headers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#attribute)
 ///
@@ -743,7 +735,7 @@ QThread* q_networkreply_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QNetworkReply* self, QThread* thread ```
-void q_networkreply_move_to_thread(void* self, void* thread);
+bool q_networkreply_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -758,6 +750,13 @@ int32_t q_networkreply_start_timer(void* self, int interval);
 ///
 /// ``` QNetworkReply* self, int id ```
 void q_networkreply_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QNetworkReply* self, enum Qt__TimerId id ```
+void q_networkreply_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -898,6 +897,13 @@ bool q_networkreply_inherits(void* self, const char* classname);
 ///
 /// ``` QNetworkReply* self ```
 void q_networkreply_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QNetworkReply* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_networkreply_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

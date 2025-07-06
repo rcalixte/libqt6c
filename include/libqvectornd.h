@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmatrix4x4.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qvector2d.html
 
 /// q_vector2d_new constructs a new QVector2D object.

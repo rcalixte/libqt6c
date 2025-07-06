@@ -55,20 +55,6 @@ typedef struct QWizard QWizard;
 typedef struct QWizardPage QWizardPage;
 #endif
 
-#ifdef __cplusplus
-typedef QWizard::WizardButton WizardButton;   // C++ enum
-typedef QWizard::WizardOption WizardOption;   // C++ enum
-typedef QWizard::WizardOptions WizardOptions; // C++ QFlags
-typedef QWizard::WizardPixmap WizardPixmap;   // C++ enum
-typedef QWizard::WizardStyle WizardStyle;     // C++ enum
-#else
-typedef int WizardButton;  // C ABI enum
-typedef int WizardOption;  // C ABI enum
-typedef int WizardOptions; // C ABI QFlags
-typedef int WizardPixmap;  // C ABI enum
-typedef int WizardStyle;   // C ABI enum
-#endif
-
 QWizard* QWizard_new(QWidget* parent);
 QWizard* QWizard_new2();
 QWizard* QWizard_new3(QWidget* parent, int flags);
@@ -95,24 +81,24 @@ bool QWizard_QBaseValidateCurrentPage(QWizard* self);
 int QWizard_NextId(const QWizard* self);
 void QWizard_OnNextId(const QWizard* self, intptr_t slot);
 int QWizard_QBaseNextId(const QWizard* self);
-void QWizard_SetField(QWizard* self, libqt_string name, QVariant* value);
-QVariant* QWizard_Field(const QWizard* self, libqt_string name);
+void QWizard_SetField(QWizard* self, const libqt_string name, const QVariant* value);
+QVariant* QWizard_Field(const QWizard* self, const libqt_string name);
 void QWizard_SetWizardStyle(QWizard* self, int style);
 int QWizard_WizardStyle(const QWizard* self);
 void QWizard_SetOption(QWizard* self, int option);
 bool QWizard_TestOption(const QWizard* self, int option);
 void QWizard_SetOptions(QWizard* self, int options);
 int QWizard_Options(const QWizard* self);
-void QWizard_SetButtonText(QWizard* self, int which, libqt_string text);
+void QWizard_SetButtonText(QWizard* self, int which, const libqt_string text);
 libqt_string QWizard_ButtonText(const QWizard* self, int which);
-void QWizard_SetButtonLayout(QWizard* self, libqt_list /* of int */ layout);
+void QWizard_SetButtonLayout(QWizard* self, const libqt_list /* of int */ layout);
 void QWizard_SetButton(QWizard* self, int which, QAbstractButton* button);
 QAbstractButton* QWizard_Button(const QWizard* self, int which);
 void QWizard_SetTitleFormat(QWizard* self, int format);
 int QWizard_TitleFormat(const QWizard* self);
 void QWizard_SetSubTitleFormat(QWizard* self, int format);
 int QWizard_SubTitleFormat(const QWizard* self);
-void QWizard_SetPixmap(QWizard* self, int which, QPixmap* pixmap);
+void QWizard_SetPixmap(QWizard* self, int which, const QPixmap* pixmap);
 QPixmap* QWizard_Pixmap(const QWizard* self, int which);
 void QWizard_SetSideWidget(QWizard* self, QWidget* widget);
 QWidget* QWizard_SideWidget(const QWizard* self);
@@ -254,9 +240,9 @@ void QWizard_QBaseDropEvent(QWizard* self, QDropEvent* event);
 void QWizard_HideEvent(QWizard* self, QHideEvent* event);
 void QWizard_OnHideEvent(QWizard* self, intptr_t slot);
 void QWizard_QBaseHideEvent(QWizard* self, QHideEvent* event);
-bool QWizard_NativeEvent(QWizard* self, libqt_string eventType, void* message, intptr_t* result);
+bool QWizard_NativeEvent(QWizard* self, const libqt_string eventType, void* message, intptr_t* result);
 void QWizard_OnNativeEvent(QWizard* self, intptr_t slot);
-bool QWizard_QBaseNativeEvent(QWizard* self, libqt_string eventType, void* message, intptr_t* result);
+bool QWizard_QBaseNativeEvent(QWizard* self, const libqt_string eventType, void* message, intptr_t* result);
 void QWizard_ChangeEvent(QWizard* self, QEvent* param1);
 void QWizard_OnChangeEvent(QWizard* self, intptr_t slot);
 void QWizard_QBaseChangeEvent(QWizard* self, QEvent* param1);
@@ -290,12 +276,12 @@ void QWizard_QBaseChildEvent(QWizard* self, QChildEvent* event);
 void QWizard_CustomEvent(QWizard* self, QEvent* event);
 void QWizard_OnCustomEvent(QWizard* self, intptr_t slot);
 void QWizard_QBaseCustomEvent(QWizard* self, QEvent* event);
-void QWizard_ConnectNotify(QWizard* self, QMetaMethod* signal);
+void QWizard_ConnectNotify(QWizard* self, const QMetaMethod* signal);
 void QWizard_OnConnectNotify(QWizard* self, intptr_t slot);
-void QWizard_QBaseConnectNotify(QWizard* self, QMetaMethod* signal);
-void QWizard_DisconnectNotify(QWizard* self, QMetaMethod* signal);
+void QWizard_QBaseConnectNotify(QWizard* self, const QMetaMethod* signal);
+void QWizard_DisconnectNotify(QWizard* self, const QMetaMethod* signal);
 void QWizard_OnDisconnectNotify(QWizard* self, intptr_t slot);
-void QWizard_QBaseDisconnectNotify(QWizard* self, QMetaMethod* signal);
+void QWizard_QBaseDisconnectNotify(QWizard* self, const QMetaMethod* signal);
 void QWizard_AdjustPosition(QWizard* self, QWidget* param1);
 void QWizard_OnAdjustPosition(QWizard* self, intptr_t slot);
 void QWizard_QBaseAdjustPosition(QWizard* self, QWidget* param1);
@@ -323,9 +309,12 @@ int QWizard_QBaseSenderSignalIndex(const QWizard* self);
 int QWizard_Receivers(const QWizard* self, const char* signal);
 void QWizard_OnReceivers(const QWizard* self, intptr_t slot);
 int QWizard_QBaseReceivers(const QWizard* self, const char* signal);
-bool QWizard_IsSignalConnected(const QWizard* self, QMetaMethod* signal);
+bool QWizard_IsSignalConnected(const QWizard* self, const QMetaMethod* signal);
 void QWizard_OnIsSignalConnected(const QWizard* self, intptr_t slot);
-bool QWizard_QBaseIsSignalConnected(const QWizard* self, QMetaMethod* signal);
+bool QWizard_QBaseIsSignalConnected(const QWizard* self, const QMetaMethod* signal);
+double QWizard_GetDecodedMetricF(const QWizard* self, int metricA, int metricB);
+void QWizard_OnGetDecodedMetricF(const QWizard* self, intptr_t slot);
+double QWizard_QBaseGetDecodedMetricF(const QWizard* self, int metricA, int metricB);
 void QWizard_Delete(QWizard* self);
 
 QWizardPage* QWizardPage_new(QWidget* parent);
@@ -336,17 +325,17 @@ int QWizardPage_Metacall(QWizardPage* self, int param1, int param2, void** param
 void QWizardPage_OnMetacall(QWizardPage* self, intptr_t slot);
 int QWizardPage_QBaseMetacall(QWizardPage* self, int param1, int param2, void** param3);
 libqt_string QWizardPage_Tr(const char* s);
-void QWizardPage_SetTitle(QWizardPage* self, libqt_string title);
+void QWizardPage_SetTitle(QWizardPage* self, const libqt_string title);
 libqt_string QWizardPage_Title(const QWizardPage* self);
-void QWizardPage_SetSubTitle(QWizardPage* self, libqt_string subTitle);
+void QWizardPage_SetSubTitle(QWizardPage* self, const libqt_string subTitle);
 libqt_string QWizardPage_SubTitle(const QWizardPage* self);
-void QWizardPage_SetPixmap(QWizardPage* self, int which, QPixmap* pixmap);
+void QWizardPage_SetPixmap(QWizardPage* self, int which, const QPixmap* pixmap);
 QPixmap* QWizardPage_Pixmap(const QWizardPage* self, int which);
 void QWizardPage_SetFinalPage(QWizardPage* self, bool finalPage);
 bool QWizardPage_IsFinalPage(const QWizardPage* self);
 void QWizardPage_SetCommitPage(QWizardPage* self, bool commitPage);
 bool QWizardPage_IsCommitPage(const QWizardPage* self);
-void QWizardPage_SetButtonText(QWizardPage* self, int which, libqt_string text);
+void QWizardPage_SetButtonText(QWizardPage* self, int which, const libqt_string text);
 libqt_string QWizardPage_ButtonText(const QWizardPage* self, int which);
 void QWizardPage_InitializePage(QWizardPage* self);
 void QWizardPage_OnInitializePage(QWizardPage* self, intptr_t slot);
@@ -463,9 +452,9 @@ void QWizardPage_QBaseShowEvent(QWizardPage* self, QShowEvent* event);
 void QWizardPage_HideEvent(QWizardPage* self, QHideEvent* event);
 void QWizardPage_OnHideEvent(QWizardPage* self, intptr_t slot);
 void QWizardPage_QBaseHideEvent(QWizardPage* self, QHideEvent* event);
-bool QWizardPage_NativeEvent(QWizardPage* self, libqt_string eventType, void* message, intptr_t* result);
+bool QWizardPage_NativeEvent(QWizardPage* self, const libqt_string eventType, void* message, intptr_t* result);
 void QWizardPage_OnNativeEvent(QWizardPage* self, intptr_t slot);
-bool QWizardPage_QBaseNativeEvent(QWizardPage* self, libqt_string eventType, void* message, intptr_t* result);
+bool QWizardPage_QBaseNativeEvent(QWizardPage* self, const libqt_string eventType, void* message, intptr_t* result);
 void QWizardPage_ChangeEvent(QWizardPage* self, QEvent* param1);
 void QWizardPage_OnChangeEvent(QWizardPage* self, intptr_t slot);
 void QWizardPage_QBaseChangeEvent(QWizardPage* self, QEvent* param1);
@@ -502,30 +491,30 @@ void QWizardPage_QBaseChildEvent(QWizardPage* self, QChildEvent* event);
 void QWizardPage_CustomEvent(QWizardPage* self, QEvent* event);
 void QWizardPage_OnCustomEvent(QWizardPage* self, intptr_t slot);
 void QWizardPage_QBaseCustomEvent(QWizardPage* self, QEvent* event);
-void QWizardPage_ConnectNotify(QWizardPage* self, QMetaMethod* signal);
+void QWizardPage_ConnectNotify(QWizardPage* self, const QMetaMethod* signal);
 void QWizardPage_OnConnectNotify(QWizardPage* self, intptr_t slot);
-void QWizardPage_QBaseConnectNotify(QWizardPage* self, QMetaMethod* signal);
-void QWizardPage_DisconnectNotify(QWizardPage* self, QMetaMethod* signal);
+void QWizardPage_QBaseConnectNotify(QWizardPage* self, const QMetaMethod* signal);
+void QWizardPage_DisconnectNotify(QWizardPage* self, const QMetaMethod* signal);
 void QWizardPage_OnDisconnectNotify(QWizardPage* self, intptr_t slot);
-void QWizardPage_QBaseDisconnectNotify(QWizardPage* self, QMetaMethod* signal);
-void QWizardPage_SetField(QWizardPage* self, libqt_string name, QVariant* value);
+void QWizardPage_QBaseDisconnectNotify(QWizardPage* self, const QMetaMethod* signal);
+void QWizardPage_SetField(QWizardPage* self, const libqt_string name, const QVariant* value);
 void QWizardPage_OnSetField(QWizardPage* self, intptr_t slot);
-void QWizardPage_QBaseSetField(QWizardPage* self, libqt_string name, QVariant* value);
-QVariant* QWizardPage_Field(const QWizardPage* self, libqt_string name);
+void QWizardPage_QBaseSetField(QWizardPage* self, const libqt_string name, const QVariant* value);
+QVariant* QWizardPage_Field(const QWizardPage* self, const libqt_string name);
 void QWizardPage_OnField(const QWizardPage* self, intptr_t slot);
-QVariant* QWizardPage_QBaseField(const QWizardPage* self, libqt_string name);
-void QWizardPage_RegisterField(QWizardPage* self, libqt_string name, QWidget* widget);
+QVariant* QWizardPage_QBaseField(const QWizardPage* self, const libqt_string name);
+void QWizardPage_RegisterField(QWizardPage* self, const libqt_string name, QWidget* widget);
 void QWizardPage_OnRegisterField(QWizardPage* self, intptr_t slot);
-void QWizardPage_QBaseRegisterField(QWizardPage* self, libqt_string name, QWidget* widget);
+void QWizardPage_QBaseRegisterField(QWizardPage* self, const libqt_string name, QWidget* widget);
 QWizard* QWizardPage_Wizard(const QWizardPage* self);
 void QWizardPage_OnWizard(const QWizardPage* self, intptr_t slot);
 QWizard* QWizardPage_QBaseWizard(const QWizardPage* self);
-void QWizardPage_RegisterField3(QWizardPage* self, libqt_string name, QWidget* widget, const char* property);
+void QWizardPage_RegisterField3(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property);
 void QWizardPage_OnRegisterField3(QWizardPage* self, intptr_t slot);
-void QWizardPage_QBaseRegisterField3(QWizardPage* self, libqt_string name, QWidget* widget, const char* property);
-void QWizardPage_RegisterField4(QWizardPage* self, libqt_string name, QWidget* widget, const char* property, const char* changedSignal);
+void QWizardPage_QBaseRegisterField3(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property);
+void QWizardPage_RegisterField4(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property, const char* changedSignal);
 void QWizardPage_OnRegisterField4(QWizardPage* self, intptr_t slot);
-void QWizardPage_QBaseRegisterField4(QWizardPage* self, libqt_string name, QWidget* widget, const char* property, const char* changedSignal);
+void QWizardPage_QBaseRegisterField4(QWizardPage* self, const libqt_string name, QWidget* widget, const char* property, const char* changedSignal);
 void QWizardPage_UpdateMicroFocus(QWizardPage* self);
 void QWizardPage_OnUpdateMicroFocus(QWizardPage* self, intptr_t slot);
 void QWizardPage_QBaseUpdateMicroFocus(QWizardPage* self);
@@ -550,9 +539,12 @@ int QWizardPage_QBaseSenderSignalIndex(const QWizardPage* self);
 int QWizardPage_Receivers(const QWizardPage* self, const char* signal);
 void QWizardPage_OnReceivers(const QWizardPage* self, intptr_t slot);
 int QWizardPage_QBaseReceivers(const QWizardPage* self, const char* signal);
-bool QWizardPage_IsSignalConnected(const QWizardPage* self, QMetaMethod* signal);
+bool QWizardPage_IsSignalConnected(const QWizardPage* self, const QMetaMethod* signal);
 void QWizardPage_OnIsSignalConnected(const QWizardPage* self, intptr_t slot);
-bool QWizardPage_QBaseIsSignalConnected(const QWizardPage* self, QMetaMethod* signal);
+bool QWizardPage_QBaseIsSignalConnected(const QWizardPage* self, const QMetaMethod* signal);
+double QWizardPage_GetDecodedMetricF(const QWizardPage* self, int metricA, int metricB);
+void QWizardPage_OnGetDecodedMetricF(const QWizardPage* self, intptr_t slot);
+double QWizardPage_QBaseGetDecodedMetricF(const QWizardPage* self, int metricA, int metricB);
 void QWizardPage_Delete(QWizardPage* self);
 
 #ifdef __cplusplus

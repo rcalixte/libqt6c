@@ -61,7 +61,7 @@ class VirtualQActionGroup final : public QActionGroup {
     mutable bool qactiongroup_issignalconnected_isbase = false;
 
   public:
-    VirtualQActionGroup(QObject* parent) : QActionGroup(parent){};
+    VirtualQActionGroup(QObject* parent) : QActionGroup(parent) {};
 
     ~VirtualQActionGroup() {
         qactiongroup_metacall_callback = nullptr;
@@ -293,18 +293,18 @@ class VirtualQActionGroup final : public QActionGroup {
     friend void QActionGroup_QBaseChildEvent(QActionGroup* self, QChildEvent* event);
     friend void QActionGroup_CustomEvent(QActionGroup* self, QEvent* event);
     friend void QActionGroup_QBaseCustomEvent(QActionGroup* self, QEvent* event);
-    friend void QActionGroup_ConnectNotify(QActionGroup* self, QMetaMethod* signal);
-    friend void QActionGroup_QBaseConnectNotify(QActionGroup* self, QMetaMethod* signal);
-    friend void QActionGroup_DisconnectNotify(QActionGroup* self, QMetaMethod* signal);
-    friend void QActionGroup_QBaseDisconnectNotify(QActionGroup* self, QMetaMethod* signal);
+    friend void QActionGroup_ConnectNotify(QActionGroup* self, const QMetaMethod* signal);
+    friend void QActionGroup_QBaseConnectNotify(QActionGroup* self, const QMetaMethod* signal);
+    friend void QActionGroup_DisconnectNotify(QActionGroup* self, const QMetaMethod* signal);
+    friend void QActionGroup_QBaseDisconnectNotify(QActionGroup* self, const QMetaMethod* signal);
     friend QObject* QActionGroup_Sender(const QActionGroup* self);
     friend QObject* QActionGroup_QBaseSender(const QActionGroup* self);
     friend int QActionGroup_SenderSignalIndex(const QActionGroup* self);
     friend int QActionGroup_QBaseSenderSignalIndex(const QActionGroup* self);
     friend int QActionGroup_Receivers(const QActionGroup* self, const char* signal);
     friend int QActionGroup_QBaseReceivers(const QActionGroup* self, const char* signal);
-    friend bool QActionGroup_IsSignalConnected(const QActionGroup* self, QMetaMethod* signal);
-    friend bool QActionGroup_QBaseIsSignalConnected(const QActionGroup* self, QMetaMethod* signal);
+    friend bool QActionGroup_IsSignalConnected(const QActionGroup* self, const QMetaMethod* signal);
+    friend bool QActionGroup_QBaseIsSignalConnected(const QActionGroup* self, const QMetaMethod* signal);
 };
 
 #endif

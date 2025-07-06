@@ -55,12 +55,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QToolButton::ToolButtonPopupMode ToolButtonPopupMode; // C++ enum
-#else
-typedef int ToolButtonPopupMode; // C ABI enum
-#endif
-
 QToolButton* QToolButton_new(QWidget* parent);
 QToolButton* QToolButton_new2();
 QMetaObject* QToolButton_MetaObject(const QToolButton* self);
@@ -117,9 +111,9 @@ void QToolButton_QBaseTimerEvent(QToolButton* self, QTimerEvent* param1);
 void QToolButton_ChangeEvent(QToolButton* self, QEvent* param1);
 void QToolButton_OnChangeEvent(QToolButton* self, intptr_t slot);
 void QToolButton_QBaseChangeEvent(QToolButton* self, QEvent* param1);
-bool QToolButton_HitButton(const QToolButton* self, QPoint* pos);
+bool QToolButton_HitButton(const QToolButton* self, const QPoint* pos);
 void QToolButton_OnHitButton(const QToolButton* self, intptr_t slot);
-bool QToolButton_QBaseHitButton(const QToolButton* self, QPoint* pos);
+bool QToolButton_QBaseHitButton(const QToolButton* self, const QPoint* pos);
 void QToolButton_CheckStateSet(QToolButton* self);
 void QToolButton_OnCheckStateSet(QToolButton* self, intptr_t slot);
 void QToolButton_QBaseCheckStateSet(QToolButton* self);
@@ -200,9 +194,9 @@ void QToolButton_QBaseShowEvent(QToolButton* self, QShowEvent* event);
 void QToolButton_HideEvent(QToolButton* self, QHideEvent* event);
 void QToolButton_OnHideEvent(QToolButton* self, intptr_t slot);
 void QToolButton_QBaseHideEvent(QToolButton* self, QHideEvent* event);
-bool QToolButton_NativeEvent(QToolButton* self, libqt_string eventType, void* message, intptr_t* result);
+bool QToolButton_NativeEvent(QToolButton* self, const libqt_string eventType, void* message, intptr_t* result);
 void QToolButton_OnNativeEvent(QToolButton* self, intptr_t slot);
-bool QToolButton_QBaseNativeEvent(QToolButton* self, libqt_string eventType, void* message, intptr_t* result);
+bool QToolButton_QBaseNativeEvent(QToolButton* self, const libqt_string eventType, void* message, intptr_t* result);
 int QToolButton_Metric(const QToolButton* self, int param1);
 void QToolButton_OnMetric(const QToolButton* self, intptr_t slot);
 int QToolButton_QBaseMetric(const QToolButton* self, int param1);
@@ -233,12 +227,12 @@ void QToolButton_QBaseChildEvent(QToolButton* self, QChildEvent* event);
 void QToolButton_CustomEvent(QToolButton* self, QEvent* event);
 void QToolButton_OnCustomEvent(QToolButton* self, intptr_t slot);
 void QToolButton_QBaseCustomEvent(QToolButton* self, QEvent* event);
-void QToolButton_ConnectNotify(QToolButton* self, QMetaMethod* signal);
+void QToolButton_ConnectNotify(QToolButton* self, const QMetaMethod* signal);
 void QToolButton_OnConnectNotify(QToolButton* self, intptr_t slot);
-void QToolButton_QBaseConnectNotify(QToolButton* self, QMetaMethod* signal);
-void QToolButton_DisconnectNotify(QToolButton* self, QMetaMethod* signal);
+void QToolButton_QBaseConnectNotify(QToolButton* self, const QMetaMethod* signal);
+void QToolButton_DisconnectNotify(QToolButton* self, const QMetaMethod* signal);
 void QToolButton_OnDisconnectNotify(QToolButton* self, intptr_t slot);
-void QToolButton_QBaseDisconnectNotify(QToolButton* self, QMetaMethod* signal);
+void QToolButton_QBaseDisconnectNotify(QToolButton* self, const QMetaMethod* signal);
 void QToolButton_UpdateMicroFocus(QToolButton* self);
 void QToolButton_OnUpdateMicroFocus(QToolButton* self, intptr_t slot);
 void QToolButton_QBaseUpdateMicroFocus(QToolButton* self);
@@ -263,9 +257,12 @@ int QToolButton_QBaseSenderSignalIndex(const QToolButton* self);
 int QToolButton_Receivers(const QToolButton* self, const char* signal);
 void QToolButton_OnReceivers(const QToolButton* self, intptr_t slot);
 int QToolButton_QBaseReceivers(const QToolButton* self, const char* signal);
-bool QToolButton_IsSignalConnected(const QToolButton* self, QMetaMethod* signal);
+bool QToolButton_IsSignalConnected(const QToolButton* self, const QMetaMethod* signal);
 void QToolButton_OnIsSignalConnected(const QToolButton* self, intptr_t slot);
-bool QToolButton_QBaseIsSignalConnected(const QToolButton* self, QMetaMethod* signal);
+bool QToolButton_QBaseIsSignalConnected(const QToolButton* self, const QMetaMethod* signal);
+double QToolButton_GetDecodedMetricF(const QToolButton* self, int metricA, int metricB);
+void QToolButton_OnGetDecodedMetricF(const QToolButton* self, intptr_t slot);
+double QToolButton_QBaseGetDecodedMetricF(const QToolButton* self, int metricA, int metricB);
 void QToolButton_Delete(QToolButton* self);
 
 #ifdef __cplusplus

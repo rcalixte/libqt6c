@@ -77,12 +77,12 @@ void QHPieModelMapper_QBaseChildEvent(QHPieModelMapper* self, QChildEvent* event
 void QHPieModelMapper_CustomEvent(QHPieModelMapper* self, QEvent* event);
 void QHPieModelMapper_OnCustomEvent(QHPieModelMapper* self, intptr_t slot);
 void QHPieModelMapper_QBaseCustomEvent(QHPieModelMapper* self, QEvent* event);
-void QHPieModelMapper_ConnectNotify(QHPieModelMapper* self, QMetaMethod* signal);
+void QHPieModelMapper_ConnectNotify(QHPieModelMapper* self, const QMetaMethod* signal);
 void QHPieModelMapper_OnConnectNotify(QHPieModelMapper* self, intptr_t slot);
-void QHPieModelMapper_QBaseConnectNotify(QHPieModelMapper* self, QMetaMethod* signal);
-void QHPieModelMapper_DisconnectNotify(QHPieModelMapper* self, QMetaMethod* signal);
+void QHPieModelMapper_QBaseConnectNotify(QHPieModelMapper* self, const QMetaMethod* signal);
+void QHPieModelMapper_DisconnectNotify(QHPieModelMapper* self, const QMetaMethod* signal);
 void QHPieModelMapper_OnDisconnectNotify(QHPieModelMapper* self, intptr_t slot);
-void QHPieModelMapper_QBaseDisconnectNotify(QHPieModelMapper* self, QMetaMethod* signal);
+void QHPieModelMapper_QBaseDisconnectNotify(QHPieModelMapper* self, const QMetaMethod* signal);
 int QHPieModelMapper_First(const QHPieModelMapper* self);
 void QHPieModelMapper_OnFirst(const QHPieModelMapper* self, intptr_t slot);
 int QHPieModelMapper_QBaseFirst(const QHPieModelMapper* self);
@@ -122,9 +122,9 @@ int QHPieModelMapper_QBaseSenderSignalIndex(const QHPieModelMapper* self);
 int QHPieModelMapper_Receivers(const QHPieModelMapper* self, const char* signal);
 void QHPieModelMapper_OnReceivers(const QHPieModelMapper* self, intptr_t slot);
 int QHPieModelMapper_QBaseReceivers(const QHPieModelMapper* self, const char* signal);
-bool QHPieModelMapper_IsSignalConnected(const QHPieModelMapper* self, QMetaMethod* signal);
+bool QHPieModelMapper_IsSignalConnected(const QHPieModelMapper* self, const QMetaMethod* signal);
 void QHPieModelMapper_OnIsSignalConnected(const QHPieModelMapper* self, intptr_t slot);
-bool QHPieModelMapper_QBaseIsSignalConnected(const QHPieModelMapper* self, QMetaMethod* signal);
+bool QHPieModelMapper_QBaseIsSignalConnected(const QHPieModelMapper* self, const QMetaMethod* signal);
 void QHPieModelMapper_Delete(QHPieModelMapper* self);
 
 #ifdef __cplusplus

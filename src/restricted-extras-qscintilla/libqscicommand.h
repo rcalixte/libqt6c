@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)

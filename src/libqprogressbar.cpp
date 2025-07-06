@@ -144,7 +144,7 @@ int QProgressBar_TextDirection(const QProgressBar* self) {
     return static_cast<int>(self->textDirection());
 }
 
-void QProgressBar_SetFormat(QProgressBar* self, libqt_string format) {
+void QProgressBar_SetFormat(QProgressBar* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->setFormat(format_QString);
 }
@@ -1244,7 +1244,7 @@ void QProgressBar_OnHideEvent(QProgressBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QProgressBar_NativeEvent(QProgressBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QProgressBar_NativeEvent(QProgressBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqprogressbar = dynamic_cast<VirtualQProgressBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
@@ -1255,7 +1255,7 @@ bool QProgressBar_NativeEvent(QProgressBar* self, libqt_string eventType, void* 
 }
 
 // Base class handler implementation
-bool QProgressBar_QBaseNativeEvent(QProgressBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QProgressBar_QBaseNativeEvent(QProgressBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqprogressbar = dynamic_cast<VirtualQProgressBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
@@ -1623,7 +1623,7 @@ void QProgressBar_OnCustomEvent(QProgressBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProgressBar_ConnectNotify(QProgressBar* self, QMetaMethod* signal) {
+void QProgressBar_ConnectNotify(QProgressBar* self, const QMetaMethod* signal) {
     auto* vqprogressbar = dynamic_cast<VirtualQProgressBar*>(self);
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         vqprogressbar->connectNotify(*signal);
@@ -1633,7 +1633,7 @@ void QProgressBar_ConnectNotify(QProgressBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QProgressBar_QBaseConnectNotify(QProgressBar* self, QMetaMethod* signal) {
+void QProgressBar_QBaseConnectNotify(QProgressBar* self, const QMetaMethod* signal) {
     auto* vqprogressbar = dynamic_cast<VirtualQProgressBar*>(self);
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         vqprogressbar->setQProgressBar_ConnectNotify_IsBase(true);
@@ -1652,7 +1652,7 @@ void QProgressBar_OnConnectNotify(QProgressBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProgressBar_DisconnectNotify(QProgressBar* self, QMetaMethod* signal) {
+void QProgressBar_DisconnectNotify(QProgressBar* self, const QMetaMethod* signal) {
     auto* vqprogressbar = dynamic_cast<VirtualQProgressBar*>(self);
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         vqprogressbar->disconnectNotify(*signal);
@@ -1662,7 +1662,7 @@ void QProgressBar_DisconnectNotify(QProgressBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QProgressBar_QBaseDisconnectNotify(QProgressBar* self, QMetaMethod* signal) {
+void QProgressBar_QBaseDisconnectNotify(QProgressBar* self, const QMetaMethod* signal) {
     auto* vqprogressbar = dynamic_cast<VirtualQProgressBar*>(self);
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         vqprogressbar->setQProgressBar_DisconnectNotify_IsBase(true);
@@ -1913,7 +1913,7 @@ void QProgressBar_OnReceivers(const QProgressBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QProgressBar_IsSignalConnected(const QProgressBar* self, QMetaMethod* signal) {
+bool QProgressBar_IsSignalConnected(const QProgressBar* self, const QMetaMethod* signal) {
     auto* vqprogressbar = const_cast<VirtualQProgressBar*>(dynamic_cast<const VirtualQProgressBar*>(self));
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         return vqprogressbar->isSignalConnected(*signal);
@@ -1923,7 +1923,7 @@ bool QProgressBar_IsSignalConnected(const QProgressBar* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QProgressBar_QBaseIsSignalConnected(const QProgressBar* self, QMetaMethod* signal) {
+bool QProgressBar_QBaseIsSignalConnected(const QProgressBar* self, const QMetaMethod* signal) {
     auto* vqprogressbar = const_cast<VirtualQProgressBar*>(dynamic_cast<const VirtualQProgressBar*>(self));
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         vqprogressbar->setQProgressBar_IsSignalConnected_IsBase(true);
@@ -1938,6 +1938,35 @@ void QProgressBar_OnIsSignalConnected(const QProgressBar* self, intptr_t slot) {
     auto* vqprogressbar = const_cast<VirtualQProgressBar*>(dynamic_cast<const VirtualQProgressBar*>(self));
     if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
         vqprogressbar->setQProgressBar_IsSignalConnected_Callback(reinterpret_cast<VirtualQProgressBar::QProgressBar_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QProgressBar_GetDecodedMetricF(const QProgressBar* self, int metricA, int metricB) {
+    auto* vqprogressbar = const_cast<VirtualQProgressBar*>(dynamic_cast<const VirtualQProgressBar*>(self));
+    if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
+        return vqprogressbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQProgressBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QProgressBar_QBaseGetDecodedMetricF(const QProgressBar* self, int metricA, int metricB) {
+    auto* vqprogressbar = const_cast<VirtualQProgressBar*>(dynamic_cast<const VirtualQProgressBar*>(self));
+    if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
+        vqprogressbar->setQProgressBar_GetDecodedMetricF_IsBase(true);
+        return vqprogressbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQProgressBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QProgressBar_OnGetDecodedMetricF(const QProgressBar* self, intptr_t slot) {
+    auto* vqprogressbar = const_cast<VirtualQProgressBar*>(dynamic_cast<const VirtualQProgressBar*>(self));
+    if (vqprogressbar && vqprogressbar->isVirtualQProgressBar) {
+        vqprogressbar->setQProgressBar_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQProgressBar::QProgressBar_GetDecodedMetricF_Callback>(slot));
     }
 }
 

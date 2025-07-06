@@ -70,7 +70,7 @@ class VirtualQWidgetAction final : public QWidgetAction {
     mutable bool qwidgetaction_issignalconnected_isbase = false;
 
   public:
-    VirtualQWidgetAction(QObject* parent) : QWidgetAction(parent){};
+    VirtualQWidgetAction(QObject* parent) : QWidgetAction(parent) {};
 
     ~VirtualQWidgetAction() {
         qwidgetaction_metacall_callback = nullptr;
@@ -367,10 +367,10 @@ class VirtualQWidgetAction final : public QWidgetAction {
     friend void QWidgetAction_QBaseChildEvent(QWidgetAction* self, QChildEvent* event);
     friend void QWidgetAction_CustomEvent(QWidgetAction* self, QEvent* event);
     friend void QWidgetAction_QBaseCustomEvent(QWidgetAction* self, QEvent* event);
-    friend void QWidgetAction_ConnectNotify(QWidgetAction* self, QMetaMethod* signal);
-    friend void QWidgetAction_QBaseConnectNotify(QWidgetAction* self, QMetaMethod* signal);
-    friend void QWidgetAction_DisconnectNotify(QWidgetAction* self, QMetaMethod* signal);
-    friend void QWidgetAction_QBaseDisconnectNotify(QWidgetAction* self, QMetaMethod* signal);
+    friend void QWidgetAction_ConnectNotify(QWidgetAction* self, const QMetaMethod* signal);
+    friend void QWidgetAction_QBaseConnectNotify(QWidgetAction* self, const QMetaMethod* signal);
+    friend void QWidgetAction_DisconnectNotify(QWidgetAction* self, const QMetaMethod* signal);
+    friend void QWidgetAction_QBaseDisconnectNotify(QWidgetAction* self, const QMetaMethod* signal);
     friend libqt_list /* of QWidget* */ QWidgetAction_CreatedWidgets(const QWidgetAction* self);
     friend libqt_list /* of QWidget* */ QWidgetAction_QBaseCreatedWidgets(const QWidgetAction* self);
     friend QObject* QWidgetAction_Sender(const QWidgetAction* self);
@@ -379,8 +379,8 @@ class VirtualQWidgetAction final : public QWidgetAction {
     friend int QWidgetAction_QBaseSenderSignalIndex(const QWidgetAction* self);
     friend int QWidgetAction_Receivers(const QWidgetAction* self, const char* signal);
     friend int QWidgetAction_QBaseReceivers(const QWidgetAction* self, const char* signal);
-    friend bool QWidgetAction_IsSignalConnected(const QWidgetAction* self, QMetaMethod* signal);
-    friend bool QWidgetAction_QBaseIsSignalConnected(const QWidgetAction* self, QMetaMethod* signal);
+    friend bool QWidgetAction_IsSignalConnected(const QWidgetAction* self, const QMetaMethod* signal);
+    friend bool QWidgetAction_QBaseIsSignalConnected(const QWidgetAction* self, const QMetaMethod* signal);
 };
 
 #endif

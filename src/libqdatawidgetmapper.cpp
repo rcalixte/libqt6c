@@ -89,7 +89,7 @@ QAbstractItemDelegate* QDataWidgetMapper_ItemDelegate(const QDataWidgetMapper* s
     return self->itemDelegate();
 }
 
-void QDataWidgetMapper_SetRootIndex(QDataWidgetMapper* self, QModelIndex* index) {
+void QDataWidgetMapper_SetRootIndex(QDataWidgetMapper* self, const QModelIndex* index) {
     self->setRootIndex(*index);
 }
 
@@ -117,7 +117,7 @@ void QDataWidgetMapper_AddMapping(QDataWidgetMapper* self, QWidget* widget, int 
     self->addMapping(widget, static_cast<int>(section));
 }
 
-void QDataWidgetMapper_AddMapping2(QDataWidgetMapper* self, QWidget* widget, int section, libqt_string propertyName) {
+void QDataWidgetMapper_AddMapping2(QDataWidgetMapper* self, QWidget* widget, int section, const libqt_string propertyName) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     self->addMapping(widget, static_cast<int>(section), propertyName_QByteArray);
 }
@@ -176,7 +176,7 @@ void QDataWidgetMapper_ToPrevious(QDataWidgetMapper* self) {
     self->toPrevious();
 }
 
-void QDataWidgetMapper_SetCurrentModelIndex(QDataWidgetMapper* self, QModelIndex* index) {
+void QDataWidgetMapper_SetCurrentModelIndex(QDataWidgetMapper* self, const QModelIndex* index) {
     self->setCurrentModelIndex(*index);
 }
 
@@ -391,7 +391,7 @@ void QDataWidgetMapper_OnCustomEvent(QDataWidgetMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDataWidgetMapper_ConnectNotify(QDataWidgetMapper* self, QMetaMethod* signal) {
+void QDataWidgetMapper_ConnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal) {
     auto* vqdatawidgetmapper = dynamic_cast<VirtualQDataWidgetMapper*>(self);
     if (vqdatawidgetmapper && vqdatawidgetmapper->isVirtualQDataWidgetMapper) {
         vqdatawidgetmapper->connectNotify(*signal);
@@ -401,7 +401,7 @@ void QDataWidgetMapper_ConnectNotify(QDataWidgetMapper* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QDataWidgetMapper_QBaseConnectNotify(QDataWidgetMapper* self, QMetaMethod* signal) {
+void QDataWidgetMapper_QBaseConnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal) {
     auto* vqdatawidgetmapper = dynamic_cast<VirtualQDataWidgetMapper*>(self);
     if (vqdatawidgetmapper && vqdatawidgetmapper->isVirtualQDataWidgetMapper) {
         vqdatawidgetmapper->setQDataWidgetMapper_ConnectNotify_IsBase(true);
@@ -420,7 +420,7 @@ void QDataWidgetMapper_OnConnectNotify(QDataWidgetMapper* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDataWidgetMapper_DisconnectNotify(QDataWidgetMapper* self, QMetaMethod* signal) {
+void QDataWidgetMapper_DisconnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal) {
     auto* vqdatawidgetmapper = dynamic_cast<VirtualQDataWidgetMapper*>(self);
     if (vqdatawidgetmapper && vqdatawidgetmapper->isVirtualQDataWidgetMapper) {
         vqdatawidgetmapper->disconnectNotify(*signal);
@@ -430,7 +430,7 @@ void QDataWidgetMapper_DisconnectNotify(QDataWidgetMapper* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QDataWidgetMapper_QBaseDisconnectNotify(QDataWidgetMapper* self, QMetaMethod* signal) {
+void QDataWidgetMapper_QBaseDisconnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal) {
     auto* vqdatawidgetmapper = dynamic_cast<VirtualQDataWidgetMapper*>(self);
     if (vqdatawidgetmapper && vqdatawidgetmapper->isVirtualQDataWidgetMapper) {
         vqdatawidgetmapper->setQDataWidgetMapper_DisconnectNotify_IsBase(true);
@@ -536,7 +536,7 @@ void QDataWidgetMapper_OnReceivers(const QDataWidgetMapper* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QDataWidgetMapper_IsSignalConnected(const QDataWidgetMapper* self, QMetaMethod* signal) {
+bool QDataWidgetMapper_IsSignalConnected(const QDataWidgetMapper* self, const QMetaMethod* signal) {
     auto* vqdatawidgetmapper = const_cast<VirtualQDataWidgetMapper*>(dynamic_cast<const VirtualQDataWidgetMapper*>(self));
     if (vqdatawidgetmapper && vqdatawidgetmapper->isVirtualQDataWidgetMapper) {
         return vqdatawidgetmapper->isSignalConnected(*signal);
@@ -546,7 +546,7 @@ bool QDataWidgetMapper_IsSignalConnected(const QDataWidgetMapper* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QDataWidgetMapper_QBaseIsSignalConnected(const QDataWidgetMapper* self, QMetaMethod* signal) {
+bool QDataWidgetMapper_QBaseIsSignalConnected(const QDataWidgetMapper* self, const QMetaMethod* signal) {
     auto* vqdatawidgetmapper = const_cast<VirtualQDataWidgetMapper*>(dynamic_cast<const VirtualQDataWidgetMapper*>(self));
     if (vqdatawidgetmapper && vqdatawidgetmapper->isVirtualQDataWidgetMapper) {
         vqdatawidgetmapper->setQDataWidgetMapper_IsSignalConnected_IsBase(true);

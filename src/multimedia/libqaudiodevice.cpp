@@ -13,7 +13,7 @@ QAudioDevice* QAudioDevice_new() {
     return new QAudioDevice();
 }
 
-QAudioDevice* QAudioDevice_new2(QAudioDevice* other) {
+QAudioDevice* QAudioDevice_new2(const QAudioDevice* other) {
     return new QAudioDevice(*other);
 }
 
@@ -21,15 +21,15 @@ void QAudioDevice_Swap(QAudioDevice* self, QAudioDevice* other) {
     self->swap(*other);
 }
 
-void QAudioDevice_OperatorAssign(QAudioDevice* self, QAudioDevice* other) {
+void QAudioDevice_OperatorAssign(QAudioDevice* self, const QAudioDevice* other) {
     self->operator=(*other);
 }
 
-bool QAudioDevice_OperatorEqual(const QAudioDevice* self, QAudioDevice* other) {
+bool QAudioDevice_OperatorEqual(const QAudioDevice* self, const QAudioDevice* other) {
     return (*self == *other);
 }
 
-bool QAudioDevice_OperatorNotEqual(const QAudioDevice* self, QAudioDevice* other) {
+bool QAudioDevice_OperatorNotEqual(const QAudioDevice* self, const QAudioDevice* other) {
     return (*self != *other);
 }
 
@@ -67,7 +67,7 @@ int QAudioDevice_Mode(const QAudioDevice* self) {
     return static_cast<int>(self->mode());
 }
 
-bool QAudioDevice_IsFormatSupported(const QAudioDevice* self, QAudioFormat* format) {
+bool QAudioDevice_IsFormatSupported(const QAudioDevice* self, const QAudioFormat* format) {
     return self->isFormatSupported(*format);
 }
 
@@ -94,12 +94,12 @@ int QAudioDevice_MaximumChannelCount(const QAudioDevice* self) {
 libqt_list /* of uint16_t */ QAudioDevice_SupportedSampleFormats(const QAudioDevice* self) {
     QList<QAudioFormat::SampleFormat> _ret = self->supportedSampleFormats();
     // Convert QList<> from C++ memory to manually-managed C memory
-    uint16_t* _arr = static_cast<uint16_t*>(malloc(sizeof(uint16_t) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    uint16_t* _arr = static_cast<uint16_t*>(malloc(sizeof(uint16_t) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = static_cast<uint16_t>(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.uint16_ts = _arr;
     return _out;
 }

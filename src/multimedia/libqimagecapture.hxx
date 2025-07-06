@@ -61,8 +61,8 @@ class VirtualQImageCapture final : public QImageCapture {
     mutable bool qimagecapture_issignalconnected_isbase = false;
 
   public:
-    VirtualQImageCapture() : QImageCapture(){};
-    VirtualQImageCapture(QObject* parent) : QImageCapture(parent){};
+    VirtualQImageCapture() : QImageCapture() {};
+    VirtualQImageCapture(QObject* parent) : QImageCapture(parent) {};
 
     ~VirtualQImageCapture() {
         qimagecapture_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQImageCapture final : public QImageCapture {
     friend void QImageCapture_QBaseChildEvent(QImageCapture* self, QChildEvent* event);
     friend void QImageCapture_CustomEvent(QImageCapture* self, QEvent* event);
     friend void QImageCapture_QBaseCustomEvent(QImageCapture* self, QEvent* event);
-    friend void QImageCapture_ConnectNotify(QImageCapture* self, QMetaMethod* signal);
-    friend void QImageCapture_QBaseConnectNotify(QImageCapture* self, QMetaMethod* signal);
-    friend void QImageCapture_DisconnectNotify(QImageCapture* self, QMetaMethod* signal);
-    friend void QImageCapture_QBaseDisconnectNotify(QImageCapture* self, QMetaMethod* signal);
+    friend void QImageCapture_ConnectNotify(QImageCapture* self, const QMetaMethod* signal);
+    friend void QImageCapture_QBaseConnectNotify(QImageCapture* self, const QMetaMethod* signal);
+    friend void QImageCapture_DisconnectNotify(QImageCapture* self, const QMetaMethod* signal);
+    friend void QImageCapture_QBaseDisconnectNotify(QImageCapture* self, const QMetaMethod* signal);
     friend QObject* QImageCapture_Sender(const QImageCapture* self);
     friend QObject* QImageCapture_QBaseSender(const QImageCapture* self);
     friend int QImageCapture_SenderSignalIndex(const QImageCapture* self);
     friend int QImageCapture_QBaseSenderSignalIndex(const QImageCapture* self);
     friend int QImageCapture_Receivers(const QImageCapture* self, const char* signal);
     friend int QImageCapture_QBaseReceivers(const QImageCapture* self, const char* signal);
-    friend bool QImageCapture_IsSignalConnected(const QImageCapture* self, QMetaMethod* signal);
-    friend bool QImageCapture_QBaseIsSignalConnected(const QImageCapture* self, QMetaMethod* signal);
+    friend bool QImageCapture_IsSignalConnected(const QImageCapture* self, const QMetaMethod* signal);
+    friend bool QImageCapture_QBaseIsSignalConnected(const QImageCapture* self, const QMetaMethod* signal);
 };
 
 #endif

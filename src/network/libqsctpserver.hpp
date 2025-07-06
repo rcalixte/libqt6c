@@ -65,12 +65,12 @@ void QSctpServer_QBaseChildEvent(QSctpServer* self, QChildEvent* event);
 void QSctpServer_CustomEvent(QSctpServer* self, QEvent* event);
 void QSctpServer_OnCustomEvent(QSctpServer* self, intptr_t slot);
 void QSctpServer_QBaseCustomEvent(QSctpServer* self, QEvent* event);
-void QSctpServer_ConnectNotify(QSctpServer* self, QMetaMethod* signal);
+void QSctpServer_ConnectNotify(QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_OnConnectNotify(QSctpServer* self, intptr_t slot);
-void QSctpServer_QBaseConnectNotify(QSctpServer* self, QMetaMethod* signal);
-void QSctpServer_DisconnectNotify(QSctpServer* self, QMetaMethod* signal);
+void QSctpServer_QBaseConnectNotify(QSctpServer* self, const QMetaMethod* signal);
+void QSctpServer_DisconnectNotify(QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_OnDisconnectNotify(QSctpServer* self, intptr_t slot);
-void QSctpServer_QBaseDisconnectNotify(QSctpServer* self, QMetaMethod* signal);
+void QSctpServer_QBaseDisconnectNotify(QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_AddPendingConnection(QSctpServer* self, QTcpSocket* socket);
 void QSctpServer_OnAddPendingConnection(QSctpServer* self, intptr_t slot);
 void QSctpServer_QBaseAddPendingConnection(QSctpServer* self, QTcpSocket* socket);
@@ -83,9 +83,9 @@ int QSctpServer_QBaseSenderSignalIndex(const QSctpServer* self);
 int QSctpServer_Receivers(const QSctpServer* self, const char* signal);
 void QSctpServer_OnReceivers(const QSctpServer* self, intptr_t slot);
 int QSctpServer_QBaseReceivers(const QSctpServer* self, const char* signal);
-bool QSctpServer_IsSignalConnected(const QSctpServer* self, QMetaMethod* signal);
+bool QSctpServer_IsSignalConnected(const QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_OnIsSignalConnected(const QSctpServer* self, intptr_t slot);
-bool QSctpServer_QBaseIsSignalConnected(const QSctpServer* self, QMetaMethod* signal);
+bool QSctpServer_QBaseIsSignalConnected(const QSctpServer* self, const QMetaMethod* signal);
 void QSctpServer_Delete(QSctpServer* self);
 
 #ifdef __cplusplus

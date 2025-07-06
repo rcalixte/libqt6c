@@ -83,7 +83,7 @@ QVector3D* QAudioRoom_Dimensions(const QAudioRoom* self) {
     return new QVector3D(self->dimensions());
 }
 
-void QAudioRoom_SetRotation(QAudioRoom* self, QQuaternion* q) {
+void QAudioRoom_SetRotation(QAudioRoom* self, const QQuaternion* q) {
     self->setRotation(*q);
 }
 
@@ -389,7 +389,7 @@ void QAudioRoom_OnCustomEvent(QAudioRoom* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioRoom_ConnectNotify(QAudioRoom* self, QMetaMethod* signal) {
+void QAudioRoom_ConnectNotify(QAudioRoom* self, const QMetaMethod* signal) {
     auto* vqaudioroom = dynamic_cast<VirtualQAudioRoom*>(self);
     if (vqaudioroom && vqaudioroom->isVirtualQAudioRoom) {
         vqaudioroom->connectNotify(*signal);
@@ -399,7 +399,7 @@ void QAudioRoom_ConnectNotify(QAudioRoom* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioRoom_QBaseConnectNotify(QAudioRoom* self, QMetaMethod* signal) {
+void QAudioRoom_QBaseConnectNotify(QAudioRoom* self, const QMetaMethod* signal) {
     auto* vqaudioroom = dynamic_cast<VirtualQAudioRoom*>(self);
     if (vqaudioroom && vqaudioroom->isVirtualQAudioRoom) {
         vqaudioroom->setQAudioRoom_ConnectNotify_IsBase(true);
@@ -418,7 +418,7 @@ void QAudioRoom_OnConnectNotify(QAudioRoom* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAudioRoom_DisconnectNotify(QAudioRoom* self, QMetaMethod* signal) {
+void QAudioRoom_DisconnectNotify(QAudioRoom* self, const QMetaMethod* signal) {
     auto* vqaudioroom = dynamic_cast<VirtualQAudioRoom*>(self);
     if (vqaudioroom && vqaudioroom->isVirtualQAudioRoom) {
         vqaudioroom->disconnectNotify(*signal);
@@ -428,7 +428,7 @@ void QAudioRoom_DisconnectNotify(QAudioRoom* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAudioRoom_QBaseDisconnectNotify(QAudioRoom* self, QMetaMethod* signal) {
+void QAudioRoom_QBaseDisconnectNotify(QAudioRoom* self, const QMetaMethod* signal) {
     auto* vqaudioroom = dynamic_cast<VirtualQAudioRoom*>(self);
     if (vqaudioroom && vqaudioroom->isVirtualQAudioRoom) {
         vqaudioroom->setQAudioRoom_DisconnectNotify_IsBase(true);
@@ -534,7 +534,7 @@ void QAudioRoom_OnReceivers(const QAudioRoom* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAudioRoom_IsSignalConnected(const QAudioRoom* self, QMetaMethod* signal) {
+bool QAudioRoom_IsSignalConnected(const QAudioRoom* self, const QMetaMethod* signal) {
     auto* vqaudioroom = const_cast<VirtualQAudioRoom*>(dynamic_cast<const VirtualQAudioRoom*>(self));
     if (vqaudioroom && vqaudioroom->isVirtualQAudioRoom) {
         return vqaudioroom->isSignalConnected(*signal);
@@ -544,7 +544,7 @@ bool QAudioRoom_IsSignalConnected(const QAudioRoom* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QAudioRoom_QBaseIsSignalConnected(const QAudioRoom* self, QMetaMethod* signal) {
+bool QAudioRoom_QBaseIsSignalConnected(const QAudioRoom* self, const QMetaMethod* signal) {
     auto* vqaudioroom = const_cast<VirtualQAudioRoom*>(dynamic_cast<const VirtualQAudioRoom*>(self));
     if (vqaudioroom && vqaudioroom->isVirtualQAudioRoom) {
         vqaudioroom->setQAudioRoom_IsSignalConnected_IsBase(true);

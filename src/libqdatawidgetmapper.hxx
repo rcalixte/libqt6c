@@ -64,8 +64,8 @@ class VirtualQDataWidgetMapper final : public QDataWidgetMapper {
     mutable bool qdatawidgetmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQDataWidgetMapper() : QDataWidgetMapper(){};
-    VirtualQDataWidgetMapper(QObject* parent) : QDataWidgetMapper(parent){};
+    VirtualQDataWidgetMapper() : QDataWidgetMapper() {};
+    VirtualQDataWidgetMapper(QObject* parent) : QDataWidgetMapper(parent) {};
 
     ~VirtualQDataWidgetMapper() {
         qdatawidgetmapper_metacall_callback = nullptr;
@@ -314,18 +314,18 @@ class VirtualQDataWidgetMapper final : public QDataWidgetMapper {
     friend void QDataWidgetMapper_QBaseChildEvent(QDataWidgetMapper* self, QChildEvent* event);
     friend void QDataWidgetMapper_CustomEvent(QDataWidgetMapper* self, QEvent* event);
     friend void QDataWidgetMapper_QBaseCustomEvent(QDataWidgetMapper* self, QEvent* event);
-    friend void QDataWidgetMapper_ConnectNotify(QDataWidgetMapper* self, QMetaMethod* signal);
-    friend void QDataWidgetMapper_QBaseConnectNotify(QDataWidgetMapper* self, QMetaMethod* signal);
-    friend void QDataWidgetMapper_DisconnectNotify(QDataWidgetMapper* self, QMetaMethod* signal);
-    friend void QDataWidgetMapper_QBaseDisconnectNotify(QDataWidgetMapper* self, QMetaMethod* signal);
+    friend void QDataWidgetMapper_ConnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal);
+    friend void QDataWidgetMapper_QBaseConnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal);
+    friend void QDataWidgetMapper_DisconnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal);
+    friend void QDataWidgetMapper_QBaseDisconnectNotify(QDataWidgetMapper* self, const QMetaMethod* signal);
     friend QObject* QDataWidgetMapper_Sender(const QDataWidgetMapper* self);
     friend QObject* QDataWidgetMapper_QBaseSender(const QDataWidgetMapper* self);
     friend int QDataWidgetMapper_SenderSignalIndex(const QDataWidgetMapper* self);
     friend int QDataWidgetMapper_QBaseSenderSignalIndex(const QDataWidgetMapper* self);
     friend int QDataWidgetMapper_Receivers(const QDataWidgetMapper* self, const char* signal);
     friend int QDataWidgetMapper_QBaseReceivers(const QDataWidgetMapper* self, const char* signal);
-    friend bool QDataWidgetMapper_IsSignalConnected(const QDataWidgetMapper* self, QMetaMethod* signal);
-    friend bool QDataWidgetMapper_QBaseIsSignalConnected(const QDataWidgetMapper* self, QMetaMethod* signal);
+    friend bool QDataWidgetMapper_IsSignalConnected(const QDataWidgetMapper* self, const QMetaMethod* signal);
+    friend bool QDataWidgetMapper_QBaseIsSignalConnected(const QDataWidgetMapper* self, const QMetaMethod* signal);
 };
 
 #endif

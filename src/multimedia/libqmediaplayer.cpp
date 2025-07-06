@@ -1,3 +1,4 @@
+#include <QAudioBufferOutput>
 #include <QAudioOutput>
 #include <QChildEvent>
 #include <QEvent>
@@ -78,12 +79,12 @@ libqt_string QMediaPlayer_Tr(const char* s) {
 libqt_list /* of QMediaMetaData* */ QMediaPlayer_AudioTracks(const QMediaPlayer* self) {
     QList<QMediaMetaData> _ret = self->audioTracks();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QMediaMetaData** _arr = static_cast<QMediaMetaData**>(malloc(sizeof(QMediaMetaData*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QMediaMetaData** _arr = static_cast<QMediaMetaData**>(malloc(sizeof(QMediaMetaData*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QMediaMetaData(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -91,12 +92,12 @@ libqt_list /* of QMediaMetaData* */ QMediaPlayer_AudioTracks(const QMediaPlayer*
 libqt_list /* of QMediaMetaData* */ QMediaPlayer_VideoTracks(const QMediaPlayer* self) {
     QList<QMediaMetaData> _ret = self->videoTracks();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QMediaMetaData** _arr = static_cast<QMediaMetaData**>(malloc(sizeof(QMediaMetaData*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QMediaMetaData** _arr = static_cast<QMediaMetaData**>(malloc(sizeof(QMediaMetaData*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QMediaMetaData(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -104,12 +105,12 @@ libqt_list /* of QMediaMetaData* */ QMediaPlayer_VideoTracks(const QMediaPlayer*
 libqt_list /* of QMediaMetaData* */ QMediaPlayer_SubtitleTracks(const QMediaPlayer* self) {
     QList<QMediaMetaData> _ret = self->subtitleTracks();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QMediaMetaData** _arr = static_cast<QMediaMetaData**>(malloc(sizeof(QMediaMetaData*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QMediaMetaData** _arr = static_cast<QMediaMetaData**>(malloc(sizeof(QMediaMetaData*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QMediaMetaData(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -136,6 +137,14 @@ void QMediaPlayer_SetActiveVideoTrack(QMediaPlayer* self, int index) {
 
 void QMediaPlayer_SetActiveSubtitleTrack(QMediaPlayer* self, int index) {
     self->setActiveSubtitleTrack(static_cast<int>(index));
+}
+
+void QMediaPlayer_SetAudioBufferOutput(QMediaPlayer* self, QAudioBufferOutput* output) {
+    self->setAudioBufferOutput(output);
+}
+
+QAudioBufferOutput* QMediaPlayer_AudioBufferOutput(const QMediaPlayer* self) {
+    return self->audioBufferOutput();
 }
 
 void QMediaPlayer_SetAudioOutput(QMediaPlayer* self, QAudioOutput* output) {
@@ -210,6 +219,10 @@ double QMediaPlayer_PlaybackRate(const QMediaPlayer* self) {
     return static_cast<double>(self->playbackRate());
 }
 
+bool QMediaPlayer_IsPlaying(const QMediaPlayer* self) {
+    return self->isPlaying();
+}
+
 int QMediaPlayer_Loops(const QMediaPlayer* self) {
     return self->loops();
 }
@@ -262,7 +275,7 @@ void QMediaPlayer_SetPlaybackRate(QMediaPlayer* self, double rate) {
     self->setPlaybackRate(static_cast<qreal>(rate));
 }
 
-void QMediaPlayer_SetSource(QMediaPlayer* self, QUrl* source) {
+void QMediaPlayer_SetSource(QMediaPlayer* self, const QUrl* source) {
     self->setSource(*source);
 }
 
@@ -270,7 +283,7 @@ void QMediaPlayer_SetSourceDevice(QMediaPlayer* self, QIODevice* device) {
     self->setSourceDevice(device);
 }
 
-void QMediaPlayer_SourceChanged(QMediaPlayer* self, QUrl* media) {
+void QMediaPlayer_SourceChanged(QMediaPlayer* self, const QUrl* media) {
     self->sourceChanged(*media);
 }
 
@@ -380,6 +393,18 @@ void QMediaPlayer_Connect_SeekableChanged(QMediaPlayer* self, intptr_t slot) {
     });
 }
 
+void QMediaPlayer_PlayingChanged(QMediaPlayer* self, bool playing) {
+    self->playingChanged(playing);
+}
+
+void QMediaPlayer_Connect_PlayingChanged(QMediaPlayer* self, intptr_t slot) {
+    void (*slotFunc)(QMediaPlayer*, bool) = reinterpret_cast<void (*)(QMediaPlayer*, bool)>(slot);
+    QMediaPlayer::connect(self, &QMediaPlayer::playingChanged, [self, slotFunc](bool playing) {
+        bool sigval1 = playing;
+        slotFunc(self, sigval1);
+    });
+}
+
 void QMediaPlayer_PlaybackRateChanged(QMediaPlayer* self, double rate) {
     self->playbackRateChanged(static_cast<qreal>(rate));
 }
@@ -436,6 +461,17 @@ void QMediaPlayer_Connect_AudioOutputChanged(QMediaPlayer* self, intptr_t slot) 
     });
 }
 
+void QMediaPlayer_AudioBufferOutputChanged(QMediaPlayer* self) {
+    self->audioBufferOutputChanged();
+}
+
+void QMediaPlayer_Connect_AudioBufferOutputChanged(QMediaPlayer* self, intptr_t slot) {
+    void (*slotFunc)(QMediaPlayer*) = reinterpret_cast<void (*)(QMediaPlayer*)>(slot);
+    QMediaPlayer::connect(self, &QMediaPlayer::audioBufferOutputChanged, [self, slotFunc]() {
+        slotFunc(self);
+    });
+}
+
 void QMediaPlayer_TracksChanged(QMediaPlayer* self) {
     self->tracksChanged();
 }
@@ -469,7 +505,7 @@ void QMediaPlayer_Connect_ErrorChanged(QMediaPlayer* self, intptr_t slot) {
     });
 }
 
-void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int errorVal, libqt_string errorString) {
+void QMediaPlayer_ErrorOccurred(QMediaPlayer* self, int errorVal, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     self->errorOccurred(static_cast<QMediaPlayer::Error>(errorVal), errorString_QString);
 }
@@ -515,7 +551,7 @@ libqt_string QMediaPlayer_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QMediaPlayer_SetSourceDevice2(QMediaPlayer* self, QIODevice* device, QUrl* sourceUrl) {
+void QMediaPlayer_SetSourceDevice2(QMediaPlayer* self, QIODevice* device, const QUrl* sourceUrl) {
     self->setSourceDevice(device, *sourceUrl);
 }
 
@@ -665,7 +701,7 @@ void QMediaPlayer_OnCustomEvent(QMediaPlayer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMediaPlayer_ConnectNotify(QMediaPlayer* self, QMetaMethod* signal) {
+void QMediaPlayer_ConnectNotify(QMediaPlayer* self, const QMetaMethod* signal) {
     auto* vqmediaplayer = dynamic_cast<VirtualQMediaPlayer*>(self);
     if (vqmediaplayer && vqmediaplayer->isVirtualQMediaPlayer) {
         vqmediaplayer->connectNotify(*signal);
@@ -675,7 +711,7 @@ void QMediaPlayer_ConnectNotify(QMediaPlayer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMediaPlayer_QBaseConnectNotify(QMediaPlayer* self, QMetaMethod* signal) {
+void QMediaPlayer_QBaseConnectNotify(QMediaPlayer* self, const QMetaMethod* signal) {
     auto* vqmediaplayer = dynamic_cast<VirtualQMediaPlayer*>(self);
     if (vqmediaplayer && vqmediaplayer->isVirtualQMediaPlayer) {
         vqmediaplayer->setQMediaPlayer_ConnectNotify_IsBase(true);
@@ -694,7 +730,7 @@ void QMediaPlayer_OnConnectNotify(QMediaPlayer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMediaPlayer_DisconnectNotify(QMediaPlayer* self, QMetaMethod* signal) {
+void QMediaPlayer_DisconnectNotify(QMediaPlayer* self, const QMetaMethod* signal) {
     auto* vqmediaplayer = dynamic_cast<VirtualQMediaPlayer*>(self);
     if (vqmediaplayer && vqmediaplayer->isVirtualQMediaPlayer) {
         vqmediaplayer->disconnectNotify(*signal);
@@ -704,7 +740,7 @@ void QMediaPlayer_DisconnectNotify(QMediaPlayer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMediaPlayer_QBaseDisconnectNotify(QMediaPlayer* self, QMetaMethod* signal) {
+void QMediaPlayer_QBaseDisconnectNotify(QMediaPlayer* self, const QMetaMethod* signal) {
     auto* vqmediaplayer = dynamic_cast<VirtualQMediaPlayer*>(self);
     if (vqmediaplayer && vqmediaplayer->isVirtualQMediaPlayer) {
         vqmediaplayer->setQMediaPlayer_DisconnectNotify_IsBase(true);
@@ -810,7 +846,7 @@ void QMediaPlayer_OnReceivers(const QMediaPlayer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMediaPlayer_IsSignalConnected(const QMediaPlayer* self, QMetaMethod* signal) {
+bool QMediaPlayer_IsSignalConnected(const QMediaPlayer* self, const QMetaMethod* signal) {
     auto* vqmediaplayer = const_cast<VirtualQMediaPlayer*>(dynamic_cast<const VirtualQMediaPlayer*>(self));
     if (vqmediaplayer && vqmediaplayer->isVirtualQMediaPlayer) {
         return vqmediaplayer->isSignalConnected(*signal);
@@ -820,7 +856,7 @@ bool QMediaPlayer_IsSignalConnected(const QMediaPlayer* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QMediaPlayer_QBaseIsSignalConnected(const QMediaPlayer* self, QMetaMethod* signal) {
+bool QMediaPlayer_QBaseIsSignalConnected(const QMediaPlayer* self, const QMetaMethod* signal) {
     auto* vqmediaplayer = const_cast<VirtualQMediaPlayer*>(dynamic_cast<const VirtualQMediaPlayer*>(self));
     if (vqmediaplayer && vqmediaplayer->isVirtualQMediaPlayer) {
         vqmediaplayer->setQMediaPlayer_IsSignalConnected_IsBase(true);

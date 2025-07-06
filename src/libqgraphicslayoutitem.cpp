@@ -19,7 +19,7 @@ QGraphicsLayoutItem* QGraphicsLayoutItem_new3(QGraphicsLayoutItem* parent, bool 
     return new VirtualQGraphicsLayoutItem(parent, isLayout);
 }
 
-void QGraphicsLayoutItem_SetSizePolicy(QGraphicsLayoutItem* self, QSizePolicy* policy) {
+void QGraphicsLayoutItem_SetSizePolicy(QGraphicsLayoutItem* self, const QSizePolicy* policy) {
     self->setSizePolicy(*policy);
 }
 
@@ -31,7 +31,7 @@ QSizePolicy* QGraphicsLayoutItem_SizePolicy(const QGraphicsLayoutItem* self) {
     return new QSizePolicy(self->sizePolicy());
 }
 
-void QGraphicsLayoutItem_SetMinimumSize(QGraphicsLayoutItem* self, QSizeF* size) {
+void QGraphicsLayoutItem_SetMinimumSize(QGraphicsLayoutItem* self, const QSizeF* size) {
     self->setMinimumSize(*size);
 }
 
@@ -59,7 +59,7 @@ double QGraphicsLayoutItem_MinimumHeight(const QGraphicsLayoutItem* self) {
     return static_cast<double>(self->minimumHeight());
 }
 
-void QGraphicsLayoutItem_SetPreferredSize(QGraphicsLayoutItem* self, QSizeF* size) {
+void QGraphicsLayoutItem_SetPreferredSize(QGraphicsLayoutItem* self, const QSizeF* size) {
     self->setPreferredSize(*size);
 }
 
@@ -87,7 +87,7 @@ double QGraphicsLayoutItem_PreferredHeight(const QGraphicsLayoutItem* self) {
     return static_cast<double>(self->preferredHeight());
 }
 
-void QGraphicsLayoutItem_SetMaximumSize(QGraphicsLayoutItem* self, QSizeF* size) {
+void QGraphicsLayoutItem_SetMaximumSize(QGraphicsLayoutItem* self, const QSizeF* size) {
     self->setMaximumSize(*size);
 }
 
@@ -151,12 +151,12 @@ void QGraphicsLayoutItem_SetSizePolicy3(QGraphicsLayoutItem* self, int hPolicy, 
     self->setSizePolicy(static_cast<QSizePolicy::Policy>(hPolicy), static_cast<QSizePolicy::Policy>(vPolicy), static_cast<QSizePolicy::ControlType>(controlType));
 }
 
-QSizeF* QGraphicsLayoutItem_EffectiveSizeHint2(const QGraphicsLayoutItem* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLayoutItem_EffectiveSizeHint2(const QGraphicsLayoutItem* self, int which, const QSizeF* constraint) {
     return new QSizeF(self->effectiveSizeHint(static_cast<Qt::SizeHint>(which), *constraint));
 }
 
 // Derived class handler implementation
-void QGraphicsLayoutItem_SetGeometry(QGraphicsLayoutItem* self, QRectF* rect) {
+void QGraphicsLayoutItem_SetGeometry(QGraphicsLayoutItem* self, const QRectF* rect) {
     auto* vqgraphicslayoutitem = dynamic_cast<VirtualQGraphicsLayoutItem*>(self);
     if (vqgraphicslayoutitem && vqgraphicslayoutitem->isVirtualQGraphicsLayoutItem) {
         vqgraphicslayoutitem->setGeometry(*rect);
@@ -166,7 +166,7 @@ void QGraphicsLayoutItem_SetGeometry(QGraphicsLayoutItem* self, QRectF* rect) {
 }
 
 // Base class handler implementation
-void QGraphicsLayoutItem_QBaseSetGeometry(QGraphicsLayoutItem* self, QRectF* rect) {
+void QGraphicsLayoutItem_QBaseSetGeometry(QGraphicsLayoutItem* self, const QRectF* rect) {
     auto* vqgraphicslayoutitem = dynamic_cast<VirtualQGraphicsLayoutItem*>(self);
     if (vqgraphicslayoutitem && vqgraphicslayoutitem->isVirtualQGraphicsLayoutItem) {
         vqgraphicslayoutitem->setQGraphicsLayoutItem_SetGeometry_IsBase(true);
@@ -272,7 +272,7 @@ void QGraphicsLayoutItem_OnIsEmpty(const QGraphicsLayoutItem* self, intptr_t slo
 }
 
 // Derived class handler implementation
-QSizeF* QGraphicsLayoutItem_SizeHint(const QGraphicsLayoutItem* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLayoutItem_SizeHint(const QGraphicsLayoutItem* self, int which, const QSizeF* constraint) {
     auto* vqgraphicslayoutitem = const_cast<VirtualQGraphicsLayoutItem*>(dynamic_cast<const VirtualQGraphicsLayoutItem*>(self));
     if (vqgraphicslayoutitem && vqgraphicslayoutitem->isVirtualQGraphicsLayoutItem) {
         return new QSizeF(vqgraphicslayoutitem->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -281,7 +281,7 @@ QSizeF* QGraphicsLayoutItem_SizeHint(const QGraphicsLayoutItem* self, int which,
 }
 
 // Base class handler implementation
-QSizeF* QGraphicsLayoutItem_QBaseSizeHint(const QGraphicsLayoutItem* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLayoutItem_QBaseSizeHint(const QGraphicsLayoutItem* self, int which, const QSizeF* constraint) {
     auto* vqgraphicslayoutitem = const_cast<VirtualQGraphicsLayoutItem*>(dynamic_cast<const VirtualQGraphicsLayoutItem*>(self));
     if (vqgraphicslayoutitem && vqgraphicslayoutitem->isVirtualQGraphicsLayoutItem) {
         vqgraphicslayoutitem->setQGraphicsLayoutItem_SizeHint_IsBase(true);

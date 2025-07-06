@@ -118,8 +118,8 @@ class VirtualQIODevice final : public QIODevice {
     mutable bool qiodevice_issignalconnected_isbase = false;
 
   public:
-    VirtualQIODevice() : QIODevice(){};
-    VirtualQIODevice(QObject* parent) : QIODevice(parent){};
+    VirtualQIODevice() : QIODevice() {};
+    VirtualQIODevice(QObject* parent) : QIODevice(parent) {};
 
     ~VirtualQIODevice() {
         qiodevice_metacall_callback = nullptr;
@@ -685,22 +685,22 @@ class VirtualQIODevice final : public QIODevice {
     friend void QIODevice_QBaseChildEvent(QIODevice* self, QChildEvent* event);
     friend void QIODevice_CustomEvent(QIODevice* self, QEvent* event);
     friend void QIODevice_QBaseCustomEvent(QIODevice* self, QEvent* event);
-    friend void QIODevice_ConnectNotify(QIODevice* self, QMetaMethod* signal);
-    friend void QIODevice_QBaseConnectNotify(QIODevice* self, QMetaMethod* signal);
-    friend void QIODevice_DisconnectNotify(QIODevice* self, QMetaMethod* signal);
-    friend void QIODevice_QBaseDisconnectNotify(QIODevice* self, QMetaMethod* signal);
+    friend void QIODevice_ConnectNotify(QIODevice* self, const QMetaMethod* signal);
+    friend void QIODevice_QBaseConnectNotify(QIODevice* self, const QMetaMethod* signal);
+    friend void QIODevice_DisconnectNotify(QIODevice* self, const QMetaMethod* signal);
+    friend void QIODevice_QBaseDisconnectNotify(QIODevice* self, const QMetaMethod* signal);
     friend void QIODevice_SetOpenMode(QIODevice* self, int openMode);
     friend void QIODevice_QBaseSetOpenMode(QIODevice* self, int openMode);
-    friend void QIODevice_SetErrorString(QIODevice* self, libqt_string errorString);
-    friend void QIODevice_QBaseSetErrorString(QIODevice* self, libqt_string errorString);
+    friend void QIODevice_SetErrorString(QIODevice* self, const libqt_string errorString);
+    friend void QIODevice_QBaseSetErrorString(QIODevice* self, const libqt_string errorString);
     friend QObject* QIODevice_Sender(const QIODevice* self);
     friend QObject* QIODevice_QBaseSender(const QIODevice* self);
     friend int QIODevice_SenderSignalIndex(const QIODevice* self);
     friend int QIODevice_QBaseSenderSignalIndex(const QIODevice* self);
     friend int QIODevice_Receivers(const QIODevice* self, const char* signal);
     friend int QIODevice_QBaseReceivers(const QIODevice* self, const char* signal);
-    friend bool QIODevice_IsSignalConnected(const QIODevice* self, QMetaMethod* signal);
-    friend bool QIODevice_QBaseIsSignalConnected(const QIODevice* self, QMetaMethod* signal);
+    friend bool QIODevice_IsSignalConnected(const QIODevice* self, const QMetaMethod* signal);
+    friend bool QIODevice_QBaseIsSignalConnected(const QIODevice* self, const QMetaMethod* signal);
 };
 
 #endif

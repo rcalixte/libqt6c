@@ -1256,7 +1256,7 @@ void QPrintPreviewDialog_OnHideEvent(QPrintPreviewDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPrintPreviewDialog_NativeEvent(QPrintPreviewDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPrintPreviewDialog_NativeEvent(QPrintPreviewDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqprintpreviewdialog = dynamic_cast<VirtualQPrintPreviewDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
@@ -1267,7 +1267,7 @@ bool QPrintPreviewDialog_NativeEvent(QPrintPreviewDialog* self, libqt_string eve
 }
 
 // Base class handler implementation
-bool QPrintPreviewDialog_QBaseNativeEvent(QPrintPreviewDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QPrintPreviewDialog_QBaseNativeEvent(QPrintPreviewDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqprintpreviewdialog = dynamic_cast<VirtualQPrintPreviewDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
@@ -1606,7 +1606,7 @@ void QPrintPreviewDialog_OnCustomEvent(QPrintPreviewDialog* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QPrintPreviewDialog_ConnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal) {
+void QPrintPreviewDialog_ConnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal) {
     auto* vqprintpreviewdialog = dynamic_cast<VirtualQPrintPreviewDialog*>(self);
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         vqprintpreviewdialog->connectNotify(*signal);
@@ -1616,7 +1616,7 @@ void QPrintPreviewDialog_ConnectNotify(QPrintPreviewDialog* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-void QPrintPreviewDialog_QBaseConnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal) {
+void QPrintPreviewDialog_QBaseConnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal) {
     auto* vqprintpreviewdialog = dynamic_cast<VirtualQPrintPreviewDialog*>(self);
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         vqprintpreviewdialog->setQPrintPreviewDialog_ConnectNotify_IsBase(true);
@@ -1635,7 +1635,7 @@ void QPrintPreviewDialog_OnConnectNotify(QPrintPreviewDialog* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QPrintPreviewDialog_DisconnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal) {
+void QPrintPreviewDialog_DisconnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal) {
     auto* vqprintpreviewdialog = dynamic_cast<VirtualQPrintPreviewDialog*>(self);
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         vqprintpreviewdialog->disconnectNotify(*signal);
@@ -1645,7 +1645,7 @@ void QPrintPreviewDialog_DisconnectNotify(QPrintPreviewDialog* self, QMetaMethod
 }
 
 // Base class handler implementation
-void QPrintPreviewDialog_QBaseDisconnectNotify(QPrintPreviewDialog* self, QMetaMethod* signal) {
+void QPrintPreviewDialog_QBaseDisconnectNotify(QPrintPreviewDialog* self, const QMetaMethod* signal) {
     auto* vqprintpreviewdialog = dynamic_cast<VirtualQPrintPreviewDialog*>(self);
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         vqprintpreviewdialog->setQPrintPreviewDialog_DisconnectNotify_IsBase(true);
@@ -1925,7 +1925,7 @@ void QPrintPreviewDialog_OnReceivers(const QPrintPreviewDialog* self, intptr_t s
 }
 
 // Derived class handler implementation
-bool QPrintPreviewDialog_IsSignalConnected(const QPrintPreviewDialog* self, QMetaMethod* signal) {
+bool QPrintPreviewDialog_IsSignalConnected(const QPrintPreviewDialog* self, const QMetaMethod* signal) {
     auto* vqprintpreviewdialog = const_cast<VirtualQPrintPreviewDialog*>(dynamic_cast<const VirtualQPrintPreviewDialog*>(self));
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         return vqprintpreviewdialog->isSignalConnected(*signal);
@@ -1935,7 +1935,7 @@ bool QPrintPreviewDialog_IsSignalConnected(const QPrintPreviewDialog* self, QMet
 }
 
 // Base class handler implementation
-bool QPrintPreviewDialog_QBaseIsSignalConnected(const QPrintPreviewDialog* self, QMetaMethod* signal) {
+bool QPrintPreviewDialog_QBaseIsSignalConnected(const QPrintPreviewDialog* self, const QMetaMethod* signal) {
     auto* vqprintpreviewdialog = const_cast<VirtualQPrintPreviewDialog*>(dynamic_cast<const VirtualQPrintPreviewDialog*>(self));
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         vqprintpreviewdialog->setQPrintPreviewDialog_IsSignalConnected_IsBase(true);
@@ -1950,6 +1950,35 @@ void QPrintPreviewDialog_OnIsSignalConnected(const QPrintPreviewDialog* self, in
     auto* vqprintpreviewdialog = const_cast<VirtualQPrintPreviewDialog*>(dynamic_cast<const VirtualQPrintPreviewDialog*>(self));
     if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
         vqprintpreviewdialog->setQPrintPreviewDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQPrintPreviewDialog::QPrintPreviewDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QPrintPreviewDialog_GetDecodedMetricF(const QPrintPreviewDialog* self, int metricA, int metricB) {
+    auto* vqprintpreviewdialog = const_cast<VirtualQPrintPreviewDialog*>(dynamic_cast<const VirtualQPrintPreviewDialog*>(self));
+    if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
+        return vqprintpreviewdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPrintPreviewDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QPrintPreviewDialog_QBaseGetDecodedMetricF(const QPrintPreviewDialog* self, int metricA, int metricB) {
+    auto* vqprintpreviewdialog = const_cast<VirtualQPrintPreviewDialog*>(dynamic_cast<const VirtualQPrintPreviewDialog*>(self));
+    if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
+        vqprintpreviewdialog->setQPrintPreviewDialog_GetDecodedMetricF_IsBase(true);
+        return vqprintpreviewdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQPrintPreviewDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QPrintPreviewDialog_OnGetDecodedMetricF(const QPrintPreviewDialog* self, intptr_t slot) {
+    auto* vqprintpreviewdialog = const_cast<VirtualQPrintPreviewDialog*>(dynamic_cast<const VirtualQPrintPreviewDialog*>(self));
+    if (vqprintpreviewdialog && vqprintpreviewdialog->isVirtualQPrintPreviewDialog) {
+        vqprintpreviewdialog->setQPrintPreviewDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQPrintPreviewDialog::QPrintPreviewDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

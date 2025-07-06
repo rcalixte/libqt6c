@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include <string.h>
-#include "libqurl.h"
-
 /// https://doc.qt.io/qt-6/qurlquery.html
 
 /// q_urlquery_new constructs a new QUrlQuery object.
@@ -42,16 +38,6 @@ QUrlQuery* q_urlquery_new4(void* other);
 ///
 /// ``` QUrlQuery* self, QUrlQuery* other ```
 void q_urlquery_operator_assign(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#operator==)
-///
-/// ``` QUrlQuery* self, QUrlQuery* other ```
-bool q_urlquery_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#operator!=)
-///
-/// ``` QUrlQuery* self, QUrlQuery* other ```
-bool q_urlquery_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#swap)
 ///

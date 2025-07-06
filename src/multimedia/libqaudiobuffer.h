@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioformat.h"
-
 /// https://doc.qt.io/qt-6/qaudiobuffer.html
 
 /// q_audiobuffer_new constructs a new QAudioBuffer object.

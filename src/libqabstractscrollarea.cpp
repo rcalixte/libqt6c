@@ -145,14 +145,14 @@ void QAbstractScrollArea_AddScrollBarWidget(QAbstractScrollArea* self, QWidget* 
 }
 
 libqt_list /* of QWidget* */ QAbstractScrollArea_ScrollBarWidgets(QAbstractScrollArea* self, int alignment) {
-    QWidgetList _ret = self->scrollBarWidgets(static_cast<Qt::Alignment>(alignment));
+    QList<QWidget*> _ret = self->scrollBarWidgets(static_cast<Qt::Alignment>(alignment));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QWidget** _arr = static_cast<QWidget**>(malloc(sizeof(QWidget*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -1331,7 +1331,7 @@ void QAbstractScrollArea_OnHideEvent(QAbstractScrollArea* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractScrollArea_NativeEvent(QAbstractScrollArea* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractScrollArea_NativeEvent(QAbstractScrollArea* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
@@ -1342,7 +1342,7 @@ bool QAbstractScrollArea_NativeEvent(QAbstractScrollArea* self, libqt_string eve
 }
 
 // Base class handler implementation
-bool QAbstractScrollArea_QBaseNativeEvent(QAbstractScrollArea* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QAbstractScrollArea_QBaseNativeEvent(QAbstractScrollArea* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
@@ -1652,7 +1652,7 @@ void QAbstractScrollArea_OnCustomEvent(QAbstractScrollArea* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QAbstractScrollArea_ConnectNotify(QAbstractScrollArea* self, QMetaMethod* signal) {
+void QAbstractScrollArea_ConnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->connectNotify(*signal);
@@ -1662,7 +1662,7 @@ void QAbstractScrollArea_ConnectNotify(QAbstractScrollArea* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-void QAbstractScrollArea_QBaseConnectNotify(QAbstractScrollArea* self, QMetaMethod* signal) {
+void QAbstractScrollArea_QBaseConnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->setQAbstractScrollArea_ConnectNotify_IsBase(true);
@@ -1681,7 +1681,7 @@ void QAbstractScrollArea_OnConnectNotify(QAbstractScrollArea* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QAbstractScrollArea_DisconnectNotify(QAbstractScrollArea* self, QMetaMethod* signal) {
+void QAbstractScrollArea_DisconnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->disconnectNotify(*signal);
@@ -1691,7 +1691,7 @@ void QAbstractScrollArea_DisconnectNotify(QAbstractScrollArea* self, QMetaMethod
 }
 
 // Base class handler implementation
-void QAbstractScrollArea_QBaseDisconnectNotify(QAbstractScrollArea* self, QMetaMethod* signal) {
+void QAbstractScrollArea_QBaseDisconnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->setQAbstractScrollArea_DisconnectNotify_IsBase(true);
@@ -1739,7 +1739,7 @@ void QAbstractScrollArea_OnSetViewportMargins(QAbstractScrollArea* self, intptr_
 }
 
 // Derived class handler implementation
-void QAbstractScrollArea_SetViewportMarginsWithMargins(QAbstractScrollArea* self, QMargins* margins) {
+void QAbstractScrollArea_SetViewportMarginsWithMargins(QAbstractScrollArea* self, const QMargins* margins) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->setViewportMargins(*margins);
@@ -1749,7 +1749,7 @@ void QAbstractScrollArea_SetViewportMarginsWithMargins(QAbstractScrollArea* self
 }
 
 // Base class handler implementation
-void QAbstractScrollArea_QBaseSetViewportMarginsWithMargins(QAbstractScrollArea* self, QMargins* margins) {
+void QAbstractScrollArea_QBaseSetViewportMarginsWithMargins(QAbstractScrollArea* self, const QMargins* margins) {
     auto* vqabstractscrollarea = dynamic_cast<VirtualQAbstractScrollArea*>(self);
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->setQAbstractScrollArea_SetViewportMarginsWithMargins_IsBase(true);
@@ -2056,7 +2056,7 @@ void QAbstractScrollArea_OnReceivers(const QAbstractScrollArea* self, intptr_t s
 }
 
 // Derived class handler implementation
-bool QAbstractScrollArea_IsSignalConnected(const QAbstractScrollArea* self, QMetaMethod* signal) {
+bool QAbstractScrollArea_IsSignalConnected(const QAbstractScrollArea* self, const QMetaMethod* signal) {
     auto* vqabstractscrollarea = const_cast<VirtualQAbstractScrollArea*>(dynamic_cast<const VirtualQAbstractScrollArea*>(self));
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         return vqabstractscrollarea->isSignalConnected(*signal);
@@ -2066,7 +2066,7 @@ bool QAbstractScrollArea_IsSignalConnected(const QAbstractScrollArea* self, QMet
 }
 
 // Base class handler implementation
-bool QAbstractScrollArea_QBaseIsSignalConnected(const QAbstractScrollArea* self, QMetaMethod* signal) {
+bool QAbstractScrollArea_QBaseIsSignalConnected(const QAbstractScrollArea* self, const QMetaMethod* signal) {
     auto* vqabstractscrollarea = const_cast<VirtualQAbstractScrollArea*>(dynamic_cast<const VirtualQAbstractScrollArea*>(self));
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->setQAbstractScrollArea_IsSignalConnected_IsBase(true);
@@ -2081,6 +2081,35 @@ void QAbstractScrollArea_OnIsSignalConnected(const QAbstractScrollArea* self, in
     auto* vqabstractscrollarea = const_cast<VirtualQAbstractScrollArea*>(dynamic_cast<const VirtualQAbstractScrollArea*>(self));
     if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
         vqabstractscrollarea->setQAbstractScrollArea_IsSignalConnected_Callback(reinterpret_cast<VirtualQAbstractScrollArea::QAbstractScrollArea_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QAbstractScrollArea_GetDecodedMetricF(const QAbstractScrollArea* self, int metricA, int metricB) {
+    auto* vqabstractscrollarea = const_cast<VirtualQAbstractScrollArea*>(dynamic_cast<const VirtualQAbstractScrollArea*>(self));
+    if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
+        return vqabstractscrollarea->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractScrollArea*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QAbstractScrollArea_QBaseGetDecodedMetricF(const QAbstractScrollArea* self, int metricA, int metricB) {
+    auto* vqabstractscrollarea = const_cast<VirtualQAbstractScrollArea*>(dynamic_cast<const VirtualQAbstractScrollArea*>(self));
+    if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
+        vqabstractscrollarea->setQAbstractScrollArea_GetDecodedMetricF_IsBase(true);
+        return vqabstractscrollarea->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQAbstractScrollArea*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QAbstractScrollArea_OnGetDecodedMetricF(const QAbstractScrollArea* self, intptr_t slot) {
+    auto* vqabstractscrollarea = const_cast<VirtualQAbstractScrollArea*>(dynamic_cast<const VirtualQAbstractScrollArea*>(self));
+    if (vqabstractscrollarea && vqabstractscrollarea->isVirtualQAbstractScrollArea) {
+        vqabstractscrollarea->setQAbstractScrollArea_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQAbstractScrollArea::QAbstractScrollArea_GetDecodedMetricF_Callback>(slot));
     }
 }
 

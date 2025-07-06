@@ -1,3 +1,4 @@
+#include "../libqiodevice.hpp"
 #include "../libqurl.hpp"
 #include "libqwebengineurlrequestinfo.hpp"
 #include "libqwebengineurlrequestinfo.h"
@@ -27,6 +28,10 @@ char* q_webengineurlrequestinfo_request_method(void* self) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QIODevice* q_webengineurlrequestinfo_request_body(void* self) {
+    return QWebEngineUrlRequestInfo_RequestBody((QWebEngineUrlRequestInfo*)self);
 }
 
 bool q_webengineurlrequestinfo_changed(void* self) {

@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpaintdevice.h"
-#include "libqpoint.h"
-#include "libqregion.h"
-#include "libqsize.h"
-#include "libqwindow.h"
-
 /// https://doc.qt.io/qt-6/qbackingstore.html
 
 /// q_backingstore_new constructs a new QBackingStore object.

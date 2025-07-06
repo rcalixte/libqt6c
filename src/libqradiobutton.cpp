@@ -49,12 +49,12 @@ QRadioButton* QRadioButton_new2() {
     return new VirtualQRadioButton();
 }
 
-QRadioButton* QRadioButton_new3(libqt_string text) {
+QRadioButton* QRadioButton_new3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQRadioButton(text_QString);
 }
 
-QRadioButton* QRadioButton_new4(libqt_string text, QWidget* parent) {
+QRadioButton* QRadioButton_new4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQRadioButton(text_QString, parent);
 }
@@ -219,7 +219,7 @@ void QRadioButton_OnEvent(QRadioButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QRadioButton_HitButton(const QRadioButton* self, QPoint* param1) {
+bool QRadioButton_HitButton(const QRadioButton* self, const QPoint* param1) {
     auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         return vqradiobutton->hitButton(*param1);
@@ -229,7 +229,7 @@ bool QRadioButton_HitButton(const QRadioButton* self, QPoint* param1) {
 }
 
 // Base class handler implementation
-bool QRadioButton_QBaseHitButton(const QRadioButton* self, QPoint* param1) {
+bool QRadioButton_QBaseHitButton(const QRadioButton* self, const QPoint* param1) {
     auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->setQRadioButton_HitButton_IsBase(true);
@@ -1234,7 +1234,7 @@ void QRadioButton_OnHideEvent(QRadioButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QRadioButton_NativeEvent(QRadioButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QRadioButton_NativeEvent(QRadioButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqradiobutton = dynamic_cast<VirtualQRadioButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
@@ -1245,7 +1245,7 @@ bool QRadioButton_NativeEvent(QRadioButton* self, libqt_string eventType, void* 
 }
 
 // Base class handler implementation
-bool QRadioButton_QBaseNativeEvent(QRadioButton* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QRadioButton_QBaseNativeEvent(QRadioButton* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqradiobutton = dynamic_cast<VirtualQRadioButton*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
@@ -1555,7 +1555,7 @@ void QRadioButton_OnCustomEvent(QRadioButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QRadioButton_ConnectNotify(QRadioButton* self, QMetaMethod* signal) {
+void QRadioButton_ConnectNotify(QRadioButton* self, const QMetaMethod* signal) {
     auto* vqradiobutton = dynamic_cast<VirtualQRadioButton*>(self);
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->connectNotify(*signal);
@@ -1565,7 +1565,7 @@ void QRadioButton_ConnectNotify(QRadioButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QRadioButton_QBaseConnectNotify(QRadioButton* self, QMetaMethod* signal) {
+void QRadioButton_QBaseConnectNotify(QRadioButton* self, const QMetaMethod* signal) {
     auto* vqradiobutton = dynamic_cast<VirtualQRadioButton*>(self);
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->setQRadioButton_ConnectNotify_IsBase(true);
@@ -1584,7 +1584,7 @@ void QRadioButton_OnConnectNotify(QRadioButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QRadioButton_DisconnectNotify(QRadioButton* self, QMetaMethod* signal) {
+void QRadioButton_DisconnectNotify(QRadioButton* self, const QMetaMethod* signal) {
     auto* vqradiobutton = dynamic_cast<VirtualQRadioButton*>(self);
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->disconnectNotify(*signal);
@@ -1594,7 +1594,7 @@ void QRadioButton_DisconnectNotify(QRadioButton* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QRadioButton_QBaseDisconnectNotify(QRadioButton* self, QMetaMethod* signal) {
+void QRadioButton_QBaseDisconnectNotify(QRadioButton* self, const QMetaMethod* signal) {
     auto* vqradiobutton = dynamic_cast<VirtualQRadioButton*>(self);
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->setQRadioButton_DisconnectNotify_IsBase(true);
@@ -1845,7 +1845,7 @@ void QRadioButton_OnReceivers(const QRadioButton* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QRadioButton_IsSignalConnected(const QRadioButton* self, QMetaMethod* signal) {
+bool QRadioButton_IsSignalConnected(const QRadioButton* self, const QMetaMethod* signal) {
     auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         return vqradiobutton->isSignalConnected(*signal);
@@ -1855,7 +1855,7 @@ bool QRadioButton_IsSignalConnected(const QRadioButton* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QRadioButton_QBaseIsSignalConnected(const QRadioButton* self, QMetaMethod* signal) {
+bool QRadioButton_QBaseIsSignalConnected(const QRadioButton* self, const QMetaMethod* signal) {
     auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->setQRadioButton_IsSignalConnected_IsBase(true);
@@ -1870,6 +1870,35 @@ void QRadioButton_OnIsSignalConnected(const QRadioButton* self, intptr_t slot) {
     auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
     if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
         vqradiobutton->setQRadioButton_IsSignalConnected_Callback(reinterpret_cast<VirtualQRadioButton::QRadioButton_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QRadioButton_GetDecodedMetricF(const QRadioButton* self, int metricA, int metricB) {
+    auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
+    if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
+        return vqradiobutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQRadioButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QRadioButton_QBaseGetDecodedMetricF(const QRadioButton* self, int metricA, int metricB) {
+    auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
+    if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
+        vqradiobutton->setQRadioButton_GetDecodedMetricF_IsBase(true);
+        return vqradiobutton->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQRadioButton*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QRadioButton_OnGetDecodedMetricF(const QRadioButton* self, intptr_t slot) {
+    auto* vqradiobutton = const_cast<VirtualQRadioButton*>(dynamic_cast<const VirtualQRadioButton*>(self));
+    if (vqradiobutton && vqradiobutton->isVirtualQRadioButton) {
+        vqradiobutton->setQRadioButton_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQRadioButton::QRadioButton_GetDecodedMetricF_Callback>(slot));
     }
 }
 

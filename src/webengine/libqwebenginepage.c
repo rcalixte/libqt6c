@@ -15,20 +15,24 @@
 #include "../webchannel/libqwebchannel.hpp"
 #include "libqwebenginecertificateerror.hpp"
 #include "libqwebengineclientcertificateselection.hpp"
+#include "libqwebenginedesktopmediarequest.hpp"
 #include "libqwebenginefilesystemaccessrequest.hpp"
 #include "libqwebenginefindtextresult.hpp"
+#include "libqwebengineframe.hpp"
 #include "libqwebenginefullscreenrequest.hpp"
 #include "libqwebenginehistory.hpp"
 #include "libqwebenginehttprequest.hpp"
 #include "libqwebengineloadinginfo.hpp"
 #include "libqwebenginenavigationrequest.hpp"
 #include "libqwebenginenewwindowrequest.hpp"
+#include "libqwebenginepermission.hpp"
 #include "libqwebengineprofile.hpp"
 #include "libqwebenginequotarequest.hpp"
 #include "libqwebengineregisterprotocolhandlerrequest.hpp"
 #include "libqwebenginescriptcollection.hpp"
 #include "libqwebenginesettings.hpp"
 #include "libqwebengineurlrequestinterceptor.hpp"
+#include "libqwebenginewebauthuxrequest.hpp"
 #include "../libqcoreevent.hpp"
 #include "libqwebenginepage.hpp"
 #include "libqwebenginepage.h"
@@ -125,10 +129,6 @@ void q_webenginepage_on_event(void* self, bool (*slot)(void*, void*)) {
 
 bool q_webenginepage_qbase_event(void* self, void* param1) {
     return QWebEnginePage_QBaseEvent((QWebEnginePage*)self, (QEvent*)param1);
-}
-
-void q_webenginepage_set_feature_permission(void* self, void* securityOrigin, int64_t feature, int64_t policy) {
-    QWebEnginePage_SetFeaturePermission((QWebEnginePage*)self, (QUrl*)securityOrigin, feature, policy);
 }
 
 bool q_webenginepage_is_loading(void* self) {
@@ -262,6 +262,13 @@ QWebEnginePage* q_webenginepage_dev_tools_page(void* self) {
     return QWebEnginePage_DevToolsPage((QWebEnginePage*)self);
 }
 
+const char* q_webenginepage_dev_tools_id(void* self) {
+    libqt_string _str = QWebEnginePage_DevToolsId((QWebEnginePage*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 void q_webenginepage_set_url_request_interceptor(void* self, void* interceptor) {
     QWebEnginePage_SetUrlRequestInterceptor((QWebEnginePage*)self, (QWebEngineUrlRequestInterceptor*)interceptor);
 }
@@ -284,6 +291,10 @@ bool q_webenginepage_is_visible(void* self) {
 
 void q_webenginepage_set_visible(void* self, bool visible) {
     QWebEnginePage_SetVisible((QWebEnginePage*)self, visible);
+}
+
+QWebEngineFrame* q_webenginepage_main_frame(void* self) {
+    return QWebEnginePage_MainFrame((QWebEnginePage*)self);
 }
 
 void q_webenginepage_accept_as_new_window(void* self, void* request) {
@@ -378,6 +389,14 @@ void q_webenginepage_on_full_screen_requested(void* self, void (*slot)(void*, vo
     QWebEnginePage_Connect_FullScreenRequested((QWebEnginePage*)self, (intptr_t)slot);
 }
 
+void q_webenginepage_permission_requested(void* self, void* permissionRequest) {
+    QWebEnginePage_PermissionRequested((QWebEnginePage*)self, (QWebEnginePermission*)permissionRequest);
+}
+
+void q_webenginepage_on_permission_requested(void* self, void (*slot)(void*, void*)) {
+    QWebEnginePage_Connect_PermissionRequested((QWebEnginePage*)self, (intptr_t)slot);
+}
+
 void q_webenginepage_quota_requested(void* self, void* quotaRequest) {
     QWebEnginePage_QuotaRequested((QWebEnginePage*)self, (QWebEngineQuotaRequest*)quotaRequest);
 }
@@ -432,6 +451,14 @@ void q_webenginepage_render_process_terminated(void* self, int64_t terminationSt
 
 void q_webenginepage_on_render_process_terminated(void* self, void (*slot)(void*, int64_t, int)) {
     QWebEnginePage_Connect_RenderProcessTerminated((QWebEnginePage*)self, (intptr_t)slot);
+}
+
+void q_webenginepage_desktop_media_requested(void* self, void* request) {
+    QWebEnginePage_DesktopMediaRequested((QWebEnginePage*)self, (QWebEngineDesktopMediaRequest*)request);
+}
+
+void q_webenginepage_on_desktop_media_requested(void* self, void (*slot)(void*, void*)) {
+    QWebEnginePage_Connect_DesktopMediaRequested((QWebEnginePage*)self, (intptr_t)slot);
 }
 
 void q_webenginepage_certificate_error(void* self, void* certificateError) {
@@ -490,6 +517,14 @@ void q_webenginepage_on_icon_changed(void* self, void (*slot)(void*, void*)) {
     QWebEnginePage_Connect_IconChanged((QWebEnginePage*)self, (intptr_t)slot);
 }
 
+void q_webenginepage_zoom_factor_changed(void* self, double factor) {
+    QWebEnginePage_ZoomFactorChanged((QWebEnginePage*)self, factor);
+}
+
+void q_webenginepage_on_zoom_factor_changed(void* self, void (*slot)(void*, double)) {
+    QWebEnginePage_Connect_ZoomFactorChanged((QWebEnginePage*)self, (intptr_t)slot);
+}
+
 void q_webenginepage_scroll_position_changed(void* self, void* position) {
     QWebEnginePage_ScrollPositionChanged((QWebEnginePage*)self, (QPointF*)position);
 }
@@ -546,6 +581,14 @@ void q_webenginepage_on_print_requested(void* self, void (*slot)(void*)) {
     QWebEnginePage_Connect_PrintRequested((QWebEnginePage*)self, (intptr_t)slot);
 }
 
+void q_webenginepage_print_requested_by_frame(void* self, void* frame) {
+    QWebEnginePage_PrintRequestedByFrame((QWebEnginePage*)self, (QWebEngineFrame*)frame);
+}
+
+void q_webenginepage_on_print_requested_by_frame(void* self, void (*slot)(void*, void*)) {
+    QWebEnginePage_Connect_PrintRequestedByFrame((QWebEnginePage*)self, (intptr_t)slot);
+}
+
 void q_webenginepage_visible_changed(void* self, bool visible) {
     QWebEnginePage_VisibleChanged((QWebEnginePage*)self, visible);
 }
@@ -584,6 +627,14 @@ void q_webenginepage_q_about_to_delete(void* self) {
 
 void q_webenginepage_on_q_about_to_delete(void* self, void (*slot)(void*)) {
     QWebEnginePage_Connect_QAboutToDelete((QWebEnginePage*)self, (intptr_t)slot);
+}
+
+void q_webenginepage_web_auth_ux_requested(void* self, void* request) {
+    QWebEnginePage_WebAuthUxRequested((QWebEnginePage*)self, (QWebEngineWebAuthUxRequest*)request);
+}
+
+void q_webenginepage_on_web_auth_ux_requested(void* self, void (*slot)(void*, void*)) {
+    QWebEnginePage_Connect_WebAuthUxRequested((QWebEnginePage*)self, (intptr_t)slot);
 }
 
 QWebEnginePage* q_webenginepage_create_window(void* self, int64_t typeVal) {
@@ -785,8 +836,8 @@ QThread* q_webenginepage_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_webenginepage_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_webenginepage_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_webenginepage_start_timer(void* self, int interval) {
@@ -795,6 +846,10 @@ int32_t q_webenginepage_start_timer(void* self, int interval) {
 
 void q_webenginepage_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_webenginepage_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_webenginepage_children(void* self) {
@@ -887,6 +942,10 @@ bool q_webenginepage_inherits(void* self, const char* classname) {
 
 void q_webenginepage_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_webenginepage_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_webenginepage_start_timer2(void* self, int interval, int64_t timerType) {

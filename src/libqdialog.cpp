@@ -1280,7 +1280,7 @@ void QDialog_OnHideEvent(QDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDialog_NativeEvent(QDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDialog_NativeEvent(QDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdialog = dynamic_cast<VirtualQDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdialog && vqdialog->isVirtualQDialog) {
@@ -1291,7 +1291,7 @@ bool QDialog_NativeEvent(QDialog* self, libqt_string eventType, void* message, i
 }
 
 // Base class handler implementation
-bool QDialog_QBaseNativeEvent(QDialog* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDialog_QBaseNativeEvent(QDialog* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdialog = dynamic_cast<VirtualQDialog*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdialog && vqdialog->isVirtualQDialog) {
@@ -1630,7 +1630,7 @@ void QDialog_OnCustomEvent(QDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDialog_ConnectNotify(QDialog* self, QMetaMethod* signal) {
+void QDialog_ConnectNotify(QDialog* self, const QMetaMethod* signal) {
     auto* vqdialog = dynamic_cast<VirtualQDialog*>(self);
     if (vqdialog && vqdialog->isVirtualQDialog) {
         vqdialog->connectNotify(*signal);
@@ -1640,7 +1640,7 @@ void QDialog_ConnectNotify(QDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDialog_QBaseConnectNotify(QDialog* self, QMetaMethod* signal) {
+void QDialog_QBaseConnectNotify(QDialog* self, const QMetaMethod* signal) {
     auto* vqdialog = dynamic_cast<VirtualQDialog*>(self);
     if (vqdialog && vqdialog->isVirtualQDialog) {
         vqdialog->setQDialog_ConnectNotify_IsBase(true);
@@ -1659,7 +1659,7 @@ void QDialog_OnConnectNotify(QDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDialog_DisconnectNotify(QDialog* self, QMetaMethod* signal) {
+void QDialog_DisconnectNotify(QDialog* self, const QMetaMethod* signal) {
     auto* vqdialog = dynamic_cast<VirtualQDialog*>(self);
     if (vqdialog && vqdialog->isVirtualQDialog) {
         vqdialog->disconnectNotify(*signal);
@@ -1669,7 +1669,7 @@ void QDialog_DisconnectNotify(QDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDialog_QBaseDisconnectNotify(QDialog* self, QMetaMethod* signal) {
+void QDialog_QBaseDisconnectNotify(QDialog* self, const QMetaMethod* signal) {
     auto* vqdialog = dynamic_cast<VirtualQDialog*>(self);
     if (vqdialog && vqdialog->isVirtualQDialog) {
         vqdialog->setQDialog_DisconnectNotify_IsBase(true);
@@ -1949,7 +1949,7 @@ void QDialog_OnReceivers(const QDialog* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDialog_IsSignalConnected(const QDialog* self, QMetaMethod* signal) {
+bool QDialog_IsSignalConnected(const QDialog* self, const QMetaMethod* signal) {
     auto* vqdialog = const_cast<VirtualQDialog*>(dynamic_cast<const VirtualQDialog*>(self));
     if (vqdialog && vqdialog->isVirtualQDialog) {
         return vqdialog->isSignalConnected(*signal);
@@ -1959,7 +1959,7 @@ bool QDialog_IsSignalConnected(const QDialog* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QDialog_QBaseIsSignalConnected(const QDialog* self, QMetaMethod* signal) {
+bool QDialog_QBaseIsSignalConnected(const QDialog* self, const QMetaMethod* signal) {
     auto* vqdialog = const_cast<VirtualQDialog*>(dynamic_cast<const VirtualQDialog*>(self));
     if (vqdialog && vqdialog->isVirtualQDialog) {
         vqdialog->setQDialog_IsSignalConnected_IsBase(true);
@@ -1974,6 +1974,35 @@ void QDialog_OnIsSignalConnected(const QDialog* self, intptr_t slot) {
     auto* vqdialog = const_cast<VirtualQDialog*>(dynamic_cast<const VirtualQDialog*>(self));
     if (vqdialog && vqdialog->isVirtualQDialog) {
         vqdialog->setQDialog_IsSignalConnected_Callback(reinterpret_cast<VirtualQDialog::QDialog_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QDialog_GetDecodedMetricF(const QDialog* self, int metricA, int metricB) {
+    auto* vqdialog = const_cast<VirtualQDialog*>(dynamic_cast<const VirtualQDialog*>(self));
+    if (vqdialog && vqdialog->isVirtualQDialog) {
+        return vqdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QDialog_QBaseGetDecodedMetricF(const QDialog* self, int metricA, int metricB) {
+    auto* vqdialog = const_cast<VirtualQDialog*>(dynamic_cast<const VirtualQDialog*>(self));
+    if (vqdialog && vqdialog->isVirtualQDialog) {
+        vqdialog->setQDialog_GetDecodedMetricF_IsBase(true);
+        return vqdialog->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDialog*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QDialog_OnGetDecodedMetricF(const QDialog* self, intptr_t slot) {
+    auto* vqdialog = const_cast<VirtualQDialog*>(dynamic_cast<const VirtualQDialog*>(self));
+    if (vqdialog && vqdialog->isVirtualQDialog) {
+        vqdialog->setQDialog_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQDialog::QDialog_GetDecodedMetricF_Callback>(slot));
     }
 }
 

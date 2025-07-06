@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbytearrayview.h"
-#include "libqiodevice.h"
-
 /// https://doc.qt.io/qt-6/qcryptographichash.html
 
 /// q_cryptographichash_new constructs a new QCryptographicHash object.
@@ -22,10 +19,20 @@
 /// ``` enum QCryptographicHash__Algorithm method ```
 QCryptographicHash* q_cryptographichash_new(int64_t method);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#swap)
+///
+/// ``` QCryptographicHash* self, QCryptographicHash* other ```
+void q_cryptographichash_swap(void* self, void* other);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#reset)
 ///
 /// ``` QCryptographicHash* self ```
 void q_cryptographichash_reset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#algorithm)
+///
+/// ``` QCryptographicHash* self ```
+int64_t q_cryptographichash_algorithm(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
@@ -57,10 +64,35 @@ const char* q_cryptographichash_result_view(void* self);
 /// ``` const char* data, enum QCryptographicHash__Algorithm method ```
 char* q_cryptographichash_hash(const char* data, int64_t method);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+///
+/// ``` libqt_list /* of char */ buffer, const char* data, enum QCryptographicHash__Algorithm method ```
+const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int64_t method);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+///
+/// ``` libqt_list /* of unsigned char */ buffer, const char* data, enum QCryptographicHash__Algorithm method ```
+const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int64_t method);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+///
+/// ``` libqt_list /* of char */ buffer, libqt_list /* of const char* */ data, enum QCryptographicHash__Algorithm method ```
+const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int64_t method);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashInto)
+///
+/// ``` libqt_list /* of unsigned char */ buffer, libqt_list /* of const char* */ data, enum QCryptographicHash__Algorithm method ```
+const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int64_t method);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#hashLength)
 ///
 /// ``` enum QCryptographicHash__Algorithm method ```
 int32_t q_cryptographichash_hash_length(int64_t method);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#supportsAlgorithm)
+///
+/// ``` enum QCryptographicHash__Algorithm method ```
+bool q_cryptographichash_supports_algorithm(int64_t method);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#dtor.QCryptographicHash)
 ///
@@ -98,7 +130,8 @@ typedef enum {
     QCRYPTOGRAPHICHASH_ALGORITHM_BLAKE2S_128 = 19,
     QCRYPTOGRAPHICHASH_ALGORITHM_BLAKE2S_160 = 20,
     QCRYPTOGRAPHICHASH_ALGORITHM_BLAKE2S_224 = 21,
-    QCRYPTOGRAPHICHASH_ALGORITHM_BLAKE2S_256 = 22
+    QCRYPTOGRAPHICHASH_ALGORITHM_BLAKE2S_256 = 22,
+    QCRYPTOGRAPHICHASH_ALGORITHM_NUMALGORITHMS = 23
 } QCryptographicHash__Algorithm;
 
 #endif

@@ -180,7 +180,7 @@ long long QIODevice_WriteWithData(QIODevice* self, const char* data) {
     return static_cast<long long>(self->write(data));
 }
 
-long long QIODevice_Write2(QIODevice* self, libqt_string data) {
+long long QIODevice_Write2(QIODevice* self, const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     return static_cast<long long>(self->write(data_QByteArray));
 }
@@ -970,7 +970,7 @@ void QIODevice_OnCustomEvent(QIODevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIODevice_ConnectNotify(QIODevice* self, QMetaMethod* signal) {
+void QIODevice_ConnectNotify(QIODevice* self, const QMetaMethod* signal) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
         vqiodevice->connectNotify(*signal);
@@ -980,7 +980,7 @@ void QIODevice_ConnectNotify(QIODevice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QIODevice_QBaseConnectNotify(QIODevice* self, QMetaMethod* signal) {
+void QIODevice_QBaseConnectNotify(QIODevice* self, const QMetaMethod* signal) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
         vqiodevice->setQIODevice_ConnectNotify_IsBase(true);
@@ -999,7 +999,7 @@ void QIODevice_OnConnectNotify(QIODevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIODevice_DisconnectNotify(QIODevice* self, QMetaMethod* signal) {
+void QIODevice_DisconnectNotify(QIODevice* self, const QMetaMethod* signal) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
         vqiodevice->disconnectNotify(*signal);
@@ -1009,7 +1009,7 @@ void QIODevice_DisconnectNotify(QIODevice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QIODevice_QBaseDisconnectNotify(QIODevice* self, QMetaMethod* signal) {
+void QIODevice_QBaseDisconnectNotify(QIODevice* self, const QMetaMethod* signal) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
         vqiodevice->setQIODevice_DisconnectNotify_IsBase(true);
@@ -1057,7 +1057,7 @@ void QIODevice_OnSetOpenMode(QIODevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QIODevice_SetErrorString(QIODevice* self, libqt_string errorString) {
+void QIODevice_SetErrorString(QIODevice* self, const libqt_string errorString) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
@@ -1068,7 +1068,7 @@ void QIODevice_SetErrorString(QIODevice* self, libqt_string errorString) {
 }
 
 // Base class handler implementation
-void QIODevice_QBaseSetErrorString(QIODevice* self, libqt_string errorString) {
+void QIODevice_QBaseSetErrorString(QIODevice* self, const libqt_string errorString) {
     auto* vqiodevice = dynamic_cast<VirtualQIODevice*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
@@ -1175,7 +1175,7 @@ void QIODevice_OnReceivers(const QIODevice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QIODevice_IsSignalConnected(const QIODevice* self, QMetaMethod* signal) {
+bool QIODevice_IsSignalConnected(const QIODevice* self, const QMetaMethod* signal) {
     auto* vqiodevice = const_cast<VirtualQIODevice*>(dynamic_cast<const VirtualQIODevice*>(self));
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
         return vqiodevice->isSignalConnected(*signal);
@@ -1185,7 +1185,7 @@ bool QIODevice_IsSignalConnected(const QIODevice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QIODevice_QBaseIsSignalConnected(const QIODevice* self, QMetaMethod* signal) {
+bool QIODevice_QBaseIsSignalConnected(const QIODevice* self, const QMetaMethod* signal) {
     auto* vqiodevice = const_cast<VirtualQIODevice*>(dynamic_cast<const VirtualQIODevice*>(self));
     if (vqiodevice && vqiodevice->isVirtualQIODevice) {
         vqiodevice->setQIODevice_IsSignalConnected_IsBase(true);

@@ -118,8 +118,16 @@ QTimerEvent* QTimerEvent_new(int timerId) {
     return new VirtualQTimerEvent(static_cast<int>(timerId));
 }
 
+QTimerEvent* QTimerEvent_new2(int timerId) {
+    return new VirtualQTimerEvent(static_cast<Qt::TimerId>(timerId));
+}
+
 int QTimerEvent_TimerId(const QTimerEvent* self) {
     return self->timerId();
+}
+
+int QTimerEvent_Id(const QTimerEvent* self) {
+    return static_cast<int>(self->id());
 }
 
 // Derived class handler implementation
@@ -266,7 +274,7 @@ void QChildEvent_Delete(QChildEvent* self) {
     delete self;
 }
 
-QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_new(libqt_string name) {
+QDynamicPropertyChangeEvent* QDynamicPropertyChangeEvent_new(const libqt_string name) {
     QByteArray name_QByteArray(name.data, name.len);
     return new VirtualQDynamicPropertyChangeEvent(name_QByteArray);
 }

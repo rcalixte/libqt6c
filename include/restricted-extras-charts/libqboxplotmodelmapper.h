@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "libqboxplotseries.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qboxplotmodelmapper-qtcharts.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
@@ -121,7 +115,7 @@ QThread* q_boxplotmodelmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QBoxPlotModelMapper* self, QThread* thread ```
-void q_boxplotmodelmapper_move_to_thread(void* self, void* thread);
+bool q_boxplotmodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -136,6 +130,13 @@ int32_t q_boxplotmodelmapper_start_timer(void* self, int interval);
 ///
 /// ``` QBoxPlotModelMapper* self, int id ```
 void q_boxplotmodelmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QBoxPlotModelMapper* self, enum Qt__TimerId id ```
+void q_boxplotmodelmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -276,6 +277,13 @@ bool q_boxplotmodelmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QBoxPlotModelMapper* self ```
 void q_boxplotmodelmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QBoxPlotModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_boxplotmodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

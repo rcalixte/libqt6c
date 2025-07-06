@@ -1,3 +1,4 @@
+#include "libqdeadlinetimer.hpp"
 #include "libqreadwritelock.hpp"
 #include "libqreadwritelock.h"
 
@@ -13,28 +14,36 @@ void q_readwritelock_lock_for_read(void* self) {
     QReadWriteLock_LockForRead((QReadWriteLock*)self);
 }
 
-bool q_readwritelock_try_lock_for_read(void* self) {
-    return QReadWriteLock_TryLockForRead((QReadWriteLock*)self);
+bool q_readwritelock_try_lock_for_read(void* self, int timeout) {
+    return QReadWriteLock_TryLockForRead((QReadWriteLock*)self, timeout);
 }
 
-bool q_readwritelock_try_lock_for_read_with_timeout(void* self, int timeout) {
-    return QReadWriteLock_TryLockForReadWithTimeout((QReadWriteLock*)self, timeout);
+bool q_readwritelock_try_lock_for_read2(void* self) {
+    return QReadWriteLock_TryLockForRead2((QReadWriteLock*)self);
 }
 
 void q_readwritelock_lock_for_write(void* self) {
     QReadWriteLock_LockForWrite((QReadWriteLock*)self);
 }
 
-bool q_readwritelock_try_lock_for_write(void* self) {
-    return QReadWriteLock_TryLockForWrite((QReadWriteLock*)self);
+bool q_readwritelock_try_lock_for_write(void* self, int timeout) {
+    return QReadWriteLock_TryLockForWrite((QReadWriteLock*)self, timeout);
 }
 
-bool q_readwritelock_try_lock_for_write_with_timeout(void* self, int timeout) {
-    return QReadWriteLock_TryLockForWriteWithTimeout((QReadWriteLock*)self, timeout);
+bool q_readwritelock_try_lock_for_write2(void* self) {
+    return QReadWriteLock_TryLockForWrite2((QReadWriteLock*)self);
 }
 
 void q_readwritelock_unlock(void* self) {
     QReadWriteLock_Unlock((QReadWriteLock*)self);
+}
+
+bool q_readwritelock_try_lock_for_read1(void* self, void* timeout) {
+    return QReadWriteLock_TryLockForRead1((QReadWriteLock*)self, (QDeadlineTimer*)timeout);
+}
+
+bool q_readwritelock_try_lock_for_write1(void* self, void* timeout) {
+    return QReadWriteLock_TryLockForWrite1((QReadWriteLock*)self, (QDeadlineTimer*)timeout);
 }
 
 void q_readwritelock_delete(void* self) {

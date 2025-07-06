@@ -225,7 +225,7 @@ void QFutureWatcherBase_Connect_ProgressValueChanged(QFutureWatcherBase* self, i
     });
 }
 
-void QFutureWatcherBase_ProgressTextChanged(QFutureWatcherBase* self, libqt_string progressText) {
+void QFutureWatcherBase_ProgressTextChanged(QFutureWatcherBase* self, const libqt_string progressText) {
     QString progressText_QString = QString::fromUtf8(progressText.data, progressText.len);
     self->progressTextChanged(progressText_QString);
 }

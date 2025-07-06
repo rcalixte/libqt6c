@@ -1,4 +1,7 @@
+#include "../libqanystringview.hpp"
+#include "libqhttp1configuration.hpp"
 #include "libqhttp2configuration.hpp"
+#include "libqhttpheaders.hpp"
 #include "../libqobject.hpp"
 #include "libqsslconfiguration.hpp"
 #include <string.h>
@@ -43,6 +46,14 @@ void q_networkrequest_set_url(void* self, void* url) {
     QNetworkRequest_SetUrl((QNetworkRequest*)self, (QUrl*)url);
 }
 
+QHttpHeaders* q_networkrequest_headers(void* self) {
+    return QNetworkRequest_Headers((QNetworkRequest*)self);
+}
+
+void q_networkrequest_set_headers(void* self, void* newHeaders) {
+    QNetworkRequest_SetHeaders((QNetworkRequest*)self, (QHttpHeaders*)newHeaders);
+}
+
 QVariant* q_networkrequest_header(void* self, int64_t header) {
     return QNetworkRequest_Header((QNetworkRequest*)self, header);
 }
@@ -51,8 +62,8 @@ void q_networkrequest_set_header(void* self, int64_t header, void* value) {
     QNetworkRequest_SetHeader((QNetworkRequest*)self, header, (QVariant*)value);
 }
 
-bool q_networkrequest_has_raw_header(void* self, const char* headerName) {
-    return QNetworkRequest_HasRawHeader((QNetworkRequest*)self, qstring(headerName));
+bool q_networkrequest_has_raw_header(void* self, char* headerName) {
+    return QNetworkRequest_HasRawHeader((QNetworkRequest*)self, headerName);
 }
 
 const char** q_networkrequest_raw_header_list(void* self) {
@@ -70,8 +81,8 @@ const char** q_networkrequest_raw_header_list(void* self) {
     return _ret;
 }
 
-char* q_networkrequest_raw_header(void* self, const char* headerName) {
-    libqt_string _str = QNetworkRequest_RawHeader((QNetworkRequest*)self, qstring(headerName));
+char* q_networkrequest_raw_header(void* self, char* headerName) {
+    libqt_string _str = QNetworkRequest_RawHeader((QNetworkRequest*)self, headerName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -132,6 +143,14 @@ void q_networkrequest_set_peer_verify_name(void* self, const char* peerName) {
     QNetworkRequest_SetPeerVerifyName((QNetworkRequest*)self, qstring(peerName));
 }
 
+QHttp1Configuration* q_networkrequest_http1_configuration(void* self) {
+    return QNetworkRequest_Http1Configuration((QNetworkRequest*)self);
+}
+
+void q_networkrequest_set_http1_configuration(void* self, void* configuration) {
+    QNetworkRequest_SetHttp1Configuration((QNetworkRequest*)self, (QHttp1Configuration*)configuration);
+}
+
 QHttp2Configuration* q_networkrequest_http2_configuration(void* self) {
     return QNetworkRequest_Http2Configuration((QNetworkRequest*)self);
 }
@@ -152,16 +171,16 @@ int32_t q_networkrequest_transfer_timeout(void* self) {
     return QNetworkRequest_TransferTimeout((QNetworkRequest*)self);
 }
 
-void q_networkrequest_set_transfer_timeout(void* self) {
-    QNetworkRequest_SetTransferTimeout((QNetworkRequest*)self);
+void q_networkrequest_set_transfer_timeout(void* self, int timeout) {
+    QNetworkRequest_SetTransferTimeout((QNetworkRequest*)self, timeout);
+}
+
+void q_networkrequest_set_transfer_timeout2(void* self) {
+    QNetworkRequest_SetTransferTimeout2((QNetworkRequest*)self);
 }
 
 QVariant* q_networkrequest_attribute2(void* self, int64_t code, void* defaultValue) {
     return QNetworkRequest_Attribute2((QNetworkRequest*)self, code, (QVariant*)defaultValue);
-}
-
-void q_networkrequest_set_transfer_timeout1(void* self, int timeout) {
-    QNetworkRequest_SetTransferTimeout1((QNetworkRequest*)self, timeout);
 }
 
 void q_networkrequest_delete(void* self) {

@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqimage.h"
-#include "../libqpainter.h"
-#include "../libqrect.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "libqvideoframeformat.h"
-
 /// https://doc.qt.io/qt-6/qvideoframe.html
 
 /// q_videoframe_new constructs a new QVideoFrame object.
@@ -33,8 +26,13 @@ QVideoFrame* q_videoframe_new2(void* format);
 
 /// q_videoframe_new3 constructs a new QVideoFrame object.
 ///
+/// ``` QImage* image ```
+QVideoFrame* q_videoframe_new3(void* image);
+
+/// q_videoframe_new4 constructs a new QVideoFrame object.
+///
 /// ``` QVideoFrame* other ```
-QVideoFrame* q_videoframe_new3(void* other);
+QVideoFrame* q_videoframe_new4(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#swap)
 ///
@@ -168,13 +166,23 @@ void q_videoframe_set_end_time(void* self, long long time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#setRotationAngle)
 ///
-/// ``` QVideoFrame* self, enum QVideoFrame__RotationAngle rotationAngle ```
-void q_videoframe_set_rotation_angle(void* self, int64_t rotationAngle);
+/// ``` QVideoFrame* self, enum QVideoFrame__RotationAngle angle ```
+void q_videoframe_set_rotation_angle(void* self, int64_t angle);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#rotationAngle)
 ///
 /// ``` QVideoFrame* self ```
 int64_t q_videoframe_rotation_angle(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#setRotation)
+///
+/// ``` QVideoFrame* self, enum QtVideo__Rotation angle ```
+void q_videoframe_set_rotation(void* self, int64_t angle);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#rotation)
+///
+/// ``` QVideoFrame* self ```
+int64_t q_videoframe_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#setMirrored)
 ///
@@ -185,6 +193,16 @@ void q_videoframe_set_mirrored(void* self, bool mirrored);
 ///
 /// ``` QVideoFrame* self ```
 bool q_videoframe_mirrored(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#setStreamFrameRate)
+///
+/// ``` QVideoFrame* self, double rate ```
+void q_videoframe_set_stream_frame_rate(void* self, double rate);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#streamFrameRate)
+///
+/// ``` QVideoFrame* self ```
+double q_videoframe_stream_frame_rate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#toImage)
 ///

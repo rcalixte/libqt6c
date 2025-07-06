@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioengine.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqquaternion.h"
-#include <string.h>
-#include "../libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qaudioroom.html
 
 /// q_audioroom_new constructs a new QAudioRoom object.
@@ -284,7 +276,7 @@ QThread* q_audioroom_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAudioRoom* self, QThread* thread ```
-void q_audioroom_move_to_thread(void* self, void* thread);
+bool q_audioroom_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -299,6 +291,13 @@ int32_t q_audioroom_start_timer(void* self, int interval);
 ///
 /// ``` QAudioRoom* self, int id ```
 void q_audioroom_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAudioRoom* self, enum Qt__TimerId id ```
+void q_audioroom_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -439,6 +438,13 @@ bool q_audioroom_inherits(void* self, const char* classname);
 ///
 /// ``` QAudioRoom* self ```
 void q_audioroom_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAudioRoom* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_audioroom_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

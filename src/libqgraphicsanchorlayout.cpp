@@ -166,7 +166,7 @@ void QGraphicsAnchorLayout_OnRemoveAt(QGraphicsAnchorLayout* self, intptr_t slot
 }
 
 // Derived class handler implementation
-void QGraphicsAnchorLayout_SetGeometry(QGraphicsAnchorLayout* self, QRectF* rect) {
+void QGraphicsAnchorLayout_SetGeometry(QGraphicsAnchorLayout* self, const QRectF* rect) {
     auto* vqgraphicsanchorlayout = dynamic_cast<VirtualQGraphicsAnchorLayout*>(self);
     if (vqgraphicsanchorlayout && vqgraphicsanchorlayout->isVirtualQGraphicsAnchorLayout) {
         vqgraphicsanchorlayout->setGeometry(*rect);
@@ -176,7 +176,7 @@ void QGraphicsAnchorLayout_SetGeometry(QGraphicsAnchorLayout* self, QRectF* rect
 }
 
 // Base class handler implementation
-void QGraphicsAnchorLayout_QBaseSetGeometry(QGraphicsAnchorLayout* self, QRectF* rect) {
+void QGraphicsAnchorLayout_QBaseSetGeometry(QGraphicsAnchorLayout* self, const QRectF* rect) {
     auto* vqgraphicsanchorlayout = dynamic_cast<VirtualQGraphicsAnchorLayout*>(self);
     if (vqgraphicsanchorlayout && vqgraphicsanchorlayout->isVirtualQGraphicsAnchorLayout) {
         vqgraphicsanchorlayout->setQGraphicsAnchorLayout_SetGeometry_IsBase(true);
@@ -282,7 +282,7 @@ void QGraphicsAnchorLayout_OnInvalidate(QGraphicsAnchorLayout* self, intptr_t sl
 }
 
 // Derived class handler implementation
-QSizeF* QGraphicsAnchorLayout_SizeHint(const QGraphicsAnchorLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsAnchorLayout_SizeHint(const QGraphicsAnchorLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicsanchorlayout = const_cast<VirtualQGraphicsAnchorLayout*>(dynamic_cast<const VirtualQGraphicsAnchorLayout*>(self));
     if (vqgraphicsanchorlayout && vqgraphicsanchorlayout->isVirtualQGraphicsAnchorLayout) {
         return new QSizeF(vqgraphicsanchorlayout->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -291,7 +291,7 @@ QSizeF* QGraphicsAnchorLayout_SizeHint(const QGraphicsAnchorLayout* self, int wh
 }
 
 // Base class handler implementation
-QSizeF* QGraphicsAnchorLayout_QBaseSizeHint(const QGraphicsAnchorLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsAnchorLayout_QBaseSizeHint(const QGraphicsAnchorLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicsanchorlayout = const_cast<VirtualQGraphicsAnchorLayout*>(dynamic_cast<const VirtualQGraphicsAnchorLayout*>(self));
     if (vqgraphicsanchorlayout && vqgraphicsanchorlayout->isVirtualQGraphicsAnchorLayout) {
         vqgraphicsanchorlayout->setQGraphicsAnchorLayout_SizeHint_IsBase(true);

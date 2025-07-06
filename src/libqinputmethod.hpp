@@ -26,20 +26,14 @@ typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 #endif
 
-#ifdef __cplusplus
-typedef QInputMethod::Action Action; // C++ enum
-#else
-typedef int Action; // C ABI enum
-#endif
-
 QMetaObject* QInputMethod_MetaObject(const QInputMethod* self);
 void* QInputMethod_Metacast(QInputMethod* self, const char* param1);
 int QInputMethod_Metacall(QInputMethod* self, int param1, int param2, void** param3);
 libqt_string QInputMethod_Tr(const char* s);
 QTransform* QInputMethod_InputItemTransform(const QInputMethod* self);
-void QInputMethod_SetInputItemTransform(QInputMethod* self, QTransform* transform);
+void QInputMethod_SetInputItemTransform(QInputMethod* self, const QTransform* transform);
 QRectF* QInputMethod_InputItemRectangle(const QInputMethod* self);
-void QInputMethod_SetInputItemRectangle(QInputMethod* self, QRectF* rect);
+void QInputMethod_SetInputItemRectangle(QInputMethod* self, const QRectF* rect);
 QRectF* QInputMethod_CursorRectangle(const QInputMethod* self);
 QRectF* QInputMethod_AnchorRectangle(const QInputMethod* self);
 QRectF* QInputMethod_KeyboardRectangle(const QInputMethod* self);
@@ -49,7 +43,7 @@ void QInputMethod_SetVisible(QInputMethod* self, bool visible);
 bool QInputMethod_IsAnimating(const QInputMethod* self);
 QLocale* QInputMethod_Locale(const QInputMethod* self);
 int QInputMethod_InputDirection(const QInputMethod* self);
-QVariant* QInputMethod_QueryFocusObject(int query, QVariant* argument);
+QVariant* QInputMethod_QueryFocusObject(int query, const QVariant* argument);
 void QInputMethod_Show(QInputMethod* self);
 void QInputMethod_Hide(QInputMethod* self);
 void QInputMethod_Update(QInputMethod* self, int queries);

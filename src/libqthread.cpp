@@ -78,6 +78,10 @@ QThread* QThread_CurrentThread() {
     return QThread::currentThread();
 }
 
+bool QThread_IsMainThread() {
+    return QThread::isMainThread();
+}
+
 int QThread_IdealThreadCount() {
     return QThread::idealThreadCount();
 }
@@ -128,6 +132,10 @@ void QThread_SetEventDispatcher(QThread* self, QAbstractEventDispatcher* eventDi
 
 int QThread_LoopLevel(const QThread* self) {
     return self->loopLevel();
+}
+
+bool QThread_IsCurrentThread(const QThread* self) {
+    return self->isCurrentThread();
 }
 
 void QThread_Start(QThread* self) {
@@ -377,7 +385,7 @@ void QThread_OnCustomEvent(QThread* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QThread_ConnectNotify(QThread* self, QMetaMethod* signal) {
+void QThread_ConnectNotify(QThread* self, const QMetaMethod* signal) {
     auto* vqthread = dynamic_cast<VirtualQThread*>(self);
     if (vqthread && vqthread->isVirtualQThread) {
         vqthread->connectNotify(*signal);
@@ -387,7 +395,7 @@ void QThread_ConnectNotify(QThread* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QThread_QBaseConnectNotify(QThread* self, QMetaMethod* signal) {
+void QThread_QBaseConnectNotify(QThread* self, const QMetaMethod* signal) {
     auto* vqthread = dynamic_cast<VirtualQThread*>(self);
     if (vqthread && vqthread->isVirtualQThread) {
         vqthread->setQThread_ConnectNotify_IsBase(true);
@@ -406,7 +414,7 @@ void QThread_OnConnectNotify(QThread* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QThread_DisconnectNotify(QThread* self, QMetaMethod* signal) {
+void QThread_DisconnectNotify(QThread* self, const QMetaMethod* signal) {
     auto* vqthread = dynamic_cast<VirtualQThread*>(self);
     if (vqthread && vqthread->isVirtualQThread) {
         vqthread->disconnectNotify(*signal);
@@ -416,7 +424,7 @@ void QThread_DisconnectNotify(QThread* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QThread_QBaseDisconnectNotify(QThread* self, QMetaMethod* signal) {
+void QThread_QBaseDisconnectNotify(QThread* self, const QMetaMethod* signal) {
     auto* vqthread = dynamic_cast<VirtualQThread*>(self);
     if (vqthread && vqthread->isVirtualQThread) {
         vqthread->setQThread_DisconnectNotify_IsBase(true);
@@ -551,7 +559,7 @@ void QThread_OnReceivers(const QThread* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QThread_IsSignalConnected(const QThread* self, QMetaMethod* signal) {
+bool QThread_IsSignalConnected(const QThread* self, const QMetaMethod* signal) {
     auto* vqthread = const_cast<VirtualQThread*>(dynamic_cast<const VirtualQThread*>(self));
     if (vqthread && vqthread->isVirtualQThread) {
         return vqthread->isSignalConnected(*signal);
@@ -561,7 +569,7 @@ bool QThread_IsSignalConnected(const QThread* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QThread_QBaseIsSignalConnected(const QThread* self, QMetaMethod* signal) {
+bool QThread_QBaseIsSignalConnected(const QThread* self, const QMetaMethod* signal) {
     auto* vqthread = const_cast<VirtualQThread*>(dynamic_cast<const VirtualQThread*>(self));
     if (vqthread && vqthread->isVirtualQThread) {
         vqthread->setQThread_IsSignalConnected_IsBase(true);

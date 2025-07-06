@@ -68,7 +68,7 @@ libqt_string QSpatialSound_Tr(const char* s) {
     return _str;
 }
 
-void QSpatialSound_SetSource(QSpatialSound* self, QUrl* url) {
+void QSpatialSound_SetSource(QSpatialSound* self, const QUrl* url) {
     self->setSource(*url);
 }
 
@@ -100,7 +100,7 @@ QVector3D* QSpatialSound_Position(const QSpatialSound* self) {
     return new QVector3D(self->position());
 }
 
-void QSpatialSound_SetRotation(QSpatialSound* self, QQuaternion* q) {
+void QSpatialSound_SetRotation(QSpatialSound* self, const QQuaternion* q) {
     self->setRotation(*q);
 }
 
@@ -520,7 +520,7 @@ void QSpatialSound_OnCustomEvent(QSpatialSound* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSpatialSound_ConnectNotify(QSpatialSound* self, QMetaMethod* signal) {
+void QSpatialSound_ConnectNotify(QSpatialSound* self, const QMetaMethod* signal) {
     auto* vqspatialsound = dynamic_cast<VirtualQSpatialSound*>(self);
     if (vqspatialsound && vqspatialsound->isVirtualQSpatialSound) {
         vqspatialsound->connectNotify(*signal);
@@ -530,7 +530,7 @@ void QSpatialSound_ConnectNotify(QSpatialSound* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSpatialSound_QBaseConnectNotify(QSpatialSound* self, QMetaMethod* signal) {
+void QSpatialSound_QBaseConnectNotify(QSpatialSound* self, const QMetaMethod* signal) {
     auto* vqspatialsound = dynamic_cast<VirtualQSpatialSound*>(self);
     if (vqspatialsound && vqspatialsound->isVirtualQSpatialSound) {
         vqspatialsound->setQSpatialSound_ConnectNotify_IsBase(true);
@@ -549,7 +549,7 @@ void QSpatialSound_OnConnectNotify(QSpatialSound* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSpatialSound_DisconnectNotify(QSpatialSound* self, QMetaMethod* signal) {
+void QSpatialSound_DisconnectNotify(QSpatialSound* self, const QMetaMethod* signal) {
     auto* vqspatialsound = dynamic_cast<VirtualQSpatialSound*>(self);
     if (vqspatialsound && vqspatialsound->isVirtualQSpatialSound) {
         vqspatialsound->disconnectNotify(*signal);
@@ -559,7 +559,7 @@ void QSpatialSound_DisconnectNotify(QSpatialSound* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSpatialSound_QBaseDisconnectNotify(QSpatialSound* self, QMetaMethod* signal) {
+void QSpatialSound_QBaseDisconnectNotify(QSpatialSound* self, const QMetaMethod* signal) {
     auto* vqspatialsound = dynamic_cast<VirtualQSpatialSound*>(self);
     if (vqspatialsound && vqspatialsound->isVirtualQSpatialSound) {
         vqspatialsound->setQSpatialSound_DisconnectNotify_IsBase(true);
@@ -665,7 +665,7 @@ void QSpatialSound_OnReceivers(const QSpatialSound* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSpatialSound_IsSignalConnected(const QSpatialSound* self, QMetaMethod* signal) {
+bool QSpatialSound_IsSignalConnected(const QSpatialSound* self, const QMetaMethod* signal) {
     auto* vqspatialsound = const_cast<VirtualQSpatialSound*>(dynamic_cast<const VirtualQSpatialSound*>(self));
     if (vqspatialsound && vqspatialsound->isVirtualQSpatialSound) {
         return vqspatialsound->isSignalConnected(*signal);
@@ -675,7 +675,7 @@ bool QSpatialSound_IsSignalConnected(const QSpatialSound* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QSpatialSound_QBaseIsSignalConnected(const QSpatialSound* self, QMetaMethod* signal) {
+bool QSpatialSound_QBaseIsSignalConnected(const QSpatialSound* self, const QMetaMethod* signal) {
     auto* vqspatialsound = const_cast<VirtualQSpatialSound*>(dynamic_cast<const VirtualQSpatialSound*>(self));
     if (vqspatialsound && vqspatialsound->isVirtualQSpatialSound) {
         vqspatialsound->setQSpatialSound_IsSignalConnected_IsBase(true);

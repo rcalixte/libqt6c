@@ -12,22 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqaccessible.h"
-#include "libqevent.h"
-#include "libqcursor.h"
-#include "libqicon.h"
-#include "libqmargins.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include "libqscreen.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqsurface.h"
-#include "libqsurfaceformat.h"
-
 /// https://doc.qt.io/qt-6/qwindow.html
 
 /// q_window_new constructs a new QWindow object.
@@ -1361,7 +1345,7 @@ QThread* q_window_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWindow* self, QThread* thread ```
-void q_window_move_to_thread(void* self, void* thread);
+bool q_window_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1376,6 +1360,13 @@ int32_t q_window_start_timer(void* self, int interval);
 ///
 /// ``` QWindow* self, int id ```
 void q_window_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWindow* self, enum Qt__TimerId id ```
+void q_window_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1502,6 +1493,13 @@ bool q_window_inherits(void* self, const char* classname);
 ///
 /// ``` QWindow* self ```
 void q_window_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWindow* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_window_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

@@ -15,7 +15,7 @@ QLayoutItem* QLayoutItem_new() {
     return new VirtualQLayoutItem();
 }
 
-QLayoutItem* QLayoutItem_new2(QLayoutItem* param1) {
+QLayoutItem* QLayoutItem_new2(const QLayoutItem* param1) {
     return new VirtualQLayoutItem(*param1);
 }
 
@@ -148,7 +148,7 @@ void QLayoutItem_OnExpandingDirections(const QLayoutItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLayoutItem_SetGeometry(QLayoutItem* self, QRect* geometry) {
+void QLayoutItem_SetGeometry(QLayoutItem* self, const QRect* geometry) {
     auto* vqlayoutitem = dynamic_cast<VirtualQLayoutItem*>(self);
     if (vqlayoutitem && vqlayoutitem->isVirtualQLayoutItem) {
         vqlayoutitem->setGeometry(*geometry);
@@ -158,7 +158,7 @@ void QLayoutItem_SetGeometry(QLayoutItem* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QLayoutItem_QBaseSetGeometry(QLayoutItem* self, QRect* geometry) {
+void QLayoutItem_QBaseSetGeometry(QLayoutItem* self, const QRect* geometry) {
     auto* vqlayoutitem = dynamic_cast<VirtualQLayoutItem*>(self);
     if (vqlayoutitem && vqlayoutitem->isVirtualQLayoutItem) {
         vqlayoutitem->setQLayoutItem_SetGeometry_IsBase(true);
@@ -467,7 +467,7 @@ void QLayoutItem_OnControlTypes(const QLayoutItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLayoutItem_OperatorAssign(QLayoutItem* self, QLayoutItem* param1) {
+void QLayoutItem_OperatorAssign(QLayoutItem* self, const QLayoutItem* param1) {
     auto* vqlayoutitem = dynamic_cast<VirtualQLayoutItem*>(self);
     if (vqlayoutitem && vqlayoutitem->isVirtualQLayoutItem) {
         vqlayoutitem->operator=(*param1);
@@ -477,7 +477,7 @@ void QLayoutItem_OperatorAssign(QLayoutItem* self, QLayoutItem* param1) {
 }
 
 // Base class handler implementation
-void QLayoutItem_QBaseOperatorAssign(QLayoutItem* self, QLayoutItem* param1) {
+void QLayoutItem_QBaseOperatorAssign(QLayoutItem* self, const QLayoutItem* param1) {
     auto* vqlayoutitem = dynamic_cast<VirtualQLayoutItem*>(self);
     if (vqlayoutitem && vqlayoutitem->isVirtualQLayoutItem) {
         vqlayoutitem->setQLayoutItem_OperatorAssign_IsBase(true);
@@ -503,7 +503,7 @@ QSpacerItem* QSpacerItem_new(int w, int h) {
     return new VirtualQSpacerItem(static_cast<int>(w), static_cast<int>(h));
 }
 
-QSpacerItem* QSpacerItem_new2(QSpacerItem* param1) {
+QSpacerItem* QSpacerItem_new2(const QSpacerItem* param1) {
     return new VirtualQSpacerItem(*param1);
 }
 
@@ -677,7 +677,7 @@ void QSpacerItem_OnIsEmpty(const QSpacerItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSpacerItem_SetGeometry(QSpacerItem* self, QRect* geometry) {
+void QSpacerItem_SetGeometry(QSpacerItem* self, const QRect* geometry) {
     auto* vqspaceritem = dynamic_cast<VirtualQSpacerItem*>(self);
     if (vqspaceritem && vqspaceritem->isVirtualQSpacerItem) {
         vqspaceritem->setGeometry(*geometry);
@@ -687,7 +687,7 @@ void QSpacerItem_SetGeometry(QSpacerItem* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QSpacerItem_QBaseSetGeometry(QSpacerItem* self, QRect* geometry) {
+void QSpacerItem_QBaseSetGeometry(QSpacerItem* self, const QRect* geometry) {
     auto* vqspaceritem = dynamic_cast<VirtualQSpacerItem*>(self);
     if (vqspaceritem && vqspaceritem->isVirtualQSpacerItem) {
         vqspaceritem->setQSpacerItem_SetGeometry_IsBase(true);
@@ -1120,7 +1120,7 @@ void QWidgetItem_OnIsEmpty(const QWidgetItem* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWidgetItem_SetGeometry(QWidgetItem* self, QRect* geometry) {
+void QWidgetItem_SetGeometry(QWidgetItem* self, const QRect* geometry) {
     auto* vqwidgetitem = dynamic_cast<VirtualQWidgetItem*>(self);
     if (vqwidgetitem && vqwidgetitem->isVirtualQWidgetItem) {
         vqwidgetitem->setGeometry(*geometry);
@@ -1130,7 +1130,7 @@ void QWidgetItem_SetGeometry(QWidgetItem* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QWidgetItem_QBaseSetGeometry(QWidgetItem* self, QRect* geometry) {
+void QWidgetItem_QBaseSetGeometry(QWidgetItem* self, const QRect* geometry) {
     auto* vqwidgetitem = dynamic_cast<VirtualQWidgetItem*>(self);
     if (vqwidgetitem && vqwidgetitem->isVirtualQWidgetItem) {
         vqwidgetitem->setQWidgetItem_SetGeometry_IsBase(true);
@@ -1592,7 +1592,7 @@ void QWidgetItemV2_OnIsEmpty(const QWidgetItemV2* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QWidgetItemV2_SetGeometry(QWidgetItemV2* self, QRect* geometry) {
+void QWidgetItemV2_SetGeometry(QWidgetItemV2* self, const QRect* geometry) {
     auto* vqwidgetitemv2 = dynamic_cast<VirtualQWidgetItemV2*>(self);
     if (vqwidgetitemv2 && vqwidgetitemv2->isVirtualQWidgetItemV2) {
         vqwidgetitemv2->setGeometry(*geometry);
@@ -1602,7 +1602,7 @@ void QWidgetItemV2_SetGeometry(QWidgetItemV2* self, QRect* geometry) {
 }
 
 // Base class handler implementation
-void QWidgetItemV2_QBaseSetGeometry(QWidgetItemV2* self, QRect* geometry) {
+void QWidgetItemV2_QBaseSetGeometry(QWidgetItemV2* self, const QRect* geometry) {
     auto* vqwidgetitemv2 = dynamic_cast<VirtualQWidgetItemV2*>(self);
     if (vqwidgetitemv2 && vqwidgetitemv2->isVirtualQWidgetItemV2) {
         vqwidgetitemv2->setQWidgetItemV2_SetGeometry_IsBase(true);

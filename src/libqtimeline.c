@@ -223,8 +223,8 @@ QThread* q_timeline_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_timeline_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_timeline_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_timeline_start_timer(void* self, int interval) {
@@ -233,6 +233,10 @@ int32_t q_timeline_start_timer(void* self, int interval) {
 
 void q_timeline_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_timeline_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_timeline_children(void* self) {
@@ -325,6 +329,10 @@ bool q_timeline_inherits(void* self, const char* classname) {
 
 void q_timeline_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_timeline_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_timeline_start_timer2(void* self, int interval, int64_t timerType) {

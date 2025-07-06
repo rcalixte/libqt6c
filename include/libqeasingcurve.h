@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpoint.h"
-
 /// https://doc.qt.io/qt-6/qeasingcurve.html
 
 /// q_easingcurve_new constructs a new QEasingCurve object.
@@ -40,16 +38,6 @@ void q_easingcurve_operator_assign(void* self, void* other);
 ///
 /// ``` QEasingCurve* self, QEasingCurve* other ```
 void q_easingcurve_swap(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator==)
-///
-/// ``` QEasingCurve* self, QEasingCurve* other ```
-bool q_easingcurve_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator!=)
-///
-/// ``` QEasingCurve* self, QEasingCurve* other ```
-bool q_easingcurve_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#amplitude)
 ///

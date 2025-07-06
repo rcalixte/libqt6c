@@ -91,8 +91,8 @@ class VirtualQAbstractItemDelegate final : public QAbstractItemDelegate {
     mutable bool qabstractitemdelegate_issignalconnected_isbase = false;
 
   public:
-    VirtualQAbstractItemDelegate() : QAbstractItemDelegate(){};
-    VirtualQAbstractItemDelegate(QObject* parent) : QAbstractItemDelegate(parent){};
+    VirtualQAbstractItemDelegate() : QAbstractItemDelegate() {};
+    VirtualQAbstractItemDelegate(QObject* parent) : QAbstractItemDelegate(parent) {};
 
     ~VirtualQAbstractItemDelegate() {
         qabstractitemdelegate_metacall_callback = nullptr;
@@ -542,18 +542,18 @@ class VirtualQAbstractItemDelegate final : public QAbstractItemDelegate {
     friend void QAbstractItemDelegate_QBaseChildEvent(QAbstractItemDelegate* self, QChildEvent* event);
     friend void QAbstractItemDelegate_CustomEvent(QAbstractItemDelegate* self, QEvent* event);
     friend void QAbstractItemDelegate_QBaseCustomEvent(QAbstractItemDelegate* self, QEvent* event);
-    friend void QAbstractItemDelegate_ConnectNotify(QAbstractItemDelegate* self, QMetaMethod* signal);
-    friend void QAbstractItemDelegate_QBaseConnectNotify(QAbstractItemDelegate* self, QMetaMethod* signal);
-    friend void QAbstractItemDelegate_DisconnectNotify(QAbstractItemDelegate* self, QMetaMethod* signal);
-    friend void QAbstractItemDelegate_QBaseDisconnectNotify(QAbstractItemDelegate* self, QMetaMethod* signal);
+    friend void QAbstractItemDelegate_ConnectNotify(QAbstractItemDelegate* self, const QMetaMethod* signal);
+    friend void QAbstractItemDelegate_QBaseConnectNotify(QAbstractItemDelegate* self, const QMetaMethod* signal);
+    friend void QAbstractItemDelegate_DisconnectNotify(QAbstractItemDelegate* self, const QMetaMethod* signal);
+    friend void QAbstractItemDelegate_QBaseDisconnectNotify(QAbstractItemDelegate* self, const QMetaMethod* signal);
     friend QObject* QAbstractItemDelegate_Sender(const QAbstractItemDelegate* self);
     friend QObject* QAbstractItemDelegate_QBaseSender(const QAbstractItemDelegate* self);
     friend int QAbstractItemDelegate_SenderSignalIndex(const QAbstractItemDelegate* self);
     friend int QAbstractItemDelegate_QBaseSenderSignalIndex(const QAbstractItemDelegate* self);
     friend int QAbstractItemDelegate_Receivers(const QAbstractItemDelegate* self, const char* signal);
     friend int QAbstractItemDelegate_QBaseReceivers(const QAbstractItemDelegate* self, const char* signal);
-    friend bool QAbstractItemDelegate_IsSignalConnected(const QAbstractItemDelegate* self, QMetaMethod* signal);
-    friend bool QAbstractItemDelegate_QBaseIsSignalConnected(const QAbstractItemDelegate* self, QMetaMethod* signal);
+    friend bool QAbstractItemDelegate_IsSignalConnected(const QAbstractItemDelegate* self, const QMetaMethod* signal);
+    friend bool QAbstractItemDelegate_QBaseIsSignalConnected(const QAbstractItemDelegate* self, const QMetaMethod* signal);
 };
 
 #endif

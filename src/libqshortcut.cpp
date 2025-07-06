@@ -18,7 +18,7 @@ QShortcut* QShortcut_new(QObject* parent) {
     return new VirtualQShortcut(parent);
 }
 
-QShortcut* QShortcut_new2(QKeySequence* key, QObject* parent) {
+QShortcut* QShortcut_new2(const QKeySequence* key, QObject* parent) {
     return new VirtualQShortcut(*key, parent);
 }
 
@@ -26,15 +26,15 @@ QShortcut* QShortcut_new3(int key, QObject* parent) {
     return new VirtualQShortcut(static_cast<QKeySequence::StandardKey>(key), parent);
 }
 
-QShortcut* QShortcut_new4(QKeySequence* key, QObject* parent, const char* member) {
+QShortcut* QShortcut_new4(const QKeySequence* key, QObject* parent, const char* member) {
     return new VirtualQShortcut(*key, parent, member);
 }
 
-QShortcut* QShortcut_new5(QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember) {
+QShortcut* QShortcut_new5(const QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember) {
     return new VirtualQShortcut(*key, parent, member, ambiguousMember);
 }
 
-QShortcut* QShortcut_new6(QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember, int context) {
+QShortcut* QShortcut_new6(const QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember, int context) {
     return new VirtualQShortcut(*key, parent, member, ambiguousMember, static_cast<Qt::ShortcutContext>(context));
 }
 
@@ -98,7 +98,7 @@ libqt_string QShortcut_Tr(const char* s) {
     return _str;
 }
 
-void QShortcut_SetKey(QShortcut* self, QKeySequence* key) {
+void QShortcut_SetKey(QShortcut* self, const QKeySequence* key) {
     self->setKey(*key);
 }
 
@@ -110,7 +110,7 @@ void QShortcut_SetKeys(QShortcut* self, int key) {
     self->setKeys(static_cast<QKeySequence::StandardKey>(key));
 }
 
-void QShortcut_SetKeysWithKeys(QShortcut* self, libqt_list /* of QKeySequence* */ keys) {
+void QShortcut_SetKeysWithKeys(QShortcut* self, const libqt_list /* of QKeySequence* */ keys) {
     QList<QKeySequence> keys_QList;
     keys_QList.reserve(keys.len);
     QKeySequence** keys_arr = static_cast<QKeySequence**>(keys.data.ptr);
@@ -123,12 +123,12 @@ void QShortcut_SetKeysWithKeys(QShortcut* self, libqt_list /* of QKeySequence* *
 libqt_list /* of QKeySequence* */ QShortcut_Keys(const QShortcut* self) {
     QList<QKeySequence> _ret = self->keys();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QKeySequence** _arr = static_cast<QKeySequence**>(malloc(sizeof(QKeySequence*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QKeySequence** _arr = static_cast<QKeySequence**>(malloc(sizeof(QKeySequence*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QKeySequence(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -161,7 +161,7 @@ int QShortcut_Id(const QShortcut* self) {
     return self->id();
 }
 
-void QShortcut_SetWhatsThis(QShortcut* self, libqt_string text) {
+void QShortcut_SetWhatsThis(QShortcut* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setWhatsThis(text_QString);
 }
@@ -370,7 +370,7 @@ void QShortcut_OnCustomEvent(QShortcut* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QShortcut_ConnectNotify(QShortcut* self, QMetaMethod* signal) {
+void QShortcut_ConnectNotify(QShortcut* self, const QMetaMethod* signal) {
     auto* vqshortcut = dynamic_cast<VirtualQShortcut*>(self);
     if (vqshortcut && vqshortcut->isVirtualQShortcut) {
         vqshortcut->connectNotify(*signal);
@@ -380,7 +380,7 @@ void QShortcut_ConnectNotify(QShortcut* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QShortcut_QBaseConnectNotify(QShortcut* self, QMetaMethod* signal) {
+void QShortcut_QBaseConnectNotify(QShortcut* self, const QMetaMethod* signal) {
     auto* vqshortcut = dynamic_cast<VirtualQShortcut*>(self);
     if (vqshortcut && vqshortcut->isVirtualQShortcut) {
         vqshortcut->setQShortcut_ConnectNotify_IsBase(true);
@@ -399,7 +399,7 @@ void QShortcut_OnConnectNotify(QShortcut* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QShortcut_DisconnectNotify(QShortcut* self, QMetaMethod* signal) {
+void QShortcut_DisconnectNotify(QShortcut* self, const QMetaMethod* signal) {
     auto* vqshortcut = dynamic_cast<VirtualQShortcut*>(self);
     if (vqshortcut && vqshortcut->isVirtualQShortcut) {
         vqshortcut->disconnectNotify(*signal);
@@ -409,7 +409,7 @@ void QShortcut_DisconnectNotify(QShortcut* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QShortcut_QBaseDisconnectNotify(QShortcut* self, QMetaMethod* signal) {
+void QShortcut_QBaseDisconnectNotify(QShortcut* self, const QMetaMethod* signal) {
     auto* vqshortcut = dynamic_cast<VirtualQShortcut*>(self);
     if (vqshortcut && vqshortcut->isVirtualQShortcut) {
         vqshortcut->setQShortcut_DisconnectNotify_IsBase(true);
@@ -515,7 +515,7 @@ void QShortcut_OnReceivers(const QShortcut* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QShortcut_IsSignalConnected(const QShortcut* self, QMetaMethod* signal) {
+bool QShortcut_IsSignalConnected(const QShortcut* self, const QMetaMethod* signal) {
     auto* vqshortcut = const_cast<VirtualQShortcut*>(dynamic_cast<const VirtualQShortcut*>(self));
     if (vqshortcut && vqshortcut->isVirtualQShortcut) {
         return vqshortcut->isSignalConnected(*signal);
@@ -525,7 +525,7 @@ bool QShortcut_IsSignalConnected(const QShortcut* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QShortcut_QBaseIsSignalConnected(const QShortcut* self, QMetaMethod* signal) {
+bool QShortcut_QBaseIsSignalConnected(const QShortcut* self, const QMetaMethod* signal) {
     auto* vqshortcut = const_cast<VirtualQShortcut*>(dynamic_cast<const VirtualQShortcut*>(self));
     if (vqshortcut && vqshortcut->isVirtualQShortcut) {
         vqshortcut->setQShortcut_IsSignalConnected_IsBase(true);

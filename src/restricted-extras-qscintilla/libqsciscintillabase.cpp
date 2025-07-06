@@ -149,23 +149,23 @@ long QsciScintillaBase_SendScintilla8(const QsciScintillaBase* self, unsigned in
     return self->SendScintilla(static_cast<unsigned int>(msg), static_cast<long>(cpMin), static_cast<long>(cpMax), lpstrText);
 }
 
-long QsciScintillaBase_SendScintilla9(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QColor* col) {
+long QsciScintillaBase_SendScintilla9(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, const QColor* col) {
     return self->SendScintilla(static_cast<unsigned int>(msg), static_cast<unsigned long>(wParam), *col);
 }
 
-long QsciScintillaBase_SendScintilla10(const QsciScintillaBase* self, unsigned int msg, QColor* col) {
+long QsciScintillaBase_SendScintilla10(const QsciScintillaBase* self, unsigned int msg, const QColor* col) {
     return self->SendScintilla(static_cast<unsigned int>(msg), *col);
 }
 
-long QsciScintillaBase_SendScintilla11(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QPainter* hdc, QRect* rc, long cpMin, long cpMax) {
+long QsciScintillaBase_SendScintilla11(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QPainter* hdc, const QRect* rc, long cpMin, long cpMax) {
     return self->SendScintilla(static_cast<unsigned int>(msg), static_cast<unsigned long>(wParam), hdc, *rc, static_cast<long>(cpMin), static_cast<long>(cpMax));
 }
 
-long QsciScintillaBase_SendScintilla12(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QPixmap* lParam) {
+long QsciScintillaBase_SendScintilla12(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, const QPixmap* lParam) {
     return self->SendScintilla(static_cast<unsigned int>(msg), static_cast<unsigned long>(wParam), *lParam);
 }
 
-long QsciScintillaBase_SendScintilla13(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, QImage* lParam) {
+long QsciScintillaBase_SendScintilla13(const QsciScintillaBase* self, unsigned int msg, unsigned long wParam, const QImage* lParam) {
     return self->SendScintilla(static_cast<unsigned int>(msg), static_cast<unsigned long>(wParam), *lParam);
 }
 
@@ -297,7 +297,7 @@ void QsciScintillaBase_SCN_STYLENEEDED(QsciScintillaBase* self, int position) {
     self->SCN_STYLENEEDED(static_cast<int>(position));
 }
 
-void QsciScintillaBase_SCN_URIDROPPED(QsciScintillaBase* self, QUrl* url) {
+void QsciScintillaBase_SCN_URIDROPPED(QsciScintillaBase* self, const QUrl* url) {
     self->SCN_URIDROPPED(*url);
 }
 
@@ -354,7 +354,7 @@ long QsciScintillaBase_SendScintilla32(const QsciScintillaBase* self, unsigned i
 }
 
 // Derived class handler implementation
-bool QsciScintillaBase_CanInsertFromMimeData(const QsciScintillaBase* self, QMimeData* source) {
+bool QsciScintillaBase_CanInsertFromMimeData(const QsciScintillaBase* self, const QMimeData* source) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         return vqsciscintillabase->canInsertFromMimeData(source);
@@ -364,7 +364,7 @@ bool QsciScintillaBase_CanInsertFromMimeData(const QsciScintillaBase* self, QMim
 }
 
 // Base class handler implementation
-bool QsciScintillaBase_QBaseCanInsertFromMimeData(const QsciScintillaBase* self, QMimeData* source) {
+bool QsciScintillaBase_QBaseCanInsertFromMimeData(const QsciScintillaBase* self, const QMimeData* source) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->setQsciScintillaBase_CanInsertFromMimeData_IsBase(true);
@@ -383,7 +383,7 @@ void QsciScintillaBase_OnCanInsertFromMimeData(const QsciScintillaBase* self, in
 }
 
 // Derived class handler implementation
-libqt_string QsciScintillaBase_FromMimeData(const QsciScintillaBase* self, QMimeData* source, bool* rectangular) {
+libqt_string QsciScintillaBase_FromMimeData(const QsciScintillaBase* self, const QMimeData* source, bool* rectangular) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         QByteArray _qb = vqsciscintillabase->fromMimeData(source, *rectangular);
@@ -405,7 +405,7 @@ libqt_string QsciScintillaBase_FromMimeData(const QsciScintillaBase* self, QMime
 }
 
 // Base class handler implementation
-libqt_string QsciScintillaBase_QBaseFromMimeData(const QsciScintillaBase* self, QMimeData* source, bool* rectangular) {
+libqt_string QsciScintillaBase_QBaseFromMimeData(const QsciScintillaBase* self, const QMimeData* source, bool* rectangular) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->setQsciScintillaBase_FromMimeData_IsBase(true);
@@ -436,7 +436,7 @@ void QsciScintillaBase_OnFromMimeData(const QsciScintillaBase* self, intptr_t sl
 }
 
 // Derived class handler implementation
-QMimeData* QsciScintillaBase_ToMimeData(const QsciScintillaBase* self, libqt_string text, bool rectangular) {
+QMimeData* QsciScintillaBase_ToMimeData(const QsciScintillaBase* self, const libqt_string text, bool rectangular) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     QByteArray text_QByteArray(text.data, text.len);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
@@ -447,7 +447,7 @@ QMimeData* QsciScintillaBase_ToMimeData(const QsciScintillaBase* self, libqt_str
 }
 
 // Base class handler implementation
-QMimeData* QsciScintillaBase_QBaseToMimeData(const QsciScintillaBase* self, libqt_string text, bool rectangular) {
+QMimeData* QsciScintillaBase_QBaseToMimeData(const QsciScintillaBase* self, const libqt_string text, bool rectangular) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     QByteArray text_QByteArray(text.data, text.len);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
@@ -1654,7 +1654,7 @@ void QsciScintillaBase_OnHideEvent(QsciScintillaBase* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciScintillaBase_NativeEvent(QsciScintillaBase* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QsciScintillaBase_NativeEvent(QsciScintillaBase* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsciscintillabase = dynamic_cast<VirtualQsciScintillaBase*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
@@ -1665,7 +1665,7 @@ bool QsciScintillaBase_NativeEvent(QsciScintillaBase* self, libqt_string eventTy
 }
 
 // Base class handler implementation
-bool QsciScintillaBase_QBaseNativeEvent(QsciScintillaBase* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QsciScintillaBase_QBaseNativeEvent(QsciScintillaBase* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsciscintillabase = dynamic_cast<VirtualQsciScintillaBase*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
@@ -1917,7 +1917,7 @@ void QsciScintillaBase_OnCustomEvent(QsciScintillaBase* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciScintillaBase_ConnectNotify(QsciScintillaBase* self, QMetaMethod* signal) {
+void QsciScintillaBase_ConnectNotify(QsciScintillaBase* self, const QMetaMethod* signal) {
     auto* vqsciscintillabase = dynamic_cast<VirtualQsciScintillaBase*>(self);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->connectNotify(*signal);
@@ -1927,7 +1927,7 @@ void QsciScintillaBase_ConnectNotify(QsciScintillaBase* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-void QsciScintillaBase_QBaseConnectNotify(QsciScintillaBase* self, QMetaMethod* signal) {
+void QsciScintillaBase_QBaseConnectNotify(QsciScintillaBase* self, const QMetaMethod* signal) {
     auto* vqsciscintillabase = dynamic_cast<VirtualQsciScintillaBase*>(self);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->setQsciScintillaBase_ConnectNotify_IsBase(true);
@@ -1946,7 +1946,7 @@ void QsciScintillaBase_OnConnectNotify(QsciScintillaBase* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciScintillaBase_DisconnectNotify(QsciScintillaBase* self, QMetaMethod* signal) {
+void QsciScintillaBase_DisconnectNotify(QsciScintillaBase* self, const QMetaMethod* signal) {
     auto* vqsciscintillabase = dynamic_cast<VirtualQsciScintillaBase*>(self);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->disconnectNotify(*signal);
@@ -1956,7 +1956,7 @@ void QsciScintillaBase_DisconnectNotify(QsciScintillaBase* self, QMetaMethod* si
 }
 
 // Base class handler implementation
-void QsciScintillaBase_QBaseDisconnectNotify(QsciScintillaBase* self, QMetaMethod* signal) {
+void QsciScintillaBase_QBaseDisconnectNotify(QsciScintillaBase* self, const QMetaMethod* signal) {
     auto* vqsciscintillabase = dynamic_cast<VirtualQsciScintillaBase*>(self);
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->setQsciScintillaBase_DisconnectNotify_IsBase(true);
@@ -2350,7 +2350,7 @@ void QsciScintillaBase_OnReceivers(const QsciScintillaBase* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-bool QsciScintillaBase_IsSignalConnected(const QsciScintillaBase* self, QMetaMethod* signal) {
+bool QsciScintillaBase_IsSignalConnected(const QsciScintillaBase* self, const QMetaMethod* signal) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         return vqsciscintillabase->isSignalConnected(*signal);
@@ -2360,7 +2360,7 @@ bool QsciScintillaBase_IsSignalConnected(const QsciScintillaBase* self, QMetaMet
 }
 
 // Base class handler implementation
-bool QsciScintillaBase_QBaseIsSignalConnected(const QsciScintillaBase* self, QMetaMethod* signal) {
+bool QsciScintillaBase_QBaseIsSignalConnected(const QsciScintillaBase* self, const QMetaMethod* signal) {
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->setQsciScintillaBase_IsSignalConnected_IsBase(true);
@@ -2375,6 +2375,35 @@ void QsciScintillaBase_OnIsSignalConnected(const QsciScintillaBase* self, intptr
     auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
     if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
         vqsciscintillabase->setQsciScintillaBase_IsSignalConnected_Callback(reinterpret_cast<VirtualQsciScintillaBase::QsciScintillaBase_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QsciScintillaBase_GetDecodedMetricF(const QsciScintillaBase* self, int metricA, int metricB) {
+    auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
+    if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
+        return vqsciscintillabase->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQsciScintillaBase*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QsciScintillaBase_QBaseGetDecodedMetricF(const QsciScintillaBase* self, int metricA, int metricB) {
+    auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
+    if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
+        vqsciscintillabase->setQsciScintillaBase_GetDecodedMetricF_IsBase(true);
+        return vqsciscintillabase->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQsciScintillaBase*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciScintillaBase_OnGetDecodedMetricF(const QsciScintillaBase* self, intptr_t slot) {
+    auto* vqsciscintillabase = const_cast<VirtualQsciScintillaBase*>(dynamic_cast<const VirtualQsciScintillaBase*>(self));
+    if (vqsciscintillabase && vqsciscintillabase->isVirtualQsciScintillaBase) {
+        vqsciscintillabase->setQsciScintillaBase_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQsciScintillaBase::QsciScintillaBase_GetDecodedMetricF_Callback>(slot));
     }
 }
 

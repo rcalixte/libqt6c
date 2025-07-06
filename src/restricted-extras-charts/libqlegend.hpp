@@ -37,28 +37,22 @@ typedef struct QStyleOptionGraphicsItem QStyleOptionGraphicsItem;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QLegend::MarkerShape MarkerShape; // C++ enum
-#else
-typedef int MarkerShape; // C ABI enum
-#endif
-
 QMetaObject* QLegend_MetaObject(const QLegend* self);
 void* QLegend_Metacast(QLegend* self, const char* param1);
 int QLegend_Metacall(QLegend* self, int param1, int param2, void** param3);
 libqt_string QLegend_Tr(const char* s);
-void QLegend_Paint(QLegend* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget);
-void QLegend_SetBrush(QLegend* self, QBrush* brush);
+void QLegend_Paint(QLegend* self, QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget);
+void QLegend_SetBrush(QLegend* self, const QBrush* brush);
 QBrush* QLegend_Brush(const QLegend* self);
 void QLegend_SetColor(QLegend* self, QColor* color);
 QColor* QLegend_Color(QLegend* self);
-void QLegend_SetPen(QLegend* self, QPen* pen);
+void QLegend_SetPen(QLegend* self, const QPen* pen);
 QPen* QLegend_Pen(const QLegend* self);
 void QLegend_SetBorderColor(QLegend* self, QColor* color);
 QColor* QLegend_BorderColor(QLegend* self);
-void QLegend_SetFont(QLegend* self, QFont* font);
+void QLegend_SetFont(QLegend* self, const QFont* font);
 QFont* QLegend_Font(const QLegend* self);
-void QLegend_SetLabelBrush(QLegend* self, QBrush* brush);
+void QLegend_SetLabelBrush(QLegend* self, const QBrush* brush);
 QBrush* QLegend_LabelBrush(const QLegend* self);
 void QLegend_SetLabelColor(QLegend* self, QColor* color);
 QColor* QLegend_LabelColor(const QLegend* self);

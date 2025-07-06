@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpoint.h"
-#include "libqrawfont.h"
-#include "libqrect.h"
-
 /// https://doc.qt.io/qt-6/qglyphrun.html
 
 /// q_glyphrun_new constructs a new QGlyphRun object.
@@ -152,6 +148,26 @@ void q_glyphrun_set_bounding_rect(void* self, void* boundingRect);
 ///
 /// ``` QGlyphRun* self ```
 QRectF* q_glyphrun_bounding_rect(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#stringIndexes)
+///
+/// ``` QGlyphRun* self ```
+libqt_list /* of int64_t */ q_glyphrun_string_indexes(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#setStringIndexes)
+///
+/// ``` QGlyphRun* self, libqt_list /* of int64_t */ stringIndexes ```
+void q_glyphrun_set_string_indexes(void* self, libqt_list stringIndexes);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#setSourceString)
+///
+/// ``` QGlyphRun* self, const char* sourceString ```
+void q_glyphrun_set_source_string(void* self, const char* sourceString);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#sourceString)
+///
+/// ``` QGlyphRun* self ```
+const char* q_glyphrun_source_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#isEmpty)
 ///

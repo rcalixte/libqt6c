@@ -31,6 +31,10 @@ const char* q_webenginecertificateerror_description(void* self) {
     return _ret;
 }
 
+bool q_webenginecertificateerror_is_main_frame(void* self) {
+    return QWebEngineCertificateError_IsMainFrame((QWebEngineCertificateError*)self);
+}
+
 void q_webenginecertificateerror_defer(void* self) {
     QWebEngineCertificateError_Defer((QWebEngineCertificateError*)self);
 }

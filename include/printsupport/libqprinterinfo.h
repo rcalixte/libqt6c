@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqpagesize.h"
-#include "libqprinter.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qprinterinfo.html
 
 /// q_printerinfo_new constructs a new QPrinterInfo object.

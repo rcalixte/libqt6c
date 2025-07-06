@@ -97,8 +97,8 @@ class VirtualQStyledItemDelegate final : public QStyledItemDelegate {
     mutable bool qstyleditemdelegate_issignalconnected_isbase = false;
 
   public:
-    VirtualQStyledItemDelegate() : QStyledItemDelegate(){};
-    VirtualQStyledItemDelegate(QObject* parent) : QStyledItemDelegate(parent){};
+    VirtualQStyledItemDelegate() : QStyledItemDelegate() {};
+    VirtualQStyledItemDelegate(QObject* parent) : QStyledItemDelegate(parent) {};
 
     ~VirtualQStyledItemDelegate() {
         qstyleditemdelegate_metacall_callback = nullptr;
@@ -594,30 +594,30 @@ class VirtualQStyledItemDelegate final : public QStyledItemDelegate {
     }
 
     // Friend functions
-    friend void QStyledItemDelegate_InitStyleOption(const QStyledItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index);
-    friend void QStyledItemDelegate_QBaseInitStyleOption(const QStyledItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index);
+    friend void QStyledItemDelegate_InitStyleOption(const QStyledItemDelegate* self, QStyleOptionViewItem* option, const QModelIndex* index);
+    friend void QStyledItemDelegate_QBaseInitStyleOption(const QStyledItemDelegate* self, QStyleOptionViewItem* option, const QModelIndex* index);
     friend bool QStyledItemDelegate_EventFilter(QStyledItemDelegate* self, QObject* object, QEvent* event);
     friend bool QStyledItemDelegate_QBaseEventFilter(QStyledItemDelegate* self, QObject* object, QEvent* event);
-    friend bool QStyledItemDelegate_EditorEvent(QStyledItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index);
-    friend bool QStyledItemDelegate_QBaseEditorEvent(QStyledItemDelegate* self, QEvent* event, QAbstractItemModel* model, QStyleOptionViewItem* option, QModelIndex* index);
+    friend bool QStyledItemDelegate_EditorEvent(QStyledItemDelegate* self, QEvent* event, QAbstractItemModel* model, const QStyleOptionViewItem* option, const QModelIndex* index);
+    friend bool QStyledItemDelegate_QBaseEditorEvent(QStyledItemDelegate* self, QEvent* event, QAbstractItemModel* model, const QStyleOptionViewItem* option, const QModelIndex* index);
     friend void QStyledItemDelegate_TimerEvent(QStyledItemDelegate* self, QTimerEvent* event);
     friend void QStyledItemDelegate_QBaseTimerEvent(QStyledItemDelegate* self, QTimerEvent* event);
     friend void QStyledItemDelegate_ChildEvent(QStyledItemDelegate* self, QChildEvent* event);
     friend void QStyledItemDelegate_QBaseChildEvent(QStyledItemDelegate* self, QChildEvent* event);
     friend void QStyledItemDelegate_CustomEvent(QStyledItemDelegate* self, QEvent* event);
     friend void QStyledItemDelegate_QBaseCustomEvent(QStyledItemDelegate* self, QEvent* event);
-    friend void QStyledItemDelegate_ConnectNotify(QStyledItemDelegate* self, QMetaMethod* signal);
-    friend void QStyledItemDelegate_QBaseConnectNotify(QStyledItemDelegate* self, QMetaMethod* signal);
-    friend void QStyledItemDelegate_DisconnectNotify(QStyledItemDelegate* self, QMetaMethod* signal);
-    friend void QStyledItemDelegate_QBaseDisconnectNotify(QStyledItemDelegate* self, QMetaMethod* signal);
+    friend void QStyledItemDelegate_ConnectNotify(QStyledItemDelegate* self, const QMetaMethod* signal);
+    friend void QStyledItemDelegate_QBaseConnectNotify(QStyledItemDelegate* self, const QMetaMethod* signal);
+    friend void QStyledItemDelegate_DisconnectNotify(QStyledItemDelegate* self, const QMetaMethod* signal);
+    friend void QStyledItemDelegate_QBaseDisconnectNotify(QStyledItemDelegate* self, const QMetaMethod* signal);
     friend QObject* QStyledItemDelegate_Sender(const QStyledItemDelegate* self);
     friend QObject* QStyledItemDelegate_QBaseSender(const QStyledItemDelegate* self);
     friend int QStyledItemDelegate_SenderSignalIndex(const QStyledItemDelegate* self);
     friend int QStyledItemDelegate_QBaseSenderSignalIndex(const QStyledItemDelegate* self);
     friend int QStyledItemDelegate_Receivers(const QStyledItemDelegate* self, const char* signal);
     friend int QStyledItemDelegate_QBaseReceivers(const QStyledItemDelegate* self, const char* signal);
-    friend bool QStyledItemDelegate_IsSignalConnected(const QStyledItemDelegate* self, QMetaMethod* signal);
-    friend bool QStyledItemDelegate_QBaseIsSignalConnected(const QStyledItemDelegate* self, QMetaMethod* signal);
+    friend bool QStyledItemDelegate_IsSignalConnected(const QStyledItemDelegate* self, const QMetaMethod* signal);
+    friend bool QStyledItemDelegate_QBaseIsSignalConnected(const QStyledItemDelegate* self, const QMetaMethod* signal);
 };
 
 #endif

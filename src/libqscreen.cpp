@@ -143,12 +143,12 @@ QRect* QScreen_AvailableGeometry(const QScreen* self) {
 libqt_list /* of QScreen* */ QScreen_VirtualSiblings(const QScreen* self) {
     QList<QScreen*> _ret = self->virtualSiblings();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QScreen** _arr = static_cast<QScreen**>(malloc(sizeof(QScreen*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QScreen** _arr = static_cast<QScreen**>(malloc(sizeof(QScreen*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -189,11 +189,11 @@ int QScreen_AngleBetween(const QScreen* self, int a, int b) {
     return self->angleBetween(static_cast<Qt::ScreenOrientation>(a), static_cast<Qt::ScreenOrientation>(b));
 }
 
-QTransform* QScreen_TransformBetween(const QScreen* self, int a, int b, QRect* target) {
+QTransform* QScreen_TransformBetween(const QScreen* self, int a, int b, const QRect* target) {
     return new QTransform(self->transformBetween(static_cast<Qt::ScreenOrientation>(a), static_cast<Qt::ScreenOrientation>(b), *target));
 }
 
-QRect* QScreen_MapBetween(const QScreen* self, int a, int b, QRect* rect) {
+QRect* QScreen_MapBetween(const QScreen* self, int a, int b, const QRect* rect) {
     return new QRect(self->mapBetween(static_cast<Qt::ScreenOrientation>(a), static_cast<Qt::ScreenOrientation>(b), *rect));
 }
 
@@ -213,7 +213,7 @@ double QScreen_RefreshRate(const QScreen* self) {
     return static_cast<double>(self->refreshRate());
 }
 
-void QScreen_GeometryChanged(QScreen* self, QRect* geometry) {
+void QScreen_GeometryChanged(QScreen* self, const QRect* geometry) {
     self->geometryChanged(*geometry);
 }
 
@@ -227,7 +227,7 @@ void QScreen_Connect_GeometryChanged(QScreen* self, intptr_t slot) {
     });
 }
 
-void QScreen_AvailableGeometryChanged(QScreen* self, QRect* geometry) {
+void QScreen_AvailableGeometryChanged(QScreen* self, const QRect* geometry) {
     self->availableGeometryChanged(*geometry);
 }
 
@@ -241,7 +241,7 @@ void QScreen_Connect_AvailableGeometryChanged(QScreen* self, intptr_t slot) {
     });
 }
 
-void QScreen_PhysicalSizeChanged(QScreen* self, QSizeF* size) {
+void QScreen_PhysicalSizeChanged(QScreen* self, const QSizeF* size) {
     self->physicalSizeChanged(*size);
 }
 
@@ -279,7 +279,7 @@ void QScreen_Connect_LogicalDotsPerInchChanged(QScreen* self, intptr_t slot) {
     });
 }
 
-void QScreen_VirtualGeometryChanged(QScreen* self, QRect* rect) {
+void QScreen_VirtualGeometryChanged(QScreen* self, const QRect* rect) {
     self->virtualGeometryChanged(*rect);
 }
 

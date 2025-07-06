@@ -51,12 +51,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QDialog::DialogCode DialogCode; // C++ enum
-#else
-typedef int DialogCode; // C ABI enum
-#endif
-
 QDialog* QDialog_new(QWidget* parent);
 QDialog* QDialog_new2();
 QDialog* QDialog_new3(QWidget* parent, int f);
@@ -193,9 +187,9 @@ void QDialog_QBaseDropEvent(QDialog* self, QDropEvent* event);
 void QDialog_HideEvent(QDialog* self, QHideEvent* event);
 void QDialog_OnHideEvent(QDialog* self, intptr_t slot);
 void QDialog_QBaseHideEvent(QDialog* self, QHideEvent* event);
-bool QDialog_NativeEvent(QDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QDialog_NativeEvent(QDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QDialog_OnNativeEvent(QDialog* self, intptr_t slot);
-bool QDialog_QBaseNativeEvent(QDialog* self, libqt_string eventType, void* message, intptr_t* result);
+bool QDialog_QBaseNativeEvent(QDialog* self, const libqt_string eventType, void* message, intptr_t* result);
 void QDialog_ChangeEvent(QDialog* self, QEvent* param1);
 void QDialog_OnChangeEvent(QDialog* self, intptr_t slot);
 void QDialog_QBaseChangeEvent(QDialog* self, QEvent* param1);
@@ -229,12 +223,12 @@ void QDialog_QBaseChildEvent(QDialog* self, QChildEvent* event);
 void QDialog_CustomEvent(QDialog* self, QEvent* event);
 void QDialog_OnCustomEvent(QDialog* self, intptr_t slot);
 void QDialog_QBaseCustomEvent(QDialog* self, QEvent* event);
-void QDialog_ConnectNotify(QDialog* self, QMetaMethod* signal);
+void QDialog_ConnectNotify(QDialog* self, const QMetaMethod* signal);
 void QDialog_OnConnectNotify(QDialog* self, intptr_t slot);
-void QDialog_QBaseConnectNotify(QDialog* self, QMetaMethod* signal);
-void QDialog_DisconnectNotify(QDialog* self, QMetaMethod* signal);
+void QDialog_QBaseConnectNotify(QDialog* self, const QMetaMethod* signal);
+void QDialog_DisconnectNotify(QDialog* self, const QMetaMethod* signal);
 void QDialog_OnDisconnectNotify(QDialog* self, intptr_t slot);
-void QDialog_QBaseDisconnectNotify(QDialog* self, QMetaMethod* signal);
+void QDialog_QBaseDisconnectNotify(QDialog* self, const QMetaMethod* signal);
 void QDialog_AdjustPosition(QDialog* self, QWidget* param1);
 void QDialog_OnAdjustPosition(QDialog* self, intptr_t slot);
 void QDialog_QBaseAdjustPosition(QDialog* self, QWidget* param1);
@@ -262,9 +256,12 @@ int QDialog_QBaseSenderSignalIndex(const QDialog* self);
 int QDialog_Receivers(const QDialog* self, const char* signal);
 void QDialog_OnReceivers(const QDialog* self, intptr_t slot);
 int QDialog_QBaseReceivers(const QDialog* self, const char* signal);
-bool QDialog_IsSignalConnected(const QDialog* self, QMetaMethod* signal);
+bool QDialog_IsSignalConnected(const QDialog* self, const QMetaMethod* signal);
 void QDialog_OnIsSignalConnected(const QDialog* self, intptr_t slot);
-bool QDialog_QBaseIsSignalConnected(const QDialog* self, QMetaMethod* signal);
+bool QDialog_QBaseIsSignalConnected(const QDialog* self, const QMetaMethod* signal);
+double QDialog_GetDecodedMetricF(const QDialog* self, int metricA, int metricB);
+void QDialog_OnGetDecodedMetricF(const QDialog* self, intptr_t slot);
+double QDialog_QBaseGetDecodedMetricF(const QDialog* self, int metricA, int metricB);
 void QDialog_Delete(QDialog* self);
 
 #ifdef __cplusplus

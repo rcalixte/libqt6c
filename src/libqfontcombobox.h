@@ -12,22 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqevent.h"
-#include "libqcombobox.h"
-#include "libqfont.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpaintdevice.h"
-#include "libqpaintengine.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qfontcombobox.html
 
 /// q_fontcombobox_new constructs a new QFontComboBox object.
@@ -2421,6 +2405,13 @@ QWidget* q_fontcombobox_child_at_with_q_point(void* self, void* p);
 
 /// Inherited from QWidget
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
+///
+/// ``` QFontComboBox* self, QPointF* p ```
+QWidget* q_fontcombobox_child_at_with_q_point_f(void* self, void* p);
+
+/// Inherited from QWidget
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
 /// ``` QFontComboBox* self, enum Qt__WidgetAttribute param1 ```
@@ -2732,7 +2723,7 @@ QThread* q_fontcombobox_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QFontComboBox* self, QThread* thread ```
-void q_fontcombobox_move_to_thread(void* self, void* thread);
+bool q_fontcombobox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2747,6 +2738,13 @@ int32_t q_fontcombobox_start_timer(void* self, int interval);
 ///
 /// ``` QFontComboBox* self, int id ```
 void q_fontcombobox_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QFontComboBox* self, enum Qt__TimerId id ```
+void q_fontcombobox_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2883,6 +2881,13 @@ void q_fontcombobox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QFontComboBox* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_fontcombobox_move_to_thread2(void* self, void* thread, void* param2);
+
+/// Inherited from QObject
+///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QFontComboBox* self, int interval, enum Qt__TimerType timerType ```
@@ -2999,6 +3004,13 @@ int32_t q_fontcombobox_depth(void* self);
 ///
 ///
 double q_fontcombobox_device_pixel_ratio_f_scale();
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
+///
+/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+int32_t q_fontcombobox_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QComboBox
 ///
@@ -4565,6 +4577,33 @@ bool q_fontcombobox_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// ``` QFontComboBox* self, bool (*slot)(QFontComboBox*, QMetaMethod*) ```
 void q_fontcombobox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// ``` QFontComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_fontcombobox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// ``` QFontComboBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+double q_fontcombobox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+
+/// Inherited from QPaintDevice
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// ``` QFontComboBox* self, double (*slot)(QFontComboBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
+void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///

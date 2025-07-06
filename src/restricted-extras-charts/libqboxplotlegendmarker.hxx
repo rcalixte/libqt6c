@@ -67,8 +67,8 @@ class VirtualQBoxPlotLegendMarker final : public QBoxPlotLegendMarker {
     mutable bool qboxplotlegendmarker_issignalconnected_isbase = false;
 
   public:
-    VirtualQBoxPlotLegendMarker(QBoxPlotSeries* series, QLegend* legend) : QBoxPlotLegendMarker(series, legend){};
-    VirtualQBoxPlotLegendMarker(QBoxPlotSeries* series, QLegend* legend, QObject* parent) : QBoxPlotLegendMarker(series, legend, parent){};
+    VirtualQBoxPlotLegendMarker(QBoxPlotSeries* series, QLegend* legend) : QBoxPlotLegendMarker(series, legend) {};
+    VirtualQBoxPlotLegendMarker(QBoxPlotSeries* series, QLegend* legend, QObject* parent) : QBoxPlotLegendMarker(series, legend, parent) {};
 
     ~VirtualQBoxPlotLegendMarker() {
         qboxplotlegendmarker_metacall_callback = nullptr;
@@ -332,18 +332,18 @@ class VirtualQBoxPlotLegendMarker final : public QBoxPlotLegendMarker {
     friend void QBoxPlotLegendMarker_QBaseChildEvent(QBoxPlotLegendMarker* self, QChildEvent* event);
     friend void QBoxPlotLegendMarker_CustomEvent(QBoxPlotLegendMarker* self, QEvent* event);
     friend void QBoxPlotLegendMarker_QBaseCustomEvent(QBoxPlotLegendMarker* self, QEvent* event);
-    friend void QBoxPlotLegendMarker_ConnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal);
-    friend void QBoxPlotLegendMarker_QBaseConnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal);
-    friend void QBoxPlotLegendMarker_DisconnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal);
-    friend void QBoxPlotLegendMarker_QBaseDisconnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal);
+    friend void QBoxPlotLegendMarker_ConnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal);
+    friend void QBoxPlotLegendMarker_QBaseConnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal);
+    friend void QBoxPlotLegendMarker_DisconnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal);
+    friend void QBoxPlotLegendMarker_QBaseDisconnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal);
     friend QObject* QBoxPlotLegendMarker_Sender(const QBoxPlotLegendMarker* self);
     friend QObject* QBoxPlotLegendMarker_QBaseSender(const QBoxPlotLegendMarker* self);
     friend int QBoxPlotLegendMarker_SenderSignalIndex(const QBoxPlotLegendMarker* self);
     friend int QBoxPlotLegendMarker_QBaseSenderSignalIndex(const QBoxPlotLegendMarker* self);
     friend int QBoxPlotLegendMarker_Receivers(const QBoxPlotLegendMarker* self, const char* signal);
     friend int QBoxPlotLegendMarker_QBaseReceivers(const QBoxPlotLegendMarker* self, const char* signal);
-    friend bool QBoxPlotLegendMarker_IsSignalConnected(const QBoxPlotLegendMarker* self, QMetaMethod* signal);
-    friend bool QBoxPlotLegendMarker_QBaseIsSignalConnected(const QBoxPlotLegendMarker* self, QMetaMethod* signal);
+    friend bool QBoxPlotLegendMarker_IsSignalConnected(const QBoxPlotLegendMarker* self, const QMetaMethod* signal);
+    friend bool QBoxPlotLegendMarker_QBaseIsSignalConnected(const QBoxPlotLegendMarker* self, const QMetaMethod* signal);
 };
 
 #endif

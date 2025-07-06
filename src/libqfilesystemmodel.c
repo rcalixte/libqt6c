@@ -11,6 +11,7 @@
 #include "libqobject.hpp"
 #include "libqsize.hpp"
 #include <string.h>
+#include "libqtimezone.hpp"
 #include "libqvariant.hpp"
 #include "libqcoreevent.hpp"
 #include "libqfilesystemmodel.hpp"
@@ -443,6 +444,10 @@ QDateTime* q_filesystemmodel_last_modified(void* self, void* index) {
     return QFileSystemModel_LastModified((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
+QDateTime* q_filesystemmodel_last_modified2(void* self, void* index, void* tz) {
+    return QFileSystemModel_LastModified2((QFileSystemModel*)self, (QModelIndex*)index, (QTimeZone*)tz);
+}
+
 QModelIndex* q_filesystemmodel_mkdir(void* self, void* parent, const char* name) {
     return QFileSystemModel_Mkdir((QFileSystemModel*)self, (QModelIndex*)parent, qstring(name));
 }
@@ -687,8 +692,8 @@ QThread* q_filesystemmodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_filesystemmodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_filesystemmodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_filesystemmodel_start_timer(void* self, int interval) {
@@ -697,6 +702,10 @@ int32_t q_filesystemmodel_start_timer(void* self, int interval) {
 
 void q_filesystemmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_filesystemmodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_filesystemmodel_children(void* self) {
@@ -785,6 +794,10 @@ bool q_filesystemmodel_inherits(void* self, const char* classname) {
 
 void q_filesystemmodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_filesystemmodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_filesystemmodel_start_timer2(void* self, int interval, int64_t timerType) {

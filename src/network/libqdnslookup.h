@@ -12,12 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "libqhostaddress.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qdnsdomainnamerecord.html
 
 /// q_dnsdomainnamerecord_new constructs a new QDnsDomainNameRecord object.
@@ -258,6 +252,65 @@ const char** q_dnstextrecord_values(void* self);
 /// ``` QDnsTextRecord* self ```
 void q_dnstextrecord_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qdnstlsassociationrecord.html
+
+/// q_dnstlsassociationrecord_new constructs a new QDnsTlsAssociationRecord object.
+///
+///
+QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new();
+
+/// q_dnstlsassociationrecord_new2 constructs a new QDnsTlsAssociationRecord object.
+///
+/// ``` QDnsTlsAssociationRecord* other ```
+QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new2(void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#operator=)
+///
+/// ``` QDnsTlsAssociationRecord* self, QDnsTlsAssociationRecord* other ```
+void q_dnstlsassociationrecord_operator_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#swap)
+///
+/// ``` QDnsTlsAssociationRecord* self, QDnsTlsAssociationRecord* other ```
+void q_dnstlsassociationrecord_swap(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#name)
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+const char* q_dnstlsassociationrecord_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#timeToLive)
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+uint32_t q_dnstlsassociationrecord_time_to_live(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#usage)
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+int64_t q_dnstlsassociationrecord_usage(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#selector)
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+int64_t q_dnstlsassociationrecord_selector(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#matchType)
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+int64_t q_dnstlsassociationrecord_match_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#value)
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+char* q_dnstlsassociationrecord_value(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#dtor.QDnsTlsAssociationRecord)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QDnsTlsAssociationRecord* self ```
+void q_dnstlsassociationrecord_delete(void* self);
+
 /// https://doc.qt.io/qt-6/qdnslookup.html
 
 /// q_dnslookup_new constructs a new QDnsLookup object.
@@ -277,18 +330,43 @@ QDnsLookup* q_dnslookup_new3(int64_t typeVal, const char* name, void* nameserver
 
 /// q_dnslookup_new4 constructs a new QDnsLookup object.
 ///
-/// ``` QObject* parent ```
-QDnsLookup* q_dnslookup_new4(void* parent);
+/// ``` enum QDnsLookup__Type typeVal, const char* name, QHostAddress* nameserver, unsigned short port ```
+QDnsLookup* q_dnslookup_new4(int64_t typeVal, const char* name, void* nameserver, unsigned short port);
 
 /// q_dnslookup_new5 constructs a new QDnsLookup object.
 ///
-/// ``` enum QDnsLookup__Type typeVal, const char* name, QObject* parent ```
-QDnsLookup* q_dnslookup_new5(int64_t typeVal, const char* name, void* parent);
+/// ``` enum QDnsLookup__Type typeVal, const char* name, enum QDnsLookup__Protocol protocol, QHostAddress* nameserver ```
+QDnsLookup* q_dnslookup_new5(int64_t typeVal, const char* name, int64_t protocol, void* nameserver);
 
 /// q_dnslookup_new6 constructs a new QDnsLookup object.
 ///
+/// ``` QObject* parent ```
+QDnsLookup* q_dnslookup_new6(void* parent);
+
+/// q_dnslookup_new7 constructs a new QDnsLookup object.
+///
+/// ``` enum QDnsLookup__Type typeVal, const char* name, QObject* parent ```
+QDnsLookup* q_dnslookup_new7(int64_t typeVal, const char* name, void* parent);
+
+/// q_dnslookup_new8 constructs a new QDnsLookup object.
+///
 /// ``` enum QDnsLookup__Type typeVal, const char* name, QHostAddress* nameserver, QObject* parent ```
-QDnsLookup* q_dnslookup_new6(int64_t typeVal, const char* name, void* nameserver, void* parent);
+QDnsLookup* q_dnslookup_new8(int64_t typeVal, const char* name, void* nameserver, void* parent);
+
+/// q_dnslookup_new9 constructs a new QDnsLookup object.
+///
+/// ``` enum QDnsLookup__Type typeVal, const char* name, QHostAddress* nameserver, unsigned short port, QObject* parent ```
+QDnsLookup* q_dnslookup_new9(int64_t typeVal, const char* name, void* nameserver, unsigned short port, void* parent);
+
+/// q_dnslookup_new10 constructs a new QDnsLookup object.
+///
+/// ``` enum QDnsLookup__Type typeVal, const char* name, enum QDnsLookup__Protocol protocol, QHostAddress* nameserver, unsigned short port ```
+QDnsLookup* q_dnslookup_new10(int64_t typeVal, const char* name, int64_t protocol, void* nameserver, unsigned short port);
+
+/// q_dnslookup_new11 constructs a new QDnsLookup object.
+///
+/// ``` enum QDnsLookup__Type typeVal, const char* name, enum QDnsLookup__Protocol protocol, QHostAddress* nameserver, unsigned short port, QObject* parent ```
+QDnsLookup* q_dnslookup_new11(int64_t typeVal, const char* name, int64_t protocol, void* nameserver, unsigned short port, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -315,6 +393,11 @@ int32_t q_dnslookup_qbase_metacall(void* self, int64_t param1, int param2, void*
 ///
 /// ``` const char* s ```
 const char* q_dnslookup_tr(const char* s);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#isAuthenticData)
+///
+/// ``` QDnsLookup* self ```
+bool q_dnslookup_is_authentic_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#error)
 ///
@@ -361,6 +444,36 @@ QHostAddress* q_dnslookup_nameserver(void* self);
 /// ``` QDnsLookup* self, QHostAddress* nameserver ```
 void q_dnslookup_set_nameserver(void* self, void* nameserver);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPort)
+///
+/// ``` QDnsLookup* self ```
+unsigned short q_dnslookup_nameserver_port(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setNameserverPort)
+///
+/// ``` QDnsLookup* self, unsigned short port ```
+void q_dnslookup_set_nameserver_port(void* self, unsigned short port);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverProtocol)
+///
+/// ``` QDnsLookup* self ```
+int64_t q_dnslookup_nameserver_protocol(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setNameserverProtocol)
+///
+/// ``` QDnsLookup* self, enum QDnsLookup__Protocol protocol ```
+void q_dnslookup_set_nameserver_protocol(void* self, int64_t protocol);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setNameserver)
+///
+/// ``` QDnsLookup* self, enum QDnsLookup__Protocol protocol, QHostAddress* nameserver ```
+void q_dnslookup_set_nameserver2(void* self, int64_t protocol, void* nameserver);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setNameserver)
+///
+/// ``` QDnsLookup* self, QHostAddress* nameserver, unsigned short port ```
+void q_dnslookup_set_nameserver3(void* self, void* nameserver, unsigned short port);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#canonicalNameRecords)
 ///
 /// ``` QDnsLookup* self ```
@@ -395,6 +508,31 @@ libqt_list /* of QDnsServiceRecord* */ q_dnslookup_service_records(void* self);
 ///
 /// ``` QDnsLookup* self ```
 libqt_list /* of QDnsTextRecord* */ q_dnslookup_text_records(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#tlsAssociationRecords)
+///
+/// ``` QDnsLookup* self ```
+libqt_list /* of QDnsTlsAssociationRecord* */ q_dnslookup_tls_association_records(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setSslConfiguration)
+///
+/// ``` QDnsLookup* self, QSslConfiguration* sslConfiguration ```
+void q_dnslookup_set_ssl_configuration(void* self, void* sslConfiguration);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#sslConfiguration)
+///
+/// ``` QDnsLookup* self ```
+QSslConfiguration* q_dnslookup_ssl_configuration(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#isProtocolSupported)
+///
+/// ``` enum QDnsLookup__Protocol protocol ```
+bool q_dnslookup_is_protocol_supported(int64_t protocol);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#defaultPortForProtocol)
+///
+/// ``` enum QDnsLookup__Protocol protocol ```
+unsigned short q_dnslookup_default_port_for_protocol(int64_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#abort)
 ///
@@ -446,6 +584,26 @@ void q_dnslookup_nameserver_changed(void* self, void* nameserver);
 /// ``` QDnsLookup* self, void (*slot)(QDnsLookup*, QHostAddress*) ```
 void q_dnslookup_on_nameserver_changed(void* self, void (*slot)(void*, void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPortChanged)
+///
+/// ``` QDnsLookup* self, unsigned short port ```
+void q_dnslookup_nameserver_port_changed(void* self, unsigned short port);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPortChanged)
+///
+/// ``` QDnsLookup* self, void (*slot)(QDnsLookup*, unsigned short) ```
+void q_dnslookup_on_nameserver_port_changed(void* self, void (*slot)(void*, unsigned short));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverProtocolChanged)
+///
+/// ``` QDnsLookup* self, enum QDnsLookup__Protocol protocol ```
+void q_dnslookup_nameserver_protocol_changed(void* self, int64_t protocol);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#nameserverProtocolChanged)
+///
+/// ``` QDnsLookup* self, void (*slot)(QDnsLookup*, enum QDnsLookup__Protocol) ```
+void q_dnslookup_on_nameserver_protocol_changed(void* self, void (*slot)(void*, int64_t));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -455,6 +613,11 @@ const char* q_dnslookup_tr2(const char* s, const char* c);
 ///
 /// ``` const char* s, const char* c, int n ```
 const char* q_dnslookup_tr3(const char* s, const char* c, int n);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnslookup.html#setNameserver)
+///
+/// ``` QDnsLookup* self, enum QDnsLookup__Protocol protocol, QHostAddress* nameserver, unsigned short port ```
+void q_dnslookup_set_nameserver32(void* self, int64_t protocol, void* nameserver, unsigned short port);
 
 /// Inherited from QObject
 ///
@@ -517,7 +680,7 @@ QThread* q_dnslookup_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDnsLookup* self, QThread* thread ```
-void q_dnslookup_move_to_thread(void* self, void* thread);
+bool q_dnslookup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -532,6 +695,13 @@ int32_t q_dnslookup_start_timer(void* self, int interval);
 ///
 /// ``` QDnsLookup* self, int id ```
 void q_dnslookup_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDnsLookup* self, enum Qt__TimerId id ```
+void q_dnslookup_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -672,6 +842,13 @@ bool q_dnslookup_inherits(void* self, const char* classname);
 ///
 /// ``` QDnsLookup* self ```
 void q_dnslookup_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDnsLookup* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_dnslookup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1024,6 +1201,36 @@ void q_dnslookup_delete(void* self);
 /// https://doc.qt.io/qt-6/qdnslookup.html#types
 
 typedef enum {
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_CERTIFICATEAUTHORITYCONSTRAIT = 0,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_SERVICECERTIFICATECONSTRAINT = 1,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_TRUSTANCHORASSERTION = 2,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_DOMAINISSUEDCERTIFICATE = 3,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_PRIVATEUSE = 255,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_PKIX_TA = 0,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_PKIX_EE = 1,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_DANE_TA = 2,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_DANE_EE = 3,
+    QDNSTLSASSOCIATIONRECORD_CERTIFICATEUSAGE_PRIVCERT = 255
+} QDnsTlsAssociationRecord__CertificateUsage;
+
+typedef enum {
+    QDNSTLSASSOCIATIONRECORD_SELECTOR_FULLCERTIFICATE = 0,
+    QDNSTLSASSOCIATIONRECORD_SELECTOR_SUBJECTPUBLICKEYINFO = 1,
+    QDNSTLSASSOCIATIONRECORD_SELECTOR_PRIVATEUSE = 255,
+    QDNSTLSASSOCIATIONRECORD_SELECTOR_CERT = 0,
+    QDNSTLSASSOCIATIONRECORD_SELECTOR_SPKI = 1,
+    QDNSTLSASSOCIATIONRECORD_SELECTOR_PRIVSEL = 255
+} QDnsTlsAssociationRecord__Selector;
+
+typedef enum {
+    QDNSTLSASSOCIATIONRECORD_MATCHINGTYPE_EXACT = 0,
+    QDNSTLSASSOCIATIONRECORD_MATCHINGTYPE_SHA256 = 1,
+    QDNSTLSASSOCIATIONRECORD_MATCHINGTYPE_SHA512 = 2,
+    QDNSTLSASSOCIATIONRECORD_MATCHINGTYPE_PRIVATEUSE = 255,
+    QDNSTLSASSOCIATIONRECORD_MATCHINGTYPE_PRIVMATCH = 255
+} QDnsTlsAssociationRecord__MatchingType;
+
+typedef enum {
     QDNSLOOKUP_ERROR_NOERROR = 0,
     QDNSLOOKUP_ERROR_RESOLVERERROR = 1,
     QDNSLOOKUP_ERROR_OPERATIONCANCELLEDERROR = 2,
@@ -1031,7 +1238,8 @@ typedef enum {
     QDNSLOOKUP_ERROR_INVALIDREPLYERROR = 4,
     QDNSLOOKUP_ERROR_SERVERFAILUREERROR = 5,
     QDNSLOOKUP_ERROR_SERVERREFUSEDERROR = 6,
-    QDNSLOOKUP_ERROR_NOTFOUNDERROR = 7
+    QDNSLOOKUP_ERROR_NOTFOUNDERROR = 7,
+    QDNSLOOKUP_ERROR_TIMEOUTERROR = 8
 } QDnsLookup__Error;
 
 typedef enum {
@@ -1043,7 +1251,13 @@ typedef enum {
     QDNSLOOKUP_TYPE_NS = 2,
     QDNSLOOKUP_TYPE_PTR = 12,
     QDNSLOOKUP_TYPE_SRV = 33,
+    QDNSLOOKUP_TYPE_TLSA = 52,
     QDNSLOOKUP_TYPE_TXT = 16
 } QDnsLookup__Type;
+
+typedef enum {
+    QDNSLOOKUP_PROTOCOL_STANDARD = 0,
+    QDNSLOOKUP_PROTOCOL_DNSOVERTLS = 1
+} QDnsLookup__Protocol;
 
 #endif

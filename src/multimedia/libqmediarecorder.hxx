@@ -61,8 +61,8 @@ class VirtualQMediaRecorder final : public QMediaRecorder {
     mutable bool qmediarecorder_issignalconnected_isbase = false;
 
   public:
-    VirtualQMediaRecorder() : QMediaRecorder(){};
-    VirtualQMediaRecorder(QObject* parent) : QMediaRecorder(parent){};
+    VirtualQMediaRecorder() : QMediaRecorder() {};
+    VirtualQMediaRecorder(QObject* parent) : QMediaRecorder(parent) {};
 
     ~VirtualQMediaRecorder() {
         qmediarecorder_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQMediaRecorder final : public QMediaRecorder {
     friend void QMediaRecorder_QBaseChildEvent(QMediaRecorder* self, QChildEvent* event);
     friend void QMediaRecorder_CustomEvent(QMediaRecorder* self, QEvent* event);
     friend void QMediaRecorder_QBaseCustomEvent(QMediaRecorder* self, QEvent* event);
-    friend void QMediaRecorder_ConnectNotify(QMediaRecorder* self, QMetaMethod* signal);
-    friend void QMediaRecorder_QBaseConnectNotify(QMediaRecorder* self, QMetaMethod* signal);
-    friend void QMediaRecorder_DisconnectNotify(QMediaRecorder* self, QMetaMethod* signal);
-    friend void QMediaRecorder_QBaseDisconnectNotify(QMediaRecorder* self, QMetaMethod* signal);
+    friend void QMediaRecorder_ConnectNotify(QMediaRecorder* self, const QMetaMethod* signal);
+    friend void QMediaRecorder_QBaseConnectNotify(QMediaRecorder* self, const QMetaMethod* signal);
+    friend void QMediaRecorder_DisconnectNotify(QMediaRecorder* self, const QMetaMethod* signal);
+    friend void QMediaRecorder_QBaseDisconnectNotify(QMediaRecorder* self, const QMetaMethod* signal);
     friend QObject* QMediaRecorder_Sender(const QMediaRecorder* self);
     friend QObject* QMediaRecorder_QBaseSender(const QMediaRecorder* self);
     friend int QMediaRecorder_SenderSignalIndex(const QMediaRecorder* self);
     friend int QMediaRecorder_QBaseSenderSignalIndex(const QMediaRecorder* self);
     friend int QMediaRecorder_Receivers(const QMediaRecorder* self, const char* signal);
     friend int QMediaRecorder_QBaseReceivers(const QMediaRecorder* self, const char* signal);
-    friend bool QMediaRecorder_IsSignalConnected(const QMediaRecorder* self, QMetaMethod* signal);
-    friend bool QMediaRecorder_QBaseIsSignalConnected(const QMediaRecorder* self, QMetaMethod* signal);
+    friend bool QMediaRecorder_IsSignalConnected(const QMediaRecorder* self, const QMetaMethod* signal);
+    friend bool QMediaRecorder_QBaseIsSignalConnected(const QMediaRecorder* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -144,20 +144,10 @@ void q_bitarray_operator_bitwise_or_assign(void* self, void* param1);
 /// ``` QBitArray* self, QBitArray* param1 ```
 void q_bitarray_operator_bitwise_not_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator==)
-///
-/// ``` QBitArray* self, QBitArray* other ```
-bool q_bitarray_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator!=)
-///
-/// ``` QBitArray* self, QBitArray* other ```
-bool q_bitarray_operator_not_equal(void* self, void* other);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
-/// ``` QBitArray* self, bool val ```
-bool q_bitarray_fill(void* self, bool val);
+/// ``` QBitArray* self, bool aval ```
+bool q_bitarray_fill(void* self, bool aval);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
@@ -186,8 +176,8 @@ uint32_t q_bitarray_to_u_int32(void* self, int64_t endianness);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
-/// ``` QBitArray* self, bool val, int64_t size ```
-bool q_bitarray_fill22(void* self, bool val, int64_t size);
+/// ``` QBitArray* self, bool aval, int64_t asize ```
+bool q_bitarray_fill22(void* self, bool aval, int64_t asize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///

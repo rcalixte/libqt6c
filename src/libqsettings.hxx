@@ -61,21 +61,21 @@ class VirtualQSettings final : public QSettings {
     mutable bool qsettings_issignalconnected_isbase = false;
 
   public:
-    VirtualQSettings(const QString& organization) : QSettings(organization){};
-    VirtualQSettings(QSettings::Scope scope, const QString& organization) : QSettings(scope, organization){};
-    VirtualQSettings(QSettings::Format format, QSettings::Scope scope, const QString& organization) : QSettings(format, scope, organization){};
-    VirtualQSettings(const QString& fileName, QSettings::Format format) : QSettings(fileName, format){};
-    VirtualQSettings() : QSettings(){};
-    VirtualQSettings(QSettings::Scope scope) : QSettings(scope){};
-    VirtualQSettings(const QString& organization, const QString& application) : QSettings(organization, application){};
-    VirtualQSettings(const QString& organization, const QString& application, QObject* parent) : QSettings(organization, application, parent){};
-    VirtualQSettings(QSettings::Scope scope, const QString& organization, const QString& application) : QSettings(scope, organization, application){};
-    VirtualQSettings(QSettings::Scope scope, const QString& organization, const QString& application, QObject* parent) : QSettings(scope, organization, application, parent){};
-    VirtualQSettings(QSettings::Format format, QSettings::Scope scope, const QString& organization, const QString& application) : QSettings(format, scope, organization, application){};
-    VirtualQSettings(QSettings::Format format, QSettings::Scope scope, const QString& organization, const QString& application, QObject* parent) : QSettings(format, scope, organization, application, parent){};
-    VirtualQSettings(const QString& fileName, QSettings::Format format, QObject* parent) : QSettings(fileName, format, parent){};
-    VirtualQSettings(QObject* parent) : QSettings(parent){};
-    VirtualQSettings(QSettings::Scope scope, QObject* parent) : QSettings(scope, parent){};
+    VirtualQSettings(const QString& organization) : QSettings(organization) {};
+    VirtualQSettings(QSettings::Scope scope, const QString& organization) : QSettings(scope, organization) {};
+    VirtualQSettings(QSettings::Format format, QSettings::Scope scope, const QString& organization) : QSettings(format, scope, organization) {};
+    VirtualQSettings(const QString& fileName, QSettings::Format format) : QSettings(fileName, format) {};
+    VirtualQSettings() : QSettings() {};
+    VirtualQSettings(QSettings::Scope scope) : QSettings(scope) {};
+    VirtualQSettings(const QString& organization, const QString& application) : QSettings(organization, application) {};
+    VirtualQSettings(const QString& organization, const QString& application, QObject* parent) : QSettings(organization, application, parent) {};
+    VirtualQSettings(QSettings::Scope scope, const QString& organization, const QString& application) : QSettings(scope, organization, application) {};
+    VirtualQSettings(QSettings::Scope scope, const QString& organization, const QString& application, QObject* parent) : QSettings(scope, organization, application, parent) {};
+    VirtualQSettings(QSettings::Format format, QSettings::Scope scope, const QString& organization, const QString& application) : QSettings(format, scope, organization, application) {};
+    VirtualQSettings(QSettings::Format format, QSettings::Scope scope, const QString& organization, const QString& application, QObject* parent) : QSettings(format, scope, organization, application, parent) {};
+    VirtualQSettings(const QString& fileName, QSettings::Format format, QObject* parent) : QSettings(fileName, format, parent) {};
+    VirtualQSettings(QObject* parent) : QSettings(parent) {};
+    VirtualQSettings(QSettings::Scope scope, QObject* parent) : QSettings(scope, parent) {};
 
     ~VirtualQSettings() {
         qsettings_metacall_callback = nullptr;
@@ -309,18 +309,18 @@ class VirtualQSettings final : public QSettings {
     friend void QSettings_QBaseChildEvent(QSettings* self, QChildEvent* event);
     friend void QSettings_CustomEvent(QSettings* self, QEvent* event);
     friend void QSettings_QBaseCustomEvent(QSettings* self, QEvent* event);
-    friend void QSettings_ConnectNotify(QSettings* self, QMetaMethod* signal);
-    friend void QSettings_QBaseConnectNotify(QSettings* self, QMetaMethod* signal);
-    friend void QSettings_DisconnectNotify(QSettings* self, QMetaMethod* signal);
-    friend void QSettings_QBaseDisconnectNotify(QSettings* self, QMetaMethod* signal);
+    friend void QSettings_ConnectNotify(QSettings* self, const QMetaMethod* signal);
+    friend void QSettings_QBaseConnectNotify(QSettings* self, const QMetaMethod* signal);
+    friend void QSettings_DisconnectNotify(QSettings* self, const QMetaMethod* signal);
+    friend void QSettings_QBaseDisconnectNotify(QSettings* self, const QMetaMethod* signal);
     friend QObject* QSettings_Sender(const QSettings* self);
     friend QObject* QSettings_QBaseSender(const QSettings* self);
     friend int QSettings_SenderSignalIndex(const QSettings* self);
     friend int QSettings_QBaseSenderSignalIndex(const QSettings* self);
     friend int QSettings_Receivers(const QSettings* self, const char* signal);
     friend int QSettings_QBaseReceivers(const QSettings* self, const char* signal);
-    friend bool QSettings_IsSignalConnected(const QSettings* self, QMetaMethod* signal);
-    friend bool QSettings_QBaseIsSignalConnected(const QSettings* self, QMetaMethod* signal);
+    friend bool QSettings_IsSignalConnected(const QSettings* self, const QMetaMethod* signal);
+    friend bool QSettings_QBaseIsSignalConnected(const QSettings* self, const QMetaMethod* signal);
 };
 
 #endif

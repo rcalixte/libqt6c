@@ -361,6 +361,10 @@ double q_printer_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
+int32_t q_printer_encode_metric_f(int64_t metric, double value) {
+    return QPaintDevice_EncodeMetricF(metric, value);
+}
+
 bool q_printer_set_page_layout(void* self, void* pageLayout) {
     return QPrinter_SetPageLayout((QPrinter*)self, (QPageLayout*)pageLayout);
 }
@@ -455,6 +459,18 @@ QPainter* q_printer_qbase_shared_painter(void* self) {
 
 void q_printer_on_shared_painter(void* self, QPainter* (*slot)()) {
     QPrinter_OnSharedPainter((QPrinter*)self, (intptr_t)slot);
+}
+
+double q_printer_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPrinter_GetDecodedMetricF((QPrinter*)self, metricA, metricB);
+}
+
+double q_printer_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+    return QPrinter_QBaseGetDecodedMetricF((QPrinter*)self, metricA, metricB);
+}
+
+void q_printer_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
+    QPrinter_OnGetDecodedMetricF((QPrinter*)self, (intptr_t)slot);
 }
 
 void q_printer_delete(void* self) {

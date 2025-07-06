@@ -172,7 +172,7 @@ class VirtualQAbstractSocket final : public QAbstractSocket {
     mutable bool qabstractsocket_issignalconnected_isbase = false;
 
   public:
-    VirtualQAbstractSocket(QAbstractSocket::SocketType socketType, QObject* parent) : QAbstractSocket(socketType, parent){};
+    VirtualQAbstractSocket(QAbstractSocket::SocketType socketType, QObject* parent) : QAbstractSocket(socketType, parent) {};
 
     ~VirtualQAbstractSocket() {
         qabstractsocket_metacall_callback = nullptr;
@@ -358,7 +358,7 @@ class VirtualQAbstractSocket final : public QAbstractSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool bind(const QHostAddress& address, quint16 port, QAbstractSocket::BindMode mode) override {
+    virtual bool bind(const QHostAddress& address, quint16 port, QFlags<QAbstractSocket::BindFlag> mode) override {
         if (qabstractsocket_bind_isbase) {
             qabstractsocket_bind_isbase = false;
             return QAbstractSocket::bind(address, port, mode);
@@ -377,7 +377,7 @@ class VirtualQAbstractSocket final : public QAbstractSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual void connectToHost(const QString& hostName, quint16 port, QIODeviceBase::OpenMode mode, QAbstractSocket::NetworkLayerProtocol protocol) override {
+    virtual void connectToHost(const QString& hostName, quint16 port, QFlags<QIODeviceBase::OpenModeFlag> mode, QAbstractSocket::NetworkLayerProtocol protocol) override {
         if (qabstractsocket_connecttohost_isbase) {
             qabstractsocket_connecttohost_isbase = false;
             QAbstractSocket::connectToHost(hostName, port, mode, protocol);
@@ -467,7 +467,7 @@ class VirtualQAbstractSocket final : public QAbstractSocket {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool setSocketDescriptor(qintptr socketDescriptor, QAbstractSocket::SocketState state, QIODeviceBase::OpenMode openMode) override {
+    virtual bool setSocketDescriptor(qintptr socketDescriptor, QAbstractSocket::SocketState state, QFlags<QIODeviceBase::OpenModeFlag> openMode) override {
         if (qabstractsocket_setsocketdescriptor_isbase) {
             qabstractsocket_setsocketdescriptor_isbase = false;
             return QAbstractSocket::setSocketDescriptor(socketDescriptor, state, openMode);
@@ -1083,36 +1083,36 @@ class VirtualQAbstractSocket final : public QAbstractSocket {
     friend void QAbstractSocket_QBaseChildEvent(QAbstractSocket* self, QChildEvent* event);
     friend void QAbstractSocket_CustomEvent(QAbstractSocket* self, QEvent* event);
     friend void QAbstractSocket_QBaseCustomEvent(QAbstractSocket* self, QEvent* event);
-    friend void QAbstractSocket_ConnectNotify(QAbstractSocket* self, QMetaMethod* signal);
-    friend void QAbstractSocket_QBaseConnectNotify(QAbstractSocket* self, QMetaMethod* signal);
-    friend void QAbstractSocket_DisconnectNotify(QAbstractSocket* self, QMetaMethod* signal);
-    friend void QAbstractSocket_QBaseDisconnectNotify(QAbstractSocket* self, QMetaMethod* signal);
+    friend void QAbstractSocket_ConnectNotify(QAbstractSocket* self, const QMetaMethod* signal);
+    friend void QAbstractSocket_QBaseConnectNotify(QAbstractSocket* self, const QMetaMethod* signal);
+    friend void QAbstractSocket_DisconnectNotify(QAbstractSocket* self, const QMetaMethod* signal);
+    friend void QAbstractSocket_QBaseDisconnectNotify(QAbstractSocket* self, const QMetaMethod* signal);
     friend void QAbstractSocket_SetSocketState(QAbstractSocket* self, int state);
     friend void QAbstractSocket_QBaseSetSocketState(QAbstractSocket* self, int state);
     friend void QAbstractSocket_SetSocketError(QAbstractSocket* self, int socketError);
     friend void QAbstractSocket_QBaseSetSocketError(QAbstractSocket* self, int socketError);
     friend void QAbstractSocket_SetLocalPort(QAbstractSocket* self, uint16_t port);
     friend void QAbstractSocket_QBaseSetLocalPort(QAbstractSocket* self, uint16_t port);
-    friend void QAbstractSocket_SetLocalAddress(QAbstractSocket* self, QHostAddress* address);
-    friend void QAbstractSocket_QBaseSetLocalAddress(QAbstractSocket* self, QHostAddress* address);
+    friend void QAbstractSocket_SetLocalAddress(QAbstractSocket* self, const QHostAddress* address);
+    friend void QAbstractSocket_QBaseSetLocalAddress(QAbstractSocket* self, const QHostAddress* address);
     friend void QAbstractSocket_SetPeerPort(QAbstractSocket* self, uint16_t port);
     friend void QAbstractSocket_QBaseSetPeerPort(QAbstractSocket* self, uint16_t port);
-    friend void QAbstractSocket_SetPeerAddress(QAbstractSocket* self, QHostAddress* address);
-    friend void QAbstractSocket_QBaseSetPeerAddress(QAbstractSocket* self, QHostAddress* address);
-    friend void QAbstractSocket_SetPeerName(QAbstractSocket* self, libqt_string name);
-    friend void QAbstractSocket_QBaseSetPeerName(QAbstractSocket* self, libqt_string name);
+    friend void QAbstractSocket_SetPeerAddress(QAbstractSocket* self, const QHostAddress* address);
+    friend void QAbstractSocket_QBaseSetPeerAddress(QAbstractSocket* self, const QHostAddress* address);
+    friend void QAbstractSocket_SetPeerName(QAbstractSocket* self, const libqt_string name);
+    friend void QAbstractSocket_QBaseSetPeerName(QAbstractSocket* self, const libqt_string name);
     friend void QAbstractSocket_SetOpenMode(QAbstractSocket* self, int openMode);
     friend void QAbstractSocket_QBaseSetOpenMode(QAbstractSocket* self, int openMode);
-    friend void QAbstractSocket_SetErrorString(QAbstractSocket* self, libqt_string errorString);
-    friend void QAbstractSocket_QBaseSetErrorString(QAbstractSocket* self, libqt_string errorString);
+    friend void QAbstractSocket_SetErrorString(QAbstractSocket* self, const libqt_string errorString);
+    friend void QAbstractSocket_QBaseSetErrorString(QAbstractSocket* self, const libqt_string errorString);
     friend QObject* QAbstractSocket_Sender(const QAbstractSocket* self);
     friend QObject* QAbstractSocket_QBaseSender(const QAbstractSocket* self);
     friend int QAbstractSocket_SenderSignalIndex(const QAbstractSocket* self);
     friend int QAbstractSocket_QBaseSenderSignalIndex(const QAbstractSocket* self);
     friend int QAbstractSocket_Receivers(const QAbstractSocket* self, const char* signal);
     friend int QAbstractSocket_QBaseReceivers(const QAbstractSocket* self, const char* signal);
-    friend bool QAbstractSocket_IsSignalConnected(const QAbstractSocket* self, QMetaMethod* signal);
-    friend bool QAbstractSocket_QBaseIsSignalConnected(const QAbstractSocket* self, QMetaMethod* signal);
+    friend bool QAbstractSocket_IsSignalConnected(const QAbstractSocket* self, const QMetaMethod* signal);
+    friend bool QAbstractSocket_QBaseIsSignalConnected(const QAbstractSocket* self, const QMetaMethod* signal);
 };
 
 #endif

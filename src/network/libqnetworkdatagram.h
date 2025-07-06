@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqhostaddress.h"
-
 /// https://doc.qt.io/qt-6/qnetworkdatagram.html
 
 /// q_networkdatagram_new constructs a new QNetworkDatagram object.

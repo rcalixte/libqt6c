@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqmargins.h"
-#include "libqpoint.h"
-#include "libqsize.h"
-
 /// https://doc.qt.io/qt-6/qrect.html
 
 /// q_rect_new constructs a new QRect object.

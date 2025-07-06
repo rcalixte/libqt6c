@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqlocale.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqregularexpression.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qvalidator.html
 
 /// q_validator_new constructs a new QValidator object.
@@ -186,7 +179,7 @@ QThread* q_validator_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QValidator* self, QThread* thread ```
-void q_validator_move_to_thread(void* self, void* thread);
+bool q_validator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -201,6 +194,13 @@ int32_t q_validator_start_timer(void* self, int interval);
 ///
 /// ``` QValidator* self, int id ```
 void q_validator_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QValidator* self, enum Qt__TimerId id ```
+void q_validator_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -341,6 +341,13 @@ bool q_validator_inherits(void* self, const char* classname);
 ///
 /// ``` QValidator* self ```
 void q_validator_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QValidator* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_validator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -920,7 +927,7 @@ QThread* q_intvalidator_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QIntValidator* self, QThread* thread ```
-void q_intvalidator_move_to_thread(void* self, void* thread);
+bool q_intvalidator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -935,6 +942,13 @@ int32_t q_intvalidator_start_timer(void* self, int interval);
 ///
 /// ``` QIntValidator* self, int id ```
 void q_intvalidator_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QIntValidator* self, enum Qt__TimerId id ```
+void q_intvalidator_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1075,6 +1089,13 @@ bool q_intvalidator_inherits(void* self, const char* classname);
 ///
 /// ``` QIntValidator* self ```
 void q_intvalidator_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QIntValidator* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_intvalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1699,7 +1720,7 @@ QThread* q_doublevalidator_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDoubleValidator* self, QThread* thread ```
-void q_doublevalidator_move_to_thread(void* self, void* thread);
+bool q_doublevalidator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1714,6 +1735,13 @@ int32_t q_doublevalidator_start_timer(void* self, int interval);
 ///
 /// ``` QDoubleValidator* self, int id ```
 void q_doublevalidator_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDoubleValidator* self, enum Qt__TimerId id ```
+void q_doublevalidator_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1854,6 +1882,13 @@ bool q_doublevalidator_inherits(void* self, const char* classname);
 ///
 /// ``` QDoubleValidator* self ```
 void q_doublevalidator_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDoubleValidator* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_doublevalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -2389,7 +2424,7 @@ QThread* q_regularexpressionvalidator_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QRegularExpressionValidator* self, QThread* thread ```
-void q_regularexpressionvalidator_move_to_thread(void* self, void* thread);
+bool q_regularexpressionvalidator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -2404,6 +2439,13 @@ int32_t q_regularexpressionvalidator_start_timer(void* self, int interval);
 ///
 /// ``` QRegularExpressionValidator* self, int id ```
 void q_regularexpressionvalidator_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QRegularExpressionValidator* self, enum Qt__TimerId id ```
+void q_regularexpressionvalidator_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2544,6 +2586,13 @@ bool q_regularexpressionvalidator_inherits(void* self, const char* classname);
 ///
 /// ``` QRegularExpressionValidator* self ```
 void q_regularexpressionvalidator_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QRegularExpressionValidator* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_regularexpressionvalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

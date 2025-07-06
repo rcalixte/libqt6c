@@ -52,14 +52,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QPrintPreviewWidget::ViewMode ViewMode; // C++ enum
-typedef QPrintPreviewWidget::ZoomMode ZoomMode; // C++ enum
-#else
-typedef int ViewMode; // C ABI enum
-typedef int ZoomMode; // C ABI enum
-#endif
-
 QPrintPreviewWidget* QPrintPreviewWidget_new(QWidget* parent);
 QPrintPreviewWidget* QPrintPreviewWidget_new2(QPrinter* printer);
 QPrintPreviewWidget* QPrintPreviewWidget_new3();
@@ -198,9 +190,9 @@ void QPrintPreviewWidget_QBaseShowEvent(QPrintPreviewWidget* self, QShowEvent* e
 void QPrintPreviewWidget_HideEvent(QPrintPreviewWidget* self, QHideEvent* event);
 void QPrintPreviewWidget_OnHideEvent(QPrintPreviewWidget* self, intptr_t slot);
 void QPrintPreviewWidget_QBaseHideEvent(QPrintPreviewWidget* self, QHideEvent* event);
-bool QPrintPreviewWidget_NativeEvent(QPrintPreviewWidget* self, libqt_string eventType, void* message, intptr_t* result);
+bool QPrintPreviewWidget_NativeEvent(QPrintPreviewWidget* self, const libqt_string eventType, void* message, intptr_t* result);
 void QPrintPreviewWidget_OnNativeEvent(QPrintPreviewWidget* self, intptr_t slot);
-bool QPrintPreviewWidget_QBaseNativeEvent(QPrintPreviewWidget* self, libqt_string eventType, void* message, intptr_t* result);
+bool QPrintPreviewWidget_QBaseNativeEvent(QPrintPreviewWidget* self, const libqt_string eventType, void* message, intptr_t* result);
 void QPrintPreviewWidget_ChangeEvent(QPrintPreviewWidget* self, QEvent* param1);
 void QPrintPreviewWidget_OnChangeEvent(QPrintPreviewWidget* self, intptr_t slot);
 void QPrintPreviewWidget_QBaseChangeEvent(QPrintPreviewWidget* self, QEvent* param1);
@@ -237,12 +229,12 @@ void QPrintPreviewWidget_QBaseChildEvent(QPrintPreviewWidget* self, QChildEvent*
 void QPrintPreviewWidget_CustomEvent(QPrintPreviewWidget* self, QEvent* event);
 void QPrintPreviewWidget_OnCustomEvent(QPrintPreviewWidget* self, intptr_t slot);
 void QPrintPreviewWidget_QBaseCustomEvent(QPrintPreviewWidget* self, QEvent* event);
-void QPrintPreviewWidget_ConnectNotify(QPrintPreviewWidget* self, QMetaMethod* signal);
+void QPrintPreviewWidget_ConnectNotify(QPrintPreviewWidget* self, const QMetaMethod* signal);
 void QPrintPreviewWidget_OnConnectNotify(QPrintPreviewWidget* self, intptr_t slot);
-void QPrintPreviewWidget_QBaseConnectNotify(QPrintPreviewWidget* self, QMetaMethod* signal);
-void QPrintPreviewWidget_DisconnectNotify(QPrintPreviewWidget* self, QMetaMethod* signal);
+void QPrintPreviewWidget_QBaseConnectNotify(QPrintPreviewWidget* self, const QMetaMethod* signal);
+void QPrintPreviewWidget_DisconnectNotify(QPrintPreviewWidget* self, const QMetaMethod* signal);
 void QPrintPreviewWidget_OnDisconnectNotify(QPrintPreviewWidget* self, intptr_t slot);
-void QPrintPreviewWidget_QBaseDisconnectNotify(QPrintPreviewWidget* self, QMetaMethod* signal);
+void QPrintPreviewWidget_QBaseDisconnectNotify(QPrintPreviewWidget* self, const QMetaMethod* signal);
 void QPrintPreviewWidget_UpdateMicroFocus(QPrintPreviewWidget* self);
 void QPrintPreviewWidget_OnUpdateMicroFocus(QPrintPreviewWidget* self, intptr_t slot);
 void QPrintPreviewWidget_QBaseUpdateMicroFocus(QPrintPreviewWidget* self);
@@ -267,9 +259,12 @@ int QPrintPreviewWidget_QBaseSenderSignalIndex(const QPrintPreviewWidget* self);
 int QPrintPreviewWidget_Receivers(const QPrintPreviewWidget* self, const char* signal);
 void QPrintPreviewWidget_OnReceivers(const QPrintPreviewWidget* self, intptr_t slot);
 int QPrintPreviewWidget_QBaseReceivers(const QPrintPreviewWidget* self, const char* signal);
-bool QPrintPreviewWidget_IsSignalConnected(const QPrintPreviewWidget* self, QMetaMethod* signal);
+bool QPrintPreviewWidget_IsSignalConnected(const QPrintPreviewWidget* self, const QMetaMethod* signal);
 void QPrintPreviewWidget_OnIsSignalConnected(const QPrintPreviewWidget* self, intptr_t slot);
-bool QPrintPreviewWidget_QBaseIsSignalConnected(const QPrintPreviewWidget* self, QMetaMethod* signal);
+bool QPrintPreviewWidget_QBaseIsSignalConnected(const QPrintPreviewWidget* self, const QMetaMethod* signal);
+double QPrintPreviewWidget_GetDecodedMetricF(const QPrintPreviewWidget* self, int metricA, int metricB);
+void QPrintPreviewWidget_OnGetDecodedMetricF(const QPrintPreviewWidget* self, intptr_t slot);
+double QPrintPreviewWidget_QBaseGetDecodedMetricF(const QPrintPreviewWidget* self, int metricA, int metricB);
 void QPrintPreviewWidget_Delete(QPrintPreviewWidget* self);
 
 #ifdef __cplusplus

@@ -2,6 +2,7 @@
 #include <QEvent>
 #include <QMetaMethod>
 #include <QMetaObject>
+#include <QNativeIpcKey>
 #include <QObject>
 #include <QSharedMemory>
 #include <QString>
@@ -16,16 +17,24 @@ QSharedMemory* QSharedMemory_new() {
     return new VirtualQSharedMemory();
 }
 
-QSharedMemory* QSharedMemory_new2(libqt_string key) {
+QSharedMemory* QSharedMemory_new2(const QNativeIpcKey* key) {
+    return new VirtualQSharedMemory(*key);
+}
+
+QSharedMemory* QSharedMemory_new3(const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new VirtualQSharedMemory(key_QString);
 }
 
-QSharedMemory* QSharedMemory_new3(QObject* parent) {
+QSharedMemory* QSharedMemory_new4(QObject* parent) {
     return new VirtualQSharedMemory(parent);
 }
 
-QSharedMemory* QSharedMemory_new4(libqt_string key, QObject* parent) {
+QSharedMemory* QSharedMemory_new5(const QNativeIpcKey* key, QObject* parent) {
+    return new VirtualQSharedMemory(*key, parent);
+}
+
+QSharedMemory* QSharedMemory_new6(const libqt_string key, QObject* parent) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new VirtualQSharedMemory(key_QString, parent);
 }
@@ -78,7 +87,7 @@ libqt_string QSharedMemory_Tr(const char* s) {
     return _str;
 }
 
-void QSharedMemory_SetKey(QSharedMemory* self, libqt_string key) {
+void QSharedMemory_SetKey(QSharedMemory* self, const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     self->setKey(key_QString);
 }
@@ -95,7 +104,11 @@ libqt_string QSharedMemory_Key(const QSharedMemory* self) {
     return _str;
 }
 
-void QSharedMemory_SetNativeKey(QSharedMemory* self, libqt_string key) {
+void QSharedMemory_SetNativeKey(QSharedMemory* self, const QNativeIpcKey* key) {
+    self->setNativeKey(*key);
+}
+
+void QSharedMemory_SetNativeKeyWithKey(QSharedMemory* self, const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     self->setNativeKey(key_QString);
 }
@@ -110,6 +123,10 @@ libqt_string QSharedMemory_NativeKey(const QSharedMemory* self) {
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
     return _str;
+}
+
+QNativeIpcKey* QSharedMemory_NativeIpcKey(const QSharedMemory* self) {
+    return new QNativeIpcKey(self->nativeIpcKey());
 }
 
 bool QSharedMemory_Create(QSharedMemory* self, ptrdiff_t size) {
@@ -168,6 +185,20 @@ libqt_string QSharedMemory_ErrorString(const QSharedMemory* self) {
     return _str;
 }
 
+bool QSharedMemory_IsKeyTypeSupported(uint16_t typeVal) {
+    return QSharedMemory::isKeyTypeSupported(static_cast<QNativeIpcKey::Type>(typeVal));
+}
+
+QNativeIpcKey* QSharedMemory_PlatformSafeKey(const libqt_string key) {
+    QString key_QString = QString::fromUtf8(key.data, key.len);
+    return new QNativeIpcKey(QSharedMemory::platformSafeKey(key_QString));
+}
+
+QNativeIpcKey* QSharedMemory_LegacyNativeKey(const libqt_string key) {
+    QString key_QString = QString::fromUtf8(key.data, key.len);
+    return new QNativeIpcKey(QSharedMemory::legacyNativeKey(key_QString));
+}
+
 libqt_string QSharedMemory_Tr2(const char* s, const char* c) {
     QString _ret = QSharedMemory::tr(s, c);
     // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
@@ -192,12 +223,27 @@ libqt_string QSharedMemory_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
+void QSharedMemory_SetNativeKey2(QSharedMemory* self, const libqt_string key, uint16_t typeVal) {
+    QString key_QString = QString::fromUtf8(key.data, key.len);
+    self->setNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal));
+}
+
 bool QSharedMemory_Create2(QSharedMemory* self, ptrdiff_t size, int mode) {
     return self->create((qsizetype)(size), static_cast<QSharedMemory::AccessMode>(mode));
 }
 
 bool QSharedMemory_Attach1(QSharedMemory* self, int mode) {
     return self->attach(static_cast<QSharedMemory::AccessMode>(mode));
+}
+
+QNativeIpcKey* QSharedMemory_PlatformSafeKey2(const libqt_string key, uint16_t typeVal) {
+    QString key_QString = QString::fromUtf8(key.data, key.len);
+    return new QNativeIpcKey(QSharedMemory::platformSafeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal)));
+}
+
+QNativeIpcKey* QSharedMemory_LegacyNativeKey2(const libqt_string key, uint16_t typeVal) {
+    QString key_QString = QString::fromUtf8(key.data, key.len);
+    return new QNativeIpcKey(QSharedMemory::legacyNativeKey(key_QString, static_cast<QNativeIpcKey::Type>(typeVal)));
 }
 
 // Derived class handler implementation
@@ -346,7 +392,7 @@ void QSharedMemory_OnCustomEvent(QSharedMemory* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSharedMemory_ConnectNotify(QSharedMemory* self, QMetaMethod* signal) {
+void QSharedMemory_ConnectNotify(QSharedMemory* self, const QMetaMethod* signal) {
     auto* vqsharedmemory = dynamic_cast<VirtualQSharedMemory*>(self);
     if (vqsharedmemory && vqsharedmemory->isVirtualQSharedMemory) {
         vqsharedmemory->connectNotify(*signal);
@@ -356,7 +402,7 @@ void QSharedMemory_ConnectNotify(QSharedMemory* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSharedMemory_QBaseConnectNotify(QSharedMemory* self, QMetaMethod* signal) {
+void QSharedMemory_QBaseConnectNotify(QSharedMemory* self, const QMetaMethod* signal) {
     auto* vqsharedmemory = dynamic_cast<VirtualQSharedMemory*>(self);
     if (vqsharedmemory && vqsharedmemory->isVirtualQSharedMemory) {
         vqsharedmemory->setQSharedMemory_ConnectNotify_IsBase(true);
@@ -375,7 +421,7 @@ void QSharedMemory_OnConnectNotify(QSharedMemory* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSharedMemory_DisconnectNotify(QSharedMemory* self, QMetaMethod* signal) {
+void QSharedMemory_DisconnectNotify(QSharedMemory* self, const QMetaMethod* signal) {
     auto* vqsharedmemory = dynamic_cast<VirtualQSharedMemory*>(self);
     if (vqsharedmemory && vqsharedmemory->isVirtualQSharedMemory) {
         vqsharedmemory->disconnectNotify(*signal);
@@ -385,7 +431,7 @@ void QSharedMemory_DisconnectNotify(QSharedMemory* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSharedMemory_QBaseDisconnectNotify(QSharedMemory* self, QMetaMethod* signal) {
+void QSharedMemory_QBaseDisconnectNotify(QSharedMemory* self, const QMetaMethod* signal) {
     auto* vqsharedmemory = dynamic_cast<VirtualQSharedMemory*>(self);
     if (vqsharedmemory && vqsharedmemory->isVirtualQSharedMemory) {
         vqsharedmemory->setQSharedMemory_DisconnectNotify_IsBase(true);
@@ -491,7 +537,7 @@ void QSharedMemory_OnReceivers(const QSharedMemory* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSharedMemory_IsSignalConnected(const QSharedMemory* self, QMetaMethod* signal) {
+bool QSharedMemory_IsSignalConnected(const QSharedMemory* self, const QMetaMethod* signal) {
     auto* vqsharedmemory = const_cast<VirtualQSharedMemory*>(dynamic_cast<const VirtualQSharedMemory*>(self));
     if (vqsharedmemory && vqsharedmemory->isVirtualQSharedMemory) {
         return vqsharedmemory->isSignalConnected(*signal);
@@ -501,7 +547,7 @@ bool QSharedMemory_IsSignalConnected(const QSharedMemory* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QSharedMemory_QBaseIsSignalConnected(const QSharedMemory* self, QMetaMethod* signal) {
+bool QSharedMemory_QBaseIsSignalConnected(const QSharedMemory* self, const QMetaMethod* signal) {
     auto* vqsharedmemory = const_cast<VirtualQSharedMemory*>(dynamic_cast<const VirtualQSharedMemory*>(self));
     if (vqsharedmemory && vqsharedmemory->isVirtualQSharedMemory) {
         vqsharedmemory->setQSharedMemory_IsSignalConnected_IsBase(true);

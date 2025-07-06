@@ -77,7 +77,7 @@ libqt_string QPdfDocument_Tr(const char* s) {
     return _str;
 }
 
-int QPdfDocument_Load(QPdfDocument* self, libqt_string fileName) {
+int QPdfDocument_Load(QPdfDocument* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return static_cast<int>(self->load(fileName_QString));
 }
@@ -90,7 +90,7 @@ void QPdfDocument_LoadWithDevice(QPdfDocument* self, QIODevice* device) {
     self->load(device);
 }
 
-void QPdfDocument_SetPassword(QPdfDocument* self, libqt_string password) {
+void QPdfDocument_SetPassword(QPdfDocument* self, const libqt_string password) {
     QString password_QString = QString::fromUtf8(password.data, password.len);
     self->setPassword(password_QString);
 }
@@ -137,6 +137,11 @@ libqt_string QPdfDocument_PageLabel(QPdfDocument* self, int page) {
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
     return _str;
+}
+
+int QPdfDocument_PageIndexForLabel(QPdfDocument* self, const libqt_string label) {
+    QString label_QString = QString::fromUtf8(label.data, label.len);
+    return self->pageIndexForLabel(label_QString);
 }
 
 QAbstractListModel* QPdfDocument_PageModel(QPdfDocument* self) {
@@ -390,7 +395,7 @@ void QPdfDocument_OnCustomEvent(QPdfDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfDocument_ConnectNotify(QPdfDocument* self, QMetaMethod* signal) {
+void QPdfDocument_ConnectNotify(QPdfDocument* self, const QMetaMethod* signal) {
     auto* vqpdfdocument = dynamic_cast<VirtualQPdfDocument*>(self);
     if (vqpdfdocument && vqpdfdocument->isVirtualQPdfDocument) {
         vqpdfdocument->connectNotify(*signal);
@@ -400,7 +405,7 @@ void QPdfDocument_ConnectNotify(QPdfDocument* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPdfDocument_QBaseConnectNotify(QPdfDocument* self, QMetaMethod* signal) {
+void QPdfDocument_QBaseConnectNotify(QPdfDocument* self, const QMetaMethod* signal) {
     auto* vqpdfdocument = dynamic_cast<VirtualQPdfDocument*>(self);
     if (vqpdfdocument && vqpdfdocument->isVirtualQPdfDocument) {
         vqpdfdocument->setQPdfDocument_ConnectNotify_IsBase(true);
@@ -419,7 +424,7 @@ void QPdfDocument_OnConnectNotify(QPdfDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPdfDocument_DisconnectNotify(QPdfDocument* self, QMetaMethod* signal) {
+void QPdfDocument_DisconnectNotify(QPdfDocument* self, const QMetaMethod* signal) {
     auto* vqpdfdocument = dynamic_cast<VirtualQPdfDocument*>(self);
     if (vqpdfdocument && vqpdfdocument->isVirtualQPdfDocument) {
         vqpdfdocument->disconnectNotify(*signal);
@@ -429,7 +434,7 @@ void QPdfDocument_DisconnectNotify(QPdfDocument* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPdfDocument_QBaseDisconnectNotify(QPdfDocument* self, QMetaMethod* signal) {
+void QPdfDocument_QBaseDisconnectNotify(QPdfDocument* self, const QMetaMethod* signal) {
     auto* vqpdfdocument = dynamic_cast<VirtualQPdfDocument*>(self);
     if (vqpdfdocument && vqpdfdocument->isVirtualQPdfDocument) {
         vqpdfdocument->setQPdfDocument_DisconnectNotify_IsBase(true);
@@ -535,7 +540,7 @@ void QPdfDocument_OnReceivers(const QPdfDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, QMetaMethod* signal) {
+bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, const QMetaMethod* signal) {
     auto* vqpdfdocument = const_cast<VirtualQPdfDocument*>(dynamic_cast<const VirtualQPdfDocument*>(self));
     if (vqpdfdocument && vqpdfdocument->isVirtualQPdfDocument) {
         return vqpdfdocument->isSignalConnected(*signal);
@@ -545,7 +550,7 @@ bool QPdfDocument_IsSignalConnected(const QPdfDocument* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QPdfDocument_QBaseIsSignalConnected(const QPdfDocument* self, QMetaMethod* signal) {
+bool QPdfDocument_QBaseIsSignalConnected(const QPdfDocument* self, const QMetaMethod* signal) {
     auto* vqpdfdocument = const_cast<VirtualQPdfDocument*>(dynamic_cast<const VirtualQPdfDocument*>(self));
     if (vqpdfdocument && vqpdfdocument->isVirtualQPdfDocument) {
         vqpdfdocument->setQPdfDocument_IsSignalConnected_IsBase(true);

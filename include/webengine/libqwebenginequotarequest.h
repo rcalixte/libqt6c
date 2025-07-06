@@ -12,19 +12,32 @@
 
 #include "../qtlibc.h"
 
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebenginequotarequest.html
 
 /// q_webenginequotarequest_new constructs a new QWebEngineQuotaRequest object.
 ///
-///
-QWebEngineQuotaRequest* q_webenginequotarequest_new();
+/// ``` QWebEngineQuotaRequest* other ```
+QWebEngineQuotaRequest* q_webenginequotarequest_new(void* other);
 
-/// q_webenginequotarequest_new2 constructs a new QWebEngineQuotaRequest object.
+/// q_webenginequotarequest_new2 constructs a new QWebEngineQuotaRequest object and invalidates the source QWebEngineQuotaRequest object.
 ///
-/// ``` QWebEngineQuotaRequest* param1 ```
-QWebEngineQuotaRequest* q_webenginequotarequest_new2(void* param1);
+/// ``` QWebEngineQuotaRequest* other ```
+QWebEngineQuotaRequest* q_webenginequotarequest_new2(void* other);
+
+/// q_webenginequotarequest_new3 constructs a new QWebEngineQuotaRequest object.
+///
+///
+QWebEngineQuotaRequest* q_webenginequotarequest_new3();
+
+/// q_webenginequotarequest_copy_assign shallow copies `other` into `self`.
+///
+/// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* other ```
+void q_webenginequotarequest_copy_assign(void* self, void* other);
+
+/// q_webenginequotarequest_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* other ```
+void q_webenginequotarequest_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#accept)
 ///
@@ -48,13 +61,13 @@ long long q_webenginequotarequest_requested_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator==)
 ///
-/// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* that ```
-bool q_webenginequotarequest_operator_equal(void* self, void* that);
+/// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* param1 ```
+bool q_webenginequotarequest_operator_equal(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator!=)
 ///
-/// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* that ```
-bool q_webenginequotarequest_operator_not_equal(void* self, void* that);
+/// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* param1 ```
+bool q_webenginequotarequest_operator_not_equal(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#dtor.QWebEngineQuotaRequest)
 ///

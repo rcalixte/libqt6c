@@ -67,8 +67,8 @@ class VirtualQTranslator final : public QTranslator {
     mutable bool qtranslator_issignalconnected_isbase = false;
 
   public:
-    VirtualQTranslator() : QTranslator(){};
-    VirtualQTranslator(QObject* parent) : QTranslator(parent){};
+    VirtualQTranslator() : QTranslator() {};
+    VirtualQTranslator(QObject* parent) : QTranslator(parent) {};
 
     ~VirtualQTranslator() {
         qtranslator_metacall_callback = nullptr;
@@ -338,18 +338,18 @@ class VirtualQTranslator final : public QTranslator {
     friend void QTranslator_QBaseChildEvent(QTranslator* self, QChildEvent* event);
     friend void QTranslator_CustomEvent(QTranslator* self, QEvent* event);
     friend void QTranslator_QBaseCustomEvent(QTranslator* self, QEvent* event);
-    friend void QTranslator_ConnectNotify(QTranslator* self, QMetaMethod* signal);
-    friend void QTranslator_QBaseConnectNotify(QTranslator* self, QMetaMethod* signal);
-    friend void QTranslator_DisconnectNotify(QTranslator* self, QMetaMethod* signal);
-    friend void QTranslator_QBaseDisconnectNotify(QTranslator* self, QMetaMethod* signal);
+    friend void QTranslator_ConnectNotify(QTranslator* self, const QMetaMethod* signal);
+    friend void QTranslator_QBaseConnectNotify(QTranslator* self, const QMetaMethod* signal);
+    friend void QTranslator_DisconnectNotify(QTranslator* self, const QMetaMethod* signal);
+    friend void QTranslator_QBaseDisconnectNotify(QTranslator* self, const QMetaMethod* signal);
     friend QObject* QTranslator_Sender(const QTranslator* self);
     friend QObject* QTranslator_QBaseSender(const QTranslator* self);
     friend int QTranslator_SenderSignalIndex(const QTranslator* self);
     friend int QTranslator_QBaseSenderSignalIndex(const QTranslator* self);
     friend int QTranslator_Receivers(const QTranslator* self, const char* signal);
     friend int QTranslator_QBaseReceivers(const QTranslator* self, const char* signal);
-    friend bool QTranslator_IsSignalConnected(const QTranslator* self, QMetaMethod* signal);
-    friend bool QTranslator_QBaseIsSignalConnected(const QTranslator* self, QMetaMethod* signal);
+    friend bool QTranslator_IsSignalConnected(const QTranslator* self, const QMetaMethod* signal);
+    friend bool QTranslator_QBaseIsSignalConnected(const QTranslator* self, const QMetaMethod* signal);
 };
 
 #endif

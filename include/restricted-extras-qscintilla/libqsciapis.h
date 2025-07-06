@@ -12,11 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html
 
 /// q_sciapis_new constructs a new QsciAPIs object.
@@ -304,7 +299,7 @@ QThread* q_sciapis_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QsciAPIs* self, QThread* thread ```
-void q_sciapis_move_to_thread(void* self, void* thread);
+bool q_sciapis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -319,6 +314,13 @@ int32_t q_sciapis_start_timer(void* self, int interval);
 ///
 /// ``` QsciAPIs* self, int id ```
 void q_sciapis_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QsciAPIs* self, enum Qt__TimerId id ```
+void q_sciapis_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -459,6 +461,13 @@ bool q_sciapis_inherits(void* self, const char* classname);
 ///
 /// ``` QsciAPIs* self ```
 void q_sciapis_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QsciAPIs* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_sciapis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

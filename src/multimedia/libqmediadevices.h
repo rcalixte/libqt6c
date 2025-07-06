@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudiodevice.h"
-#include "libqcameradevice.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qmediadevices.html
 
 /// q_mediadevices_new constructs a new QMediaDevices object.
@@ -117,6 +110,25 @@ void q_mediadevices_video_inputs_changed(void* self);
 /// ``` QMediaDevices* self, void (*slot)(QMediaDevices*) ```
 void q_mediadevices_on_video_inputs_changed(void* self, void (*slot)(void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#connectNotify)
+///
+/// ``` QMediaDevices* self, QMetaMethod* signal ```
+void q_mediadevices_connect_notify(void* self, void* signal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#connectNotify)
+///
+/// Allows for overriding the related default method
+///
+/// ``` QMediaDevices* self, void (*slot)(QMediaDevices*, QMetaMethod*) ```
+void q_mediadevices_on_connect_notify(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediadevices.html#connectNotify)
+///
+/// Base class method implementation
+///
+/// ``` QMediaDevices* self, QMetaMethod* signal ```
+void q_mediadevices_qbase_connect_notify(void* self, void* signal);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// ``` const char* s, const char* c ```
@@ -188,7 +200,7 @@ QThread* q_mediadevices_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QMediaDevices* self, QThread* thread ```
-void q_mediadevices_move_to_thread(void* self, void* thread);
+bool q_mediadevices_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -203,6 +215,13 @@ int32_t q_mediadevices_start_timer(void* self, int interval);
 ///
 /// ``` QMediaDevices* self, int id ```
 void q_mediadevices_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QMediaDevices* self, enum Qt__TimerId id ```
+void q_mediadevices_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -343,6 +362,13 @@ bool q_mediadevices_inherits(void* self, const char* classname);
 ///
 /// ``` QMediaDevices* self ```
 void q_mediadevices_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QMediaDevices* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_mediadevices_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -513,33 +539,6 @@ void q_mediadevices_qbase_custom_event(void* self, void* event);
 ///
 /// ``` QMediaDevices* self, void (*slot)(QMediaDevices*, QEvent*) ```
 void q_mediadevices_on_custom_event(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling virtual or protected method
-///
-/// ``` QMediaDevices* self, QMetaMethod* signal ```
-void q_mediadevices_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow calling base class virtual or protected method
-///
-/// ``` QMediaDevices* self, QMetaMethod* signal ```
-void q_mediadevices_qbase_connect_notify(void* self, void* signal);
-
-/// Inherited from QObject
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connectNotify)
-///
-/// Wrapper to allow overriding base class virtual or protected method
-///
-/// ``` QMediaDevices* self, void (*slot)(QMediaDevices*, QMetaMethod*) ```
-void q_mediadevices_on_connect_notify(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
 ///

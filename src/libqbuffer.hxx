@@ -118,8 +118,8 @@ class VirtualQBuffer final : public QBuffer {
     mutable bool qbuffer_issignalconnected_isbase = false;
 
   public:
-    VirtualQBuffer() : QBuffer(){};
-    VirtualQBuffer(QObject* parent) : QBuffer(parent){};
+    VirtualQBuffer() : QBuffer() {};
+    VirtualQBuffer(QObject* parent) : QBuffer(parent) {};
 
     ~VirtualQBuffer() {
         qbuffer_metacall_callback = nullptr;
@@ -239,7 +239,7 @@ class VirtualQBuffer final : public QBuffer {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool open(QIODeviceBase::OpenMode openMode) override {
+    virtual bool open(QFlags<QIODeviceBase::OpenModeFlag> openMode) override {
         if (qbuffer_open_isbase) {
             qbuffer_open_isbase = false;
             return QBuffer::open(openMode);
@@ -677,10 +677,10 @@ class VirtualQBuffer final : public QBuffer {
     }
 
     // Friend functions
-    friend void QBuffer_ConnectNotify(QBuffer* self, QMetaMethod* param1);
-    friend void QBuffer_QBaseConnectNotify(QBuffer* self, QMetaMethod* param1);
-    friend void QBuffer_DisconnectNotify(QBuffer* self, QMetaMethod* param1);
-    friend void QBuffer_QBaseDisconnectNotify(QBuffer* self, QMetaMethod* param1);
+    friend void QBuffer_ConnectNotify(QBuffer* self, const QMetaMethod* param1);
+    friend void QBuffer_QBaseConnectNotify(QBuffer* self, const QMetaMethod* param1);
+    friend void QBuffer_DisconnectNotify(QBuffer* self, const QMetaMethod* param1);
+    friend void QBuffer_QBaseDisconnectNotify(QBuffer* self, const QMetaMethod* param1);
     friend long long QBuffer_ReadData(QBuffer* self, char* data, long long maxlen);
     friend long long QBuffer_QBaseReadData(QBuffer* self, char* data, long long maxlen);
     friend long long QBuffer_WriteData(QBuffer* self, const char* data, long long lenVal);
@@ -697,16 +697,16 @@ class VirtualQBuffer final : public QBuffer {
     friend void QBuffer_QBaseCustomEvent(QBuffer* self, QEvent* event);
     friend void QBuffer_SetOpenMode(QBuffer* self, int openMode);
     friend void QBuffer_QBaseSetOpenMode(QBuffer* self, int openMode);
-    friend void QBuffer_SetErrorString(QBuffer* self, libqt_string errorString);
-    friend void QBuffer_QBaseSetErrorString(QBuffer* self, libqt_string errorString);
+    friend void QBuffer_SetErrorString(QBuffer* self, const libqt_string errorString);
+    friend void QBuffer_QBaseSetErrorString(QBuffer* self, const libqt_string errorString);
     friend QObject* QBuffer_Sender(const QBuffer* self);
     friend QObject* QBuffer_QBaseSender(const QBuffer* self);
     friend int QBuffer_SenderSignalIndex(const QBuffer* self);
     friend int QBuffer_QBaseSenderSignalIndex(const QBuffer* self);
     friend int QBuffer_Receivers(const QBuffer* self, const char* signal);
     friend int QBuffer_QBaseReceivers(const QBuffer* self, const char* signal);
-    friend bool QBuffer_IsSignalConnected(const QBuffer* self, QMetaMethod* signal);
-    friend bool QBuffer_QBaseIsSignalConnected(const QBuffer* self, QMetaMethod* signal);
+    friend bool QBuffer_IsSignalConnected(const QBuffer* self, const QMetaMethod* signal);
+    friend bool QBuffer_QBaseIsSignalConnected(const QBuffer* self, const QMetaMethod* signal);
 };
 
 #endif

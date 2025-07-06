@@ -104,6 +104,10 @@ QVariant* q_pdfsearchmodel_qbase_data(void* self, void* index, int role) {
     return QPdfSearchModel_QBaseData((QPdfSearchModel*)self, (QModelIndex*)index, role);
 }
 
+int32_t q_pdfsearchmodel_count(void* self) {
+    return QPdfSearchModel_Count((QPdfSearchModel*)self);
+}
+
 void q_pdfsearchmodel_set_search_string(void* self, const char* searchString) {
     QPdfSearchModel_SetSearchString((QPdfSearchModel*)self, qstring(searchString));
 }
@@ -126,6 +130,14 @@ void q_pdfsearchmodel_search_string_changed(void* self) {
 
 void q_pdfsearchmodel_on_search_string_changed(void* self, void (*slot)(void*)) {
     QPdfSearchModel_Connect_SearchStringChanged((QPdfSearchModel*)self, (intptr_t)slot);
+}
+
+void q_pdfsearchmodel_count_changed(void* self) {
+    QPdfSearchModel_CountChanged((QPdfSearchModel*)self);
+}
+
+void q_pdfsearchmodel_on_count_changed(void* self, void (*slot)(void*)) {
+    QPdfSearchModel_Connect_CountChanged((QPdfSearchModel*)self, (intptr_t)slot);
 }
 
 void q_pdfsearchmodel_update_page(void* self, int page) {
@@ -365,8 +377,8 @@ QThread* q_pdfsearchmodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_pdfsearchmodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_pdfsearchmodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_pdfsearchmodel_start_timer(void* self, int interval) {
@@ -375,6 +387,10 @@ int32_t q_pdfsearchmodel_start_timer(void* self, int interval) {
 
 void q_pdfsearchmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_pdfsearchmodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_pdfsearchmodel_children(void* self) {
@@ -463,6 +479,10 @@ bool q_pdfsearchmodel_inherits(void* self, const char* classname) {
 
 void q_pdfsearchmodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_pdfsearchmodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_pdfsearchmodel_start_timer2(void* self, int interval, int64_t timerType) {

@@ -78,7 +78,7 @@ libqt_string QDtlsClientVerifier_Tr(const char* s) {
     return _str;
 }
 
-bool QDtlsClientVerifier_SetCookieGeneratorParameters(QDtlsClientVerifier* self, QDtlsClientVerifier__GeneratorParameters* params) {
+bool QDtlsClientVerifier_SetCookieGeneratorParameters(QDtlsClientVerifier* self, const QDtlsClientVerifier__GeneratorParameters* params) {
     return self->setCookieGeneratorParameters(*params);
 }
 
@@ -86,7 +86,7 @@ QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier_CookieGeneratorPar
     return new QDtlsClientVerifier::GeneratorParameters(self->cookieGeneratorParameters());
 }
 
-bool QDtlsClientVerifier_VerifyClient(QDtlsClientVerifier* self, QUdpSocket* socket, libqt_string dgram, QHostAddress* address, uint16_t port) {
+bool QDtlsClientVerifier_VerifyClient(QDtlsClientVerifier* self, QUdpSocket* socket, const libqt_string dgram, const QHostAddress* address, uint16_t port) {
     QByteArray dgram_QByteArray(dgram.data, dgram.len);
     return self->verifyClient(socket, dgram_QByteArray, *address, static_cast<quint16>(port));
 }
@@ -287,7 +287,7 @@ void QDtlsClientVerifier_OnCustomEvent(QDtlsClientVerifier* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QDtlsClientVerifier_ConnectNotify(QDtlsClientVerifier* self, QMetaMethod* signal) {
+void QDtlsClientVerifier_ConnectNotify(QDtlsClientVerifier* self, const QMetaMethod* signal) {
     auto* vqdtlsclientverifier = dynamic_cast<VirtualQDtlsClientVerifier*>(self);
     if (vqdtlsclientverifier && vqdtlsclientverifier->isVirtualQDtlsClientVerifier) {
         vqdtlsclientverifier->connectNotify(*signal);
@@ -297,7 +297,7 @@ void QDtlsClientVerifier_ConnectNotify(QDtlsClientVerifier* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-void QDtlsClientVerifier_QBaseConnectNotify(QDtlsClientVerifier* self, QMetaMethod* signal) {
+void QDtlsClientVerifier_QBaseConnectNotify(QDtlsClientVerifier* self, const QMetaMethod* signal) {
     auto* vqdtlsclientverifier = dynamic_cast<VirtualQDtlsClientVerifier*>(self);
     if (vqdtlsclientverifier && vqdtlsclientverifier->isVirtualQDtlsClientVerifier) {
         vqdtlsclientverifier->setQDtlsClientVerifier_ConnectNotify_IsBase(true);
@@ -316,7 +316,7 @@ void QDtlsClientVerifier_OnConnectNotify(QDtlsClientVerifier* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QDtlsClientVerifier_DisconnectNotify(QDtlsClientVerifier* self, QMetaMethod* signal) {
+void QDtlsClientVerifier_DisconnectNotify(QDtlsClientVerifier* self, const QMetaMethod* signal) {
     auto* vqdtlsclientverifier = dynamic_cast<VirtualQDtlsClientVerifier*>(self);
     if (vqdtlsclientverifier && vqdtlsclientverifier->isVirtualQDtlsClientVerifier) {
         vqdtlsclientverifier->disconnectNotify(*signal);
@@ -326,7 +326,7 @@ void QDtlsClientVerifier_DisconnectNotify(QDtlsClientVerifier* self, QMetaMethod
 }
 
 // Base class handler implementation
-void QDtlsClientVerifier_QBaseDisconnectNotify(QDtlsClientVerifier* self, QMetaMethod* signal) {
+void QDtlsClientVerifier_QBaseDisconnectNotify(QDtlsClientVerifier* self, const QMetaMethod* signal) {
     auto* vqdtlsclientverifier = dynamic_cast<VirtualQDtlsClientVerifier*>(self);
     if (vqdtlsclientverifier && vqdtlsclientverifier->isVirtualQDtlsClientVerifier) {
         vqdtlsclientverifier->setQDtlsClientVerifier_DisconnectNotify_IsBase(true);
@@ -432,7 +432,7 @@ void QDtlsClientVerifier_OnReceivers(const QDtlsClientVerifier* self, intptr_t s
 }
 
 // Derived class handler implementation
-bool QDtlsClientVerifier_IsSignalConnected(const QDtlsClientVerifier* self, QMetaMethod* signal) {
+bool QDtlsClientVerifier_IsSignalConnected(const QDtlsClientVerifier* self, const QMetaMethod* signal) {
     auto* vqdtlsclientverifier = const_cast<VirtualQDtlsClientVerifier*>(dynamic_cast<const VirtualQDtlsClientVerifier*>(self));
     if (vqdtlsclientverifier && vqdtlsclientverifier->isVirtualQDtlsClientVerifier) {
         return vqdtlsclientverifier->isSignalConnected(*signal);
@@ -442,7 +442,7 @@ bool QDtlsClientVerifier_IsSignalConnected(const QDtlsClientVerifier* self, QMet
 }
 
 // Base class handler implementation
-bool QDtlsClientVerifier_QBaseIsSignalConnected(const QDtlsClientVerifier* self, QMetaMethod* signal) {
+bool QDtlsClientVerifier_QBaseIsSignalConnected(const QDtlsClientVerifier* self, const QMetaMethod* signal) {
     auto* vqdtlsclientverifier = const_cast<VirtualQDtlsClientVerifier*>(dynamic_cast<const VirtualQDtlsClientVerifier*>(self));
     if (vqdtlsclientverifier && vqdtlsclientverifier->isVirtualQDtlsClientVerifier) {
         vqdtlsclientverifier->setQDtlsClientVerifier_IsSignalConnected_IsBase(true);
@@ -520,11 +520,11 @@ libqt_string QDtls_Tr(const char* s) {
     return _str;
 }
 
-bool QDtls_SetPeer(QDtls* self, QHostAddress* address, uint16_t port) {
+bool QDtls_SetPeer(QDtls* self, const QHostAddress* address, uint16_t port) {
     return self->setPeer(*address, static_cast<quint16>(port));
 }
 
-bool QDtls_SetPeerVerificationName(QDtls* self, libqt_string name) {
+bool QDtls_SetPeerVerificationName(QDtls* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return self->setPeerVerificationName(name_QString);
 }
@@ -561,7 +561,7 @@ uint16_t QDtls_MtuHint(const QDtls* self) {
     return static_cast<uint16_t>(self->mtuHint());
 }
 
-bool QDtls_SetCookieGeneratorParameters(QDtls* self, QDtlsClientVerifier__GeneratorParameters* params) {
+bool QDtls_SetCookieGeneratorParameters(QDtls* self, const QDtlsClientVerifier__GeneratorParameters* params) {
     return self->setCookieGeneratorParameters(*params);
 }
 
@@ -569,7 +569,7 @@ QDtlsClientVerifier__GeneratorParameters* QDtls_CookieGeneratorParameters(const 
     return new QDtlsClientVerifier::GeneratorParameters(self->cookieGeneratorParameters());
 }
 
-bool QDtls_SetDtlsConfiguration(QDtls* self, QSslConfiguration* configuration) {
+bool QDtls_SetDtlsConfiguration(QDtls* self, const QSslConfiguration* configuration) {
     return self->setDtlsConfiguration(*configuration);
 }
 
@@ -613,12 +613,12 @@ int QDtls_SessionProtocol(const QDtls* self) {
     return static_cast<int>(self->sessionProtocol());
 }
 
-long long QDtls_WriteDatagramEncrypted(QDtls* self, QUdpSocket* socket, libqt_string dgram) {
+long long QDtls_WriteDatagramEncrypted(QDtls* self, QUdpSocket* socket, const libqt_string dgram) {
     QByteArray dgram_QByteArray(dgram.data, dgram.len);
     return static_cast<long long>(self->writeDatagramEncrypted(socket, dgram_QByteArray));
 }
 
-libqt_string QDtls_DecryptDatagram(QDtls* self, QUdpSocket* socket, libqt_string dgram) {
+libqt_string QDtls_DecryptDatagram(QDtls* self, QUdpSocket* socket, const libqt_string dgram) {
     QByteArray dgram_QByteArray(dgram.data, dgram.len);
     QByteArray _qb = self->decryptDatagram(socket, dgram_QByteArray);
     libqt_string _str;
@@ -648,17 +648,17 @@ libqt_string QDtls_DtlsErrorString(const QDtls* self) {
 libqt_list /* of QSslError* */ QDtls_PeerVerificationErrors(const QDtls* self) {
     QList<QSslError> _ret = self->peerVerificationErrors();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QSslError** _arr = static_cast<QSslError**>(malloc(sizeof(QSslError*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QSslError** _arr = static_cast<QSslError**>(malloc(sizeof(QSslError*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QSslError(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QDtls_IgnoreVerificationErrors(QDtls* self, libqt_list /* of QSslError* */ errorsToIgnore) {
+void QDtls_IgnoreVerificationErrors(QDtls* self, const libqt_list /* of QSslError* */ errorsToIgnore) {
     QList<QSslError> errorsToIgnore_QList;
     errorsToIgnore_QList.reserve(errorsToIgnore.len);
     QSslError** errorsToIgnore_arr = static_cast<QSslError**>(errorsToIgnore.data.ptr);
@@ -715,12 +715,12 @@ libqt_string QDtls_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QDtls_SetPeer3(QDtls* self, QHostAddress* address, uint16_t port, libqt_string verificationName) {
+bool QDtls_SetPeer3(QDtls* self, const QHostAddress* address, uint16_t port, const libqt_string verificationName) {
     QString verificationName_QString = QString::fromUtf8(verificationName.data, verificationName.len);
     return self->setPeer(*address, static_cast<quint16>(port), verificationName_QString);
 }
 
-bool QDtls_DoHandshake2(QDtls* self, QUdpSocket* socket, libqt_string dgram) {
+bool QDtls_DoHandshake2(QDtls* self, QUdpSocket* socket, const libqt_string dgram) {
     QByteArray dgram_QByteArray(dgram.data, dgram.len);
     return self->doHandshake(socket, dgram_QByteArray);
 }
@@ -871,7 +871,7 @@ void QDtls_OnCustomEvent(QDtls* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDtls_ConnectNotify(QDtls* self, QMetaMethod* signal) {
+void QDtls_ConnectNotify(QDtls* self, const QMetaMethod* signal) {
     auto* vqdtls = dynamic_cast<VirtualQDtls*>(self);
     if (vqdtls && vqdtls->isVirtualQDtls) {
         vqdtls->connectNotify(*signal);
@@ -881,7 +881,7 @@ void QDtls_ConnectNotify(QDtls* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDtls_QBaseConnectNotify(QDtls* self, QMetaMethod* signal) {
+void QDtls_QBaseConnectNotify(QDtls* self, const QMetaMethod* signal) {
     auto* vqdtls = dynamic_cast<VirtualQDtls*>(self);
     if (vqdtls && vqdtls->isVirtualQDtls) {
         vqdtls->setQDtls_ConnectNotify_IsBase(true);
@@ -900,7 +900,7 @@ void QDtls_OnConnectNotify(QDtls* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDtls_DisconnectNotify(QDtls* self, QMetaMethod* signal) {
+void QDtls_DisconnectNotify(QDtls* self, const QMetaMethod* signal) {
     auto* vqdtls = dynamic_cast<VirtualQDtls*>(self);
     if (vqdtls && vqdtls->isVirtualQDtls) {
         vqdtls->disconnectNotify(*signal);
@@ -910,7 +910,7 @@ void QDtls_DisconnectNotify(QDtls* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDtls_QBaseDisconnectNotify(QDtls* self, QMetaMethod* signal) {
+void QDtls_QBaseDisconnectNotify(QDtls* self, const QMetaMethod* signal) {
     auto* vqdtls = dynamic_cast<VirtualQDtls*>(self);
     if (vqdtls && vqdtls->isVirtualQDtls) {
         vqdtls->setQDtls_DisconnectNotify_IsBase(true);
@@ -1016,7 +1016,7 @@ void QDtls_OnReceivers(const QDtls* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDtls_IsSignalConnected(const QDtls* self, QMetaMethod* signal) {
+bool QDtls_IsSignalConnected(const QDtls* self, const QMetaMethod* signal) {
     auto* vqdtls = const_cast<VirtualQDtls*>(dynamic_cast<const VirtualQDtls*>(self));
     if (vqdtls && vqdtls->isVirtualQDtls) {
         return vqdtls->isSignalConnected(*signal);
@@ -1026,7 +1026,7 @@ bool QDtls_IsSignalConnected(const QDtls* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QDtls_QBaseIsSignalConnected(const QDtls* self, QMetaMethod* signal) {
+bool QDtls_QBaseIsSignalConnected(const QDtls* self, const QMetaMethod* signal) {
     auto* vqdtls = const_cast<VirtualQDtls*>(dynamic_cast<const VirtualQDtls*>(self));
     if (vqdtls && vqdtls->isVirtualQDtls) {
         vqdtls->setQDtls_IsSignalConnected_IsBase(true);
@@ -1052,16 +1052,16 @@ QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParamete
     return new QDtlsClientVerifier::GeneratorParameters();
 }
 
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new2(int a, libqt_string s) {
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new2(int a, const libqt_string s) {
     QByteArray s_QByteArray(s.data, s.len);
     return new QDtlsClientVerifier::GeneratorParameters(static_cast<QCryptographicHash::Algorithm>(a), s_QByteArray);
 }
 
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new3(QDtlsClientVerifier__GeneratorParameters* param1) {
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new3(const QDtlsClientVerifier__GeneratorParameters* param1) {
     return new QDtlsClientVerifier::GeneratorParameters(*param1);
 }
 
-void QDtlsClientVerifier__GeneratorParameters_OperatorAssign(QDtlsClientVerifier__GeneratorParameters* self, QDtlsClientVerifier__GeneratorParameters* param1) {
+void QDtlsClientVerifier__GeneratorParameters_OperatorAssign(QDtlsClientVerifier__GeneratorParameters* self, const QDtlsClientVerifier__GeneratorParameters* param1) {
     self->operator=(*param1);
 }
 

@@ -1,3 +1,4 @@
+#include <QByteArray>
 #include <QChildEvent>
 #include <QColor>
 #include <QEvent>
@@ -244,10 +245,10 @@ void QsciLexerFortran_OnAutoCompletionFillups(const QsciLexerFortran* self, intp
 libqt_list /* of libqt_string */ QsciLexerFortran_AutoCompletionWordSeparators(const QsciLexerFortran* self) {
     auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
-        QStringList _ret = vqscilexerfortran->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexerfortran->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -259,14 +260,14 @@ libqt_list /* of libqt_string */ QsciLexerFortran_AutoCompletionWordSeparators(c
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerFortran*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerFortran*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -278,7 +279,7 @@ libqt_list /* of libqt_string */ QsciLexerFortran_AutoCompletionWordSeparators(c
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -289,10 +290,10 @@ libqt_list /* of libqt_string */ QsciLexerFortran_QBaseAutoCompletionWordSeparat
     auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_AutoCompletionWordSeparators_IsBase(true);
-        QStringList _ret = vqscilexerfortran->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexerfortran->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -304,14 +305,14 @@ libqt_list /* of libqt_string */ QsciLexerFortran_QBaseAutoCompletionWordSeparat
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerFortran*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerFortran*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -323,7 +324,7 @@ libqt_list /* of libqt_string */ QsciLexerFortran_QBaseAutoCompletionWordSeparat
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1037,7 +1038,7 @@ void QsciLexerFortran_OnSetAutoIndentStyle(QsciLexerFortran* self, intptr_t slot
 }
 
 // Derived class handler implementation
-void QsciLexerFortran_SetColor(QsciLexerFortran* self, QColor* c, int style) {
+void QsciLexerFortran_SetColor(QsciLexerFortran* self, const QColor* c, int style) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setColor(*c, static_cast<int>(style));
@@ -1047,7 +1048,7 @@ void QsciLexerFortran_SetColor(QsciLexerFortran* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerFortran_QBaseSetColor(QsciLexerFortran* self, QColor* c, int style) {
+void QsciLexerFortran_QBaseSetColor(QsciLexerFortran* self, const QColor* c, int style) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_SetColor_IsBase(true);
@@ -1095,7 +1096,7 @@ void QsciLexerFortran_OnSetEolFill(QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerFortran_SetFont(QsciLexerFortran* self, QFont* f, int style) {
+void QsciLexerFortran_SetFont(QsciLexerFortran* self, const QFont* f, int style) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setFont(*f, static_cast<int>(style));
@@ -1105,7 +1106,7 @@ void QsciLexerFortran_SetFont(QsciLexerFortran* self, QFont* f, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerFortran_QBaseSetFont(QsciLexerFortran* self, QFont* f, int style) {
+void QsciLexerFortran_QBaseSetFont(QsciLexerFortran* self, const QFont* f, int style) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_SetFont_IsBase(true);
@@ -1124,7 +1125,7 @@ void QsciLexerFortran_OnSetFont(QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerFortran_SetPaper(QsciLexerFortran* self, QColor* c, int style) {
+void QsciLexerFortran_SetPaper(QsciLexerFortran* self, const QColor* c, int style) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setPaper(*c, static_cast<int>(style));
@@ -1134,7 +1135,7 @@ void QsciLexerFortran_SetPaper(QsciLexerFortran* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerFortran_QBaseSetPaper(QsciLexerFortran* self, QColor* c, int style) {
+void QsciLexerFortran_QBaseSetPaper(QsciLexerFortran* self, const QColor* c, int style) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_SetPaper_IsBase(true);
@@ -1153,7 +1154,7 @@ void QsciLexerFortran_OnSetPaper(QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerFortran_ReadProperties(QsciLexerFortran* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerFortran_ReadProperties(QsciLexerFortran* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
@@ -1164,7 +1165,7 @@ bool QsciLexerFortran_ReadProperties(QsciLexerFortran* self, QSettings* qs, libq
 }
 
 // Base class handler implementation
-bool QsciLexerFortran_QBaseReadProperties(QsciLexerFortran* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerFortran_QBaseReadProperties(QsciLexerFortran* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
@@ -1184,7 +1185,7 @@ void QsciLexerFortran_OnReadProperties(QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerFortran_WriteProperties(const QsciLexerFortran* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerFortran_WriteProperties(const QsciLexerFortran* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
@@ -1195,7 +1196,7 @@ bool QsciLexerFortran_WriteProperties(const QsciLexerFortran* self, QSettings* q
 }
 
 // Base class handler implementation
-bool QsciLexerFortran_QBaseWriteProperties(const QsciLexerFortran* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerFortran_QBaseWriteProperties(const QsciLexerFortran* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
@@ -1360,7 +1361,7 @@ void QsciLexerFortran_OnCustomEvent(QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerFortran_ConnectNotify(QsciLexerFortran* self, QMetaMethod* signal) {
+void QsciLexerFortran_ConnectNotify(QsciLexerFortran* self, const QMetaMethod* signal) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->connectNotify(*signal);
@@ -1370,7 +1371,7 @@ void QsciLexerFortran_ConnectNotify(QsciLexerFortran* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QsciLexerFortran_QBaseConnectNotify(QsciLexerFortran* self, QMetaMethod* signal) {
+void QsciLexerFortran_QBaseConnectNotify(QsciLexerFortran* self, const QMetaMethod* signal) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_ConnectNotify_IsBase(true);
@@ -1389,7 +1390,7 @@ void QsciLexerFortran_OnConnectNotify(QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerFortran_DisconnectNotify(QsciLexerFortran* self, QMetaMethod* signal) {
+void QsciLexerFortran_DisconnectNotify(QsciLexerFortran* self, const QMetaMethod* signal) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->disconnectNotify(*signal);
@@ -1399,7 +1400,7 @@ void QsciLexerFortran_DisconnectNotify(QsciLexerFortran* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QsciLexerFortran_QBaseDisconnectNotify(QsciLexerFortran* self, QMetaMethod* signal) {
+void QsciLexerFortran_QBaseDisconnectNotify(QsciLexerFortran* self, const QMetaMethod* signal) {
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_DisconnectNotify_IsBase(true);
@@ -1414,6 +1415,122 @@ void QsciLexerFortran_OnDisconnectNotify(QsciLexerFortran* self, intptr_t slot) 
     auto* vqscilexerfortran = dynamic_cast<VirtualQsciLexerFortran*>(self);
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_DisconnectNotify_Callback(reinterpret_cast<VirtualQsciLexerFortran::QsciLexerFortran_DisconnectNotify_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerFortran_TextAsBytes(const QsciLexerFortran* self, const libqt_string text) {
+    auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
+        QByteArray _qb = vqscilexerfortran->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerFortran*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerFortran_QBaseTextAsBytes(const QsciLexerFortran* self, const libqt_string text) {
+    auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
+        vqscilexerfortran->setQsciLexerFortran_TextAsBytes_IsBase(true);
+        QByteArray _qb = vqscilexerfortran->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerFortran*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerFortran_OnTextAsBytes(const QsciLexerFortran* self, intptr_t slot) {
+    auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
+    if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
+        vqscilexerfortran->setQsciLexerFortran_TextAsBytes_Callback(reinterpret_cast<VirtualQsciLexerFortran::QsciLexerFortran_TextAsBytes_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerFortran_BytesAsText(const QsciLexerFortran* self, const char* bytes, int size) {
+    auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
+    if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
+        QString _ret = vqscilexerfortran->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerFortran*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerFortran_QBaseBytesAsText(const QsciLexerFortran* self, const char* bytes, int size) {
+    auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
+    if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
+        vqscilexerfortran->setQsciLexerFortran_BytesAsText_IsBase(true);
+        QString _ret = vqscilexerfortran->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerFortran*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerFortran_OnBytesAsText(const QsciLexerFortran* self, intptr_t slot) {
+    auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
+    if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
+        vqscilexerfortran->setQsciLexerFortran_BytesAsText_Callback(reinterpret_cast<VirtualQsciLexerFortran::QsciLexerFortran_BytesAsText_Callback>(slot));
     }
 }
 
@@ -1505,7 +1622,7 @@ void QsciLexerFortran_OnReceivers(const QsciLexerFortran* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerFortran_IsSignalConnected(const QsciLexerFortran* self, QMetaMethod* signal) {
+bool QsciLexerFortran_IsSignalConnected(const QsciLexerFortran* self, const QMetaMethod* signal) {
     auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         return vqscilexerfortran->isSignalConnected(*signal);
@@ -1515,7 +1632,7 @@ bool QsciLexerFortran_IsSignalConnected(const QsciLexerFortran* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QsciLexerFortran_QBaseIsSignalConnected(const QsciLexerFortran* self, QMetaMethod* signal) {
+bool QsciLexerFortran_QBaseIsSignalConnected(const QsciLexerFortran* self, const QMetaMethod* signal) {
     auto* vqscilexerfortran = const_cast<VirtualQsciLexerFortran*>(dynamic_cast<const VirtualQsciLexerFortran*>(self));
     if (vqscilexerfortran && vqscilexerfortran->isVirtualQsciLexerFortran) {
         vqscilexerfortran->setQsciLexerFortran_IsSignalConnected_IsBase(true);

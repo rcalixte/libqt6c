@@ -53,43 +53,43 @@ QMessageBox* QMessageBox_new2() {
     return new VirtualQMessageBox();
 }
 
-QMessageBox* QMessageBox_new3(int icon, libqt_string title, libqt_string text) {
+QMessageBox* QMessageBox_new3(int icon, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString);
 }
 
-QMessageBox* QMessageBox_new4(libqt_string title, libqt_string text, int icon, int button0, int button1, int button2) {
+QMessageBox* QMessageBox_new4(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(title_QString, text_QString, static_cast<QMessageBox::Icon>(icon), static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2));
 }
 
-QMessageBox* QMessageBox_new5(int icon, libqt_string title, libqt_string text, int buttons) {
+QMessageBox* QMessageBox_new5(int icon, const libqt_string title, const libqt_string text, int buttons) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons));
 }
 
-QMessageBox* QMessageBox_new6(int icon, libqt_string title, libqt_string text, int buttons, QWidget* parent) {
+QMessageBox* QMessageBox_new6(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), parent);
 }
 
-QMessageBox* QMessageBox_new7(int icon, libqt_string title, libqt_string text, int buttons, QWidget* parent, int flags) {
+QMessageBox* QMessageBox_new7(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent, int flags) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QMessageBox* QMessageBox_new8(libqt_string title, libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent) {
+QMessageBox* QMessageBox_new8(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(title_QString, text_QString, static_cast<QMessageBox::Icon>(icon), static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2), parent);
 }
 
-QMessageBox* QMessageBox_new9(libqt_string title, libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent, int f) {
+QMessageBox* QMessageBox_new9(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent, int f) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(title_QString, text_QString, static_cast<QMessageBox::Icon>(icon), static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2), parent, static_cast<Qt::WindowFlags>(f));
@@ -147,7 +147,7 @@ void QMessageBox_AddButton(QMessageBox* self, QAbstractButton* button, int role)
     self->addButton(button, static_cast<QMessageBox::ButtonRole>(role));
 }
 
-QPushButton* QMessageBox_AddButton2(QMessageBox* self, libqt_string text, int role) {
+QPushButton* QMessageBox_AddButton2(QMessageBox* self, const libqt_string text, int role) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addButton(text_QString, static_cast<QMessageBox::ButtonRole>(role));
 }
@@ -163,12 +163,12 @@ void QMessageBox_RemoveButton(QMessageBox* self, QAbstractButton* button) {
 libqt_list /* of QAbstractButton* */ QMessageBox_Buttons(const QMessageBox* self) {
     QList<QAbstractButton*> _ret = self->buttons();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QAbstractButton** _arr = static_cast<QAbstractButton**>(malloc(sizeof(QAbstractButton*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QAbstractButton** _arr = static_cast<QAbstractButton**>(malloc(sizeof(QAbstractButton*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -233,7 +233,7 @@ libqt_string QMessageBox_Text(const QMessageBox* self) {
     return _str;
 }
 
-void QMessageBox_SetText(QMessageBox* self, libqt_string text) {
+void QMessageBox_SetText(QMessageBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -250,7 +250,7 @@ QPixmap* QMessageBox_IconPixmap(const QMessageBox* self) {
     return new QPixmap(self->iconPixmap());
 }
 
-void QMessageBox_SetIconPixmap(QMessageBox* self, QPixmap* pixmap) {
+void QMessageBox_SetIconPixmap(QMessageBox* self, const QPixmap* pixmap) {
     self->setIconPixmap(*pixmap);
 }
 
@@ -278,55 +278,71 @@ QCheckBox* QMessageBox_CheckBox(const QMessageBox* self) {
     return self->checkBox();
 }
 
-int QMessageBox_Information(QWidget* parent, libqt_string title, libqt_string text) {
+void QMessageBox_SetOption(QMessageBox* self, int option) {
+    self->setOption(static_cast<QMessageBox::Option>(option));
+}
+
+bool QMessageBox_TestOption(const QMessageBox* self, int option) {
+    return self->testOption(static_cast<QMessageBox::Option>(option));
+}
+
+void QMessageBox_SetOptions(QMessageBox* self, int options) {
+    self->setOptions(static_cast<QMessageBox::Options>(options));
+}
+
+int QMessageBox_Options(const QMessageBox* self) {
+    return static_cast<int>(self->options());
+}
+
+int QMessageBox_Information(QWidget* parent, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::information(parent, title_QString, text_QString));
 }
 
-int QMessageBox_Information2(QWidget* parent, libqt_string title, libqt_string text, int button0) {
+int QMessageBox_Information2(QWidget* parent, const libqt_string title, const libqt_string text, int button0) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::information(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButton>(button0)));
 }
 
-int QMessageBox_Question(QWidget* parent, libqt_string title, libqt_string text) {
+int QMessageBox_Question(QWidget* parent, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::question(parent, title_QString, text_QString));
 }
 
-int QMessageBox_Question2(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Question2(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::question(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButton>(button0), static_cast<QMessageBox::StandardButton>(button1));
 }
 
-int QMessageBox_Warning(QWidget* parent, libqt_string title, libqt_string text) {
+int QMessageBox_Warning(QWidget* parent, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::warning(parent, title_QString, text_QString));
 }
 
-int QMessageBox_Warning2(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Warning2(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::warning(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButton>(button0), static_cast<QMessageBox::StandardButton>(button1));
 }
 
-int QMessageBox_Critical(QWidget* parent, libqt_string title, libqt_string text) {
+int QMessageBox_Critical(QWidget* parent, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::critical(parent, title_QString, text_QString));
 }
 
-int QMessageBox_Critical2(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Critical2(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::critical(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButton>(button0), static_cast<QMessageBox::StandardButton>(button1));
 }
 
-void QMessageBox_About(QWidget* parent, libqt_string title, libqt_string text) {
+void QMessageBox_About(QWidget* parent, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QMessageBox::about(parent, title_QString, text_QString);
@@ -336,52 +352,52 @@ void QMessageBox_AboutQt(QWidget* parent) {
     QMessageBox::aboutQt(parent);
 }
 
-int QMessageBox_Information3(QWidget* parent, libqt_string title, libqt_string text, int button0) {
+int QMessageBox_Information3(QWidget* parent, const libqt_string title, const libqt_string text, int button0) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::information(parent, title_QString, text_QString, static_cast<int>(button0));
 }
 
-int QMessageBox_Information4(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text) {
+int QMessageBox_Information4(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
     return QMessageBox::information(parent, title_QString, text_QString, button0Text_QString);
 }
 
-int QMessageBox_Question3(QWidget* parent, libqt_string title, libqt_string text, int button0) {
+int QMessageBox_Question3(QWidget* parent, const libqt_string title, const libqt_string text, int button0) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::question(parent, title_QString, text_QString, static_cast<int>(button0));
 }
 
-int QMessageBox_Question4(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text) {
+int QMessageBox_Question4(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
     return QMessageBox::question(parent, title_QString, text_QString, button0Text_QString);
 }
 
-int QMessageBox_Warning3(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Warning3(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::warning(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1));
 }
 
-int QMessageBox_Warning4(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text) {
+int QMessageBox_Warning4(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
     return QMessageBox::warning(parent, title_QString, text_QString, button0Text_QString);
 }
 
-int QMessageBox_Critical3(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Critical3(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::critical(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1));
 }
 
-int QMessageBox_Critical4(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text) {
+int QMessageBox_Critical4(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -400,7 +416,7 @@ libqt_string QMessageBox_ButtonText(const QMessageBox* self, int button) {
     return _str;
 }
 
-void QMessageBox_SetButtonText(QMessageBox* self, int button, libqt_string text) {
+void QMessageBox_SetButtonText(QMessageBox* self, int button, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setButtonText(static_cast<int>(button), text_QString);
 }
@@ -417,7 +433,7 @@ libqt_string QMessageBox_InformativeText(const QMessageBox* self) {
     return _str;
 }
 
-void QMessageBox_SetInformativeText(QMessageBox* self, libqt_string text) {
+void QMessageBox_SetInformativeText(QMessageBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setInformativeText(text_QString);
 }
@@ -434,12 +450,12 @@ libqt_string QMessageBox_DetailedText(const QMessageBox* self) {
     return _str;
 }
 
-void QMessageBox_SetDetailedText(QMessageBox* self, libqt_string text) {
+void QMessageBox_SetDetailedText(QMessageBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setDetailedText(text_QString);
 }
 
-void QMessageBox_SetWindowTitle(QMessageBox* self, libqt_string title) {
+void QMessageBox_SetWindowTitle(QMessageBox* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setWindowTitle(title_QString);
 }
@@ -488,78 +504,82 @@ libqt_string QMessageBox_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-int QMessageBox_Information42(QWidget* parent, libqt_string title, libqt_string text, int buttons) {
+void QMessageBox_SetOption2(QMessageBox* self, int option, bool on) {
+    self->setOption(static_cast<QMessageBox::Option>(option), on);
+}
+
+int QMessageBox_Information42(QWidget* parent, const libqt_string title, const libqt_string text, int buttons) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::information(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons)));
 }
 
-int QMessageBox_Information5(QWidget* parent, libqt_string title, libqt_string text, int buttons, int defaultButton) {
+int QMessageBox_Information5(QWidget* parent, const libqt_string title, const libqt_string text, int buttons, int defaultButton) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::information(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), static_cast<QMessageBox::StandardButton>(defaultButton)));
 }
 
-int QMessageBox_Information52(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Information52(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::information(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButton>(button0), static_cast<QMessageBox::StandardButton>(button1)));
 }
 
-int QMessageBox_Question42(QWidget* parent, libqt_string title, libqt_string text, int buttons) {
+int QMessageBox_Question42(QWidget* parent, const libqt_string title, const libqt_string text, int buttons) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::question(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons)));
 }
 
-int QMessageBox_Question5(QWidget* parent, libqt_string title, libqt_string text, int buttons, int defaultButton) {
+int QMessageBox_Question5(QWidget* parent, const libqt_string title, const libqt_string text, int buttons, int defaultButton) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::question(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), static_cast<QMessageBox::StandardButton>(defaultButton)));
 }
 
-int QMessageBox_Warning42(QWidget* parent, libqt_string title, libqt_string text, int buttons) {
+int QMessageBox_Warning42(QWidget* parent, const libqt_string title, const libqt_string text, int buttons) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::warning(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons)));
 }
 
-int QMessageBox_Warning5(QWidget* parent, libqt_string title, libqt_string text, int buttons, int defaultButton) {
+int QMessageBox_Warning5(QWidget* parent, const libqt_string title, const libqt_string text, int buttons, int defaultButton) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::warning(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), static_cast<QMessageBox::StandardButton>(defaultButton)));
 }
 
-int QMessageBox_Critical42(QWidget* parent, libqt_string title, libqt_string text, int buttons) {
+int QMessageBox_Critical42(QWidget* parent, const libqt_string title, const libqt_string text, int buttons) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::critical(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons)));
 }
 
-int QMessageBox_Critical5(QWidget* parent, libqt_string title, libqt_string text, int buttons, int defaultButton) {
+int QMessageBox_Critical5(QWidget* parent, const libqt_string title, const libqt_string text, int buttons, int defaultButton) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return static_cast<int>(QMessageBox::critical(parent, title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), static_cast<QMessageBox::StandardButton>(defaultButton)));
 }
 
-void QMessageBox_AboutQt2(QWidget* parent, libqt_string title) {
+void QMessageBox_AboutQt2(QWidget* parent, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QMessageBox::aboutQt(parent, title_QString);
 }
 
-int QMessageBox_Information53(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Information53(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::information(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1));
 }
 
-int QMessageBox_Information6(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1, int button2) {
+int QMessageBox_Information6(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1, int button2) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::information(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2));
 }
 
-int QMessageBox_Information54(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text) {
+int QMessageBox_Information54(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -567,7 +587,7 @@ int QMessageBox_Information54(QWidget* parent, libqt_string title, libqt_string 
     return QMessageBox::information(parent, title_QString, text_QString, button0Text_QString, button1Text_QString);
 }
 
-int QMessageBox_Information62(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text) {
+int QMessageBox_Information62(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -576,7 +596,7 @@ int QMessageBox_Information62(QWidget* parent, libqt_string title, libqt_string 
     return QMessageBox::information(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString);
 }
 
-int QMessageBox_Information7(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber) {
+int QMessageBox_Information7(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -585,7 +605,7 @@ int QMessageBox_Information7(QWidget* parent, libqt_string title, libqt_string t
     return QMessageBox::information(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber));
 }
 
-int QMessageBox_Information8(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
+int QMessageBox_Information8(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -594,19 +614,19 @@ int QMessageBox_Information8(QWidget* parent, libqt_string title, libqt_string t
     return QMessageBox::information(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber), static_cast<int>(escapeButtonNumber));
 }
 
-int QMessageBox_Question52(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1) {
+int QMessageBox_Question52(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::question(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1));
 }
 
-int QMessageBox_Question6(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1, int button2) {
+int QMessageBox_Question6(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1, int button2) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::question(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2));
 }
 
-int QMessageBox_Question53(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text) {
+int QMessageBox_Question53(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -614,7 +634,7 @@ int QMessageBox_Question53(QWidget* parent, libqt_string title, libqt_string tex
     return QMessageBox::question(parent, title_QString, text_QString, button0Text_QString, button1Text_QString);
 }
 
-int QMessageBox_Question62(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text) {
+int QMessageBox_Question62(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -623,7 +643,7 @@ int QMessageBox_Question62(QWidget* parent, libqt_string title, libqt_string tex
     return QMessageBox::question(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString);
 }
 
-int QMessageBox_Question7(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber) {
+int QMessageBox_Question7(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -632,7 +652,7 @@ int QMessageBox_Question7(QWidget* parent, libqt_string title, libqt_string text
     return QMessageBox::question(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber));
 }
 
-int QMessageBox_Question8(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
+int QMessageBox_Question8(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -641,13 +661,13 @@ int QMessageBox_Question8(QWidget* parent, libqt_string title, libqt_string text
     return QMessageBox::question(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber), static_cast<int>(escapeButtonNumber));
 }
 
-int QMessageBox_Warning6(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1, int button2) {
+int QMessageBox_Warning6(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1, int button2) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::warning(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2));
 }
 
-int QMessageBox_Warning52(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text) {
+int QMessageBox_Warning52(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -655,7 +675,7 @@ int QMessageBox_Warning52(QWidget* parent, libqt_string title, libqt_string text
     return QMessageBox::warning(parent, title_QString, text_QString, button0Text_QString, button1Text_QString);
 }
 
-int QMessageBox_Warning62(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text) {
+int QMessageBox_Warning62(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -664,7 +684,7 @@ int QMessageBox_Warning62(QWidget* parent, libqt_string title, libqt_string text
     return QMessageBox::warning(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString);
 }
 
-int QMessageBox_Warning7(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber) {
+int QMessageBox_Warning7(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -673,7 +693,7 @@ int QMessageBox_Warning7(QWidget* parent, libqt_string title, libqt_string text,
     return QMessageBox::warning(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber));
 }
 
-int QMessageBox_Warning8(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
+int QMessageBox_Warning8(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -682,13 +702,13 @@ int QMessageBox_Warning8(QWidget* parent, libqt_string title, libqt_string text,
     return QMessageBox::warning(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber), static_cast<int>(escapeButtonNumber));
 }
 
-int QMessageBox_Critical6(QWidget* parent, libqt_string title, libqt_string text, int button0, int button1, int button2) {
+int QMessageBox_Critical6(QWidget* parent, const libqt_string title, const libqt_string text, int button0, int button1, int button2) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return QMessageBox::critical(parent, title_QString, text_QString, static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2));
 }
 
-int QMessageBox_Critical52(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text) {
+int QMessageBox_Critical52(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -696,7 +716,7 @@ int QMessageBox_Critical52(QWidget* parent, libqt_string title, libqt_string tex
     return QMessageBox::critical(parent, title_QString, text_QString, button0Text_QString, button1Text_QString);
 }
 
-int QMessageBox_Critical62(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text) {
+int QMessageBox_Critical62(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -705,7 +725,7 @@ int QMessageBox_Critical62(QWidget* parent, libqt_string title, libqt_string tex
     return QMessageBox::critical(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString);
 }
 
-int QMessageBox_Critical7(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber) {
+int QMessageBox_Critical7(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -714,7 +734,7 @@ int QMessageBox_Critical7(QWidget* parent, libqt_string title, libqt_string text
     return QMessageBox::critical(parent, title_QString, text_QString, button0Text_QString, button1Text_QString, button2Text_QString, static_cast<int>(defaultButtonNumber));
 }
 
-int QMessageBox_Critical8(QWidget* parent, libqt_string title, libqt_string text, libqt_string button0Text, libqt_string button1Text, libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
+int QMessageBox_Critical8(QWidget* parent, const libqt_string title, const libqt_string text, const libqt_string button0Text, const libqt_string button1Text, const libqt_string button2Text, int defaultButtonNumber, int escapeButtonNumber) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString button0Text_QString = QString::fromUtf8(button0Text.data, button0Text.len);
@@ -1855,7 +1875,7 @@ void QMessageBox_OnHideEvent(QMessageBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMessageBox_NativeEvent(QMessageBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMessageBox_NativeEvent(QMessageBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmessagebox = dynamic_cast<VirtualQMessageBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
@@ -1866,7 +1886,7 @@ bool QMessageBox_NativeEvent(QMessageBox* self, libqt_string eventType, void* me
 }
 
 // Base class handler implementation
-bool QMessageBox_QBaseNativeEvent(QMessageBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMessageBox_QBaseNativeEvent(QMessageBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmessagebox = dynamic_cast<VirtualQMessageBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
@@ -2176,7 +2196,7 @@ void QMessageBox_OnCustomEvent(QMessageBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMessageBox_ConnectNotify(QMessageBox* self, QMetaMethod* signal) {
+void QMessageBox_ConnectNotify(QMessageBox* self, const QMetaMethod* signal) {
     auto* vqmessagebox = dynamic_cast<VirtualQMessageBox*>(self);
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         vqmessagebox->connectNotify(*signal);
@@ -2186,7 +2206,7 @@ void QMessageBox_ConnectNotify(QMessageBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMessageBox_QBaseConnectNotify(QMessageBox* self, QMetaMethod* signal) {
+void QMessageBox_QBaseConnectNotify(QMessageBox* self, const QMetaMethod* signal) {
     auto* vqmessagebox = dynamic_cast<VirtualQMessageBox*>(self);
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         vqmessagebox->setQMessageBox_ConnectNotify_IsBase(true);
@@ -2205,7 +2225,7 @@ void QMessageBox_OnConnectNotify(QMessageBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMessageBox_DisconnectNotify(QMessageBox* self, QMetaMethod* signal) {
+void QMessageBox_DisconnectNotify(QMessageBox* self, const QMetaMethod* signal) {
     auto* vqmessagebox = dynamic_cast<VirtualQMessageBox*>(self);
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         vqmessagebox->disconnectNotify(*signal);
@@ -2215,7 +2235,7 @@ void QMessageBox_DisconnectNotify(QMessageBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMessageBox_QBaseDisconnectNotify(QMessageBox* self, QMetaMethod* signal) {
+void QMessageBox_QBaseDisconnectNotify(QMessageBox* self, const QMetaMethod* signal) {
     auto* vqmessagebox = dynamic_cast<VirtualQMessageBox*>(self);
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         vqmessagebox->setQMessageBox_DisconnectNotify_IsBase(true);
@@ -2495,7 +2515,7 @@ void QMessageBox_OnReceivers(const QMessageBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMessageBox_IsSignalConnected(const QMessageBox* self, QMetaMethod* signal) {
+bool QMessageBox_IsSignalConnected(const QMessageBox* self, const QMetaMethod* signal) {
     auto* vqmessagebox = const_cast<VirtualQMessageBox*>(dynamic_cast<const VirtualQMessageBox*>(self));
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         return vqmessagebox->isSignalConnected(*signal);
@@ -2505,7 +2525,7 @@ bool QMessageBox_IsSignalConnected(const QMessageBox* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QMessageBox_QBaseIsSignalConnected(const QMessageBox* self, QMetaMethod* signal) {
+bool QMessageBox_QBaseIsSignalConnected(const QMessageBox* self, const QMetaMethod* signal) {
     auto* vqmessagebox = const_cast<VirtualQMessageBox*>(dynamic_cast<const VirtualQMessageBox*>(self));
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         vqmessagebox->setQMessageBox_IsSignalConnected_IsBase(true);
@@ -2520,6 +2540,35 @@ void QMessageBox_OnIsSignalConnected(const QMessageBox* self, intptr_t slot) {
     auto* vqmessagebox = const_cast<VirtualQMessageBox*>(dynamic_cast<const VirtualQMessageBox*>(self));
     if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
         vqmessagebox->setQMessageBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQMessageBox::QMessageBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QMessageBox_GetDecodedMetricF(const QMessageBox* self, int metricA, int metricB) {
+    auto* vqmessagebox = const_cast<VirtualQMessageBox*>(dynamic_cast<const VirtualQMessageBox*>(self));
+    if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
+        return vqmessagebox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMessageBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QMessageBox_QBaseGetDecodedMetricF(const QMessageBox* self, int metricA, int metricB) {
+    auto* vqmessagebox = const_cast<VirtualQMessageBox*>(dynamic_cast<const VirtualQMessageBox*>(self));
+    if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
+        vqmessagebox->setQMessageBox_GetDecodedMetricF_IsBase(true);
+        return vqmessagebox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMessageBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QMessageBox_OnGetDecodedMetricF(const QMessageBox* self, intptr_t slot) {
+    auto* vqmessagebox = const_cast<VirtualQMessageBox*>(dynamic_cast<const VirtualQMessageBox*>(self));
+    if (vqmessagebox && vqmessagebox->isVirtualQMessageBox) {
+        vqmessagebox->setQMessageBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQMessageBox::QMessageBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

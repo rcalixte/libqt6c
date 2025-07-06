@@ -1,3 +1,4 @@
+#include "libqdeadlinetimer.hpp"
 #include "libqmutex.hpp"
 #include "libqmutex.h"
 
@@ -37,16 +38,16 @@ bool q_mutex_try_lock_with_timeout(void* self, int timeout) {
     return QMutex_TryLockWithTimeout((QMutex*)self, timeout);
 }
 
+bool q_mutex_try_lock2(void* self, void* timeout) {
+    return QMutex_TryLock2((QMutex*)self, (QDeadlineTimer*)timeout);
+}
+
 void q_mutex_lock(void* self) {
     QBasicMutex_Lock((QBasicMutex*)self);
 }
 
 void q_mutex_unlock(void* self) {
     QBasicMutex_Unlock((QBasicMutex*)self);
-}
-
-bool q_mutex_try_lock2(void* self) {
-    return QBasicMutex_TryLock2((QBasicMutex*)self);
 }
 
 void q_mutex_delete(void* self) {
@@ -61,20 +62,24 @@ void q_recursivemutex_lock(void* self) {
     QRecursiveMutex_Lock((QRecursiveMutex*)self);
 }
 
-bool q_recursivemutex_try_lock(void* self) {
-    return QRecursiveMutex_TryLock((QRecursiveMutex*)self);
-}
-
-void q_recursivemutex_unlock(void* self) {
-    QRecursiveMutex_Unlock((QRecursiveMutex*)self);
+bool q_recursivemutex_try_lock(void* self, int timeout) {
+    return QRecursiveMutex_TryLock((QRecursiveMutex*)self, timeout);
 }
 
 bool q_recursivemutex_try_lock2(void* self) {
     return QRecursiveMutex_TryLock2((QRecursiveMutex*)self);
 }
 
-bool q_recursivemutex_try_lock1(void* self, int timeout) {
-    return QRecursiveMutex_TryLock1((QRecursiveMutex*)self, timeout);
+void q_recursivemutex_unlock(void* self) {
+    QRecursiveMutex_Unlock((QRecursiveMutex*)self);
+}
+
+bool q_recursivemutex_try_lock3(void* self) {
+    return QRecursiveMutex_TryLock3((QRecursiveMutex*)self);
+}
+
+bool q_recursivemutex_try_lock1(void* self, void* timer) {
+    return QRecursiveMutex_TryLock1((QRecursiveMutex*)self, (QDeadlineTimer*)timer);
 }
 
 void q_recursivemutex_delete(void* self) {

@@ -103,6 +103,14 @@ QAccessibleHyperlinkInterface* q_accessibleobject_hyperlink_interface(void* self
     return QAccessibleInterface_HyperlinkInterface((QAccessibleInterface*)self);
 }
 
+QAccessibleSelectionInterface* q_accessibleobject_selection_interface(void* self) {
+    return QAccessibleInterface_SelectionInterface((QAccessibleInterface*)self);
+}
+
+QAccessibleAttributesInterface* q_accessibleobject_attributes_interface(void* self) {
+    return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
+}
+
 QWindow* q_accessibleobject_window(void* self) {
     return QAccessibleObject_Window((QAccessibleObject*)self);
 }
@@ -427,6 +435,14 @@ QAccessibleTableCellInterface* q_accessibleapplication_table_cell_interface(void
 
 QAccessibleHyperlinkInterface* q_accessibleapplication_hyperlink_interface(void* self) {
     return QAccessibleInterface_HyperlinkInterface((QAccessibleInterface*)self);
+}
+
+QAccessibleSelectionInterface* q_accessibleapplication_selection_interface(void* self) {
+    return QAccessibleInterface_SelectionInterface((QAccessibleInterface*)self);
+}
+
+QAccessibleAttributesInterface* q_accessibleapplication_attributes_interface(void* self) {
+    return QAccessibleInterface_AttributesInterface((QAccessibleInterface*)self);
 }
 
 bool q_accessibleapplication_is_valid(void* self) {

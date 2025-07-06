@@ -12,8 +12,19 @@
 
 #include "qtlibc.h"
 
-#include "libqmetatype.h"
-#include <string.h>
+/// https://doc.qt.io/qt-6/qscopedpropertyupdategroup.html
+
+/// q_scopedpropertyupdategroup_new constructs a new QScopedPropertyUpdateGroup object.
+///
+///
+QScopedPropertyUpdateGroup* q_scopedpropertyupdategroup_new();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpropertyupdategroup.html#dtor.QScopedPropertyUpdateGroup)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QScopedPropertyUpdateGroup* self ```
+void q_scopedpropertyupdategroup_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html
 
@@ -301,8 +312,7 @@ typedef enum {
 typedef enum {
     QPROPERTYOBSERVERBASE_OBSERVERTAG_OBSERVERNOTIFIESBINDING = 0,
     QPROPERTYOBSERVERBASE_OBSERVERTAG_OBSERVERNOTIFIESCHANGEHANDLER = 1,
-    QPROPERTYOBSERVERBASE_OBSERVERTAG_OBSERVERISPLACEHOLDER = 2,
-    QPROPERTYOBSERVERBASE_OBSERVERTAG_OBSERVERISALIAS = 3
+    QPROPERTYOBSERVERBASE_OBSERVERTAG_OBSERVERISPLACEHOLDER = 2
 } QPropertyObserverBase__ObserverTag;
 
 #endif

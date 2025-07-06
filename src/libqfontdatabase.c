@@ -178,6 +178,39 @@ bool q_fontdatabase_remove_all_application_fonts() {
     return QFontDatabase_RemoveAllApplicationFonts();
 }
 
+void q_fontdatabase_add_application_fallback_font_family(int64_t script, const char* familyName) {
+    QFontDatabase_AddApplicationFallbackFontFamily(script, qstring(familyName));
+}
+
+bool q_fontdatabase_remove_application_fallback_font_family(int64_t script, const char* familyName) {
+    return QFontDatabase_RemoveApplicationFallbackFontFamily(script, qstring(familyName));
+}
+
+void q_fontdatabase_set_application_fallback_font_families(int64_t param1, const char* familyNames[]) {
+    size_t familyNames_len = libqt_strv_length(familyNames);
+    libqt_string* familyNames_qstr = malloc(familyNames_len * sizeof(libqt_string));
+    for (size_t _i = 0; _i < familyNames_len; ++_i) {
+        familyNames_qstr[_i] = qstring(familyNames[_i]);
+    }
+    libqt_list familyNames_list = qlist(familyNames_qstr, familyNames_len);
+    QFontDatabase_SetApplicationFallbackFontFamilies(param1, familyNames_list);
+}
+
+const char** q_fontdatabase_application_fallback_font_families(int64_t script) {
+    libqt_list _arr = QFontDatabase_ApplicationFallbackFontFamilies(script);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        _ret[_i] = qstring_to_char(_qstr[_i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t _i = 0; _i < _arr.len; ++_i) {
+        libqt_string_free((libqt_string*)&_qstr[_i]);
+    }
+    free((void*)_arr.data.ptr);
+    return _ret;
+}
+
 QFont* q_fontdatabase_system_font(int64_t typeVal) {
     return QFontDatabase_SystemFont(typeVal);
 }

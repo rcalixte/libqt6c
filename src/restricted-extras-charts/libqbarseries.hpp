@@ -55,12 +55,12 @@ void QBarSeries_QBaseChildEvent(QBarSeries* self, QChildEvent* event);
 void QBarSeries_CustomEvent(QBarSeries* self, QEvent* event);
 void QBarSeries_OnCustomEvent(QBarSeries* self, intptr_t slot);
 void QBarSeries_QBaseCustomEvent(QBarSeries* self, QEvent* event);
-void QBarSeries_ConnectNotify(QBarSeries* self, QMetaMethod* signal);
+void QBarSeries_ConnectNotify(QBarSeries* self, const QMetaMethod* signal);
 void QBarSeries_OnConnectNotify(QBarSeries* self, intptr_t slot);
-void QBarSeries_QBaseConnectNotify(QBarSeries* self, QMetaMethod* signal);
-void QBarSeries_DisconnectNotify(QBarSeries* self, QMetaMethod* signal);
+void QBarSeries_QBaseConnectNotify(QBarSeries* self, const QMetaMethod* signal);
+void QBarSeries_DisconnectNotify(QBarSeries* self, const QMetaMethod* signal);
 void QBarSeries_OnDisconnectNotify(QBarSeries* self, intptr_t slot);
-void QBarSeries_QBaseDisconnectNotify(QBarSeries* self, QMetaMethod* signal);
+void QBarSeries_QBaseDisconnectNotify(QBarSeries* self, const QMetaMethod* signal);
 QObject* QBarSeries_Sender(const QBarSeries* self);
 void QBarSeries_OnSender(const QBarSeries* self, intptr_t slot);
 QObject* QBarSeries_QBaseSender(const QBarSeries* self);
@@ -70,9 +70,9 @@ int QBarSeries_QBaseSenderSignalIndex(const QBarSeries* self);
 int QBarSeries_Receivers(const QBarSeries* self, const char* signal);
 void QBarSeries_OnReceivers(const QBarSeries* self, intptr_t slot);
 int QBarSeries_QBaseReceivers(const QBarSeries* self, const char* signal);
-bool QBarSeries_IsSignalConnected(const QBarSeries* self, QMetaMethod* signal);
+bool QBarSeries_IsSignalConnected(const QBarSeries* self, const QMetaMethod* signal);
 void QBarSeries_OnIsSignalConnected(const QBarSeries* self, intptr_t slot);
-bool QBarSeries_QBaseIsSignalConnected(const QBarSeries* self, QMetaMethod* signal);
+bool QBarSeries_QBaseIsSignalConnected(const QBarSeries* self, const QMetaMethod* signal);
 void QBarSeries_Delete(QBarSeries* self);
 
 #ifdef __cplusplus

@@ -61,10 +61,10 @@ class VirtualQSystemTrayIcon final : public QSystemTrayIcon {
     mutable bool qsystemtrayicon_issignalconnected_isbase = false;
 
   public:
-    VirtualQSystemTrayIcon() : QSystemTrayIcon(){};
-    VirtualQSystemTrayIcon(const QIcon& icon) : QSystemTrayIcon(icon){};
-    VirtualQSystemTrayIcon(QObject* parent) : QSystemTrayIcon(parent){};
-    VirtualQSystemTrayIcon(const QIcon& icon, QObject* parent) : QSystemTrayIcon(icon, parent){};
+    VirtualQSystemTrayIcon() : QSystemTrayIcon() {};
+    VirtualQSystemTrayIcon(const QIcon& icon) : QSystemTrayIcon(icon) {};
+    VirtualQSystemTrayIcon(QObject* parent) : QSystemTrayIcon(parent) {};
+    VirtualQSystemTrayIcon(const QIcon& icon, QObject* parent) : QSystemTrayIcon(icon, parent) {};
 
     ~VirtualQSystemTrayIcon() {
         qsystemtrayicon_metacall_callback = nullptr;
@@ -298,18 +298,18 @@ class VirtualQSystemTrayIcon final : public QSystemTrayIcon {
     friend void QSystemTrayIcon_QBaseChildEvent(QSystemTrayIcon* self, QChildEvent* event);
     friend void QSystemTrayIcon_CustomEvent(QSystemTrayIcon* self, QEvent* event);
     friend void QSystemTrayIcon_QBaseCustomEvent(QSystemTrayIcon* self, QEvent* event);
-    friend void QSystemTrayIcon_ConnectNotify(QSystemTrayIcon* self, QMetaMethod* signal);
-    friend void QSystemTrayIcon_QBaseConnectNotify(QSystemTrayIcon* self, QMetaMethod* signal);
-    friend void QSystemTrayIcon_DisconnectNotify(QSystemTrayIcon* self, QMetaMethod* signal);
-    friend void QSystemTrayIcon_QBaseDisconnectNotify(QSystemTrayIcon* self, QMetaMethod* signal);
+    friend void QSystemTrayIcon_ConnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal);
+    friend void QSystemTrayIcon_QBaseConnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal);
+    friend void QSystemTrayIcon_DisconnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal);
+    friend void QSystemTrayIcon_QBaseDisconnectNotify(QSystemTrayIcon* self, const QMetaMethod* signal);
     friend QObject* QSystemTrayIcon_Sender(const QSystemTrayIcon* self);
     friend QObject* QSystemTrayIcon_QBaseSender(const QSystemTrayIcon* self);
     friend int QSystemTrayIcon_SenderSignalIndex(const QSystemTrayIcon* self);
     friend int QSystemTrayIcon_QBaseSenderSignalIndex(const QSystemTrayIcon* self);
     friend int QSystemTrayIcon_Receivers(const QSystemTrayIcon* self, const char* signal);
     friend int QSystemTrayIcon_QBaseReceivers(const QSystemTrayIcon* self, const char* signal);
-    friend bool QSystemTrayIcon_IsSignalConnected(const QSystemTrayIcon* self, QMetaMethod* signal);
-    friend bool QSystemTrayIcon_QBaseIsSignalConnected(const QSystemTrayIcon* self, QMetaMethod* signal);
+    friend bool QSystemTrayIcon_IsSignalConnected(const QSystemTrayIcon* self, const QMetaMethod* signal);
+    friend bool QSystemTrayIcon_QBaseIsSignalConnected(const QSystemTrayIcon* self, const QMetaMethod* signal);
 };
 
 #endif

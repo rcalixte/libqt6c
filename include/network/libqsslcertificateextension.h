@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qsslcertificateextension.html
 
 /// q_sslcertificateextension_new constructs a new QSslCertificateExtension object.

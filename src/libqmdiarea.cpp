@@ -113,12 +113,12 @@ QMdiSubWindow* QMdiArea_ActiveSubWindow(const QMdiArea* self) {
 libqt_list /* of QMdiSubWindow* */ QMdiArea_SubWindowList(const QMdiArea* self) {
     QList<QMdiSubWindow*> _ret = self->subWindowList();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QMdiSubWindow** _arr = static_cast<QMdiSubWindow**>(malloc(sizeof(QMdiSubWindow*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QMdiSubWindow** _arr = static_cast<QMdiSubWindow**>(malloc(sizeof(QMdiSubWindow*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -135,7 +135,7 @@ QBrush* QMdiArea_Background(const QMdiArea* self) {
     return new QBrush(self->background());
 }
 
-void QMdiArea_SetBackground(QMdiArea* self, QBrush* background) {
+void QMdiArea_SetBackground(QMdiArea* self, const QBrush* background) {
     self->setBackground(*background);
 }
 
@@ -270,12 +270,12 @@ libqt_string QMdiArea_Tr3(const char* s, const char* c, int n) {
 libqt_list /* of QMdiSubWindow* */ QMdiArea_SubWindowList1(const QMdiArea* self, int order) {
     QList<QMdiSubWindow*> _ret = self->subWindowList(static_cast<QMdiArea::WindowOrder>(order));
     // Convert QList<> from C++ memory to manually-managed C memory
-    QMdiSubWindow** _arr = static_cast<QMdiSubWindow**>(malloc(sizeof(QMdiSubWindow*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QMdiSubWindow** _arr = static_cast<QMdiSubWindow**>(malloc(sizeof(QMdiSubWindow*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -1476,7 +1476,7 @@ void QMdiArea_OnHideEvent(QMdiArea* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMdiArea_NativeEvent(QMdiArea* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMdiArea_NativeEvent(QMdiArea* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmdiarea = dynamic_cast<VirtualQMdiArea*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
@@ -1487,7 +1487,7 @@ bool QMdiArea_NativeEvent(QMdiArea* self, libqt_string eventType, void* message,
 }
 
 // Base class handler implementation
-bool QMdiArea_QBaseNativeEvent(QMdiArea* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMdiArea_QBaseNativeEvent(QMdiArea* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmdiarea = dynamic_cast<VirtualQMdiArea*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
@@ -1739,7 +1739,7 @@ void QMdiArea_OnCustomEvent(QMdiArea* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMdiArea_ConnectNotify(QMdiArea* self, QMetaMethod* signal) {
+void QMdiArea_ConnectNotify(QMdiArea* self, const QMetaMethod* signal) {
     auto* vqmdiarea = dynamic_cast<VirtualQMdiArea*>(self);
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         vqmdiarea->connectNotify(*signal);
@@ -1749,7 +1749,7 @@ void QMdiArea_ConnectNotify(QMdiArea* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMdiArea_QBaseConnectNotify(QMdiArea* self, QMetaMethod* signal) {
+void QMdiArea_QBaseConnectNotify(QMdiArea* self, const QMetaMethod* signal) {
     auto* vqmdiarea = dynamic_cast<VirtualQMdiArea*>(self);
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         vqmdiarea->setQMdiArea_ConnectNotify_IsBase(true);
@@ -1768,7 +1768,7 @@ void QMdiArea_OnConnectNotify(QMdiArea* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMdiArea_DisconnectNotify(QMdiArea* self, QMetaMethod* signal) {
+void QMdiArea_DisconnectNotify(QMdiArea* self, const QMetaMethod* signal) {
     auto* vqmdiarea = dynamic_cast<VirtualQMdiArea*>(self);
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         vqmdiarea->disconnectNotify(*signal);
@@ -1778,7 +1778,7 @@ void QMdiArea_DisconnectNotify(QMdiArea* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMdiArea_QBaseDisconnectNotify(QMdiArea* self, QMetaMethod* signal) {
+void QMdiArea_QBaseDisconnectNotify(QMdiArea* self, const QMetaMethod* signal) {
     auto* vqmdiarea = dynamic_cast<VirtualQMdiArea*>(self);
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         vqmdiarea->setQMdiArea_DisconnectNotify_IsBase(true);
@@ -2114,7 +2114,7 @@ void QMdiArea_OnReceivers(const QMdiArea* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMdiArea_IsSignalConnected(const QMdiArea* self, QMetaMethod* signal) {
+bool QMdiArea_IsSignalConnected(const QMdiArea* self, const QMetaMethod* signal) {
     auto* vqmdiarea = const_cast<VirtualQMdiArea*>(dynamic_cast<const VirtualQMdiArea*>(self));
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         return vqmdiarea->isSignalConnected(*signal);
@@ -2124,7 +2124,7 @@ bool QMdiArea_IsSignalConnected(const QMdiArea* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QMdiArea_QBaseIsSignalConnected(const QMdiArea* self, QMetaMethod* signal) {
+bool QMdiArea_QBaseIsSignalConnected(const QMdiArea* self, const QMetaMethod* signal) {
     auto* vqmdiarea = const_cast<VirtualQMdiArea*>(dynamic_cast<const VirtualQMdiArea*>(self));
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         vqmdiarea->setQMdiArea_IsSignalConnected_IsBase(true);
@@ -2139,6 +2139,35 @@ void QMdiArea_OnIsSignalConnected(const QMdiArea* self, intptr_t slot) {
     auto* vqmdiarea = const_cast<VirtualQMdiArea*>(dynamic_cast<const VirtualQMdiArea*>(self));
     if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
         vqmdiarea->setQMdiArea_IsSignalConnected_Callback(reinterpret_cast<VirtualQMdiArea::QMdiArea_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QMdiArea_GetDecodedMetricF(const QMdiArea* self, int metricA, int metricB) {
+    auto* vqmdiarea = const_cast<VirtualQMdiArea*>(dynamic_cast<const VirtualQMdiArea*>(self));
+    if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
+        return vqmdiarea->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMdiArea*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QMdiArea_QBaseGetDecodedMetricF(const QMdiArea* self, int metricA, int metricB) {
+    auto* vqmdiarea = const_cast<VirtualQMdiArea*>(dynamic_cast<const VirtualQMdiArea*>(self));
+    if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
+        vqmdiarea->setQMdiArea_GetDecodedMetricF_IsBase(true);
+        return vqmdiarea->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMdiArea*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QMdiArea_OnGetDecodedMetricF(const QMdiArea* self, intptr_t slot) {
+    auto* vqmdiarea = const_cast<VirtualQMdiArea*>(dynamic_cast<const VirtualQMdiArea*>(self));
+    if (vqmdiarea && vqmdiarea->isVirtualQMdiArea) {
+        vqmdiarea->setQMdiArea_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQMdiArea::QMdiArea_GetDecodedMetricF_Callback>(slot));
     }
 }
 

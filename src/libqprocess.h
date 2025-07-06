@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqiodevice.h"
-#include "libqiodevicebase.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qprocessenvironment.html
 
 /// q_processenvironment_new constructs a new QProcessEnvironment object.
@@ -45,16 +38,6 @@ void q_processenvironment_operator_assign(void* self, void* other);
 ///
 /// ``` QProcessEnvironment* self, QProcessEnvironment* other ```
 void q_processenvironment_swap(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qprocessenvironment.html#operator==)
-///
-/// ``` QProcessEnvironment* self, QProcessEnvironment* other ```
-bool q_processenvironment_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qprocessenvironment.html#operator!=)
-///
-/// ``` QProcessEnvironment* self, QProcessEnvironment* other ```
-bool q_processenvironment_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocessenvironment.html#isEmpty)
 ///
@@ -279,6 +262,26 @@ void q_process_set_standard_error_file(void* self, const char* fileName);
 ///
 /// ``` QProcess* self, QProcess* destination ```
 void q_process_set_standard_output_process(void* self, void* destination);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
+///
+/// ``` QProcess* self, const char* description ```
+void q_process_fail_child_process_modifier(void* self, const char* description);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#unixProcessParameters)
+///
+/// ``` QProcess* self ```
+QProcess__UnixProcessParameters* q_process_unix_process_parameters(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setUnixProcessParameters)
+///
+/// ``` QProcess* self, QProcess__UnixProcessParameters* params ```
+void q_process_set_unix_process_parameters(void* self, void* params);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setUnixProcessParameters)
+///
+/// ``` QProcess* self, uint32_t flagsOnly ```
+void q_process_set_unix_process_parameters_with_flags_only(void* self, int64_t flagsOnly);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#workingDirectory)
 ///
@@ -601,6 +604,11 @@ void q_process_set_standard_output_file2(void* self, const char* fileName, int64
 ///
 /// ``` QProcess* self, const char* fileName, int mode ```
 void q_process_set_standard_error_file2(void* self, const char* fileName, int64_t mode);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
+///
+/// ``` QProcess* self, const char* description, int errorVal ```
+void q_process_fail_child_process_modifier2(void* self, const char* description, int errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#waitForStarted)
 ///
@@ -1011,7 +1019,7 @@ QThread* q_process_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QProcess* self, QThread* thread ```
-void q_process_move_to_thread(void* self, void* thread);
+bool q_process_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1026,6 +1034,13 @@ int32_t q_process_start_timer(void* self, int interval);
 ///
 /// ``` QProcess* self, int id ```
 void q_process_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QProcess* self, enum Qt__TimerId id ```
+void q_process_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1166,6 +1181,13 @@ bool q_process_inherits(void* self, const char* classname);
 ///
 /// ``` QProcess* self ```
 void q_process_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QProcess* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_process_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1840,6 +1862,35 @@ void q_process_on_object_name_changed(void* self, void (*slot)(void*, const char
 /// ``` QProcess* self ```
 void q_process_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html
+
+/// q_process__unixprocessparameters_new constructs a new QProcess::UnixProcessParameters object.
+///
+/// ``` QProcess__UnixProcessParameters* other ```
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new(void* other);
+
+/// q_process__unixprocessparameters_new2 constructs a new QProcess::UnixProcessParameters object and invalidates the source QProcess::UnixProcessParameters object.
+///
+/// ``` QProcess__UnixProcessParameters* other ```
+QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other);
+
+/// q_process__unixprocessparameters_copy_assign shallow copies `other` into `self`.
+///
+/// ``` QProcess__UnixProcessParameters* self, QProcess__UnixProcessParameters* other ```
+void q_process__unixprocessparameters_copy_assign(void* self, void* other);
+
+/// q_process__unixprocessparameters_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QProcess__UnixProcessParameters* self, QProcess__UnixProcessParameters* other ```
+void q_process__unixprocessparameters_move_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess::unixprocessparameters.html#dtor.QProcess::UnixProcessParameters)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QProcess__UnixProcessParameters* self ```
+void q_process__unixprocessparameters_delete(void* self);
+
 /// https://doc.qt.io/qt-6/qprocess.html#types
 
 typedef enum {
@@ -1883,5 +1934,15 @@ typedef enum {
     QPROCESS_EXITSTATUS_NORMALEXIT = 0,
     QPROCESS_EXITSTATUS_CRASHEXIT = 1
 } QProcess__ExitStatus;
+
+typedef enum {
+    QPROCESS_UNIXPROCESSFLAG_RESETSIGNALHANDLERS = 1,
+    QPROCESS_UNIXPROCESSFLAG_IGNORESIGPIPE = 2,
+    QPROCESS_UNIXPROCESSFLAG_CLOSEFILEDESCRIPTORS = 16,
+    QPROCESS_UNIXPROCESSFLAG_USEVFORK = 32,
+    QPROCESS_UNIXPROCESSFLAG_CREATENEWSESSION = 64,
+    QPROCESS_UNIXPROCESSFLAG_DISCONNECTCONTROLLINGTERMINAL = 128,
+    QPROCESS_UNIXPROCESSFLAG_RESETIDS = 256
+} QProcess__UnixProcessFlag;
 
 #endif

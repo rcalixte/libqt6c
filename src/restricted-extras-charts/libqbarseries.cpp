@@ -269,7 +269,7 @@ void QBarSeries_OnCustomEvent(QBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarSeries_ConnectNotify(QBarSeries* self, QMetaMethod* signal) {
+void QBarSeries_ConnectNotify(QBarSeries* self, const QMetaMethod* signal) {
     auto* vqbarseries = dynamic_cast<VirtualQBarSeries*>(self);
     if (vqbarseries && vqbarseries->isVirtualQBarSeries) {
         vqbarseries->connectNotify(*signal);
@@ -279,7 +279,7 @@ void QBarSeries_ConnectNotify(QBarSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBarSeries_QBaseConnectNotify(QBarSeries* self, QMetaMethod* signal) {
+void QBarSeries_QBaseConnectNotify(QBarSeries* self, const QMetaMethod* signal) {
     auto* vqbarseries = dynamic_cast<VirtualQBarSeries*>(self);
     if (vqbarseries && vqbarseries->isVirtualQBarSeries) {
         vqbarseries->setQBarSeries_ConnectNotify_IsBase(true);
@@ -298,7 +298,7 @@ void QBarSeries_OnConnectNotify(QBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarSeries_DisconnectNotify(QBarSeries* self, QMetaMethod* signal) {
+void QBarSeries_DisconnectNotify(QBarSeries* self, const QMetaMethod* signal) {
     auto* vqbarseries = dynamic_cast<VirtualQBarSeries*>(self);
     if (vqbarseries && vqbarseries->isVirtualQBarSeries) {
         vqbarseries->disconnectNotify(*signal);
@@ -308,7 +308,7 @@ void QBarSeries_DisconnectNotify(QBarSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QBarSeries_QBaseDisconnectNotify(QBarSeries* self, QMetaMethod* signal) {
+void QBarSeries_QBaseDisconnectNotify(QBarSeries* self, const QMetaMethod* signal) {
     auto* vqbarseries = dynamic_cast<VirtualQBarSeries*>(self);
     if (vqbarseries && vqbarseries->isVirtualQBarSeries) {
         vqbarseries->setQBarSeries_DisconnectNotify_IsBase(true);
@@ -414,7 +414,7 @@ void QBarSeries_OnReceivers(const QBarSeries* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBarSeries_IsSignalConnected(const QBarSeries* self, QMetaMethod* signal) {
+bool QBarSeries_IsSignalConnected(const QBarSeries* self, const QMetaMethod* signal) {
     auto* vqbarseries = const_cast<VirtualQBarSeries*>(dynamic_cast<const VirtualQBarSeries*>(self));
     if (vqbarseries && vqbarseries->isVirtualQBarSeries) {
         return vqbarseries->isSignalConnected(*signal);
@@ -424,7 +424,7 @@ bool QBarSeries_IsSignalConnected(const QBarSeries* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QBarSeries_QBaseIsSignalConnected(const QBarSeries* self, QMetaMethod* signal) {
+bool QBarSeries_QBaseIsSignalConnected(const QBarSeries* self, const QMetaMethod* signal) {
     auto* vqbarseries = const_cast<VirtualQBarSeries*>(dynamic_cast<const VirtualQBarSeries*>(self));
     if (vqbarseries && vqbarseries->isVirtualQBarSeries) {
         vqbarseries->setQBarSeries_IsSignalConnected_IsBase(true);

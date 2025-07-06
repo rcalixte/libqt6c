@@ -12,13 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqbrush.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpen.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html
 
 /// q_candlestickset_new constructs a new QCandlestickSet object.
@@ -338,7 +331,7 @@ QThread* q_candlestickset_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QCandlestickSet* self, QThread* thread ```
-void q_candlestickset_move_to_thread(void* self, void* thread);
+bool q_candlestickset_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -353,6 +346,13 @@ int32_t q_candlestickset_start_timer(void* self, int interval);
 ///
 /// ``` QCandlestickSet* self, int id ```
 void q_candlestickset_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QCandlestickSet* self, enum Qt__TimerId id ```
+void q_candlestickset_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -493,6 +493,13 @@ bool q_candlestickset_inherits(void* self, const char* classname);
 ///
 /// ``` QCandlestickSet* self ```
 void q_candlestickset_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QCandlestickSet* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_candlestickset_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

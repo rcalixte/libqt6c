@@ -12,7 +12,7 @@ QHostInfo* QHostInfo_new() {
     return new QHostInfo();
 }
 
-QHostInfo* QHostInfo_new2(QHostInfo* d) {
+QHostInfo* QHostInfo_new2(const QHostInfo* d) {
     return new QHostInfo(*d);
 }
 
@@ -20,7 +20,7 @@ QHostInfo* QHostInfo_new3(int lookupId) {
     return new QHostInfo(static_cast<int>(lookupId));
 }
 
-void QHostInfo_OperatorAssign(QHostInfo* self, QHostInfo* d) {
+void QHostInfo_OperatorAssign(QHostInfo* self, const QHostInfo* d) {
     self->operator=(*d);
 }
 
@@ -40,7 +40,7 @@ libqt_string QHostInfo_HostName(const QHostInfo* self) {
     return _str;
 }
 
-void QHostInfo_SetHostName(QHostInfo* self, libqt_string name) {
+void QHostInfo_SetHostName(QHostInfo* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     self->setHostName(name_QString);
 }
@@ -48,17 +48,17 @@ void QHostInfo_SetHostName(QHostInfo* self, libqt_string name) {
 libqt_list /* of QHostAddress* */ QHostInfo_Addresses(const QHostInfo* self) {
     QList<QHostAddress> _ret = self->addresses();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QHostAddress** _arr = static_cast<QHostAddress**>(malloc(sizeof(QHostAddress*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QHostAddress** _arr = static_cast<QHostAddress**>(malloc(sizeof(QHostAddress*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QHostAddress(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QHostInfo_SetAddresses(QHostInfo* self, libqt_list /* of QHostAddress* */ addresses) {
+void QHostInfo_SetAddresses(QHostInfo* self, const libqt_list /* of QHostAddress* */ addresses) {
     QList<QHostAddress> addresses_QList;
     addresses_QList.reserve(addresses.len);
     QHostAddress** addresses_arr = static_cast<QHostAddress**>(addresses.data.ptr);
@@ -88,7 +88,7 @@ libqt_string QHostInfo_ErrorString(const QHostInfo* self) {
     return _str;
 }
 
-void QHostInfo_SetErrorString(QHostInfo* self, libqt_string errorString) {
+void QHostInfo_SetErrorString(QHostInfo* self, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     self->setErrorString(errorString_QString);
 }
@@ -105,7 +105,7 @@ void QHostInfo_AbortHostLookup(int lookupId) {
     QHostInfo::abortHostLookup(static_cast<int>(lookupId));
 }
 
-QHostInfo* QHostInfo_FromName(libqt_string name) {
+QHostInfo* QHostInfo_FromName(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QHostInfo(QHostInfo::fromName(name_QString));
 }

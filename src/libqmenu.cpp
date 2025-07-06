@@ -52,12 +52,12 @@ QMenu* QMenu_new2() {
     return new VirtualQMenu();
 }
 
-QMenu* QMenu_new3(libqt_string title) {
+QMenu* QMenu_new3(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQMenu(title_QString);
 }
 
-QMenu* QMenu_new4(libqt_string title, QWidget* parent) {
+QMenu* QMenu_new4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQMenu(title_QString, parent);
 }
@@ -114,12 +114,12 @@ QAction* QMenu_AddMenu(QMenu* self, QMenu* menu) {
     return self->addMenu(menu);
 }
 
-QMenu* QMenu_AddMenuWithTitle(QMenu* self, libqt_string title) {
+QMenu* QMenu_AddMenuWithTitle(QMenu* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return self->addMenu(title_QString);
 }
 
-QMenu* QMenu_AddMenu2(QMenu* self, QIcon* icon, libqt_string title) {
+QMenu* QMenu_AddMenu2(QMenu* self, const QIcon* icon, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return self->addMenu(*icon, title_QString);
 }
@@ -128,12 +128,12 @@ QAction* QMenu_AddSeparator(QMenu* self) {
     return self->addSeparator();
 }
 
-QAction* QMenu_AddSection(QMenu* self, libqt_string text) {
+QAction* QMenu_AddSection(QMenu* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addSection(text_QString);
 }
 
-QAction* QMenu_AddSection2(QMenu* self, QIcon* icon, libqt_string text) {
+QAction* QMenu_AddSection2(QMenu* self, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->addSection(*icon, text_QString);
 }
@@ -146,12 +146,12 @@ QAction* QMenu_InsertSeparator(QMenu* self, QAction* before) {
     return self->insertSeparator(before);
 }
 
-QAction* QMenu_InsertSection(QMenu* self, QAction* before, libqt_string text) {
+QAction* QMenu_InsertSection(QMenu* self, QAction* before, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->insertSection(before, text_QString);
 }
 
-QAction* QMenu_InsertSection2(QMenu* self, QAction* before, QIcon* icon, libqt_string text) {
+QAction* QMenu_InsertSection2(QMenu* self, QAction* before, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->insertSection(before, *icon, text_QString);
 }
@@ -180,7 +180,7 @@ void QMenu_ShowTearOffMenu(QMenu* self) {
     self->showTearOffMenu();
 }
 
-void QMenu_ShowTearOffMenuWithPos(QMenu* self, QPoint* pos) {
+void QMenu_ShowTearOffMenuWithPos(QMenu* self, const QPoint* pos) {
     self->showTearOffMenu(*pos);
 }
 
@@ -204,7 +204,7 @@ QAction* QMenu_ActiveAction(const QMenu* self) {
     return self->activeAction();
 }
 
-void QMenu_Popup(QMenu* self, QPoint* pos) {
+void QMenu_Popup(QMenu* self, const QPoint* pos) {
     self->popup(*pos);
 }
 
@@ -212,11 +212,11 @@ QAction* QMenu_Exec(QMenu* self) {
     return self->exec();
 }
 
-QAction* QMenu_ExecWithPos(QMenu* self, QPoint* pos) {
+QAction* QMenu_ExecWithPos(QMenu* self, const QPoint* pos) {
     return self->exec(*pos);
 }
 
-QAction* QMenu_Exec2(libqt_list /* of QAction* */ actions, QPoint* pos) {
+QAction* QMenu_Exec2(const libqt_list /* of QAction* */ actions, const QPoint* pos) {
     QList<QAction*> actions_QList;
     actions_QList.reserve(actions.len);
     QAction** actions_arr = static_cast<QAction**>(actions.data.ptr);
@@ -230,7 +230,7 @@ QRect* QMenu_ActionGeometry(const QMenu* self, QAction* param1) {
     return new QRect(self->actionGeometry(param1));
 }
 
-QAction* QMenu_ActionAt(const QMenu* self, QPoint* param1) {
+QAction* QMenu_ActionAt(const QMenu* self, const QPoint* param1) {
     return self->actionAt(*param1);
 }
 
@@ -238,7 +238,7 @@ QAction* QMenu_MenuAction(const QMenu* self) {
     return self->menuAction();
 }
 
-QMenu* QMenu_MenuInAction(QAction* action) {
+QMenu* QMenu_MenuInAction(const QAction* action) {
     return QMenu::menuInAction(action);
 }
 
@@ -254,7 +254,7 @@ libqt_string QMenu_Title(const QMenu* self) {
     return _str;
 }
 
-void QMenu_SetTitle(QMenu* self, libqt_string title) {
+void QMenu_SetTitle(QMenu* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -263,7 +263,7 @@ QIcon* QMenu_Icon(const QMenu* self) {
     return new QIcon(self->icon());
 }
 
-void QMenu_SetIcon(QMenu* self, QIcon* icon) {
+void QMenu_SetIcon(QMenu* self, const QIcon* icon) {
     self->setIcon(*icon);
 }
 
@@ -357,15 +357,15 @@ libqt_string QMenu_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-void QMenu_Popup2(QMenu* self, QPoint* pos, QAction* at) {
+void QMenu_Popup2(QMenu* self, const QPoint* pos, QAction* at) {
     self->popup(*pos, at);
 }
 
-QAction* QMenu_Exec22(QMenu* self, QPoint* pos, QAction* at) {
+QAction* QMenu_Exec22(QMenu* self, const QPoint* pos, QAction* at) {
     return self->exec(*pos, at);
 }
 
-QAction* QMenu_Exec3(libqt_list /* of QAction* */ actions, QPoint* pos, QAction* at) {
+QAction* QMenu_Exec3(const libqt_list /* of QAction* */ actions, const QPoint* pos, QAction* at) {
     QList<QAction*> actions_QList;
     actions_QList.reserve(actions.len);
     QAction** actions_arr = static_cast<QAction**>(actions.data.ptr);
@@ -375,7 +375,7 @@ QAction* QMenu_Exec3(libqt_list /* of QAction* */ actions, QPoint* pos, QAction*
     return QMenu::exec(actions_QList, *pos, at);
 }
 
-QAction* QMenu_Exec4(libqt_list /* of QAction* */ actions, QPoint* pos, QAction* at, QWidget* parent) {
+QAction* QMenu_Exec4(const libqt_list /* of QAction* */ actions, const QPoint* pos, QAction* at, QWidget* parent) {
     QList<QAction*> actions_QList;
     actions_QList.reserve(actions.len);
     QAction** actions_arr = static_cast<QAction**>(actions.data.ptr);
@@ -821,7 +821,7 @@ void QMenu_OnFocusNextPrevChild(QMenu* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMenu_InitStyleOption(const QMenu* self, QStyleOptionMenuItem* option, QAction* action) {
+void QMenu_InitStyleOption(const QMenu* self, QStyleOptionMenuItem* option, const QAction* action) {
     auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->initStyleOption(option, action);
@@ -831,7 +831,7 @@ void QMenu_InitStyleOption(const QMenu* self, QStyleOptionMenuItem* option, QAct
 }
 
 // Base class handler implementation
-void QMenu_QBaseInitStyleOption(const QMenu* self, QStyleOptionMenuItem* option, QAction* action) {
+void QMenu_QBaseInitStyleOption(const QMenu* self, QStyleOptionMenuItem* option, const QAction* action) {
     auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->setQMenu_InitStyleOption_IsBase(true);
@@ -1430,7 +1430,7 @@ void QMenu_OnShowEvent(QMenu* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMenu_NativeEvent(QMenu* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMenu_NativeEvent(QMenu* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmenu = dynamic_cast<VirtualQMenu*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmenu && vqmenu->isVirtualQMenu) {
@@ -1441,7 +1441,7 @@ bool QMenu_NativeEvent(QMenu* self, libqt_string eventType, void* message, intpt
 }
 
 // Base class handler implementation
-bool QMenu_QBaseNativeEvent(QMenu* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QMenu_QBaseNativeEvent(QMenu* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqmenu = dynamic_cast<VirtualQMenu*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqmenu && vqmenu->isVirtualQMenu) {
@@ -1722,7 +1722,7 @@ void QMenu_OnCustomEvent(QMenu* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMenu_ConnectNotify(QMenu* self, QMetaMethod* signal) {
+void QMenu_ConnectNotify(QMenu* self, const QMetaMethod* signal) {
     auto* vqmenu = dynamic_cast<VirtualQMenu*>(self);
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->connectNotify(*signal);
@@ -1732,7 +1732,7 @@ void QMenu_ConnectNotify(QMenu* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMenu_QBaseConnectNotify(QMenu* self, QMetaMethod* signal) {
+void QMenu_QBaseConnectNotify(QMenu* self, const QMetaMethod* signal) {
     auto* vqmenu = dynamic_cast<VirtualQMenu*>(self);
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->setQMenu_ConnectNotify_IsBase(true);
@@ -1751,7 +1751,7 @@ void QMenu_OnConnectNotify(QMenu* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMenu_DisconnectNotify(QMenu* self, QMetaMethod* signal) {
+void QMenu_DisconnectNotify(QMenu* self, const QMetaMethod* signal) {
     auto* vqmenu = dynamic_cast<VirtualQMenu*>(self);
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->disconnectNotify(*signal);
@@ -1761,7 +1761,7 @@ void QMenu_DisconnectNotify(QMenu* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMenu_QBaseDisconnectNotify(QMenu* self, QMetaMethod* signal) {
+void QMenu_QBaseDisconnectNotify(QMenu* self, const QMetaMethod* signal) {
     auto* vqmenu = dynamic_cast<VirtualQMenu*>(self);
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->setQMenu_DisconnectNotify_IsBase(true);
@@ -2041,7 +2041,7 @@ void QMenu_OnReceivers(const QMenu* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMenu_IsSignalConnected(const QMenu* self, QMetaMethod* signal) {
+bool QMenu_IsSignalConnected(const QMenu* self, const QMetaMethod* signal) {
     auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
     if (vqmenu && vqmenu->isVirtualQMenu) {
         return vqmenu->isSignalConnected(*signal);
@@ -2051,7 +2051,7 @@ bool QMenu_IsSignalConnected(const QMenu* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QMenu_QBaseIsSignalConnected(const QMenu* self, QMetaMethod* signal) {
+bool QMenu_QBaseIsSignalConnected(const QMenu* self, const QMetaMethod* signal) {
     auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->setQMenu_IsSignalConnected_IsBase(true);
@@ -2066,6 +2066,35 @@ void QMenu_OnIsSignalConnected(const QMenu* self, intptr_t slot) {
     auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
     if (vqmenu && vqmenu->isVirtualQMenu) {
         vqmenu->setQMenu_IsSignalConnected_Callback(reinterpret_cast<VirtualQMenu::QMenu_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QMenu_GetDecodedMetricF(const QMenu* self, int metricA, int metricB) {
+    auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
+    if (vqmenu && vqmenu->isVirtualQMenu) {
+        return vqmenu->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMenu*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QMenu_QBaseGetDecodedMetricF(const QMenu* self, int metricA, int metricB) {
+    auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
+    if (vqmenu && vqmenu->isVirtualQMenu) {
+        vqmenu->setQMenu_GetDecodedMetricF_IsBase(true);
+        return vqmenu->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQMenu*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QMenu_OnGetDecodedMetricF(const QMenu* self, intptr_t slot) {
+    auto* vqmenu = const_cast<VirtualQMenu*>(dynamic_cast<const VirtualQMenu*>(self));
+    if (vqmenu && vqmenu->isVirtualQMenu) {
+        vqmenu->setQMenu_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQMenu::QMenu_GetDecodedMetricF_Callback>(slot));
     }
 }
 

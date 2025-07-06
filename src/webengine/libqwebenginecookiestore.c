@@ -126,8 +126,8 @@ QThread* q_webenginecookiestore_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_webenginecookiestore_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_webenginecookiestore_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_webenginecookiestore_start_timer(void* self, int interval) {
@@ -136,6 +136,10 @@ int32_t q_webenginecookiestore_start_timer(void* self, int interval) {
 
 void q_webenginecookiestore_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_webenginecookiestore_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_webenginecookiestore_children(void* self) {
@@ -230,6 +234,10 @@ void q_webenginecookiestore_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
 }
 
+bool q_webenginecookiestore_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
+}
+
 int32_t q_webenginecookiestore_start_timer2(void* self, int interval, int64_t timerType) {
     return QObject_StartTimer2((QObject*)self, interval, timerType);
 }
@@ -256,4 +264,16 @@ void q_webenginecookiestore_on_object_name_changed(void* self, void (*slot)(void
 
 void q_webenginecookiestore_delete(void* self) {
     QWebEngineCookieStore_Delete((QWebEngineCookieStore*)(self));
+}
+
+QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1) {
+    return QWebEngineCookieStore__FilterRequest_new((QWebEngineCookieStore__FilterRequest*)param1);
+}
+
+void q_webenginecookiestore__filterrequest_operator_assign(void* self, void* param1) {
+    QWebEngineCookieStore__FilterRequest_OperatorAssign((QWebEngineCookieStore__FilterRequest*)self, (QWebEngineCookieStore__FilterRequest*)param1);
+}
+
+void q_webenginecookiestore__filterrequest_delete(void* self) {
+    QWebEngineCookieStore__FilterRequest_Delete((QWebEngineCookieStore__FilterRequest*)(self));
 }

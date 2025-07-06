@@ -43,11 +43,14 @@ struct libqt_strview {
 struct libqt_list {
     size_t len;
     union {
-        void* ptr;
-        int* ints;
-        uint16_t* uint16_ts;
-        unsigned int* unsignedints;
+        char* chars;
         double* doubles;
+        int* ints;
+        intptr_t* ptrdiffs;
+        uint16_t* uint16_ts;
+        unsigned char* unsignedchars;
+        unsigned int* unsignedints;
+        void* ptr;
     } data;
 };
 

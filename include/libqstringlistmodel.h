@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemmodel.h"
-#include "libqevent.h"
-#include "libqdatastream.h"
-#include "libqmetaobject.h"
-#include "libqmimedata.h"
-#include "libqobject.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qstringlistmodel.html
 
 /// q_stringlistmodel_new constructs a new QStringListModel object.
@@ -697,7 +687,7 @@ QThread* q_stringlistmodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QStringListModel* self, QThread* thread ```
-void q_stringlistmodel_move_to_thread(void* self, void* thread);
+bool q_stringlistmodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -712,6 +702,13 @@ int32_t q_stringlistmodel_start_timer(void* self, int interval);
 ///
 /// ``` QStringListModel* self, int id ```
 void q_stringlistmodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QStringListModel* self, enum Qt__TimerId id ```
+void q_stringlistmodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -845,6 +842,13 @@ bool q_stringlistmodel_inherits(void* self, const char* classname);
 ///
 /// ``` QStringListModel* self ```
 void q_stringlistmodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QStringListModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_stringlistmodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

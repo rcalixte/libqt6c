@@ -121,8 +121,8 @@ class VirtualQProcess final : public QProcess {
     mutable bool qprocess_issignalconnected_isbase = false;
 
   public:
-    VirtualQProcess() : QProcess(){};
-    VirtualQProcess(QObject* parent) : QProcess(parent){};
+    VirtualQProcess() : QProcess() {};
+    VirtualQProcess(QObject* parent) : QProcess(parent) {};
 
     ~VirtualQProcess() {
         qprocess_metacall_callback = nullptr;
@@ -245,7 +245,7 @@ class VirtualQProcess final : public QProcess {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool open(QIODeviceBase::OpenMode mode) override {
+    virtual bool open(QFlags<QIODeviceBase::OpenModeFlag> mode) override {
         if (qprocess_open_isbase) {
             qprocess_open_isbase = false;
             return QProcess::open(mode);
@@ -711,24 +711,24 @@ class VirtualQProcess final : public QProcess {
     friend void QProcess_QBaseChildEvent(QProcess* self, QChildEvent* event);
     friend void QProcess_CustomEvent(QProcess* self, QEvent* event);
     friend void QProcess_QBaseCustomEvent(QProcess* self, QEvent* event);
-    friend void QProcess_ConnectNotify(QProcess* self, QMetaMethod* signal);
-    friend void QProcess_QBaseConnectNotify(QProcess* self, QMetaMethod* signal);
-    friend void QProcess_DisconnectNotify(QProcess* self, QMetaMethod* signal);
-    friend void QProcess_QBaseDisconnectNotify(QProcess* self, QMetaMethod* signal);
+    friend void QProcess_ConnectNotify(QProcess* self, const QMetaMethod* signal);
+    friend void QProcess_QBaseConnectNotify(QProcess* self, const QMetaMethod* signal);
+    friend void QProcess_DisconnectNotify(QProcess* self, const QMetaMethod* signal);
+    friend void QProcess_QBaseDisconnectNotify(QProcess* self, const QMetaMethod* signal);
     friend void QProcess_SetProcessState(QProcess* self, int state);
     friend void QProcess_QBaseSetProcessState(QProcess* self, int state);
     friend void QProcess_SetOpenMode(QProcess* self, int openMode);
     friend void QProcess_QBaseSetOpenMode(QProcess* self, int openMode);
-    friend void QProcess_SetErrorString(QProcess* self, libqt_string errorString);
-    friend void QProcess_QBaseSetErrorString(QProcess* self, libqt_string errorString);
+    friend void QProcess_SetErrorString(QProcess* self, const libqt_string errorString);
+    friend void QProcess_QBaseSetErrorString(QProcess* self, const libqt_string errorString);
     friend QObject* QProcess_Sender(const QProcess* self);
     friend QObject* QProcess_QBaseSender(const QProcess* self);
     friend int QProcess_SenderSignalIndex(const QProcess* self);
     friend int QProcess_QBaseSenderSignalIndex(const QProcess* self);
     friend int QProcess_Receivers(const QProcess* self, const char* signal);
     friend int QProcess_QBaseReceivers(const QProcess* self, const char* signal);
-    friend bool QProcess_IsSignalConnected(const QProcess* self, QMetaMethod* signal);
-    friend bool QProcess_QBaseIsSignalConnected(const QProcess* self, QMetaMethod* signal);
+    friend bool QProcess_IsSignalConnected(const QProcess* self, const QMetaMethod* signal);
+    friend bool QProcess_QBaseIsSignalConnected(const QProcess* self, const QMetaMethod* signal);
 };
 
 #endif

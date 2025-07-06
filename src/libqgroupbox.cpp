@@ -48,12 +48,12 @@ QGroupBox* QGroupBox_new2() {
     return new VirtualQGroupBox();
 }
 
-QGroupBox* QGroupBox_new3(libqt_string title) {
+QGroupBox* QGroupBox_new3(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQGroupBox(title_QString);
 }
 
-QGroupBox* QGroupBox_new4(libqt_string title, QWidget* parent) {
+QGroupBox* QGroupBox_new4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQGroupBox(title_QString, parent);
 }
@@ -118,7 +118,7 @@ libqt_string QGroupBox_Title(const QGroupBox* self) {
     return _str;
 }
 
-void QGroupBox_SetTitle(QGroupBox* self, libqt_string title) {
+void QGroupBox_SetTitle(QGroupBox* self, const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     self->setTitle(title_QString);
 }
@@ -1230,7 +1230,7 @@ void QGroupBox_OnHideEvent(QGroupBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGroupBox_NativeEvent(QGroupBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QGroupBox_NativeEvent(QGroupBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqgroupbox = dynamic_cast<VirtualQGroupBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
@@ -1241,7 +1241,7 @@ bool QGroupBox_NativeEvent(QGroupBox* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QGroupBox_QBaseNativeEvent(QGroupBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QGroupBox_QBaseNativeEvent(QGroupBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqgroupbox = dynamic_cast<VirtualQGroupBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
@@ -1551,7 +1551,7 @@ void QGroupBox_OnCustomEvent(QGroupBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGroupBox_ConnectNotify(QGroupBox* self, QMetaMethod* signal) {
+void QGroupBox_ConnectNotify(QGroupBox* self, const QMetaMethod* signal) {
     auto* vqgroupbox = dynamic_cast<VirtualQGroupBox*>(self);
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         vqgroupbox->connectNotify(*signal);
@@ -1561,7 +1561,7 @@ void QGroupBox_ConnectNotify(QGroupBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGroupBox_QBaseConnectNotify(QGroupBox* self, QMetaMethod* signal) {
+void QGroupBox_QBaseConnectNotify(QGroupBox* self, const QMetaMethod* signal) {
     auto* vqgroupbox = dynamic_cast<VirtualQGroupBox*>(self);
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         vqgroupbox->setQGroupBox_ConnectNotify_IsBase(true);
@@ -1580,7 +1580,7 @@ void QGroupBox_OnConnectNotify(QGroupBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGroupBox_DisconnectNotify(QGroupBox* self, QMetaMethod* signal) {
+void QGroupBox_DisconnectNotify(QGroupBox* self, const QMetaMethod* signal) {
     auto* vqgroupbox = dynamic_cast<VirtualQGroupBox*>(self);
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         vqgroupbox->disconnectNotify(*signal);
@@ -1590,7 +1590,7 @@ void QGroupBox_DisconnectNotify(QGroupBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGroupBox_QBaseDisconnectNotify(QGroupBox* self, QMetaMethod* signal) {
+void QGroupBox_QBaseDisconnectNotify(QGroupBox* self, const QMetaMethod* signal) {
     auto* vqgroupbox = dynamic_cast<VirtualQGroupBox*>(self);
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         vqgroupbox->setQGroupBox_DisconnectNotify_IsBase(true);
@@ -1841,7 +1841,7 @@ void QGroupBox_OnReceivers(const QGroupBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGroupBox_IsSignalConnected(const QGroupBox* self, QMetaMethod* signal) {
+bool QGroupBox_IsSignalConnected(const QGroupBox* self, const QMetaMethod* signal) {
     auto* vqgroupbox = const_cast<VirtualQGroupBox*>(dynamic_cast<const VirtualQGroupBox*>(self));
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         return vqgroupbox->isSignalConnected(*signal);
@@ -1851,7 +1851,7 @@ bool QGroupBox_IsSignalConnected(const QGroupBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QGroupBox_QBaseIsSignalConnected(const QGroupBox* self, QMetaMethod* signal) {
+bool QGroupBox_QBaseIsSignalConnected(const QGroupBox* self, const QMetaMethod* signal) {
     auto* vqgroupbox = const_cast<VirtualQGroupBox*>(dynamic_cast<const VirtualQGroupBox*>(self));
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         vqgroupbox->setQGroupBox_IsSignalConnected_IsBase(true);
@@ -1866,6 +1866,35 @@ void QGroupBox_OnIsSignalConnected(const QGroupBox* self, intptr_t slot) {
     auto* vqgroupbox = const_cast<VirtualQGroupBox*>(dynamic_cast<const VirtualQGroupBox*>(self));
     if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
         vqgroupbox->setQGroupBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQGroupBox::QGroupBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QGroupBox_GetDecodedMetricF(const QGroupBox* self, int metricA, int metricB) {
+    auto* vqgroupbox = const_cast<VirtualQGroupBox*>(dynamic_cast<const VirtualQGroupBox*>(self));
+    if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
+        return vqgroupbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQGroupBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QGroupBox_QBaseGetDecodedMetricF(const QGroupBox* self, int metricA, int metricB) {
+    auto* vqgroupbox = const_cast<VirtualQGroupBox*>(dynamic_cast<const VirtualQGroupBox*>(self));
+    if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
+        vqgroupbox->setQGroupBox_GetDecodedMetricF_IsBase(true);
+        return vqgroupbox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQGroupBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QGroupBox_OnGetDecodedMetricF(const QGroupBox* self, intptr_t slot) {
+    auto* vqgroupbox = const_cast<VirtualQGroupBox*>(dynamic_cast<const VirtualQGroupBox*>(self));
+    if (vqgroupbox && vqgroupbox->isVirtualQGroupBox) {
+        vqgroupbox->setQGroupBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQGroupBox::QGroupBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

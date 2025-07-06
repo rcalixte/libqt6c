@@ -43,9 +43,6 @@ func (p CppParameter) RenderTypeCabi() string {
 	} else if p.ParameterType == "QAnyStringView" {
 		return "char*"
 
-	} else if p.ParameterType == "QStringList" {
-		return "libqt_list /* of libqt_string */"
-
 	} else if inner, ok := p.QListOf(); ok {
 		return "libqt_list " + cppComment("of "+inner.RenderTypeCabi())
 
@@ -199,29 +196,6 @@ func emitParameterNames(m CppMethod, includeHidden bool) string {
 	return strings.Join(tmp, `, `)
 }
 
-func emitCABIParameterTypesCpp(m CppMethod, includeHidden bool, currentClass string) string {
-	tmp := make([]string, 0, len(m.Parameters))
-
-	for _, p := range m.Parameters {
-		paramType := p.RenderTypeQtCpp()
-		if p.IsKnownEnum() {
-			if enum, ok := KnownEnums[p.ParameterType]; ok && enum.Enum.IsProtected {
-				// Workaround protected enum types by hard-coding them as int
-				paramType = "int"
-			}
-		}
-		tmp = append(tmp, paramType)
-	}
-	if includeHidden {
-		for _, p := range m.HiddenParams {
-			maybeConst := ifv(p.Const, "const ", "")
-			tmp = append(tmp, maybeConst+p.RenderTypeQtCpp())
-		}
-	}
-
-	return strings.Join(tmp, `, `)
-}
-
 func emitParametersCabi(m CppMethod, selfType string) string {
 	tmp := make([]string, 0, len(m.Parameters)+1)
 
@@ -230,7 +204,9 @@ func emitParametersCabi(m CppMethod, selfType string) string {
 	}
 
 	for _, p := range m.Parameters {
-		tmp = append(tmp, p.RenderTypeCabi()+" "+p.ParameterName)
+		pType := p.RenderTypeCabi()
+		maybeConst := ifv(p.Const && !strings.HasPrefix(pType, "const "), "const ", "")
+		tmp = append(tmp, maybeConst+pType+" "+p.ParameterName)
 	}
 
 	return strings.Join(tmp, ", ")
@@ -288,9 +264,26 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 
 	} else if listType, ok := p.QListOf(); ok {
 
+		// QSpan technically doesn't own the data but we use QList because we already
+		// have the structure in place to support the conversion with a patch for
+		// consideration for const types in some cases
+		paramType := p.GetQtCppType().ParameterType
+		containerQtType := strings.Replace(paramType, "QSpan<", "QList<", 1)
+		if strings.HasPrefix(containerQtType, "QList<const Q") {
+			containerQtType = strings.Replace(containerQtType, "const ", "", 1)
+		} else if strings.HasPrefix(containerQtType, "QList<const int>") {
+			containerQtType = strings.Replace(containerQtType, "const ", "", 1)
+			listType.Const = false
+		}
+		containerType := strings.Split(paramType, "<")[0]
+		containerType = strings.ReplaceAll(containerType, "::", "__")
 		unionType, _, _, _ := getUnionType(listType)
-		preamble += indent + p.GetQtCppType().ParameterType + " " + nameprefix + "_QList;\n"
-		preamble += indent + nameprefix + "_QList.reserve(" + p.ParameterName + ".len);\n"
+		if strings.HasPrefix(unionType, "QInteger") {
+			unionType = "ptrdiffs"
+		}
+
+		preamble += indent + containerQtType + " " + nameprefix + "_" + containerType + ";\n"
+		preamble += indent + nameprefix + "_" + containerType + ".reserve(" + p.ParameterName + ".len);\n"
 
 		preamble += indent + listType.RenderTypeCabi() + "* " + nameprefix + "_arr = static_cast<" + listType.RenderTypeCabi() + "*>(" + p.ParameterName + ".data." + unionType + ");\n"
 		preamble += indent + "for(size_t i = 0; i < " + p.ParameterName + ".len; ++i) {\n"
@@ -298,15 +291,15 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 		listType.ParameterName = nameprefix + "_arr[i]"
 		addPre, addFwd := emitCABI2CppForwarding(listType, indent+"\t", currentClass)
 		preamble += addPre
-		preamble += indent + "\t" + nameprefix + "_QList.push_back(" + addFwd + ");\n"
+		preamble += indent + "\t" + nameprefix + "_" + containerType + ".push_back(" + addFwd + ");\n"
 
 		preamble += indent + "}\n"
 
 		// Support passing QList<>* (very rare, but used in qnetwork)
 		if p.Pointer {
-			return preamble, "&" + nameprefix + "_QList"
+			return preamble, "&" + nameprefix + "_" + containerType
 		} else {
-			return preamble, nameprefix + "_QList"
+			return preamble, nameprefix + "_" + containerType
 		}
 
 	} else if kType, vType, ok := p.QMapOf(); ok {
@@ -372,11 +365,7 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 			return preamble, "static_cast<" + p.RenderTypeQtCpp() + ">(const_cast<" + p.RenderTypeIntermediateCpp() + ">(" + p.ParameterName + "))"
 		}
 
-		if p.ParameterType == "qint64" ||
-			p.ParameterType == "quint64" ||
-			p.ParameterType == "qlonglong" ||
-			p.ParameterType == "qulonglong" ||
-			p.GetQtCppType().ParameterType == "qintptr" ||
+		if p.GetQtCppType().ParameterType == "qintptr" ||
 			p.GetQtCppType().ParameterType == "qsizetype" || // Qt 6 qversionnumber.h: invalid ‘static_cast’ from type ‘ptrdiff_t*’ {aka ‘long int*’} to type ‘qsizetype*’ {aka ‘long long int*’}
 			p.ParameterType == "qint8" ||
 			(p.IsFlagType() && p.ByRef) ||
@@ -468,6 +457,23 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + assignExpression + namePrefix + "_str;\n"
 		return indent + shouldReturn + rvalue + ";\n" + afterCall
 
+	} else if p.ParameterType == "QAnyStringView" {
+
+		if !p.Pointer {
+			shouldReturn = maybeConst + "QAnyStringView " + namePrefix + "_ret = "
+			afterCall = indent + "QString " + namePrefix + "_qstr = " + namePrefix + "_ret.toString();\n"
+			afterCall += indent + "// Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory\n"
+			afterCall += indent + "QByteArray " + namePrefix + "_b = " + namePrefix + "_qstr.toUtf8();\n"
+		}
+
+		afterCall += indent + "libqt_string " + namePrefix + "_str;\n"
+		afterCall += indent + namePrefix + "_str.len = " + namePrefix + "_b.length();\n"
+		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc((" + namePrefix + "_str.len + 1) * sizeof(char)));\n"
+		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_b.data(), " + namePrefix + "_str.len);\n"
+		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
+		afterCall += indent + assignExpression + "(char*)" + namePrefix + "_str.data;\n"
+		return indent + shouldReturn + rvalue + ";\n" + afterCall
+
 	} else if p.ParameterType == "QByteArray" {
 
 		// C++ has given us a QByteArray. CABI needs this as a libqt_string
@@ -481,29 +487,6 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_qb.data(), " + namePrefix + "_str.len);\n"
 		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
 		afterCall += indent + assignExpression + namePrefix + "_str;\n"
-		return indent + shouldReturn + rvalue + ";\n" + afterCall
-
-	} else if p.ParameterType == "QStringList" {
-
-		// Much of the handling for QStringList is the same as QList<QString>
-		// but we need to convert the QStringList to a libqt_list of
-		// libqt_string and handle the memory allocation ourselves
-		shouldReturn = p.RenderTypeQtCpp() + " " + namePrefix + "_ret = "
-
-		afterCall += indent + "// Convert QStringList from C++ memory to manually-managed C memory\n"
-		afterCall += indent + "libqt_string* " + namePrefix + "_arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * " + namePrefix + "_ret.length()));\n"
-		afterCall += indent + "for (size_t i = 0; i < " + namePrefix + "_ret.length(); ++i) {\n"
-		afterCall += indent + "\tQByteArray " + namePrefix + "_b = " + namePrefix + "_ret[i].toUtf8();\n"
-		afterCall += indent + "\t" + namePrefix + "_arr[i].len = " + namePrefix + "_b.length();\n"
-		afterCall += indent + "\t" + namePrefix + "_arr[i].data = static_cast<const char*>(malloc((" + namePrefix + "_arr[i].len + 1) * sizeof(char)));\n"
-		afterCall += indent + "\tmemcpy((void*)" + namePrefix + "_arr[i].data, " + namePrefix + "_b.data(), " + namePrefix + "_arr[i].len);\n"
-		afterCall += indent + "((char*)" + namePrefix + "_arr[i].data)[" + namePrefix + "_arr[i].len] = '\\0';\n"
-		afterCall += indent + "}\n"
-		afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
-		afterCall += indent + "" + namePrefix + "_out.len = " + namePrefix + "_ret.length();\n"
-		afterCall += indent + "" + namePrefix + "_out.data = static_cast<void*>(" + namePrefix + "_arr);\n"
-
-		afterCall += indent + assignExpression + "" + namePrefix + "_out;\n"
 		return indent + shouldReturn + rvalue + ";\n" + afterCall
 
 	} else if t, ok := p.QListOf(); ok {
@@ -520,18 +503,21 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		// hack for QAudioDevice_SupportedSampleFormats and QLocale_CountriesForLanguage
 		if cType == "uint16_t" {
 			unionType = cType + "s"
+		} else if strings.HasPrefix(unionType, "QInteger") {
+			unionType = "ptrdiffs"
 		}
 
 		shouldReturn = p.RenderTypeQtCpp() + " " + namePrefix + "_ret = "
+		containerType := strings.Split(p.RenderTypeQtCpp(), "<")[0]
 
-		afterCall += indent + "// Convert QList<> from C++ memory to manually-managed C memory\n"
-		afterCall += indent + "" + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * " + namePrefix + "_ret.length()));\n"
-		afterCall += indent + "for (size_t i = 0; i < " + namePrefix + "_ret.length(); ++i) {\n"
+		afterCall += indent + "// Convert " + containerType + "<> from C++ memory to manually-managed C memory\n"
+		afterCall += indent + "" + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * " + namePrefix + "_ret.size()));\n"
+		afterCall += indent + "for (size_t i = 0; i < " + namePrefix + "_ret.size(); ++i) {\n"
 		afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr[i] = ", t, namePrefix+"_ret[i]")
 		afterCall += indent + "}\n"
 
 		afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
-		afterCall += indent + "" + namePrefix + "_out.len = " + namePrefix + "_ret.length();\n"
+		afterCall += indent + "" + namePrefix + "_out.len = " + namePrefix + "_ret.size();\n"
 		afterCall += indent + "" + namePrefix + "_out.data." + unionType + " = " + castType + maybeLParen + namePrefix + "_arr" + maybeRParen + ";\n"
 
 		afterCall += indent + assignExpression + "" + namePrefix + "_out;\n"
@@ -565,8 +551,9 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		vTypeC := vType.RenderTypeCabi()
 
 		shouldReturn = p.RenderTypeQtCpp() + " " + namePrefix + "_ret = "
+		containerType := strings.Split(p.RenderTypeQtCpp(), "<")[0]
 
-		afterCall += indent + "// Convert QMap<> from C++ memory to manually-managed C memory\n"
+		afterCall += indent + "// Convert " + containerType + "<> from C++ memory to manually-managed C memory\n"
 		afterCall += indent + "" + kTypeC + "* " + namePrefix + "_karr = static_cast<" + kTypeC + "*>(malloc(sizeof(" + kTypeC + ") * " + namePrefix + "_ret.size()));\n"
 		afterCall += indent + "" + vTypeC + "* " + namePrefix + "_varr = static_cast<" + vTypeC + "*>(malloc(sizeof(" + vTypeC + ") * " + namePrefix + "_ret.size()));\n"
 
@@ -672,11 +659,13 @@ func getReferencedTypes(src *CppParsedHeader) []string {
 			foundTypes[p.ParameterType] = struct{}{}
 		}
 		if t, ok := p.QListOf(); ok {
-			foundTypes["QList"] = struct{}{} // FIXME or QVector?
+			containerType := strings.Split(p.ParameterType, "<")[0]
+			foundTypes[containerType] = struct{}{}
 			maybeAddType(t)
 		}
 		if kType, vType, ok := p.QMapOf(); ok {
-			foundTypes["QMap"] = struct{}{} // FIXME or QHash?
+			containerType := strings.Split(p.ParameterType, "<")[0]
+			foundTypes[containerType] = struct{}{}
 			maybeAddType(kType)
 			maybeAddType(vType)
 		}
@@ -776,60 +765,16 @@ func cabiClassName(className string) string {
 	className = strings.TrimPrefix(className, `Qt::`)
 
 	// Must use __ to avoid subclass/method name collision e.g. QPagedPaintDevice::Margins
-	return strings.Replace(className, `::`, `__`, -1)
+	return strings.ReplaceAll(className, `::`, `__`)
 }
 
 func cabiPreventStructDeclaration(className string) bool {
 	switch className {
-	case "QList", "QString", "QSet", "QMap", "QHash", "QPair", "QVector", "QByteArray":
+	case "QList", "QString", "QSet", "QMap", "QHash", "QPair", "QVector", "QByteArray", "QSpan":
 		return true // These types are reprojected
 	default:
 		return false
 	}
-}
-
-func (header *CppParsedHeader) RegisterFlags() map[string]CppFlagProperty {
-	if header.DetectedFlags == nil {
-		header.DetectedFlags = make(map[string]CppFlagProperty)
-	}
-	skippedClasses := []string{"Private"}
-
-nextTypedef:
-	for _, typedef := range header.Typedefs {
-		typeClass := strings.Split(typedef.Alias, `::`)[0]
-		for _, skippedClass := range skippedClasses {
-			if strings.Contains(typeClass, skippedClass) {
-				continue nextTypedef
-			}
-		}
-		if strings.HasSuffix(typedef.Alias, "Private") {
-			continue
-		}
-		if enum, ok := KnownEnums[typedef.Alias]; ok {
-			if enum.Enum.IsProtected {
-				continue
-			}
-		}
-
-		if strings.Contains(typedef.Alias, "::") {
-			var flagName string
-			flagDef := strings.Split(typedef.Alias, `::`)
-			if len(flagDef) > 1 {
-				flagName = strings.Join(flagDef[1:], ``)
-			} else {
-				continue
-			}
-
-			flagProperty := CppFlagProperty{
-				PropertyName: typedef.Alias,
-				PropertyType: CppParameter{
-					ParameterType: typedef.UnderlyingType.RenderTypeCabi(),
-				},
-			}
-			header.DetectedFlags[flagName] = flagProperty
-		}
-	}
-	return header.DetectedFlags
 }
 
 func refLookup(ref string) (string, bool) {
@@ -865,7 +810,8 @@ func refLookup(ref string) (string, bool) {
 	}
 
 	if strings.HasPrefix(ref, "qpropertybinding") || strings.HasPrefix(ref, "qpropertyobserver") ||
-		strings.HasPrefix(ref, "qpropertynotifier") || strings.HasPrefix(ref, "quntyped") {
+		strings.HasPrefix(ref, "qpropertynotifier") || strings.HasPrefix(ref, "qscopedproperty") ||
+		strings.HasPrefix(ref, "quntyped") {
 		return "qproperty", true
 	}
 
@@ -922,8 +868,8 @@ func refLookup(ref string) (string, bool) {
 	case "qaccessiblebridgeplugin":
 		return "qaccessiblebridge", true
 
-	case "qaccessibleinterface", "qaccessibleactioninterface", "qaccessibleeditabletextinterface",
-		"qaccessiblehyperlinkinterface", "qaccessibleimageinterface", "qaccessibletablecellinterface",
+	case "qaccessibleattributesinterface", "qaccessibleinterface", "qaccessibleactioninterface", "qaccessibleeditabletextinterface",
+		"qaccessiblehyperlinkinterface", "qaccessibleimageinterface", "qaccessibleselectioninterface", "qaccessibletablecellinterface",
 		"qaccessibletableinterface", "qaccessibletextinterface", "qaccessiblevalueinterface":
 		return "qaccessible", true
 
@@ -942,7 +888,7 @@ func refLookup(ref string) (string, bool) {
 	case "qcameraformat":
 		return "qcameradevice", true
 
-	case "qcborerror":
+	case "qcborstreamwriter", "qcborerror":
 		return "qcborcommon", true
 
 	case "qcborparsererror", "qcborvalueconstref", "qcborvalueref":
@@ -981,7 +927,8 @@ func refLookup(ref string) (string, bool) {
 	case "qfuturewatcherbase":
 		return "qfuturewatcher", true
 
-	case "qgenericargument", "qgenericreturnargument", "qmethodrawarguments":
+	case "qgenericargument", "qgenericreturnargument", "qmetamethodargument",
+		"qmetamethodreturnargument", "qmethodrawarguments":
 		return "qobjectdefs", true
 
 	case "qgraphicsanchor":
@@ -1054,7 +1001,7 @@ func refLookup(ref string) (string, bool) {
 	case "qobjectdata", "qsignalblocker":
 		return "qobject", true
 
-	case "qoperatingsystemversionbase":
+	case "qoperatingsystemversionbase", "qoperatingsystemversionunexported":
 		return "qoperatingsystemversion", true
 
 	case "qpaintenginestate", "qtextitem":
@@ -1169,30 +1116,42 @@ func refLookup(ref string) (string, bool) {
 	case "qwizardpage":
 		return "qwizard", true
 
+	case "qnativeipckey":
+		return "qtipccommon", true
+
+	case "qbluetoothpermission", "qcalendarpermission", "qcontactspermission",
+		"qlocationpermission", "qpermission":
+		return "qpermissions", true
+
+	case "qabstracteventdispatcherv2":
+		return "qabstracteventdispatcher", true
+
+	case "qflag", "qincompatibleflag":
+		return "qflags", true
+
+	case "qmessagelogcontext", "qmessagelogger":
+		return "qlogging", true
+
+	case "qlatin1string":
+		return "qlatin1stringview", true
+
 	default:
 		return ref, false
 	}
 }
 
 var (
-	// We need to skip some protected/private flags
-	skippedFlags = map[string]struct{}{
-		"QLatin1StringMatcher::CaseInsensitiveSearcher": {},
-		"QLatin1StringMatcher::CaseSensitiveSearcher":   {},
-		"QPropertyObserverBase::ChangeHandler":          {},
-		"QRandomGenerator::RandomEngine":                {},
-		"QRestAccessManager::CallbackPrototype":         {},
-		"QVLABaseBase::malloced_ptr":                    {},
-		"QsciAPIs::WordIndex":                           {},
-		"QsciAPIs::WordIndexList":                       {},
-		"QsciScintillaBase::ScintillaBytes":             {},
-	}
-
 	noQtConnect = map[string]struct{}{
-		"QAudioDecoder":     {},
-		"QCompleter":        {},
-		"QPrintDialog":      {},
-		"QsciScintillaBase": {},
+		"QAudioDecoder":         {},
+		"QBluetoothPermission":  {},
+		"QCalendarPermission":   {},
+		"QCameraPermission":     {},
+		"QCompleter":            {},
+		"QContactsPermission":   {},
+		"QLocationPermission":   {},
+		"QMicrophonePermission": {},
+		"QPrintDialog":          {},
+		"QsciScintillaBase":     {},
 	}
 
 	nonPolymorphicClasses = map[string]struct{}{
@@ -1214,13 +1173,23 @@ var (
 	skippedMethods = map[string]struct{}{
 		"QHostAddress_IsInSubnetWithSubnet": {}, // linker error
 	}
+
+	cTypes = map[string]struct{}{
+		"char":          {},
+		"double":        {},
+		"float":         {},
+		"int":           {},
+		"long long":     {},
+		"uint16_t":      {},
+		"unsigned char": {},
+		"unsigned int":  {},
+	}
 )
 
 func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string) (string, error) {
 	ret := strings.Builder{}
-	src.DetectedFlags = src.RegisterFlags()
 
-	includeGuard := strings.ToUpper(strings.Replace(strings.Replace(packageName, `/`, `_`, -1), `-`, `_`, -1)) + "C_LIBVIRTUAL" + strings.ToUpper(strings.Replace(strings.Replace(filename, `.`, `_`, -1), `-`, `_`, -1))
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "C_LIBVIRTUAL" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, `.`, `_`), `-`, `_`))
 	extraInclude := ifv(filename == "qsequentialiterable.h", "#include \"libqvariant.h\"", "")
 	bindingInclude := "qtlibc.h"
 
@@ -1241,9 +1210,6 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 #include "` + bindingInclude + "\"\n" + extraInclude + "\n\n")
 
 	for _, c := range src.Classes {
-		if c.ClassName == "QWebEngineCookieStore::FilterRequest" {
-			continue
-		}
 		cppClassName := c.ClassName
 		methodPrefixName := cabiClassName(cppClassName)
 		virtualMethods := c.VirtualMethods()
@@ -1251,7 +1217,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 
 		if len(virtualMethods) > 0 {
 			if c.ClassName != "QTest::QTouchEventSequence" {
-				overriddenClassName := "Virtual" + strings.Replace(cppClassName, `::`, ``, -1)
+				overriddenClassName := "Virtual" + strings.ReplaceAll(cppClassName, `::`, ``)
 
 				var publicTypes, privateCallbacks, callbackSetters, baseSetters, privateCallbackVars, privateBaseFlags, friendFuncs []string
 
@@ -1395,11 +1361,8 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 						retTransformP, retTransformF = emitCABI2CppForwarding(returnParam, "\t\t", cppClassName)
 					}
 
-					// fixes for QsciLexerAsm
-					if methodPrefixName == "QsciLexerAsm" {
-						maybeOverride = "override "
-					}
-					if methodPrefixName == "QsciLexerAsm" && (m.MethodName == "sender" || m.MethodName == "senderSignalIndex" || m.MethodName == "receivers" || m.MethodName == "isSignalConnected") {
+					// fix for QsciLexerAsm
+					if methodPrefixName == "QsciLexerAsm" && m.IsProtected {
 						maybeOverride = ""
 					}
 
@@ -1488,12 +1451,9 @@ func emitBindingHeader(src *CppParsedHeader, filename, packageName string) (stri
 	ret := strings.Builder{}
 	qtstructdefs := make(map[string]struct{})
 	qttypedefs := make(map[string]struct{})
-	src.DetectedFlags = src.RegisterFlags()
 
-	badCppIncludes := []string{"QWheelEvent", "QTouchEvent"}
-	includeGuard := strings.ToUpper(strings.Replace(strings.Replace(packageName, `/`, `_`, -1), `-`, `_`, -1)) + "C_LIB" + strings.ToUpper(strings.Replace(strings.Replace(filename, `.`, `_`, -1), `-`, `_`, -1)+"pp")
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, `.`, `_`), `-`, `_`)+"pp")
 	extraInclude := ifv(filename == "qsequentialiterable.h", "#include \"libqvariant.h\"", "")
-	totalEnumClasses := make(map[string]struct{})
 	bindingInclude := "qtlibc.h"
 
 	if strings.Contains(packageName, `/`) {
@@ -1531,10 +1491,6 @@ extern "C" {
 
 	ret.WriteString("#ifdef __cplusplus\n")
 
-	if filename == "qwebenginecookiestore.h" {
-		ret.WriteString("typedef QWebEngineCookieStore::FilterRequest FilterRequest;\n")
-	}
-
 	for _, ft := range foundTypesList {
 		if cabiPreventStructDeclaration(ft) {
 			continue
@@ -1553,11 +1509,27 @@ extern "C" {
 	ret.WriteString("#else\n")
 
 	foundTypes := make([]string, 0, len(foundTypesList))
+	seenTypes := map[string]struct{}{}
+
 	for _, ft := range foundTypesList {
 		if cabiPreventStructDeclaration(ft) {
 			continue
 		}
-		typedef := `typedef struct ` + cabiClassName(ft) + " " + cabiClassName(ft) + ";"
+
+		fType := cabiClassName(ft)
+		fType = strings.TrimSuffix(fType, "*")
+		fType = strings.TrimPrefix(fType, "const ")
+
+		if _, ok := cTypes[fType]; ok {
+			continue
+		}
+
+		if _, ok := seenTypes[fType]; ok {
+			continue
+		}
+
+		seenTypes[fType] = struct{}{}
+		typedef := "typedef struct " + fType + " " + fType + ";"
 		foundTypes = append(foundTypes, typedef)
 		qtstructdefs[typedef] = struct{}{}
 	}
@@ -1566,177 +1538,7 @@ extern "C" {
 	ret.WriteString(strings.Join(foundTypes, "\n"))
 	ret.WriteString("\n#endif\n\n")
 
-	if len(src.DetectedFlags) > 0 || len(src.Enums) > 0 {
-		includeExtra := false
-		maybeCppInc := ("#ifdef __cplusplus\n")
-		cppIncs := make([]string, 0, len(src.DetectedFlags)+len(src.Enums))
-	nextEnum:
-		for flagName, flagInfo := range src.DetectedFlags {
-			for _, badEnum := range badCppIncludes {
-				flagClass := strings.Split(flagInfo.PropertyName, `::`)[0]
-				if flagClass == badEnum {
-					continue nextEnum
-				}
-			}
-			if _, ok := skippedFlags[flagName]; ok {
-				continue
-			}
-			if _, ok := skippedFlags[flagInfo.PropertyName]; ok {
-				continue
-			}
-			if enum, ok := KnownEnums[flagName]; ok {
-				if enum.Enum.IsProtected {
-					continue nextEnum
-				}
-			}
-			if enum, ok := KnownEnums[flagInfo.PropertyName]; ok {
-				if enum.Enum.IsProtected {
-					continue nextEnum
-				}
-			}
-			if !strings.Contains(flagName, "_iterator") {
-				cppIncs = append(cppIncs, fmt.Sprintf("typedef %s %s; // C++ QFlags", flagInfo.PropertyName, flagName))
-				includeExtra = true
-			}
-		}
-
-		seenCppEnums := make(map[string]struct{})
-		for _, enum := range src.Enums {
-			if enum.IsProtected {
-				continue
-			}
-			if enum.EnumName != "" && enum.CabiEnumName() != "" {
-				if _, exists := seenCppEnums[enum.CabiEnumName()]; !exists {
-					seenCppEnums[enum.CabiEnumName()] = struct{}{}
-					cppIncs = append(cppIncs, fmt.Sprintf(("typedef %s %s; // C++ enum"), enum.EnumName, enum.CabiEnumName()))
-					includeExtra = true
-				}
-			}
-		}
-
-		if len(cppIncs) > 0 {
-			sort.Strings(cppIncs)
-			maybeCppInc += strings.Join(cppIncs, "\n")
-		}
-		maybeCppInc += "\n#else"
-
-		maybeCInc := ifv(includeExtra, maybeCppInc+"\n", "#ifndef __cplusplus\n")
-		cIncs := make([]string, 0, len(src.DetectedFlags)+len(src.Enums))
-
-		// temporary hack... commented out
-		// if filename == "qmetatype.h" {
-		// 	cIncs = append(cIncs, "typedef void ConverterFunction; // manual C ABI QFlag")
-		// 	cIncs = append(cIncs, "typedef void MutableViewFunction; // manual C ABI QFlag")
-		// }
-		for flagName, flagInfo := range src.DetectedFlags {
-			flagType := flagInfo.PropertyType.RenderTypeCabi()
-			// ugly
-			if !strings.Contains(flagType, "<") && (!strings.Contains(flagType, "::") || strings.HasPrefix(flagType, "std::")) &&
-				!strings.Contains(flagType, "char") /* && !strings.Contains(flagType, "std::random") */ &&
-				!strings.Contains(flagType, "QByte") && !strings.Contains(flagType, "QList") &&
-				!strings.Contains(flagType, "random_access_iterator_tag") &&
-				!strings.Contains(flagType, " (*)") && !strings.Contains(flagType, "unique_ptr") &&
-				!strings.Contains(flagType, "QString") && !strings.Contains(flagName, "_iterator") &&
-				flagName != "DataPtr" && flagName != "const_reference" &&
-				flagName != "reference" && flagName != "value_type" && flagName != "iterator" &&
-				!strings.HasPrefix(flagType, "QtPrivate") {
-				// ugly
-				if strings.HasPrefix(flagType, "std::") {
-					flagType = strings.Replace(flagType, "std::", "", -1)
-				}
-				if strings.Contains(flagType, "libqt_") && strings.Contains(flagType, "QCbor") {
-					continue
-				}
-				if flagType == "QJsonObject__iterator*" && flagName == "Iterator" {
-					continue
-				}
-				if flagType == "QJsonValue*" && flagName == "mapped_type" {
-					continue
-				}
-				if flagType == "libqt_string" && flagName == "key_type" {
-					continue
-				}
-				if flagType == "QJsonObject__const_iterator*" && flagName == "ConstIterator" {
-					continue
-				}
-				if flagType == "QTextBlock__iterator*" && flagName == "Iterator" {
-					continue
-				}
-				if flagName == "difference_type" {
-					flagType = "long long"
-				}
-				typedef := fmt.Sprintf("typedef %s %s; // C ABI QFlags", flagType, flagName)
-				cIncs = append(cIncs, typedef)
-				qttypedefs[typedef] = struct{}{}
-				if flagType == "int" {
-					if _, exists := KnownEnums[flagName]; !exists {
-						KnownEnums[flagName] = lookupResultEnum{
-							PackageName: packageName,
-							Enum: CppEnum{
-								EnumName:       flagName,
-								UnderlyingType: CppParameter{ParameterType: flagType},
-							},
-						}
-					}
-				}
-				includeExtra = true
-			}
-		}
-
-		seenCEnuns := make(map[string]struct{})
-		for _, enum := range src.Enums {
-			enumType := enum.UnderlyingType.RenderTypeCabi()
-			if enum.EnumName != "" && enum.CabiEnumName() != "" && !strings.Contains(enum.EnumName, "<") &&
-				!strings.Contains(enum.EnumName, "*") {
-				if enum.CabiEnumName() == "Type" {
-					enumType = "unsigned char"
-				}
-				if enum.CabiEnumName() == "State" {
-					enumType = "int"
-				}
-				if enum.CabiEnumName() == "Option" {
-					enumType = "int"
-				}
-				if enum.CabiEnumName() == "Script" {
-					enumType = "int"
-				}
-				inc := fmt.Sprintf(("typedef %s %s; // C ABI enum"), enumType, enum.CabiEnumName())
-				if enumType == "int" {
-					if _, exists := KnownEnums[enum.CabiEnumName()]; !exists {
-						KnownEnums[enum.CabiEnumName()] = lookupResultEnum{
-							PackageName: enum.CabiEnumName(),
-							Enum: CppEnum{
-								EnumName:       enum.CabiEnumName(),
-								UnderlyingType: CppParameter{ParameterType: enumType},
-							},
-						}
-					}
-				}
-				if _, exists := seenCEnuns[inc]; !exists {
-					seenCEnuns[inc] = struct{}{}
-					cIncs = append(cIncs, inc)
-					qttypedefs[inc] = struct{}{}
-				}
-				includeExtra = true
-				totalEnumClasses[enum.ShortEnumName()] = struct{}{}
-			}
-		}
-
-		if len(cIncs) > 0 {
-			sort.Strings(cIncs)
-			maybeCInc += strings.Join(cIncs, "\n")
-		}
-		maybeCInc += "\n#endif\n\n"
-
-		if includeExtra {
-			ret.WriteString(maybeCInc)
-		}
-	}
-
 	for _, c := range src.Classes {
-		if c.ClassName == "QWebEngineCookieStore::FilterRequest" {
-			continue
-		}
 		methodPrefixName := cabiClassName(c.ClassName)
 		virtualMethods := c.VirtualMethods()
 		protectedMethods := c.ProtectedMethods()
@@ -1802,22 +1604,12 @@ extern "C" {
 				continue
 			}
 			returnCabi := m.ReturnType.RenderTypeCabi()
-			for flagName, flagInfo := range src.DetectedFlags {
-				if returnCabi == flagName {
-					returnCabi = flagInfo.PropertyType.ParameterType
-				}
-			}
-			for _, enum := range src.Enums {
-				if returnCabi == enum.CabiEnumName() {
-					returnCabi = enum.UnderlyingType.RenderTypeCabi()
-				}
-			}
 
 			maybeConst := ifv(m.IsConst, "const ", "")
 
 			if m.ReturnType.BecomesConstInVersion != nil {
 				ret.WriteString(fmt.Sprintf("// This method's return type was changed from non-const to const in Qt %s\n", *m.ReturnType.BecomesConstInVersion) +
-					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.Replace(*m.ReturnType.BecomesConstInVersion, `.`, `,`, -1) + ",0)\n" +
+					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, `.`, `,`) + ",0)\n" +
 					fmt.Sprintf("%s %s_%s(%s);\n", "const "+returnCabi, methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
 					"#else\n" +
 					fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
@@ -1867,7 +1659,7 @@ extern "C" {
 				continue
 			}
 
-			cppClassName := strings.Replace(c.ClassName, `::`, ``, -1) + "*"
+			cppClassName := strings.ReplaceAll(c.ClassName, `::`, ``) + "*"
 			maybeConst := ifv(m.IsConst, "const ", "")
 
 			ret.WriteString(m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + m.SafeMethodName() + "(" +
@@ -1901,15 +1693,15 @@ extern "C" {
 	return ret.String(), qtstructdefs, qttypedefs, nil
 }
 
-func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string, error) {
+func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 	if len(src.Classes) == 0 {
 		return "", nil
 	}
 
 	ret := strings.Builder{}
 	seenClassMethods := map[string]struct{}{}
-	src.DetectedFlags = src.RegisterFlags()
 
+	seenRefs := map[string]struct{}{}
 	for _, ref := range getReferencedTypes(src) {
 
 		if ref == "QString" {
@@ -1928,6 +1720,13 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 			continue
 		}
 
+		ref = strings.TrimSuffix(ref, "*")
+		ref = strings.TrimPrefix(ref, "const ")
+
+		if _, ok := seenRefs[ref]; ok {
+			continue
+		}
+		seenRefs[ref] = struct{}{}
 		ret.WriteString(`#include <` + ref + ">\n")
 	}
 
@@ -1936,14 +1735,11 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 	ret.WriteString(`#include "lib` + filename + `xx"` + "\n\n")
 
 	for _, c := range src.Classes {
-		if c.ClassName == "QWebEngineCookieStore::FilterRequest" {
-			continue
-		}
 		methodPrefixName := cabiClassName(c.ClassName)
 		virtualMethods := c.VirtualMethods()
 		protectedMethods := c.ProtectedMethods()
 		baseMethods := c.Methods
-		cppClassName := strings.Replace(c.ClassName, `::`, ``, -1)
+		cppClassName := strings.ReplaceAll(c.ClassName, `::`, ``)
 		virtualEligible := AllowVirtualForClass(c.ClassName)
 
 		// Add protected methods first
@@ -2030,10 +1826,8 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 				ctorReturn = "\t return " + baseReturn
 
 				ret.WriteString(methodPrefixName + "* " + methodPrefixName + "_new" +
-					maybeSuffix(i) + "(" +
-					emitParametersCabi(ctor, "") +
-					") {\n" + preamble +
-					ctorReturn + ";\n}\n\n")
+					maybeSuffix(i) + "(" + emitParametersCabi(ctor, "") +
+					") {\n" + preamble + ctorReturn + ";\n}\n\n")
 			}
 		}
 
@@ -2075,8 +1869,6 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 			} else {
 				seenMethodVariants[baseName] = false
 			}
-			seenMethodVariants[m.MethodName] = false
-			seenMethodVariants[m.SafeMethodName()] = false
 
 			preamble, forwarding := emitParametersCABI2CppForwarding(m.Parameters, "\t", c.ClassName)
 
@@ -2119,15 +1911,13 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 						"%s"+
 						"%s"+
 						"#else\n"+
-						"\t%s _ret_invalidOS;\n"+
-						"\treturn _ret_invalidOS;\n"+
+						"\treturn {};\n"+
 						"#endif\n"+
 						"}\n"+
 						"\n",
 					m.ReturnType.RenderTypeCabi(), methodPrefixName, m.SafeMethodName(), emitParametersCabi(m, maybeConst+methodPrefixName+"*"),
 					preamble,
 					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget),
-					m.ReturnType.RenderTypeCabi(),
 				))
 
 			} else if m.BecomesNonConstInVersion != nil {
@@ -2138,7 +1928,7 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 					m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + m.SafeMethodName() + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					preamble +
 					"// This method was changed from const to non-const in Qt " + *m.BecomesNonConstInVersion + "\n" +
-					"#if QT_VERSION < QT_VERSION_CHECK(" + strings.Replace(*m.BecomesNonConstInVersion, `.`, `,`, -1) + ",0)\n" +
+					"#if QT_VERSION < QT_VERSION_CHECK(" + strings.ReplaceAll(*m.BecomesNonConstInVersion, `.`, `,`) + ",0)\n" +
 					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget) +
 					"#else\n" +
 					emitAssignCppToCabi("\treturn ", m.ReturnType, nonConstCallTarget) +
@@ -2151,7 +1941,7 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 
 				ret.WriteString("" +
 					"// This method's return type was changed from non-const to const in Qt " + *m.ReturnType.BecomesConstInVersion + "\n" +
-					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.Replace(*m.ReturnType.BecomesConstInVersion, `.`, `,`, -1) + ",0)\n" +
+					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, `.`, `,`) + ",0)\n" +
 					"const " + m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + m.SafeMethodName() + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					"#else\n" +
 					m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + m.SafeMethodName() + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
@@ -2164,18 +1954,7 @@ func emitBindingCpp(src *CppParsedHeader, filename, packageName string) (string,
 			} else {
 				returnCabi := m.ReturnType.RenderTypeCabi()
 				flagOrEnum := false
-				for flagName, flagInfo := range src.DetectedFlags {
-					if returnCabi == flagName {
-						returnCabi = flagInfo.PropertyType.ParameterType
-						flagOrEnum = true
-					}
-				}
-				for _, enum := range src.Enums {
-					if returnCabi == enum.CabiEnumName() {
-						returnCabi = enum.UnderlyingType.RenderTypeCabi()
-						flagOrEnum = true
-					}
-				}
+
 				returnCallTarget := callTarget
 				if flagOrEnum {
 					returnCallTarget = "static_cast<" + returnCabi + ">(" + callTarget + ")"

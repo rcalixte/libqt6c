@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqiodevice.h"
-#include <string.h>
-#include "libqtextdocument.h"
-#include "libqtextdocumentfragment.h"
-
 /// https://doc.qt.io/qt-6/qtextdocumentwriter.html
 
 /// q_textdocumentwriter_new constructs a new QTextDocumentWriter object.

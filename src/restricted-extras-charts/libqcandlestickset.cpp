@@ -126,7 +126,7 @@ double QCandlestickSet_Close(const QCandlestickSet* self) {
     return static_cast<double>(self->close());
 }
 
-void QCandlestickSet_SetBrush(QCandlestickSet* self, QBrush* brush) {
+void QCandlestickSet_SetBrush(QCandlestickSet* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -134,7 +134,7 @@ QBrush* QCandlestickSet_Brush(const QCandlestickSet* self) {
     return new QBrush(self->brush());
 }
 
-void QCandlestickSet_SetPen(QCandlestickSet* self, QPen* pen) {
+void QCandlestickSet_SetPen(QCandlestickSet* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -445,7 +445,7 @@ void QCandlestickSet_OnCustomEvent(QCandlestickSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCandlestickSet_ConnectNotify(QCandlestickSet* self, QMetaMethod* signal) {
+void QCandlestickSet_ConnectNotify(QCandlestickSet* self, const QMetaMethod* signal) {
     auto* vqcandlestickset = dynamic_cast<VirtualQCandlestickSet*>(self);
     if (vqcandlestickset && vqcandlestickset->isVirtualQCandlestickSet) {
         vqcandlestickset->connectNotify(*signal);
@@ -455,7 +455,7 @@ void QCandlestickSet_ConnectNotify(QCandlestickSet* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QCandlestickSet_QBaseConnectNotify(QCandlestickSet* self, QMetaMethod* signal) {
+void QCandlestickSet_QBaseConnectNotify(QCandlestickSet* self, const QMetaMethod* signal) {
     auto* vqcandlestickset = dynamic_cast<VirtualQCandlestickSet*>(self);
     if (vqcandlestickset && vqcandlestickset->isVirtualQCandlestickSet) {
         vqcandlestickset->setQCandlestickSet_ConnectNotify_IsBase(true);
@@ -474,7 +474,7 @@ void QCandlestickSet_OnConnectNotify(QCandlestickSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QCandlestickSet_DisconnectNotify(QCandlestickSet* self, QMetaMethod* signal) {
+void QCandlestickSet_DisconnectNotify(QCandlestickSet* self, const QMetaMethod* signal) {
     auto* vqcandlestickset = dynamic_cast<VirtualQCandlestickSet*>(self);
     if (vqcandlestickset && vqcandlestickset->isVirtualQCandlestickSet) {
         vqcandlestickset->disconnectNotify(*signal);
@@ -484,7 +484,7 @@ void QCandlestickSet_DisconnectNotify(QCandlestickSet* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QCandlestickSet_QBaseDisconnectNotify(QCandlestickSet* self, QMetaMethod* signal) {
+void QCandlestickSet_QBaseDisconnectNotify(QCandlestickSet* self, const QMetaMethod* signal) {
     auto* vqcandlestickset = dynamic_cast<VirtualQCandlestickSet*>(self);
     if (vqcandlestickset && vqcandlestickset->isVirtualQCandlestickSet) {
         vqcandlestickset->setQCandlestickSet_DisconnectNotify_IsBase(true);
@@ -590,7 +590,7 @@ void QCandlestickSet_OnReceivers(const QCandlestickSet* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QCandlestickSet_IsSignalConnected(const QCandlestickSet* self, QMetaMethod* signal) {
+bool QCandlestickSet_IsSignalConnected(const QCandlestickSet* self, const QMetaMethod* signal) {
     auto* vqcandlestickset = const_cast<VirtualQCandlestickSet*>(dynamic_cast<const VirtualQCandlestickSet*>(self));
     if (vqcandlestickset && vqcandlestickset->isVirtualQCandlestickSet) {
         return vqcandlestickset->isSignalConnected(*signal);
@@ -600,7 +600,7 @@ bool QCandlestickSet_IsSignalConnected(const QCandlestickSet* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QCandlestickSet_QBaseIsSignalConnected(const QCandlestickSet* self, QMetaMethod* signal) {
+bool QCandlestickSet_QBaseIsSignalConnected(const QCandlestickSet* self, const QMetaMethod* signal) {
     auto* vqcandlestickset = const_cast<VirtualQCandlestickSet*>(dynamic_cast<const VirtualQCandlestickSet*>(self));
     if (vqcandlestickset && vqcandlestickset->isVirtualQCandlestickSet) {
         vqcandlestickset->setQCandlestickSet_IsSignalConnected_IsBase(true);

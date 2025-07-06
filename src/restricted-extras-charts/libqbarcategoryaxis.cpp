@@ -70,8 +70,8 @@ libqt_string QBarCategoryAxis_Tr(const char* s) {
     return _str;
 }
 
-void QBarCategoryAxis_Append(QBarCategoryAxis* self, libqt_list /* of libqt_string */ categories) {
-    QStringList categories_QList;
+void QBarCategoryAxis_Append(QBarCategoryAxis* self, const libqt_list /* of libqt_string */ categories) {
+    QList<QString> categories_QList;
     categories_QList.reserve(categories.len);
     libqt_string* categories_arr = static_cast<libqt_string*>(categories.data.ptr);
     for (size_t i = 0; i < categories.len; ++i) {
@@ -81,22 +81,22 @@ void QBarCategoryAxis_Append(QBarCategoryAxis* self, libqt_list /* of libqt_stri
     self->append(categories_QList);
 }
 
-void QBarCategoryAxis_AppendWithCategory(QBarCategoryAxis* self, libqt_string category) {
+void QBarCategoryAxis_AppendWithCategory(QBarCategoryAxis* self, const libqt_string category) {
     QString category_QString = QString::fromUtf8(category.data, category.len);
     self->append(category_QString);
 }
 
-void QBarCategoryAxis_Remove(QBarCategoryAxis* self, libqt_string category) {
+void QBarCategoryAxis_Remove(QBarCategoryAxis* self, const libqt_string category) {
     QString category_QString = QString::fromUtf8(category.data, category.len);
     self->remove(category_QString);
 }
 
-void QBarCategoryAxis_Insert(QBarCategoryAxis* self, int index, libqt_string category) {
+void QBarCategoryAxis_Insert(QBarCategoryAxis* self, int index, const libqt_string category) {
     QString category_QString = QString::fromUtf8(category.data, category.len);
     self->insert(static_cast<int>(index), category_QString);
 }
 
-void QBarCategoryAxis_Replace(QBarCategoryAxis* self, libqt_string oldCategory, libqt_string newCategory) {
+void QBarCategoryAxis_Replace(QBarCategoryAxis* self, const libqt_string oldCategory, const libqt_string newCategory) {
     QString oldCategory_QString = QString::fromUtf8(oldCategory.data, oldCategory.len);
     QString newCategory_QString = QString::fromUtf8(newCategory.data, newCategory.len);
     self->replace(oldCategory_QString, newCategory_QString);
@@ -106,8 +106,8 @@ void QBarCategoryAxis_Clear(QBarCategoryAxis* self) {
     self->clear();
 }
 
-void QBarCategoryAxis_SetCategories(QBarCategoryAxis* self, libqt_list /* of libqt_string */ categories) {
-    QStringList categories_QList;
+void QBarCategoryAxis_SetCategories(QBarCategoryAxis* self, const libqt_list /* of libqt_string */ categories) {
+    QList<QString> categories_QList;
     categories_QList.reserve(categories.len);
     libqt_string* categories_arr = static_cast<libqt_string*>(categories.data.ptr);
     for (size_t i = 0; i < categories.len; ++i) {
@@ -118,10 +118,10 @@ void QBarCategoryAxis_SetCategories(QBarCategoryAxis* self, libqt_list /* of lib
 }
 
 libqt_list /* of libqt_string */ QBarCategoryAxis_Categories(QBarCategoryAxis* self) {
-    QStringList _ret = self->categories();
+    QList<QString> _ret = self->categories();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -133,7 +133,7 @@ libqt_list /* of libqt_string */ QBarCategoryAxis_Categories(QBarCategoryAxis* s
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -154,7 +154,7 @@ libqt_string QBarCategoryAxis_At(const QBarCategoryAxis* self, int index) {
     return _str;
 }
 
-void QBarCategoryAxis_SetMin(QBarCategoryAxis* self, libqt_string minCategory) {
+void QBarCategoryAxis_SetMin(QBarCategoryAxis* self, const libqt_string minCategory) {
     QString minCategory_QString = QString::fromUtf8(minCategory.data, minCategory.len);
     self->setMin(minCategory_QString);
 }
@@ -171,7 +171,7 @@ libqt_string QBarCategoryAxis_Min(const QBarCategoryAxis* self) {
     return _str;
 }
 
-void QBarCategoryAxis_SetMax(QBarCategoryAxis* self, libqt_string maxCategory) {
+void QBarCategoryAxis_SetMax(QBarCategoryAxis* self, const libqt_string maxCategory) {
     QString maxCategory_QString = QString::fromUtf8(maxCategory.data, maxCategory.len);
     self->setMax(maxCategory_QString);
 }
@@ -188,7 +188,7 @@ libqt_string QBarCategoryAxis_Max(const QBarCategoryAxis* self) {
     return _str;
 }
 
-void QBarCategoryAxis_SetRange(QBarCategoryAxis* self, libqt_string minCategory, libqt_string maxCategory) {
+void QBarCategoryAxis_SetRange(QBarCategoryAxis* self, const libqt_string minCategory, const libqt_string maxCategory) {
     QString minCategory_QString = QString::fromUtf8(minCategory.data, minCategory.len);
     QString maxCategory_QString = QString::fromUtf8(maxCategory.data, maxCategory.len);
     self->setRange(minCategory_QString, maxCategory_QString);
@@ -205,7 +205,7 @@ void QBarCategoryAxis_Connect_CategoriesChanged(QBarCategoryAxis* self, intptr_t
     });
 }
 
-void QBarCategoryAxis_MinChanged(QBarCategoryAxis* self, libqt_string min) {
+void QBarCategoryAxis_MinChanged(QBarCategoryAxis* self, const libqt_string min) {
     QString min_QString = QString::fromUtf8(min.data, min.len);
     self->minChanged(min_QString);
 }
@@ -226,7 +226,7 @@ void QBarCategoryAxis_Connect_MinChanged(QBarCategoryAxis* self, intptr_t slot) 
     });
 }
 
-void QBarCategoryAxis_MaxChanged(QBarCategoryAxis* self, libqt_string max) {
+void QBarCategoryAxis_MaxChanged(QBarCategoryAxis* self, const libqt_string max) {
     QString max_QString = QString::fromUtf8(max.data, max.len);
     self->maxChanged(max_QString);
 }
@@ -247,7 +247,7 @@ void QBarCategoryAxis_Connect_MaxChanged(QBarCategoryAxis* self, intptr_t slot) 
     });
 }
 
-void QBarCategoryAxis_RangeChanged(QBarCategoryAxis* self, libqt_string min, libqt_string max) {
+void QBarCategoryAxis_RangeChanged(QBarCategoryAxis* self, const libqt_string min, const libqt_string max) {
     QString min_QString = QString::fromUtf8(min.data, min.len);
     QString max_QString = QString::fromUtf8(max.data, max.len);
     self->rangeChanged(min_QString, max_QString);
@@ -488,7 +488,7 @@ void QBarCategoryAxis_OnCustomEvent(QBarCategoryAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarCategoryAxis_ConnectNotify(QBarCategoryAxis* self, QMetaMethod* signal) {
+void QBarCategoryAxis_ConnectNotify(QBarCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqbarcategoryaxis = dynamic_cast<VirtualQBarCategoryAxis*>(self);
     if (vqbarcategoryaxis && vqbarcategoryaxis->isVirtualQBarCategoryAxis) {
         vqbarcategoryaxis->connectNotify(*signal);
@@ -498,7 +498,7 @@ void QBarCategoryAxis_ConnectNotify(QBarCategoryAxis* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-void QBarCategoryAxis_QBaseConnectNotify(QBarCategoryAxis* self, QMetaMethod* signal) {
+void QBarCategoryAxis_QBaseConnectNotify(QBarCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqbarcategoryaxis = dynamic_cast<VirtualQBarCategoryAxis*>(self);
     if (vqbarcategoryaxis && vqbarcategoryaxis->isVirtualQBarCategoryAxis) {
         vqbarcategoryaxis->setQBarCategoryAxis_ConnectNotify_IsBase(true);
@@ -517,7 +517,7 @@ void QBarCategoryAxis_OnConnectNotify(QBarCategoryAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QBarCategoryAxis_DisconnectNotify(QBarCategoryAxis* self, QMetaMethod* signal) {
+void QBarCategoryAxis_DisconnectNotify(QBarCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqbarcategoryaxis = dynamic_cast<VirtualQBarCategoryAxis*>(self);
     if (vqbarcategoryaxis && vqbarcategoryaxis->isVirtualQBarCategoryAxis) {
         vqbarcategoryaxis->disconnectNotify(*signal);
@@ -527,7 +527,7 @@ void QBarCategoryAxis_DisconnectNotify(QBarCategoryAxis* self, QMetaMethod* sign
 }
 
 // Base class handler implementation
-void QBarCategoryAxis_QBaseDisconnectNotify(QBarCategoryAxis* self, QMetaMethod* signal) {
+void QBarCategoryAxis_QBaseDisconnectNotify(QBarCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqbarcategoryaxis = dynamic_cast<VirtualQBarCategoryAxis*>(self);
     if (vqbarcategoryaxis && vqbarcategoryaxis->isVirtualQBarCategoryAxis) {
         vqbarcategoryaxis->setQBarCategoryAxis_DisconnectNotify_IsBase(true);
@@ -633,7 +633,7 @@ void QBarCategoryAxis_OnReceivers(const QBarCategoryAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QBarCategoryAxis_IsSignalConnected(const QBarCategoryAxis* self, QMetaMethod* signal) {
+bool QBarCategoryAxis_IsSignalConnected(const QBarCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqbarcategoryaxis = const_cast<VirtualQBarCategoryAxis*>(dynamic_cast<const VirtualQBarCategoryAxis*>(self));
     if (vqbarcategoryaxis && vqbarcategoryaxis->isVirtualQBarCategoryAxis) {
         return vqbarcategoryaxis->isSignalConnected(*signal);
@@ -643,7 +643,7 @@ bool QBarCategoryAxis_IsSignalConnected(const QBarCategoryAxis* self, QMetaMetho
 }
 
 // Base class handler implementation
-bool QBarCategoryAxis_QBaseIsSignalConnected(const QBarCategoryAxis* self, QMetaMethod* signal) {
+bool QBarCategoryAxis_QBaseIsSignalConnected(const QBarCategoryAxis* self, const QMetaMethod* signal) {
     auto* vqbarcategoryaxis = const_cast<VirtualQBarCategoryAxis*>(dynamic_cast<const VirtualQBarCategoryAxis*>(self));
     if (vqbarcategoryaxis && vqbarcategoryaxis->isVirtualQBarCategoryAxis) {
         vqbarcategoryaxis->setQBarCategoryAxis_IsSignalConnected_IsBase(true);

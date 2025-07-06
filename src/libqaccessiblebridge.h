@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqaccessible.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qaccessiblebridge.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblebridge.html#setRootObject)
@@ -170,7 +164,7 @@ QThread* q_accessiblebridgeplugin_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QAccessibleBridgePlugin* self, QThread* thread ```
-void q_accessiblebridgeplugin_move_to_thread(void* self, void* thread);
+bool q_accessiblebridgeplugin_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -185,6 +179,13 @@ int32_t q_accessiblebridgeplugin_start_timer(void* self, int interval);
 ///
 /// ``` QAccessibleBridgePlugin* self, int id ```
 void q_accessiblebridgeplugin_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QAccessibleBridgePlugin* self, enum Qt__TimerId id ```
+void q_accessiblebridgeplugin_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -325,6 +326,13 @@ bool q_accessiblebridgeplugin_inherits(void* self, const char* classname);
 ///
 /// ``` QAccessibleBridgePlugin* self ```
 void q_accessiblebridgeplugin_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QAccessibleBridgePlugin* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_accessiblebridgeplugin_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

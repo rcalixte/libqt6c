@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqchar.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qstringmatcher.html
 
 /// q_stringmatcher_new constructs a new QStringMatcher object.

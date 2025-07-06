@@ -292,7 +292,7 @@ void QsciPrinter_OnMetric(const QsciPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciPrinter_SetPageLayout(QsciPrinter* self, QPageLayout* pageLayout) {
+bool QsciPrinter_SetPageLayout(QsciPrinter* self, const QPageLayout* pageLayout) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         return vqsciprinter->setPageLayout(*pageLayout);
@@ -302,7 +302,7 @@ bool QsciPrinter_SetPageLayout(QsciPrinter* self, QPageLayout* pageLayout) {
 }
 
 // Base class handler implementation
-bool QsciPrinter_QBaseSetPageLayout(QsciPrinter* self, QPageLayout* pageLayout) {
+bool QsciPrinter_QBaseSetPageLayout(QsciPrinter* self, const QPageLayout* pageLayout) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         vqsciprinter->setQsciPrinter_SetPageLayout_IsBase(true);
@@ -321,7 +321,7 @@ void QsciPrinter_OnSetPageLayout(QsciPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciPrinter_SetPageSize(QsciPrinter* self, QPageSize* pageSize) {
+bool QsciPrinter_SetPageSize(QsciPrinter* self, const QPageSize* pageSize) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         return vqsciprinter->setPageSize(*pageSize);
@@ -331,7 +331,7 @@ bool QsciPrinter_SetPageSize(QsciPrinter* self, QPageSize* pageSize) {
 }
 
 // Base class handler implementation
-bool QsciPrinter_QBaseSetPageSize(QsciPrinter* self, QPageSize* pageSize) {
+bool QsciPrinter_QBaseSetPageSize(QsciPrinter* self, const QPageSize* pageSize) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         vqsciprinter->setQsciPrinter_SetPageSize_IsBase(true);
@@ -379,7 +379,7 @@ void QsciPrinter_OnSetPageOrientation(QsciPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciPrinter_SetPageMargins(QsciPrinter* self, QMarginsF* margins, int units) {
+bool QsciPrinter_SetPageMargins(QsciPrinter* self, const QMarginsF* margins, int units) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         return vqsciprinter->setPageMargins(*margins, static_cast<QPageLayout::Unit>(units));
@@ -389,7 +389,7 @@ bool QsciPrinter_SetPageMargins(QsciPrinter* self, QMarginsF* margins, int units
 }
 
 // Base class handler implementation
-bool QsciPrinter_QBaseSetPageMargins(QsciPrinter* self, QMarginsF* margins, int units) {
+bool QsciPrinter_QBaseSetPageMargins(QsciPrinter* self, const QMarginsF* margins, int units) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         vqsciprinter->setQsciPrinter_SetPageMargins_IsBase(true);
@@ -408,7 +408,7 @@ void QsciPrinter_OnSetPageMargins(QsciPrinter* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciPrinter_SetPageRanges(QsciPrinter* self, QPageRanges* ranges) {
+void QsciPrinter_SetPageRanges(QsciPrinter* self, const QPageRanges* ranges) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         vqsciprinter->setPageRanges(*ranges);
@@ -418,7 +418,7 @@ void QsciPrinter_SetPageRanges(QsciPrinter* self, QPageRanges* ranges) {
 }
 
 // Base class handler implementation
-void QsciPrinter_QBaseSetPageRanges(QsciPrinter* self, QPageRanges* ranges) {
+void QsciPrinter_QBaseSetPageRanges(QsciPrinter* self, const QPageRanges* ranges) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         vqsciprinter->setQsciPrinter_SetPageRanges_IsBase(true);
@@ -549,6 +549,35 @@ void QsciPrinter_OnSetEngines(QsciPrinter* self, intptr_t slot) {
     auto* vqsciprinter = dynamic_cast<VirtualQsciPrinter*>(self);
     if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
         vqsciprinter->setQsciPrinter_SetEngines_Callback(reinterpret_cast<VirtualQsciPrinter::QsciPrinter_SetEngines_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QsciPrinter_GetDecodedMetricF(const QsciPrinter* self, int metricA, int metricB) {
+    auto* vqsciprinter = const_cast<VirtualQsciPrinter*>(dynamic_cast<const VirtualQsciPrinter*>(self));
+    if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
+        return vqsciprinter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQsciPrinter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QsciPrinter_QBaseGetDecodedMetricF(const QsciPrinter* self, int metricA, int metricB) {
+    auto* vqsciprinter = const_cast<VirtualQsciPrinter*>(dynamic_cast<const VirtualQsciPrinter*>(self));
+    if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
+        vqsciprinter->setQsciPrinter_GetDecodedMetricF_IsBase(true);
+        return vqsciprinter->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQsciPrinter*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciPrinter_OnGetDecodedMetricF(const QsciPrinter* self, intptr_t slot) {
+    auto* vqsciprinter = const_cast<VirtualQsciPrinter*>(dynamic_cast<const VirtualQsciPrinter*>(self));
+    if (vqsciprinter && vqsciprinter->isVirtualQsciPrinter) {
+        vqsciprinter->setQsciPrinter_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQsciPrinter::QsciPrinter_GetDecodedMetricF_Callback>(slot));
     }
 }
 

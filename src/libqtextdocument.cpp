@@ -38,7 +38,7 @@ void QAbstractUndoItem_Redo(QAbstractUndoItem* self) {
     self->redo();
 }
 
-void QAbstractUndoItem_OperatorAssign(QAbstractUndoItem* self, QAbstractUndoItem* param1) {
+void QAbstractUndoItem_OperatorAssign(QAbstractUndoItem* self, const QAbstractUndoItem* param1) {
     self->operator=(*param1);
 }
 
@@ -50,7 +50,7 @@ QTextDocument* QTextDocument_new() {
     return new VirtualQTextDocument();
 }
 
-QTextDocument* QTextDocument_new2(libqt_string text) {
+QTextDocument* QTextDocument_new2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextDocument(text_QString);
 }
@@ -59,7 +59,7 @@ QTextDocument* QTextDocument_new3(QObject* parent) {
     return new VirtualQTextDocument(parent);
 }
 
-QTextDocument* QTextDocument_new4(libqt_string text, QObject* parent) {
+QTextDocument* QTextDocument_new4(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextDocument(text_QString, parent);
 }
@@ -156,7 +156,7 @@ QAbstractTextDocumentLayout* QTextDocument_DocumentLayout(const QTextDocument* s
     return self->documentLayout();
 }
 
-void QTextDocument_SetMetaInformation(QTextDocument* self, int info, libqt_string param2) {
+void QTextDocument_SetMetaInformation(QTextDocument* self, int info, const libqt_string param2) {
     QString param2_QString = QString::fromUtf8(param2.data, param2.len);
     self->setMetaInformation(static_cast<QTextDocument::MetaInformation>(info), param2_QString);
 }
@@ -185,7 +185,7 @@ libqt_string QTextDocument_ToHtml(const QTextDocument* self) {
     return _str;
 }
 
-void QTextDocument_SetHtml(QTextDocument* self, libqt_string html) {
+void QTextDocument_SetHtml(QTextDocument* self, const libqt_string html) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->setHtml(html_QString);
 }
@@ -202,7 +202,7 @@ libqt_string QTextDocument_ToMarkdown(const QTextDocument* self) {
     return _str;
 }
 
-void QTextDocument_SetMarkdown(QTextDocument* self, libqt_string markdown) {
+void QTextDocument_SetMarkdown(QTextDocument* self, const libqt_string markdown) {
     QString markdown_QString = QString::fromUtf8(markdown.data, markdown.len);
     self->setMarkdown(markdown_QString);
 }
@@ -231,7 +231,7 @@ libqt_string QTextDocument_ToPlainText(const QTextDocument* self) {
     return _str;
 }
 
-void QTextDocument_SetPlainText(QTextDocument* self, libqt_string text) {
+void QTextDocument_SetPlainText(QTextDocument* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setPlainText(text_QString);
 }
@@ -240,21 +240,21 @@ QChar* QTextDocument_CharacterAt(const QTextDocument* self, int pos) {
     return new QChar(self->characterAt(static_cast<int>(pos)));
 }
 
-QTextCursor* QTextDocument_Find(const QTextDocument* self, libqt_string subString) {
+QTextCursor* QTextDocument_Find(const QTextDocument* self, const libqt_string subString) {
     QString subString_QString = QString::fromUtf8(subString.data, subString.len);
     return new QTextCursor(self->find(subString_QString));
 }
 
-QTextCursor* QTextDocument_Find2(const QTextDocument* self, libqt_string subString, QTextCursor* cursor) {
+QTextCursor* QTextDocument_Find2(const QTextDocument* self, const libqt_string subString, const QTextCursor* cursor) {
     QString subString_QString = QString::fromUtf8(subString.data, subString.len);
     return new QTextCursor(self->find(subString_QString, *cursor));
 }
 
-QTextCursor* QTextDocument_FindWithExpr(const QTextDocument* self, QRegularExpression* expr) {
+QTextCursor* QTextDocument_FindWithExpr(const QTextDocument* self, const QRegularExpression* expr) {
     return new QTextCursor(self->find(*expr));
 }
 
-QTextCursor* QTextDocument_Find3(const QTextDocument* self, QRegularExpression* expr, QTextCursor* cursor) {
+QTextCursor* QTextDocument_Find3(const QTextDocument* self, const QRegularExpression* expr, const QTextCursor* cursor) {
     return new QTextCursor(self->find(*expr, *cursor));
 }
 
@@ -270,7 +270,7 @@ QTextObject* QTextDocument_Object(const QTextDocument* self, int objectIndex) {
     return self->object(static_cast<int>(objectIndex));
 }
 
-QTextObject* QTextDocument_ObjectForFormat(const QTextDocument* self, QTextFormat* param1) {
+QTextObject* QTextDocument_ObjectForFormat(const QTextDocument* self, const QTextFormat* param1) {
     return self->objectForFormat(*param1);
 }
 
@@ -302,7 +302,7 @@ QTextBlock* QTextDocument_LastBlock(const QTextDocument* self) {
     return new QTextBlock(self->lastBlock());
 }
 
-void QTextDocument_SetPageSize(QTextDocument* self, QSizeF* size) {
+void QTextDocument_SetPageSize(QTextDocument* self, const QSizeF* size) {
     self->setPageSize(*size);
 }
 
@@ -310,7 +310,7 @@ QSizeF* QTextDocument_PageSize(const QTextDocument* self) {
     return new QSizeF(self->pageSize());
 }
 
-void QTextDocument_SetDefaultFont(QTextDocument* self, QFont* font) {
+void QTextDocument_SetDefaultFont(QTextDocument* self, const QFont* font) {
     self->setDefaultFont(*font);
 }
 
@@ -354,23 +354,23 @@ void QTextDocument_Print(const QTextDocument* self, QPagedPaintDevice* printer) 
     self->print(printer);
 }
 
-QVariant* QTextDocument_Resource(const QTextDocument* self, int typeVal, QUrl* name) {
+QVariant* QTextDocument_Resource(const QTextDocument* self, int typeVal, const QUrl* name) {
     return new QVariant(self->resource(static_cast<int>(typeVal), *name));
 }
 
-void QTextDocument_AddResource(QTextDocument* self, int typeVal, QUrl* name, QVariant* resource) {
+void QTextDocument_AddResource(QTextDocument* self, int typeVal, const QUrl* name, const QVariant* resource) {
     self->addResource(static_cast<int>(typeVal), *name, *resource);
 }
 
 libqt_list /* of QTextFormat* */ QTextDocument_AllFormats(const QTextDocument* self) {
     QList<QTextFormat> _ret = self->allFormats();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QTextFormat** _arr = static_cast<QTextFormat**>(malloc(sizeof(QTextFormat*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QTextFormat** _arr = static_cast<QTextFormat**>(malloc(sizeof(QTextFormat*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QTextFormat(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -447,7 +447,7 @@ int QTextDocument_CharacterCount(const QTextDocument* self) {
     return self->characterCount();
 }
 
-void QTextDocument_SetDefaultStyleSheet(QTextDocument* self, libqt_string sheet) {
+void QTextDocument_SetDefaultStyleSheet(QTextDocument* self, const libqt_string sheet) {
     QString sheet_QString = QString::fromUtf8(sheet.data, sheet.len);
     self->setDefaultStyleSheet(sheet_QString);
 }
@@ -488,7 +488,7 @@ QTextOption* QTextDocument_DefaultTextOption(const QTextDocument* self) {
     return new QTextOption(self->defaultTextOption());
 }
 
-void QTextDocument_SetDefaultTextOption(QTextDocument* self, QTextOption* option) {
+void QTextDocument_SetDefaultTextOption(QTextDocument* self, const QTextOption* option) {
     self->setDefaultTextOption(*option);
 }
 
@@ -496,7 +496,7 @@ QUrl* QTextDocument_BaseUrl(const QTextDocument* self) {
     return new QUrl(self->baseUrl());
 }
 
-void QTextDocument_SetBaseUrl(QTextDocument* self, QUrl* url) {
+void QTextDocument_SetBaseUrl(QTextDocument* self, const QUrl* url) {
     self->setBaseUrl(*url);
 }
 
@@ -580,7 +580,7 @@ void QTextDocument_Connect_ModificationChanged(QTextDocument* self, intptr_t slo
     });
 }
 
-void QTextDocument_CursorPositionChanged(QTextDocument* self, QTextCursor* cursor) {
+void QTextDocument_CursorPositionChanged(QTextDocument* self, const QTextCursor* cursor) {
     self->cursorPositionChanged(*cursor);
 }
 
@@ -606,7 +606,7 @@ void QTextDocument_Connect_BlockCountChanged(QTextDocument* self, intptr_t slot)
     });
 }
 
-void QTextDocument_BaseUrlChanged(QTextDocument* self, QUrl* url) {
+void QTextDocument_BaseUrlChanged(QTextDocument* self, const QUrl* url) {
     self->baseUrlChanged(*url);
 }
 
@@ -687,39 +687,39 @@ libqt_string QTextDocument_ToMarkdown1(const QTextDocument* self, int features) 
     return _str;
 }
 
-void QTextDocument_SetMarkdown2(QTextDocument* self, libqt_string markdown, int features) {
+void QTextDocument_SetMarkdown2(QTextDocument* self, const libqt_string markdown, int features) {
     QString markdown_QString = QString::fromUtf8(markdown.data, markdown.len);
     self->setMarkdown(markdown_QString, static_cast<QTextDocument::MarkdownFeatures>(features));
 }
 
-QTextCursor* QTextDocument_Find22(const QTextDocument* self, libqt_string subString, int from) {
+QTextCursor* QTextDocument_Find22(const QTextDocument* self, const libqt_string subString, int from) {
     QString subString_QString = QString::fromUtf8(subString.data, subString.len);
     return new QTextCursor(self->find(subString_QString, static_cast<int>(from)));
 }
 
-QTextCursor* QTextDocument_Find32(const QTextDocument* self, libqt_string subString, int from, int options) {
+QTextCursor* QTextDocument_Find32(const QTextDocument* self, const libqt_string subString, int from, int options) {
     QString subString_QString = QString::fromUtf8(subString.data, subString.len);
     return new QTextCursor(self->find(subString_QString, static_cast<int>(from), static_cast<QTextDocument::FindFlags>(options)));
 }
 
-QTextCursor* QTextDocument_Find33(const QTextDocument* self, libqt_string subString, QTextCursor* cursor, int options) {
+QTextCursor* QTextDocument_Find33(const QTextDocument* self, const libqt_string subString, const QTextCursor* cursor, int options) {
     QString subString_QString = QString::fromUtf8(subString.data, subString.len);
     return new QTextCursor(self->find(subString_QString, *cursor, static_cast<QTextDocument::FindFlags>(options)));
 }
 
-QTextCursor* QTextDocument_Find23(const QTextDocument* self, QRegularExpression* expr, int from) {
+QTextCursor* QTextDocument_Find23(const QTextDocument* self, const QRegularExpression* expr, int from) {
     return new QTextCursor(self->find(*expr, static_cast<int>(from)));
 }
 
-QTextCursor* QTextDocument_Find34(const QTextDocument* self, QRegularExpression* expr, int from, int options) {
+QTextCursor* QTextDocument_Find34(const QTextDocument* self, const QRegularExpression* expr, int from, int options) {
     return new QTextCursor(self->find(*expr, static_cast<int>(from), static_cast<QTextDocument::FindFlags>(options)));
 }
 
-QTextCursor* QTextDocument_Find35(const QTextDocument* self, QRegularExpression* expr, QTextCursor* cursor, int options) {
+QTextCursor* QTextDocument_Find35(const QTextDocument* self, const QRegularExpression* expr, const QTextCursor* cursor, int options) {
     return new QTextCursor(self->find(*expr, *cursor, static_cast<QTextDocument::FindFlags>(options)));
 }
 
-void QTextDocument_DrawContents2(QTextDocument* self, QPainter* painter, QRectF* rect) {
+void QTextDocument_DrawContents2(QTextDocument* self, QPainter* painter, const QRectF* rect) {
     self->drawContents(painter, *rect);
 }
 
@@ -761,7 +761,7 @@ void QTextDocument_OnClear(QTextDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QTextObject* QTextDocument_CreateObject(QTextDocument* self, QTextFormat* f) {
+QTextObject* QTextDocument_CreateObject(QTextDocument* self, const QTextFormat* f) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->createObject(*f);
@@ -771,7 +771,7 @@ QTextObject* QTextDocument_CreateObject(QTextDocument* self, QTextFormat* f) {
 }
 
 // Base class handler implementation
-QTextObject* QTextDocument_QBaseCreateObject(QTextDocument* self, QTextFormat* f) {
+QTextObject* QTextDocument_QBaseCreateObject(QTextDocument* self, const QTextFormat* f) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_CreateObject_IsBase(true);
@@ -790,7 +790,7 @@ void QTextDocument_OnCreateObject(QTextDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, QUrl* name) {
+QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, const QUrl* name) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return new QVariant(vqtextdocument->loadResource(static_cast<int>(typeVal), *name));
@@ -799,7 +799,7 @@ QVariant* QTextDocument_LoadResource(QTextDocument* self, int typeVal, QUrl* nam
 }
 
 // Base class handler implementation
-QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int typeVal, QUrl* name) {
+QVariant* QTextDocument_QBaseLoadResource(QTextDocument* self, int typeVal, const QUrl* name) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_LoadResource_IsBase(true);
@@ -962,7 +962,7 @@ void QTextDocument_OnCustomEvent(QTextDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextDocument_ConnectNotify(QTextDocument* self, QMetaMethod* signal) {
+void QTextDocument_ConnectNotify(QTextDocument* self, const QMetaMethod* signal) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->connectNotify(*signal);
@@ -972,7 +972,7 @@ void QTextDocument_ConnectNotify(QTextDocument* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextDocument_QBaseConnectNotify(QTextDocument* self, QMetaMethod* signal) {
+void QTextDocument_QBaseConnectNotify(QTextDocument* self, const QMetaMethod* signal) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_ConnectNotify_IsBase(true);
@@ -991,7 +991,7 @@ void QTextDocument_OnConnectNotify(QTextDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTextDocument_DisconnectNotify(QTextDocument* self, QMetaMethod* signal) {
+void QTextDocument_DisconnectNotify(QTextDocument* self, const QMetaMethod* signal) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->disconnectNotify(*signal);
@@ -1001,7 +1001,7 @@ void QTextDocument_DisconnectNotify(QTextDocument* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTextDocument_QBaseDisconnectNotify(QTextDocument* self, QMetaMethod* signal) {
+void QTextDocument_QBaseDisconnectNotify(QTextDocument* self, const QMetaMethod* signal) {
     auto* vqtextdocument = dynamic_cast<VirtualQTextDocument*>(self);
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_DisconnectNotify_IsBase(true);
@@ -1107,7 +1107,7 @@ void QTextDocument_OnReceivers(const QTextDocument* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTextDocument_IsSignalConnected(const QTextDocument* self, QMetaMethod* signal) {
+bool QTextDocument_IsSignalConnected(const QTextDocument* self, const QMetaMethod* signal) {
     auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         return vqtextdocument->isSignalConnected(*signal);
@@ -1117,7 +1117,7 @@ bool QTextDocument_IsSignalConnected(const QTextDocument* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QTextDocument_QBaseIsSignalConnected(const QTextDocument* self, QMetaMethod* signal) {
+bool QTextDocument_QBaseIsSignalConnected(const QTextDocument* self, const QMetaMethod* signal) {
     auto* vqtextdocument = const_cast<VirtualQTextDocument*>(dynamic_cast<const VirtualQTextDocument*>(self));
     if (vqtextdocument && vqtextdocument->isVirtualQTextDocument) {
         vqtextdocument->setQTextDocument_IsSignalConnected_IsBase(true);

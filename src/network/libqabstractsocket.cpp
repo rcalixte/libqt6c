@@ -82,7 +82,7 @@ bool QAbstractSocket_Bind2(QAbstractSocket* self) {
     return self->bind();
 }
 
-void QAbstractSocket_ConnectToHost2(QAbstractSocket* self, QHostAddress* address, uint16_t port) {
+void QAbstractSocket_ConnectToHost2(QAbstractSocket* self, const QHostAddress* address, uint16_t port) {
     self->connectToHost(*address, static_cast<quint16>(port));
 }
 
@@ -142,7 +142,7 @@ bool QAbstractSocket_Flush(QAbstractSocket* self) {
     return self->flush();
 }
 
-void QAbstractSocket_SetProxy(QAbstractSocket* self, QNetworkProxy* networkProxy) {
+void QAbstractSocket_SetProxy(QAbstractSocket* self, const QNetworkProxy* networkProxy) {
     self->setProxy(*networkProxy);
 }
 
@@ -162,7 +162,7 @@ libqt_string QAbstractSocket_ProtocolTag(const QAbstractSocket* self) {
     return _str;
 }
 
-void QAbstractSocket_SetProtocolTag(QAbstractSocket* self, libqt_string tag) {
+void QAbstractSocket_SetProtocolTag(QAbstractSocket* self, const libqt_string tag) {
     QString tag_QString = QString::fromUtf8(tag.data, tag.len);
     self->setProtocolTag(tag_QString);
 }
@@ -224,7 +224,7 @@ void QAbstractSocket_Connect_ErrorOccurred(QAbstractSocket* self, intptr_t slot)
     });
 }
 
-void QAbstractSocket_ProxyAuthenticationRequired(QAbstractSocket* self, QNetworkProxy* proxy, QAuthenticator* authenticator) {
+void QAbstractSocket_ProxyAuthenticationRequired(QAbstractSocket* self, const QNetworkProxy* proxy, QAuthenticator* authenticator) {
     self->proxyAuthenticationRequired(*proxy, authenticator);
 }
 
@@ -268,11 +268,11 @@ bool QAbstractSocket_Bind1(QAbstractSocket* self, uint16_t port) {
 }
 
 bool QAbstractSocket_Bind22(QAbstractSocket* self, uint16_t port, int mode) {
-    return self->bind(static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+    return self->bind(static_cast<quint16>(port), static_cast<QFlags<QAbstractSocket::BindFlag>>(mode));
 }
 
-void QAbstractSocket_ConnectToHost3(QAbstractSocket* self, QHostAddress* address, uint16_t port, int mode) {
-    self->connectToHost(*address, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(mode));
+void QAbstractSocket_ConnectToHost3(QAbstractSocket* self, const QHostAddress* address, uint16_t port, int mode) {
+    self->connectToHost(*address, static_cast<quint16>(port), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(mode));
 }
 
 // Derived class handler implementation
@@ -305,23 +305,23 @@ void QAbstractSocket_OnResume(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractSocket_Bind(QAbstractSocket* self, QHostAddress* address, uint16_t port, int mode) {
+bool QAbstractSocket_Bind(QAbstractSocket* self, const QHostAddress* address, uint16_t port, int mode) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
-        return vqabstractsocket->bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+        return vqabstractsocket->bind(*address, static_cast<quint16>(port), static_cast<QFlags<QAbstractSocket::BindFlag>>(mode));
     } else {
-        return self->QAbstractSocket::bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+        return self->QAbstractSocket::bind(*address, static_cast<quint16>(port), static_cast<QFlags<QAbstractSocket::BindFlag>>(mode));
     }
 }
 
 // Base class handler implementation
-bool QAbstractSocket_QBaseBind(QAbstractSocket* self, QHostAddress* address, uint16_t port, int mode) {
+bool QAbstractSocket_QBaseBind(QAbstractSocket* self, const QHostAddress* address, uint16_t port, int mode) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_Bind_IsBase(true);
-        return vqabstractsocket->bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+        return vqabstractsocket->bind(*address, static_cast<quint16>(port), static_cast<QFlags<QAbstractSocket::BindFlag>>(mode));
     } else {
-        return self->QAbstractSocket::bind(*address, static_cast<quint16>(port), static_cast<QAbstractSocket::BindMode>(mode));
+        return self->QAbstractSocket::bind(*address, static_cast<quint16>(port), static_cast<QFlags<QAbstractSocket::BindFlag>>(mode));
     }
 }
 
@@ -334,25 +334,25 @@ void QAbstractSocket_OnBind(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_ConnectToHost(QAbstractSocket* self, libqt_string hostName, uint16_t port, int mode, int protocol) {
+void QAbstractSocket_ConnectToHost(QAbstractSocket* self, const libqt_string hostName, uint16_t port, int mode, int protocol) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     QString hostName_QString = QString::fromUtf8(hostName.data, hostName.len);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
-        vqabstractsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
+        vqabstractsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     } else {
-        self->QAbstractSocket::connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
+        self->QAbstractSocket::connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     }
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseConnectToHost(QAbstractSocket* self, libqt_string hostName, uint16_t port, int mode, int protocol) {
+void QAbstractSocket_QBaseConnectToHost(QAbstractSocket* self, const libqt_string hostName, uint16_t port, int mode, int protocol) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     QString hostName_QString = QString::fromUtf8(hostName.data, hostName.len);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_ConnectToHost_IsBase(true);
-        vqabstractsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
+        vqabstractsocket->connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     } else {
-        self->QAbstractSocket::connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QIODeviceBase::OpenMode>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
+        self->QAbstractSocket::connectToHost(hostName_QString, static_cast<quint16>(port), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(mode), static_cast<QAbstractSocket::NetworkLayerProtocol>(protocol));
     }
 }
 
@@ -517,9 +517,9 @@ void QAbstractSocket_OnSocketDescriptor(const QAbstractSocket* self, intptr_t sl
 bool QAbstractSocket_SetSocketDescriptor(QAbstractSocket* self, intptr_t socketDescriptor, int state, int openMode) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
-        return vqabstractsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
+        return vqabstractsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     } else {
-        return self->QAbstractSocket::setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QAbstractSocket::setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     }
 }
 
@@ -528,9 +528,9 @@ bool QAbstractSocket_QBaseSetSocketDescriptor(QAbstractSocket* self, intptr_t so
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_SetSocketDescriptor_IsBase(true);
-        return vqabstractsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
+        return vqabstractsocket->setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     } else {
-        return self->QAbstractSocket::setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QIODeviceBase::OpenMode>(openMode));
+        return self->QAbstractSocket::setSocketDescriptor((qintptr)(socketDescriptor), static_cast<QAbstractSocket::SocketState>(state), static_cast<QFlags<QIODeviceBase::OpenModeFlag>>(openMode));
     }
 }
 
@@ -543,7 +543,7 @@ void QAbstractSocket_OnSetSocketDescriptor(QAbstractSocket* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QAbstractSocket_SetSocketOption(QAbstractSocket* self, int option, QVariant* value) {
+void QAbstractSocket_SetSocketOption(QAbstractSocket* self, int option, const QVariant* value) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setSocketOption(static_cast<QAbstractSocket::SocketOption>(option), *value);
@@ -553,7 +553,7 @@ void QAbstractSocket_SetSocketOption(QAbstractSocket* self, int option, QVariant
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseSetSocketOption(QAbstractSocket* self, int option, QVariant* value) {
+void QAbstractSocket_QBaseSetSocketOption(QAbstractSocket* self, int option, const QVariant* value) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_SetSocketOption_IsBase(true);
@@ -1239,7 +1239,7 @@ void QAbstractSocket_OnCustomEvent(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_ConnectNotify(QAbstractSocket* self, QMetaMethod* signal) {
+void QAbstractSocket_ConnectNotify(QAbstractSocket* self, const QMetaMethod* signal) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->connectNotify(*signal);
@@ -1249,7 +1249,7 @@ void QAbstractSocket_ConnectNotify(QAbstractSocket* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseConnectNotify(QAbstractSocket* self, QMetaMethod* signal) {
+void QAbstractSocket_QBaseConnectNotify(QAbstractSocket* self, const QMetaMethod* signal) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_ConnectNotify_IsBase(true);
@@ -1268,7 +1268,7 @@ void QAbstractSocket_OnConnectNotify(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_DisconnectNotify(QAbstractSocket* self, QMetaMethod* signal) {
+void QAbstractSocket_DisconnectNotify(QAbstractSocket* self, const QMetaMethod* signal) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->disconnectNotify(*signal);
@@ -1278,7 +1278,7 @@ void QAbstractSocket_DisconnectNotify(QAbstractSocket* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseDisconnectNotify(QAbstractSocket* self, QMetaMethod* signal) {
+void QAbstractSocket_QBaseDisconnectNotify(QAbstractSocket* self, const QMetaMethod* signal) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_DisconnectNotify_IsBase(true);
@@ -1384,7 +1384,7 @@ void QAbstractSocket_OnSetLocalPort(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_SetLocalAddress(QAbstractSocket* self, QHostAddress* address) {
+void QAbstractSocket_SetLocalAddress(QAbstractSocket* self, const QHostAddress* address) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setLocalAddress(*address);
@@ -1394,7 +1394,7 @@ void QAbstractSocket_SetLocalAddress(QAbstractSocket* self, QHostAddress* addres
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseSetLocalAddress(QAbstractSocket* self, QHostAddress* address) {
+void QAbstractSocket_QBaseSetLocalAddress(QAbstractSocket* self, const QHostAddress* address) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_SetLocalAddress_IsBase(true);
@@ -1442,7 +1442,7 @@ void QAbstractSocket_OnSetPeerPort(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_SetPeerAddress(QAbstractSocket* self, QHostAddress* address) {
+void QAbstractSocket_SetPeerAddress(QAbstractSocket* self, const QHostAddress* address) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setPeerAddress(*address);
@@ -1452,7 +1452,7 @@ void QAbstractSocket_SetPeerAddress(QAbstractSocket* self, QHostAddress* address
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseSetPeerAddress(QAbstractSocket* self, QHostAddress* address) {
+void QAbstractSocket_QBaseSetPeerAddress(QAbstractSocket* self, const QHostAddress* address) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_SetPeerAddress_IsBase(true);
@@ -1471,7 +1471,7 @@ void QAbstractSocket_OnSetPeerAddress(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_SetPeerName(QAbstractSocket* self, libqt_string name) {
+void QAbstractSocket_SetPeerName(QAbstractSocket* self, const libqt_string name) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
@@ -1482,7 +1482,7 @@ void QAbstractSocket_SetPeerName(QAbstractSocket* self, libqt_string name) {
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseSetPeerName(QAbstractSocket* self, libqt_string name) {
+void QAbstractSocket_QBaseSetPeerName(QAbstractSocket* self, const libqt_string name) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
@@ -1531,7 +1531,7 @@ void QAbstractSocket_OnSetOpenMode(QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAbstractSocket_SetErrorString(QAbstractSocket* self, libqt_string errorString) {
+void QAbstractSocket_SetErrorString(QAbstractSocket* self, const libqt_string errorString) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
@@ -1542,7 +1542,7 @@ void QAbstractSocket_SetErrorString(QAbstractSocket* self, libqt_string errorStr
 }
 
 // Base class handler implementation
-void QAbstractSocket_QBaseSetErrorString(QAbstractSocket* self, libqt_string errorString) {
+void QAbstractSocket_QBaseSetErrorString(QAbstractSocket* self, const libqt_string errorString) {
     auto* vqabstractsocket = dynamic_cast<VirtualQAbstractSocket*>(self);
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
@@ -1649,7 +1649,7 @@ void QAbstractSocket_OnReceivers(const QAbstractSocket* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAbstractSocket_IsSignalConnected(const QAbstractSocket* self, QMetaMethod* signal) {
+bool QAbstractSocket_IsSignalConnected(const QAbstractSocket* self, const QMetaMethod* signal) {
     auto* vqabstractsocket = const_cast<VirtualQAbstractSocket*>(dynamic_cast<const VirtualQAbstractSocket*>(self));
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         return vqabstractsocket->isSignalConnected(*signal);
@@ -1659,7 +1659,7 @@ bool QAbstractSocket_IsSignalConnected(const QAbstractSocket* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QAbstractSocket_QBaseIsSignalConnected(const QAbstractSocket* self, QMetaMethod* signal) {
+bool QAbstractSocket_QBaseIsSignalConnected(const QAbstractSocket* self, const QMetaMethod* signal) {
     auto* vqabstractsocket = const_cast<VirtualQAbstractSocket*>(dynamic_cast<const VirtualQAbstractSocket*>(self));
     if (vqabstractsocket && vqabstractsocket->isVirtualQAbstractSocket) {
         vqabstractsocket->setQAbstractSocket_IsSignalConnected_IsBase(true);

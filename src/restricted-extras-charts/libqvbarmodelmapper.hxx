@@ -91,8 +91,8 @@ class VirtualQVBarModelMapper final : public QVBarModelMapper {
     mutable bool qvbarmodelmapper_issignalconnected_isbase = false;
 
   public:
-    VirtualQVBarModelMapper() : QVBarModelMapper(){};
-    VirtualQVBarModelMapper(QObject* parent) : QVBarModelMapper(parent){};
+    VirtualQVBarModelMapper() : QVBarModelMapper() {};
+    VirtualQVBarModelMapper(QObject* parent) : QVBarModelMapper(parent) {};
 
     ~VirtualQVBarModelMapper() {
         qvbarmodelmapper_metacall_callback = nullptr;
@@ -489,10 +489,10 @@ class VirtualQVBarModelMapper final : public QVBarModelMapper {
     friend void QVBarModelMapper_QBaseChildEvent(QVBarModelMapper* self, QChildEvent* event);
     friend void QVBarModelMapper_CustomEvent(QVBarModelMapper* self, QEvent* event);
     friend void QVBarModelMapper_QBaseCustomEvent(QVBarModelMapper* self, QEvent* event);
-    friend void QVBarModelMapper_ConnectNotify(QVBarModelMapper* self, QMetaMethod* signal);
-    friend void QVBarModelMapper_QBaseConnectNotify(QVBarModelMapper* self, QMetaMethod* signal);
-    friend void QVBarModelMapper_DisconnectNotify(QVBarModelMapper* self, QMetaMethod* signal);
-    friend void QVBarModelMapper_QBaseDisconnectNotify(QVBarModelMapper* self, QMetaMethod* signal);
+    friend void QVBarModelMapper_ConnectNotify(QVBarModelMapper* self, const QMetaMethod* signal);
+    friend void QVBarModelMapper_QBaseConnectNotify(QVBarModelMapper* self, const QMetaMethod* signal);
+    friend void QVBarModelMapper_DisconnectNotify(QVBarModelMapper* self, const QMetaMethod* signal);
+    friend void QVBarModelMapper_QBaseDisconnectNotify(QVBarModelMapper* self, const QMetaMethod* signal);
     friend int QVBarModelMapper_First(const QVBarModelMapper* self);
     friend int QVBarModelMapper_QBaseFirst(const QVBarModelMapper* self);
     friend void QVBarModelMapper_SetFirst(QVBarModelMapper* self, int first);
@@ -519,8 +519,8 @@ class VirtualQVBarModelMapper final : public QVBarModelMapper {
     friend int QVBarModelMapper_QBaseSenderSignalIndex(const QVBarModelMapper* self);
     friend int QVBarModelMapper_Receivers(const QVBarModelMapper* self, const char* signal);
     friend int QVBarModelMapper_QBaseReceivers(const QVBarModelMapper* self, const char* signal);
-    friend bool QVBarModelMapper_IsSignalConnected(const QVBarModelMapper* self, QMetaMethod* signal);
-    friend bool QVBarModelMapper_QBaseIsSignalConnected(const QVBarModelMapper* self, QMetaMethod* signal);
+    friend bool QVBarModelMapper_IsSignalConnected(const QVBarModelMapper* self, const QMetaMethod* signal);
+    friend bool QVBarModelMapper_QBaseIsSignalConnected(const QVBarModelMapper* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -31,7 +31,7 @@ QProxyStyle* QProxyStyle_new() {
     return new VirtualQProxyStyle();
 }
 
-QProxyStyle* QProxyStyle_new2(libqt_string key) {
+QProxyStyle* QProxyStyle_new2(const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new VirtualQProxyStyle(key_QString);
 }
@@ -121,7 +121,7 @@ libqt_string QProxyStyle_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_DrawPrimitive(const QProxyStyle* self, int element, QStyleOption* option, QPainter* painter, QWidget* widget) {
+void QProxyStyle_DrawPrimitive(const QProxyStyle* self, int element, const QStyleOption* option, QPainter* painter, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->drawPrimitive(static_cast<QStyle::PrimitiveElement>(element), option, painter, widget);
@@ -131,7 +131,7 @@ void QProxyStyle_DrawPrimitive(const QProxyStyle* self, int element, QStyleOptio
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseDrawPrimitive(const QProxyStyle* self, int element, QStyleOption* option, QPainter* painter, QWidget* widget) {
+void QProxyStyle_QBaseDrawPrimitive(const QProxyStyle* self, int element, const QStyleOption* option, QPainter* painter, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_DrawPrimitive_IsBase(true);
@@ -150,7 +150,7 @@ void QProxyStyle_OnDrawPrimitive(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_DrawControl(const QProxyStyle* self, int element, QStyleOption* option, QPainter* painter, QWidget* widget) {
+void QProxyStyle_DrawControl(const QProxyStyle* self, int element, const QStyleOption* option, QPainter* painter, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->drawControl(static_cast<QStyle::ControlElement>(element), option, painter, widget);
@@ -160,7 +160,7 @@ void QProxyStyle_DrawControl(const QProxyStyle* self, int element, QStyleOption*
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseDrawControl(const QProxyStyle* self, int element, QStyleOption* option, QPainter* painter, QWidget* widget) {
+void QProxyStyle_QBaseDrawControl(const QProxyStyle* self, int element, const QStyleOption* option, QPainter* painter, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_DrawControl_IsBase(true);
@@ -179,7 +179,7 @@ void QProxyStyle_OnDrawControl(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_DrawComplexControl(const QProxyStyle* self, int control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget) {
+void QProxyStyle_DrawComplexControl(const QProxyStyle* self, int control, const QStyleOptionComplex* option, QPainter* painter, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->drawComplexControl(static_cast<QStyle::ComplexControl>(control), option, painter, widget);
@@ -189,7 +189,7 @@ void QProxyStyle_DrawComplexControl(const QProxyStyle* self, int control, QStyle
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseDrawComplexControl(const QProxyStyle* self, int control, QStyleOptionComplex* option, QPainter* painter, QWidget* widget) {
+void QProxyStyle_QBaseDrawComplexControl(const QProxyStyle* self, int control, const QStyleOptionComplex* option, QPainter* painter, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_DrawComplexControl_IsBase(true);
@@ -208,7 +208,7 @@ void QProxyStyle_OnDrawComplexControl(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_DrawItemText(const QProxyStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, libqt_string text, int textRole) {
+void QProxyStyle_DrawItemText(const QProxyStyle* self, QPainter* painter, const QRect* rect, int flags, const QPalette* pal, bool enabled, const libqt_string text, int textRole) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
@@ -219,7 +219,7 @@ void QProxyStyle_DrawItemText(const QProxyStyle* self, QPainter* painter, QRect*
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseDrawItemText(const QProxyStyle* self, QPainter* painter, QRect* rect, int flags, QPalette* pal, bool enabled, libqt_string text, int textRole) {
+void QProxyStyle_QBaseDrawItemText(const QProxyStyle* self, QPainter* painter, const QRect* rect, int flags, const QPalette* pal, bool enabled, const libqt_string text, int textRole) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
@@ -239,7 +239,7 @@ void QProxyStyle_OnDrawItemText(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_DrawItemPixmap(const QProxyStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap) {
+void QProxyStyle_DrawItemPixmap(const QProxyStyle* self, QPainter* painter, const QRect* rect, int alignment, const QPixmap* pixmap) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->drawItemPixmap(painter, *rect, static_cast<int>(alignment), *pixmap);
@@ -249,7 +249,7 @@ void QProxyStyle_DrawItemPixmap(const QProxyStyle* self, QPainter* painter, QRec
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseDrawItemPixmap(const QProxyStyle* self, QPainter* painter, QRect* rect, int alignment, QPixmap* pixmap) {
+void QProxyStyle_QBaseDrawItemPixmap(const QProxyStyle* self, QPainter* painter, const QRect* rect, int alignment, const QPixmap* pixmap) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_DrawItemPixmap_IsBase(true);
@@ -268,7 +268,7 @@ void QProxyStyle_OnDrawItemPixmap(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int typeVal, QStyleOption* option, QSize* size, QWidget* widget) {
+QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int typeVal, const QStyleOption* option, const QSize* size, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QSize(vqproxystyle->sizeFromContents(static_cast<QStyle::ContentsType>(typeVal), option, *size, widget));
@@ -278,7 +278,7 @@ QSize* QProxyStyle_SizeFromContents(const QProxyStyle* self, int typeVal, QStyle
 }
 
 // Base class handler implementation
-QSize* QProxyStyle_QBaseSizeFromContents(const QProxyStyle* self, int typeVal, QStyleOption* option, QSize* size, QWidget* widget) {
+QSize* QProxyStyle_QBaseSizeFromContents(const QProxyStyle* self, int typeVal, const QStyleOption* option, const QSize* size, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_SizeFromContents_IsBase(true);
@@ -297,7 +297,7 @@ void QProxyStyle_OnSizeFromContents(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QProxyStyle_SubElementRect(const QProxyStyle* self, int element, QStyleOption* option, QWidget* widget) {
+QRect* QProxyStyle_SubElementRect(const QProxyStyle* self, int element, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QRect(vqproxystyle->subElementRect(static_cast<QStyle::SubElement>(element), option, widget));
@@ -307,7 +307,7 @@ QRect* QProxyStyle_SubElementRect(const QProxyStyle* self, int element, QStyleOp
 }
 
 // Base class handler implementation
-QRect* QProxyStyle_QBaseSubElementRect(const QProxyStyle* self, int element, QStyleOption* option, QWidget* widget) {
+QRect* QProxyStyle_QBaseSubElementRect(const QProxyStyle* self, int element, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_SubElementRect_IsBase(true);
@@ -326,7 +326,7 @@ void QProxyStyle_OnSubElementRect(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QProxyStyle_SubControlRect(const QProxyStyle* self, int cc, QStyleOptionComplex* opt, int sc, QWidget* widget) {
+QRect* QProxyStyle_SubControlRect(const QProxyStyle* self, int cc, const QStyleOptionComplex* opt, int sc, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QRect(vqproxystyle->subControlRect(static_cast<QStyle::ComplexControl>(cc), opt, static_cast<QStyle::SubControl>(sc), widget));
@@ -336,7 +336,7 @@ QRect* QProxyStyle_SubControlRect(const QProxyStyle* self, int cc, QStyleOptionC
 }
 
 // Base class handler implementation
-QRect* QProxyStyle_QBaseSubControlRect(const QProxyStyle* self, int cc, QStyleOptionComplex* opt, int sc, QWidget* widget) {
+QRect* QProxyStyle_QBaseSubControlRect(const QProxyStyle* self, int cc, const QStyleOptionComplex* opt, int sc, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_SubControlRect_IsBase(true);
@@ -355,7 +355,7 @@ void QProxyStyle_OnSubControlRect(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QProxyStyle_ItemTextRect(const QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, libqt_string text) {
+QRect* QProxyStyle_ItemTextRect(const QProxyStyle* self, const QFontMetrics* fm, const QRect* r, int flags, bool enabled, const libqt_string text) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
@@ -366,7 +366,7 @@ QRect* QProxyStyle_ItemTextRect(const QProxyStyle* self, QFontMetrics* fm, QRect
 }
 
 // Base class handler implementation
-QRect* QProxyStyle_QBaseItemTextRect(const QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, libqt_string text) {
+QRect* QProxyStyle_QBaseItemTextRect(const QProxyStyle* self, const QFontMetrics* fm, const QRect* r, int flags, bool enabled, const libqt_string text) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
@@ -386,7 +386,7 @@ void QProxyStyle_OnItemTextRect(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QRect* QProxyStyle_ItemPixmapRect(const QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap) {
+QRect* QProxyStyle_ItemPixmapRect(const QProxyStyle* self, const QRect* r, int flags, const QPixmap* pixmap) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QRect(vqproxystyle->itemPixmapRect(*r, static_cast<int>(flags), *pixmap));
@@ -396,7 +396,7 @@ QRect* QProxyStyle_ItemPixmapRect(const QProxyStyle* self, QRect* r, int flags, 
 }
 
 // Base class handler implementation
-QRect* QProxyStyle_QBaseItemPixmapRect(const QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap) {
+QRect* QProxyStyle_QBaseItemPixmapRect(const QProxyStyle* self, const QRect* r, int flags, const QPixmap* pixmap) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_ItemPixmapRect_IsBase(true);
@@ -415,7 +415,7 @@ void QProxyStyle_OnItemPixmapRect(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QProxyStyle_HitTestComplexControl(const QProxyStyle* self, int control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget) {
+int QProxyStyle_HitTestComplexControl(const QProxyStyle* self, int control, const QStyleOptionComplex* option, const QPoint* pos, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return static_cast<int>(vqproxystyle->hitTestComplexControl(static_cast<QStyle::ComplexControl>(control), option, *pos, widget));
@@ -425,7 +425,7 @@ int QProxyStyle_HitTestComplexControl(const QProxyStyle* self, int control, QSty
 }
 
 // Base class handler implementation
-int QProxyStyle_QBaseHitTestComplexControl(const QProxyStyle* self, int control, QStyleOptionComplex* option, QPoint* pos, QWidget* widget) {
+int QProxyStyle_QBaseHitTestComplexControl(const QProxyStyle* self, int control, const QStyleOptionComplex* option, const QPoint* pos, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_HitTestComplexControl_IsBase(true);
@@ -444,7 +444,7 @@ void QProxyStyle_OnHitTestComplexControl(const QProxyStyle* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-int QProxyStyle_StyleHint(const QProxyStyle* self, int hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData) {
+int QProxyStyle_StyleHint(const QProxyStyle* self, int hint, const QStyleOption* option, const QWidget* widget, QStyleHintReturn* returnData) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return vqproxystyle->styleHint(static_cast<QStyle::StyleHint>(hint), option, widget, returnData);
@@ -454,7 +454,7 @@ int QProxyStyle_StyleHint(const QProxyStyle* self, int hint, QStyleOption* optio
 }
 
 // Base class handler implementation
-int QProxyStyle_QBaseStyleHint(const QProxyStyle* self, int hint, QStyleOption* option, QWidget* widget, QStyleHintReturn* returnData) {
+int QProxyStyle_QBaseStyleHint(const QProxyStyle* self, int hint, const QStyleOption* option, const QWidget* widget, QStyleHintReturn* returnData) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_StyleHint_IsBase(true);
@@ -473,7 +473,7 @@ void QProxyStyle_OnStyleHint(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QProxyStyle_PixelMetric(const QProxyStyle* self, int metric, QStyleOption* option, QWidget* widget) {
+int QProxyStyle_PixelMetric(const QProxyStyle* self, int metric, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return vqproxystyle->pixelMetric(static_cast<QStyle::PixelMetric>(metric), option, widget);
@@ -483,7 +483,7 @@ int QProxyStyle_PixelMetric(const QProxyStyle* self, int metric, QStyleOption* o
 }
 
 // Base class handler implementation
-int QProxyStyle_QBasePixelMetric(const QProxyStyle* self, int metric, QStyleOption* option, QWidget* widget) {
+int QProxyStyle_QBasePixelMetric(const QProxyStyle* self, int metric, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_PixelMetric_IsBase(true);
@@ -502,7 +502,7 @@ void QProxyStyle_OnPixelMetric(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-int QProxyStyle_LayoutSpacing(const QProxyStyle* self, int control1, int control2, int orientation, QStyleOption* option, QWidget* widget) {
+int QProxyStyle_LayoutSpacing(const QProxyStyle* self, int control1, int control2, int orientation, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return vqproxystyle->layoutSpacing(static_cast<QSizePolicy::ControlType>(control1), static_cast<QSizePolicy::ControlType>(control2), static_cast<Qt::Orientation>(orientation), option, widget);
@@ -512,7 +512,7 @@ int QProxyStyle_LayoutSpacing(const QProxyStyle* self, int control1, int control
 }
 
 // Base class handler implementation
-int QProxyStyle_QBaseLayoutSpacing(const QProxyStyle* self, int control1, int control2, int orientation, QStyleOption* option, QWidget* widget) {
+int QProxyStyle_QBaseLayoutSpacing(const QProxyStyle* self, int control1, int control2, int orientation, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_LayoutSpacing_IsBase(true);
@@ -531,7 +531,7 @@ void QProxyStyle_OnLayoutSpacing(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QIcon* QProxyStyle_StandardIcon(const QProxyStyle* self, int standardIcon, QStyleOption* option, QWidget* widget) {
+QIcon* QProxyStyle_StandardIcon(const QProxyStyle* self, int standardIcon, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QIcon(vqproxystyle->standardIcon(static_cast<QStyle::StandardPixmap>(standardIcon), option, widget));
@@ -541,7 +541,7 @@ QIcon* QProxyStyle_StandardIcon(const QProxyStyle* self, int standardIcon, QStyl
 }
 
 // Base class handler implementation
-QIcon* QProxyStyle_QBaseStandardIcon(const QProxyStyle* self, int standardIcon, QStyleOption* option, QWidget* widget) {
+QIcon* QProxyStyle_QBaseStandardIcon(const QProxyStyle* self, int standardIcon, const QStyleOption* option, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_StandardIcon_IsBase(true);
@@ -560,7 +560,7 @@ void QProxyStyle_OnStandardIcon(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QPixmap* QProxyStyle_StandardPixmap(const QProxyStyle* self, int standardPixmap, QStyleOption* opt, QWidget* widget) {
+QPixmap* QProxyStyle_StandardPixmap(const QProxyStyle* self, int standardPixmap, const QStyleOption* opt, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QPixmap(vqproxystyle->standardPixmap(static_cast<QStyle::StandardPixmap>(standardPixmap), opt, widget));
@@ -570,7 +570,7 @@ QPixmap* QProxyStyle_StandardPixmap(const QProxyStyle* self, int standardPixmap,
 }
 
 // Base class handler implementation
-QPixmap* QProxyStyle_QBaseStandardPixmap(const QProxyStyle* self, int standardPixmap, QStyleOption* opt, QWidget* widget) {
+QPixmap* QProxyStyle_QBaseStandardPixmap(const QProxyStyle* self, int standardPixmap, const QStyleOption* opt, const QWidget* widget) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_StandardPixmap_IsBase(true);
@@ -589,7 +589,7 @@ void QProxyStyle_OnStandardPixmap(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QPixmap* QProxyStyle_GeneratedIconPixmap(const QProxyStyle* self, int iconMode, QPixmap* pixmap, QStyleOption* opt) {
+QPixmap* QProxyStyle_GeneratedIconPixmap(const QProxyStyle* self, int iconMode, const QPixmap* pixmap, const QStyleOption* opt) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return new QPixmap(vqproxystyle->generatedIconPixmap(static_cast<QIcon::Mode>(iconMode), *pixmap, opt));
@@ -599,7 +599,7 @@ QPixmap* QProxyStyle_GeneratedIconPixmap(const QProxyStyle* self, int iconMode, 
 }
 
 // Base class handler implementation
-QPixmap* QProxyStyle_QBaseGeneratedIconPixmap(const QProxyStyle* self, int iconMode, QPixmap* pixmap, QStyleOption* opt) {
+QPixmap* QProxyStyle_QBaseGeneratedIconPixmap(const QProxyStyle* self, int iconMode, const QPixmap* pixmap, const QStyleOption* opt) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_GeneratedIconPixmap_IsBase(true);
@@ -937,7 +937,7 @@ void QProxyStyle_OnCustomEvent(QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_ConnectNotify(QProxyStyle* self, QMetaMethod* signal) {
+void QProxyStyle_ConnectNotify(QProxyStyle* self, const QMetaMethod* signal) {
     auto* vqproxystyle = dynamic_cast<VirtualQProxyStyle*>(self);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->connectNotify(*signal);
@@ -947,7 +947,7 @@ void QProxyStyle_ConnectNotify(QProxyStyle* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseConnectNotify(QProxyStyle* self, QMetaMethod* signal) {
+void QProxyStyle_QBaseConnectNotify(QProxyStyle* self, const QMetaMethod* signal) {
     auto* vqproxystyle = dynamic_cast<VirtualQProxyStyle*>(self);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_ConnectNotify_IsBase(true);
@@ -966,7 +966,7 @@ void QProxyStyle_OnConnectNotify(QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QProxyStyle_DisconnectNotify(QProxyStyle* self, QMetaMethod* signal) {
+void QProxyStyle_DisconnectNotify(QProxyStyle* self, const QMetaMethod* signal) {
     auto* vqproxystyle = dynamic_cast<VirtualQProxyStyle*>(self);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->disconnectNotify(*signal);
@@ -976,7 +976,7 @@ void QProxyStyle_DisconnectNotify(QProxyStyle* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QProxyStyle_QBaseDisconnectNotify(QProxyStyle* self, QMetaMethod* signal) {
+void QProxyStyle_QBaseDisconnectNotify(QProxyStyle* self, const QMetaMethod* signal) {
     auto* vqproxystyle = dynamic_cast<VirtualQProxyStyle*>(self);
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_DisconnectNotify_IsBase(true);
@@ -1082,7 +1082,7 @@ void QProxyStyle_OnReceivers(const QProxyStyle* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QProxyStyle_IsSignalConnected(const QProxyStyle* self, QMetaMethod* signal) {
+bool QProxyStyle_IsSignalConnected(const QProxyStyle* self, const QMetaMethod* signal) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         return vqproxystyle->isSignalConnected(*signal);
@@ -1092,7 +1092,7 @@ bool QProxyStyle_IsSignalConnected(const QProxyStyle* self, QMetaMethod* signal)
 }
 
 // Base class handler implementation
-bool QProxyStyle_QBaseIsSignalConnected(const QProxyStyle* self, QMetaMethod* signal) {
+bool QProxyStyle_QBaseIsSignalConnected(const QProxyStyle* self, const QMetaMethod* signal) {
     auto* vqproxystyle = const_cast<VirtualQProxyStyle*>(dynamic_cast<const VirtualQProxyStyle*>(self));
     if (vqproxystyle && vqproxystyle->isVirtualQProxyStyle) {
         vqproxystyle->setQProxyStyle_IsSignalConnected_IsBase(true);

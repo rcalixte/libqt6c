@@ -151,14 +151,6 @@ const QJsonValue* q_jsonvalue_operator_subscript_with_qsizetype(void* self, int6
     return QJsonValue_OperatorSubscriptWithQsizetype((QJsonValue*)self, i);
 }
 
-bool q_jsonvalue_operator_equal(void* self, void* other) {
-    return QJsonValue_OperatorEqual((QJsonValue*)self, (QJsonValue*)other);
-}
-
-bool q_jsonvalue_operator_not_equal(void* self, void* other) {
-    return QJsonValue_OperatorNotEqual((QJsonValue*)self, (QJsonValue*)other);
-}
-
 bool q_jsonvalue_to_bool1(void* self, bool defaultValue) {
     return QJsonValue_ToBool1((QJsonValue*)self, defaultValue);
 }
@@ -260,14 +252,6 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self) {
 
 const QJsonValue* q_jsonvalueconstref_operator_subscript_with_qsizetype(void* self, int64_t i) {
     return QJsonValueConstRef_OperatorSubscriptWithQsizetype((QJsonValueConstRef*)self, i);
-}
-
-bool q_jsonvalueconstref_operator_equal(void* self, void* other) {
-    return QJsonValueConstRef_OperatorEqual((QJsonValueConstRef*)self, (QJsonValue*)other);
-}
-
-bool q_jsonvalueconstref_operator_not_equal(void* self, void* other) {
-    return QJsonValueConstRef_OperatorNotEqual((QJsonValueConstRef*)self, (QJsonValue*)other);
 }
 
 bool q_jsonvalueconstref_to_bool1(void* self, bool defaultValue) {
@@ -394,14 +378,6 @@ QJsonObject* q_jsonvalueref_to_object(void* self) {
 
 const QJsonValue* q_jsonvalueref_operator_subscript_with_qsizetype(void* self, int64_t i) {
     return QJsonValueRef_OperatorSubscriptWithQsizetype((QJsonValueRef*)self, i);
-}
-
-bool q_jsonvalueref_operator_equal(void* self, void* other) {
-    return QJsonValueRef_OperatorEqual((QJsonValueRef*)self, (QJsonValue*)other);
-}
-
-bool q_jsonvalueref_operator_not_equal(void* self, void* other) {
-    return QJsonValueRef_OperatorNotEqual((QJsonValueRef*)self, (QJsonValue*)other);
 }
 
 bool q_jsonvalueref_to_bool1(void* self, bool defaultValue) {

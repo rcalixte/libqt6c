@@ -251,9 +251,9 @@ class VirtualQPolarChart final : public QPolarChart {
     mutable bool qpolarchart_setownedbylayout_isbase = false;
 
   public:
-    VirtualQPolarChart() : QPolarChart(){};
-    VirtualQPolarChart(QGraphicsItem* parent) : QPolarChart(parent){};
-    VirtualQPolarChart(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QPolarChart(parent, wFlags){};
+    VirtualQPolarChart() : QPolarChart() {};
+    VirtualQPolarChart(QGraphicsItem* parent) : QPolarChart(parent) {};
+    VirtualQPolarChart(QGraphicsItem* parent, Qt::WindowFlags wFlags) : QPolarChart(parent, wFlags) {};
 
     ~VirtualQPolarChart() {
         qpolarchart_metacall_callback = nullptr;
@@ -1590,20 +1590,20 @@ class VirtualQPolarChart final : public QPolarChart {
     // Friend functions
     friend void QPolarChart_InitStyleOption(const QPolarChart* self, QStyleOption* option);
     friend void QPolarChart_QBaseInitStyleOption(const QPolarChart* self, QStyleOption* option);
-    friend QSizeF* QPolarChart_SizeHint(const QPolarChart* self, int which, QSizeF* constraint);
-    friend QSizeF* QPolarChart_QBaseSizeHint(const QPolarChart* self, int which, QSizeF* constraint);
+    friend QSizeF* QPolarChart_SizeHint(const QPolarChart* self, int which, const QSizeF* constraint);
+    friend QSizeF* QPolarChart_QBaseSizeHint(const QPolarChart* self, int which, const QSizeF* constraint);
     friend void QPolarChart_UpdateGeometry(QPolarChart* self);
     friend void QPolarChart_QBaseUpdateGeometry(QPolarChart* self);
-    friend QVariant* QPolarChart_ItemChange(QPolarChart* self, int change, QVariant* value);
-    friend QVariant* QPolarChart_QBaseItemChange(QPolarChart* self, int change, QVariant* value);
-    friend QVariant* QPolarChart_PropertyChange(QPolarChart* self, libqt_string propertyName, QVariant* value);
-    friend QVariant* QPolarChart_QBasePropertyChange(QPolarChart* self, libqt_string propertyName, QVariant* value);
+    friend QVariant* QPolarChart_ItemChange(QPolarChart* self, int change, const QVariant* value);
+    friend QVariant* QPolarChart_QBaseItemChange(QPolarChart* self, int change, const QVariant* value);
+    friend QVariant* QPolarChart_PropertyChange(QPolarChart* self, const libqt_string propertyName, const QVariant* value);
+    friend QVariant* QPolarChart_QBasePropertyChange(QPolarChart* self, const libqt_string propertyName, const QVariant* value);
     friend bool QPolarChart_SceneEvent(QPolarChart* self, QEvent* event);
     friend bool QPolarChart_QBaseSceneEvent(QPolarChart* self, QEvent* event);
     friend bool QPolarChart_WindowFrameEvent(QPolarChart* self, QEvent* e);
     friend bool QPolarChart_QBaseWindowFrameEvent(QPolarChart* self, QEvent* e);
-    friend int QPolarChart_WindowFrameSectionAt(const QPolarChart* self, QPointF* pos);
-    friend int QPolarChart_QBaseWindowFrameSectionAt(const QPolarChart* self, QPointF* pos);
+    friend int QPolarChart_WindowFrameSectionAt(const QPolarChart* self, const QPointF* pos);
+    friend int QPolarChart_QBaseWindowFrameSectionAt(const QPolarChart* self, const QPointF* pos);
     friend bool QPolarChart_Event(QPolarChart* self, QEvent* event);
     friend bool QPolarChart_QBaseEvent(QPolarChart* self, QEvent* event);
     friend void QPolarChart_ChangeEvent(QPolarChart* self, QEvent* event);
@@ -1644,10 +1644,10 @@ class VirtualQPolarChart final : public QPolarChart {
     friend void QPolarChart_QBaseChildEvent(QPolarChart* self, QChildEvent* event);
     friend void QPolarChart_CustomEvent(QPolarChart* self, QEvent* event);
     friend void QPolarChart_QBaseCustomEvent(QPolarChart* self, QEvent* event);
-    friend void QPolarChart_ConnectNotify(QPolarChart* self, QMetaMethod* signal);
-    friend void QPolarChart_QBaseConnectNotify(QPolarChart* self, QMetaMethod* signal);
-    friend void QPolarChart_DisconnectNotify(QPolarChart* self, QMetaMethod* signal);
-    friend void QPolarChart_QBaseDisconnectNotify(QPolarChart* self, QMetaMethod* signal);
+    friend void QPolarChart_ConnectNotify(QPolarChart* self, const QMetaMethod* signal);
+    friend void QPolarChart_QBaseConnectNotify(QPolarChart* self, const QMetaMethod* signal);
+    friend void QPolarChart_DisconnectNotify(QPolarChart* self, const QMetaMethod* signal);
+    friend void QPolarChart_QBaseDisconnectNotify(QPolarChart* self, const QMetaMethod* signal);
     friend bool QPolarChart_SceneEventFilter(QPolarChart* self, QGraphicsItem* watched, QEvent* event);
     friend bool QPolarChart_QBaseSceneEventFilter(QPolarChart* self, QGraphicsItem* watched, QEvent* event);
     friend void QPolarChart_ContextMenuEvent(QPolarChart* self, QGraphicsSceneContextMenuEvent* event);
@@ -1682,10 +1682,10 @@ class VirtualQPolarChart final : public QPolarChart {
     friend QVariant* QPolarChart_QBaseInputMethodQuery(const QPolarChart* self, int query);
     friend bool QPolarChart_SupportsExtension(const QPolarChart* self, int extension);
     friend bool QPolarChart_QBaseSupportsExtension(const QPolarChart* self, int extension);
-    friend void QPolarChart_SetExtension(QPolarChart* self, int extension, QVariant* variant);
-    friend void QPolarChart_QBaseSetExtension(QPolarChart* self, int extension, QVariant* variant);
-    friend QVariant* QPolarChart_Extension(const QPolarChart* self, QVariant* variant);
-    friend QVariant* QPolarChart_QBaseExtension(const QPolarChart* self, QVariant* variant);
+    friend void QPolarChart_SetExtension(QPolarChart* self, int extension, const QVariant* variant);
+    friend void QPolarChart_QBaseSetExtension(QPolarChart* self, int extension, const QVariant* variant);
+    friend QVariant* QPolarChart_Extension(const QPolarChart* self, const QVariant* variant);
+    friend QVariant* QPolarChart_QBaseExtension(const QPolarChart* self, const QVariant* variant);
     friend void QPolarChart_UpdateMicroFocus(QPolarChart* self);
     friend void QPolarChart_QBaseUpdateMicroFocus(QPolarChart* self);
     friend QObject* QPolarChart_Sender(const QPolarChart* self);
@@ -1694,8 +1694,8 @@ class VirtualQPolarChart final : public QPolarChart {
     friend int QPolarChart_QBaseSenderSignalIndex(const QPolarChart* self);
     friend int QPolarChart_Receivers(const QPolarChart* self, const char* signal);
     friend int QPolarChart_QBaseReceivers(const QPolarChart* self, const char* signal);
-    friend bool QPolarChart_IsSignalConnected(const QPolarChart* self, QMetaMethod* signal);
-    friend bool QPolarChart_QBaseIsSignalConnected(const QPolarChart* self, QMetaMethod* signal);
+    friend bool QPolarChart_IsSignalConnected(const QPolarChart* self, const QMetaMethod* signal);
+    friend bool QPolarChart_QBaseIsSignalConnected(const QPolarChart* self, const QMetaMethod* signal);
     friend void QPolarChart_AddToIndex(QPolarChart* self);
     friend void QPolarChart_QBaseAddToIndex(QPolarChart* self);
     friend void QPolarChart_RemoveFromIndex(QPolarChart* self);

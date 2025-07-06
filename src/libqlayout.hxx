@@ -148,8 +148,8 @@ class VirtualQLayout final : public QLayout {
     mutable bool qlayout_issignalconnected_isbase = false;
 
   public:
-    VirtualQLayout(QWidget* parent) : QLayout(parent){};
-    VirtualQLayout() : QLayout(){};
+    VirtualQLayout(QWidget* parent) : QLayout(parent) {};
+    VirtualQLayout() : QLayout() {};
 
     ~VirtualQLayout() {
         qlayout_metacall_callback = nullptr;
@@ -857,10 +857,10 @@ class VirtualQLayout final : public QLayout {
     friend void QLayout_QBaseTimerEvent(QLayout* self, QTimerEvent* event);
     friend void QLayout_CustomEvent(QLayout* self, QEvent* event);
     friend void QLayout_QBaseCustomEvent(QLayout* self, QEvent* event);
-    friend void QLayout_ConnectNotify(QLayout* self, QMetaMethod* signal);
-    friend void QLayout_QBaseConnectNotify(QLayout* self, QMetaMethod* signal);
-    friend void QLayout_DisconnectNotify(QLayout* self, QMetaMethod* signal);
-    friend void QLayout_QBaseDisconnectNotify(QLayout* self, QMetaMethod* signal);
+    friend void QLayout_ConnectNotify(QLayout* self, const QMetaMethod* signal);
+    friend void QLayout_QBaseConnectNotify(QLayout* self, const QMetaMethod* signal);
+    friend void QLayout_DisconnectNotify(QLayout* self, const QMetaMethod* signal);
+    friend void QLayout_QBaseDisconnectNotify(QLayout* self, const QMetaMethod* signal);
     friend void QLayout_WidgetEvent(QLayout* self, QEvent* param1);
     friend void QLayout_QBaseWidgetEvent(QLayout* self, QEvent* param1);
     friend void QLayout_AddChildLayout(QLayout* self, QLayout* l);
@@ -869,16 +869,16 @@ class VirtualQLayout final : public QLayout {
     friend void QLayout_QBaseAddChildWidget(QLayout* self, QWidget* w);
     friend bool QLayout_AdoptLayout(QLayout* self, QLayout* layout);
     friend bool QLayout_QBaseAdoptLayout(QLayout* self, QLayout* layout);
-    friend QRect* QLayout_AlignmentRect(const QLayout* self, QRect* param1);
-    friend QRect* QLayout_QBaseAlignmentRect(const QLayout* self, QRect* param1);
+    friend QRect* QLayout_AlignmentRect(const QLayout* self, const QRect* param1);
+    friend QRect* QLayout_QBaseAlignmentRect(const QLayout* self, const QRect* param1);
     friend QObject* QLayout_Sender(const QLayout* self);
     friend QObject* QLayout_QBaseSender(const QLayout* self);
     friend int QLayout_SenderSignalIndex(const QLayout* self);
     friend int QLayout_QBaseSenderSignalIndex(const QLayout* self);
     friend int QLayout_Receivers(const QLayout* self, const char* signal);
     friend int QLayout_QBaseReceivers(const QLayout* self, const char* signal);
-    friend bool QLayout_IsSignalConnected(const QLayout* self, QMetaMethod* signal);
-    friend bool QLayout_QBaseIsSignalConnected(const QLayout* self, QMetaMethod* signal);
+    friend bool QLayout_IsSignalConnected(const QLayout* self, const QMetaMethod* signal);
+    friend bool QLayout_QBaseIsSignalConnected(const QLayout* self, const QMetaMethod* signal);
 };
 
 #endif

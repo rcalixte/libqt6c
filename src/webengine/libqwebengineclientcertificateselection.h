@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../network/libqsslcertificate.h"
-#include "../libqurl.h"
-
 /// https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html
 
 /// q_webengineclientcertificateselection_new constructs a new QWebEngineClientCertificateSelection object.

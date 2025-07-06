@@ -19,7 +19,7 @@ QPluginLoader* QPluginLoader_new() {
     return new VirtualQPluginLoader();
 }
 
-QPluginLoader* QPluginLoader_new2(libqt_string fileName) {
+QPluginLoader* QPluginLoader_new2(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPluginLoader(fileName_QString);
 }
@@ -28,7 +28,7 @@ QPluginLoader* QPluginLoader_new3(QObject* parent) {
     return new VirtualQPluginLoader(parent);
 }
 
-QPluginLoader* QPluginLoader_new4(libqt_string fileName, QObject* parent) {
+QPluginLoader* QPluginLoader_new4(const libqt_string fileName, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPluginLoader(fileName_QString, parent);
 }
@@ -90,14 +90,14 @@ QJsonObject* QPluginLoader_MetaData(const QPluginLoader* self) {
 }
 
 libqt_list /* of QObject* */ QPluginLoader_StaticInstances() {
-    QObjectList _ret = QPluginLoader::staticInstances();
+    QList<QObject*> _ret = QPluginLoader::staticInstances();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QObject** _arr = static_cast<QObject**>(malloc(sizeof(QObject*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QObject** _arr = static_cast<QObject**>(malloc(sizeof(QObject*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = _ret[i];
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -105,12 +105,12 @@ libqt_list /* of QObject* */ QPluginLoader_StaticInstances() {
 libqt_list /* of QStaticPlugin* */ QPluginLoader_StaticPlugins() {
     QList<QStaticPlugin> _ret = QPluginLoader::staticPlugins();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QStaticPlugin** _arr = static_cast<QStaticPlugin**>(malloc(sizeof(QStaticPlugin*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QStaticPlugin** _arr = static_cast<QStaticPlugin**>(malloc(sizeof(QStaticPlugin*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QStaticPlugin(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -127,7 +127,7 @@ bool QPluginLoader_IsLoaded(const QPluginLoader* self) {
     return self->isLoaded();
 }
 
-void QPluginLoader_SetFileName(QPluginLoader* self, libqt_string fileName) {
+void QPluginLoader_SetFileName(QPluginLoader* self, const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     self->setFileName(fileName_QString);
 }
@@ -334,7 +334,7 @@ void QPluginLoader_OnCustomEvent(QPluginLoader* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPluginLoader_ConnectNotify(QPluginLoader* self, QMetaMethod* signal) {
+void QPluginLoader_ConnectNotify(QPluginLoader* self, const QMetaMethod* signal) {
     auto* vqpluginloader = dynamic_cast<VirtualQPluginLoader*>(self);
     if (vqpluginloader && vqpluginloader->isVirtualQPluginLoader) {
         vqpluginloader->connectNotify(*signal);
@@ -344,7 +344,7 @@ void QPluginLoader_ConnectNotify(QPluginLoader* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPluginLoader_QBaseConnectNotify(QPluginLoader* self, QMetaMethod* signal) {
+void QPluginLoader_QBaseConnectNotify(QPluginLoader* self, const QMetaMethod* signal) {
     auto* vqpluginloader = dynamic_cast<VirtualQPluginLoader*>(self);
     if (vqpluginloader && vqpluginloader->isVirtualQPluginLoader) {
         vqpluginloader->setQPluginLoader_ConnectNotify_IsBase(true);
@@ -363,7 +363,7 @@ void QPluginLoader_OnConnectNotify(QPluginLoader* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPluginLoader_DisconnectNotify(QPluginLoader* self, QMetaMethod* signal) {
+void QPluginLoader_DisconnectNotify(QPluginLoader* self, const QMetaMethod* signal) {
     auto* vqpluginloader = dynamic_cast<VirtualQPluginLoader*>(self);
     if (vqpluginloader && vqpluginloader->isVirtualQPluginLoader) {
         vqpluginloader->disconnectNotify(*signal);
@@ -373,7 +373,7 @@ void QPluginLoader_DisconnectNotify(QPluginLoader* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPluginLoader_QBaseDisconnectNotify(QPluginLoader* self, QMetaMethod* signal) {
+void QPluginLoader_QBaseDisconnectNotify(QPluginLoader* self, const QMetaMethod* signal) {
     auto* vqpluginloader = dynamic_cast<VirtualQPluginLoader*>(self);
     if (vqpluginloader && vqpluginloader->isVirtualQPluginLoader) {
         vqpluginloader->setQPluginLoader_DisconnectNotify_IsBase(true);
@@ -479,7 +479,7 @@ void QPluginLoader_OnReceivers(const QPluginLoader* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPluginLoader_IsSignalConnected(const QPluginLoader* self, QMetaMethod* signal) {
+bool QPluginLoader_IsSignalConnected(const QPluginLoader* self, const QMetaMethod* signal) {
     auto* vqpluginloader = const_cast<VirtualQPluginLoader*>(dynamic_cast<const VirtualQPluginLoader*>(self));
     if (vqpluginloader && vqpluginloader->isVirtualQPluginLoader) {
         return vqpluginloader->isSignalConnected(*signal);
@@ -489,7 +489,7 @@ bool QPluginLoader_IsSignalConnected(const QPluginLoader* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QPluginLoader_QBaseIsSignalConnected(const QPluginLoader* self, QMetaMethod* signal) {
+bool QPluginLoader_QBaseIsSignalConnected(const QPluginLoader* self, const QMetaMethod* signal) {
     auto* vqpluginloader = const_cast<VirtualQPluginLoader*>(dynamic_cast<const VirtualQPluginLoader*>(self));
     if (vqpluginloader && vqpluginloader->isVirtualQPluginLoader) {
         vqpluginloader->setQPluginLoader_IsSignalConnected_IsBase(true);

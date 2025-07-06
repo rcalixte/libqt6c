@@ -41,11 +41,11 @@ libqt_string QPaintDeviceWindow_Tr(const char* s) {
     return _str;
 }
 
-void QPaintDeviceWindow_Update(QPaintDeviceWindow* self, QRect* rect) {
+void QPaintDeviceWindow_Update(QPaintDeviceWindow* self, const QRect* rect) {
     self->update(*rect);
 }
 
-void QPaintDeviceWindow_UpdateWithRegion(QPaintDeviceWindow* self, QRegion* region) {
+void QPaintDeviceWindow_UpdateWithRegion(QPaintDeviceWindow* self, const QRegion* region) {
     self->update(*region);
 }
 

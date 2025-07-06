@@ -132,7 +132,7 @@ bool QPieSlice_IsExploded(const QPieSlice* self) {
     return self->isExploded();
 }
 
-void QPieSlice_SetPen(QPieSlice* self, QPen* pen) {
+void QPieSlice_SetPen(QPieSlice* self, const QPen* pen) {
     self->setPen(*pen);
 }
 
@@ -156,7 +156,7 @@ void QPieSlice_SetBorderWidth(QPieSlice* self, int width) {
     self->setBorderWidth(static_cast<int>(width));
 }
 
-void QPieSlice_SetBrush(QPieSlice* self, QBrush* brush) {
+void QPieSlice_SetBrush(QPieSlice* self, const QBrush* brush) {
     self->setBrush(*brush);
 }
 
@@ -172,7 +172,7 @@ void QPieSlice_SetColor(QPieSlice* self, QColor* color) {
     self->setColor(*color);
 }
 
-void QPieSlice_SetLabelBrush(QPieSlice* self, QBrush* brush) {
+void QPieSlice_SetLabelBrush(QPieSlice* self, const QBrush* brush) {
     self->setLabelBrush(*brush);
 }
 
@@ -188,7 +188,7 @@ void QPieSlice_SetLabelColor(QPieSlice* self, QColor* color) {
     self->setLabelColor(*color);
 }
 
-void QPieSlice_SetLabelFont(QPieSlice* self, QFont* font) {
+void QPieSlice_SetLabelFont(QPieSlice* self, const QFont* font) {
     self->setLabelFont(*font);
 }
 
@@ -616,7 +616,7 @@ void QPieSlice_OnCustomEvent(QPieSlice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPieSlice_ConnectNotify(QPieSlice* self, QMetaMethod* signal) {
+void QPieSlice_ConnectNotify(QPieSlice* self, const QMetaMethod* signal) {
     auto* vqpieslice = dynamic_cast<VirtualQPieSlice*>(self);
     if (vqpieslice && vqpieslice->isVirtualQPieSlice) {
         vqpieslice->connectNotify(*signal);
@@ -626,7 +626,7 @@ void QPieSlice_ConnectNotify(QPieSlice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPieSlice_QBaseConnectNotify(QPieSlice* self, QMetaMethod* signal) {
+void QPieSlice_QBaseConnectNotify(QPieSlice* self, const QMetaMethod* signal) {
     auto* vqpieslice = dynamic_cast<VirtualQPieSlice*>(self);
     if (vqpieslice && vqpieslice->isVirtualQPieSlice) {
         vqpieslice->setQPieSlice_ConnectNotify_IsBase(true);
@@ -645,7 +645,7 @@ void QPieSlice_OnConnectNotify(QPieSlice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QPieSlice_DisconnectNotify(QPieSlice* self, QMetaMethod* signal) {
+void QPieSlice_DisconnectNotify(QPieSlice* self, const QMetaMethod* signal) {
     auto* vqpieslice = dynamic_cast<VirtualQPieSlice*>(self);
     if (vqpieslice && vqpieslice->isVirtualQPieSlice) {
         vqpieslice->disconnectNotify(*signal);
@@ -655,7 +655,7 @@ void QPieSlice_DisconnectNotify(QPieSlice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QPieSlice_QBaseDisconnectNotify(QPieSlice* self, QMetaMethod* signal) {
+void QPieSlice_QBaseDisconnectNotify(QPieSlice* self, const QMetaMethod* signal) {
     auto* vqpieslice = dynamic_cast<VirtualQPieSlice*>(self);
     if (vqpieslice && vqpieslice->isVirtualQPieSlice) {
         vqpieslice->setQPieSlice_DisconnectNotify_IsBase(true);
@@ -761,7 +761,7 @@ void QPieSlice_OnReceivers(const QPieSlice* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QPieSlice_IsSignalConnected(const QPieSlice* self, QMetaMethod* signal) {
+bool QPieSlice_IsSignalConnected(const QPieSlice* self, const QMetaMethod* signal) {
     auto* vqpieslice = const_cast<VirtualQPieSlice*>(dynamic_cast<const VirtualQPieSlice*>(self));
     if (vqpieslice && vqpieslice->isVirtualQPieSlice) {
         return vqpieslice->isSignalConnected(*signal);
@@ -771,7 +771,7 @@ bool QPieSlice_IsSignalConnected(const QPieSlice* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QPieSlice_QBaseIsSignalConnected(const QPieSlice* self, QMetaMethod* signal) {
+bool QPieSlice_QBaseIsSignalConnected(const QPieSlice* self, const QMetaMethod* signal) {
     auto* vqpieslice = const_cast<VirtualQPieSlice*>(dynamic_cast<const VirtualQPieSlice*>(self));
     if (vqpieslice && vqpieslice->isVirtualQPieSlice) {
         vqpieslice->setQPieSlice_IsSignalConnected_IsBase(true);

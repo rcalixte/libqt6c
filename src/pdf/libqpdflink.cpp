@@ -14,11 +14,11 @@ QPdfLink* QPdfLink_new() {
     return new QPdfLink();
 }
 
-QPdfLink* QPdfLink_new2(QPdfLink* other) {
+QPdfLink* QPdfLink_new2(const QPdfLink* other) {
     return new QPdfLink(*other);
 }
 
-void QPdfLink_OperatorAssign(QPdfLink* self, QPdfLink* other) {
+void QPdfLink_OperatorAssign(QPdfLink* self, const QPdfLink* other) {
     self->operator=(*other);
 }
 
@@ -73,12 +73,12 @@ libqt_string QPdfLink_ContextAfter(const QPdfLink* self) {
 libqt_list /* of QRectF* */ QPdfLink_Rectangles(const QPdfLink* self) {
     QList<QRectF> _ret = self->rectangles();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QRectF** _arr = static_cast<QRectF**>(malloc(sizeof(QRectF*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QRectF** _arr = static_cast<QRectF**>(malloc(sizeof(QRectF*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QRectF(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

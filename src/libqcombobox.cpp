@@ -141,12 +141,12 @@ bool QComboBox_HasFrame(const QComboBox* self) {
     return self->hasFrame();
 }
 
-int QComboBox_FindText(const QComboBox* self, libqt_string text) {
+int QComboBox_FindText(const QComboBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->findText(text_QString);
 }
 
-int QComboBox_FindData(const QComboBox* self, QVariant* data) {
+int QComboBox_FindData(const QComboBox* self, const QVariant* data) {
     return self->findData(*data);
 }
 
@@ -178,11 +178,11 @@ QSize* QComboBox_IconSize(const QComboBox* self) {
     return new QSize(self->iconSize());
 }
 
-void QComboBox_SetIconSize(QComboBox* self, QSize* size) {
+void QComboBox_SetIconSize(QComboBox* self, const QSize* size) {
     self->setIconSize(*size);
 }
 
-void QComboBox_SetPlaceholderText(QComboBox* self, libqt_string placeholderText) {
+void QComboBox_SetPlaceholderText(QComboBox* self, const libqt_string placeholderText) {
     QString placeholderText_QString = QString::fromUtf8(placeholderText.data, placeholderText.len);
     self->setPlaceholderText(placeholderText_QString);
 }
@@ -215,7 +215,7 @@ QLineEdit* QComboBox_LineEdit(const QComboBox* self) {
     return self->lineEdit();
 }
 
-void QComboBox_SetValidator(QComboBox* self, QValidator* v) {
+void QComboBox_SetValidator(QComboBox* self, const QValidator* v) {
     self->setValidator(v);
 }
 
@@ -247,7 +247,7 @@ QModelIndex* QComboBox_RootModelIndex(const QComboBox* self) {
     return new QModelIndex(self->rootModelIndex());
 }
 
-void QComboBox_SetRootModelIndex(QComboBox* self, QModelIndex* index) {
+void QComboBox_SetRootModelIndex(QComboBox* self, const QModelIndex* index) {
     self->setRootModelIndex(*index);
 }
 
@@ -299,18 +299,18 @@ QVariant* QComboBox_ItemData(const QComboBox* self, int index) {
     return new QVariant(self->itemData(static_cast<int>(index)));
 }
 
-void QComboBox_AddItem(QComboBox* self, libqt_string text) {
+void QComboBox_AddItem(QComboBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->addItem(text_QString);
 }
 
-void QComboBox_AddItem2(QComboBox* self, QIcon* icon, libqt_string text) {
+void QComboBox_AddItem2(QComboBox* self, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->addItem(*icon, text_QString);
 }
 
-void QComboBox_AddItems(QComboBox* self, libqt_list /* of libqt_string */ texts) {
-    QStringList texts_QList;
+void QComboBox_AddItems(QComboBox* self, const libqt_list /* of libqt_string */ texts) {
+    QList<QString> texts_QList;
     texts_QList.reserve(texts.len);
     libqt_string* texts_arr = static_cast<libqt_string*>(texts.data.ptr);
     for (size_t i = 0; i < texts.len; ++i) {
@@ -320,18 +320,18 @@ void QComboBox_AddItems(QComboBox* self, libqt_list /* of libqt_string */ texts)
     self->addItems(texts_QList);
 }
 
-void QComboBox_InsertItem(QComboBox* self, int index, libqt_string text) {
+void QComboBox_InsertItem(QComboBox* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertItem(static_cast<int>(index), text_QString);
 }
 
-void QComboBox_InsertItem2(QComboBox* self, int index, QIcon* icon, libqt_string text) {
+void QComboBox_InsertItem2(QComboBox* self, int index, const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertItem(static_cast<int>(index), *icon, text_QString);
 }
 
-void QComboBox_InsertItems(QComboBox* self, int index, libqt_list /* of libqt_string */ texts) {
-    QStringList texts_QList;
+void QComboBox_InsertItems(QComboBox* self, int index, const libqt_list /* of libqt_string */ texts) {
+    QList<QString> texts_QList;
     texts_QList.reserve(texts.len);
     libqt_string* texts_arr = static_cast<libqt_string*>(texts.data.ptr);
     for (size_t i = 0; i < texts.len; ++i) {
@@ -349,16 +349,16 @@ void QComboBox_RemoveItem(QComboBox* self, int index) {
     self->removeItem(static_cast<int>(index));
 }
 
-void QComboBox_SetItemText(QComboBox* self, int index, libqt_string text) {
+void QComboBox_SetItemText(QComboBox* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setItemText(static_cast<int>(index), text_QString);
 }
 
-void QComboBox_SetItemIcon(QComboBox* self, int index, QIcon* icon) {
+void QComboBox_SetItemIcon(QComboBox* self, int index, const QIcon* icon) {
     self->setItemIcon(static_cast<int>(index), *icon);
 }
 
-void QComboBox_SetItemData(QComboBox* self, int index, QVariant* value) {
+void QComboBox_SetItemData(QComboBox* self, int index, const QVariant* value) {
     self->setItemData(static_cast<int>(index), *value);
 }
 
@@ -370,7 +370,7 @@ void QComboBox_SetView(QComboBox* self, QAbstractItemView* itemView) {
     self->setView(itemView);
 }
 
-QVariant* QComboBox_InputMethodQuery2(const QComboBox* self, int query, QVariant* argument) {
+QVariant* QComboBox_InputMethodQuery2(const QComboBox* self, int query, const QVariant* argument) {
     return new QVariant(self->inputMethodQuery(static_cast<Qt::InputMethodQuery>(query), *argument));
 }
 
@@ -382,7 +382,7 @@ void QComboBox_ClearEditText(QComboBox* self) {
     self->clearEditText();
 }
 
-void QComboBox_SetEditText(QComboBox* self, libqt_string text) {
+void QComboBox_SetEditText(QComboBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setEditText(text_QString);
 }
@@ -391,12 +391,12 @@ void QComboBox_SetCurrentIndex(QComboBox* self, int index) {
     self->setCurrentIndex(static_cast<int>(index));
 }
 
-void QComboBox_SetCurrentText(QComboBox* self, libqt_string text) {
+void QComboBox_SetCurrentText(QComboBox* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setCurrentText(text_QString);
 }
 
-void QComboBox_EditTextChanged(QComboBox* self, libqt_string param1) {
+void QComboBox_EditTextChanged(QComboBox* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->editTextChanged(param1_QString);
 }
@@ -429,7 +429,7 @@ void QComboBox_Connect_Activated(QComboBox* self, intptr_t slot) {
     });
 }
 
-void QComboBox_TextActivated(QComboBox* self, libqt_string param1) {
+void QComboBox_TextActivated(QComboBox* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->textActivated(param1_QString);
 }
@@ -462,7 +462,7 @@ void QComboBox_Connect_Highlighted(QComboBox* self, intptr_t slot) {
     });
 }
 
-void QComboBox_TextHighlighted(QComboBox* self, libqt_string param1) {
+void QComboBox_TextHighlighted(QComboBox* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->textHighlighted(param1_QString);
 }
@@ -495,7 +495,7 @@ void QComboBox_Connect_CurrentIndexChanged(QComboBox* self, intptr_t slot) {
     });
 }
 
-void QComboBox_CurrentTextChanged(QComboBox* self, libqt_string param1) {
+void QComboBox_CurrentTextChanged(QComboBox* self, const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     self->currentTextChanged(param1_QString);
 }
@@ -540,16 +540,16 @@ libqt_string QComboBox_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-int QComboBox_FindText2(const QComboBox* self, libqt_string text, int flags) {
+int QComboBox_FindText2(const QComboBox* self, const libqt_string text, int flags) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return self->findText(text_QString, static_cast<Qt::MatchFlags>(flags));
 }
 
-int QComboBox_FindData2(const QComboBox* self, QVariant* data, int role) {
+int QComboBox_FindData2(const QComboBox* self, const QVariant* data, int role) {
     return self->findData(*data, static_cast<int>(role));
 }
 
-int QComboBox_FindData3(const QComboBox* self, QVariant* data, int role, int flags) {
+int QComboBox_FindData3(const QComboBox* self, const QVariant* data, int role, int flags) {
     return self->findData(*data, static_cast<int>(role), static_cast<Qt::MatchFlags>(flags));
 }
 
@@ -561,27 +561,27 @@ QVariant* QComboBox_ItemData2(const QComboBox* self, int index, int role) {
     return new QVariant(self->itemData(static_cast<int>(index), static_cast<int>(role)));
 }
 
-void QComboBox_AddItem22(QComboBox* self, libqt_string text, QVariant* userData) {
+void QComboBox_AddItem22(QComboBox* self, const libqt_string text, const QVariant* userData) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->addItem(text_QString, *userData);
 }
 
-void QComboBox_AddItem3(QComboBox* self, QIcon* icon, libqt_string text, QVariant* userData) {
+void QComboBox_AddItem3(QComboBox* self, const QIcon* icon, const libqt_string text, const QVariant* userData) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->addItem(*icon, text_QString, *userData);
 }
 
-void QComboBox_InsertItem3(QComboBox* self, int index, libqt_string text, QVariant* userData) {
+void QComboBox_InsertItem3(QComboBox* self, int index, const libqt_string text, const QVariant* userData) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertItem(static_cast<int>(index), text_QString, *userData);
 }
 
-void QComboBox_InsertItem4(QComboBox* self, int index, QIcon* icon, libqt_string text, QVariant* userData) {
+void QComboBox_InsertItem4(QComboBox* self, int index, const QIcon* icon, const libqt_string text, const QVariant* userData) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->insertItem(static_cast<int>(index), *icon, text_QString, *userData);
 }
 
-void QComboBox_SetItemData3(QComboBox* self, int index, QVariant* value, int role) {
+void QComboBox_SetItemData3(QComboBox* self, int index, const QVariant* value, int role) {
     self->setItemData(static_cast<int>(index), *value, static_cast<int>(role));
 }
 
@@ -1717,7 +1717,7 @@ void QComboBox_OnDropEvent(QComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QComboBox_NativeEvent(QComboBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QComboBox_NativeEvent(QComboBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcombobox = dynamic_cast<VirtualQComboBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
@@ -1728,7 +1728,7 @@ bool QComboBox_NativeEvent(QComboBox* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QComboBox_QBaseNativeEvent(QComboBox* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QComboBox_QBaseNativeEvent(QComboBox* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqcombobox = dynamic_cast<VirtualQComboBox*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
@@ -2009,7 +2009,7 @@ void QComboBox_OnCustomEvent(QComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QComboBox_ConnectNotify(QComboBox* self, QMetaMethod* signal) {
+void QComboBox_ConnectNotify(QComboBox* self, const QMetaMethod* signal) {
     auto* vqcombobox = dynamic_cast<VirtualQComboBox*>(self);
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         vqcombobox->connectNotify(*signal);
@@ -2019,7 +2019,7 @@ void QComboBox_ConnectNotify(QComboBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QComboBox_QBaseConnectNotify(QComboBox* self, QMetaMethod* signal) {
+void QComboBox_QBaseConnectNotify(QComboBox* self, const QMetaMethod* signal) {
     auto* vqcombobox = dynamic_cast<VirtualQComboBox*>(self);
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         vqcombobox->setQComboBox_ConnectNotify_IsBase(true);
@@ -2038,7 +2038,7 @@ void QComboBox_OnConnectNotify(QComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QComboBox_DisconnectNotify(QComboBox* self, QMetaMethod* signal) {
+void QComboBox_DisconnectNotify(QComboBox* self, const QMetaMethod* signal) {
     auto* vqcombobox = dynamic_cast<VirtualQComboBox*>(self);
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         vqcombobox->disconnectNotify(*signal);
@@ -2048,7 +2048,7 @@ void QComboBox_DisconnectNotify(QComboBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QComboBox_QBaseDisconnectNotify(QComboBox* self, QMetaMethod* signal) {
+void QComboBox_QBaseDisconnectNotify(QComboBox* self, const QMetaMethod* signal) {
     auto* vqcombobox = dynamic_cast<VirtualQComboBox*>(self);
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         vqcombobox->setQComboBox_DisconnectNotify_IsBase(true);
@@ -2299,7 +2299,7 @@ void QComboBox_OnReceivers(const QComboBox* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QComboBox_IsSignalConnected(const QComboBox* self, QMetaMethod* signal) {
+bool QComboBox_IsSignalConnected(const QComboBox* self, const QMetaMethod* signal) {
     auto* vqcombobox = const_cast<VirtualQComboBox*>(dynamic_cast<const VirtualQComboBox*>(self));
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         return vqcombobox->isSignalConnected(*signal);
@@ -2309,7 +2309,7 @@ bool QComboBox_IsSignalConnected(const QComboBox* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QComboBox_QBaseIsSignalConnected(const QComboBox* self, QMetaMethod* signal) {
+bool QComboBox_QBaseIsSignalConnected(const QComboBox* self, const QMetaMethod* signal) {
     auto* vqcombobox = const_cast<VirtualQComboBox*>(dynamic_cast<const VirtualQComboBox*>(self));
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         vqcombobox->setQComboBox_IsSignalConnected_IsBase(true);
@@ -2324,6 +2324,35 @@ void QComboBox_OnIsSignalConnected(const QComboBox* self, intptr_t slot) {
     auto* vqcombobox = const_cast<VirtualQComboBox*>(dynamic_cast<const VirtualQComboBox*>(self));
     if (vqcombobox && vqcombobox->isVirtualQComboBox) {
         vqcombobox->setQComboBox_IsSignalConnected_Callback(reinterpret_cast<VirtualQComboBox::QComboBox_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QComboBox_GetDecodedMetricF(const QComboBox* self, int metricA, int metricB) {
+    auto* vqcombobox = const_cast<VirtualQComboBox*>(dynamic_cast<const VirtualQComboBox*>(self));
+    if (vqcombobox && vqcombobox->isVirtualQComboBox) {
+        return vqcombobox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQComboBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QComboBox_QBaseGetDecodedMetricF(const QComboBox* self, int metricA, int metricB) {
+    auto* vqcombobox = const_cast<VirtualQComboBox*>(dynamic_cast<const VirtualQComboBox*>(self));
+    if (vqcombobox && vqcombobox->isVirtualQComboBox) {
+        vqcombobox->setQComboBox_GetDecodedMetricF_IsBase(true);
+        return vqcombobox->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQComboBox*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QComboBox_OnGetDecodedMetricF(const QComboBox* self, intptr_t slot) {
+    auto* vqcombobox = const_cast<VirtualQComboBox*>(dynamic_cast<const VirtualQComboBox*>(self));
+    if (vqcombobox && vqcombobox->isVirtualQComboBox) {
+        vqcombobox->setQComboBox_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQComboBox::QComboBox_GetDecodedMetricF_Callback>(slot));
     }
 }
 

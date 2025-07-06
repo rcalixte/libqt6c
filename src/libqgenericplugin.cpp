@@ -93,7 +93,7 @@ libqt_string QGenericPlugin_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-QObject* QGenericPlugin_Create(QGenericPlugin* self, libqt_string name, libqt_string spec) {
+QObject* QGenericPlugin_Create(QGenericPlugin* self, const libqt_string name, const libqt_string spec) {
     auto* vqgenericplugin = dynamic_cast<VirtualQGenericPlugin*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString spec_QString = QString::fromUtf8(spec.data, spec.len);
@@ -105,7 +105,7 @@ QObject* QGenericPlugin_Create(QGenericPlugin* self, libqt_string name, libqt_st
 }
 
 // Base class handler implementation
-QObject* QGenericPlugin_QBaseCreate(QGenericPlugin* self, libqt_string name, libqt_string spec) {
+QObject* QGenericPlugin_QBaseCreate(QGenericPlugin* self, const libqt_string name, const libqt_string spec) {
     auto* vqgenericplugin = dynamic_cast<VirtualQGenericPlugin*>(self);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString spec_QString = QString::fromUtf8(spec.data, spec.len);
@@ -271,7 +271,7 @@ void QGenericPlugin_OnCustomEvent(QGenericPlugin* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGenericPlugin_ConnectNotify(QGenericPlugin* self, QMetaMethod* signal) {
+void QGenericPlugin_ConnectNotify(QGenericPlugin* self, const QMetaMethod* signal) {
     auto* vqgenericplugin = dynamic_cast<VirtualQGenericPlugin*>(self);
     if (vqgenericplugin && vqgenericplugin->isVirtualQGenericPlugin) {
         vqgenericplugin->connectNotify(*signal);
@@ -281,7 +281,7 @@ void QGenericPlugin_ConnectNotify(QGenericPlugin* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGenericPlugin_QBaseConnectNotify(QGenericPlugin* self, QMetaMethod* signal) {
+void QGenericPlugin_QBaseConnectNotify(QGenericPlugin* self, const QMetaMethod* signal) {
     auto* vqgenericplugin = dynamic_cast<VirtualQGenericPlugin*>(self);
     if (vqgenericplugin && vqgenericplugin->isVirtualQGenericPlugin) {
         vqgenericplugin->setQGenericPlugin_ConnectNotify_IsBase(true);
@@ -300,7 +300,7 @@ void QGenericPlugin_OnConnectNotify(QGenericPlugin* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGenericPlugin_DisconnectNotify(QGenericPlugin* self, QMetaMethod* signal) {
+void QGenericPlugin_DisconnectNotify(QGenericPlugin* self, const QMetaMethod* signal) {
     auto* vqgenericplugin = dynamic_cast<VirtualQGenericPlugin*>(self);
     if (vqgenericplugin && vqgenericplugin->isVirtualQGenericPlugin) {
         vqgenericplugin->disconnectNotify(*signal);
@@ -310,7 +310,7 @@ void QGenericPlugin_DisconnectNotify(QGenericPlugin* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QGenericPlugin_QBaseDisconnectNotify(QGenericPlugin* self, QMetaMethod* signal) {
+void QGenericPlugin_QBaseDisconnectNotify(QGenericPlugin* self, const QMetaMethod* signal) {
     auto* vqgenericplugin = dynamic_cast<VirtualQGenericPlugin*>(self);
     if (vqgenericplugin && vqgenericplugin->isVirtualQGenericPlugin) {
         vqgenericplugin->setQGenericPlugin_DisconnectNotify_IsBase(true);
@@ -416,7 +416,7 @@ void QGenericPlugin_OnReceivers(const QGenericPlugin* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGenericPlugin_IsSignalConnected(const QGenericPlugin* self, QMetaMethod* signal) {
+bool QGenericPlugin_IsSignalConnected(const QGenericPlugin* self, const QMetaMethod* signal) {
     auto* vqgenericplugin = const_cast<VirtualQGenericPlugin*>(dynamic_cast<const VirtualQGenericPlugin*>(self));
     if (vqgenericplugin && vqgenericplugin->isVirtualQGenericPlugin) {
         return vqgenericplugin->isSignalConnected(*signal);
@@ -426,7 +426,7 @@ bool QGenericPlugin_IsSignalConnected(const QGenericPlugin* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QGenericPlugin_QBaseIsSignalConnected(const QGenericPlugin* self, QMetaMethod* signal) {
+bool QGenericPlugin_QBaseIsSignalConnected(const QGenericPlugin* self, const QMetaMethod* signal) {
     auto* vqgenericplugin = const_cast<VirtualQGenericPlugin*>(dynamic_cast<const VirtualQGenericPlugin*>(self));
     if (vqgenericplugin && vqgenericplugin->isVirtualQGenericPlugin) {
         vqgenericplugin->setQGenericPlugin_IsSignalConnected_IsBase(true);

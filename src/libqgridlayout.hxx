@@ -145,8 +145,8 @@ class VirtualQGridLayout final : public QGridLayout {
     mutable bool qgridlayout_issignalconnected_isbase = false;
 
   public:
-    VirtualQGridLayout(QWidget* parent) : QGridLayout(parent){};
-    VirtualQGridLayout() : QGridLayout(){};
+    VirtualQGridLayout(QWidget* parent) : QGridLayout(parent) {};
+    VirtualQGridLayout() : QGridLayout() {};
 
     ~VirtualQGridLayout() {
         qgridlayout_metacall_callback = nullptr;
@@ -855,10 +855,10 @@ class VirtualQGridLayout final : public QGridLayout {
     friend void QGridLayout_QBaseTimerEvent(QGridLayout* self, QTimerEvent* event);
     friend void QGridLayout_CustomEvent(QGridLayout* self, QEvent* event);
     friend void QGridLayout_QBaseCustomEvent(QGridLayout* self, QEvent* event);
-    friend void QGridLayout_ConnectNotify(QGridLayout* self, QMetaMethod* signal);
-    friend void QGridLayout_QBaseConnectNotify(QGridLayout* self, QMetaMethod* signal);
-    friend void QGridLayout_DisconnectNotify(QGridLayout* self, QMetaMethod* signal);
-    friend void QGridLayout_QBaseDisconnectNotify(QGridLayout* self, QMetaMethod* signal);
+    friend void QGridLayout_ConnectNotify(QGridLayout* self, const QMetaMethod* signal);
+    friend void QGridLayout_QBaseConnectNotify(QGridLayout* self, const QMetaMethod* signal);
+    friend void QGridLayout_DisconnectNotify(QGridLayout* self, const QMetaMethod* signal);
+    friend void QGridLayout_QBaseDisconnectNotify(QGridLayout* self, const QMetaMethod* signal);
     friend void QGridLayout_WidgetEvent(QGridLayout* self, QEvent* param1);
     friend void QGridLayout_QBaseWidgetEvent(QGridLayout* self, QEvent* param1);
     friend void QGridLayout_AddChildLayout(QGridLayout* self, QLayout* l);
@@ -867,16 +867,16 @@ class VirtualQGridLayout final : public QGridLayout {
     friend void QGridLayout_QBaseAddChildWidget(QGridLayout* self, QWidget* w);
     friend bool QGridLayout_AdoptLayout(QGridLayout* self, QLayout* layout);
     friend bool QGridLayout_QBaseAdoptLayout(QGridLayout* self, QLayout* layout);
-    friend QRect* QGridLayout_AlignmentRect(const QGridLayout* self, QRect* param1);
-    friend QRect* QGridLayout_QBaseAlignmentRect(const QGridLayout* self, QRect* param1);
+    friend QRect* QGridLayout_AlignmentRect(const QGridLayout* self, const QRect* param1);
+    friend QRect* QGridLayout_QBaseAlignmentRect(const QGridLayout* self, const QRect* param1);
     friend QObject* QGridLayout_Sender(const QGridLayout* self);
     friend QObject* QGridLayout_QBaseSender(const QGridLayout* self);
     friend int QGridLayout_SenderSignalIndex(const QGridLayout* self);
     friend int QGridLayout_QBaseSenderSignalIndex(const QGridLayout* self);
     friend int QGridLayout_Receivers(const QGridLayout* self, const char* signal);
     friend int QGridLayout_QBaseReceivers(const QGridLayout* self, const char* signal);
-    friend bool QGridLayout_IsSignalConnected(const QGridLayout* self, QMetaMethod* signal);
-    friend bool QGridLayout_QBaseIsSignalConnected(const QGridLayout* self, QMetaMethod* signal);
+    friend bool QGridLayout_IsSignalConnected(const QGridLayout* self, const QMetaMethod* signal);
+    friend bool QGridLayout_QBaseIsSignalConnected(const QGridLayout* self, const QMetaMethod* signal);
 };
 
 #endif

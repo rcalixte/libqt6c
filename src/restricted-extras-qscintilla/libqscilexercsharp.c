@@ -290,8 +290,8 @@ QThread* q_scilexercsharp_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_scilexercsharp_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_scilexercsharp_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_scilexercsharp_start_timer(void* self, int interval) {
@@ -300,6 +300,10 @@ int32_t q_scilexercsharp_start_timer(void* self, int interval) {
 
 void q_scilexercsharp_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_scilexercsharp_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexercsharp_children(void* self) {
@@ -392,6 +396,10 @@ bool q_scilexercsharp_inherits(void* self, const char* classname) {
 
 void q_scilexercsharp_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_scilexercsharp_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_scilexercsharp_start_timer2(void* self, int interval, int64_t timerType) {
@@ -938,6 +946,42 @@ void q_scilexercsharp_qbase_disconnect_notify(void* self, void* signal) {
 
 void q_scilexercsharp_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
     QsciLexerCSharp_OnDisconnectNotify((QsciLexerCSharp*)self, (intptr_t)slot);
+}
+
+char* q_scilexercsharp_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerCSharp_TextAsBytes((QsciLexerCSharp*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* q_scilexercsharp_qbase_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerCSharp_QBaseTextAsBytes((QsciLexerCSharp*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexercsharp_on_text_as_bytes(void* self, char* (*slot)(void*, const char*)) {
+    QsciLexerCSharp_OnTextAsBytes((QsciLexerCSharp*)self, (intptr_t)slot);
+}
+
+const char* q_scilexercsharp_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerCSharp_BytesAsText((QsciLexerCSharp*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_scilexercsharp_qbase_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerCSharp_QBaseBytesAsText((QsciLexerCSharp*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_scilexercsharp_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int)) {
+    QsciLexerCSharp_OnBytesAsText((QsciLexerCSharp*)self, (intptr_t)slot);
 }
 
 QObject* q_scilexercsharp_sender(void* self) {

@@ -12,15 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqabstractitemmodel.h"
-#include "../libqdatastream.h"
-#include "../libqdatetime.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "../libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qwebenginehistoryitem.html
 
 /// q_webenginehistoryitem_new constructs a new QWebEngineHistoryItem object.
@@ -653,7 +644,7 @@ QThread* q_webenginehistorymodel_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineHistoryModel* self, QThread* thread ```
-void q_webenginehistorymodel_move_to_thread(void* self, void* thread);
+bool q_webenginehistorymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -668,6 +659,13 @@ int32_t q_webenginehistorymodel_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineHistoryModel* self, int id ```
 void q_webenginehistorymodel_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineHistoryModel* self, enum Qt__TimerId id ```
+void q_webenginehistorymodel_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -801,6 +799,13 @@ bool q_webenginehistorymodel_inherits(void* self, const char* classname);
 ///
 /// ``` QWebEngineHistoryModel* self ```
 void q_webenginehistorymodel_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineHistoryModel* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webenginehistorymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1165,7 +1170,7 @@ QThread* q_webenginehistory_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineHistory* self, QThread* thread ```
-void q_webenginehistory_move_to_thread(void* self, void* thread);
+bool q_webenginehistory_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1180,6 +1185,13 @@ int32_t q_webenginehistory_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineHistory* self, int id ```
 void q_webenginehistory_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineHistory* self, enum Qt__TimerId id ```
+void q_webenginehistory_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1320,6 +1332,13 @@ bool q_webenginehistory_inherits(void* self, const char* classname);
 ///
 /// ``` QWebEngineHistory* self ```
 void q_webenginehistory_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineHistory* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webenginehistory_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

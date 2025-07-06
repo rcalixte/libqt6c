@@ -1,3 +1,4 @@
+#include "libqbytearrayview.hpp"
 #include <string.h>
 #include "libqurlquery.hpp"
 #include "libqurl.hpp"
@@ -63,8 +64,9 @@ char* q_url_to_encoded(void* self) {
     return _ret;
 }
 
-QUrl* q_url_from_encoded(const char* url) {
-    return QUrl_FromEncoded(qstring(url));
+QUrl* q_url_from_encoded(const char* input) {
+    libqt_strview input_strview = qstrview(input);
+    return QUrl_FromEncoded((QByteArrayView*)&input_strview);
 }
 
 QUrl* q_url_from_user_input(const char* userInput) {
@@ -251,18 +253,6 @@ bool q_url_is_detached(void* self) {
     return QUrl_IsDetached((QUrl*)self);
 }
 
-bool q_url_operator_lesser(void* self, void* url) {
-    return QUrl_OperatorLesser((QUrl*)self, (QUrl*)url);
-}
-
-bool q_url_operator_equal(void* self, void* url) {
-    return QUrl_OperatorEqual((QUrl*)self, (QUrl*)url);
-}
-
-bool q_url_operator_not_equal(void* self, void* url) {
-    return QUrl_OperatorNotEqual((QUrl*)self, (QUrl*)url);
-}
-
 const char* q_url_from_percent_encoding(const char* param1) {
     libqt_string _str = QUrl_FromPercentEncoding(qstring(param1));
     char* _ret = qstring_to_char(_str);
@@ -346,8 +336,9 @@ void q_url_set_url2(void* self, const char* url, int64_t mode) {
     QUrl_SetUrl2((QUrl*)self, qstring(url), mode);
 }
 
-QUrl* q_url_from_encoded2(const char* url, int64_t mode) {
-    return QUrl_FromEncoded2(qstring(url), mode);
+QUrl* q_url_from_encoded2(const char* input, int64_t mode) {
+    libqt_strview input_strview = qstrview(input);
+    return QUrl_FromEncoded2((QByteArrayView*)&input_strview, mode);
 }
 
 QUrl* q_url_from_user_input2(const char* userInput, const char* workingDirectory) {

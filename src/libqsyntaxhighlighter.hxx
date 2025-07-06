@@ -94,8 +94,8 @@ class VirtualQSyntaxHighlighter final : public QSyntaxHighlighter {
     mutable bool qsyntaxhighlighter_issignalconnected_isbase = false;
 
   public:
-    VirtualQSyntaxHighlighter(QObject* parent) : QSyntaxHighlighter(parent){};
-    VirtualQSyntaxHighlighter(QTextDocument* parent) : QSyntaxHighlighter(parent){};
+    VirtualQSyntaxHighlighter(QObject* parent) : QSyntaxHighlighter(parent) {};
+    VirtualQSyntaxHighlighter(QTextDocument* parent) : QSyntaxHighlighter(parent) {};
 
     ~VirtualQSyntaxHighlighter() {
         qsyntaxhighlighter_metacall_callback = nullptr;
@@ -520,24 +520,24 @@ class VirtualQSyntaxHighlighter final : public QSyntaxHighlighter {
     }
 
     // Friend functions
-    friend void QSyntaxHighlighter_HighlightBlock(QSyntaxHighlighter* self, libqt_string text);
-    friend void QSyntaxHighlighter_QBaseHighlightBlock(QSyntaxHighlighter* self, libqt_string text);
+    friend void QSyntaxHighlighter_HighlightBlock(QSyntaxHighlighter* self, const libqt_string text);
+    friend void QSyntaxHighlighter_QBaseHighlightBlock(QSyntaxHighlighter* self, const libqt_string text);
     friend void QSyntaxHighlighter_TimerEvent(QSyntaxHighlighter* self, QTimerEvent* event);
     friend void QSyntaxHighlighter_QBaseTimerEvent(QSyntaxHighlighter* self, QTimerEvent* event);
     friend void QSyntaxHighlighter_ChildEvent(QSyntaxHighlighter* self, QChildEvent* event);
     friend void QSyntaxHighlighter_QBaseChildEvent(QSyntaxHighlighter* self, QChildEvent* event);
     friend void QSyntaxHighlighter_CustomEvent(QSyntaxHighlighter* self, QEvent* event);
     friend void QSyntaxHighlighter_QBaseCustomEvent(QSyntaxHighlighter* self, QEvent* event);
-    friend void QSyntaxHighlighter_ConnectNotify(QSyntaxHighlighter* self, QMetaMethod* signal);
-    friend void QSyntaxHighlighter_QBaseConnectNotify(QSyntaxHighlighter* self, QMetaMethod* signal);
-    friend void QSyntaxHighlighter_DisconnectNotify(QSyntaxHighlighter* self, QMetaMethod* signal);
-    friend void QSyntaxHighlighter_QBaseDisconnectNotify(QSyntaxHighlighter* self, QMetaMethod* signal);
-    friend void QSyntaxHighlighter_SetFormat(QSyntaxHighlighter* self, int start, int count, QTextCharFormat* format);
-    friend void QSyntaxHighlighter_QBaseSetFormat(QSyntaxHighlighter* self, int start, int count, QTextCharFormat* format);
-    friend void QSyntaxHighlighter_SetFormat2(QSyntaxHighlighter* self, int start, int count, QColor* color);
-    friend void QSyntaxHighlighter_QBaseSetFormat2(QSyntaxHighlighter* self, int start, int count, QColor* color);
-    friend void QSyntaxHighlighter_SetFormat3(QSyntaxHighlighter* self, int start, int count, QFont* font);
-    friend void QSyntaxHighlighter_QBaseSetFormat3(QSyntaxHighlighter* self, int start, int count, QFont* font);
+    friend void QSyntaxHighlighter_ConnectNotify(QSyntaxHighlighter* self, const QMetaMethod* signal);
+    friend void QSyntaxHighlighter_QBaseConnectNotify(QSyntaxHighlighter* self, const QMetaMethod* signal);
+    friend void QSyntaxHighlighter_DisconnectNotify(QSyntaxHighlighter* self, const QMetaMethod* signal);
+    friend void QSyntaxHighlighter_QBaseDisconnectNotify(QSyntaxHighlighter* self, const QMetaMethod* signal);
+    friend void QSyntaxHighlighter_SetFormat(QSyntaxHighlighter* self, int start, int count, const QTextCharFormat* format);
+    friend void QSyntaxHighlighter_QBaseSetFormat(QSyntaxHighlighter* self, int start, int count, const QTextCharFormat* format);
+    friend void QSyntaxHighlighter_SetFormat2(QSyntaxHighlighter* self, int start, int count, const QColor* color);
+    friend void QSyntaxHighlighter_QBaseSetFormat2(QSyntaxHighlighter* self, int start, int count, const QColor* color);
+    friend void QSyntaxHighlighter_SetFormat3(QSyntaxHighlighter* self, int start, int count, const QFont* font);
+    friend void QSyntaxHighlighter_QBaseSetFormat3(QSyntaxHighlighter* self, int start, int count, const QFont* font);
     friend QTextCharFormat* QSyntaxHighlighter_Format(const QSyntaxHighlighter* self, int pos);
     friend QTextCharFormat* QSyntaxHighlighter_QBaseFormat(const QSyntaxHighlighter* self, int pos);
     friend int QSyntaxHighlighter_PreviousBlockState(const QSyntaxHighlighter* self);
@@ -558,8 +558,8 @@ class VirtualQSyntaxHighlighter final : public QSyntaxHighlighter {
     friend int QSyntaxHighlighter_QBaseSenderSignalIndex(const QSyntaxHighlighter* self);
     friend int QSyntaxHighlighter_Receivers(const QSyntaxHighlighter* self, const char* signal);
     friend int QSyntaxHighlighter_QBaseReceivers(const QSyntaxHighlighter* self, const char* signal);
-    friend bool QSyntaxHighlighter_IsSignalConnected(const QSyntaxHighlighter* self, QMetaMethod* signal);
-    friend bool QSyntaxHighlighter_QBaseIsSignalConnected(const QSyntaxHighlighter* self, QMetaMethod* signal);
+    friend bool QSyntaxHighlighter_IsSignalConnected(const QSyntaxHighlighter* self, const QMetaMethod* signal);
+    friend bool QSyntaxHighlighter_QBaseIsSignalConnected(const QSyntaxHighlighter* self, const QMetaMethod* signal);
 };
 
 #endif

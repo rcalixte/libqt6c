@@ -381,7 +381,7 @@ void QSequentialAnimationGroup_OnCustomEvent(QSequentialAnimationGroup* self, in
 }
 
 // Derived class handler implementation
-void QSequentialAnimationGroup_ConnectNotify(QSequentialAnimationGroup* self, QMetaMethod* signal) {
+void QSequentialAnimationGroup_ConnectNotify(QSequentialAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqsequentialanimationgroup = dynamic_cast<VirtualQSequentialAnimationGroup*>(self);
     if (vqsequentialanimationgroup && vqsequentialanimationgroup->isVirtualQSequentialAnimationGroup) {
         vqsequentialanimationgroup->connectNotify(*signal);
@@ -391,7 +391,7 @@ void QSequentialAnimationGroup_ConnectNotify(QSequentialAnimationGroup* self, QM
 }
 
 // Base class handler implementation
-void QSequentialAnimationGroup_QBaseConnectNotify(QSequentialAnimationGroup* self, QMetaMethod* signal) {
+void QSequentialAnimationGroup_QBaseConnectNotify(QSequentialAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqsequentialanimationgroup = dynamic_cast<VirtualQSequentialAnimationGroup*>(self);
     if (vqsequentialanimationgroup && vqsequentialanimationgroup->isVirtualQSequentialAnimationGroup) {
         vqsequentialanimationgroup->setQSequentialAnimationGroup_ConnectNotify_IsBase(true);
@@ -410,7 +410,7 @@ void QSequentialAnimationGroup_OnConnectNotify(QSequentialAnimationGroup* self, 
 }
 
 // Derived class handler implementation
-void QSequentialAnimationGroup_DisconnectNotify(QSequentialAnimationGroup* self, QMetaMethod* signal) {
+void QSequentialAnimationGroup_DisconnectNotify(QSequentialAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqsequentialanimationgroup = dynamic_cast<VirtualQSequentialAnimationGroup*>(self);
     if (vqsequentialanimationgroup && vqsequentialanimationgroup->isVirtualQSequentialAnimationGroup) {
         vqsequentialanimationgroup->disconnectNotify(*signal);
@@ -420,7 +420,7 @@ void QSequentialAnimationGroup_DisconnectNotify(QSequentialAnimationGroup* self,
 }
 
 // Base class handler implementation
-void QSequentialAnimationGroup_QBaseDisconnectNotify(QSequentialAnimationGroup* self, QMetaMethod* signal) {
+void QSequentialAnimationGroup_QBaseDisconnectNotify(QSequentialAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqsequentialanimationgroup = dynamic_cast<VirtualQSequentialAnimationGroup*>(self);
     if (vqsequentialanimationgroup && vqsequentialanimationgroup->isVirtualQSequentialAnimationGroup) {
         vqsequentialanimationgroup->setQSequentialAnimationGroup_DisconnectNotify_IsBase(true);
@@ -526,7 +526,7 @@ void QSequentialAnimationGroup_OnReceivers(const QSequentialAnimationGroup* self
 }
 
 // Derived class handler implementation
-bool QSequentialAnimationGroup_IsSignalConnected(const QSequentialAnimationGroup* self, QMetaMethod* signal) {
+bool QSequentialAnimationGroup_IsSignalConnected(const QSequentialAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqsequentialanimationgroup = const_cast<VirtualQSequentialAnimationGroup*>(dynamic_cast<const VirtualQSequentialAnimationGroup*>(self));
     if (vqsequentialanimationgroup && vqsequentialanimationgroup->isVirtualQSequentialAnimationGroup) {
         return vqsequentialanimationgroup->isSignalConnected(*signal);
@@ -536,7 +536,7 @@ bool QSequentialAnimationGroup_IsSignalConnected(const QSequentialAnimationGroup
 }
 
 // Base class handler implementation
-bool QSequentialAnimationGroup_QBaseIsSignalConnected(const QSequentialAnimationGroup* self, QMetaMethod* signal) {
+bool QSequentialAnimationGroup_QBaseIsSignalConnected(const QSequentialAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqsequentialanimationgroup = const_cast<VirtualQSequentialAnimationGroup*>(dynamic_cast<const VirtualQSequentialAnimationGroup*>(self));
     if (vqsequentialanimationgroup && vqsequentialanimationgroup->isVirtualQSequentialAnimationGroup) {
         vqsequentialanimationgroup->setQSequentialAnimationGroup_IsSignalConnected_IsBase(true);

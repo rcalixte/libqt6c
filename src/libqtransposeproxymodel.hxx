@@ -250,8 +250,8 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     mutable bool qtransposeproxymodel_issignalconnected_isbase = false;
 
   public:
-    VirtualQTransposeProxyModel() : QTransposeProxyModel(){};
-    VirtualQTransposeProxyModel(QObject* parent) : QTransposeProxyModel(parent){};
+    VirtualQTransposeProxyModel() : QTransposeProxyModel() {};
+    VirtualQTransposeProxyModel(QObject* parent) : QTransposeProxyModel(parent) {};
 
     ~VirtualQTransposeProxyModel() {
         qtransposeproxymodel_metacall_callback = nullptr;
@@ -597,7 +597,7 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
             // Cast returned reference into pointer
             QModelIndex* cbval1 = const_cast<QModelIndex*>(&index_ret);
             const QMap<int, QVariant>& roles_ret = roles;
-            // Convert QMap<> from C++ memory to manually-managed C memory
+            // Convert const QMap<> from C++ memory to manually-managed C memory
             int* roles_karr = static_cast<int*>(malloc(sizeof(int) * roles_ret.size()));
             QVariant** roles_varr = static_cast<QVariant**>(malloc(sizeof(QVariant*) * roles_ret.size()));
             int roles_ctr = 0;
@@ -1085,19 +1085,19 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QMimeData* mimeData(const QModelIndexList& indexes) const override {
+    virtual QMimeData* mimeData(const QList<QModelIndex>& indexes) const override {
         if (qtransposeproxymodel_mimedata_isbase) {
             qtransposeproxymodel_mimedata_isbase = false;
             return QTransposeProxyModel::mimeData(indexes);
         } else if (qtransposeproxymodel_mimedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
 
@@ -1151,13 +1151,13 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QStringList mimeTypes() const override {
+    virtual QList<QString> mimeTypes() const override {
         if (qtransposeproxymodel_mimetypes_isbase) {
             qtransposeproxymodel_mimetypes_isbase = false;
             return QTransposeProxyModel::mimeTypes();
         } else if (qtransposeproxymodel_mimetypes_callback != nullptr) {
             libqt_list /* of libqt_string */ callback_ret = qtransposeproxymodel_mimetypes_callback();
-            QStringList callback_ret_QList;
+            QList<QString> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             libqt_string* callback_ret_arr = static_cast<libqt_string*>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1218,7 +1218,7 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual QModelIndexList match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
+    virtual QList<QModelIndex> match(const QModelIndex& start, int role, const QVariant& value, int hits, Qt::MatchFlags flags) const override {
         if (qtransposeproxymodel_match_isbase) {
             qtransposeproxymodel_match_isbase = false;
             return QTransposeProxyModel::match(start, role, value, hits, flags);
@@ -1234,7 +1234,7 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
             int cbval5 = static_cast<int>(flags);
 
             libqt_list /* of QModelIndex* */ callback_ret = qtransposeproxymodel_match_callback(this, cbval1, cbval2, cbval3, cbval4, cbval5);
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1414,19 +1414,19 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void encodeData(const QModelIndexList& indexes, QDataStream& stream) const {
+    void encodeData(const QList<QModelIndex>& indexes, QDataStream& stream) const {
         if (qtransposeproxymodel_encodedata_isbase) {
             qtransposeproxymodel_encodedata_isbase = false;
             QTransposeProxyModel::encodeData(indexes, stream);
         } else if (qtransposeproxymodel_encodedata_callback != nullptr) {
-            const QModelIndexList& indexes_ret = indexes;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.length()));
-            for (size_t i = 0; i < indexes_ret.length(); ++i) {
+            const QList<QModelIndex>& indexes_ret = indexes;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** indexes_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * indexes_ret.size()));
+            for (size_t i = 0; i < indexes_ret.size(); ++i) {
                 indexes_arr[i] = new QModelIndex(indexes_ret[i]);
             }
             libqt_list indexes_out;
-            indexes_out.len = indexes_ret.length();
+            indexes_out.len = indexes_ret.size();
             indexes_out.data.ptr = static_cast<void*>(indexes_arr);
             libqt_list /* of QModelIndex* */ cbval1 = indexes_out;
             QDataStream& stream_ret = stream;
@@ -1695,29 +1695,29 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    void changePersistentIndexList(const QModelIndexList& from, const QModelIndexList& to) {
+    void changePersistentIndexList(const QList<QModelIndex>& from, const QList<QModelIndex>& to) {
         if (qtransposeproxymodel_changepersistentindexlist_isbase) {
             qtransposeproxymodel_changepersistentindexlist_isbase = false;
             QTransposeProxyModel::changePersistentIndexList(from, to);
         } else if (qtransposeproxymodel_changepersistentindexlist_callback != nullptr) {
-            const QModelIndexList& from_ret = from;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.length()));
-            for (size_t i = 0; i < from_ret.length(); ++i) {
+            const QList<QModelIndex>& from_ret = from;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** from_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * from_ret.size()));
+            for (size_t i = 0; i < from_ret.size(); ++i) {
                 from_arr[i] = new QModelIndex(from_ret[i]);
             }
             libqt_list from_out;
-            from_out.len = from_ret.length();
+            from_out.len = from_ret.size();
             from_out.data.ptr = static_cast<void*>(from_arr);
             libqt_list /* of QModelIndex* */ cbval1 = from_out;
-            const QModelIndexList& to_ret = to;
-            // Convert QList<> from C++ memory to manually-managed C memory
-            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.length()));
-            for (size_t i = 0; i < to_ret.length(); ++i) {
+            const QList<QModelIndex>& to_ret = to;
+            // Convert const QList<> from C++ memory to manually-managed C memory
+            QModelIndex** to_arr = static_cast<QModelIndex**>(malloc(sizeof(QModelIndex*) * to_ret.size()));
+            for (size_t i = 0; i < to_ret.size(); ++i) {
                 to_arr[i] = new QModelIndex(to_ret[i]);
             }
             libqt_list to_out;
-            to_out.len = to_ret.length();
+            to_out.len = to_ret.size();
             to_out.data.ptr = static_cast<void*>(to_arr);
             libqt_list /* of QModelIndex* */ cbval2 = to_out;
 
@@ -1728,13 +1728,13 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     }
 
     // Virtual method for C ABI access and custom callback
-    QModelIndexList persistentIndexList() const {
+    QList<QModelIndex> persistentIndexList() const {
         if (qtransposeproxymodel_persistentindexlist_isbase) {
             qtransposeproxymodel_persistentindexlist_isbase = false;
             return QTransposeProxyModel::persistentIndexList();
         } else if (qtransposeproxymodel_persistentindexlist_callback != nullptr) {
             libqt_list /* of QModelIndex* */ callback_ret = qtransposeproxymodel_persistentindexlist_callback();
-            QModelIndexList callback_ret_QList;
+            QList<QModelIndex> callback_ret_QList;
             callback_ret_QList.reserve(callback_ret.len);
             QModelIndex** callback_ret_arr = static_cast<QModelIndex**>(callback_ret.data.ptr);
             for (size_t i = 0; i < callback_ret.len; ++i) {
@@ -1813,50 +1813,50 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     friend void QTransposeProxyModel_QBaseChildEvent(QTransposeProxyModel* self, QChildEvent* event);
     friend void QTransposeProxyModel_CustomEvent(QTransposeProxyModel* self, QEvent* event);
     friend void QTransposeProxyModel_QBaseCustomEvent(QTransposeProxyModel* self, QEvent* event);
-    friend void QTransposeProxyModel_ConnectNotify(QTransposeProxyModel* self, QMetaMethod* signal);
-    friend void QTransposeProxyModel_QBaseConnectNotify(QTransposeProxyModel* self, QMetaMethod* signal);
-    friend void QTransposeProxyModel_DisconnectNotify(QTransposeProxyModel* self, QMetaMethod* signal);
-    friend void QTransposeProxyModel_QBaseDisconnectNotify(QTransposeProxyModel* self, QMetaMethod* signal);
+    friend void QTransposeProxyModel_ConnectNotify(QTransposeProxyModel* self, const QMetaMethod* signal);
+    friend void QTransposeProxyModel_QBaseConnectNotify(QTransposeProxyModel* self, const QMetaMethod* signal);
+    friend void QTransposeProxyModel_DisconnectNotify(QTransposeProxyModel* self, const QMetaMethod* signal);
+    friend void QTransposeProxyModel_QBaseDisconnectNotify(QTransposeProxyModel* self, const QMetaMethod* signal);
     friend QModelIndex* QTransposeProxyModel_CreateSourceIndex(const QTransposeProxyModel* self, int row, int col, void* internalPtr);
     friend QModelIndex* QTransposeProxyModel_QBaseCreateSourceIndex(const QTransposeProxyModel* self, int row, int col, void* internalPtr);
     friend QModelIndex* QTransposeProxyModel_CreateIndex(const QTransposeProxyModel* self, int row, int column);
     friend QModelIndex* QTransposeProxyModel_QBaseCreateIndex(const QTransposeProxyModel* self, int row, int column);
-    friend void QTransposeProxyModel_EncodeData(const QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend void QTransposeProxyModel_QBaseEncodeData(const QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
-    friend bool QTransposeProxyModel_DecodeData(QTransposeProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend bool QTransposeProxyModel_QBaseDecodeData(QTransposeProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream);
-    friend void QTransposeProxyModel_BeginInsertRows(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QTransposeProxyModel_QBaseBeginInsertRows(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_EncodeData(const QTransposeProxyModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend void QTransposeProxyModel_QBaseEncodeData(const QTransposeProxyModel* self, const libqt_list /* of QModelIndex* */ indexes, QDataStream* stream);
+    friend bool QTransposeProxyModel_DecodeData(QTransposeProxyModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend bool QTransposeProxyModel_QBaseDecodeData(QTransposeProxyModel* self, int row, int column, const QModelIndex* parent, QDataStream* stream);
+    friend void QTransposeProxyModel_BeginInsertRows(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_QBaseBeginInsertRows(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QTransposeProxyModel_EndInsertRows(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndInsertRows(QTransposeProxyModel* self);
-    friend void QTransposeProxyModel_BeginRemoveRows(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QTransposeProxyModel_QBaseBeginRemoveRows(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_BeginRemoveRows(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_QBaseBeginRemoveRows(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QTransposeProxyModel_EndRemoveRows(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndRemoveRows(QTransposeProxyModel* self);
-    friend bool QTransposeProxyModel_BeginMoveRows(QTransposeProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
-    friend bool QTransposeProxyModel_QBaseBeginMoveRows(QTransposeProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow);
+    friend bool QTransposeProxyModel_BeginMoveRows(QTransposeProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
+    friend bool QTransposeProxyModel_QBaseBeginMoveRows(QTransposeProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationRow);
     friend void QTransposeProxyModel_EndMoveRows(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndMoveRows(QTransposeProxyModel* self);
-    friend void QTransposeProxyModel_BeginInsertColumns(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QTransposeProxyModel_QBaseBeginInsertColumns(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_BeginInsertColumns(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_QBaseBeginInsertColumns(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QTransposeProxyModel_EndInsertColumns(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndInsertColumns(QTransposeProxyModel* self);
-    friend void QTransposeProxyModel_BeginRemoveColumns(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
-    friend void QTransposeProxyModel_QBaseBeginRemoveColumns(QTransposeProxyModel* self, QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_BeginRemoveColumns(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
+    friend void QTransposeProxyModel_QBaseBeginRemoveColumns(QTransposeProxyModel* self, const QModelIndex* parent, int first, int last);
     friend void QTransposeProxyModel_EndRemoveColumns(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndRemoveColumns(QTransposeProxyModel* self);
-    friend bool QTransposeProxyModel_BeginMoveColumns(QTransposeProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
-    friend bool QTransposeProxyModel_QBaseBeginMoveColumns(QTransposeProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn);
+    friend bool QTransposeProxyModel_BeginMoveColumns(QTransposeProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
+    friend bool QTransposeProxyModel_QBaseBeginMoveColumns(QTransposeProxyModel* self, const QModelIndex* sourceParent, int sourceFirst, int sourceLast, const QModelIndex* destinationParent, int destinationColumn);
     friend void QTransposeProxyModel_EndMoveColumns(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndMoveColumns(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_BeginResetModel(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseBeginResetModel(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_EndResetModel(QTransposeProxyModel* self);
     friend void QTransposeProxyModel_QBaseEndResetModel(QTransposeProxyModel* self);
-    friend void QTransposeProxyModel_ChangePersistentIndex(QTransposeProxyModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QTransposeProxyModel_QBaseChangePersistentIndex(QTransposeProxyModel* self, QModelIndex* from, QModelIndex* to);
-    friend void QTransposeProxyModel_ChangePersistentIndexList(QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
-    friend void QTransposeProxyModel_QBaseChangePersistentIndexList(QTransposeProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to);
+    friend void QTransposeProxyModel_ChangePersistentIndex(QTransposeProxyModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QTransposeProxyModel_QBaseChangePersistentIndex(QTransposeProxyModel* self, const QModelIndex* from, const QModelIndex* to);
+    friend void QTransposeProxyModel_ChangePersistentIndexList(QTransposeProxyModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
+    friend void QTransposeProxyModel_QBaseChangePersistentIndexList(QTransposeProxyModel* self, const libqt_list /* of QModelIndex* */ from, const libqt_list /* of QModelIndex* */ to);
     friend libqt_list /* of QModelIndex* */ QTransposeProxyModel_PersistentIndexList(const QTransposeProxyModel* self);
     friend libqt_list /* of QModelIndex* */ QTransposeProxyModel_QBasePersistentIndexList(const QTransposeProxyModel* self);
     friend QObject* QTransposeProxyModel_Sender(const QTransposeProxyModel* self);
@@ -1865,8 +1865,8 @@ class VirtualQTransposeProxyModel final : public QTransposeProxyModel {
     friend int QTransposeProxyModel_QBaseSenderSignalIndex(const QTransposeProxyModel* self);
     friend int QTransposeProxyModel_Receivers(const QTransposeProxyModel* self, const char* signal);
     friend int QTransposeProxyModel_QBaseReceivers(const QTransposeProxyModel* self, const char* signal);
-    friend bool QTransposeProxyModel_IsSignalConnected(const QTransposeProxyModel* self, QMetaMethod* signal);
-    friend bool QTransposeProxyModel_QBaseIsSignalConnected(const QTransposeProxyModel* self, QMetaMethod* signal);
+    friend bool QTransposeProxyModel_IsSignalConnected(const QTransposeProxyModel* self, const QMetaMethod* signal);
+    friend bool QTransposeProxyModel_QBaseIsSignalConnected(const QTransposeProxyModel* self, const QMetaMethod* signal);
 };
 
 #endif

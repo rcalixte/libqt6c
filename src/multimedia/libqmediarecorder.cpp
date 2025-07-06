@@ -1,5 +1,6 @@
 #include <QChildEvent>
 #include <QEvent>
+#include <QIODevice>
 #include <QMediaCaptureSession>
 #include <QMediaFormat>
 #include <QMediaMetaData>
@@ -81,8 +82,16 @@ QUrl* QMediaRecorder_OutputLocation(const QMediaRecorder* self) {
     return new QUrl(self->outputLocation());
 }
 
-void QMediaRecorder_SetOutputLocation(QMediaRecorder* self, QUrl* location) {
+void QMediaRecorder_SetOutputLocation(QMediaRecorder* self, const QUrl* location) {
     self->setOutputLocation(*location);
+}
+
+void QMediaRecorder_SetOutputDevice(QMediaRecorder* self, QIODevice* device) {
+    self->setOutputDevice(device);
+}
+
+QIODevice* QMediaRecorder_OutputDevice(const QMediaRecorder* self) {
+    return self->outputDevice();
 }
 
 QUrl* QMediaRecorder_ActualLocation(const QMediaRecorder* self) {
@@ -117,7 +126,7 @@ QMediaFormat* QMediaRecorder_MediaFormat(const QMediaRecorder* self) {
     return new QMediaFormat(self->mediaFormat());
 }
 
-void QMediaRecorder_SetMediaFormat(QMediaRecorder* self, QMediaFormat* format) {
+void QMediaRecorder_SetMediaFormat(QMediaRecorder* self, const QMediaFormat* format) {
     self->setMediaFormat(*format);
 }
 
@@ -141,7 +150,7 @@ QSize* QMediaRecorder_VideoResolution(const QMediaRecorder* self) {
     return new QSize(self->videoResolution());
 }
 
-void QMediaRecorder_SetVideoResolution(QMediaRecorder* self, QSize* videoResolution) {
+void QMediaRecorder_SetVideoResolution(QMediaRecorder* self, const QSize* videoResolution) {
     self->setVideoResolution(*videoResolution);
 }
 
@@ -193,12 +202,20 @@ QMediaMetaData* QMediaRecorder_MetaData(const QMediaRecorder* self) {
     return new QMediaMetaData(self->metaData());
 }
 
-void QMediaRecorder_SetMetaData(QMediaRecorder* self, QMediaMetaData* metaData) {
+void QMediaRecorder_SetMetaData(QMediaRecorder* self, const QMediaMetaData* metaData) {
     self->setMetaData(*metaData);
 }
 
-void QMediaRecorder_AddMetaData(QMediaRecorder* self, QMediaMetaData* metaData) {
+void QMediaRecorder_AddMetaData(QMediaRecorder* self, const QMediaMetaData* metaData) {
     self->addMetaData(*metaData);
+}
+
+bool QMediaRecorder_AutoStop(const QMediaRecorder* self) {
+    return self->autoStop();
+}
+
+void QMediaRecorder_SetAutoStop(QMediaRecorder* self, bool autoStop) {
+    self->setAutoStop(autoStop);
 }
 
 QMediaCaptureSession* QMediaRecorder_CaptureSession(const QMediaRecorder* self) {
@@ -241,7 +258,7 @@ void QMediaRecorder_Connect_DurationChanged(QMediaRecorder* self, intptr_t slot)
     });
 }
 
-void QMediaRecorder_ActualLocationChanged(QMediaRecorder* self, QUrl* location) {
+void QMediaRecorder_ActualLocationChanged(QMediaRecorder* self, const QUrl* location) {
     self->actualLocationChanged(*location);
 }
 
@@ -266,7 +283,7 @@ void QMediaRecorder_Connect_EncoderSettingsChanged(QMediaRecorder* self, intptr_
     });
 }
 
-void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int errorVal, libqt_string errorString) {
+void QMediaRecorder_ErrorOccurred(QMediaRecorder* self, int errorVal, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     self->errorOccurred(static_cast<QMediaRecorder::Error>(errorVal), errorString_QString);
 }
@@ -405,6 +422,17 @@ void QMediaRecorder_AudioSampleRateChanged(QMediaRecorder* self) {
 void QMediaRecorder_Connect_AudioSampleRateChanged(QMediaRecorder* self, intptr_t slot) {
     void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
     QMediaRecorder::connect(self, &QMediaRecorder::audioSampleRateChanged, [self, slotFunc]() {
+        slotFunc(self);
+    });
+}
+
+void QMediaRecorder_AutoStopChanged(QMediaRecorder* self) {
+    self->autoStopChanged();
+}
+
+void QMediaRecorder_Connect_AutoStopChanged(QMediaRecorder* self, intptr_t slot) {
+    void (*slotFunc)(QMediaRecorder*) = reinterpret_cast<void (*)(QMediaRecorder*)>(slot);
+    QMediaRecorder::connect(self, &QMediaRecorder::autoStopChanged, [self, slotFunc]() {
         slotFunc(self);
     });
 }
@@ -579,7 +607,7 @@ void QMediaRecorder_OnCustomEvent(QMediaRecorder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMediaRecorder_ConnectNotify(QMediaRecorder* self, QMetaMethod* signal) {
+void QMediaRecorder_ConnectNotify(QMediaRecorder* self, const QMetaMethod* signal) {
     auto* vqmediarecorder = dynamic_cast<VirtualQMediaRecorder*>(self);
     if (vqmediarecorder && vqmediarecorder->isVirtualQMediaRecorder) {
         vqmediarecorder->connectNotify(*signal);
@@ -589,7 +617,7 @@ void QMediaRecorder_ConnectNotify(QMediaRecorder* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMediaRecorder_QBaseConnectNotify(QMediaRecorder* self, QMetaMethod* signal) {
+void QMediaRecorder_QBaseConnectNotify(QMediaRecorder* self, const QMetaMethod* signal) {
     auto* vqmediarecorder = dynamic_cast<VirtualQMediaRecorder*>(self);
     if (vqmediarecorder && vqmediarecorder->isVirtualQMediaRecorder) {
         vqmediarecorder->setQMediaRecorder_ConnectNotify_IsBase(true);
@@ -608,7 +636,7 @@ void QMediaRecorder_OnConnectNotify(QMediaRecorder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMediaRecorder_DisconnectNotify(QMediaRecorder* self, QMetaMethod* signal) {
+void QMediaRecorder_DisconnectNotify(QMediaRecorder* self, const QMetaMethod* signal) {
     auto* vqmediarecorder = dynamic_cast<VirtualQMediaRecorder*>(self);
     if (vqmediarecorder && vqmediarecorder->isVirtualQMediaRecorder) {
         vqmediarecorder->disconnectNotify(*signal);
@@ -618,7 +646,7 @@ void QMediaRecorder_DisconnectNotify(QMediaRecorder* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QMediaRecorder_QBaseDisconnectNotify(QMediaRecorder* self, QMetaMethod* signal) {
+void QMediaRecorder_QBaseDisconnectNotify(QMediaRecorder* self, const QMetaMethod* signal) {
     auto* vqmediarecorder = dynamic_cast<VirtualQMediaRecorder*>(self);
     if (vqmediarecorder && vqmediarecorder->isVirtualQMediaRecorder) {
         vqmediarecorder->setQMediaRecorder_DisconnectNotify_IsBase(true);
@@ -724,7 +752,7 @@ void QMediaRecorder_OnReceivers(const QMediaRecorder* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMediaRecorder_IsSignalConnected(const QMediaRecorder* self, QMetaMethod* signal) {
+bool QMediaRecorder_IsSignalConnected(const QMediaRecorder* self, const QMetaMethod* signal) {
     auto* vqmediarecorder = const_cast<VirtualQMediaRecorder*>(dynamic_cast<const VirtualQMediaRecorder*>(self));
     if (vqmediarecorder && vqmediarecorder->isVirtualQMediaRecorder) {
         return vqmediarecorder->isSignalConnected(*signal);
@@ -734,7 +762,7 @@ bool QMediaRecorder_IsSignalConnected(const QMediaRecorder* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QMediaRecorder_QBaseIsSignalConnected(const QMediaRecorder* self, QMetaMethod* signal) {
+bool QMediaRecorder_QBaseIsSignalConnected(const QMediaRecorder* self, const QMetaMethod* signal) {
     auto* vqmediarecorder = const_cast<VirtualQMediaRecorder*>(dynamic_cast<const VirtualQMediaRecorder*>(self));
     if (vqmediarecorder && vqmediarecorder->isVirtualQMediaRecorder) {
         vqmediarecorder->setQMediaRecorder_IsSignalConnected_IsBase(true);

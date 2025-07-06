@@ -12,21 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqgraphicsitem.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include "../libqpainter.h"
-#include "../libqpainterpath.h"
-#include "../libqpoint.h"
-#include "../libqrect.h"
-#include "../libqsize.h"
-#include <string.h>
-#include "../libqstyleoption.h"
-#include "libqsvgrenderer.h"
-#include "../libqvariant.h"
-#include "../libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qgraphicssvgitem.html
 
 /// q_graphicssvgitem_new constructs a new QGraphicsSvgItem object.
@@ -432,7 +417,7 @@ QThread* q_graphicssvgitem_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsSvgItem* self, QThread* thread ```
-void q_graphicssvgitem_move_to_thread(void* self, void* thread);
+bool q_graphicssvgitem_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -447,6 +432,13 @@ int32_t q_graphicssvgitem_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsSvgItem* self, int id ```
 void q_graphicssvgitem_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsSvgItem* self, enum Qt__TimerId id ```
+void q_graphicssvgitem_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -587,6 +579,13 @@ bool q_graphicssvgitem_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsSvgItem* self ```
 void q_graphicssvgitem_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsSvgItem* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicssvgitem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

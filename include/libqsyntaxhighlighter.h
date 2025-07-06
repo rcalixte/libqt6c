@@ -12,16 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqcolor.h"
-#include "libqfont.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqtextobject.h"
-#include "libqtextformat.h"
-#include "libqtextdocument.h"
-
 /// https://doc.qt.io/qt-6/qsyntaxhighlighter.html
 
 /// q_syntaxhighlighter_new constructs a new QSyntaxHighlighter object.
@@ -360,7 +350,7 @@ QThread* q_syntaxhighlighter_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QSyntaxHighlighter* self, QThread* thread ```
-void q_syntaxhighlighter_move_to_thread(void* self, void* thread);
+bool q_syntaxhighlighter_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -375,6 +365,13 @@ int32_t q_syntaxhighlighter_start_timer(void* self, int interval);
 ///
 /// ``` QSyntaxHighlighter* self, int id ```
 void q_syntaxhighlighter_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QSyntaxHighlighter* self, enum Qt__TimerId id ```
+void q_syntaxhighlighter_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -515,6 +512,13 @@ bool q_syntaxhighlighter_inherits(void* self, const char* classname);
 ///
 /// ``` QSyntaxHighlighter* self ```
 void q_syntaxhighlighter_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QSyntaxHighlighter* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_syntaxhighlighter_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

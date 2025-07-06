@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqanystringview.h"
-#include "libqdatetime.h"
-#include "libqlocale.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qcalendar.html
 
 /// q_calendar_new constructs a new QCalendar object.
@@ -148,6 +143,11 @@ QDate* q_calendar_date_from_parts(void* self, int year, int month, int day);
 ///
 /// ``` QCalendar* self, QCalendar__YearMonthDay* parts ```
 QDate* q_calendar_date_from_parts_with_parts(void* self, void* parts);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#matchCenturyToWeekday)
+///
+/// ``` QCalendar* self, QCalendar__YearMonthDay* parts, int dow ```
+QDate* q_calendar_match_century_to_weekday(void* self, void* parts, int dow);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#partsFromDate)
 ///

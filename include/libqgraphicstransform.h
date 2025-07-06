@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmatrix4x4.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqvectornd.h"
-
 /// https://doc.qt.io/qt-6/qgraphicstransform.html
 
 /// q_graphicstransform_new constructs a new QGraphicsTransform object.
@@ -166,7 +159,7 @@ QThread* q_graphicstransform_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsTransform* self, QThread* thread ```
-void q_graphicstransform_move_to_thread(void* self, void* thread);
+bool q_graphicstransform_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -181,6 +174,13 @@ int32_t q_graphicstransform_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsTransform* self, int id ```
 void q_graphicstransform_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsTransform* self, enum Qt__TimerId id ```
+void q_graphicstransform_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -321,6 +321,13 @@ bool q_graphicstransform_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsTransform* self ```
 void q_graphicstransform_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsTransform* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicstransform_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -888,7 +895,7 @@ QThread* q_graphicsscale_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsScale* self, QThread* thread ```
-void q_graphicsscale_move_to_thread(void* self, void* thread);
+bool q_graphicsscale_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -903,6 +910,13 @@ int32_t q_graphicsscale_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsScale* self, int id ```
 void q_graphicsscale_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsScale* self, enum Qt__TimerId id ```
+void q_graphicsscale_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1043,6 +1057,13 @@ bool q_graphicsscale_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsScale* self ```
 void q_graphicsscale_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsScale* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicsscale_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -1612,7 +1633,7 @@ QThread* q_graphicsrotation_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QGraphicsRotation* self, QThread* thread ```
-void q_graphicsrotation_move_to_thread(void* self, void* thread);
+bool q_graphicsrotation_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -1627,6 +1648,13 @@ int32_t q_graphicsrotation_start_timer(void* self, int interval);
 ///
 /// ``` QGraphicsRotation* self, int id ```
 void q_graphicsrotation_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QGraphicsRotation* self, enum Qt__TimerId id ```
+void q_graphicsrotation_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1767,6 +1795,13 @@ bool q_graphicsrotation_inherits(void* self, const char* classname);
 ///
 /// ``` QGraphicsRotation* self ```
 void q_graphicsrotation_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QGraphicsRotation* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_graphicsrotation_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

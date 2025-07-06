@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqlayout.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include "libqsizepolicy.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qlayoutitem.html
 
 /// q_layoutitem_new constructs a new QLayoutItem object.

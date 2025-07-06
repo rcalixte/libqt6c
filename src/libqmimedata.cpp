@@ -72,17 +72,17 @@ libqt_string QMimeData_Tr(const char* s) {
 libqt_list /* of QUrl* */ QMimeData_Urls(const QMimeData* self) {
     QList<QUrl> _ret = self->urls();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QUrl** _arr = static_cast<QUrl**>(malloc(sizeof(QUrl*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QUrl** _arr = static_cast<QUrl**>(malloc(sizeof(QUrl*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QUrl(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
-void QMimeData_SetUrls(QMimeData* self, libqt_list /* of QUrl* */ urls) {
+void QMimeData_SetUrls(QMimeData* self, const libqt_list /* of QUrl* */ urls) {
     QList<QUrl> urls_QList;
     urls_QList.reserve(urls.len);
     QUrl** urls_arr = static_cast<QUrl**>(urls.data.ptr);
@@ -108,7 +108,7 @@ libqt_string QMimeData_Text(const QMimeData* self) {
     return _str;
 }
 
-void QMimeData_SetText(QMimeData* self, libqt_string text) {
+void QMimeData_SetText(QMimeData* self, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setText(text_QString);
 }
@@ -129,7 +129,7 @@ libqt_string QMimeData_Html(const QMimeData* self) {
     return _str;
 }
 
-void QMimeData_SetHtml(QMimeData* self, libqt_string html) {
+void QMimeData_SetHtml(QMimeData* self, const libqt_string html) {
     QString html_QString = QString::fromUtf8(html.data, html.len);
     self->setHtml(html_QString);
 }
@@ -142,7 +142,7 @@ QVariant* QMimeData_ImageData(const QMimeData* self) {
     return new QVariant(self->imageData());
 }
 
-void QMimeData_SetImageData(QMimeData* self, QVariant* image) {
+void QMimeData_SetImageData(QMimeData* self, const QVariant* image) {
     self->setImageData(*image);
 }
 
@@ -154,7 +154,7 @@ QVariant* QMimeData_ColorData(const QMimeData* self) {
     return new QVariant(self->colorData());
 }
 
-void QMimeData_SetColorData(QMimeData* self, QVariant* color) {
+void QMimeData_SetColorData(QMimeData* self, const QVariant* color) {
     self->setColorData(*color);
 }
 
@@ -162,7 +162,7 @@ bool QMimeData_HasColor(const QMimeData* self) {
     return self->hasColor();
 }
 
-libqt_string QMimeData_Data(const QMimeData* self, libqt_string mimetype) {
+libqt_string QMimeData_Data(const QMimeData* self, const libqt_string mimetype) {
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     QByteArray _qb = self->data(mimetype_QString);
     libqt_string _str;
@@ -173,13 +173,13 @@ libqt_string QMimeData_Data(const QMimeData* self, libqt_string mimetype) {
     return _str;
 }
 
-void QMimeData_SetData(QMimeData* self, libqt_string mimetype, libqt_string data) {
+void QMimeData_SetData(QMimeData* self, const libqt_string mimetype, const libqt_string data) {
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     QByteArray data_QByteArray(data.data, data.len);
     self->setData(mimetype_QString, data_QByteArray);
 }
 
-void QMimeData_RemoveFormat(QMimeData* self, libqt_string mimetype) {
+void QMimeData_RemoveFormat(QMimeData* self, const libqt_string mimetype) {
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     self->removeFormat(mimetype_QString);
 }
@@ -213,7 +213,7 @@ libqt_string QMimeData_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-bool QMimeData_HasFormat(const QMimeData* self, libqt_string mimetype) {
+bool QMimeData_HasFormat(const QMimeData* self, const libqt_string mimetype) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
@@ -224,7 +224,7 @@ bool QMimeData_HasFormat(const QMimeData* self, libqt_string mimetype) {
 }
 
 // Base class handler implementation
-bool QMimeData_QBaseHasFormat(const QMimeData* self, libqt_string mimetype) {
+bool QMimeData_QBaseHasFormat(const QMimeData* self, const libqt_string mimetype) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
@@ -247,10 +247,10 @@ void QMimeData_OnHasFormat(const QMimeData* self, intptr_t slot) {
 libqt_list /* of libqt_string */ QMimeData_Formats(const QMimeData* self) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
-        QStringList _ret = vqmimedata->formats();
+        QList<QString> _ret = vqmimedata->formats();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -262,14 +262,14 @@ libqt_list /* of libqt_string */ QMimeData_Formats(const QMimeData* self) {
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QMimeData::formats();
+        QList<QString> _ret = self->QMimeData::formats();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -281,7 +281,7 @@ libqt_list /* of libqt_string */ QMimeData_Formats(const QMimeData* self) {
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -292,10 +292,10 @@ libqt_list /* of libqt_string */ QMimeData_QBaseFormats(const QMimeData* self) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         vqmimedata->setQMimeData_Formats_IsBase(true);
-        QStringList _ret = vqmimedata->formats();
+        QList<QString> _ret = vqmimedata->formats();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -307,14 +307,14 @@ libqt_list /* of libqt_string */ QMimeData_QBaseFormats(const QMimeData* self) {
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = self->QMimeData::formats();
+        QList<QString> _ret = self->QMimeData::formats();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -326,7 +326,7 @@ libqt_list /* of libqt_string */ QMimeData_QBaseFormats(const QMimeData* self) {
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -341,7 +341,7 @@ void QMimeData_OnFormats(const QMimeData* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QVariant* QMimeData_RetrieveData(const QMimeData* self, libqt_string mimetype, QMetaType* preferredType) {
+QVariant* QMimeData_RetrieveData(const QMimeData* self, const libqt_string mimetype, QMetaType* preferredType) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
@@ -351,7 +351,7 @@ QVariant* QMimeData_RetrieveData(const QMimeData* self, libqt_string mimetype, Q
 }
 
 // Base class handler implementation
-QVariant* QMimeData_QBaseRetrieveData(const QMimeData* self, libqt_string mimetype, QMetaType* preferredType) {
+QVariant* QMimeData_QBaseRetrieveData(const QMimeData* self, const libqt_string mimetype, QMetaType* preferredType) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
@@ -515,7 +515,7 @@ void QMimeData_OnCustomEvent(QMimeData* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMimeData_ConnectNotify(QMimeData* self, QMetaMethod* signal) {
+void QMimeData_ConnectNotify(QMimeData* self, const QMetaMethod* signal) {
     auto* vqmimedata = dynamic_cast<VirtualQMimeData*>(self);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         vqmimedata->connectNotify(*signal);
@@ -525,7 +525,7 @@ void QMimeData_ConnectNotify(QMimeData* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMimeData_QBaseConnectNotify(QMimeData* self, QMetaMethod* signal) {
+void QMimeData_QBaseConnectNotify(QMimeData* self, const QMetaMethod* signal) {
     auto* vqmimedata = dynamic_cast<VirtualQMimeData*>(self);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         vqmimedata->setQMimeData_ConnectNotify_IsBase(true);
@@ -544,7 +544,7 @@ void QMimeData_OnConnectNotify(QMimeData* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QMimeData_DisconnectNotify(QMimeData* self, QMetaMethod* signal) {
+void QMimeData_DisconnectNotify(QMimeData* self, const QMetaMethod* signal) {
     auto* vqmimedata = dynamic_cast<VirtualQMimeData*>(self);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         vqmimedata->disconnectNotify(*signal);
@@ -554,7 +554,7 @@ void QMimeData_DisconnectNotify(QMimeData* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QMimeData_QBaseDisconnectNotify(QMimeData* self, QMetaMethod* signal) {
+void QMimeData_QBaseDisconnectNotify(QMimeData* self, const QMetaMethod* signal) {
     auto* vqmimedata = dynamic_cast<VirtualQMimeData*>(self);
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         vqmimedata->setQMimeData_DisconnectNotify_IsBase(true);
@@ -660,7 +660,7 @@ void QMimeData_OnReceivers(const QMimeData* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QMimeData_IsSignalConnected(const QMimeData* self, QMetaMethod* signal) {
+bool QMimeData_IsSignalConnected(const QMimeData* self, const QMetaMethod* signal) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         return vqmimedata->isSignalConnected(*signal);
@@ -670,7 +670,7 @@ bool QMimeData_IsSignalConnected(const QMimeData* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QMimeData_QBaseIsSignalConnected(const QMimeData* self, QMetaMethod* signal) {
+bool QMimeData_QBaseIsSignalConnected(const QMimeData* self, const QMetaMethod* signal) {
     auto* vqmimedata = const_cast<VirtualQMimeData*>(dynamic_cast<const VirtualQMimeData*>(self));
     if (vqmimedata && vqmimedata->isVirtualQMimeData) {
         vqmimedata->setQMimeData_IsSignalConnected_IsBase(true);

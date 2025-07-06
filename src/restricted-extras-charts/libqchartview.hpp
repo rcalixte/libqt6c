@@ -58,14 +58,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QChartView::RubberBand RubberBand;   // C++ enum
-typedef QChartView::RubberBands RubberBands; // C++ QFlags
-#else
-typedef int RubberBand;  // C ABI enum
-typedef int RubberBands; // C ABI QFlags
-#endif
-
 QChartView* QChartView_new(QWidget* parent);
 QChartView* QChartView_new2();
 QChartView* QChartView_new3(QChart* chart);
@@ -76,7 +68,7 @@ int QChartView_Metacall(QChartView* self, int param1, int param2, void** param3)
 void QChartView_OnMetacall(QChartView* self, intptr_t slot);
 int QChartView_QBaseMetacall(QChartView* self, int param1, int param2, void** param3);
 libqt_string QChartView_Tr(const char* s);
-void QChartView_SetRubberBand(QChartView* self, int* rubberBands);
+void QChartView_SetRubberBand(QChartView* self, const int* rubberBands);
 int QChartView_RubberBand(const QChartView* self);
 QChart* QChartView_Chart(const QChartView* self);
 void QChartView_SetChart(QChartView* self, QChart* chart);
@@ -157,12 +149,12 @@ void QChartView_QBaseShowEvent(QChartView* self, QShowEvent* event);
 void QChartView_InputMethodEvent(QChartView* self, QInputMethodEvent* event);
 void QChartView_OnInputMethodEvent(QChartView* self, intptr_t slot);
 void QChartView_QBaseInputMethodEvent(QChartView* self, QInputMethodEvent* event);
-void QChartView_DrawBackground(QChartView* self, QPainter* painter, QRectF* rect);
+void QChartView_DrawBackground(QChartView* self, QPainter* painter, const QRectF* rect);
 void QChartView_OnDrawBackground(QChartView* self, intptr_t slot);
-void QChartView_QBaseDrawBackground(QChartView* self, QPainter* painter, QRectF* rect);
-void QChartView_DrawForeground(QChartView* self, QPainter* painter, QRectF* rect);
+void QChartView_QBaseDrawBackground(QChartView* self, QPainter* painter, const QRectF* rect);
+void QChartView_DrawForeground(QChartView* self, QPainter* painter, const QRectF* rect);
 void QChartView_OnDrawForeground(QChartView* self, intptr_t slot);
-void QChartView_QBaseDrawForeground(QChartView* self, QPainter* painter, QRectF* rect);
+void QChartView_QBaseDrawForeground(QChartView* self, QPainter* painter, const QRectF* rect);
 QSize* QChartView_MinimumSizeHint(const QChartView* self);
 void QChartView_OnMinimumSizeHint(const QChartView* self, intptr_t slot);
 QSize* QChartView_QBaseMinimumSizeHint(const QChartView* self);
@@ -214,9 +206,9 @@ void QChartView_QBaseActionEvent(QChartView* self, QActionEvent* event);
 void QChartView_HideEvent(QChartView* self, QHideEvent* event);
 void QChartView_OnHideEvent(QChartView* self, intptr_t slot);
 void QChartView_QBaseHideEvent(QChartView* self, QHideEvent* event);
-bool QChartView_NativeEvent(QChartView* self, libqt_string eventType, void* message, intptr_t* result);
+bool QChartView_NativeEvent(QChartView* self, const libqt_string eventType, void* message, intptr_t* result);
 void QChartView_OnNativeEvent(QChartView* self, intptr_t slot);
-bool QChartView_QBaseNativeEvent(QChartView* self, libqt_string eventType, void* message, intptr_t* result);
+bool QChartView_QBaseNativeEvent(QChartView* self, const libqt_string eventType, void* message, intptr_t* result);
 int QChartView_Metric(const QChartView* self, int param1);
 void QChartView_OnMetric(const QChartView* self, intptr_t slot);
 int QChartView_QBaseMetric(const QChartView* self, int param1);
@@ -238,12 +230,12 @@ void QChartView_QBaseChildEvent(QChartView* self, QChildEvent* event);
 void QChartView_CustomEvent(QChartView* self, QEvent* event);
 void QChartView_OnCustomEvent(QChartView* self, intptr_t slot);
 void QChartView_QBaseCustomEvent(QChartView* self, QEvent* event);
-void QChartView_ConnectNotify(QChartView* self, QMetaMethod* signal);
+void QChartView_ConnectNotify(QChartView* self, const QMetaMethod* signal);
 void QChartView_OnConnectNotify(QChartView* self, intptr_t slot);
-void QChartView_QBaseConnectNotify(QChartView* self, QMetaMethod* signal);
-void QChartView_DisconnectNotify(QChartView* self, QMetaMethod* signal);
+void QChartView_QBaseConnectNotify(QChartView* self, const QMetaMethod* signal);
+void QChartView_DisconnectNotify(QChartView* self, const QMetaMethod* signal);
 void QChartView_OnDisconnectNotify(QChartView* self, intptr_t slot);
-void QChartView_QBaseDisconnectNotify(QChartView* self, QMetaMethod* signal);
+void QChartView_QBaseDisconnectNotify(QChartView* self, const QMetaMethod* signal);
 void QChartView_SetViewportMargins(QChartView* self, int left, int top, int right, int bottom);
 void QChartView_OnSetViewportMargins(QChartView* self, intptr_t slot);
 void QChartView_QBaseSetViewportMargins(QChartView* self, int left, int top, int right, int bottom);
@@ -277,9 +269,12 @@ int QChartView_QBaseSenderSignalIndex(const QChartView* self);
 int QChartView_Receivers(const QChartView* self, const char* signal);
 void QChartView_OnReceivers(const QChartView* self, intptr_t slot);
 int QChartView_QBaseReceivers(const QChartView* self, const char* signal);
-bool QChartView_IsSignalConnected(const QChartView* self, QMetaMethod* signal);
+bool QChartView_IsSignalConnected(const QChartView* self, const QMetaMethod* signal);
 void QChartView_OnIsSignalConnected(const QChartView* self, intptr_t slot);
-bool QChartView_QBaseIsSignalConnected(const QChartView* self, QMetaMethod* signal);
+bool QChartView_QBaseIsSignalConnected(const QChartView* self, const QMetaMethod* signal);
+double QChartView_GetDecodedMetricF(const QChartView* self, int metricA, int metricB);
+void QChartView_OnGetDecodedMetricF(const QChartView* self, intptr_t slot);
+double QChartView_QBaseGetDecodedMetricF(const QChartView* self, int metricA, int metricB);
 void QChartView_Delete(QChartView* self);
 
 #ifdef __cplusplus

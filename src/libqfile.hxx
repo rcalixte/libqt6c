@@ -130,10 +130,10 @@ class VirtualQFile final : public QFile {
     mutable bool qfile_issignalconnected_isbase = false;
 
   public:
-    VirtualQFile() : QFile(){};
-    VirtualQFile(const QString& name) : QFile(name){};
-    VirtualQFile(QObject* parent) : QFile(parent){};
-    VirtualQFile(const QString& name, QObject* parent) : QFile(name, parent){};
+    VirtualQFile() : QFile() {};
+    VirtualQFile(const QString& name) : QFile(name) {};
+    VirtualQFile(QObject* parent) : QFile(parent) {};
+    VirtualQFile(const QString& name, QObject* parent) : QFile(name, parent) {};
 
     ~VirtualQFile() {
         qfile_metacall_callback = nullptr;
@@ -279,7 +279,7 @@ class VirtualQFile final : public QFile {
     }
 
     // Virtual method for C ABI access and custom callback
-    virtual bool open(QIODeviceBase::OpenMode flags) override {
+    virtual bool open(QFlags<QIODeviceBase::OpenModeFlag> flags) override {
         if (qfile_open_isbase) {
             qfile_open_isbase = false;
             return QFile::open(flags);
@@ -774,22 +774,22 @@ class VirtualQFile final : public QFile {
     friend void QFile_QBaseChildEvent(QFile* self, QChildEvent* event);
     friend void QFile_CustomEvent(QFile* self, QEvent* event);
     friend void QFile_QBaseCustomEvent(QFile* self, QEvent* event);
-    friend void QFile_ConnectNotify(QFile* self, QMetaMethod* signal);
-    friend void QFile_QBaseConnectNotify(QFile* self, QMetaMethod* signal);
-    friend void QFile_DisconnectNotify(QFile* self, QMetaMethod* signal);
-    friend void QFile_QBaseDisconnectNotify(QFile* self, QMetaMethod* signal);
+    friend void QFile_ConnectNotify(QFile* self, const QMetaMethod* signal);
+    friend void QFile_QBaseConnectNotify(QFile* self, const QMetaMethod* signal);
+    friend void QFile_DisconnectNotify(QFile* self, const QMetaMethod* signal);
+    friend void QFile_QBaseDisconnectNotify(QFile* self, const QMetaMethod* signal);
     friend void QFile_SetOpenMode(QFile* self, int openMode);
     friend void QFile_QBaseSetOpenMode(QFile* self, int openMode);
-    friend void QFile_SetErrorString(QFile* self, libqt_string errorString);
-    friend void QFile_QBaseSetErrorString(QFile* self, libqt_string errorString);
+    friend void QFile_SetErrorString(QFile* self, const libqt_string errorString);
+    friend void QFile_QBaseSetErrorString(QFile* self, const libqt_string errorString);
     friend QObject* QFile_Sender(const QFile* self);
     friend QObject* QFile_QBaseSender(const QFile* self);
     friend int QFile_SenderSignalIndex(const QFile* self);
     friend int QFile_QBaseSenderSignalIndex(const QFile* self);
     friend int QFile_Receivers(const QFile* self, const char* signal);
     friend int QFile_QBaseReceivers(const QFile* self, const char* signal);
-    friend bool QFile_IsSignalConnected(const QFile* self, QMetaMethod* signal);
-    friend bool QFile_QBaseIsSignalConnected(const QFile* self, QMetaMethod* signal);
+    friend bool QFile_IsSignalConnected(const QFile* self, const QMetaMethod* signal);
+    friend bool QFile_QBaseIsSignalConnected(const QFile* self, const QMetaMethod* signal);
 };
 
 #endif

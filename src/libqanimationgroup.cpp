@@ -387,7 +387,7 @@ void QAnimationGroup_OnCustomEvent(QAnimationGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAnimationGroup_ConnectNotify(QAnimationGroup* self, QMetaMethod* signal) {
+void QAnimationGroup_ConnectNotify(QAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqanimationgroup = dynamic_cast<VirtualQAnimationGroup*>(self);
     if (vqanimationgroup && vqanimationgroup->isVirtualQAnimationGroup) {
         vqanimationgroup->connectNotify(*signal);
@@ -397,7 +397,7 @@ void QAnimationGroup_ConnectNotify(QAnimationGroup* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QAnimationGroup_QBaseConnectNotify(QAnimationGroup* self, QMetaMethod* signal) {
+void QAnimationGroup_QBaseConnectNotify(QAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqanimationgroup = dynamic_cast<VirtualQAnimationGroup*>(self);
     if (vqanimationgroup && vqanimationgroup->isVirtualQAnimationGroup) {
         vqanimationgroup->setQAnimationGroup_ConnectNotify_IsBase(true);
@@ -416,7 +416,7 @@ void QAnimationGroup_OnConnectNotify(QAnimationGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QAnimationGroup_DisconnectNotify(QAnimationGroup* self, QMetaMethod* signal) {
+void QAnimationGroup_DisconnectNotify(QAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqanimationgroup = dynamic_cast<VirtualQAnimationGroup*>(self);
     if (vqanimationgroup && vqanimationgroup->isVirtualQAnimationGroup) {
         vqanimationgroup->disconnectNotify(*signal);
@@ -426,7 +426,7 @@ void QAnimationGroup_DisconnectNotify(QAnimationGroup* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QAnimationGroup_QBaseDisconnectNotify(QAnimationGroup* self, QMetaMethod* signal) {
+void QAnimationGroup_QBaseDisconnectNotify(QAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqanimationgroup = dynamic_cast<VirtualQAnimationGroup*>(self);
     if (vqanimationgroup && vqanimationgroup->isVirtualQAnimationGroup) {
         vqanimationgroup->setQAnimationGroup_DisconnectNotify_IsBase(true);
@@ -532,7 +532,7 @@ void QAnimationGroup_OnReceivers(const QAnimationGroup* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QAnimationGroup_IsSignalConnected(const QAnimationGroup* self, QMetaMethod* signal) {
+bool QAnimationGroup_IsSignalConnected(const QAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqanimationgroup = const_cast<VirtualQAnimationGroup*>(dynamic_cast<const VirtualQAnimationGroup*>(self));
     if (vqanimationgroup && vqanimationgroup->isVirtualQAnimationGroup) {
         return vqanimationgroup->isSignalConnected(*signal);
@@ -542,7 +542,7 @@ bool QAnimationGroup_IsSignalConnected(const QAnimationGroup* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QAnimationGroup_QBaseIsSignalConnected(const QAnimationGroup* self, QMetaMethod* signal) {
+bool QAnimationGroup_QBaseIsSignalConnected(const QAnimationGroup* self, const QMetaMethod* signal) {
     auto* vqanimationgroup = const_cast<VirtualQAnimationGroup*>(dynamic_cast<const VirtualQAnimationGroup*>(self));
     if (vqanimationgroup && vqanimationgroup->isVirtualQAnimationGroup) {
         vqanimationgroup->setQAnimationGroup_IsSignalConnected_IsBase(true);

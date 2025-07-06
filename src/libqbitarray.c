@@ -105,16 +105,8 @@ void q_bitarray_operator_bitwise_not_assign(void* self, void* param1) {
     QBitArray_OperatorBitwiseNotAssign((QBitArray*)self, (QBitArray*)param1);
 }
 
-bool q_bitarray_operator_equal(void* self, void* other) {
-    return QBitArray_OperatorEqual((QBitArray*)self, (QBitArray*)other);
-}
-
-bool q_bitarray_operator_not_equal(void* self, void* other) {
-    return QBitArray_OperatorNotEqual((QBitArray*)self, (QBitArray*)other);
-}
-
-bool q_bitarray_fill(void* self, bool val) {
-    return QBitArray_Fill((QBitArray*)self, val);
+bool q_bitarray_fill(void* self, bool aval) {
+    return QBitArray_Fill((QBitArray*)self, aval);
 }
 
 void q_bitarray_fill2(void* self, bool val, int64_t first, int64_t last) {
@@ -137,8 +129,8 @@ uint32_t q_bitarray_to_u_int32(void* self, int64_t endianness) {
     return QBitArray_ToUInt32((QBitArray*)self, endianness);
 }
 
-bool q_bitarray_fill22(void* self, bool val, int64_t size) {
-    return QBitArray_Fill22((QBitArray*)self, val, size);
+bool q_bitarray_fill22(void* self, bool aval, int64_t asize) {
+    return QBitArray_Fill22((QBitArray*)self, aval, asize);
 }
 
 uint32_t q_bitarray_to_u_int322(void* self, int64_t endianness, bool* ok) {

@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qfactoryinterface.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)

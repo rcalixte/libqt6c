@@ -81,6 +81,7 @@ class VirtualQSplitter final : public QSplitter {
     using QSplitter_SenderSignalIndex_Callback = int (*)();
     using QSplitter_Receivers_Callback = int (*)(const QSplitter*, const char*);
     using QSplitter_IsSignalConnected_Callback = bool (*)(const QSplitter*, QMetaMethod*);
+    using QSplitter_GetDecodedMetricF_Callback = double (*)(const QSplitter*, int, int);
 
   protected:
     // Instance callback storage
@@ -147,6 +148,7 @@ class VirtualQSplitter final : public QSplitter {
     QSplitter_SenderSignalIndex_Callback qsplitter_sendersignalindex_callback = nullptr;
     QSplitter_Receivers_Callback qsplitter_receivers_callback = nullptr;
     QSplitter_IsSignalConnected_Callback qsplitter_issignalconnected_callback = nullptr;
+    QSplitter_GetDecodedMetricF_Callback qsplitter_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qsplitter_metacall_isbase = false;
@@ -212,12 +214,13 @@ class VirtualQSplitter final : public QSplitter {
     mutable bool qsplitter_sendersignalindex_isbase = false;
     mutable bool qsplitter_receivers_isbase = false;
     mutable bool qsplitter_issignalconnected_isbase = false;
+    mutable bool qsplitter_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQSplitter(QWidget* parent) : QSplitter(parent){};
-    VirtualQSplitter() : QSplitter(){};
-    VirtualQSplitter(Qt::Orientation param1) : QSplitter(param1){};
-    VirtualQSplitter(Qt::Orientation param1, QWidget* parent) : QSplitter(param1, parent){};
+    VirtualQSplitter(QWidget* parent) : QSplitter(parent) {};
+    VirtualQSplitter() : QSplitter() {};
+    VirtualQSplitter(Qt::Orientation param1) : QSplitter(param1) {};
+    VirtualQSplitter(Qt::Orientation param1, QWidget* parent) : QSplitter(param1, parent) {};
 
     ~VirtualQSplitter() {
         qsplitter_metacall_callback = nullptr;
@@ -283,6 +286,7 @@ class VirtualQSplitter final : public QSplitter {
         qsplitter_sendersignalindex_callback = nullptr;
         qsplitter_receivers_callback = nullptr;
         qsplitter_issignalconnected_callback = nullptr;
+        qsplitter_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -349,6 +353,7 @@ class VirtualQSplitter final : public QSplitter {
     inline void setQSplitter_SenderSignalIndex_Callback(QSplitter_SenderSignalIndex_Callback cb) { qsplitter_sendersignalindex_callback = cb; }
     inline void setQSplitter_Receivers_Callback(QSplitter_Receivers_Callback cb) { qsplitter_receivers_callback = cb; }
     inline void setQSplitter_IsSignalConnected_Callback(QSplitter_IsSignalConnected_Callback cb) { qsplitter_issignalconnected_callback = cb; }
+    inline void setQSplitter_GetDecodedMetricF_Callback(QSplitter_GetDecodedMetricF_Callback cb) { qsplitter_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQSplitter_Metacall_IsBase(bool value) const { qsplitter_metacall_isbase = value; }
@@ -414,6 +419,7 @@ class VirtualQSplitter final : public QSplitter {
     inline void setQSplitter_SenderSignalIndex_IsBase(bool value) const { qsplitter_sendersignalindex_isbase = value; }
     inline void setQSplitter_Receivers_IsBase(bool value) const { qsplitter_receivers_isbase = value; }
     inline void setQSplitter_IsSignalConnected_IsBase(bool value) const { qsplitter_issignalconnected_isbase = value; }
+    inline void setQSplitter_GetDecodedMetricF_IsBase(bool value) const { qsplitter_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -1312,6 +1318,22 @@ class VirtualQSplitter final : public QSplitter {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qsplitter_getdecodedmetricf_isbase) {
+            qsplitter_getdecodedmetricf_isbase = false;
+            return QSplitter::getDecodedMetricF(metricA, metricB);
+        } else if (qsplitter_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qsplitter_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QSplitter::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend QSplitterHandle* QSplitter_CreateHandle(QSplitter* self);
     friend QSplitterHandle* QSplitter_QBaseCreateHandle(QSplitter* self);
@@ -1371,8 +1393,8 @@ class VirtualQSplitter final : public QSplitter {
     friend void QSplitter_QBaseShowEvent(QSplitter* self, QShowEvent* event);
     friend void QSplitter_HideEvent(QSplitter* self, QHideEvent* event);
     friend void QSplitter_QBaseHideEvent(QSplitter* self, QHideEvent* event);
-    friend bool QSplitter_NativeEvent(QSplitter* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QSplitter_QBaseNativeEvent(QSplitter* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QSplitter_NativeEvent(QSplitter* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QSplitter_QBaseNativeEvent(QSplitter* self, const libqt_string eventType, void* message, intptr_t* result);
     friend int QSplitter_Metric(const QSplitter* self, int param1);
     friend int QSplitter_QBaseMetric(const QSplitter* self, int param1);
     friend void QSplitter_InitPainter(const QSplitter* self, QPainter* painter);
@@ -1389,10 +1411,10 @@ class VirtualQSplitter final : public QSplitter {
     friend void QSplitter_QBaseTimerEvent(QSplitter* self, QTimerEvent* event);
     friend void QSplitter_CustomEvent(QSplitter* self, QEvent* event);
     friend void QSplitter_QBaseCustomEvent(QSplitter* self, QEvent* event);
-    friend void QSplitter_ConnectNotify(QSplitter* self, QMetaMethod* signal);
-    friend void QSplitter_QBaseConnectNotify(QSplitter* self, QMetaMethod* signal);
-    friend void QSplitter_DisconnectNotify(QSplitter* self, QMetaMethod* signal);
-    friend void QSplitter_QBaseDisconnectNotify(QSplitter* self, QMetaMethod* signal);
+    friend void QSplitter_ConnectNotify(QSplitter* self, const QMetaMethod* signal);
+    friend void QSplitter_QBaseConnectNotify(QSplitter* self, const QMetaMethod* signal);
+    friend void QSplitter_DisconnectNotify(QSplitter* self, const QMetaMethod* signal);
+    friend void QSplitter_QBaseDisconnectNotify(QSplitter* self, const QMetaMethod* signal);
     friend void QSplitter_MoveSplitter(QSplitter* self, int pos, int index);
     friend void QSplitter_QBaseMoveSplitter(QSplitter* self, int pos, int index);
     friend void QSplitter_SetRubberBand(QSplitter* self, int position);
@@ -1417,8 +1439,10 @@ class VirtualQSplitter final : public QSplitter {
     friend int QSplitter_QBaseSenderSignalIndex(const QSplitter* self);
     friend int QSplitter_Receivers(const QSplitter* self, const char* signal);
     friend int QSplitter_QBaseReceivers(const QSplitter* self, const char* signal);
-    friend bool QSplitter_IsSignalConnected(const QSplitter* self, QMetaMethod* signal);
-    friend bool QSplitter_QBaseIsSignalConnected(const QSplitter* self, QMetaMethod* signal);
+    friend bool QSplitter_IsSignalConnected(const QSplitter* self, const QMetaMethod* signal);
+    friend bool QSplitter_QBaseIsSignalConnected(const QSplitter* self, const QMetaMethod* signal);
+    friend double QSplitter_GetDecodedMetricF(const QSplitter* self, int metricA, int metricB);
+    friend double QSplitter_QBaseGetDecodedMetricF(const QSplitter* self, int metricA, int metricB);
 };
 
 // This class is a subclass of QSplitterHandle so that we can call protected methods
@@ -1488,6 +1512,7 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     using QSplitterHandle_SenderSignalIndex_Callback = int (*)();
     using QSplitterHandle_Receivers_Callback = int (*)(const QSplitterHandle*, const char*);
     using QSplitterHandle_IsSignalConnected_Callback = bool (*)(const QSplitterHandle*, QMetaMethod*);
+    using QSplitterHandle_GetDecodedMetricF_Callback = double (*)(const QSplitterHandle*, int, int);
 
   protected:
     // Instance callback storage
@@ -1550,6 +1575,7 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     QSplitterHandle_SenderSignalIndex_Callback qsplitterhandle_sendersignalindex_callback = nullptr;
     QSplitterHandle_Receivers_Callback qsplitterhandle_receivers_callback = nullptr;
     QSplitterHandle_IsSignalConnected_Callback qsplitterhandle_issignalconnected_callback = nullptr;
+    QSplitterHandle_GetDecodedMetricF_Callback qsplitterhandle_getdecodedmetricf_callback = nullptr;
 
     // Instance base flags
     mutable bool qsplitterhandle_metacall_isbase = false;
@@ -1611,9 +1637,10 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     mutable bool qsplitterhandle_sendersignalindex_isbase = false;
     mutable bool qsplitterhandle_receivers_isbase = false;
     mutable bool qsplitterhandle_issignalconnected_isbase = false;
+    mutable bool qsplitterhandle_getdecodedmetricf_isbase = false;
 
   public:
-    VirtualQSplitterHandle(Qt::Orientation o, QSplitter* parent) : QSplitterHandle(o, parent){};
+    VirtualQSplitterHandle(Qt::Orientation o, QSplitter* parent) : QSplitterHandle(o, parent) {};
 
     ~VirtualQSplitterHandle() {
         qsplitterhandle_metacall_callback = nullptr;
@@ -1675,6 +1702,7 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
         qsplitterhandle_sendersignalindex_callback = nullptr;
         qsplitterhandle_receivers_callback = nullptr;
         qsplitterhandle_issignalconnected_callback = nullptr;
+        qsplitterhandle_getdecodedmetricf_callback = nullptr;
     }
 
     // Callback setters
@@ -1737,6 +1765,7 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     inline void setQSplitterHandle_SenderSignalIndex_Callback(QSplitterHandle_SenderSignalIndex_Callback cb) { qsplitterhandle_sendersignalindex_callback = cb; }
     inline void setQSplitterHandle_Receivers_Callback(QSplitterHandle_Receivers_Callback cb) { qsplitterhandle_receivers_callback = cb; }
     inline void setQSplitterHandle_IsSignalConnected_Callback(QSplitterHandle_IsSignalConnected_Callback cb) { qsplitterhandle_issignalconnected_callback = cb; }
+    inline void setQSplitterHandle_GetDecodedMetricF_Callback(QSplitterHandle_GetDecodedMetricF_Callback cb) { qsplitterhandle_getdecodedmetricf_callback = cb; }
 
     // Base flag setters
     inline void setQSplitterHandle_Metacall_IsBase(bool value) const { qsplitterhandle_metacall_isbase = value; }
@@ -1798,6 +1827,7 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     inline void setQSplitterHandle_SenderSignalIndex_IsBase(bool value) const { qsplitterhandle_sendersignalindex_isbase = value; }
     inline void setQSplitterHandle_Receivers_IsBase(bool value) const { qsplitterhandle_receivers_isbase = value; }
     inline void setQSplitterHandle_IsSignalConnected_IsBase(bool value) const { qsplitterhandle_issignalconnected_isbase = value; }
+    inline void setQSplitterHandle_GetDecodedMetricF_IsBase(bool value) const { qsplitterhandle_getdecodedmetricf_isbase = value; }
 
     // Virtual method for C ABI access and custom callback
     virtual int qt_metacall(QMetaObject::Call param1, int param2, void** param3) override {
@@ -2639,6 +2669,22 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
         }
     }
 
+    // Virtual method for C ABI access and custom callback
+    double getDecodedMetricF(QPaintDevice::PaintDeviceMetric metricA, QPaintDevice::PaintDeviceMetric metricB) const {
+        if (qsplitterhandle_getdecodedmetricf_isbase) {
+            qsplitterhandle_getdecodedmetricf_isbase = false;
+            return QSplitterHandle::getDecodedMetricF(metricA, metricB);
+        } else if (qsplitterhandle_getdecodedmetricf_callback != nullptr) {
+            int cbval1 = static_cast<int>(metricA);
+            int cbval2 = static_cast<int>(metricB);
+
+            double callback_ret = qsplitterhandle_getdecodedmetricf_callback(this, cbval1, cbval2);
+            return static_cast<double>(callback_ret);
+        } else {
+            return QSplitterHandle::getDecodedMetricF(metricA, metricB);
+        }
+    }
+
     // Friend functions
     friend void QSplitterHandle_PaintEvent(QSplitterHandle* self, QPaintEvent* param1);
     friend void QSplitterHandle_QBasePaintEvent(QSplitterHandle* self, QPaintEvent* param1);
@@ -2690,8 +2736,8 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     friend void QSplitterHandle_QBaseShowEvent(QSplitterHandle* self, QShowEvent* event);
     friend void QSplitterHandle_HideEvent(QSplitterHandle* self, QHideEvent* event);
     friend void QSplitterHandle_QBaseHideEvent(QSplitterHandle* self, QHideEvent* event);
-    friend bool QSplitterHandle_NativeEvent(QSplitterHandle* self, libqt_string eventType, void* message, intptr_t* result);
-    friend bool QSplitterHandle_QBaseNativeEvent(QSplitterHandle* self, libqt_string eventType, void* message, intptr_t* result);
+    friend bool QSplitterHandle_NativeEvent(QSplitterHandle* self, const libqt_string eventType, void* message, intptr_t* result);
+    friend bool QSplitterHandle_QBaseNativeEvent(QSplitterHandle* self, const libqt_string eventType, void* message, intptr_t* result);
     friend void QSplitterHandle_ChangeEvent(QSplitterHandle* self, QEvent* param1);
     friend void QSplitterHandle_QBaseChangeEvent(QSplitterHandle* self, QEvent* param1);
     friend int QSplitterHandle_Metric(const QSplitterHandle* self, int param1);
@@ -2712,10 +2758,10 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     friend void QSplitterHandle_QBaseChildEvent(QSplitterHandle* self, QChildEvent* event);
     friend void QSplitterHandle_CustomEvent(QSplitterHandle* self, QEvent* event);
     friend void QSplitterHandle_QBaseCustomEvent(QSplitterHandle* self, QEvent* event);
-    friend void QSplitterHandle_ConnectNotify(QSplitterHandle* self, QMetaMethod* signal);
-    friend void QSplitterHandle_QBaseConnectNotify(QSplitterHandle* self, QMetaMethod* signal);
-    friend void QSplitterHandle_DisconnectNotify(QSplitterHandle* self, QMetaMethod* signal);
-    friend void QSplitterHandle_QBaseDisconnectNotify(QSplitterHandle* self, QMetaMethod* signal);
+    friend void QSplitterHandle_ConnectNotify(QSplitterHandle* self, const QMetaMethod* signal);
+    friend void QSplitterHandle_QBaseConnectNotify(QSplitterHandle* self, const QMetaMethod* signal);
+    friend void QSplitterHandle_DisconnectNotify(QSplitterHandle* self, const QMetaMethod* signal);
+    friend void QSplitterHandle_QBaseDisconnectNotify(QSplitterHandle* self, const QMetaMethod* signal);
     friend void QSplitterHandle_MoveSplitter(QSplitterHandle* self, int p);
     friend void QSplitterHandle_QBaseMoveSplitter(QSplitterHandle* self, int p);
     friend int QSplitterHandle_ClosestLegalPosition(QSplitterHandle* self, int p);
@@ -2736,8 +2782,10 @@ class VirtualQSplitterHandle final : public QSplitterHandle {
     friend int QSplitterHandle_QBaseSenderSignalIndex(const QSplitterHandle* self);
     friend int QSplitterHandle_Receivers(const QSplitterHandle* self, const char* signal);
     friend int QSplitterHandle_QBaseReceivers(const QSplitterHandle* self, const char* signal);
-    friend bool QSplitterHandle_IsSignalConnected(const QSplitterHandle* self, QMetaMethod* signal);
-    friend bool QSplitterHandle_QBaseIsSignalConnected(const QSplitterHandle* self, QMetaMethod* signal);
+    friend bool QSplitterHandle_IsSignalConnected(const QSplitterHandle* self, const QMetaMethod* signal);
+    friend bool QSplitterHandle_QBaseIsSignalConnected(const QSplitterHandle* self, const QMetaMethod* signal);
+    friend double QSplitterHandle_GetDecodedMetricF(const QSplitterHandle* self, int metricA, int metricB);
+    friend double QSplitterHandle_QBaseGetDecodedMetricF(const QSplitterHandle* self, int metricA, int metricB);
 };
 
 #endif

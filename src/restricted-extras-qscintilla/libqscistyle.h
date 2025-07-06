@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqcolor.h"
-#include "../libqfont.h"
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html
 
 /// q_scistyle_new constructs a new QsciStyle object.

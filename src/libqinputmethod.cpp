@@ -41,7 +41,7 @@ QTransform* QInputMethod_InputItemTransform(const QInputMethod* self) {
     return new QTransform(self->inputItemTransform());
 }
 
-void QInputMethod_SetInputItemTransform(QInputMethod* self, QTransform* transform) {
+void QInputMethod_SetInputItemTransform(QInputMethod* self, const QTransform* transform) {
     self->setInputItemTransform(*transform);
 }
 
@@ -49,7 +49,7 @@ QRectF* QInputMethod_InputItemRectangle(const QInputMethod* self) {
     return new QRectF(self->inputItemRectangle());
 }
 
-void QInputMethod_SetInputItemRectangle(QInputMethod* self, QRectF* rect) {
+void QInputMethod_SetInputItemRectangle(QInputMethod* self, const QRectF* rect) {
     self->setInputItemRectangle(*rect);
 }
 
@@ -89,7 +89,7 @@ int QInputMethod_InputDirection(const QInputMethod* self) {
     return static_cast<int>(self->inputDirection());
 }
 
-QVariant* QInputMethod_QueryFocusObject(int query, QVariant* argument) {
+QVariant* QInputMethod_QueryFocusObject(int query, const QVariant* argument) {
     return new QVariant(QInputMethod::queryFocusObject(static_cast<Qt::InputMethodQuery>(query), *argument));
 }
 

@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqsize.h"
-#include "libqsurfaceformat.h"
-
 /// https://doc.qt.io/qt-6/qsurface.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)

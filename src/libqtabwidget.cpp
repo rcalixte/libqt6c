@@ -98,22 +98,22 @@ libqt_string QTabWidget_Tr(const char* s) {
     return _str;
 }
 
-int QTabWidget_AddTab(QTabWidget* self, QWidget* widget, libqt_string param2) {
+int QTabWidget_AddTab(QTabWidget* self, QWidget* widget, const libqt_string param2) {
     QString param2_QString = QString::fromUtf8(param2.data, param2.len);
     return self->addTab(widget, param2_QString);
 }
 
-int QTabWidget_AddTab2(QTabWidget* self, QWidget* widget, QIcon* icon, libqt_string label) {
+int QTabWidget_AddTab2(QTabWidget* self, QWidget* widget, const QIcon* icon, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return self->addTab(widget, *icon, label_QString);
 }
 
-int QTabWidget_InsertTab(QTabWidget* self, int index, QWidget* widget, libqt_string param3) {
+int QTabWidget_InsertTab(QTabWidget* self, int index, QWidget* widget, const libqt_string param3) {
     QString param3_QString = QString::fromUtf8(param3.data, param3.len);
     return self->insertTab(static_cast<int>(index), widget, param3_QString);
 }
 
-int QTabWidget_InsertTab2(QTabWidget* self, int index, QWidget* widget, QIcon* icon, libqt_string label) {
+int QTabWidget_InsertTab2(QTabWidget* self, int index, QWidget* widget, const QIcon* icon, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return self->insertTab(static_cast<int>(index), widget, *icon, label_QString);
 }
@@ -150,7 +150,7 @@ libqt_string QTabWidget_TabText(const QTabWidget* self, int index) {
     return _str;
 }
 
-void QTabWidget_SetTabText(QTabWidget* self, int index, libqt_string text) {
+void QTabWidget_SetTabText(QTabWidget* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setTabText(static_cast<int>(index), text_QString);
 }
@@ -159,11 +159,11 @@ QIcon* QTabWidget_TabIcon(const QTabWidget* self, int index) {
     return new QIcon(self->tabIcon(static_cast<int>(index)));
 }
 
-void QTabWidget_SetTabIcon(QTabWidget* self, int index, QIcon* icon) {
+void QTabWidget_SetTabIcon(QTabWidget* self, int index, const QIcon* icon) {
     self->setTabIcon(static_cast<int>(index), *icon);
 }
 
-void QTabWidget_SetTabToolTip(QTabWidget* self, int index, libqt_string tip) {
+void QTabWidget_SetTabToolTip(QTabWidget* self, int index, const libqt_string tip) {
     QString tip_QString = QString::fromUtf8(tip.data, tip.len);
     self->setTabToolTip(static_cast<int>(index), tip_QString);
 }
@@ -180,7 +180,7 @@ libqt_string QTabWidget_TabToolTip(const QTabWidget* self, int index) {
     return _str;
 }
 
-void QTabWidget_SetTabWhatsThis(QTabWidget* self, int index, libqt_string text) {
+void QTabWidget_SetTabWhatsThis(QTabWidget* self, int index, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     self->setTabWhatsThis(static_cast<int>(index), text_QString);
 }
@@ -209,7 +209,7 @@ QWidget* QTabWidget_Widget(const QTabWidget* self, int index) {
     return self->widget(static_cast<int>(index));
 }
 
-int QTabWidget_IndexOf(const QTabWidget* self, QWidget* widget) {
+int QTabWidget_IndexOf(const QTabWidget* self, const QWidget* widget) {
     return self->indexOf(widget);
 }
 
@@ -269,7 +269,7 @@ QSize* QTabWidget_IconSize(const QTabWidget* self) {
     return new QSize(self->iconSize());
 }
 
-void QTabWidget_SetIconSize(QTabWidget* self, QSize* size) {
+void QTabWidget_SetIconSize(QTabWidget* self, const QSize* size) {
     self->setIconSize(*size);
 }
 
@@ -1438,7 +1438,7 @@ void QTabWidget_OnHideEvent(QTabWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTabWidget_NativeEvent(QTabWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTabWidget_NativeEvent(QTabWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtabwidget = dynamic_cast<VirtualQTabWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
@@ -1449,7 +1449,7 @@ bool QTabWidget_NativeEvent(QTabWidget* self, libqt_string eventType, void* mess
 }
 
 // Base class handler implementation
-bool QTabWidget_QBaseNativeEvent(QTabWidget* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTabWidget_QBaseNativeEvent(QTabWidget* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtabwidget = dynamic_cast<VirtualQTabWidget*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
@@ -1788,7 +1788,7 @@ void QTabWidget_OnCustomEvent(QTabWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTabWidget_ConnectNotify(QTabWidget* self, QMetaMethod* signal) {
+void QTabWidget_ConnectNotify(QTabWidget* self, const QMetaMethod* signal) {
     auto* vqtabwidget = dynamic_cast<VirtualQTabWidget*>(self);
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         vqtabwidget->connectNotify(*signal);
@@ -1798,7 +1798,7 @@ void QTabWidget_ConnectNotify(QTabWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTabWidget_QBaseConnectNotify(QTabWidget* self, QMetaMethod* signal) {
+void QTabWidget_QBaseConnectNotify(QTabWidget* self, const QMetaMethod* signal) {
     auto* vqtabwidget = dynamic_cast<VirtualQTabWidget*>(self);
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         vqtabwidget->setQTabWidget_ConnectNotify_IsBase(true);
@@ -1817,7 +1817,7 @@ void QTabWidget_OnConnectNotify(QTabWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTabWidget_DisconnectNotify(QTabWidget* self, QMetaMethod* signal) {
+void QTabWidget_DisconnectNotify(QTabWidget* self, const QMetaMethod* signal) {
     auto* vqtabwidget = dynamic_cast<VirtualQTabWidget*>(self);
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         vqtabwidget->disconnectNotify(*signal);
@@ -1827,7 +1827,7 @@ void QTabWidget_DisconnectNotify(QTabWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTabWidget_QBaseDisconnectNotify(QTabWidget* self, QMetaMethod* signal) {
+void QTabWidget_QBaseDisconnectNotify(QTabWidget* self, const QMetaMethod* signal) {
     auto* vqtabwidget = dynamic_cast<VirtualQTabWidget*>(self);
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         vqtabwidget->setQTabWidget_DisconnectNotify_IsBase(true);
@@ -2107,7 +2107,7 @@ void QTabWidget_OnReceivers(const QTabWidget* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTabWidget_IsSignalConnected(const QTabWidget* self, QMetaMethod* signal) {
+bool QTabWidget_IsSignalConnected(const QTabWidget* self, const QMetaMethod* signal) {
     auto* vqtabwidget = const_cast<VirtualQTabWidget*>(dynamic_cast<const VirtualQTabWidget*>(self));
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         return vqtabwidget->isSignalConnected(*signal);
@@ -2117,7 +2117,7 @@ bool QTabWidget_IsSignalConnected(const QTabWidget* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTabWidget_QBaseIsSignalConnected(const QTabWidget* self, QMetaMethod* signal) {
+bool QTabWidget_QBaseIsSignalConnected(const QTabWidget* self, const QMetaMethod* signal) {
     auto* vqtabwidget = const_cast<VirtualQTabWidget*>(dynamic_cast<const VirtualQTabWidget*>(self));
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         vqtabwidget->setQTabWidget_IsSignalConnected_IsBase(true);
@@ -2132,6 +2132,35 @@ void QTabWidget_OnIsSignalConnected(const QTabWidget* self, intptr_t slot) {
     auto* vqtabwidget = const_cast<VirtualQTabWidget*>(dynamic_cast<const VirtualQTabWidget*>(self));
     if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
         vqtabwidget->setQTabWidget_IsSignalConnected_Callback(reinterpret_cast<VirtualQTabWidget::QTabWidget_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QTabWidget_GetDecodedMetricF(const QTabWidget* self, int metricA, int metricB) {
+    auto* vqtabwidget = const_cast<VirtualQTabWidget*>(dynamic_cast<const VirtualQTabWidget*>(self));
+    if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
+        return vqtabwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTabWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QTabWidget_QBaseGetDecodedMetricF(const QTabWidget* self, int metricA, int metricB) {
+    auto* vqtabwidget = const_cast<VirtualQTabWidget*>(dynamic_cast<const VirtualQTabWidget*>(self));
+    if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
+        vqtabwidget->setQTabWidget_GetDecodedMetricF_IsBase(true);
+        return vqtabwidget->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTabWidget*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QTabWidget_OnGetDecodedMetricF(const QTabWidget* self, intptr_t slot) {
+    auto* vqtabwidget = const_cast<VirtualQTabWidget*>(dynamic_cast<const VirtualQTabWidget*>(self));
+    if (vqtabwidget && vqtabwidget->isVirtualQTabWidget) {
+        vqtabwidget->setQTabWidget_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQTabWidget::QTabWidget_GetDecodedMetricF_Callback>(slot));
     }
 }
 

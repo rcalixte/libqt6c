@@ -88,8 +88,8 @@ class VirtualQNetworkDiskCache final : public QNetworkDiskCache {
     mutable bool qnetworkdiskcache_issignalconnected_isbase = false;
 
   public:
-    VirtualQNetworkDiskCache() : QNetworkDiskCache(){};
-    VirtualQNetworkDiskCache(QObject* parent) : QNetworkDiskCache(parent){};
+    VirtualQNetworkDiskCache() : QNetworkDiskCache() {};
+    VirtualQNetworkDiskCache(QObject* parent) : QNetworkDiskCache(parent) {};
 
     ~VirtualQNetworkDiskCache() {
         qnetworkdiskcache_metacall_callback = nullptr;
@@ -486,18 +486,18 @@ class VirtualQNetworkDiskCache final : public QNetworkDiskCache {
     friend void QNetworkDiskCache_QBaseChildEvent(QNetworkDiskCache* self, QChildEvent* event);
     friend void QNetworkDiskCache_CustomEvent(QNetworkDiskCache* self, QEvent* event);
     friend void QNetworkDiskCache_QBaseCustomEvent(QNetworkDiskCache* self, QEvent* event);
-    friend void QNetworkDiskCache_ConnectNotify(QNetworkDiskCache* self, QMetaMethod* signal);
-    friend void QNetworkDiskCache_QBaseConnectNotify(QNetworkDiskCache* self, QMetaMethod* signal);
-    friend void QNetworkDiskCache_DisconnectNotify(QNetworkDiskCache* self, QMetaMethod* signal);
-    friend void QNetworkDiskCache_QBaseDisconnectNotify(QNetworkDiskCache* self, QMetaMethod* signal);
+    friend void QNetworkDiskCache_ConnectNotify(QNetworkDiskCache* self, const QMetaMethod* signal);
+    friend void QNetworkDiskCache_QBaseConnectNotify(QNetworkDiskCache* self, const QMetaMethod* signal);
+    friend void QNetworkDiskCache_DisconnectNotify(QNetworkDiskCache* self, const QMetaMethod* signal);
+    friend void QNetworkDiskCache_QBaseDisconnectNotify(QNetworkDiskCache* self, const QMetaMethod* signal);
     friend QObject* QNetworkDiskCache_Sender(const QNetworkDiskCache* self);
     friend QObject* QNetworkDiskCache_QBaseSender(const QNetworkDiskCache* self);
     friend int QNetworkDiskCache_SenderSignalIndex(const QNetworkDiskCache* self);
     friend int QNetworkDiskCache_QBaseSenderSignalIndex(const QNetworkDiskCache* self);
     friend int QNetworkDiskCache_Receivers(const QNetworkDiskCache* self, const char* signal);
     friend int QNetworkDiskCache_QBaseReceivers(const QNetworkDiskCache* self, const char* signal);
-    friend bool QNetworkDiskCache_IsSignalConnected(const QNetworkDiskCache* self, QMetaMethod* signal);
-    friend bool QNetworkDiskCache_QBaseIsSignalConnected(const QNetworkDiskCache* self, QMetaMethod* signal);
+    friend bool QNetworkDiskCache_IsSignalConnected(const QNetworkDiskCache* self, const QMetaMethod* signal);
+    friend bool QNetworkDiskCache_QBaseIsSignalConnected(const QNetworkDiskCache* self, const QMetaMethod* signal);
 };
 
 #endif

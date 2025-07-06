@@ -59,18 +59,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QLineEdit::ActionPosition ActionPosition; // C++ enum
-typedef QLineEdit::EchoMode EchoMode;             // C++ enum
-#else
-typedef int ActionPosition; // C ABI enum
-typedef int EchoMode;       // C ABI enum
-#endif
-
 QLineEdit* QLineEdit_new(QWidget* parent);
 QLineEdit* QLineEdit_new2();
-QLineEdit* QLineEdit_new3(libqt_string param1);
-QLineEdit* QLineEdit_new4(libqt_string param1, QWidget* parent);
+QLineEdit* QLineEdit_new3(const libqt_string param1);
+QLineEdit* QLineEdit_new4(const libqt_string param1, QWidget* parent);
 QMetaObject* QLineEdit_MetaObject(const QLineEdit* self);
 void* QLineEdit_Metacast(QLineEdit* self, const char* param1);
 int QLineEdit_Metacall(QLineEdit* self, int param1, int param2, void** param3);
@@ -80,7 +72,7 @@ libqt_string QLineEdit_Tr(const char* s);
 libqt_string QLineEdit_Text(const QLineEdit* self);
 libqt_string QLineEdit_DisplayText(const QLineEdit* self);
 libqt_string QLineEdit_PlaceholderText(const QLineEdit* self);
-void QLineEdit_SetPlaceholderText(QLineEdit* self, libqt_string placeholderText);
+void QLineEdit_SetPlaceholderText(QLineEdit* self, const libqt_string placeholderText);
 int QLineEdit_MaxLength(const QLineEdit* self);
 void QLineEdit_SetMaxLength(QLineEdit* self, int maxLength);
 void QLineEdit_SetFrame(QLineEdit* self, bool frame);
@@ -91,7 +83,7 @@ int QLineEdit_EchoMode(const QLineEdit* self);
 void QLineEdit_SetEchoMode(QLineEdit* self, int echoMode);
 bool QLineEdit_IsReadOnly(const QLineEdit* self);
 void QLineEdit_SetReadOnly(QLineEdit* self, bool readOnly);
-void QLineEdit_SetValidator(QLineEdit* self, QValidator* validator);
+void QLineEdit_SetValidator(QLineEdit* self, const QValidator* validator);
 QValidator* QLineEdit_Validator(const QLineEdit* self);
 void QLineEdit_SetCompleter(QLineEdit* self, QCompleter* completer);
 QCompleter* QLineEdit_Completer(const QLineEdit* self);
@@ -103,7 +95,7 @@ void QLineEdit_OnMinimumSizeHint(const QLineEdit* self, intptr_t slot);
 QSize* QLineEdit_QBaseMinimumSizeHint(const QLineEdit* self);
 int QLineEdit_CursorPosition(const QLineEdit* self);
 void QLineEdit_SetCursorPosition(QLineEdit* self, int cursorPosition);
-int QLineEdit_CursorPositionAt(QLineEdit* self, QPoint* pos);
+int QLineEdit_CursorPositionAt(QLineEdit* self, const QPoint* pos);
 void QLineEdit_SetAlignment(QLineEdit* self, int flag);
 int QLineEdit_Alignment(const QLineEdit* self);
 void QLineEdit_CursorForward(QLineEdit* self, bool mark);
@@ -129,14 +121,14 @@ bool QLineEdit_DragEnabled(const QLineEdit* self);
 void QLineEdit_SetCursorMoveStyle(QLineEdit* self, int style);
 int QLineEdit_CursorMoveStyle(const QLineEdit* self);
 libqt_string QLineEdit_InputMask(const QLineEdit* self);
-void QLineEdit_SetInputMask(QLineEdit* self, libqt_string inputMask);
+void QLineEdit_SetInputMask(QLineEdit* self, const libqt_string inputMask);
 bool QLineEdit_HasAcceptableInput(const QLineEdit* self);
 void QLineEdit_SetTextMargins(QLineEdit* self, int left, int top, int right, int bottom);
-void QLineEdit_SetTextMarginsWithMargins(QLineEdit* self, QMargins* margins);
+void QLineEdit_SetTextMarginsWithMargins(QLineEdit* self, const QMargins* margins);
 QMargins* QLineEdit_TextMargins(const QLineEdit* self);
 void QLineEdit_AddAction(QLineEdit* self, QAction* action, int position);
-QAction* QLineEdit_AddAction2(QLineEdit* self, QIcon* icon, int position);
-void QLineEdit_SetText(QLineEdit* self, libqt_string text);
+QAction* QLineEdit_AddAction2(QLineEdit* self, const QIcon* icon, int position);
+void QLineEdit_SetText(QLineEdit* self, const libqt_string text);
 void QLineEdit_Clear(QLineEdit* self);
 void QLineEdit_SelectAll(QLineEdit* self);
 void QLineEdit_Undo(QLineEdit* self);
@@ -145,11 +137,11 @@ void QLineEdit_Cut(QLineEdit* self);
 void QLineEdit_Copy(const QLineEdit* self);
 void QLineEdit_Paste(QLineEdit* self);
 void QLineEdit_Deselect(QLineEdit* self);
-void QLineEdit_Insert(QLineEdit* self, libqt_string param1);
+void QLineEdit_Insert(QLineEdit* self, const libqt_string param1);
 QMenu* QLineEdit_CreateStandardContextMenu(QLineEdit* self);
-void QLineEdit_TextChanged(QLineEdit* self, libqt_string param1);
+void QLineEdit_TextChanged(QLineEdit* self, const libqt_string param1);
 void QLineEdit_Connect_TextChanged(QLineEdit* self, intptr_t slot);
-void QLineEdit_TextEdited(QLineEdit* self, libqt_string param1);
+void QLineEdit_TextEdited(QLineEdit* self, const libqt_string param1);
 void QLineEdit_Connect_TextEdited(QLineEdit* self, intptr_t slot);
 void QLineEdit_CursorPositionChanged(QLineEdit* self, int param1, int param2);
 void QLineEdit_Connect_CursorPositionChanged(QLineEdit* self, intptr_t slot);
@@ -271,9 +263,9 @@ void QLineEdit_QBaseShowEvent(QLineEdit* self, QShowEvent* event);
 void QLineEdit_HideEvent(QLineEdit* self, QHideEvent* event);
 void QLineEdit_OnHideEvent(QLineEdit* self, intptr_t slot);
 void QLineEdit_QBaseHideEvent(QLineEdit* self, QHideEvent* event);
-bool QLineEdit_NativeEvent(QLineEdit* self, libqt_string eventType, void* message, intptr_t* result);
+bool QLineEdit_NativeEvent(QLineEdit* self, const libqt_string eventType, void* message, intptr_t* result);
 void QLineEdit_OnNativeEvent(QLineEdit* self, intptr_t slot);
-bool QLineEdit_QBaseNativeEvent(QLineEdit* self, libqt_string eventType, void* message, intptr_t* result);
+bool QLineEdit_QBaseNativeEvent(QLineEdit* self, const libqt_string eventType, void* message, intptr_t* result);
 int QLineEdit_Metric(const QLineEdit* self, int param1);
 void QLineEdit_OnMetric(const QLineEdit* self, intptr_t slot);
 int QLineEdit_QBaseMetric(const QLineEdit* self, int param1);
@@ -298,12 +290,12 @@ void QLineEdit_QBaseChildEvent(QLineEdit* self, QChildEvent* event);
 void QLineEdit_CustomEvent(QLineEdit* self, QEvent* event);
 void QLineEdit_OnCustomEvent(QLineEdit* self, intptr_t slot);
 void QLineEdit_QBaseCustomEvent(QLineEdit* self, QEvent* event);
-void QLineEdit_ConnectNotify(QLineEdit* self, QMetaMethod* signal);
+void QLineEdit_ConnectNotify(QLineEdit* self, const QMetaMethod* signal);
 void QLineEdit_OnConnectNotify(QLineEdit* self, intptr_t slot);
-void QLineEdit_QBaseConnectNotify(QLineEdit* self, QMetaMethod* signal);
-void QLineEdit_DisconnectNotify(QLineEdit* self, QMetaMethod* signal);
+void QLineEdit_QBaseConnectNotify(QLineEdit* self, const QMetaMethod* signal);
+void QLineEdit_DisconnectNotify(QLineEdit* self, const QMetaMethod* signal);
 void QLineEdit_OnDisconnectNotify(QLineEdit* self, intptr_t slot);
-void QLineEdit_QBaseDisconnectNotify(QLineEdit* self, QMetaMethod* signal);
+void QLineEdit_QBaseDisconnectNotify(QLineEdit* self, const QMetaMethod* signal);
 QRect* QLineEdit_CursorRect(const QLineEdit* self);
 void QLineEdit_OnCursorRect(const QLineEdit* self, intptr_t slot);
 QRect* QLineEdit_QBaseCursorRect(const QLineEdit* self);
@@ -331,9 +323,12 @@ int QLineEdit_QBaseSenderSignalIndex(const QLineEdit* self);
 int QLineEdit_Receivers(const QLineEdit* self, const char* signal);
 void QLineEdit_OnReceivers(const QLineEdit* self, intptr_t slot);
 int QLineEdit_QBaseReceivers(const QLineEdit* self, const char* signal);
-bool QLineEdit_IsSignalConnected(const QLineEdit* self, QMetaMethod* signal);
+bool QLineEdit_IsSignalConnected(const QLineEdit* self, const QMetaMethod* signal);
 void QLineEdit_OnIsSignalConnected(const QLineEdit* self, intptr_t slot);
-bool QLineEdit_QBaseIsSignalConnected(const QLineEdit* self, QMetaMethod* signal);
+bool QLineEdit_QBaseIsSignalConnected(const QLineEdit* self, const QMetaMethod* signal);
+double QLineEdit_GetDecodedMetricF(const QLineEdit* self, int metricA, int metricB);
+void QLineEdit_OnGetDecodedMetricF(const QLineEdit* self, intptr_t slot);
+double QLineEdit_QBaseGetDecodedMetricF(const QLineEdit* self, int metricA, int metricB);
 void QLineEdit_Delete(QLineEdit* self);
 
 #ifdef __cplusplus

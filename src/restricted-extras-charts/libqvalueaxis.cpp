@@ -129,7 +129,7 @@ int QValueAxis_TickType(const QValueAxis* self) {
     return static_cast<int>(self->tickType());
 }
 
-void QValueAxis_SetLabelFormat(QValueAxis* self, libqt_string format) {
+void QValueAxis_SetLabelFormat(QValueAxis* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->setLabelFormat(format_QString);
 }
@@ -211,7 +211,7 @@ void QValueAxis_Connect_MinorTickCountChanged(QValueAxis* self, intptr_t slot) {
     });
 }
 
-void QValueAxis_LabelFormatChanged(QValueAxis* self, libqt_string format) {
+void QValueAxis_LabelFormatChanged(QValueAxis* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->labelFormatChanged(format_QString);
 }
@@ -467,7 +467,7 @@ void QValueAxis_OnCustomEvent(QValueAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QValueAxis_ConnectNotify(QValueAxis* self, QMetaMethod* signal) {
+void QValueAxis_ConnectNotify(QValueAxis* self, const QMetaMethod* signal) {
     auto* vqvalueaxis = dynamic_cast<VirtualQValueAxis*>(self);
     if (vqvalueaxis && vqvalueaxis->isVirtualQValueAxis) {
         vqvalueaxis->connectNotify(*signal);
@@ -477,7 +477,7 @@ void QValueAxis_ConnectNotify(QValueAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QValueAxis_QBaseConnectNotify(QValueAxis* self, QMetaMethod* signal) {
+void QValueAxis_QBaseConnectNotify(QValueAxis* self, const QMetaMethod* signal) {
     auto* vqvalueaxis = dynamic_cast<VirtualQValueAxis*>(self);
     if (vqvalueaxis && vqvalueaxis->isVirtualQValueAxis) {
         vqvalueaxis->setQValueAxis_ConnectNotify_IsBase(true);
@@ -496,7 +496,7 @@ void QValueAxis_OnConnectNotify(QValueAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QValueAxis_DisconnectNotify(QValueAxis* self, QMetaMethod* signal) {
+void QValueAxis_DisconnectNotify(QValueAxis* self, const QMetaMethod* signal) {
     auto* vqvalueaxis = dynamic_cast<VirtualQValueAxis*>(self);
     if (vqvalueaxis && vqvalueaxis->isVirtualQValueAxis) {
         vqvalueaxis->disconnectNotify(*signal);
@@ -506,7 +506,7 @@ void QValueAxis_DisconnectNotify(QValueAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QValueAxis_QBaseDisconnectNotify(QValueAxis* self, QMetaMethod* signal) {
+void QValueAxis_QBaseDisconnectNotify(QValueAxis* self, const QMetaMethod* signal) {
     auto* vqvalueaxis = dynamic_cast<VirtualQValueAxis*>(self);
     if (vqvalueaxis && vqvalueaxis->isVirtualQValueAxis) {
         vqvalueaxis->setQValueAxis_DisconnectNotify_IsBase(true);
@@ -612,7 +612,7 @@ void QValueAxis_OnReceivers(const QValueAxis* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QValueAxis_IsSignalConnected(const QValueAxis* self, QMetaMethod* signal) {
+bool QValueAxis_IsSignalConnected(const QValueAxis* self, const QMetaMethod* signal) {
     auto* vqvalueaxis = const_cast<VirtualQValueAxis*>(dynamic_cast<const VirtualQValueAxis*>(self));
     if (vqvalueaxis && vqvalueaxis->isVirtualQValueAxis) {
         return vqvalueaxis->isSignalConnected(*signal);
@@ -622,7 +622,7 @@ bool QValueAxis_IsSignalConnected(const QValueAxis* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QValueAxis_QBaseIsSignalConnected(const QValueAxis* self, QMetaMethod* signal) {
+bool QValueAxis_QBaseIsSignalConnected(const QValueAxis* self, const QMetaMethod* signal) {
     auto* vqvalueaxis = const_cast<VirtualQValueAxis*>(dynamic_cast<const VirtualQValueAxis*>(self));
     if (vqvalueaxis && vqvalueaxis->isVirtualQValueAxis) {
         vqvalueaxis->setQValueAxis_IsSignalConnected_IsBase(true);

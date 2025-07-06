@@ -20,7 +20,7 @@ libqt_string QItemEditorCreatorBase_ValuePropertyName(const QItemEditorCreatorBa
     return _str;
 }
 
-void QItemEditorCreatorBase_OperatorAssign(QItemEditorCreatorBase* self, QItemEditorCreatorBase* param1) {
+void QItemEditorCreatorBase_OperatorAssign(QItemEditorCreatorBase* self, const QItemEditorCreatorBase* param1) {
     self->operator=(*param1);
 }
 
@@ -32,7 +32,7 @@ QItemEditorFactory* QItemEditorFactory_new() {
     return new VirtualQItemEditorFactory();
 }
 
-QItemEditorFactory* QItemEditorFactory_new2(QItemEditorFactory* param1) {
+QItemEditorFactory* QItemEditorFactory_new2(const QItemEditorFactory* param1) {
     return new VirtualQItemEditorFactory(*param1);
 }
 

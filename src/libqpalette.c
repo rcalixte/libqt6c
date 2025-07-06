@@ -176,6 +176,10 @@ const QBrush* q_palette_placeholder_text(void* self) {
     return QPalette_PlaceholderText((QPalette*)self);
 }
 
+const QBrush* q_palette_accent(void* self) {
+    return QPalette_Accent((QPalette*)self);
+}
+
 bool q_palette_operator_equal(void* self, void* p) {
     return QPalette_OperatorEqual((QPalette*)self, (QPalette*)p);
 }

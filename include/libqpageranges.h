@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpageranges.html
 
 /// q_pageranges_new constructs a new QPageRanges object.

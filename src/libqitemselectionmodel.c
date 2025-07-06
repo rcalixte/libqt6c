@@ -19,10 +19,6 @@ QItemSelectionRange* q_itemselectionrange_new3(void* index) {
     return QItemSelectionRange_new3((QModelIndex*)index);
 }
 
-QItemSelectionRange* q_itemselectionrange_new4(void* param1) {
-    return QItemSelectionRange_new4((QItemSelectionRange*)param1);
-}
-
 void q_itemselectionrange_swap(void* self, void* other) {
     QItemSelectionRange_Swap((QItemSelectionRange*)self, (QItemSelectionRange*)other);
 }
@@ -81,14 +77,6 @@ bool q_itemselectionrange_intersects(void* self, void* other) {
 
 QItemSelectionRange* q_itemselectionrange_intersected(void* self, void* other) {
     return QItemSelectionRange_Intersected((QItemSelectionRange*)self, (QItemSelectionRange*)other);
-}
-
-bool q_itemselectionrange_operator_equal(void* self, void* other) {
-    return QItemSelectionRange_OperatorEqual((QItemSelectionRange*)self, (QItemSelectionRange*)other);
-}
-
-bool q_itemselectionrange_operator_not_equal(void* self, void* other) {
-    return QItemSelectionRange_OperatorNotEqual((QItemSelectionRange*)self, (QItemSelectionRange*)other);
 }
 
 bool q_itemselectionrange_is_valid(void* self) {
@@ -409,8 +397,8 @@ QThread* q_itemselectionmodel_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_itemselectionmodel_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_itemselectionmodel_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_itemselectionmodel_start_timer(void* self, int interval) {
@@ -419,6 +407,10 @@ int32_t q_itemselectionmodel_start_timer(void* self, int interval) {
 
 void q_itemselectionmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_itemselectionmodel_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_itemselectionmodel_children(void* self) {
@@ -511,6 +503,10 @@ bool q_itemselectionmodel_inherits(void* self, const char* classname) {
 
 void q_itemselectionmodel_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_itemselectionmodel_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_itemselectionmodel_start_timer2(void* self, int interval, int64_t timerType) {

@@ -9,7 +9,7 @@ QEasingCurve* QEasingCurve_new() {
     return new QEasingCurve();
 }
 
-QEasingCurve* QEasingCurve_new2(QEasingCurve* other) {
+QEasingCurve* QEasingCurve_new2(const QEasingCurve* other) {
     return new QEasingCurve(*other);
 }
 
@@ -17,20 +17,12 @@ QEasingCurve* QEasingCurve_new3(int typeVal) {
     return new QEasingCurve(static_cast<QEasingCurve::Type>(typeVal));
 }
 
-void QEasingCurve_OperatorAssign(QEasingCurve* self, QEasingCurve* other) {
+void QEasingCurve_OperatorAssign(QEasingCurve* self, const QEasingCurve* other) {
     self->operator=(*other);
 }
 
 void QEasingCurve_Swap(QEasingCurve* self, QEasingCurve* other) {
     self->swap(*other);
-}
-
-bool QEasingCurve_OperatorEqual(const QEasingCurve* self, QEasingCurve* other) {
-    return (*self == *other);
-}
-
-bool QEasingCurve_OperatorNotEqual(const QEasingCurve* self, QEasingCurve* other) {
-    return (*self != *other);
 }
 
 double QEasingCurve_Amplitude(const QEasingCurve* self) {
@@ -57,23 +49,23 @@ void QEasingCurve_SetOvershoot(QEasingCurve* self, double overshoot) {
     self->setOvershoot(static_cast<qreal>(overshoot));
 }
 
-void QEasingCurve_AddCubicBezierSegment(QEasingCurve* self, QPointF* c1, QPointF* c2, QPointF* endPoint) {
+void QEasingCurve_AddCubicBezierSegment(QEasingCurve* self, const QPointF* c1, const QPointF* c2, const QPointF* endPoint) {
     self->addCubicBezierSegment(*c1, *c2, *endPoint);
 }
 
-void QEasingCurve_AddTCBSegment(QEasingCurve* self, QPointF* nextPoint, double t, double c, double b) {
+void QEasingCurve_AddTCBSegment(QEasingCurve* self, const QPointF* nextPoint, double t, double c, double b) {
     self->addTCBSegment(*nextPoint, static_cast<qreal>(t), static_cast<qreal>(c), static_cast<qreal>(b));
 }
 
 libqt_list /* of QPointF* */ QEasingCurve_ToCubicSpline(const QEasingCurve* self) {
     QList<QPointF> _ret = self->toCubicSpline();
     // Convert QList<> from C++ memory to manually-managed C memory
-    QPointF** _arr = static_cast<QPointF**>(malloc(sizeof(QPointF*) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    QPointF** _arr = static_cast<QPointF**>(malloc(sizeof(QPointF*) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QPointF(_ret[i]);
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }

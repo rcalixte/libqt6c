@@ -144,7 +144,7 @@ void QTcpServer_ResumeAccepting(QTcpServer* self) {
     self->resumeAccepting();
 }
 
-void QTcpServer_SetProxy(QTcpServer* self, QNetworkProxy* networkProxy) {
+void QTcpServer_SetProxy(QTcpServer* self, const QNetworkProxy* networkProxy) {
     self->setProxy(*networkProxy);
 }
 
@@ -199,11 +199,11 @@ libqt_string QTcpServer_Tr3(const char* s, const char* c, int n) {
     return _str;
 }
 
-bool QTcpServer_Listen1(QTcpServer* self, QHostAddress* address) {
+bool QTcpServer_Listen1(QTcpServer* self, const QHostAddress* address) {
     return self->listen(*address);
 }
 
-bool QTcpServer_Listen2(QTcpServer* self, QHostAddress* address, uint16_t port) {
+bool QTcpServer_Listen2(QTcpServer* self, const QHostAddress* address, uint16_t port) {
     return self->listen(*address, static_cast<quint16>(port));
 }
 
@@ -448,7 +448,7 @@ void QTcpServer_OnCustomEvent(QTcpServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTcpServer_ConnectNotify(QTcpServer* self, QMetaMethod* signal) {
+void QTcpServer_ConnectNotify(QTcpServer* self, const QMetaMethod* signal) {
     auto* vqtcpserver = dynamic_cast<VirtualQTcpServer*>(self);
     if (vqtcpserver && vqtcpserver->isVirtualQTcpServer) {
         vqtcpserver->connectNotify(*signal);
@@ -458,7 +458,7 @@ void QTcpServer_ConnectNotify(QTcpServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTcpServer_QBaseConnectNotify(QTcpServer* self, QMetaMethod* signal) {
+void QTcpServer_QBaseConnectNotify(QTcpServer* self, const QMetaMethod* signal) {
     auto* vqtcpserver = dynamic_cast<VirtualQTcpServer*>(self);
     if (vqtcpserver && vqtcpserver->isVirtualQTcpServer) {
         vqtcpserver->setQTcpServer_ConnectNotify_IsBase(true);
@@ -477,7 +477,7 @@ void QTcpServer_OnConnectNotify(QTcpServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTcpServer_DisconnectNotify(QTcpServer* self, QMetaMethod* signal) {
+void QTcpServer_DisconnectNotify(QTcpServer* self, const QMetaMethod* signal) {
     auto* vqtcpserver = dynamic_cast<VirtualQTcpServer*>(self);
     if (vqtcpserver && vqtcpserver->isVirtualQTcpServer) {
         vqtcpserver->disconnectNotify(*signal);
@@ -487,7 +487,7 @@ void QTcpServer_DisconnectNotify(QTcpServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTcpServer_QBaseDisconnectNotify(QTcpServer* self, QMetaMethod* signal) {
+void QTcpServer_QBaseDisconnectNotify(QTcpServer* self, const QMetaMethod* signal) {
     auto* vqtcpserver = dynamic_cast<VirtualQTcpServer*>(self);
     if (vqtcpserver && vqtcpserver->isVirtualQTcpServer) {
         vqtcpserver->setQTcpServer_DisconnectNotify_IsBase(true);
@@ -622,7 +622,7 @@ void QTcpServer_OnReceivers(const QTcpServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTcpServer_IsSignalConnected(const QTcpServer* self, QMetaMethod* signal) {
+bool QTcpServer_IsSignalConnected(const QTcpServer* self, const QMetaMethod* signal) {
     auto* vqtcpserver = const_cast<VirtualQTcpServer*>(dynamic_cast<const VirtualQTcpServer*>(self));
     if (vqtcpserver && vqtcpserver->isVirtualQTcpServer) {
         return vqtcpserver->isSignalConnected(*signal);
@@ -632,7 +632,7 @@ bool QTcpServer_IsSignalConnected(const QTcpServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTcpServer_QBaseIsSignalConnected(const QTcpServer* self, QMetaMethod* signal) {
+bool QTcpServer_QBaseIsSignalConnected(const QTcpServer* self, const QMetaMethod* signal) {
     auto* vqtcpserver = const_cast<VirtualQTcpServer*>(dynamic_cast<const VirtualQTcpServer*>(self));
     if (vqtcpserver && vqtcpserver->isVirtualQTcpServer) {
         vqtcpserver->setQTcpServer_IsSignalConnected_IsBase(true);

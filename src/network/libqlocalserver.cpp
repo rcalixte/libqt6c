@@ -100,7 +100,7 @@ bool QLocalServer_IsListening(const QLocalServer* self) {
     return self->isListening();
 }
 
-bool QLocalServer_Listen(QLocalServer* self, libqt_string name) {
+bool QLocalServer_Listen(QLocalServer* self, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return self->listen(name_QString);
 }
@@ -137,7 +137,7 @@ libqt_string QLocalServer_FullServerName(const QLocalServer* self) {
     return _str;
 }
 
-bool QLocalServer_RemoveServer(libqt_string name) {
+bool QLocalServer_RemoveServer(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return QLocalServer::removeServer(name_QString);
 }
@@ -440,7 +440,7 @@ void QLocalServer_OnCustomEvent(QLocalServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLocalServer_ConnectNotify(QLocalServer* self, QMetaMethod* signal) {
+void QLocalServer_ConnectNotify(QLocalServer* self, const QMetaMethod* signal) {
     auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         vqlocalserver->connectNotify(*signal);
@@ -450,7 +450,7 @@ void QLocalServer_ConnectNotify(QLocalServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLocalServer_QBaseConnectNotify(QLocalServer* self, QMetaMethod* signal) {
+void QLocalServer_QBaseConnectNotify(QLocalServer* self, const QMetaMethod* signal) {
     auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         vqlocalserver->setQLocalServer_ConnectNotify_IsBase(true);
@@ -469,7 +469,7 @@ void QLocalServer_OnConnectNotify(QLocalServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QLocalServer_DisconnectNotify(QLocalServer* self, QMetaMethod* signal) {
+void QLocalServer_DisconnectNotify(QLocalServer* self, const QMetaMethod* signal) {
     auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         vqlocalserver->disconnectNotify(*signal);
@@ -479,7 +479,7 @@ void QLocalServer_DisconnectNotify(QLocalServer* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QLocalServer_QBaseDisconnectNotify(QLocalServer* self, QMetaMethod* signal) {
+void QLocalServer_QBaseDisconnectNotify(QLocalServer* self, const QMetaMethod* signal) {
     auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         vqlocalserver->setQLocalServer_DisconnectNotify_IsBase(true);
@@ -494,6 +494,35 @@ void QLocalServer_OnDisconnectNotify(QLocalServer* self, intptr_t slot) {
     auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         vqlocalserver->setQLocalServer_DisconnectNotify_Callback(reinterpret_cast<VirtualQLocalServer::QLocalServer_DisconnectNotify_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+void QLocalServer_AddPendingConnection(QLocalServer* self, QLocalSocket* socket) {
+    auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
+    if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
+        vqlocalserver->addPendingConnection(socket);
+    } else {
+        ((VirtualQLocalServer*)self)->addPendingConnection(socket);
+    }
+}
+
+// Base class handler implementation
+void QLocalServer_QBaseAddPendingConnection(QLocalServer* self, QLocalSocket* socket) {
+    auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
+    if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
+        vqlocalserver->setQLocalServer_AddPendingConnection_IsBase(true);
+        vqlocalserver->addPendingConnection(socket);
+    } else {
+        ((VirtualQLocalServer*)self)->addPendingConnection(socket);
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QLocalServer_OnAddPendingConnection(QLocalServer* self, intptr_t slot) {
+    auto* vqlocalserver = dynamic_cast<VirtualQLocalServer*>(self);
+    if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
+        vqlocalserver->setQLocalServer_AddPendingConnection_Callback(reinterpret_cast<VirtualQLocalServer::QLocalServer_AddPendingConnection_Callback>(slot));
     }
 }
 
@@ -585,7 +614,7 @@ void QLocalServer_OnReceivers(const QLocalServer* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QLocalServer_IsSignalConnected(const QLocalServer* self, QMetaMethod* signal) {
+bool QLocalServer_IsSignalConnected(const QLocalServer* self, const QMetaMethod* signal) {
     auto* vqlocalserver = const_cast<VirtualQLocalServer*>(dynamic_cast<const VirtualQLocalServer*>(self));
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         return vqlocalserver->isSignalConnected(*signal);
@@ -595,7 +624,7 @@ bool QLocalServer_IsSignalConnected(const QLocalServer* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QLocalServer_QBaseIsSignalConnected(const QLocalServer* self, QMetaMethod* signal) {
+bool QLocalServer_QBaseIsSignalConnected(const QLocalServer* self, const QMetaMethod* signal) {
     auto* vqlocalserver = const_cast<VirtualQLocalServer*>(dynamic_cast<const VirtualQLocalServer*>(self));
     if (vqlocalserver && vqlocalserver->isVirtualQLocalServer) {
         vqlocalserver->setQLocalServer_IsSignalConnected_IsBase(true);

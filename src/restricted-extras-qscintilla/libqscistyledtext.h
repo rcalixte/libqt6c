@@ -12,8 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include <string.h>
-
 /// https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyledText.html
 
 /// q_scistyledtext_new constructs a new QsciStyledText object.

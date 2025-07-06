@@ -299,7 +299,7 @@ void QBoxPlotLegendMarker_OnCustomEvent(QBoxPlotLegendMarker* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QBoxPlotLegendMarker_ConnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal) {
+void QBoxPlotLegendMarker_ConnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal) {
     auto* vqboxplotlegendmarker = dynamic_cast<VirtualQBoxPlotLegendMarker*>(self);
     if (vqboxplotlegendmarker && vqboxplotlegendmarker->isVirtualQBoxPlotLegendMarker) {
         vqboxplotlegendmarker->connectNotify(*signal);
@@ -309,7 +309,7 @@ void QBoxPlotLegendMarker_ConnectNotify(QBoxPlotLegendMarker* self, QMetaMethod*
 }
 
 // Base class handler implementation
-void QBoxPlotLegendMarker_QBaseConnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal) {
+void QBoxPlotLegendMarker_QBaseConnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal) {
     auto* vqboxplotlegendmarker = dynamic_cast<VirtualQBoxPlotLegendMarker*>(self);
     if (vqboxplotlegendmarker && vqboxplotlegendmarker->isVirtualQBoxPlotLegendMarker) {
         vqboxplotlegendmarker->setQBoxPlotLegendMarker_ConnectNotify_IsBase(true);
@@ -328,7 +328,7 @@ void QBoxPlotLegendMarker_OnConnectNotify(QBoxPlotLegendMarker* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QBoxPlotLegendMarker_DisconnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal) {
+void QBoxPlotLegendMarker_DisconnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal) {
     auto* vqboxplotlegendmarker = dynamic_cast<VirtualQBoxPlotLegendMarker*>(self);
     if (vqboxplotlegendmarker && vqboxplotlegendmarker->isVirtualQBoxPlotLegendMarker) {
         vqboxplotlegendmarker->disconnectNotify(*signal);
@@ -338,7 +338,7 @@ void QBoxPlotLegendMarker_DisconnectNotify(QBoxPlotLegendMarker* self, QMetaMeth
 }
 
 // Base class handler implementation
-void QBoxPlotLegendMarker_QBaseDisconnectNotify(QBoxPlotLegendMarker* self, QMetaMethod* signal) {
+void QBoxPlotLegendMarker_QBaseDisconnectNotify(QBoxPlotLegendMarker* self, const QMetaMethod* signal) {
     auto* vqboxplotlegendmarker = dynamic_cast<VirtualQBoxPlotLegendMarker*>(self);
     if (vqboxplotlegendmarker && vqboxplotlegendmarker->isVirtualQBoxPlotLegendMarker) {
         vqboxplotlegendmarker->setQBoxPlotLegendMarker_DisconnectNotify_IsBase(true);
@@ -444,7 +444,7 @@ void QBoxPlotLegendMarker_OnReceivers(const QBoxPlotLegendMarker* self, intptr_t
 }
 
 // Derived class handler implementation
-bool QBoxPlotLegendMarker_IsSignalConnected(const QBoxPlotLegendMarker* self, QMetaMethod* signal) {
+bool QBoxPlotLegendMarker_IsSignalConnected(const QBoxPlotLegendMarker* self, const QMetaMethod* signal) {
     auto* vqboxplotlegendmarker = const_cast<VirtualQBoxPlotLegendMarker*>(dynamic_cast<const VirtualQBoxPlotLegendMarker*>(self));
     if (vqboxplotlegendmarker && vqboxplotlegendmarker->isVirtualQBoxPlotLegendMarker) {
         return vqboxplotlegendmarker->isSignalConnected(*signal);
@@ -454,7 +454,7 @@ bool QBoxPlotLegendMarker_IsSignalConnected(const QBoxPlotLegendMarker* self, QM
 }
 
 // Base class handler implementation
-bool QBoxPlotLegendMarker_QBaseIsSignalConnected(const QBoxPlotLegendMarker* self, QMetaMethod* signal) {
+bool QBoxPlotLegendMarker_QBaseIsSignalConnected(const QBoxPlotLegendMarker* self, const QMetaMethod* signal) {
     auto* vqboxplotlegendmarker = const_cast<VirtualQBoxPlotLegendMarker*>(dynamic_cast<const VirtualQBoxPlotLegendMarker*>(self));
     if (vqboxplotlegendmarker && vqboxplotlegendmarker->isVirtualQBoxPlotLegendMarker) {
         vqboxplotlegendmarker->setQBoxPlotLegendMarker_IsSignalConnected_IsBase(true);

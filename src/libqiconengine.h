@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqdatastream.h"
-#include "libqpainter.h"
-#include "libqpixmap.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qiconengine.html
 
 /// q_iconengine_new constructs a new QIconEngine object.

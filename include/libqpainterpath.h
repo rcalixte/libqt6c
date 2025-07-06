@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfont.h"
-#include "libqpen.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregion.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpainterpath.html
 
 /// q_painterpath_new constructs a new QPainterPath object.
@@ -493,6 +486,16 @@ QPainterPath* q_painterpathstroker_create_stroke(void* self, void* path);
 void q_painterpathstroker_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpainterpath-element.html
+
+/// q_painterpath__element_new constructs a new QPainterPath::Element object.
+///
+///
+QPainterPath__Element* q_painterpath__element_new();
+
+/// q_painterpath__element_new2 constructs a new QPainterPath::Element object.
+///
+/// ``` QPainterPath__Element* param1 ```
+QPainterPath__Element* q_painterpath__element_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#isMoveTo)
 ///

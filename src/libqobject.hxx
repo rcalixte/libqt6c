@@ -61,8 +61,8 @@ class VirtualQObject final : public QObject {
     mutable bool qobject_issignalconnected_isbase = false;
 
   public:
-    VirtualQObject() : QObject(){};
-    VirtualQObject(QObject* parent) : QObject(parent){};
+    VirtualQObject() : QObject() {};
+    VirtualQObject(QObject* parent) : QObject(parent) {};
 
     ~VirtualQObject() {
         qobject_metacall_callback = nullptr;
@@ -294,18 +294,18 @@ class VirtualQObject final : public QObject {
     friend void QObject_QBaseChildEvent(QObject* self, QChildEvent* event);
     friend void QObject_CustomEvent(QObject* self, QEvent* event);
     friend void QObject_QBaseCustomEvent(QObject* self, QEvent* event);
-    friend void QObject_ConnectNotify(QObject* self, QMetaMethod* signal);
-    friend void QObject_QBaseConnectNotify(QObject* self, QMetaMethod* signal);
-    friend void QObject_DisconnectNotify(QObject* self, QMetaMethod* signal);
-    friend void QObject_QBaseDisconnectNotify(QObject* self, QMetaMethod* signal);
+    friend void QObject_ConnectNotify(QObject* self, const QMetaMethod* signal);
+    friend void QObject_QBaseConnectNotify(QObject* self, const QMetaMethod* signal);
+    friend void QObject_DisconnectNotify(QObject* self, const QMetaMethod* signal);
+    friend void QObject_QBaseDisconnectNotify(QObject* self, const QMetaMethod* signal);
     friend QObject* QObject_Sender(const QObject* self);
     friend QObject* QObject_QBaseSender(const QObject* self);
     friend int QObject_SenderSignalIndex(const QObject* self);
     friend int QObject_QBaseSenderSignalIndex(const QObject* self);
     friend int QObject_Receivers(const QObject* self, const char* signal);
     friend int QObject_QBaseReceivers(const QObject* self, const char* signal);
-    friend bool QObject_IsSignalConnected(const QObject* self, QMetaMethod* signal);
-    friend bool QObject_QBaseIsSignalConnected(const QObject* self, QMetaMethod* signal);
+    friend bool QObject_IsSignalConnected(const QObject* self, const QMetaMethod* signal);
+    friend bool QObject_QBaseIsSignalConnected(const QObject* self, const QMetaMethod* signal);
 };
 
 #endif

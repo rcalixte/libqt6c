@@ -12,10 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqrect.h"
-#include "../libqsize.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qvideoframeformat.html
 
 /// q_videoframeformat_new constructs a new QVideoFrameFormat object.
@@ -128,6 +124,16 @@ double q_videoframeformat_frame_rate(void* self);
 /// ``` QVideoFrameFormat* self, double rate ```
 void q_videoframeformat_set_frame_rate(void* self, double rate);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#streamFrameRate)
+///
+/// ``` QVideoFrameFormat* self ```
+double q_videoframeformat_stream_frame_rate(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setStreamFrameRate)
+///
+/// ``` QVideoFrameFormat* self, double rate ```
+void q_videoframeformat_set_stream_frame_rate(void* self, double rate);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#yCbCrColorSpace)
 ///
 /// ``` QVideoFrameFormat* self ```
@@ -177,6 +183,16 @@ bool q_videoframeformat_is_mirrored(void* self);
 ///
 /// ``` QVideoFrameFormat* self, bool mirrored ```
 void q_videoframeformat_set_mirrored(void* self, bool mirrored);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#rotation)
+///
+/// ``` QVideoFrameFormat* self ```
+int64_t q_videoframeformat_rotation(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setRotation)
+///
+/// ``` QVideoFrameFormat* self, enum QtVideo__Rotation rotation ```
+void q_videoframeformat_set_rotation(void* self, int64_t rotation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#vertexShaderFileName)
 ///

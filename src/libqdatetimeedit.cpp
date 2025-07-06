@@ -41,6 +41,7 @@
 #include <QTabletEvent>
 #include <QTime>
 #include <QTimeEdit>
+#include <QTimeZone>
 #include <QTimerEvent>
 #include <QVariant>
 #include <QWheelEvent>
@@ -57,7 +58,7 @@ QDateTimeEdit* QDateTimeEdit_new2() {
     return new VirtualQDateTimeEdit();
 }
 
-QDateTimeEdit* QDateTimeEdit_new3(QDateTime* dt) {
+QDateTimeEdit* QDateTimeEdit_new3(const QDateTime* dt) {
     return new VirtualQDateTimeEdit(*dt);
 }
 
@@ -69,7 +70,7 @@ QDateTimeEdit* QDateTimeEdit_new5(QTime* t) {
     return new VirtualQDateTimeEdit(*t);
 }
 
-QDateTimeEdit* QDateTimeEdit_new6(QDateTime* dt, QWidget* parent) {
+QDateTimeEdit* QDateTimeEdit_new6(const QDateTime* dt, QWidget* parent) {
     return new VirtualQDateTimeEdit(*dt, parent);
 }
 
@@ -157,7 +158,7 @@ void QDateTimeEdit_ClearMinimumDateTime(QDateTimeEdit* self) {
     self->clearMinimumDateTime();
 }
 
-void QDateTimeEdit_SetMinimumDateTime(QDateTimeEdit* self, QDateTime* dt) {
+void QDateTimeEdit_SetMinimumDateTime(QDateTimeEdit* self, const QDateTime* dt) {
     self->setMinimumDateTime(*dt);
 }
 
@@ -169,11 +170,11 @@ void QDateTimeEdit_ClearMaximumDateTime(QDateTimeEdit* self) {
     self->clearMaximumDateTime();
 }
 
-void QDateTimeEdit_SetMaximumDateTime(QDateTimeEdit* self, QDateTime* dt) {
+void QDateTimeEdit_SetMaximumDateTime(QDateTimeEdit* self, const QDateTime* dt) {
     self->setMaximumDateTime(*dt);
 }
 
-void QDateTimeEdit_SetDateTimeRange(QDateTimeEdit* self, QDateTime* min, QDateTime* max) {
+void QDateTimeEdit_SetDateTimeRange(QDateTimeEdit* self, const QDateTime* min, const QDateTime* max) {
     self->setDateTimeRange(*min, *max);
 }
 
@@ -297,7 +298,7 @@ libqt_string QDateTimeEdit_DisplayFormat(const QDateTimeEdit* self) {
     return _str;
 }
 
-void QDateTimeEdit_SetDisplayFormat(QDateTimeEdit* self, libqt_string format) {
+void QDateTimeEdit_SetDisplayFormat(QDateTimeEdit* self, const libqt_string format) {
     QString format_QString = QString::fromUtf8(format.data, format.len);
     self->setDisplayFormat(format_QString);
 }
@@ -318,7 +319,15 @@ void QDateTimeEdit_SetTimeSpec(QDateTimeEdit* self, int spec) {
     self->setTimeSpec(static_cast<Qt::TimeSpec>(spec));
 }
 
-void QDateTimeEdit_DateTimeChanged(QDateTimeEdit* self, QDateTime* dateTime) {
+QTimeZone* QDateTimeEdit_TimeZone(const QDateTimeEdit* self) {
+    return new QTimeZone(self->timeZone());
+}
+
+void QDateTimeEdit_SetTimeZone(QDateTimeEdit* self, const QTimeZone* zone) {
+    self->setTimeZone(*zone);
+}
+
+void QDateTimeEdit_DateTimeChanged(QDateTimeEdit* self, const QDateTime* dateTime) {
     self->dateTimeChanged(*dateTime);
 }
 
@@ -356,7 +365,7 @@ void QDateTimeEdit_Connect_DateChanged(QDateTimeEdit* self, intptr_t slot) {
     });
 }
 
-void QDateTimeEdit_SetDateTime(QDateTimeEdit* self, QDateTime* dateTime) {
+void QDateTimeEdit_SetDateTime(QDateTimeEdit* self, const QDateTime* dateTime) {
     self->setDateTime(*dateTime);
 }
 
@@ -687,7 +696,7 @@ void QDateTimeEdit_OnFixup(const QDateTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QDateTime* QDateTimeEdit_DateTimeFromText(const QDateTimeEdit* self, libqt_string text) {
+QDateTime* QDateTimeEdit_DateTimeFromText(const QDateTimeEdit* self, const libqt_string text) {
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
@@ -697,7 +706,7 @@ QDateTime* QDateTimeEdit_DateTimeFromText(const QDateTimeEdit* self, libqt_strin
 }
 
 // Base class handler implementation
-QDateTime* QDateTimeEdit_QBaseDateTimeFromText(const QDateTimeEdit* self, libqt_string text) {
+QDateTime* QDateTimeEdit_QBaseDateTimeFromText(const QDateTimeEdit* self, const libqt_string text) {
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
@@ -716,7 +725,7 @@ void QDateTimeEdit_OnDateTimeFromText(const QDateTimeEdit* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-libqt_string QDateTimeEdit_TextFromDateTime(const QDateTimeEdit* self, QDateTime* dt) {
+libqt_string QDateTimeEdit_TextFromDateTime(const QDateTimeEdit* self, const QDateTime* dt) {
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         QString _ret = vqdatetimeedit->textFromDateTime(*dt);
@@ -742,7 +751,7 @@ libqt_string QDateTimeEdit_TextFromDateTime(const QDateTimeEdit* self, QDateTime
 }
 
 // Base class handler implementation
-libqt_string QDateTimeEdit_QBaseTextFromDateTime(const QDateTimeEdit* self, QDateTime* dt) {
+libqt_string QDateTimeEdit_QBaseTextFromDateTime(const QDateTimeEdit* self, const QDateTime* dt) {
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->setQDateTimeEdit_TextFromDateTime_IsBase(true);
@@ -1705,7 +1714,7 @@ void QDateTimeEdit_OnDropEvent(QDateTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDateTimeEdit_NativeEvent(QDateTimeEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDateTimeEdit_NativeEvent(QDateTimeEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdatetimeedit = dynamic_cast<VirtualQDateTimeEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
@@ -1716,7 +1725,7 @@ bool QDateTimeEdit_NativeEvent(QDateTimeEdit* self, libqt_string eventType, void
 }
 
 // Base class handler implementation
-bool QDateTimeEdit_QBaseNativeEvent(QDateTimeEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDateTimeEdit_QBaseNativeEvent(QDateTimeEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdatetimeedit = dynamic_cast<VirtualQDateTimeEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
@@ -1968,7 +1977,7 @@ void QDateTimeEdit_OnCustomEvent(QDateTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDateTimeEdit_ConnectNotify(QDateTimeEdit* self, QMetaMethod* signal) {
+void QDateTimeEdit_ConnectNotify(QDateTimeEdit* self, const QMetaMethod* signal) {
     auto* vqdatetimeedit = dynamic_cast<VirtualQDateTimeEdit*>(self);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->connectNotify(*signal);
@@ -1978,7 +1987,7 @@ void QDateTimeEdit_ConnectNotify(QDateTimeEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDateTimeEdit_QBaseConnectNotify(QDateTimeEdit* self, QMetaMethod* signal) {
+void QDateTimeEdit_QBaseConnectNotify(QDateTimeEdit* self, const QMetaMethod* signal) {
     auto* vqdatetimeedit = dynamic_cast<VirtualQDateTimeEdit*>(self);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->setQDateTimeEdit_ConnectNotify_IsBase(true);
@@ -1997,7 +2006,7 @@ void QDateTimeEdit_OnConnectNotify(QDateTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDateTimeEdit_DisconnectNotify(QDateTimeEdit* self, QMetaMethod* signal) {
+void QDateTimeEdit_DisconnectNotify(QDateTimeEdit* self, const QMetaMethod* signal) {
     auto* vqdatetimeedit = dynamic_cast<VirtualQDateTimeEdit*>(self);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->disconnectNotify(*signal);
@@ -2007,7 +2016,7 @@ void QDateTimeEdit_DisconnectNotify(QDateTimeEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDateTimeEdit_QBaseDisconnectNotify(QDateTimeEdit* self, QMetaMethod* signal) {
+void QDateTimeEdit_QBaseDisconnectNotify(QDateTimeEdit* self, const QMetaMethod* signal) {
     auto* vqdatetimeedit = dynamic_cast<VirtualQDateTimeEdit*>(self);
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->setQDateTimeEdit_DisconnectNotify_IsBase(true);
@@ -2316,7 +2325,7 @@ void QDateTimeEdit_OnReceivers(const QDateTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDateTimeEdit_IsSignalConnected(const QDateTimeEdit* self, QMetaMethod* signal) {
+bool QDateTimeEdit_IsSignalConnected(const QDateTimeEdit* self, const QMetaMethod* signal) {
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         return vqdatetimeedit->isSignalConnected(*signal);
@@ -2326,7 +2335,7 @@ bool QDateTimeEdit_IsSignalConnected(const QDateTimeEdit* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QDateTimeEdit_QBaseIsSignalConnected(const QDateTimeEdit* self, QMetaMethod* signal) {
+bool QDateTimeEdit_QBaseIsSignalConnected(const QDateTimeEdit* self, const QMetaMethod* signal) {
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->setQDateTimeEdit_IsSignalConnected_IsBase(true);
@@ -2341,6 +2350,35 @@ void QDateTimeEdit_OnIsSignalConnected(const QDateTimeEdit* self, intptr_t slot)
     auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
     if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
         vqdatetimeedit->setQDateTimeEdit_IsSignalConnected_Callback(reinterpret_cast<VirtualQDateTimeEdit::QDateTimeEdit_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QDateTimeEdit_GetDecodedMetricF(const QDateTimeEdit* self, int metricA, int metricB) {
+    auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
+    if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
+        return vqdatetimeedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDateTimeEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QDateTimeEdit_QBaseGetDecodedMetricF(const QDateTimeEdit* self, int metricA, int metricB) {
+    auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
+    if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
+        vqdatetimeedit->setQDateTimeEdit_GetDecodedMetricF_IsBase(true);
+        return vqdatetimeedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDateTimeEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QDateTimeEdit_OnGetDecodedMetricF(const QDateTimeEdit* self, intptr_t slot) {
+    auto* vqdatetimeedit = const_cast<VirtualQDateTimeEdit*>(dynamic_cast<const VirtualQDateTimeEdit*>(self));
+    if (vqdatetimeedit && vqdatetimeedit->isVirtualQDateTimeEdit) {
+        vqdatetimeedit->setQDateTimeEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQDateTimeEdit::QDateTimeEdit_GetDecodedMetricF_Callback>(slot));
     }
 }
 
@@ -2743,7 +2781,7 @@ void QTimeEdit_OnFixup(const QTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QDateTime* QTimeEdit_DateTimeFromText(const QTimeEdit* self, libqt_string text) {
+QDateTime* QTimeEdit_DateTimeFromText(const QTimeEdit* self, const libqt_string text) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
@@ -2753,7 +2791,7 @@ QDateTime* QTimeEdit_DateTimeFromText(const QTimeEdit* self, libqt_string text) 
 }
 
 // Base class handler implementation
-QDateTime* QTimeEdit_QBaseDateTimeFromText(const QTimeEdit* self, libqt_string text) {
+QDateTime* QTimeEdit_QBaseDateTimeFromText(const QTimeEdit* self, const libqt_string text) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
@@ -2772,7 +2810,7 @@ void QTimeEdit_OnDateTimeFromText(const QTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-libqt_string QTimeEdit_TextFromDateTime(const QTimeEdit* self, QDateTime* dt) {
+libqt_string QTimeEdit_TextFromDateTime(const QTimeEdit* self, const QDateTime* dt) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         QString _ret = vqtimeedit->textFromDateTime(*dt);
@@ -2798,7 +2836,7 @@ libqt_string QTimeEdit_TextFromDateTime(const QTimeEdit* self, QDateTime* dt) {
 }
 
 // Base class handler implementation
-libqt_string QTimeEdit_QBaseTextFromDateTime(const QTimeEdit* self, QDateTime* dt) {
+libqt_string QTimeEdit_QBaseTextFromDateTime(const QTimeEdit* self, const QDateTime* dt) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->setQTimeEdit_TextFromDateTime_IsBase(true);
@@ -3761,7 +3799,7 @@ void QTimeEdit_OnDropEvent(QTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTimeEdit_NativeEvent(QTimeEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTimeEdit_NativeEvent(QTimeEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtimeedit = dynamic_cast<VirtualQTimeEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
@@ -3772,7 +3810,7 @@ bool QTimeEdit_NativeEvent(QTimeEdit* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QTimeEdit_QBaseNativeEvent(QTimeEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QTimeEdit_QBaseNativeEvent(QTimeEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqtimeedit = dynamic_cast<VirtualQTimeEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
@@ -4024,7 +4062,7 @@ void QTimeEdit_OnCustomEvent(QTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTimeEdit_ConnectNotify(QTimeEdit* self, QMetaMethod* signal) {
+void QTimeEdit_ConnectNotify(QTimeEdit* self, const QMetaMethod* signal) {
     auto* vqtimeedit = dynamic_cast<VirtualQTimeEdit*>(self);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->connectNotify(*signal);
@@ -4034,7 +4072,7 @@ void QTimeEdit_ConnectNotify(QTimeEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTimeEdit_QBaseConnectNotify(QTimeEdit* self, QMetaMethod* signal) {
+void QTimeEdit_QBaseConnectNotify(QTimeEdit* self, const QMetaMethod* signal) {
     auto* vqtimeedit = dynamic_cast<VirtualQTimeEdit*>(self);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->setQTimeEdit_ConnectNotify_IsBase(true);
@@ -4053,7 +4091,7 @@ void QTimeEdit_OnConnectNotify(QTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QTimeEdit_DisconnectNotify(QTimeEdit* self, QMetaMethod* signal) {
+void QTimeEdit_DisconnectNotify(QTimeEdit* self, const QMetaMethod* signal) {
     auto* vqtimeedit = dynamic_cast<VirtualQTimeEdit*>(self);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->disconnectNotify(*signal);
@@ -4063,7 +4101,7 @@ void QTimeEdit_DisconnectNotify(QTimeEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QTimeEdit_QBaseDisconnectNotify(QTimeEdit* self, QMetaMethod* signal) {
+void QTimeEdit_QBaseDisconnectNotify(QTimeEdit* self, const QMetaMethod* signal) {
     auto* vqtimeedit = dynamic_cast<VirtualQTimeEdit*>(self);
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->setQTimeEdit_DisconnectNotify_IsBase(true);
@@ -4372,7 +4410,7 @@ void QTimeEdit_OnReceivers(const QTimeEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QTimeEdit_IsSignalConnected(const QTimeEdit* self, QMetaMethod* signal) {
+bool QTimeEdit_IsSignalConnected(const QTimeEdit* self, const QMetaMethod* signal) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         return vqtimeedit->isSignalConnected(*signal);
@@ -4382,7 +4420,7 @@ bool QTimeEdit_IsSignalConnected(const QTimeEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QTimeEdit_QBaseIsSignalConnected(const QTimeEdit* self, QMetaMethod* signal) {
+bool QTimeEdit_QBaseIsSignalConnected(const QTimeEdit* self, const QMetaMethod* signal) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->setQTimeEdit_IsSignalConnected_IsBase(true);
@@ -4397,6 +4435,35 @@ void QTimeEdit_OnIsSignalConnected(const QTimeEdit* self, intptr_t slot) {
     auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
     if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
         vqtimeedit->setQTimeEdit_IsSignalConnected_Callback(reinterpret_cast<VirtualQTimeEdit::QTimeEdit_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QTimeEdit_GetDecodedMetricF(const QTimeEdit* self, int metricA, int metricB) {
+    auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
+    if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
+        return vqtimeedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTimeEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QTimeEdit_QBaseGetDecodedMetricF(const QTimeEdit* self, int metricA, int metricB) {
+    auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
+    if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
+        vqtimeedit->setQTimeEdit_GetDecodedMetricF_IsBase(true);
+        return vqtimeedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQTimeEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QTimeEdit_OnGetDecodedMetricF(const QTimeEdit* self, intptr_t slot) {
+    auto* vqtimeedit = const_cast<VirtualQTimeEdit*>(dynamic_cast<const VirtualQTimeEdit*>(self));
+    if (vqtimeedit && vqtimeedit->isVirtualQTimeEdit) {
+        vqtimeedit->setQTimeEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQTimeEdit::QTimeEdit_GetDecodedMetricF_Callback>(slot));
     }
 }
 
@@ -4799,7 +4866,7 @@ void QDateEdit_OnFixup(const QDateEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-QDateTime* QDateEdit_DateTimeFromText(const QDateEdit* self, libqt_string text) {
+QDateTime* QDateEdit_DateTimeFromText(const QDateEdit* self, const libqt_string text) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
@@ -4809,7 +4876,7 @@ QDateTime* QDateEdit_DateTimeFromText(const QDateEdit* self, libqt_string text) 
 }
 
 // Base class handler implementation
-QDateTime* QDateEdit_QBaseDateTimeFromText(const QDateEdit* self, libqt_string text) {
+QDateTime* QDateEdit_QBaseDateTimeFromText(const QDateEdit* self, const libqt_string text) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     QString text_QString = QString::fromUtf8(text.data, text.len);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
@@ -4828,7 +4895,7 @@ void QDateEdit_OnDateTimeFromText(const QDateEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-libqt_string QDateEdit_TextFromDateTime(const QDateEdit* self, QDateTime* dt) {
+libqt_string QDateEdit_TextFromDateTime(const QDateEdit* self, const QDateTime* dt) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         QString _ret = vqdateedit->textFromDateTime(*dt);
@@ -4854,7 +4921,7 @@ libqt_string QDateEdit_TextFromDateTime(const QDateEdit* self, QDateTime* dt) {
 }
 
 // Base class handler implementation
-libqt_string QDateEdit_QBaseTextFromDateTime(const QDateEdit* self, QDateTime* dt) {
+libqt_string QDateEdit_QBaseTextFromDateTime(const QDateEdit* self, const QDateTime* dt) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->setQDateEdit_TextFromDateTime_IsBase(true);
@@ -5817,7 +5884,7 @@ void QDateEdit_OnDropEvent(QDateEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDateEdit_NativeEvent(QDateEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDateEdit_NativeEvent(QDateEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdateedit = dynamic_cast<VirtualQDateEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
@@ -5828,7 +5895,7 @@ bool QDateEdit_NativeEvent(QDateEdit* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QDateEdit_QBaseNativeEvent(QDateEdit* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QDateEdit_QBaseNativeEvent(QDateEdit* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqdateedit = dynamic_cast<VirtualQDateEdit*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
@@ -6080,7 +6147,7 @@ void QDateEdit_OnCustomEvent(QDateEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDateEdit_ConnectNotify(QDateEdit* self, QMetaMethod* signal) {
+void QDateEdit_ConnectNotify(QDateEdit* self, const QMetaMethod* signal) {
     auto* vqdateedit = dynamic_cast<VirtualQDateEdit*>(self);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->connectNotify(*signal);
@@ -6090,7 +6157,7 @@ void QDateEdit_ConnectNotify(QDateEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDateEdit_QBaseConnectNotify(QDateEdit* self, QMetaMethod* signal) {
+void QDateEdit_QBaseConnectNotify(QDateEdit* self, const QMetaMethod* signal) {
     auto* vqdateedit = dynamic_cast<VirtualQDateEdit*>(self);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->setQDateEdit_ConnectNotify_IsBase(true);
@@ -6109,7 +6176,7 @@ void QDateEdit_OnConnectNotify(QDateEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QDateEdit_DisconnectNotify(QDateEdit* self, QMetaMethod* signal) {
+void QDateEdit_DisconnectNotify(QDateEdit* self, const QMetaMethod* signal) {
     auto* vqdateedit = dynamic_cast<VirtualQDateEdit*>(self);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->disconnectNotify(*signal);
@@ -6119,7 +6186,7 @@ void QDateEdit_DisconnectNotify(QDateEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QDateEdit_QBaseDisconnectNotify(QDateEdit* self, QMetaMethod* signal) {
+void QDateEdit_QBaseDisconnectNotify(QDateEdit* self, const QMetaMethod* signal) {
     auto* vqdateedit = dynamic_cast<VirtualQDateEdit*>(self);
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->setQDateEdit_DisconnectNotify_IsBase(true);
@@ -6428,7 +6495,7 @@ void QDateEdit_OnReceivers(const QDateEdit* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QDateEdit_IsSignalConnected(const QDateEdit* self, QMetaMethod* signal) {
+bool QDateEdit_IsSignalConnected(const QDateEdit* self, const QMetaMethod* signal) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         return vqdateedit->isSignalConnected(*signal);
@@ -6438,7 +6505,7 @@ bool QDateEdit_IsSignalConnected(const QDateEdit* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QDateEdit_QBaseIsSignalConnected(const QDateEdit* self, QMetaMethod* signal) {
+bool QDateEdit_QBaseIsSignalConnected(const QDateEdit* self, const QMetaMethod* signal) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->setQDateEdit_IsSignalConnected_IsBase(true);
@@ -6453,6 +6520,35 @@ void QDateEdit_OnIsSignalConnected(const QDateEdit* self, intptr_t slot) {
     auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
     if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
         vqdateedit->setQDateEdit_IsSignalConnected_Callback(reinterpret_cast<VirtualQDateEdit::QDateEdit_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QDateEdit_GetDecodedMetricF(const QDateEdit* self, int metricA, int metricB) {
+    auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
+    if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
+        return vqdateedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDateEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QDateEdit_QBaseGetDecodedMetricF(const QDateEdit* self, int metricA, int metricB) {
+    auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
+    if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
+        vqdateedit->setQDateEdit_GetDecodedMetricF_IsBase(true);
+        return vqdateedit->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQDateEdit*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QDateEdit_OnGetDecodedMetricF(const QDateEdit* self, intptr_t slot) {
+    auto* vqdateedit = const_cast<VirtualQDateEdit*>(dynamic_cast<const VirtualQDateEdit*>(self));
+    if (vqdateedit && vqdateedit->isVirtualQDateEdit) {
+        vqdateedit->setQDateEdit_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQDateEdit::QDateEdit_GetDecodedMetricF_Callback>(slot));
     }
 }
 

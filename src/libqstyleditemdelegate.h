@@ -12,21 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemdelegate.h"
-#include "libqabstractitemmodel.h"
-#include "libqabstractitemview.h"
-#include "libqevent.h"
-#include "libqitemeditorfactory.h"
-#include "libqlocale.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include "libqpainter.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqstyleoption.h"
-#include "libqvariant.h"
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qstyleditemdelegate.html
 
 /// q_styleditemdelegate_new constructs a new QStyledItemDelegate object.
@@ -392,7 +377,7 @@ QThread* q_styleditemdelegate_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QStyledItemDelegate* self, QThread* thread ```
-void q_styleditemdelegate_move_to_thread(void* self, void* thread);
+bool q_styleditemdelegate_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -407,6 +392,13 @@ int32_t q_styleditemdelegate_start_timer(void* self, int interval);
 ///
 /// ``` QStyledItemDelegate* self, int id ```
 void q_styleditemdelegate_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QStyledItemDelegate* self, enum Qt__TimerId id ```
+void q_styleditemdelegate_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -547,6 +539,13 @@ bool q_styleditemdelegate_inherits(void* self, const char* classname);
 ///
 /// ``` QStyledItemDelegate* self ```
 void q_styleditemdelegate_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QStyledItemDelegate* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_styleditemdelegate_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

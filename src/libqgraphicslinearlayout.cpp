@@ -131,7 +131,7 @@ void QGraphicsLinearLayout_OnRemoveAt(QGraphicsLinearLayout* self, intptr_t slot
 }
 
 // Derived class handler implementation
-void QGraphicsLinearLayout_SetGeometry(QGraphicsLinearLayout* self, QRectF* rect) {
+void QGraphicsLinearLayout_SetGeometry(QGraphicsLinearLayout* self, const QRectF* rect) {
     auto* vqgraphicslinearlayout = dynamic_cast<VirtualQGraphicsLinearLayout*>(self);
     if (vqgraphicslinearlayout && vqgraphicslinearlayout->isVirtualQGraphicsLinearLayout) {
         vqgraphicslinearlayout->setGeometry(*rect);
@@ -141,7 +141,7 @@ void QGraphicsLinearLayout_SetGeometry(QGraphicsLinearLayout* self, QRectF* rect
 }
 
 // Base class handler implementation
-void QGraphicsLinearLayout_QBaseSetGeometry(QGraphicsLinearLayout* self, QRectF* rect) {
+void QGraphicsLinearLayout_QBaseSetGeometry(QGraphicsLinearLayout* self, const QRectF* rect) {
     auto* vqgraphicslinearlayout = dynamic_cast<VirtualQGraphicsLinearLayout*>(self);
     if (vqgraphicslinearlayout && vqgraphicslinearlayout->isVirtualQGraphicsLinearLayout) {
         vqgraphicslinearlayout->setQGraphicsLinearLayout_SetGeometry_IsBase(true);
@@ -247,7 +247,7 @@ void QGraphicsLinearLayout_OnInvalidate(QGraphicsLinearLayout* self, intptr_t sl
 }
 
 // Derived class handler implementation
-QSizeF* QGraphicsLinearLayout_SizeHint(const QGraphicsLinearLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLinearLayout_SizeHint(const QGraphicsLinearLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicslinearlayout = const_cast<VirtualQGraphicsLinearLayout*>(dynamic_cast<const VirtualQGraphicsLinearLayout*>(self));
     if (vqgraphicslinearlayout && vqgraphicslinearlayout->isVirtualQGraphicsLinearLayout) {
         return new QSizeF(vqgraphicslinearlayout->sizeHint(static_cast<Qt::SizeHint>(which), *constraint));
@@ -257,7 +257,7 @@ QSizeF* QGraphicsLinearLayout_SizeHint(const QGraphicsLinearLayout* self, int wh
 }
 
 // Base class handler implementation
-QSizeF* QGraphicsLinearLayout_QBaseSizeHint(const QGraphicsLinearLayout* self, int which, QSizeF* constraint) {
+QSizeF* QGraphicsLinearLayout_QBaseSizeHint(const QGraphicsLinearLayout* self, int which, const QSizeF* constraint) {
     auto* vqgraphicslinearlayout = const_cast<VirtualQGraphicsLinearLayout*>(dynamic_cast<const VirtualQGraphicsLinearLayout*>(self));
     if (vqgraphicslinearlayout && vqgraphicslinearlayout->isVirtualQGraphicsLinearLayout) {
         vqgraphicslinearlayout->setQGraphicsLinearLayout_SizeHint_IsBase(true);

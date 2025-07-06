@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqmetatype.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqurl.h"
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qmimedata.html
 
 /// q_mimedata_new constructs a new QMimeData object.
@@ -276,7 +268,7 @@ QThread* q_mimedata_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QMimeData* self, QThread* thread ```
-void q_mimedata_move_to_thread(void* self, void* thread);
+bool q_mimedata_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -291,6 +283,13 @@ int32_t q_mimedata_start_timer(void* self, int interval);
 ///
 /// ``` QMimeData* self, int id ```
 void q_mimedata_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QMimeData* self, enum Qt__TimerId id ```
+void q_mimedata_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -431,6 +430,13 @@ bool q_mimedata_inherits(void* self, const char* classname);
 ///
 /// ``` QMimeData* self ```
 void q_mimedata_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QMimeData* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_mimedata_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

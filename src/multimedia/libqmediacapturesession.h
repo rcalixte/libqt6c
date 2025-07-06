@@ -12,17 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqaudioinput.h"
-#include "libqaudiooutput.h"
-#include "libqcamera.h"
-#include "../libqevent.h"
-#include "libqimagecapture.h"
-#include "libqmediarecorder.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "libqvideosink.h"
-
 /// https://doc.qt.io/qt-6/qmediacapturesession.html
 
 /// q_mediacapturesession_new constructs a new QMediaCaptureSession object.
@@ -71,6 +60,16 @@ QAudioInput* q_mediacapturesession_audio_input(void* self);
 /// ``` QMediaCaptureSession* self, QAudioInput* input ```
 void q_mediacapturesession_set_audio_input(void* self, void* input);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInput)
+///
+/// ``` QMediaCaptureSession* self ```
+QAudioBufferInput* q_mediacapturesession_audio_buffer_input(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setAudioBufferInput)
+///
+/// ``` QMediaCaptureSession* self, QAudioBufferInput* input ```
+void q_mediacapturesession_set_audio_buffer_input(void* self, void* input);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#camera)
 ///
 /// ``` QMediaCaptureSession* self ```
@@ -90,6 +89,36 @@ QImageCapture* q_mediacapturesession_image_capture(void* self);
 ///
 /// ``` QMediaCaptureSession* self, QImageCapture* imageCapture ```
 void q_mediacapturesession_set_image_capture(void* self, void* imageCapture);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCapture)
+///
+/// ``` QMediaCaptureSession* self ```
+QScreenCapture* q_mediacapturesession_screen_capture(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setScreenCapture)
+///
+/// ``` QMediaCaptureSession* self, QScreenCapture* screenCapture ```
+void q_mediacapturesession_set_screen_capture(void* self, void* screenCapture);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCapture)
+///
+/// ``` QMediaCaptureSession* self ```
+QWindowCapture* q_mediacapturesession_window_capture(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setWindowCapture)
+///
+/// ``` QMediaCaptureSession* self, QWindowCapture* windowCapture ```
+void q_mediacapturesession_set_window_capture(void* self, void* windowCapture);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInput)
+///
+/// ``` QMediaCaptureSession* self ```
+QVideoFrameInput* q_mediacapturesession_video_frame_input(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#setVideoFrameInput)
+///
+/// ``` QMediaCaptureSession* self, QVideoFrameInput* input ```
+void q_mediacapturesession_set_video_frame_input(void* self, void* input);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#recorder)
 ///
@@ -141,6 +170,16 @@ void q_mediacapturesession_audio_input_changed(void* self);
 /// ``` QMediaCaptureSession* self, void (*slot)(QMediaCaptureSession*) ```
 void q_mediacapturesession_on_audio_input_changed(void* self, void (*slot)(void*));
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInputChanged)
+///
+/// ``` QMediaCaptureSession* self ```
+void q_mediacapturesession_audio_buffer_input_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#audioBufferInputChanged)
+///
+/// ``` QMediaCaptureSession* self, void (*slot)(QMediaCaptureSession*) ```
+void q_mediacapturesession_on_audio_buffer_input_changed(void* self, void (*slot)(void*));
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#cameraChanged)
 ///
 /// ``` QMediaCaptureSession* self ```
@@ -150,6 +189,36 @@ void q_mediacapturesession_camera_changed(void* self);
 ///
 /// ``` QMediaCaptureSession* self, void (*slot)(QMediaCaptureSession*) ```
 void q_mediacapturesession_on_camera_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCaptureChanged)
+///
+/// ``` QMediaCaptureSession* self ```
+void q_mediacapturesession_screen_capture_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#screenCaptureChanged)
+///
+/// ``` QMediaCaptureSession* self, void (*slot)(QMediaCaptureSession*) ```
+void q_mediacapturesession_on_screen_capture_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCaptureChanged)
+///
+/// ``` QMediaCaptureSession* self ```
+void q_mediacapturesession_window_capture_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#windowCaptureChanged)
+///
+/// ``` QMediaCaptureSession* self, void (*slot)(QMediaCaptureSession*) ```
+void q_mediacapturesession_on_window_capture_changed(void* self, void (*slot)(void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInputChanged)
+///
+/// ``` QMediaCaptureSession* self ```
+void q_mediacapturesession_video_frame_input_changed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#videoFrameInputChanged)
+///
+/// ``` QMediaCaptureSession* self, void (*slot)(QMediaCaptureSession*) ```
+void q_mediacapturesession_on_video_frame_input_changed(void* self, void (*slot)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediacapturesession.html#imageCaptureChanged)
 ///
@@ -262,7 +331,7 @@ QThread* q_mediacapturesession_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QMediaCaptureSession* self, QThread* thread ```
-void q_mediacapturesession_move_to_thread(void* self, void* thread);
+bool q_mediacapturesession_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -277,6 +346,13 @@ int32_t q_mediacapturesession_start_timer(void* self, int interval);
 ///
 /// ``` QMediaCaptureSession* self, int id ```
 void q_mediacapturesession_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QMediaCaptureSession* self, enum Qt__TimerId id ```
+void q_mediacapturesession_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -417,6 +493,13 @@ bool q_mediacapturesession_inherits(void* self, const char* classname);
 ///
 /// ``` QMediaCaptureSession* self ```
 void q_mediacapturesession_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QMediaCaptureSession* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_mediacapturesession_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

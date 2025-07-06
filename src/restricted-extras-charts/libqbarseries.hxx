@@ -64,8 +64,8 @@ class VirtualQBarSeries final : public QBarSeries {
     mutable bool qbarseries_issignalconnected_isbase = false;
 
   public:
-    VirtualQBarSeries() : QBarSeries(){};
-    VirtualQBarSeries(QObject* parent) : QBarSeries(parent){};
+    VirtualQBarSeries() : QBarSeries() {};
+    VirtualQBarSeries(QObject* parent) : QBarSeries(parent) {};
 
     ~VirtualQBarSeries() {
         qbarseries_metacall_callback = nullptr;
@@ -313,18 +313,18 @@ class VirtualQBarSeries final : public QBarSeries {
     friend void QBarSeries_QBaseChildEvent(QBarSeries* self, QChildEvent* event);
     friend void QBarSeries_CustomEvent(QBarSeries* self, QEvent* event);
     friend void QBarSeries_QBaseCustomEvent(QBarSeries* self, QEvent* event);
-    friend void QBarSeries_ConnectNotify(QBarSeries* self, QMetaMethod* signal);
-    friend void QBarSeries_QBaseConnectNotify(QBarSeries* self, QMetaMethod* signal);
-    friend void QBarSeries_DisconnectNotify(QBarSeries* self, QMetaMethod* signal);
-    friend void QBarSeries_QBaseDisconnectNotify(QBarSeries* self, QMetaMethod* signal);
+    friend void QBarSeries_ConnectNotify(QBarSeries* self, const QMetaMethod* signal);
+    friend void QBarSeries_QBaseConnectNotify(QBarSeries* self, const QMetaMethod* signal);
+    friend void QBarSeries_DisconnectNotify(QBarSeries* self, const QMetaMethod* signal);
+    friend void QBarSeries_QBaseDisconnectNotify(QBarSeries* self, const QMetaMethod* signal);
     friend QObject* QBarSeries_Sender(const QBarSeries* self);
     friend QObject* QBarSeries_QBaseSender(const QBarSeries* self);
     friend int QBarSeries_SenderSignalIndex(const QBarSeries* self);
     friend int QBarSeries_QBaseSenderSignalIndex(const QBarSeries* self);
     friend int QBarSeries_Receivers(const QBarSeries* self, const char* signal);
     friend int QBarSeries_QBaseReceivers(const QBarSeries* self, const char* signal);
-    friend bool QBarSeries_IsSignalConnected(const QBarSeries* self, QMetaMethod* signal);
-    friend bool QBarSeries_QBaseIsSignalConnected(const QBarSeries* self, QMetaMethod* signal);
+    friend bool QBarSeries_IsSignalConnected(const QBarSeries* self, const QMetaMethod* signal);
+    friend bool QBarSeries_QBaseIsSignalConnected(const QBarSeries* self, const QMetaMethod* signal);
 };
 
 #endif

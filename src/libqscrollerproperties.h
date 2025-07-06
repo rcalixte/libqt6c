@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qscrollerproperties.html
 
 /// q_scrollerproperties_new constructs a new QScrollerProperties object.

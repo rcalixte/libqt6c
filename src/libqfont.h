@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqpaintdevice.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qfont.html
 
 /// q_font_new constructs a new QFont object.
@@ -303,6 +299,66 @@ void q_font_set_hinting_preference(void* self, int64_t hintingPreference);
 /// ``` QFont* self ```
 int64_t q_font_hinting_preference(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setFeature)
+///
+/// ``` QFont* self, QFont__Tag* tag, uint32_t value ```
+void q_font_set_feature(void* self, void* tag, uint32_t value);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#unsetFeature)
+///
+/// ``` QFont* self, QFont__Tag* tag ```
+void q_font_unset_feature(void* self, void* tag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#featureValue)
+///
+/// ``` QFont* self, QFont__Tag* tag ```
+uint32_t q_font_feature_value(void* self, void* tag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#isFeatureSet)
+///
+/// ``` QFont* self, QFont__Tag* tag ```
+bool q_font_is_feature_set(void* self, void* tag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#featureTags)
+///
+/// ``` QFont* self ```
+libqt_list /* of QFont__Tag* */ q_font_feature_tags(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#clearFeatures)
+///
+/// ``` QFont* self ```
+void q_font_clear_features(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setVariableAxis)
+///
+/// ``` QFont* self, QFont__Tag* tag, float value ```
+void q_font_set_variable_axis(void* self, void* tag, float value);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#unsetVariableAxis)
+///
+/// ``` QFont* self, QFont__Tag* tag ```
+void q_font_unset_variable_axis(void* self, void* tag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#isVariableAxisSet)
+///
+/// ``` QFont* self, QFont__Tag* tag ```
+bool q_font_is_variable_axis_set(void* self, void* tag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#variableAxisValue)
+///
+/// ``` QFont* self, QFont__Tag* tag ```
+float q_font_variable_axis_value(void* self, void* tag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#clearVariableAxes)
+///
+/// ``` QFont* self ```
+void q_font_clear_variable_axes(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#variableAxisTags)
+///
+/// ``` QFont* self ```
+libqt_list /* of QFont__Tag* */ q_font_variable_axis_tags(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#exactMatch)
 ///
 /// ``` QFont* self ```
@@ -440,6 +496,60 @@ void q_font_set_style_hint2(void* self, int64_t param1, int64_t param2);
 /// ``` QFont* self ```
 void q_font_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qfont-tag.html
+
+/// q_font__tag_new constructs a new QFont::Tag object.
+///
+/// ``` QFont__Tag* other ```
+QFont__Tag* q_font__tag_new(void* other);
+
+/// q_font__tag_new2 constructs a new QFont::Tag object and invalidates the source QFont::Tag object.
+///
+/// ``` QFont__Tag* other ```
+QFont__Tag* q_font__tag_new2(void* other);
+
+/// q_font__tag_new3 constructs a new QFont::Tag object.
+///
+///
+QFont__Tag* q_font__tag_new3();
+
+/// q_font__tag_new4 constructs a new QFont::Tag object.
+///
+/// ``` QFont__Tag* param1 ```
+QFont__Tag* q_font__tag_new4(void* param1);
+
+/// q_font__tag_copy_assign shallow copies `other` into `self`.
+///
+/// ``` QFont__Tag* self, QFont__Tag* other ```
+void q_font__tag_copy_assign(void* self, void* other);
+
+/// q_font__tag_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QFont__Tag* self, QFont__Tag* other ```
+void q_font__tag_move_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont__tag.html#isValid)
+///
+/// ``` QFont__Tag* self ```
+bool q_font__tag_is_valid(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont__tag.html#value)
+///
+/// ``` QFont__Tag* self ```
+uint32_t q_font__tag_value(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont__tag.html#toString)
+///
+/// ``` QFont__Tag* self ```
+char* q_font__tag_to_string(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont::tag.html#dtor.QFont::Tag)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QFont__Tag* self ```
+void q_font__tag_delete(void* self);
+
 /// https://doc.qt.io/qt-6/qfont.html#types
 
 typedef enum {
@@ -470,6 +580,8 @@ typedef enum {
     QFONT_STYLESTRATEGY_NOANTIALIAS = 256,
     QFONT_STYLESTRATEGY_NOSUBPIXELANTIALIAS = 2048,
     QFONT_STYLESTRATEGY_PREFERNOSHAPING = 4096,
+    QFONT_STYLESTRATEGY_CONTEXTFONTMERGING = 8192,
+    QFONT_STYLESTRATEGY_PREFERTYPOLINEMETRICS = 16384,
     QFONT_STYLESTRATEGY_NOFONTMERGING = 32768
 } QFont__StyleStrategy;
 
@@ -544,7 +656,9 @@ typedef enum {
     QFONT_RESOLVEPROPERTIES_HINTINGPREFERENCERESOLVED = 32768,
     QFONT_RESOLVEPROPERTIES_STYLENAMERESOLVED = 65536,
     QFONT_RESOLVEPROPERTIES_FAMILIESRESOLVED = 131072,
-    QFONT_RESOLVEPROPERTIES_ALLPROPERTIESRESOLVED = 262143
+    QFONT_RESOLVEPROPERTIES_FEATURESRESOLVED = 262144,
+    QFONT_RESOLVEPROPERTIES_VARIABLEAXESRESOLVED = 524288,
+    QFONT_RESOLVEPROPERTIES_ALLPROPERTIESRESOLVED = 1048575
 } QFont__ResolveProperties;
 
 #endif

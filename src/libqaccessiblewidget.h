@@ -12,15 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqaccessible.h"
-#include "libqaccessibleobject.h"
-#include "libqcolor.h"
-#include "libqobject.h"
-#include "libqrect.h"
-#include <string.h>
-#include "libqwidget.h"
-#include "libqwindow.h"
-
 /// https://doc.qt.io/qt-6/qaccessiblewidget.html
 
 /// q_accessiblewidget_new constructs a new QAccessibleWidget object.
@@ -492,6 +483,20 @@ QAccessibleTableCellInterface* q_accessiblewidget_table_cell_interface(void* sel
 ///
 /// ``` QAccessibleWidget* self ```
 QAccessibleHyperlinkInterface* q_accessiblewidget_hyperlink_interface(void* self);
+
+/// Inherited from QAccessibleInterface
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#selectionInterface)
+///
+/// ``` QAccessibleWidget* self ```
+QAccessibleSelectionInterface* q_accessiblewidget_selection_interface(void* self);
+
+/// Inherited from QAccessibleInterface
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#attributesInterface)
+///
+/// ``` QAccessibleWidget* self ```
+QAccessibleAttributesInterface* q_accessiblewidget_attributes_interface(void* self);
 
 /// Inherited from QAccessibleActionInterface
 ///

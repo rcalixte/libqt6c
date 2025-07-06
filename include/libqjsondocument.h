@@ -12,12 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqjsonarray.h"
-#include "libqjsonobject.h"
-#include "libqjsonvalue.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qjsonparseerror.html
 
 /// q_jsonparseerror_new constructs a new QJsonParseError object.
@@ -148,16 +142,6 @@ const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key)
 ///
 /// ``` QJsonDocument* self, int64_t i ```
 const QJsonValue* q_jsondocument_operator_subscript_with_qsizetype(void* self, int64_t i);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator==)
-///
-/// ``` QJsonDocument* self, QJsonDocument* other ```
-bool q_jsondocument_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator!=)
-///
-/// ``` QJsonDocument* self, QJsonDocument* other ```
-bool q_jsondocument_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isNull)
 ///

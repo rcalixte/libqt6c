@@ -1,3 +1,4 @@
+#include <QByteArray>
 #include <QChildEvent>
 #include <QColor>
 #include <QEvent>
@@ -366,10 +367,10 @@ void QsciLexerSQL_OnAutoCompletionFillups(const QsciLexerSQL* self, intptr_t slo
 libqt_list /* of libqt_string */ QsciLexerSQL_AutoCompletionWordSeparators(const QsciLexerSQL* self) {
     auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
-        QStringList _ret = vqscilexersql->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexersql->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -381,14 +382,14 @@ libqt_list /* of libqt_string */ QsciLexerSQL_AutoCompletionWordSeparators(const
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerSQL*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerSQL*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -400,7 +401,7 @@ libqt_list /* of libqt_string */ QsciLexerSQL_AutoCompletionWordSeparators(const
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -411,10 +412,10 @@ libqt_list /* of libqt_string */ QsciLexerSQL_QBaseAutoCompletionWordSeparators(
     auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_AutoCompletionWordSeparators_IsBase(true);
-        QStringList _ret = vqscilexersql->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexersql->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -426,14 +427,14 @@ libqt_list /* of libqt_string */ QsciLexerSQL_QBaseAutoCompletionWordSeparators(
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerSQL*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerSQL*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -445,7 +446,7 @@ libqt_list /* of libqt_string */ QsciLexerSQL_QBaseAutoCompletionWordSeparators(
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1159,7 +1160,7 @@ void QsciLexerSQL_OnSetAutoIndentStyle(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerSQL_SetColor(QsciLexerSQL* self, QColor* c, int style) {
+void QsciLexerSQL_SetColor(QsciLexerSQL* self, const QColor* c, int style) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setColor(*c, static_cast<int>(style));
@@ -1169,7 +1170,7 @@ void QsciLexerSQL_SetColor(QsciLexerSQL* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerSQL_QBaseSetColor(QsciLexerSQL* self, QColor* c, int style) {
+void QsciLexerSQL_QBaseSetColor(QsciLexerSQL* self, const QColor* c, int style) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_SetColor_IsBase(true);
@@ -1217,7 +1218,7 @@ void QsciLexerSQL_OnSetEolFill(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerSQL_SetFont(QsciLexerSQL* self, QFont* f, int style) {
+void QsciLexerSQL_SetFont(QsciLexerSQL* self, const QFont* f, int style) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setFont(*f, static_cast<int>(style));
@@ -1227,7 +1228,7 @@ void QsciLexerSQL_SetFont(QsciLexerSQL* self, QFont* f, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerSQL_QBaseSetFont(QsciLexerSQL* self, QFont* f, int style) {
+void QsciLexerSQL_QBaseSetFont(QsciLexerSQL* self, const QFont* f, int style) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_SetFont_IsBase(true);
@@ -1246,7 +1247,7 @@ void QsciLexerSQL_OnSetFont(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerSQL_SetPaper(QsciLexerSQL* self, QColor* c, int style) {
+void QsciLexerSQL_SetPaper(QsciLexerSQL* self, const QColor* c, int style) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setPaper(*c, static_cast<int>(style));
@@ -1256,7 +1257,7 @@ void QsciLexerSQL_SetPaper(QsciLexerSQL* self, QColor* c, int style) {
 }
 
 // Base class handler implementation
-void QsciLexerSQL_QBaseSetPaper(QsciLexerSQL* self, QColor* c, int style) {
+void QsciLexerSQL_QBaseSetPaper(QsciLexerSQL* self, const QColor* c, int style) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_SetPaper_IsBase(true);
@@ -1275,7 +1276,7 @@ void QsciLexerSQL_OnSetPaper(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerSQL_ReadProperties(QsciLexerSQL* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerSQL_ReadProperties(QsciLexerSQL* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
@@ -1286,7 +1287,7 @@ bool QsciLexerSQL_ReadProperties(QsciLexerSQL* self, QSettings* qs, libqt_string
 }
 
 // Base class handler implementation
-bool QsciLexerSQL_QBaseReadProperties(QsciLexerSQL* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerSQL_QBaseReadProperties(QsciLexerSQL* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
@@ -1306,7 +1307,7 @@ void QsciLexerSQL_OnReadProperties(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerSQL_WriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerSQL_WriteProperties(const QsciLexerSQL* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
@@ -1317,7 +1318,7 @@ bool QsciLexerSQL_WriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt
 }
 
 // Base class handler implementation
-bool QsciLexerSQL_QBaseWriteProperties(const QsciLexerSQL* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerSQL_QBaseWriteProperties(const QsciLexerSQL* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
@@ -1482,7 +1483,7 @@ void QsciLexerSQL_OnCustomEvent(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerSQL_ConnectNotify(QsciLexerSQL* self, QMetaMethod* signal) {
+void QsciLexerSQL_ConnectNotify(QsciLexerSQL* self, const QMetaMethod* signal) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->connectNotify(*signal);
@@ -1492,7 +1493,7 @@ void QsciLexerSQL_ConnectNotify(QsciLexerSQL* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QsciLexerSQL_QBaseConnectNotify(QsciLexerSQL* self, QMetaMethod* signal) {
+void QsciLexerSQL_QBaseConnectNotify(QsciLexerSQL* self, const QMetaMethod* signal) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_ConnectNotify_IsBase(true);
@@ -1511,7 +1512,7 @@ void QsciLexerSQL_OnConnectNotify(QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QsciLexerSQL_DisconnectNotify(QsciLexerSQL* self, QMetaMethod* signal) {
+void QsciLexerSQL_DisconnectNotify(QsciLexerSQL* self, const QMetaMethod* signal) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->disconnectNotify(*signal);
@@ -1521,7 +1522,7 @@ void QsciLexerSQL_DisconnectNotify(QsciLexerSQL* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QsciLexerSQL_QBaseDisconnectNotify(QsciLexerSQL* self, QMetaMethod* signal) {
+void QsciLexerSQL_QBaseDisconnectNotify(QsciLexerSQL* self, const QMetaMethod* signal) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_DisconnectNotify_IsBase(true);
@@ -1536,6 +1537,122 @@ void QsciLexerSQL_OnDisconnectNotify(QsciLexerSQL* self, intptr_t slot) {
     auto* vqscilexersql = dynamic_cast<VirtualQsciLexerSQL*>(self);
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_DisconnectNotify_Callback(reinterpret_cast<VirtualQsciLexerSQL::QsciLexerSQL_DisconnectNotify_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerSQL_TextAsBytes(const QsciLexerSQL* self, const libqt_string text) {
+    auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
+        QByteArray _qb = vqscilexersql->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerSQL*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerSQL_QBaseTextAsBytes(const QsciLexerSQL* self, const libqt_string text) {
+    auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
+        vqscilexersql->setQsciLexerSQL_TextAsBytes_IsBase(true);
+        QByteArray _qb = vqscilexersql->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerSQL*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerSQL_OnTextAsBytes(const QsciLexerSQL* self, intptr_t slot) {
+    auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
+    if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
+        vqscilexersql->setQsciLexerSQL_TextAsBytes_Callback(reinterpret_cast<VirtualQsciLexerSQL::QsciLexerSQL_TextAsBytes_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerSQL_BytesAsText(const QsciLexerSQL* self, const char* bytes, int size) {
+    auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
+    if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
+        QString _ret = vqscilexersql->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerSQL*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerSQL_QBaseBytesAsText(const QsciLexerSQL* self, const char* bytes, int size) {
+    auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
+    if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
+        vqscilexersql->setQsciLexerSQL_BytesAsText_IsBase(true);
+        QString _ret = vqscilexersql->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerSQL*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerSQL_OnBytesAsText(const QsciLexerSQL* self, intptr_t slot) {
+    auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
+    if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
+        vqscilexersql->setQsciLexerSQL_BytesAsText_Callback(reinterpret_cast<VirtualQsciLexerSQL::QsciLexerSQL_BytesAsText_Callback>(slot));
     }
 }
 
@@ -1627,7 +1744,7 @@ void QsciLexerSQL_OnReceivers(const QsciLexerSQL* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QsciLexerSQL_IsSignalConnected(const QsciLexerSQL* self, QMetaMethod* signal) {
+bool QsciLexerSQL_IsSignalConnected(const QsciLexerSQL* self, const QMetaMethod* signal) {
     auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         return vqscilexersql->isSignalConnected(*signal);
@@ -1637,7 +1754,7 @@ bool QsciLexerSQL_IsSignalConnected(const QsciLexerSQL* self, QMetaMethod* signa
 }
 
 // Base class handler implementation
-bool QsciLexerSQL_QBaseIsSignalConnected(const QsciLexerSQL* self, QMetaMethod* signal) {
+bool QsciLexerSQL_QBaseIsSignalConnected(const QsciLexerSQL* self, const QMetaMethod* signal) {
     auto* vqscilexersql = const_cast<VirtualQsciLexerSQL*>(dynamic_cast<const VirtualQsciLexerSQL*>(self));
     if (vqscilexersql && vqscilexersql->isVirtualQsciLexerSQL) {
         vqscilexersql->setQsciLexerSQL_IsSignalConnected_IsBase(true);

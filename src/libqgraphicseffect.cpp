@@ -132,7 +132,7 @@ libqt_string QGraphicsEffect_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-QRectF* QGraphicsEffect_BoundingRectFor(const QGraphicsEffect* self, QRectF* sourceRect) {
+QRectF* QGraphicsEffect_BoundingRectFor(const QGraphicsEffect* self, const QRectF* sourceRect) {
     auto* vqgraphicseffect = const_cast<VirtualQGraphicsEffect*>(dynamic_cast<const VirtualQGraphicsEffect*>(self));
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         return new QRectF(vqgraphicseffect->boundingRectFor(*sourceRect));
@@ -142,7 +142,7 @@ QRectF* QGraphicsEffect_BoundingRectFor(const QGraphicsEffect* self, QRectF* sou
 }
 
 // Base class handler implementation
-QRectF* QGraphicsEffect_QBaseBoundingRectFor(const QGraphicsEffect* self, QRectF* sourceRect) {
+QRectF* QGraphicsEffect_QBaseBoundingRectFor(const QGraphicsEffect* self, const QRectF* sourceRect) {
     auto* vqgraphicseffect = const_cast<VirtualQGraphicsEffect*>(dynamic_cast<const VirtualQGraphicsEffect*>(self));
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         vqgraphicseffect->setQGraphicsEffect_BoundingRectFor_IsBase(true);
@@ -364,7 +364,7 @@ void QGraphicsEffect_OnCustomEvent(QGraphicsEffect* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsEffect_ConnectNotify(QGraphicsEffect* self, QMetaMethod* signal) {
+void QGraphicsEffect_ConnectNotify(QGraphicsEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicseffect = dynamic_cast<VirtualQGraphicsEffect*>(self);
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         vqgraphicseffect->connectNotify(*signal);
@@ -374,7 +374,7 @@ void QGraphicsEffect_ConnectNotify(QGraphicsEffect* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QGraphicsEffect_QBaseConnectNotify(QGraphicsEffect* self, QMetaMethod* signal) {
+void QGraphicsEffect_QBaseConnectNotify(QGraphicsEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicseffect = dynamic_cast<VirtualQGraphicsEffect*>(self);
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         vqgraphicseffect->setQGraphicsEffect_ConnectNotify_IsBase(true);
@@ -393,7 +393,7 @@ void QGraphicsEffect_OnConnectNotify(QGraphicsEffect* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QGraphicsEffect_DisconnectNotify(QGraphicsEffect* self, QMetaMethod* signal) {
+void QGraphicsEffect_DisconnectNotify(QGraphicsEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicseffect = dynamic_cast<VirtualQGraphicsEffect*>(self);
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         vqgraphicseffect->disconnectNotify(*signal);
@@ -403,7 +403,7 @@ void QGraphicsEffect_DisconnectNotify(QGraphicsEffect* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QGraphicsEffect_QBaseDisconnectNotify(QGraphicsEffect* self, QMetaMethod* signal) {
+void QGraphicsEffect_QBaseDisconnectNotify(QGraphicsEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicseffect = dynamic_cast<VirtualQGraphicsEffect*>(self);
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         vqgraphicseffect->setQGraphicsEffect_DisconnectNotify_IsBase(true);
@@ -758,7 +758,7 @@ void QGraphicsEffect_OnReceivers(const QGraphicsEffect* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QGraphicsEffect_IsSignalConnected(const QGraphicsEffect* self, QMetaMethod* signal) {
+bool QGraphicsEffect_IsSignalConnected(const QGraphicsEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicseffect = const_cast<VirtualQGraphicsEffect*>(dynamic_cast<const VirtualQGraphicsEffect*>(self));
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         return vqgraphicseffect->isSignalConnected(*signal);
@@ -768,7 +768,7 @@ bool QGraphicsEffect_IsSignalConnected(const QGraphicsEffect* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QGraphicsEffect_QBaseIsSignalConnected(const QGraphicsEffect* self, QMetaMethod* signal) {
+bool QGraphicsEffect_QBaseIsSignalConnected(const QGraphicsEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicseffect = const_cast<VirtualQGraphicsEffect*>(dynamic_cast<const VirtualQGraphicsEffect*>(self));
     if (vqgraphicseffect && vqgraphicseffect->isVirtualQGraphicsEffect) {
         vqgraphicseffect->setQGraphicsEffect_IsSignalConnected_IsBase(true);
@@ -854,7 +854,7 @@ double QGraphicsColorizeEffect_Strength(const QGraphicsColorizeEffect* self) {
     return static_cast<double>(self->strength());
 }
 
-void QGraphicsColorizeEffect_SetColor(QGraphicsColorizeEffect* self, QColor* c) {
+void QGraphicsColorizeEffect_SetColor(QGraphicsColorizeEffect* self, const QColor* c) {
     self->setColor(*c);
 }
 
@@ -862,7 +862,7 @@ void QGraphicsColorizeEffect_SetStrength(QGraphicsColorizeEffect* self, double s
     self->setStrength(static_cast<qreal>(strength));
 }
 
-void QGraphicsColorizeEffect_ColorChanged(QGraphicsColorizeEffect* self, QColor* color) {
+void QGraphicsColorizeEffect_ColorChanged(QGraphicsColorizeEffect* self, const QColor* color) {
     self->colorChanged(*color);
 }
 
@@ -942,7 +942,7 @@ void QGraphicsColorizeEffect_OnDraw(QGraphicsColorizeEffect* self, intptr_t slot
 }
 
 // Derived class handler implementation
-QRectF* QGraphicsColorizeEffect_BoundingRectFor(const QGraphicsColorizeEffect* self, QRectF* sourceRect) {
+QRectF* QGraphicsColorizeEffect_BoundingRectFor(const QGraphicsColorizeEffect* self, const QRectF* sourceRect) {
     auto* vqgraphicscolorizeeffect = const_cast<VirtualQGraphicsColorizeEffect*>(dynamic_cast<const VirtualQGraphicsColorizeEffect*>(self));
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         return new QRectF(vqgraphicscolorizeeffect->boundingRectFor(*sourceRect));
@@ -952,7 +952,7 @@ QRectF* QGraphicsColorizeEffect_BoundingRectFor(const QGraphicsColorizeEffect* s
 }
 
 // Base class handler implementation
-QRectF* QGraphicsColorizeEffect_QBaseBoundingRectFor(const QGraphicsColorizeEffect* self, QRectF* sourceRect) {
+QRectF* QGraphicsColorizeEffect_QBaseBoundingRectFor(const QGraphicsColorizeEffect* self, const QRectF* sourceRect) {
     auto* vqgraphicscolorizeeffect = const_cast<VirtualQGraphicsColorizeEffect*>(dynamic_cast<const VirtualQGraphicsColorizeEffect*>(self));
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         vqgraphicscolorizeeffect->setQGraphicsColorizeEffect_BoundingRectFor_IsBase(true);
@@ -1145,7 +1145,7 @@ void QGraphicsColorizeEffect_OnCustomEvent(QGraphicsColorizeEffect* self, intptr
 }
 
 // Derived class handler implementation
-void QGraphicsColorizeEffect_ConnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal) {
+void QGraphicsColorizeEffect_ConnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicscolorizeeffect = dynamic_cast<VirtualQGraphicsColorizeEffect*>(self);
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         vqgraphicscolorizeeffect->connectNotify(*signal);
@@ -1155,7 +1155,7 @@ void QGraphicsColorizeEffect_ConnectNotify(QGraphicsColorizeEffect* self, QMetaM
 }
 
 // Base class handler implementation
-void QGraphicsColorizeEffect_QBaseConnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal) {
+void QGraphicsColorizeEffect_QBaseConnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicscolorizeeffect = dynamic_cast<VirtualQGraphicsColorizeEffect*>(self);
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         vqgraphicscolorizeeffect->setQGraphicsColorizeEffect_ConnectNotify_IsBase(true);
@@ -1174,7 +1174,7 @@ void QGraphicsColorizeEffect_OnConnectNotify(QGraphicsColorizeEffect* self, intp
 }
 
 // Derived class handler implementation
-void QGraphicsColorizeEffect_DisconnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal) {
+void QGraphicsColorizeEffect_DisconnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicscolorizeeffect = dynamic_cast<VirtualQGraphicsColorizeEffect*>(self);
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         vqgraphicscolorizeeffect->disconnectNotify(*signal);
@@ -1184,7 +1184,7 @@ void QGraphicsColorizeEffect_DisconnectNotify(QGraphicsColorizeEffect* self, QMe
 }
 
 // Base class handler implementation
-void QGraphicsColorizeEffect_QBaseDisconnectNotify(QGraphicsColorizeEffect* self, QMetaMethod* signal) {
+void QGraphicsColorizeEffect_QBaseDisconnectNotify(QGraphicsColorizeEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicscolorizeeffect = dynamic_cast<VirtualQGraphicsColorizeEffect*>(self);
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         vqgraphicscolorizeeffect->setQGraphicsColorizeEffect_DisconnectNotify_IsBase(true);
@@ -1431,7 +1431,7 @@ void QGraphicsColorizeEffect_OnReceivers(const QGraphicsColorizeEffect* self, in
 }
 
 // Derived class handler implementation
-bool QGraphicsColorizeEffect_IsSignalConnected(const QGraphicsColorizeEffect* self, QMetaMethod* signal) {
+bool QGraphicsColorizeEffect_IsSignalConnected(const QGraphicsColorizeEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicscolorizeeffect = const_cast<VirtualQGraphicsColorizeEffect*>(dynamic_cast<const VirtualQGraphicsColorizeEffect*>(self));
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         return vqgraphicscolorizeeffect->isSignalConnected(*signal);
@@ -1441,7 +1441,7 @@ bool QGraphicsColorizeEffect_IsSignalConnected(const QGraphicsColorizeEffect* se
 }
 
 // Base class handler implementation
-bool QGraphicsColorizeEffect_QBaseIsSignalConnected(const QGraphicsColorizeEffect* self, QMetaMethod* signal) {
+bool QGraphicsColorizeEffect_QBaseIsSignalConnected(const QGraphicsColorizeEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicscolorizeeffect = const_cast<VirtualQGraphicsColorizeEffect*>(dynamic_cast<const VirtualQGraphicsColorizeEffect*>(self));
     if (vqgraphicscolorizeeffect && vqgraphicscolorizeeffect->isVirtualQGraphicsColorizeEffect) {
         vqgraphicscolorizeeffect->setQGraphicsColorizeEffect_IsSignalConnected_IsBase(true);
@@ -1584,7 +1584,7 @@ libqt_string QGraphicsBlurEffect_Tr3(const char* s, const char* c, int n) {
 }
 
 // Derived class handler implementation
-QRectF* QGraphicsBlurEffect_BoundingRectFor(const QGraphicsBlurEffect* self, QRectF* rect) {
+QRectF* QGraphicsBlurEffect_BoundingRectFor(const QGraphicsBlurEffect* self, const QRectF* rect) {
     auto* vqgraphicsblureffect = const_cast<VirtualQGraphicsBlurEffect*>(dynamic_cast<const VirtualQGraphicsBlurEffect*>(self));
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         return new QRectF(vqgraphicsblureffect->boundingRectFor(*rect));
@@ -1594,7 +1594,7 @@ QRectF* QGraphicsBlurEffect_BoundingRectFor(const QGraphicsBlurEffect* self, QRe
 }
 
 // Base class handler implementation
-QRectF* QGraphicsBlurEffect_QBaseBoundingRectFor(const QGraphicsBlurEffect* self, QRectF* rect) {
+QRectF* QGraphicsBlurEffect_QBaseBoundingRectFor(const QGraphicsBlurEffect* self, const QRectF* rect) {
     auto* vqgraphicsblureffect = const_cast<VirtualQGraphicsBlurEffect*>(dynamic_cast<const VirtualQGraphicsBlurEffect*>(self));
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         vqgraphicsblureffect->setQGraphicsBlurEffect_BoundingRectFor_IsBase(true);
@@ -1816,7 +1816,7 @@ void QGraphicsBlurEffect_OnCustomEvent(QGraphicsBlurEffect* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QGraphicsBlurEffect_ConnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal) {
+void QGraphicsBlurEffect_ConnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsblureffect = dynamic_cast<VirtualQGraphicsBlurEffect*>(self);
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         vqgraphicsblureffect->connectNotify(*signal);
@@ -1826,7 +1826,7 @@ void QGraphicsBlurEffect_ConnectNotify(QGraphicsBlurEffect* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-void QGraphicsBlurEffect_QBaseConnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal) {
+void QGraphicsBlurEffect_QBaseConnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsblureffect = dynamic_cast<VirtualQGraphicsBlurEffect*>(self);
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         vqgraphicsblureffect->setQGraphicsBlurEffect_ConnectNotify_IsBase(true);
@@ -1845,7 +1845,7 @@ void QGraphicsBlurEffect_OnConnectNotify(QGraphicsBlurEffect* self, intptr_t slo
 }
 
 // Derived class handler implementation
-void QGraphicsBlurEffect_DisconnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal) {
+void QGraphicsBlurEffect_DisconnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsblureffect = dynamic_cast<VirtualQGraphicsBlurEffect*>(self);
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         vqgraphicsblureffect->disconnectNotify(*signal);
@@ -1855,7 +1855,7 @@ void QGraphicsBlurEffect_DisconnectNotify(QGraphicsBlurEffect* self, QMetaMethod
 }
 
 // Base class handler implementation
-void QGraphicsBlurEffect_QBaseDisconnectNotify(QGraphicsBlurEffect* self, QMetaMethod* signal) {
+void QGraphicsBlurEffect_QBaseDisconnectNotify(QGraphicsBlurEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsblureffect = dynamic_cast<VirtualQGraphicsBlurEffect*>(self);
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         vqgraphicsblureffect->setQGraphicsBlurEffect_DisconnectNotify_IsBase(true);
@@ -2102,7 +2102,7 @@ void QGraphicsBlurEffect_OnReceivers(const QGraphicsBlurEffect* self, intptr_t s
 }
 
 // Derived class handler implementation
-bool QGraphicsBlurEffect_IsSignalConnected(const QGraphicsBlurEffect* self, QMetaMethod* signal) {
+bool QGraphicsBlurEffect_IsSignalConnected(const QGraphicsBlurEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsblureffect = const_cast<VirtualQGraphicsBlurEffect*>(dynamic_cast<const VirtualQGraphicsBlurEffect*>(self));
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         return vqgraphicsblureffect->isSignalConnected(*signal);
@@ -2112,7 +2112,7 @@ bool QGraphicsBlurEffect_IsSignalConnected(const QGraphicsBlurEffect* self, QMet
 }
 
 // Base class handler implementation
-bool QGraphicsBlurEffect_QBaseIsSignalConnected(const QGraphicsBlurEffect* self, QMetaMethod* signal) {
+bool QGraphicsBlurEffect_QBaseIsSignalConnected(const QGraphicsBlurEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsblureffect = const_cast<VirtualQGraphicsBlurEffect*>(dynamic_cast<const VirtualQGraphicsBlurEffect*>(self));
     if (vqgraphicsblureffect && vqgraphicsblureffect->isVirtualQGraphicsBlurEffect) {
         vqgraphicsblureffect->setQGraphicsBlurEffect_IsSignalConnected_IsBase(true);
@@ -2210,7 +2210,7 @@ QColor* QGraphicsDropShadowEffect_Color(const QGraphicsDropShadowEffect* self) {
     return new QColor(self->color());
 }
 
-void QGraphicsDropShadowEffect_SetOffset(QGraphicsDropShadowEffect* self, QPointF* ofs) {
+void QGraphicsDropShadowEffect_SetOffset(QGraphicsDropShadowEffect* self, const QPointF* ofs) {
     self->setOffset(*ofs);
 }
 
@@ -2234,11 +2234,11 @@ void QGraphicsDropShadowEffect_SetBlurRadius(QGraphicsDropShadowEffect* self, do
     self->setBlurRadius(static_cast<qreal>(blurRadius));
 }
 
-void QGraphicsDropShadowEffect_SetColor(QGraphicsDropShadowEffect* self, QColor* color) {
+void QGraphicsDropShadowEffect_SetColor(QGraphicsDropShadowEffect* self, const QColor* color) {
     self->setColor(*color);
 }
 
-void QGraphicsDropShadowEffect_OffsetChanged(QGraphicsDropShadowEffect* self, QPointF* offset) {
+void QGraphicsDropShadowEffect_OffsetChanged(QGraphicsDropShadowEffect* self, const QPointF* offset) {
     self->offsetChanged(*offset);
 }
 
@@ -2264,7 +2264,7 @@ void QGraphicsDropShadowEffect_Connect_BlurRadiusChanged(QGraphicsDropShadowEffe
     });
 }
 
-void QGraphicsDropShadowEffect_ColorChanged(QGraphicsDropShadowEffect* self, QColor* color) {
+void QGraphicsDropShadowEffect_ColorChanged(QGraphicsDropShadowEffect* self, const QColor* color) {
     self->colorChanged(*color);
 }
 
@@ -2303,7 +2303,7 @@ libqt_string QGraphicsDropShadowEffect_Tr3(const char* s, const char* c, int n) 
 }
 
 // Derived class handler implementation
-QRectF* QGraphicsDropShadowEffect_BoundingRectFor(const QGraphicsDropShadowEffect* self, QRectF* rect) {
+QRectF* QGraphicsDropShadowEffect_BoundingRectFor(const QGraphicsDropShadowEffect* self, const QRectF* rect) {
     auto* vqgraphicsdropshadoweffect = const_cast<VirtualQGraphicsDropShadowEffect*>(dynamic_cast<const VirtualQGraphicsDropShadowEffect*>(self));
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         return new QRectF(vqgraphicsdropshadoweffect->boundingRectFor(*rect));
@@ -2313,7 +2313,7 @@ QRectF* QGraphicsDropShadowEffect_BoundingRectFor(const QGraphicsDropShadowEffec
 }
 
 // Base class handler implementation
-QRectF* QGraphicsDropShadowEffect_QBaseBoundingRectFor(const QGraphicsDropShadowEffect* self, QRectF* rect) {
+QRectF* QGraphicsDropShadowEffect_QBaseBoundingRectFor(const QGraphicsDropShadowEffect* self, const QRectF* rect) {
     auto* vqgraphicsdropshadoweffect = const_cast<VirtualQGraphicsDropShadowEffect*>(dynamic_cast<const VirtualQGraphicsDropShadowEffect*>(self));
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         vqgraphicsdropshadoweffect->setQGraphicsDropShadowEffect_BoundingRectFor_IsBase(true);
@@ -2535,7 +2535,7 @@ void QGraphicsDropShadowEffect_OnCustomEvent(QGraphicsDropShadowEffect* self, in
 }
 
 // Derived class handler implementation
-void QGraphicsDropShadowEffect_ConnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal) {
+void QGraphicsDropShadowEffect_ConnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsdropshadoweffect = dynamic_cast<VirtualQGraphicsDropShadowEffect*>(self);
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         vqgraphicsdropshadoweffect->connectNotify(*signal);
@@ -2545,7 +2545,7 @@ void QGraphicsDropShadowEffect_ConnectNotify(QGraphicsDropShadowEffect* self, QM
 }
 
 // Base class handler implementation
-void QGraphicsDropShadowEffect_QBaseConnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal) {
+void QGraphicsDropShadowEffect_QBaseConnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsdropshadoweffect = dynamic_cast<VirtualQGraphicsDropShadowEffect*>(self);
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         vqgraphicsdropshadoweffect->setQGraphicsDropShadowEffect_ConnectNotify_IsBase(true);
@@ -2564,7 +2564,7 @@ void QGraphicsDropShadowEffect_OnConnectNotify(QGraphicsDropShadowEffect* self, 
 }
 
 // Derived class handler implementation
-void QGraphicsDropShadowEffect_DisconnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal) {
+void QGraphicsDropShadowEffect_DisconnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsdropshadoweffect = dynamic_cast<VirtualQGraphicsDropShadowEffect*>(self);
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         vqgraphicsdropshadoweffect->disconnectNotify(*signal);
@@ -2574,7 +2574,7 @@ void QGraphicsDropShadowEffect_DisconnectNotify(QGraphicsDropShadowEffect* self,
 }
 
 // Base class handler implementation
-void QGraphicsDropShadowEffect_QBaseDisconnectNotify(QGraphicsDropShadowEffect* self, QMetaMethod* signal) {
+void QGraphicsDropShadowEffect_QBaseDisconnectNotify(QGraphicsDropShadowEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsdropshadoweffect = dynamic_cast<VirtualQGraphicsDropShadowEffect*>(self);
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         vqgraphicsdropshadoweffect->setQGraphicsDropShadowEffect_DisconnectNotify_IsBase(true);
@@ -2821,7 +2821,7 @@ void QGraphicsDropShadowEffect_OnReceivers(const QGraphicsDropShadowEffect* self
 }
 
 // Derived class handler implementation
-bool QGraphicsDropShadowEffect_IsSignalConnected(const QGraphicsDropShadowEffect* self, QMetaMethod* signal) {
+bool QGraphicsDropShadowEffect_IsSignalConnected(const QGraphicsDropShadowEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsdropshadoweffect = const_cast<VirtualQGraphicsDropShadowEffect*>(dynamic_cast<const VirtualQGraphicsDropShadowEffect*>(self));
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         return vqgraphicsdropshadoweffect->isSignalConnected(*signal);
@@ -2831,7 +2831,7 @@ bool QGraphicsDropShadowEffect_IsSignalConnected(const QGraphicsDropShadowEffect
 }
 
 // Base class handler implementation
-bool QGraphicsDropShadowEffect_QBaseIsSignalConnected(const QGraphicsDropShadowEffect* self, QMetaMethod* signal) {
+bool QGraphicsDropShadowEffect_QBaseIsSignalConnected(const QGraphicsDropShadowEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsdropshadoweffect = const_cast<VirtualQGraphicsDropShadowEffect*>(dynamic_cast<const VirtualQGraphicsDropShadowEffect*>(self));
     if (vqgraphicsdropshadoweffect && vqgraphicsdropshadoweffect->isVirtualQGraphicsDropShadowEffect) {
         vqgraphicsdropshadoweffect->setQGraphicsDropShadowEffect_IsSignalConnected_IsBase(true);
@@ -2921,7 +2921,7 @@ void QGraphicsOpacityEffect_SetOpacity(QGraphicsOpacityEffect* self, double opac
     self->setOpacity(static_cast<qreal>(opacity));
 }
 
-void QGraphicsOpacityEffect_SetOpacityMask(QGraphicsOpacityEffect* self, QBrush* mask) {
+void QGraphicsOpacityEffect_SetOpacityMask(QGraphicsOpacityEffect* self, const QBrush* mask) {
     self->setOpacityMask(*mask);
 }
 
@@ -2937,7 +2937,7 @@ void QGraphicsOpacityEffect_Connect_OpacityChanged(QGraphicsOpacityEffect* self,
     });
 }
 
-void QGraphicsOpacityEffect_OpacityMaskChanged(QGraphicsOpacityEffect* self, QBrush* mask) {
+void QGraphicsOpacityEffect_OpacityMaskChanged(QGraphicsOpacityEffect* self, const QBrush* mask) {
     self->opacityMaskChanged(*mask);
 }
 
@@ -3005,7 +3005,7 @@ void QGraphicsOpacityEffect_OnDraw(QGraphicsOpacityEffect* self, intptr_t slot) 
 }
 
 // Derived class handler implementation
-QRectF* QGraphicsOpacityEffect_BoundingRectFor(const QGraphicsOpacityEffect* self, QRectF* sourceRect) {
+QRectF* QGraphicsOpacityEffect_BoundingRectFor(const QGraphicsOpacityEffect* self, const QRectF* sourceRect) {
     auto* vqgraphicsopacityeffect = const_cast<VirtualQGraphicsOpacityEffect*>(dynamic_cast<const VirtualQGraphicsOpacityEffect*>(self));
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         return new QRectF(vqgraphicsopacityeffect->boundingRectFor(*sourceRect));
@@ -3015,7 +3015,7 @@ QRectF* QGraphicsOpacityEffect_BoundingRectFor(const QGraphicsOpacityEffect* sel
 }
 
 // Base class handler implementation
-QRectF* QGraphicsOpacityEffect_QBaseBoundingRectFor(const QGraphicsOpacityEffect* self, QRectF* sourceRect) {
+QRectF* QGraphicsOpacityEffect_QBaseBoundingRectFor(const QGraphicsOpacityEffect* self, const QRectF* sourceRect) {
     auto* vqgraphicsopacityeffect = const_cast<VirtualQGraphicsOpacityEffect*>(dynamic_cast<const VirtualQGraphicsOpacityEffect*>(self));
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         vqgraphicsopacityeffect->setQGraphicsOpacityEffect_BoundingRectFor_IsBase(true);
@@ -3208,7 +3208,7 @@ void QGraphicsOpacityEffect_OnCustomEvent(QGraphicsOpacityEffect* self, intptr_t
 }
 
 // Derived class handler implementation
-void QGraphicsOpacityEffect_ConnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal) {
+void QGraphicsOpacityEffect_ConnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsopacityeffect = dynamic_cast<VirtualQGraphicsOpacityEffect*>(self);
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         vqgraphicsopacityeffect->connectNotify(*signal);
@@ -3218,7 +3218,7 @@ void QGraphicsOpacityEffect_ConnectNotify(QGraphicsOpacityEffect* self, QMetaMet
 }
 
 // Base class handler implementation
-void QGraphicsOpacityEffect_QBaseConnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal) {
+void QGraphicsOpacityEffect_QBaseConnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsopacityeffect = dynamic_cast<VirtualQGraphicsOpacityEffect*>(self);
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         vqgraphicsopacityeffect->setQGraphicsOpacityEffect_ConnectNotify_IsBase(true);
@@ -3237,7 +3237,7 @@ void QGraphicsOpacityEffect_OnConnectNotify(QGraphicsOpacityEffect* self, intptr
 }
 
 // Derived class handler implementation
-void QGraphicsOpacityEffect_DisconnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal) {
+void QGraphicsOpacityEffect_DisconnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsopacityeffect = dynamic_cast<VirtualQGraphicsOpacityEffect*>(self);
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         vqgraphicsopacityeffect->disconnectNotify(*signal);
@@ -3247,7 +3247,7 @@ void QGraphicsOpacityEffect_DisconnectNotify(QGraphicsOpacityEffect* self, QMeta
 }
 
 // Base class handler implementation
-void QGraphicsOpacityEffect_QBaseDisconnectNotify(QGraphicsOpacityEffect* self, QMetaMethod* signal) {
+void QGraphicsOpacityEffect_QBaseDisconnectNotify(QGraphicsOpacityEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsopacityeffect = dynamic_cast<VirtualQGraphicsOpacityEffect*>(self);
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         vqgraphicsopacityeffect->setQGraphicsOpacityEffect_DisconnectNotify_IsBase(true);
@@ -3494,7 +3494,7 @@ void QGraphicsOpacityEffect_OnReceivers(const QGraphicsOpacityEffect* self, intp
 }
 
 // Derived class handler implementation
-bool QGraphicsOpacityEffect_IsSignalConnected(const QGraphicsOpacityEffect* self, QMetaMethod* signal) {
+bool QGraphicsOpacityEffect_IsSignalConnected(const QGraphicsOpacityEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsopacityeffect = const_cast<VirtualQGraphicsOpacityEffect*>(dynamic_cast<const VirtualQGraphicsOpacityEffect*>(self));
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         return vqgraphicsopacityeffect->isSignalConnected(*signal);
@@ -3504,7 +3504,7 @@ bool QGraphicsOpacityEffect_IsSignalConnected(const QGraphicsOpacityEffect* self
 }
 
 // Base class handler implementation
-bool QGraphicsOpacityEffect_QBaseIsSignalConnected(const QGraphicsOpacityEffect* self, QMetaMethod* signal) {
+bool QGraphicsOpacityEffect_QBaseIsSignalConnected(const QGraphicsOpacityEffect* self, const QMetaMethod* signal) {
     auto* vqgraphicsopacityeffect = const_cast<VirtualQGraphicsOpacityEffect*>(dynamic_cast<const VirtualQGraphicsOpacityEffect*>(self));
     if (vqgraphicsopacityeffect && vqgraphicsopacityeffect->isVirtualQGraphicsOpacityEffect) {
         vqgraphicsopacityeffect->setQGraphicsOpacityEffect_IsSignalConnected_IsBase(true);

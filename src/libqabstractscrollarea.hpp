@@ -55,12 +55,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QAbstractScrollArea::SizeAdjustPolicy SizeAdjustPolicy; // C++ enum
-#else
-typedef int SizeAdjustPolicy; // C ABI enum
-#endif
-
 QAbstractScrollArea* QAbstractScrollArea_new(QWidget* parent);
 QAbstractScrollArea* QAbstractScrollArea_new2();
 QMetaObject* QAbstractScrollArea_MetaObject(const QAbstractScrollArea* self);
@@ -205,9 +199,9 @@ void QAbstractScrollArea_QBaseShowEvent(QAbstractScrollArea* self, QShowEvent* e
 void QAbstractScrollArea_HideEvent(QAbstractScrollArea* self, QHideEvent* event);
 void QAbstractScrollArea_OnHideEvent(QAbstractScrollArea* self, intptr_t slot);
 void QAbstractScrollArea_QBaseHideEvent(QAbstractScrollArea* self, QHideEvent* event);
-bool QAbstractScrollArea_NativeEvent(QAbstractScrollArea* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractScrollArea_NativeEvent(QAbstractScrollArea* self, const libqt_string eventType, void* message, intptr_t* result);
 void QAbstractScrollArea_OnNativeEvent(QAbstractScrollArea* self, intptr_t slot);
-bool QAbstractScrollArea_QBaseNativeEvent(QAbstractScrollArea* self, libqt_string eventType, void* message, intptr_t* result);
+bool QAbstractScrollArea_QBaseNativeEvent(QAbstractScrollArea* self, const libqt_string eventType, void* message, intptr_t* result);
 int QAbstractScrollArea_Metric(const QAbstractScrollArea* self, int param1);
 void QAbstractScrollArea_OnMetric(const QAbstractScrollArea* self, intptr_t slot);
 int QAbstractScrollArea_QBaseMetric(const QAbstractScrollArea* self, int param1);
@@ -238,18 +232,18 @@ void QAbstractScrollArea_QBaseChildEvent(QAbstractScrollArea* self, QChildEvent*
 void QAbstractScrollArea_CustomEvent(QAbstractScrollArea* self, QEvent* event);
 void QAbstractScrollArea_OnCustomEvent(QAbstractScrollArea* self, intptr_t slot);
 void QAbstractScrollArea_QBaseCustomEvent(QAbstractScrollArea* self, QEvent* event);
-void QAbstractScrollArea_ConnectNotify(QAbstractScrollArea* self, QMetaMethod* signal);
+void QAbstractScrollArea_ConnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal);
 void QAbstractScrollArea_OnConnectNotify(QAbstractScrollArea* self, intptr_t slot);
-void QAbstractScrollArea_QBaseConnectNotify(QAbstractScrollArea* self, QMetaMethod* signal);
-void QAbstractScrollArea_DisconnectNotify(QAbstractScrollArea* self, QMetaMethod* signal);
+void QAbstractScrollArea_QBaseConnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal);
+void QAbstractScrollArea_DisconnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal);
 void QAbstractScrollArea_OnDisconnectNotify(QAbstractScrollArea* self, intptr_t slot);
-void QAbstractScrollArea_QBaseDisconnectNotify(QAbstractScrollArea* self, QMetaMethod* signal);
+void QAbstractScrollArea_QBaseDisconnectNotify(QAbstractScrollArea* self, const QMetaMethod* signal);
 void QAbstractScrollArea_SetViewportMargins(QAbstractScrollArea* self, int left, int top, int right, int bottom);
 void QAbstractScrollArea_OnSetViewportMargins(QAbstractScrollArea* self, intptr_t slot);
 void QAbstractScrollArea_QBaseSetViewportMargins(QAbstractScrollArea* self, int left, int top, int right, int bottom);
-void QAbstractScrollArea_SetViewportMarginsWithMargins(QAbstractScrollArea* self, QMargins* margins);
+void QAbstractScrollArea_SetViewportMarginsWithMargins(QAbstractScrollArea* self, const QMargins* margins);
 void QAbstractScrollArea_OnSetViewportMarginsWithMargins(QAbstractScrollArea* self, intptr_t slot);
-void QAbstractScrollArea_QBaseSetViewportMarginsWithMargins(QAbstractScrollArea* self, QMargins* margins);
+void QAbstractScrollArea_QBaseSetViewportMarginsWithMargins(QAbstractScrollArea* self, const QMargins* margins);
 QMargins* QAbstractScrollArea_ViewportMargins(const QAbstractScrollArea* self);
 void QAbstractScrollArea_OnViewportMargins(const QAbstractScrollArea* self, intptr_t slot);
 QMargins* QAbstractScrollArea_QBaseViewportMargins(const QAbstractScrollArea* self);
@@ -280,9 +274,12 @@ int QAbstractScrollArea_QBaseSenderSignalIndex(const QAbstractScrollArea* self);
 int QAbstractScrollArea_Receivers(const QAbstractScrollArea* self, const char* signal);
 void QAbstractScrollArea_OnReceivers(const QAbstractScrollArea* self, intptr_t slot);
 int QAbstractScrollArea_QBaseReceivers(const QAbstractScrollArea* self, const char* signal);
-bool QAbstractScrollArea_IsSignalConnected(const QAbstractScrollArea* self, QMetaMethod* signal);
+bool QAbstractScrollArea_IsSignalConnected(const QAbstractScrollArea* self, const QMetaMethod* signal);
 void QAbstractScrollArea_OnIsSignalConnected(const QAbstractScrollArea* self, intptr_t slot);
-bool QAbstractScrollArea_QBaseIsSignalConnected(const QAbstractScrollArea* self, QMetaMethod* signal);
+bool QAbstractScrollArea_QBaseIsSignalConnected(const QAbstractScrollArea* self, const QMetaMethod* signal);
+double QAbstractScrollArea_GetDecodedMetricF(const QAbstractScrollArea* self, int metricA, int metricB);
+void QAbstractScrollArea_OnGetDecodedMetricF(const QAbstractScrollArea* self, intptr_t slot);
+double QAbstractScrollArea_QBaseGetDecodedMetricF(const QAbstractScrollArea* self, int metricA, int metricB);
 void QAbstractScrollArea_Delete(QAbstractScrollArea* self);
 
 #ifdef __cplusplus

@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqproperty.h"
-
 /// https://doc.qt.io/qt-6/qbindingstatus.html
 
 /// q_bindingstatus_new constructs a new QBindingStatus object.

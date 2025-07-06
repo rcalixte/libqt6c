@@ -20,11 +20,11 @@ QHttpPart* QHttpPart_new() {
     return new QHttpPart();
 }
 
-QHttpPart* QHttpPart_new2(QHttpPart* other) {
+QHttpPart* QHttpPart_new2(const QHttpPart* other) {
     return new QHttpPart(*other);
 }
 
-void QHttpPart_OperatorAssign(QHttpPart* self, QHttpPart* other) {
+void QHttpPart_OperatorAssign(QHttpPart* self, const QHttpPart* other) {
     self->operator=(*other);
 }
 
@@ -32,25 +32,25 @@ void QHttpPart_Swap(QHttpPart* self, QHttpPart* other) {
     self->swap(*other);
 }
 
-bool QHttpPart_OperatorEqual(const QHttpPart* self, QHttpPart* other) {
+bool QHttpPart_OperatorEqual(const QHttpPart* self, const QHttpPart* other) {
     return (*self == *other);
 }
 
-bool QHttpPart_OperatorNotEqual(const QHttpPart* self, QHttpPart* other) {
+bool QHttpPart_OperatorNotEqual(const QHttpPart* self, const QHttpPart* other) {
     return (*self != *other);
 }
 
-void QHttpPart_SetHeader(QHttpPart* self, int header, QVariant* value) {
+void QHttpPart_SetHeader(QHttpPart* self, int header, const QVariant* value) {
     self->setHeader(static_cast<QNetworkRequest::KnownHeaders>(header), *value);
 }
 
-void QHttpPart_SetRawHeader(QHttpPart* self, libqt_string headerName, libqt_string headerValue) {
+void QHttpPart_SetRawHeader(QHttpPart* self, const libqt_string headerName, const libqt_string headerValue) {
     QByteArray headerName_QByteArray(headerName.data, headerName.len);
     QByteArray headerValue_QByteArray(headerValue.data, headerValue.len);
     self->setRawHeader(headerName_QByteArray, headerValue_QByteArray);
 }
 
-void QHttpPart_SetBody(QHttpPart* self, libqt_string body) {
+void QHttpPart_SetBody(QHttpPart* self, const libqt_string body) {
     QByteArray body_QByteArray(body.data, body.len);
     self->setBody(body_QByteArray);
 }
@@ -127,7 +127,7 @@ libqt_string QHttpMultiPart_Tr(const char* s) {
     return _str;
 }
 
-void QHttpMultiPart_Append(QHttpMultiPart* self, QHttpPart* httpPart) {
+void QHttpMultiPart_Append(QHttpMultiPart* self, const QHttpPart* httpPart) {
     self->append(*httpPart);
 }
 
@@ -145,7 +145,7 @@ libqt_string QHttpMultiPart_Boundary(const QHttpMultiPart* self) {
     return _str;
 }
 
-void QHttpMultiPart_SetBoundary(QHttpMultiPart* self, libqt_string boundary) {
+void QHttpMultiPart_SetBoundary(QHttpMultiPart* self, const libqt_string boundary) {
     QByteArray boundary_QByteArray(boundary.data, boundary.len);
     self->setBoundary(boundary_QByteArray);
 }
@@ -320,7 +320,7 @@ void QHttpMultiPart_OnCustomEvent(QHttpMultiPart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHttpMultiPart_ConnectNotify(QHttpMultiPart* self, QMetaMethod* signal) {
+void QHttpMultiPart_ConnectNotify(QHttpMultiPart* self, const QMetaMethod* signal) {
     auto* vqhttpmultipart = dynamic_cast<VirtualQHttpMultiPart*>(self);
     if (vqhttpmultipart && vqhttpmultipart->isVirtualQHttpMultiPart) {
         vqhttpmultipart->connectNotify(*signal);
@@ -330,7 +330,7 @@ void QHttpMultiPart_ConnectNotify(QHttpMultiPart* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QHttpMultiPart_QBaseConnectNotify(QHttpMultiPart* self, QMetaMethod* signal) {
+void QHttpMultiPart_QBaseConnectNotify(QHttpMultiPart* self, const QMetaMethod* signal) {
     auto* vqhttpmultipart = dynamic_cast<VirtualQHttpMultiPart*>(self);
     if (vqhttpmultipart && vqhttpmultipart->isVirtualQHttpMultiPart) {
         vqhttpmultipart->setQHttpMultiPart_ConnectNotify_IsBase(true);
@@ -349,7 +349,7 @@ void QHttpMultiPart_OnConnectNotify(QHttpMultiPart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QHttpMultiPart_DisconnectNotify(QHttpMultiPart* self, QMetaMethod* signal) {
+void QHttpMultiPart_DisconnectNotify(QHttpMultiPart* self, const QMetaMethod* signal) {
     auto* vqhttpmultipart = dynamic_cast<VirtualQHttpMultiPart*>(self);
     if (vqhttpmultipart && vqhttpmultipart->isVirtualQHttpMultiPart) {
         vqhttpmultipart->disconnectNotify(*signal);
@@ -359,7 +359,7 @@ void QHttpMultiPart_DisconnectNotify(QHttpMultiPart* self, QMetaMethod* signal) 
 }
 
 // Base class handler implementation
-void QHttpMultiPart_QBaseDisconnectNotify(QHttpMultiPart* self, QMetaMethod* signal) {
+void QHttpMultiPart_QBaseDisconnectNotify(QHttpMultiPart* self, const QMetaMethod* signal) {
     auto* vqhttpmultipart = dynamic_cast<VirtualQHttpMultiPart*>(self);
     if (vqhttpmultipart && vqhttpmultipart->isVirtualQHttpMultiPart) {
         vqhttpmultipart->setQHttpMultiPart_DisconnectNotify_IsBase(true);
@@ -465,7 +465,7 @@ void QHttpMultiPart_OnReceivers(const QHttpMultiPart* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QHttpMultiPart_IsSignalConnected(const QHttpMultiPart* self, QMetaMethod* signal) {
+bool QHttpMultiPart_IsSignalConnected(const QHttpMultiPart* self, const QMetaMethod* signal) {
     auto* vqhttpmultipart = const_cast<VirtualQHttpMultiPart*>(dynamic_cast<const VirtualQHttpMultiPart*>(self));
     if (vqhttpmultipart && vqhttpmultipart->isVirtualQHttpMultiPart) {
         return vqhttpmultipart->isSignalConnected(*signal);
@@ -475,7 +475,7 @@ bool QHttpMultiPart_IsSignalConnected(const QHttpMultiPart* self, QMetaMethod* s
 }
 
 // Base class handler implementation
-bool QHttpMultiPart_QBaseIsSignalConnected(const QHttpMultiPart* self, QMetaMethod* signal) {
+bool QHttpMultiPart_QBaseIsSignalConnected(const QHttpMultiPart* self, const QMetaMethod* signal) {
     auto* vqhttpmultipart = const_cast<VirtualQHttpMultiPart*>(dynamic_cast<const VirtualQHttpMultiPart*>(self));
     if (vqhttpmultipart && vqhttpmultipart->isVirtualQHttpMultiPart) {
         vqhttpmultipart->setQHttpMultiPart_IsSignalConnected_IsBase(true);

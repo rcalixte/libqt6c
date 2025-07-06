@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqjsonobject.h"
-
 /// https://doc.qt.io/qt-6/qpluginmetadata.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata.html#archRequirements)
@@ -39,6 +37,11 @@ QStaticPlugin* q_staticplugin_new(void* other);
 ///
 /// ``` QStaticPlugin* other ```
 QStaticPlugin* q_staticplugin_new2(void* other);
+
+/// q_staticplugin_new3 constructs a new QStaticPlugin object.
+///
+/// ``` QStaticPlugin* param1 ```
+QStaticPlugin* q_staticplugin_new3(void* param1);
 
 /// q_staticplugin_copy_assign shallow copies `other` into `self`.
 ///

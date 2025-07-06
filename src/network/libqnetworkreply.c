@@ -1,3 +1,6 @@
+#include "../libqanystringview.hpp"
+#include "../libqbytearrayview.hpp"
+#include "libqhttpheaders.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
@@ -80,8 +83,8 @@ QVariant* q_networkreply_header(void* self, int64_t header) {
     return QNetworkReply_Header((QNetworkReply*)self, header);
 }
 
-bool q_networkreply_has_raw_header(void* self, const char* headerName) {
-    return QNetworkReply_HasRawHeader((QNetworkReply*)self, qstring(headerName));
+bool q_networkreply_has_raw_header(void* self, char* headerName) {
+    return QNetworkReply_HasRawHeader((QNetworkReply*)self, headerName);
 }
 
 const char** q_networkreply_raw_header_list(void* self) {
@@ -99,8 +102,8 @@ const char** q_networkreply_raw_header_list(void* self) {
     return _ret;
 }
 
-char* q_networkreply_raw_header(void* self, const char* headerName) {
-    libqt_string _str = QNetworkReply_RawHeader((QNetworkReply*)self, qstring(headerName));
+char* q_networkreply_raw_header(void* self, char* headerName) {
+    libqt_string _str = QNetworkReply_RawHeader((QNetworkReply*)self, headerName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -109,6 +112,10 @@ char* q_networkreply_raw_header(void* self, const char* headerName) {
 libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkreply_raw_header_pairs(void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderPairs((QNetworkReply*)self);
     return _arr;
+}
+
+QHttpHeaders* q_networkreply_headers(void* self) {
+    return QNetworkReply_Headers((QNetworkReply*)self);
 }
 
 QVariant* q_networkreply_attribute(void* self, int64_t code) {
@@ -526,8 +533,8 @@ QThread* q_networkreply_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_networkreply_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_networkreply_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_networkreply_start_timer(void* self, int interval) {
@@ -536,6 +543,10 @@ int32_t q_networkreply_start_timer(void* self, int interval) {
 
 void q_networkreply_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_networkreply_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_networkreply_children(void* self) {
@@ -628,6 +639,10 @@ bool q_networkreply_inherits(void* self, const char* classname) {
 
 void q_networkreply_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_networkreply_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_networkreply_start_timer2(void* self, int interval, int64_t timerType) {

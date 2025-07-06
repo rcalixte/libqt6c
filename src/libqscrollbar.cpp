@@ -1174,7 +1174,7 @@ void QScrollBar_OnShowEvent(QScrollBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QScrollBar_NativeEvent(QScrollBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QScrollBar_NativeEvent(QScrollBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqscrollbar = dynamic_cast<VirtualQScrollBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
@@ -1185,7 +1185,7 @@ bool QScrollBar_NativeEvent(QScrollBar* self, libqt_string eventType, void* mess
 }
 
 // Base class handler implementation
-bool QScrollBar_QBaseNativeEvent(QScrollBar* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QScrollBar_QBaseNativeEvent(QScrollBar* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqscrollbar = dynamic_cast<VirtualQScrollBar*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
@@ -1495,7 +1495,7 @@ void QScrollBar_OnCustomEvent(QScrollBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QScrollBar_ConnectNotify(QScrollBar* self, QMetaMethod* signal) {
+void QScrollBar_ConnectNotify(QScrollBar* self, const QMetaMethod* signal) {
     auto* vqscrollbar = dynamic_cast<VirtualQScrollBar*>(self);
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         vqscrollbar->connectNotify(*signal);
@@ -1505,7 +1505,7 @@ void QScrollBar_ConnectNotify(QScrollBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QScrollBar_QBaseConnectNotify(QScrollBar* self, QMetaMethod* signal) {
+void QScrollBar_QBaseConnectNotify(QScrollBar* self, const QMetaMethod* signal) {
     auto* vqscrollbar = dynamic_cast<VirtualQScrollBar*>(self);
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         vqscrollbar->setQScrollBar_ConnectNotify_IsBase(true);
@@ -1524,7 +1524,7 @@ void QScrollBar_OnConnectNotify(QScrollBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QScrollBar_DisconnectNotify(QScrollBar* self, QMetaMethod* signal) {
+void QScrollBar_DisconnectNotify(QScrollBar* self, const QMetaMethod* signal) {
     auto* vqscrollbar = dynamic_cast<VirtualQScrollBar*>(self);
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         vqscrollbar->disconnectNotify(*signal);
@@ -1534,7 +1534,7 @@ void QScrollBar_DisconnectNotify(QScrollBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QScrollBar_QBaseDisconnectNotify(QScrollBar* self, QMetaMethod* signal) {
+void QScrollBar_QBaseDisconnectNotify(QScrollBar* self, const QMetaMethod* signal) {
     auto* vqscrollbar = dynamic_cast<VirtualQScrollBar*>(self);
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         vqscrollbar->setQScrollBar_DisconnectNotify_IsBase(true);
@@ -1843,7 +1843,7 @@ void QScrollBar_OnReceivers(const QScrollBar* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QScrollBar_IsSignalConnected(const QScrollBar* self, QMetaMethod* signal) {
+bool QScrollBar_IsSignalConnected(const QScrollBar* self, const QMetaMethod* signal) {
     auto* vqscrollbar = const_cast<VirtualQScrollBar*>(dynamic_cast<const VirtualQScrollBar*>(self));
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         return vqscrollbar->isSignalConnected(*signal);
@@ -1853,7 +1853,7 @@ bool QScrollBar_IsSignalConnected(const QScrollBar* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QScrollBar_QBaseIsSignalConnected(const QScrollBar* self, QMetaMethod* signal) {
+bool QScrollBar_QBaseIsSignalConnected(const QScrollBar* self, const QMetaMethod* signal) {
     auto* vqscrollbar = const_cast<VirtualQScrollBar*>(dynamic_cast<const VirtualQScrollBar*>(self));
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         vqscrollbar->setQScrollBar_IsSignalConnected_IsBase(true);
@@ -1868,6 +1868,35 @@ void QScrollBar_OnIsSignalConnected(const QScrollBar* self, intptr_t slot) {
     auto* vqscrollbar = const_cast<VirtualQScrollBar*>(dynamic_cast<const VirtualQScrollBar*>(self));
     if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
         vqscrollbar->setQScrollBar_IsSignalConnected_Callback(reinterpret_cast<VirtualQScrollBar::QScrollBar_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QScrollBar_GetDecodedMetricF(const QScrollBar* self, int metricA, int metricB) {
+    auto* vqscrollbar = const_cast<VirtualQScrollBar*>(dynamic_cast<const VirtualQScrollBar*>(self));
+    if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
+        return vqscrollbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQScrollBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QScrollBar_QBaseGetDecodedMetricF(const QScrollBar* self, int metricA, int metricB) {
+    auto* vqscrollbar = const_cast<VirtualQScrollBar*>(dynamic_cast<const VirtualQScrollBar*>(self));
+    if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
+        vqscrollbar->setQScrollBar_GetDecodedMetricF_IsBase(true);
+        return vqscrollbar->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQScrollBar*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QScrollBar_OnGetDecodedMetricF(const QScrollBar* self, intptr_t slot) {
+    auto* vqscrollbar = const_cast<VirtualQScrollBar*>(dynamic_cast<const VirtualQScrollBar*>(self));
+    if (vqscrollbar && vqscrollbar->isVirtualQScrollBar) {
+        vqscrollbar->setQScrollBar_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQScrollBar::QScrollBar_GetDecodedMetricF_Callback>(slot));
     }
 }
 

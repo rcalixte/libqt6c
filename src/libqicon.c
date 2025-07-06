@@ -133,6 +133,18 @@ bool q_icon_has_theme_icon(const char* name) {
     return QIcon_HasThemeIcon(qstring(name));
 }
 
+QIcon* q_icon_from_theme_with_icon(int64_t icon) {
+    return QIcon_FromThemeWithIcon(icon);
+}
+
+QIcon* q_icon_from_theme3(int64_t icon, void* fallback) {
+    return QIcon_FromTheme3(icon, (QIcon*)fallback);
+}
+
+bool q_icon_has_theme_icon_with_icon(int64_t icon) {
+    return QIcon_HasThemeIconWithIcon(icon);
+}
+
 const char** q_icon_theme_search_paths() {
     libqt_list _arr = QIcon_ThemeSearchPaths();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;

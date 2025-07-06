@@ -26,14 +26,6 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-#ifdef __cplusplus
-typedef QLocalServer::SocketOption SocketOption;   // C++ enum
-typedef QLocalServer::SocketOptions SocketOptions; // C++ QFlags
-#else
-typedef int SocketOption;  // C ABI enum
-typedef int SocketOptions; // C ABI QFlags
-#endif
-
 QLocalServer* QLocalServer_new();
 QLocalServer* QLocalServer_new2(QObject* parent);
 QMetaObject* QLocalServer_MetaObject(const QLocalServer* self);
@@ -50,7 +42,7 @@ bool QLocalServer_HasPendingConnections(const QLocalServer* self);
 void QLocalServer_OnHasPendingConnections(const QLocalServer* self, intptr_t slot);
 bool QLocalServer_QBaseHasPendingConnections(const QLocalServer* self);
 bool QLocalServer_IsListening(const QLocalServer* self);
-bool QLocalServer_Listen(QLocalServer* self, libqt_string name);
+bool QLocalServer_Listen(QLocalServer* self, const libqt_string name);
 bool QLocalServer_ListenWithSocketDescriptor(QLocalServer* self, intptr_t socketDescriptor);
 int QLocalServer_MaxPendingConnections(const QLocalServer* self);
 QLocalSocket* QLocalServer_NextPendingConnection(QLocalServer* self);
@@ -58,7 +50,7 @@ void QLocalServer_OnNextPendingConnection(QLocalServer* self, intptr_t slot);
 QLocalSocket* QLocalServer_QBaseNextPendingConnection(QLocalServer* self);
 libqt_string QLocalServer_ServerName(const QLocalServer* self);
 libqt_string QLocalServer_FullServerName(const QLocalServer* self);
-bool QLocalServer_RemoveServer(libqt_string name);
+bool QLocalServer_RemoveServer(const libqt_string name);
 int QLocalServer_ServerError(const QLocalServer* self);
 void QLocalServer_SetMaxPendingConnections(QLocalServer* self, int numConnections);
 bool QLocalServer_WaitForNewConnection(QLocalServer* self);
@@ -89,12 +81,15 @@ void QLocalServer_QBaseChildEvent(QLocalServer* self, QChildEvent* event);
 void QLocalServer_CustomEvent(QLocalServer* self, QEvent* event);
 void QLocalServer_OnCustomEvent(QLocalServer* self, intptr_t slot);
 void QLocalServer_QBaseCustomEvent(QLocalServer* self, QEvent* event);
-void QLocalServer_ConnectNotify(QLocalServer* self, QMetaMethod* signal);
+void QLocalServer_ConnectNotify(QLocalServer* self, const QMetaMethod* signal);
 void QLocalServer_OnConnectNotify(QLocalServer* self, intptr_t slot);
-void QLocalServer_QBaseConnectNotify(QLocalServer* self, QMetaMethod* signal);
-void QLocalServer_DisconnectNotify(QLocalServer* self, QMetaMethod* signal);
+void QLocalServer_QBaseConnectNotify(QLocalServer* self, const QMetaMethod* signal);
+void QLocalServer_DisconnectNotify(QLocalServer* self, const QMetaMethod* signal);
 void QLocalServer_OnDisconnectNotify(QLocalServer* self, intptr_t slot);
-void QLocalServer_QBaseDisconnectNotify(QLocalServer* self, QMetaMethod* signal);
+void QLocalServer_QBaseDisconnectNotify(QLocalServer* self, const QMetaMethod* signal);
+void QLocalServer_AddPendingConnection(QLocalServer* self, QLocalSocket* socket);
+void QLocalServer_OnAddPendingConnection(QLocalServer* self, intptr_t slot);
+void QLocalServer_QBaseAddPendingConnection(QLocalServer* self, QLocalSocket* socket);
 QObject* QLocalServer_Sender(const QLocalServer* self);
 void QLocalServer_OnSender(const QLocalServer* self, intptr_t slot);
 QObject* QLocalServer_QBaseSender(const QLocalServer* self);
@@ -104,9 +99,9 @@ int QLocalServer_QBaseSenderSignalIndex(const QLocalServer* self);
 int QLocalServer_Receivers(const QLocalServer* self, const char* signal);
 void QLocalServer_OnReceivers(const QLocalServer* self, intptr_t slot);
 int QLocalServer_QBaseReceivers(const QLocalServer* self, const char* signal);
-bool QLocalServer_IsSignalConnected(const QLocalServer* self, QMetaMethod* signal);
+bool QLocalServer_IsSignalConnected(const QLocalServer* self, const QMetaMethod* signal);
 void QLocalServer_OnIsSignalConnected(const QLocalServer* self, intptr_t slot);
-bool QLocalServer_QBaseIsSignalConnected(const QLocalServer* self, QMetaMethod* signal);
+bool QLocalServer_QBaseIsSignalConnected(const QLocalServer* self, const QMetaMethod* signal);
 void QLocalServer_Delete(QLocalServer* self);
 
 #ifdef __cplusplus

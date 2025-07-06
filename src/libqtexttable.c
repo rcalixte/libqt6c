@@ -74,14 +74,6 @@ bool q_texttablecell_operator_not_equal(void* self, void* other) {
     return QTextTableCell_OperatorNotEqual((QTextTableCell*)self, (QTextTableCell*)other);
 }
 
-QTextFrame__iterator* q_texttablecell_begin(void* self) {
-    return QTextTableCell_Begin((QTextTableCell*)self);
-}
-
-QTextFrame__iterator* q_texttablecell_end(void* self) {
-    return QTextTableCell_End((QTextTableCell*)self);
-}
-
 int32_t q_texttablecell_table_cell_format_index(void* self) {
     return QTextTableCell_TableCellFormatIndex((QTextTableCell*)self);
 }
@@ -252,14 +244,6 @@ QTextFrame* q_texttable_parent_frame(void* self) {
     return QTextFrame_ParentFrame((QTextFrame*)self);
 }
 
-QTextFrame__iterator* q_texttable_begin(void* self) {
-    return QTextFrame_Begin((QTextFrame*)self);
-}
-
-QTextFrame__iterator* q_texttable_end(void* self) {
-    return QTextFrame_End((QTextFrame*)self);
-}
-
 int32_t q_texttable_format_index(void* self) {
     return QTextObject_FormatIndex((QTextObject*)self);
 }
@@ -307,8 +291,8 @@ QThread* q_texttable_thread(void* self) {
     return QObject_Thread((QObject*)self);
 }
 
-void q_texttable_move_to_thread(void* self, void* thread) {
-    QObject_MoveToThread((QObject*)self, (QThread*)thread);
+bool q_texttable_move_to_thread(void* self, void* thread) {
+    return QObject_MoveToThread((QObject*)self, (QThread*)thread);
 }
 
 int32_t q_texttable_start_timer(void* self, int interval) {
@@ -317,6 +301,10 @@ int32_t q_texttable_start_timer(void* self, int interval) {
 
 void q_texttable_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
+}
+
+void q_texttable_kill_timer_with_id(void* self, int64_t id) {
+    QObject_KillTimerWithId((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_texttable_children(void* self) {
@@ -409,6 +397,10 @@ bool q_texttable_inherits(void* self, const char* classname) {
 
 void q_texttable_delete_later(void* self) {
     QObject_DeleteLater((QObject*)self);
+}
+
+bool q_texttable_move_to_thread2(void* self, void* thread, void* param2) {
+    return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
 int32_t q_texttable_start_timer2(void* self, int interval, int64_t timerType) {

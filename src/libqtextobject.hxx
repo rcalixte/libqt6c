@@ -64,7 +64,7 @@ class VirtualQTextFrame final : public QTextFrame {
     mutable bool qtextframe_issignalconnected_isbase = false;
 
   public:
-    VirtualQTextFrame(QTextDocument* doc) : QTextFrame(doc){};
+    VirtualQTextFrame(QTextDocument* doc) : QTextFrame(doc) {};
 
     ~VirtualQTextFrame() {
         qtextframe_metacall_callback = nullptr;
@@ -315,20 +315,20 @@ class VirtualQTextFrame final : public QTextFrame {
     friend void QTextFrame_QBaseChildEvent(QTextFrame* self, QChildEvent* event);
     friend void QTextFrame_CustomEvent(QTextFrame* self, QEvent* event);
     friend void QTextFrame_QBaseCustomEvent(QTextFrame* self, QEvent* event);
-    friend void QTextFrame_ConnectNotify(QTextFrame* self, QMetaMethod* signal);
-    friend void QTextFrame_QBaseConnectNotify(QTextFrame* self, QMetaMethod* signal);
-    friend void QTextFrame_DisconnectNotify(QTextFrame* self, QMetaMethod* signal);
-    friend void QTextFrame_QBaseDisconnectNotify(QTextFrame* self, QMetaMethod* signal);
-    friend void QTextFrame_SetFormat(QTextFrame* self, QTextFormat* format);
-    friend void QTextFrame_QBaseSetFormat(QTextFrame* self, QTextFormat* format);
+    friend void QTextFrame_ConnectNotify(QTextFrame* self, const QMetaMethod* signal);
+    friend void QTextFrame_QBaseConnectNotify(QTextFrame* self, const QMetaMethod* signal);
+    friend void QTextFrame_DisconnectNotify(QTextFrame* self, const QMetaMethod* signal);
+    friend void QTextFrame_QBaseDisconnectNotify(QTextFrame* self, const QMetaMethod* signal);
+    friend void QTextFrame_SetFormat(QTextFrame* self, const QTextFormat* format);
+    friend void QTextFrame_QBaseSetFormat(QTextFrame* self, const QTextFormat* format);
     friend QObject* QTextFrame_Sender(const QTextFrame* self);
     friend QObject* QTextFrame_QBaseSender(const QTextFrame* self);
     friend int QTextFrame_SenderSignalIndex(const QTextFrame* self);
     friend int QTextFrame_QBaseSenderSignalIndex(const QTextFrame* self);
     friend int QTextFrame_Receivers(const QTextFrame* self, const char* signal);
     friend int QTextFrame_QBaseReceivers(const QTextFrame* self, const char* signal);
-    friend bool QTextFrame_IsSignalConnected(const QTextFrame* self, QMetaMethod* signal);
-    friend bool QTextFrame_QBaseIsSignalConnected(const QTextFrame* self, QMetaMethod* signal);
+    friend bool QTextFrame_IsSignalConnected(const QTextFrame* self, const QMetaMethod* signal);
+    friend bool QTextFrame_QBaseIsSignalConnected(const QTextFrame* self, const QMetaMethod* signal);
 };
 
 #endif

@@ -12,9 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqrect.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qpdfselection.html
 
 /// q_pdfselection_new constructs a new QPdfSelection object.

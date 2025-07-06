@@ -106,14 +106,6 @@ void q_line_set_line(void* self, int x1, int y1, int x2, int y2) {
     QLine_SetLine((QLine*)self, x1, y1, x2, y2);
 }
 
-bool q_line_operator_equal(void* self, void* d) {
-    return QLine_OperatorEqual((QLine*)self, (QLine*)d);
-}
-
-bool q_line_operator_not_equal(void* self, void* d) {
-    return QLine_OperatorNotEqual((QLine*)self, (QLine*)d);
-}
-
 QLineF* q_line_to_line_f(void* self) {
     return QLine_ToLineF((QLine*)self);
 }
@@ -268,14 +260,6 @@ void q_linef_set_points(void* self, void* p1, void* p2) {
 
 void q_linef_set_line(void* self, double x1, double y1, double x2, double y2) {
     QLineF_SetLine((QLineF*)self, x1, y1, x2, y2);
-}
-
-bool q_linef_operator_equal(void* self, void* d) {
-    return QLineF_OperatorEqual((QLineF*)self, (QLineF*)d);
-}
-
-bool q_linef_operator_not_equal(void* self, void* d) {
-    return QLineF_OperatorNotEqual((QLineF*)self, (QLineF*)d);
 }
 
 QLine* q_linef_to_line(void* self) {

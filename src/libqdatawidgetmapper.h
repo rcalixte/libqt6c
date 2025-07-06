@@ -12,14 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqabstractitemdelegate.h"
-#include "libqabstractitemmodel.h"
-#include "libqevent.h"
-#include "libqmetaobject.h"
-#include "libqobject.h"
-#include <string.h>
-#include "libqwidget.h"
-
 /// https://doc.qt.io/qt-6/qdatawidgetmapper.html
 
 /// q_datawidgetmapper_new constructs a new QDataWidgetMapper object.
@@ -283,7 +275,7 @@ QThread* q_datawidgetmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QDataWidgetMapper* self, QThread* thread ```
-void q_datawidgetmapper_move_to_thread(void* self, void* thread);
+bool q_datawidgetmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -298,6 +290,13 @@ int32_t q_datawidgetmapper_start_timer(void* self, int interval);
 ///
 /// ``` QDataWidgetMapper* self, int id ```
 void q_datawidgetmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QDataWidgetMapper* self, enum Qt__TimerId id ```
+void q_datawidgetmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -438,6 +437,13 @@ bool q_datawidgetmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QDataWidgetMapper* self ```
 void q_datawidgetmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QDataWidgetMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_datawidgetmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

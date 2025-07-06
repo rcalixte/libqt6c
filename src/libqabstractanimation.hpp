@@ -27,16 +27,6 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-#ifdef __cplusplus
-typedef QAbstractAnimation::DeletionPolicy DeletionPolicy; // C++ enum
-typedef QAbstractAnimation::Direction Direction;           // C++ enum
-typedef QAbstractAnimation::State State;                   // C++ enum
-#else
-typedef int DeletionPolicy; // C ABI enum
-typedef int Direction;      // C ABI enum
-typedef int State;          // C ABI enum
-#endif
-
 QAbstractAnimation* QAbstractAnimation_new();
 QAbstractAnimation* QAbstractAnimation_new2(QObject* parent);
 QMetaObject* QAbstractAnimation_MetaObject(const QAbstractAnimation* self);
@@ -99,12 +89,12 @@ void QAbstractAnimation_QBaseChildEvent(QAbstractAnimation* self, QChildEvent* e
 void QAbstractAnimation_CustomEvent(QAbstractAnimation* self, QEvent* event);
 void QAbstractAnimation_OnCustomEvent(QAbstractAnimation* self, intptr_t slot);
 void QAbstractAnimation_QBaseCustomEvent(QAbstractAnimation* self, QEvent* event);
-void QAbstractAnimation_ConnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
+void QAbstractAnimation_ConnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
 void QAbstractAnimation_OnConnectNotify(QAbstractAnimation* self, intptr_t slot);
-void QAbstractAnimation_QBaseConnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
-void QAbstractAnimation_DisconnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
+void QAbstractAnimation_QBaseConnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
+void QAbstractAnimation_DisconnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
 void QAbstractAnimation_OnDisconnectNotify(QAbstractAnimation* self, intptr_t slot);
-void QAbstractAnimation_QBaseDisconnectNotify(QAbstractAnimation* self, QMetaMethod* signal);
+void QAbstractAnimation_QBaseDisconnectNotify(QAbstractAnimation* self, const QMetaMethod* signal);
 QObject* QAbstractAnimation_Sender(const QAbstractAnimation* self);
 void QAbstractAnimation_OnSender(const QAbstractAnimation* self, intptr_t slot);
 QObject* QAbstractAnimation_QBaseSender(const QAbstractAnimation* self);
@@ -114,9 +104,9 @@ int QAbstractAnimation_QBaseSenderSignalIndex(const QAbstractAnimation* self);
 int QAbstractAnimation_Receivers(const QAbstractAnimation* self, const char* signal);
 void QAbstractAnimation_OnReceivers(const QAbstractAnimation* self, intptr_t slot);
 int QAbstractAnimation_QBaseReceivers(const QAbstractAnimation* self, const char* signal);
-bool QAbstractAnimation_IsSignalConnected(const QAbstractAnimation* self, QMetaMethod* signal);
+bool QAbstractAnimation_IsSignalConnected(const QAbstractAnimation* self, const QMetaMethod* signal);
 void QAbstractAnimation_OnIsSignalConnected(const QAbstractAnimation* self, intptr_t slot);
-bool QAbstractAnimation_QBaseIsSignalConnected(const QAbstractAnimation* self, QMetaMethod* signal);
+bool QAbstractAnimation_QBaseIsSignalConnected(const QAbstractAnimation* self, const QMetaMethod* signal);
 void QAbstractAnimation_Delete(QAbstractAnimation* self);
 
 QAnimationDriver* QAnimationDriver_new();
@@ -163,12 +153,12 @@ void QAnimationDriver_QBaseChildEvent(QAnimationDriver* self, QChildEvent* event
 void QAnimationDriver_CustomEvent(QAnimationDriver* self, QEvent* event);
 void QAnimationDriver_OnCustomEvent(QAnimationDriver* self, intptr_t slot);
 void QAnimationDriver_QBaseCustomEvent(QAnimationDriver* self, QEvent* event);
-void QAnimationDriver_ConnectNotify(QAnimationDriver* self, QMetaMethod* signal);
+void QAnimationDriver_ConnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
 void QAnimationDriver_OnConnectNotify(QAnimationDriver* self, intptr_t slot);
-void QAnimationDriver_QBaseConnectNotify(QAnimationDriver* self, QMetaMethod* signal);
-void QAnimationDriver_DisconnectNotify(QAnimationDriver* self, QMetaMethod* signal);
+void QAnimationDriver_QBaseConnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
+void QAnimationDriver_DisconnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
 void QAnimationDriver_OnDisconnectNotify(QAnimationDriver* self, intptr_t slot);
-void QAnimationDriver_QBaseDisconnectNotify(QAnimationDriver* self, QMetaMethod* signal);
+void QAnimationDriver_QBaseDisconnectNotify(QAnimationDriver* self, const QMetaMethod* signal);
 void QAnimationDriver_AdvanceAnimation(QAnimationDriver* self);
 void QAnimationDriver_OnAdvanceAnimation(QAnimationDriver* self, intptr_t slot);
 void QAnimationDriver_QBaseAdvanceAnimation(QAnimationDriver* self);
@@ -181,9 +171,9 @@ int QAnimationDriver_QBaseSenderSignalIndex(const QAnimationDriver* self);
 int QAnimationDriver_Receivers(const QAnimationDriver* self, const char* signal);
 void QAnimationDriver_OnReceivers(const QAnimationDriver* self, intptr_t slot);
 int QAnimationDriver_QBaseReceivers(const QAnimationDriver* self, const char* signal);
-bool QAnimationDriver_IsSignalConnected(const QAnimationDriver* self, QMetaMethod* signal);
+bool QAnimationDriver_IsSignalConnected(const QAnimationDriver* self, const QMetaMethod* signal);
 void QAnimationDriver_OnIsSignalConnected(const QAnimationDriver* self, intptr_t slot);
-bool QAnimationDriver_QBaseIsSignalConnected(const QAnimationDriver* self, QMetaMethod* signal);
+bool QAnimationDriver_QBaseIsSignalConnected(const QAnimationDriver* self, const QMetaMethod* signal);
 void QAnimationDriver_Delete(QAnimationDriver* self);
 
 #ifdef __cplusplus

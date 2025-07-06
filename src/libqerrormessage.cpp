@@ -100,12 +100,12 @@ QErrorMessage* QErrorMessage_QtHandler() {
     return QErrorMessage::qtHandler();
 }
 
-void QErrorMessage_ShowMessage(QErrorMessage* self, libqt_string message) {
+void QErrorMessage_ShowMessage(QErrorMessage* self, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     self->showMessage(message_QString);
 }
 
-void QErrorMessage_ShowMessage2(QErrorMessage* self, libqt_string message, libqt_string typeVal) {
+void QErrorMessage_ShowMessage2(QErrorMessage* self, const libqt_string message, const libqt_string typeVal) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     QString typeVal_QString = QString::fromUtf8(typeVal.data, typeVal.len);
     self->showMessage(message_QString, typeVal_QString);
@@ -1267,7 +1267,7 @@ void QErrorMessage_OnHideEvent(QErrorMessage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QErrorMessage_NativeEvent(QErrorMessage* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QErrorMessage_NativeEvent(QErrorMessage* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqerrormessage = dynamic_cast<VirtualQErrorMessage*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
@@ -1278,7 +1278,7 @@ bool QErrorMessage_NativeEvent(QErrorMessage* self, libqt_string eventType, void
 }
 
 // Base class handler implementation
-bool QErrorMessage_QBaseNativeEvent(QErrorMessage* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QErrorMessage_QBaseNativeEvent(QErrorMessage* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqerrormessage = dynamic_cast<VirtualQErrorMessage*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
@@ -1588,7 +1588,7 @@ void QErrorMessage_OnCustomEvent(QErrorMessage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QErrorMessage_ConnectNotify(QErrorMessage* self, QMetaMethod* signal) {
+void QErrorMessage_ConnectNotify(QErrorMessage* self, const QMetaMethod* signal) {
     auto* vqerrormessage = dynamic_cast<VirtualQErrorMessage*>(self);
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         vqerrormessage->connectNotify(*signal);
@@ -1598,7 +1598,7 @@ void QErrorMessage_ConnectNotify(QErrorMessage* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QErrorMessage_QBaseConnectNotify(QErrorMessage* self, QMetaMethod* signal) {
+void QErrorMessage_QBaseConnectNotify(QErrorMessage* self, const QMetaMethod* signal) {
     auto* vqerrormessage = dynamic_cast<VirtualQErrorMessage*>(self);
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         vqerrormessage->setQErrorMessage_ConnectNotify_IsBase(true);
@@ -1617,7 +1617,7 @@ void QErrorMessage_OnConnectNotify(QErrorMessage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QErrorMessage_DisconnectNotify(QErrorMessage* self, QMetaMethod* signal) {
+void QErrorMessage_DisconnectNotify(QErrorMessage* self, const QMetaMethod* signal) {
     auto* vqerrormessage = dynamic_cast<VirtualQErrorMessage*>(self);
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         vqerrormessage->disconnectNotify(*signal);
@@ -1627,7 +1627,7 @@ void QErrorMessage_DisconnectNotify(QErrorMessage* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QErrorMessage_QBaseDisconnectNotify(QErrorMessage* self, QMetaMethod* signal) {
+void QErrorMessage_QBaseDisconnectNotify(QErrorMessage* self, const QMetaMethod* signal) {
     auto* vqerrormessage = dynamic_cast<VirtualQErrorMessage*>(self);
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         vqerrormessage->setQErrorMessage_DisconnectNotify_IsBase(true);
@@ -1907,7 +1907,7 @@ void QErrorMessage_OnReceivers(const QErrorMessage* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QErrorMessage_IsSignalConnected(const QErrorMessage* self, QMetaMethod* signal) {
+bool QErrorMessage_IsSignalConnected(const QErrorMessage* self, const QMetaMethod* signal) {
     auto* vqerrormessage = const_cast<VirtualQErrorMessage*>(dynamic_cast<const VirtualQErrorMessage*>(self));
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         return vqerrormessage->isSignalConnected(*signal);
@@ -1917,7 +1917,7 @@ bool QErrorMessage_IsSignalConnected(const QErrorMessage* self, QMetaMethod* sig
 }
 
 // Base class handler implementation
-bool QErrorMessage_QBaseIsSignalConnected(const QErrorMessage* self, QMetaMethod* signal) {
+bool QErrorMessage_QBaseIsSignalConnected(const QErrorMessage* self, const QMetaMethod* signal) {
     auto* vqerrormessage = const_cast<VirtualQErrorMessage*>(dynamic_cast<const VirtualQErrorMessage*>(self));
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         vqerrormessage->setQErrorMessage_IsSignalConnected_IsBase(true);
@@ -1932,6 +1932,35 @@ void QErrorMessage_OnIsSignalConnected(const QErrorMessage* self, intptr_t slot)
     auto* vqerrormessage = const_cast<VirtualQErrorMessage*>(dynamic_cast<const VirtualQErrorMessage*>(self));
     if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
         vqerrormessage->setQErrorMessage_IsSignalConnected_Callback(reinterpret_cast<VirtualQErrorMessage::QErrorMessage_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QErrorMessage_GetDecodedMetricF(const QErrorMessage* self, int metricA, int metricB) {
+    auto* vqerrormessage = const_cast<VirtualQErrorMessage*>(dynamic_cast<const VirtualQErrorMessage*>(self));
+    if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
+        return vqerrormessage->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQErrorMessage*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QErrorMessage_QBaseGetDecodedMetricF(const QErrorMessage* self, int metricA, int metricB) {
+    auto* vqerrormessage = const_cast<VirtualQErrorMessage*>(dynamic_cast<const VirtualQErrorMessage*>(self));
+    if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
+        vqerrormessage->setQErrorMessage_GetDecodedMetricF_IsBase(true);
+        return vqerrormessage->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQErrorMessage*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QErrorMessage_OnGetDecodedMetricF(const QErrorMessage* self, intptr_t slot) {
+    auto* vqerrormessage = const_cast<VirtualQErrorMessage*>(dynamic_cast<const VirtualQErrorMessage*>(self));
+    if (vqerrormessage && vqerrormessage->isVirtualQErrorMessage) {
+        vqerrormessage->setQErrorMessage_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQErrorMessage::QErrorMessage_GetDecodedMetricF_Callback>(slot));
     }
 }
 

@@ -12,18 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfont.h"
-#include "libqglyphrun.h"
-#include "libqpaintdevice.h"
-#include "libqpainter.h"
-#include "libqpoint.h"
-#include "libqrawfont.h"
-#include "libqrect.h"
-#include <string.h>
-#include "libqtextobject.h"
-#include "libqtextformat.h"
-#include "libqtextoption.h"
-
 /// https://doc.qt.io/qt-6/qtextinlineobject.html
 
 /// q_textinlineobject_new constructs a new QTextInlineObject object.
@@ -337,8 +325,13 @@ double q_textlayout_maximum_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
+/// ``` QTextLayout* self, int from, int length, quint16 flags ```
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, int64_t flags);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
+///
 /// ``` QTextLayout* self ```
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self);
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setFlags)
 ///
@@ -373,7 +366,7 @@ libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
 /// ``` QTextLayout* self, int from, int length ```
-libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(void* self, int from, int length);
+libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs22(void* self, int from, int length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#dtor.QTextLayout)
 ///
@@ -541,8 +534,13 @@ void q_textline_draw(void* self, void* painter, void* position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
+/// ``` QTextLine* self, int from, int length, quint16 flags ```
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, int64_t flags);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
+///
 /// ``` QTextLine* self ```
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self);
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
@@ -567,7 +565,7 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(void* self, int from);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
 /// ``` QTextLine* self, int from, int length ```
-libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self, int from, int length);
+libqt_list /* of QGlyphRun* */ q_textline_glyph_runs22(void* self, int from, int length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#dtor.QTextLine)
 ///
@@ -580,13 +578,8 @@ void q_textline_delete(void* self);
 
 /// q_textlayout__formatrange_new constructs a new QTextLayout::FormatRange object.
 ///
-/// ``` QTextLayout__FormatRange* param1 ```
-QTextLayout__FormatRange* q_textlayout__formatrange_new(void* param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout__formatrange.html#operator=)
 ///
-/// ``` QTextLayout__FormatRange* self, QTextLayout__FormatRange* param1 ```
-void q_textlayout__formatrange_operator_assign(void* self, void* param1);
+QTextLayout__FormatRange* q_textlayout__formatrange_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout::formatrange.html#dtor.QTextLayout::FormatRange)
 ///
@@ -596,6 +589,15 @@ void q_textlayout__formatrange_operator_assign(void* self, void* param1);
 void q_textlayout__formatrange_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextlayout.html#types
+
+typedef enum {
+    QTEXTLAYOUT_GLYPHRUNRETRIEVALFLAG_RETRIEVEGLYPHINDEXES = 1,
+    QTEXTLAYOUT_GLYPHRUNRETRIEVALFLAG_RETRIEVEGLYPHPOSITIONS = 2,
+    QTEXTLAYOUT_GLYPHRUNRETRIEVALFLAG_RETRIEVESTRINGINDEXES = 4,
+    QTEXTLAYOUT_GLYPHRUNRETRIEVALFLAG_RETRIEVESTRING = 8,
+    QTEXTLAYOUT_GLYPHRUNRETRIEVALFLAG_DEFAULTRETRIEVALFLAGS = 3,
+    QTEXTLAYOUT_GLYPHRUNRETRIEVALFLAG_RETRIEVEALL = 65535
+} QTextLayout__GlyphRunRetrievalFlag;
 
 typedef enum {
     QTEXTLAYOUT_CURSORMODE_SKIPCHARACTERS = 0,

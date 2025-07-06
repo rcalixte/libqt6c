@@ -63,24 +63,6 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-#ifdef __cplusplus
-typedef QGraphicsView::CacheMode CacheMode;                   // C++ QFlags
-typedef QGraphicsView::CacheModeFlag CacheModeFlag;           // C++ enum
-typedef QGraphicsView::DragMode DragMode;                     // C++ enum
-typedef QGraphicsView::OptimizationFlag OptimizationFlag;     // C++ enum
-typedef QGraphicsView::OptimizationFlags OptimizationFlags;   // C++ QFlags
-typedef QGraphicsView::ViewportAnchor ViewportAnchor;         // C++ enum
-typedef QGraphicsView::ViewportUpdateMode ViewportUpdateMode; // C++ enum
-#else
-typedef int CacheMode;          // C ABI QFlags
-typedef int CacheModeFlag;      // C ABI enum
-typedef int DragMode;           // C ABI enum
-typedef int OptimizationFlag;   // C ABI enum
-typedef int OptimizationFlags;  // C ABI QFlags
-typedef int ViewportAnchor;     // C ABI enum
-typedef int ViewportUpdateMode; // C ABI enum
-#endif
-
 QGraphicsView* QGraphicsView_new(QWidget* parent);
 QGraphicsView* QGraphicsView_new2();
 QGraphicsView* QGraphicsView_new3(QGraphicsScene* scene);
@@ -121,51 +103,51 @@ void QGraphicsView_SetInteractive(QGraphicsView* self, bool allowed);
 QGraphicsScene* QGraphicsView_Scene(const QGraphicsView* self);
 void QGraphicsView_SetScene(QGraphicsView* self, QGraphicsScene* scene);
 QRectF* QGraphicsView_SceneRect(const QGraphicsView* self);
-void QGraphicsView_SetSceneRect(QGraphicsView* self, QRectF* rect);
+void QGraphicsView_SetSceneRect(QGraphicsView* self, const QRectF* rect);
 void QGraphicsView_SetSceneRect2(QGraphicsView* self, double x, double y, double w, double h);
 QTransform* QGraphicsView_Transform(const QGraphicsView* self);
 QTransform* QGraphicsView_ViewportTransform(const QGraphicsView* self);
 bool QGraphicsView_IsTransformed(const QGraphicsView* self);
-void QGraphicsView_SetTransform(QGraphicsView* self, QTransform* matrix);
+void QGraphicsView_SetTransform(QGraphicsView* self, const QTransform* matrix);
 void QGraphicsView_ResetTransform(QGraphicsView* self);
 void QGraphicsView_Rotate(QGraphicsView* self, double angle);
 void QGraphicsView_Scale(QGraphicsView* self, double sx, double sy);
 void QGraphicsView_Shear(QGraphicsView* self, double sh, double sv);
 void QGraphicsView_Translate(QGraphicsView* self, double dx, double dy);
-void QGraphicsView_CenterOn(QGraphicsView* self, QPointF* pos);
+void QGraphicsView_CenterOn(QGraphicsView* self, const QPointF* pos);
 void QGraphicsView_CenterOn2(QGraphicsView* self, double x, double y);
-void QGraphicsView_CenterOnWithItem(QGraphicsView* self, QGraphicsItem* item);
-void QGraphicsView_EnsureVisible(QGraphicsView* self, QRectF* rect);
+void QGraphicsView_CenterOnWithItem(QGraphicsView* self, const QGraphicsItem* item);
+void QGraphicsView_EnsureVisible(QGraphicsView* self, const QRectF* rect);
 void QGraphicsView_EnsureVisible2(QGraphicsView* self, double x, double y, double w, double h);
-void QGraphicsView_EnsureVisibleWithItem(QGraphicsView* self, QGraphicsItem* item);
-void QGraphicsView_FitInView(QGraphicsView* self, QRectF* rect);
+void QGraphicsView_EnsureVisibleWithItem(QGraphicsView* self, const QGraphicsItem* item);
+void QGraphicsView_FitInView(QGraphicsView* self, const QRectF* rect);
 void QGraphicsView_FitInView2(QGraphicsView* self, double x, double y, double w, double h);
-void QGraphicsView_FitInViewWithItem(QGraphicsView* self, QGraphicsItem* item);
+void QGraphicsView_FitInViewWithItem(QGraphicsView* self, const QGraphicsItem* item);
 void QGraphicsView_Render(QGraphicsView* self, QPainter* painter);
 libqt_list /* of QGraphicsItem* */ QGraphicsView_Items(const QGraphicsView* self);
-libqt_list /* of QGraphicsItem* */ QGraphicsView_ItemsWithPos(const QGraphicsView* self, QPoint* pos);
+libqt_list /* of QGraphicsItem* */ QGraphicsView_ItemsWithPos(const QGraphicsView* self, const QPoint* pos);
 libqt_list /* of QGraphicsItem* */ QGraphicsView_Items2(const QGraphicsView* self, int x, int y);
-libqt_list /* of QGraphicsItem* */ QGraphicsView_ItemsWithRect(const QGraphicsView* self, QRect* rect);
+libqt_list /* of QGraphicsItem* */ QGraphicsView_ItemsWithRect(const QGraphicsView* self, const QRect* rect);
 libqt_list /* of QGraphicsItem* */ QGraphicsView_Items3(const QGraphicsView* self, int x, int y, int w, int h);
-libqt_list /* of QGraphicsItem* */ QGraphicsView_ItemsWithPath(const QGraphicsView* self, QPainterPath* path);
-QGraphicsItem* QGraphicsView_ItemAt(const QGraphicsView* self, QPoint* pos);
+libqt_list /* of QGraphicsItem* */ QGraphicsView_ItemsWithPath(const QGraphicsView* self, const QPainterPath* path);
+QGraphicsItem* QGraphicsView_ItemAt(const QGraphicsView* self, const QPoint* pos);
 QGraphicsItem* QGraphicsView_ItemAt2(const QGraphicsView* self, int x, int y);
-QPointF* QGraphicsView_MapToScene(const QGraphicsView* self, QPoint* point);
-QPainterPath* QGraphicsView_MapToSceneWithPath(const QGraphicsView* self, QPainterPath* path);
-QPoint* QGraphicsView_MapFromScene(const QGraphicsView* self, QPointF* point);
-QPainterPath* QGraphicsView_MapFromSceneWithPath(const QGraphicsView* self, QPainterPath* path);
+QPointF* QGraphicsView_MapToScene(const QGraphicsView* self, const QPoint* point);
+QPainterPath* QGraphicsView_MapToSceneWithPath(const QGraphicsView* self, const QPainterPath* path);
+QPoint* QGraphicsView_MapFromScene(const QGraphicsView* self, const QPointF* point);
+QPainterPath* QGraphicsView_MapFromSceneWithPath(const QGraphicsView* self, const QPainterPath* path);
 QPointF* QGraphicsView_MapToScene2(const QGraphicsView* self, int x, int y);
 QPoint* QGraphicsView_MapFromScene2(const QGraphicsView* self, double x, double y);
 QVariant* QGraphicsView_InputMethodQuery(const QGraphicsView* self, int query);
 void QGraphicsView_OnInputMethodQuery(const QGraphicsView* self, intptr_t slot);
 QVariant* QGraphicsView_QBaseInputMethodQuery(const QGraphicsView* self, int query);
 QBrush* QGraphicsView_BackgroundBrush(const QGraphicsView* self);
-void QGraphicsView_SetBackgroundBrush(QGraphicsView* self, QBrush* brush);
+void QGraphicsView_SetBackgroundBrush(QGraphicsView* self, const QBrush* brush);
 QBrush* QGraphicsView_ForegroundBrush(const QGraphicsView* self);
-void QGraphicsView_SetForegroundBrush(QGraphicsView* self, QBrush* brush);
-void QGraphicsView_UpdateScene(QGraphicsView* self, libqt_list /* of QRectF* */ rects);
+void QGraphicsView_SetForegroundBrush(QGraphicsView* self, const QBrush* brush);
+void QGraphicsView_UpdateScene(QGraphicsView* self, const libqt_list /* of QRectF* */ rects);
 void QGraphicsView_InvalidateScene(QGraphicsView* self);
-void QGraphicsView_UpdateSceneRect(QGraphicsView* self, QRectF* rect);
+void QGraphicsView_UpdateSceneRect(QGraphicsView* self, const QRectF* rect);
 void QGraphicsView_RubberBandChanged(QGraphicsView* self, QRect* viewportRect, QPointF* fromScenePoint, QPointF* toScenePoint);
 void QGraphicsView_Connect_RubberBandChanged(QGraphicsView* self, intptr_t slot);
 void QGraphicsView_SetupViewport(QGraphicsView* self, QWidget* widget);
@@ -237,34 +219,34 @@ void QGraphicsView_QBaseShowEvent(QGraphicsView* self, QShowEvent* event);
 void QGraphicsView_InputMethodEvent(QGraphicsView* self, QInputMethodEvent* event);
 void QGraphicsView_OnInputMethodEvent(QGraphicsView* self, intptr_t slot);
 void QGraphicsView_QBaseInputMethodEvent(QGraphicsView* self, QInputMethodEvent* event);
-void QGraphicsView_DrawBackground(QGraphicsView* self, QPainter* painter, QRectF* rect);
+void QGraphicsView_DrawBackground(QGraphicsView* self, QPainter* painter, const QRectF* rect);
 void QGraphicsView_OnDrawBackground(QGraphicsView* self, intptr_t slot);
-void QGraphicsView_QBaseDrawBackground(QGraphicsView* self, QPainter* painter, QRectF* rect);
-void QGraphicsView_DrawForeground(QGraphicsView* self, QPainter* painter, QRectF* rect);
+void QGraphicsView_QBaseDrawBackground(QGraphicsView* self, QPainter* painter, const QRectF* rect);
+void QGraphicsView_DrawForeground(QGraphicsView* self, QPainter* painter, const QRectF* rect);
 void QGraphicsView_OnDrawForeground(QGraphicsView* self, intptr_t slot);
-void QGraphicsView_QBaseDrawForeground(QGraphicsView* self, QPainter* painter, QRectF* rect);
+void QGraphicsView_QBaseDrawForeground(QGraphicsView* self, QPainter* painter, const QRectF* rect);
 libqt_string QGraphicsView_Tr2(const char* s, const char* c);
 libqt_string QGraphicsView_Tr3(const char* s, const char* c, int n);
 void QGraphicsView_SetRenderHint2(QGraphicsView* self, int hint, bool enabled);
 void QGraphicsView_SetOptimizationFlag2(QGraphicsView* self, int flag, bool enabled);
-void QGraphicsView_SetTransform2(QGraphicsView* self, QTransform* matrix, bool combine);
-void QGraphicsView_EnsureVisible22(QGraphicsView* self, QRectF* rect, int xmargin);
-void QGraphicsView_EnsureVisible3(QGraphicsView* self, QRectF* rect, int xmargin, int ymargin);
+void QGraphicsView_SetTransform2(QGraphicsView* self, const QTransform* matrix, bool combine);
+void QGraphicsView_EnsureVisible22(QGraphicsView* self, const QRectF* rect, int xmargin);
+void QGraphicsView_EnsureVisible3(QGraphicsView* self, const QRectF* rect, int xmargin, int ymargin);
 void QGraphicsView_EnsureVisible5(QGraphicsView* self, double x, double y, double w, double h, int xmargin);
 void QGraphicsView_EnsureVisible6(QGraphicsView* self, double x, double y, double w, double h, int xmargin, int ymargin);
-void QGraphicsView_EnsureVisible23(QGraphicsView* self, QGraphicsItem* item, int xmargin);
-void QGraphicsView_EnsureVisible32(QGraphicsView* self, QGraphicsItem* item, int xmargin, int ymargin);
-void QGraphicsView_FitInView22(QGraphicsView* self, QRectF* rect, int aspectRadioMode);
+void QGraphicsView_EnsureVisible23(QGraphicsView* self, const QGraphicsItem* item, int xmargin);
+void QGraphicsView_EnsureVisible32(QGraphicsView* self, const QGraphicsItem* item, int xmargin, int ymargin);
+void QGraphicsView_FitInView22(QGraphicsView* self, const QRectF* rect, int aspectRadioMode);
 void QGraphicsView_FitInView5(QGraphicsView* self, double x, double y, double w, double h, int aspectRadioMode);
-void QGraphicsView_FitInView23(QGraphicsView* self, QGraphicsItem* item, int aspectRadioMode);
-void QGraphicsView_Render2(QGraphicsView* self, QPainter* painter, QRectF* target);
-void QGraphicsView_Render3(QGraphicsView* self, QPainter* painter, QRectF* target, QRect* source);
-void QGraphicsView_Render4(QGraphicsView* self, QPainter* painter, QRectF* target, QRect* source, int aspectRatioMode);
-libqt_list /* of QGraphicsItem* */ QGraphicsView_Items22(const QGraphicsView* self, QRect* rect, int mode);
+void QGraphicsView_FitInView23(QGraphicsView* self, const QGraphicsItem* item, int aspectRadioMode);
+void QGraphicsView_Render2(QGraphicsView* self, QPainter* painter, const QRectF* target);
+void QGraphicsView_Render3(QGraphicsView* self, QPainter* painter, const QRectF* target, const QRect* source);
+void QGraphicsView_Render4(QGraphicsView* self, QPainter* painter, const QRectF* target, const QRect* source, int aspectRatioMode);
+libqt_list /* of QGraphicsItem* */ QGraphicsView_Items22(const QGraphicsView* self, const QRect* rect, int mode);
 libqt_list /* of QGraphicsItem* */ QGraphicsView_Items5(const QGraphicsView* self, int x, int y, int w, int h, int mode);
-libqt_list /* of QGraphicsItem* */ QGraphicsView_Items24(const QGraphicsView* self, QPainterPath* path, int mode);
-void QGraphicsView_InvalidateScene1(QGraphicsView* self, QRectF* rect);
-void QGraphicsView_InvalidateScene2(QGraphicsView* self, QRectF* rect, int layers);
+libqt_list /* of QGraphicsItem* */ QGraphicsView_Items24(const QGraphicsView* self, const QPainterPath* path, int mode);
+void QGraphicsView_InvalidateScene1(QGraphicsView* self, const QRectF* rect);
+void QGraphicsView_InvalidateScene2(QGraphicsView* self, const QRectF* rect, int layers);
 QSize* QGraphicsView_MinimumSizeHint(const QGraphicsView* self);
 void QGraphicsView_OnMinimumSizeHint(const QGraphicsView* self, intptr_t slot);
 QSize* QGraphicsView_QBaseMinimumSizeHint(const QGraphicsView* self);
@@ -316,9 +298,9 @@ void QGraphicsView_QBaseActionEvent(QGraphicsView* self, QActionEvent* event);
 void QGraphicsView_HideEvent(QGraphicsView* self, QHideEvent* event);
 void QGraphicsView_OnHideEvent(QGraphicsView* self, intptr_t slot);
 void QGraphicsView_QBaseHideEvent(QGraphicsView* self, QHideEvent* event);
-bool QGraphicsView_NativeEvent(QGraphicsView* self, libqt_string eventType, void* message, intptr_t* result);
+bool QGraphicsView_NativeEvent(QGraphicsView* self, const libqt_string eventType, void* message, intptr_t* result);
 void QGraphicsView_OnNativeEvent(QGraphicsView* self, intptr_t slot);
-bool QGraphicsView_QBaseNativeEvent(QGraphicsView* self, libqt_string eventType, void* message, intptr_t* result);
+bool QGraphicsView_QBaseNativeEvent(QGraphicsView* self, const libqt_string eventType, void* message, intptr_t* result);
 int QGraphicsView_Metric(const QGraphicsView* self, int param1);
 void QGraphicsView_OnMetric(const QGraphicsView* self, intptr_t slot);
 int QGraphicsView_QBaseMetric(const QGraphicsView* self, int param1);
@@ -340,12 +322,12 @@ void QGraphicsView_QBaseChildEvent(QGraphicsView* self, QChildEvent* event);
 void QGraphicsView_CustomEvent(QGraphicsView* self, QEvent* event);
 void QGraphicsView_OnCustomEvent(QGraphicsView* self, intptr_t slot);
 void QGraphicsView_QBaseCustomEvent(QGraphicsView* self, QEvent* event);
-void QGraphicsView_ConnectNotify(QGraphicsView* self, QMetaMethod* signal);
+void QGraphicsView_ConnectNotify(QGraphicsView* self, const QMetaMethod* signal);
 void QGraphicsView_OnConnectNotify(QGraphicsView* self, intptr_t slot);
-void QGraphicsView_QBaseConnectNotify(QGraphicsView* self, QMetaMethod* signal);
-void QGraphicsView_DisconnectNotify(QGraphicsView* self, QMetaMethod* signal);
+void QGraphicsView_QBaseConnectNotify(QGraphicsView* self, const QMetaMethod* signal);
+void QGraphicsView_DisconnectNotify(QGraphicsView* self, const QMetaMethod* signal);
 void QGraphicsView_OnDisconnectNotify(QGraphicsView* self, intptr_t slot);
-void QGraphicsView_QBaseDisconnectNotify(QGraphicsView* self, QMetaMethod* signal);
+void QGraphicsView_QBaseDisconnectNotify(QGraphicsView* self, const QMetaMethod* signal);
 void QGraphicsView_SetViewportMargins(QGraphicsView* self, int left, int top, int right, int bottom);
 void QGraphicsView_OnSetViewportMargins(QGraphicsView* self, intptr_t slot);
 void QGraphicsView_QBaseSetViewportMargins(QGraphicsView* self, int left, int top, int right, int bottom);
@@ -379,9 +361,12 @@ int QGraphicsView_QBaseSenderSignalIndex(const QGraphicsView* self);
 int QGraphicsView_Receivers(const QGraphicsView* self, const char* signal);
 void QGraphicsView_OnReceivers(const QGraphicsView* self, intptr_t slot);
 int QGraphicsView_QBaseReceivers(const QGraphicsView* self, const char* signal);
-bool QGraphicsView_IsSignalConnected(const QGraphicsView* self, QMetaMethod* signal);
+bool QGraphicsView_IsSignalConnected(const QGraphicsView* self, const QMetaMethod* signal);
 void QGraphicsView_OnIsSignalConnected(const QGraphicsView* self, intptr_t slot);
-bool QGraphicsView_QBaseIsSignalConnected(const QGraphicsView* self, QMetaMethod* signal);
+bool QGraphicsView_QBaseIsSignalConnected(const QGraphicsView* self, const QMetaMethod* signal);
+double QGraphicsView_GetDecodedMetricF(const QGraphicsView* self, int metricA, int metricB);
+void QGraphicsView_OnGetDecodedMetricF(const QGraphicsView* self, intptr_t slot);
+double QGraphicsView_QBaseGetDecodedMetricF(const QGraphicsView* self, int metricA, int metricB);
 void QGraphicsView_Delete(QGraphicsView* self);
 
 #ifdef __cplusplus

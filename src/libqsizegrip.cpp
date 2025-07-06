@@ -1073,7 +1073,7 @@ void QSizeGrip_OnDropEvent(QSizeGrip* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSizeGrip_NativeEvent(QSizeGrip* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSizeGrip_NativeEvent(QSizeGrip* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsizegrip = dynamic_cast<VirtualQSizeGrip*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
@@ -1084,7 +1084,7 @@ bool QSizeGrip_NativeEvent(QSizeGrip* self, libqt_string eventType, void* messag
 }
 
 // Base class handler implementation
-bool QSizeGrip_QBaseNativeEvent(QSizeGrip* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QSizeGrip_QBaseNativeEvent(QSizeGrip* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqsizegrip = dynamic_cast<VirtualQSizeGrip*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
@@ -1423,7 +1423,7 @@ void QSizeGrip_OnCustomEvent(QSizeGrip* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSizeGrip_ConnectNotify(QSizeGrip* self, QMetaMethod* signal) {
+void QSizeGrip_ConnectNotify(QSizeGrip* self, const QMetaMethod* signal) {
     auto* vqsizegrip = dynamic_cast<VirtualQSizeGrip*>(self);
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         vqsizegrip->connectNotify(*signal);
@@ -1433,7 +1433,7 @@ void QSizeGrip_ConnectNotify(QSizeGrip* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSizeGrip_QBaseConnectNotify(QSizeGrip* self, QMetaMethod* signal) {
+void QSizeGrip_QBaseConnectNotify(QSizeGrip* self, const QMetaMethod* signal) {
     auto* vqsizegrip = dynamic_cast<VirtualQSizeGrip*>(self);
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         vqsizegrip->setQSizeGrip_ConnectNotify_IsBase(true);
@@ -1452,7 +1452,7 @@ void QSizeGrip_OnConnectNotify(QSizeGrip* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSizeGrip_DisconnectNotify(QSizeGrip* self, QMetaMethod* signal) {
+void QSizeGrip_DisconnectNotify(QSizeGrip* self, const QMetaMethod* signal) {
     auto* vqsizegrip = dynamic_cast<VirtualQSizeGrip*>(self);
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         vqsizegrip->disconnectNotify(*signal);
@@ -1462,7 +1462,7 @@ void QSizeGrip_DisconnectNotify(QSizeGrip* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSizeGrip_QBaseDisconnectNotify(QSizeGrip* self, QMetaMethod* signal) {
+void QSizeGrip_QBaseDisconnectNotify(QSizeGrip* self, const QMetaMethod* signal) {
     auto* vqsizegrip = dynamic_cast<VirtualQSizeGrip*>(self);
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         vqsizegrip->setQSizeGrip_DisconnectNotify_IsBase(true);
@@ -1713,7 +1713,7 @@ void QSizeGrip_OnReceivers(const QSizeGrip* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSizeGrip_IsSignalConnected(const QSizeGrip* self, QMetaMethod* signal) {
+bool QSizeGrip_IsSignalConnected(const QSizeGrip* self, const QMetaMethod* signal) {
     auto* vqsizegrip = const_cast<VirtualQSizeGrip*>(dynamic_cast<const VirtualQSizeGrip*>(self));
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         return vqsizegrip->isSignalConnected(*signal);
@@ -1723,7 +1723,7 @@ bool QSizeGrip_IsSignalConnected(const QSizeGrip* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSizeGrip_QBaseIsSignalConnected(const QSizeGrip* self, QMetaMethod* signal) {
+bool QSizeGrip_QBaseIsSignalConnected(const QSizeGrip* self, const QMetaMethod* signal) {
     auto* vqsizegrip = const_cast<VirtualQSizeGrip*>(dynamic_cast<const VirtualQSizeGrip*>(self));
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         vqsizegrip->setQSizeGrip_IsSignalConnected_IsBase(true);
@@ -1738,6 +1738,35 @@ void QSizeGrip_OnIsSignalConnected(const QSizeGrip* self, intptr_t slot) {
     auto* vqsizegrip = const_cast<VirtualQSizeGrip*>(dynamic_cast<const VirtualQSizeGrip*>(self));
     if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
         vqsizegrip->setQSizeGrip_IsSignalConnected_Callback(reinterpret_cast<VirtualQSizeGrip::QSizeGrip_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QSizeGrip_GetDecodedMetricF(const QSizeGrip* self, int metricA, int metricB) {
+    auto* vqsizegrip = const_cast<VirtualQSizeGrip*>(dynamic_cast<const VirtualQSizeGrip*>(self));
+    if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
+        return vqsizegrip->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSizeGrip*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QSizeGrip_QBaseGetDecodedMetricF(const QSizeGrip* self, int metricA, int metricB) {
+    auto* vqsizegrip = const_cast<VirtualQSizeGrip*>(dynamic_cast<const VirtualQSizeGrip*>(self));
+    if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
+        vqsizegrip->setQSizeGrip_GetDecodedMetricF_IsBase(true);
+        return vqsizegrip->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQSizeGrip*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QSizeGrip_OnGetDecodedMetricF(const QSizeGrip* self, intptr_t slot) {
+    auto* vqsizegrip = const_cast<VirtualQSizeGrip*>(dynamic_cast<const VirtualQSizeGrip*>(self));
+    if (vqsizegrip && vqsizegrip->isVirtualQSizeGrip) {
+        vqsizegrip->setQSizeGrip_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQSizeGrip::QSizeGrip_GetDecodedMetricF_Callback>(slot));
     }
 }
 

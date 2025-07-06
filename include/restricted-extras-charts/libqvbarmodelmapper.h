@@ -12,14 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "libqabstractbarseries.h"
-#include "../libqabstractitemmodel.h"
-#include "libqbarmodelmapper.h"
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qvbarmodelmapper-qtcharts.html
 
 /// q_vbarmodelmapper_new constructs a new QVBarModelMapper object.
@@ -249,7 +241,7 @@ QThread* q_vbarmodelmapper_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QVBarModelMapper* self, QThread* thread ```
-void q_vbarmodelmapper_move_to_thread(void* self, void* thread);
+bool q_vbarmodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -264,6 +256,13 @@ int32_t q_vbarmodelmapper_start_timer(void* self, int interval);
 ///
 /// ``` QVBarModelMapper* self, int id ```
 void q_vbarmodelmapper_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QVBarModelMapper* self, enum Qt__TimerId id ```
+void q_vbarmodelmapper_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -404,6 +403,13 @@ bool q_vbarmodelmapper_inherits(void* self, const char* classname);
 ///
 /// ``` QVBarModelMapper* self ```
 void q_vbarmodelmapper_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QVBarModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_vbarmodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///

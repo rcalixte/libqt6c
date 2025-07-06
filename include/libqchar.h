@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qlatin1char.html
 
 /// q_latin1char_new constructs a new QLatin1Char object.
@@ -554,7 +552,9 @@ typedef enum {
     QCHAR_SCRIPT_SCRIPT_TANGSA = 159,
     QCHAR_SCRIPT_SCRIPT_TOTO = 160,
     QCHAR_SCRIPT_SCRIPT_VITHKUQI = 161,
-    QCHAR_SCRIPT_SCRIPTCOUNT = 162
+    QCHAR_SCRIPT_SCRIPT_KAWI = 162,
+    QCHAR_SCRIPT_SCRIPT_NAGMUNDARI = 163,
+    QCHAR_SCRIPT_SCRIPTCOUNT = 164
 } QChar__Script;
 
 typedef enum {
@@ -660,7 +660,9 @@ typedef enum {
     QCHAR_UNICODEVERSION_UNICODE_12_0 = 21,
     QCHAR_UNICODEVERSION_UNICODE_12_1 = 22,
     QCHAR_UNICODEVERSION_UNICODE_13_0 = 23,
-    QCHAR_UNICODEVERSION_UNICODE_14_0 = 24
+    QCHAR_UNICODEVERSION_UNICODE_14_0 = 24,
+    QCHAR_UNICODEVERSION_UNICODE_15_0 = 25,
+    QCHAR_UNICODEVERSION_UNICODE_15_1 = 26
 } QChar__UnicodeVersion;
 
 #endif

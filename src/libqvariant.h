@@ -12,28 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqbitarray.h"
-#include "libqchar.h"
-#include "libqdatastream.h"
-#include "libqdatetime.h"
-#include "libqeasingcurve.h"
-#include "libqjsonarray.h"
-#include "libqjsondocument.h"
-#include "libqjsonobject.h"
-#include "libqjsonvalue.h"
-#include "libqline.h"
-#include "libqlocale.h"
-#include "libqmetatype.h"
-#include "libqabstractitemmodel.h"
-#include "libqcompare.h"
-#include "libqpoint.h"
-#include "libqrect.h"
-#include "libqregularexpression.h"
-#include "libqsize.h"
-#include <string.h>
-#include "libqurl.h"
-#include "libquuid.h"
-
 /// https://doc.qt.io/qt-6/qvariant.html
 
 /// q_variant_new constructs a new QVariant object.
@@ -88,163 +66,98 @@ QVariant* q_variant_new10(float f);
 
 /// q_variant_new11 constructs a new QVariant object.
 ///
-/// ``` const char* str ```
-QVariant* q_variant_new11(const char* str);
+/// ``` QChar* qchar ```
+QVariant* q_variant_new11(void* qchar);
 
 /// q_variant_new12 constructs a new QVariant object.
 ///
-/// ``` const char* bytearray ```
-QVariant* q_variant_new12(const char* bytearray);
+/// ``` QDate* date ```
+QVariant* q_variant_new12(void* date);
 
 /// q_variant_new13 constructs a new QVariant object.
 ///
-/// ``` QBitArray* bitarray ```
-QVariant* q_variant_new13(void* bitarray);
+/// ``` QTime* time ```
+QVariant* q_variant_new13(void* time);
 
 /// q_variant_new14 constructs a new QVariant object.
 ///
-/// ``` const char* stringVal ```
-QVariant* q_variant_new14(const char* stringVal);
+/// ``` QBitArray* bitarray ```
+QVariant* q_variant_new14(void* bitarray);
 
 /// q_variant_new15 constructs a new QVariant object.
 ///
-/// ``` const char* stringlist[] ```
-QVariant* q_variant_new15(const char* stringlist[]);
+/// ``` const char* bytearray ```
+QVariant* q_variant_new15(const char* bytearray);
 
 /// q_variant_new16 constructs a new QVariant object.
 ///
-/// ``` QChar* qchar ```
-QVariant* q_variant_new16(void* qchar);
+/// ``` QDateTime* datetime ```
+QVariant* q_variant_new16(void* datetime);
 
 /// q_variant_new17 constructs a new QVariant object.
 ///
-/// ``` QDate* date ```
-QVariant* q_variant_new17(void* date);
+/// ``` libqt_map /* of const char* to QVariant* */ hash ```
+QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash);
 
 /// q_variant_new18 constructs a new QVariant object.
 ///
-/// ``` QTime* time ```
-QVariant* q_variant_new18(void* time);
+/// ``` QJsonArray* jsonArray ```
+QVariant* q_variant_new18(void* jsonArray);
 
 /// q_variant_new19 constructs a new QVariant object.
 ///
-/// ``` QDateTime* datetime ```
-QVariant* q_variant_new19(void* datetime);
+/// ``` QJsonObject* jsonObject ```
+QVariant* q_variant_new19(void* jsonObject);
 
 /// q_variant_new20 constructs a new QVariant object.
 ///
-/// ``` libqt_map /* of const char* to QVariant* */ mapVal ```
-QVariant* q_variant_new20(libqt_map /* of const char* to QVariant* */ mapVal);
+/// ``` QLocale* locale ```
+QVariant* q_variant_new20(void* locale);
 
 /// q_variant_new21 constructs a new QVariant object.
 ///
-/// ``` libqt_map /* of const char* to QVariant* */ hash ```
-QVariant* q_variant_new21(libqt_map /* of const char* to QVariant* */ hash);
+/// ``` libqt_map /* of const char* to QVariant* */ mapVal ```
+QVariant* q_variant_new21(libqt_map /* of const char* to QVariant* */ mapVal);
 
 /// q_variant_new22 constructs a new QVariant object.
 ///
-/// ``` QSize* size ```
-QVariant* q_variant_new22(void* size);
+/// ``` QRegularExpression* re ```
+QVariant* q_variant_new22(void* re);
 
 /// q_variant_new23 constructs a new QVariant object.
 ///
-/// ``` QSizeF* size ```
-QVariant* q_variant_new23(void* size);
+/// ``` const char* stringVal ```
+QVariant* q_variant_new23(const char* stringVal);
 
 /// q_variant_new24 constructs a new QVariant object.
 ///
-/// ``` QPoint* pt ```
-QVariant* q_variant_new24(void* pt);
+/// ``` const char* stringlist[] ```
+QVariant* q_variant_new24(const char* stringlist[]);
 
 /// q_variant_new25 constructs a new QVariant object.
 ///
-/// ``` QPointF* pt ```
-QVariant* q_variant_new25(void* pt);
+/// ``` QUrl* url ```
+QVariant* q_variant_new25(void* url);
 
 /// q_variant_new26 constructs a new QVariant object.
 ///
-/// ``` QLine* line ```
-QVariant* q_variant_new26(void* line);
+/// ``` QSize* size ```
+QVariant* q_variant_new26(void* size);
 
 /// q_variant_new27 constructs a new QVariant object.
 ///
-/// ``` QLineF* line ```
-QVariant* q_variant_new27(void* line);
+/// ``` QPoint* pt ```
+QVariant* q_variant_new27(void* pt);
 
 /// q_variant_new28 constructs a new QVariant object.
 ///
-/// ``` QRect* rect ```
-QVariant* q_variant_new28(void* rect);
+/// ``` enum QVariant__Type typeVal ```
+QVariant* q_variant_new28(int64_t typeVal);
 
 /// q_variant_new29 constructs a new QVariant object.
 ///
-/// ``` QRectF* rect ```
-QVariant* q_variant_new29(void* rect);
-
-/// q_variant_new30 constructs a new QVariant object.
-///
-/// ``` QLocale* locale ```
-QVariant* q_variant_new30(void* locale);
-
-/// q_variant_new31 constructs a new QVariant object.
-///
-/// ``` QRegularExpression* re ```
-QVariant* q_variant_new31(void* re);
-
-/// q_variant_new32 constructs a new QVariant object.
-///
-/// ``` QEasingCurve* easing ```
-QVariant* q_variant_new32(void* easing);
-
-/// q_variant_new33 constructs a new QVariant object.
-///
-/// ``` QUuid* uuid ```
-QVariant* q_variant_new33(void* uuid);
-
-/// q_variant_new34 constructs a new QVariant object.
-///
-/// ``` QUrl* url ```
-QVariant* q_variant_new34(void* url);
-
-/// q_variant_new35 constructs a new QVariant object.
-///
-/// ``` QJsonValue* jsonValue ```
-QVariant* q_variant_new35(void* jsonValue);
-
-/// q_variant_new36 constructs a new QVariant object.
-///
-/// ``` QJsonObject* jsonObject ```
-QVariant* q_variant_new36(void* jsonObject);
-
-/// q_variant_new37 constructs a new QVariant object.
-///
-/// ``` QJsonArray* jsonArray ```
-QVariant* q_variant_new37(void* jsonArray);
-
-/// q_variant_new38 constructs a new QVariant object.
-///
-/// ``` QJsonDocument* jsonDocument ```
-QVariant* q_variant_new38(void* jsonDocument);
-
-/// q_variant_new39 constructs a new QVariant object.
-///
-/// ``` QModelIndex* modelIndex ```
-QVariant* q_variant_new39(void* modelIndex);
-
-/// q_variant_new40 constructs a new QVariant object.
-///
-/// ``` QPersistentModelIndex* modelIndex ```
-QVariant* q_variant_new40(void* modelIndex);
-
-/// q_variant_new41 constructs a new QVariant object.
-///
-/// ``` enum QVariant__Type typeVal ```
-QVariant* q_variant_new41(int64_t typeVal);
-
-/// q_variant_new42 constructs a new QVariant object.
-///
 /// ``` QMetaType* typeVal, void* copyVal ```
-QVariant* q_variant_new42(void* typeVal, void* copyVal);
+QVariant* q_variant_new29(void* typeVal, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#operator=)
 ///
@@ -556,6 +469,11 @@ const void* q_variant_data2(void* self);
 /// ``` QVariant* self, QVariant* avalue ```
 void q_variant_set_value(void* self, void* avalue);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
+///
+/// ``` QMetaType* typeVal ```
+QVariant* q_variant_from_meta_type(void* typeVal);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#compare)
 ///
 /// ``` QVariant* lhs, QVariant* rhs ```
@@ -596,46 +514,17 @@ float q_variant_to_float1(void* self, bool* ok);
 /// ``` QVariant* self, bool* ok ```
 double q_variant_to_real1(void* self, bool* ok);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
+///
+/// ``` QMetaType* typeVal, void* copyVal ```
+QVariant* q_variant_from_meta_type2(void* typeVal, void* copyVal);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#dtor.QVariant)
 ///
 /// Delete this object from C++ memory.
 ///
 /// ``` QVariant* self ```
 void q_variant_delete(void* self);
-
-/// https://doc.qt.io/qt-6/qvariantconstpointer.html
-
-/// q_variantconstpointer_new constructs a new QVariantConstPointer object.
-///
-/// ``` QVariant* variant ```
-QVariantConstPointer* q_variantconstpointer_new(void* variant);
-
-/// q_variantconstpointer_new2 constructs a new QVariantConstPointer object.
-///
-/// ``` QVariantConstPointer* param1 ```
-QVariantConstPointer* q_variantconstpointer_new2(void* param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator*)
-///
-/// ``` QVariantConstPointer* self ```
-QVariant* q_variantconstpointer_operator_multiply(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator->)
-///
-/// ``` QVariantConstPointer* self ```
-const QVariant* q_variantconstpointer_operator_minus_greater(void* self);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#operator=)
-///
-/// ``` QVariantConstPointer* self, QVariantConstPointer* param1 ```
-void q_variantconstpointer_operator_assign(void* self, void* param1);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qvariantconstpointer.html#dtor.QVariantConstPointer)
-///
-/// Delete this object from C++ memory.
-///
-/// ``` QVariantConstPointer* self ```
-void q_variantconstpointer_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qvariant.html#types
 
@@ -673,7 +562,7 @@ typedef enum {
     QVARIANT_TYPE_UUID = 30,
     QVARIANT_TYPE_MODELINDEX = 42,
     QVARIANT_TYPE_PERSISTENTMODELINDEX = 50,
-    QVARIANT_TYPE_LASTCORETYPE = 58,
+    QVARIANT_TYPE_LASTCORETYPE = 63,
     QVARIANT_TYPE_FONT = 4096,
     QVARIANT_TYPE_PIXMAP = 4097,
     QVARIANT_TYPE_BRUSH = 4098,

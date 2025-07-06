@@ -149,7 +149,7 @@ QRect* QFrame_FrameRect(const QFrame* self) {
     return new QRect(self->frameRect());
 }
 
-void QFrame_SetFrameRect(QFrame* self, QRect* frameRect) {
+void QFrame_SetFrameRect(QFrame* self, const QRect* frameRect) {
     self->setFrameRect(*frameRect);
 }
 
@@ -1164,7 +1164,7 @@ void QFrame_OnHideEvent(QFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFrame_NativeEvent(QFrame* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFrame_NativeEvent(QFrame* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqframe = dynamic_cast<VirtualQFrame*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqframe && vqframe->isVirtualQFrame) {
@@ -1175,7 +1175,7 @@ bool QFrame_NativeEvent(QFrame* self, libqt_string eventType, void* message, int
 }
 
 // Base class handler implementation
-bool QFrame_QBaseNativeEvent(QFrame* self, libqt_string eventType, void* message, intptr_t* result) {
+bool QFrame_QBaseNativeEvent(QFrame* self, const libqt_string eventType, void* message, intptr_t* result) {
     auto* vqframe = dynamic_cast<VirtualQFrame*>(self);
     QByteArray eventType_QByteArray(eventType.data, eventType.len);
     if (vqframe && vqframe->isVirtualQFrame) {
@@ -1514,7 +1514,7 @@ void QFrame_OnCustomEvent(QFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFrame_ConnectNotify(QFrame* self, QMetaMethod* signal) {
+void QFrame_ConnectNotify(QFrame* self, const QMetaMethod* signal) {
     auto* vqframe = dynamic_cast<VirtualQFrame*>(self);
     if (vqframe && vqframe->isVirtualQFrame) {
         vqframe->connectNotify(*signal);
@@ -1524,7 +1524,7 @@ void QFrame_ConnectNotify(QFrame* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFrame_QBaseConnectNotify(QFrame* self, QMetaMethod* signal) {
+void QFrame_QBaseConnectNotify(QFrame* self, const QMetaMethod* signal) {
     auto* vqframe = dynamic_cast<VirtualQFrame*>(self);
     if (vqframe && vqframe->isVirtualQFrame) {
         vqframe->setQFrame_ConnectNotify_IsBase(true);
@@ -1543,7 +1543,7 @@ void QFrame_OnConnectNotify(QFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QFrame_DisconnectNotify(QFrame* self, QMetaMethod* signal) {
+void QFrame_DisconnectNotify(QFrame* self, const QMetaMethod* signal) {
     auto* vqframe = dynamic_cast<VirtualQFrame*>(self);
     if (vqframe && vqframe->isVirtualQFrame) {
         vqframe->disconnectNotify(*signal);
@@ -1553,7 +1553,7 @@ void QFrame_DisconnectNotify(QFrame* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QFrame_QBaseDisconnectNotify(QFrame* self, QMetaMethod* signal) {
+void QFrame_QBaseDisconnectNotify(QFrame* self, const QMetaMethod* signal) {
     auto* vqframe = dynamic_cast<VirtualQFrame*>(self);
     if (vqframe && vqframe->isVirtualQFrame) {
         vqframe->setQFrame_DisconnectNotify_IsBase(true);
@@ -1833,7 +1833,7 @@ void QFrame_OnReceivers(const QFrame* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QFrame_IsSignalConnected(const QFrame* self, QMetaMethod* signal) {
+bool QFrame_IsSignalConnected(const QFrame* self, const QMetaMethod* signal) {
     auto* vqframe = const_cast<VirtualQFrame*>(dynamic_cast<const VirtualQFrame*>(self));
     if (vqframe && vqframe->isVirtualQFrame) {
         return vqframe->isSignalConnected(*signal);
@@ -1843,7 +1843,7 @@ bool QFrame_IsSignalConnected(const QFrame* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QFrame_QBaseIsSignalConnected(const QFrame* self, QMetaMethod* signal) {
+bool QFrame_QBaseIsSignalConnected(const QFrame* self, const QMetaMethod* signal) {
     auto* vqframe = const_cast<VirtualQFrame*>(dynamic_cast<const VirtualQFrame*>(self));
     if (vqframe && vqframe->isVirtualQFrame) {
         vqframe->setQFrame_IsSignalConnected_IsBase(true);
@@ -1858,6 +1858,35 @@ void QFrame_OnIsSignalConnected(const QFrame* self, intptr_t slot) {
     auto* vqframe = const_cast<VirtualQFrame*>(dynamic_cast<const VirtualQFrame*>(self));
     if (vqframe && vqframe->isVirtualQFrame) {
         vqframe->setQFrame_IsSignalConnected_Callback(reinterpret_cast<VirtualQFrame::QFrame_IsSignalConnected_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+double QFrame_GetDecodedMetricF(const QFrame* self, int metricA, int metricB) {
+    auto* vqframe = const_cast<VirtualQFrame*>(dynamic_cast<const VirtualQFrame*>(self));
+    if (vqframe && vqframe->isVirtualQFrame) {
+        return vqframe->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFrame*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Base class handler implementation
+double QFrame_QBaseGetDecodedMetricF(const QFrame* self, int metricA, int metricB) {
+    auto* vqframe = const_cast<VirtualQFrame*>(dynamic_cast<const VirtualQFrame*>(self));
+    if (vqframe && vqframe->isVirtualQFrame) {
+        vqframe->setQFrame_GetDecodedMetricF_IsBase(true);
+        return vqframe->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    } else {
+        return ((VirtualQFrame*)self)->getDecodedMetricF(static_cast<QPaintDevice::PaintDeviceMetric>(metricA), static_cast<QPaintDevice::PaintDeviceMetric>(metricB));
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QFrame_OnGetDecodedMetricF(const QFrame* self, intptr_t slot) {
+    auto* vqframe = const_cast<VirtualQFrame*>(dynamic_cast<const VirtualQFrame*>(self));
+    if (vqframe && vqframe->isVirtualQFrame) {
+        vqframe->setQFrame_GetDecodedMetricF_Callback(reinterpret_cast<VirtualQFrame::QFrame_GetDecodedMetricF_Callback>(slot));
     }
 }
 

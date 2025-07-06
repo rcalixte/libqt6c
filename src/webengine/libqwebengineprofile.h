@@ -12,19 +12,6 @@
 
 #include "../qtlibc.h"
 
-#include "../libqevent.h"
-#include "../libqmetaobject.h"
-#include "../libqobject.h"
-#include <string.h>
-#include "../libqurl.h"
-#include "libqwebengineclientcertificatestore.h"
-#include "libqwebenginecookiestore.h"
-#include "libqwebenginedownloadrequest.h"
-#include "libqwebenginescriptcollection.h"
-#include "libqwebenginesettings.h"
-#include "libqwebengineurlrequestinterceptor.h"
-#include "libqwebengineurlschemehandler.h"
-
 /// https://doc.qt.io/qt-6/qwebengineprofile.html
 
 /// q_webengineprofile_new constructs a new QWebEngineProfile object.
@@ -143,6 +130,16 @@ int64_t q_webengineprofile_persistent_cookies_policy(void* self);
 /// ``` QWebEngineProfile* self, enum QWebEngineProfile__PersistentCookiesPolicy persistentCookiesPolicy ```
 void q_webengineprofile_set_persistent_cookies_policy(void* self, int64_t persistentCookiesPolicy);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#persistentPermissionsPolicy)
+///
+/// ``` QWebEngineProfile* self ```
+int64_t q_webengineprofile_persistent_permissions_policy(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#setPersistentPermissionsPolicy)
+///
+/// ``` QWebEngineProfile* self, enum QWebEngineProfile__PersistentPermissionsPolicy persistentPermissionsPolicy ```
+void q_webengineprofile_set_persistent_permissions_policy(void* self, int64_t persistentPermissionsPolicy);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#httpCacheMaximumSize)
 ///
 /// ``` QWebEngineProfile* self ```
@@ -187,6 +184,11 @@ QWebEngineSettings* q_webengineprofile_settings(void* self);
 ///
 /// ``` QWebEngineProfile* self ```
 QWebEngineScriptCollection* q_webengineprofile_scripts(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#clientHints)
+///
+/// ``` QWebEngineProfile* self ```
+QWebEngineClientHints* q_webengineprofile_client_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#urlSchemeHandler)
 ///
@@ -248,10 +250,40 @@ const char* q_webengineprofile_download_path(void* self);
 /// ``` QWebEngineProfile* self, const char* path ```
 void q_webengineprofile_set_download_path(void* self, const char* path);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#isPushServiceEnabled)
+///
+/// ``` QWebEngineProfile* self ```
+bool q_webengineprofile_is_push_service_enabled(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#setPushServiceEnabled)
+///
+/// ``` QWebEngineProfile* self, bool enabled ```
+void q_webengineprofile_set_push_service_enabled(void* self, bool enabled);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#clientCertificateStore)
 ///
 /// ``` QWebEngineProfile* self ```
 QWebEngineClientCertificateStore* q_webengineprofile_client_certificate_store(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#queryPermission)
+///
+/// ``` QWebEngineProfile* self, QUrl* securityOrigin, enum QWebEnginePermission__PermissionType permissionType ```
+QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* securityOrigin, int64_t permissionType);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#listAllPermissions)
+///
+/// ``` QWebEngineProfile* self ```
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_all_permissions(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#listPermissionsForOrigin)
+///
+/// ``` QWebEngineProfile* self, QUrl* securityOrigin ```
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_origin(void* self, void* securityOrigin);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#listPermissionsForPermissionType)
+///
+/// ``` QWebEngineProfile* self, enum QWebEnginePermission__PermissionType permissionType ```
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_permission_type(void* self, int64_t permissionType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#defaultProfile)
 ///
@@ -267,6 +299,16 @@ void q_webengineprofile_download_requested(void* self, void* download);
 ///
 /// ``` QWebEngineProfile* self, void (*slot)(QWebEngineProfile*, QWebEngineDownloadRequest*) ```
 void q_webengineprofile_on_download_requested(void* self, void (*slot)(void*, void*));
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#clearHttpCacheCompleted)
+///
+/// ``` QWebEngineProfile* self ```
+void q_webengineprofile_clear_http_cache_completed(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#clearHttpCacheCompleted)
+///
+/// ``` QWebEngineProfile* self, void (*slot)(QWebEngineProfile*) ```
+void q_webengineprofile_on_clear_http_cache_completed(void* self, void (*slot)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -339,7 +381,7 @@ QThread* q_webengineprofile_thread(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
 /// ``` QWebEngineProfile* self, QThread* thread ```
-void q_webengineprofile_move_to_thread(void* self, void* thread);
+bool q_webengineprofile_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
@@ -354,6 +396,13 @@ int32_t q_webengineprofile_start_timer(void* self, int interval);
 ///
 /// ``` QWebEngineProfile* self, int id ```
 void q_webengineprofile_kill_timer(void* self, int id);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
+///
+/// ``` QWebEngineProfile* self, enum Qt__TimerId id ```
+void q_webengineprofile_kill_timer_with_id(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -494,6 +543,13 @@ bool q_webengineprofile_inherits(void* self, const char* classname);
 ///
 /// ``` QWebEngineProfile* self ```
 void q_webengineprofile_delete_later(void* self);
+
+/// Inherited from QObject
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
+///
+/// ``` QWebEngineProfile* self, QThread* thread, Disambiguated_t* param2 ```
+bool q_webengineprofile_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
@@ -856,5 +912,11 @@ typedef enum {
     QWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY_ALLOWPERSISTENTCOOKIES = 1,
     QWEBENGINEPROFILE_PERSISTENTCOOKIESPOLICY_FORCEPERSISTENTCOOKIES = 2
 } QWebEngineProfile__PersistentCookiesPolicy;
+
+typedef enum {
+    QWEBENGINEPROFILE_PERSISTENTPERMISSIONSPOLICY_ASKEVERYTIME = 0,
+    QWEBENGINEPROFILE_PERSISTENTPERMISSIONSPOLICY_STOREINMEMORY = 1,
+    QWEBENGINEPROFILE_PERSISTENTPERMISSIONSPOLICY_STOREONDISK = 2
+} QWebEngineProfile__PersistentPermissionsPolicy;
 
 #endif

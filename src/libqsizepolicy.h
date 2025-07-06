@@ -12,8 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qsizepolicy.html
 
 /// q_sizepolicy_new constructs a new QSizePolicy object.

@@ -12,9 +12,6 @@
 
 #include "qtlibc.h"
 
-#include <string.h>
-#include "libqversionnumber.h"
-
 /// https://doc.qt.io/qt-6/qlibraryinfo.html
 
 /// q_libraryinfo_new constructs a new QLibraryInfo object.
@@ -47,6 +44,11 @@ const char* q_libraryinfo_build();
 ///
 bool q_libraryinfo_is_debug_build();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#isSharedBuild)
+///
+///
+bool q_libraryinfo_is_shared_build();
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#version)
 ///
 ///
@@ -56,6 +58,11 @@ QVersionNumber* q_libraryinfo_version();
 ///
 /// ``` enum QLibraryInfo__LibraryPath p ```
 const char* q_libraryinfo_path(int64_t p);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
+///
+/// ``` enum QLibraryInfo__LibraryPath p ```
+const char** q_libraryinfo_paths(int64_t p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
 ///

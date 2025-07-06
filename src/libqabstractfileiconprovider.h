@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqfileinfo.h"
-#include "libqicon.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qabstractfileiconprovider.html
 
 /// q_abstractfileiconprovider_new constructs a new QAbstractFileIconProvider object.

@@ -12,13 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqcolor.h"
-#include "libqiodevice.h"
-#include "libqimage.h"
-#include "libqrect.h"
-#include "libqsize.h"
-#include <string.h>
-
 /// https://doc.qt.io/qt-6/qimagereader.html
 
 /// q_imagereader_new constructs a new QImageReader object.

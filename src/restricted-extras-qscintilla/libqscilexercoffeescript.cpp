@@ -1,3 +1,4 @@
+#include <QByteArray>
 #include <QChildEvent>
 #include <QColor>
 #include <QEvent>
@@ -271,10 +272,10 @@ void QsciLexerCoffeeScript_OnAutoCompletionFillups(const QsciLexerCoffeeScript* 
 libqt_list /* of libqt_string */ QsciLexerCoffeeScript_AutoCompletionWordSeparators(const QsciLexerCoffeeScript* self) {
     auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
-        QStringList _ret = vqscilexercoffeescript->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexercoffeescript->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -286,14 +287,14 @@ libqt_list /* of libqt_string */ QsciLexerCoffeeScript_AutoCompletionWordSeparat
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerCoffeeScript*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerCoffeeScript*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -305,7 +306,7 @@ libqt_list /* of libqt_string */ QsciLexerCoffeeScript_AutoCompletionWordSeparat
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -316,10 +317,10 @@ libqt_list /* of libqt_string */ QsciLexerCoffeeScript_QBaseAutoCompletionWordSe
     auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_AutoCompletionWordSeparators_IsBase(true);
-        QStringList _ret = vqscilexercoffeescript->autoCompletionWordSeparators();
+        QList<QString> _ret = vqscilexercoffeescript->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -331,14 +332,14 @@ libqt_list /* of libqt_string */ QsciLexerCoffeeScript_QBaseAutoCompletionWordSe
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     } else {
-        QStringList _ret = ((VirtualQsciLexerCoffeeScript*)self)->autoCompletionWordSeparators();
+        QList<QString> _ret = ((VirtualQsciLexerCoffeeScript*)self)->autoCompletionWordSeparators();
         // Convert QList<> from C++ memory to manually-managed C memory
-        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-        for (size_t i = 0; i < _ret.length(); ++i) {
+        libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+        for (size_t i = 0; i < _ret.size(); ++i) {
             QString _lv_ret = _ret[i];
             // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
             QByteArray _lv_b = _lv_ret.toUtf8();
@@ -350,7 +351,7 @@ libqt_list /* of libqt_string */ QsciLexerCoffeeScript_QBaseAutoCompletionWordSe
             _arr[i] = _lv_str;
         }
         libqt_list _out;
-        _out.len = _ret.length();
+        _out.len = _ret.size();
         _out.data.ptr = static_cast<void*>(_arr);
         return _out;
     }
@@ -1064,7 +1065,7 @@ void QsciLexerCoffeeScript_OnSetAutoIndentStyle(QsciLexerCoffeeScript* self, int
 }
 
 // Derived class handler implementation
-void QsciLexerCoffeeScript_SetColor(QsciLexerCoffeeScript* self, QColor* c, int style) {
+void QsciLexerCoffeeScript_SetColor(QsciLexerCoffeeScript* self, const QColor* c, int style) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setColor(*c, static_cast<int>(style));
@@ -1074,7 +1075,7 @@ void QsciLexerCoffeeScript_SetColor(QsciLexerCoffeeScript* self, QColor* c, int 
 }
 
 // Base class handler implementation
-void QsciLexerCoffeeScript_QBaseSetColor(QsciLexerCoffeeScript* self, QColor* c, int style) {
+void QsciLexerCoffeeScript_QBaseSetColor(QsciLexerCoffeeScript* self, const QColor* c, int style) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_SetColor_IsBase(true);
@@ -1122,7 +1123,7 @@ void QsciLexerCoffeeScript_OnSetEolFill(QsciLexerCoffeeScript* self, intptr_t sl
 }
 
 // Derived class handler implementation
-void QsciLexerCoffeeScript_SetFont(QsciLexerCoffeeScript* self, QFont* f, int style) {
+void QsciLexerCoffeeScript_SetFont(QsciLexerCoffeeScript* self, const QFont* f, int style) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setFont(*f, static_cast<int>(style));
@@ -1132,7 +1133,7 @@ void QsciLexerCoffeeScript_SetFont(QsciLexerCoffeeScript* self, QFont* f, int st
 }
 
 // Base class handler implementation
-void QsciLexerCoffeeScript_QBaseSetFont(QsciLexerCoffeeScript* self, QFont* f, int style) {
+void QsciLexerCoffeeScript_QBaseSetFont(QsciLexerCoffeeScript* self, const QFont* f, int style) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_SetFont_IsBase(true);
@@ -1151,7 +1152,7 @@ void QsciLexerCoffeeScript_OnSetFont(QsciLexerCoffeeScript* self, intptr_t slot)
 }
 
 // Derived class handler implementation
-void QsciLexerCoffeeScript_SetPaper(QsciLexerCoffeeScript* self, QColor* c, int style) {
+void QsciLexerCoffeeScript_SetPaper(QsciLexerCoffeeScript* self, const QColor* c, int style) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setPaper(*c, static_cast<int>(style));
@@ -1161,7 +1162,7 @@ void QsciLexerCoffeeScript_SetPaper(QsciLexerCoffeeScript* self, QColor* c, int 
 }
 
 // Base class handler implementation
-void QsciLexerCoffeeScript_QBaseSetPaper(QsciLexerCoffeeScript* self, QColor* c, int style) {
+void QsciLexerCoffeeScript_QBaseSetPaper(QsciLexerCoffeeScript* self, const QColor* c, int style) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_SetPaper_IsBase(true);
@@ -1180,7 +1181,7 @@ void QsciLexerCoffeeScript_OnSetPaper(QsciLexerCoffeeScript* self, intptr_t slot
 }
 
 // Derived class handler implementation
-bool QsciLexerCoffeeScript_ReadProperties(QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerCoffeeScript_ReadProperties(QsciLexerCoffeeScript* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
@@ -1191,7 +1192,7 @@ bool QsciLexerCoffeeScript_ReadProperties(QsciLexerCoffeeScript* self, QSettings
 }
 
 // Base class handler implementation
-bool QsciLexerCoffeeScript_QBaseReadProperties(QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerCoffeeScript_QBaseReadProperties(QsciLexerCoffeeScript* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
@@ -1211,7 +1212,7 @@ void QsciLexerCoffeeScript_OnReadProperties(QsciLexerCoffeeScript* self, intptr_
 }
 
 // Derived class handler implementation
-bool QsciLexerCoffeeScript_WriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerCoffeeScript_WriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
@@ -1222,7 +1223,7 @@ bool QsciLexerCoffeeScript_WriteProperties(const QsciLexerCoffeeScript* self, QS
 }
 
 // Base class handler implementation
-bool QsciLexerCoffeeScript_QBaseWriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, libqt_string prefix) {
+bool QsciLexerCoffeeScript_QBaseWriteProperties(const QsciLexerCoffeeScript* self, QSettings* qs, const libqt_string prefix) {
     auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
@@ -1387,7 +1388,7 @@ void QsciLexerCoffeeScript_OnCustomEvent(QsciLexerCoffeeScript* self, intptr_t s
 }
 
 // Derived class handler implementation
-void QsciLexerCoffeeScript_ConnectNotify(QsciLexerCoffeeScript* self, QMetaMethod* signal) {
+void QsciLexerCoffeeScript_ConnectNotify(QsciLexerCoffeeScript* self, const QMetaMethod* signal) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->connectNotify(*signal);
@@ -1397,7 +1398,7 @@ void QsciLexerCoffeeScript_ConnectNotify(QsciLexerCoffeeScript* self, QMetaMetho
 }
 
 // Base class handler implementation
-void QsciLexerCoffeeScript_QBaseConnectNotify(QsciLexerCoffeeScript* self, QMetaMethod* signal) {
+void QsciLexerCoffeeScript_QBaseConnectNotify(QsciLexerCoffeeScript* self, const QMetaMethod* signal) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_ConnectNotify_IsBase(true);
@@ -1416,7 +1417,7 @@ void QsciLexerCoffeeScript_OnConnectNotify(QsciLexerCoffeeScript* self, intptr_t
 }
 
 // Derived class handler implementation
-void QsciLexerCoffeeScript_DisconnectNotify(QsciLexerCoffeeScript* self, QMetaMethod* signal) {
+void QsciLexerCoffeeScript_DisconnectNotify(QsciLexerCoffeeScript* self, const QMetaMethod* signal) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->disconnectNotify(*signal);
@@ -1426,7 +1427,7 @@ void QsciLexerCoffeeScript_DisconnectNotify(QsciLexerCoffeeScript* self, QMetaMe
 }
 
 // Base class handler implementation
-void QsciLexerCoffeeScript_QBaseDisconnectNotify(QsciLexerCoffeeScript* self, QMetaMethod* signal) {
+void QsciLexerCoffeeScript_QBaseDisconnectNotify(QsciLexerCoffeeScript* self, const QMetaMethod* signal) {
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_DisconnectNotify_IsBase(true);
@@ -1441,6 +1442,122 @@ void QsciLexerCoffeeScript_OnDisconnectNotify(QsciLexerCoffeeScript* self, intpt
     auto* vqscilexercoffeescript = dynamic_cast<VirtualQsciLexerCoffeeScript*>(self);
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_DisconnectNotify_Callback(reinterpret_cast<VirtualQsciLexerCoffeeScript::QsciLexerCoffeeScript_DisconnectNotify_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerCoffeeScript_TextAsBytes(const QsciLexerCoffeeScript* self, const libqt_string text) {
+    auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
+        QByteArray _qb = vqscilexercoffeescript->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerCoffeeScript*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerCoffeeScript_QBaseTextAsBytes(const QsciLexerCoffeeScript* self, const libqt_string text) {
+    auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
+    QString text_QString = QString::fromUtf8(text.data, text.len);
+    if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
+        vqscilexercoffeescript->setQsciLexerCoffeeScript_TextAsBytes_IsBase(true);
+        QByteArray _qb = vqscilexercoffeescript->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QByteArray _qb = ((VirtualQsciLexerCoffeeScript*)self)->textAsBytes(text_QString);
+        libqt_string _str;
+        _str.len = _qb.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _qb.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerCoffeeScript_OnTextAsBytes(const QsciLexerCoffeeScript* self, intptr_t slot) {
+    auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
+    if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
+        vqscilexercoffeescript->setQsciLexerCoffeeScript_TextAsBytes_Callback(reinterpret_cast<VirtualQsciLexerCoffeeScript::QsciLexerCoffeeScript_TextAsBytes_Callback>(slot));
+    }
+}
+
+// Derived class handler implementation
+libqt_string QsciLexerCoffeeScript_BytesAsText(const QsciLexerCoffeeScript* self, const char* bytes, int size) {
+    auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
+    if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
+        QString _ret = vqscilexercoffeescript->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerCoffeeScript*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Base class handler implementation
+libqt_string QsciLexerCoffeeScript_QBaseBytesAsText(const QsciLexerCoffeeScript* self, const char* bytes, int size) {
+    auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
+    if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
+        vqscilexercoffeescript->setQsciLexerCoffeeScript_BytesAsText_IsBase(true);
+        QString _ret = vqscilexercoffeescript->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    } else {
+        QString _ret = ((VirtualQsciLexerCoffeeScript*)self)->bytesAsText(bytes, static_cast<int>(size));
+        // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
+        QByteArray _b = _ret.toUtf8();
+        libqt_string _str;
+        _str.len = _b.length();
+        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        memcpy((void*)_str.data, _b.data(), _str.len);
+        ((char*)_str.data)[_str.len] = '\0';
+        return _str;
+    }
+}
+
+// Auxiliary method to allow providing re-implementation
+void QsciLexerCoffeeScript_OnBytesAsText(const QsciLexerCoffeeScript* self, intptr_t slot) {
+    auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
+    if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
+        vqscilexercoffeescript->setQsciLexerCoffeeScript_BytesAsText_Callback(reinterpret_cast<VirtualQsciLexerCoffeeScript::QsciLexerCoffeeScript_BytesAsText_Callback>(slot));
     }
 }
 
@@ -1532,7 +1649,7 @@ void QsciLexerCoffeeScript_OnReceivers(const QsciLexerCoffeeScript* self, intptr
 }
 
 // Derived class handler implementation
-bool QsciLexerCoffeeScript_IsSignalConnected(const QsciLexerCoffeeScript* self, QMetaMethod* signal) {
+bool QsciLexerCoffeeScript_IsSignalConnected(const QsciLexerCoffeeScript* self, const QMetaMethod* signal) {
     auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         return vqscilexercoffeescript->isSignalConnected(*signal);
@@ -1542,7 +1659,7 @@ bool QsciLexerCoffeeScript_IsSignalConnected(const QsciLexerCoffeeScript* self, 
 }
 
 // Base class handler implementation
-bool QsciLexerCoffeeScript_QBaseIsSignalConnected(const QsciLexerCoffeeScript* self, QMetaMethod* signal) {
+bool QsciLexerCoffeeScript_QBaseIsSignalConnected(const QsciLexerCoffeeScript* self, const QMetaMethod* signal) {
     auto* vqscilexercoffeescript = const_cast<VirtualQsciLexerCoffeeScript*>(dynamic_cast<const VirtualQsciLexerCoffeeScript*>(self));
     if (vqscilexercoffeescript && vqscilexercoffeescript->isVirtualQsciLexerCoffeeScript) {
         vqscilexercoffeescript->setQsciLexerCoffeeScript_IsSignalConnected_IsBase(true);

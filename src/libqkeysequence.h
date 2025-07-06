@@ -12,10 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqnamespace.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qkeysequence.html
 
 /// q_keysequence_new constructs a new QKeySequence object.

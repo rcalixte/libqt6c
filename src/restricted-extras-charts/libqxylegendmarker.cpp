@@ -299,7 +299,7 @@ void QXYLegendMarker_OnCustomEvent(QXYLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QXYLegendMarker_ConnectNotify(QXYLegendMarker* self, QMetaMethod* signal) {
+void QXYLegendMarker_ConnectNotify(QXYLegendMarker* self, const QMetaMethod* signal) {
     auto* vqxylegendmarker = dynamic_cast<VirtualQXYLegendMarker*>(self);
     if (vqxylegendmarker && vqxylegendmarker->isVirtualQXYLegendMarker) {
         vqxylegendmarker->connectNotify(*signal);
@@ -309,7 +309,7 @@ void QXYLegendMarker_ConnectNotify(QXYLegendMarker* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QXYLegendMarker_QBaseConnectNotify(QXYLegendMarker* self, QMetaMethod* signal) {
+void QXYLegendMarker_QBaseConnectNotify(QXYLegendMarker* self, const QMetaMethod* signal) {
     auto* vqxylegendmarker = dynamic_cast<VirtualQXYLegendMarker*>(self);
     if (vqxylegendmarker && vqxylegendmarker->isVirtualQXYLegendMarker) {
         vqxylegendmarker->setQXYLegendMarker_ConnectNotify_IsBase(true);
@@ -328,7 +328,7 @@ void QXYLegendMarker_OnConnectNotify(QXYLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QXYLegendMarker_DisconnectNotify(QXYLegendMarker* self, QMetaMethod* signal) {
+void QXYLegendMarker_DisconnectNotify(QXYLegendMarker* self, const QMetaMethod* signal) {
     auto* vqxylegendmarker = dynamic_cast<VirtualQXYLegendMarker*>(self);
     if (vqxylegendmarker && vqxylegendmarker->isVirtualQXYLegendMarker) {
         vqxylegendmarker->disconnectNotify(*signal);
@@ -338,7 +338,7 @@ void QXYLegendMarker_DisconnectNotify(QXYLegendMarker* self, QMetaMethod* signal
 }
 
 // Base class handler implementation
-void QXYLegendMarker_QBaseDisconnectNotify(QXYLegendMarker* self, QMetaMethod* signal) {
+void QXYLegendMarker_QBaseDisconnectNotify(QXYLegendMarker* self, const QMetaMethod* signal) {
     auto* vqxylegendmarker = dynamic_cast<VirtualQXYLegendMarker*>(self);
     if (vqxylegendmarker && vqxylegendmarker->isVirtualQXYLegendMarker) {
         vqxylegendmarker->setQXYLegendMarker_DisconnectNotify_IsBase(true);
@@ -444,7 +444,7 @@ void QXYLegendMarker_OnReceivers(const QXYLegendMarker* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QXYLegendMarker_IsSignalConnected(const QXYLegendMarker* self, QMetaMethod* signal) {
+bool QXYLegendMarker_IsSignalConnected(const QXYLegendMarker* self, const QMetaMethod* signal) {
     auto* vqxylegendmarker = const_cast<VirtualQXYLegendMarker*>(dynamic_cast<const VirtualQXYLegendMarker*>(self));
     if (vqxylegendmarker && vqxylegendmarker->isVirtualQXYLegendMarker) {
         return vqxylegendmarker->isSignalConnected(*signal);
@@ -454,7 +454,7 @@ bool QXYLegendMarker_IsSignalConnected(const QXYLegendMarker* self, QMetaMethod*
 }
 
 // Base class handler implementation
-bool QXYLegendMarker_QBaseIsSignalConnected(const QXYLegendMarker* self, QMetaMethod* signal) {
+bool QXYLegendMarker_QBaseIsSignalConnected(const QXYLegendMarker* self, const QMetaMethod* signal) {
     auto* vqxylegendmarker = const_cast<VirtualQXYLegendMarker*>(dynamic_cast<const VirtualQXYLegendMarker*>(self));
     if (vqxylegendmarker && vqxylegendmarker->isVirtualQXYLegendMarker) {
         vqxylegendmarker->setQXYLegendMarker_IsSignalConnected_IsBase(true);

@@ -42,7 +42,7 @@ void QAbstractFileIconProvider_OnIcon(const QAbstractFileIconProvider* self, int
 }
 
 // Derived class handler implementation
-QIcon* QAbstractFileIconProvider_IconWithQFileInfo(const QAbstractFileIconProvider* self, QFileInfo* param1) {
+QIcon* QAbstractFileIconProvider_IconWithQFileInfo(const QAbstractFileIconProvider* self, const QFileInfo* param1) {
     auto* vqabstractfileiconprovider = const_cast<VirtualQAbstractFileIconProvider*>(dynamic_cast<const VirtualQAbstractFileIconProvider*>(self));
     if (vqabstractfileiconprovider && vqabstractfileiconprovider->isVirtualQAbstractFileIconProvider) {
         return new QIcon(vqabstractfileiconprovider->icon(*param1));
@@ -52,7 +52,7 @@ QIcon* QAbstractFileIconProvider_IconWithQFileInfo(const QAbstractFileIconProvid
 }
 
 // Base class handler implementation
-QIcon* QAbstractFileIconProvider_QBaseIconWithQFileInfo(const QAbstractFileIconProvider* self, QFileInfo* param1) {
+QIcon* QAbstractFileIconProvider_QBaseIconWithQFileInfo(const QAbstractFileIconProvider* self, const QFileInfo* param1) {
     auto* vqabstractfileiconprovider = const_cast<VirtualQAbstractFileIconProvider*>(dynamic_cast<const VirtualQAbstractFileIconProvider*>(self));
     if (vqabstractfileiconprovider && vqabstractfileiconprovider->isVirtualQAbstractFileIconProvider) {
         vqabstractfileiconprovider->setQAbstractFileIconProvider_IconWithQFileInfo_IsBase(true);
@@ -71,7 +71,7 @@ void QAbstractFileIconProvider_OnIconWithQFileInfo(const QAbstractFileIconProvid
 }
 
 // Derived class handler implementation
-libqt_string QAbstractFileIconProvider_Type(const QAbstractFileIconProvider* self, QFileInfo* param1) {
+libqt_string QAbstractFileIconProvider_Type(const QAbstractFileIconProvider* self, const QFileInfo* param1) {
     auto* vqabstractfileiconprovider = const_cast<VirtualQAbstractFileIconProvider*>(dynamic_cast<const VirtualQAbstractFileIconProvider*>(self));
     if (vqabstractfileiconprovider && vqabstractfileiconprovider->isVirtualQAbstractFileIconProvider) {
         QString _ret = vqabstractfileiconprovider->type(*param1);
@@ -97,7 +97,7 @@ libqt_string QAbstractFileIconProvider_Type(const QAbstractFileIconProvider* sel
 }
 
 // Base class handler implementation
-libqt_string QAbstractFileIconProvider_QBaseType(const QAbstractFileIconProvider* self, QFileInfo* param1) {
+libqt_string QAbstractFileIconProvider_QBaseType(const QAbstractFileIconProvider* self, const QFileInfo* param1) {
     auto* vqabstractfileiconprovider = const_cast<VirtualQAbstractFileIconProvider*>(dynamic_cast<const VirtualQAbstractFileIconProvider*>(self));
     if (vqabstractfileiconprovider && vqabstractfileiconprovider->isVirtualQAbstractFileIconProvider) {
         vqabstractfileiconprovider->setQAbstractFileIconProvider_Type_IsBase(true);

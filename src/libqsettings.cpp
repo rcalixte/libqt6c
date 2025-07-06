@@ -15,22 +15,22 @@
 #include "libqsettings.hpp"
 #include "libqsettings.hxx"
 
-QSettings* QSettings_new(libqt_string organization) {
+QSettings* QSettings_new(const libqt_string organization) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     return new VirtualQSettings(organization_QString);
 }
 
-QSettings* QSettings_new2(int scope, libqt_string organization) {
+QSettings* QSettings_new2(int scope, const libqt_string organization) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), organization_QString);
 }
 
-QSettings* QSettings_new3(int format, int scope, libqt_string organization) {
+QSettings* QSettings_new3(int format, int scope, const libqt_string organization) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     return new VirtualQSettings(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), organization_QString);
 }
 
-QSettings* QSettings_new4(libqt_string fileName, int format) {
+QSettings* QSettings_new4(const libqt_string fileName, int format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQSettings(fileName_QString, static_cast<QSettings::Format>(format));
 }
@@ -43,43 +43,43 @@ QSettings* QSettings_new6(int scope) {
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope));
 }
 
-QSettings* QSettings_new7(libqt_string organization, libqt_string application) {
+QSettings* QSettings_new7(const libqt_string organization, const libqt_string application) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(organization_QString, application_QString);
 }
 
-QSettings* QSettings_new8(libqt_string organization, libqt_string application, QObject* parent) {
+QSettings* QSettings_new8(const libqt_string organization, const libqt_string application, QObject* parent) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(organization_QString, application_QString, parent);
 }
 
-QSettings* QSettings_new9(int scope, libqt_string organization, libqt_string application) {
+QSettings* QSettings_new9(int scope, const libqt_string organization, const libqt_string application) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), organization_QString, application_QString);
 }
 
-QSettings* QSettings_new10(int scope, libqt_string organization, libqt_string application, QObject* parent) {
+QSettings* QSettings_new10(int scope, const libqt_string organization, const libqt_string application, QObject* parent) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Scope>(scope), organization_QString, application_QString, parent);
 }
 
-QSettings* QSettings_new11(int format, int scope, libqt_string organization, libqt_string application) {
+QSettings* QSettings_new11(int format, int scope, const libqt_string organization, const libqt_string application) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), organization_QString, application_QString);
 }
 
-QSettings* QSettings_new12(int format, int scope, libqt_string organization, libqt_string application, QObject* parent) {
+QSettings* QSettings_new12(int format, int scope, const libqt_string organization, const libqt_string application, QObject* parent) {
     QString organization_QString = QString::fromUtf8(organization.data, organization.len);
     QString application_QString = QString::fromUtf8(application.data, application.len);
     return new VirtualQSettings(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), organization_QString, application_QString, parent);
 }
 
-QSettings* QSettings_new13(libqt_string fileName, int format, QObject* parent) {
+QSettings* QSettings_new13(const libqt_string fileName, int format, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQSettings(fileName_QString, static_cast<QSettings::Format>(format), parent);
 }
@@ -197,10 +197,10 @@ void QSettings_SetArrayIndex(QSettings* self, int i) {
 }
 
 libqt_list /* of libqt_string */ QSettings_AllKeys(const QSettings* self) {
-    QStringList _ret = self->allKeys();
+    QList<QString> _ret = self->allKeys();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -212,16 +212,16 @@ libqt_list /* of libqt_string */ QSettings_AllKeys(const QSettings* self) {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 libqt_list /* of libqt_string */ QSettings_ChildKeys(const QSettings* self) {
-    QStringList _ret = self->childKeys();
+    QList<QString> _ret = self->childKeys();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -233,16 +233,16 @@ libqt_list /* of libqt_string */ QSettings_ChildKeys(const QSettings* self) {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
 
 libqt_list /* of libqt_string */ QSettings_ChildGroups(const QSettings* self) {
-    QStringList _ret = self->childGroups();
+    QList<QString> _ret = self->childGroups();
     // Convert QList<> from C++ memory to manually-managed C memory
-    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.length()));
-    for (size_t i = 0; i < _ret.length(); ++i) {
+    libqt_string* _arr = static_cast<libqt_string*>(malloc(sizeof(libqt_string) * _ret.size()));
+    for (size_t i = 0; i < _ret.size(); ++i) {
         QString _lv_ret = _ret[i];
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory
         QByteArray _lv_b = _lv_ret.toUtf8();
@@ -254,7 +254,7 @@ libqt_list /* of libqt_string */ QSettings_ChildGroups(const QSettings* self) {
         _arr[i] = _lv_str;
     }
     libqt_list _out;
-    _out.len = _ret.length();
+    _out.len = _ret.size();
     _out.data.ptr = static_cast<void*>(_arr);
     return _out;
 }
@@ -263,11 +263,11 @@ bool QSettings_IsWritable(const QSettings* self) {
     return self->isWritable();
 }
 
-void QSettings_SetValue(QSettings* self, char* key, QVariant* value) {
+void QSettings_SetValue(QSettings* self, char* key, const QVariant* value) {
     self->setValue(QAnyStringView(key), *value);
 }
 
-QVariant* QSettings_Value(const QSettings* self, char* key, QVariant* defaultValue) {
+QVariant* QSettings_Value(const QSettings* self, char* key, const QVariant* defaultValue) {
     return new QVariant(self->value(QAnyStringView(key), *defaultValue));
 }
 
@@ -343,7 +343,7 @@ int QSettings_DefaultFormat() {
     return static_cast<int>(QSettings::defaultFormat());
 }
 
-void QSettings_SetPath(int format, int scope, libqt_string path) {
+void QSettings_SetPath(int format, int scope, const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QSettings::setPath(static_cast<QSettings::Format>(format), static_cast<QSettings::Scope>(scope), path_QString);
 }
@@ -522,7 +522,7 @@ void QSettings_OnCustomEvent(QSettings* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSettings_ConnectNotify(QSettings* self, QMetaMethod* signal) {
+void QSettings_ConnectNotify(QSettings* self, const QMetaMethod* signal) {
     auto* vqsettings = dynamic_cast<VirtualQSettings*>(self);
     if (vqsettings && vqsettings->isVirtualQSettings) {
         vqsettings->connectNotify(*signal);
@@ -532,7 +532,7 @@ void QSettings_ConnectNotify(QSettings* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSettings_QBaseConnectNotify(QSettings* self, QMetaMethod* signal) {
+void QSettings_QBaseConnectNotify(QSettings* self, const QMetaMethod* signal) {
     auto* vqsettings = dynamic_cast<VirtualQSettings*>(self);
     if (vqsettings && vqsettings->isVirtualQSettings) {
         vqsettings->setQSettings_ConnectNotify_IsBase(true);
@@ -551,7 +551,7 @@ void QSettings_OnConnectNotify(QSettings* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-void QSettings_DisconnectNotify(QSettings* self, QMetaMethod* signal) {
+void QSettings_DisconnectNotify(QSettings* self, const QMetaMethod* signal) {
     auto* vqsettings = dynamic_cast<VirtualQSettings*>(self);
     if (vqsettings && vqsettings->isVirtualQSettings) {
         vqsettings->disconnectNotify(*signal);
@@ -561,7 +561,7 @@ void QSettings_DisconnectNotify(QSettings* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-void QSettings_QBaseDisconnectNotify(QSettings* self, QMetaMethod* signal) {
+void QSettings_QBaseDisconnectNotify(QSettings* self, const QMetaMethod* signal) {
     auto* vqsettings = dynamic_cast<VirtualQSettings*>(self);
     if (vqsettings && vqsettings->isVirtualQSettings) {
         vqsettings->setQSettings_DisconnectNotify_IsBase(true);
@@ -667,7 +667,7 @@ void QSettings_OnReceivers(const QSettings* self, intptr_t slot) {
 }
 
 // Derived class handler implementation
-bool QSettings_IsSignalConnected(const QSettings* self, QMetaMethod* signal) {
+bool QSettings_IsSignalConnected(const QSettings* self, const QMetaMethod* signal) {
     auto* vqsettings = const_cast<VirtualQSettings*>(dynamic_cast<const VirtualQSettings*>(self));
     if (vqsettings && vqsettings->isVirtualQSettings) {
         return vqsettings->isSignalConnected(*signal);
@@ -677,7 +677,7 @@ bool QSettings_IsSignalConnected(const QSettings* self, QMetaMethod* signal) {
 }
 
 // Base class handler implementation
-bool QSettings_QBaseIsSignalConnected(const QSettings* self, QMetaMethod* signal) {
+bool QSettings_QBaseIsSignalConnected(const QSettings* self, const QMetaMethod* signal) {
     auto* vqsettings = const_cast<VirtualQSettings*>(dynamic_cast<const VirtualQSettings*>(self));
     if (vqsettings && vqsettings->isVirtualQSettings) {
         vqsettings->setQSettings_IsSignalConnected_IsBase(true);

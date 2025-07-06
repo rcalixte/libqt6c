@@ -12,11 +12,6 @@
 
 #include "qtlibc.h"
 
-#include "libqjsonarray.h"
-#include "libqjsonobject.h"
-#include <string.h>
-#include "libqvariant.h"
-
 /// https://doc.qt.io/qt-6/qjsonvalue.html
 
 /// q_jsonvalue_new constructs a new QJsonValue object.
@@ -194,16 +189,6 @@ const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key);
 /// ``` QJsonValue* self, int64_t i ```
 const QJsonValue* q_jsonvalue_operator_subscript_with_qsizetype(void* self, int64_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator==)
-///
-/// ``` QJsonValue* self, QJsonValue* other ```
-bool q_jsonvalue_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator!=)
-///
-/// ``` QJsonValue* self, QJsonValue* other ```
-bool q_jsonvalue_operator_not_equal(void* self, void* other);
-
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toBool)
 ///
 /// ``` QJsonValue* self, bool defaultValue ```
@@ -332,16 +317,6 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self);
 ///
 /// ``` QJsonValueConstRef* self, int64_t i ```
 const QJsonValue* q_jsonvalueconstref_operator_subscript_with_qsizetype(void* self, int64_t i);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator==)
-///
-/// ``` QJsonValueConstRef* self, QJsonValue* other ```
-bool q_jsonvalueconstref_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator!=)
-///
-/// ``` QJsonValueConstRef* self, QJsonValue* other ```
-bool q_jsonvalueconstref_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toBool)
 ///
@@ -496,16 +471,6 @@ QJsonObject* q_jsonvalueref_to_object(void* self);
 ///
 /// ``` QJsonValueRef* self, int64_t i ```
 const QJsonValue* q_jsonvalueref_operator_subscript_with_qsizetype(void* self, int64_t i);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator==)
-///
-/// ``` QJsonValueRef* self, QJsonValue* other ```
-bool q_jsonvalueref_operator_equal(void* self, void* other);
-
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator!=)
-///
-/// ``` QJsonValueRef* self, QJsonValue* other ```
-bool q_jsonvalueref_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toBool)
 ///
