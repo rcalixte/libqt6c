@@ -23,7 +23,7 @@ func getPageName(c string) string {
 	if pageName == "qnamespace" {
 		return "qt"
 	}
-	pageName = strings.Replace(pageName, "__", "-", -1)
+	pageName = strings.ReplaceAll(pageName, "__", "-")
 	return pageName
 }
 
@@ -69,14 +69,14 @@ func cabiEnumName(className string) string {
 	// prefixed to avoid collisions.
 	name := strings.Split(className, `::`)
 	enumName := name[len(name)-1]
-	return strings.Replace(enumName, `::`, `__`, -1)
+	return strings.ReplaceAll(enumName, `::`, `__`)
 }
 
 // cabiEnumClassName returns the C ABI enum class name for a Qt C++ class.
 // Normally this is the same, except for class types that are nested inside another class definition.
 func cabiEnumClassName(className string) string {
 	// Must use __ to avoid subclass/method name collision e.g. QPagedPaintDevice::Margins
-	return strings.Replace(className, `::`, `__`, -1)
+	return strings.ReplaceAll(className, `::`, `__`)
 }
 
 func cSafeMethodName(name string) string {
@@ -290,8 +290,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType bool, fullEnumNa
 	}
 
 	if strings.Contains(ret, `::`) {
-		ret = strings.Replace(ret, "::", "__", -1)
-		ret = strings.Replace(ret, "Qt__", "", -1)
+		ret = strings.ReplaceAll(ret, "::", "__")
+		ret = strings.ReplaceAll(ret, "Qt__", "")
 	}
 
 	return ret // ignore const
@@ -316,7 +316,7 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState) string {
 	}
 
 	if strings.Contains(ret, `::`) {
-		ret = strings.Replace(ret, "::", "__", -1)
+		ret = strings.ReplaceAll(ret, "::", "__")
 	}
 
 	maybeConst := ifv(p.Const && !strings.HasPrefix(ret, "const ") && !strings.HasPrefix(ret, "libqt"), "const ", "")
@@ -532,11 +532,17 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return rvalue + ";"
 	} else if rt.ParameterType == "void" && rt.Pointer {
 		return assignExpr + rvalue + ";"
-	} else if rt.ParameterType == "QString" || rt.ParameterType == "QAnyStringView" ||
+	} else if rt.ParameterType == "QString" ||
 		rt.ParameterType == "QStringView" || rt.ParameterType == "QByteArray" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
 		afterword += "char* " + namePrefix + "_ret = qstring_to_char(" + namePrefix + "_str);\n"
 		afterword += "libqt_string_free(&" + namePrefix + "_str);\n"
+
+		afterword += assignExpr + " " + namePrefix + "_ret;\n"
+		return shouldReturn + rvalue + ";\n" + afterword
+
+	} else if rt.ParameterType == "QAnyStringView" {
+		shouldReturn := "char* " + namePrefix + "_ret = "
 
 		afterword += assignExpr + " " + namePrefix + "_ret;\n"
 		return shouldReturn + rvalue + ";\n" + afterword
@@ -649,7 +655,7 @@ func collectInheritedMethodsForC(class string, seenMethods map[string]struct{}) 
 				// Create a copy of the method to avoid modifying the original
 				methodCopy := m
 				// Apply typedefs to ensure proper type resolution
-				applyTypedefs_Method(&methodCopy)
+				applyTypedefs_Method(&methodCopy, pkg.Class.ClassName)
 				if err := blocklist_MethodAllowed(&methodCopy); err != nil {
 					continue
 				}
@@ -686,7 +692,7 @@ func collectInheritedPrivateSignals(class string, seenSignals map[string]struct{
 				// Create a copy of the method to avoid modifying the original
 				methodCopy := m
 				// Apply typedefs to ensure proper type resolution
-				applyTypedefs_Method(&methodCopy)
+				applyTypedefs_Method(&methodCopy, pkg.Class.ClassName)
 				if err := blocklist_MethodAllowed(&methodCopy); err != nil {
 					continue
 				}
@@ -713,8 +719,8 @@ func collectInheritedPrivateSignals(class string, seenSignals map[string]struct{
 // for headers and code
 var (
 	skipRefs = map[string]struct{}{
-		"QByteArray": {}, "QList": {},
-		"QMap": {}, "QPair": {}, "QSet": {},
+		"QByteArray": {}, "QHash": {}, "QList": {},
+		"QMap": {}, "QPair": {}, "QSet": {}, "QSpan": {},
 	}
 
 	// We need to brute force these for now
@@ -731,9 +737,9 @@ var (
 		"qcaptur": {}, "qcbor": {}, "qchart": {}, "qhost": {}, "qhst": {},
 		"qhttp": {}, "qimagecapture": {}, "qlegend": {}, "qlineseries": {},
 		"qmedia": {}, "qnet": {}, "qocsp": {}, "qpdf": {}, "qpie": {},
-		"qprint": {}, "qssl": {}, "qsvg": {}, "qtcp": {}, "qudp": {},
-		"qvalueaxis": {}, "qvideo": {}, "qweb": {}, "qxymodel": {},
-		"qxyseries": {},
+		"qprint": {}, "qscreencapture": {}, "qssl": {}, "qsvg": {},
+		"qtcp": {}, "qudp": {}, "qvalueaxis": {}, "qvideo": {}, "qweb": {},
+		"qwindowcapture": {}, "qxymodel": {}, "qxyseries": {},
 	}
 
 	undoIncludeSuffixMap = map[string]struct{}{
@@ -776,18 +782,13 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	ret := strings.Builder{}
 
-	includeGuard := strings.ToUpper(strings.Replace(strings.Replace(packageName, `/`, `_`, -1), `-`, `_`, -1)) + "QT6C_LIB" + strings.ToUpper(strings.Replace(strings.Replace(headerName, `.`, `_`, -1), `-`, `_`, -1))
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "QT6C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(headerName, `.`, `_`), `-`, `_`))
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 
 	if strings.Contains(packageName, `/`) {
 		bindingInclude = "../" + bindingInclude
 		maybeDots = "../"
-	}
-
-	var extraInclude string
-	if headerName == "qsequentialiterable.h" {
-		extraInclude += "#include \"libqvariant.h\""
 	}
 
 	cfs := cFileState{
@@ -808,107 +809,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-#include "` + bindingInclude + "\"\n" + extraInclude + "\n\n")
-
-	var parentInclude string
-
-	seenRefs := map[string]struct{}{cfs.currentHeaderName: {}}
-
-	for _, ref := range getReferencedTypes(src) {
-		if strings.Contains(packageName, `/`) {
-			parentInclude = "../"
-		}
-
-		if _, ok := skipRefs[ref]; ok {
-			continue
-		}
-
-		if _, ok := seenRefs[ref]; ok {
-			continue
-		}
-		seenRefs[ref] = struct{}{}
-
-		refInc, _ := refLookup(strings.ToLower(ref))
-		if _, ok := seenRefs[refInc]; ok {
-			continue
-		}
-		seenRefs[refInc] = struct{}{}
-
-		if ref == "QString" {
-			ret.WriteString("#include <string.h>\n")
-			continue
-		}
-
-		if strings.Contains(ref, `::`) {
-			continue
-		}
-
-		if !ImportHeaderForClass(ref) {
-			continue
-		}
-
-		for prefix := range undoIncludePrefixMap {
-			if strings.HasPrefix(refInc, prefix) {
-				parentInclude = ""
-				break
-			}
-		}
-
-		for suffix := range undoIncludeSuffixMap {
-			if strings.HasSuffix(refInc, suffix) {
-				parentInclude = ""
-				break
-			}
-		}
-
-		if strings.HasPrefix(headerName, "qweb") && strings.HasPrefix(refInc, "qnet") {
-			parentInclude = "../network/"
-		}
-
-		if strings.HasPrefix(headerName, "qweb") && strings.HasPrefix(refInc, "qssl") {
-			parentInclude = "../network/"
-		}
-
-		if strings.HasPrefix(headerName, "qweb") && strings.HasPrefix(refInc, "qprinter") {
-			parentInclude = "../printsupport/"
-		}
-
-		if strings.HasPrefix(headerName, "qsciprinter") && strings.HasPrefix(refInc, "qprint") {
-			parentInclude = "../printsupport/"
-		}
-
-		if strings.HasPrefix(headerName, "qwebenginepage") && strings.HasPrefix(refInc, "qauth") {
-			parentInclude = "../network/"
-		}
-
-		if strings.HasPrefix(headerName, "qwebenginepage") && strings.HasPrefix(refInc, "qwebchannel") {
-			parentInclude = "../webchannel/"
-		}
-
-		if strings.HasPrefix(headerName, "qaudioengine") && strings.HasPrefix(refInc, "qaudiodevice") {
-			parentInclude = "../multimedia/"
-		}
-
-		ret.WriteString(`#include "` + parentInclude + `lib` + refInc + ".h\"\n")
-		if refInc == "qevent" {
-			cfs.imports["qcoreevent"] = struct{}{}
-		}
-	}
-
-	if cfs.currentHeaderName == "qstringconverter" {
-		ret.WriteString(`#include "libqstringconverter_base.h"` + "\n")
-	}
-
-	if cfs.currentHeaderName == "qevent" {
-		ret.WriteString(`#include "libqcoreevent.h"` + "\n")
-	}
-
-	ret.WriteString("\n")
+#include "` + bindingInclude + "\"\n\n")
 
 	for _, c := range src.Classes {
-		if c.ClassName == "QWebEngineCookieStore::FilterRequest" {
-			continue
-		}
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
 		nameIndex := 1
@@ -1563,9 +1466,6 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	}
 
 	for _, c := range src.Classes {
-		if c.ClassName == "QWebEngineCookieStore::FilterRequest" {
-			continue
-		}
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
 		nameIndex := 1
@@ -1969,9 +1869,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
-		cSrc = strings.Replace(cSrc, "%%_IMPORTLIBS_%%", strings.Join(allImports, "\n"), -1)
+		cSrc = strings.ReplaceAll(cSrc, "%%_IMPORTLIBS_%%", strings.Join(allImports, "\n"))
 	} else {
-		cSrc = strings.Replace(cSrc, "%%_IMPORTLIBS_%%", "", -1)
+		cSrc = strings.ReplaceAll(cSrc, "%%_IMPORTLIBS_%%", "")
 	}
 	return cSrc, nil
 }
