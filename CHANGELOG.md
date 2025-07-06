@@ -1,4 +1,8 @@
 
+### 6.8.2 rev1 (6 July 2025)
+
+* **BREAKING CHANGE:** Update to Qt 6.8 base (#13)
+
 ### 6.4.2 rev13 (3 July 2025)
 
 * **BREAKING CHANGE:** Switch enum workarounds to remove uppercasing (#12)
