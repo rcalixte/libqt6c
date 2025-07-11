@@ -10,6 +10,12 @@
 extern "C" {
 #endif
 
+#if defined(__GNUC__) || defined(__clang__)
+#define UNUSED __attribute__((unused))
+#else
+#define UNUSED
+#endif
+
 // Forward declarations
 
 struct libqt_string;
@@ -27,6 +33,7 @@ typedef struct libqt_map libqt_map;
 typedef struct libqt_pair libqt_pair;
 
 // Structs representing Qt-allocated memory
+
 // QString
 struct libqt_string {
     size_t len;
@@ -72,6 +79,9 @@ struct libqt_pair {
     void* first;
     void* second;
 };
+
+// Generic function to free Qt-allocated memory
+static inline void libqt_free(const void* ptr) { free((void*)ptr); }
 
 // Helper functions for common cases
 
