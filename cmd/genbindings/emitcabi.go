@@ -1171,7 +1171,7 @@ var (
 	}
 
 	skippedMethods = map[string]struct{}{
-		"QHostAddress_IsInSubnetWithSubnet": {}, // linker error
+		"QHostAddress_IsInSubnet2": {}, // linker error
 	}
 
 	cTypes = map[string]struct{}{
