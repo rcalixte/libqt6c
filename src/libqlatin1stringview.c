@@ -109,48 +109,48 @@ QLatin1Char* q_latin1string_back(void* self) {
     return QLatin1String_Back((QLatin1String*)self);
 }
 
-int32_t q_latin1string_compare_with_q_char(void* self, void* c) {
-    return QLatin1String_CompareWithQChar((QLatin1String*)self, (QChar*)c);
+int32_t q_latin1string_compare4(void* self, void* c) {
+    return QLatin1String_Compare4((QLatin1String*)self, (QChar*)c);
 }
 
-int32_t q_latin1string_compare3(void* self, void* c, int64_t cs) {
-    return QLatin1String_Compare3((QLatin1String*)self, (QChar*)c, cs);
+int32_t q_latin1string_compare5(void* self, void* c, int64_t cs) {
+    return QLatin1String_Compare5((QLatin1String*)self, (QChar*)c, cs);
 }
 
-bool q_latin1string_starts_with_with_q_char(void* self, void* c) {
-    return QLatin1String_StartsWithWithQChar((QLatin1String*)self, (QChar*)c);
+bool q_latin1string_starts_with3(void* self, void* c) {
+    return QLatin1String_StartsWith3((QLatin1String*)self, (QChar*)c);
 }
 
-bool q_latin1string_starts_with2(void* self, void* c, int64_t cs) {
-    return QLatin1String_StartsWith2((QLatin1String*)self, (QChar*)c, cs);
+bool q_latin1string_starts_with4(void* self, void* c, int64_t cs) {
+    return QLatin1String_StartsWith4((QLatin1String*)self, (QChar*)c, cs);
 }
 
-bool q_latin1string_ends_with_with_q_char(void* self, void* c) {
-    return QLatin1String_EndsWithWithQChar((QLatin1String*)self, (QChar*)c);
+bool q_latin1string_ends_with3(void* self, void* c) {
+    return QLatin1String_EndsWith3((QLatin1String*)self, (QChar*)c);
 }
 
-bool q_latin1string_ends_with2(void* self, void* c, int64_t cs) {
-    return QLatin1String_EndsWith2((QLatin1String*)self, (QChar*)c, cs);
+bool q_latin1string_ends_with4(void* self, void* c, int64_t cs) {
+    return QLatin1String_EndsWith4((QLatin1String*)self, (QChar*)c, cs);
 }
 
-int64_t q_latin1string_index_of_with_q_char(void* self, void* c) {
-    return QLatin1String_IndexOfWithQChar((QLatin1String*)self, (QChar*)c);
+int64_t q_latin1string_index_of3(void* self, void* c) {
+    return QLatin1String_IndexOf3((QLatin1String*)self, (QChar*)c);
 }
 
-bool q_latin1string_contains_with_q_char(void* self, void* c) {
-    return QLatin1String_ContainsWithQChar((QLatin1String*)self, (QChar*)c);
+bool q_latin1string_contains3(void* self, void* c) {
+    return QLatin1String_Contains3((QLatin1String*)self, (QChar*)c);
 }
 
-int64_t q_latin1string_last_index_of_with_q_char(void* self, void* c) {
-    return QLatin1String_LastIndexOfWithQChar((QLatin1String*)self, (QChar*)c);
+int64_t q_latin1string_last_index_of5(void* self, void* c) {
+    return QLatin1String_LastIndexOf5((QLatin1String*)self, (QChar*)c);
 }
 
-int64_t q_latin1string_last_index_of4(void* self, void* c, int64_t from) {
-    return QLatin1String_LastIndexOf4((QLatin1String*)self, (QChar*)c, from);
+int64_t q_latin1string_last_index_of6(void* self, void* c, int64_t from) {
+    return QLatin1String_LastIndexOf6((QLatin1String*)self, (QChar*)c, from);
 }
 
-int64_t q_latin1string_count_with_ch(void* self, void* ch) {
-    return QLatin1String_CountWithCh((QLatin1String*)self, (QChar*)ch);
+int64_t q_latin1string_count3(void* self, void* ch) {
+    return QLatin1String_Count3((QLatin1String*)self, (QChar*)ch);
 }
 
 short q_latin1string_to_short(void* self) {
@@ -225,16 +225,16 @@ void q_latin1string_truncate(void* self, int64_t n) {
     QLatin1String_Truncate((QLatin1String*)self, n);
 }
 
-int64_t q_latin1string_index_of23(void* self, void* c, int64_t from) {
-    return QLatin1String_IndexOf23((QLatin1String*)self, (QChar*)c, from);
+int64_t q_latin1string_index_of24(void* self, void* c, int64_t from) {
+    return QLatin1String_IndexOf24((QLatin1String*)self, (QChar*)c, from);
 }
 
-int64_t q_latin1string_index_of33(void* self, void* c, int64_t from, int64_t cs) {
-    return QLatin1String_IndexOf33((QLatin1String*)self, (QChar*)c, from, cs);
+int64_t q_latin1string_index_of34(void* self, void* c, int64_t from, int64_t cs) {
+    return QLatin1String_IndexOf34((QLatin1String*)self, (QChar*)c, from, cs);
 }
 
-bool q_latin1string_contains23(void* self, void* c, int64_t cs) {
-    return QLatin1String_Contains23((QLatin1String*)self, (QChar*)c, cs);
+bool q_latin1string_contains24(void* self, void* c, int64_t cs) {
+    return QLatin1String_Contains24((QLatin1String*)self, (QChar*)c, cs);
 }
 
 int64_t q_latin1string_last_index_of24(void* self, void* c, int64_t cs) {
@@ -245,8 +245,8 @@ int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int64_
     return QLatin1String_LastIndexOf34((QLatin1String*)self, (QChar*)c, from, cs);
 }
 
-int64_t q_latin1string_count23(void* self, void* ch, int64_t cs) {
-    return QLatin1String_Count23((QLatin1String*)self, (QChar*)ch, cs);
+int64_t q_latin1string_count24(void* self, void* ch, int64_t cs) {
+    return QLatin1String_Count24((QLatin1String*)self, (QChar*)ch, cs);
 }
 
 short q_latin1string_to_short1(void* self, bool* ok) {

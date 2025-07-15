@@ -55,8 +55,8 @@ bool q_textdocumentwriter_write(void* self, void* document) {
     return QTextDocumentWriter_Write((QTextDocumentWriter*)self, (QTextDocument*)document);
 }
 
-bool q_textdocumentwriter_write_with_fragment(void* self, void* fragment) {
-    return QTextDocumentWriter_WriteWithFragment((QTextDocumentWriter*)self, (QTextDocumentFragment*)fragment);
+bool q_textdocumentwriter_write2(void* self, void* fragment) {
+    return QTextDocumentWriter_Write2((QTextDocumentWriter*)self, (QTextDocumentFragment*)fragment);
 }
 
 const char** q_textdocumentwriter_supported_document_formats() {

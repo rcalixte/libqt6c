@@ -98,12 +98,12 @@ void q_stylepainter_set_pen(void* self, void* color) {
     QPainter_SetPen((QPainter*)self, (QColor*)color);
 }
 
-void q_stylepainter_set_pen_with_pen(void* self, void* pen) {
-    QPainter_SetPenWithPen((QPainter*)self, (QPen*)pen);
+void q_stylepainter_set_pen2(void* self, void* pen) {
+    QPainter_SetPen2((QPainter*)self, (QPen*)pen);
 }
 
-void q_stylepainter_set_pen_with_style(void* self, int64_t style) {
-    QPainter_SetPenWithStyle((QPainter*)self, style);
+void q_stylepainter_set_pen3(void* self, int64_t style) {
+    QPainter_SetPen3((QPainter*)self, style);
 }
 
 const QPen* q_stylepainter_pen(void* self) {
@@ -114,8 +114,8 @@ void q_stylepainter_set_brush(void* self, void* brush) {
     QPainter_SetBrush((QPainter*)self, (QBrush*)brush);
 }
 
-void q_stylepainter_set_brush_with_style(void* self, int64_t style) {
-    QPainter_SetBrushWithStyle((QPainter*)self, style);
+void q_stylepainter_set_brush2(void* self, int64_t style) {
+    QPainter_SetBrush2((QPainter*)self, style);
 }
 
 const QBrush* q_stylepainter_brush(void* self) {
@@ -138,12 +138,12 @@ void q_stylepainter_set_brush_origin(void* self, int x, int y) {
     QPainter_SetBrushOrigin((QPainter*)self, x, y);
 }
 
-void q_stylepainter_set_brush_origin_with_brush_origin(void* self, void* brushOrigin) {
-    QPainter_SetBrushOriginWithBrushOrigin((QPainter*)self, (QPoint*)brushOrigin);
+void q_stylepainter_set_brush_origin2(void* self, void* brushOrigin) {
+    QPainter_SetBrushOrigin2((QPainter*)self, (QPoint*)brushOrigin);
 }
 
-void q_stylepainter_set_brush_origin2(void* self, void* brushOrigin) {
-    QPainter_SetBrushOrigin2((QPainter*)self, (QPointF*)brushOrigin);
+void q_stylepainter_set_brush_origin3(void* self, void* brushOrigin) {
+    QPainter_SetBrushOrigin3((QPainter*)self, (QPointF*)brushOrigin);
 }
 
 void q_stylepainter_set_background(void* self, void* bg) {
@@ -174,12 +174,12 @@ void q_stylepainter_set_clip_rect(void* self, void* param1) {
     QPainter_SetClipRect((QPainter*)self, (QRectF*)param1);
 }
 
-void q_stylepainter_set_clip_rect_with_q_rect(void* self, void* param1) {
-    QPainter_SetClipRectWithQRect((QPainter*)self, (QRect*)param1);
+void q_stylepainter_set_clip_rect2(void* self, void* param1) {
+    QPainter_SetClipRect2((QPainter*)self, (QRect*)param1);
 }
 
-void q_stylepainter_set_clip_rect2(void* self, int x, int y, int w, int h) {
-    QPainter_SetClipRect2((QPainter*)self, x, y, w, h);
+void q_stylepainter_set_clip_rect3(void* self, int x, int y, int w, int h) {
+    QPainter_SetClipRect3((QPainter*)self, x, y, w, h);
 }
 
 void q_stylepainter_set_clip_region(void* self, void* param1) {
@@ -262,12 +262,12 @@ void q_stylepainter_translate(void* self, void* offset) {
     QPainter_Translate((QPainter*)self, (QPointF*)offset);
 }
 
-void q_stylepainter_translate_with_offset(void* self, void* offset) {
-    QPainter_TranslateWithOffset((QPainter*)self, (QPoint*)offset);
+void q_stylepainter_translate2(void* self, void* offset) {
+    QPainter_Translate2((QPainter*)self, (QPoint*)offset);
 }
 
-void q_stylepainter_translate2(void* self, double dx, double dy) {
-    QPainter_Translate2((QPainter*)self, dx, dy);
+void q_stylepainter_translate3(void* self, double dx, double dy) {
+    QPainter_Translate3((QPainter*)self, dx, dy);
 }
 
 QRect* q_stylepainter_window(void* self) {
@@ -318,72 +318,72 @@ void q_stylepainter_draw_point(void* self, void* pt) {
     QPainter_DrawPoint((QPainter*)self, (QPointF*)pt);
 }
 
-void q_stylepainter_draw_point_with_q_point(void* self, void* p) {
-    QPainter_DrawPointWithQPoint((QPainter*)self, (QPoint*)p);
+void q_stylepainter_draw_point2(void* self, void* p) {
+    QPainter_DrawPoint2((QPainter*)self, (QPoint*)p);
 }
 
-void q_stylepainter_draw_point2(void* self, int x, int y) {
-    QPainter_DrawPoint2((QPainter*)self, x, y);
+void q_stylepainter_draw_point3(void* self, int x, int y) {
+    QPainter_DrawPoint3((QPainter*)self, x, y);
 }
 
 void q_stylepainter_draw_points(void* self, void* points, int pointCount) {
     QPainter_DrawPoints((QPainter*)self, (QPointF*)points, pointCount);
 }
 
-void q_stylepainter_draw_points2(void* self, void* points, int pointCount) {
-    QPainter_DrawPoints2((QPainter*)self, (QPoint*)points, pointCount);
+void q_stylepainter_draw_points3(void* self, void* points, int pointCount) {
+    QPainter_DrawPoints3((QPainter*)self, (QPoint*)points, pointCount);
 }
 
 void q_stylepainter_draw_line(void* self, void* line) {
     QPainter_DrawLine((QPainter*)self, (QLineF*)line);
 }
 
-void q_stylepainter_draw_line_with_line(void* self, void* line) {
-    QPainter_DrawLineWithLine((QPainter*)self, (QLine*)line);
+void q_stylepainter_draw_line2(void* self, void* line) {
+    QPainter_DrawLine2((QPainter*)self, (QLine*)line);
 }
 
-void q_stylepainter_draw_line2(void* self, int x1, int y1, int x2, int y2) {
-    QPainter_DrawLine2((QPainter*)self, x1, y1, x2, y2);
-}
-
-void q_stylepainter_draw_line3(void* self, void* p1, void* p2) {
-    QPainter_DrawLine3((QPainter*)self, (QPoint*)p1, (QPoint*)p2);
+void q_stylepainter_draw_line3(void* self, int x1, int y1, int x2, int y2) {
+    QPainter_DrawLine3((QPainter*)self, x1, y1, x2, y2);
 }
 
 void q_stylepainter_draw_line4(void* self, void* p1, void* p2) {
-    QPainter_DrawLine4((QPainter*)self, (QPointF*)p1, (QPointF*)p2);
+    QPainter_DrawLine4((QPainter*)self, (QPoint*)p1, (QPoint*)p2);
+}
+
+void q_stylepainter_draw_line5(void* self, void* p1, void* p2) {
+    QPainter_DrawLine5((QPainter*)self, (QPointF*)p1, (QPointF*)p2);
 }
 
 void q_stylepainter_draw_lines(void* self, void* lines, int lineCount) {
     QPainter_DrawLines((QPainter*)self, (QLineF*)lines, lineCount);
 }
 
-void q_stylepainter_draw_lines_with_lines(void* self, libqt_list lines) {
-    QPainter_DrawLinesWithLines((QPainter*)self, lines);
+void q_stylepainter_draw_lines2(void* self, libqt_list lines) {
+    QPainter_DrawLines2((QPainter*)self, lines);
 }
 
-void q_stylepainter_draw_lines2(void* self, void* pointPairs, int lineCount) {
-    QPainter_DrawLines2((QPainter*)self, (QPointF*)pointPairs, lineCount);
+void q_stylepainter_draw_lines3(void* self, void* pointPairs, int lineCount) {
+    QPainter_DrawLines3((QPainter*)self, (QPointF*)pointPairs, lineCount);
 }
 
-void q_stylepainter_draw_lines_with_point_pairs(void* self, libqt_list pointPairs) {
-    QPainter_DrawLinesWithPointPairs((QPainter*)self, pointPairs);
+void q_stylepainter_draw_lines4(void* self, libqt_list pointPairs) {
+    QPainter_DrawLines4((QPainter*)self, pointPairs);
 }
 
-void q_stylepainter_draw_lines3(void* self, void* lines, int lineCount) {
-    QPainter_DrawLines3((QPainter*)self, (QLine*)lines, lineCount);
+void q_stylepainter_draw_lines5(void* self, void* lines, int lineCount) {
+    QPainter_DrawLines5((QPainter*)self, (QLine*)lines, lineCount);
 }
 
-void q_stylepainter_draw_lines4(void* self, libqt_list lines) {
-    QPainter_DrawLines4((QPainter*)self, lines);
+void q_stylepainter_draw_lines6(void* self, libqt_list lines) {
+    QPainter_DrawLines6((QPainter*)self, lines);
 }
 
-void q_stylepainter_draw_lines5(void* self, void* pointPairs, int lineCount) {
-    QPainter_DrawLines5((QPainter*)self, (QPoint*)pointPairs, lineCount);
+void q_stylepainter_draw_lines7(void* self, void* pointPairs, int lineCount) {
+    QPainter_DrawLines7((QPainter*)self, (QPoint*)pointPairs, lineCount);
 }
 
-void q_stylepainter_draw_lines6(void* self, libqt_list pointPairs) {
-    QPainter_DrawLines6((QPainter*)self, pointPairs);
+void q_stylepainter_draw_lines8(void* self, libqt_list pointPairs) {
+    QPainter_DrawLines8((QPainter*)self, pointPairs);
 }
 
 void q_stylepainter_draw_rect(void* self, void* rect) {
@@ -394,68 +394,68 @@ void q_stylepainter_draw_rect2(void* self, int x1, int y1, int w, int h) {
     QPainter_DrawRect2((QPainter*)self, x1, y1, w, h);
 }
 
-void q_stylepainter_draw_rect_with_rect(void* self, void* rect) {
-    QPainter_DrawRectWithRect((QPainter*)self, (QRect*)rect);
+void q_stylepainter_draw_rect3(void* self, void* rect) {
+    QPainter_DrawRect3((QPainter*)self, (QRect*)rect);
 }
 
 void q_stylepainter_draw_rects(void* self, void* rects, int rectCount) {
     QPainter_DrawRects((QPainter*)self, (QRectF*)rects, rectCount);
 }
 
-void q_stylepainter_draw_rects_with_rectangles(void* self, libqt_list rectangles) {
-    QPainter_DrawRectsWithRectangles((QPainter*)self, rectangles);
+void q_stylepainter_draw_rects2(void* self, libqt_list rectangles) {
+    QPainter_DrawRects2((QPainter*)self, rectangles);
 }
 
-void q_stylepainter_draw_rects2(void* self, void* rects, int rectCount) {
-    QPainter_DrawRects2((QPainter*)self, (QRect*)rects, rectCount);
+void q_stylepainter_draw_rects3(void* self, void* rects, int rectCount) {
+    QPainter_DrawRects3((QPainter*)self, (QRect*)rects, rectCount);
 }
 
-void q_stylepainter_draw_rects3(void* self, libqt_list rectangles) {
-    QPainter_DrawRects3((QPainter*)self, rectangles);
+void q_stylepainter_draw_rects4(void* self, libqt_list rectangles) {
+    QPainter_DrawRects4((QPainter*)self, rectangles);
 }
 
 void q_stylepainter_draw_ellipse(void* self, void* r) {
     QPainter_DrawEllipse((QPainter*)self, (QRectF*)r);
 }
 
-void q_stylepainter_draw_ellipse_with_q_rect(void* self, void* r) {
-    QPainter_DrawEllipseWithQRect((QPainter*)self, (QRect*)r);
+void q_stylepainter_draw_ellipse2(void* self, void* r) {
+    QPainter_DrawEllipse2((QPainter*)self, (QRect*)r);
 }
 
-void q_stylepainter_draw_ellipse2(void* self, int x, int y, int w, int h) {
-    QPainter_DrawEllipse2((QPainter*)self, x, y, w, h);
+void q_stylepainter_draw_ellipse3(void* self, int x, int y, int w, int h) {
+    QPainter_DrawEllipse3((QPainter*)self, x, y, w, h);
 }
 
-void q_stylepainter_draw_ellipse3(void* self, void* center, double rx, double ry) {
-    QPainter_DrawEllipse3((QPainter*)self, (QPointF*)center, rx, ry);
+void q_stylepainter_draw_ellipse4(void* self, void* center, double rx, double ry) {
+    QPainter_DrawEllipse4((QPainter*)self, (QPointF*)center, rx, ry);
 }
 
-void q_stylepainter_draw_ellipse4(void* self, void* center, int rx, int ry) {
-    QPainter_DrawEllipse4((QPainter*)self, (QPoint*)center, rx, ry);
+void q_stylepainter_draw_ellipse5(void* self, void* center, int rx, int ry) {
+    QPainter_DrawEllipse5((QPainter*)self, (QPoint*)center, rx, ry);
 }
 
 void q_stylepainter_draw_polyline(void* self, void* points, int pointCount) {
     QPainter_DrawPolyline((QPainter*)self, (QPointF*)points, pointCount);
 }
 
-void q_stylepainter_draw_polyline2(void* self, void* points, int pointCount) {
-    QPainter_DrawPolyline2((QPainter*)self, (QPoint*)points, pointCount);
+void q_stylepainter_draw_polyline3(void* self, void* points, int pointCount) {
+    QPainter_DrawPolyline3((QPainter*)self, (QPoint*)points, pointCount);
 }
 
 void q_stylepainter_draw_polygon(void* self, void* points, int pointCount) {
     QPainter_DrawPolygon((QPainter*)self, (QPointF*)points, pointCount);
 }
 
-void q_stylepainter_draw_polygon2(void* self, void* points, int pointCount) {
-    QPainter_DrawPolygon2((QPainter*)self, (QPoint*)points, pointCount);
+void q_stylepainter_draw_polygon3(void* self, void* points, int pointCount) {
+    QPainter_DrawPolygon3((QPainter*)self, (QPoint*)points, pointCount);
 }
 
 void q_stylepainter_draw_convex_polygon(void* self, void* points, int pointCount) {
     QPainter_DrawConvexPolygon((QPainter*)self, (QPointF*)points, pointCount);
 }
 
-void q_stylepainter_draw_convex_polygon2(void* self, void* points, int pointCount) {
-    QPainter_DrawConvexPolygon2((QPainter*)self, (QPoint*)points, pointCount);
+void q_stylepainter_draw_convex_polygon3(void* self, void* points, int pointCount) {
+    QPainter_DrawConvexPolygon3((QPainter*)self, (QPoint*)points, pointCount);
 }
 
 void q_stylepainter_draw_arc(void* self, void* rect, int a, int alen) {
@@ -766,8 +766,8 @@ void q_stylepainter_erase_rect2(void* self, int x, int y, int w, int h) {
     QPainter_EraseRect2((QPainter*)self, x, y, w, h);
 }
 
-void q_stylepainter_erase_rect_with_q_rect(void* self, void* param1) {
-    QPainter_EraseRectWithQRect((QPainter*)self, (QRect*)param1);
+void q_stylepainter_erase_rect3(void* self, void* param1) {
+    QPainter_EraseRect3((QPainter*)self, (QRect*)param1);
 }
 
 void q_stylepainter_set_render_hint(void* self, int64_t hint) {

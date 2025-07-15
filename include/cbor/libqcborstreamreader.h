@@ -187,7 +187,7 @@ bool q_cborstreamreader_is_invalid(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#isSimpleType)
 ///
 /// ``` QCborStreamReader* self, enum QCborStreamReader__QCborSimpleType st ```
-bool q_cborstreamreader_is_simple_type_with_st(void* self, int64_t st);
+bool q_cborstreamreader_is_simple_type2(void* self, int64_t st);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#isFalse)
 ///

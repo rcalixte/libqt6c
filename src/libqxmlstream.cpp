@@ -554,7 +554,7 @@ void QXmlStreamWriter_WriteAttribute2(QXmlStreamWriter* self, char* namespaceUri
     self->writeAttribute(QAnyStringView(namespaceUri), QAnyStringView(name), QAnyStringView(value));
 }
 
-void QXmlStreamWriter_WriteAttributeWithAttribute(QXmlStreamWriter* self, const QXmlStreamAttribute* attribute) {
+void QXmlStreamWriter_WriteAttribute3(QXmlStreamWriter* self, const QXmlStreamAttribute* attribute) {
     self->writeAttribute(*attribute);
 }
 
@@ -622,11 +622,11 @@ void QXmlStreamWriter_WriteStartDocument(QXmlStreamWriter* self) {
     self->writeStartDocument();
 }
 
-void QXmlStreamWriter_WriteStartDocumentWithVersion(QXmlStreamWriter* self, char* version) {
+void QXmlStreamWriter_WriteStartDocument2(QXmlStreamWriter* self, char* version) {
     self->writeStartDocument(QAnyStringView(version));
 }
 
-void QXmlStreamWriter_WriteStartDocument2(QXmlStreamWriter* self, char* version, bool standalone) {
+void QXmlStreamWriter_WriteStartDocument3(QXmlStreamWriter* self, char* version, bool standalone) {
     self->writeStartDocument(QAnyStringView(version), standalone);
 }
 

@@ -57,7 +57,7 @@ int64_t q_bitarray_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
 /// ``` QBitArray* self, bool on ```
-int64_t q_bitarray_count_with_on(void* self, bool on);
+int64_t q_bitarray_count2(void* self, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#isEmpty)
 ///
@@ -127,7 +127,7 @@ QBitRef* q_bitarray_operator_subscript(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator[])
 ///
 /// ``` QBitArray* self, int64_t i ```
-bool q_bitarray_operator_subscript_with_qsizetype(void* self, int64_t i);
+bool q_bitarray_operator_subscript2(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator&=)
 ///
@@ -221,7 +221,7 @@ void q_bitref_operator_assign(void* self, void* val);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator=)
 ///
 /// ``` QBitRef* self, bool val ```
-void q_bitref_operator_assign_with_val(void* self, bool val);
+void q_bitref_operator_assign2(void* self, bool val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#dtor.QBitRef)
 ///

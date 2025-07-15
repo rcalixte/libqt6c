@@ -108,7 +108,7 @@ void q_svgrenderer_set_view_box(void* self, void* viewbox);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#setViewBox)
 ///
 /// ``` QSvgRenderer* self, QRectF* viewbox ```
-void q_svgrenderer_set_view_box_with_viewbox(void* self, void* viewbox);
+void q_svgrenderer_set_view_box2(void* self, void* viewbox);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#aspectRatioMode)
 ///
@@ -198,12 +198,12 @@ bool q_svgrenderer_load(void* self, const char* filename);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#load)
 ///
 /// ``` QSvgRenderer* self, const char* contents ```
-bool q_svgrenderer_load_with_contents(void* self, const char* contents);
+bool q_svgrenderer_load2(void* self, const char* contents);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#load)
 ///
 /// ``` QSvgRenderer* self, QXmlStreamReader* contents ```
-bool q_svgrenderer_load2(void* self, void* contents);
+bool q_svgrenderer_load3(void* self, void* contents);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvgrenderer.html#render)
 ///
@@ -327,7 +327,7 @@ void q_svgrenderer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSvgRenderer* self, enum Qt__TimerId id ```
-void q_svgrenderer_kill_timer_with_id(void* self, int64_t id);
+void q_svgrenderer_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -383,7 +383,7 @@ bool q_svgrenderer_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_svgrenderer_disconnect_with_q_meta_object_connection(void* param1);
+bool q_svgrenderer_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -481,7 +481,7 @@ bool q_svgrenderer_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSvgRenderer* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_svgrenderer_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_svgrenderer_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

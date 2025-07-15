@@ -129,14 +129,14 @@ void q_rasterwindow_update(void* self, void* rect);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// ``` QRasterWindow* self, QRegion* region ```
-void q_rasterwindow_update_with_region(void* self, void* region);
+void q_rasterwindow_update2(void* self, void* region);
 
 /// Inherited from QPaintDeviceWindow
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#update)
 ///
 /// ``` QRasterWindow* self ```
-void q_rasterwindow_update2(void* self);
+void q_rasterwindow_update3(void* self);
 
 /// Inherited from QWindow
 ///
@@ -647,14 +647,14 @@ QPointF* q_rasterwindow_map_from_global(void* self, void* pos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mapToGlobal)
 ///
 /// ``` QRasterWindow* self, QPoint* pos ```
-QPoint* q_rasterwindow_map_to_global_with_pos(void* self, void* pos);
+QPoint* q_rasterwindow_map_to_global2(void* self, void* pos);
 
 /// Inherited from QWindow
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#mapFromGlobal)
 ///
 /// ``` QRasterWindow* self, QPoint* pos ```
-QPoint* q_rasterwindow_map_from_global_with_pos(void* self, void* pos);
+QPoint* q_rasterwindow_map_from_global2(void* self, void* pos);
 
 /// Inherited from QWindow
 ///
@@ -822,7 +822,7 @@ void q_rasterwindow_set_geometry(void* self, int posx, int posy, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setGeometry)
 ///
 /// ``` QRasterWindow* self, QRect* rect ```
-void q_rasterwindow_set_geometry_with_rect(void* self, void* rect);
+void q_rasterwindow_set_geometry2(void* self, void* rect);
 
 /// Inherited from QWindow
 ///
@@ -1235,7 +1235,7 @@ void q_rasterwindow_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QRasterWindow* self, enum Qt__TimerId id ```
-void q_rasterwindow_kill_timer_with_id(void* self, int64_t id);
+void q_rasterwindow_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1284,7 +1284,7 @@ bool q_rasterwindow_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_rasterwindow_disconnect_with_q_meta_object_connection(void* param1);
+bool q_rasterwindow_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1375,7 +1375,7 @@ bool q_rasterwindow_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QRasterWindow* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_rasterwindow_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_rasterwindow_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

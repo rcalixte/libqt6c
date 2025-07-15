@@ -184,12 +184,12 @@ void q_scatterseries_append(void* self, double x, double y) {
     QXYSeries_Append((QXYSeries*)self, x, y);
 }
 
-void q_scatterseries_append_with_point(void* self, void* point) {
-    QXYSeries_AppendWithPoint((QXYSeries*)self, (QPointF*)point);
+void q_scatterseries_append2(void* self, void* point) {
+    QXYSeries_Append2((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_scatterseries_append_with_points(void* self, libqt_list points) {
-    QXYSeries_AppendWithPoints((QXYSeries*)self, points);
+void q_scatterseries_append3(void* self, libqt_list points) {
+    QXYSeries_Append3((QXYSeries*)self, points);
 }
 
 void q_scatterseries_replace(void* self, double oldX, double oldY, double newX, double newY) {
@@ -212,12 +212,12 @@ void q_scatterseries_remove(void* self, double x, double y) {
     QXYSeries_Remove((QXYSeries*)self, x, y);
 }
 
-void q_scatterseries_remove_with_point(void* self, void* point) {
-    QXYSeries_RemoveWithPoint((QXYSeries*)self, (QPointF*)point);
+void q_scatterseries_remove2(void* self, void* point) {
+    QXYSeries_Remove2((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_scatterseries_remove_with_index(void* self, int index) {
-    QXYSeries_RemoveWithIndex((QXYSeries*)self, index);
+void q_scatterseries_remove3(void* self, int index) {
+    QXYSeries_Remove3((QXYSeries*)self, index);
 }
 
 void q_scatterseries_remove_points(void* self, int index, int count) {
@@ -254,8 +254,8 @@ QXYSeries* q_scatterseries_operator_shift_left(void* self, void* point) {
     return QXYSeries_OperatorShiftLeft((QXYSeries*)self, (QPointF*)point);
 }
 
-QXYSeries* q_scatterseries_operator_shift_left_with_points(void* self, libqt_list points) {
-    return QXYSeries_OperatorShiftLeftWithPoints((QXYSeries*)self, points);
+QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list points) {
+    return QXYSeries_OperatorShiftLeft2((QXYSeries*)self, points);
 }
 
 QPen* q_scatterseries_pen(void* self) {
@@ -321,8 +321,8 @@ bool q_scatterseries_point_labels_clipping(void* self) {
     return QXYSeries_PointLabelsClipping((QXYSeries*)self);
 }
 
-void q_scatterseries_replace_with_points(void* self, libqt_list points) {
-    QXYSeries_ReplaceWithPoints((QXYSeries*)self, points);
+void q_scatterseries_replace5(void* self, libqt_list points) {
+    QXYSeries_Replace5((QXYSeries*)self, points);
 }
 
 bool q_scatterseries_is_point_selected(void* self, int index) {
@@ -422,8 +422,8 @@ void q_scatterseries_clear_points_configuration(void* self) {
     QXYSeries_ClearPointsConfiguration((QXYSeries*)self);
 }
 
-void q_scatterseries_clear_points_configuration_with_key(void* self, int64_t key) {
-    QXYSeries_ClearPointsConfigurationWithKey((QXYSeries*)self, key);
+void q_scatterseries_clear_points_configuration2(void* self, int64_t key) {
+    QXYSeries_ClearPointsConfiguration2((QXYSeries*)self, key);
 }
 
 void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration) {
@@ -813,8 +813,8 @@ void q_scatterseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scatterseries_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scatterseries_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scatterseries_children(void* self) {
@@ -846,8 +846,8 @@ bool q_scatterseries_disconnect(void* sender, void* signal, void* receiver, void
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scatterseries_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scatterseries_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scatterseries_dump_object_tree(void* self) {
@@ -913,8 +913,8 @@ bool q_scatterseries_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scatterseries_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scatterseries_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scatterseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

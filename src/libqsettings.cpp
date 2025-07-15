@@ -271,7 +271,7 @@ QVariant* QSettings_Value(const QSettings* self, char* key, const QVariant* defa
     return new QVariant(self->value(QAnyStringView(key), *defaultValue));
 }
 
-QVariant* QSettings_ValueWithKey(const QSettings* self, char* key) {
+QVariant* QSettings_Value2(const QSettings* self, char* key) {
     return new QVariant(self->value(QAnyStringView(key)));
 }
 

@@ -92,7 +92,7 @@ QJsonValue* q_jsonobject_operator_subscript(void* self, const char* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject.html#operator[])
 ///
 /// ``` QJsonObject* self, const char* key ```
-QJsonValueRef* q_jsonobject_operator_subscript_with_key(void* self, const char* key);
+QJsonValueRef* q_jsonobject_operator_subscript2(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject.html#remove)
 ///

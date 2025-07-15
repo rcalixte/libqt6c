@@ -108,8 +108,8 @@ QDate* q_calendar_date_from_parts(void* self, int year, int month, int day) {
     return QCalendar_DateFromParts((QCalendar*)self, year, month, day);
 }
 
-QDate* q_calendar_date_from_parts_with_parts(void* self, void* parts) {
-    return QCalendar_DateFromPartsWithParts((QCalendar*)self, (QCalendar__YearMonthDay*)parts);
+QDate* q_calendar_date_from_parts2(void* self, void* parts) {
+    return QCalendar_DateFromParts2((QCalendar*)self, (QCalendar__YearMonthDay*)parts);
 }
 
 QDate* q_calendar_match_century_to_weekday(void* self, void* parts, int dow) {

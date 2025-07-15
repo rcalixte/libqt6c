@@ -95,7 +95,7 @@ bool q_picture_load(void* self, void* dev);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#load)
 ///
 /// ``` QPicture* self, const char* fileName ```
-bool q_picture_load_with_file_name(void* self, const char* fileName);
+bool q_picture_load2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#save)
 ///
@@ -105,7 +105,7 @@ bool q_picture_save(void* self, void* dev);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#save)
 ///
 /// ``` QPicture* self, const char* fileName ```
-bool q_picture_save_with_file_name(void* self, const char* fileName);
+bool q_picture_save2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#boundingRect)
 ///

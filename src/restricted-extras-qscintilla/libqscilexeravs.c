@@ -289,8 +289,8 @@ void q_scilexeravs_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexeravs_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexeravs_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexeravs_children(void* self) {
@@ -322,8 +322,8 @@ bool q_scilexeravs_disconnect(void* sender, void* signal, void* receiver, void* 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexeravs_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexeravs_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexeravs_dump_object_tree(void* self) {
@@ -389,8 +389,8 @@ bool q_scilexeravs_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexeravs_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexeravs_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexeravs_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -599,16 +599,16 @@ void q_scilexeravs_on_paper(void* self, QColor* (*slot)(void*, int)) {
     QsciLexerAVS_OnPaper((QsciLexerAVS*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexeravs_default_color_with_style(void* self, int style) {
-    return QsciLexerAVS_DefaultColorWithStyle((QsciLexerAVS*)self, style);
+QColor* q_scilexeravs_default_color2(void* self, int style) {
+    return QsciLexerAVS_DefaultColor2((QsciLexerAVS*)self, style);
 }
 
-QColor* q_scilexeravs_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexerAVS_QBaseDefaultColorWithStyle((QsciLexerAVS*)self, style);
+QColor* q_scilexeravs_qbase_default_color2(void* self, int style) {
+    return QsciLexerAVS_QBaseDefaultColor2((QsciLexerAVS*)self, style);
 }
 
-void q_scilexeravs_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerAVS_OnDefaultColorWithStyle((QsciLexerAVS*)self, (intptr_t)slot);
+void q_scilexeravs_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerAVS_OnDefaultColor2((QsciLexerAVS*)self, (intptr_t)slot);
 }
 
 bool q_scilexeravs_default_eol_fill(void* self, int style) {
@@ -623,28 +623,28 @@ void q_scilexeravs_on_default_eol_fill(void* self, bool (*slot)(void*, int)) {
     QsciLexerAVS_OnDefaultEolFill((QsciLexerAVS*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexeravs_default_font_with_style(void* self, int style) {
-    return QsciLexerAVS_DefaultFontWithStyle((QsciLexerAVS*)self, style);
+QFont* q_scilexeravs_default_font2(void* self, int style) {
+    return QsciLexerAVS_DefaultFont2((QsciLexerAVS*)self, style);
 }
 
-QFont* q_scilexeravs_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexerAVS_QBaseDefaultFontWithStyle((QsciLexerAVS*)self, style);
+QFont* q_scilexeravs_qbase_default_font2(void* self, int style) {
+    return QsciLexerAVS_QBaseDefaultFont2((QsciLexerAVS*)self, style);
 }
 
-void q_scilexeravs_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerAVS_OnDefaultFontWithStyle((QsciLexerAVS*)self, (intptr_t)slot);
+void q_scilexeravs_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexerAVS_OnDefaultFont2((QsciLexerAVS*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexeravs_default_paper_with_style(void* self, int style) {
-    return QsciLexerAVS_DefaultPaperWithStyle((QsciLexerAVS*)self, style);
+QColor* q_scilexeravs_default_paper2(void* self, int style) {
+    return QsciLexerAVS_DefaultPaper2((QsciLexerAVS*)self, style);
 }
 
-QColor* q_scilexeravs_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexerAVS_QBaseDefaultPaperWithStyle((QsciLexerAVS*)self, style);
+QColor* q_scilexeravs_qbase_default_paper2(void* self, int style) {
+    return QsciLexerAVS_QBaseDefaultPaper2((QsciLexerAVS*)self, style);
 }
 
-void q_scilexeravs_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerAVS_OnDefaultPaperWithStyle((QsciLexerAVS*)self, (intptr_t)slot);
+void q_scilexeravs_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerAVS_OnDefaultPaper2((QsciLexerAVS*)self, (intptr_t)slot);
 }
 
 void q_scilexeravs_set_editor(void* self, void* editor) {

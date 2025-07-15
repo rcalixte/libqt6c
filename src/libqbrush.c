@@ -107,8 +107,8 @@ void q_brush_set_color(void* self, void* color) {
     QBrush_SetColor((QBrush*)self, (QColor*)color);
 }
 
-void q_brush_set_color_with_color(void* self, int64_t color) {
-    QBrush_SetColorWithColor((QBrush*)self, color);
+void q_brush_set_color2(void* self, int64_t color) {
+    QBrush_SetColor2((QBrush*)self, color);
 }
 
 const QGradient* q_brush_gradient(void* self) {

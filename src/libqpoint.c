@@ -69,12 +69,12 @@ QPoint* q_point_operator_multiply_assign(void* self, float factor) {
     return QPoint_OperatorMultiplyAssign((QPoint*)self, factor);
 }
 
-QPoint* q_point_operator_multiply_assign_with_factor(void* self, double factor) {
-    return QPoint_OperatorMultiplyAssignWithFactor((QPoint*)self, factor);
+QPoint* q_point_operator_multiply_assign2(void* self, double factor) {
+    return QPoint_OperatorMultiplyAssign2((QPoint*)self, factor);
 }
 
-QPoint* q_point_operator_multiply_assign2(void* self, int factor) {
-    return QPoint_OperatorMultiplyAssign2((QPoint*)self, factor);
+QPoint* q_point_operator_multiply_assign3(void* self, int factor) {
+    return QPoint_OperatorMultiplyAssign3((QPoint*)self, factor);
 }
 
 QPoint* q_point_operator_divide_assign(void* self, double divisor) {

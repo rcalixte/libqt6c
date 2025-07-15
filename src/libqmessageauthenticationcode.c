@@ -30,13 +30,13 @@ void q_messageauthenticationcode_add_data(void* self, const char* data, int64_t 
     QMessageAuthenticationCode_AddData((QMessageAuthenticationCode*)self, data, length);
 }
 
-void q_messageauthenticationcode_add_data_with_data(void* self, const char* data) {
+void q_messageauthenticationcode_add_data2(void* self, const char* data) {
     libqt_strview data_strview = qstrview(data);
-    QMessageAuthenticationCode_AddDataWithData((QMessageAuthenticationCode*)self, (QByteArrayView*)&data_strview);
+    QMessageAuthenticationCode_AddData2((QMessageAuthenticationCode*)self, (QByteArrayView*)&data_strview);
 }
 
-bool q_messageauthenticationcode_add_data_with_device(void* self, void* device) {
-    return QMessageAuthenticationCode_AddDataWithDevice((QMessageAuthenticationCode*)self, (QIODevice*)device);
+bool q_messageauthenticationcode_add_data3(void* self, void* device) {
+    return QMessageAuthenticationCode_AddData3((QMessageAuthenticationCode*)self, (QIODevice*)device);
 }
 
 const char* q_messageauthenticationcode_result_view(void* self) {

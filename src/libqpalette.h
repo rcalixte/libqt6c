@@ -122,12 +122,12 @@ bool q_palette_is_equal(void* self, int64_t cr1, int64_t cr2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// ``` QPalette* self, enum QPalette__ColorRole cr ```
-const QColor* q_palette_color_with_cr(void* self, int64_t cr);
+const QColor* q_palette_color2(void* self, int64_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// ``` QPalette* self, enum QPalette__ColorRole cr ```
-const QBrush* q_palette_brush_with_cr(void* self, int64_t cr);
+const QBrush* q_palette_brush2(void* self, int64_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#windowText)
 ///

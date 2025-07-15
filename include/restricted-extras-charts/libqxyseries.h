@@ -38,12 +38,12 @@ void q_xyseries_append(void* self, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#append)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
-void q_xyseries_append_with_point(void* self, void* point);
+void q_xyseries_append2(void* self, void* point);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#append)
 ///
 /// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
-void q_xyseries_append_with_points(void* self, libqt_list points);
+void q_xyseries_append3(void* self, libqt_list points);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
@@ -73,12 +73,12 @@ void q_xyseries_remove(void* self, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
-void q_xyseries_remove_with_point(void* self, void* point);
+void q_xyseries_remove2(void* self, void* point);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#remove)
 ///
 /// ``` QXYSeries* self, int index ```
-void q_xyseries_remove_with_index(void* self, int index);
+void q_xyseries_remove3(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#removePoints)
 ///
@@ -123,7 +123,7 @@ QXYSeries* q_xyseries_operator_shift_left(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator<<)
 ///
 /// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
-QXYSeries* q_xyseries_operator_shift_left_with_points(void* self, libqt_list points);
+QXYSeries* q_xyseries_operator_shift_left2(void* self, libqt_list points);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPen)
 ///
@@ -228,7 +228,7 @@ bool q_xyseries_point_labels_clipping(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#replace)
 ///
 /// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
-void q_xyseries_replace_with_points(void* self, libqt_list points);
+void q_xyseries_replace5(void* self, libqt_list points);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#isPointSelected)
 ///
@@ -363,7 +363,7 @@ void q_xyseries_clear_points_configuration(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointsConfiguration)
 ///
 /// ``` QXYSeries* self, enum QXYSeries__PointConfiguration key ```
-void q_xyseries_clear_points_configuration_with_key(void* self, int64_t key);
+void q_xyseries_clear_points_configuration2(void* self, int64_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointConfiguration)
 ///
@@ -966,7 +966,7 @@ void q_xyseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QXYSeries* self, enum Qt__TimerId id ```
-void q_xyseries_kill_timer_with_id(void* self, int64_t id);
+void q_xyseries_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1022,7 +1022,7 @@ bool q_xyseries_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_xyseries_disconnect_with_q_meta_object_connection(void* param1);
+bool q_xyseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1120,7 +1120,7 @@ bool q_xyseries_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QXYSeries* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_xyseries_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_xyseries_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

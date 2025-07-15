@@ -271,7 +271,7 @@ bool q_cborvalue_is_simple_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#isSimpleType)
 ///
 /// ``` QCborValue* self, enum QCborValue__QCborSimpleType st ```
-bool q_cborvalue_is_simple_type_with_st(void* self, int64_t st);
+bool q_cborvalue_is_simple_type2(void* self, int64_t st);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toSimpleType)
 ///
@@ -341,7 +341,7 @@ QCborArray* q_cborvalue_to_array(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toArray)
 ///
 /// ``` QCborValue* self, QCborArray* defaultValue ```
-QCborArray* q_cborvalue_to_array_with_default_value(void* self, void* defaultValue);
+QCborArray* q_cborvalue_to_array2(void* self, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toMap)
 ///
@@ -351,7 +351,7 @@ QCborMap* q_cborvalue_to_map(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toMap)
 ///
 /// ``` QCborValue* self, QCborMap* defaultValue ```
-QCborMap* q_cborvalue_to_map_with_default_value(void* self, void* defaultValue);
+QCborMap* q_cborvalue_to_map2(void* self, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
@@ -361,17 +361,17 @@ const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
 /// ``` QCborValue* self, long long key ```
-const QCborValue* q_cborvalue_operator_subscript2(void* self, long long key);
+const QCborValue* q_cborvalue_operator_subscript3(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
 /// ``` QCborValue* self, long long key ```
-QCborValueRef* q_cborvalue_operator_subscript3(void* self, long long key);
+QCborValueRef* q_cborvalue_operator_subscript4(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#operator[])
 ///
 /// ``` QCborValue* self, const char* key ```
-QCborValueRef* q_cborvalue_operator_subscript5(void* self, const char* key);
+QCborValueRef* q_cborvalue_operator_subscript6(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#compare)
 ///
@@ -406,17 +406,17 @@ QCborValue* q_cborvalue_from_cbor(void* reader);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// ``` const char* ba ```
-QCborValue* q_cborvalue_from_cbor_with_ba(const char* ba);
+QCborValue* q_cborvalue_from_cbor2(const char* ba);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// ``` const char* data, int64_t lenVal ```
-QCborValue* q_cborvalue_from_cbor2(const char* data, int64_t lenVal);
+QCborValue* q_cborvalue_from_cbor3(const char* data, int64_t lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// ``` unsigned char* data, int64_t lenVal ```
-QCborValue* q_cborvalue_from_cbor3(unsigned char* data, int64_t lenVal);
+QCborValue* q_cborvalue_from_cbor4(unsigned char* data, int64_t lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
@@ -426,7 +426,7 @@ char* q_cborvalue_to_cbor(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
 /// ``` QCborValue* self, QCborStreamWriter* writer ```
-void q_cborvalue_to_cbor_with_writer(void* self, void* writer);
+void q_cborvalue_to_cbor2(void* self, void* writer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toDiagnosticNotation)
 ///
@@ -516,7 +516,7 @@ char* q_cborvalue_to_cbor1(void* self, int64_t opt);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
 /// ``` QCborValue* self, QCborStreamWriter* writer, int opt ```
-void q_cborvalue_to_cbor2(void* self, void* writer, int64_t opt);
+void q_cborvalue_to_cbor22(void* self, void* writer, int64_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalue.html#toDiagnosticNotation)
 ///
@@ -650,7 +650,7 @@ bool q_cborvalueconstref_is_simple_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#isSimpleType)
 ///
 /// ``` QCborValueConstRef* self, enum QCborValueConstRef__QCborSimpleType st ```
-bool q_cborvalueconstref_is_simple_type_with_st(void* self, int64_t st);
+bool q_cborvalueconstref_is_simple_type2(void* self, int64_t st);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toSimpleType)
 ///
@@ -720,7 +720,7 @@ QCborArray* q_cborvalueconstref_to_array(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toArray)
 ///
 /// ``` QCborValueConstRef* self, QCborArray* a ```
-QCborArray* q_cborvalueconstref_to_array_with_q_cbor_array(void* self, void* a);
+QCborArray* q_cborvalueconstref_to_array2(void* self, void* a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toMap)
 ///
@@ -730,7 +730,7 @@ QCborMap* q_cborvalueconstref_to_map(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toMap)
 ///
 /// ``` QCborValueConstRef* self, QCborMap* m ```
-QCborMap* q_cborvalueconstref_to_map_with_q_cbor_map(void* self, void* m);
+QCborMap* q_cborvalueconstref_to_map2(void* self, void* m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator[])
 ///
@@ -740,7 +740,7 @@ const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char*
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator[])
 ///
 /// ``` QCborValueConstRef* self, long long key ```
-const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, long long key);
+const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#compare)
 ///
@@ -765,7 +765,7 @@ char* q_cborvalueconstref_to_cbor(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
 /// ``` QCborValueConstRef* self, QCborStreamWriter* writer ```
-void q_cborvalueconstref_to_cbor_with_writer(void* self, void* writer);
+void q_cborvalueconstref_to_cbor2(void* self, void* writer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDiagnosticNotation)
 ///
@@ -840,7 +840,7 @@ char* q_cborvalueconstref_to_cbor1(void* self, int64_t opt);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toCbor)
 ///
 /// ``` QCborValueConstRef* self, QCborStreamWriter* writer, int opt ```
-void q_cborvalueconstref_to_cbor2(void* self, void* writer, int64_t opt);
+void q_cborvalueconstref_to_cbor22(void* self, void* writer, int64_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueconstref.html#toDiagnosticNotation)
 ///
@@ -879,7 +879,7 @@ void q_cborvalueref_operator_assign(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator=)
 ///
 /// ``` QCborValueRef* self, QCborValueRef* other ```
-void q_cborvalueref_operator_assign_with_other(void* self, void* other);
+void q_cborvalueref_operator_assign2(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator[])
 ///
@@ -889,7 +889,7 @@ QCborValueRef* q_cborvalueref_operator_subscript(void* self, long long key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator[])
 ///
 /// ``` QCborValueRef* self, const char* key ```
-QCborValueRef* q_cborvalueref_operator_subscript2(void* self, const char* key);
+QCborValueRef* q_cborvalueref_operator_subscript3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator QCborValue)
 ///
@@ -999,7 +999,7 @@ bool q_cborvalueref_is_simple_type(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#isSimpleType)
 ///
 /// ``` QCborValueRef* self, enum QCborValueRef__QCborSimpleType st ```
-bool q_cborvalueref_is_simple_type_with_st(void* self, int64_t st);
+bool q_cborvalueref_is_simple_type2(void* self, int64_t st);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toSimpleType)
 ///
@@ -1069,7 +1069,7 @@ QCborArray* q_cborvalueref_to_array(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toArray)
 ///
 /// ``` QCborValueRef* self, QCborArray* a ```
-QCborArray* q_cborvalueref_to_array_with_q_cbor_array(void* self, void* a);
+QCborArray* q_cborvalueref_to_array2(void* self, void* a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toMap)
 ///
@@ -1079,17 +1079,17 @@ QCborMap* q_cborvalueref_to_map(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toMap)
 ///
 /// ``` QCborValueRef* self, QCborMap* m ```
-QCborMap* q_cborvalueref_to_map_with_q_cbor_map(void* self, void* m);
+QCborMap* q_cborvalueref_to_map2(void* self, void* m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator[])
 ///
 /// ``` QCborValueRef* self, const char* key ```
-const QCborValue* q_cborvalueref_operator_subscript3(void* self, const char* key);
+const QCborValue* q_cborvalueref_operator_subscript4(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#operator[])
 ///
 /// ``` QCborValueRef* self, long long key ```
-const QCborValue* q_cborvalueref_operator_subscript5(void* self, long long key);
+const QCborValue* q_cborvalueref_operator_subscript6(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#compare)
 ///
@@ -1114,7 +1114,7 @@ char* q_cborvalueref_to_cbor(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
 /// ``` QCborValueRef* self, QCborStreamWriter* writer ```
-void q_cborvalueref_to_cbor_with_writer(void* self, void* writer);
+void q_cborvalueref_to_cbor2(void* self, void* writer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toDiagnosticNotation)
 ///
@@ -1189,7 +1189,7 @@ char* q_cborvalueref_to_cbor1(void* self, int64_t opt);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toCbor)
 ///
 /// ``` QCborValueRef* self, QCborStreamWriter* writer, int opt ```
-void q_cborvalueref_to_cbor2(void* self, void* writer, int64_t opt);
+void q_cborvalueref_to_cbor22(void* self, void* writer, int64_t opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborvalueref.html#toDiagnosticNotation)
 ///

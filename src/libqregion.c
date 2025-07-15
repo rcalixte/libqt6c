@@ -69,40 +69,40 @@ bool q_region_contains(void* self, void* p) {
     return QRegion_Contains((QRegion*)self, (QPoint*)p);
 }
 
-bool q_region_contains_with_q_rect(void* self, void* r) {
-    return QRegion_ContainsWithQRect((QRegion*)self, (QRect*)r);
+bool q_region_contains2(void* self, void* r) {
+    return QRegion_Contains2((QRegion*)self, (QRect*)r);
 }
 
 void q_region_translate(void* self, int dx, int dy) {
     QRegion_Translate((QRegion*)self, dx, dy);
 }
 
-void q_region_translate_with_q_point(void* self, void* p) {
-    QRegion_TranslateWithQPoint((QRegion*)self, (QPoint*)p);
+void q_region_translate2(void* self, void* p) {
+    QRegion_Translate2((QRegion*)self, (QPoint*)p);
 }
 
 QRegion* q_region_translated(void* self, int dx, int dy) {
     return QRegion_Translated((QRegion*)self, dx, dy);
 }
 
-QRegion* q_region_translated_with_q_point(void* self, void* p) {
-    return QRegion_TranslatedWithQPoint((QRegion*)self, (QPoint*)p);
+QRegion* q_region_translated2(void* self, void* p) {
+    return QRegion_Translated2((QRegion*)self, (QPoint*)p);
 }
 
 QRegion* q_region_united(void* self, void* r) {
     return QRegion_United((QRegion*)self, (QRegion*)r);
 }
 
-QRegion* q_region_united_with_q_rect(void* self, void* r) {
-    return QRegion_UnitedWithQRect((QRegion*)self, (QRect*)r);
+QRegion* q_region_united2(void* self, void* r) {
+    return QRegion_United2((QRegion*)self, (QRect*)r);
 }
 
 QRegion* q_region_intersected(void* self, void* r) {
     return QRegion_Intersected((QRegion*)self, (QRegion*)r);
 }
 
-QRegion* q_region_intersected_with_q_rect(void* self, void* r) {
-    return QRegion_IntersectedWithQRect((QRegion*)self, (QRect*)r);
+QRegion* q_region_intersected2(void* self, void* r) {
+    return QRegion_Intersected2((QRegion*)self, (QRect*)r);
 }
 
 QRegion* q_region_subtracted(void* self, void* r) {
@@ -117,8 +117,8 @@ bool q_region_intersects(void* self, void* r) {
     return QRegion_Intersects((QRegion*)self, (QRegion*)r);
 }
 
-bool q_region_intersects_with_q_rect(void* self, void* r) {
-    return QRegion_IntersectsWithQRect((QRegion*)self, (QRect*)r);
+bool q_region_intersects2(void* self, void* r) {
+    return QRegion_Intersects2((QRegion*)self, (QRect*)r);
 }
 
 QRect* q_region_bounding_rect(void* self) {
@@ -129,8 +129,8 @@ void q_region_set_rects(void* self, void* rect, int num) {
     QRegion_SetRects((QRegion*)self, (QRect*)rect, num);
 }
 
-void q_region_set_rects_with_q_span_lesserconst_q_rect_greater(void* self, libqt_list r) {
-    QRegion_SetRectsWithQSpanLesserconstQRectGreater((QRegion*)self, r);
+void q_region_set_rects2(void* self, libqt_list r) {
+    QRegion_SetRects2((QRegion*)self, r);
 }
 
 libqt_list /* of QRect* */ q_region_rects(void* self) {
@@ -150,16 +150,16 @@ QRegion* q_region_operator_plus(void* self, void* r) {
     return QRegion_OperatorPlus((QRegion*)self, (QRegion*)r);
 }
 
-QRegion* q_region_operator_plus_with_q_rect(void* self, void* r) {
-    return QRegion_OperatorPlusWithQRect((QRegion*)self, (QRect*)r);
+QRegion* q_region_operator_plus2(void* self, void* r) {
+    return QRegion_OperatorPlus2((QRegion*)self, (QRect*)r);
 }
 
 QRegion* q_region_operator_bitwise_and(void* self, void* r) {
     return QRegion_OperatorBitwiseAnd((QRegion*)self, (QRegion*)r);
 }
 
-QRegion* q_region_operator_bitwise_and_with_q_rect(void* self, void* r) {
-    return QRegion_OperatorBitwiseAndWithQRect((QRegion*)self, (QRect*)r);
+QRegion* q_region_operator_bitwise_and2(void* self, void* r) {
+    return QRegion_OperatorBitwiseAnd2((QRegion*)self, (QRect*)r);
 }
 
 QRegion* q_region_operator_minus(void* self, void* r) {
@@ -178,16 +178,16 @@ QRegion* q_region_operator_plus_assign(void* self, void* r) {
     return QRegion_OperatorPlusAssign((QRegion*)self, (QRegion*)r);
 }
 
-QRegion* q_region_operator_plus_assign_with_q_rect(void* self, void* r) {
-    return QRegion_OperatorPlusAssignWithQRect((QRegion*)self, (QRect*)r);
+QRegion* q_region_operator_plus_assign2(void* self, void* r) {
+    return QRegion_OperatorPlusAssign2((QRegion*)self, (QRect*)r);
 }
 
 void q_region_operator_bitwise_and_assign(void* self, void* r) {
     QRegion_OperatorBitwiseAndAssign((QRegion*)self, (QRegion*)r);
 }
 
-void q_region_operator_bitwise_and_assign_with_q_rect(void* self, void* r) {
-    QRegion_OperatorBitwiseAndAssignWithQRect((QRegion*)self, (QRect*)r);
+void q_region_operator_bitwise_and_assign2(void* self, void* r) {
+    QRegion_OperatorBitwiseAndAssign2((QRegion*)self, (QRect*)r);
 }
 
 QRegion* q_region_operator_minus_assign(void* self, void* r) {

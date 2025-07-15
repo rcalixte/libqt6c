@@ -124,7 +124,7 @@ void QXmlStreamWriter_SetAutoFormattingIndent(QXmlStreamWriter* self, int spaces
 int QXmlStreamWriter_AutoFormattingIndent(const QXmlStreamWriter* self);
 void QXmlStreamWriter_WriteAttribute(QXmlStreamWriter* self, char* qualifiedName, char* value);
 void QXmlStreamWriter_WriteAttribute2(QXmlStreamWriter* self, char* namespaceUri, char* name, char* value);
-void QXmlStreamWriter_WriteAttributeWithAttribute(QXmlStreamWriter* self, const QXmlStreamAttribute* attribute);
+void QXmlStreamWriter_WriteAttribute3(QXmlStreamWriter* self, const QXmlStreamAttribute* attribute);
 void QXmlStreamWriter_WriteAttributes(QXmlStreamWriter* self, const QXmlStreamAttributes* attributes);
 void QXmlStreamWriter_WriteCDATA(QXmlStreamWriter* self, char* text);
 void QXmlStreamWriter_WriteCharacters(QXmlStreamWriter* self, char* text);
@@ -141,8 +141,8 @@ void QXmlStreamWriter_WriteNamespace(QXmlStreamWriter* self, char* namespaceUri)
 void QXmlStreamWriter_WriteDefaultNamespace(QXmlStreamWriter* self, char* namespaceUri);
 void QXmlStreamWriter_WriteProcessingInstruction(QXmlStreamWriter* self, char* target);
 void QXmlStreamWriter_WriteStartDocument(QXmlStreamWriter* self);
-void QXmlStreamWriter_WriteStartDocumentWithVersion(QXmlStreamWriter* self, char* version);
-void QXmlStreamWriter_WriteStartDocument2(QXmlStreamWriter* self, char* version, bool standalone);
+void QXmlStreamWriter_WriteStartDocument2(QXmlStreamWriter* self, char* version);
+void QXmlStreamWriter_WriteStartDocument3(QXmlStreamWriter* self, char* version, bool standalone);
 void QXmlStreamWriter_WriteStartElement(QXmlStreamWriter* self, char* qualifiedName);
 void QXmlStreamWriter_WriteStartElement2(QXmlStreamWriter* self, char* namespaceUri, char* name);
 void QXmlStreamWriter_WriteCurrentToken(QXmlStreamWriter* self, const QXmlStreamReader* reader);

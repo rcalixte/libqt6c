@@ -2057,8 +2057,8 @@ void q_textframeformat_set_width(void* self, double width) {
     QTextFrameFormat_SetWidth((QTextFrameFormat*)self, width);
 }
 
-void q_textframeformat_set_width_with_length(void* self, void* length) {
-    QTextFrameFormat_SetWidthWithLength((QTextFrameFormat*)self, (QTextLength*)length);
+void q_textframeformat_set_width2(void* self, void* length) {
+    QTextFrameFormat_SetWidth2((QTextFrameFormat*)self, (QTextLength*)length);
 }
 
 QTextLength* q_textframeformat_width(void* self) {
@@ -2069,8 +2069,8 @@ void q_textframeformat_set_height(void* self, double height) {
     QTextFrameFormat_SetHeight((QTextFrameFormat*)self, height);
 }
 
-void q_textframeformat_set_height_with_height(void* self, void* height) {
-    QTextFrameFormat_SetHeightWithHeight((QTextFrameFormat*)self, (QTextLength*)height);
+void q_textframeformat_set_height2(void* self, void* height) {
+    QTextFrameFormat_SetHeight2((QTextFrameFormat*)self, (QTextLength*)height);
 }
 
 QTextLength* q_textframeformat_height(void* self) {
@@ -2446,8 +2446,8 @@ void q_texttableformat_set_width(void* self, double width) {
     QTextFrameFormat_SetWidth((QTextFrameFormat*)self, width);
 }
 
-void q_texttableformat_set_width_with_length(void* self, void* length) {
-    QTextFrameFormat_SetWidthWithLength((QTextFrameFormat*)self, (QTextLength*)length);
+void q_texttableformat_set_width2(void* self, void* length) {
+    QTextFrameFormat_SetWidth2((QTextFrameFormat*)self, (QTextLength*)length);
 }
 
 QTextLength* q_texttableformat_width(void* self) {
@@ -2458,8 +2458,8 @@ void q_texttableformat_set_height(void* self, double height) {
     QTextFrameFormat_SetHeight((QTextFrameFormat*)self, height);
 }
 
-void q_texttableformat_set_height_with_height(void* self, void* height) {
-    QTextFrameFormat_SetHeightWithHeight((QTextFrameFormat*)self, (QTextLength*)height);
+void q_texttableformat_set_height2(void* self, void* height) {
+    QTextFrameFormat_SetHeight2((QTextFrameFormat*)self, (QTextLength*)height);
 }
 
 QTextLength* q_texttableformat_height(void* self) {

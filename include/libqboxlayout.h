@@ -487,7 +487,7 @@ void q_boxlayout_set_contents_margins(void* self, int left, int top, int right, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// ``` QBoxLayout* self, QMargins* margins ```
-void q_boxlayout_set_contents_margins_with_margins(void* self, void* margins);
+void q_boxlayout_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QLayout
 ///
@@ -599,7 +599,7 @@ void q_boxlayout_remove_item(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// ``` QBoxLayout* self, QLayoutItem* param1 ```
-int32_t q_boxlayout_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_boxlayout_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -608,7 +608,7 @@ int32_t q_boxlayout_index_of_with_q_layout_item(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
-void q_boxlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
+void q_boxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
 ///
@@ -617,7 +617,7 @@ void q_boxlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void
 /// Base class method implementation
 ///
 /// ``` QBoxLayout* self, QLayoutItem* param1 ```
-int32_t q_boxlayout_qbase_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_boxlayout_qbase_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -757,7 +757,7 @@ void q_boxlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QBoxLayout* self, enum Qt__TimerId id ```
-void q_boxlayout_kill_timer_with_id(void* self, int64_t id);
+void q_boxlayout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -813,7 +813,7 @@ bool q_boxlayout_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_boxlayout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_boxlayout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -911,7 +911,7 @@ bool q_boxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QBoxLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_boxlayout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_boxlayout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1854,7 +1854,7 @@ void q_hboxlayout_set_contents_margins(void* self, int left, int top, int right,
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// ``` QHBoxLayout* self, QMargins* margins ```
-void q_hboxlayout_set_contents_margins_with_margins(void* self, void* margins);
+void q_hboxlayout_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QLayout
 ///
@@ -1966,7 +1966,7 @@ void q_hboxlayout_remove_item(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// ``` QHBoxLayout* self, QLayoutItem* param1 ```
-int32_t q_hboxlayout_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_hboxlayout_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -1975,7 +1975,7 @@ int32_t q_hboxlayout_index_of_with_q_layout_item(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
-void q_hboxlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
+void q_hboxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
 ///
@@ -1984,7 +1984,7 @@ void q_hboxlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(voi
 /// Base class method implementation
 ///
 /// ``` QHBoxLayout* self, QLayoutItem* param1 ```
-int32_t q_hboxlayout_qbase_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_hboxlayout_qbase_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -2124,7 +2124,7 @@ void q_hboxlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QHBoxLayout* self, enum Qt__TimerId id ```
-void q_hboxlayout_kill_timer_with_id(void* self, int64_t id);
+void q_hboxlayout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2180,7 +2180,7 @@ bool q_hboxlayout_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_hboxlayout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_hboxlayout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2278,7 +2278,7 @@ bool q_hboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QHBoxLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_hboxlayout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_hboxlayout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3626,7 +3626,7 @@ void q_vboxlayout_set_contents_margins(void* self, int left, int top, int right,
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// ``` QVBoxLayout* self, QMargins* margins ```
-void q_vboxlayout_set_contents_margins_with_margins(void* self, void* margins);
+void q_vboxlayout_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QLayout
 ///
@@ -3738,7 +3738,7 @@ void q_vboxlayout_remove_item(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// ``` QVBoxLayout* self, QLayoutItem* param1 ```
-int32_t q_vboxlayout_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_vboxlayout_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -3747,7 +3747,7 @@ int32_t q_vboxlayout_index_of_with_q_layout_item(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
-void q_vboxlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
+void q_vboxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
 ///
@@ -3756,7 +3756,7 @@ void q_vboxlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(voi
 /// Base class method implementation
 ///
 /// ``` QVBoxLayout* self, QLayoutItem* param1 ```
-int32_t q_vboxlayout_qbase_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_vboxlayout_qbase_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -3896,7 +3896,7 @@ void q_vboxlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QVBoxLayout* self, enum Qt__TimerId id ```
-void q_vboxlayout_kill_timer_with_id(void* self, int64_t id);
+void q_vboxlayout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3952,7 +3952,7 @@ bool q_vboxlayout_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_vboxlayout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_vboxlayout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -4050,7 +4050,7 @@ bool q_vboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QVBoxLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_vboxlayout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_vboxlayout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -301,8 +301,8 @@ void q_chartview_center_on2(void* self, double x, double y) {
     QGraphicsView_CenterOn2((QGraphicsView*)self, x, y);
 }
 
-void q_chartview_center_on_with_item(void* self, void* item) {
-    QGraphicsView_CenterOnWithItem((QGraphicsView*)self, (QGraphicsItem*)item);
+void q_chartview_center_on3(void* self, void* item) {
+    QGraphicsView_CenterOn3((QGraphicsView*)self, (QGraphicsItem*)item);
 }
 
 void q_chartview_ensure_visible(void* self, void* rect) {
@@ -313,8 +313,8 @@ void q_chartview_ensure_visible2(void* self, double x, double y, double w, doubl
     QGraphicsView_EnsureVisible2((QGraphicsView*)self, x, y, w, h);
 }
 
-void q_chartview_ensure_visible_with_item(void* self, void* item) {
-    QGraphicsView_EnsureVisibleWithItem((QGraphicsView*)self, (QGraphicsItem*)item);
+void q_chartview_ensure_visible3(void* self, void* item) {
+    QGraphicsView_EnsureVisible3((QGraphicsView*)self, (QGraphicsItem*)item);
 }
 
 void q_chartview_fit_in_view(void* self, void* rect) {
@@ -325,8 +325,8 @@ void q_chartview_fit_in_view2(void* self, double x, double y, double w, double h
     QGraphicsView_FitInView2((QGraphicsView*)self, x, y, w, h);
 }
 
-void q_chartview_fit_in_view_with_item(void* self, void* item) {
-    QGraphicsView_FitInViewWithItem((QGraphicsView*)self, (QGraphicsItem*)item);
+void q_chartview_fit_in_view3(void* self, void* item) {
+    QGraphicsView_FitInView3((QGraphicsView*)self, (QGraphicsItem*)item);
 }
 
 void q_chartview_render(void* self, void* painter) {
@@ -338,28 +338,28 @@ libqt_list /* of QGraphicsItem* */ q_chartview_items(void* self) {
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_chartview_items_with_pos(void* self, void* pos) {
-    libqt_list _arr = QGraphicsView_ItemsWithPos((QGraphicsView*)self, (QPoint*)pos);
+libqt_list /* of QGraphicsItem* */ q_chartview_items2(void* self, void* pos) {
+    libqt_list _arr = QGraphicsView_Items2((QGraphicsView*)self, (QPoint*)pos);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_chartview_items2(void* self, int x, int y) {
-    libqt_list _arr = QGraphicsView_Items2((QGraphicsView*)self, x, y);
+libqt_list /* of QGraphicsItem* */ q_chartview_items3(void* self, int x, int y) {
+    libqt_list _arr = QGraphicsView_Items3((QGraphicsView*)self, x, y);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_chartview_items_with_rect(void* self, void* rect) {
-    libqt_list _arr = QGraphicsView_ItemsWithRect((QGraphicsView*)self, (QRect*)rect);
+libqt_list /* of QGraphicsItem* */ q_chartview_items4(void* self, void* rect) {
+    libqt_list _arr = QGraphicsView_Items4((QGraphicsView*)self, (QRect*)rect);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_chartview_items3(void* self, int x, int y, int w, int h) {
-    libqt_list _arr = QGraphicsView_Items3((QGraphicsView*)self, x, y, w, h);
+libqt_list /* of QGraphicsItem* */ q_chartview_items5(void* self, int x, int y, int w, int h) {
+    libqt_list _arr = QGraphicsView_Items5((QGraphicsView*)self, x, y, w, h);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_chartview_items_with_path(void* self, void* path) {
-    libqt_list _arr = QGraphicsView_ItemsWithPath((QGraphicsView*)self, (QPainterPath*)path);
+libqt_list /* of QGraphicsItem* */ q_chartview_items7(void* self, void* path) {
+    libqt_list _arr = QGraphicsView_Items7((QGraphicsView*)self, (QPainterPath*)path);
     return _arr;
 }
 
@@ -375,24 +375,24 @@ QPointF* q_chartview_map_to_scene(void* self, void* point) {
     return QGraphicsView_MapToScene((QGraphicsView*)self, (QPoint*)point);
 }
 
-QPainterPath* q_chartview_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsView_MapToSceneWithPath((QGraphicsView*)self, (QPainterPath*)path);
+QPainterPath* q_chartview_map_to_scene4(void* self, void* path) {
+    return QGraphicsView_MapToScene4((QGraphicsView*)self, (QPainterPath*)path);
 }
 
 QPoint* q_chartview_map_from_scene(void* self, void* point) {
     return QGraphicsView_MapFromScene((QGraphicsView*)self, (QPointF*)point);
 }
 
-QPainterPath* q_chartview_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsView_MapFromSceneWithPath((QGraphicsView*)self, (QPainterPath*)path);
+QPainterPath* q_chartview_map_from_scene4(void* self, void* path) {
+    return QGraphicsView_MapFromScene4((QGraphicsView*)self, (QPainterPath*)path);
 }
 
-QPointF* q_chartview_map_to_scene2(void* self, int x, int y) {
-    return QGraphicsView_MapToScene2((QGraphicsView*)self, x, y);
+QPointF* q_chartview_map_to_scene5(void* self, int x, int y) {
+    return QGraphicsView_MapToScene5((QGraphicsView*)self, x, y);
 }
 
-QPoint* q_chartview_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsView_MapFromScene2((QGraphicsView*)self, x, y);
+QPoint* q_chartview_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsView_MapFromScene5((QGraphicsView*)self, x, y);
 }
 
 QBrush* q_chartview_background_brush(void* self) {
@@ -447,8 +447,8 @@ void q_chartview_ensure_visible22(void* self, void* rect, int xmargin) {
     QGraphicsView_EnsureVisible22((QGraphicsView*)self, (QRectF*)rect, xmargin);
 }
 
-void q_chartview_ensure_visible3(void* self, void* rect, int xmargin, int ymargin) {
-    QGraphicsView_EnsureVisible3((QGraphicsView*)self, (QRectF*)rect, xmargin, ymargin);
+void q_chartview_ensure_visible32(void* self, void* rect, int xmargin, int ymargin) {
+    QGraphicsView_EnsureVisible32((QGraphicsView*)self, (QRectF*)rect, xmargin, ymargin);
 }
 
 void q_chartview_ensure_visible5(void* self, double x, double y, double w, double h, int xmargin) {
@@ -463,8 +463,8 @@ void q_chartview_ensure_visible23(void* self, void* item, int xmargin) {
     QGraphicsView_EnsureVisible23((QGraphicsView*)self, (QGraphicsItem*)item, xmargin);
 }
 
-void q_chartview_ensure_visible32(void* self, void* item, int xmargin, int ymargin) {
-    QGraphicsView_EnsureVisible32((QGraphicsView*)self, (QGraphicsItem*)item, xmargin, ymargin);
+void q_chartview_ensure_visible33(void* self, void* item, int xmargin, int ymargin) {
+    QGraphicsView_EnsureVisible33((QGraphicsView*)self, (QGraphicsItem*)item, xmargin, ymargin);
 }
 
 void q_chartview_fit_in_view22(void* self, void* rect, int64_t aspectRadioMode) {
@@ -496,8 +496,8 @@ libqt_list /* of QGraphicsItem* */ q_chartview_items22(void* self, void* rect, i
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_chartview_items5(void* self, int x, int y, int w, int h, int64_t mode) {
-    libqt_list _arr = QGraphicsView_Items5((QGraphicsView*)self, x, y, w, h, mode);
+libqt_list /* of QGraphicsItem* */ q_chartview_items52(void* self, int x, int y, int w, int h, int64_t mode) {
+    libqt_list _arr = QGraphicsView_Items52((QGraphicsView*)self, x, y, w, h, mode);
     return _arr;
 }
 
@@ -851,32 +851,32 @@ QPointF* q_chartview_map_to_global(void* self, void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_chartview_map_to_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapToGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_chartview_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_chartview_map_from_global(void* self, void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_chartview_map_from_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_chartview_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_chartview_map_to_parent(void* self, void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_chartview_map_to_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapToParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_chartview_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_chartview_map_from_parent(void* self, void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_chartview_map_from_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_chartview_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_chartview_map_to(void* self, void* param1, void* param2) {
@@ -983,8 +983,8 @@ void q_chartview_set_mask(void* self, void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_chartview_set_mask_with_mask(void* self, void* mask) {
-    QWidget_SetMaskWithMask((QWidget*)self, (QRegion*)mask);
+void q_chartview_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
 QRegion* q_chartview_mask(void* self) {
@@ -993,10 +993,6 @@ QRegion* q_chartview_mask(void* self) {
 
 void q_chartview_clear_mask(void* self) {
     QWidget_ClearMask((QWidget*)self);
-}
-
-void q_chartview_render_with_painter(void* self, void* painter) {
-    QWidget_RenderWithPainter((QWidget*)self, (QPainter*)painter);
 }
 
 QPixmap* q_chartview_grab(void* self) {
@@ -1205,8 +1201,8 @@ void q_chartview_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_chartview_set_focus_with_reason(void* self, int64_t reason) {
-    QWidget_SetFocusWithReason((QWidget*)self, reason);
+void q_chartview_set_focus2(void* self, int64_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
 }
 
 int64_t q_chartview_focus_policy(void* self) {
@@ -1245,8 +1241,8 @@ void q_chartview_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_chartview_grab_mouse_with_q_cursor(void* self, void* param1) {
-    QWidget_GrabMouseWithQCursor((QWidget*)self, (QCursor*)param1);
+void q_chartview_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
 void q_chartview_release_mouse(void* self) {
@@ -1309,24 +1305,24 @@ void q_chartview_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_chartview_update_with_q_rect(void* self, void* param1) {
-    QWidget_UpdateWithQRect((QWidget*)self, (QRect*)param1);
+void q_chartview_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_chartview_update_with_q_region(void* self, void* param1) {
-    QWidget_UpdateWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_chartview_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_chartview_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_chartview_repaint_with_q_rect(void* self, void* param1) {
-    QWidget_RepaintWithQRect((QWidget*)self, (QRect*)param1);
+void q_chartview_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_chartview_repaint_with_q_region(void* self, void* param1) {
-    QWidget_RepaintWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_chartview_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_chartview_set_hidden(void* self, bool hidden) {
@@ -1377,24 +1373,24 @@ void q_chartview_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_chartview_move_with_q_point(void* self, void* param1) {
-    QWidget_MoveWithQPoint((QWidget*)self, (QPoint*)param1);
+void q_chartview_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
 void q_chartview_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_chartview_resize_with_q_size(void* self, void* param1) {
-    QWidget_ResizeWithQSize((QWidget*)self, (QSize*)param1);
+void q_chartview_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
 void q_chartview_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_chartview_set_geometry_with_geometry(void* self, void* geometry) {
-    QWidget_SetGeometryWithGeometry((QWidget*)self, (QRect*)geometry);
+void q_chartview_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
 char* q_chartview_save_geometry(void* self) {
@@ -1468,8 +1464,8 @@ void q_chartview_set_contents_margins(void* self, int left, int top, int right, 
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_chartview_set_contents_margins_with_margins(void* self, void* margins) {
-    QWidget_SetContentsMarginsWithMargins((QWidget*)self, (QMargins*)margins);
+void q_chartview_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
 QMargins* q_chartview_contents_margins(void* self) {
@@ -1553,20 +1549,20 @@ libqt_list /* of QAction* */ q_chartview_actions(void* self) {
     return _arr;
 }
 
-QAction* q_chartview_add_action_with_text(void* self, const char* text) {
-    return QWidget_AddActionWithText((QWidget*)self, qstring(text));
+QAction* q_chartview_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_chartview_add_action2(void* self, void* icon, const char* text) {
-    return QWidget_AddAction2((QWidget*)self, (QIcon*)icon, qstring(text));
+QAction* q_chartview_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_chartview_add_action3(void* self, const char* text, void* shortcut) {
-    return QWidget_AddAction3((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+QAction* q_chartview_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_chartview_add_action4(void* self, void* icon, const char* text, void* shortcut) {
-    return QWidget_AddAction4((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+QAction* q_chartview_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
 QWidget* q_chartview_parent_widget(void* self) {
@@ -1601,12 +1597,12 @@ QWidget* q_chartview_child_at(void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_chartview_child_at_with_q_point(void* self, void* p) {
-    return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
+QWidget* q_chartview_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_chartview_child_at_with_q_point_f(void* self, void* p) {
-    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+QWidget* q_chartview_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
 void q_chartview_set_attribute(void* self, int64_t param1) {
@@ -1693,8 +1689,12 @@ void q_chartview_set_input_method_hints(void* self, int64_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_chartview_render22(void* self, void* painter, void* targetOffset) {
-    QWidget_Render22((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+void q_chartview_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+}
+
+void q_chartview_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
 void q_chartview_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
@@ -1788,8 +1788,8 @@ void q_chartview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_chartview_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_chartview_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_chartview_children(void* self) {
@@ -1817,8 +1817,8 @@ bool q_chartview_disconnect(void* sender, void* signal, void* receiver, void* me
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_chartview_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_chartview_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_chartview_dump_object_tree(void* self) {
@@ -1884,8 +1884,8 @@ bool q_chartview_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_chartview_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_chartview_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_chartview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

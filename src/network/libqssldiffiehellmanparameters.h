@@ -47,7 +47,7 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(const cha
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// ``` QIODevice* device ```
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded_with_device(void* device);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isEmpty)
 ///
@@ -72,12 +72,12 @@ const char* q_ssldiffiehellmanparameters_error_string(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// ``` const char* encoded, enum QSsl__EncodingFormat format ```
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(const char* encoded, int64_t format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// ``` QIODevice* device, enum QSsl__EncodingFormat format ```
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(void* device, int64_t format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#dtor.QSslDiffieHellmanParameters)
 ///

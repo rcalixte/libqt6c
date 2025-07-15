@@ -299,8 +299,8 @@ void q_graphicssvgitem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicssvgitem_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicssvgitem_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicssvgitem_children(void* self) {
@@ -332,8 +332,8 @@ bool q_graphicssvgitem_disconnect(void* sender, void* signal, void* receiver, vo
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicssvgitem_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicssvgitem_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicssvgitem_dump_object_tree(void* self) {
@@ -399,8 +399,8 @@ bool q_graphicssvgitem_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicssvgitem_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicssvgitem_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicssvgitem_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -901,12 +901,12 @@ QPainterPath* q_graphicssvgitem_map_to_item4(void* self, void* item, void* path)
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssvgitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssvgitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssvgitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssvgitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicssvgitem_map_from_item(void* self, void* item, void* point) {
@@ -937,24 +937,24 @@ QPainterPath* q_graphicssvgitem_map_from_item4(void* self, void* item, void* pat
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssvgitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssvgitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssvgitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssvgitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicssvgitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicssvgitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssvgitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicssvgitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssvgitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicssvgitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -973,12 +973,12 @@ QPointF* q_graphicssvgitem_map_from_item5(void* self, void* item, double x, doub
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicssvgitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssvgitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicssvgitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssvgitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicssvgitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {

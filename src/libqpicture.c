@@ -64,16 +64,16 @@ bool q_picture_load(void* self, void* dev) {
     return QPicture_Load((QPicture*)self, (QIODevice*)dev);
 }
 
-bool q_picture_load_with_file_name(void* self, const char* fileName) {
-    return QPicture_LoadWithFileName((QPicture*)self, qstring(fileName));
+bool q_picture_load2(void* self, const char* fileName) {
+    return QPicture_Load2((QPicture*)self, qstring(fileName));
 }
 
 bool q_picture_save(void* self, void* dev) {
     return QPicture_Save((QPicture*)self, (QIODevice*)dev);
 }
 
-bool q_picture_save_with_file_name(void* self, const char* fileName) {
-    return QPicture_SaveWithFileName((QPicture*)self, qstring(fileName));
+bool q_picture_save2(void* self, const char* fileName) {
+    return QPicture_Save2((QPicture*)self, qstring(fileName));
 }
 
 QRect* q_picture_bounding_rect(void* self) {

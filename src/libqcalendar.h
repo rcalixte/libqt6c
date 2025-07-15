@@ -142,7 +142,7 @@ QDate* q_calendar_date_from_parts(void* self, int year, int month, int day);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#dateFromParts)
 ///
 /// ``` QCalendar* self, QCalendar__YearMonthDay* parts ```
-QDate* q_calendar_date_from_parts_with_parts(void* self, void* parts);
+QDate* q_calendar_date_from_parts2(void* self, void* parts);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#matchCenturyToWeekday)
 ///

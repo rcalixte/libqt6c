@@ -62,7 +62,7 @@ int32_t q_metatype_type(const char* typeName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#type)
 ///
 /// ``` const char* typeName ```
-int32_t q_metatype_type_with_type_name(const char* typeName);
+int32_t q_metatype_type2(const char* typeName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#typeName)
 ///
@@ -162,17 +162,17 @@ void* q_metatype_create2(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#destroy)
 ///
 /// ``` QMetaType* self, void* data ```
-void q_metatype_destroy_with_data(void* self, void* data);
+void q_metatype_destroy2(void* self, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#construct)
 ///
 /// ``` QMetaType* self, void* where ```
-void* q_metatype_construct_with_where(void* self, void* where);
+void* q_metatype_construct2(void* self, void* where);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#destruct)
 ///
 /// ``` QMetaType* self, void* data ```
-void q_metatype_destruct_with_data(void* self, void* data);
+void q_metatype_destruct2(void* self, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#compare)
 ///
@@ -267,7 +267,7 @@ bool q_metatype_debug_stream2(void* dbg, void* rhs, int typeId);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#hasRegisteredDebugStreamOperator)
 ///
 /// ``` int typeId ```
-bool q_metatype_has_registered_debug_stream_operator_with_type_id(int typeId);
+bool q_metatype_has_registered_debug_stream_operator2(int typeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#convert)
 ///
@@ -347,7 +347,7 @@ void* q_metatype_create1(void* self, void* copyVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#construct)
 ///
 /// ``` QMetaType* self, void* where, void* copyVal ```
-void* q_metatype_construct2(void* self, void* where, void* copyVal);
+void* q_metatype_construct22(void* self, void* where, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetatype.html#dtor.QMetaType)
 ///

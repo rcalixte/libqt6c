@@ -509,7 +509,7 @@ long long q_sctpsocket_read(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// ``` QSctpSocket* self, long long maxlen ```
-char* q_sctpsocket_read_with_maxlen(void* self, long long maxlen);
+char* q_sctpsocket_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -572,14 +572,14 @@ long long q_sctpsocket_write(void* self, const char* data, long long lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QSctpSocket* self, const char* data ```
-long long q_sctpsocket_write_with_data(void* self, const char* data);
+long long q_sctpsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QSctpSocket* self, const char* data ```
-long long q_sctpsocket_write2(void* self, const char* data);
+long long q_sctpsocket_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -593,7 +593,7 @@ long long q_sctpsocket_peek(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// ``` QSctpSocket* self, long long maxlen ```
-char* q_sctpsocket_peek_with_maxlen(void* self, long long maxlen);
+char* q_sctpsocket_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -803,7 +803,7 @@ void q_sctpsocket_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSctpSocket* self, enum Qt__TimerId id ```
-void q_sctpsocket_kill_timer_with_id(void* self, int64_t id);
+void q_sctpsocket_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -859,7 +859,7 @@ bool q_sctpsocket_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_sctpsocket_disconnect_with_q_meta_object_connection(void* param1);
+bool q_sctpsocket_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -957,7 +957,7 @@ bool q_sctpsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSctpSocket* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_sctpsocket_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_sctpsocket_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

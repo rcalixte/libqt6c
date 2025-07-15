@@ -290,7 +290,7 @@ void q_abstractnetworkcache_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QAbstractNetworkCache* self, enum Qt__TimerId id ```
-void q_abstractnetworkcache_kill_timer_with_id(void* self, int64_t id);
+void q_abstractnetworkcache_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -346,7 +346,7 @@ bool q_abstractnetworkcache_disconnect(void* sender, void* signal, void* receive
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_abstractnetworkcache_disconnect_with_q_meta_object_connection(void* param1);
+bool q_abstractnetworkcache_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -444,7 +444,7 @@ bool q_abstractnetworkcache_move_to_thread2(void* self, void* thread, void* para
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QAbstractNetworkCache* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_abstractnetworkcache_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_abstractnetworkcache_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

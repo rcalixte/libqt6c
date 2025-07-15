@@ -34,12 +34,12 @@ void q_paintdevicewindow_update(void* self, void* rect) {
     QPaintDeviceWindow_Update((QPaintDeviceWindow*)self, (QRect*)rect);
 }
 
-void q_paintdevicewindow_update_with_region(void* self, void* region) {
-    QPaintDeviceWindow_UpdateWithRegion((QPaintDeviceWindow*)self, (QRegion*)region);
+void q_paintdevicewindow_update2(void* self, void* region) {
+    QPaintDeviceWindow_Update2((QPaintDeviceWindow*)self, (QRegion*)region);
 }
 
-void q_paintdevicewindow_update2(void* self) {
-    QPaintDeviceWindow_Update2((QPaintDeviceWindow*)self);
+void q_paintdevicewindow_update3(void* self) {
+    QPaintDeviceWindow_Update3((QPaintDeviceWindow*)self);
 }
 
 const char* q_paintdevicewindow_tr2(const char* s, const char* c) {
@@ -370,12 +370,12 @@ QPointF* q_paintdevicewindow_map_from_global(void* self, void* pos) {
     return QWindow_MapFromGlobal((QWindow*)self, (QPointF*)pos);
 }
 
-QPoint* q_paintdevicewindow_map_to_global_with_pos(void* self, void* pos) {
-    return QWindow_MapToGlobalWithPos((QWindow*)self, (QPoint*)pos);
+QPoint* q_paintdevicewindow_map_to_global2(void* self, void* pos) {
+    return QWindow_MapToGlobal2((QWindow*)self, (QPoint*)pos);
 }
 
-QPoint* q_paintdevicewindow_map_from_global_with_pos(void* self, void* pos) {
-    return QWindow_MapFromGlobalWithPos((QWindow*)self, (QPoint*)pos);
+QPoint* q_paintdevicewindow_map_from_global2(void* self, void* pos) {
+    return QWindow_MapFromGlobal2((QWindow*)self, (QPoint*)pos);
 }
 
 QCursor* q_paintdevicewindow_cursor(void* self) {
@@ -470,8 +470,8 @@ void q_paintdevicewindow_set_geometry(void* self, int posx, int posy, int w, int
     QWindow_SetGeometry((QWindow*)self, posx, posy, w, h);
 }
 
-void q_paintdevicewindow_set_geometry_with_rect(void* self, void* rect) {
-    QWindow_SetGeometryWithRect((QWindow*)self, (QRect*)rect);
+void q_paintdevicewindow_set_geometry2(void* self, void* rect) {
+    QWindow_SetGeometry2((QWindow*)self, (QRect*)rect);
 }
 
 void q_paintdevicewindow_set_minimum_width(void* self, int w) {
@@ -713,8 +713,8 @@ void q_paintdevicewindow_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_paintdevicewindow_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_paintdevicewindow_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_paintdevicewindow_children(void* self) {
@@ -742,8 +742,8 @@ bool q_paintdevicewindow_disconnect(void* sender, void* signal, void* receiver, 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_paintdevicewindow_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_paintdevicewindow_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_paintdevicewindow_dump_object_tree(void* self) {
@@ -805,8 +805,8 @@ bool q_paintdevicewindow_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_paintdevicewindow_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_paintdevicewindow_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_paintdevicewindow_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

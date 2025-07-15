@@ -23,13 +23,13 @@ void q_cryptographichash_add_data(void* self, const char* data, int64_t length) 
     QCryptographicHash_AddData((QCryptographicHash*)self, data, length);
 }
 
-void q_cryptographichash_add_data_with_data(void* self, const char* data) {
+void q_cryptographichash_add_data2(void* self, const char* data) {
     libqt_strview data_strview = qstrview(data);
-    QCryptographicHash_AddDataWithData((QCryptographicHash*)self, (QByteArrayView*)&data_strview);
+    QCryptographicHash_AddData2((QCryptographicHash*)self, (QByteArrayView*)&data_strview);
 }
 
-bool q_cryptographichash_add_data_with_device(void* self, void* device) {
-    return QCryptographicHash_AddDataWithDevice((QCryptographicHash*)self, (QIODevice*)device);
+bool q_cryptographichash_add_data3(void* self, void* device) {
+    return QCryptographicHash_AddData3((QCryptographicHash*)self, (QIODevice*)device);
 }
 
 char* q_cryptographichash_result(void* self) {

@@ -87,7 +87,7 @@ QBitmap* q_bitmap_transformed(void* self, void* matrix);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator=)
 ///
 /// ``` QBitmap* self, QBitmap* param1 ```
-void q_bitmap_operator_assign_with_q_bitmap(void* self, void* param1);
+void q_bitmap_operator_assign2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#fromImage)
 ///
@@ -230,7 +230,7 @@ QPixmap* q_bitmap_scaled(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
 /// ``` QBitmap* self, QSize* s ```
-QPixmap* q_bitmap_scaled_with_q_size(void* self, void* s);
+QPixmap* q_bitmap_scaled2(void* self, void* s);
 
 /// Inherited from QPixmap
 ///
@@ -286,7 +286,7 @@ bool q_bitmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
 /// ``` QBitmap* self, const char* data ```
-bool q_bitmap_load_from_data_with_data(void* self, const char* data);
+bool q_bitmap_load_from_data2(void* self, const char* data);
 
 /// Inherited from QPixmap
 ///
@@ -300,7 +300,7 @@ bool q_bitmap_save(void* self, const char* fileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
 /// ``` QBitmap* self, QIODevice* device ```
-bool q_bitmap_save_with_device(void* self, void* device);
+bool q_bitmap_save2(void* self, void* device);
 
 /// Inherited from QPixmap
 ///
@@ -412,7 +412,7 @@ QPixmap* q_bitmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
 /// ``` QBitmap* self, QSize* s, enum Qt__AspectRatioMode aspectMode ```
-QPixmap* q_bitmap_scaled2(void* self, void* s, int64_t aspectMode);
+QPixmap* q_bitmap_scaled22(void* self, void* s, int64_t aspectMode);
 
 /// Inherited from QPixmap
 ///
@@ -482,7 +482,7 @@ bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, c
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
 /// ``` QBitmap* self, const char* data, const char* format ```
-bool q_bitmap_load_from_data2(void* self, const char* data, const char* format);
+bool q_bitmap_load_from_data22(void* self, const char* data, const char* format);
 
 /// Inherited from QPixmap
 ///
@@ -496,7 +496,7 @@ bool q_bitmap_load_from_data32(void* self, const char* data, const char* format,
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
 /// ``` QBitmap* self, const char* fileName, const char* format ```
-bool q_bitmap_save2(void* self, const char* fileName, const char* format);
+bool q_bitmap_save22(void* self, const char* fileName, const char* format);
 
 /// Inherited from QPixmap
 ///
@@ -510,7 +510,7 @@ bool q_bitmap_save3(void* self, const char* fileName, const char* format, int qu
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
 /// ``` QBitmap* self, QIODevice* device, const char* format ```
-bool q_bitmap_save22(void* self, void* device, const char* format);
+bool q_bitmap_save23(void* self, void* device, const char* format);
 
 /// Inherited from QPixmap
 ///

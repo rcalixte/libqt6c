@@ -96,28 +96,28 @@ int32_t q_fontmetrics_horizontal_advance2(void* self, const char* param1, void* 
     return QFontMetrics_HorizontalAdvance2((QFontMetrics*)self, qstring(param1), (QTextOption*)textOption);
 }
 
-int32_t q_fontmetrics_horizontal_advance_with_q_char(void* self, void* param1) {
-    return QFontMetrics_HorizontalAdvanceWithQChar((QFontMetrics*)self, (QChar*)param1);
+int32_t q_fontmetrics_horizontal_advance3(void* self, void* param1) {
+    return QFontMetrics_HorizontalAdvance3((QFontMetrics*)self, (QChar*)param1);
 }
 
 QRect* q_fontmetrics_bounding_rect(void* self, void* param1) {
     return QFontMetrics_BoundingRect((QFontMetrics*)self, (QChar*)param1);
 }
 
-QRect* q_fontmetrics_bounding_rect_with_text(void* self, const char* text) {
-    return QFontMetrics_BoundingRectWithText((QFontMetrics*)self, qstring(text));
+QRect* q_fontmetrics_bounding_rect2(void* self, const char* text) {
+    return QFontMetrics_BoundingRect2((QFontMetrics*)self, qstring(text));
 }
 
-QRect* q_fontmetrics_bounding_rect2(void* self, const char* text, void* textOption) {
-    return QFontMetrics_BoundingRect2((QFontMetrics*)self, qstring(text), (QTextOption*)textOption);
+QRect* q_fontmetrics_bounding_rect3(void* self, const char* text, void* textOption) {
+    return QFontMetrics_BoundingRect3((QFontMetrics*)self, qstring(text), (QTextOption*)textOption);
 }
 
-QRect* q_fontmetrics_bounding_rect3(void* self, void* r, int flags, const char* text) {
-    return QFontMetrics_BoundingRect3((QFontMetrics*)self, (QRect*)r, flags, qstring(text));
+QRect* q_fontmetrics_bounding_rect4(void* self, void* r, int flags, const char* text) {
+    return QFontMetrics_BoundingRect4((QFontMetrics*)self, (QRect*)r, flags, qstring(text));
 }
 
-QRect* q_fontmetrics_bounding_rect4(void* self, int x, int y, int w, int h, int flags, const char* text) {
-    return QFontMetrics_BoundingRect4((QFontMetrics*)self, x, y, w, h, flags, qstring(text));
+QRect* q_fontmetrics_bounding_rect5(void* self, int x, int y, int w, int h, int flags, const char* text) {
+    return QFontMetrics_BoundingRect5((QFontMetrics*)self, x, y, w, h, flags, qstring(text));
 }
 
 QSize* q_fontmetrics_size(void* self, int flags, const char* str) {
@@ -175,8 +175,8 @@ QRect* q_fontmetrics_bounding_rect42(void* self, void* r, int flags, const char*
     return QFontMetrics_BoundingRect42((QFontMetrics*)self, (QRect*)r, flags, qstring(text), tabstops);
 }
 
-QRect* q_fontmetrics_bounding_rect5(void* self, void* r, int flags, const char* text, int tabstops, int* tabarray) {
-    return QFontMetrics_BoundingRect5((QFontMetrics*)self, (QRect*)r, flags, qstring(text), tabstops, tabarray);
+QRect* q_fontmetrics_bounding_rect52(void* self, void* r, int flags, const char* text, int tabstops, int* tabarray) {
+    return QFontMetrics_BoundingRect52((QFontMetrics*)self, (QRect*)r, flags, qstring(text), tabstops, tabarray);
 }
 
 QRect* q_fontmetrics_bounding_rect7(void* self, int x, int y, int w, int h, int flags, const char* text, int tabstops) {
@@ -226,8 +226,8 @@ void q_fontmetricsf_operator_assign(void* self, void* param1) {
     QFontMetricsF_OperatorAssign((QFontMetricsF*)self, (QFontMetricsF*)param1);
 }
 
-void q_fontmetricsf_operator_assign_with_q_font_metrics(void* self, void* param1) {
-    QFontMetricsF_OperatorAssignWithQFontMetrics((QFontMetricsF*)self, (QFontMetrics*)param1);
+void q_fontmetricsf_operator_assign2(void* self, void* param1) {
+    QFontMetricsF_OperatorAssign2((QFontMetricsF*)self, (QFontMetrics*)param1);
 }
 
 void q_fontmetricsf_swap(void* self, void* other) {
@@ -298,12 +298,12 @@ double q_fontmetricsf_horizontal_advance(void* self, const char* stringVal) {
     return QFontMetricsF_HorizontalAdvance((QFontMetricsF*)self, qstring(stringVal));
 }
 
-double q_fontmetricsf_horizontal_advance_with_q_char(void* self, void* param1) {
-    return QFontMetricsF_HorizontalAdvanceWithQChar((QFontMetricsF*)self, (QChar*)param1);
+double q_fontmetricsf_horizontal_advance2(void* self, void* param1) {
+    return QFontMetricsF_HorizontalAdvance2((QFontMetricsF*)self, (QChar*)param1);
 }
 
-double q_fontmetricsf_horizontal_advance2(void* self, const char* stringVal, void* textOption) {
-    return QFontMetricsF_HorizontalAdvance2((QFontMetricsF*)self, qstring(stringVal), (QTextOption*)textOption);
+double q_fontmetricsf_horizontal_advance3(void* self, const char* stringVal, void* textOption) {
+    return QFontMetricsF_HorizontalAdvance3((QFontMetricsF*)self, qstring(stringVal), (QTextOption*)textOption);
 }
 
 QRectF* q_fontmetricsf_bounding_rect(void* self, const char* stringVal) {
@@ -314,12 +314,12 @@ QRectF* q_fontmetricsf_bounding_rect2(void* self, const char* text, void* textOp
     return QFontMetricsF_BoundingRect2((QFontMetricsF*)self, qstring(text), (QTextOption*)textOption);
 }
 
-QRectF* q_fontmetricsf_bounding_rect_with_q_char(void* self, void* param1) {
-    return QFontMetricsF_BoundingRectWithQChar((QFontMetricsF*)self, (QChar*)param1);
+QRectF* q_fontmetricsf_bounding_rect3(void* self, void* param1) {
+    return QFontMetricsF_BoundingRect3((QFontMetricsF*)self, (QChar*)param1);
 }
 
-QRectF* q_fontmetricsf_bounding_rect3(void* self, void* r, int flags, const char* stringVal) {
-    return QFontMetricsF_BoundingRect3((QFontMetricsF*)self, (QRectF*)r, flags, qstring(stringVal));
+QRectF* q_fontmetricsf_bounding_rect4(void* self, void* r, int flags, const char* stringVal) {
+    return QFontMetricsF_BoundingRect4((QFontMetricsF*)self, (QRectF*)r, flags, qstring(stringVal));
 }
 
 QSizeF* q_fontmetricsf_size(void* self, int flags, const char* str) {
@@ -373,8 +373,8 @@ double q_fontmetricsf_horizontal_advance22(void* self, const char* stringVal, in
     return QFontMetricsF_HorizontalAdvance22((QFontMetricsF*)self, qstring(stringVal), length);
 }
 
-QRectF* q_fontmetricsf_bounding_rect4(void* self, void* r, int flags, const char* stringVal, int tabstops) {
-    return QFontMetricsF_BoundingRect4((QFontMetricsF*)self, (QRectF*)r, flags, qstring(stringVal), tabstops);
+QRectF* q_fontmetricsf_bounding_rect42(void* self, void* r, int flags, const char* stringVal, int tabstops) {
+    return QFontMetricsF_BoundingRect42((QFontMetricsF*)self, (QRectF*)r, flags, qstring(stringVal), tabstops);
 }
 
 QRectF* q_fontmetricsf_bounding_rect5(void* self, void* r, int flags, const char* stringVal, int tabstops, int* tabarray) {

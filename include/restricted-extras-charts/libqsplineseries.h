@@ -91,14 +91,14 @@ void q_splineseries_append(void* self, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
 /// ``` QSplineSeries* self, QPointF* point ```
-void q_splineseries_append_with_point(void* self, void* point);
+void q_splineseries_append2(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
 /// ``` QSplineSeries* self, libqt_list /* of QPointF* */ points ```
-void q_splineseries_append_with_points(void* self, libqt_list points);
+void q_splineseries_append3(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -140,14 +140,14 @@ void q_splineseries_remove(void* self, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
 ///
 /// ``` QSplineSeries* self, QPointF* point ```
-void q_splineseries_remove_with_point(void* self, void* point);
+void q_splineseries_remove2(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
 ///
 /// ``` QSplineSeries* self, int index ```
-void q_splineseries_remove_with_index(void* self, int index);
+void q_splineseries_remove3(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
@@ -210,7 +210,7 @@ QXYSeries* q_splineseries_operator_shift_left(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator<<)
 ///
 /// ``` QSplineSeries* self, libqt_list /* of QPointF* */ points ```
-QXYSeries* q_splineseries_operator_shift_left_with_points(void* self, libqt_list points);
+QXYSeries* q_splineseries_operator_shift_left2(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -329,7 +329,7 @@ bool q_splineseries_point_labels_clipping(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
 /// ``` QSplineSeries* self, libqt_list /* of QPointF* */ points ```
-void q_splineseries_replace_with_points(void* self, libqt_list points);
+void q_splineseries_replace5(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
@@ -518,7 +518,7 @@ void q_splineseries_clear_points_configuration(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointsConfiguration)
 ///
 /// ``` QSplineSeries* self, enum QXYSeries__PointConfiguration key ```
-void q_splineseries_clear_points_configuration_with_key(void* self, int64_t key);
+void q_splineseries_clear_points_configuration2(void* self, int64_t key);
 
 /// Inherited from QXYSeries
 ///
@@ -1218,7 +1218,7 @@ void q_splineseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSplineSeries* self, enum Qt__TimerId id ```
-void q_splineseries_kill_timer_with_id(void* self, int64_t id);
+void q_splineseries_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1274,7 +1274,7 @@ bool q_splineseries_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_splineseries_disconnect_with_q_meta_object_connection(void* param1);
+bool q_splineseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1372,7 +1372,7 @@ bool q_splineseries_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSplineSeries* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_splineseries_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_splineseries_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

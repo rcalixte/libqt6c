@@ -96,7 +96,7 @@ void q_layout_set_contents_margins(void* self, int left, int top, int right, int
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// ``` QLayout* self, QMargins* margins ```
-void q_layout_set_contents_margins_with_margins(void* self, void* margins);
+void q_layout_set_contents_margins2(void* self, void* margins);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#unsetContentsMargins)
 ///
@@ -371,21 +371,21 @@ int32_t q_layout_qbase_index_of(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// ``` QLayout* self, QLayoutItem* param1 ```
-int32_t q_layout_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_layout_index_of2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
-void q_layout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
+void q_layout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// Base class method implementation
 ///
 /// ``` QLayout* self, QLayoutItem* param1 ```
-int32_t q_layout_qbase_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_layout_qbase_index_of2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#count)
 ///
@@ -728,7 +728,7 @@ void q_layout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QLayout* self, enum Qt__TimerId id ```
-void q_layout_kill_timer_with_id(void* self, int64_t id);
+void q_layout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -784,7 +784,7 @@ bool q_layout_disconnect(void* sender, void* signal, void* receiver, void* membe
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_layout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_layout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -882,7 +882,7 @@ bool q_layout_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_layout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_layout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -56,7 +56,7 @@ QDebug* q_messagelogger_debug(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#debug)
 ///
 /// ``` QMessageLogger* self, QLoggingCategory* cat ```
-QDebug* q_messagelogger_debug_with_cat(void* self, void* cat);
+QDebug* q_messagelogger_debug2(void* self, void* cat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#info)
 ///
@@ -66,7 +66,7 @@ QDebug* q_messagelogger_info(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#info)
 ///
 /// ``` QMessageLogger* self, QLoggingCategory* cat ```
-QDebug* q_messagelogger_info_with_cat(void* self, void* cat);
+QDebug* q_messagelogger_info2(void* self, void* cat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#warning)
 ///
@@ -76,7 +76,7 @@ QDebug* q_messagelogger_warning(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#warning)
 ///
 /// ``` QMessageLogger* self, QLoggingCategory* cat ```
-QDebug* q_messagelogger_warning_with_cat(void* self, void* cat);
+QDebug* q_messagelogger_warning2(void* self, void* cat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#critical)
 ///
@@ -86,7 +86,7 @@ QDebug* q_messagelogger_critical(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#critical)
 ///
 /// ``` QMessageLogger* self, QLoggingCategory* cat ```
-QDebug* q_messagelogger_critical_with_cat(void* self, void* cat);
+QDebug* q_messagelogger_critical2(void* self, void* cat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#fatal)
 ///
@@ -96,7 +96,7 @@ QDebug* q_messagelogger_fatal(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#fatal)
 ///
 /// ``` QMessageLogger* self, QLoggingCategory* cat ```
-QDebug* q_messagelogger_fatal_with_cat(void* self, void* cat);
+QDebug* q_messagelogger_fatal2(void* self, void* cat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogger.html#noDebug)
 ///

@@ -309,7 +309,7 @@ void q_completer_activated(void* self, const char* text);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#activated)
 ///
 /// ``` QCompleter* self, QModelIndex* index ```
-void q_completer_activated_with_index(void* self, void* index);
+void q_completer_activated2(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
@@ -319,7 +319,7 @@ void q_completer_highlighted(void* self, const char* text);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcompleter.html#highlighted)
 ///
 /// ``` QCompleter* self, QModelIndex* index ```
-void q_completer_highlighted_with_index(void* self, void* index);
+void q_completer_highlighted2(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -418,7 +418,7 @@ void q_completer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QCompleter* self, enum Qt__TimerId id ```
-void q_completer_kill_timer_with_id(void* self, int64_t id);
+void q_completer_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -474,7 +474,7 @@ bool q_completer_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_completer_disconnect_with_q_meta_object_connection(void* param1);
+bool q_completer_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -572,7 +572,7 @@ bool q_completer_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QCompleter* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_completer_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_completer_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

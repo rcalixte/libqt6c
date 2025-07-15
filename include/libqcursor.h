@@ -122,7 +122,7 @@ QPoint* q_cursor_pos();
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#pos)
 ///
 /// ``` QScreen* screen ```
-QPoint* q_cursor_pos_with_screen(void* screen);
+QPoint* q_cursor_pos2(void* screen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
@@ -137,12 +137,12 @@ void q_cursor_set_pos2(void* screen, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
 /// ``` QPoint* p ```
-void q_cursor_set_pos_with_q_point(void* p);
+void q_cursor_set_pos3(void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setPos)
 ///
 /// ``` QScreen* screen, QPoint* p ```
-void q_cursor_set_pos3(void* screen, void* p);
+void q_cursor_set_pos4(void* screen, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#dtor.QCursor)
 ///

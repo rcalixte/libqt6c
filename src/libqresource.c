@@ -81,28 +81,28 @@ bool q_resource_unregister_resource(const char* rccFilename) {
     return QResource_UnregisterResource(qstring(rccFilename));
 }
 
-bool q_resource_register_resource_with_rcc_data(unsigned char* rccData) {
-    return QResource_RegisterResourceWithRccData(rccData);
+bool q_resource_register_resource2(unsigned char* rccData) {
+    return QResource_RegisterResource2(rccData);
 }
 
-bool q_resource_unregister_resource_with_rcc_data(unsigned char* rccData) {
-    return QResource_UnregisterResourceWithRccData(rccData);
+bool q_resource_unregister_resource2(unsigned char* rccData) {
+    return QResource_UnregisterResource2(rccData);
 }
 
-bool q_resource_register_resource2(const char* rccFilename, const char* resourceRoot) {
-    return QResource_RegisterResource2(qstring(rccFilename), qstring(resourceRoot));
+bool q_resource_register_resource22(const char* rccFilename, const char* resourceRoot) {
+    return QResource_RegisterResource22(qstring(rccFilename), qstring(resourceRoot));
 }
 
-bool q_resource_unregister_resource2(const char* rccFilename, const char* resourceRoot) {
-    return QResource_UnregisterResource2(qstring(rccFilename), qstring(resourceRoot));
+bool q_resource_unregister_resource22(const char* rccFilename, const char* resourceRoot) {
+    return QResource_UnregisterResource22(qstring(rccFilename), qstring(resourceRoot));
 }
 
-bool q_resource_register_resource22(unsigned char* rccData, const char* resourceRoot) {
-    return QResource_RegisterResource22(rccData, qstring(resourceRoot));
+bool q_resource_register_resource23(unsigned char* rccData, const char* resourceRoot) {
+    return QResource_RegisterResource23(rccData, qstring(resourceRoot));
 }
 
-bool q_resource_unregister_resource22(unsigned char* rccData, const char* resourceRoot) {
-    return QResource_UnregisterResource22(rccData, qstring(resourceRoot));
+bool q_resource_unregister_resource23(unsigned char* rccData, const char* resourceRoot) {
+    return QResource_UnregisterResource23(rccData, qstring(resourceRoot));
 }
 
 void q_resource_delete(void* self) {

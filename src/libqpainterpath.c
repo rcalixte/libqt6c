@@ -147,8 +147,8 @@ bool q_painterpath_contains(void* self, void* pt) {
     return QPainterPath_Contains((QPainterPath*)self, (QPointF*)pt);
 }
 
-bool q_painterpath_contains_with_rect(void* self, void* rect) {
-    return QPainterPath_ContainsWithRect((QPainterPath*)self, (QRectF*)rect);
+bool q_painterpath_contains2(void* self, void* rect) {
+    return QPainterPath_Contains2((QPainterPath*)self, (QRectF*)rect);
 }
 
 bool q_painterpath_intersects(void* self, void* rect) {
@@ -159,16 +159,16 @@ void q_painterpath_translate(void* self, double dx, double dy) {
     QPainterPath_Translate((QPainterPath*)self, dx, dy);
 }
 
-void q_painterpath_translate_with_offset(void* self, void* offset) {
-    QPainterPath_TranslateWithOffset((QPainterPath*)self, (QPointF*)offset);
+void q_painterpath_translate2(void* self, void* offset) {
+    QPainterPath_Translate2((QPainterPath*)self, (QPointF*)offset);
 }
 
 QPainterPath* q_painterpath_translated(void* self, double dx, double dy) {
     return QPainterPath_Translated((QPainterPath*)self, dx, dy);
 }
 
-QPainterPath* q_painterpath_translated_with_offset(void* self, void* offset) {
-    return QPainterPath_TranslatedWithOffset((QPainterPath*)self, (QPointF*)offset);
+QPainterPath* q_painterpath_translated2(void* self, void* offset) {
+    return QPainterPath_Translated2((QPainterPath*)self, (QPointF*)offset);
 }
 
 QRectF* q_painterpath_bounding_rect(void* self) {
@@ -227,12 +227,12 @@ double q_painterpath_slope_at_percent(void* self, double t) {
     return QPainterPath_SlopeAtPercent((QPainterPath*)self, t);
 }
 
-bool q_painterpath_intersects_with_q_painter_path(void* self, void* p) {
-    return QPainterPath_IntersectsWithQPainterPath((QPainterPath*)self, (QPainterPath*)p);
+bool q_painterpath_intersects2(void* self, void* p) {
+    return QPainterPath_Intersects2((QPainterPath*)self, (QPainterPath*)p);
 }
 
-bool q_painterpath_contains_with_q_painter_path(void* self, void* p) {
-    return QPainterPath_ContainsWithQPainterPath((QPainterPath*)self, (QPainterPath*)p);
+bool q_painterpath_contains3(void* self, void* p) {
+    return QPainterPath_Contains3((QPainterPath*)self, (QPainterPath*)p);
 }
 
 QPainterPath* q_painterpath_united(void* self, void* r) {
@@ -355,8 +355,8 @@ void q_painterpathstroker_set_dash_pattern(void* self, int64_t dashPattern) {
     QPainterPathStroker_SetDashPattern((QPainterPathStroker*)self, dashPattern);
 }
 
-void q_painterpathstroker_set_dash_pattern_with_dash_pattern(void* self, libqt_list dashPattern) {
-    QPainterPathStroker_SetDashPatternWithDashPattern((QPainterPathStroker*)self, dashPattern);
+void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list dashPattern) {
+    QPainterPathStroker_SetDashPattern2((QPainterPathStroker*)self, dashPattern);
 }
 
 libqt_list /* of double */ q_painterpathstroker_dash_pattern(void* self) {

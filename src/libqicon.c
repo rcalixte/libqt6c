@@ -49,16 +49,16 @@ QPixmap* q_icon_pixmap2(void* self, int w, int h) {
     return QIcon_Pixmap2((QIcon*)self, w, h);
 }
 
-QPixmap* q_icon_pixmap_with_extent(void* self, int extent) {
-    return QIcon_PixmapWithExtent((QIcon*)self, extent);
+QPixmap* q_icon_pixmap3(void* self, int extent) {
+    return QIcon_Pixmap3((QIcon*)self, extent);
 }
 
-QPixmap* q_icon_pixmap3(void* self, void* size, double devicePixelRatio) {
-    return QIcon_Pixmap3((QIcon*)self, (QSize*)size, devicePixelRatio);
+QPixmap* q_icon_pixmap4(void* self, void* size, double devicePixelRatio) {
+    return QIcon_Pixmap4((QIcon*)self, (QSize*)size, devicePixelRatio);
 }
 
-QPixmap* q_icon_pixmap4(void* self, void* window, void* size) {
-    return QIcon_Pixmap4((QIcon*)self, (QWindow*)window, (QSize*)size);
+QPixmap* q_icon_pixmap5(void* self, void* window, void* size) {
+    return QIcon_Pixmap5((QIcon*)self, (QWindow*)window, (QSize*)size);
 }
 
 QSize* q_icon_actual_size(void* self, void* size) {
@@ -133,16 +133,16 @@ bool q_icon_has_theme_icon(const char* name) {
     return QIcon_HasThemeIcon(qstring(name));
 }
 
-QIcon* q_icon_from_theme_with_icon(int64_t icon) {
-    return QIcon_FromThemeWithIcon(icon);
+QIcon* q_icon_from_theme3(int64_t icon) {
+    return QIcon_FromTheme3(icon);
 }
 
-QIcon* q_icon_from_theme3(int64_t icon, void* fallback) {
-    return QIcon_FromTheme3(icon, (QIcon*)fallback);
+QIcon* q_icon_from_theme4(int64_t icon, void* fallback) {
+    return QIcon_FromTheme4(icon, (QIcon*)fallback);
 }
 
-bool q_icon_has_theme_icon_with_icon(int64_t icon) {
-    return QIcon_HasThemeIconWithIcon(icon);
+bool q_icon_has_theme_icon2(int64_t icon) {
+    return QIcon_HasThemeIcon2(icon);
 }
 
 const char** q_icon_theme_search_paths() {

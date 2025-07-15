@@ -387,8 +387,8 @@ double q_textline_cursor_to_x(void* self, int* cursorPos) {
     return QTextLine_CursorToX((QTextLine*)self, cursorPos);
 }
 
-double q_textline_cursor_to_x_with_cursor_pos(void* self, int cursorPos) {
-    return QTextLine_CursorToXWithCursorPos((QTextLine*)self, cursorPos);
+double q_textline_cursor_to_x2(void* self, int cursorPos) {
+    return QTextLine_CursorToX2((QTextLine*)self, cursorPos);
 }
 
 int32_t q_textline_x_to_cursor(void* self, double x) {
@@ -441,12 +441,12 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self) {
     return _arr;
 }
 
-double q_textline_cursor_to_x2(void* self, int* cursorPos, int64_t edge) {
-    return QTextLine_CursorToX2((QTextLine*)self, cursorPos, edge);
+double q_textline_cursor_to_x22(void* self, int* cursorPos, int64_t edge) {
+    return QTextLine_CursorToX22((QTextLine*)self, cursorPos, edge);
 }
 
-double q_textline_cursor_to_x22(void* self, int cursorPos, int64_t edge) {
-    return QTextLine_CursorToX22((QTextLine*)self, cursorPos, edge);
+double q_textline_cursor_to_x23(void* self, int cursorPos, int64_t edge) {
+    return QTextLine_CursorToX23((QTextLine*)self, cursorPos, edge);
 }
 
 int32_t q_textline_x_to_cursor2(void* self, double x, int64_t param2) {

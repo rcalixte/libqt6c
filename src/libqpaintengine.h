@@ -258,21 +258,21 @@ void q_paintengine_qbase_draw_ellipse(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// ``` QPaintEngine* self, QRect* r ```
-void q_paintengine_draw_ellipse_with_q_rect(void* self, void* r);
+void q_paintengine_draw_ellipse2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRect*) ```
-void q_paintengine_on_draw_ellipse_with_q_rect(void* self, void (*slot)(void*, void*));
+void q_paintengine_on_draw_ellipse2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Base class method implementation
 ///
 /// ``` QPaintEngine* self, QRect* r ```
-void q_paintengine_qbase_draw_ellipse_with_q_rect(void* self, void* r);
+void q_paintengine_qbase_draw_ellipse2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///

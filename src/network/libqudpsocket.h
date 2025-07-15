@@ -489,7 +489,7 @@ long long q_udpsocket_read(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// ``` QUdpSocket* self, long long maxlen ```
-char* q_udpsocket_read_with_maxlen(void* self, long long maxlen);
+char* q_udpsocket_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -552,14 +552,14 @@ long long q_udpsocket_write(void* self, const char* data, long long lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QUdpSocket* self, const char* data ```
-long long q_udpsocket_write_with_data(void* self, const char* data);
+long long q_udpsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QUdpSocket* self, const char* data ```
-long long q_udpsocket_write2(void* self, const char* data);
+long long q_udpsocket_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -573,7 +573,7 @@ long long q_udpsocket_peek(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// ``` QUdpSocket* self, long long maxlen ```
-char* q_udpsocket_peek_with_maxlen(void* self, long long maxlen);
+char* q_udpsocket_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -783,7 +783,7 @@ void q_udpsocket_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QUdpSocket* self, enum Qt__TimerId id ```
-void q_udpsocket_kill_timer_with_id(void* self, int64_t id);
+void q_udpsocket_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -839,7 +839,7 @@ bool q_udpsocket_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_udpsocket_disconnect_with_q_meta_object_connection(void* param1);
+bool q_udpsocket_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -937,7 +937,7 @@ bool q_udpsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QUdpSocket* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_udpsocket_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_udpsocket_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

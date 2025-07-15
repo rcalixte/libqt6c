@@ -258,7 +258,7 @@ void q_sortfilterproxymodel_set_filter_regular_expression(void* self, const char
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterRegularExpression)
 ///
 /// ``` QSortFilterProxyModel* self, QRegularExpression* regularExpression ```
-void q_sortfilterproxymodel_set_filter_regular_expression_with_regular_expression(void* self, void* regularExpression);
+void q_sortfilterproxymodel_set_filter_regular_expression2(void* self, void* regularExpression);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterWildcard)
 ///
@@ -1267,7 +1267,7 @@ void q_sortfilterproxymodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSortFilterProxyModel* self, enum Qt__TimerId id ```
-void q_sortfilterproxymodel_kill_timer_with_id(void* self, int64_t id);
+void q_sortfilterproxymodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1323,7 +1323,7 @@ bool q_sortfilterproxymodel_disconnect(void* sender, void* signal, void* receive
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_sortfilterproxymodel_disconnect_with_q_meta_object_connection(void* param1);
+bool q_sortfilterproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1414,7 +1414,7 @@ bool q_sortfilterproxymodel_move_to_thread2(void* self, void* thread, void* para
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSortFilterProxyModel* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_sortfilterproxymodel_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_sortfilterproxymodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

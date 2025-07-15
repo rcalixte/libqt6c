@@ -68,7 +68,7 @@ const char* q_clipboard_text(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
 /// ``` QClipboard* self, const char* subtype ```
-const char* q_clipboard_text_with_subtype(void* self, const char* subtype);
+const char* q_clipboard_text2(void* self, const char* subtype);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setText)
 ///
@@ -168,7 +168,7 @@ const char* q_clipboard_text1(void* self, int64_t mode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
 /// ``` QClipboard* self, const char* subtype, enum QClipboard__Mode mode ```
-const char* q_clipboard_text2(void* self, const char* subtype, int64_t mode);
+const char* q_clipboard_text22(void* self, const char* subtype, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setText)
 ///
@@ -301,7 +301,7 @@ void q_clipboard_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QClipboard* self, enum Qt__TimerId id ```
-void q_clipboard_kill_timer_with_id(void* self, int64_t id);
+void q_clipboard_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -357,7 +357,7 @@ bool q_clipboard_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_clipboard_disconnect_with_q_meta_object_connection(void* param1);
+bool q_clipboard_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -455,7 +455,7 @@ bool q_clipboard_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QClipboard* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_clipboard_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_clipboard_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

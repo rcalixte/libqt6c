@@ -178,8 +178,8 @@ bool q_rawfont_supports_character(void* self, uint32_t ucs4) {
     return QRawFont_SupportsCharacter((QRawFont*)self, ucs4);
 }
 
-bool q_rawfont_supports_character_with_character(void* self, void* character) {
-    return QRawFont_SupportsCharacterWithCharacter((QRawFont*)self, (QChar*)character);
+bool q_rawfont_supports_character2(void* self, void* character) {
+    return QRawFont_SupportsCharacter2((QRawFont*)self, (QChar*)character);
 }
 
 libqt_list /* of int64_t */ q_rawfont_supported_writing_systems(void* self) {
@@ -194,8 +194,8 @@ char* q_rawfont_font_table(void* self, const char* tagName) {
     return _ret;
 }
 
-char* q_rawfont_font_table_with_tag(void* self, void* tag) {
-    libqt_string _str = QRawFont_FontTableWithTag((QRawFont*)self, (QFont__Tag*)tag);
+char* q_rawfont_font_table2(void* self, void* tag) {
+    libqt_string _str = QRawFont_FontTable2((QRawFont*)self, (QFont__Tag*)tag);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

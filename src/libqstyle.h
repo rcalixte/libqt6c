@@ -91,59 +91,59 @@ void q_style_qbase_unpolish(void* self, void* widget);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// ``` QStyle* self, QApplication* application ```
-void q_style_polish_with_application(void* self, void* application);
+void q_style_polish2(void* self, void* application);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
-void q_style_on_polish_with_application(void* self, void (*slot)(void*, void*));
+void q_style_on_polish2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QApplication* application ```
-void q_style_qbase_polish_with_application(void* self, void* application);
+void q_style_qbase_polish2(void* self, void* application);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// ``` QStyle* self, QApplication* application ```
-void q_style_unpolish_with_application(void* self, void* application);
+void q_style_unpolish2(void* self, void* application);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
-void q_style_on_unpolish_with_application(void* self, void (*slot)(void*, void*));
+void q_style_on_unpolish2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QApplication* application ```
-void q_style_qbase_unpolish_with_application(void* self, void* application);
+void q_style_qbase_unpolish2(void* self, void* application);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// ``` QStyle* self, QPalette* palette ```
-void q_style_polish_with_palette(void* self, void* palette);
+void q_style_polish3(void* self, void* palette);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QStyle* self, void (*slot)(QStyle*, QPalette*) ```
-void q_style_on_polish_with_palette(void* self, void (*slot)(void*, void*));
+void q_style_on_polish3(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
 ///
 /// ``` QStyle* self, QPalette* palette ```
-void q_style_qbase_polish_with_palette(void* self, void* palette);
+void q_style_qbase_polish3(void* self, void* palette);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
 ///
@@ -639,7 +639,7 @@ void q_style_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QStyle* self, enum Qt__TimerId id ```
-void q_style_kill_timer_with_id(void* self, int64_t id);
+void q_style_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -695,7 +695,7 @@ bool q_style_disconnect(void* sender, void* signal, void* receiver, void* member
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_style_disconnect_with_q_meta_object_connection(void* param1);
+bool q_style_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -793,7 +793,7 @@ bool q_style_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QStyle* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_style_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_style_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

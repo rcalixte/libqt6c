@@ -627,12 +627,12 @@ QPainterPath* q_graphicsitem_map_to_item4(void* self, void* item, void* path) {
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsitem_map_from_item(void* self, void* item, void* point) {
@@ -663,24 +663,24 @@ QPainterPath* q_graphicsitem_map_from_item4(void* self, void* item, void* path) 
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -699,12 +699,12 @@ QPointF* q_graphicsitem_map_from_item5(void* self, void* item, double x, double 
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -1404,8 +1404,8 @@ void q_graphicsobject_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsobject_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicsobject_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicsobject_children(void* self) {
@@ -1437,8 +1437,8 @@ bool q_graphicsobject_disconnect(void* sender, void* signal, void* receiver, voi
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicsobject_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicsobject_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsobject_dump_object_tree(void* self) {
@@ -1504,8 +1504,8 @@ bool q_graphicsobject_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsobject_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicsobject_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -2006,12 +2006,12 @@ QPainterPath* q_graphicsobject_map_to_item4(void* self, void* item, void* path) 
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsobject_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsobject_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsobject_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsobject_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsobject_map_from_item(void* self, void* item, void* point) {
@@ -2042,24 +2042,24 @@ QPainterPath* q_graphicsobject_map_from_item4(void* self, void* item, void* path
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsobject_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsobject_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsobject_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsobject_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsobject_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsobject_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsobject_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsobject_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsobject_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsobject_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -2078,12 +2078,12 @@ QPointF* q_graphicsobject_map_from_item5(void* self, void* item, double x, doubl
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsobject_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsobject_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsobject_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsobject_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsobject_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -3305,12 +3305,12 @@ QPainterPath* q_abstractgraphicsshapeitem_map_to_item4(void* self, void* item, v
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_abstractgraphicsshapeitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_abstractgraphicsshapeitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_abstractgraphicsshapeitem_map_from_item(void* self, void* item, void* point) {
@@ -3341,24 +3341,24 @@ QPainterPath* q_abstractgraphicsshapeitem_map_from_item4(void* self, void* item,
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_abstractgraphicsshapeitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_abstractgraphicsshapeitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_abstractgraphicsshapeitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_abstractgraphicsshapeitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_abstractgraphicsshapeitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_abstractgraphicsshapeitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_abstractgraphicsshapeitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_abstractgraphicsshapeitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -3377,12 +3377,12 @@ QPointF* q_abstractgraphicsshapeitem_map_from_item5(void* self, void* item, doub
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_abstractgraphicsshapeitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_abstractgraphicsshapeitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_abstractgraphicsshapeitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_abstractgraphicsshapeitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_abstractgraphicsshapeitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -4580,12 +4580,12 @@ QPainterPath* q_graphicspathitem_map_to_item4(void* self, void* item, void* path
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspathitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspathitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspathitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspathitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicspathitem_map_from_item(void* self, void* item, void* point) {
@@ -4616,24 +4616,24 @@ QPainterPath* q_graphicspathitem_map_from_item4(void* self, void* item, void* pa
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspathitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspathitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspathitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspathitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicspathitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicspathitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspathitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicspathitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspathitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicspathitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -4652,12 +4652,12 @@ QPointF* q_graphicspathitem_map_from_item5(void* self, void* item, double x, dou
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicspathitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspathitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicspathitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspathitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicspathitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -5771,12 +5771,12 @@ QPainterPath* q_graphicsrectitem_map_to_item4(void* self, void* item, void* path
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsrectitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsrectitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsrectitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsrectitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsrectitem_map_from_item(void* self, void* item, void* point) {
@@ -5807,24 +5807,24 @@ QPainterPath* q_graphicsrectitem_map_from_item4(void* self, void* item, void* pa
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsrectitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsrectitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsrectitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsrectitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsrectitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsrectitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsrectitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsrectitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsrectitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsrectitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -5843,12 +5843,12 @@ QPointF* q_graphicsrectitem_map_from_item5(void* self, void* item, double x, dou
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsrectitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsrectitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsrectitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsrectitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsrectitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -6978,12 +6978,12 @@ QPainterPath* q_graphicsellipseitem_map_to_item4(void* self, void* item, void* p
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsellipseitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsellipseitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsellipseitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsellipseitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsellipseitem_map_from_item(void* self, void* item, void* point) {
@@ -7014,24 +7014,24 @@ QPainterPath* q_graphicsellipseitem_map_from_item4(void* self, void* item, void*
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsellipseitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsellipseitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsellipseitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsellipseitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsellipseitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsellipseitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsellipseitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsellipseitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsellipseitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsellipseitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -7050,12 +7050,12 @@ QPointF* q_graphicsellipseitem_map_from_item5(void* self, void* item, double x, 
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsellipseitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsellipseitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsellipseitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsellipseitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsellipseitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -8149,12 +8149,12 @@ QPainterPath* q_graphicspolygonitem_map_to_item4(void* self, void* item, void* p
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspolygonitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspolygonitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspolygonitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspolygonitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicspolygonitem_map_from_item(void* self, void* item, void* point) {
@@ -8185,24 +8185,24 @@ QPainterPath* q_graphicspolygonitem_map_from_item4(void* self, void* item, void*
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspolygonitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspolygonitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspolygonitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspolygonitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicspolygonitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicspolygonitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspolygonitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicspolygonitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspolygonitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicspolygonitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -8221,12 +8221,12 @@ QPointF* q_graphicspolygonitem_map_from_item5(void* self, void* item, double x, 
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicspolygonitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspolygonitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicspolygonitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspolygonitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicspolygonitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -9332,12 +9332,12 @@ QPainterPath* q_graphicslineitem_map_to_item4(void* self, void* item, void* path
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicslineitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicslineitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicslineitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicslineitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicslineitem_map_from_item(void* self, void* item, void* point) {
@@ -9368,24 +9368,24 @@ QPainterPath* q_graphicslineitem_map_from_item4(void* self, void* item, void* pa
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicslineitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicslineitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicslineitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicslineitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicslineitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicslineitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicslineitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicslineitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicslineitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicslineitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -9404,12 +9404,12 @@ QPointF* q_graphicslineitem_map_from_item5(void* self, void* item, double x, dou
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicslineitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicslineitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicslineitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicslineitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicslineitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -10523,12 +10523,12 @@ QPainterPath* q_graphicspixmapitem_map_to_item4(void* self, void* item, void* pa
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspixmapitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspixmapitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspixmapitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspixmapitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicspixmapitem_map_from_item(void* self, void* item, void* point) {
@@ -10559,24 +10559,24 @@ QPainterPath* q_graphicspixmapitem_map_from_item4(void* self, void* item, void* 
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspixmapitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspixmapitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicspixmapitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicspixmapitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicspixmapitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicspixmapitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspixmapitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicspixmapitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspixmapitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicspixmapitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -10595,12 +10595,12 @@ QPointF* q_graphicspixmapitem_map_from_item5(void* self, void* item, double x, d
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicspixmapitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspixmapitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicspixmapitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicspixmapitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicspixmapitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -11726,8 +11726,8 @@ void q_graphicstextitem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicstextitem_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicstextitem_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicstextitem_children(void* self) {
@@ -11759,8 +11759,8 @@ bool q_graphicstextitem_disconnect(void* sender, void* signal, void* receiver, v
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicstextitem_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicstextitem_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicstextitem_dump_object_tree(void* self) {
@@ -11826,8 +11826,8 @@ bool q_graphicstextitem_move_to_thread2(void* self, void* thread, void* param2) 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicstextitem_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicstextitem_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -12328,12 +12328,12 @@ QPainterPath* q_graphicstextitem_map_to_item4(void* self, void* item, void* path
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicstextitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicstextitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicstextitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicstextitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicstextitem_map_from_item(void* self, void* item, void* point) {
@@ -12364,24 +12364,24 @@ QPainterPath* q_graphicstextitem_map_from_item4(void* self, void* item, void* pa
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicstextitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicstextitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicstextitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicstextitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicstextitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicstextitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicstextitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicstextitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicstextitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicstextitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -12400,12 +12400,12 @@ QPointF* q_graphicstextitem_map_from_item5(void* self, void* item, double x, dou
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicstextitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicstextitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicstextitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicstextitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicstextitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -13426,12 +13426,12 @@ QPainterPath* q_graphicssimpletextitem_map_to_item4(void* self, void* item, void
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssimpletextitem_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssimpletextitem_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssimpletextitem_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssimpletextitem_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicssimpletextitem_map_from_item(void* self, void* item, void* point) {
@@ -13462,24 +13462,24 @@ QPainterPath* q_graphicssimpletextitem_map_from_item4(void* self, void* item, vo
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssimpletextitem_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssimpletextitem_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicssimpletextitem_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicssimpletextitem_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicssimpletextitem_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicssimpletextitem_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssimpletextitem_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicssimpletextitem_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssimpletextitem_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicssimpletextitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -13498,12 +13498,12 @@ QPointF* q_graphicssimpletextitem_map_from_item5(void* self, void* item, double 
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicssimpletextitem_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssimpletextitem_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicssimpletextitem_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicssimpletextitem_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicssimpletextitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -14521,12 +14521,12 @@ QPainterPath* q_graphicsitemgroup_map_to_item4(void* self, void* item, void* pat
     return QGraphicsItem_MapToItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitemgroup_map_to_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitemgroup_map_to_parent4(void* self, void* path) {
+    return QGraphicsItem_MapToParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitemgroup_map_to_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapToSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitemgroup_map_to_scene4(void* self, void* path) {
+    return QGraphicsItem_MapToScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsitemgroup_map_from_item(void* self, void* item, void* point) {
@@ -14557,24 +14557,24 @@ QPainterPath* q_graphicsitemgroup_map_from_item4(void* self, void* item, void* p
     return QGraphicsItem_MapFromItem4((QGraphicsItem*)self, (QGraphicsItem*)item, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitemgroup_map_from_parent_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromParentWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitemgroup_map_from_parent4(void* self, void* path) {
+    return QGraphicsItem_MapFromParent4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
-QPainterPath* q_graphicsitemgroup_map_from_scene_with_path(void* self, void* path) {
-    return QGraphicsItem_MapFromSceneWithPath((QGraphicsItem*)self, (QPainterPath*)path);
+QPainterPath* q_graphicsitemgroup_map_from_scene4(void* self, void* path) {
+    return QGraphicsItem_MapFromScene4((QGraphicsItem*)self, (QPainterPath*)path);
 }
 
 QPointF* q_graphicsitemgroup_map_to_item5(void* self, void* item, double x, double y) {
     return QGraphicsItem_MapToItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsitemgroup_map_to_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapToParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitemgroup_map_to_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapToParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsitemgroup_map_to_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapToScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitemgroup_map_to_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapToScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsitemgroup_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h) {
@@ -14593,12 +14593,12 @@ QPointF* q_graphicsitemgroup_map_from_item5(void* self, void* item, double x, do
     return QGraphicsItem_MapFromItem5((QGraphicsItem*)self, (QGraphicsItem*)item, x, y);
 }
 
-QPointF* q_graphicsitemgroup_map_from_parent2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromParent2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitemgroup_map_from_parent5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromParent5((QGraphicsItem*)self, x, y);
 }
 
-QPointF* q_graphicsitemgroup_map_from_scene2(void* self, double x, double y) {
-    return QGraphicsItem_MapFromScene2((QGraphicsItem*)self, x, y);
+QPointF* q_graphicsitemgroup_map_from_scene5(void* self, double x, double y) {
+    return QGraphicsItem_MapFromScene5((QGraphicsItem*)self, x, y);
 }
 
 QRectF* q_graphicsitemgroup_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h) {

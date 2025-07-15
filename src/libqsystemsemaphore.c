@@ -38,8 +38,8 @@ void q_systemsemaphore_set_native_key(void* self, void* key) {
     QSystemSemaphore_SetNativeKey((QSystemSemaphore*)self, (QNativeIpcKey*)key);
 }
 
-void q_systemsemaphore_set_native_key_with_key(void* self, const char* key) {
-    QSystemSemaphore_SetNativeKeyWithKey((QSystemSemaphore*)self, qstring(key));
+void q_systemsemaphore_set_native_key2(void* self, const char* key) {
+    QSystemSemaphore_SetNativeKey2((QSystemSemaphore*)self, qstring(key));
 }
 
 QNativeIpcKey* q_systemsemaphore_native_ipc_key(void* self) {
@@ -102,16 +102,16 @@ const char* q_systemsemaphore_tr3(const char* sourceText, const char* disambigua
     return _ret;
 }
 
-void q_systemsemaphore_set_native_key2(void* self, void* key, int initialValue) {
-    QSystemSemaphore_SetNativeKey2((QSystemSemaphore*)self, (QNativeIpcKey*)key, initialValue);
+void q_systemsemaphore_set_native_key22(void* self, void* key, int initialValue) {
+    QSystemSemaphore_SetNativeKey22((QSystemSemaphore*)self, (QNativeIpcKey*)key, initialValue);
 }
 
 void q_systemsemaphore_set_native_key3(void* self, void* key, int initialValue, int64_t param3) {
     QSystemSemaphore_SetNativeKey3((QSystemSemaphore*)self, (QNativeIpcKey*)key, initialValue, param3);
 }
 
-void q_systemsemaphore_set_native_key22(void* self, const char* key, int initialValue) {
-    QSystemSemaphore_SetNativeKey22((QSystemSemaphore*)self, qstring(key), initialValue);
+void q_systemsemaphore_set_native_key23(void* self, const char* key, int initialValue) {
+    QSystemSemaphore_SetNativeKey23((QSystemSemaphore*)self, qstring(key), initialValue);
 }
 
 void q_systemsemaphore_set_native_key32(void* self, const char* key, int initialValue, int64_t mode) {

@@ -50,8 +50,8 @@ void q_hostaddress_operator_assign(void* self, void* other) {
     QHostAddress_OperatorAssign((QHostAddress*)self, (QHostAddress*)other);
 }
 
-void q_hostaddress_operator_assign_with_address(void* self, int64_t address) {
-    QHostAddress_OperatorAssignWithAddress((QHostAddress*)self, address);
+void q_hostaddress_operator_assign2(void* self, int64_t address) {
+    QHostAddress_OperatorAssign2((QHostAddress*)self, address);
 }
 
 void q_hostaddress_swap(void* self, void* other) {
@@ -62,20 +62,20 @@ void q_hostaddress_set_address(void* self, uint32_t ip4Addr) {
     QHostAddress_SetAddress((QHostAddress*)self, ip4Addr);
 }
 
-void q_hostaddress_set_address_with_ip6_addr(void* self, unsigned char* ip6Addr) {
-    QHostAddress_SetAddressWithIp6Addr((QHostAddress*)self, ip6Addr);
+void q_hostaddress_set_address2(void* self, unsigned char* ip6Addr) {
+    QHostAddress_SetAddress2((QHostAddress*)self, ip6Addr);
 }
 
-void q_hostaddress_set_address2(void* self, void* ip6Addr) {
-    QHostAddress_SetAddress2((QHostAddress*)self, (QIPv6Address*)ip6Addr);
+void q_hostaddress_set_address3(void* self, void* ip6Addr) {
+    QHostAddress_SetAddress3((QHostAddress*)self, (QIPv6Address*)ip6Addr);
 }
 
-bool q_hostaddress_set_address3(void* self, const char* address) {
-    return QHostAddress_SetAddress3((QHostAddress*)self, qstring(address));
+bool q_hostaddress_set_address5(void* self, const char* address) {
+    return QHostAddress_SetAddress5((QHostAddress*)self, qstring(address));
 }
 
-void q_hostaddress_set_address4(void* self, int64_t address) {
-    QHostAddress_SetAddress4((QHostAddress*)self, address);
+void q_hostaddress_set_address6(void* self, int64_t address) {
+    QHostAddress_SetAddress6((QHostAddress*)self, address);
 }
 
 int64_t q_hostaddress_protocol(void* self) {
@@ -116,16 +116,16 @@ bool q_hostaddress_operator_equal(void* self, void* address) {
     return QHostAddress_OperatorEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_equal_with_address(void* self, int64_t address) {
-    return QHostAddress_OperatorEqualWithAddress((QHostAddress*)self, address);
+bool q_hostaddress_operator_equal2(void* self, int64_t address) {
+    return QHostAddress_OperatorEqual2((QHostAddress*)self, address);
 }
 
 bool q_hostaddress_operator_not_equal(void* self, void* address) {
     return QHostAddress_OperatorNotEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_not_equal_with_address(void* self, int64_t address) {
-    return QHostAddress_OperatorNotEqualWithAddress((QHostAddress*)self, address);
+bool q_hostaddress_operator_not_equal2(void* self, int64_t address) {
+    return QHostAddress_OperatorNotEqual2((QHostAddress*)self, address);
 }
 
 bool q_hostaddress_is_null(void* self) {

@@ -81,8 +81,8 @@ bool q_localserver_listen(void* self, const char* name) {
     return QLocalServer_Listen((QLocalServer*)self, qstring(name));
 }
 
-bool q_localserver_listen_with_socket_descriptor(void* self, intptr_t socketDescriptor) {
-    return QLocalServer_ListenWithSocketDescriptor((QLocalServer*)self, socketDescriptor);
+bool q_localserver_listen2(void* self, intptr_t socketDescriptor) {
+    return QLocalServer_Listen2((QLocalServer*)self, socketDescriptor);
 }
 
 int32_t q_localserver_max_pending_connections(void* self) {
@@ -244,8 +244,8 @@ void q_localserver_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_localserver_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_localserver_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_localserver_children(void* self) {
@@ -277,8 +277,8 @@ bool q_localserver_disconnect(void* sender, void* signal, void* receiver, void* 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_localserver_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_localserver_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_localserver_dump_object_tree(void* self) {
@@ -344,8 +344,8 @@ bool q_localserver_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_localserver_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_localserver_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_localserver_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

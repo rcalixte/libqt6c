@@ -32,12 +32,12 @@ bool q_waitcondition_wait2(void* self, void* lockedMutex, uint64_t time);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwaitcondition.html#wait)
 ///
 /// ``` QWaitCondition* self, QReadWriteLock* lockedReadWriteLock ```
-bool q_waitcondition_wait_with_locked_read_write_lock(void* self, void* lockedReadWriteLock);
+bool q_waitcondition_wait3(void* self, void* lockedReadWriteLock);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwaitcondition.html#wait)
 ///
 /// ``` QWaitCondition* self, QReadWriteLock* lockedReadWriteLock, uint64_t time ```
-bool q_waitcondition_wait3(void* self, void* lockedReadWriteLock, uint64_t time);
+bool q_waitcondition_wait4(void* self, void* lockedReadWriteLock, uint64_t time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwaitcondition.html#wakeOne)
 ///

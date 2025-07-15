@@ -127,7 +127,7 @@ void q_colorspace_set_transfer_function(void* self, int64_t transferFunction);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
 /// ``` QColorSpace* self, libqt_list /* of uint16_t */ transferFunctionTable ```
-void q_colorspace_set_transfer_function_with_transfer_function_table(void* self, libqt_list transferFunctionTable);
+void q_colorspace_set_transfer_function2(void* self, libqt_list transferFunctionTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunctions)
 ///
@@ -142,7 +142,7 @@ QColorSpace* q_colorspace_with_transfer_function(void* self, int64_t transferFun
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
 /// ``` QColorSpace* self, libqt_list /* of uint16_t */ transferFunctionTable ```
-QColorSpace* q_colorspace_with_transfer_function_with_transfer_function_table(void* self, libqt_list transferFunctionTable);
+QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list transferFunctionTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunctions)
 ///
@@ -217,12 +217,12 @@ QVariant* q_colorspace_to_q_variant(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
 /// ``` QColorSpace* self, enum QColorSpace__TransferFunction transferFunction, float gamma ```
-void q_colorspace_set_transfer_function2(void* self, int64_t transferFunction, float gamma);
+void q_colorspace_set_transfer_function22(void* self, int64_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
 /// ``` QColorSpace* self, enum QColorSpace__TransferFunction transferFunction, float gamma ```
-QColorSpace* q_colorspace_with_transfer_function2(void* self, int64_t transferFunction, float gamma);
+QColorSpace* q_colorspace_with_transfer_function22(void* self, int64_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#dtor.QColorSpace)
 ///

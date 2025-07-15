@@ -372,8 +372,8 @@ void q_standarditem_insert_row2(void* self, int row, void* item) {
     QStandardItem_InsertRow2((QStandardItem*)self, row, (QStandardItem*)item);
 }
 
-void q_standarditem_append_row_with_item(void* self, void* item) {
-    QStandardItem_AppendRowWithItem((QStandardItem*)self, (QStandardItem*)item);
+void q_standarditem_append_row2(void* self, void* item) {
+    QStandardItem_AppendRow2((QStandardItem*)self, (QStandardItem*)item);
 }
 
 QStandardItem* q_standarditem_take_child(void* self, int row) {
@@ -873,8 +873,8 @@ void q_standarditemmodel_append_column(void* self, libqt_list items) {
     QStandardItemModel_AppendColumn((QStandardItemModel*)self, items);
 }
 
-void q_standarditemmodel_append_row_with_item(void* self, void* item) {
-    QStandardItemModel_AppendRowWithItem((QStandardItemModel*)self, (QStandardItem*)item);
+void q_standarditemmodel_append_row2(void* self, void* item) {
+    QStandardItemModel_AppendRow2((QStandardItemModel*)self, (QStandardItem*)item);
 }
 
 void q_standarditemmodel_insert_row(void* self, int row, libqt_list items) {
@@ -889,12 +889,12 @@ void q_standarditemmodel_insert_row2(void* self, int row, void* item) {
     QStandardItemModel_InsertRow2((QStandardItemModel*)self, row, (QStandardItem*)item);
 }
 
-bool q_standarditemmodel_insert_row_with_row(void* self, int row) {
-    return QStandardItemModel_InsertRowWithRow((QStandardItemModel*)self, row);
+bool q_standarditemmodel_insert_row3(void* self, int row) {
+    return QStandardItemModel_InsertRow3((QStandardItemModel*)self, row);
 }
 
-bool q_standarditemmodel_insert_column_with_column(void* self, int column) {
-    return QStandardItemModel_InsertColumnWithColumn((QStandardItemModel*)self, column);
+bool q_standarditemmodel_insert_column2(void* self, int column) {
+    return QStandardItemModel_InsertColumn2((QStandardItemModel*)self, column);
 }
 
 QStandardItem* q_standarditemmodel_take_item(void* self, int row) {
@@ -1028,8 +1028,8 @@ bool q_standarditemmodel_insert_row22(void* self, int row, void* parent) {
     return QStandardItemModel_InsertRow22((QStandardItemModel*)self, row, (QModelIndex*)parent);
 }
 
-bool q_standarditemmodel_insert_column2(void* self, int column, void* parent) {
-    return QStandardItemModel_InsertColumn2((QStandardItemModel*)self, column, (QModelIndex*)parent);
+bool q_standarditemmodel_insert_column22(void* self, int column, void* parent) {
+    return QStandardItemModel_InsertColumn22((QStandardItemModel*)self, column, (QModelIndex*)parent);
 }
 
 QStandardItem* q_standarditemmodel_take_item2(void* self, int row, int column) {
@@ -1205,8 +1205,8 @@ void q_standarditemmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_standarditemmodel_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_standarditemmodel_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_standarditemmodel_children(void* self) {
@@ -1238,8 +1238,8 @@ bool q_standarditemmodel_disconnect(void* sender, void* signal, void* receiver, 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_standarditemmodel_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_standarditemmodel_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_standarditemmodel_dump_object_tree(void* self) {
@@ -1301,8 +1301,8 @@ bool q_standarditemmodel_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_standarditemmodel_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_standarditemmodel_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_standarditemmodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

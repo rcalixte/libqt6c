@@ -78,12 +78,12 @@ QObject* q_signalmapper_mapping(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsignalmapper.html#mapping)
 ///
 /// ``` QSignalMapper* self, const char* text ```
-QObject* q_signalmapper_mapping_with_text(void* self, const char* text);
+QObject* q_signalmapper_mapping2(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsignalmapper.html#mapping)
 ///
 /// ``` QSignalMapper* self, QObject* object ```
-QObject* q_signalmapper_mapping_with_object(void* self, void* object);
+QObject* q_signalmapper_mapping3(void* self, void* object);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsignalmapper.html#mappedInt)
 ///
@@ -123,7 +123,7 @@ void q_signalmapper_map(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsignalmapper.html#map)
 ///
 /// ``` QSignalMapper* self, QObject* sender ```
-void q_signalmapper_map_with_sender(void* self, void* sender);
+void q_signalmapper_map2(void* self, void* sender);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -217,7 +217,7 @@ void q_signalmapper_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSignalMapper* self, enum Qt__TimerId id ```
-void q_signalmapper_kill_timer_with_id(void* self, int64_t id);
+void q_signalmapper_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -273,7 +273,7 @@ bool q_signalmapper_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_signalmapper_disconnect_with_q_meta_object_connection(void* param1);
+bool q_signalmapper_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -371,7 +371,7 @@ bool q_signalmapper_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSignalMapper* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_signalmapper_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_signalmapper_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

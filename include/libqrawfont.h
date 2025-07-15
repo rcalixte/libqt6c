@@ -217,7 +217,7 @@ bool q_rawfont_supports_character(void* self, uint32_t ucs4);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#supportsCharacter)
 ///
 /// ``` QRawFont* self, QChar* character ```
-bool q_rawfont_supports_character_with_character(void* self, void* character);
+bool q_rawfont_supports_character2(void* self, void* character);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#supportedWritingSystems)
 ///
@@ -232,7 +232,7 @@ char* q_rawfont_font_table(void* self, const char* tagName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///
 /// ``` QRawFont* self, QFont__Tag* tag ```
-char* q_rawfont_font_table_with_tag(void* self, void* tag);
+char* q_rawfont_font_table2(void* self, void* tag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#fromFont)
 ///

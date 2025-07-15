@@ -204,28 +204,28 @@ void q_textcursor_insert_block(void* self) {
     QTextCursor_InsertBlock((QTextCursor*)self);
 }
 
-void q_textcursor_insert_block_with_format(void* self, void* format) {
-    QTextCursor_InsertBlockWithFormat((QTextCursor*)self, (QTextBlockFormat*)format);
+void q_textcursor_insert_block2(void* self, void* format) {
+    QTextCursor_InsertBlock2((QTextCursor*)self, (QTextBlockFormat*)format);
 }
 
-void q_textcursor_insert_block2(void* self, void* format, void* charFormat) {
-    QTextCursor_InsertBlock2((QTextCursor*)self, (QTextBlockFormat*)format, (QTextCharFormat*)charFormat);
+void q_textcursor_insert_block3(void* self, void* format, void* charFormat) {
+    QTextCursor_InsertBlock3((QTextCursor*)self, (QTextBlockFormat*)format, (QTextCharFormat*)charFormat);
 }
 
 QTextList* q_textcursor_insert_list(void* self, void* format) {
     return QTextCursor_InsertList((QTextCursor*)self, (QTextListFormat*)format);
 }
 
-QTextList* q_textcursor_insert_list_with_style(void* self, int64_t style) {
-    return QTextCursor_InsertListWithStyle((QTextCursor*)self, style);
+QTextList* q_textcursor_insert_list2(void* self, int64_t style) {
+    return QTextCursor_InsertList2((QTextCursor*)self, style);
 }
 
 QTextList* q_textcursor_create_list(void* self, void* format) {
     return QTextCursor_CreateList((QTextCursor*)self, (QTextListFormat*)format);
 }
 
-QTextList* q_textcursor_create_list_with_style(void* self, int64_t style) {
-    return QTextCursor_CreateListWithStyle((QTextCursor*)self, style);
+QTextList* q_textcursor_create_list2(void* self, int64_t style) {
+    return QTextCursor_CreateList2((QTextCursor*)self, style);
 }
 
 QTextList* q_textcursor_current_list(void* self) {
@@ -268,16 +268,16 @@ void q_textcursor_insert_image(void* self, void* format, int64_t alignment) {
     QTextCursor_InsertImage((QTextCursor*)self, (QTextImageFormat*)format, alignment);
 }
 
-void q_textcursor_insert_image_with_format(void* self, void* format) {
-    QTextCursor_InsertImageWithFormat((QTextCursor*)self, (QTextImageFormat*)format);
+void q_textcursor_insert_image2(void* self, void* format) {
+    QTextCursor_InsertImage2((QTextCursor*)self, (QTextImageFormat*)format);
 }
 
-void q_textcursor_insert_image_with_name(void* self, const char* name) {
-    QTextCursor_InsertImageWithName((QTextCursor*)self, qstring(name));
+void q_textcursor_insert_image3(void* self, const char* name) {
+    QTextCursor_InsertImage3((QTextCursor*)self, qstring(name));
 }
 
-void q_textcursor_insert_image_with_image(void* self, void* image) {
-    QTextCursor_InsertImageWithImage((QTextCursor*)self, (QImage*)image);
+void q_textcursor_insert_image4(void* self, void* image) {
+    QTextCursor_InsertImage4((QTextCursor*)self, (QImage*)image);
 }
 
 void q_textcursor_begin_edit_block(void* self) {
@@ -348,8 +348,8 @@ void q_textcursor_insert_markdown2(void* self, const char* markdown, int64_t fea
     QTextCursor_InsertMarkdown2((QTextCursor*)self, qstring(markdown), features);
 }
 
-void q_textcursor_insert_image2(void* self, void* image, const char* name) {
-    QTextCursor_InsertImage2((QTextCursor*)self, (QImage*)image, qstring(name));
+void q_textcursor_insert_image22(void* self, void* image, const char* name) {
+    QTextCursor_InsertImage22((QTextCursor*)self, (QImage*)image, qstring(name));
 }
 
 void q_textcursor_delete(void* self) {

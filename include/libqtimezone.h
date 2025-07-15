@@ -132,7 +132,7 @@ const char* q_timezone_display_name(void* self, void* atDateTime);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// ``` QTimeZone* self, enum QTimeZone__TimeType timeType ```
-const char* q_timezone_display_name_with_time_type(void* self, int64_t timeType);
+const char* q_timezone_display_name2(void* self, int64_t timeType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#abbreviation)
 ///
@@ -217,12 +217,12 @@ const char** q_timezone_available_time_zone_ids();
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#availableTimeZoneIds)
 ///
 /// ``` enum QLocale__Country territory ```
-const char** q_timezone_available_time_zone_ids_with_territory(int64_t territory);
+const char** q_timezone_available_time_zone_ids2(int64_t territory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#availableTimeZoneIds)
 ///
 /// ``` int offsetSeconds ```
-const char** q_timezone_available_time_zone_ids_with_offset_seconds(int offsetSeconds);
+const char** q_timezone_available_time_zone_ids3(int offsetSeconds);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#ianaIdToWindowsId)
 ///
@@ -252,7 +252,7 @@ const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, int64_t t
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// ``` QTimeZone* self, QDateTime* atDateTime, enum QTimeZone__NameType nameType ```
-const char* q_timezone_display_name2(void* self, void* atDateTime, int64_t nameType);
+const char* q_timezone_display_name22(void* self, void* atDateTime, int64_t nameType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
@@ -262,7 +262,7 @@ const char* q_timezone_display_name3(void* self, void* atDateTime, int64_t nameT
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///
 /// ``` QTimeZone* self, enum QTimeZone__TimeType timeType, enum QTimeZone__NameType nameType ```
-const char* q_timezone_display_name22(void* self, int64_t timeType, int64_t nameType);
+const char* q_timezone_display_name23(void* self, int64_t timeType, int64_t nameType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#displayName)
 ///

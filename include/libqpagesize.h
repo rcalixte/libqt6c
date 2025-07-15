@@ -142,42 +142,42 @@ QRect* q_pagesize_rect_pixels(void* self, int resolution);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#key)
 ///
 /// ``` enum QPageSize__PageSizeId pageSizeId ```
-const char* q_pagesize_key_with_page_size_id(int64_t pageSizeId);
+const char* q_pagesize_key2(int64_t pageSizeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#name)
 ///
 /// ``` enum QPageSize__PageSizeId pageSizeId ```
-const char* q_pagesize_name_with_page_size_id(int64_t pageSizeId);
+const char* q_pagesize_name2(int64_t pageSizeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
 /// ``` QSize* pointSize ```
-int64_t q_pagesize_id_with_point_size(void* pointSize);
+int64_t q_pagesize_id2(void* pointSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
 /// ``` QSizeF* size, enum QPageSize__Unit units ```
-int64_t q_pagesize_id2(void* size, int64_t units);
+int64_t q_pagesize_id3(void* size, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
 /// ``` int windowsId ```
-int64_t q_pagesize_id_with_windows_id(int windowsId);
+int64_t q_pagesize_id4(int windowsId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#windowsId)
 ///
 /// ``` enum QPageSize__PageSizeId pageSizeId ```
-int32_t q_pagesize_windows_id_with_page_size_id(int64_t pageSizeId);
+int32_t q_pagesize_windows_id2(int64_t pageSizeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#definitionSize)
 ///
 /// ``` enum QPageSize__PageSizeId pageSizeId ```
-QSizeF* q_pagesize_definition_size_with_page_size_id(int64_t pageSizeId);
+QSizeF* q_pagesize_definition_size2(int64_t pageSizeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#definitionUnits)
 ///
 /// ``` enum QPageSize__PageSizeId pageSizeId ```
-int64_t q_pagesize_definition_units_with_page_size_id(int64_t pageSizeId);
+int64_t q_pagesize_definition_units2(int64_t pageSizeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#size)
 ///
@@ -187,7 +187,7 @@ QSizeF* q_pagesize_size2(int64_t pageSizeId, int64_t units);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#sizePoints)
 ///
 /// ``` enum QPageSize__PageSizeId pageSizeId ```
-QSize* q_pagesize_size_points_with_page_size_id(int64_t pageSizeId);
+QSize* q_pagesize_size_points2(int64_t pageSizeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#sizePixels)
 ///
@@ -202,7 +202,7 @@ int64_t q_pagesize_id22(void* pointSize, int64_t matchPolicy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#id)
 ///
 /// ``` QSizeF* size, enum QPageSize__Unit units, enum QPageSize__SizeMatchPolicy matchPolicy ```
-int64_t q_pagesize_id3(void* size, int64_t units, int64_t matchPolicy);
+int64_t q_pagesize_id32(void* size, int64_t units, int64_t matchPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#dtor.QPageSize)
 ///

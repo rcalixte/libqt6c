@@ -221,12 +221,12 @@ QTextCursor* q_textdocument_find2(void* self, const char* subString, void* curso
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
 /// ``` QTextDocument* self, QRegularExpression* expr ```
-QTextCursor* q_textdocument_find_with_expr(void* self, void* expr);
+QTextCursor* q_textdocument_find3(void* self, void* expr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
 /// ``` QTextDocument* self, QRegularExpression* expr, QTextCursor* cursor ```
-QTextCursor* q_textdocument_find3(void* self, void* expr, void* cursor);
+QTextCursor* q_textdocument_find4(void* self, void* expr, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#frameAt)
 ///
@@ -828,7 +828,7 @@ void q_textdocument_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QTextDocument* self, enum Qt__TimerId id ```
-void q_textdocument_kill_timer_with_id(void* self, int64_t id);
+void q_textdocument_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -884,7 +884,7 @@ bool q_textdocument_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_textdocument_disconnect_with_q_meta_object_connection(void* param1);
+bool q_textdocument_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -982,7 +982,7 @@ bool q_textdocument_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QTextDocument* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_textdocument_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_textdocument_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

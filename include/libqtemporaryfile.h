@@ -117,26 +117,26 @@ QTemporaryFile* q_temporaryfile_create_native_file(const char* fileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#createNativeFile)
 ///
 /// ``` QFile* file ```
-QTemporaryFile* q_temporaryfile_create_native_file_with_file(void* file);
+QTemporaryFile* q_temporaryfile_create_native_file2(void* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
 ///
 /// ``` QTemporaryFile* self, int flags ```
-bool q_temporaryfile_open_with_flags(void* self, int64_t flags);
+bool q_temporaryfile_open2(void* self, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QTemporaryFile* self, bool (*slot)(QTemporaryFile*, int) ```
-void q_temporaryfile_on_open_with_flags(void* self, bool (*slot)(void*, int64_t));
+void q_temporaryfile_on_open2(void* self, bool (*slot)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#open)
 ///
 /// Base class method implementation
 ///
 /// ``` QTemporaryFile* self, int flags ```
-bool q_temporaryfile_qbase_open_with_flags(void* self, int64_t flags);
+bool q_temporaryfile_qbase_open2(void* self, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -174,7 +174,7 @@ const char* q_temporaryfile_decode_name(const char* localFileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#decodeName)
 ///
 /// ``` const char* localFileName ```
-const char* q_temporaryfile_decode_name_with_local_file_name(const char* localFileName);
+const char* q_temporaryfile_decode_name2(const char* localFileName);
 
 /// Inherited from QFile
 ///
@@ -188,7 +188,7 @@ bool q_temporaryfile_exists(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#exists)
 ///
 /// ``` const char* fileName ```
-bool q_temporaryfile_exists_with_file_name(const char* fileName);
+bool q_temporaryfile_exists2(const char* fileName);
 
 /// Inherited from QFile
 ///
@@ -202,7 +202,7 @@ const char* q_temporaryfile_sym_link_target(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#symLinkTarget)
 ///
 /// ``` const char* fileName ```
-const char* q_temporaryfile_sym_link_target_with_file_name(const char* fileName);
+const char* q_temporaryfile_sym_link_target2(const char* fileName);
 
 /// Inherited from QFile
 ///
@@ -216,7 +216,7 @@ bool q_temporaryfile_remove(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#remove)
 ///
 /// ``` const char* fileName ```
-bool q_temporaryfile_remove_with_file_name(const char* fileName);
+bool q_temporaryfile_remove2(const char* fileName);
 
 /// Inherited from QFile
 ///
@@ -230,7 +230,7 @@ bool q_temporaryfile_move_to_trash(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#moveToTrash)
 ///
 /// ``` const char* fileName ```
-bool q_temporaryfile_move_to_trash_with_file_name(const char* fileName);
+bool q_temporaryfile_move_to_trash2(const char* fileName);
 
 /// Inherited from QFile
 ///
@@ -271,13 +271,6 @@ bool q_temporaryfile_copy2(const char* fileName, const char* newName);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#open)
 ///
-/// ``` QTemporaryFile* self, int flags, int permissions ```
-bool q_temporaryfile_open2(void* self, int64_t flags, int64_t permissions);
-
-/// Inherited from QFile
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#open)
-///
 /// ``` QTemporaryFile* self, int fd, int ioFlags ```
 bool q_temporaryfile_open4(void* self, int fd, int64_t ioFlags);
 
@@ -293,7 +286,7 @@ bool q_temporaryfile_resize2(const char* filename, long long sz);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
 ///
 /// ``` const char* filename ```
-int64_t q_temporaryfile_permissions_with_filename(const char* filename);
+int64_t q_temporaryfile_permissions2(const char* filename);
 
 /// Inherited from QFile
 ///
@@ -468,7 +461,7 @@ long long q_temporaryfile_read(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// ``` QTemporaryFile* self, long long maxlen ```
-char* q_temporaryfile_read_with_maxlen(void* self, long long maxlen);
+char* q_temporaryfile_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -531,14 +524,14 @@ long long q_temporaryfile_write(void* self, const char* data, long long lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QTemporaryFile* self, const char* data ```
-long long q_temporaryfile_write_with_data(void* self, const char* data);
+long long q_temporaryfile_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QTemporaryFile* self, const char* data ```
-long long q_temporaryfile_write2(void* self, const char* data);
+long long q_temporaryfile_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -552,7 +545,7 @@ long long q_temporaryfile_peek(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// ``` QTemporaryFile* self, long long maxlen ```
-char* q_temporaryfile_peek_with_maxlen(void* self, long long maxlen);
+char* q_temporaryfile_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -762,7 +755,7 @@ void q_temporaryfile_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QTemporaryFile* self, enum Qt__TimerId id ```
-void q_temporaryfile_kill_timer_with_id(void* self, int64_t id);
+void q_temporaryfile_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -818,7 +811,7 @@ bool q_temporaryfile_disconnect(void* sender, void* signal, void* receiver, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_temporaryfile_disconnect_with_q_meta_object_connection(void* param1);
+bool q_temporaryfile_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -916,7 +909,7 @@ bool q_temporaryfile_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QTemporaryFile* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_temporaryfile_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_temporaryfile_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

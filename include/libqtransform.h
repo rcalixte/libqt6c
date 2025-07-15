@@ -202,7 +202,7 @@ QTransform* q_transform_rotate(void* self, double a, int64_t axis, double distan
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotate)
 ///
 /// ``` QTransform* self, double a ```
-QTransform* q_transform_rotate_with_qreal(void* self, double a);
+QTransform* q_transform_rotate2(void* self, double a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
@@ -212,7 +212,7 @@ QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
 /// ``` QTransform* self, double a ```
-QTransform* q_transform_rotate_radians_with_qreal(void* self, double a);
+QTransform* q_transform_rotate_radians2(void* self, double a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator==)
 ///
@@ -252,27 +252,27 @@ QPoint* q_transform_map(void* self, void* p);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, QPointF* p ```
-QPointF* q_transform_map_with_q_point_f(void* self, void* p);
+QPointF* q_transform_map2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, QLine* l ```
-QLine* q_transform_map_with_q_line(void* self, void* l);
+QLine* q_transform_map3(void* self, void* l);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, QLineF* l ```
-QLineF* q_transform_map_with_q_line_f(void* self, void* l);
+QLineF* q_transform_map4(void* self, void* l);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, QRegion* r ```
-QRegion* q_transform_map_with_q_region(void* self, void* r);
+QRegion* q_transform_map7(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, QPainterPath* p ```
-QPainterPath* q_transform_map_with_q_painter_path(void* self, void* p);
+QPainterPath* q_transform_map8(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
@@ -282,22 +282,22 @@ QRect* q_transform_map_rect(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#mapRect)
 ///
 /// ``` QTransform* self, QRectF* param1 ```
-QRectF* q_transform_map_rect_with_q_rect_f(void* self, void* param1);
+QRectF* q_transform_map_rect2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, int x, int y, int* tx, int* ty ```
-void q_transform_map2(void* self, int x, int y, int* tx, int* ty);
+void q_transform_map9(void* self, int x, int y, int* tx, int* ty);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#map)
 ///
 /// ``` QTransform* self, double x, double y, double* tx, double* ty ```
-void q_transform_map3(void* self, double x, double y, double* tx, double* ty);
+void q_transform_map10(void* self, double x, double y, double* tx, double* ty);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator*=)
 ///
 /// ``` QTransform* self, double div ```
-QTransform* q_transform_operator_multiply_assign_with_div(void* self, double div);
+QTransform* q_transform_operator_multiply_assign2(void* self, double div);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator/=)
 ///
@@ -332,12 +332,12 @@ QTransform* q_transform_inverted1(void* self, bool* invertible);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotate)
 ///
 /// ``` QTransform* self, double a, enum Qt__Axis axis ```
-QTransform* q_transform_rotate2(void* self, double a, int64_t axis);
+QTransform* q_transform_rotate22(void* self, double a, int64_t axis);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
 /// ``` QTransform* self, double a, enum Qt__Axis axis ```
-QTransform* q_transform_rotate_radians2(void* self, double a, int64_t axis);
+QTransform* q_transform_rotate_radians22(void* self, double a, int64_t axis);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#dtor.QTransform)
 ///

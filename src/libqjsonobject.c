@@ -75,8 +75,8 @@ QJsonValue* q_jsonobject_operator_subscript(void* self, const char* key) {
     return QJsonObject_OperatorSubscript((QJsonObject*)self, qstring(key));
 }
 
-QJsonValueRef* q_jsonobject_operator_subscript_with_key(void* self, const char* key) {
-    return QJsonObject_OperatorSubscriptWithKey((QJsonObject*)self, qstring(key));
+QJsonValueRef* q_jsonobject_operator_subscript2(void* self, const char* key) {
+    return QJsonObject_OperatorSubscript2((QJsonObject*)self, qstring(key));
 }
 
 void q_jsonobject_remove(void* self, const char* key) {

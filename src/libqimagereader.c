@@ -196,8 +196,8 @@ QImage* q_imagereader_read(void* self) {
     return QImageReader_Read((QImageReader*)self);
 }
 
-bool q_imagereader_read_with_image(void* self, void* image) {
-    return QImageReader_ReadWithImage((QImageReader*)self, (QImage*)image);
+bool q_imagereader_read2(void* self, void* image) {
+    return QImageReader_Read2((QImageReader*)self, (QImage*)image);
 }
 
 bool q_imagereader_jump_to_next_image(void* self) {
@@ -243,15 +243,15 @@ bool q_imagereader_supports_option(void* self, int64_t option) {
     return QImageReader_SupportsOption((QImageReader*)self, option);
 }
 
-char* q_imagereader_image_format_with_file_name(const char* fileName) {
-    libqt_string _str = QImageReader_ImageFormatWithFileName(qstring(fileName));
+char* q_imagereader_image_format2(const char* fileName) {
+    libqt_string _str = QImageReader_ImageFormat2(qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_imagereader_image_format_with_device(void* device) {
-    libqt_string _str = QImageReader_ImageFormatWithDevice((QIODevice*)device);
+char* q_imagereader_image_format3(void* device) {
+    libqt_string _str = QImageReader_ImageFormat3((QIODevice*)device);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

@@ -183,16 +183,16 @@ void q_paintengine_qbase_draw_ellipse(void* self, void* r) {
     QPaintEngine_QBaseDrawEllipse((QPaintEngine*)self, (QRectF*)r);
 }
 
-void q_paintengine_draw_ellipse_with_q_rect(void* self, void* r) {
-    QPaintEngine_DrawEllipseWithQRect((QPaintEngine*)self, (QRect*)r);
+void q_paintengine_draw_ellipse2(void* self, void* r) {
+    QPaintEngine_DrawEllipse2((QPaintEngine*)self, (QRect*)r);
 }
 
-void q_paintengine_on_draw_ellipse_with_q_rect(void* self, void (*slot)(void*, void*)) {
-    QPaintEngine_OnDrawEllipseWithQRect((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_ellipse2(void* self, void (*slot)(void*, void*)) {
+    QPaintEngine_OnDrawEllipse2((QPaintEngine*)self, (intptr_t)slot);
 }
 
-void q_paintengine_qbase_draw_ellipse_with_q_rect(void* self, void* r) {
-    QPaintEngine_QBaseDrawEllipseWithQRect((QPaintEngine*)self, (QRect*)r);
+void q_paintengine_qbase_draw_ellipse2(void* self, void* r) {
+    QPaintEngine_QBaseDrawEllipse2((QPaintEngine*)self, (QRect*)r);
 }
 
 void q_paintengine_draw_path(void* self, void* path) {

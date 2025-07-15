@@ -847,32 +847,32 @@ QPointF* q_datetimeedit_map_to_global(void* self, void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_datetimeedit_map_to_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapToGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_datetimeedit_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_datetimeedit_map_from_global(void* self, void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_datetimeedit_map_from_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_datetimeedit_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_datetimeedit_map_to_parent(void* self, void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_datetimeedit_map_to_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapToParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_datetimeedit_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_datetimeedit_map_from_parent(void* self, void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_datetimeedit_map_from_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_datetimeedit_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_datetimeedit_map_to(void* self, void* param1, void* param2) {
@@ -979,8 +979,8 @@ void q_datetimeedit_set_mask(void* self, void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_datetimeedit_set_mask_with_mask(void* self, void* mask) {
-    QWidget_SetMaskWithMask((QWidget*)self, (QRegion*)mask);
+void q_datetimeedit_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
 QRegion* q_datetimeedit_mask(void* self) {
@@ -995,8 +995,8 @@ void q_datetimeedit_render(void* self, void* target) {
     QWidget_Render((QWidget*)self, (QPaintDevice*)target);
 }
 
-void q_datetimeedit_render_with_painter(void* self, void* painter) {
-    QWidget_RenderWithPainter((QWidget*)self, (QPainter*)painter);
+void q_datetimeedit_render2(void* self, void* painter) {
+    QWidget_Render2((QWidget*)self, (QPainter*)painter);
 }
 
 QPixmap* q_datetimeedit_grab(void* self) {
@@ -1205,8 +1205,8 @@ void q_datetimeedit_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_datetimeedit_set_focus_with_reason(void* self, int64_t reason) {
-    QWidget_SetFocusWithReason((QWidget*)self, reason);
+void q_datetimeedit_set_focus2(void* self, int64_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
 }
 
 int64_t q_datetimeedit_focus_policy(void* self) {
@@ -1245,8 +1245,8 @@ void q_datetimeedit_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_datetimeedit_grab_mouse_with_q_cursor(void* self, void* param1) {
-    QWidget_GrabMouseWithQCursor((QWidget*)self, (QCursor*)param1);
+void q_datetimeedit_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
 void q_datetimeedit_release_mouse(void* self) {
@@ -1309,24 +1309,24 @@ void q_datetimeedit_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_datetimeedit_update_with_q_rect(void* self, void* param1) {
-    QWidget_UpdateWithQRect((QWidget*)self, (QRect*)param1);
+void q_datetimeedit_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_datetimeedit_update_with_q_region(void* self, void* param1) {
-    QWidget_UpdateWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_datetimeedit_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_datetimeedit_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_datetimeedit_repaint_with_q_rect(void* self, void* param1) {
-    QWidget_RepaintWithQRect((QWidget*)self, (QRect*)param1);
+void q_datetimeedit_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_datetimeedit_repaint_with_q_region(void* self, void* param1) {
-    QWidget_RepaintWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_datetimeedit_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_datetimeedit_set_hidden(void* self, bool hidden) {
@@ -1377,24 +1377,24 @@ void q_datetimeedit_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_datetimeedit_move_with_q_point(void* self, void* param1) {
-    QWidget_MoveWithQPoint((QWidget*)self, (QPoint*)param1);
+void q_datetimeedit_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
 void q_datetimeedit_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_datetimeedit_resize_with_q_size(void* self, void* param1) {
-    QWidget_ResizeWithQSize((QWidget*)self, (QSize*)param1);
+void q_datetimeedit_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
 void q_datetimeedit_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_datetimeedit_set_geometry_with_geometry(void* self, void* geometry) {
-    QWidget_SetGeometryWithGeometry((QWidget*)self, (QRect*)geometry);
+void q_datetimeedit_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
 char* q_datetimeedit_save_geometry(void* self) {
@@ -1468,8 +1468,8 @@ void q_datetimeedit_set_contents_margins(void* self, int left, int top, int righ
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_datetimeedit_set_contents_margins_with_margins(void* self, void* margins) {
-    QWidget_SetContentsMarginsWithMargins((QWidget*)self, (QMargins*)margins);
+void q_datetimeedit_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
 QMargins* q_datetimeedit_contents_margins(void* self) {
@@ -1553,20 +1553,20 @@ libqt_list /* of QAction* */ q_datetimeedit_actions(void* self) {
     return _arr;
 }
 
-QAction* q_datetimeedit_add_action_with_text(void* self, const char* text) {
-    return QWidget_AddActionWithText((QWidget*)self, qstring(text));
+QAction* q_datetimeedit_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_datetimeedit_add_action2(void* self, void* icon, const char* text) {
-    return QWidget_AddAction2((QWidget*)self, (QIcon*)icon, qstring(text));
+QAction* q_datetimeedit_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_datetimeedit_add_action3(void* self, const char* text, void* shortcut) {
-    return QWidget_AddAction3((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+QAction* q_datetimeedit_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_datetimeedit_add_action4(void* self, void* icon, const char* text, void* shortcut) {
-    return QWidget_AddAction4((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+QAction* q_datetimeedit_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
 QWidget* q_datetimeedit_parent_widget(void* self) {
@@ -1601,12 +1601,12 @@ QWidget* q_datetimeedit_child_at(void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_datetimeedit_child_at_with_q_point(void* self, void* p) {
-    return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
+QWidget* q_datetimeedit_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_datetimeedit_child_at_with_q_point_f(void* self, void* p) {
-    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+QWidget* q_datetimeedit_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
 void q_datetimeedit_set_attribute(void* self, int64_t param1) {
@@ -1693,8 +1693,8 @@ void q_datetimeedit_set_input_method_hints(void* self, int64_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_datetimeedit_render2(void* self, void* target, void* targetOffset) {
-    QWidget_Render2((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+void q_datetimeedit_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
 void q_datetimeedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
@@ -1705,8 +1705,8 @@ void q_datetimeedit_render4(void* self, void* target, void* targetOffset, void* 
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void q_datetimeedit_render22(void* self, void* painter, void* targetOffset) {
-    QWidget_Render22((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+void q_datetimeedit_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
 void q_datetimeedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
@@ -1800,8 +1800,8 @@ void q_datetimeedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_datetimeedit_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_datetimeedit_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_datetimeedit_children(void* self) {
@@ -1829,8 +1829,8 @@ bool q_datetimeedit_disconnect(void* sender, void* signal, void* receiver, void*
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_datetimeedit_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_datetimeedit_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_datetimeedit_dump_object_tree(void* self) {
@@ -1896,8 +1896,8 @@ bool q_datetimeedit_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_datetimeedit_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_datetimeedit_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_datetimeedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -3209,32 +3209,32 @@ QPointF* q_timeedit_map_to_global(void* self, void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_timeedit_map_to_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapToGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_timeedit_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_timeedit_map_from_global(void* self, void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_timeedit_map_from_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_timeedit_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_timeedit_map_to_parent(void* self, void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_timeedit_map_to_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapToParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_timeedit_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_timeedit_map_from_parent(void* self, void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_timeedit_map_from_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_timeedit_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_timeedit_map_to(void* self, void* param1, void* param2) {
@@ -3341,8 +3341,8 @@ void q_timeedit_set_mask(void* self, void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_timeedit_set_mask_with_mask(void* self, void* mask) {
-    QWidget_SetMaskWithMask((QWidget*)self, (QRegion*)mask);
+void q_timeedit_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
 QRegion* q_timeedit_mask(void* self) {
@@ -3357,8 +3357,8 @@ void q_timeedit_render(void* self, void* target) {
     QWidget_Render((QWidget*)self, (QPaintDevice*)target);
 }
 
-void q_timeedit_render_with_painter(void* self, void* painter) {
-    QWidget_RenderWithPainter((QWidget*)self, (QPainter*)painter);
+void q_timeedit_render2(void* self, void* painter) {
+    QWidget_Render2((QWidget*)self, (QPainter*)painter);
 }
 
 QPixmap* q_timeedit_grab(void* self) {
@@ -3567,8 +3567,8 @@ void q_timeedit_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_timeedit_set_focus_with_reason(void* self, int64_t reason) {
-    QWidget_SetFocusWithReason((QWidget*)self, reason);
+void q_timeedit_set_focus2(void* self, int64_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
 }
 
 int64_t q_timeedit_focus_policy(void* self) {
@@ -3607,8 +3607,8 @@ void q_timeedit_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_timeedit_grab_mouse_with_q_cursor(void* self, void* param1) {
-    QWidget_GrabMouseWithQCursor((QWidget*)self, (QCursor*)param1);
+void q_timeedit_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
 void q_timeedit_release_mouse(void* self) {
@@ -3671,24 +3671,24 @@ void q_timeedit_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_timeedit_update_with_q_rect(void* self, void* param1) {
-    QWidget_UpdateWithQRect((QWidget*)self, (QRect*)param1);
+void q_timeedit_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_timeedit_update_with_q_region(void* self, void* param1) {
-    QWidget_UpdateWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_timeedit_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_timeedit_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_timeedit_repaint_with_q_rect(void* self, void* param1) {
-    QWidget_RepaintWithQRect((QWidget*)self, (QRect*)param1);
+void q_timeedit_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_timeedit_repaint_with_q_region(void* self, void* param1) {
-    QWidget_RepaintWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_timeedit_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_timeedit_set_hidden(void* self, bool hidden) {
@@ -3739,24 +3739,24 @@ void q_timeedit_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_timeedit_move_with_q_point(void* self, void* param1) {
-    QWidget_MoveWithQPoint((QWidget*)self, (QPoint*)param1);
+void q_timeedit_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
 void q_timeedit_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_timeedit_resize_with_q_size(void* self, void* param1) {
-    QWidget_ResizeWithQSize((QWidget*)self, (QSize*)param1);
+void q_timeedit_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
 void q_timeedit_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_timeedit_set_geometry_with_geometry(void* self, void* geometry) {
-    QWidget_SetGeometryWithGeometry((QWidget*)self, (QRect*)geometry);
+void q_timeedit_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
 char* q_timeedit_save_geometry(void* self) {
@@ -3830,8 +3830,8 @@ void q_timeedit_set_contents_margins(void* self, int left, int top, int right, i
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_timeedit_set_contents_margins_with_margins(void* self, void* margins) {
-    QWidget_SetContentsMarginsWithMargins((QWidget*)self, (QMargins*)margins);
+void q_timeedit_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
 QMargins* q_timeedit_contents_margins(void* self) {
@@ -3915,20 +3915,20 @@ libqt_list /* of QAction* */ q_timeedit_actions(void* self) {
     return _arr;
 }
 
-QAction* q_timeedit_add_action_with_text(void* self, const char* text) {
-    return QWidget_AddActionWithText((QWidget*)self, qstring(text));
+QAction* q_timeedit_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_timeedit_add_action2(void* self, void* icon, const char* text) {
-    return QWidget_AddAction2((QWidget*)self, (QIcon*)icon, qstring(text));
+QAction* q_timeedit_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_timeedit_add_action3(void* self, const char* text, void* shortcut) {
-    return QWidget_AddAction3((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+QAction* q_timeedit_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_timeedit_add_action4(void* self, void* icon, const char* text, void* shortcut) {
-    return QWidget_AddAction4((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+QAction* q_timeedit_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
 QWidget* q_timeedit_parent_widget(void* self) {
@@ -3963,12 +3963,12 @@ QWidget* q_timeedit_child_at(void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_timeedit_child_at_with_q_point(void* self, void* p) {
-    return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
+QWidget* q_timeedit_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_timeedit_child_at_with_q_point_f(void* self, void* p) {
-    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+QWidget* q_timeedit_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
 void q_timeedit_set_attribute(void* self, int64_t param1) {
@@ -4055,8 +4055,8 @@ void q_timeedit_set_input_method_hints(void* self, int64_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_timeedit_render2(void* self, void* target, void* targetOffset) {
-    QWidget_Render2((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+void q_timeedit_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
 void q_timeedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
@@ -4067,8 +4067,8 @@ void q_timeedit_render4(void* self, void* target, void* targetOffset, void* sour
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void q_timeedit_render22(void* self, void* painter, void* targetOffset) {
-    QWidget_Render22((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+void q_timeedit_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
 void q_timeedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
@@ -4162,8 +4162,8 @@ void q_timeedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_timeedit_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_timeedit_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_timeedit_children(void* self) {
@@ -4191,8 +4191,8 @@ bool q_timeedit_disconnect(void* sender, void* signal, void* receiver, void* mem
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_timeedit_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_timeedit_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_timeedit_dump_object_tree(void* self) {
@@ -4258,8 +4258,8 @@ bool q_timeedit_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_timeedit_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_timeedit_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_timeedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -5769,32 +5769,32 @@ QPointF* q_dateedit_map_to_global(void* self, void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_dateedit_map_to_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapToGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_dateedit_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_dateedit_map_from_global(void* self, void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_dateedit_map_from_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_dateedit_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_dateedit_map_to_parent(void* self, void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_dateedit_map_to_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapToParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_dateedit_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_dateedit_map_from_parent(void* self, void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_dateedit_map_from_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_dateedit_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_dateedit_map_to(void* self, void* param1, void* param2) {
@@ -5901,8 +5901,8 @@ void q_dateedit_set_mask(void* self, void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_dateedit_set_mask_with_mask(void* self, void* mask) {
-    QWidget_SetMaskWithMask((QWidget*)self, (QRegion*)mask);
+void q_dateedit_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
 QRegion* q_dateedit_mask(void* self) {
@@ -5917,8 +5917,8 @@ void q_dateedit_render(void* self, void* target) {
     QWidget_Render((QWidget*)self, (QPaintDevice*)target);
 }
 
-void q_dateedit_render_with_painter(void* self, void* painter) {
-    QWidget_RenderWithPainter((QWidget*)self, (QPainter*)painter);
+void q_dateedit_render2(void* self, void* painter) {
+    QWidget_Render2((QWidget*)self, (QPainter*)painter);
 }
 
 QPixmap* q_dateedit_grab(void* self) {
@@ -6127,8 +6127,8 @@ void q_dateedit_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_dateedit_set_focus_with_reason(void* self, int64_t reason) {
-    QWidget_SetFocusWithReason((QWidget*)self, reason);
+void q_dateedit_set_focus2(void* self, int64_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
 }
 
 int64_t q_dateedit_focus_policy(void* self) {
@@ -6167,8 +6167,8 @@ void q_dateedit_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_dateedit_grab_mouse_with_q_cursor(void* self, void* param1) {
-    QWidget_GrabMouseWithQCursor((QWidget*)self, (QCursor*)param1);
+void q_dateedit_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
 void q_dateedit_release_mouse(void* self) {
@@ -6231,24 +6231,24 @@ void q_dateedit_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_dateedit_update_with_q_rect(void* self, void* param1) {
-    QWidget_UpdateWithQRect((QWidget*)self, (QRect*)param1);
+void q_dateedit_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_dateedit_update_with_q_region(void* self, void* param1) {
-    QWidget_UpdateWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_dateedit_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_dateedit_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_dateedit_repaint_with_q_rect(void* self, void* param1) {
-    QWidget_RepaintWithQRect((QWidget*)self, (QRect*)param1);
+void q_dateedit_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_dateedit_repaint_with_q_region(void* self, void* param1) {
-    QWidget_RepaintWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_dateedit_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_dateedit_set_hidden(void* self, bool hidden) {
@@ -6299,24 +6299,24 @@ void q_dateedit_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_dateedit_move_with_q_point(void* self, void* param1) {
-    QWidget_MoveWithQPoint((QWidget*)self, (QPoint*)param1);
+void q_dateedit_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
 void q_dateedit_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_dateedit_resize_with_q_size(void* self, void* param1) {
-    QWidget_ResizeWithQSize((QWidget*)self, (QSize*)param1);
+void q_dateedit_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
 void q_dateedit_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_dateedit_set_geometry_with_geometry(void* self, void* geometry) {
-    QWidget_SetGeometryWithGeometry((QWidget*)self, (QRect*)geometry);
+void q_dateedit_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
 char* q_dateedit_save_geometry(void* self) {
@@ -6390,8 +6390,8 @@ void q_dateedit_set_contents_margins(void* self, int left, int top, int right, i
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_dateedit_set_contents_margins_with_margins(void* self, void* margins) {
-    QWidget_SetContentsMarginsWithMargins((QWidget*)self, (QMargins*)margins);
+void q_dateedit_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
 QMargins* q_dateedit_contents_margins(void* self) {
@@ -6475,20 +6475,20 @@ libqt_list /* of QAction* */ q_dateedit_actions(void* self) {
     return _arr;
 }
 
-QAction* q_dateedit_add_action_with_text(void* self, const char* text) {
-    return QWidget_AddActionWithText((QWidget*)self, qstring(text));
+QAction* q_dateedit_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_dateedit_add_action2(void* self, void* icon, const char* text) {
-    return QWidget_AddAction2((QWidget*)self, (QIcon*)icon, qstring(text));
+QAction* q_dateedit_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_dateedit_add_action3(void* self, const char* text, void* shortcut) {
-    return QWidget_AddAction3((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+QAction* q_dateedit_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_dateedit_add_action4(void* self, void* icon, const char* text, void* shortcut) {
-    return QWidget_AddAction4((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+QAction* q_dateedit_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
 QWidget* q_dateedit_parent_widget(void* self) {
@@ -6523,12 +6523,12 @@ QWidget* q_dateedit_child_at(void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_dateedit_child_at_with_q_point(void* self, void* p) {
-    return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
+QWidget* q_dateedit_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_dateedit_child_at_with_q_point_f(void* self, void* p) {
-    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+QWidget* q_dateedit_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
 void q_dateedit_set_attribute(void* self, int64_t param1) {
@@ -6615,8 +6615,8 @@ void q_dateedit_set_input_method_hints(void* self, int64_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_dateedit_render2(void* self, void* target, void* targetOffset) {
-    QWidget_Render2((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+void q_dateedit_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
 void q_dateedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
@@ -6627,8 +6627,8 @@ void q_dateedit_render4(void* self, void* target, void* targetOffset, void* sour
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void q_dateedit_render22(void* self, void* painter, void* targetOffset) {
-    QWidget_Render22((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+void q_dateedit_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
 void q_dateedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
@@ -6722,8 +6722,8 @@ void q_dateedit_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_dateedit_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_dateedit_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_dateedit_children(void* self) {
@@ -6751,8 +6751,8 @@ bool q_dateedit_disconnect(void* sender, void* signal, void* receiver, void* mem
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_dateedit_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_dateedit_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_dateedit_dump_object_tree(void* self) {
@@ -6818,8 +6818,8 @@ bool q_dateedit_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_dateedit_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_dateedit_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_dateedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

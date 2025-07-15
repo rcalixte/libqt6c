@@ -42,12 +42,12 @@ void q_cryptographichash_add_data(void* self, const char* data, int64_t length);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
 /// ``` QCryptographicHash* self, const char* data ```
-void q_cryptographichash_add_data_with_data(void* self, const char* data);
+void q_cryptographichash_add_data2(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///
 /// ``` QCryptographicHash* self, QIODevice* device ```
-bool q_cryptographichash_add_data_with_device(void* self, void* device);
+bool q_cryptographichash_add_data3(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcryptographichash.html#result)
 ///

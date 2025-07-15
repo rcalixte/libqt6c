@@ -102,32 +102,32 @@ bool q_resource_unregister_resource(const char* rccFilename);
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// ``` unsigned char* rccData ```
-bool q_resource_register_resource_with_rcc_data(unsigned char* rccData);
+bool q_resource_register_resource2(unsigned char* rccData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// ``` unsigned char* rccData ```
-bool q_resource_unregister_resource_with_rcc_data(unsigned char* rccData);
+bool q_resource_unregister_resource2(unsigned char* rccData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// ``` const char* rccFilename, const char* resourceRoot ```
-bool q_resource_register_resource2(const char* rccFilename, const char* resourceRoot);
+bool q_resource_register_resource22(const char* rccFilename, const char* resourceRoot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// ``` const char* rccFilename, const char* resourceRoot ```
-bool q_resource_unregister_resource2(const char* rccFilename, const char* resourceRoot);
+bool q_resource_unregister_resource22(const char* rccFilename, const char* resourceRoot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#registerResource)
 ///
 /// ``` unsigned char* rccData, const char* resourceRoot ```
-bool q_resource_register_resource22(unsigned char* rccData, const char* resourceRoot);
+bool q_resource_register_resource23(unsigned char* rccData, const char* resourceRoot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#unregisterResource)
 ///
 /// ``` unsigned char* rccData, const char* resourceRoot ```
-bool q_resource_unregister_resource22(unsigned char* rccData, const char* resourceRoot);
+bool q_resource_unregister_resource23(unsigned char* rccData, const char* resourceRoot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#dtor.QResource)
 ///

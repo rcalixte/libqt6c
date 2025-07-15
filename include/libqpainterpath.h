@@ -192,7 +192,7 @@ bool q_painterpath_contains(void* self, void* pt);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#contains)
 ///
 /// ``` QPainterPath* self, QRectF* rect ```
-bool q_painterpath_contains_with_rect(void* self, void* rect);
+bool q_painterpath_contains2(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#intersects)
 ///
@@ -207,7 +207,7 @@ void q_painterpath_translate(void* self, double dx, double dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#translate)
 ///
 /// ``` QPainterPath* self, QPointF* offset ```
-void q_painterpath_translate_with_offset(void* self, void* offset);
+void q_painterpath_translate2(void* self, void* offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#translated)
 ///
@@ -217,7 +217,7 @@ QPainterPath* q_painterpath_translated(void* self, double dx, double dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#translated)
 ///
 /// ``` QPainterPath* self, QPointF* offset ```
-QPainterPath* q_painterpath_translated_with_offset(void* self, void* offset);
+QPainterPath* q_painterpath_translated2(void* self, void* offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#boundingRect)
 ///
@@ -292,12 +292,12 @@ double q_painterpath_slope_at_percent(void* self, double t);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#intersects)
 ///
 /// ``` QPainterPath* self, QPainterPath* p ```
-bool q_painterpath_intersects_with_q_painter_path(void* self, void* p);
+bool q_painterpath_intersects2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#contains)
 ///
 /// ``` QPainterPath* self, QPainterPath* p ```
-bool q_painterpath_contains_with_q_painter_path(void* self, void* p);
+bool q_painterpath_contains3(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#united)
 ///
@@ -456,7 +456,7 @@ void q_painterpathstroker_set_dash_pattern(void* self, int64_t dashPattern);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashPattern)
 ///
 /// ``` QPainterPathStroker* self, libqt_list /* of double */ dashPattern ```
-void q_painterpathstroker_set_dash_pattern_with_dash_pattern(void* self, libqt_list dashPattern);
+void q_painterpathstroker_set_dash_pattern2(void* self, libqt_list dashPattern);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#dashPattern)
 ///

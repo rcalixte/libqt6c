@@ -79,40 +79,40 @@ void q_style_qbase_unpolish(void* self, void* widget) {
     QStyle_QBaseUnpolish((QStyle*)self, (QWidget*)widget);
 }
 
-void q_style_polish_with_application(void* self, void* application) {
-    QStyle_PolishWithApplication((QStyle*)self, (QApplication*)application);
+void q_style_polish2(void* self, void* application) {
+    QStyle_Polish2((QStyle*)self, (QApplication*)application);
 }
 
-void q_style_on_polish_with_application(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolishWithApplication((QStyle*)self, (intptr_t)slot);
+void q_style_on_polish2(void* self, void (*slot)(void*, void*)) {
+    QStyle_OnPolish2((QStyle*)self, (intptr_t)slot);
 }
 
-void q_style_qbase_polish_with_application(void* self, void* application) {
-    QStyle_QBasePolishWithApplication((QStyle*)self, (QApplication*)application);
+void q_style_qbase_polish2(void* self, void* application) {
+    QStyle_QBasePolish2((QStyle*)self, (QApplication*)application);
 }
 
-void q_style_unpolish_with_application(void* self, void* application) {
-    QStyle_UnpolishWithApplication((QStyle*)self, (QApplication*)application);
+void q_style_unpolish2(void* self, void* application) {
+    QStyle_Unpolish2((QStyle*)self, (QApplication*)application);
 }
 
-void q_style_on_unpolish_with_application(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnUnpolishWithApplication((QStyle*)self, (intptr_t)slot);
+void q_style_on_unpolish2(void* self, void (*slot)(void*, void*)) {
+    QStyle_OnUnpolish2((QStyle*)self, (intptr_t)slot);
 }
 
-void q_style_qbase_unpolish_with_application(void* self, void* application) {
-    QStyle_QBaseUnpolishWithApplication((QStyle*)self, (QApplication*)application);
+void q_style_qbase_unpolish2(void* self, void* application) {
+    QStyle_QBaseUnpolish2((QStyle*)self, (QApplication*)application);
 }
 
-void q_style_polish_with_palette(void* self, void* palette) {
-    QStyle_PolishWithPalette((QStyle*)self, (QPalette*)palette);
+void q_style_polish3(void* self, void* palette) {
+    QStyle_Polish3((QStyle*)self, (QPalette*)palette);
 }
 
-void q_style_on_polish_with_palette(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolishWithPalette((QStyle*)self, (intptr_t)slot);
+void q_style_on_polish3(void* self, void (*slot)(void*, void*)) {
+    QStyle_OnPolish3((QStyle*)self, (intptr_t)slot);
 }
 
-void q_style_qbase_polish_with_palette(void* self, void* palette) {
-    QStyle_QBasePolishWithPalette((QStyle*)self, (QPalette*)palette);
+void q_style_qbase_polish3(void* self, void* palette) {
+    QStyle_QBasePolish3((QStyle*)self, (QPalette*)palette);
 }
 
 QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text) {
@@ -440,8 +440,8 @@ void q_style_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_style_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_style_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_style_children(void* self) {
@@ -473,8 +473,8 @@ bool q_style_disconnect(void* sender, void* signal, void* receiver, void* member
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_style_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_style_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_style_dump_object_tree(void* self) {
@@ -540,8 +540,8 @@ bool q_style_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_style_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_style_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_style_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

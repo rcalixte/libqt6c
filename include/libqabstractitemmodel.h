@@ -279,7 +279,7 @@ void q_persistentmodelindex_swap(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator=)
 ///
 /// ``` QPersistentModelIndex* self, QModelIndex* other ```
-void q_persistentmodelindex_operator_assign_with_other(void* self, void* other);
+void q_persistentmodelindex_operator_assign2(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator QModelIndex)
 ///
@@ -1769,7 +1769,7 @@ void q_abstractitemmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QAbstractItemModel* self, enum Qt__TimerId id ```
-void q_abstractitemmodel_kill_timer_with_id(void* self, int64_t id);
+void q_abstractitemmodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1825,7 +1825,7 @@ bool q_abstractitemmodel_disconnect(void* sender, void* signal, void* receiver, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_abstractitemmodel_disconnect_with_q_meta_object_connection(void* param1);
+bool q_abstractitemmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1916,7 +1916,7 @@ bool q_abstractitemmodel_move_to_thread2(void* self, void* thread, void* param2)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QAbstractItemModel* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_abstractitemmodel_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_abstractitemmodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2837,7 +2837,7 @@ void q_abstracttablemodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QAbstractTableModel* self, enum Qt__TimerId id ```
-void q_abstracttablemodel_kill_timer_with_id(void* self, int64_t id);
+void q_abstracttablemodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2893,7 +2893,7 @@ bool q_abstracttablemodel_disconnect(void* sender, void* signal, void* receiver,
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_abstracttablemodel_disconnect_with_q_meta_object_connection(void* param1);
+bool q_abstracttablemodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2984,7 +2984,7 @@ bool q_abstracttablemodel_move_to_thread2(void* self, void* thread, void* param2
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QAbstractTableModel* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_abstracttablemodel_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_abstracttablemodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -5335,7 +5335,7 @@ void q_abstractlistmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QAbstractListModel* self, enum Qt__TimerId id ```
-void q_abstractlistmodel_kill_timer_with_id(void* self, int64_t id);
+void q_abstractlistmodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -5391,7 +5391,7 @@ bool q_abstractlistmodel_disconnect(void* sender, void* signal, void* receiver, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_abstractlistmodel_disconnect_with_q_meta_object_connection(void* param1);
+bool q_abstractlistmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -5482,7 +5482,7 @@ bool q_abstractlistmodel_move_to_thread2(void* self, void* thread, void* param2)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QAbstractListModel* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_abstractlistmodel_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_abstractlistmodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

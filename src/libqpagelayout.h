@@ -132,7 +132,7 @@ QMarginsF* q_pagelayout_margins(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#margins)
 ///
 /// ``` QPageLayout* self, enum QPageLayout__Unit units ```
-QMarginsF* q_pagelayout_margins_with_units(void* self, int64_t units);
+QMarginsF* q_pagelayout_margins2(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#marginsPoints)
 ///
@@ -167,7 +167,7 @@ QRectF* q_pagelayout_full_rect(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#fullRect)
 ///
 /// ``` QPageLayout* self, enum QPageLayout__Unit units ```
-QRectF* q_pagelayout_full_rect_with_units(void* self, int64_t units);
+QRectF* q_pagelayout_full_rect2(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#fullRectPoints)
 ///
@@ -187,7 +187,7 @@ QRectF* q_pagelayout_paint_rect(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#paintRect)
 ///
 /// ``` QPageLayout* self, enum QPageLayout__Unit units ```
-QRectF* q_pagelayout_paint_rect_with_units(void* self, int64_t units);
+QRectF* q_pagelayout_paint_rect2(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#paintRectPoints)
 ///

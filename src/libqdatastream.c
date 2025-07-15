@@ -67,100 +67,100 @@ void q_datastream_operator_shift_right(void* self, char* i) {
     QDataStream_OperatorShiftRight((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_qint8(void* self, char* i) {
-    QDataStream_OperatorShiftRightWithQint8((QDataStream*)self, i);
+void q_datastream_operator_shift_right2(void* self, char* i) {
+    QDataStream_OperatorShiftRight2((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_quint8(void* self, unsigned char* i) {
-    QDataStream_OperatorShiftRightWithQuint8((QDataStream*)self, i);
+void q_datastream_operator_shift_right3(void* self, unsigned char* i) {
+    QDataStream_OperatorShiftRight3((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_qint16(void* self, short* i) {
-    QDataStream_OperatorShiftRightWithQint16((QDataStream*)self, i);
+void q_datastream_operator_shift_right4(void* self, short* i) {
+    QDataStream_OperatorShiftRight4((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_quint16(void* self, unsigned short* i) {
-    QDataStream_OperatorShiftRightWithQuint16((QDataStream*)self, i);
+void q_datastream_operator_shift_right5(void* self, unsigned short* i) {
+    QDataStream_OperatorShiftRight5((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_qint32(void* self, int* i) {
-    QDataStream_OperatorShiftRightWithQint32((QDataStream*)self, i);
+void q_datastream_operator_shift_right6(void* self, int* i) {
+    QDataStream_OperatorShiftRight6((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_quint32(void* self, uint32_t* i) {
-    QDataStream_OperatorShiftRightWithQuint32((QDataStream*)self, i);
+void q_datastream_operator_shift_right7(void* self, uint32_t* i) {
+    QDataStream_OperatorShiftRight7((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_qint64(void* self, long long* i) {
-    QDataStream_OperatorShiftRightWithQint64((QDataStream*)self, i);
+void q_datastream_operator_shift_right8(void* self, long long* i) {
+    QDataStream_OperatorShiftRight8((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_quint64(void* self, uint64_t* i) {
-    QDataStream_OperatorShiftRightWithQuint64((QDataStream*)self, i);
+void q_datastream_operator_shift_right9(void* self, uint64_t* i) {
+    QDataStream_OperatorShiftRight9((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right_with_bool(void* self, bool* i) {
-    QDataStream_OperatorShiftRightWithBool((QDataStream*)self, (bool*)i);
+void q_datastream_operator_shift_right11(void* self, bool* i) {
+    QDataStream_OperatorShiftRight11((QDataStream*)self, (bool*)i);
 }
 
-void q_datastream_operator_shift_right_with_float(void* self, float* f) {
-    QDataStream_OperatorShiftRightWithFloat((QDataStream*)self, f);
+void q_datastream_operator_shift_right12(void* self, float* f) {
+    QDataStream_OperatorShiftRight12((QDataStream*)self, f);
 }
 
-void q_datastream_operator_shift_right_with_double(void* self, double* f) {
-    QDataStream_OperatorShiftRightWithDouble((QDataStream*)self, f);
+void q_datastream_operator_shift_right13(void* self, double* f) {
+    QDataStream_OperatorShiftRight13((QDataStream*)self, f);
 }
 
-void q_datastream_operator_shift_right_with_str(void* self, char* str) {
-    QDataStream_OperatorShiftRightWithStr((QDataStream*)self, str);
+void q_datastream_operator_shift_right14(void* self, char* str) {
+    QDataStream_OperatorShiftRight14((QDataStream*)self, str);
 }
 
 void q_datastream_operator_shift_left(void* self, char i) {
     QDataStream_OperatorShiftLeft((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_qint8(void* self, char i) {
-    QDataStream_OperatorShiftLeftWithQint8((QDataStream*)self, i);
+void q_datastream_operator_shift_left2(void* self, char i) {
+    QDataStream_OperatorShiftLeft2((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_quint8(void* self, unsigned char i) {
-    QDataStream_OperatorShiftLeftWithQuint8((QDataStream*)self, i);
+void q_datastream_operator_shift_left3(void* self, unsigned char i) {
+    QDataStream_OperatorShiftLeft3((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_qint16(void* self, short i) {
-    QDataStream_OperatorShiftLeftWithQint16((QDataStream*)self, i);
+void q_datastream_operator_shift_left4(void* self, short i) {
+    QDataStream_OperatorShiftLeft4((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_quint16(void* self, unsigned short i) {
-    QDataStream_OperatorShiftLeftWithQuint16((QDataStream*)self, i);
+void q_datastream_operator_shift_left5(void* self, unsigned short i) {
+    QDataStream_OperatorShiftLeft5((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_qint32(void* self, int i) {
-    QDataStream_OperatorShiftLeftWithQint32((QDataStream*)self, i);
+void q_datastream_operator_shift_left6(void* self, int i) {
+    QDataStream_OperatorShiftLeft6((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_quint32(void* self, uint32_t i) {
-    QDataStream_OperatorShiftLeftWithQuint32((QDataStream*)self, i);
+void q_datastream_operator_shift_left7(void* self, uint32_t i) {
+    QDataStream_OperatorShiftLeft7((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_qint64(void* self, long long i) {
-    QDataStream_OperatorShiftLeftWithQint64((QDataStream*)self, i);
+void q_datastream_operator_shift_left8(void* self, long long i) {
+    QDataStream_OperatorShiftLeft8((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_quint64(void* self, uint64_t i) {
-    QDataStream_OperatorShiftLeftWithQuint64((QDataStream*)self, i);
+void q_datastream_operator_shift_left9(void* self, uint64_t i) {
+    QDataStream_OperatorShiftLeft9((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_left_with_float(void* self, float f) {
-    QDataStream_OperatorShiftLeftWithFloat((QDataStream*)self, f);
+void q_datastream_operator_shift_left11(void* self, float f) {
+    QDataStream_OperatorShiftLeft11((QDataStream*)self, f);
 }
 
-void q_datastream_operator_shift_left_with_double(void* self, double f) {
-    QDataStream_OperatorShiftLeftWithDouble((QDataStream*)self, f);
+void q_datastream_operator_shift_left12(void* self, double f) {
+    QDataStream_OperatorShiftLeft12((QDataStream*)self, f);
 }
 
-void q_datastream_operator_shift_left_with_str(void* self, const char* str) {
-    QDataStream_OperatorShiftLeftWithStr((QDataStream*)self, str);
+void q_datastream_operator_shift_left13(void* self, const char* str) {
+    QDataStream_OperatorShiftLeft13((QDataStream*)self, str);
 }
 
 QDataStream* q_datastream_read_bytes(void* self, char* param1, uint32_t* lenVal) {

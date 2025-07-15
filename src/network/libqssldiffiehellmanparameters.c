@@ -27,8 +27,8 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(const cha
     return QSslDiffieHellmanParameters_FromEncoded(qstring(encoded));
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded_with_device(void* device) {
-    return QSslDiffieHellmanParameters_FromEncodedWithDevice((QIODevice*)device);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(void* device) {
+    return QSslDiffieHellmanParameters_FromEncoded2((QIODevice*)device);
 }
 
 bool q_ssldiffiehellmanparameters_is_empty(void* self) {
@@ -50,12 +50,12 @@ const char* q_ssldiffiehellmanparameters_error_string(void* self) {
     return _ret;
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(const char* encoded, int64_t format) {
-    return QSslDiffieHellmanParameters_FromEncoded2(qstring(encoded), format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int64_t format) {
+    return QSslDiffieHellmanParameters_FromEncoded22(qstring(encoded), format);
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(void* device, int64_t format) {
-    return QSslDiffieHellmanParameters_FromEncoded22((QIODevice*)device, format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int64_t format) {
+    return QSslDiffieHellmanParameters_FromEncoded23((QIODevice*)device, format);
 }
 
 void q_ssldiffiehellmanparameters_delete(void* self) {

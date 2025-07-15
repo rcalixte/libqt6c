@@ -47,12 +47,12 @@ void q_messageauthenticationcode_add_data(void* self, const char* data, int64_t 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#addData)
 ///
 /// ``` QMessageAuthenticationCode* self, const char* data ```
-void q_messageauthenticationcode_add_data_with_data(void* self, const char* data);
+void q_messageauthenticationcode_add_data2(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#addData)
 ///
 /// ``` QMessageAuthenticationCode* self, QIODevice* device ```
-bool q_messageauthenticationcode_add_data_with_device(void* self, void* device);
+bool q_messageauthenticationcode_add_data3(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#resultView)
 ///

@@ -90,8 +90,8 @@ QPoint* q_cursor_pos() {
     return QCursor_Pos();
 }
 
-QPoint* q_cursor_pos_with_screen(void* screen) {
-    return QCursor_PosWithScreen((QScreen*)screen);
+QPoint* q_cursor_pos2(void* screen) {
+    return QCursor_Pos2((QScreen*)screen);
 }
 
 void q_cursor_set_pos(int x, int y) {
@@ -102,12 +102,12 @@ void q_cursor_set_pos2(void* screen, int x, int y) {
     QCursor_SetPos2((QScreen*)screen, x, y);
 }
 
-void q_cursor_set_pos_with_q_point(void* p) {
-    QCursor_SetPosWithQPoint((QPoint*)p);
+void q_cursor_set_pos3(void* p) {
+    QCursor_SetPos3((QPoint*)p);
 }
 
-void q_cursor_set_pos3(void* screen, void* p) {
-    QCursor_SetPos3((QScreen*)screen, (QPoint*)p);
+void q_cursor_set_pos4(void* screen, void* p) {
+    QCursor_SetPos4((QScreen*)screen, (QPoint*)p);
 }
 
 void q_cursor_delete(void* self) {

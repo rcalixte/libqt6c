@@ -96,8 +96,8 @@ QMarginsF* q_pagelayout_margins(void* self) {
     return QPageLayout_Margins((QPageLayout*)self);
 }
 
-QMarginsF* q_pagelayout_margins_with_units(void* self, int64_t units) {
-    return QPageLayout_MarginsWithUnits((QPageLayout*)self, units);
+QMarginsF* q_pagelayout_margins2(void* self, int64_t units) {
+    return QPageLayout_Margins2((QPageLayout*)self, units);
 }
 
 QMargins* q_pagelayout_margins_points(void* self) {
@@ -124,8 +124,8 @@ QRectF* q_pagelayout_full_rect(void* self) {
     return QPageLayout_FullRect((QPageLayout*)self);
 }
 
-QRectF* q_pagelayout_full_rect_with_units(void* self, int64_t units) {
-    return QPageLayout_FullRectWithUnits((QPageLayout*)self, units);
+QRectF* q_pagelayout_full_rect2(void* self, int64_t units) {
+    return QPageLayout_FullRect2((QPageLayout*)self, units);
 }
 
 QRect* q_pagelayout_full_rect_points(void* self) {
@@ -140,8 +140,8 @@ QRectF* q_pagelayout_paint_rect(void* self) {
     return QPageLayout_PaintRect((QPageLayout*)self);
 }
 
-QRectF* q_pagelayout_paint_rect_with_units(void* self, int64_t units) {
-    return QPageLayout_PaintRectWithUnits((QPageLayout*)self, units);
+QRectF* q_pagelayout_paint_rect2(void* self, int64_t units) {
+    return QPageLayout_PaintRect2((QPageLayout*)self, units);
 }
 
 QRect* q_pagelayout_paint_rect_points(void* self) {

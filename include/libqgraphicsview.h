@@ -282,7 +282,7 @@ void q_graphicsview_center_on2(void* self, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#centerOn)
 ///
 /// ``` QGraphicsView* self, QGraphicsItem* item ```
-void q_graphicsview_center_on_with_item(void* self, void* item);
+void q_graphicsview_center_on3(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#ensureVisible)
 ///
@@ -297,7 +297,7 @@ void q_graphicsview_ensure_visible2(void* self, double x, double y, double w, do
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#ensureVisible)
 ///
 /// ``` QGraphicsView* self, QGraphicsItem* item ```
-void q_graphicsview_ensure_visible_with_item(void* self, void* item);
+void q_graphicsview_ensure_visible3(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#fitInView)
 ///
@@ -312,7 +312,7 @@ void q_graphicsview_fit_in_view2(void* self, double x, double y, double w, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#fitInView)
 ///
 /// ``` QGraphicsView* self, QGraphicsItem* item ```
-void q_graphicsview_fit_in_view_with_item(void* self, void* item);
+void q_graphicsview_fit_in_view3(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#render)
 ///
@@ -327,27 +327,27 @@ libqt_list /* of QGraphicsItem* */ q_graphicsview_items(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// ``` QGraphicsView* self, QPoint* pos ```
-libqt_list /* of QGraphicsItem* */ q_graphicsview_items_with_pos(void* self, void* pos);
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items2(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// ``` QGraphicsView* self, int x, int y ```
-libqt_list /* of QGraphicsItem* */ q_graphicsview_items2(void* self, int x, int y);
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items3(void* self, int x, int y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// ``` QGraphicsView* self, QRect* rect ```
-libqt_list /* of QGraphicsItem* */ q_graphicsview_items_with_rect(void* self, void* rect);
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items4(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// ``` QGraphicsView* self, int x, int y, int w, int h ```
-libqt_list /* of QGraphicsItem* */ q_graphicsview_items3(void* self, int x, int y, int w, int h);
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items5(void* self, int x, int y, int w, int h);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// ``` QGraphicsView* self, QPainterPath* path ```
-libqt_list /* of QGraphicsItem* */ q_graphicsview_items_with_path(void* self, void* path);
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items7(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#itemAt)
 ///
@@ -367,7 +367,7 @@ QPointF* q_graphicsview_map_to_scene(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
 ///
 /// ``` QGraphicsView* self, QPainterPath* path ```
-QPainterPath* q_graphicsview_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsview_map_to_scene4(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
 ///
@@ -377,17 +377,17 @@ QPoint* q_graphicsview_map_from_scene(void* self, void* point);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
 ///
 /// ``` QGraphicsView* self, QPainterPath* path ```
-QPainterPath* q_graphicsview_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsview_map_from_scene4(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#mapToScene)
 ///
 /// ``` QGraphicsView* self, int x, int y ```
-QPointF* q_graphicsview_map_to_scene2(void* self, int x, int y);
+QPointF* q_graphicsview_map_to_scene5(void* self, int x, int y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#mapFromScene)
 ///
 /// ``` QGraphicsView* self, double x, double y ```
-QPoint* q_graphicsview_map_from_scene2(void* self, double x, double y);
+QPoint* q_graphicsview_map_from_scene5(void* self, double x, double y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#inputMethodQuery)
 ///
@@ -961,7 +961,7 @@ void q_graphicsview_ensure_visible22(void* self, void* rect, int xmargin);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#ensureVisible)
 ///
 /// ``` QGraphicsView* self, QRectF* rect, int xmargin, int ymargin ```
-void q_graphicsview_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
+void q_graphicsview_ensure_visible32(void* self, void* rect, int xmargin, int ymargin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#ensureVisible)
 ///
@@ -981,7 +981,7 @@ void q_graphicsview_ensure_visible23(void* self, void* item, int xmargin);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#ensureVisible)
 ///
 /// ``` QGraphicsView* self, QGraphicsItem* item, int xmargin, int ymargin ```
-void q_graphicsview_ensure_visible32(void* self, void* item, int xmargin, int ymargin);
+void q_graphicsview_ensure_visible33(void* self, void* item, int xmargin, int ymargin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#fitInView)
 ///
@@ -1021,7 +1021,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsview_items22(void* self, void* rect
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
 /// ``` QGraphicsView* self, int x, int y, int w, int h, enum Qt__ItemSelectionMode mode ```
-libqt_list /* of QGraphicsItem* */ q_graphicsview_items5(void* self, int x, int y, int w, int h, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsview_items52(void* self, int x, int y, int w, int h, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#items)
 ///
@@ -1631,7 +1631,7 @@ QPointF* q_graphicsview_map_to_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// ``` QGraphicsView* self, QPoint* param1 ```
-QPoint* q_graphicsview_map_to_global_with_q_point(void* self, void* param1);
+QPoint* q_graphicsview_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1645,7 +1645,7 @@ QPointF* q_graphicsview_map_from_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// ``` QGraphicsView* self, QPoint* param1 ```
-QPoint* q_graphicsview_map_from_global_with_q_point(void* self, void* param1);
+QPoint* q_graphicsview_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1659,7 +1659,7 @@ QPointF* q_graphicsview_map_to_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// ``` QGraphicsView* self, QPoint* param1 ```
-QPoint* q_graphicsview_map_to_parent_with_q_point(void* self, void* param1);
+QPoint* q_graphicsview_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1673,7 +1673,7 @@ QPointF* q_graphicsview_map_from_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// ``` QGraphicsView* self, QPoint* param1 ```
-QPoint* q_graphicsview_map_from_parent_with_q_point(void* self, void* param1);
+QPoint* q_graphicsview_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1862,7 +1862,7 @@ void q_graphicsview_set_mask(void* self, void* mask);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// ``` QGraphicsView* self, QRegion* mask ```
-void q_graphicsview_set_mask_with_mask(void* self, void* mask);
+void q_graphicsview_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1877,13 +1877,6 @@ QRegion* q_graphicsview_mask(void* self);
 ///
 /// ``` QGraphicsView* self ```
 void q_graphicsview_clear_mask(void* self);
-
-/// Inherited from QWidget
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
-///
-/// ``` QGraphicsView* self, QPainter* painter ```
-void q_graphicsview_render_with_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -2198,7 +2191,7 @@ void q_graphicsview_clear_focus(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// ``` QGraphicsView* self, enum Qt__FocusReason reason ```
-void q_graphicsview_set_focus_with_reason(void* self, int64_t reason);
+void q_graphicsview_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2268,7 +2261,7 @@ void q_graphicsview_grab_mouse(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// ``` QGraphicsView* self, QCursor* param1 ```
-void q_graphicsview_grab_mouse_with_q_cursor(void* self, void* param1);
+void q_graphicsview_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2380,14 +2373,14 @@ void q_graphicsview_update2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QGraphicsView* self, QRect* param1 ```
-void q_graphicsview_update_with_q_rect(void* self, void* param1);
+void q_graphicsview_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QGraphicsView* self, QRegion* param1 ```
-void q_graphicsview_update_with_q_region(void* self, void* param1);
+void q_graphicsview_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2401,14 +2394,14 @@ void q_graphicsview_repaint2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QGraphicsView* self, QRect* param1 ```
-void q_graphicsview_repaint_with_q_rect(void* self, void* param1);
+void q_graphicsview_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QGraphicsView* self, QRegion* param1 ```
-void q_graphicsview_repaint_with_q_region(void* self, void* param1);
+void q_graphicsview_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2499,7 +2492,7 @@ void q_graphicsview_move(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// ``` QGraphicsView* self, QPoint* param1 ```
-void q_graphicsview_move_with_q_point(void* self, void* param1);
+void q_graphicsview_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2513,7 +2506,7 @@ void q_graphicsview_resize(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// ``` QGraphicsView* self, QSize* param1 ```
-void q_graphicsview_resize_with_q_size(void* self, void* param1);
+void q_graphicsview_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2527,7 +2520,7 @@ void q_graphicsview_set_geometry(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// ``` QGraphicsView* self, QRect* geometry ```
-void q_graphicsview_set_geometry_with_geometry(void* self, void* geometry);
+void q_graphicsview_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2653,7 +2646,7 @@ void q_graphicsview_set_contents_margins(void* self, int left, int top, int righ
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// ``` QGraphicsView* self, QMargins* margins ```
-void q_graphicsview_set_contents_margins_with_margins(void* self, void* margins);
+void q_graphicsview_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
@@ -2800,28 +2793,28 @@ libqt_list /* of QAction* */ q_graphicsview_actions(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QGraphicsView* self, const char* text ```
-QAction* q_graphicsview_add_action_with_text(void* self, const char* text);
+QAction* q_graphicsview_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QGraphicsView* self, QIcon* icon, const char* text ```
-QAction* q_graphicsview_add_action2(void* self, void* icon, const char* text);
+QAction* q_graphicsview_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QGraphicsView* self, const char* text, QKeySequence* shortcut ```
-QAction* q_graphicsview_add_action3(void* self, const char* text, void* shortcut);
+QAction* q_graphicsview_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QGraphicsView* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
-QAction* q_graphicsview_add_action4(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_graphicsview_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2884,14 +2877,14 @@ QWidget* q_graphicsview_child_at(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QGraphicsView* self, QPoint* p ```
-QWidget* q_graphicsview_child_at_with_q_point(void* self, void* p);
+QWidget* q_graphicsview_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QGraphicsView* self, QPointF* p ```
-QWidget* q_graphicsview_child_at_with_q_point_f(void* self, void* p);
+QWidget* q_graphicsview_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
@@ -3044,8 +3037,15 @@ void q_graphicsview_set_input_method_hints(void* self, int64_t hints);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
+/// ``` QGraphicsView* self, QPaintDevice* target, QPoint* targetOffset ```
+void q_graphicsview_render22(void* self, void* target, void* targetOffset);
+
+/// Inherited from QWidget
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
+///
 /// ``` QGraphicsView* self, QPainter* painter, QPoint* targetOffset ```
-void q_graphicsview_render22(void* self, void* painter, void* targetOffset);
+void q_graphicsview_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3206,7 +3206,7 @@ void q_graphicsview_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsView* self, enum Qt__TimerId id ```
-void q_graphicsview_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsview_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3255,7 +3255,7 @@ bool q_graphicsview_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsview_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsview_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -3353,7 +3353,7 @@ bool q_graphicsview_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsView* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsview_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsview_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

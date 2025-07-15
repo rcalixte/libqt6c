@@ -92,32 +92,32 @@ void q_stringview_chop(void* self, int64_t n);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#compare)
 ///
 /// ``` QStringView* self, QChar* c ```
-int32_t q_stringview_compare_with_q_char(void* self, void* c);
+int32_t q_stringview_compare4(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#compare)
 ///
 /// ``` QStringView* self, QChar* c, enum Qt__CaseSensitivity cs ```
-int32_t q_stringview_compare3(void* self, void* c, int64_t cs);
+int32_t q_stringview_compare5(void* self, void* c, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#startsWith)
 ///
 /// ``` QStringView* self, QChar* c ```
-bool q_stringview_starts_with_with_q_char(void* self, void* c);
+bool q_stringview_starts_with3(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#startsWith)
 ///
 /// ``` QStringView* self, QChar* c, enum Qt__CaseSensitivity cs ```
-bool q_stringview_starts_with2(void* self, void* c, int64_t cs);
+bool q_stringview_starts_with4(void* self, void* c, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#endsWith)
 ///
 /// ``` QStringView* self, QChar* c ```
-bool q_stringview_ends_with_with_q_char(void* self, void* c);
+bool q_stringview_ends_with3(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#endsWith)
 ///
 /// ``` QStringView* self, QChar* c, enum Qt__CaseSensitivity cs ```
-bool q_stringview_ends_with2(void* self, void* c, int64_t cs);
+bool q_stringview_ends_with4(void* self, void* c, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
@@ -147,22 +147,22 @@ int64_t q_stringview_last_index_of2(void* self, void* c, int64_t from);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// ``` QStringView* self, QRegularExpression* re ```
-int64_t q_stringview_index_of_with_re(void* self, void* re);
+int64_t q_stringview_index_of4(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// ``` QStringView* self, QRegularExpression* re, int64_t from ```
-int64_t q_stringview_last_index_of5(void* self, void* re, int64_t from);
+int64_t q_stringview_last_index_of7(void* self, void* re, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
 /// ``` QStringView* self, QRegularExpression* re ```
-bool q_stringview_contains_with_re(void* self, void* re);
+bool q_stringview_contains4(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#count)
 ///
 /// ``` QStringView* self, QRegularExpression* re ```
-int64_t q_stringview_count_with_re(void* self, void* re);
+int64_t q_stringview_count4(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#isRightToLeft)
 ///
@@ -317,22 +317,22 @@ int64_t q_stringview_max_size2();
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// ``` QStringView* self, QChar* c, int64_t from ```
-int64_t q_stringview_index_of2(void* self, void* c, int64_t from);
+int64_t q_stringview_index_of22(void* self, void* c, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// ``` QStringView* self, QChar* c, int64_t from, enum Qt__CaseSensitivity cs ```
-int64_t q_stringview_index_of3(void* self, void* c, int64_t from, int64_t cs);
+int64_t q_stringview_index_of32(void* self, void* c, int64_t from, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
 /// ``` QStringView* self, QChar* c, enum Qt__CaseSensitivity cs ```
-bool q_stringview_contains2(void* self, void* c, int64_t cs);
+bool q_stringview_contains22(void* self, void* c, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#count)
 ///
 /// ``` QStringView* self, QChar* c, enum Qt__CaseSensitivity cs ```
-int64_t q_stringview_count2(void* self, void* c, int64_t cs);
+int64_t q_stringview_count22(void* self, void* c, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
@@ -347,12 +347,12 @@ int64_t q_stringview_last_index_of32(void* self, void* c, int64_t from, int64_t 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// ``` QStringView* self, QRegularExpression* re, int64_t from ```
-int64_t q_stringview_index_of24(void* self, void* re, int64_t from);
+int64_t q_stringview_index_of25(void* self, void* re, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// ``` QStringView* self, QRegularExpression* re, int64_t from, QRegularExpressionMatch* rmatch ```
-int64_t q_stringview_index_of34(void* self, void* re, int64_t from, void* rmatch);
+int64_t q_stringview_index_of35(void* self, void* re, int64_t from, void* rmatch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
@@ -362,7 +362,7 @@ int64_t q_stringview_last_index_of35(void* self, void* re, int64_t from, void* r
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
 /// ``` QStringView* self, QRegularExpression* re, QRegularExpressionMatch* rmatch ```
-bool q_stringview_contains24(void* self, void* re, void* rmatch);
+bool q_stringview_contains25(void* self, void* re, void* rmatch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#toShort)
 ///

@@ -111,8 +111,8 @@ void q_sslconfiguration_set_ciphers(void* self, libqt_list ciphers) {
     QSslConfiguration_SetCiphers((QSslConfiguration*)self, ciphers);
 }
 
-void q_sslconfiguration_set_ciphers_with_ciphers(void* self, const char* ciphers) {
-    QSslConfiguration_SetCiphersWithCiphers((QSslConfiguration*)self, qstring(ciphers));
+void q_sslconfiguration_set_ciphers2(void* self, const char* ciphers) {
+    QSslConfiguration_SetCiphers2((QSslConfiguration*)self, qstring(ciphers));
 }
 
 libqt_list /* of QSslCipher* */ q_sslconfiguration_supported_ciphers() {
@@ -137,8 +137,8 @@ void q_sslconfiguration_add_ca_certificate(void* self, void* certificate) {
     QSslConfiguration_AddCaCertificate((QSslConfiguration*)self, (QSslCertificate*)certificate);
 }
 
-void q_sslconfiguration_add_ca_certificates_with_certificates(void* self, libqt_list certificates) {
-    QSslConfiguration_AddCaCertificatesWithCertificates((QSslConfiguration*)self, certificates);
+void q_sslconfiguration_add_ca_certificates2(void* self, libqt_list certificates) {
+    QSslConfiguration_AddCaCertificates2((QSslConfiguration*)self, certificates);
 }
 
 libqt_list /* of QSslCertificate* */ q_sslconfiguration_system_ca_certificates() {
@@ -298,8 +298,8 @@ int64_t q_sslconfiguration_next_protocol_negotiation_status(void* self) {
     return QSslConfiguration_NextProtocolNegotiationStatus((QSslConfiguration*)self);
 }
 
-bool q_sslconfiguration_add_ca_certificates2(void* self, const char* path, int64_t format) {
-    return QSslConfiguration_AddCaCertificates2((QSslConfiguration*)self, qstring(path), format);
+bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int64_t format) {
+    return QSslConfiguration_AddCaCertificates22((QSslConfiguration*)self, qstring(path), format);
 }
 
 bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int64_t format, int64_t syntax) {

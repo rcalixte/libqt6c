@@ -6040,12 +6040,12 @@ void q_dragmoveevent_ignore(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#accept)
 ///
 /// ``` QDragMoveEvent* self, QRect* r ```
-void q_dragmoveevent_accept_with_q_rect(void* self, void* r);
+void q_dragmoveevent_accept2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#ignore)
 ///
 /// ``` QDragMoveEvent* self, QRect* r ```
-void q_dragmoveevent_ignore_with_q_rect(void* self, void* r);
+void q_dragmoveevent_ignore2(void* self, void* r);
 
 /// Inherited from QDropEvent
 ///
@@ -6287,14 +6287,14 @@ void q_dragenterevent_ignore(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#accept)
 ///
 /// ``` QDragEnterEvent* self, QRect* r ```
-void q_dragenterevent_accept_with_q_rect(void* self, void* r);
+void q_dragenterevent_accept2(void* self, void* r);
 
 /// Inherited from QDragMoveEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#ignore)
 ///
 /// ``` QDragEnterEvent* self, QRect* r ```
-void q_dragenterevent_ignore_with_q_rect(void* self, void* r);
+void q_dragenterevent_ignore2(void* self, void* r);
 
 /// Inherited from QDropEvent
 ///

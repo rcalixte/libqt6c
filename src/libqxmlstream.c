@@ -389,8 +389,8 @@ void q_xmlstreamwriter_write_attribute2(void* self, char* namespaceUri, char* na
     QXmlStreamWriter_WriteAttribute2((QXmlStreamWriter*)self, namespaceUri, name, value);
 }
 
-void q_xmlstreamwriter_write_attribute_with_attribute(void* self, void* attribute) {
-    QXmlStreamWriter_WriteAttributeWithAttribute((QXmlStreamWriter*)self, (QXmlStreamAttribute*)attribute);
+void q_xmlstreamwriter_write_attribute3(void* self, void* attribute) {
+    QXmlStreamWriter_WriteAttribute3((QXmlStreamWriter*)self, (QXmlStreamAttribute*)attribute);
 }
 
 void q_xmlstreamwriter_write_attributes(void* self, void* attributes) {
@@ -457,12 +457,12 @@ void q_xmlstreamwriter_write_start_document(void* self) {
     QXmlStreamWriter_WriteStartDocument((QXmlStreamWriter*)self);
 }
 
-void q_xmlstreamwriter_write_start_document_with_version(void* self, char* version) {
-    QXmlStreamWriter_WriteStartDocumentWithVersion((QXmlStreamWriter*)self, version);
+void q_xmlstreamwriter_write_start_document2(void* self, char* version) {
+    QXmlStreamWriter_WriteStartDocument2((QXmlStreamWriter*)self, version);
 }
 
-void q_xmlstreamwriter_write_start_document2(void* self, char* version, bool standalone) {
-    QXmlStreamWriter_WriteStartDocument2((QXmlStreamWriter*)self, version, standalone);
+void q_xmlstreamwriter_write_start_document3(void* self, char* version, bool standalone) {
+    QXmlStreamWriter_WriteStartDocument3((QXmlStreamWriter*)self, version, standalone);
 }
 
 void q_xmlstreamwriter_write_start_element(void* self, char* qualifiedName) {

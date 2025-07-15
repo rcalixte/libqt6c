@@ -81,7 +81,7 @@ void q_hostaddress_operator_assign(void* self, void* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#operator=)
 ///
 /// ``` QHostAddress* self, enum QHostAddress__SpecialAddress address ```
-void q_hostaddress_operator_assign_with_address(void* self, int64_t address);
+void q_hostaddress_operator_assign2(void* self, int64_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#swap)
 ///
@@ -96,22 +96,22 @@ void q_hostaddress_set_address(void* self, uint32_t ip4Addr);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#setAddress)
 ///
 /// ``` QHostAddress* self, unsigned char* ip6Addr ```
-void q_hostaddress_set_address_with_ip6_addr(void* self, unsigned char* ip6Addr);
+void q_hostaddress_set_address2(void* self, unsigned char* ip6Addr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#setAddress)
 ///
 /// ``` QHostAddress* self, QIPv6Address* ip6Addr ```
-void q_hostaddress_set_address2(void* self, void* ip6Addr);
+void q_hostaddress_set_address3(void* self, void* ip6Addr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#setAddress)
 ///
 /// ``` QHostAddress* self, const char* address ```
-bool q_hostaddress_set_address3(void* self, const char* address);
+bool q_hostaddress_set_address5(void* self, const char* address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#setAddress)
 ///
 /// ``` QHostAddress* self, enum QHostAddress__SpecialAddress address ```
-void q_hostaddress_set_address4(void* self, int64_t address);
+void q_hostaddress_set_address6(void* self, int64_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#protocol)
 ///
@@ -156,7 +156,7 @@ bool q_hostaddress_operator_equal(void* self, void* address);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#operator==)
 ///
 /// ``` QHostAddress* self, enum QHostAddress__SpecialAddress address ```
-bool q_hostaddress_operator_equal_with_address(void* self, int64_t address);
+bool q_hostaddress_operator_equal2(void* self, int64_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#operator!=)
 ///
@@ -166,7 +166,7 @@ bool q_hostaddress_operator_not_equal(void* self, void* address);
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#operator!=)
 ///
 /// ``` QHostAddress* self, enum QHostAddress__SpecialAddress address ```
-bool q_hostaddress_operator_not_equal_with_address(void* self, int64_t address);
+bool q_hostaddress_operator_not_equal2(void* self, int64_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#isNull)
 ///

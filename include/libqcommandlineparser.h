@@ -82,7 +82,7 @@ void q_commandlineparser_process(void* self, const char* arguments[]);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#process)
 ///
 /// ``` QCommandLineParser* self, QCoreApplication* app ```
-void q_commandlineparser_process_with_app(void* self, void* app);
+void q_commandlineparser_process2(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#parse)
 ///
@@ -112,17 +112,17 @@ const char** q_commandlineparser_values(void* self, const char* name);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#isSet)
 ///
 /// ``` QCommandLineParser* self, QCommandLineOption* option ```
-bool q_commandlineparser_is_set_with_option(void* self, void* option);
+bool q_commandlineparser_is_set2(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#value)
 ///
 /// ``` QCommandLineParser* self, QCommandLineOption* option ```
-const char* q_commandlineparser_value_with_option(void* self, void* option);
+const char* q_commandlineparser_value2(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#values)
 ///
 /// ``` QCommandLineParser* self, QCommandLineOption* option ```
-const char** q_commandlineparser_values_with_option(void* self, void* option);
+const char** q_commandlineparser_values2(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#positionalArguments)
 ///

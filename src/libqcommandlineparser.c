@@ -68,8 +68,8 @@ void q_commandlineparser_process(void* self, const char* arguments[]) {
     QCommandLineParser_Process((QCommandLineParser*)self, arguments_list);
 }
 
-void q_commandlineparser_process_with_app(void* self, void* app) {
-    QCommandLineParser_ProcessWithApp((QCommandLineParser*)self, (QCoreApplication*)app);
+void q_commandlineparser_process2(void* self, void* app) {
+    QCommandLineParser_Process2((QCommandLineParser*)self, (QCoreApplication*)app);
 }
 
 bool q_commandlineparser_parse(void* self, const char* arguments[]) {
@@ -115,19 +115,19 @@ const char** q_commandlineparser_values(void* self, const char* name) {
     return _ret;
 }
 
-bool q_commandlineparser_is_set_with_option(void* self, void* option) {
-    return QCommandLineParser_IsSetWithOption((QCommandLineParser*)self, (QCommandLineOption*)option);
+bool q_commandlineparser_is_set2(void* self, void* option) {
+    return QCommandLineParser_IsSet2((QCommandLineParser*)self, (QCommandLineOption*)option);
 }
 
-const char* q_commandlineparser_value_with_option(void* self, void* option) {
-    libqt_string _str = QCommandLineParser_ValueWithOption((QCommandLineParser*)self, (QCommandLineOption*)option);
+const char* q_commandlineparser_value2(void* self, void* option) {
+    libqt_string _str = QCommandLineParser_Value2((QCommandLineParser*)self, (QCommandLineOption*)option);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_commandlineparser_values_with_option(void* self, void* option) {
-    libqt_list _arr = QCommandLineParser_ValuesWithOption((QCommandLineParser*)self, (QCommandLineOption*)option);
+const char** q_commandlineparser_values2(void* self, void* option) {
+    libqt_list _arr = QCommandLineParser_Values2((QCommandLineParser*)self, (QCommandLineOption*)option);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {

@@ -99,8 +99,8 @@ const char** q_sslcertificate_issuer_info(void* self, int64_t info) {
     return _ret;
 }
 
-const char** q_sslcertificate_issuer_info_with_attribute(void* self, const char* attribute) {
-    libqt_list _arr = QSslCertificate_IssuerInfoWithAttribute((QSslCertificate*)self, qstring(attribute));
+const char** q_sslcertificate_issuer_info2(void* self, const char* attribute) {
+    libqt_list _arr = QSslCertificate_IssuerInfo2((QSslCertificate*)self, qstring(attribute));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -129,8 +129,8 @@ const char** q_sslcertificate_subject_info(void* self, int64_t info) {
     return _ret;
 }
 
-const char** q_sslcertificate_subject_info_with_attribute(void* self, const char* attribute) {
-    libqt_list _arr = QSslCertificate_SubjectInfoWithAttribute((QSslCertificate*)self, qstring(attribute));
+const char** q_sslcertificate_subject_info2(void* self, const char* attribute) {
+    libqt_list _arr = QSslCertificate_SubjectInfo2((QSslCertificate*)self, qstring(attribute));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {

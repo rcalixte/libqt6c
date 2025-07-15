@@ -251,7 +251,7 @@ unsigned char* q_image_scan_line(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scanLine)
 ///
 /// ``` QImage* self, int param1 ```
-const unsigned char* q_image_scan_line_with_int(void* self, int param1);
+const unsigned char* q_image_scan_line2(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#constScanLine)
 ///
@@ -271,7 +271,7 @@ bool q_image_valid(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#valid)
 ///
 /// ``` QImage* self, QPoint* pt ```
-bool q_image_valid_with_pt(void* self, void* pt);
+bool q_image_valid2(void* self, void* pt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#pixelIndex)
 ///
@@ -281,7 +281,7 @@ int32_t q_image_pixel_index(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#pixelIndex)
 ///
 /// ``` QImage* self, QPoint* pt ```
-int32_t q_image_pixel_index_with_pt(void* self, void* pt);
+int32_t q_image_pixel_index2(void* self, void* pt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#pixel)
 ///
@@ -291,7 +291,7 @@ uint32_t q_image_pixel(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#pixel)
 ///
 /// ``` QImage* self, QPoint* pt ```
-uint32_t q_image_pixel_with_pt(void* self, void* pt);
+uint32_t q_image_pixel2(void* self, void* pt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#setPixel)
 ///
@@ -311,7 +311,7 @@ QColor* q_image_pixel_color(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#pixelColor)
 ///
 /// ``` QImage* self, QPoint* pt ```
-QColor* q_image_pixel_color_with_pt(void* self, void* pt);
+QColor* q_image_pixel_color2(void* self, void* pt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#setPixelColor)
 ///
@@ -356,12 +356,12 @@ void q_image_fill(void* self, uint32_t pixel);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#fill)
 ///
 /// ``` QImage* self, QColor* color ```
-void q_image_fill_with_color(void* self, void* color);
+void q_image_fill2(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#fill)
 ///
 /// ``` QImage* self, enum Qt__GlobalColor color ```
-void q_image_fill2(void* self, int64_t color);
+void q_image_fill3(void* self, int64_t color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#hasAlphaChannel)
 ///
@@ -396,7 +396,7 @@ QImage* q_image_scaled(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
 /// ``` QImage* self, QSize* s ```
-QImage* q_image_scaled_with_q_size(void* self, void* s);
+QImage* q_image_scaled2(void* self, void* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaledToWidth)
 ///
@@ -501,7 +501,7 @@ bool q_image_load(void* self, void* device, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#load)
 ///
 /// ``` QImage* self, const char* fileName ```
-bool q_image_load_with_file_name(void* self, const char* fileName);
+bool q_image_load2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
@@ -516,7 +516,7 @@ bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
 /// ``` QImage* self, const char* data ```
-bool q_image_load_from_data_with_data(void* self, const char* data);
+bool q_image_load_from_data3(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#save)
 ///
@@ -526,7 +526,7 @@ bool q_image_save(void* self, const char* fileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#save)
 ///
 /// ``` QImage* self, QIODevice* device ```
-bool q_image_save_with_device(void* self, void* device);
+bool q_image_save2(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
@@ -541,7 +541,7 @@ QImage* q_image_from_data2(unsigned char* data, int size);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
 /// ``` const char* data ```
-QImage* q_image_from_data_with_data(const char* data);
+QImage* q_image_from_data3(const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#cacheKey)
 ///
@@ -851,7 +851,7 @@ QImage* q_image_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t mo
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
 /// ``` QImage* self, QSize* s, enum Qt__AspectRatioMode aspectMode ```
-QImage* q_image_scaled2(void* self, void* s, int64_t aspectMode);
+QImage* q_image_scaled22(void* self, void* s, int64_t aspectMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
@@ -921,7 +921,7 @@ void q_image_apply_color_transform3(void* self, void* transform, int64_t format,
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#load)
 ///
 /// ``` QImage* self, const char* fileName, const char* format ```
-bool q_image_load2(void* self, const char* fileName, const char* format);
+bool q_image_load22(void* self, const char* fileName, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
@@ -931,7 +931,7 @@ bool q_image_load_from_data22(void* self, const char* data, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
 /// ``` QImage* self, unsigned char* buf, int lenVal, const char* format ```
-bool q_image_load_from_data3(void* self, unsigned char* buf, int lenVal, const char* format);
+bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#loadFromData)
 ///
@@ -941,7 +941,7 @@ bool q_image_load_from_data23(void* self, const char* data, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#save)
 ///
 /// ``` QImage* self, const char* fileName, const char* format ```
-bool q_image_save2(void* self, const char* fileName, const char* format);
+bool q_image_save22(void* self, const char* fileName, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#save)
 ///
@@ -951,7 +951,7 @@ bool q_image_save3(void* self, const char* fileName, const char* format, int qua
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#save)
 ///
 /// ``` QImage* self, QIODevice* device, const char* format ```
-bool q_image_save22(void* self, void* device, const char* format);
+bool q_image_save23(void* self, void* device, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#save)
 ///
@@ -966,7 +966,7 @@ QImage* q_image_from_data22(const char* data, const char* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///
 /// ``` unsigned char* data, int size, const char* format ```
-QImage* q_image_from_data3(unsigned char* data, int size, const char* format);
+QImage* q_image_from_data32(unsigned char* data, int size, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#fromData)
 ///

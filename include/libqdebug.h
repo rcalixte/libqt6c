@@ -112,87 +112,87 @@ QDebug* q_debug_operator_shift_left(void* self, void* t);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, bool t ```
-QDebug* q_debug_operator_shift_left_with_bool(void* self, bool t);
+QDebug* q_debug_operator_shift_left2(void* self, bool t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, char t ```
-QDebug* q_debug_operator_shift_left_with_char(void* self, char t);
+QDebug* q_debug_operator_shift_left3(void* self, char t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, short t ```
-QDebug* q_debug_operator_shift_left_with_short(void* self, short t);
+QDebug* q_debug_operator_shift_left4(void* self, short t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, unsigned short t ```
-QDebug* q_debug_operator_shift_left_with_unsignedshort(void* self, unsigned short t);
+QDebug* q_debug_operator_shift_left5(void* self, unsigned short t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, int t ```
-QDebug* q_debug_operator_shift_left_with_int(void* self, int t);
+QDebug* q_debug_operator_shift_left8(void* self, int t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, uint32_t t ```
-QDebug* q_debug_operator_shift_left_with_unsignedint(void* self, uint32_t t);
+QDebug* q_debug_operator_shift_left9(void* self, uint32_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, int64_t t ```
-QDebug* q_debug_operator_shift_left_with_long(void* self, int64_t t);
+QDebug* q_debug_operator_shift_left10(void* self, int64_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, uint64_t t ```
-QDebug* q_debug_operator_shift_left_with_unsignedlong(void* self, uint64_t t);
+QDebug* q_debug_operator_shift_left11(void* self, uint64_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, long long t ```
-QDebug* q_debug_operator_shift_left_with_qint64(void* self, long long t);
+QDebug* q_debug_operator_shift_left12(void* self, long long t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, uint64_t t ```
-QDebug* q_debug_operator_shift_left_with_quint64(void* self, uint64_t t);
+QDebug* q_debug_operator_shift_left13(void* self, uint64_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, float t ```
-QDebug* q_debug_operator_shift_left_with_float(void* self, float t);
+QDebug* q_debug_operator_shift_left15(void* self, float t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, double t ```
-QDebug* q_debug_operator_shift_left_with_double(void* self, double t);
+QDebug* q_debug_operator_shift_left16(void* self, double t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, const char* t ```
-QDebug* q_debug_operator_shift_left2(void* self, const char* t);
+QDebug* q_debug_operator_shift_left17(void* self, const char* t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, const char* t ```
-QDebug* q_debug_operator_shift_left_with_q_string(void* self, const char* t);
+QDebug* q_debug_operator_shift_left19(void* self, const char* t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, const char* t ```
-QDebug* q_debug_operator_shift_left_with_q_byte_array(void* self, const char* t);
+QDebug* q_debug_operator_shift_left23(void* self, const char* t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, const char* t ```
-QDebug* q_debug_operator_shift_left_with_q_byte_array_view(void* self, const char* t);
+QDebug* q_debug_operator_shift_left24(void* self, const char* t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
 ///
 /// ``` QDebug* self, void* t ```
-QDebug* q_debug_operator_shift_left_with_void(void* self, void* t);
+QDebug* q_debug_operator_shift_left25(void* self, void* t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#maybeQuote)
 ///

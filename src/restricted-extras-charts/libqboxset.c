@@ -63,8 +63,8 @@ void q_boxset_append(void* self, double value) {
     QBoxSet_Append((QBoxSet*)self, value);
 }
 
-void q_boxset_append_with_values(void* self, libqt_list values) {
-    QBoxSet_AppendWithValues((QBoxSet*)self, values);
+void q_boxset_append2(void* self, libqt_list values) {
+    QBoxSet_Append2((QBoxSet*)self, values);
 }
 
 void q_boxset_clear(void* self) {
@@ -259,8 +259,8 @@ void q_boxset_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_boxset_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_boxset_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_boxset_children(void* self) {
@@ -292,8 +292,8 @@ bool q_boxset_disconnect(void* sender, void* signal, void* receiver, void* membe
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_boxset_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_boxset_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_boxset_dump_object_tree(void* self) {
@@ -359,8 +359,8 @@ bool q_boxset_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_boxset_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_boxset_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_boxset_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

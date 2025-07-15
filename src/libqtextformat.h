@@ -3022,7 +3022,7 @@ void q_textframeformat_set_width(void* self, double width);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#setWidth)
 ///
 /// ``` QTextFrameFormat* self, QTextLength* length ```
-void q_textframeformat_set_width_with_length(void* self, void* length);
+void q_textframeformat_set_width2(void* self, void* length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#width)
 ///
@@ -3037,7 +3037,7 @@ void q_textframeformat_set_height(void* self, double height);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#setHeight)
 ///
 /// ``` QTextFrameFormat* self, QTextLength* height ```
-void q_textframeformat_set_height_with_height(void* self, void* height);
+void q_textframeformat_set_height2(void* self, void* height);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#height)
 ///
@@ -3650,7 +3650,7 @@ void q_texttableformat_set_width(void* self, double width);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#setWidth)
 ///
 /// ``` QTextTableFormat* self, QTextLength* length ```
-void q_texttableformat_set_width_with_length(void* self, void* length);
+void q_texttableformat_set_width2(void* self, void* length);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -3671,7 +3671,7 @@ void q_texttableformat_set_height(void* self, double height);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#setHeight)
 ///
 /// ``` QTextTableFormat* self, QTextLength* height ```
-void q_texttableformat_set_height_with_height(void* self, void* height);
+void q_texttableformat_set_height2(void* self, void* height);
 
 /// Inherited from QTextFrameFormat
 ///

@@ -575,7 +575,7 @@ QPointF* q_splashscreen_map_to_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// ``` QSplashScreen* self, QPoint* param1 ```
-QPoint* q_splashscreen_map_to_global_with_q_point(void* self, void* param1);
+QPoint* q_splashscreen_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -589,7 +589,7 @@ QPointF* q_splashscreen_map_from_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// ``` QSplashScreen* self, QPoint* param1 ```
-QPoint* q_splashscreen_map_from_global_with_q_point(void* self, void* param1);
+QPoint* q_splashscreen_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -603,7 +603,7 @@ QPointF* q_splashscreen_map_to_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// ``` QSplashScreen* self, QPoint* param1 ```
-QPoint* q_splashscreen_map_to_parent_with_q_point(void* self, void* param1);
+QPoint* q_splashscreen_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -617,7 +617,7 @@ QPointF* q_splashscreen_map_from_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// ``` QSplashScreen* self, QPoint* param1 ```
-QPoint* q_splashscreen_map_from_parent_with_q_point(void* self, void* param1);
+QPoint* q_splashscreen_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -806,7 +806,7 @@ void q_splashscreen_set_mask(void* self, void* mask);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// ``` QSplashScreen* self, QRegion* mask ```
-void q_splashscreen_set_mask_with_mask(void* self, void* mask);
+void q_splashscreen_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
@@ -834,7 +834,7 @@ void q_splashscreen_render(void* self, void* target);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QSplashScreen* self, QPainter* painter ```
-void q_splashscreen_render_with_painter(void* self, void* painter);
+void q_splashscreen_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -1149,7 +1149,7 @@ void q_splashscreen_clear_focus(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// ``` QSplashScreen* self, enum Qt__FocusReason reason ```
-void q_splashscreen_set_focus_with_reason(void* self, int64_t reason);
+void q_splashscreen_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1219,7 +1219,7 @@ void q_splashscreen_grab_mouse(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// ``` QSplashScreen* self, QCursor* param1 ```
-void q_splashscreen_grab_mouse_with_q_cursor(void* self, void* param1);
+void q_splashscreen_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1324,14 +1324,14 @@ void q_splashscreen_update2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QSplashScreen* self, QRect* param1 ```
-void q_splashscreen_update_with_q_rect(void* self, void* param1);
+void q_splashscreen_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QSplashScreen* self, QRegion* param1 ```
-void q_splashscreen_update_with_q_region(void* self, void* param1);
+void q_splashscreen_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1345,14 +1345,14 @@ void q_splashscreen_repaint2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QSplashScreen* self, QRect* param1 ```
-void q_splashscreen_repaint_with_q_rect(void* self, void* param1);
+void q_splashscreen_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QSplashScreen* self, QRegion* param1 ```
-void q_splashscreen_repaint_with_q_region(void* self, void* param1);
+void q_splashscreen_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1443,7 +1443,7 @@ void q_splashscreen_move(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// ``` QSplashScreen* self, QPoint* param1 ```
-void q_splashscreen_move_with_q_point(void* self, void* param1);
+void q_splashscreen_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1457,7 +1457,7 @@ void q_splashscreen_resize(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// ``` QSplashScreen* self, QSize* param1 ```
-void q_splashscreen_resize_with_q_size(void* self, void* param1);
+void q_splashscreen_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1471,7 +1471,7 @@ void q_splashscreen_set_geometry(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// ``` QSplashScreen* self, QRect* geometry ```
-void q_splashscreen_set_geometry_with_geometry(void* self, void* geometry);
+void q_splashscreen_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1597,7 +1597,7 @@ void q_splashscreen_set_contents_margins(void* self, int left, int top, int righ
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// ``` QSplashScreen* self, QMargins* margins ```
-void q_splashscreen_set_contents_margins_with_margins(void* self, void* margins);
+void q_splashscreen_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
@@ -1744,28 +1744,28 @@ libqt_list /* of QAction* */ q_splashscreen_actions(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QSplashScreen* self, const char* text ```
-QAction* q_splashscreen_add_action_with_text(void* self, const char* text);
+QAction* q_splashscreen_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QSplashScreen* self, QIcon* icon, const char* text ```
-QAction* q_splashscreen_add_action2(void* self, void* icon, const char* text);
+QAction* q_splashscreen_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QSplashScreen* self, const char* text, QKeySequence* shortcut ```
-QAction* q_splashscreen_add_action3(void* self, const char* text, void* shortcut);
+QAction* q_splashscreen_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QSplashScreen* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
-QAction* q_splashscreen_add_action4(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_splashscreen_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -1828,14 +1828,14 @@ QWidget* q_splashscreen_child_at(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QSplashScreen* self, QPoint* p ```
-QWidget* q_splashscreen_child_at_with_q_point(void* self, void* p);
+QWidget* q_splashscreen_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QSplashScreen* self, QPointF* p ```
-QWidget* q_splashscreen_child_at_with_q_point_f(void* self, void* p);
+QWidget* q_splashscreen_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
@@ -1989,7 +1989,7 @@ void q_splashscreen_set_input_method_hints(void* self, int64_t hints);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QSplashScreen* self, QPaintDevice* target, QPoint* targetOffset ```
-void q_splashscreen_render2(void* self, void* target, void* targetOffset);
+void q_splashscreen_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2010,7 +2010,7 @@ void q_splashscreen_render4(void* self, void* target, void* targetOffset, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QSplashScreen* self, QPainter* painter, QPoint* targetOffset ```
-void q_splashscreen_render22(void* self, void* painter, void* targetOffset);
+void q_splashscreen_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2171,7 +2171,7 @@ void q_splashscreen_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSplashScreen* self, enum Qt__TimerId id ```
-void q_splashscreen_kill_timer_with_id(void* self, int64_t id);
+void q_splashscreen_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2220,7 +2220,7 @@ bool q_splashscreen_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_splashscreen_disconnect_with_q_meta_object_connection(void* param1);
+bool q_splashscreen_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2318,7 +2318,7 @@ bool q_splashscreen_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSplashScreen* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_splashscreen_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_splashscreen_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

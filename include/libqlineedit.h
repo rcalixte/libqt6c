@@ -346,7 +346,7 @@ void q_lineedit_set_text_margins(void* self, int left, int top, int right, int b
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#setTextMargins)
 ///
 /// ``` QLineEdit* self, QMargins* margins ```
-void q_lineedit_set_text_margins_with_margins(void* self, void* margins);
+void q_lineedit_set_text_margins2(void* self, void* margins);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#textMargins)
 ///
@@ -1295,7 +1295,7 @@ QPointF* q_lineedit_map_to_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// ``` QLineEdit* self, QPoint* param1 ```
-QPoint* q_lineedit_map_to_global_with_q_point(void* self, void* param1);
+QPoint* q_lineedit_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1309,7 +1309,7 @@ QPointF* q_lineedit_map_from_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// ``` QLineEdit* self, QPoint* param1 ```
-QPoint* q_lineedit_map_from_global_with_q_point(void* self, void* param1);
+QPoint* q_lineedit_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1323,7 +1323,7 @@ QPointF* q_lineedit_map_to_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// ``` QLineEdit* self, QPoint* param1 ```
-QPoint* q_lineedit_map_to_parent_with_q_point(void* self, void* param1);
+QPoint* q_lineedit_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1337,7 +1337,7 @@ QPointF* q_lineedit_map_from_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// ``` QLineEdit* self, QPoint* param1 ```
-QPoint* q_lineedit_map_from_parent_with_q_point(void* self, void* param1);
+QPoint* q_lineedit_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1526,7 +1526,7 @@ void q_lineedit_set_mask(void* self, void* mask);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// ``` QLineEdit* self, QRegion* mask ```
-void q_lineedit_set_mask_with_mask(void* self, void* mask);
+void q_lineedit_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1554,7 +1554,7 @@ void q_lineedit_render(void* self, void* target);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QLineEdit* self, QPainter* painter ```
-void q_lineedit_render_with_painter(void* self, void* painter);
+void q_lineedit_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -1869,7 +1869,7 @@ void q_lineedit_clear_focus(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// ``` QLineEdit* self, enum Qt__FocusReason reason ```
-void q_lineedit_set_focus_with_reason(void* self, int64_t reason);
+void q_lineedit_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1939,7 +1939,7 @@ void q_lineedit_grab_mouse(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// ``` QLineEdit* self, QCursor* param1 ```
-void q_lineedit_grab_mouse_with_q_cursor(void* self, void* param1);
+void q_lineedit_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2051,14 +2051,14 @@ void q_lineedit_update2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QLineEdit* self, QRect* param1 ```
-void q_lineedit_update_with_q_rect(void* self, void* param1);
+void q_lineedit_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QLineEdit* self, QRegion* param1 ```
-void q_lineedit_update_with_q_region(void* self, void* param1);
+void q_lineedit_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2072,14 +2072,14 @@ void q_lineedit_repaint2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QLineEdit* self, QRect* param1 ```
-void q_lineedit_repaint_with_q_rect(void* self, void* param1);
+void q_lineedit_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QLineEdit* self, QRegion* param1 ```
-void q_lineedit_repaint_with_q_region(void* self, void* param1);
+void q_lineedit_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2170,7 +2170,7 @@ void q_lineedit_move(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// ``` QLineEdit* self, QPoint* param1 ```
-void q_lineedit_move_with_q_point(void* self, void* param1);
+void q_lineedit_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2184,7 +2184,7 @@ void q_lineedit_resize(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// ``` QLineEdit* self, QSize* param1 ```
-void q_lineedit_resize_with_q_size(void* self, void* param1);
+void q_lineedit_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2198,7 +2198,7 @@ void q_lineedit_set_geometry(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// ``` QLineEdit* self, QRect* geometry ```
-void q_lineedit_set_geometry_with_geometry(void* self, void* geometry);
+void q_lineedit_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2324,7 +2324,7 @@ void q_lineedit_set_contents_margins(void* self, int left, int top, int right, i
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// ``` QLineEdit* self, QMargins* margins ```
-void q_lineedit_set_contents_margins_with_margins(void* self, void* margins);
+void q_lineedit_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
@@ -2463,22 +2463,22 @@ libqt_list /* of QAction* */ q_lineedit_actions(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QLineEdit* self, const char* text ```
-QAction* q_lineedit_add_action_with_text(void* self, const char* text);
+/// ``` QLineEdit* self, QIcon* icon, const char* text ```
+QAction* q_lineedit_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QLineEdit* self, const char* text, QKeySequence* shortcut ```
-QAction* q_lineedit_add_action3(void* self, const char* text, void* shortcut);
+QAction* q_lineedit_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QLineEdit* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
-QAction* q_lineedit_add_action4(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_lineedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2541,14 +2541,14 @@ QWidget* q_lineedit_child_at(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QLineEdit* self, QPoint* p ```
-QWidget* q_lineedit_child_at_with_q_point(void* self, void* p);
+QWidget* q_lineedit_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QLineEdit* self, QPointF* p ```
-QWidget* q_lineedit_child_at_with_q_point_f(void* self, void* p);
+QWidget* q_lineedit_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
@@ -2702,7 +2702,7 @@ void q_lineedit_set_input_method_hints(void* self, int64_t hints);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QLineEdit* self, QPaintDevice* target, QPoint* targetOffset ```
-void q_lineedit_render2(void* self, void* target, void* targetOffset);
+void q_lineedit_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2723,7 +2723,7 @@ void q_lineedit_render4(void* self, void* target, void* targetOffset, void* sour
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QLineEdit* self, QPainter* painter, QPoint* targetOffset ```
-void q_lineedit_render22(void* self, void* painter, void* targetOffset);
+void q_lineedit_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2884,7 +2884,7 @@ void q_lineedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QLineEdit* self, enum Qt__TimerId id ```
-void q_lineedit_kill_timer_with_id(void* self, int64_t id);
+void q_lineedit_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2933,7 +2933,7 @@ bool q_lineedit_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_lineedit_disconnect_with_q_meta_object_connection(void* param1);
+bool q_lineedit_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -3031,7 +3031,7 @@ bool q_lineedit_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QLineEdit* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_lineedit_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_lineedit_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -41,21 +41,21 @@ QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
 /// ``` QAbstractFileIconProvider* self, QFileInfo* param1 ```
-QIcon* q_abstractfileiconprovider_icon_with_q_file_info(void* self, void* param1);
+QIcon* q_abstractfileiconprovider_icon2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QAbstractFileIconProvider* self, QIcon* (*slot)(QAbstractFileIconProvider*, QFileInfo*) ```
-void q_abstractfileiconprovider_on_icon_with_q_file_info(void* self, QIcon* (*slot)(void*, void*));
+void q_abstractfileiconprovider_on_icon2(void* self, QIcon* (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
 /// Base class method implementation
 ///
 /// ``` QAbstractFileIconProvider* self, QFileInfo* param1 ```
-QIcon* q_abstractfileiconprovider_qbase_icon_with_q_file_info(void* self, void* param1);
+QIcon* q_abstractfileiconprovider_qbase_icon2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#type)
 ///

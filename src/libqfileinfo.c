@@ -38,20 +38,20 @@ void q_fileinfo_set_file(void* self, const char* file) {
     QFileInfo_SetFile((QFileInfo*)self, qstring(file));
 }
 
-void q_fileinfo_set_file_with_file(void* self, void* file) {
-    QFileInfo_SetFileWithFile((QFileInfo*)self, (QFileDevice*)file);
+void q_fileinfo_set_file2(void* self, void* file) {
+    QFileInfo_SetFile2((QFileInfo*)self, (QFileDevice*)file);
 }
 
-void q_fileinfo_set_file2(void* self, void* dir, const char* file) {
-    QFileInfo_SetFile2((QFileInfo*)self, (QDir*)dir, qstring(file));
+void q_fileinfo_set_file3(void* self, void* dir, const char* file) {
+    QFileInfo_SetFile3((QFileInfo*)self, (QDir*)dir, qstring(file));
 }
 
 bool q_fileinfo_exists(void* self) {
     return QFileInfo_Exists((QFileInfo*)self);
 }
 
-bool q_fileinfo_exists_with_file(const char* file) {
-    return QFileInfo_ExistsWithFile(qstring(file));
+bool q_fileinfo_exists2(const char* file) {
+    return QFileInfo_Exists2(qstring(file));
 }
 
 void q_fileinfo_refresh(void* self) {
@@ -293,20 +293,20 @@ QDateTime* q_fileinfo_file_time(void* self, int64_t time) {
     return QFileInfo_FileTime((QFileInfo*)self, time);
 }
 
-QDateTime* q_fileinfo_birth_time_with_tz(void* self, void* tz) {
-    return QFileInfo_BirthTimeWithTz((QFileInfo*)self, (QTimeZone*)tz);
+QDateTime* q_fileinfo_birth_time2(void* self, void* tz) {
+    return QFileInfo_BirthTime2((QFileInfo*)self, (QTimeZone*)tz);
 }
 
-QDateTime* q_fileinfo_metadata_change_time_with_tz(void* self, void* tz) {
-    return QFileInfo_MetadataChangeTimeWithTz((QFileInfo*)self, (QTimeZone*)tz);
+QDateTime* q_fileinfo_metadata_change_time2(void* self, void* tz) {
+    return QFileInfo_MetadataChangeTime2((QFileInfo*)self, (QTimeZone*)tz);
 }
 
-QDateTime* q_fileinfo_last_modified_with_tz(void* self, void* tz) {
-    return QFileInfo_LastModifiedWithTz((QFileInfo*)self, (QTimeZone*)tz);
+QDateTime* q_fileinfo_last_modified2(void* self, void* tz) {
+    return QFileInfo_LastModified2((QFileInfo*)self, (QTimeZone*)tz);
 }
 
-QDateTime* q_fileinfo_last_read_with_tz(void* self, void* tz) {
-    return QFileInfo_LastReadWithTz((QFileInfo*)self, (QTimeZone*)tz);
+QDateTime* q_fileinfo_last_read2(void* self, void* tz) {
+    return QFileInfo_LastRead2((QFileInfo*)self, (QTimeZone*)tz);
 }
 
 QDateTime* q_fileinfo_file_time2(void* self, int64_t time, void* tz) {

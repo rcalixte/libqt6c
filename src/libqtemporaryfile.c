@@ -102,20 +102,20 @@ QTemporaryFile* q_temporaryfile_create_native_file(const char* fileName) {
     return QTemporaryFile_CreateNativeFile(qstring(fileName));
 }
 
-QTemporaryFile* q_temporaryfile_create_native_file_with_file(void* file) {
-    return QTemporaryFile_CreateNativeFileWithFile((QFile*)file);
+QTemporaryFile* q_temporaryfile_create_native_file2(void* file) {
+    return QTemporaryFile_CreateNativeFile2((QFile*)file);
 }
 
-bool q_temporaryfile_open_with_flags(void* self, int64_t flags) {
-    return QTemporaryFile_OpenWithFlags((QTemporaryFile*)self, flags);
+bool q_temporaryfile_open2(void* self, int64_t flags) {
+    return QTemporaryFile_Open2((QTemporaryFile*)self, flags);
 }
 
-void q_temporaryfile_on_open_with_flags(void* self, bool (*slot)(void*, int64_t)) {
-    QTemporaryFile_OnOpenWithFlags((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_open2(void* self, bool (*slot)(void*, int64_t)) {
+    QTemporaryFile_OnOpen2((QTemporaryFile*)self, (intptr_t)slot);
 }
 
-bool q_temporaryfile_qbase_open_with_flags(void* self, int64_t flags) {
-    return QTemporaryFile_QBaseOpenWithFlags((QTemporaryFile*)self, flags);
+bool q_temporaryfile_qbase_open2(void* self, int64_t flags) {
+    return QTemporaryFile_QBaseOpen2((QTemporaryFile*)self, flags);
 }
 
 const char* q_temporaryfile_tr2(const char* s, const char* c) {
@@ -150,8 +150,8 @@ const char* q_temporaryfile_decode_name(const char* localFileName) {
     return _ret;
 }
 
-const char* q_temporaryfile_decode_name_with_local_file_name(const char* localFileName) {
-    libqt_string _str = QFile_DecodeNameWithLocalFileName(localFileName);
+const char* q_temporaryfile_decode_name2(const char* localFileName) {
+    libqt_string _str = QFile_DecodeName2(localFileName);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -161,8 +161,8 @@ bool q_temporaryfile_exists(void* self) {
     return QFile_Exists((QFile*)self);
 }
 
-bool q_temporaryfile_exists_with_file_name(const char* fileName) {
-    return QFile_ExistsWithFileName(qstring(fileName));
+bool q_temporaryfile_exists2(const char* fileName) {
+    return QFile_Exists2(qstring(fileName));
 }
 
 const char* q_temporaryfile_sym_link_target(void* self) {
@@ -172,8 +172,8 @@ const char* q_temporaryfile_sym_link_target(void* self) {
     return _ret;
 }
 
-const char* q_temporaryfile_sym_link_target_with_file_name(const char* fileName) {
-    libqt_string _str = QFile_SymLinkTargetWithFileName(qstring(fileName));
+const char* q_temporaryfile_sym_link_target2(const char* fileName) {
+    libqt_string _str = QFile_SymLinkTarget2(qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -183,16 +183,16 @@ bool q_temporaryfile_remove(void* self) {
     return QFile_Remove((QFile*)self);
 }
 
-bool q_temporaryfile_remove_with_file_name(const char* fileName) {
-    return QFile_RemoveWithFileName(qstring(fileName));
+bool q_temporaryfile_remove2(const char* fileName) {
+    return QFile_Remove2(qstring(fileName));
 }
 
 bool q_temporaryfile_move_to_trash(void* self) {
     return QFile_MoveToTrash((QFile*)self);
 }
 
-bool q_temporaryfile_move_to_trash_with_file_name(const char* fileName) {
-    return QFile_MoveToTrashWithFileName(qstring(fileName));
+bool q_temporaryfile_move_to_trash2(const char* fileName) {
+    return QFile_MoveToTrash2(qstring(fileName));
 }
 
 bool q_temporaryfile_rename2(const char* oldName, const char* newName) {
@@ -215,10 +215,6 @@ bool q_temporaryfile_copy2(const char* fileName, const char* newName) {
     return QFile_Copy2(qstring(fileName), qstring(newName));
 }
 
-bool q_temporaryfile_open2(void* self, int64_t flags, int64_t permissions) {
-    return QFile_Open2((QFile*)self, flags, permissions);
-}
-
 bool q_temporaryfile_open4(void* self, int fd, int64_t ioFlags) {
     return QFile_Open4((QFile*)self, fd, ioFlags);
 }
@@ -227,8 +223,8 @@ bool q_temporaryfile_resize2(const char* filename, long long sz) {
     return QFile_Resize2(qstring(filename), sz);
 }
 
-int64_t q_temporaryfile_permissions_with_filename(const char* filename) {
-    return QFile_PermissionsWithFilename(qstring(filename));
+int64_t q_temporaryfile_permissions2(const char* filename) {
+    return QFile_Permissions2(qstring(filename));
 }
 
 bool q_temporaryfile_set_permissions2(const char* filename, int64_t permissionSpec) {
@@ -327,8 +323,8 @@ long long q_temporaryfile_read(void* self, char* data, long long maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_temporaryfile_read_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_ReadWithMaxlen((QIODevice*)self, maxlen);
+char* q_temporaryfile_read2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -372,20 +368,20 @@ long long q_temporaryfile_write(void* self, const char* data, long long lenVal) 
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_temporaryfile_write_with_data(void* self, const char* data) {
-    return QIODevice_WriteWithData((QIODevice*)self, data);
+long long q_temporaryfile_write2(void* self, const char* data) {
+    return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_temporaryfile_write2(void* self, const char* data) {
-    return QIODevice_Write2((QIODevice*)self, qstring(data));
+long long q_temporaryfile_write3(void* self, const char* data) {
+    return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
 long long q_temporaryfile_peek(void* self, char* data, long long maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_temporaryfile_peek_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_PeekWithMaxlen((QIODevice*)self, maxlen);
+char* q_temporaryfile_peek2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -516,8 +512,8 @@ void q_temporaryfile_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_temporaryfile_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_temporaryfile_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_temporaryfile_children(void* self) {
@@ -549,8 +545,8 @@ bool q_temporaryfile_disconnect(void* sender, void* signal, void* receiver, void
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_temporaryfile_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_temporaryfile_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_temporaryfile_dump_object_tree(void* self) {
@@ -616,8 +612,8 @@ bool q_temporaryfile_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_temporaryfile_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_temporaryfile_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_temporaryfile_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

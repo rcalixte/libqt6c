@@ -207,12 +207,12 @@ bool q_variant_can_view(void* self, void* targetType);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#canConvert)
 ///
 /// ``` QVariant* self, int targetTypeId ```
-bool q_variant_can_convert_with_target_type_id(void* self, int targetTypeId);
+bool q_variant_can_convert2(void* self, int targetTypeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#convert)
 ///
 /// ``` QVariant* self, int targetTypeId ```
-bool q_variant_convert_with_target_type_id(void* self, int targetTypeId);
+bool q_variant_convert2(void* self, int targetTypeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#isValid)
 ///

@@ -313,7 +313,7 @@ void q_stackedlayout_set_contents_margins(void* self, int left, int top, int rig
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// ``` QStackedLayout* self, QMargins* margins ```
-void q_stackedlayout_set_contents_margins_with_margins(void* self, void* margins);
+void q_stackedlayout_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QLayout
 ///
@@ -425,7 +425,7 @@ void q_stackedlayout_remove_item(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// ``` QStackedLayout* self, QLayoutItem* param1 ```
-int32_t q_stackedlayout_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_stackedlayout_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -434,7 +434,7 @@ int32_t q_stackedlayout_index_of_with_q_layout_item(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
-void q_stackedlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
+void q_stackedlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
 ///
@@ -443,7 +443,7 @@ void q_stackedlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(
 /// Base class method implementation
 ///
 /// ``` QStackedLayout* self, QLayoutItem* param1 ```
-int32_t q_stackedlayout_qbase_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_stackedlayout_qbase_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -583,7 +583,7 @@ void q_stackedlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QStackedLayout* self, enum Qt__TimerId id ```
-void q_stackedlayout_kill_timer_with_id(void* self, int64_t id);
+void q_stackedlayout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -639,7 +639,7 @@ bool q_stackedlayout_disconnect(void* sender, void* signal, void* receiver, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_stackedlayout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_stackedlayout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -737,7 +737,7 @@ bool q_stackedlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QStackedLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_stackedlayout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_stackedlayout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

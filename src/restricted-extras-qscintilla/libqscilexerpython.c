@@ -392,8 +392,8 @@ void q_scilexerpython_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexerpython_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexerpython_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexerpython_children(void* self) {
@@ -425,8 +425,8 @@ bool q_scilexerpython_disconnect(void* sender, void* signal, void* receiver, voi
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexerpython_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexerpython_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexerpython_dump_object_tree(void* self) {
@@ -492,8 +492,8 @@ bool q_scilexerpython_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexerpython_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexerpython_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexerpython_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -632,40 +632,40 @@ void q_scilexerpython_on_paper(void* self, QColor* (*slot)(void*, int)) {
     QsciLexerPython_OnPaper((QsciLexerPython*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexerpython_default_color_with_style(void* self, int style) {
-    return QsciLexerPython_DefaultColorWithStyle((QsciLexerPython*)self, style);
+QColor* q_scilexerpython_default_color2(void* self, int style) {
+    return QsciLexerPython_DefaultColor2((QsciLexerPython*)self, style);
 }
 
-QColor* q_scilexerpython_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexerPython_QBaseDefaultColorWithStyle((QsciLexerPython*)self, style);
+QColor* q_scilexerpython_qbase_default_color2(void* self, int style) {
+    return QsciLexerPython_QBaseDefaultColor2((QsciLexerPython*)self, style);
 }
 
-void q_scilexerpython_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerPython_OnDefaultColorWithStyle((QsciLexerPython*)self, (intptr_t)slot);
+void q_scilexerpython_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerPython_OnDefaultColor2((QsciLexerPython*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexerpython_default_font_with_style(void* self, int style) {
-    return QsciLexerPython_DefaultFontWithStyle((QsciLexerPython*)self, style);
+QFont* q_scilexerpython_default_font2(void* self, int style) {
+    return QsciLexerPython_DefaultFont2((QsciLexerPython*)self, style);
 }
 
-QFont* q_scilexerpython_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexerPython_QBaseDefaultFontWithStyle((QsciLexerPython*)self, style);
+QFont* q_scilexerpython_qbase_default_font2(void* self, int style) {
+    return QsciLexerPython_QBaseDefaultFont2((QsciLexerPython*)self, style);
 }
 
-void q_scilexerpython_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerPython_OnDefaultFontWithStyle((QsciLexerPython*)self, (intptr_t)slot);
+void q_scilexerpython_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexerPython_OnDefaultFont2((QsciLexerPython*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexerpython_default_paper_with_style(void* self, int style) {
-    return QsciLexerPython_DefaultPaperWithStyle((QsciLexerPython*)self, style);
+QColor* q_scilexerpython_default_paper2(void* self, int style) {
+    return QsciLexerPython_DefaultPaper2((QsciLexerPython*)self, style);
 }
 
-QColor* q_scilexerpython_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexerPython_QBaseDefaultPaperWithStyle((QsciLexerPython*)self, style);
+QColor* q_scilexerpython_qbase_default_paper2(void* self, int style) {
+    return QsciLexerPython_QBaseDefaultPaper2((QsciLexerPython*)self, style);
 }
 
-void q_scilexerpython_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerPython_OnDefaultPaperWithStyle((QsciLexerPython*)self, (intptr_t)slot);
+void q_scilexerpython_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerPython_OnDefaultPaper2((QsciLexerPython*)self, (intptr_t)slot);
 }
 
 void q_scilexerpython_set_editor(void* self, void* editor) {

@@ -61,12 +61,12 @@ bool q_mutex_try_lock(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#tryLock)
 ///
 /// ``` QMutex* self, int timeout ```
-bool q_mutex_try_lock_with_timeout(void* self, int timeout);
+bool q_mutex_try_lock2(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmutex.html#tryLock)
 ///
 /// ``` QMutex* self, QDeadlineTimer* timeout ```
-bool q_mutex_try_lock2(void* self, void* timeout);
+bool q_mutex_try_lock3(void* self, void* timeout);
 
 /// Inherited from QBasicMutex
 ///

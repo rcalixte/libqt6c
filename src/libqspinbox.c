@@ -562,32 +562,32 @@ QPointF* q_spinbox_map_to_global(void* self, void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_spinbox_map_to_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapToGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_spinbox_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_spinbox_map_from_global(void* self, void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_spinbox_map_from_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_spinbox_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_spinbox_map_to_parent(void* self, void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_spinbox_map_to_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapToParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_spinbox_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_spinbox_map_from_parent(void* self, void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_spinbox_map_from_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_spinbox_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_spinbox_map_to(void* self, void* param1, void* param2) {
@@ -694,8 +694,8 @@ void q_spinbox_set_mask(void* self, void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_spinbox_set_mask_with_mask(void* self, void* mask) {
-    QWidget_SetMaskWithMask((QWidget*)self, (QRegion*)mask);
+void q_spinbox_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
 QRegion* q_spinbox_mask(void* self) {
@@ -710,8 +710,8 @@ void q_spinbox_render(void* self, void* target) {
     QWidget_Render((QWidget*)self, (QPaintDevice*)target);
 }
 
-void q_spinbox_render_with_painter(void* self, void* painter) {
-    QWidget_RenderWithPainter((QWidget*)self, (QPainter*)painter);
+void q_spinbox_render2(void* self, void* painter) {
+    QWidget_Render2((QWidget*)self, (QPainter*)painter);
 }
 
 QPixmap* q_spinbox_grab(void* self) {
@@ -920,8 +920,8 @@ void q_spinbox_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_spinbox_set_focus_with_reason(void* self, int64_t reason) {
-    QWidget_SetFocusWithReason((QWidget*)self, reason);
+void q_spinbox_set_focus2(void* self, int64_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
 }
 
 int64_t q_spinbox_focus_policy(void* self) {
@@ -960,8 +960,8 @@ void q_spinbox_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_spinbox_grab_mouse_with_q_cursor(void* self, void* param1) {
-    QWidget_GrabMouseWithQCursor((QWidget*)self, (QCursor*)param1);
+void q_spinbox_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
 void q_spinbox_release_mouse(void* self) {
@@ -1024,24 +1024,24 @@ void q_spinbox_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_spinbox_update_with_q_rect(void* self, void* param1) {
-    QWidget_UpdateWithQRect((QWidget*)self, (QRect*)param1);
+void q_spinbox_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_spinbox_update_with_q_region(void* self, void* param1) {
-    QWidget_UpdateWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_spinbox_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_spinbox_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_spinbox_repaint_with_q_rect(void* self, void* param1) {
-    QWidget_RepaintWithQRect((QWidget*)self, (QRect*)param1);
+void q_spinbox_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_spinbox_repaint_with_q_region(void* self, void* param1) {
-    QWidget_RepaintWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_spinbox_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_spinbox_set_hidden(void* self, bool hidden) {
@@ -1092,24 +1092,24 @@ void q_spinbox_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_spinbox_move_with_q_point(void* self, void* param1) {
-    QWidget_MoveWithQPoint((QWidget*)self, (QPoint*)param1);
+void q_spinbox_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
 void q_spinbox_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_spinbox_resize_with_q_size(void* self, void* param1) {
-    QWidget_ResizeWithQSize((QWidget*)self, (QSize*)param1);
+void q_spinbox_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
 void q_spinbox_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_spinbox_set_geometry_with_geometry(void* self, void* geometry) {
-    QWidget_SetGeometryWithGeometry((QWidget*)self, (QRect*)geometry);
+void q_spinbox_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
 char* q_spinbox_save_geometry(void* self) {
@@ -1183,8 +1183,8 @@ void q_spinbox_set_contents_margins(void* self, int left, int top, int right, in
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_spinbox_set_contents_margins_with_margins(void* self, void* margins) {
-    QWidget_SetContentsMarginsWithMargins((QWidget*)self, (QMargins*)margins);
+void q_spinbox_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
 QMargins* q_spinbox_contents_margins(void* self) {
@@ -1268,20 +1268,20 @@ libqt_list /* of QAction* */ q_spinbox_actions(void* self) {
     return _arr;
 }
 
-QAction* q_spinbox_add_action_with_text(void* self, const char* text) {
-    return QWidget_AddActionWithText((QWidget*)self, qstring(text));
+QAction* q_spinbox_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_spinbox_add_action2(void* self, void* icon, const char* text) {
-    return QWidget_AddAction2((QWidget*)self, (QIcon*)icon, qstring(text));
+QAction* q_spinbox_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_spinbox_add_action3(void* self, const char* text, void* shortcut) {
-    return QWidget_AddAction3((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+QAction* q_spinbox_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_spinbox_add_action4(void* self, void* icon, const char* text, void* shortcut) {
-    return QWidget_AddAction4((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+QAction* q_spinbox_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
 QWidget* q_spinbox_parent_widget(void* self) {
@@ -1316,12 +1316,12 @@ QWidget* q_spinbox_child_at(void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_spinbox_child_at_with_q_point(void* self, void* p) {
-    return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
+QWidget* q_spinbox_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_spinbox_child_at_with_q_point_f(void* self, void* p) {
-    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+QWidget* q_spinbox_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
 void q_spinbox_set_attribute(void* self, int64_t param1) {
@@ -1408,8 +1408,8 @@ void q_spinbox_set_input_method_hints(void* self, int64_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_spinbox_render2(void* self, void* target, void* targetOffset) {
-    QWidget_Render2((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+void q_spinbox_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
 void q_spinbox_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
@@ -1420,8 +1420,8 @@ void q_spinbox_render4(void* self, void* target, void* targetOffset, void* sourc
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void q_spinbox_render22(void* self, void* painter, void* targetOffset) {
-    QWidget_Render22((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+void q_spinbox_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
 void q_spinbox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
@@ -1515,8 +1515,8 @@ void q_spinbox_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_spinbox_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_spinbox_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_spinbox_children(void* self) {
@@ -1544,8 +1544,8 @@ bool q_spinbox_disconnect(void* sender, void* signal, void* receiver, void* memb
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_spinbox_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_spinbox_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_spinbox_dump_object_tree(void* self) {
@@ -1611,8 +1611,8 @@ bool q_spinbox_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_spinbox_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_spinbox_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_spinbox_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -2969,32 +2969,32 @@ QPointF* q_doublespinbox_map_to_global(void* self, void* param1) {
     return QWidget_MapToGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_doublespinbox_map_to_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapToGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_doublespinbox_map_to_global2(void* self, void* param1) {
+    return QWidget_MapToGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_doublespinbox_map_from_global(void* self, void* param1) {
     return QWidget_MapFromGlobal((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_doublespinbox_map_from_global_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromGlobalWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_doublespinbox_map_from_global2(void* self, void* param1) {
+    return QWidget_MapFromGlobal2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_doublespinbox_map_to_parent(void* self, void* param1) {
     return QWidget_MapToParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_doublespinbox_map_to_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapToParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_doublespinbox_map_to_parent2(void* self, void* param1) {
+    return QWidget_MapToParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_doublespinbox_map_from_parent(void* self, void* param1) {
     return QWidget_MapFromParent((QWidget*)self, (QPointF*)param1);
 }
 
-QPoint* q_doublespinbox_map_from_parent_with_q_point(void* self, void* param1) {
-    return QWidget_MapFromParentWithQPoint((QWidget*)self, (QPoint*)param1);
+QPoint* q_doublespinbox_map_from_parent2(void* self, void* param1) {
+    return QWidget_MapFromParent2((QWidget*)self, (QPoint*)param1);
 }
 
 QPointF* q_doublespinbox_map_to(void* self, void* param1, void* param2) {
@@ -3101,8 +3101,8 @@ void q_doublespinbox_set_mask(void* self, void* mask) {
     QWidget_SetMask((QWidget*)self, (QBitmap*)mask);
 }
 
-void q_doublespinbox_set_mask_with_mask(void* self, void* mask) {
-    QWidget_SetMaskWithMask((QWidget*)self, (QRegion*)mask);
+void q_doublespinbox_set_mask2(void* self, void* mask) {
+    QWidget_SetMask2((QWidget*)self, (QRegion*)mask);
 }
 
 QRegion* q_doublespinbox_mask(void* self) {
@@ -3117,8 +3117,8 @@ void q_doublespinbox_render(void* self, void* target) {
     QWidget_Render((QWidget*)self, (QPaintDevice*)target);
 }
 
-void q_doublespinbox_render_with_painter(void* self, void* painter) {
-    QWidget_RenderWithPainter((QWidget*)self, (QPainter*)painter);
+void q_doublespinbox_render2(void* self, void* painter) {
+    QWidget_Render2((QWidget*)self, (QPainter*)painter);
 }
 
 QPixmap* q_doublespinbox_grab(void* self) {
@@ -3327,8 +3327,8 @@ void q_doublespinbox_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_doublespinbox_set_focus_with_reason(void* self, int64_t reason) {
-    QWidget_SetFocusWithReason((QWidget*)self, reason);
+void q_doublespinbox_set_focus2(void* self, int64_t reason) {
+    QWidget_SetFocus2((QWidget*)self, reason);
 }
 
 int64_t q_doublespinbox_focus_policy(void* self) {
@@ -3367,8 +3367,8 @@ void q_doublespinbox_grab_mouse(void* self) {
     QWidget_GrabMouse((QWidget*)self);
 }
 
-void q_doublespinbox_grab_mouse_with_q_cursor(void* self, void* param1) {
-    QWidget_GrabMouseWithQCursor((QWidget*)self, (QCursor*)param1);
+void q_doublespinbox_grab_mouse2(void* self, void* param1) {
+    QWidget_GrabMouse2((QWidget*)self, (QCursor*)param1);
 }
 
 void q_doublespinbox_release_mouse(void* self) {
@@ -3431,24 +3431,24 @@ void q_doublespinbox_update2(void* self, int x, int y, int w, int h) {
     QWidget_Update2((QWidget*)self, x, y, w, h);
 }
 
-void q_doublespinbox_update_with_q_rect(void* self, void* param1) {
-    QWidget_UpdateWithQRect((QWidget*)self, (QRect*)param1);
+void q_doublespinbox_update3(void* self, void* param1) {
+    QWidget_Update3((QWidget*)self, (QRect*)param1);
 }
 
-void q_doublespinbox_update_with_q_region(void* self, void* param1) {
-    QWidget_UpdateWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_doublespinbox_update4(void* self, void* param1) {
+    QWidget_Update4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_doublespinbox_repaint2(void* self, int x, int y, int w, int h) {
     QWidget_Repaint2((QWidget*)self, x, y, w, h);
 }
 
-void q_doublespinbox_repaint_with_q_rect(void* self, void* param1) {
-    QWidget_RepaintWithQRect((QWidget*)self, (QRect*)param1);
+void q_doublespinbox_repaint3(void* self, void* param1) {
+    QWidget_Repaint3((QWidget*)self, (QRect*)param1);
 }
 
-void q_doublespinbox_repaint_with_q_region(void* self, void* param1) {
-    QWidget_RepaintWithQRegion((QWidget*)self, (QRegion*)param1);
+void q_doublespinbox_repaint4(void* self, void* param1) {
+    QWidget_Repaint4((QWidget*)self, (QRegion*)param1);
 }
 
 void q_doublespinbox_set_hidden(void* self, bool hidden) {
@@ -3499,24 +3499,24 @@ void q_doublespinbox_move(void* self, int x, int y) {
     QWidget_Move((QWidget*)self, x, y);
 }
 
-void q_doublespinbox_move_with_q_point(void* self, void* param1) {
-    QWidget_MoveWithQPoint((QWidget*)self, (QPoint*)param1);
+void q_doublespinbox_move2(void* self, void* param1) {
+    QWidget_Move2((QWidget*)self, (QPoint*)param1);
 }
 
 void q_doublespinbox_resize(void* self, int w, int h) {
     QWidget_Resize((QWidget*)self, w, h);
 }
 
-void q_doublespinbox_resize_with_q_size(void* self, void* param1) {
-    QWidget_ResizeWithQSize((QWidget*)self, (QSize*)param1);
+void q_doublespinbox_resize2(void* self, void* param1) {
+    QWidget_Resize2((QWidget*)self, (QSize*)param1);
 }
 
 void q_doublespinbox_set_geometry(void* self, int x, int y, int w, int h) {
     QWidget_SetGeometry((QWidget*)self, x, y, w, h);
 }
 
-void q_doublespinbox_set_geometry_with_geometry(void* self, void* geometry) {
-    QWidget_SetGeometryWithGeometry((QWidget*)self, (QRect*)geometry);
+void q_doublespinbox_set_geometry2(void* self, void* geometry) {
+    QWidget_SetGeometry2((QWidget*)self, (QRect*)geometry);
 }
 
 char* q_doublespinbox_save_geometry(void* self) {
@@ -3590,8 +3590,8 @@ void q_doublespinbox_set_contents_margins(void* self, int left, int top, int rig
     QWidget_SetContentsMargins((QWidget*)self, left, top, right, bottom);
 }
 
-void q_doublespinbox_set_contents_margins_with_margins(void* self, void* margins) {
-    QWidget_SetContentsMarginsWithMargins((QWidget*)self, (QMargins*)margins);
+void q_doublespinbox_set_contents_margins2(void* self, void* margins) {
+    QWidget_SetContentsMargins2((QWidget*)self, (QMargins*)margins);
 }
 
 QMargins* q_doublespinbox_contents_margins(void* self) {
@@ -3675,20 +3675,20 @@ libqt_list /* of QAction* */ q_doublespinbox_actions(void* self) {
     return _arr;
 }
 
-QAction* q_doublespinbox_add_action_with_text(void* self, const char* text) {
-    return QWidget_AddActionWithText((QWidget*)self, qstring(text));
+QAction* q_doublespinbox_add_action2(void* self, const char* text) {
+    return QWidget_AddAction2((QWidget*)self, qstring(text));
 }
 
-QAction* q_doublespinbox_add_action2(void* self, void* icon, const char* text) {
-    return QWidget_AddAction2((QWidget*)self, (QIcon*)icon, qstring(text));
+QAction* q_doublespinbox_add_action3(void* self, void* icon, const char* text) {
+    return QWidget_AddAction3((QWidget*)self, (QIcon*)icon, qstring(text));
 }
 
-QAction* q_doublespinbox_add_action3(void* self, const char* text, void* shortcut) {
-    return QWidget_AddAction3((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
+QAction* q_doublespinbox_add_action4(void* self, const char* text, void* shortcut) {
+    return QWidget_AddAction4((QWidget*)self, qstring(text), (QKeySequence*)shortcut);
 }
 
-QAction* q_doublespinbox_add_action4(void* self, void* icon, const char* text, void* shortcut) {
-    return QWidget_AddAction4((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
+QAction* q_doublespinbox_add_action5(void* self, void* icon, const char* text, void* shortcut) {
+    return QWidget_AddAction5((QWidget*)self, (QIcon*)icon, qstring(text), (QKeySequence*)shortcut);
 }
 
 QWidget* q_doublespinbox_parent_widget(void* self) {
@@ -3723,12 +3723,12 @@ QWidget* q_doublespinbox_child_at(void* self, int x, int y) {
     return QWidget_ChildAt((QWidget*)self, x, y);
 }
 
-QWidget* q_doublespinbox_child_at_with_q_point(void* self, void* p) {
-    return QWidget_ChildAtWithQPoint((QWidget*)self, (QPoint*)p);
+QWidget* q_doublespinbox_child_at2(void* self, void* p) {
+    return QWidget_ChildAt2((QWidget*)self, (QPoint*)p);
 }
 
-QWidget* q_doublespinbox_child_at_with_q_point_f(void* self, void* p) {
-    return QWidget_ChildAtWithQPointF((QWidget*)self, (QPointF*)p);
+QWidget* q_doublespinbox_child_at3(void* self, void* p) {
+    return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
 void q_doublespinbox_set_attribute(void* self, int64_t param1) {
@@ -3815,8 +3815,8 @@ void q_doublespinbox_set_input_method_hints(void* self, int64_t hints) {
     QWidget_SetInputMethodHints((QWidget*)self, hints);
 }
 
-void q_doublespinbox_render2(void* self, void* target, void* targetOffset) {
-    QWidget_Render2((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
+void q_doublespinbox_render22(void* self, void* target, void* targetOffset) {
+    QWidget_Render22((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset);
 }
 
 void q_doublespinbox_render3(void* self, void* target, void* targetOffset, void* sourceRegion) {
@@ -3827,8 +3827,8 @@ void q_doublespinbox_render4(void* self, void* target, void* targetOffset, void*
     QWidget_Render4((QWidget*)self, (QPaintDevice*)target, (QPoint*)targetOffset, (QRegion*)sourceRegion, renderFlags);
 }
 
-void q_doublespinbox_render22(void* self, void* painter, void* targetOffset) {
-    QWidget_Render22((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
+void q_doublespinbox_render23(void* self, void* painter, void* targetOffset) {
+    QWidget_Render23((QWidget*)self, (QPainter*)painter, (QPoint*)targetOffset);
 }
 
 void q_doublespinbox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion) {
@@ -3922,8 +3922,8 @@ void q_doublespinbox_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_doublespinbox_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_doublespinbox_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_doublespinbox_children(void* self) {
@@ -3951,8 +3951,8 @@ bool q_doublespinbox_disconnect(void* sender, void* signal, void* receiver, void
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_doublespinbox_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_doublespinbox_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_doublespinbox_dump_object_tree(void* self) {
@@ -4018,8 +4018,8 @@ bool q_doublespinbox_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_doublespinbox_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_doublespinbox_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_doublespinbox_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

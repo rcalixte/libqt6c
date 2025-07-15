@@ -140,8 +140,8 @@ bool q_cborstreamreader_is_invalid(void* self) {
     return QCborStreamReader_IsInvalid((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_simple_type_with_st(void* self, int64_t st) {
-    return QCborStreamReader_IsSimpleTypeWithSt((QCborStreamReader*)self, st);
+bool q_cborstreamreader_is_simple_type2(void* self, int64_t st) {
+    return QCborStreamReader_IsSimpleType2((QCborStreamReader*)self, st);
 }
 
 bool q_cborstreamreader_is_false(void* self) {

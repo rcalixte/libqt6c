@@ -62,8 +62,8 @@ int64_t q_stringmatcher_index_in22(void* self, const char* str, int64_t from) {
     return QStringMatcher_IndexIn22((QStringMatcher*)self, qstring(str), from);
 }
 
-int64_t q_stringmatcher_index_in3(void* self, void* str, int64_t length, int64_t from) {
-    return QStringMatcher_IndexIn3((QStringMatcher*)self, (QChar*)str, length, from);
+int64_t q_stringmatcher_index_in32(void* self, void* str, int64_t length, int64_t from) {
+    return QStringMatcher_IndexIn32((QStringMatcher*)self, (QChar*)str, length, from);
 }
 
 void q_stringmatcher_delete(void* self) {

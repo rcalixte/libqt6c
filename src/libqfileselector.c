@@ -49,8 +49,8 @@ const char* q_fileselector_select(void* self, const char* filePath) {
     return _ret;
 }
 
-QUrl* q_fileselector_select_with_file_path(void* self, void* filePath) {
-    return QFileSelector_SelectWithFilePath((QFileSelector*)self, (QUrl*)filePath);
+QUrl* q_fileselector_select2(void* self, void* filePath) {
+    return QFileSelector_Select2((QFileSelector*)self, (QUrl*)filePath);
 }
 
 const char** q_fileselector_extra_selectors(void* self) {
@@ -154,8 +154,8 @@ void q_fileselector_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_fileselector_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_fileselector_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_fileselector_children(void* self) {
@@ -187,8 +187,8 @@ bool q_fileselector_disconnect(void* sender, void* signal, void* receiver, void*
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_fileselector_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_fileselector_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_fileselector_dump_object_tree(void* self) {
@@ -254,8 +254,8 @@ bool q_fileselector_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_fileselector_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_fileselector_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_fileselector_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

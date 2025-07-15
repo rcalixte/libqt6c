@@ -498,7 +498,7 @@ void q_xmlstreamwriter_write_attribute2(void* self, char* namespaceUri, char* na
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeAttribute)
 ///
 /// ``` QXmlStreamWriter* self, QXmlStreamAttribute* attribute ```
-void q_xmlstreamwriter_write_attribute_with_attribute(void* self, void* attribute);
+void q_xmlstreamwriter_write_attribute3(void* self, void* attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeAttributes)
 ///
@@ -583,12 +583,12 @@ void q_xmlstreamwriter_write_start_document(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartDocument)
 ///
 /// ``` QXmlStreamWriter* self, char* version ```
-void q_xmlstreamwriter_write_start_document_with_version(void* self, char* version);
+void q_xmlstreamwriter_write_start_document2(void* self, char* version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartDocument)
 ///
 /// ``` QXmlStreamWriter* self, char* version, bool standalone ```
-void q_xmlstreamwriter_write_start_document2(void* self, char* version, bool standalone);
+void q_xmlstreamwriter_write_start_document3(void* self, char* version, bool standalone);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamwriter.html#writeStartElement)
 ///

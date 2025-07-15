@@ -162,87 +162,87 @@ const char* q_locale_to_string(void* self, long long i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, uint64_t i ```
-const char* q_locale_to_string_with_qulonglong(void* self, uint64_t i);
+const char* q_locale_to_string2(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, int64_t i ```
-const char* q_locale_to_string_with_long(void* self, int64_t i);
+const char* q_locale_to_string3(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, uint64_t i ```
-const char* q_locale_to_string_with_ulong(void* self, uint64_t i);
+const char* q_locale_to_string4(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, short i ```
-const char* q_locale_to_string_with_short(void* self, short i);
+const char* q_locale_to_string5(void* self, short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, unsigned short i ```
-const char* q_locale_to_string_with_ushort(void* self, unsigned short i);
+const char* q_locale_to_string6(void* self, unsigned short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, int i ```
-const char* q_locale_to_string_with_int(void* self, int i);
+const char* q_locale_to_string7(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, uint32_t i ```
-const char* q_locale_to_string_with_uint(void* self, uint32_t i);
+const char* q_locale_to_string8(void* self, uint32_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, double f ```
-const char* q_locale_to_string_with_double(void* self, double f);
+const char* q_locale_to_string9(void* self, double f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, float f ```
-const char* q_locale_to_string_with_float(void* self, float f);
+const char* q_locale_to_string10(void* self, float f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDate* date, const char* format ```
-const char* q_locale_to_string2(void* self, void* date, const char* format);
+const char* q_locale_to_string11(void* self, void* date, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QTime* time, const char* format ```
-const char* q_locale_to_string3(void* self, void* time, const char* format);
+const char* q_locale_to_string12(void* self, void* time, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDateTime* dateTime, const char* format ```
-const char* q_locale_to_string4(void* self, void* dateTime, const char* format);
+const char* q_locale_to_string13(void* self, void* dateTime, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDate* date ```
-const char* q_locale_to_string_with_date(void* self, void* date);
+const char* q_locale_to_string17(void* self, void* date);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QTime* time ```
-const char* q_locale_to_string_with_time(void* self, void* time);
+const char* q_locale_to_string18(void* self, void* time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDateTime* dateTime ```
-const char* q_locale_to_string_with_date_time(void* self, void* dateTime);
+const char* q_locale_to_string19(void* self, void* dateTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDate* date, enum QLocale__FormatType format, QCalendar* cal ```
-const char* q_locale_to_string9(void* self, void* date, int64_t format, void* cal);
+const char* q_locale_to_string21(void* self, void* date, int64_t format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDateTime* dateTime, enum QLocale__FormatType format, QCalendar* cal ```
-const char* q_locale_to_string10(void* self, void* dateTime, int64_t format, void* cal);
+const char* q_locale_to_string22(void* self, void* dateTime, int64_t format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dateFormat)
 ///
@@ -422,37 +422,37 @@ const char* q_locale_to_currency_string(void* self, long long param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, uint64_t param1 ```
-const char* q_locale_to_currency_string_with_unsignedlonglong(void* self, uint64_t param1);
+const char* q_locale_to_currency_string2(void* self, uint64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, short i ```
-const char* q_locale_to_currency_string_with_short(void* self, short i);
+const char* q_locale_to_currency_string3(void* self, short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, unsigned short i ```
-const char* q_locale_to_currency_string_with_ushort(void* self, unsigned short i);
+const char* q_locale_to_currency_string4(void* self, unsigned short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, int i ```
-const char* q_locale_to_currency_string_with_int(void* self, int i);
+const char* q_locale_to_currency_string5(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, uint32_t i ```
-const char* q_locale_to_currency_string_with_uint(void* self, uint32_t i);
+const char* q_locale_to_currency_string6(void* self, uint32_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, double param1 ```
-const char* q_locale_to_currency_string_with_double(void* self, double param1);
+const char* q_locale_to_currency_string7(void* self, double param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, float i ```
-const char* q_locale_to_currency_string_with_float(void* self, float i);
+const char* q_locale_to_currency_string8(void* self, float i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#formattedDataSize)
 ///
@@ -562,57 +562,57 @@ const char* q_locale_bcp47_name1(void* self, int64_t separator);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toShort)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-short q_locale_to_short2(void* self, const char* s, bool* ok);
+short q_locale_to_short22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toUShort)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-unsigned short q_locale_to_u_short2(void* self, const char* s, bool* ok);
+unsigned short q_locale_to_u_short22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toInt)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-int32_t q_locale_to_int2(void* self, const char* s, bool* ok);
+int32_t q_locale_to_int22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toUInt)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-uint32_t q_locale_to_u_int2(void* self, const char* s, bool* ok);
+uint32_t q_locale_to_u_int22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toLong)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-int64_t q_locale_to_long2(void* self, const char* s, bool* ok);
+int64_t q_locale_to_long22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toULong)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-uint64_t q_locale_to_u_long2(void* self, const char* s, bool* ok);
+uint64_t q_locale_to_u_long22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toLongLong)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-long long q_locale_to_long_long2(void* self, const char* s, bool* ok);
+long long q_locale_to_long_long22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toULongLong)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-uint64_t q_locale_to_u_long_long2(void* self, const char* s, bool* ok);
+uint64_t q_locale_to_u_long_long22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toFloat)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-float q_locale_to_float2(void* self, const char* s, bool* ok);
+float q_locale_to_float22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDouble)
 ///
 /// ``` QLocale* self, const char* s, bool* ok ```
-double q_locale_to_double2(void* self, const char* s, bool* ok);
+double q_locale_to_double22(void* self, const char* s, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, double f, char format ```
-const char* q_locale_to_string22(void* self, double f, char format);
+const char* q_locale_to_string24(void* self, double f, char format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
@@ -622,7 +622,7 @@ const char* q_locale_to_string32(void* self, double f, char format, int precisio
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, float f, char format ```
-const char* q_locale_to_string23(void* self, float f, char format);
+const char* q_locale_to_string25(void* self, float f, char format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
@@ -632,17 +632,17 @@ const char* q_locale_to_string33(void* self, float f, char format, int precision
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDate* date, enum QLocale__FormatType format ```
-const char* q_locale_to_string24(void* self, void* date, int64_t format);
+const char* q_locale_to_string26(void* self, void* date, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QTime* time, enum QLocale__FormatType format ```
-const char* q_locale_to_string25(void* self, void* time, int64_t format);
+const char* q_locale_to_string27(void* self, void* time, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
 /// ``` QLocale* self, QDateTime* dateTime, enum QLocale__FormatType format ```
-const char* q_locale_to_string26(void* self, void* dateTime, int64_t format);
+const char* q_locale_to_string28(void* self, void* dateTime, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dateFormat)
 ///
@@ -742,52 +742,52 @@ const char* q_locale_currency_symbol1(void* self, int64_t param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, long long param1, const char* symbol ```
-const char* q_locale_to_currency_string2(void* self, long long param1, const char* symbol);
+const char* q_locale_to_currency_string22(void* self, long long param1, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, uint64_t param1, const char* symbol ```
-const char* q_locale_to_currency_string22(void* self, uint64_t param1, const char* symbol);
+const char* q_locale_to_currency_string23(void* self, uint64_t param1, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, short i, const char* symbol ```
-const char* q_locale_to_currency_string23(void* self, short i, const char* symbol);
+const char* q_locale_to_currency_string24(void* self, short i, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, unsigned short i, const char* symbol ```
-const char* q_locale_to_currency_string24(void* self, unsigned short i, const char* symbol);
+const char* q_locale_to_currency_string25(void* self, unsigned short i, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, int i, const char* symbol ```
-const char* q_locale_to_currency_string25(void* self, int i, const char* symbol);
+const char* q_locale_to_currency_string26(void* self, int i, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, uint32_t i, const char* symbol ```
-const char* q_locale_to_currency_string26(void* self, uint32_t i, const char* symbol);
+const char* q_locale_to_currency_string27(void* self, uint32_t i, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, double param1, const char* symbol ```
-const char* q_locale_to_currency_string27(void* self, double param1, const char* symbol);
+const char* q_locale_to_currency_string28(void* self, double param1, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, double param1, const char* symbol, int precision ```
-const char* q_locale_to_currency_string3(void* self, double param1, const char* symbol, int precision);
+const char* q_locale_to_currency_string32(void* self, double param1, const char* symbol, int precision);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, float i, const char* symbol ```
-const char* q_locale_to_currency_string28(void* self, float i, const char* symbol);
+const char* q_locale_to_currency_string29(void* self, float i, const char* symbol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
 /// ``` QLocale* self, float i, const char* symbol, int precision ```
-const char* q_locale_to_currency_string32(void* self, float i, const char* symbol, int precision);
+const char* q_locale_to_currency_string33(void* self, float i, const char* symbol, int precision);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#formattedDataSize)
 ///
@@ -812,7 +812,7 @@ const char* q_locale_language_to_code2(int64_t language, int64_t codeTypes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#quoteString)
 ///
 /// ``` QLocale* self, const char* str, enum QLocale__QuotationStyle style ```
-const char* q_locale_quote_string2(void* self, const char* str, int64_t style);
+const char* q_locale_quote_string22(void* self, const char* str, int64_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dtor.QLocale)
 ///

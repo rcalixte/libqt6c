@@ -237,7 +237,7 @@ void q_rect_translate(void* self, int dx, int dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translate)
 ///
 /// ``` QRect* self, QPoint* p ```
-void q_rect_translate_with_q_point(void* self, void* p);
+void q_rect_translate2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translated)
 ///
@@ -247,7 +247,7 @@ QRect* q_rect_translated(void* self, int dx, int dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#translated)
 ///
 /// ``` QRect* self, QPoint* p ```
-QRect* q_rect_translated_with_q_point(void* self, void* p);
+QRect* q_rect_translated2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#transposed)
 ///
@@ -262,7 +262,7 @@ void q_rect_move_to(void* self, int x, int t);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#moveTo)
 ///
 /// ``` QRect* self, QPoint* p ```
-void q_rect_move_to_with_q_point(void* self, void* p);
+void q_rect_move_to2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#setRect)
 ///
@@ -352,17 +352,17 @@ bool q_rect_contains(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// ``` QRect* self, QPoint* p ```
-bool q_rect_contains_with_q_point(void* self, void* p);
+bool q_rect_contains2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// ``` QRect* self, int x, int y ```
-bool q_rect_contains2(void* self, int x, int y);
+bool q_rect_contains3(void* self, int x, int y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#contains)
 ///
 /// ``` QRect* self, int x, int y, bool proper ```
-bool q_rect_contains3(void* self, int x, int y, bool proper);
+bool q_rect_contains4(void* self, int x, int y, bool proper);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#united)
 ///
@@ -656,7 +656,7 @@ void q_rectf_translate(void* self, double dx, double dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translate)
 ///
 /// ``` QRectF* self, QPointF* p ```
-void q_rectf_translate_with_q_point_f(void* self, void* p);
+void q_rectf_translate2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translated)
 ///
@@ -666,7 +666,7 @@ QRectF* q_rectf_translated(void* self, double dx, double dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#translated)
 ///
 /// ``` QRectF* self, QPointF* p ```
-QRectF* q_rectf_translated_with_q_point_f(void* self, void* p);
+QRectF* q_rectf_translated2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#transposed)
 ///
@@ -681,7 +681,7 @@ void q_rectf_move_to(void* self, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#moveTo)
 ///
 /// ``` QRectF* self, QPointF* p ```
-void q_rectf_move_to_with_q_point_f(void* self, void* p);
+void q_rectf_move_to2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#setRect)
 ///
@@ -771,12 +771,12 @@ bool q_rectf_contains(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#contains)
 ///
 /// ``` QRectF* self, QPointF* p ```
-bool q_rectf_contains_with_q_point_f(void* self, void* p);
+bool q_rectf_contains2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#contains)
 ///
 /// ``` QRectF* self, double x, double y ```
-bool q_rectf_contains2(void* self, double x, double y);
+bool q_rectf_contains3(void* self, double x, double y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#united)
 ///

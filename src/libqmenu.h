@@ -68,12 +68,12 @@ QAction* q_menu_add_menu(void* self, void* menu);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#addMenu)
 ///
 /// ``` QMenu* self, const char* title ```
-QMenu* q_menu_add_menu_with_title(void* self, const char* title);
+QMenu* q_menu_add_menu2(void* self, const char* title);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#addMenu)
 ///
 /// ``` QMenu* self, QIcon* icon, const char* title ```
-QMenu* q_menu_add_menu2(void* self, void* icon, const char* title);
+QMenu* q_menu_add_menu3(void* self, void* icon, const char* title);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#addSeparator)
 ///
@@ -143,7 +143,7 @@ void q_menu_show_tear_off_menu(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#showTearOffMenu)
 ///
 /// ``` QMenu* self, QPoint* pos ```
-void q_menu_show_tear_off_menu_with_pos(void* self, void* pos);
+void q_menu_show_tear_off_menu2(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#hideTearOffMenu)
 ///
@@ -183,12 +183,12 @@ QAction* q_menu_exec(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
 /// ``` QMenu* self, QPoint* pos ```
-QAction* q_menu_exec_with_pos(void* self, void* pos);
+QAction* q_menu_exec2(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
 /// ``` libqt_list /* of QAction* */ actions, QPoint* pos ```
-QAction* q_menu_exec2(libqt_list actions, void* pos);
+QAction* q_menu_exec3(libqt_list actions, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#sizeHint)
 ///
@@ -641,7 +641,7 @@ QAction* q_menu_exec22(void* self, void* pos, void* at);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
 /// ``` libqt_list /* of QAction* */ actions, QPoint* pos, QAction* at ```
-QAction* q_menu_exec3(libqt_list actions, void* pos, void* at);
+QAction* q_menu_exec32(libqt_list actions, void* pos, void* at);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmenu.html#exec)
 ///
@@ -1031,7 +1031,7 @@ QPointF* q_menu_map_to_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// ``` QMenu* self, QPoint* param1 ```
-QPoint* q_menu_map_to_global_with_q_point(void* self, void* param1);
+QPoint* q_menu_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1045,7 +1045,7 @@ QPointF* q_menu_map_from_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// ``` QMenu* self, QPoint* param1 ```
-QPoint* q_menu_map_from_global_with_q_point(void* self, void* param1);
+QPoint* q_menu_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1059,7 +1059,7 @@ QPointF* q_menu_map_to_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// ``` QMenu* self, QPoint* param1 ```
-QPoint* q_menu_map_to_parent_with_q_point(void* self, void* param1);
+QPoint* q_menu_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1073,7 +1073,7 @@ QPointF* q_menu_map_from_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// ``` QMenu* self, QPoint* param1 ```
-QPoint* q_menu_map_from_parent_with_q_point(void* self, void* param1);
+QPoint* q_menu_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1262,7 +1262,7 @@ void q_menu_set_mask(void* self, void* mask);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// ``` QMenu* self, QRegion* mask ```
-void q_menu_set_mask_with_mask(void* self, void* mask);
+void q_menu_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1290,7 +1290,7 @@ void q_menu_render(void* self, void* target);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QMenu* self, QPainter* painter ```
-void q_menu_render_with_painter(void* self, void* painter);
+void q_menu_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -1605,7 +1605,7 @@ void q_menu_clear_focus(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// ``` QMenu* self, enum Qt__FocusReason reason ```
-void q_menu_set_focus_with_reason(void* self, int64_t reason);
+void q_menu_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1675,7 +1675,7 @@ void q_menu_grab_mouse(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// ``` QMenu* self, QCursor* param1 ```
-void q_menu_grab_mouse_with_q_cursor(void* self, void* param1);
+void q_menu_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1787,14 +1787,14 @@ void q_menu_update2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QMenu* self, QRect* param1 ```
-void q_menu_update_with_q_rect(void* self, void* param1);
+void q_menu_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QMenu* self, QRegion* param1 ```
-void q_menu_update_with_q_region(void* self, void* param1);
+void q_menu_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1808,14 +1808,14 @@ void q_menu_repaint2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QMenu* self, QRect* param1 ```
-void q_menu_repaint_with_q_rect(void* self, void* param1);
+void q_menu_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QMenu* self, QRegion* param1 ```
-void q_menu_repaint_with_q_region(void* self, void* param1);
+void q_menu_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1906,7 +1906,7 @@ void q_menu_move(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// ``` QMenu* self, QPoint* param1 ```
-void q_menu_move_with_q_point(void* self, void* param1);
+void q_menu_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1920,7 +1920,7 @@ void q_menu_resize(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// ``` QMenu* self, QSize* param1 ```
-void q_menu_resize_with_q_size(void* self, void* param1);
+void q_menu_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1934,7 +1934,7 @@ void q_menu_set_geometry(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// ``` QMenu* self, QRect* geometry ```
-void q_menu_set_geometry_with_geometry(void* self, void* geometry);
+void q_menu_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2060,7 +2060,7 @@ void q_menu_set_contents_margins(void* self, int left, int top, int right, int b
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// ``` QMenu* self, QMargins* margins ```
-void q_menu_set_contents_margins_with_margins(void* self, void* margins);
+void q_menu_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
@@ -2207,28 +2207,28 @@ libqt_list /* of QAction* */ q_menu_actions(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QMenu* self, const char* text ```
-QAction* q_menu_add_action_with_text(void* self, const char* text);
+QAction* q_menu_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QMenu* self, QIcon* icon, const char* text ```
-QAction* q_menu_add_action2(void* self, void* icon, const char* text);
+QAction* q_menu_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QMenu* self, const char* text, QKeySequence* shortcut ```
-QAction* q_menu_add_action3(void* self, const char* text, void* shortcut);
+QAction* q_menu_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QMenu* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
-QAction* q_menu_add_action4(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_menu_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2291,14 +2291,14 @@ QWidget* q_menu_child_at(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QMenu* self, QPoint* p ```
-QWidget* q_menu_child_at_with_q_point(void* self, void* p);
+QWidget* q_menu_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QMenu* self, QPointF* p ```
-QWidget* q_menu_child_at_with_q_point_f(void* self, void* p);
+QWidget* q_menu_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
@@ -2452,7 +2452,7 @@ void q_menu_set_input_method_hints(void* self, int64_t hints);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QMenu* self, QPaintDevice* target, QPoint* targetOffset ```
-void q_menu_render2(void* self, void* target, void* targetOffset);
+void q_menu_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2473,7 +2473,7 @@ void q_menu_render4(void* self, void* target, void* targetOffset, void* sourceRe
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QMenu* self, QPainter* painter, QPoint* targetOffset ```
-void q_menu_render22(void* self, void* painter, void* targetOffset);
+void q_menu_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2634,7 +2634,7 @@ void q_menu_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QMenu* self, enum Qt__TimerId id ```
-void q_menu_kill_timer_with_id(void* self, int64_t id);
+void q_menu_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2683,7 +2683,7 @@ bool q_menu_disconnect(void* sender, void* signal, void* receiver, void* member)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_menu_disconnect_with_q_meta_object_connection(void* param1);
+bool q_menu_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2781,7 +2781,7 @@ bool q_menu_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QMenu* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_menu_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_menu_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

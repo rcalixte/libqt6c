@@ -180,7 +180,7 @@ void q_graphicstransform_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsTransform* self, enum Qt__TimerId id ```
-void q_graphicstransform_kill_timer_with_id(void* self, int64_t id);
+void q_graphicstransform_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -236,7 +236,7 @@ bool q_graphicstransform_disconnect(void* sender, void* signal, void* receiver, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicstransform_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicstransform_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -334,7 +334,7 @@ bool q_graphicstransform_move_to_thread2(void* self, void* thread, void* param2)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsTransform* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicstransform_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicstransform_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -916,7 +916,7 @@ void q_graphicsscale_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsScale* self, enum Qt__TimerId id ```
-void q_graphicsscale_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsscale_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -972,7 +972,7 @@ bool q_graphicsscale_disconnect(void* sender, void* signal, void* receiver, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsscale_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsscale_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1070,7 +1070,7 @@ bool q_graphicsscale_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsScale* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsscale_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsscale_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1511,7 +1511,7 @@ void q_graphicsrotation_set_axis(void* self, void* axis);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsrotation.html#setAxis)
 ///
 /// ``` QGraphicsRotation* self, enum Qt__Axis axis ```
-void q_graphicsrotation_set_axis_with_axis(void* self, int64_t axis);
+void q_graphicsrotation_set_axis2(void* self, int64_t axis);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsrotation.html#applyTo)
 ///
@@ -1654,7 +1654,7 @@ void q_graphicsrotation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsRotation* self, enum Qt__TimerId id ```
-void q_graphicsrotation_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsrotation_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1710,7 +1710,7 @@ bool q_graphicsrotation_disconnect(void* sender, void* signal, void* receiver, v
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsrotation_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsrotation_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1808,7 +1808,7 @@ bool q_graphicsrotation_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsRotation* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsrotation_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsrotation_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

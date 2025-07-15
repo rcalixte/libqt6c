@@ -228,8 +228,8 @@ void q_scilexernasm_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexernasm_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexernasm_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexernasm_children(void* self) {
@@ -261,8 +261,8 @@ bool q_scilexernasm_disconnect(void* sender, void* signal, void* receiver, void*
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexernasm_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexernasm_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexernasm_dump_object_tree(void* self) {
@@ -328,8 +328,8 @@ bool q_scilexernasm_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexernasm_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexernasm_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexernasm_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -628,16 +628,16 @@ void q_scilexernasm_on_paper(void* self, QColor* (*slot)(void*, int)) {
     QsciLexerNASM_OnPaper((QsciLexerNASM*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexernasm_default_color_with_style(void* self, int style) {
-    return QsciLexerNASM_DefaultColorWithStyle((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_default_color2(void* self, int style) {
+    return QsciLexerNASM_DefaultColor2((QsciLexerNASM*)self, style);
 }
 
-QColor* q_scilexernasm_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultColorWithStyle((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_qbase_default_color2(void* self, int style) {
+    return QsciLexerNASM_QBaseDefaultColor2((QsciLexerNASM*)self, style);
 }
 
-void q_scilexernasm_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerNASM_OnDefaultColorWithStyle((QsciLexerNASM*)self, (intptr_t)slot);
+void q_scilexernasm_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerNASM_OnDefaultColor2((QsciLexerNASM*)self, (intptr_t)slot);
 }
 
 bool q_scilexernasm_default_eol_fill(void* self, int style) {
@@ -652,28 +652,28 @@ void q_scilexernasm_on_default_eol_fill(void* self, bool (*slot)(void*, int)) {
     QsciLexerNASM_OnDefaultEolFill((QsciLexerNASM*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexernasm_default_font_with_style(void* self, int style) {
-    return QsciLexerNASM_DefaultFontWithStyle((QsciLexerNASM*)self, style);
+QFont* q_scilexernasm_default_font2(void* self, int style) {
+    return QsciLexerNASM_DefaultFont2((QsciLexerNASM*)self, style);
 }
 
-QFont* q_scilexernasm_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultFontWithStyle((QsciLexerNASM*)self, style);
+QFont* q_scilexernasm_qbase_default_font2(void* self, int style) {
+    return QsciLexerNASM_QBaseDefaultFont2((QsciLexerNASM*)self, style);
 }
 
-void q_scilexernasm_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerNASM_OnDefaultFontWithStyle((QsciLexerNASM*)self, (intptr_t)slot);
+void q_scilexernasm_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexerNASM_OnDefaultFont2((QsciLexerNASM*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexernasm_default_paper_with_style(void* self, int style) {
-    return QsciLexerNASM_DefaultPaperWithStyle((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_default_paper2(void* self, int style) {
+    return QsciLexerNASM_DefaultPaper2((QsciLexerNASM*)self, style);
 }
 
-QColor* q_scilexernasm_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexerNASM_QBaseDefaultPaperWithStyle((QsciLexerNASM*)self, style);
+QColor* q_scilexernasm_qbase_default_paper2(void* self, int style) {
+    return QsciLexerNASM_QBaseDefaultPaper2((QsciLexerNASM*)self, style);
 }
 
-void q_scilexernasm_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerNASM_OnDefaultPaperWithStyle((QsciLexerNASM*)self, (intptr_t)slot);
+void q_scilexernasm_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerNASM_OnDefaultPaper2((QsciLexerNASM*)self, (intptr_t)slot);
 }
 
 void q_scilexernasm_set_editor(void* self, void* editor) {

@@ -376,7 +376,7 @@ void q_sslsocket_set_local_certificate(void* self, void* certificate);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setLocalCertificate)
 ///
 /// ``` QSslSocket* self, const char* fileName ```
-void q_sslsocket_set_local_certificate_with_file_name(void* self, const char* fileName);
+void q_sslsocket_set_local_certificate2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#localCertificate)
 ///
@@ -416,7 +416,7 @@ void q_sslsocket_set_private_key(void* self, void* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
 /// ``` QSslSocket* self, const char* fileName ```
-void q_sslsocket_set_private_key_with_file_name(void* self, const char* fileName);
+void q_sslsocket_set_private_key2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#privateKey)
 ///
@@ -794,12 +794,12 @@ void q_sslsocket_connect_to_host_encrypted5(void* self, const char* hostName, un
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setLocalCertificate)
 ///
 /// ``` QSslSocket* self, const char* fileName, enum QSsl__EncodingFormat format ```
-void q_sslsocket_set_local_certificate2(void* self, const char* fileName, int64_t format);
+void q_sslsocket_set_local_certificate22(void* self, const char* fileName, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
 /// ``` QSslSocket* self, const char* fileName, enum QSsl__KeyAlgorithm algorithm ```
-void q_sslsocket_set_private_key2(void* self, const char* fileName, int64_t algorithm);
+void q_sslsocket_set_private_key22(void* self, const char* fileName, int64_t algorithm);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
@@ -1194,7 +1194,7 @@ long long q_sslsocket_read(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// ``` QSslSocket* self, long long maxlen ```
-char* q_sslsocket_read_with_maxlen(void* self, long long maxlen);
+char* q_sslsocket_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1257,14 +1257,14 @@ long long q_sslsocket_write(void* self, const char* data, long long lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QSslSocket* self, const char* data ```
-long long q_sslsocket_write_with_data(void* self, const char* data);
+long long q_sslsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QSslSocket* self, const char* data ```
-long long q_sslsocket_write2(void* self, const char* data);
+long long q_sslsocket_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1278,7 +1278,7 @@ long long q_sslsocket_peek(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// ``` QSslSocket* self, long long maxlen ```
-char* q_sslsocket_peek_with_maxlen(void* self, long long maxlen);
+char* q_sslsocket_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1488,7 +1488,7 @@ void q_sslsocket_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QSslSocket* self, enum Qt__TimerId id ```
-void q_sslsocket_kill_timer_with_id(void* self, int64_t id);
+void q_sslsocket_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1544,7 +1544,7 @@ bool q_sslsocket_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_sslsocket_disconnect_with_q_meta_object_connection(void* param1);
+bool q_sslsocket_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1642,7 +1642,7 @@ bool q_sslsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QSslSocket* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_sslsocket_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_sslsocket_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

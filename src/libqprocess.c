@@ -89,8 +89,8 @@ const char** q_processenvironment_keys(void* self) {
     return _ret;
 }
 
-void q_processenvironment_insert_with_q_process_environment(void* self, void* e) {
-    QProcessEnvironment_InsertWithQProcessEnvironment((QProcessEnvironment*)self, (QProcessEnvironment*)e);
+void q_processenvironment_insert2(void* self, void* e) {
+    QProcessEnvironment_Insert2((QProcessEnvironment*)self, (QProcessEnvironment*)e);
 }
 
 QProcessEnvironment* q_processenvironment_system_environment() {
@@ -267,8 +267,8 @@ void q_process_set_unix_process_parameters(void* self, void* params) {
     QProcess_SetUnixProcessParameters((QProcess*)self, (QProcess__UnixProcessParameters*)params);
 }
 
-void q_process_set_unix_process_parameters_with_flags_only(void* self, int64_t flagsOnly) {
-    QProcess_SetUnixProcessParametersWithFlagsOnly((QProcess*)self, flagsOnly);
+void q_process_set_unix_process_parameters2(void* self, int64_t flagsOnly) {
+    QProcess_SetUnixProcessParameters2((QProcess*)self, flagsOnly);
 }
 
 const char* q_process_working_directory(void* self) {
@@ -421,8 +421,8 @@ int32_t q_process_execute(const char* program) {
     return QProcess_Execute(qstring(program));
 }
 
-bool q_process_start_detached_with_program(const char* program) {
-    return QProcess_StartDetachedWithProgram(qstring(program));
+bool q_process_start_detached2(const char* program) {
+    return QProcess_StartDetached2(qstring(program));
 }
 
 const char** q_process_system_environment() {
@@ -583,14 +583,14 @@ int32_t q_process_execute2(const char* program, const char* arguments[]) {
     return QProcess_Execute2(qstring(program), arguments_list);
 }
 
-bool q_process_start_detached2(const char* program, const char* arguments[]) {
+bool q_process_start_detached22(const char* program, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
     libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < arguments_len; ++_i) {
         arguments_qstr[_i] = qstring(arguments[_i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
-    return QProcess_StartDetached2(qstring(program), arguments_list);
+    return QProcess_StartDetached22(qstring(program), arguments_list);
 }
 
 bool q_process_start_detached3(const char* program, const char* arguments[], const char* workingDirectory) {
@@ -673,8 +673,8 @@ long long q_process_read(void* self, char* data, long long maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_process_read_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_ReadWithMaxlen((QIODevice*)self, maxlen);
+char* q_process_read2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -718,20 +718,20 @@ long long q_process_write(void* self, const char* data, long long lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_process_write_with_data(void* self, const char* data) {
-    return QIODevice_WriteWithData((QIODevice*)self, data);
+long long q_process_write2(void* self, const char* data) {
+    return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_process_write2(void* self, const char* data) {
-    return QIODevice_Write2((QIODevice*)self, qstring(data));
+long long q_process_write3(void* self, const char* data) {
+    return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
 long long q_process_peek(void* self, char* data, long long maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_process_peek_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_PeekWithMaxlen((QIODevice*)self, maxlen);
+char* q_process_peek2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -862,8 +862,8 @@ void q_process_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_process_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_process_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_process_children(void* self) {
@@ -895,8 +895,8 @@ bool q_process_disconnect(void* sender, void* signal, void* receiver, void* memb
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_process_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_process_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_process_dump_object_tree(void* self) {
@@ -962,8 +962,8 @@ bool q_process_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_process_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_process_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_process_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

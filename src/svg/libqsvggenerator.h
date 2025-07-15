@@ -72,7 +72,7 @@ void q_svggenerator_set_view_box(void* self, void* viewBox);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#setViewBox)
 ///
 /// ``` QSvgGenerator* self, QRectF* viewBox ```
-void q_svggenerator_set_view_box_with_view_box(void* self, void* viewBox);
+void q_svggenerator_set_view_box2(void* self, void* viewBox);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#fileName)
 ///

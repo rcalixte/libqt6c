@@ -117,7 +117,7 @@ const char* q_regularexpression_anchored_pattern(const char* expression);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
 /// ``` QRegularExpression* self, const char* subject, int64_t offset ```
-QRegularExpressionMatch* q_regularexpression_match2(void* self, const char* subject, int64_t offset);
+QRegularExpressionMatch* q_regularexpression_match22(void* self, const char* subject, int64_t offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
@@ -132,7 +132,7 @@ QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subj
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
 ///
 /// ``` const char* str, int options ```
-const char* q_regularexpression_wildcard_to_regular_expression2(const char* str, int64_t options);
+const char* q_regularexpression_wildcard_to_regular_expression22(const char* str, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#dtor.QRegularExpression)
 ///
@@ -206,7 +206,7 @@ bool q_regularexpressionmatch_has_captured(void* self, char* name);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#hasCaptured)
 ///
 /// ``` QRegularExpressionMatch* self, int nth ```
-bool q_regularexpressionmatch_has_captured_with_nth(void* self, int nth);
+bool q_regularexpressionmatch_has_captured2(void* self, int nth);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
@@ -216,7 +216,7 @@ const char* q_regularexpressionmatch_captured(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///
 /// ``` QRegularExpressionMatch* self, char* name ```
-const char* q_regularexpressionmatch_captured_with_name(void* self, char* name);
+const char* q_regularexpressionmatch_captured2(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedTexts)
 ///
@@ -241,17 +241,17 @@ int64_t q_regularexpressionmatch_captured_end(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedStart)
 ///
 /// ``` QRegularExpressionMatch* self, char* name ```
-int64_t q_regularexpressionmatch_captured_start_with_name(void* self, char* name);
+int64_t q_regularexpressionmatch_captured_start2(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedLength)
 ///
 /// ``` QRegularExpressionMatch* self, char* name ```
-int64_t q_regularexpressionmatch_captured_length_with_name(void* self, char* name);
+int64_t q_regularexpressionmatch_captured_length2(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#capturedEnd)
 ///
 /// ``` QRegularExpressionMatch* self, char* name ```
-int64_t q_regularexpressionmatch_captured_end_with_name(void* self, char* name);
+int64_t q_regularexpressionmatch_captured_end2(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#captured)
 ///

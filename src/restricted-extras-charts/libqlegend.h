@@ -448,7 +448,7 @@ void q_legend_set_contents_margins(void* self, double left, double top, double r
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setContentsMargins)
 ///
 /// ``` QLegend* self, QMarginsF* margins ```
-void q_legend_set_contents_margins_with_margins(void* self, void* margins);
+void q_legend_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -469,7 +469,7 @@ void q_legend_set_window_frame_margins(void* self, double left, double top, doub
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowFrameMargins)
 ///
 /// ``` QLegend* self, QMarginsF* margins ```
-void q_legend_set_window_frame_margins_with_margins(void* self, void* margins);
+void q_legend_set_window_frame_margins2(void* self, void* margins);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1022,7 +1022,7 @@ void q_legend_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QLegend* self, enum Qt__TimerId id ```
-void q_legend_kill_timer_with_id(void* self, int64_t id);
+void q_legend_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1078,7 +1078,7 @@ bool q_legend_disconnect(void* sender, void* signal, void* receiver, void* membe
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_legend_disconnect_with_q_meta_object_connection(void* param1);
+bool q_legend_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1176,7 +1176,7 @@ bool q_legend_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QLegend* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_legend_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_legend_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2086,14 +2086,14 @@ QPainterPath* q_legend_map_to_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QLegend* self, QPainterPath* path ```
-QPainterPath* q_legend_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_legend_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QLegend* self, QPainterPath* path ```
-QPainterPath* q_legend_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_legend_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2149,14 +2149,14 @@ QPainterPath* q_legend_map_from_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QLegend* self, QPainterPath* path ```
-QPainterPath* q_legend_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_legend_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QLegend* self, QPainterPath* path ```
-QPainterPath* q_legend_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_legend_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2170,14 +2170,14 @@ QPointF* q_legend_map_to_item5(void* self, void* item, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QLegend* self, double x, double y ```
-QPointF* q_legend_map_to_parent2(void* self, double x, double y);
+QPointF* q_legend_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QLegend* self, double x, double y ```
-QPointF* q_legend_map_to_scene2(void* self, double x, double y);
+QPointF* q_legend_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2212,14 +2212,14 @@ QPointF* q_legend_map_from_item5(void* self, void* item, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QLegend* self, double x, double y ```
-QPointF* q_legend_map_from_parent2(void* self, double x, double y);
+QPointF* q_legend_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QLegend* self, double x, double y ```
-QPointF* q_legend_map_from_scene2(void* self, double x, double y);
+QPointF* q_legend_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///

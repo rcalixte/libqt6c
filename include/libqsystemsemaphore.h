@@ -57,7 +57,7 @@ void q_systemsemaphore_set_native_key(void* self, void* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
 /// ``` QSystemSemaphore* self, const char* key ```
-void q_systemsemaphore_set_native_key_with_key(void* self, const char* key);
+void q_systemsemaphore_set_native_key2(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#nativeIpcKey)
 ///
@@ -122,7 +122,7 @@ const char* q_systemsemaphore_tr3(const char* sourceText, const char* disambigua
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
 /// ``` QSystemSemaphore* self, QNativeIpcKey* key, int initialValue ```
-void q_systemsemaphore_set_native_key2(void* self, void* key, int initialValue);
+void q_systemsemaphore_set_native_key22(void* self, void* key, int initialValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
@@ -132,7 +132,7 @@ void q_systemsemaphore_set_native_key3(void* self, void* key, int initialValue, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
 /// ``` QSystemSemaphore* self, const char* key, int initialValue ```
-void q_systemsemaphore_set_native_key22(void* self, const char* key, int initialValue);
+void q_systemsemaphore_set_native_key23(void* self, const char* key, int initialValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///

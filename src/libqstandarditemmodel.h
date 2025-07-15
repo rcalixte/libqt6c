@@ -454,7 +454,7 @@ void q_standarditem_insert_row2(void* self, int row, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#appendRow)
 ///
 /// ``` QStandardItem* self, QStandardItem* item ```
-void q_standarditem_append_row_with_item(void* self, void* item);
+void q_standarditem_append_row2(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#takeChild)
 ///
@@ -1171,7 +1171,7 @@ void q_standarditemmodel_append_column(void* self, libqt_list items);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#appendRow)
 ///
 /// ``` QStandardItemModel* self, QStandardItem* item ```
-void q_standarditemmodel_append_row_with_item(void* self, void* item);
+void q_standarditemmodel_append_row2(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
 ///
@@ -1191,12 +1191,12 @@ void q_standarditemmodel_insert_row2(void* self, int row, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertRow)
 ///
 /// ``` QStandardItemModel* self, int row ```
-bool q_standarditemmodel_insert_row_with_row(void* self, int row);
+bool q_standarditemmodel_insert_row3(void* self, int row);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumn)
 ///
 /// ``` QStandardItemModel* self, int column ```
-bool q_standarditemmodel_insert_column_with_column(void* self, int column);
+bool q_standarditemmodel_insert_column2(void* self, int column);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeItem)
 ///
@@ -1338,7 +1338,7 @@ bool q_standarditemmodel_insert_row22(void* self, int row, void* parent);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#insertColumn)
 ///
 /// ``` QStandardItemModel* self, int column, QModelIndex* parent ```
-bool q_standarditemmodel_insert_column2(void* self, int column, void* parent);
+bool q_standarditemmodel_insert_column22(void* self, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandarditemmodel.html#takeItem)
 ///
@@ -1633,7 +1633,7 @@ void q_standarditemmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QStandardItemModel* self, enum Qt__TimerId id ```
-void q_standarditemmodel_kill_timer_with_id(void* self, int64_t id);
+void q_standarditemmodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1689,7 +1689,7 @@ bool q_standarditemmodel_disconnect(void* sender, void* signal, void* receiver, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_standarditemmodel_disconnect_with_q_meta_object_connection(void* param1);
+bool q_standarditemmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1780,7 +1780,7 @@ bool q_standarditemmodel_move_to_thread2(void* self, void* thread, void* param2)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QStandardItemModel* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_standarditemmodel_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_standarditemmodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

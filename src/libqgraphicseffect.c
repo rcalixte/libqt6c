@@ -276,8 +276,8 @@ void q_graphicseffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicseffect_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicseffect_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicseffect_children(void* self) {
@@ -309,8 +309,8 @@ bool q_graphicseffect_disconnect(void* sender, void* signal, void* receiver, voi
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicseffect_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicseffect_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicseffect_dump_object_tree(void* self) {
@@ -376,8 +376,8 @@ bool q_graphicseffect_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicseffect_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicseffect_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -700,8 +700,8 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicscolorizeeffect_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicscolorizeeffect_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicscolorizeeffect_children(void* self) {
@@ -733,8 +733,8 @@ bool q_graphicscolorizeeffect_disconnect(void* sender, void* signal, void* recei
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicscolorizeeffect_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicscolorizeeffect_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicscolorizeeffect_dump_object_tree(void* self) {
@@ -800,8 +800,8 @@ bool q_graphicscolorizeeffect_move_to_thread2(void* self, void* thread, void* pa
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicscolorizeeffect_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -1220,8 +1220,8 @@ void q_graphicsblureffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsblureffect_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicsblureffect_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicsblureffect_children(void* self) {
@@ -1253,8 +1253,8 @@ bool q_graphicsblureffect_disconnect(void* sender, void* signal, void* receiver,
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicsblureffect_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicsblureffect_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsblureffect_dump_object_tree(void* self) {
@@ -1320,8 +1320,8 @@ bool q_graphicsblureffect_move_to_thread2(void* self, void* thread, void* param2
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsblureffect_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -1627,8 +1627,8 @@ void q_graphicsdropshadoweffect_set_offset2(void* self, double dx, double dy) {
     QGraphicsDropShadowEffect_SetOffset2((QGraphicsDropShadowEffect*)self, dx, dy);
 }
 
-void q_graphicsdropshadoweffect_set_offset_with_qreal(void* self, double d) {
-    QGraphicsDropShadowEffect_SetOffsetWithQreal((QGraphicsDropShadowEffect*)self, d);
+void q_graphicsdropshadoweffect_set_offset3(void* self, double d) {
+    QGraphicsDropShadowEffect_SetOffset3((QGraphicsDropShadowEffect*)self, d);
 }
 
 void q_graphicsdropshadoweffect_set_x_offset(void* self, double dx) {
@@ -1768,8 +1768,8 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsdropshadoweffect_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicsdropshadoweffect_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicsdropshadoweffect_children(void* self) {
@@ -1801,8 +1801,8 @@ bool q_graphicsdropshadoweffect_disconnect(void* sender, void* signal, void* rec
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicsdropshadoweffect_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicsdropshadoweffect_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsdropshadoweffect_dump_object_tree(void* self) {
@@ -1868,8 +1868,8 @@ bool q_graphicsdropshadoweffect_move_to_thread2(void* self, void* thread, void* 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsdropshadoweffect_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -2264,8 +2264,8 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsopacityeffect_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_graphicsopacityeffect_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_graphicsopacityeffect_children(void* self) {
@@ -2297,8 +2297,8 @@ bool q_graphicsopacityeffect_disconnect(void* sender, void* signal, void* receiv
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_graphicsopacityeffect_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_graphicsopacityeffect_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_graphicsopacityeffect_dump_object_tree(void* self) {
@@ -2364,8 +2364,8 @@ bool q_graphicsopacityeffect_move_to_thread2(void* self, void* thread, void* par
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsopacityeffect_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

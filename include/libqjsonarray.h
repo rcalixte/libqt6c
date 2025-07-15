@@ -117,7 +117,7 @@ QJsonValueRef* q_jsonarray_operator_subscript(void* self, int64_t i);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#operator[])
 ///
 /// ``` QJsonArray* self, int64_t i ```
-QJsonValue* q_jsonarray_operator_subscript_with_qsizetype(void* self, int64_t i);
+QJsonValue* q_jsonarray_operator_subscript2(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#swap)
 ///
