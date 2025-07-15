@@ -155,16 +155,16 @@ QTransform* q_transform_rotate(void* self, double a, int64_t axis, double distan
     return QTransform_Rotate((QTransform*)self, a, axis, distanceToPlane);
 }
 
-QTransform* q_transform_rotate_with_qreal(void* self, double a) {
-    return QTransform_RotateWithQreal((QTransform*)self, a);
+QTransform* q_transform_rotate2(void* self, double a) {
+    return QTransform_Rotate2((QTransform*)self, a);
 }
 
 QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, double distanceToPlane) {
     return QTransform_RotateRadians((QTransform*)self, a, axis, distanceToPlane);
 }
 
-QTransform* q_transform_rotate_radians_with_qreal(void* self, double a) {
-    return QTransform_RotateRadiansWithQreal((QTransform*)self, a);
+QTransform* q_transform_rotate_radians2(void* self, double a) {
+    return QTransform_RotateRadians2((QTransform*)self, a);
 }
 
 bool q_transform_operator_equal(void* self, void* param1) {
@@ -195,44 +195,44 @@ QPoint* q_transform_map(void* self, void* p) {
     return QTransform_Map((QTransform*)self, (QPoint*)p);
 }
 
-QPointF* q_transform_map_with_q_point_f(void* self, void* p) {
-    return QTransform_MapWithQPointF((QTransform*)self, (QPointF*)p);
+QPointF* q_transform_map2(void* self, void* p) {
+    return QTransform_Map2((QTransform*)self, (QPointF*)p);
 }
 
-QLine* q_transform_map_with_q_line(void* self, void* l) {
-    return QTransform_MapWithQLine((QTransform*)self, (QLine*)l);
+QLine* q_transform_map3(void* self, void* l) {
+    return QTransform_Map3((QTransform*)self, (QLine*)l);
 }
 
-QLineF* q_transform_map_with_q_line_f(void* self, void* l) {
-    return QTransform_MapWithQLineF((QTransform*)self, (QLineF*)l);
+QLineF* q_transform_map4(void* self, void* l) {
+    return QTransform_Map4((QTransform*)self, (QLineF*)l);
 }
 
-QRegion* q_transform_map_with_q_region(void* self, void* r) {
-    return QTransform_MapWithQRegion((QTransform*)self, (QRegion*)r);
+QRegion* q_transform_map7(void* self, void* r) {
+    return QTransform_Map7((QTransform*)self, (QRegion*)r);
 }
 
-QPainterPath* q_transform_map_with_q_painter_path(void* self, void* p) {
-    return QTransform_MapWithQPainterPath((QTransform*)self, (QPainterPath*)p);
+QPainterPath* q_transform_map8(void* self, void* p) {
+    return QTransform_Map8((QTransform*)self, (QPainterPath*)p);
 }
 
 QRect* q_transform_map_rect(void* self, void* param1) {
     return QTransform_MapRect((QTransform*)self, (QRect*)param1);
 }
 
-QRectF* q_transform_map_rect_with_q_rect_f(void* self, void* param1) {
-    return QTransform_MapRectWithQRectF((QTransform*)self, (QRectF*)param1);
+QRectF* q_transform_map_rect2(void* self, void* param1) {
+    return QTransform_MapRect2((QTransform*)self, (QRectF*)param1);
 }
 
-void q_transform_map2(void* self, int x, int y, int* tx, int* ty) {
-    QTransform_Map2((QTransform*)self, x, y, tx, ty);
+void q_transform_map9(void* self, int x, int y, int* tx, int* ty) {
+    QTransform_Map9((QTransform*)self, x, y, tx, ty);
 }
 
-void q_transform_map3(void* self, double x, double y, double* tx, double* ty) {
-    QTransform_Map3((QTransform*)self, x, y, tx, ty);
+void q_transform_map10(void* self, double x, double y, double* tx, double* ty) {
+    QTransform_Map10((QTransform*)self, x, y, tx, ty);
 }
 
-QTransform* q_transform_operator_multiply_assign_with_div(void* self, double div) {
-    return QTransform_OperatorMultiplyAssignWithDiv((QTransform*)self, div);
+QTransform* q_transform_operator_multiply_assign2(void* self, double div) {
+    return QTransform_OperatorMultiplyAssign2((QTransform*)self, div);
 }
 
 QTransform* q_transform_operator_divide_assign(void* self, double div) {
@@ -259,12 +259,12 @@ QTransform* q_transform_inverted1(void* self, bool* invertible) {
     return QTransform_Inverted1((QTransform*)self, (bool*)invertible);
 }
 
-QTransform* q_transform_rotate2(void* self, double a, int64_t axis) {
-    return QTransform_Rotate2((QTransform*)self, a, axis);
+QTransform* q_transform_rotate22(void* self, double a, int64_t axis) {
+    return QTransform_Rotate22((QTransform*)self, a, axis);
 }
 
-QTransform* q_transform_rotate_radians2(void* self, double a, int64_t axis) {
-    return QTransform_RotateRadians2((QTransform*)self, a, axis);
+QTransform* q_transform_rotate_radians22(void* self, double a, int64_t axis) {
+    return QTransform_RotateRadians22((QTransform*)self, a, axis);
 }
 
 void q_transform_delete(void* self) {

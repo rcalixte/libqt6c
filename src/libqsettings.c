@@ -203,8 +203,8 @@ QVariant* q_settings_value(void* self, char* key, void* defaultValue) {
     return QSettings_Value((QSettings*)self, key, (QVariant*)defaultValue);
 }
 
-QVariant* q_settings_value_with_key(void* self, char* key) {
-    return QSettings_ValueWithKey((QSettings*)self, key);
+QVariant* q_settings_value2(void* self, char* key) {
+    return QSettings_Value2((QSettings*)self, key);
 }
 
 void q_settings_remove(void* self, char* key) {
@@ -341,8 +341,8 @@ void q_settings_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_settings_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_settings_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_settings_children(void* self) {
@@ -374,8 +374,8 @@ bool q_settings_disconnect(void* sender, void* signal, void* receiver, void* mem
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_settings_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_settings_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_settings_dump_object_tree(void* self) {
@@ -441,8 +441,8 @@ bool q_settings_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_settings_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_settings_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

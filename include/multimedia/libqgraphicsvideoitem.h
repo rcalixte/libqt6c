@@ -476,7 +476,7 @@ void q_graphicsvideoitem_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsVideoItem* self, enum Qt__TimerId id ```
-void q_graphicsvideoitem_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsvideoitem_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -532,7 +532,7 @@ bool q_graphicsvideoitem_disconnect(void* sender, void* signal, void* receiver, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsvideoitem_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsvideoitem_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -630,7 +630,7 @@ bool q_graphicsvideoitem_move_to_thread2(void* self, void* thread, void* param2)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsVideoItem* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsvideoitem_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsvideoitem_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1498,14 +1498,14 @@ QPainterPath* q_graphicsvideoitem_map_to_item4(void* self, void* item, void* pat
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsVideoItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsvideoitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsvideoitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsVideoItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsvideoitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsvideoitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1561,14 +1561,14 @@ QPainterPath* q_graphicsvideoitem_map_from_item4(void* self, void* item, void* p
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsVideoItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsvideoitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsvideoitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsVideoItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsvideoitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsvideoitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1582,14 +1582,14 @@ QPointF* q_graphicsvideoitem_map_to_item5(void* self, void* item, double x, doub
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsVideoItem* self, double x, double y ```
-QPointF* q_graphicsvideoitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicsvideoitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsVideoItem* self, double x, double y ```
-QPointF* q_graphicsvideoitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicsvideoitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1624,14 +1624,14 @@ QPointF* q_graphicsvideoitem_map_from_item5(void* self, void* item, double x, do
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsVideoItem* self, double x, double y ```
-QPointF* q_graphicsvideoitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicsvideoitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsVideoItem* self, double x, double y ```
-QPointF* q_graphicsvideoitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicsvideoitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///

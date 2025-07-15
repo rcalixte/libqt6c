@@ -34,12 +34,12 @@ bool q_mutex_try_lock(void* self) {
     return QMutex_TryLock((QMutex*)self);
 }
 
-bool q_mutex_try_lock_with_timeout(void* self, int timeout) {
-    return QMutex_TryLockWithTimeout((QMutex*)self, timeout);
+bool q_mutex_try_lock2(void* self, int timeout) {
+    return QMutex_TryLock2((QMutex*)self, timeout);
 }
 
-bool q_mutex_try_lock2(void* self, void* timeout) {
-    return QMutex_TryLock2((QMutex*)self, (QDeadlineTimer*)timeout);
+bool q_mutex_try_lock3(void* self, void* timeout) {
+    return QMutex_TryLock3((QMutex*)self, (QDeadlineTimer*)timeout);
 }
 
 void q_mutex_lock(void* self) {

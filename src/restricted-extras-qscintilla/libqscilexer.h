@@ -429,21 +429,21 @@ QColor* q_scilexer_default_color(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// ``` QsciLexer* self, int style ```
-QColor* q_scilexer_default_color_with_style(void* self, int style);
+QColor* q_scilexer_default_color2(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciLexer* self, QColor* (*slot)(QsciLexer*, int) ```
-void q_scilexer_on_default_color_with_style(void* self, QColor* (*slot)(void*, int));
+void q_scilexer_on_default_color2(void* self, QColor* (*slot)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Base class method implementation
 ///
 /// ``` QsciLexer* self, int style ```
-QColor* q_scilexer_qbase_default_color_with_style(void* self, int style);
+QColor* q_scilexer_qbase_default_color2(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -472,21 +472,21 @@ QFont* q_scilexer_default_font(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// ``` QsciLexer* self, int style ```
-QFont* q_scilexer_default_font_with_style(void* self, int style);
+QFont* q_scilexer_default_font2(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciLexer* self, QFont* (*slot)(QsciLexer*, int) ```
-void q_scilexer_on_default_font_with_style(void* self, QFont* (*slot)(void*, int));
+void q_scilexer_on_default_font2(void* self, QFont* (*slot)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Base class method implementation
 ///
 /// ``` QsciLexer* self, int style ```
-QFont* q_scilexer_qbase_default_font_with_style(void* self, int style);
+QFont* q_scilexer_qbase_default_font2(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -496,21 +496,21 @@ QColor* q_scilexer_default_paper(void* self);
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// ``` QsciLexer* self, int style ```
-QColor* q_scilexer_default_paper_with_style(void* self, int style);
+QColor* q_scilexer_default_paper2(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QsciLexer* self, QColor* (*slot)(QsciLexer*, int) ```
-void q_scilexer_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int));
+void q_scilexer_on_default_paper2(void* self, QColor* (*slot)(void*, int));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
 /// Base class method implementation
 ///
 /// ``` QsciLexer* self, int style ```
-QColor* q_scilexer_qbase_default_paper_with_style(void* self, int style);
+QColor* q_scilexer_qbase_default_paper2(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
@@ -946,7 +946,7 @@ void q_scilexer_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QsciLexer* self, enum Qt__TimerId id ```
-void q_scilexer_kill_timer_with_id(void* self, int64_t id);
+void q_scilexer_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1002,7 +1002,7 @@ bool q_scilexer_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_scilexer_disconnect_with_q_meta_object_connection(void* param1);
+bool q_scilexer_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1100,7 +1100,7 @@ bool q_scilexer_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QsciLexer* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_scilexer_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_scilexer_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

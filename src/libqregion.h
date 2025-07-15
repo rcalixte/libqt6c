@@ -97,7 +97,7 @@ bool q_region_contains(void* self, void* p);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#contains)
 ///
 /// ``` QRegion* self, QRect* r ```
-bool q_region_contains_with_q_rect(void* self, void* r);
+bool q_region_contains2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#translate)
 ///
@@ -107,7 +107,7 @@ void q_region_translate(void* self, int dx, int dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#translate)
 ///
 /// ``` QRegion* self, QPoint* p ```
-void q_region_translate_with_q_point(void* self, void* p);
+void q_region_translate2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#translated)
 ///
@@ -117,7 +117,7 @@ QRegion* q_region_translated(void* self, int dx, int dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#translated)
 ///
 /// ``` QRegion* self, QPoint* p ```
-QRegion* q_region_translated_with_q_point(void* self, void* p);
+QRegion* q_region_translated2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#united)
 ///
@@ -127,7 +127,7 @@ QRegion* q_region_united(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#united)
 ///
 /// ``` QRegion* self, QRect* r ```
-QRegion* q_region_united_with_q_rect(void* self, void* r);
+QRegion* q_region_united2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#intersected)
 ///
@@ -137,7 +137,7 @@ QRegion* q_region_intersected(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#intersected)
 ///
 /// ``` QRegion* self, QRect* r ```
-QRegion* q_region_intersected_with_q_rect(void* self, void* r);
+QRegion* q_region_intersected2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#subtracted)
 ///
@@ -157,7 +157,7 @@ bool q_region_intersects(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#intersects)
 ///
 /// ``` QRegion* self, QRect* r ```
-bool q_region_intersects_with_q_rect(void* self, void* r);
+bool q_region_intersects2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#boundingRect)
 ///
@@ -172,7 +172,7 @@ void q_region_set_rects(void* self, void* rect, int num);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#setRects)
 ///
 /// ``` QRegion* self, libqt_list /* of QRect* */ r ```
-void q_region_set_rects_with_q_span_lesserconst_q_rect_greater(void* self, libqt_list r);
+void q_region_set_rects2(void* self, libqt_list r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#rects)
 ///
@@ -197,7 +197,7 @@ QRegion* q_region_operator_plus(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator+)
 ///
 /// ``` QRegion* self, QRect* r ```
-QRegion* q_region_operator_plus_with_q_rect(void* self, void* r);
+QRegion* q_region_operator_plus2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&)
 ///
@@ -207,7 +207,7 @@ QRegion* q_region_operator_bitwise_and(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&)
 ///
 /// ``` QRegion* self, QRect* r ```
-QRegion* q_region_operator_bitwise_and_with_q_rect(void* self, void* r);
+QRegion* q_region_operator_bitwise_and2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-)
 ///
@@ -232,7 +232,7 @@ QRegion* q_region_operator_plus_assign(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator+=)
 ///
 /// ``` QRegion* self, QRect* r ```
-QRegion* q_region_operator_plus_assign_with_q_rect(void* self, void* r);
+QRegion* q_region_operator_plus_assign2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&=)
 ///
@@ -242,7 +242,7 @@ void q_region_operator_bitwise_and_assign(void* self, void* r);
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&=)
 ///
 /// ``` QRegion* self, QRect* r ```
-void q_region_operator_bitwise_and_assign_with_q_rect(void* self, void* r);
+void q_region_operator_bitwise_and_assign2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-=)
 ///

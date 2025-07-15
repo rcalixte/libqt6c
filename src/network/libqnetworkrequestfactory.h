@@ -67,17 +67,17 @@ QNetworkRequest* q_networkrequestfactory_create_request(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
 /// ``` QNetworkRequestFactory* self, QUrlQuery* query ```
-QNetworkRequest* q_networkrequestfactory_create_request_with_query(void* self, void* query);
+QNetworkRequest* q_networkrequestfactory_create_request2(void* self, void* query);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
 /// ``` QNetworkRequestFactory* self, const char* path ```
-QNetworkRequest* q_networkrequestfactory_create_request_with_path(void* self, const char* path);
+QNetworkRequest* q_networkrequestfactory_create_request3(void* self, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#createRequest)
 ///
 /// ``` QNetworkRequestFactory* self, const char* path, QUrlQuery* query ```
-QNetworkRequest* q_networkrequestfactory_create_request2(void* self, const char* path, void* query);
+QNetworkRequest* q_networkrequestfactory_create_request4(void* self, const char* path, void* query);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setCommonHeaders)
 ///

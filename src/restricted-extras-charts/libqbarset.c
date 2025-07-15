@@ -60,8 +60,8 @@ void q_barset_append(void* self, double value) {
     QBarSet_Append((QBarSet*)self, value);
 }
 
-void q_barset_append_with_values(void* self, libqt_list values) {
-    QBarSet_AppendWithValues((QBarSet*)self, values);
+void q_barset_append2(void* self, libqt_list values) {
+    QBarSet_Append2((QBarSet*)self, values);
 }
 
 QBarSet* q_barset_operator_shift_left(void* self, double* value) {
@@ -410,8 +410,8 @@ void q_barset_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_barset_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_barset_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_barset_children(void* self) {
@@ -443,8 +443,8 @@ bool q_barset_disconnect(void* sender, void* signal, void* receiver, void* membe
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_barset_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_barset_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_barset_dump_object_tree(void* self) {
@@ -510,8 +510,8 @@ bool q_barset_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_barset_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_barset_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_barset_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

@@ -181,12 +181,12 @@ bool q_variant_can_view(void* self, void* targetType) {
     return QVariant_CanView((QVariant*)self, (QMetaType*)targetType);
 }
 
-bool q_variant_can_convert_with_target_type_id(void* self, int targetTypeId) {
-    return QVariant_CanConvertWithTargetTypeId((QVariant*)self, targetTypeId);
+bool q_variant_can_convert2(void* self, int targetTypeId) {
+    return QVariant_CanConvert2((QVariant*)self, targetTypeId);
 }
 
-bool q_variant_convert_with_target_type_id(void* self, int targetTypeId) {
-    return QVariant_ConvertWithTargetTypeId((QVariant*)self, targetTypeId);
+bool q_variant_convert2(void* self, int targetTypeId) {
+    return QVariant_Convert2((QVariant*)self, targetTypeId);
 }
 
 bool q_variant_is_valid(void* self) {

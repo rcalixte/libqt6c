@@ -24,8 +24,8 @@ void q_url_operator_assign(void* self, void* copyVal) {
     QUrl_OperatorAssign((QUrl*)self, (QUrl*)copyVal);
 }
 
-void q_url_operator_assign_with_url(void* self, const char* url) {
-    QUrl_OperatorAssignWithUrl((QUrl*)self, qstring(url));
+void q_url_operator_assign2(void* self, const char* url) {
+    QUrl_OperatorAssign2((QUrl*)self, qstring(url));
 }
 
 void q_url_swap(void* self, void* other) {
@@ -192,8 +192,8 @@ void q_url_set_query(void* self, const char* query) {
     QUrl_SetQuery((QUrl*)self, qstring(query));
 }
 
-void q_url_set_query_with_query(void* self, void* query) {
-    QUrl_SetQueryWithQuery((QUrl*)self, (QUrlQuery*)query);
+void q_url_set_query2(void* self, void* query) {
+    QUrl_SetQuery2((QUrl*)self, (QUrlQuery*)query);
 }
 
 const char* q_url_query(void* self) {
@@ -426,8 +426,8 @@ const char* q_url_file_name1(void* self, int64_t options) {
     return _ret;
 }
 
-void q_url_set_query2(void* self, const char* query, int64_t mode) {
-    QUrl_SetQuery2((QUrl*)self, qstring(query), mode);
+void q_url_set_query22(void* self, const char* query, int64_t mode) {
+    QUrl_SetQuery22((QUrl*)self, qstring(query), mode);
 }
 
 const char* q_url_query1(void* self, int64_t param1) {

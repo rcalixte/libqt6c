@@ -54,12 +54,12 @@ bool q_candlestickseries_remove(void* self, void* set) {
     return QCandlestickSeries_Remove((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-bool q_candlestickseries_append_with_sets(void* self, libqt_list sets) {
-    return QCandlestickSeries_AppendWithSets((QCandlestickSeries*)self, sets);
+bool q_candlestickseries_append2(void* self, libqt_list sets) {
+    return QCandlestickSeries_Append2((QCandlestickSeries*)self, sets);
 }
 
-bool q_candlestickseries_remove_with_sets(void* self, libqt_list sets) {
-    return QCandlestickSeries_RemoveWithSets((QCandlestickSeries*)self, sets);
+bool q_candlestickseries_remove2(void* self, libqt_list sets) {
+    return QCandlestickSeries_Remove2((QCandlestickSeries*)self, sets);
 }
 
 bool q_candlestickseries_insert(void* self, int index, void* set) {
@@ -480,8 +480,8 @@ void q_candlestickseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_candlestickseries_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_candlestickseries_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_candlestickseries_children(void* self) {
@@ -513,8 +513,8 @@ bool q_candlestickseries_disconnect(void* sender, void* signal, void* receiver, 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_candlestickseries_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_candlestickseries_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_candlestickseries_dump_object_tree(void* self) {
@@ -580,8 +580,8 @@ bool q_candlestickseries_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_candlestickseries_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_candlestickseries_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_candlestickseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

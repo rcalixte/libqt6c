@@ -87,7 +87,7 @@ int64_t q_stringmatcher_index_in22(void* self, const char* str, int64_t from);
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// ``` QStringMatcher* self, QChar* str, int64_t length, int64_t from ```
-int64_t q_stringmatcher_index_in3(void* self, void* str, int64_t length, int64_t from);
+int64_t q_stringmatcher_index_in32(void* self, void* str, int64_t length, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#dtor.QStringMatcher)
 ///

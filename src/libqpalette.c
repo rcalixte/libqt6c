@@ -88,12 +88,12 @@ bool q_palette_is_equal(void* self, int64_t cr1, int64_t cr2) {
     return QPalette_IsEqual((QPalette*)self, cr1, cr2);
 }
 
-const QColor* q_palette_color_with_cr(void* self, int64_t cr) {
-    return QPalette_ColorWithCr((QPalette*)self, cr);
+const QColor* q_palette_color2(void* self, int64_t cr) {
+    return QPalette_Color2((QPalette*)self, cr);
 }
 
-const QBrush* q_palette_brush_with_cr(void* self, int64_t cr) {
-    return QPalette_BrushWithCr((QPalette*)self, cr);
+const QBrush* q_palette_brush2(void* self, int64_t cr) {
+    return QPalette_Brush2((QPalette*)self, cr);
 }
 
 const QBrush* q_palette_window_text(void* self) {

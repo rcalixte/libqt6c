@@ -74,8 +74,8 @@ void q_layout_set_contents_margins(void* self, int left, int top, int right, int
     QLayout_SetContentsMargins((QLayout*)self, left, top, right, bottom);
 }
 
-void q_layout_set_contents_margins_with_margins(void* self, void* margins) {
-    QLayout_SetContentsMarginsWithMargins((QLayout*)self, (QMargins*)margins);
+void q_layout_set_contents_margins2(void* self, void* margins) {
+    QLayout_SetContentsMargins2((QLayout*)self, (QMargins*)margins);
 }
 
 void q_layout_unset_contents_margins(void* self) {
@@ -262,16 +262,16 @@ int32_t q_layout_qbase_index_of(void* self, void* param1) {
     return QLayout_QBaseIndexOf((QLayout*)self, (QWidget*)param1);
 }
 
-int32_t q_layout_index_of_with_q_layout_item(void* self, void* param1) {
-    return QLayout_IndexOfWithQLayoutItem((QLayout*)self, (QLayoutItem*)param1);
+int32_t q_layout_index_of2(void* self, void* param1) {
+    return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_layout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*)) {
-    QLayout_OnIndexOfWithQLayoutItem((QLayout*)self, (intptr_t)slot);
+void q_layout_on_index_of2(void* self, int32_t (*slot)(void*, void*)) {
+    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)slot);
 }
 
-int32_t q_layout_qbase_index_of_with_q_layout_item(void* self, void* param1) {
-    return QLayout_QBaseIndexOfWithQLayoutItem((QLayout*)self, (QLayoutItem*)param1);
+int32_t q_layout_qbase_index_of2(void* self, void* param1) {
+    return QLayout_QBaseIndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
 int32_t q_layout_count(void* self) {
@@ -499,8 +499,8 @@ void q_layout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_layout_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_layout_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_layout_children(void* self) {
@@ -532,8 +532,8 @@ bool q_layout_disconnect(void* sender, void* signal, void* receiver, void* membe
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_layout_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_layout_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_layout_dump_object_tree(void* self) {
@@ -599,8 +599,8 @@ bool q_layout_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_layout_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_layout_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_layout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

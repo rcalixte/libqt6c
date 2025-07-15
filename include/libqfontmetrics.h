@@ -127,7 +127,7 @@ int32_t q_fontmetrics_horizontal_advance2(void* self, const char* param1, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#horizontalAdvance)
 ///
 /// ``` QFontMetrics* self, QChar* param1 ```
-int32_t q_fontmetrics_horizontal_advance_with_q_char(void* self, void* param1);
+int32_t q_fontmetrics_horizontal_advance3(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
@@ -137,22 +137,22 @@ QRect* q_fontmetrics_bounding_rect(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// ``` QFontMetrics* self, const char* text ```
-QRect* q_fontmetrics_bounding_rect_with_text(void* self, const char* text);
+QRect* q_fontmetrics_bounding_rect2(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// ``` QFontMetrics* self, const char* text, QTextOption* textOption ```
-QRect* q_fontmetrics_bounding_rect2(void* self, const char* text, void* textOption);
+QRect* q_fontmetrics_bounding_rect3(void* self, const char* text, void* textOption);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// ``` QFontMetrics* self, QRect* r, int flags, const char* text ```
-QRect* q_fontmetrics_bounding_rect3(void* self, void* r, int flags, const char* text);
+QRect* q_fontmetrics_bounding_rect4(void* self, void* r, int flags, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// ``` QFontMetrics* self, int x, int y, int w, int h, int flags, const char* text ```
-QRect* q_fontmetrics_bounding_rect4(void* self, int x, int y, int w, int h, int flags, const char* text);
+QRect* q_fontmetrics_bounding_rect5(void* self, int x, int y, int w, int h, int flags, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#size)
 ///
@@ -222,7 +222,7 @@ QRect* q_fontmetrics_bounding_rect42(void* self, void* r, int flags, const char*
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
 /// ``` QFontMetrics* self, QRect* r, int flags, const char* text, int tabstops, int* tabarray ```
-QRect* q_fontmetrics_bounding_rect5(void* self, void* r, int flags, const char* text, int tabstops, int* tabarray);
+QRect* q_fontmetrics_bounding_rect52(void* self, void* r, int flags, const char* text, int tabstops, int* tabarray);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#boundingRect)
 ///
@@ -286,7 +286,7 @@ void q_fontmetricsf_operator_assign(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator=)
 ///
 /// ``` QFontMetricsF* self, QFontMetrics* param1 ```
-void q_fontmetricsf_operator_assign_with_q_font_metrics(void* self, void* param1);
+void q_fontmetricsf_operator_assign2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#swap)
 ///
@@ -376,12 +376,12 @@ double q_fontmetricsf_horizontal_advance(void* self, const char* stringVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#horizontalAdvance)
 ///
 /// ``` QFontMetricsF* self, QChar* param1 ```
-double q_fontmetricsf_horizontal_advance_with_q_char(void* self, void* param1);
+double q_fontmetricsf_horizontal_advance2(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#horizontalAdvance)
 ///
 /// ``` QFontMetricsF* self, const char* stringVal, QTextOption* textOption ```
-double q_fontmetricsf_horizontal_advance2(void* self, const char* stringVal, void* textOption);
+double q_fontmetricsf_horizontal_advance3(void* self, const char* stringVal, void* textOption);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///
@@ -396,12 +396,12 @@ QRectF* q_fontmetricsf_bounding_rect2(void* self, const char* text, void* textOp
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///
 /// ``` QFontMetricsF* self, QChar* param1 ```
-QRectF* q_fontmetricsf_bounding_rect_with_q_char(void* self, void* param1);
+QRectF* q_fontmetricsf_bounding_rect3(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///
 /// ``` QFontMetricsF* self, QRectF* r, int flags, const char* stringVal ```
-QRectF* q_fontmetricsf_bounding_rect3(void* self, void* r, int flags, const char* stringVal);
+QRectF* q_fontmetricsf_bounding_rect4(void* self, void* r, int flags, const char* stringVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#size)
 ///
@@ -466,7 +466,7 @@ double q_fontmetricsf_horizontal_advance22(void* self, const char* stringVal, in
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///
 /// ``` QFontMetricsF* self, QRectF* r, int flags, const char* stringVal, int tabstops ```
-QRectF* q_fontmetricsf_bounding_rect4(void* self, void* r, int flags, const char* stringVal, int tabstops);
+QRectF* q_fontmetricsf_bounding_rect42(void* self, void* r, int flags, const char* stringVal, int tabstops);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#boundingRect)
 ///

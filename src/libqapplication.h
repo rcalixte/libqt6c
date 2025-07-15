@@ -63,7 +63,7 @@ void q_application_set_style(void* style);
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyle)
 ///
 /// ``` const char* style ```
-QStyle* q_application_set_style_with_style(const char* style);
+QStyle* q_application_set_style2(const char* style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
@@ -73,7 +73,7 @@ QPalette* q_application_palette(void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
 /// ``` const char* className ```
-QPalette* q_application_palette_with_class_name(const char* className);
+QPalette* q_application_palette2(const char* className);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setPalette)
 ///
@@ -88,12 +88,12 @@ QFont* q_application_font();
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
 /// ``` QWidget* param1 ```
-QFont* q_application_font_with_q_widget(void* param1);
+QFont* q_application_font2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
 /// ``` const char* className ```
-QFont* q_application_font_with_class_name(const char* className);
+QFont* q_application_font3(const char* className);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setFont)
 ///
@@ -1378,7 +1378,7 @@ void q_application_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QApplication* self, enum Qt__TimerId id ```
-void q_application_kill_timer_with_id(void* self, int64_t id);
+void q_application_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1434,7 +1434,7 @@ bool q_application_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_application_disconnect_with_q_meta_object_connection(void* param1);
+bool q_application_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1532,7 +1532,7 @@ bool q_application_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QApplication* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_application_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_application_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

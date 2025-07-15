@@ -217,28 +217,28 @@ void q_commonstyle_qbase_polish(void* self, void* param1) {
     QCommonStyle_QBasePolish((QCommonStyle*)self, (QPalette*)param1);
 }
 
-void q_commonstyle_polish_with_app(void* self, void* app) {
-    QCommonStyle_PolishWithApp((QCommonStyle*)self, (QApplication*)app);
+void q_commonstyle_polish2(void* self, void* app) {
+    QCommonStyle_Polish2((QCommonStyle*)self, (QApplication*)app);
 }
 
-void q_commonstyle_on_polish_with_app(void* self, void (*slot)(void*, void*)) {
-    QCommonStyle_OnPolishWithApp((QCommonStyle*)self, (intptr_t)slot);
+void q_commonstyle_on_polish2(void* self, void (*slot)(void*, void*)) {
+    QCommonStyle_OnPolish2((QCommonStyle*)self, (intptr_t)slot);
 }
 
-void q_commonstyle_qbase_polish_with_app(void* self, void* app) {
-    QCommonStyle_QBasePolishWithApp((QCommonStyle*)self, (QApplication*)app);
+void q_commonstyle_qbase_polish2(void* self, void* app) {
+    QCommonStyle_QBasePolish2((QCommonStyle*)self, (QApplication*)app);
 }
 
-void q_commonstyle_polish_with_widget(void* self, void* widget) {
-    QCommonStyle_PolishWithWidget((QCommonStyle*)self, (QWidget*)widget);
+void q_commonstyle_polish3(void* self, void* widget) {
+    QCommonStyle_Polish3((QCommonStyle*)self, (QWidget*)widget);
 }
 
-void q_commonstyle_on_polish_with_widget(void* self, void (*slot)(void*, void*)) {
-    QCommonStyle_OnPolishWithWidget((QCommonStyle*)self, (intptr_t)slot);
+void q_commonstyle_on_polish3(void* self, void (*slot)(void*, void*)) {
+    QCommonStyle_OnPolish3((QCommonStyle*)self, (intptr_t)slot);
 }
 
-void q_commonstyle_qbase_polish_with_widget(void* self, void* widget) {
-    QCommonStyle_QBasePolishWithWidget((QCommonStyle*)self, (QWidget*)widget);
+void q_commonstyle_qbase_polish3(void* self, void* widget) {
+    QCommonStyle_QBasePolish3((QCommonStyle*)self, (QWidget*)widget);
 }
 
 void q_commonstyle_unpolish(void* self, void* widget) {
@@ -253,16 +253,16 @@ void q_commonstyle_qbase_unpolish(void* self, void* widget) {
     QCommonStyle_QBaseUnpolish((QCommonStyle*)self, (QWidget*)widget);
 }
 
-void q_commonstyle_unpolish_with_application(void* self, void* application) {
-    QCommonStyle_UnpolishWithApplication((QCommonStyle*)self, (QApplication*)application);
+void q_commonstyle_unpolish2(void* self, void* application) {
+    QCommonStyle_Unpolish2((QCommonStyle*)self, (QApplication*)application);
 }
 
-void q_commonstyle_on_unpolish_with_application(void* self, void (*slot)(void*, void*)) {
-    QCommonStyle_OnUnpolishWithApplication((QCommonStyle*)self, (intptr_t)slot);
+void q_commonstyle_on_unpolish2(void* self, void (*slot)(void*, void*)) {
+    QCommonStyle_OnUnpolish2((QCommonStyle*)self, (intptr_t)slot);
 }
 
-void q_commonstyle_qbase_unpolish_with_application(void* self, void* application) {
-    QCommonStyle_QBaseUnpolishWithApplication((QCommonStyle*)self, (QApplication*)application);
+void q_commonstyle_qbase_unpolish2(void* self, void* application) {
+    QCommonStyle_QBaseUnpolish2((QCommonStyle*)self, (QApplication*)application);
 }
 
 const char* q_commonstyle_tr2(const char* s, const char* c) {
@@ -284,30 +284,6 @@ const char* q_commonstyle_name(void* self) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
-}
-
-void q_commonstyle_polish_with_application(void* self, void* application) {
-    QStyle_PolishWithApplication((QStyle*)self, (QApplication*)application);
-}
-
-void q_commonstyle_on_polish_with_application(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolishWithApplication((QStyle*)self, (intptr_t)slot);
-}
-
-void q_commonstyle_qbase_polish_with_application(void* self, void* application) {
-    QStyle_QBasePolishWithApplication((QStyle*)self, (QApplication*)application);
-}
-
-void q_commonstyle_polish_with_palette(void* self, void* palette) {
-    QStyle_PolishWithPalette((QStyle*)self, (QPalette*)palette);
-}
-
-void q_commonstyle_on_polish_with_palette(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolishWithPalette((QStyle*)self, (intptr_t)slot);
-}
-
-void q_commonstyle_qbase_polish_with_palette(void* self, void* palette) {
-    QStyle_QBasePolishWithPalette((QStyle*)self, (QPalette*)palette);
 }
 
 QRect* q_commonstyle_visual_rect(int64_t direction, void* boundingRect, void* logicalRect) {
@@ -405,8 +381,8 @@ void q_commonstyle_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_commonstyle_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_commonstyle_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_commonstyle_children(void* self) {
@@ -438,8 +414,8 @@ bool q_commonstyle_disconnect(void* sender, void* signal, void* receiver, void* 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_commonstyle_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_commonstyle_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_commonstyle_dump_object_tree(void* self) {
@@ -505,8 +481,8 @@ bool q_commonstyle_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_commonstyle_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_commonstyle_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_commonstyle_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

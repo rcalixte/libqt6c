@@ -46,72 +46,72 @@ QCborValue* q_cbormap_value(void* self, long long key) {
     return QCborMap_Value((QCborMap*)self, key);
 }
 
-QCborValue* q_cbormap_value2(void* self, const char* key) {
-    return QCborMap_Value2((QCborMap*)self, qstring(key));
+QCborValue* q_cbormap_value3(void* self, const char* key) {
+    return QCborMap_Value3((QCborMap*)self, qstring(key));
 }
 
-QCborValue* q_cbormap_value3(void* self, void* key) {
-    return QCborMap_Value3((QCborMap*)self, (QCborValue*)key);
+QCborValue* q_cbormap_value4(void* self, void* key) {
+    return QCborMap_Value4((QCborMap*)self, (QCborValue*)key);
 }
 
 const QCborValue* q_cbormap_operator_subscript(void* self, long long key) {
     return QCborMap_OperatorSubscript((QCborMap*)self, key);
 }
 
-const QCborValue* q_cbormap_operator_subscript2(void* self, const char* key) {
-    return QCborMap_OperatorSubscript2((QCborMap*)self, qstring(key));
+const QCborValue* q_cbormap_operator_subscript3(void* self, const char* key) {
+    return QCborMap_OperatorSubscript3((QCborMap*)self, qstring(key));
 }
 
-const QCborValue* q_cbormap_operator_subscript3(void* self, void* key) {
-    return QCborMap_OperatorSubscript3((QCborMap*)self, (QCborValue*)key);
+const QCborValue* q_cbormap_operator_subscript4(void* self, void* key) {
+    return QCborMap_OperatorSubscript4((QCborMap*)self, (QCborValue*)key);
 }
 
-QCborValueRef* q_cbormap_operator_subscript4(void* self, long long key) {
-    return QCborMap_OperatorSubscript4((QCborMap*)self, key);
+QCborValueRef* q_cbormap_operator_subscript5(void* self, long long key) {
+    return QCborMap_OperatorSubscript5((QCborMap*)self, key);
 }
 
-QCborValueRef* q_cbormap_operator_subscript6(void* self, const char* key) {
-    return QCborMap_OperatorSubscript6((QCborMap*)self, qstring(key));
+QCborValueRef* q_cbormap_operator_subscript7(void* self, const char* key) {
+    return QCborMap_OperatorSubscript7((QCborMap*)self, qstring(key));
 }
 
-QCborValueRef* q_cbormap_operator_subscript7(void* self, void* key) {
-    return QCborMap_OperatorSubscript7((QCborMap*)self, (QCborValue*)key);
+QCborValueRef* q_cbormap_operator_subscript8(void* self, void* key) {
+    return QCborMap_OperatorSubscript8((QCborMap*)self, (QCborValue*)key);
 }
 
 QCborValue* q_cbormap_take(void* self, long long key) {
     return QCborMap_Take((QCborMap*)self, key);
 }
 
-QCborValue* q_cbormap_take2(void* self, const char* key) {
-    return QCborMap_Take2((QCborMap*)self, qstring(key));
+QCborValue* q_cbormap_take3(void* self, const char* key) {
+    return QCborMap_Take3((QCborMap*)self, qstring(key));
 }
 
-QCborValue* q_cbormap_take3(void* self, void* key) {
-    return QCborMap_Take3((QCborMap*)self, (QCborValue*)key);
+QCborValue* q_cbormap_take4(void* self, void* key) {
+    return QCborMap_Take4((QCborMap*)self, (QCborValue*)key);
 }
 
 void q_cbormap_remove(void* self, long long key) {
     QCborMap_Remove((QCborMap*)self, key);
 }
 
-void q_cbormap_remove2(void* self, const char* key) {
-    QCborMap_Remove2((QCborMap*)self, qstring(key));
+void q_cbormap_remove3(void* self, const char* key) {
+    QCborMap_Remove3((QCborMap*)self, qstring(key));
 }
 
-void q_cbormap_remove3(void* self, void* key) {
-    QCborMap_Remove3((QCborMap*)self, (QCborValue*)key);
+void q_cbormap_remove4(void* self, void* key) {
+    QCborMap_Remove4((QCborMap*)self, (QCborValue*)key);
 }
 
 bool q_cbormap_contains(void* self, long long key) {
     return QCborMap_Contains((QCborMap*)self, key);
 }
 
-bool q_cbormap_contains2(void* self, const char* key) {
-    return QCborMap_Contains2((QCborMap*)self, qstring(key));
+bool q_cbormap_contains3(void* self, const char* key) {
+    return QCborMap_Contains3((QCborMap*)self, qstring(key));
 }
 
-bool q_cbormap_contains3(void* self, void* key) {
-    return QCborMap_Contains3((QCborMap*)self, (QCborValue*)key);
+bool q_cbormap_contains4(void* self, void* key) {
+    return QCborMap_Contains4((QCborMap*)self, (QCborValue*)key);
 }
 
 int32_t q_cbormap_compare(void* self, void* other) {

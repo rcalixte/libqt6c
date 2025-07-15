@@ -117,8 +117,8 @@ QObject* q_metaobject_cast(void* self, void* obj) {
     return QMetaObject_Cast((QMetaObject*)self, (QObject*)obj);
 }
 
-const QObject* q_metaobject_cast_with_obj(void* self, void* obj) {
-    return QMetaObject_CastWithObj((QMetaObject*)self, (QObject*)obj);
+const QObject* q_metaobject_cast2(void* self, void* obj) {
+    return QMetaObject_Cast2((QMetaObject*)self, (QObject*)obj);
 }
 
 const char* q_metaobject_tr(void* self, const char* s, const char* c) {

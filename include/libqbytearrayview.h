@@ -197,7 +197,7 @@ bool q_bytearrayview_starts_with(void* self, const char* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#startsWith)
 ///
 /// ``` QByteArrayView* self, char c ```
-bool q_bytearrayview_starts_with_with_char(void* self, char c);
+bool q_bytearrayview_starts_with2(void* self, char c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#endsWith)
 ///
@@ -207,7 +207,7 @@ bool q_bytearrayview_ends_with(void* self, const char* other);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#endsWith)
 ///
 /// ``` QByteArrayView* self, char c ```
-bool q_bytearrayview_ends_with_with_char(void* self, char c);
+bool q_bytearrayview_ends_with2(void* self, char c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#indexOf)
 ///
@@ -217,7 +217,7 @@ int64_t q_bytearrayview_index_of(void* self, const char* a);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#indexOf)
 ///
 /// ``` QByteArrayView* self, char ch ```
-int64_t q_bytearrayview_index_of_with_ch(void* self, char ch);
+int64_t q_bytearrayview_index_of2(void* self, char ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#contains)
 ///
@@ -227,7 +227,7 @@ bool q_bytearrayview_contains(void* self, const char* a);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#contains)
 ///
 /// ``` QByteArrayView* self, char c ```
-bool q_bytearrayview_contains_with_char(void* self, char c);
+bool q_bytearrayview_contains2(void* self, char c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#lastIndexOf)
 ///
@@ -242,7 +242,7 @@ int64_t q_bytearrayview_last_index_of2(void* self, const char* a, int64_t from);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#lastIndexOf)
 ///
 /// ``` QByteArrayView* self, char ch ```
-int64_t q_bytearrayview_last_index_of_with_ch(void* self, char ch);
+int64_t q_bytearrayview_last_index_of3(void* self, char ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#count)
 ///
@@ -252,7 +252,7 @@ int64_t q_bytearrayview_count(void* self, const char* a);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#count)
 ///
 /// ``` QByteArrayView* self, char ch ```
-int64_t q_bytearrayview_count_with_ch(void* self, char ch);
+int64_t q_bytearrayview_count2(void* self, char ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#compare)
 ///
@@ -432,12 +432,12 @@ double q_bytearrayview_to_double1(void* self, bool* ok);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#indexOf)
 ///
 /// ``` QByteArrayView* self, const char* a, int64_t from ```
-int64_t q_bytearrayview_index_of2(void* self, const char* a, int64_t from);
+int64_t q_bytearrayview_index_of22(void* self, const char* a, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#indexOf)
 ///
 /// ``` QByteArrayView* self, char ch, int64_t from ```
-int64_t q_bytearrayview_index_of22(void* self, char ch, int64_t from);
+int64_t q_bytearrayview_index_of23(void* self, char ch, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#lastIndexOf)
 ///

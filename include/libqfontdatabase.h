@@ -52,7 +52,7 @@ libqt_list /* of int64_t */ q_fontdatabase_writing_systems();
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
 /// ``` const char* family ```
-libqt_list /* of int64_t */ q_fontdatabase_writing_systems_with_family(const char* family);
+libqt_list /* of int64_t */ q_fontdatabase_writing_systems2(const char* family);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
@@ -82,7 +82,7 @@ const char* q_fontdatabase_style_string(void* font);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#styleString)
 ///
 /// ``` QFontInfo* fontInfo ```
-const char* q_fontdatabase_style_string_with_font_info(void* fontInfo);
+const char* q_fontdatabase_style_string2(void* fontInfo);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#font)
 ///

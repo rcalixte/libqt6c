@@ -48,16 +48,16 @@ QNetworkRequest* q_networkrequestfactory_create_request(void* self) {
     return QNetworkRequestFactory_CreateRequest((QNetworkRequestFactory*)self);
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request_with_query(void* self, void* query) {
-    return QNetworkRequestFactory_CreateRequestWithQuery((QNetworkRequestFactory*)self, (QUrlQuery*)query);
+QNetworkRequest* q_networkrequestfactory_create_request2(void* self, void* query) {
+    return QNetworkRequestFactory_CreateRequest2((QNetworkRequestFactory*)self, (QUrlQuery*)query);
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request_with_path(void* self, const char* path) {
-    return QNetworkRequestFactory_CreateRequestWithPath((QNetworkRequestFactory*)self, qstring(path));
+QNetworkRequest* q_networkrequestfactory_create_request3(void* self, const char* path) {
+    return QNetworkRequestFactory_CreateRequest3((QNetworkRequestFactory*)self, qstring(path));
 }
 
-QNetworkRequest* q_networkrequestfactory_create_request2(void* self, const char* path, void* query) {
-    return QNetworkRequestFactory_CreateRequest2((QNetworkRequestFactory*)self, qstring(path), (QUrlQuery*)query);
+QNetworkRequest* q_networkrequestfactory_create_request4(void* self, const char* path, void* query) {
+    return QNetworkRequestFactory_CreateRequest4((QNetworkRequestFactory*)self, qstring(path), (QUrlQuery*)query);
 }
 
 void q_networkrequestfactory_set_common_headers(void* self, void* headers) {

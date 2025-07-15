@@ -257,12 +257,12 @@ void q_textcursor_insert_block(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertBlock)
 ///
 /// ``` QTextCursor* self, QTextBlockFormat* format ```
-void q_textcursor_insert_block_with_format(void* self, void* format);
+void q_textcursor_insert_block2(void* self, void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertBlock)
 ///
 /// ``` QTextCursor* self, QTextBlockFormat* format, QTextCharFormat* charFormat ```
-void q_textcursor_insert_block2(void* self, void* format, void* charFormat);
+void q_textcursor_insert_block3(void* self, void* format, void* charFormat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertList)
 ///
@@ -272,7 +272,7 @@ QTextList* q_textcursor_insert_list(void* self, void* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertList)
 ///
 /// ``` QTextCursor* self, enum QTextListFormat__Style style ```
-QTextList* q_textcursor_insert_list_with_style(void* self, int64_t style);
+QTextList* q_textcursor_insert_list2(void* self, int64_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#createList)
 ///
@@ -282,7 +282,7 @@ QTextList* q_textcursor_create_list(void* self, void* format);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#createList)
 ///
 /// ``` QTextCursor* self, enum QTextListFormat__Style style ```
-QTextList* q_textcursor_create_list_with_style(void* self, int64_t style);
+QTextList* q_textcursor_create_list2(void* self, int64_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#currentList)
 ///
@@ -337,17 +337,17 @@ void q_textcursor_insert_image(void* self, void* format, int64_t alignment);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertImage)
 ///
 /// ``` QTextCursor* self, QTextImageFormat* format ```
-void q_textcursor_insert_image_with_format(void* self, void* format);
+void q_textcursor_insert_image2(void* self, void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertImage)
 ///
 /// ``` QTextCursor* self, const char* name ```
-void q_textcursor_insert_image_with_name(void* self, const char* name);
+void q_textcursor_insert_image3(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertImage)
 ///
 /// ``` QTextCursor* self, QImage* image ```
-void q_textcursor_insert_image_with_image(void* self, void* image);
+void q_textcursor_insert_image4(void* self, void* image);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#beginEditBlock)
 ///
@@ -437,7 +437,7 @@ void q_textcursor_insert_markdown2(void* self, const char* markdown, int64_t fea
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertImage)
 ///
 /// ``` QTextCursor* self, QImage* image, const char* name ```
-void q_textcursor_insert_image2(void* self, void* image, const char* name);
+void q_textcursor_insert_image22(void* self, void* image, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#dtor.QTextCursor)
 ///

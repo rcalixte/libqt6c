@@ -157,7 +157,7 @@ const char* q_jsonvalue_to_string(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toString)
 ///
 /// ``` QJsonValue* self, const char* defaultValue ```
-const char* q_jsonvalue_to_string_with_default_value(void* self, const char* defaultValue);
+const char* q_jsonvalue_to_string2(void* self, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toArray)
 ///
@@ -167,7 +167,7 @@ QJsonArray* q_jsonvalue_to_array(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toArray)
 ///
 /// ``` QJsonValue* self, QJsonArray* defaultValue ```
-QJsonArray* q_jsonvalue_to_array_with_default_value(void* self, void* defaultValue);
+QJsonArray* q_jsonvalue_to_array2(void* self, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toObject)
 ///
@@ -177,7 +177,7 @@ QJsonObject* q_jsonvalue_to_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toObject)
 ///
 /// ``` QJsonValue* self, QJsonObject* defaultValue ```
-QJsonObject* q_jsonvalue_to_object_with_default_value(void* self, void* defaultValue);
+QJsonObject* q_jsonvalue_to_object2(void* self, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator[])
 ///
@@ -187,7 +187,7 @@ const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator[])
 ///
 /// ``` QJsonValue* self, int64_t i ```
-const QJsonValue* q_jsonvalue_operator_subscript_with_qsizetype(void* self, int64_t i);
+const QJsonValue* q_jsonvalue_operator_subscript4(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toBool)
 ///
@@ -316,7 +316,7 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator[])
 ///
 /// ``` QJsonValueConstRef* self, int64_t i ```
-const QJsonValue* q_jsonvalueconstref_operator_subscript_with_qsizetype(void* self, int64_t i);
+const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toBool)
 ///
@@ -380,7 +380,7 @@ void q_jsonvalueref_operator_assign(void* self, void* val);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator=)
 ///
 /// ``` QJsonValueRef* self, QJsonValueRef* val ```
-void q_jsonvalueref_operator_assign_with_val(void* self, void* val);
+void q_jsonvalueref_operator_assign2(void* self, void* val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator QJsonValue)
 ///
@@ -470,7 +470,7 @@ QJsonObject* q_jsonvalueref_to_object(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator[])
 ///
 /// ``` QJsonValueRef* self, int64_t i ```
-const QJsonValue* q_jsonvalueref_operator_subscript_with_qsizetype(void* self, int64_t i);
+const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toBool)
 ///

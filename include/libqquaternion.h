@@ -187,7 +187,7 @@ QQuaternion* q_quaternion_operator_multiply_assign(void* self, float factor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator*=)
 ///
 /// ``` QQuaternion* self, QQuaternion* quaternion ```
-QQuaternion* q_quaternion_operator_multiply_assign_with_quaternion(void* self, void* quaternion);
+QQuaternion* q_quaternion_operator_multiply_assign2(void* self, void* quaternion);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator/=)
 ///

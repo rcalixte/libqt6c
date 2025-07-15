@@ -133,22 +133,22 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QPointF* pos ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items_with_pos(void* self, void* pos);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items2(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QRectF* rect ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items_with_rect(void* self, void* rect);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items3(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QPainterPath* path ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items_with_path(void* self, void* path);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items5(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, double x, double y, double w, double h, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items2(void* self, double x, double y, double w, double h, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(void* self, double x, double y, double w, double h, int64_t mode, int64_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#collidingItems)
 ///
@@ -183,7 +183,7 @@ void q_graphicsscene_set_selection_area(void* self, void* path, void* deviceTran
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
 /// ``` QGraphicsScene* self, QPainterPath* path ```
-void q_graphicsscene_set_selection_area_with_path(void* self, void* path);
+void q_graphicsscene_set_selection_area2(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#createItemGroup)
 ///
@@ -936,12 +936,12 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QPointF* pos, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items3(void* self, void* pos, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos, int64_t mode, int64_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QPointF* pos, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order, QTransform* deviceTransform ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items4(void* self, void* pos, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* pos, int64_t mode, int64_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -951,12 +951,12 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rec
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QRectF* rect, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* rect, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rect, int64_t mode, int64_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QRectF* rect, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order, QTransform* deviceTransform ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* rect, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rect, int64_t mode, int64_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -966,12 +966,12 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* pat
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QPainterPath* path, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items34(void* self, void* path, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* path, int64_t mode, int64_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// ``` QGraphicsScene* self, QPainterPath* path, enum Qt__ItemSelectionMode mode, enum Qt__SortOrder order, QTransform* deviceTransform ```
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items44(void* self, void* path, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* path, int64_t mode, int64_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -986,7 +986,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(void* self, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
 /// ``` QGraphicsScene* self, QPainterPath* path, enum Qt__ItemSelectionOperation selectionOperation ```
-void q_graphicsscene_set_selection_area2(void* self, void* path, int64_t selectionOperation);
+void q_graphicsscene_set_selection_area22(void* self, void* path, int64_t selectionOperation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -1185,7 +1185,7 @@ void q_graphicsscene_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsScene* self, enum Qt__TimerId id ```
-void q_graphicsscene_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsscene_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1241,7 +1241,7 @@ bool q_graphicsscene_disconnect(void* sender, void* signal, void* receiver, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsscene_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsscene_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1339,7 +1339,7 @@ bool q_graphicsscene_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsScene* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsscene_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsscene_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

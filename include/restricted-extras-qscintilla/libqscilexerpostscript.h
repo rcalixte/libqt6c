@@ -468,7 +468,7 @@ void q_scilexerpostscript_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QsciLexerPostScript* self, enum Qt__TimerId id ```
-void q_scilexerpostscript_kill_timer_with_id(void* self, int64_t id);
+void q_scilexerpostscript_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -524,7 +524,7 @@ bool q_scilexerpostscript_disconnect(void* sender, void* signal, void* receiver,
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_scilexerpostscript_disconnect_with_q_meta_object_connection(void* param1);
+bool q_scilexerpostscript_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -622,7 +622,7 @@ bool q_scilexerpostscript_move_to_thread2(void* self, void* thread, void* param2
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QsciLexerPostScript* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_scilexerpostscript_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_scilexerpostscript_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1037,7 +1037,7 @@ void q_scilexerpostscript_on_paper(void* self, QColor* (*slot)(void*, int));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, int style ```
-QColor* q_scilexerpostscript_default_color_with_style(void* self, int style);
+QColor* q_scilexerpostscript_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1046,7 +1046,7 @@ QColor* q_scilexerpostscript_default_color_with_style(void* self, int style);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, int style ```
-QColor* q_scilexerpostscript_qbase_default_color_with_style(void* self, int style);
+QColor* q_scilexerpostscript_qbase_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1055,7 +1055,7 @@ QColor* q_scilexerpostscript_qbase_default_color_with_style(void* self, int styl
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, QColor* (*slot)(QsciLexerPostScript*, int) ```
-void q_scilexerpostscript_on_default_color_with_style(void* self, QColor* (*slot)(void*, int));
+void q_scilexerpostscript_on_default_color2(void* self, QColor* (*slot)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1091,7 +1091,7 @@ void q_scilexerpostscript_on_default_eol_fill(void* self, bool (*slot)(void*, in
 /// Wrapper to allow calling virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, int style ```
-QFont* q_scilexerpostscript_default_font_with_style(void* self, int style);
+QFont* q_scilexerpostscript_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1100,7 +1100,7 @@ QFont* q_scilexerpostscript_default_font_with_style(void* self, int style);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, int style ```
-QFont* q_scilexerpostscript_qbase_default_font_with_style(void* self, int style);
+QFont* q_scilexerpostscript_qbase_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1109,7 +1109,7 @@ QFont* q_scilexerpostscript_qbase_default_font_with_style(void* self, int style)
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, QFont* (*slot)(QsciLexerPostScript*, int) ```
-void q_scilexerpostscript_on_default_font_with_style(void* self, QFont* (*slot)(void*, int));
+void q_scilexerpostscript_on_default_font2(void* self, QFont* (*slot)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1118,7 +1118,7 @@ void q_scilexerpostscript_on_default_font_with_style(void* self, QFont* (*slot)(
 /// Wrapper to allow calling virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, int style ```
-QColor* q_scilexerpostscript_default_paper_with_style(void* self, int style);
+QColor* q_scilexerpostscript_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1127,7 +1127,7 @@ QColor* q_scilexerpostscript_default_paper_with_style(void* self, int style);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, int style ```
-QColor* q_scilexerpostscript_qbase_default_paper_with_style(void* self, int style);
+QColor* q_scilexerpostscript_qbase_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1136,7 +1136,7 @@ QColor* q_scilexerpostscript_qbase_default_paper_with_style(void* self, int styl
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciLexerPostScript* self, QColor* (*slot)(QsciLexerPostScript*, int) ```
-void q_scilexerpostscript_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int));
+void q_scilexerpostscript_on_default_paper2(void* self, QColor* (*slot)(void*, int));
 
 /// Inherited from QsciLexer
 ///

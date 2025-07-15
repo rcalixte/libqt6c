@@ -68,7 +68,7 @@ bool q_boxplotseries_take(void* self, void* box);
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#append)
 ///
 /// ``` QBoxPlotSeries* self, libqt_list /* of QBoxSet* */ boxes ```
-bool q_boxplotseries_append_with_boxes(void* self, libqt_list boxes);
+bool q_boxplotseries_append2(void* self, libqt_list boxes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#insert)
 ///
@@ -529,7 +529,7 @@ void q_boxplotseries_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QBoxPlotSeries* self, enum Qt__TimerId id ```
-void q_boxplotseries_kill_timer_with_id(void* self, int64_t id);
+void q_boxplotseries_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -585,7 +585,7 @@ bool q_boxplotseries_disconnect(void* sender, void* signal, void* receiver, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_boxplotseries_disconnect_with_q_meta_object_connection(void* param1);
+bool q_boxplotseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -683,7 +683,7 @@ bool q_boxplotseries_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QBoxPlotSeries* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_boxplotseries_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_boxplotseries_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

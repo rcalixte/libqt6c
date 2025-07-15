@@ -793,12 +793,12 @@ QPainterPath* q_graphicsitem_map_to_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsitem_map_to_parent4(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsitem_map_to_scene4(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
@@ -838,12 +838,12 @@ QPainterPath* q_graphicsitem_map_from_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsitem_map_from_parent4(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsitem_map_from_scene4(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
@@ -853,12 +853,12 @@ QPointF* q_graphicsitem_map_to_item5(void* self, void* item, double x, double y)
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsItem* self, double x, double y ```
-QPointF* q_graphicsitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicsitem_map_to_parent5(void* self, double x, double y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsItem* self, double x, double y ```
-QPointF* q_graphicsitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicsitem_map_to_scene5(void* self, double x, double y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
@@ -883,12 +883,12 @@ QPointF* q_graphicsitem_map_from_item5(void* self, void* item, double x, double 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsItem* self, double x, double y ```
-QPointF* q_graphicsitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicsitem_map_from_parent5(void* self, double x, double y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsItem* self, double x, double y ```
-QPointF* q_graphicsitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicsitem_map_from_scene5(void* self, double x, double y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
@@ -1900,7 +1900,7 @@ void q_graphicsobject_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsObject* self, enum Qt__TimerId id ```
-void q_graphicsobject_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsobject_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1956,7 +1956,7 @@ bool q_graphicsobject_disconnect(void* sender, void* signal, void* receiver, voi
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsobject_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsobject_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2054,7 +2054,7 @@ bool q_graphicsobject_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsObject* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsobject_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsobject_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2922,14 +2922,14 @@ QPainterPath* q_graphicsobject_map_to_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsObject* self, QPainterPath* path ```
-QPainterPath* q_graphicsobject_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsobject_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsObject* self, QPainterPath* path ```
-QPainterPath* q_graphicsobject_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsobject_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2985,14 +2985,14 @@ QPainterPath* q_graphicsobject_map_from_item4(void* self, void* item, void* path
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsObject* self, QPainterPath* path ```
-QPainterPath* q_graphicsobject_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsobject_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsObject* self, QPainterPath* path ```
-QPainterPath* q_graphicsobject_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsobject_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3006,14 +3006,14 @@ QPointF* q_graphicsobject_map_to_item5(void* self, void* item, double x, double 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsObject* self, double x, double y ```
-QPointF* q_graphicsobject_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicsobject_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsObject* self, double x, double y ```
-QPointF* q_graphicsobject_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicsobject_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3048,14 +3048,14 @@ QPointF* q_graphicsobject_map_from_item5(void* self, void* item, double x, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsObject* self, double x, double y ```
-QPointF* q_graphicsobject_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicsobject_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsObject* self, double x, double y ```
-QPointF* q_graphicsobject_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicsobject_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5459,14 +5459,14 @@ QPainterPath* q_abstractgraphicsshapeitem_map_to_item4(void* self, void* item, v
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, QPainterPath* path ```
-QPainterPath* q_abstractgraphicsshapeitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, QPainterPath* path ```
-QPainterPath* q_abstractgraphicsshapeitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5522,14 +5522,14 @@ QPainterPath* q_abstractgraphicsshapeitem_map_from_item4(void* self, void* item,
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, QPainterPath* path ```
-QPainterPath* q_abstractgraphicsshapeitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, QPainterPath* path ```
-QPainterPath* q_abstractgraphicsshapeitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_abstractgraphicsshapeitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5543,14 +5543,14 @@ QPointF* q_abstractgraphicsshapeitem_map_to_item5(void* self, void* item, double
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, double x, double y ```
-QPointF* q_abstractgraphicsshapeitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, double x, double y ```
-QPointF* q_abstractgraphicsshapeitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5585,14 +5585,14 @@ QPointF* q_abstractgraphicsshapeitem_map_from_item5(void* self, void* item, doub
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, double x, double y ```
-QPointF* q_abstractgraphicsshapeitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QAbstractGraphicsShapeItem* self, double x, double y ```
-QPointF* q_abstractgraphicsshapeitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_abstractgraphicsshapeitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7870,14 +7870,14 @@ QPainterPath* q_graphicspathitem_map_to_item4(void* self, void* item, void* path
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsPathItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspathitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsPathItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspathitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7933,14 +7933,14 @@ QPainterPath* q_graphicspathitem_map_from_item4(void* self, void* item, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsPathItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspathitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsPathItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspathitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicspathitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7954,14 +7954,14 @@ QPointF* q_graphicspathitem_map_to_item5(void* self, void* item, double x, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsPathItem* self, double x, double y ```
-QPointF* q_graphicspathitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsPathItem* self, double x, double y ```
-QPointF* q_graphicspathitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7996,14 +7996,14 @@ QPointF* q_graphicspathitem_map_from_item5(void* self, void* item, double x, dou
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsPathItem* self, double x, double y ```
-QPointF* q_graphicspathitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsPathItem* self, double x, double y ```
-QPointF* q_graphicspathitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicspathitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10080,14 +10080,14 @@ QPainterPath* q_graphicsrectitem_map_to_item4(void* self, void* item, void* path
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsRectItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsrectitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsRectItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsrectitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10143,14 +10143,14 @@ QPainterPath* q_graphicsrectitem_map_from_item4(void* self, void* item, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsRectItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsrectitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsRectItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsrectitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsrectitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10164,14 +10164,14 @@ QPointF* q_graphicsrectitem_map_to_item5(void* self, void* item, double x, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsRectItem* self, double x, double y ```
-QPointF* q_graphicsrectitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsRectItem* self, double x, double y ```
-QPointF* q_graphicsrectitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10206,14 +10206,14 @@ QPointF* q_graphicsrectitem_map_from_item5(void* self, void* item, double x, dou
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsRectItem* self, double x, double y ```
-QPointF* q_graphicsrectitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsRectItem* self, double x, double y ```
-QPointF* q_graphicsrectitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicsrectitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12310,14 +12310,14 @@ QPainterPath* q_graphicsellipseitem_map_to_item4(void* self, void* item, void* p
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsEllipseItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsellipseitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsEllipseItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsellipseitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12373,14 +12373,14 @@ QPainterPath* q_graphicsellipseitem_map_from_item4(void* self, void* item, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsEllipseItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsellipseitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsEllipseItem* self, QPainterPath* path ```
-QPainterPath* q_graphicsellipseitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsellipseitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12394,14 +12394,14 @@ QPointF* q_graphicsellipseitem_map_to_item5(void* self, void* item, double x, do
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsEllipseItem* self, double x, double y ```
-QPointF* q_graphicsellipseitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsEllipseItem* self, double x, double y ```
-QPointF* q_graphicsellipseitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12436,14 +12436,14 @@ QPointF* q_graphicsellipseitem_map_from_item5(void* self, void* item, double x, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsEllipseItem* self, double x, double y ```
-QPointF* q_graphicsellipseitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsEllipseItem* self, double x, double y ```
-QPointF* q_graphicsellipseitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicsellipseitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14495,14 +14495,14 @@ QPainterPath* q_graphicspolygonitem_map_to_item4(void* self, void* item, void* p
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsPolygonItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspolygonitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsPolygonItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspolygonitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14558,14 +14558,14 @@ QPainterPath* q_graphicspolygonitem_map_from_item4(void* self, void* item, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsPolygonItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspolygonitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsPolygonItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspolygonitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicspolygonitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14579,14 +14579,14 @@ QPointF* q_graphicspolygonitem_map_to_item5(void* self, void* item, double x, do
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsPolygonItem* self, double x, double y ```
-QPointF* q_graphicspolygonitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsPolygonItem* self, double x, double y ```
-QPointF* q_graphicspolygonitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14621,14 +14621,14 @@ QPointF* q_graphicspolygonitem_map_from_item5(void* self, void* item, double x, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsPolygonItem* self, double x, double y ```
-QPointF* q_graphicspolygonitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsPolygonItem* self, double x, double y ```
-QPointF* q_graphicspolygonitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicspolygonitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16687,14 +16687,14 @@ QPainterPath* q_graphicslineitem_map_to_item4(void* self, void* item, void* path
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsLineItem* self, QPainterPath* path ```
-QPainterPath* q_graphicslineitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsLineItem* self, QPainterPath* path ```
-QPainterPath* q_graphicslineitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16750,14 +16750,14 @@ QPainterPath* q_graphicslineitem_map_from_item4(void* self, void* item, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsLineItem* self, QPainterPath* path ```
-QPainterPath* q_graphicslineitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsLineItem* self, QPainterPath* path ```
-QPainterPath* q_graphicslineitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicslineitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16771,14 +16771,14 @@ QPointF* q_graphicslineitem_map_to_item5(void* self, void* item, double x, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsLineItem* self, double x, double y ```
-QPointF* q_graphicslineitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsLineItem* self, double x, double y ```
-QPointF* q_graphicslineitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16813,14 +16813,14 @@ QPointF* q_graphicslineitem_map_from_item5(void* self, void* item, double x, dou
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsLineItem* self, double x, double y ```
-QPointF* q_graphicslineitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsLineItem* self, double x, double y ```
-QPointF* q_graphicslineitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicslineitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18889,14 +18889,14 @@ QPainterPath* q_graphicspixmapitem_map_to_item4(void* self, void* item, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsPixmapItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspixmapitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsPixmapItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspixmapitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18952,14 +18952,14 @@ QPainterPath* q_graphicspixmapitem_map_from_item4(void* self, void* item, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsPixmapItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspixmapitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsPixmapItem* self, QPainterPath* path ```
-QPainterPath* q_graphicspixmapitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicspixmapitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18973,14 +18973,14 @@ QPointF* q_graphicspixmapitem_map_to_item5(void* self, void* item, double x, dou
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsPixmapItem* self, double x, double y ```
-QPointF* q_graphicspixmapitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsPixmapItem* self, double x, double y ```
-QPointF* q_graphicspixmapitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19015,14 +19015,14 @@ QPointF* q_graphicspixmapitem_map_from_item5(void* self, void* item, double x, d
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsPixmapItem* self, double x, double y ```
-QPointF* q_graphicspixmapitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsPixmapItem* self, double x, double y ```
-QPointF* q_graphicspixmapitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicspixmapitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21001,7 +21001,7 @@ void q_graphicstextitem_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsTextItem* self, enum Qt__TimerId id ```
-void q_graphicstextitem_kill_timer_with_id(void* self, int64_t id);
+void q_graphicstextitem_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -21057,7 +21057,7 @@ bool q_graphicstextitem_disconnect(void* sender, void* signal, void* receiver, v
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicstextitem_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicstextitem_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -21155,7 +21155,7 @@ bool q_graphicstextitem_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsTextItem* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicstextitem_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicstextitem_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -22023,14 +22023,14 @@ QPainterPath* q_graphicstextitem_map_to_item4(void* self, void* item, void* path
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicstextitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicstextitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22086,14 +22086,14 @@ QPainterPath* q_graphicstextitem_map_from_item4(void* self, void* item, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicstextitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicstextitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicstextitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22107,14 +22107,14 @@ QPointF* q_graphicstextitem_map_to_item5(void* self, void* item, double x, doubl
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsTextItem* self, double x, double y ```
-QPointF* q_graphicstextitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsTextItem* self, double x, double y ```
-QPointF* q_graphicstextitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22149,14 +22149,14 @@ QPointF* q_graphicstextitem_map_from_item5(void* self, void* item, double x, dou
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsTextItem* self, double x, double y ```
-QPointF* q_graphicstextitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsTextItem* self, double x, double y ```
-QPointF* q_graphicstextitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicstextitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24021,14 +24021,14 @@ QPainterPath* q_graphicssimpletextitem_map_to_item4(void* self, void* item, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsSimpleTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicssimpletextitem_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsSimpleTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicssimpletextitem_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24084,14 +24084,14 @@ QPainterPath* q_graphicssimpletextitem_map_from_item4(void* self, void* item, vo
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsSimpleTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicssimpletextitem_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsSimpleTextItem* self, QPainterPath* path ```
-QPainterPath* q_graphicssimpletextitem_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicssimpletextitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24105,14 +24105,14 @@ QPointF* q_graphicssimpletextitem_map_to_item5(void* self, void* item, double x,
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsSimpleTextItem* self, double x, double y ```
-QPointF* q_graphicssimpletextitem_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsSimpleTextItem* self, double x, double y ```
-QPointF* q_graphicssimpletextitem_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24147,14 +24147,14 @@ QPointF* q_graphicssimpletextitem_map_from_item5(void* self, void* item, double 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsSimpleTextItem* self, double x, double y ```
-QPointF* q_graphicssimpletextitem_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsSimpleTextItem* self, double x, double y ```
-QPointF* q_graphicssimpletextitem_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicssimpletextitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26083,14 +26083,14 @@ QPainterPath* q_graphicsitemgroup_map_to_item4(void* self, void* item, void* pat
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsItemGroup* self, QPainterPath* path ```
-QPainterPath* q_graphicsitemgroup_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsItemGroup* self, QPainterPath* path ```
-QPainterPath* q_graphicsitemgroup_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26146,14 +26146,14 @@ QPainterPath* q_graphicsitemgroup_map_from_item4(void* self, void* item, void* p
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsItemGroup* self, QPainterPath* path ```
-QPainterPath* q_graphicsitemgroup_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsItemGroup* self, QPainterPath* path ```
-QPainterPath* q_graphicsitemgroup_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_graphicsitemgroup_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26167,14 +26167,14 @@ QPointF* q_graphicsitemgroup_map_to_item5(void* self, void* item, double x, doub
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QGraphicsItemGroup* self, double x, double y ```
-QPointF* q_graphicsitemgroup_map_to_parent2(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QGraphicsItemGroup* self, double x, double y ```
-QPointF* q_graphicsitemgroup_map_to_scene2(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26209,14 +26209,14 @@ QPointF* q_graphicsitemgroup_map_from_item5(void* self, void* item, double x, do
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QGraphicsItemGroup* self, double x, double y ```
-QPointF* q_graphicsitemgroup_map_from_parent2(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QGraphicsItemGroup* self, double x, double y ```
-QPointF* q_graphicsitemgroup_map_from_scene2(void* self, double x, double y);
+QPointF* q_graphicsitemgroup_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///

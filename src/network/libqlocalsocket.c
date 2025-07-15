@@ -47,8 +47,8 @@ void q_localsocket_connect_to_server(void* self) {
     QLocalSocket_ConnectToServer((QLocalSocket*)self);
 }
 
-void q_localsocket_connect_to_server_with_name(void* self, const char* name) {
-    QLocalSocket_ConnectToServerWithName((QLocalSocket*)self, qstring(name));
+void q_localsocket_connect_to_server2(void* self, const char* name) {
+    QLocalSocket_ConnectToServer2((QLocalSocket*)self, qstring(name));
 }
 
 void q_localsocket_disconnect_from_server(void* self) {
@@ -319,8 +319,8 @@ void q_localsocket_connect_to_server1(void* self, int64_t openMode) {
     QLocalSocket_ConnectToServer1((QLocalSocket*)self, openMode);
 }
 
-void q_localsocket_connect_to_server2(void* self, const char* name, int64_t openMode) {
-    QLocalSocket_ConnectToServer2((QLocalSocket*)self, qstring(name), openMode);
+void q_localsocket_connect_to_server22(void* self, const char* name, int64_t openMode) {
+    QLocalSocket_ConnectToServer22((QLocalSocket*)self, qstring(name), openMode);
 }
 
 bool q_localsocket_set_socket_descriptor2(void* self, intptr_t socketDescriptor, int64_t socketState) {
@@ -391,8 +391,8 @@ long long q_localsocket_read(void* self, char* data, long long maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_localsocket_read_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_ReadWithMaxlen((QIODevice*)self, maxlen);
+char* q_localsocket_read2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -436,20 +436,20 @@ long long q_localsocket_write(void* self, const char* data, long long lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_localsocket_write_with_data(void* self, const char* data) {
-    return QIODevice_WriteWithData((QIODevice*)self, data);
+long long q_localsocket_write2(void* self, const char* data) {
+    return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_localsocket_write2(void* self, const char* data) {
-    return QIODevice_Write2((QIODevice*)self, qstring(data));
+long long q_localsocket_write3(void* self, const char* data) {
+    return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
 long long q_localsocket_peek(void* self, char* data, long long maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_localsocket_peek_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_PeekWithMaxlen((QIODevice*)self, maxlen);
+char* q_localsocket_peek2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -580,8 +580,8 @@ void q_localsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_localsocket_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_localsocket_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_localsocket_children(void* self) {
@@ -613,8 +613,8 @@ bool q_localsocket_disconnect(void* sender, void* signal, void* receiver, void* 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_localsocket_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_localsocket_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_localsocket_dump_object_tree(void* self) {
@@ -680,8 +680,8 @@ bool q_localsocket_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_localsocket_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_localsocket_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_localsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

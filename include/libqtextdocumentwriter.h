@@ -72,7 +72,7 @@ bool q_textdocumentwriter_write(void* self, void* document);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentwriter.html#write)
 ///
 /// ``` QTextDocumentWriter* self, QTextDocumentFragment* fragment ```
-bool q_textdocumentwriter_write_with_fragment(void* self, void* fragment);
+bool q_textdocumentwriter_write2(void* self, void* fragment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentwriter.html#supportedDocumentFormats)
 ///

@@ -62,7 +62,7 @@ int64_t q_bytearraymatcher_index_in(void* self, const char* str, int64_t lenVal)
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
 /// ``` QByteArrayMatcher* self, const char* data ```
-int64_t q_bytearraymatcher_index_in_with_data(void* self, const char* data);
+int64_t q_bytearraymatcher_index_in2(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#pattern)
 ///
@@ -77,7 +77,7 @@ int64_t q_bytearraymatcher_index_in3(void* self, const char* str, int64_t lenVal
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
 /// ``` QByteArrayMatcher* self, const char* data, int64_t from ```
-int64_t q_bytearraymatcher_index_in2(void* self, const char* data, int64_t from);
+int64_t q_bytearraymatcher_index_in22(void* self, const char* data, int64_t from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#dtor.QByteArrayMatcher)
 ///

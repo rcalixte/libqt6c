@@ -39,8 +39,8 @@ bool q_pixmapcache_insert(const char* key, void* pixmap) {
     return QPixmapCache_Insert(qstring(key), (QPixmap*)pixmap);
 }
 
-QPixmapCache__Key* q_pixmapcache_insert_with_pixmap(void* pixmap) {
-    return QPixmapCache_InsertWithPixmap((QPixmap*)pixmap);
+QPixmapCache__Key* q_pixmapcache_insert2(void* pixmap) {
+    return QPixmapCache_Insert2((QPixmap*)pixmap);
 }
 
 bool q_pixmapcache_replace(void* key, void* pixmap) {
@@ -51,8 +51,8 @@ void q_pixmapcache_remove(const char* key) {
     QPixmapCache_Remove(qstring(key));
 }
 
-void q_pixmapcache_remove_with_key(void* key) {
-    QPixmapCache_RemoveWithKey((QPixmapCache__Key*)key);
+void q_pixmapcache_remove2(void* key) {
+    QPixmapCache_Remove2((QPixmapCache__Key*)key);
 }
 
 void q_pixmapcache_clear() {

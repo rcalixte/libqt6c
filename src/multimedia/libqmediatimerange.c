@@ -29,8 +29,8 @@ void q_mediatimerange_detach(void* self) {
     QMediaTimeRange_Detach((QMediaTimeRange*)self);
 }
 
-void q_mediatimerange_operator_assign_with_q_media_time_range_interval(void* self, void* param1) {
-    QMediaTimeRange_OperatorAssignWithQMediaTimeRangeInterval((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
+void q_mediatimerange_operator_assign2(void* self, void* param1) {
+    QMediaTimeRange_OperatorAssign2((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
 }
 
 long long q_mediatimerange_earliest_time(void* self) {
@@ -62,8 +62,8 @@ void q_mediatimerange_add_interval(void* self, long long start, long long end) {
     QMediaTimeRange_AddInterval((QMediaTimeRange*)self, start, end);
 }
 
-void q_mediatimerange_add_interval_with_interval(void* self, void* interval) {
-    QMediaTimeRange_AddIntervalWithInterval((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)interval);
+void q_mediatimerange_add_interval2(void* self, void* interval) {
+    QMediaTimeRange_AddInterval2((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)interval);
 }
 
 void q_mediatimerange_add_time_range(void* self, void* param1) {
@@ -74,8 +74,8 @@ void q_mediatimerange_remove_interval(void* self, long long start, long long end
     QMediaTimeRange_RemoveInterval((QMediaTimeRange*)self, start, end);
 }
 
-void q_mediatimerange_remove_interval_with_interval(void* self, void* interval) {
-    QMediaTimeRange_RemoveIntervalWithInterval((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)interval);
+void q_mediatimerange_remove_interval2(void* self, void* interval) {
+    QMediaTimeRange_RemoveInterval2((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)interval);
 }
 
 void q_mediatimerange_remove_time_range(void* self, void* param1) {
@@ -86,16 +86,16 @@ QMediaTimeRange* q_mediatimerange_operator_plus_assign(void* self, void* param1)
     return QMediaTimeRange_OperatorPlusAssign((QMediaTimeRange*)self, (QMediaTimeRange*)param1);
 }
 
-QMediaTimeRange* q_mediatimerange_operator_plus_assign_with_q_media_time_range_interval(void* self, void* param1) {
-    return QMediaTimeRange_OperatorPlusAssignWithQMediaTimeRangeInterval((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
+QMediaTimeRange* q_mediatimerange_operator_plus_assign2(void* self, void* param1) {
+    return QMediaTimeRange_OperatorPlusAssign2((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
 }
 
 QMediaTimeRange* q_mediatimerange_operator_minus_assign(void* self, void* param1) {
     return QMediaTimeRange_OperatorMinusAssign((QMediaTimeRange*)self, (QMediaTimeRange*)param1);
 }
 
-QMediaTimeRange* q_mediatimerange_operator_minus_assign_with_q_media_time_range_interval(void* self, void* param1) {
-    return QMediaTimeRange_OperatorMinusAssignWithQMediaTimeRangeInterval((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
+QMediaTimeRange* q_mediatimerange_operator_minus_assign2(void* self, void* param1) {
+    return QMediaTimeRange_OperatorMinusAssign2((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
 }
 
 void q_mediatimerange_clear(void* self) {

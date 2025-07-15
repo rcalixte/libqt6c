@@ -107,12 +107,12 @@ QMargins* q_margins_operator_minus_assign(void* self, void* margins);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#operator+=)
 ///
 /// ``` QMargins* self, int param1 ```
-QMargins* q_margins_operator_plus_assign_with_int(void* self, int param1);
+QMargins* q_margins_operator_plus_assign2(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#operator-=)
 ///
 /// ``` QMargins* self, int param1 ```
-QMargins* q_margins_operator_minus_assign_with_int(void* self, int param1);
+QMargins* q_margins_operator_minus_assign2(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#operator*=)
 ///
@@ -127,12 +127,12 @@ QMargins* q_margins_operator_divide_assign(void* self, int param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#operator*=)
 ///
 /// ``` QMargins* self, double param1 ```
-QMargins* q_margins_operator_multiply_assign_with_double(void* self, double param1);
+QMargins* q_margins_operator_multiply_assign2(void* self, double param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#operator/=)
 ///
 /// ``` QMargins* self, double param1 ```
-QMargins* q_margins_operator_divide_assign_with_double(void* self, double param1);
+QMargins* q_margins_operator_divide_assign2(void* self, double param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmargins.html#toMarginsF)
 ///
@@ -246,12 +246,12 @@ QMarginsF* q_marginsf_operator_minus_assign(void* self, void* margins);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmarginsf.html#operator+=)
 ///
 /// ``` QMarginsF* self, double addend ```
-QMarginsF* q_marginsf_operator_plus_assign_with_addend(void* self, double addend);
+QMarginsF* q_marginsf_operator_plus_assign2(void* self, double addend);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmarginsf.html#operator-=)
 ///
 /// ``` QMarginsF* self, double subtrahend ```
-QMarginsF* q_marginsf_operator_minus_assign_with_subtrahend(void* self, double subtrahend);
+QMarginsF* q_marginsf_operator_minus_assign2(void* self, double subtrahend);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmarginsf.html#operator*=)
 ///

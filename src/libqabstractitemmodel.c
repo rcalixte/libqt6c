@@ -210,8 +210,8 @@ void q_persistentmodelindex_swap(void* self, void* other) {
     QPersistentModelIndex_Swap((QPersistentModelIndex*)self, (QPersistentModelIndex*)other);
 }
 
-void q_persistentmodelindex_operator_assign_with_other(void* self, void* other) {
-    QPersistentModelIndex_OperatorAssignWithOther((QPersistentModelIndex*)self, (QModelIndex*)other);
+void q_persistentmodelindex_operator_assign2(void* self, void* other) {
+    QPersistentModelIndex_OperatorAssign2((QPersistentModelIndex*)self, (QModelIndex*)other);
 }
 
 QModelIndex* q_persistentmodelindex_to_q_model_index(void* self) {
@@ -1232,8 +1232,8 @@ void q_abstractitemmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_abstractitemmodel_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_abstractitemmodel_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstractitemmodel_children(void* self) {
@@ -1265,8 +1265,8 @@ bool q_abstractitemmodel_disconnect(void* sender, void* signal, void* receiver, 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_abstractitemmodel_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_abstractitemmodel_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_abstractitemmodel_dump_object_tree(void* self) {
@@ -1328,8 +1328,8 @@ bool q_abstractitemmodel_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_abstractitemmodel_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_abstractitemmodel_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_abstractitemmodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -1840,8 +1840,8 @@ void q_abstracttablemodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_abstracttablemodel_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_abstracttablemodel_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstracttablemodel_children(void* self) {
@@ -1873,8 +1873,8 @@ bool q_abstracttablemodel_disconnect(void* sender, void* signal, void* receiver,
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_abstracttablemodel_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_abstracttablemodel_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_abstracttablemodel_dump_object_tree(void* self) {
@@ -1936,8 +1936,8 @@ bool q_abstracttablemodel_move_to_thread2(void* self, void* thread, void* param2
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_abstracttablemodel_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_abstracttablemodel_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_abstracttablemodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -3098,8 +3098,8 @@ void q_abstractlistmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_abstractlistmodel_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_abstractlistmodel_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_abstractlistmodel_children(void* self) {
@@ -3131,8 +3131,8 @@ bool q_abstractlistmodel_disconnect(void* sender, void* signal, void* receiver, 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_abstractlistmodel_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_abstractlistmodel_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_abstractlistmodel_dump_object_tree(void* self) {
@@ -3194,8 +3194,8 @@ bool q_abstractlistmodel_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_abstractlistmodel_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_abstractlistmodel_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_abstractlistmodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

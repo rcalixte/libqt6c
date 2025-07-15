@@ -314,40 +314,40 @@ void q_commonstyle_qbase_polish(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// ``` QCommonStyle* self, QApplication* app ```
-void q_commonstyle_polish_with_app(void* self, void* app);
+void q_commonstyle_polish2(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QApplication*) ```
-void q_commonstyle_on_polish_with_app(void* self, void (*slot)(void*, void*));
+void q_commonstyle_on_polish2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Base class method implementation
 ///
 /// ``` QCommonStyle* self, QApplication* app ```
-void q_commonstyle_qbase_polish_with_app(void* self, void* app);
+void q_commonstyle_qbase_polish2(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// ``` QCommonStyle* self, QWidget* widget ```
-void q_commonstyle_polish_with_widget(void* self, void* widget);
+void q_commonstyle_polish3(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QWidget*) ```
-void q_commonstyle_on_polish_with_widget(void* self, void (*slot)(void*, void*));
+void q_commonstyle_on_polish3(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
 ///
 /// Base class method implementation
 ///
 /// ``` QCommonStyle* self, QWidget* widget ```
-void q_commonstyle_qbase_polish_with_widget(void* self, void* widget);
+void q_commonstyle_qbase_polish3(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
@@ -371,21 +371,21 @@ void q_commonstyle_qbase_unpolish(void* self, void* widget);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// ``` QCommonStyle* self, QApplication* application ```
-void q_commonstyle_unpolish_with_application(void* self, void* application);
+void q_commonstyle_unpolish2(void* self, void* application);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QApplication*) ```
-void q_commonstyle_on_unpolish_with_application(void* self, void (*slot)(void*, void*));
+void q_commonstyle_on_unpolish2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
 ///
 /// Base class method implementation
 ///
 /// ``` QCommonStyle* self, QApplication* application ```
-void q_commonstyle_qbase_unpolish_with_application(void* self, void* application);
+void q_commonstyle_qbase_unpolish2(void* self, void* application);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -403,56 +403,6 @@ const char* q_commonstyle_tr3(const char* s, const char* c, int n);
 ///
 /// ``` QCommonStyle* self ```
 const char* q_commonstyle_name(void* self);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// ``` QCommonStyle* self, QApplication* application ```
-void q_commonstyle_polish_with_application(void* self, void* application);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
-void q_commonstyle_on_polish_with_application(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Base class method implementation
-///
-/// ``` QCommonStyle* self, QApplication* application ```
-void q_commonstyle_qbase_polish_with_application(void* self, void* application);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// ``` QCommonStyle* self, QPalette* palette ```
-void q_commonstyle_polish_with_palette(void* self, void* palette);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QStyle* self, void (*slot)(QStyle*, QPalette*) ```
-void q_commonstyle_on_polish_with_palette(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Base class method implementation
-///
-/// ``` QCommonStyle* self, QPalette* palette ```
-void q_commonstyle_qbase_polish_with_palette(void* self, void* palette);
 
 /// Inherited from QStyle
 ///
@@ -620,7 +570,7 @@ void q_commonstyle_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QCommonStyle* self, enum Qt__TimerId id ```
-void q_commonstyle_kill_timer_with_id(void* self, int64_t id);
+void q_commonstyle_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -676,7 +626,7 @@ bool q_commonstyle_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_commonstyle_disconnect_with_q_meta_object_connection(void* param1);
+bool q_commonstyle_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -774,7 +724,7 @@ bool q_commonstyle_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QCommonStyle* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_commonstyle_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_commonstyle_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

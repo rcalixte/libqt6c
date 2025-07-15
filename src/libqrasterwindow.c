@@ -104,12 +104,12 @@ void q_rasterwindow_update(void* self, void* rect) {
     QPaintDeviceWindow_Update((QPaintDeviceWindow*)self, (QRect*)rect);
 }
 
-void q_rasterwindow_update_with_region(void* self, void* region) {
-    QPaintDeviceWindow_UpdateWithRegion((QPaintDeviceWindow*)self, (QRegion*)region);
+void q_rasterwindow_update2(void* self, void* region) {
+    QPaintDeviceWindow_Update2((QPaintDeviceWindow*)self, (QRegion*)region);
 }
 
-void q_rasterwindow_update2(void* self) {
-    QPaintDeviceWindow_Update2((QPaintDeviceWindow*)self);
+void q_rasterwindow_update3(void* self) {
+    QPaintDeviceWindow_Update3((QPaintDeviceWindow*)self);
 }
 
 void q_rasterwindow_set_surface_type(void* self, int64_t surfaceType) {
@@ -406,12 +406,12 @@ QPointF* q_rasterwindow_map_from_global(void* self, void* pos) {
     return QWindow_MapFromGlobal((QWindow*)self, (QPointF*)pos);
 }
 
-QPoint* q_rasterwindow_map_to_global_with_pos(void* self, void* pos) {
-    return QWindow_MapToGlobalWithPos((QWindow*)self, (QPoint*)pos);
+QPoint* q_rasterwindow_map_to_global2(void* self, void* pos) {
+    return QWindow_MapToGlobal2((QWindow*)self, (QPoint*)pos);
 }
 
-QPoint* q_rasterwindow_map_from_global_with_pos(void* self, void* pos) {
-    return QWindow_MapFromGlobalWithPos((QWindow*)self, (QPoint*)pos);
+QPoint* q_rasterwindow_map_from_global2(void* self, void* pos) {
+    return QWindow_MapFromGlobal2((QWindow*)self, (QPoint*)pos);
 }
 
 QCursor* q_rasterwindow_cursor(void* self) {
@@ -506,8 +506,8 @@ void q_rasterwindow_set_geometry(void* self, int posx, int posy, int w, int h) {
     QWindow_SetGeometry((QWindow*)self, posx, posy, w, h);
 }
 
-void q_rasterwindow_set_geometry_with_rect(void* self, void* rect) {
-    QWindow_SetGeometryWithRect((QWindow*)self, (QRect*)rect);
+void q_rasterwindow_set_geometry2(void* self, void* rect) {
+    QWindow_SetGeometry2((QWindow*)self, (QRect*)rect);
 }
 
 void q_rasterwindow_set_minimum_width(void* self, int w) {
@@ -745,8 +745,8 @@ void q_rasterwindow_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_rasterwindow_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_rasterwindow_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_rasterwindow_children(void* self) {
@@ -774,8 +774,8 @@ bool q_rasterwindow_disconnect(void* sender, void* signal, void* receiver, void*
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_rasterwindow_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_rasterwindow_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_rasterwindow_dump_object_tree(void* self) {
@@ -837,8 +837,8 @@ bool q_rasterwindow_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_rasterwindow_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_rasterwindow_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_rasterwindow_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

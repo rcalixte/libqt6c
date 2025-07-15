@@ -61,12 +61,12 @@ QObject* q_signalmapper_mapping(void* self, int id) {
     return QSignalMapper_Mapping((QSignalMapper*)self, id);
 }
 
-QObject* q_signalmapper_mapping_with_text(void* self, const char* text) {
-    return QSignalMapper_MappingWithText((QSignalMapper*)self, qstring(text));
+QObject* q_signalmapper_mapping2(void* self, const char* text) {
+    return QSignalMapper_Mapping2((QSignalMapper*)self, qstring(text));
 }
 
-QObject* q_signalmapper_mapping_with_object(void* self, void* object) {
-    return QSignalMapper_MappingWithObject((QSignalMapper*)self, (QObject*)object);
+QObject* q_signalmapper_mapping3(void* self, void* object) {
+    return QSignalMapper_Mapping3((QSignalMapper*)self, (QObject*)object);
 }
 
 void q_signalmapper_mapped_int(void* self, int param1) {
@@ -97,8 +97,8 @@ void q_signalmapper_map(void* self) {
     QSignalMapper_Map((QSignalMapper*)self);
 }
 
-void q_signalmapper_map_with_sender(void* self, void* sender) {
-    QSignalMapper_MapWithSender((QSignalMapper*)self, (QObject*)sender);
+void q_signalmapper_map2(void* self, void* sender) {
+    QSignalMapper_Map2((QSignalMapper*)self, (QObject*)sender);
 }
 
 const char* q_signalmapper_tr2(const char* s, const char* c) {
@@ -162,8 +162,8 @@ void q_signalmapper_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_signalmapper_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_signalmapper_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_signalmapper_children(void* self) {
@@ -195,8 +195,8 @@ bool q_signalmapper_disconnect(void* sender, void* signal, void* receiver, void*
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_signalmapper_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_signalmapper_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_signalmapper_dump_object_tree(void* self) {
@@ -262,8 +262,8 @@ bool q_signalmapper_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_signalmapper_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_signalmapper_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_signalmapper_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

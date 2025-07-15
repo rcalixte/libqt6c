@@ -347,7 +347,7 @@ void q_polarchart_zoom_out(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#zoomIn)
 ///
 /// ``` QPolarChart* self, QRectF* rect ```
-void q_polarchart_zoom_in_with_rect(void* self, void* rect);
+void q_polarchart_zoom_in2(void* self, void* rect);
 
 /// Inherited from QChart
 ///
@@ -725,7 +725,7 @@ void q_polarchart_set_contents_margins(void* self, double left, double top, doub
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setContentsMargins)
 ///
 /// ``` QPolarChart* self, QMarginsF* margins ```
-void q_polarchart_set_contents_margins_with_margins(void* self, void* margins);
+void q_polarchart_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -739,7 +739,7 @@ void q_polarchart_set_window_frame_margins(void* self, double left, double top, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowFrameMargins)
 ///
 /// ``` QPolarChart* self, QMarginsF* margins ```
-void q_polarchart_set_window_frame_margins_with_margins(void* self, void* margins);
+void q_polarchart_set_window_frame_margins2(void* self, void* margins);
 
 /// Inherited from QGraphicsWidget
 ///
@@ -1257,7 +1257,7 @@ void q_polarchart_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QPolarChart* self, enum Qt__TimerId id ```
-void q_polarchart_kill_timer_with_id(void* self, int64_t id);
+void q_polarchart_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1313,7 +1313,7 @@ bool q_polarchart_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_polarchart_disconnect_with_q_meta_object_connection(void* param1);
+bool q_polarchart_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1411,7 +1411,7 @@ bool q_polarchart_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QPolarChart* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_polarchart_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_polarchart_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2272,14 +2272,14 @@ QPainterPath* q_polarchart_map_to_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QPolarChart* self, QPainterPath* path ```
-QPainterPath* q_polarchart_map_to_parent_with_path(void* self, void* path);
+QPainterPath* q_polarchart_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QPolarChart* self, QPainterPath* path ```
-QPainterPath* q_polarchart_map_to_scene_with_path(void* self, void* path);
+QPainterPath* q_polarchart_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2335,14 +2335,14 @@ QPainterPath* q_polarchart_map_from_item4(void* self, void* item, void* path);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QPolarChart* self, QPainterPath* path ```
-QPainterPath* q_polarchart_map_from_parent_with_path(void* self, void* path);
+QPainterPath* q_polarchart_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QPolarChart* self, QPainterPath* path ```
-QPainterPath* q_polarchart_map_from_scene_with_path(void* self, void* path);
+QPainterPath* q_polarchart_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2356,14 +2356,14 @@ QPointF* q_polarchart_map_to_item5(void* self, void* item, double x, double y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
 /// ``` QPolarChart* self, double x, double y ```
-QPointF* q_polarchart_map_to_parent2(void* self, double x, double y);
+QPointF* q_polarchart_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
 /// ``` QPolarChart* self, double x, double y ```
-QPointF* q_polarchart_map_to_scene2(void* self, double x, double y);
+QPointF* q_polarchart_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2398,14 +2398,14 @@ QPointF* q_polarchart_map_from_item5(void* self, void* item, double x, double y)
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
 /// ``` QPolarChart* self, double x, double y ```
-QPointF* q_polarchart_map_from_parent2(void* self, double x, double y);
+QPointF* q_polarchart_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
 /// ``` QPolarChart* self, double x, double y ```
-QPointF* q_polarchart_map_from_scene2(void* self, double x, double y);
+QPointF* q_polarchart_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///

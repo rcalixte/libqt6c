@@ -215,8 +215,8 @@ bool q_cborvalue_is_simple_type(void* self) {
     return QCborValue_IsSimpleType((QCborValue*)self);
 }
 
-bool q_cborvalue_is_simple_type_with_st(void* self, int64_t st) {
-    return QCborValue_IsSimpleTypeWithSt((QCborValue*)self, st);
+bool q_cborvalue_is_simple_type2(void* self, int64_t st) {
+    return QCborValue_IsSimpleType2((QCborValue*)self, st);
 }
 
 int64_t q_cborvalue_to_simple_type(void* self) {
@@ -277,32 +277,32 @@ QCborArray* q_cborvalue_to_array(void* self) {
     return QCborValue_ToArray((QCborValue*)self);
 }
 
-QCborArray* q_cborvalue_to_array_with_default_value(void* self, void* defaultValue) {
-    return QCborValue_ToArrayWithDefaultValue((QCborValue*)self, (QCborArray*)defaultValue);
+QCborArray* q_cborvalue_to_array2(void* self, void* defaultValue) {
+    return QCborValue_ToArray2((QCborValue*)self, (QCborArray*)defaultValue);
 }
 
 QCborMap* q_cborvalue_to_map(void* self) {
     return QCborValue_ToMap((QCborValue*)self);
 }
 
-QCborMap* q_cborvalue_to_map_with_default_value(void* self, void* defaultValue) {
-    return QCborValue_ToMapWithDefaultValue((QCborValue*)self, (QCborMap*)defaultValue);
+QCborMap* q_cborvalue_to_map2(void* self, void* defaultValue) {
+    return QCborValue_ToMap2((QCborValue*)self, (QCborMap*)defaultValue);
 }
 
 const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key) {
     return QCborValue_OperatorSubscript((QCborValue*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalue_operator_subscript2(void* self, long long key) {
-    return QCborValue_OperatorSubscript2((QCborValue*)self, key);
-}
-
-QCborValueRef* q_cborvalue_operator_subscript3(void* self, long long key) {
+const QCborValue* q_cborvalue_operator_subscript3(void* self, long long key) {
     return QCborValue_OperatorSubscript3((QCborValue*)self, key);
 }
 
-QCborValueRef* q_cborvalue_operator_subscript5(void* self, const char* key) {
-    return QCborValue_OperatorSubscript5((QCborValue*)self, qstring(key));
+QCborValueRef* q_cborvalue_operator_subscript4(void* self, long long key) {
+    return QCborValue_OperatorSubscript4((QCborValue*)self, key);
+}
+
+QCborValueRef* q_cborvalue_operator_subscript6(void* self, const char* key) {
+    return QCborValue_OperatorSubscript6((QCborValue*)self, qstring(key));
 }
 
 int32_t q_cborvalue_compare(void* self, void* other) {
@@ -329,16 +329,16 @@ QCborValue* q_cborvalue_from_cbor(void* reader) {
     return QCborValue_FromCbor((QCborStreamReader*)reader);
 }
 
-QCborValue* q_cborvalue_from_cbor_with_ba(const char* ba) {
-    return QCborValue_FromCborWithBa(qstring(ba));
+QCborValue* q_cborvalue_from_cbor2(const char* ba) {
+    return QCborValue_FromCbor2(qstring(ba));
 }
 
-QCborValue* q_cborvalue_from_cbor2(const char* data, int64_t lenVal) {
-    return QCborValue_FromCbor2(data, lenVal);
-}
-
-QCborValue* q_cborvalue_from_cbor3(unsigned char* data, int64_t lenVal) {
+QCborValue* q_cborvalue_from_cbor3(const char* data, int64_t lenVal) {
     return QCborValue_FromCbor3(data, lenVal);
+}
+
+QCborValue* q_cborvalue_from_cbor4(unsigned char* data, int64_t lenVal) {
+    return QCborValue_FromCbor4(data, lenVal);
 }
 
 char* q_cborvalue_to_cbor(void* self) {
@@ -348,8 +348,8 @@ char* q_cborvalue_to_cbor(void* self) {
     return _ret;
 }
 
-void q_cborvalue_to_cbor_with_writer(void* self, void* writer) {
-    QCborValue_ToCborWithWriter((QCborValue*)self, (QCborStreamWriter*)writer);
+void q_cborvalue_to_cbor2(void* self, void* writer) {
+    QCborValue_ToCbor2((QCborValue*)self, (QCborStreamWriter*)writer);
 }
 
 const char* q_cborvalue_to_diagnostic_notation(void* self) {
@@ -432,8 +432,8 @@ char* q_cborvalue_to_cbor1(void* self, int64_t opt) {
     return _ret;
 }
 
-void q_cborvalue_to_cbor2(void* self, void* writer, int64_t opt) {
-    QCborValue_ToCbor2((QCborValue*)self, (QCborStreamWriter*)writer, opt);
+void q_cborvalue_to_cbor22(void* self, void* writer, int64_t opt) {
+    QCborValue_ToCbor22((QCborValue*)self, (QCborStreamWriter*)writer, opt);
 }
 
 const char* q_cborvalue_to_diagnostic_notation1(void* self, int64_t opts) {
@@ -539,8 +539,8 @@ bool q_cborvalueconstref_is_simple_type(void* self) {
     return QCborValueConstRef_IsSimpleType((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_simple_type_with_st(void* self, int64_t st) {
-    return QCborValueConstRef_IsSimpleTypeWithSt((QCborValueConstRef*)self, st);
+bool q_cborvalueconstref_is_simple_type2(void* self, int64_t st) {
+    return QCborValueConstRef_IsSimpleType2((QCborValueConstRef*)self, st);
 }
 
 int64_t q_cborvalueconstref_to_simple_type(void* self) {
@@ -601,24 +601,24 @@ QCborArray* q_cborvalueconstref_to_array(void* self) {
     return QCborValueConstRef_ToArray((QCborValueConstRef*)self);
 }
 
-QCborArray* q_cborvalueconstref_to_array_with_q_cbor_array(void* self, void* a) {
-    return QCborValueConstRef_ToArrayWithQCborArray((QCborValueConstRef*)self, (QCborArray*)a);
+QCborArray* q_cborvalueconstref_to_array2(void* self, void* a) {
+    return QCborValueConstRef_ToArray2((QCborValueConstRef*)self, (QCborArray*)a);
 }
 
 QCborMap* q_cborvalueconstref_to_map(void* self) {
     return QCborValueConstRef_ToMap((QCborValueConstRef*)self);
 }
 
-QCborMap* q_cborvalueconstref_to_map_with_q_cbor_map(void* self, void* m) {
-    return QCborValueConstRef_ToMapWithQCborMap((QCborValueConstRef*)self, (QCborMap*)m);
+QCborMap* q_cborvalueconstref_to_map2(void* self, void* m) {
+    return QCborValueConstRef_ToMap2((QCborValueConstRef*)self, (QCborMap*)m);
 }
 
 const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char* key) {
     return QCborValueConstRef_OperatorSubscript((QCborValueConstRef*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, long long key) {
-    return QCborValueConstRef_OperatorSubscript2((QCborValueConstRef*)self, key);
+const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, long long key) {
+    return QCborValueConstRef_OperatorSubscript3((QCborValueConstRef*)self, key);
 }
 
 int32_t q_cborvalueconstref_compare(void* self, void* other) {
@@ -640,8 +640,8 @@ char* q_cborvalueconstref_to_cbor(void* self) {
     return _ret;
 }
 
-void q_cborvalueconstref_to_cbor_with_writer(void* self, void* writer) {
-    QCborValueConstRef_ToCborWithWriter((QCborValueConstRef*)self, (QCborStreamWriter*)writer);
+void q_cborvalueconstref_to_cbor2(void* self, void* writer) {
+    QCborValueConstRef_ToCbor2((QCborValueConstRef*)self, (QCborStreamWriter*)writer);
 }
 
 const char* q_cborvalueconstref_to_diagnostic_notation(void* self) {
@@ -712,8 +712,8 @@ char* q_cborvalueconstref_to_cbor1(void* self, int64_t opt) {
     return _ret;
 }
 
-void q_cborvalueconstref_to_cbor2(void* self, void* writer, int64_t opt) {
-    QCborValueConstRef_ToCbor2((QCborValueConstRef*)self, (QCborStreamWriter*)writer, opt);
+void q_cborvalueconstref_to_cbor22(void* self, void* writer, int64_t opt) {
+    QCborValueConstRef_ToCbor22((QCborValueConstRef*)self, (QCborStreamWriter*)writer, opt);
 }
 
 const char* q_cborvalueconstref_to_diagnostic_notation1(void* self, int64_t opt) {
@@ -743,16 +743,16 @@ void q_cborvalueref_operator_assign(void* self, void* other) {
     QCborValueRef_OperatorAssign((QCborValueRef*)self, (QCborValue*)other);
 }
 
-void q_cborvalueref_operator_assign_with_other(void* self, void* other) {
-    QCborValueRef_OperatorAssignWithOther((QCborValueRef*)self, (QCborValueRef*)other);
+void q_cborvalueref_operator_assign2(void* self, void* other) {
+    QCborValueRef_OperatorAssign2((QCborValueRef*)self, (QCborValueRef*)other);
 }
 
 QCborValueRef* q_cborvalueref_operator_subscript(void* self, long long key) {
     return QCborValueRef_OperatorSubscript((QCborValueRef*)self, key);
 }
 
-QCborValueRef* q_cborvalueref_operator_subscript2(void* self, const char* key) {
-    return QCborValueRef_OperatorSubscript2((QCborValueRef*)self, qstring(key));
+QCborValueRef* q_cborvalueref_operator_subscript3(void* self, const char* key) {
+    return QCborValueRef_OperatorSubscript3((QCborValueRef*)self, qstring(key));
 }
 
 QCborValue* q_cborvalueref_to_q_cbor_value(void* self) {
@@ -839,8 +839,8 @@ bool q_cborvalueref_is_simple_type(void* self) {
     return QCborValueRef_IsSimpleType((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_simple_type_with_st(void* self, int64_t st) {
-    return QCborValueRef_IsSimpleTypeWithSt((QCborValueRef*)self, st);
+bool q_cborvalueref_is_simple_type2(void* self, int64_t st) {
+    return QCborValueRef_IsSimpleType2((QCborValueRef*)self, st);
 }
 
 int64_t q_cborvalueref_to_simple_type(void* self) {
@@ -901,24 +901,24 @@ QCborArray* q_cborvalueref_to_array(void* self) {
     return QCborValueRef_ToArray((QCborValueRef*)self);
 }
 
-QCborArray* q_cborvalueref_to_array_with_q_cbor_array(void* self, void* a) {
-    return QCborValueRef_ToArrayWithQCborArray((QCborValueRef*)self, (QCborArray*)a);
+QCborArray* q_cborvalueref_to_array2(void* self, void* a) {
+    return QCborValueRef_ToArray2((QCborValueRef*)self, (QCborArray*)a);
 }
 
 QCborMap* q_cborvalueref_to_map(void* self) {
     return QCborValueRef_ToMap((QCborValueRef*)self);
 }
 
-QCborMap* q_cborvalueref_to_map_with_q_cbor_map(void* self, void* m) {
-    return QCborValueRef_ToMapWithQCborMap((QCborValueRef*)self, (QCborMap*)m);
+QCborMap* q_cborvalueref_to_map2(void* self, void* m) {
+    return QCborValueRef_ToMap2((QCborValueRef*)self, (QCborMap*)m);
 }
 
-const QCborValue* q_cborvalueref_operator_subscript3(void* self, const char* key) {
-    return QCborValueRef_OperatorSubscript3((QCborValueRef*)self, qstring(key));
+const QCborValue* q_cborvalueref_operator_subscript4(void* self, const char* key) {
+    return QCborValueRef_OperatorSubscript4((QCborValueRef*)self, qstring(key));
 }
 
-const QCborValue* q_cborvalueref_operator_subscript5(void* self, long long key) {
-    return QCborValueRef_OperatorSubscript5((QCborValueRef*)self, key);
+const QCborValue* q_cborvalueref_operator_subscript6(void* self, long long key) {
+    return QCborValueRef_OperatorSubscript6((QCborValueRef*)self, key);
 }
 
 int32_t q_cborvalueref_compare(void* self, void* other) {
@@ -940,8 +940,8 @@ char* q_cborvalueref_to_cbor(void* self) {
     return _ret;
 }
 
-void q_cborvalueref_to_cbor_with_writer(void* self, void* writer) {
-    QCborValueRef_ToCborWithWriter((QCborValueRef*)self, (QCborStreamWriter*)writer);
+void q_cborvalueref_to_cbor2(void* self, void* writer) {
+    QCborValueRef_ToCbor2((QCborValueRef*)self, (QCborStreamWriter*)writer);
 }
 
 const char* q_cborvalueref_to_diagnostic_notation(void* self) {
@@ -1012,8 +1012,8 @@ char* q_cborvalueref_to_cbor1(void* self, int64_t opt) {
     return _ret;
 }
 
-void q_cborvalueref_to_cbor2(void* self, void* writer, int64_t opt) {
-    QCborValueRef_ToCbor2((QCborValueRef*)self, (QCborStreamWriter*)writer, opt);
+void q_cborvalueref_to_cbor22(void* self, void* writer, int64_t opt) {
+    QCborValueRef_ToCbor22((QCborValueRef*)self, (QCborStreamWriter*)writer, opt);
 }
 
 const char* q_cborvalueref_to_diagnostic_notation1(void* self, int64_t opt) {

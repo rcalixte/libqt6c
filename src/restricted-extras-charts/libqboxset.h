@@ -78,7 +78,7 @@ void q_boxset_append(void* self, double value);
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#append)
 ///
 /// ``` QBoxSet* self, libqt_list /* of double */ values ```
-void q_boxset_append_with_values(void* self, libqt_list values);
+void q_boxset_append2(void* self, libqt_list values);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#clear)
 ///
@@ -332,7 +332,7 @@ void q_boxset_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QBoxSet* self, enum Qt__TimerId id ```
-void q_boxset_kill_timer_with_id(void* self, int64_t id);
+void q_boxset_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -388,7 +388,7 @@ bool q_boxset_disconnect(void* sender, void* signal, void* receiver, void* membe
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_boxset_disconnect_with_q_meta_object_connection(void* param1);
+bool q_boxset_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -486,7 +486,7 @@ bool q_boxset_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QBoxSet* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_boxset_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_boxset_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

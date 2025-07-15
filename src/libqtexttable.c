@@ -145,8 +145,8 @@ void q_texttable_merge_cells(void* self, int row, int col, int numRows, int numC
     QTextTable_MergeCells((QTextTable*)self, row, col, numRows, numCols);
 }
 
-void q_texttable_merge_cells_with_cursor(void* self, void* cursor) {
-    QTextTable_MergeCellsWithCursor((QTextTable*)self, (QTextCursor*)cursor);
+void q_texttable_merge_cells2(void* self, void* cursor) {
+    QTextTable_MergeCells2((QTextTable*)self, (QTextCursor*)cursor);
 }
 
 void q_texttable_split_cell(void* self, int row, int col, int numRows, int numCols) {
@@ -165,12 +165,12 @@ QTextTableCell* q_texttable_cell_at(void* self, int row, int col) {
     return QTextTable_CellAt((QTextTable*)self, row, col);
 }
 
-QTextTableCell* q_texttable_cell_at_with_position(void* self, int position) {
-    return QTextTable_CellAtWithPosition((QTextTable*)self, position);
+QTextTableCell* q_texttable_cell_at2(void* self, int position) {
+    return QTextTable_CellAt2((QTextTable*)self, position);
 }
 
-QTextTableCell* q_texttable_cell_at_with_q_text_cursor(void* self, void* c) {
-    return QTextTable_CellAtWithQTextCursor((QTextTable*)self, (QTextCursor*)c);
+QTextTableCell* q_texttable_cell_at3(void* self, void* c) {
+    return QTextTable_CellAt3((QTextTable*)self, (QTextCursor*)c);
 }
 
 QTextCursor* q_texttable_row_start(void* self, void* c) {
@@ -303,8 +303,8 @@ void q_texttable_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_texttable_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_texttable_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_texttable_children(void* self) {
@@ -336,8 +336,8 @@ bool q_texttable_disconnect(void* sender, void* signal, void* receiver, void* me
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_texttable_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_texttable_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_texttable_dump_object_tree(void* self) {
@@ -403,8 +403,8 @@ bool q_texttable_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_texttable_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_texttable_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_texttable_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

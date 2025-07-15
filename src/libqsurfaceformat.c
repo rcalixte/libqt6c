@@ -166,8 +166,8 @@ void q_surfaceformat_set_color_space(void* self, void* colorSpace) {
     QSurfaceFormat_SetColorSpace((QSurfaceFormat*)self, (QColorSpace*)colorSpace);
 }
 
-void q_surfaceformat_set_color_space_with_color_space(void* self, int64_t colorSpace) {
-    QSurfaceFormat_SetColorSpaceWithColorSpace((QSurfaceFormat*)self, colorSpace);
+void q_surfaceformat_set_color_space2(void* self, int64_t colorSpace) {
+    QSurfaceFormat_SetColorSpace2((QSurfaceFormat*)self, colorSpace);
 }
 
 void q_surfaceformat_set_default_format(void* format) {

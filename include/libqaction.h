@@ -183,7 +183,7 @@ void q_action_set_shortcuts(void* self, libqt_list shortcuts);
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setShortcuts)
 ///
 /// ``` QAction* self, enum QKeySequence__StandardKey shortcuts ```
-void q_action_set_shortcuts_with_shortcuts(void* self, int64_t shortcuts);
+void q_action_set_shortcuts2(void* self, int64_t shortcuts);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
@@ -531,7 +531,7 @@ void q_action_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QAction* self, enum Qt__TimerId id ```
-void q_action_kill_timer_with_id(void* self, int64_t id);
+void q_action_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -587,7 +587,7 @@ bool q_action_disconnect(void* sender, void* signal, void* receiver, void* membe
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_action_disconnect_with_q_meta_object_connection(void* param1);
+bool q_action_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -685,7 +685,7 @@ bool q_action_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QAction* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_action_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_action_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -142,7 +142,7 @@ void q_sslconfiguration_set_ciphers(void* self, libqt_list ciphers);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setCiphers)
 ///
 /// ``` QSslConfiguration* self, const char* ciphers ```
-void q_sslconfiguration_set_ciphers_with_ciphers(void* self, const char* ciphers);
+void q_sslconfiguration_set_ciphers2(void* self, const char* ciphers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#supportedCiphers)
 ///
@@ -172,7 +172,7 @@ void q_sslconfiguration_add_ca_certificate(void* self, void* certificate);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
 /// ``` QSslConfiguration* self, libqt_list /* of QSslCertificate* */ certificates ```
-void q_sslconfiguration_add_ca_certificates_with_certificates(void* self, libqt_list certificates);
+void q_sslconfiguration_add_ca_certificates2(void* self, libqt_list certificates);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#systemCaCertificates)
 ///
@@ -337,7 +337,7 @@ int64_t q_sslconfiguration_next_protocol_negotiation_status(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
 /// ``` QSslConfiguration* self, const char* path, enum QSsl__EncodingFormat format ```
-bool q_sslconfiguration_add_ca_certificates2(void* self, const char* path, int64_t format);
+bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///

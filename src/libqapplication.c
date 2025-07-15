@@ -57,16 +57,16 @@ void q_application_set_style(void* style) {
     QApplication_SetStyle((QStyle*)style);
 }
 
-QStyle* q_application_set_style_with_style(const char* style) {
-    return QApplication_SetStyleWithStyle(qstring(style));
+QStyle* q_application_set_style2(const char* style) {
+    return QApplication_SetStyle2(qstring(style));
 }
 
 QPalette* q_application_palette(void* param1) {
     return QApplication_Palette((QWidget*)param1);
 }
 
-QPalette* q_application_palette_with_class_name(const char* className) {
-    return QApplication_PaletteWithClassName(className);
+QPalette* q_application_palette2(const char* className) {
+    return QApplication_Palette2(className);
 }
 
 void q_application_set_palette(void* param1) {
@@ -77,12 +77,12 @@ QFont* q_application_font() {
     return QApplication_Font();
 }
 
-QFont* q_application_font_with_q_widget(void* param1) {
-    return QApplication_FontWithQWidget((QWidget*)param1);
+QFont* q_application_font2(void* param1) {
+    return QApplication_Font2((QWidget*)param1);
 }
 
-QFont* q_application_font_with_class_name(const char* className) {
-    return QApplication_FontWithClassName(className);
+QFont* q_application_font3(const char* className) {
+    return QApplication_Font3(className);
 }
 
 void q_application_set_font(void* param1) {
@@ -956,8 +956,8 @@ void q_application_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_application_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_application_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_application_children(void* self) {
@@ -989,8 +989,8 @@ bool q_application_disconnect(void* sender, void* signal, void* receiver, void* 
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_application_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_application_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_application_dump_object_tree(void* self) {
@@ -1056,8 +1056,8 @@ bool q_application_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_application_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_application_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

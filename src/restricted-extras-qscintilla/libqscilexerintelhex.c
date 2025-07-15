@@ -218,8 +218,8 @@ void q_scilexerintelhex_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexerintelhex_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexerintelhex_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexerintelhex_children(void* self) {
@@ -251,8 +251,8 @@ bool q_scilexerintelhex_disconnect(void* sender, void* signal, void* receiver, v
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexerintelhex_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexerintelhex_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexerintelhex_dump_object_tree(void* self) {
@@ -318,8 +318,8 @@ bool q_scilexerintelhex_move_to_thread2(void* self, void* thread, void* param2) 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexerintelhex_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexerintelhex_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexerintelhex_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -552,16 +552,16 @@ void q_scilexerintelhex_on_paper(void* self, QColor* (*slot)(void*, int)) {
     QsciLexerIntelHex_OnPaper((QsciLexerIntelHex*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexerintelhex_default_color_with_style(void* self, int style) {
-    return QsciLexerIntelHex_DefaultColorWithStyle((QsciLexerIntelHex*)self, style);
+QColor* q_scilexerintelhex_default_color2(void* self, int style) {
+    return QsciLexerIntelHex_DefaultColor2((QsciLexerIntelHex*)self, style);
 }
 
-QColor* q_scilexerintelhex_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexerIntelHex_QBaseDefaultColorWithStyle((QsciLexerIntelHex*)self, style);
+QColor* q_scilexerintelhex_qbase_default_color2(void* self, int style) {
+    return QsciLexerIntelHex_QBaseDefaultColor2((QsciLexerIntelHex*)self, style);
 }
 
-void q_scilexerintelhex_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerIntelHex_OnDefaultColorWithStyle((QsciLexerIntelHex*)self, (intptr_t)slot);
+void q_scilexerintelhex_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerIntelHex_OnDefaultColor2((QsciLexerIntelHex*)self, (intptr_t)slot);
 }
 
 bool q_scilexerintelhex_default_eol_fill(void* self, int style) {
@@ -576,28 +576,28 @@ void q_scilexerintelhex_on_default_eol_fill(void* self, bool (*slot)(void*, int)
     QsciLexerIntelHex_OnDefaultEolFill((QsciLexerIntelHex*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexerintelhex_default_font_with_style(void* self, int style) {
-    return QsciLexerIntelHex_DefaultFontWithStyle((QsciLexerIntelHex*)self, style);
+QFont* q_scilexerintelhex_default_font2(void* self, int style) {
+    return QsciLexerIntelHex_DefaultFont2((QsciLexerIntelHex*)self, style);
 }
 
-QFont* q_scilexerintelhex_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexerIntelHex_QBaseDefaultFontWithStyle((QsciLexerIntelHex*)self, style);
+QFont* q_scilexerintelhex_qbase_default_font2(void* self, int style) {
+    return QsciLexerIntelHex_QBaseDefaultFont2((QsciLexerIntelHex*)self, style);
 }
 
-void q_scilexerintelhex_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerIntelHex_OnDefaultFontWithStyle((QsciLexerIntelHex*)self, (intptr_t)slot);
+void q_scilexerintelhex_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexerIntelHex_OnDefaultFont2((QsciLexerIntelHex*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexerintelhex_default_paper_with_style(void* self, int style) {
-    return QsciLexerIntelHex_DefaultPaperWithStyle((QsciLexerIntelHex*)self, style);
+QColor* q_scilexerintelhex_default_paper2(void* self, int style) {
+    return QsciLexerIntelHex_DefaultPaper2((QsciLexerIntelHex*)self, style);
 }
 
-QColor* q_scilexerintelhex_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexerIntelHex_QBaseDefaultPaperWithStyle((QsciLexerIntelHex*)self, style);
+QColor* q_scilexerintelhex_qbase_default_paper2(void* self, int style) {
+    return QsciLexerIntelHex_QBaseDefaultPaper2((QsciLexerIntelHex*)self, style);
 }
 
-void q_scilexerintelhex_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerIntelHex_OnDefaultPaperWithStyle((QsciLexerIntelHex*)self, (intptr_t)slot);
+void q_scilexerintelhex_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerIntelHex_OnDefaultPaper2((QsciLexerIntelHex*)self, (intptr_t)slot);
 }
 
 void q_scilexerintelhex_set_editor(void* self, void* editor) {

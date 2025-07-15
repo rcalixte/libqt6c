@@ -67,8 +67,8 @@ QBitmap* q_bitmap_transformed(void* self, void* matrix) {
     return QBitmap_Transformed((QBitmap*)self, (QTransform*)matrix);
 }
 
-void q_bitmap_operator_assign_with_q_bitmap(void* self, void* param1) {
-    QBitmap_OperatorAssignWithQBitmap((QBitmap*)self, (QBitmap*)param1);
+void q_bitmap_operator_assign2(void* self, void* param1) {
+    QBitmap_OperatorAssign2((QBitmap*)self, (QBitmap*)param1);
 }
 
 QBitmap* q_bitmap_from_image2(void* image, int64_t flags) {
@@ -151,8 +151,8 @@ QPixmap* q_bitmap_scaled(void* self, int w, int h) {
     return QPixmap_Scaled((QPixmap*)self, w, h);
 }
 
-QPixmap* q_bitmap_scaled_with_q_size(void* self, void* s) {
-    return QPixmap_ScaledWithQSize((QPixmap*)self, (QSize*)s);
+QPixmap* q_bitmap_scaled2(void* self, void* s) {
+    return QPixmap_Scaled2((QPixmap*)self, (QSize*)s);
 }
 
 QPixmap* q_bitmap_scaled_to_width(void* self, int w) {
@@ -183,16 +183,16 @@ bool q_bitmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal) {
     return QPixmap_LoadFromData((QPixmap*)self, buf, lenVal);
 }
 
-bool q_bitmap_load_from_data_with_data(void* self, const char* data) {
-    return QPixmap_LoadFromDataWithData((QPixmap*)self, qstring(data));
+bool q_bitmap_load_from_data2(void* self, const char* data) {
+    return QPixmap_LoadFromData2((QPixmap*)self, qstring(data));
 }
 
 bool q_bitmap_save(void* self, const char* fileName) {
     return QPixmap_Save((QPixmap*)self, qstring(fileName));
 }
 
-bool q_bitmap_save_with_device(void* self, void* device) {
-    return QPixmap_SaveWithDevice((QPixmap*)self, (QIODevice*)device);
+bool q_bitmap_save2(void* self, void* device) {
+    return QPixmap_Save2((QPixmap*)self, (QIODevice*)device);
 }
 
 bool q_bitmap_convert_from_image(void* self, void* img) {
@@ -255,8 +255,8 @@ QPixmap* q_bitmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t 
     return QPixmap_Scaled4((QPixmap*)self, w, h, aspectMode, mode);
 }
 
-QPixmap* q_bitmap_scaled2(void* self, void* s, int64_t aspectMode) {
-    return QPixmap_Scaled2((QPixmap*)self, (QSize*)s, aspectMode);
+QPixmap* q_bitmap_scaled22(void* self, void* s, int64_t aspectMode) {
+    return QPixmap_Scaled22((QPixmap*)self, (QSize*)s, aspectMode);
 }
 
 QPixmap* q_bitmap_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode) {
@@ -295,24 +295,24 @@ bool q_bitmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, c
     return QPixmap_LoadFromData4((QPixmap*)self, buf, lenVal, format, flags);
 }
 
-bool q_bitmap_load_from_data2(void* self, const char* data, const char* format) {
-    return QPixmap_LoadFromData2((QPixmap*)self, qstring(data), format);
+bool q_bitmap_load_from_data22(void* self, const char* data, const char* format) {
+    return QPixmap_LoadFromData22((QPixmap*)self, qstring(data), format);
 }
 
 bool q_bitmap_load_from_data32(void* self, const char* data, const char* format, int64_t flags) {
     return QPixmap_LoadFromData32((QPixmap*)self, qstring(data), format, flags);
 }
 
-bool q_bitmap_save2(void* self, const char* fileName, const char* format) {
-    return QPixmap_Save2((QPixmap*)self, qstring(fileName), format);
+bool q_bitmap_save22(void* self, const char* fileName, const char* format) {
+    return QPixmap_Save22((QPixmap*)self, qstring(fileName), format);
 }
 
 bool q_bitmap_save3(void* self, const char* fileName, const char* format, int quality) {
     return QPixmap_Save3((QPixmap*)self, qstring(fileName), format, quality);
 }
 
-bool q_bitmap_save22(void* self, void* device, const char* format) {
-    return QPixmap_Save22((QPixmap*)self, (QIODevice*)device, format);
+bool q_bitmap_save23(void* self, void* device, const char* format) {
+    return QPixmap_Save23((QPixmap*)self, (QIODevice*)device, format);
 }
 
 bool q_bitmap_save32(void* self, void* device, const char* format, int quality) {

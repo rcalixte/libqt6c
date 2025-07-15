@@ -96,8 +96,8 @@ void q_colorspace_set_transfer_function(void* self, int64_t transferFunction) {
     QColorSpace_SetTransferFunction((QColorSpace*)self, transferFunction);
 }
 
-void q_colorspace_set_transfer_function_with_transfer_function_table(void* self, libqt_list transferFunctionTable) {
-    QColorSpace_SetTransferFunctionWithTransferFunctionTable((QColorSpace*)self, transferFunctionTable);
+void q_colorspace_set_transfer_function2(void* self, libqt_list transferFunctionTable) {
+    QColorSpace_SetTransferFunction2((QColorSpace*)self, transferFunctionTable);
 }
 
 void q_colorspace_set_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
@@ -108,8 +108,8 @@ QColorSpace* q_colorspace_with_transfer_function(void* self, int64_t transferFun
     return QColorSpace_WithTransferFunction((QColorSpace*)self, transferFunction);
 }
 
-QColorSpace* q_colorspace_with_transfer_function_with_transfer_function_table(void* self, libqt_list transferFunctionTable) {
-    return QColorSpace_WithTransferFunctionWithTransferFunctionTable((QColorSpace*)self, transferFunctionTable);
+QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list transferFunctionTable) {
+    return QColorSpace_WithTransferFunction2((QColorSpace*)self, transferFunctionTable);
 }
 
 QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable) {
@@ -171,12 +171,12 @@ QVariant* q_colorspace_to_q_variant(void* self) {
     return QColorSpace_ToQVariant((QColorSpace*)self);
 }
 
-void q_colorspace_set_transfer_function2(void* self, int64_t transferFunction, float gamma) {
-    QColorSpace_SetTransferFunction2((QColorSpace*)self, transferFunction, gamma);
+void q_colorspace_set_transfer_function22(void* self, int64_t transferFunction, float gamma) {
+    QColorSpace_SetTransferFunction22((QColorSpace*)self, transferFunction, gamma);
 }
 
-QColorSpace* q_colorspace_with_transfer_function2(void* self, int64_t transferFunction, float gamma) {
-    return QColorSpace_WithTransferFunction2((QColorSpace*)self, transferFunction, gamma);
+QColorSpace* q_colorspace_with_transfer_function22(void* self, int64_t transferFunction, float gamma) {
+    return QColorSpace_WithTransferFunction22((QColorSpace*)self, transferFunction, gamma);
 }
 
 void q_colorspace_delete(void* self) {

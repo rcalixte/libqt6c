@@ -16,12 +16,12 @@ bool q_waitcondition_wait2(void* self, void* lockedMutex, uint64_t time) {
     return QWaitCondition_Wait2((QWaitCondition*)self, (QMutex*)lockedMutex, time);
 }
 
-bool q_waitcondition_wait_with_locked_read_write_lock(void* self, void* lockedReadWriteLock) {
-    return QWaitCondition_WaitWithLockedReadWriteLock((QWaitCondition*)self, (QReadWriteLock*)lockedReadWriteLock);
+bool q_waitcondition_wait3(void* self, void* lockedReadWriteLock) {
+    return QWaitCondition_Wait3((QWaitCondition*)self, (QReadWriteLock*)lockedReadWriteLock);
 }
 
-bool q_waitcondition_wait3(void* self, void* lockedReadWriteLock, uint64_t time) {
-    return QWaitCondition_Wait3((QWaitCondition*)self, (QReadWriteLock*)lockedReadWriteLock, time);
+bool q_waitcondition_wait4(void* self, void* lockedReadWriteLock, uint64_t time) {
+    return QWaitCondition_Wait4((QWaitCondition*)self, (QReadWriteLock*)lockedReadWriteLock, time);
 }
 
 void q_waitcondition_wake_one(void* self) {

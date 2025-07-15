@@ -176,7 +176,7 @@ QPixmap* q_pixmap_scaled(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
 /// ``` QPixmap* self, QSize* s ```
-QPixmap* q_pixmap_scaled_with_q_size(void* self, void* s);
+QPixmap* q_pixmap_scaled2(void* self, void* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaledToWidth)
 ///
@@ -226,7 +226,7 @@ bool q_pixmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
 /// ``` QPixmap* self, const char* data ```
-bool q_pixmap_load_from_data_with_data(void* self, const char* data);
+bool q_pixmap_load_from_data2(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
@@ -236,7 +236,7 @@ bool q_pixmap_save(void* self, const char* fileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
 /// ``` QPixmap* self, QIODevice* device ```
-bool q_pixmap_save_with_device(void* self, void* device);
+bool q_pixmap_save2(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#convertFromImage)
 ///
@@ -354,7 +354,7 @@ QPixmap* q_pixmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
 /// ``` QPixmap* self, QSize* s, enum Qt__AspectRatioMode aspectMode ```
-QPixmap* q_pixmap_scaled2(void* self, void* s, int64_t aspectMode);
+QPixmap* q_pixmap_scaled22(void* self, void* s, int64_t aspectMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
@@ -409,7 +409,7 @@ bool q_pixmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, c
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
 /// ``` QPixmap* self, const char* data, const char* format ```
-bool q_pixmap_load_from_data2(void* self, const char* data, const char* format);
+bool q_pixmap_load_from_data22(void* self, const char* data, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#loadFromData)
 ///
@@ -419,7 +419,7 @@ bool q_pixmap_load_from_data32(void* self, const char* data, const char* format,
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
 /// ``` QPixmap* self, const char* fileName, const char* format ```
-bool q_pixmap_save2(void* self, const char* fileName, const char* format);
+bool q_pixmap_save22(void* self, const char* fileName, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
@@ -429,7 +429,7 @@ bool q_pixmap_save3(void* self, const char* fileName, const char* format, int qu
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///
 /// ``` QPixmap* self, QIODevice* device, const char* format ```
-bool q_pixmap_save22(void* self, void* device, const char* format);
+bool q_pixmap_save23(void* self, void* device, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#save)
 ///

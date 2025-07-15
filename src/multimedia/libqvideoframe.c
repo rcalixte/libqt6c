@@ -99,8 +99,8 @@ unsigned char* q_videoframe_bits(void* self, int plane) {
     return (unsigned char*)QVideoFrame_Bits((QVideoFrame*)self, plane);
 }
 
-const unsigned char* q_videoframe_bits_with_plane(void* self, int plane) {
-    return (unsigned char*)QVideoFrame_BitsWithPlane((QVideoFrame*)self, plane);
+const unsigned char* q_videoframe_bits2(void* self, int plane) {
+    return (unsigned char*)QVideoFrame_Bits2((QVideoFrame*)self, plane);
 }
 
 int32_t q_videoframe_mapped_bytes(void* self, int plane) {

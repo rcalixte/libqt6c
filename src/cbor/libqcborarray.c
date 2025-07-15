@@ -60,8 +60,8 @@ QCborValueRef* q_cborarray_last2(void* self) {
     return QCborArray_Last2((QCborArray*)self);
 }
 
-QCborValueRef* q_cborarray_operator_subscript_with_qsizetype(void* self, int64_t i) {
-    return QCborArray_OperatorSubscriptWithQsizetype((QCborArray*)self, i);
+QCborValueRef* q_cborarray_operator_subscript2(void* self, int64_t i) {
+    return QCborArray_OperatorSubscript2((QCborArray*)self, i);
 }
 
 void q_cborarray_insert(void* self, int64_t i, void* value) {

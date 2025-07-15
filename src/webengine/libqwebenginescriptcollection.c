@@ -24,8 +24,8 @@ void q_webenginescriptcollection_insert(void* self, void* param1) {
     QWebEngineScriptCollection_Insert((QWebEngineScriptCollection*)self, (QWebEngineScript*)param1);
 }
 
-void q_webenginescriptcollection_insert_with_list(void* self, libqt_list list) {
-    QWebEngineScriptCollection_InsertWithList((QWebEngineScriptCollection*)self, list);
+void q_webenginescriptcollection_insert2(void* self, libqt_list list) {
+    QWebEngineScriptCollection_Insert2((QWebEngineScriptCollection*)self, list);
 }
 
 bool q_webenginescriptcollection_remove(void* self, void* param1) {

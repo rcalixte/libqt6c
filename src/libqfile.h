@@ -97,7 +97,7 @@ const char* q_file_decode_name(const char* localFileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#decodeName)
 ///
 /// ``` const char* localFileName ```
-const char* q_file_decode_name_with_local_file_name(const char* localFileName);
+const char* q_file_decode_name2(const char* localFileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#exists)
 ///
@@ -107,7 +107,7 @@ bool q_file_exists(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#exists)
 ///
 /// ``` const char* fileName ```
-bool q_file_exists_with_file_name(const char* fileName);
+bool q_file_exists2(const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#symLinkTarget)
 ///
@@ -117,7 +117,7 @@ const char* q_file_sym_link_target(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#symLinkTarget)
 ///
 /// ``` const char* fileName ```
-const char* q_file_sym_link_target_with_file_name(const char* fileName);
+const char* q_file_sym_link_target2(const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#remove)
 ///
@@ -127,7 +127,7 @@ bool q_file_remove(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#remove)
 ///
 /// ``` const char* fileName ```
-bool q_file_remove_with_file_name(const char* fileName);
+bool q_file_remove2(const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#moveToTrash)
 ///
@@ -137,7 +137,7 @@ bool q_file_move_to_trash(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#moveToTrash)
 ///
 /// ``` const char* fileName ```
-bool q_file_move_to_trash_with_file_name(const char* fileName);
+bool q_file_move_to_trash2(const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#rename)
 ///
@@ -263,7 +263,7 @@ int64_t q_file_qbase_permissions(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#permissions)
 ///
 /// ``` const char* filename ```
-int64_t q_file_permissions_with_filename(const char* filename);
+int64_t q_file_permissions2(const char* filename);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfile.html#setPermissions)
 ///
@@ -463,7 +463,7 @@ long long q_file_read(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// ``` QFile* self, long long maxlen ```
-char* q_file_read_with_maxlen(void* self, long long maxlen);
+char* q_file_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -526,14 +526,14 @@ long long q_file_write(void* self, const char* data, long long lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QFile* self, const char* data ```
-long long q_file_write_with_data(void* self, const char* data);
+long long q_file_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QFile* self, const char* data ```
-long long q_file_write2(void* self, const char* data);
+long long q_file_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -547,7 +547,7 @@ long long q_file_peek(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// ``` QFile* self, long long maxlen ```
-char* q_file_peek_with_maxlen(void* self, long long maxlen);
+char* q_file_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -757,7 +757,7 @@ void q_file_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QFile* self, enum Qt__TimerId id ```
-void q_file_kill_timer_with_id(void* self, int64_t id);
+void q_file_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -813,7 +813,7 @@ bool q_file_disconnect(void* sender, void* signal, void* receiver, void* member)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_file_disconnect_with_q_meta_object_connection(void* param1);
+bool q_file_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -911,7 +911,7 @@ bool q_file_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QFile* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_file_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_file_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

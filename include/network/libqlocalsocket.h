@@ -58,7 +58,7 @@ void q_localsocket_connect_to_server(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#connectToServer)
 ///
 /// ``` QLocalSocket* self, const char* name ```
-void q_localsocket_connect_to_server_with_name(void* self, const char* name);
+void q_localsocket_connect_to_server2(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#disconnectFromServer)
 ///
@@ -431,7 +431,7 @@ void q_localsocket_connect_to_server1(void* self, int64_t openMode);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#connectToServer)
 ///
 /// ``` QLocalSocket* self, const char* name, int openMode ```
-void q_localsocket_connect_to_server2(void* self, const char* name, int64_t openMode);
+void q_localsocket_connect_to_server22(void* self, const char* name, int64_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#setSocketDescriptor)
 ///
@@ -549,7 +549,7 @@ long long q_localsocket_read(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// ``` QLocalSocket* self, long long maxlen ```
-char* q_localsocket_read_with_maxlen(void* self, long long maxlen);
+char* q_localsocket_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -612,14 +612,14 @@ long long q_localsocket_write(void* self, const char* data, long long lenVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QLocalSocket* self, const char* data ```
-long long q_localsocket_write_with_data(void* self, const char* data);
+long long q_localsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// ``` QLocalSocket* self, const char* data ```
-long long q_localsocket_write2(void* self, const char* data);
+long long q_localsocket_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -633,7 +633,7 @@ long long q_localsocket_peek(void* self, char* data, long long maxlen);
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// ``` QLocalSocket* self, long long maxlen ```
-char* q_localsocket_peek_with_maxlen(void* self, long long maxlen);
+char* q_localsocket_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -843,7 +843,7 @@ void q_localsocket_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QLocalSocket* self, enum Qt__TimerId id ```
-void q_localsocket_kill_timer_with_id(void* self, int64_t id);
+void q_localsocket_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -899,7 +899,7 @@ bool q_localsocket_disconnect(void* sender, void* signal, void* receiver, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_localsocket_disconnect_with_q_meta_object_connection(void* param1);
+bool q_localsocket_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -997,7 +997,7 @@ bool q_localsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QLocalSocket* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_localsocket_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_localsocket_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

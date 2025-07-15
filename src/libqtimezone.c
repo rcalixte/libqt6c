@@ -107,8 +107,8 @@ const char* q_timezone_display_name(void* self, void* atDateTime) {
     return _ret;
 }
 
-const char* q_timezone_display_name_with_time_type(void* self, int64_t timeType) {
-    libqt_string _str = QTimeZone_DisplayNameWithTimeType((QTimeZone*)self, timeType);
+const char* q_timezone_display_name2(void* self, int64_t timeType) {
+    libqt_string _str = QTimeZone_DisplayName2((QTimeZone*)self, timeType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -196,8 +196,8 @@ const char** q_timezone_available_time_zone_ids() {
     return _ret;
 }
 
-const char** q_timezone_available_time_zone_ids_with_territory(int64_t territory) {
-    libqt_list _arr = QTimeZone_AvailableTimeZoneIdsWithTerritory(territory);
+const char** q_timezone_available_time_zone_ids2(int64_t territory) {
+    libqt_list _arr = QTimeZone_AvailableTimeZoneIds2(territory);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -211,8 +211,8 @@ const char** q_timezone_available_time_zone_ids_with_territory(int64_t territory
     return _ret;
 }
 
-const char** q_timezone_available_time_zone_ids_with_offset_seconds(int offsetSeconds) {
-    libqt_list _arr = QTimeZone_AvailableTimeZoneIdsWithOffsetSeconds(offsetSeconds);
+const char** q_timezone_available_time_zone_ids3(int offsetSeconds) {
+    libqt_list _arr = QTimeZone_AvailableTimeZoneIds3(offsetSeconds);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -277,8 +277,8 @@ const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, int64_t t
     return _ret;
 }
 
-const char* q_timezone_display_name2(void* self, void* atDateTime, int64_t nameType) {
-    libqt_string _str = QTimeZone_DisplayName2((QTimeZone*)self, (QDateTime*)atDateTime, nameType);
+const char* q_timezone_display_name22(void* self, void* atDateTime, int64_t nameType) {
+    libqt_string _str = QTimeZone_DisplayName22((QTimeZone*)self, (QDateTime*)atDateTime, nameType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -291,8 +291,8 @@ const char* q_timezone_display_name3(void* self, void* atDateTime, int64_t nameT
     return _ret;
 }
 
-const char* q_timezone_display_name22(void* self, int64_t timeType, int64_t nameType) {
-    libqt_string _str = QTimeZone_DisplayName22((QTimeZone*)self, timeType, nameType);
+const char* q_timezone_display_name23(void* self, int64_t timeType, int64_t nameType) {
+    libqt_string _str = QTimeZone_DisplayName23((QTimeZone*)self, timeType, nameType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

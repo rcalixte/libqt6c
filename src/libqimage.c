@@ -200,8 +200,8 @@ unsigned char* q_image_scan_line(void* self, int param1) {
     return (unsigned char*)QImage_ScanLine((QImage*)self, param1);
 }
 
-const unsigned char* q_image_scan_line_with_int(void* self, int param1) {
-    return (unsigned char*)QImage_ScanLineWithInt((QImage*)self, param1);
+const unsigned char* q_image_scan_line2(void* self, int param1) {
+    return (unsigned char*)QImage_ScanLine2((QImage*)self, param1);
 }
 
 const unsigned char* q_image_const_scan_line(void* self, int param1) {
@@ -216,24 +216,24 @@ bool q_image_valid(void* self, int x, int y) {
     return QImage_Valid((QImage*)self, x, y);
 }
 
-bool q_image_valid_with_pt(void* self, void* pt) {
-    return QImage_ValidWithPt((QImage*)self, (QPoint*)pt);
+bool q_image_valid2(void* self, void* pt) {
+    return QImage_Valid2((QImage*)self, (QPoint*)pt);
 }
 
 int32_t q_image_pixel_index(void* self, int x, int y) {
     return QImage_PixelIndex((QImage*)self, x, y);
 }
 
-int32_t q_image_pixel_index_with_pt(void* self, void* pt) {
-    return QImage_PixelIndexWithPt((QImage*)self, (QPoint*)pt);
+int32_t q_image_pixel_index2(void* self, void* pt) {
+    return QImage_PixelIndex2((QImage*)self, (QPoint*)pt);
 }
 
 uint32_t q_image_pixel(void* self, int x, int y) {
     return QImage_Pixel((QImage*)self, x, y);
 }
 
-uint32_t q_image_pixel_with_pt(void* self, void* pt) {
-    return QImage_PixelWithPt((QImage*)self, (QPoint*)pt);
+uint32_t q_image_pixel2(void* self, void* pt) {
+    return QImage_Pixel2((QImage*)self, (QPoint*)pt);
 }
 
 void q_image_set_pixel(void* self, int x, int y, uint32_t index_or_rgb) {
@@ -248,8 +248,8 @@ QColor* q_image_pixel_color(void* self, int x, int y) {
     return QImage_PixelColor((QImage*)self, x, y);
 }
 
-QColor* q_image_pixel_color_with_pt(void* self, void* pt) {
-    return QImage_PixelColorWithPt((QImage*)self, (QPoint*)pt);
+QColor* q_image_pixel_color2(void* self, void* pt) {
+    return QImage_PixelColor2((QImage*)self, (QPoint*)pt);
 }
 
 void q_image_set_pixel_color(void* self, int x, int y, void* c) {
@@ -285,12 +285,12 @@ void q_image_fill(void* self, uint32_t pixel) {
     QImage_Fill((QImage*)self, pixel);
 }
 
-void q_image_fill_with_color(void* self, void* color) {
-    QImage_FillWithColor((QImage*)self, (QColor*)color);
+void q_image_fill2(void* self, void* color) {
+    QImage_Fill2((QImage*)self, (QColor*)color);
 }
 
-void q_image_fill2(void* self, int64_t color) {
-    QImage_Fill2((QImage*)self, color);
+void q_image_fill3(void* self, int64_t color) {
+    QImage_Fill3((QImage*)self, color);
 }
 
 bool q_image_has_alpha_channel(void* self) {
@@ -317,8 +317,8 @@ QImage* q_image_scaled(void* self, int w, int h) {
     return QImage_Scaled((QImage*)self, w, h);
 }
 
-QImage* q_image_scaled_with_q_size(void* self, void* s) {
-    return QImage_ScaledWithQSize((QImage*)self, (QSize*)s);
+QImage* q_image_scaled2(void* self, void* s) {
+    return QImage_Scaled2((QImage*)self, (QSize*)s);
 }
 
 QImage* q_image_scaled_to_width(void* self, int w) {
@@ -401,8 +401,8 @@ bool q_image_load(void* self, void* device, const char* format) {
     return QImage_Load((QImage*)self, (QIODevice*)device, format);
 }
 
-bool q_image_load_with_file_name(void* self, const char* fileName) {
-    return QImage_LoadWithFileName((QImage*)self, qstring(fileName));
+bool q_image_load2(void* self, const char* fileName) {
+    return QImage_Load2((QImage*)self, qstring(fileName));
 }
 
 bool q_image_load_from_data(void* self, const char* data) {
@@ -414,16 +414,16 @@ bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal) {
     return QImage_LoadFromData2((QImage*)self, buf, lenVal);
 }
 
-bool q_image_load_from_data_with_data(void* self, const char* data) {
-    return QImage_LoadFromDataWithData((QImage*)self, qstring(data));
+bool q_image_load_from_data3(void* self, const char* data) {
+    return QImage_LoadFromData3((QImage*)self, qstring(data));
 }
 
 bool q_image_save(void* self, const char* fileName) {
     return QImage_Save((QImage*)self, qstring(fileName));
 }
 
-bool q_image_save_with_device(void* self, void* device) {
-    return QImage_SaveWithDevice((QImage*)self, (QIODevice*)device);
+bool q_image_save2(void* self, void* device) {
+    return QImage_Save2((QImage*)self, (QIODevice*)device);
 }
 
 QImage* q_image_from_data(const char* data) {
@@ -435,8 +435,8 @@ QImage* q_image_from_data2(unsigned char* data, int size) {
     return QImage_FromData2(data, size);
 }
 
-QImage* q_image_from_data_with_data(const char* data) {
-    return QImage_FromDataWithData(qstring(data));
+QImage* q_image_from_data3(const char* data) {
+    return QImage_FromData3(qstring(data));
 }
 
 long long q_image_cache_key(void* self) {
@@ -665,8 +665,8 @@ QImage* q_image_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t mo
     return QImage_Scaled4((QImage*)self, w, h, aspectMode, mode);
 }
 
-QImage* q_image_scaled2(void* self, void* s, int64_t aspectMode) {
-    return QImage_Scaled2((QImage*)self, (QSize*)s, aspectMode);
+QImage* q_image_scaled22(void* self, void* s, int64_t aspectMode) {
+    return QImage_Scaled22((QImage*)self, (QSize*)s, aspectMode);
 }
 
 QImage* q_image_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode) {
@@ -721,8 +721,8 @@ void q_image_apply_color_transform3(void* self, void* transform, int64_t format,
     QImage_ApplyColorTransform3((QImage*)self, (QColorTransform*)transform, format, flags);
 }
 
-bool q_image_load2(void* self, const char* fileName, const char* format) {
-    return QImage_Load2((QImage*)self, qstring(fileName), format);
+bool q_image_load22(void* self, const char* fileName, const char* format) {
+    return QImage_Load22((QImage*)self, qstring(fileName), format);
 }
 
 bool q_image_load_from_data22(void* self, const char* data, const char* format) {
@@ -730,24 +730,24 @@ bool q_image_load_from_data22(void* self, const char* data, const char* format) 
     return QImage_LoadFromData22((QImage*)self, (QByteArrayView*)&data_strview, format);
 }
 
-bool q_image_load_from_data3(void* self, unsigned char* buf, int lenVal, const char* format) {
-    return QImage_LoadFromData3((QImage*)self, buf, lenVal, format);
+bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const char* format) {
+    return QImage_LoadFromData32((QImage*)self, buf, lenVal, format);
 }
 
 bool q_image_load_from_data23(void* self, const char* data, const char* format) {
     return QImage_LoadFromData23((QImage*)self, qstring(data), format);
 }
 
-bool q_image_save2(void* self, const char* fileName, const char* format) {
-    return QImage_Save2((QImage*)self, qstring(fileName), format);
+bool q_image_save22(void* self, const char* fileName, const char* format) {
+    return QImage_Save22((QImage*)self, qstring(fileName), format);
 }
 
 bool q_image_save3(void* self, const char* fileName, const char* format, int quality) {
     return QImage_Save3((QImage*)self, qstring(fileName), format, quality);
 }
 
-bool q_image_save22(void* self, void* device, const char* format) {
-    return QImage_Save22((QImage*)self, (QIODevice*)device, format);
+bool q_image_save23(void* self, void* device, const char* format) {
+    return QImage_Save23((QImage*)self, (QIODevice*)device, format);
 }
 
 bool q_image_save32(void* self, void* device, const char* format, int quality) {
@@ -759,8 +759,8 @@ QImage* q_image_from_data22(const char* data, const char* format) {
     return QImage_FromData22((QByteArrayView*)&data_strview, format);
 }
 
-QImage* q_image_from_data3(unsigned char* data, int size, const char* format) {
-    return QImage_FromData3(data, size, format);
+QImage* q_image_from_data32(unsigned char* data, int size, const char* format) {
+    return QImage_FromData32(data, size, format);
 }
 
 QImage* q_image_from_data23(const char* data, const char* format) {

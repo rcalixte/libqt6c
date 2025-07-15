@@ -921,7 +921,7 @@ QPointF* q_checkbox_map_to_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// ``` QCheckBox* self, QPoint* param1 ```
-QPoint* q_checkbox_map_to_global_with_q_point(void* self, void* param1);
+QPoint* q_checkbox_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -935,7 +935,7 @@ QPointF* q_checkbox_map_from_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// ``` QCheckBox* self, QPoint* param1 ```
-QPoint* q_checkbox_map_from_global_with_q_point(void* self, void* param1);
+QPoint* q_checkbox_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -949,7 +949,7 @@ QPointF* q_checkbox_map_to_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// ``` QCheckBox* self, QPoint* param1 ```
-QPoint* q_checkbox_map_to_parent_with_q_point(void* self, void* param1);
+QPoint* q_checkbox_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -963,7 +963,7 @@ QPointF* q_checkbox_map_from_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// ``` QCheckBox* self, QPoint* param1 ```
-QPoint* q_checkbox_map_from_parent_with_q_point(void* self, void* param1);
+QPoint* q_checkbox_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1152,7 +1152,7 @@ void q_checkbox_set_mask(void* self, void* mask);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// ``` QCheckBox* self, QRegion* mask ```
-void q_checkbox_set_mask_with_mask(void* self, void* mask);
+void q_checkbox_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
@@ -1180,7 +1180,7 @@ void q_checkbox_render(void* self, void* target);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QCheckBox* self, QPainter* painter ```
-void q_checkbox_render_with_painter(void* self, void* painter);
+void q_checkbox_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -1495,7 +1495,7 @@ void q_checkbox_clear_focus(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// ``` QCheckBox* self, enum Qt__FocusReason reason ```
-void q_checkbox_set_focus_with_reason(void* self, int64_t reason);
+void q_checkbox_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1565,7 +1565,7 @@ void q_checkbox_grab_mouse(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// ``` QCheckBox* self, QCursor* param1 ```
-void q_checkbox_grab_mouse_with_q_cursor(void* self, void* param1);
+void q_checkbox_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1677,14 +1677,14 @@ void q_checkbox_update2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QCheckBox* self, QRect* param1 ```
-void q_checkbox_update_with_q_rect(void* self, void* param1);
+void q_checkbox_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QCheckBox* self, QRegion* param1 ```
-void q_checkbox_update_with_q_region(void* self, void* param1);
+void q_checkbox_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1698,14 +1698,14 @@ void q_checkbox_repaint2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QCheckBox* self, QRect* param1 ```
-void q_checkbox_repaint_with_q_rect(void* self, void* param1);
+void q_checkbox_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QCheckBox* self, QRegion* param1 ```
-void q_checkbox_repaint_with_q_region(void* self, void* param1);
+void q_checkbox_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1796,7 +1796,7 @@ void q_checkbox_move(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// ``` QCheckBox* self, QPoint* param1 ```
-void q_checkbox_move_with_q_point(void* self, void* param1);
+void q_checkbox_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1810,7 +1810,7 @@ void q_checkbox_resize(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// ``` QCheckBox* self, QSize* param1 ```
-void q_checkbox_resize_with_q_size(void* self, void* param1);
+void q_checkbox_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1824,7 +1824,7 @@ void q_checkbox_set_geometry(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// ``` QCheckBox* self, QRect* geometry ```
-void q_checkbox_set_geometry_with_geometry(void* self, void* geometry);
+void q_checkbox_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -1950,7 +1950,7 @@ void q_checkbox_set_contents_margins(void* self, int left, int top, int right, i
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// ``` QCheckBox* self, QMargins* margins ```
-void q_checkbox_set_contents_margins_with_margins(void* self, void* margins);
+void q_checkbox_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
@@ -2097,28 +2097,28 @@ libqt_list /* of QAction* */ q_checkbox_actions(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QCheckBox* self, const char* text ```
-QAction* q_checkbox_add_action_with_text(void* self, const char* text);
+QAction* q_checkbox_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QCheckBox* self, QIcon* icon, const char* text ```
-QAction* q_checkbox_add_action2(void* self, void* icon, const char* text);
+QAction* q_checkbox_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QCheckBox* self, const char* text, QKeySequence* shortcut ```
-QAction* q_checkbox_add_action3(void* self, const char* text, void* shortcut);
+QAction* q_checkbox_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QCheckBox* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
-QAction* q_checkbox_add_action4(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_checkbox_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -2181,14 +2181,14 @@ QWidget* q_checkbox_child_at(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QCheckBox* self, QPoint* p ```
-QWidget* q_checkbox_child_at_with_q_point(void* self, void* p);
+QWidget* q_checkbox_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QCheckBox* self, QPointF* p ```
-QWidget* q_checkbox_child_at_with_q_point_f(void* self, void* p);
+QWidget* q_checkbox_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
@@ -2342,7 +2342,7 @@ void q_checkbox_set_input_method_hints(void* self, int64_t hints);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QCheckBox* self, QPaintDevice* target, QPoint* targetOffset ```
-void q_checkbox_render2(void* self, void* target, void* targetOffset);
+void q_checkbox_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2363,7 +2363,7 @@ void q_checkbox_render4(void* self, void* target, void* targetOffset, void* sour
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QCheckBox* self, QPainter* painter, QPoint* targetOffset ```
-void q_checkbox_render22(void* self, void* painter, void* targetOffset);
+void q_checkbox_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -2524,7 +2524,7 @@ void q_checkbox_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QCheckBox* self, enum Qt__TimerId id ```
-void q_checkbox_kill_timer_with_id(void* self, int64_t id);
+void q_checkbox_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2573,7 +2573,7 @@ bool q_checkbox_disconnect(void* sender, void* signal, void* receiver, void* mem
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_checkbox_disconnect_with_q_meta_object_connection(void* param1);
+bool q_checkbox_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2671,7 +2671,7 @@ bool q_checkbox_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QCheckBox* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_checkbox_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_checkbox_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

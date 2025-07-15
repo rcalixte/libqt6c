@@ -40,9 +40,9 @@ int64_t q_bytearraymatcher_index_in(void* self, const char* str, int64_t lenVal)
     return QByteArrayMatcher_IndexIn((QByteArrayMatcher*)self, str, lenVal);
 }
 
-int64_t q_bytearraymatcher_index_in_with_data(void* self, const char* data) {
+int64_t q_bytearraymatcher_index_in2(void* self, const char* data) {
     libqt_strview data_strview = qstrview(data);
-    return QByteArrayMatcher_IndexInWithData((QByteArrayMatcher*)self, (QByteArrayView*)&data_strview);
+    return QByteArrayMatcher_IndexIn2((QByteArrayMatcher*)self, (QByteArrayView*)&data_strview);
 }
 
 char* q_bytearraymatcher_pattern(void* self) {
@@ -56,9 +56,9 @@ int64_t q_bytearraymatcher_index_in3(void* self, const char* str, int64_t lenVal
     return QByteArrayMatcher_IndexIn3((QByteArrayMatcher*)self, str, lenVal, from);
 }
 
-int64_t q_bytearraymatcher_index_in2(void* self, const char* data, int64_t from) {
+int64_t q_bytearraymatcher_index_in22(void* self, const char* data, int64_t from) {
     libqt_strview data_strview = qstrview(data);
-    return QByteArrayMatcher_IndexIn2((QByteArrayMatcher*)self, (QByteArrayView*)&data_strview, from);
+    return QByteArrayMatcher_IndexIn22((QByteArrayMatcher*)self, (QByteArrayView*)&data_strview, from);
 }
 
 void q_bytearraymatcher_delete(void* self) {

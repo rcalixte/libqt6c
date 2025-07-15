@@ -226,14 +226,14 @@ const char** q_dir_entry_list(void* self) {
     return _ret;
 }
 
-const char** q_dir_entry_list_with_name_filters(void* self, const char* nameFilters[]) {
+const char** q_dir_entry_list2(void* self, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
-    libqt_list _arr = QDir_EntryListWithNameFilters((QDir*)self, nameFilters_list);
+    libqt_list _arr = QDir_EntryList2((QDir*)self, nameFilters_list);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -252,14 +252,14 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self) {
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list_with_name_filters(void* self, const char* nameFilters[]) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
-    libqt_list _arr = QDir_EntryInfoListWithNameFilters((QDir*)self, nameFilters_list);
+    libqt_list _arr = QDir_EntryInfoList2((QDir*)self, nameFilters_list);
     return _arr;
 }
 
@@ -327,8 +327,8 @@ bool q_dir_rename(void* self, const char* oldName, const char* newName) {
     return QDir_Rename((QDir*)self, qstring(oldName), qstring(newName));
 }
 
-bool q_dir_exists_with_name(void* self, const char* name) {
-    return QDir_ExistsWithName((QDir*)self, qstring(name));
+bool q_dir_exists2(void* self, const char* name) {
+    return QDir_Exists2((QDir*)self, qstring(name));
 }
 
 libqt_list /* of QFileInfo* */ q_dir_drives() {
@@ -440,8 +440,8 @@ const char** q_dir_entry_list1(void* self, int64_t filters) {
     return _ret;
 }
 
-const char** q_dir_entry_list2(void* self, int64_t filters, int64_t sort) {
-    libqt_list _arr = QDir_EntryList2((QDir*)self, filters, sort);
+const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort) {
+    libqt_list _arr = QDir_EntryList22((QDir*)self, filters, sort);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -455,14 +455,14 @@ const char** q_dir_entry_list2(void* self, int64_t filters, int64_t sort) {
     return _ret;
 }
 
-const char** q_dir_entry_list22(void* self, const char* nameFilters[], int64_t filters) {
+const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
-    libqt_list _arr = QDir_EntryList22((QDir*)self, nameFilters_list, filters);
+    libqt_list _arr = QDir_EntryList23((QDir*)self, nameFilters_list, filters);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -502,19 +502,19 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(void* self, int64_t filter
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, int64_t filters, int64_t sort) {
-    libqt_list _arr = QDir_EntryInfoList2((QDir*)self, filters, sort);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int64_t filters, int64_t sort) {
+    libqt_list _arr = QDir_EntryInfoList22((QDir*)self, filters, sort);
     return _arr;
 }
 
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, const char* nameFilters[], int64_t filters) {
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int64_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
     libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < nameFilters_len; ++_i) {
         nameFilters_qstr[_i] = qstring(nameFilters[_i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
-    libqt_list _arr = QDir_EntryInfoList22((QDir*)self, nameFilters_list, filters);
+    libqt_list _arr = QDir_EntryInfoList23((QDir*)self, nameFilters_list, filters);
     return _arr;
 }
 

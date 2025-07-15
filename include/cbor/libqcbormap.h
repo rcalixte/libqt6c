@@ -67,12 +67,12 @@ QCborValue* q_cbormap_value(void* self, long long key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#value)
 ///
 /// ``` QCborMap* self, const char* key ```
-QCborValue* q_cbormap_value2(void* self, const char* key);
+QCborValue* q_cbormap_value3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#value)
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-QCborValue* q_cbormap_value3(void* self, void* key);
+QCborValue* q_cbormap_value4(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
@@ -82,27 +82,27 @@ const QCborValue* q_cbormap_operator_subscript(void* self, long long key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, const char* key ```
-const QCborValue* q_cbormap_operator_subscript2(void* self, const char* key);
+const QCborValue* q_cbormap_operator_subscript3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-const QCborValue* q_cbormap_operator_subscript3(void* self, void* key);
+const QCborValue* q_cbormap_operator_subscript4(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, long long key ```
-QCborValueRef* q_cbormap_operator_subscript4(void* self, long long key);
+QCborValueRef* q_cbormap_operator_subscript5(void* self, long long key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, const char* key ```
-QCborValueRef* q_cbormap_operator_subscript6(void* self, const char* key);
+QCborValueRef* q_cbormap_operator_subscript7(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-QCborValueRef* q_cbormap_operator_subscript7(void* self, void* key);
+QCborValueRef* q_cbormap_operator_subscript8(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#take)
 ///
@@ -112,12 +112,12 @@ QCborValue* q_cbormap_take(void* self, long long key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#take)
 ///
 /// ``` QCborMap* self, const char* key ```
-QCborValue* q_cbormap_take2(void* self, const char* key);
+QCborValue* q_cbormap_take3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#take)
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-QCborValue* q_cbormap_take3(void* self, void* key);
+QCborValue* q_cbormap_take4(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#remove)
 ///
@@ -127,12 +127,12 @@ void q_cbormap_remove(void* self, long long key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#remove)
 ///
 /// ``` QCborMap* self, const char* key ```
-void q_cbormap_remove2(void* self, const char* key);
+void q_cbormap_remove3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#remove)
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-void q_cbormap_remove3(void* self, void* key);
+void q_cbormap_remove4(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#contains)
 ///
@@ -142,12 +142,12 @@ bool q_cbormap_contains(void* self, long long key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#contains)
 ///
 /// ``` QCborMap* self, const char* key ```
-bool q_cbormap_contains2(void* self, const char* key);
+bool q_cbormap_contains3(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#contains)
 ///
 /// ``` QCborMap* self, QCborValue* key ```
-bool q_cbormap_contains3(void* self, void* key);
+bool q_cbormap_contains4(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#compare)
 ///

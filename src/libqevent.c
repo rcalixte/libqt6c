@@ -3571,12 +3571,12 @@ void q_dragmoveevent_ignore(void* self) {
     QDragMoveEvent_Ignore((QDragMoveEvent*)self);
 }
 
-void q_dragmoveevent_accept_with_q_rect(void* self, void* r) {
-    QDragMoveEvent_AcceptWithQRect((QDragMoveEvent*)self, (QRect*)r);
+void q_dragmoveevent_accept2(void* self, void* r) {
+    QDragMoveEvent_Accept2((QDragMoveEvent*)self, (QRect*)r);
 }
 
-void q_dragmoveevent_ignore_with_q_rect(void* self, void* r) {
-    QDragMoveEvent_IgnoreWithQRect((QDragMoveEvent*)self, (QRect*)r);
+void q_dragmoveevent_ignore2(void* self, void* r) {
+    QDragMoveEvent_Ignore2((QDragMoveEvent*)self, (QRect*)r);
 }
 
 QPoint* q_dragmoveevent_pos(void* self) {
@@ -3711,12 +3711,12 @@ void q_dragenterevent_ignore(void* self) {
     QDragMoveEvent_Ignore((QDragMoveEvent*)self);
 }
 
-void q_dragenterevent_accept_with_q_rect(void* self, void* r) {
-    QDragMoveEvent_AcceptWithQRect((QDragMoveEvent*)self, (QRect*)r);
+void q_dragenterevent_accept2(void* self, void* r) {
+    QDragMoveEvent_Accept2((QDragMoveEvent*)self, (QRect*)r);
 }
 
-void q_dragenterevent_ignore_with_q_rect(void* self, void* r) {
-    QDragMoveEvent_IgnoreWithQRect((QDragMoveEvent*)self, (QRect*)r);
+void q_dragenterevent_ignore2(void* self, void* r) {
+    QDragMoveEvent_Ignore2((QDragMoveEvent*)self, (QRect*)r);
 }
 
 QPoint* q_dragenterevent_pos(void* self) {

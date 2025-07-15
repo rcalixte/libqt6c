@@ -180,16 +180,16 @@ int32_t q_graphicsgridlayout_qbase_count(void* self) {
     return QGraphicsGridLayout_QBaseCount((QGraphicsGridLayout*)self);
 }
 
-QGraphicsLayoutItem* q_graphicsgridlayout_item_at_with_index(void* self, int index) {
-    return QGraphicsGridLayout_ItemAtWithIndex((QGraphicsGridLayout*)self, index);
+QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(void* self, int index) {
+    return QGraphicsGridLayout_ItemAt2((QGraphicsGridLayout*)self, index);
 }
 
-void q_graphicsgridlayout_on_item_at_with_index(void* self, QGraphicsLayoutItem* (*slot)(void*, int)) {
-    QGraphicsGridLayout_OnItemAtWithIndex((QGraphicsGridLayout*)self, (intptr_t)slot);
+void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*slot)(void*, int)) {
+    QGraphicsGridLayout_OnItemAt2((QGraphicsGridLayout*)self, (intptr_t)slot);
 }
 
-QGraphicsLayoutItem* q_graphicsgridlayout_qbase_item_at_with_index(void* self, int index) {
-    return QGraphicsGridLayout_QBaseItemAtWithIndex((QGraphicsGridLayout*)self, index);
+QGraphicsLayoutItem* q_graphicsgridlayout_qbase_item_at2(void* self, int index) {
+    return QGraphicsGridLayout_QBaseItemAt2((QGraphicsGridLayout*)self, index);
 }
 
 void q_graphicsgridlayout_remove_at(void* self, int index) {

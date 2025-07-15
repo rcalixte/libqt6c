@@ -294,28 +294,28 @@ void q_proxystyle_qbase_polish(void* self, void* widget) {
     QProxyStyle_QBasePolish((QProxyStyle*)self, (QWidget*)widget);
 }
 
-void q_proxystyle_polish_with_pal(void* self, void* pal) {
-    QProxyStyle_PolishWithPal((QProxyStyle*)self, (QPalette*)pal);
+void q_proxystyle_polish2(void* self, void* pal) {
+    QProxyStyle_Polish2((QProxyStyle*)self, (QPalette*)pal);
 }
 
-void q_proxystyle_on_polish_with_pal(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnPolishWithPal((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_polish2(void* self, void (*slot)(void*, void*)) {
+    QProxyStyle_OnPolish2((QProxyStyle*)self, (intptr_t)slot);
 }
 
-void q_proxystyle_qbase_polish_with_pal(void* self, void* pal) {
-    QProxyStyle_QBasePolishWithPal((QProxyStyle*)self, (QPalette*)pal);
+void q_proxystyle_qbase_polish2(void* self, void* pal) {
+    QProxyStyle_QBasePolish2((QProxyStyle*)self, (QPalette*)pal);
 }
 
-void q_proxystyle_polish_with_app(void* self, void* app) {
-    QProxyStyle_PolishWithApp((QProxyStyle*)self, (QApplication*)app);
+void q_proxystyle_polish3(void* self, void* app) {
+    QProxyStyle_Polish3((QProxyStyle*)self, (QApplication*)app);
 }
 
-void q_proxystyle_on_polish_with_app(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnPolishWithApp((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_polish3(void* self, void (*slot)(void*, void*)) {
+    QProxyStyle_OnPolish3((QProxyStyle*)self, (intptr_t)slot);
 }
 
-void q_proxystyle_qbase_polish_with_app(void* self, void* app) {
-    QProxyStyle_QBasePolishWithApp((QProxyStyle*)self, (QApplication*)app);
+void q_proxystyle_qbase_polish3(void* self, void* app) {
+    QProxyStyle_QBasePolish3((QProxyStyle*)self, (QApplication*)app);
 }
 
 void q_proxystyle_unpolish(void* self, void* widget) {
@@ -330,16 +330,16 @@ void q_proxystyle_qbase_unpolish(void* self, void* widget) {
     QProxyStyle_QBaseUnpolish((QProxyStyle*)self, (QWidget*)widget);
 }
 
-void q_proxystyle_unpolish_with_app(void* self, void* app) {
-    QProxyStyle_UnpolishWithApp((QProxyStyle*)self, (QApplication*)app);
+void q_proxystyle_unpolish2(void* self, void* app) {
+    QProxyStyle_Unpolish2((QProxyStyle*)self, (QApplication*)app);
 }
 
-void q_proxystyle_on_unpolish_with_app(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnUnpolishWithApp((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_unpolish2(void* self, void (*slot)(void*, void*)) {
+    QProxyStyle_OnUnpolish2((QProxyStyle*)self, (intptr_t)slot);
 }
 
-void q_proxystyle_qbase_unpolish_with_app(void* self, void* app) {
-    QProxyStyle_QBaseUnpolishWithApp((QProxyStyle*)self, (QApplication*)app);
+void q_proxystyle_qbase_unpolish2(void* self, void* app) {
+    QProxyStyle_QBaseUnpolish2((QProxyStyle*)self, (QApplication*)app);
 }
 
 bool q_proxystyle_event(void* self, void* e) {
@@ -368,59 +368,11 @@ const char* q_proxystyle_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_proxystyle_polish_with_widget(void* self, void* widget) {
-    QCommonStyle_PolishWithWidget((QCommonStyle*)self, (QWidget*)widget);
-}
-
-void q_proxystyle_on_polish_with_widget(void* self, void (*slot)(void*, void*)) {
-    QCommonStyle_OnPolishWithWidget((QCommonStyle*)self, (intptr_t)slot);
-}
-
-void q_proxystyle_qbase_polish_with_widget(void* self, void* widget) {
-    QCommonStyle_QBasePolishWithWidget((QCommonStyle*)self, (QWidget*)widget);
-}
-
-void q_proxystyle_unpolish_with_application(void* self, void* application) {
-    QCommonStyle_UnpolishWithApplication((QCommonStyle*)self, (QApplication*)application);
-}
-
-void q_proxystyle_on_unpolish_with_application(void* self, void (*slot)(void*, void*)) {
-    QCommonStyle_OnUnpolishWithApplication((QCommonStyle*)self, (intptr_t)slot);
-}
-
-void q_proxystyle_qbase_unpolish_with_application(void* self, void* application) {
-    QCommonStyle_QBaseUnpolishWithApplication((QCommonStyle*)self, (QApplication*)application);
-}
-
 const char* q_proxystyle_name(void* self) {
     libqt_string _str = QStyle_Name((QStyle*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
-}
-
-void q_proxystyle_polish_with_application(void* self, void* application) {
-    QStyle_PolishWithApplication((QStyle*)self, (QApplication*)application);
-}
-
-void q_proxystyle_on_polish_with_application(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolishWithApplication((QStyle*)self, (intptr_t)slot);
-}
-
-void q_proxystyle_qbase_polish_with_application(void* self, void* application) {
-    QStyle_QBasePolishWithApplication((QStyle*)self, (QApplication*)application);
-}
-
-void q_proxystyle_polish_with_palette(void* self, void* palette) {
-    QStyle_PolishWithPalette((QStyle*)self, (QPalette*)palette);
-}
-
-void q_proxystyle_on_polish_with_palette(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolishWithPalette((QStyle*)self, (intptr_t)slot);
-}
-
-void q_proxystyle_qbase_polish_with_palette(void* self, void* palette) {
-    QStyle_QBasePolishWithPalette((QStyle*)self, (QPalette*)palette);
 }
 
 QRect* q_proxystyle_visual_rect(int64_t direction, void* boundingRect, void* logicalRect) {
@@ -518,8 +470,8 @@ void q_proxystyle_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_proxystyle_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_proxystyle_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_proxystyle_children(void* self) {
@@ -551,8 +503,8 @@ bool q_proxystyle_disconnect(void* sender, void* signal, void* receiver, void* m
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_proxystyle_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_proxystyle_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_proxystyle_dump_object_tree(void* self) {
@@ -618,8 +570,8 @@ bool q_proxystyle_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_proxystyle_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_proxystyle_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

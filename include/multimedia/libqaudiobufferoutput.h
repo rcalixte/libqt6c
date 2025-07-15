@@ -167,7 +167,7 @@ void q_audiobufferoutput_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QAudioBufferOutput* self, enum Qt__TimerId id ```
-void q_audiobufferoutput_kill_timer_with_id(void* self, int64_t id);
+void q_audiobufferoutput_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -223,7 +223,7 @@ bool q_audiobufferoutput_disconnect(void* sender, void* signal, void* receiver, 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_audiobufferoutput_disconnect_with_q_meta_object_connection(void* param1);
+bool q_audiobufferoutput_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -321,7 +321,7 @@ bool q_audiobufferoutput_move_to_thread2(void* self, void* thread, void* param2)
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QAudioBufferOutput* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_audiobufferoutput_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_audiobufferoutput_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

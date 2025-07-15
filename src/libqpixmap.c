@@ -140,8 +140,8 @@ QPixmap* q_pixmap_scaled(void* self, int w, int h) {
     return QPixmap_Scaled((QPixmap*)self, w, h);
 }
 
-QPixmap* q_pixmap_scaled_with_q_size(void* self, void* s) {
-    return QPixmap_ScaledWithQSize((QPixmap*)self, (QSize*)s);
+QPixmap* q_pixmap_scaled2(void* self, void* s) {
+    return QPixmap_Scaled2((QPixmap*)self, (QSize*)s);
 }
 
 QPixmap* q_pixmap_scaled_to_width(void* self, int w) {
@@ -180,16 +180,16 @@ bool q_pixmap_load_from_data(void* self, unsigned char* buf, uint32_t lenVal) {
     return QPixmap_LoadFromData((QPixmap*)self, buf, lenVal);
 }
 
-bool q_pixmap_load_from_data_with_data(void* self, const char* data) {
-    return QPixmap_LoadFromDataWithData((QPixmap*)self, qstring(data));
+bool q_pixmap_load_from_data2(void* self, const char* data) {
+    return QPixmap_LoadFromData2((QPixmap*)self, qstring(data));
 }
 
 bool q_pixmap_save(void* self, const char* fileName) {
     return QPixmap_Save((QPixmap*)self, qstring(fileName));
 }
 
-bool q_pixmap_save_with_device(void* self, void* device) {
-    return QPixmap_SaveWithDevice((QPixmap*)self, (QIODevice*)device);
+bool q_pixmap_save2(void* self, void* device) {
+    return QPixmap_Save2((QPixmap*)self, (QIODevice*)device);
 }
 
 bool q_pixmap_convert_from_image(void* self, void* img) {
@@ -276,8 +276,8 @@ QPixmap* q_pixmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t 
     return QPixmap_Scaled4((QPixmap*)self, w, h, aspectMode, mode);
 }
 
-QPixmap* q_pixmap_scaled2(void* self, void* s, int64_t aspectMode) {
-    return QPixmap_Scaled2((QPixmap*)self, (QSize*)s, aspectMode);
+QPixmap* q_pixmap_scaled22(void* self, void* s, int64_t aspectMode) {
+    return QPixmap_Scaled22((QPixmap*)self, (QSize*)s, aspectMode);
 }
 
 QPixmap* q_pixmap_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode) {
@@ -320,24 +320,24 @@ bool q_pixmap_load_from_data4(void* self, unsigned char* buf, uint32_t lenVal, c
     return QPixmap_LoadFromData4((QPixmap*)self, buf, lenVal, format, flags);
 }
 
-bool q_pixmap_load_from_data2(void* self, const char* data, const char* format) {
-    return QPixmap_LoadFromData2((QPixmap*)self, qstring(data), format);
+bool q_pixmap_load_from_data22(void* self, const char* data, const char* format) {
+    return QPixmap_LoadFromData22((QPixmap*)self, qstring(data), format);
 }
 
 bool q_pixmap_load_from_data32(void* self, const char* data, const char* format, int64_t flags) {
     return QPixmap_LoadFromData32((QPixmap*)self, qstring(data), format, flags);
 }
 
-bool q_pixmap_save2(void* self, const char* fileName, const char* format) {
-    return QPixmap_Save2((QPixmap*)self, qstring(fileName), format);
+bool q_pixmap_save22(void* self, const char* fileName, const char* format) {
+    return QPixmap_Save22((QPixmap*)self, qstring(fileName), format);
 }
 
 bool q_pixmap_save3(void* self, const char* fileName, const char* format, int quality) {
     return QPixmap_Save3((QPixmap*)self, qstring(fileName), format, quality);
 }
 
-bool q_pixmap_save22(void* self, void* device, const char* format) {
-    return QPixmap_Save22((QPixmap*)self, (QIODevice*)device, format);
+bool q_pixmap_save23(void* self, void* device, const char* format) {
+    return QPixmap_Save23((QPixmap*)self, (QIODevice*)device, format);
 }
 
 bool q_pixmap_save32(void* self, void* device, const char* format, int quality) {

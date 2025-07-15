@@ -102,7 +102,7 @@ QModelIndex* q_filesystemmodel_qbase_index(void* self, int row, int column, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
 ///
 /// ``` QFileSystemModel* self, const char* path ```
-QModelIndex* q_filesystemmodel_index_with_path(void* self, const char* path);
+QModelIndex* q_filesystemmodel_index2(void* self, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#parent)
 ///
@@ -643,7 +643,7 @@ const char* q_filesystemmodel_tr3(const char* s, const char* c, int n);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#index)
 ///
 /// ``` QFileSystemModel* self, const char* path, int column ```
-QModelIndex* q_filesystemmodel_index2(void* self, const char* path, int column);
+QModelIndex* q_filesystemmodel_index22(void* self, const char* path, int column);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#myComputer)
 ///
@@ -961,7 +961,7 @@ void q_filesystemmodel_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QFileSystemModel* self, enum Qt__TimerId id ```
-void q_filesystemmodel_kill_timer_with_id(void* self, int64_t id);
+void q_filesystemmodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1017,7 +1017,7 @@ bool q_filesystemmodel_disconnect(void* sender, void* signal, void* receiver, vo
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_filesystemmodel_disconnect_with_q_meta_object_connection(void* param1);
+bool q_filesystemmodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1108,7 +1108,7 @@ bool q_filesystemmodel_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QFileSystemModel* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_filesystemmodel_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_filesystemmodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

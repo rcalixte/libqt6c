@@ -429,40 +429,40 @@ void q_proxystyle_qbase_polish(void* self, void* widget);
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// ``` QProxyStyle* self, QPalette* pal ```
-void q_proxystyle_polish_with_pal(void* self, void* pal);
+void q_proxystyle_polish2(void* self, void* pal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QPalette*) ```
-void q_proxystyle_on_polish_with_pal(void* self, void (*slot)(void*, void*));
+void q_proxystyle_on_polish2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QPalette* pal ```
-void q_proxystyle_qbase_polish_with_pal(void* self, void* pal);
+void q_proxystyle_qbase_polish2(void* self, void* pal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// ``` QProxyStyle* self, QApplication* app ```
-void q_proxystyle_polish_with_app(void* self, void* app);
+void q_proxystyle_polish3(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QApplication*) ```
-void q_proxystyle_on_polish_with_app(void* self, void (*slot)(void*, void*));
+void q_proxystyle_on_polish3(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QApplication* app ```
-void q_proxystyle_qbase_polish_with_app(void* self, void* app);
+void q_proxystyle_qbase_polish3(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
@@ -486,21 +486,21 @@ void q_proxystyle_qbase_unpolish(void* self, void* widget);
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// ``` QProxyStyle* self, QApplication* app ```
-void q_proxystyle_unpolish_with_app(void* self, void* app);
+void q_proxystyle_unpolish2(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QProxyStyle* self, void (*slot)(QProxyStyle*, QApplication*) ```
-void q_proxystyle_on_unpolish_with_app(void* self, void (*slot)(void*, void*));
+void q_proxystyle_on_unpolish2(void* self, void (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// Base class method implementation
 ///
 /// ``` QProxyStyle* self, QApplication* app ```
-void q_proxystyle_qbase_unpolish_with_app(void* self, void* app);
+void q_proxystyle_qbase_unpolish2(void* self, void* app);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#event)
 ///
@@ -531,112 +531,12 @@ const char* q_proxystyle_tr2(const char* s, const char* c);
 /// ``` const char* s, const char* c, int n ```
 const char* q_proxystyle_tr3(const char* s, const char* c, int n);
 
-/// Inherited from QCommonStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
-///
-/// ``` QProxyStyle* self, QWidget* widget ```
-void q_proxystyle_polish_with_widget(void* self, void* widget);
-
-/// Inherited from QCommonStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QWidget*) ```
-void q_proxystyle_on_polish_with_widget(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QCommonStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#polish)
-///
-/// Base class method implementation
-///
-/// ``` QProxyStyle* self, QWidget* widget ```
-void q_proxystyle_qbase_polish_with_widget(void* self, void* widget);
-
-/// Inherited from QCommonStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
-///
-/// ``` QProxyStyle* self, QApplication* application ```
-void q_proxystyle_unpolish_with_application(void* self, void* application);
-
-/// Inherited from QCommonStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QCommonStyle* self, void (*slot)(QCommonStyle*, QApplication*) ```
-void q_proxystyle_on_unpolish_with_application(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QCommonStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommonstyle.html#unpolish)
-///
-/// Base class method implementation
-///
-/// ``` QProxyStyle* self, QApplication* application ```
-void q_proxystyle_qbase_unpolish_with_application(void* self, void* application);
-
 /// Inherited from QStyle
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#name)
 ///
 /// ``` QProxyStyle* self ```
 const char* q_proxystyle_name(void* self);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// ``` QProxyStyle* self, QApplication* application ```
-void q_proxystyle_polish_with_application(void* self, void* application);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QStyle* self, void (*slot)(QStyle*, QApplication*) ```
-void q_proxystyle_on_polish_with_application(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Base class method implementation
-///
-/// ``` QProxyStyle* self, QApplication* application ```
-void q_proxystyle_qbase_polish_with_application(void* self, void* application);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// ``` QProxyStyle* self, QPalette* palette ```
-void q_proxystyle_polish_with_palette(void* self, void* palette);
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QStyle* self, void (*slot)(QStyle*, QPalette*) ```
-void q_proxystyle_on_polish_with_palette(void* self, void (*slot)(void*, void*));
-
-/// Inherited from QStyle
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#polish)
-///
-/// Base class method implementation
-///
-/// ``` QProxyStyle* self, QPalette* palette ```
-void q_proxystyle_qbase_polish_with_palette(void* self, void* palette);
 
 /// Inherited from QStyle
 ///
@@ -804,7 +704,7 @@ void q_proxystyle_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QProxyStyle* self, enum Qt__TimerId id ```
-void q_proxystyle_kill_timer_with_id(void* self, int64_t id);
+void q_proxystyle_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -860,7 +760,7 @@ bool q_proxystyle_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_proxystyle_disconnect_with_q_meta_object_connection(void* param1);
+bool q_proxystyle_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -958,7 +858,7 @@ bool q_proxystyle_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QProxyStyle* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_proxystyle_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_proxystyle_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

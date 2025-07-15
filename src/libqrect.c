@@ -180,16 +180,16 @@ void q_rect_translate(void* self, int dx, int dy) {
     QRect_Translate((QRect*)self, dx, dy);
 }
 
-void q_rect_translate_with_q_point(void* self, void* p) {
-    QRect_TranslateWithQPoint((QRect*)self, (QPoint*)p);
+void q_rect_translate2(void* self, void* p) {
+    QRect_Translate2((QRect*)self, (QPoint*)p);
 }
 
 QRect* q_rect_translated(void* self, int dx, int dy) {
     return QRect_Translated((QRect*)self, dx, dy);
 }
 
-QRect* q_rect_translated_with_q_point(void* self, void* p) {
-    return QRect_TranslatedWithQPoint((QRect*)self, (QPoint*)p);
+QRect* q_rect_translated2(void* self, void* p) {
+    return QRect_Translated2((QRect*)self, (QPoint*)p);
 }
 
 QRect* q_rect_transposed(void* self) {
@@ -200,8 +200,8 @@ void q_rect_move_to(void* self, int x, int t) {
     QRect_MoveTo((QRect*)self, x, t);
 }
 
-void q_rect_move_to_with_q_point(void* self, void* p) {
-    QRect_MoveToWithQPoint((QRect*)self, (QPoint*)p);
+void q_rect_move_to2(void* self, void* p) {
+    QRect_MoveTo2((QRect*)self, (QPoint*)p);
 }
 
 void q_rect_set_rect(void* self, int x, int y, int w, int h) {
@@ -272,16 +272,16 @@ bool q_rect_contains(void* self, void* r) {
     return QRect_Contains((QRect*)self, (QRect*)r);
 }
 
-bool q_rect_contains_with_q_point(void* self, void* p) {
-    return QRect_ContainsWithQPoint((QRect*)self, (QPoint*)p);
+bool q_rect_contains2(void* self, void* p) {
+    return QRect_Contains2((QRect*)self, (QPoint*)p);
 }
 
-bool q_rect_contains2(void* self, int x, int y) {
-    return QRect_Contains2((QRect*)self, x, y);
+bool q_rect_contains3(void* self, int x, int y) {
+    return QRect_Contains3((QRect*)self, x, y);
 }
 
-bool q_rect_contains3(void* self, int x, int y, bool proper) {
-    return QRect_Contains3((QRect*)self, x, y, proper);
+bool q_rect_contains4(void* self, int x, int y, bool proper) {
+    return QRect_Contains4((QRect*)self, x, y, proper);
 }
 
 QRect* q_rect_united(void* self, void* other) {
@@ -512,16 +512,16 @@ void q_rectf_translate(void* self, double dx, double dy) {
     QRectF_Translate((QRectF*)self, dx, dy);
 }
 
-void q_rectf_translate_with_q_point_f(void* self, void* p) {
-    QRectF_TranslateWithQPointF((QRectF*)self, (QPointF*)p);
+void q_rectf_translate2(void* self, void* p) {
+    QRectF_Translate2((QRectF*)self, (QPointF*)p);
 }
 
 QRectF* q_rectf_translated(void* self, double dx, double dy) {
     return QRectF_Translated((QRectF*)self, dx, dy);
 }
 
-QRectF* q_rectf_translated_with_q_point_f(void* self, void* p) {
-    return QRectF_TranslatedWithQPointF((QRectF*)self, (QPointF*)p);
+QRectF* q_rectf_translated2(void* self, void* p) {
+    return QRectF_Translated2((QRectF*)self, (QPointF*)p);
 }
 
 QRectF* q_rectf_transposed(void* self) {
@@ -532,8 +532,8 @@ void q_rectf_move_to(void* self, double x, double y) {
     QRectF_MoveTo((QRectF*)self, x, y);
 }
 
-void q_rectf_move_to_with_q_point_f(void* self, void* p) {
-    QRectF_MoveToWithQPointF((QRectF*)self, (QPointF*)p);
+void q_rectf_move_to2(void* self, void* p) {
+    QRectF_MoveTo2((QRectF*)self, (QPointF*)p);
 }
 
 void q_rectf_set_rect(void* self, double x, double y, double w, double h) {
@@ -604,12 +604,12 @@ bool q_rectf_contains(void* self, void* r) {
     return QRectF_Contains((QRectF*)self, (QRectF*)r);
 }
 
-bool q_rectf_contains_with_q_point_f(void* self, void* p) {
-    return QRectF_ContainsWithQPointF((QRectF*)self, (QPointF*)p);
+bool q_rectf_contains2(void* self, void* p) {
+    return QRectF_Contains2((QRectF*)self, (QPointF*)p);
 }
 
-bool q_rectf_contains2(void* self, double x, double y) {
-    return QRectF_Contains2((QRectF*)self, x, y);
+bool q_rectf_contains3(void* self, double x, double y) {
+    return QRectF_Contains3((QRectF*)self, x, y);
 }
 
 QRectF* q_rectf_united(void* self, void* other) {

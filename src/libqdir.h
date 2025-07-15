@@ -187,7 +187,7 @@ const char** q_dir_entry_list(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
 /// ``` QDir* self, const char* nameFilters[] ```
-const char** q_dir_entry_list_with_name_filters(void* self, const char* nameFilters[]);
+const char** q_dir_entry_list2(void* self, const char* nameFilters[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
@@ -197,7 +197,7 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
 /// ``` QDir* self, const char* nameFilters[] ```
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list_with_name_filters(void* self, const char* nameFilters[]);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkdir)
 ///
@@ -282,7 +282,7 @@ bool q_dir_rename(void* self, const char* oldName, const char* newName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#exists)
 ///
 /// ``` QDir* self, const char* name ```
-bool q_dir_exists_with_name(void* self, const char* name);
+bool q_dir_exists2(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#drives)
 ///
@@ -382,12 +382,12 @@ const char** q_dir_entry_list1(void* self, int64_t filters);
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
 /// ``` QDir* self, int filters, int sort ```
-const char** q_dir_entry_list2(void* self, int64_t filters, int64_t sort);
+const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
 /// ``` QDir* self, const char* nameFilters[], int filters ```
-const char** q_dir_entry_list22(void* self, const char* nameFilters[], int64_t filters);
+const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
@@ -402,12 +402,12 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(void* self, int64_t filter
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
 /// ``` QDir* self, int filters, int sort ```
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, int64_t filters, int64_t sort);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int64_t filters, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
 /// ``` QDir* self, const char* nameFilters[], int filters ```
-libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, const char* nameFilters[], int64_t filters);
+libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///

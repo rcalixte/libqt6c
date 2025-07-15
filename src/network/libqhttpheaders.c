@@ -55,8 +55,8 @@ bool q_httpheaders_contains(void* self, char* name) {
     return QHttpHeaders_Contains((QHttpHeaders*)self, name);
 }
 
-bool q_httpheaders_contains_with_name(void* self, int64_t name) {
-    return QHttpHeaders_ContainsWithName((QHttpHeaders*)self, name);
+bool q_httpheaders_contains2(void* self, int64_t name) {
+    return QHttpHeaders_Contains2((QHttpHeaders*)self, name);
 }
 
 void q_httpheaders_clear(void* self) {
@@ -67,8 +67,8 @@ void q_httpheaders_remove_all(void* self, char* name) {
     QHttpHeaders_RemoveAll((QHttpHeaders*)self, name);
 }
 
-void q_httpheaders_remove_all_with_name(void* self, int64_t name) {
-    QHttpHeaders_RemoveAllWithName((QHttpHeaders*)self, name);
+void q_httpheaders_remove_all2(void* self, int64_t name) {
+    QHttpHeaders_RemoveAll2((QHttpHeaders*)self, name);
 }
 
 void q_httpheaders_remove_at(void* self, int64_t i) {
@@ -84,8 +84,8 @@ const char* q_httpheaders_value(void* self, char* name) {
     return _ret.ptr;
 }
 
-const char* q_httpheaders_value_with_name(void* self, int64_t name) {
-    QByteArrayView* _view = QHttpHeaders_ValueWithName((QHttpHeaders*)self, name);
+const char* q_httpheaders_value2(void* self, int64_t name) {
+    QByteArrayView* _view = QHttpHeaders_Value2((QHttpHeaders*)self, name);
     libqt_strview _ret = {
         .ptr = QByteArrayView_Data(_view),
         .len = QByteArrayView_Size(_view),
@@ -108,8 +108,8 @@ const char** q_httpheaders_values(void* self, char* name) {
     return _ret;
 }
 
-const char** q_httpheaders_values_with_name(void* self, int64_t name) {
-    libqt_list _arr = QHttpHeaders_ValuesWithName((QHttpHeaders*)self, name);
+const char** q_httpheaders_values2(void* self, int64_t name) {
+    libqt_list _arr = QHttpHeaders_Values2((QHttpHeaders*)self, name);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     for (size_t _i = 0; _i < _arr.len; ++_i) {
@@ -139,8 +139,8 @@ char* q_httpheaders_combined_value(void* self, char* name) {
     return _ret;
 }
 
-char* q_httpheaders_combined_value_with_name(void* self, int64_t name) {
-    libqt_string _str = QHttpHeaders_CombinedValueWithName((QHttpHeaders*)self, name);
+char* q_httpheaders_combined_value2(void* self, int64_t name) {
+    libqt_string _str = QHttpHeaders_CombinedValue2((QHttpHeaders*)self, name);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -176,9 +176,9 @@ libqt_list /* of libqt_pair  tuple of char* and char*  */ q_httpheaders_to_list_
     return _arr;
 }
 
-const char* q_httpheaders_value2(void* self, char* name, const char* defaultValue) {
+const char* q_httpheaders_value22(void* self, char* name, const char* defaultValue) {
     libqt_strview defaultValue_strview = qstrview(defaultValue);
-    QByteArrayView* _view = QHttpHeaders_Value2((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_strview);
+    QByteArrayView* _view = QHttpHeaders_Value22((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_strview);
     libqt_strview _ret = {
         .ptr = QByteArrayView_Data(_view),
         .len = QByteArrayView_Size(_view),
@@ -186,9 +186,9 @@ const char* q_httpheaders_value2(void* self, char* name, const char* defaultValu
     return _ret.ptr;
 }
 
-const char* q_httpheaders_value22(void* self, int64_t name, const char* defaultValue) {
+const char* q_httpheaders_value23(void* self, int64_t name, const char* defaultValue) {
     libqt_strview defaultValue_strview = qstrview(defaultValue);
-    QByteArrayView* _view = QHttpHeaders_Value22((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_strview);
+    QByteArrayView* _view = QHttpHeaders_Value23((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_strview);
     libqt_strview _ret = {
         .ptr = QByteArrayView_Data(_view),
         .len = QByteArrayView_Size(_view),

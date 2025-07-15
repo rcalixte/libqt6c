@@ -78,7 +78,7 @@ bool q_networkinformation_load_backend_by_features(int64_t features);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#load)
 ///
 /// ``` int features ```
-bool q_networkinformation_load_with_features(int64_t features);
+bool q_networkinformation_load2(int64_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#availableBackends)
 ///
@@ -236,7 +236,7 @@ void q_networkinformation_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QNetworkInformation* self, enum Qt__TimerId id ```
-void q_networkinformation_kill_timer_with_id(void* self, int64_t id);
+void q_networkinformation_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -292,7 +292,7 @@ bool q_networkinformation_disconnect(void* sender, void* signal, void* receiver,
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_networkinformation_disconnect_with_q_meta_object_connection(void* param1);
+bool q_networkinformation_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -390,7 +390,7 @@ bool q_networkinformation_move_to_thread2(void* self, void* thread, void* param2
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QNetworkInformation* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_networkinformation_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_networkinformation_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -34,8 +34,8 @@ libqt_list /* of int64_t */ q_fontdatabase_writing_systems() {
     return _arr;
 }
 
-libqt_list /* of int64_t */ q_fontdatabase_writing_systems_with_family(const char* family) {
-    libqt_list _arr = QFontDatabase_WritingSystemsWithFamily(qstring(family));
+libqt_list /* of int64_t */ q_fontdatabase_writing_systems2(const char* family) {
+    libqt_list _arr = QFontDatabase_WritingSystems2(qstring(family));
     return _arr;
 }
 
@@ -86,8 +86,8 @@ const char* q_fontdatabase_style_string(void* font) {
     return _ret;
 }
 
-const char* q_fontdatabase_style_string_with_font_info(void* fontInfo) {
-    libqt_string _str = QFontDatabase_StyleStringWithFontInfo((QFontInfo*)fontInfo);
+const char* q_fontdatabase_style_string2(void* fontInfo) {
+    libqt_string _str = QFontDatabase_StyleString2((QFontInfo*)fontInfo);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

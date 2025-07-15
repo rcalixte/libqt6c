@@ -107,7 +107,7 @@ const char** q_sslcertificate_issuer_info(void* self, int64_t info);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#issuerInfo)
 ///
 /// ``` QSslCertificate* self, const char* attribute ```
-const char** q_sslcertificate_issuer_info_with_attribute(void* self, const char* attribute);
+const char** q_sslcertificate_issuer_info2(void* self, const char* attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfo)
 ///
@@ -117,7 +117,7 @@ const char** q_sslcertificate_subject_info(void* self, int64_t info);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfo)
 ///
 /// ``` QSslCertificate* self, const char* attribute ```
-const char** q_sslcertificate_subject_info_with_attribute(void* self, const char* attribute);
+const char** q_sslcertificate_subject_info2(void* self, const char* attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#issuerDisplayName)
 ///

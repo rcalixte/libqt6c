@@ -59,8 +59,8 @@ void q_svggenerator_set_view_box(void* self, void* viewBox) {
     QSvgGenerator_SetViewBox((QSvgGenerator*)self, (QRect*)viewBox);
 }
 
-void q_svggenerator_set_view_box_with_view_box(void* self, void* viewBox) {
-    QSvgGenerator_SetViewBoxWithViewBox((QSvgGenerator*)self, (QRectF*)viewBox);
+void q_svggenerator_set_view_box2(void* self, void* viewBox) {
+    QSvgGenerator_SetViewBox2((QSvgGenerator*)self, (QRectF*)viewBox);
 }
 
 const char* q_svggenerator_file_name(void* self) {

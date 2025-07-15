@@ -132,7 +132,7 @@ unsigned char* q_videoframe_bits(void* self, int plane);
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#bits)
 ///
 /// ``` QVideoFrame* self, int plane ```
-const unsigned char* q_videoframe_bits_with_plane(void* self, int plane);
+const unsigned char* q_videoframe_bits2(void* self, int plane);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#mappedBytes)
 ///

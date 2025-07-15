@@ -171,12 +171,12 @@ void q_formlayout_add_row4(void* self, const char* labelText, void* field);
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#addRow)
 ///
 /// ``` QFormLayout* self, QWidget* widget ```
-void q_formlayout_add_row_with_widget(void* self, void* widget);
+void q_formlayout_add_row5(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#addRow)
 ///
 /// ``` QFormLayout* self, QLayout* layout ```
-void q_formlayout_add_row_with_layout(void* self, void* layout);
+void q_formlayout_add_row6(void* self, void* layout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#insertRow)
 ///
@@ -216,12 +216,12 @@ void q_formlayout_remove_row(void* self, int row);
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#removeRow)
 ///
 /// ``` QFormLayout* self, QWidget* widget ```
-void q_formlayout_remove_row_with_widget(void* self, void* widget);
+void q_formlayout_remove_row2(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#removeRow)
 ///
 /// ``` QFormLayout* self, QLayout* layout ```
-void q_formlayout_remove_row_with_layout(void* self, void* layout);
+void q_formlayout_remove_row3(void* self, void* layout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeRow)
 ///
@@ -231,12 +231,12 @@ QFormLayout__TakeRowResult* q_formlayout_take_row(void* self, int row);
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeRow)
 ///
 /// ``` QFormLayout* self, QWidget* widget ```
-QFormLayout__TakeRowResult* q_formlayout_take_row_with_widget(void* self, void* widget);
+QFormLayout__TakeRowResult* q_formlayout_take_row2(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeRow)
 ///
 /// ``` QFormLayout* self, QLayout* layout ```
-QFormLayout__TakeRowResult* q_formlayout_take_row_with_layout(void* self, void* layout);
+QFormLayout__TakeRowResult* q_formlayout_take_row3(void* self, void* layout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#setItem)
 ///
@@ -276,12 +276,12 @@ bool q_formlayout_is_row_visible(void* self, int row);
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#isRowVisible)
 ///
 /// ``` QFormLayout* self, QWidget* widget ```
-bool q_formlayout_is_row_visible_with_widget(void* self, void* widget);
+bool q_formlayout_is_row_visible2(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#isRowVisible)
 ///
 /// ``` QFormLayout* self, QLayout* layout ```
-bool q_formlayout_is_row_visible_with_layout(void* self, void* layout);
+bool q_formlayout_is_row_visible3(void* self, void* layout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
 ///
@@ -296,7 +296,7 @@ QWidget* q_formlayout_label_for_field(void* self, void* field);
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#labelForField)
 ///
 /// ``` QFormLayout* self, QLayout* field ```
-QWidget* q_formlayout_label_for_field_with_field(void* self, void* field);
+QWidget* q_formlayout_label_for_field2(void* self, void* field);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#addItem)
 ///
@@ -320,21 +320,21 @@ void q_formlayout_qbase_add_item(void* self, void* item);
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
 ///
 /// ``` QFormLayout* self, int index ```
-QLayoutItem* q_formlayout_item_at_with_index(void* self, int index);
+QLayoutItem* q_formlayout_item_at2(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QFormLayout* self, QLayoutItem* (*slot)(QFormLayout*, int) ```
-void q_formlayout_on_item_at_with_index(void* self, QLayoutItem* (*slot)(void*, int));
+void q_formlayout_on_item_at2(void* self, QLayoutItem* (*slot)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#itemAt)
 ///
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, int index ```
-QLayoutItem* q_formlayout_qbase_item_at_with_index(void* self, int index);
+QLayoutItem* q_formlayout_qbase_item_at2(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#takeAt)
 ///
@@ -534,7 +534,7 @@ void q_formlayout_set_contents_margins(void* self, int left, int top, int right,
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setContentsMargins)
 ///
 /// ``` QFormLayout* self, QMargins* margins ```
-void q_formlayout_set_contents_margins_with_margins(void* self, void* margins);
+void q_formlayout_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QLayout
 ///
@@ -653,7 +653,7 @@ void q_formlayout_remove_item(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#indexOf)
 ///
 /// ``` QFormLayout* self, QLayoutItem* param1 ```
-int32_t q_formlayout_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_formlayout_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -662,7 +662,7 @@ int32_t q_formlayout_index_of_with_q_layout_item(void* self, void* param1);
 /// Allows for overriding the related default method
 ///
 /// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
-void q_formlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(void*, void*));
+void q_formlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
 ///
@@ -671,7 +671,7 @@ void q_formlayout_on_index_of_with_q_layout_item(void* self, int32_t (*slot)(voi
 /// Base class method implementation
 ///
 /// ``` QFormLayout* self, QLayoutItem* param1 ```
-int32_t q_formlayout_qbase_index_of_with_q_layout_item(void* self, void* param1);
+int32_t q_formlayout_qbase_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -811,7 +811,7 @@ void q_formlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QFormLayout* self, enum Qt__TimerId id ```
-void q_formlayout_kill_timer_with_id(void* self, int64_t id);
+void q_formlayout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -867,7 +867,7 @@ bool q_formlayout_disconnect(void* sender, void* signal, void* receiver, void* m
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_formlayout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_formlayout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -965,7 +965,7 @@ bool q_formlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QFormLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_formlayout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_formlayout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

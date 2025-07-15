@@ -62,7 +62,7 @@ bool q_pixmapcache_insert(const char* key, void* pixmap);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache.html#insert)
 ///
 /// ``` QPixmap* pixmap ```
-QPixmapCache__Key* q_pixmapcache_insert_with_pixmap(void* pixmap);
+QPixmapCache__Key* q_pixmapcache_insert2(void* pixmap);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache.html#replace)
 ///
@@ -77,7 +77,7 @@ void q_pixmapcache_remove(const char* key);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache.html#remove)
 ///
 /// ``` QPixmapCache__Key* key ```
-void q_pixmapcache_remove_with_key(void* key);
+void q_pixmapcache_remove2(void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache.html#clear)
 ///

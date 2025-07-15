@@ -73,12 +73,12 @@ QMargins* q_margins_operator_minus_assign(void* self, void* margins) {
     return QMargins_OperatorMinusAssign((QMargins*)self, (QMargins*)margins);
 }
 
-QMargins* q_margins_operator_plus_assign_with_int(void* self, int param1) {
-    return QMargins_OperatorPlusAssignWithInt((QMargins*)self, param1);
+QMargins* q_margins_operator_plus_assign2(void* self, int param1) {
+    return QMargins_OperatorPlusAssign2((QMargins*)self, param1);
 }
 
-QMargins* q_margins_operator_minus_assign_with_int(void* self, int param1) {
-    return QMargins_OperatorMinusAssignWithInt((QMargins*)self, param1);
+QMargins* q_margins_operator_minus_assign2(void* self, int param1) {
+    return QMargins_OperatorMinusAssign2((QMargins*)self, param1);
 }
 
 QMargins* q_margins_operator_multiply_assign(void* self, int param1) {
@@ -89,12 +89,12 @@ QMargins* q_margins_operator_divide_assign(void* self, int param1) {
     return QMargins_OperatorDivideAssign((QMargins*)self, param1);
 }
 
-QMargins* q_margins_operator_multiply_assign_with_double(void* self, double param1) {
-    return QMargins_OperatorMultiplyAssignWithDouble((QMargins*)self, param1);
+QMargins* q_margins_operator_multiply_assign2(void* self, double param1) {
+    return QMargins_OperatorMultiplyAssign2((QMargins*)self, param1);
 }
 
-QMargins* q_margins_operator_divide_assign_with_double(void* self, double param1) {
-    return QMargins_OperatorDivideAssignWithDouble((QMargins*)self, param1);
+QMargins* q_margins_operator_divide_assign2(void* self, double param1) {
+    return QMargins_OperatorDivideAssign2((QMargins*)self, param1);
 }
 
 QMarginsF* q_margins_to_margins_f(void* self) {
@@ -181,12 +181,12 @@ QMarginsF* q_marginsf_operator_minus_assign(void* self, void* margins) {
     return QMarginsF_OperatorMinusAssign((QMarginsF*)self, (QMarginsF*)margins);
 }
 
-QMarginsF* q_marginsf_operator_plus_assign_with_addend(void* self, double addend) {
-    return QMarginsF_OperatorPlusAssignWithAddend((QMarginsF*)self, addend);
+QMarginsF* q_marginsf_operator_plus_assign2(void* self, double addend) {
+    return QMarginsF_OperatorPlusAssign2((QMarginsF*)self, addend);
 }
 
-QMarginsF* q_marginsf_operator_minus_assign_with_subtrahend(void* self, double subtrahend) {
-    return QMarginsF_OperatorMinusAssignWithSubtrahend((QMarginsF*)self, subtrahend);
+QMarginsF* q_marginsf_operator_minus_assign2(void* self, double subtrahend) {
+    return QMarginsF_OperatorMinusAssign2((QMarginsF*)self, subtrahend);
 }
 
 QMarginsF* q_marginsf_operator_multiply_assign(void* self, double factor) {

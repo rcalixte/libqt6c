@@ -257,7 +257,7 @@ uint32_t q_color_rgb(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#setRgb)
 ///
 /// ``` QColor* self, uint32_t rgb ```
-void q_color_set_rgb_with_rgb(void* self, uint32_t rgb);
+void q_color_set_rgb2(void* self, uint32_t rgb);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#hue)
 ///
@@ -497,7 +497,7 @@ QColor* q_color_from_rgba64(unsigned short r, unsigned short g, unsigned short b
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#fromRgba64)
 ///
 /// ``` QRgba64* rgba ```
-QColor* q_color_from_rgba64_with_rgba(void* rgba);
+QColor* q_color_from_rgba642(void* rgba);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#fromHsv)
 ///

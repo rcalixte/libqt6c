@@ -265,8 +265,8 @@ void q_scilexercmake_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexercmake_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexercmake_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexercmake_children(void* self) {
@@ -298,8 +298,8 @@ bool q_scilexercmake_disconnect(void* sender, void* signal, void* receiver, void
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexercmake_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexercmake_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexercmake_dump_object_tree(void* self) {
@@ -365,8 +365,8 @@ bool q_scilexercmake_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexercmake_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexercmake_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexercmake_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -587,16 +587,16 @@ void q_scilexercmake_on_paper(void* self, QColor* (*slot)(void*, int)) {
     QsciLexerCMake_OnPaper((QsciLexerCMake*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexercmake_default_color_with_style(void* self, int style) {
-    return QsciLexerCMake_DefaultColorWithStyle((QsciLexerCMake*)self, style);
+QColor* q_scilexercmake_default_color2(void* self, int style) {
+    return QsciLexerCMake_DefaultColor2((QsciLexerCMake*)self, style);
 }
 
-QColor* q_scilexercmake_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexerCMake_QBaseDefaultColorWithStyle((QsciLexerCMake*)self, style);
+QColor* q_scilexercmake_qbase_default_color2(void* self, int style) {
+    return QsciLexerCMake_QBaseDefaultColor2((QsciLexerCMake*)self, style);
 }
 
-void q_scilexercmake_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerCMake_OnDefaultColorWithStyle((QsciLexerCMake*)self, (intptr_t)slot);
+void q_scilexercmake_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerCMake_OnDefaultColor2((QsciLexerCMake*)self, (intptr_t)slot);
 }
 
 bool q_scilexercmake_default_eol_fill(void* self, int style) {
@@ -611,28 +611,28 @@ void q_scilexercmake_on_default_eol_fill(void* self, bool (*slot)(void*, int)) {
     QsciLexerCMake_OnDefaultEolFill((QsciLexerCMake*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexercmake_default_font_with_style(void* self, int style) {
-    return QsciLexerCMake_DefaultFontWithStyle((QsciLexerCMake*)self, style);
+QFont* q_scilexercmake_default_font2(void* self, int style) {
+    return QsciLexerCMake_DefaultFont2((QsciLexerCMake*)self, style);
 }
 
-QFont* q_scilexercmake_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexerCMake_QBaseDefaultFontWithStyle((QsciLexerCMake*)self, style);
+QFont* q_scilexercmake_qbase_default_font2(void* self, int style) {
+    return QsciLexerCMake_QBaseDefaultFont2((QsciLexerCMake*)self, style);
 }
 
-void q_scilexercmake_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerCMake_OnDefaultFontWithStyle((QsciLexerCMake*)self, (intptr_t)slot);
+void q_scilexercmake_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexerCMake_OnDefaultFont2((QsciLexerCMake*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexercmake_default_paper_with_style(void* self, int style) {
-    return QsciLexerCMake_DefaultPaperWithStyle((QsciLexerCMake*)self, style);
+QColor* q_scilexercmake_default_paper2(void* self, int style) {
+    return QsciLexerCMake_DefaultPaper2((QsciLexerCMake*)self, style);
 }
 
-QColor* q_scilexercmake_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexerCMake_QBaseDefaultPaperWithStyle((QsciLexerCMake*)self, style);
+QColor* q_scilexercmake_qbase_default_paper2(void* self, int style) {
+    return QsciLexerCMake_QBaseDefaultPaper2((QsciLexerCMake*)self, style);
 }
 
-void q_scilexercmake_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerCMake_OnDefaultPaperWithStyle((QsciLexerCMake*)self, (intptr_t)slot);
+void q_scilexercmake_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerCMake_OnDefaultPaper2((QsciLexerCMake*)self, (intptr_t)slot);
 }
 
 void q_scilexercmake_set_editor(void* self, void* editor) {

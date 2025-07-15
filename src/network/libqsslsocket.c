@@ -278,8 +278,8 @@ void q_sslsocket_set_local_certificate(void* self, void* certificate) {
     QSslSocket_SetLocalCertificate((QSslSocket*)self, (QSslCertificate*)certificate);
 }
 
-void q_sslsocket_set_local_certificate_with_file_name(void* self, const char* fileName) {
-    QSslSocket_SetLocalCertificateWithFileName((QSslSocket*)self, qstring(fileName));
+void q_sslsocket_set_local_certificate2(void* self, const char* fileName) {
+    QSslSocket_SetLocalCertificate2((QSslSocket*)self, qstring(fileName));
 }
 
 QSslCertificate* q_sslsocket_local_certificate(void* self) {
@@ -312,8 +312,8 @@ void q_sslsocket_set_private_key(void* self, void* key) {
     QSslSocket_SetPrivateKey((QSslSocket*)self, (QSslKey*)key);
 }
 
-void q_sslsocket_set_private_key_with_file_name(void* self, const char* fileName) {
-    QSslSocket_SetPrivateKeyWithFileName((QSslSocket*)self, qstring(fileName));
+void q_sslsocket_set_private_key2(void* self, const char* fileName) {
+    QSslSocket_SetPrivateKey2((QSslSocket*)self, qstring(fileName));
 }
 
 QSslKey* q_sslsocket_private_key(void* self) {
@@ -622,12 +622,12 @@ void q_sslsocket_connect_to_host_encrypted5(void* self, const char* hostName, un
     QSslSocket_ConnectToHostEncrypted5((QSslSocket*)self, qstring(hostName), port, qstring(sslPeerName), mode, protocol);
 }
 
-void q_sslsocket_set_local_certificate2(void* self, const char* fileName, int64_t format) {
-    QSslSocket_SetLocalCertificate2((QSslSocket*)self, qstring(fileName), format);
+void q_sslsocket_set_local_certificate22(void* self, const char* fileName, int64_t format) {
+    QSslSocket_SetLocalCertificate22((QSslSocket*)self, qstring(fileName), format);
 }
 
-void q_sslsocket_set_private_key2(void* self, const char* fileName, int64_t algorithm) {
-    QSslSocket_SetPrivateKey2((QSslSocket*)self, qstring(fileName), algorithm);
+void q_sslsocket_set_private_key22(void* self, const char* fileName, int64_t algorithm) {
+    QSslSocket_SetPrivateKey22((QSslSocket*)self, qstring(fileName), algorithm);
 }
 
 void q_sslsocket_set_private_key3(void* self, const char* fileName, int64_t algorithm, int64_t format) {
@@ -871,8 +871,8 @@ long long q_sslsocket_read(void* self, char* data, long long maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_sslsocket_read_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_ReadWithMaxlen((QIODevice*)self, maxlen);
+char* q_sslsocket_read2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -916,20 +916,20 @@ long long q_sslsocket_write(void* self, const char* data, long long lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_sslsocket_write_with_data(void* self, const char* data) {
-    return QIODevice_WriteWithData((QIODevice*)self, data);
+long long q_sslsocket_write2(void* self, const char* data) {
+    return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_sslsocket_write2(void* self, const char* data) {
-    return QIODevice_Write2((QIODevice*)self, qstring(data));
+long long q_sslsocket_write3(void* self, const char* data) {
+    return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
 long long q_sslsocket_peek(void* self, char* data, long long maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_sslsocket_peek_with_maxlen(void* self, long long maxlen) {
-    libqt_string _str = QIODevice_PeekWithMaxlen((QIODevice*)self, maxlen);
+char* q_sslsocket_peek2(void* self, long long maxlen) {
+    libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1060,8 +1060,8 @@ void q_sslsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_sslsocket_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_sslsocket_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_sslsocket_children(void* self) {
@@ -1093,8 +1093,8 @@ bool q_sslsocket_disconnect(void* sender, void* signal, void* receiver, void* me
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_sslsocket_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_sslsocket_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_sslsocket_dump_object_tree(void* self) {
@@ -1160,8 +1160,8 @@ bool q_sslsocket_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_sslsocket_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_sslsocket_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

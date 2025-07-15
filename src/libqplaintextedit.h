@@ -213,7 +213,7 @@ bool q_plaintextedit_find(void* self, const char* exp);
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#find)
 ///
 /// ``` QPlainTextEdit* self, QRegularExpression* exp ```
-bool q_plaintextedit_find_with_exp(void* self, void* exp);
+bool q_plaintextedit_find2(void* self, void* exp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#toPlainText)
 ///
@@ -252,7 +252,7 @@ QMenu* q_plaintextedit_create_standard_context_menu(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#createStandardContextMenu)
 ///
 /// ``` QPlainTextEdit* self, QPoint* position ```
-QMenu* q_plaintextedit_create_standard_context_menu_with_position(void* self, void* position);
+QMenu* q_plaintextedit_create_standard_context_menu2(void* self, void* position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#cursorForPosition)
 ///
@@ -1158,12 +1158,12 @@ const char* q_plaintextedit_tr3(const char* s, const char* c, int n);
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#find)
 ///
 /// ``` QPlainTextEdit* self, const char* exp, int options ```
-bool q_plaintextedit_find2(void* self, const char* exp, int64_t options);
+bool q_plaintextedit_find22(void* self, const char* exp, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#find)
 ///
 /// ``` QPlainTextEdit* self, QRegularExpression* exp, int options ```
-bool q_plaintextedit_find22(void* self, void* exp, int64_t options);
+bool q_plaintextedit_find23(void* self, void* exp, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#moveCursor)
 ///
@@ -1773,7 +1773,7 @@ QPointF* q_plaintextedit_map_to_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
 /// ``` QPlainTextEdit* self, QPoint* param1 ```
-QPoint* q_plaintextedit_map_to_global_with_q_point(void* self, void* param1);
+QPoint* q_plaintextedit_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1787,7 +1787,7 @@ QPointF* q_plaintextedit_map_from_global(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
 /// ``` QPlainTextEdit* self, QPoint* param1 ```
-QPoint* q_plaintextedit_map_from_global_with_q_point(void* self, void* param1);
+QPoint* q_plaintextedit_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1801,7 +1801,7 @@ QPointF* q_plaintextedit_map_to_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
 /// ``` QPlainTextEdit* self, QPoint* param1 ```
-QPoint* q_plaintextedit_map_to_parent_with_q_point(void* self, void* param1);
+QPoint* q_plaintextedit_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -1815,7 +1815,7 @@ QPointF* q_plaintextedit_map_from_parent(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
 /// ``` QPlainTextEdit* self, QPoint* param1 ```
-QPoint* q_plaintextedit_map_from_parent_with_q_point(void* self, void* param1);
+QPoint* q_plaintextedit_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2004,7 +2004,7 @@ void q_plaintextedit_set_mask(void* self, void* mask);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
 /// ``` QPlainTextEdit* self, QRegion* mask ```
-void q_plaintextedit_set_mask_with_mask(void* self, void* mask);
+void q_plaintextedit_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
@@ -2032,7 +2032,7 @@ void q_plaintextedit_render(void* self, void* target);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QPlainTextEdit* self, QPainter* painter ```
-void q_plaintextedit_render_with_painter(void* self, void* painter);
+void q_plaintextedit_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -2347,7 +2347,7 @@ void q_plaintextedit_clear_focus(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
 /// ``` QPlainTextEdit* self, enum Qt__FocusReason reason ```
-void q_plaintextedit_set_focus_with_reason(void* self, int64_t reason);
+void q_plaintextedit_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2417,7 +2417,7 @@ void q_plaintextedit_grab_mouse(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
 /// ``` QPlainTextEdit* self, QCursor* param1 ```
-void q_plaintextedit_grab_mouse_with_q_cursor(void* self, void* param1);
+void q_plaintextedit_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2529,14 +2529,14 @@ void q_plaintextedit_update2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QPlainTextEdit* self, QRect* param1 ```
-void q_plaintextedit_update_with_q_rect(void* self, void* param1);
+void q_plaintextedit_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
 /// ``` QPlainTextEdit* self, QRegion* param1 ```
-void q_plaintextedit_update_with_q_region(void* self, void* param1);
+void q_plaintextedit_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2550,14 +2550,14 @@ void q_plaintextedit_repaint2(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QPlainTextEdit* self, QRect* param1 ```
-void q_plaintextedit_repaint_with_q_rect(void* self, void* param1);
+void q_plaintextedit_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
 /// ``` QPlainTextEdit* self, QRegion* param1 ```
-void q_plaintextedit_repaint_with_q_region(void* self, void* param1);
+void q_plaintextedit_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2648,7 +2648,7 @@ void q_plaintextedit_move(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
 /// ``` QPlainTextEdit* self, QPoint* param1 ```
-void q_plaintextedit_move_with_q_point(void* self, void* param1);
+void q_plaintextedit_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2662,7 +2662,7 @@ void q_plaintextedit_resize(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
 /// ``` QPlainTextEdit* self, QSize* param1 ```
-void q_plaintextedit_resize_with_q_size(void* self, void* param1);
+void q_plaintextedit_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -2676,7 +2676,7 @@ void q_plaintextedit_set_geometry(void* self, int x, int y, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
 /// ``` QPlainTextEdit* self, QRect* geometry ```
-void q_plaintextedit_set_geometry_with_geometry(void* self, void* geometry);
+void q_plaintextedit_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
@@ -2802,7 +2802,7 @@ void q_plaintextedit_set_contents_margins(void* self, int left, int top, int rig
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
 /// ``` QPlainTextEdit* self, QMargins* margins ```
-void q_plaintextedit_set_contents_margins_with_margins(void* self, void* margins);
+void q_plaintextedit_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
@@ -2949,28 +2949,28 @@ libqt_list /* of QAction* */ q_plaintextedit_actions(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QPlainTextEdit* self, const char* text ```
-QAction* q_plaintextedit_add_action_with_text(void* self, const char* text);
+QAction* q_plaintextedit_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QPlainTextEdit* self, QIcon* icon, const char* text ```
-QAction* q_plaintextedit_add_action2(void* self, void* icon, const char* text);
+QAction* q_plaintextedit_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QPlainTextEdit* self, const char* text, QKeySequence* shortcut ```
-QAction* q_plaintextedit_add_action3(void* self, const char* text, void* shortcut);
+QAction* q_plaintextedit_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
 /// ``` QPlainTextEdit* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
-QAction* q_plaintextedit_add_action4(void* self, void* icon, const char* text, void* shortcut);
+QAction* q_plaintextedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
@@ -3026,14 +3026,14 @@ QWidget* q_plaintextedit_child_at(void* self, int x, int y);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QPlainTextEdit* self, QPoint* p ```
-QWidget* q_plaintextedit_child_at_with_q_point(void* self, void* p);
+QWidget* q_plaintextedit_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
 /// ``` QPlainTextEdit* self, QPointF* p ```
-QWidget* q_plaintextedit_child_at_with_q_point_f(void* self, void* p);
+QWidget* q_plaintextedit_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
@@ -3187,7 +3187,7 @@ void q_plaintextedit_set_input_method_hints(void* self, int64_t hints);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QPlainTextEdit* self, QPaintDevice* target, QPoint* targetOffset ```
-void q_plaintextedit_render2(void* self, void* target, void* targetOffset);
+void q_plaintextedit_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3208,7 +3208,7 @@ void q_plaintextedit_render4(void* self, void* target, void* targetOffset, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
 /// ``` QPlainTextEdit* self, QPainter* painter, QPoint* targetOffset ```
-void q_plaintextedit_render22(void* self, void* painter, void* targetOffset);
+void q_plaintextedit_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
@@ -3369,7 +3369,7 @@ void q_plaintextedit_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QPlainTextEdit* self, enum Qt__TimerId id ```
-void q_plaintextedit_kill_timer_with_id(void* self, int64_t id);
+void q_plaintextedit_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3418,7 +3418,7 @@ bool q_plaintextedit_disconnect(void* sender, void* signal, void* receiver, void
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_plaintextedit_disconnect_with_q_meta_object_connection(void* param1);
+bool q_plaintextedit_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -3516,7 +3516,7 @@ bool q_plaintextedit_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QPlainTextEdit* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_plaintextedit_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_plaintextedit_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -5185,7 +5185,7 @@ void q_plaintextdocumentlayout_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QPlainTextDocumentLayout* self, enum Qt__TimerId id ```
-void q_plaintextdocumentlayout_kill_timer_with_id(void* self, int64_t id);
+void q_plaintextdocumentlayout_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -5241,7 +5241,7 @@ bool q_plaintextdocumentlayout_disconnect(void* sender, void* signal, void* rece
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_plaintextdocumentlayout_disconnect_with_q_meta_object_connection(void* param1);
+bool q_plaintextdocumentlayout_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -5339,7 +5339,7 @@ bool q_plaintextdocumentlayout_move_to_thread2(void* self, void* thread, void* p
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QPlainTextDocumentLayout* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_plaintextdocumentlayout_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_plaintextdocumentlayout_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -47,12 +47,12 @@ uint32_t q_colortransform_map(void* self, uint32_t argb);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolortransform.html#map)
 ///
 /// ``` QColorTransform* self, QRgba64* rgba64 ```
-QRgba64* q_colortransform_map_with_rgba64(void* self, void* rgba64);
+QRgba64* q_colortransform_map2(void* self, void* rgba64);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolortransform.html#map)
 ///
 /// ``` QColorTransform* self, QColor* color ```
-QColor* q_colortransform_map_with_color(void* self, void* color);
+QColor* q_colortransform_map5(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolortransform.html#dtor.QColorTransform)
 ///

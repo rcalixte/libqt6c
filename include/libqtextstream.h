@@ -227,72 +227,72 @@ QTextStream* q_textstream_operator_shift_right(void* self, void* ch);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, char* ch ```
-QTextStream* q_textstream_operator_shift_right_with_ch(void* self, char* ch);
+QTextStream* q_textstream_operator_shift_right2(void* self, char* ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, short* i ```
-QTextStream* q_textstream_operator_shift_right_with_short(void* self, short* i);
+QTextStream* q_textstream_operator_shift_right4(void* self, short* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, unsigned short* i ```
-QTextStream* q_textstream_operator_shift_right_with_unsignedshort(void* self, unsigned short* i);
+QTextStream* q_textstream_operator_shift_right5(void* self, unsigned short* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, int* i ```
-QTextStream* q_textstream_operator_shift_right_with_int(void* self, int* i);
+QTextStream* q_textstream_operator_shift_right6(void* self, int* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, uint32_t* i ```
-QTextStream* q_textstream_operator_shift_right_with_unsignedint(void* self, uint32_t* i);
+QTextStream* q_textstream_operator_shift_right7(void* self, uint32_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, int64_t* i ```
-QTextStream* q_textstream_operator_shift_right_with_long(void* self, int64_t* i);
+QTextStream* q_textstream_operator_shift_right8(void* self, int64_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, uint64_t* i ```
-QTextStream* q_textstream_operator_shift_right_with_unsignedlong(void* self, uint64_t* i);
+QTextStream* q_textstream_operator_shift_right9(void* self, uint64_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, long long* i ```
-QTextStream* q_textstream_operator_shift_right_with_qlonglong(void* self, long long* i);
+QTextStream* q_textstream_operator_shift_right10(void* self, long long* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, uint64_t* i ```
-QTextStream* q_textstream_operator_shift_right_with_qulonglong(void* self, uint64_t* i);
+QTextStream* q_textstream_operator_shift_right11(void* self, uint64_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, float* f ```
-QTextStream* q_textstream_operator_shift_right_with_float(void* self, float* f);
+QTextStream* q_textstream_operator_shift_right12(void* self, float* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, double* f ```
-QTextStream* q_textstream_operator_shift_right_with_double(void* self, double* f);
+QTextStream* q_textstream_operator_shift_right13(void* self, double* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, const char* s ```
-QTextStream* q_textstream_operator_shift_right_with_q_string(void* self, const char* s);
+QTextStream* q_textstream_operator_shift_right14(void* self, const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, char* array ```
-QTextStream* q_textstream_operator_shift_right_with_array(void* self, char* array);
+QTextStream* q_textstream_operator_shift_right15(void* self, char* array);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator>>)
 ///
 /// ``` QTextStream* self, char* c ```
-QTextStream* q_textstream_operator_shift_right_with_char(void* self, char* c);
+QTextStream* q_textstream_operator_shift_right16(void* self, char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
@@ -302,77 +302,77 @@ QTextStream* q_textstream_operator_shift_left(void* self, void* ch);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, char ch ```
-QTextStream* q_textstream_operator_shift_left_with_ch(void* self, char ch);
+QTextStream* q_textstream_operator_shift_left2(void* self, char ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, short i ```
-QTextStream* q_textstream_operator_shift_left_with_short(void* self, short i);
+QTextStream* q_textstream_operator_shift_left4(void* self, short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, unsigned short i ```
-QTextStream* q_textstream_operator_shift_left_with_unsignedshort(void* self, unsigned short i);
+QTextStream* q_textstream_operator_shift_left5(void* self, unsigned short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, int i ```
-QTextStream* q_textstream_operator_shift_left_with_int(void* self, int i);
+QTextStream* q_textstream_operator_shift_left6(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, uint32_t i ```
-QTextStream* q_textstream_operator_shift_left_with_unsignedint(void* self, uint32_t i);
+QTextStream* q_textstream_operator_shift_left7(void* self, uint32_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, int64_t i ```
-QTextStream* q_textstream_operator_shift_left_with_long(void* self, int64_t i);
+QTextStream* q_textstream_operator_shift_left8(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, uint64_t i ```
-QTextStream* q_textstream_operator_shift_left_with_unsignedlong(void* self, uint64_t i);
+QTextStream* q_textstream_operator_shift_left9(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, long long i ```
-QTextStream* q_textstream_operator_shift_left_with_qlonglong(void* self, long long i);
+QTextStream* q_textstream_operator_shift_left10(void* self, long long i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, uint64_t i ```
-QTextStream* q_textstream_operator_shift_left_with_qulonglong(void* self, uint64_t i);
+QTextStream* q_textstream_operator_shift_left11(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, float f ```
-QTextStream* q_textstream_operator_shift_left_with_float(void* self, float f);
+QTextStream* q_textstream_operator_shift_left12(void* self, float f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, double f ```
-QTextStream* q_textstream_operator_shift_left_with_double(void* self, double f);
+QTextStream* q_textstream_operator_shift_left13(void* self, double f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, const char* s ```
-QTextStream* q_textstream_operator_shift_left_with_q_string(void* self, const char* s);
+QTextStream* q_textstream_operator_shift_left14(void* self, const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, const char* array ```
-QTextStream* q_textstream_operator_shift_left_with_array(void* self, const char* array);
+QTextStream* q_textstream_operator_shift_left17(void* self, const char* array);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, const char* c ```
-QTextStream* q_textstream_operator_shift_left_with_char(void* self, const char* c);
+QTextStream* q_textstream_operator_shift_left18(void* self, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator<<)
 ///
 /// ``` QTextStream* self, void* ptr ```
-QTextStream* q_textstream_operator_shift_left_with_ptr(void* self, void* ptr);
+QTextStream* q_textstream_operator_shift_left19(void* self, void* ptr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#readLine)
 ///

@@ -87,7 +87,7 @@ QCborValueRef* q_cborarray_last2(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator[])
 ///
 /// ``` QCborArray* self, int64_t i ```
-QCborValueRef* q_cborarray_operator_subscript_with_qsizetype(void* self, int64_t i);
+QCborValueRef* q_cborarray_operator_subscript2(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#insert)
 ///

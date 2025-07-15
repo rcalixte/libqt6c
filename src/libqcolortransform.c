@@ -27,12 +27,12 @@ uint32_t q_colortransform_map(void* self, uint32_t argb) {
     return QColorTransform_Map((QColorTransform*)self, argb);
 }
 
-QRgba64* q_colortransform_map_with_rgba64(void* self, void* rgba64) {
-    return QColorTransform_MapWithRgba64((QColorTransform*)self, (QRgba64*)rgba64);
+QRgba64* q_colortransform_map2(void* self, void* rgba64) {
+    return QColorTransform_Map2((QColorTransform*)self, (QRgba64*)rgba64);
 }
 
-QColor* q_colortransform_map_with_color(void* self, void* color) {
-    return QColorTransform_MapWithColor((QColorTransform*)self, (QColor*)color);
+QColor* q_colortransform_map5(void* self, void* color) {
+    return QColorTransform_Map5((QColorTransform*)self, (QColor*)color);
 }
 
 void q_colortransform_delete(void* self) {

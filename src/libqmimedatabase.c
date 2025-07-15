@@ -18,8 +18,8 @@ QMimeType* q_mimedatabase_mime_type_for_file(void* self, const char* fileName) {
     return QMimeDatabase_MimeTypeForFile((QMimeDatabase*)self, qstring(fileName));
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file_with_file_info(void* self, void* fileInfo) {
-    return QMimeDatabase_MimeTypeForFileWithFileInfo((QMimeDatabase*)self, (QFileInfo*)fileInfo);
+QMimeType* q_mimedatabase_mime_type_for_file2(void* self, void* fileInfo) {
+    return QMimeDatabase_MimeTypeForFile2((QMimeDatabase*)self, (QFileInfo*)fileInfo);
 }
 
 libqt_list /* of QMimeType* */ q_mimedatabase_mime_types_for_file_name(void* self, const char* fileName) {
@@ -31,8 +31,8 @@ QMimeType* q_mimedatabase_mime_type_for_data(void* self, const char* data) {
     return QMimeDatabase_MimeTypeForData((QMimeDatabase*)self, qstring(data));
 }
 
-QMimeType* q_mimedatabase_mime_type_for_data_with_device(void* self, void* device) {
-    return QMimeDatabase_MimeTypeForDataWithDevice((QMimeDatabase*)self, (QIODevice*)device);
+QMimeType* q_mimedatabase_mime_type_for_data2(void* self, void* device) {
+    return QMimeDatabase_MimeTypeForData2((QMimeDatabase*)self, (QIODevice*)device);
 }
 
 QMimeType* q_mimedatabase_mime_type_for_url(void* self, void* url) {
@@ -59,12 +59,12 @@ libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(void* self) {
     return _arr;
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file2(void* self, const char* fileName, int64_t mode) {
-    return QMimeDatabase_MimeTypeForFile2((QMimeDatabase*)self, qstring(fileName), mode);
+QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int64_t mode) {
+    return QMimeDatabase_MimeTypeForFile22((QMimeDatabase*)self, qstring(fileName), mode);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file22(void* self, void* fileInfo, int64_t mode) {
-    return QMimeDatabase_MimeTypeForFile22((QMimeDatabase*)self, (QFileInfo*)fileInfo, mode);
+QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int64_t mode) {
+    return QMimeDatabase_MimeTypeForFile23((QMimeDatabase*)self, (QFileInfo*)fileInfo, mode);
 }
 
 void q_mimedatabase_delete(void* self) {

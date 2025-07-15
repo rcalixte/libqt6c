@@ -102,12 +102,12 @@ QPoint* q_point_operator_multiply_assign(void* self, float factor);
 /// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator*=)
 ///
 /// ``` QPoint* self, double factor ```
-QPoint* q_point_operator_multiply_assign_with_factor(void* self, double factor);
+QPoint* q_point_operator_multiply_assign2(void* self, double factor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator*=)
 ///
 /// ``` QPoint* self, int factor ```
-QPoint* q_point_operator_multiply_assign2(void* self, int factor);
+QPoint* q_point_operator_multiply_assign3(void* self, int factor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator/=)
 ///

@@ -113,16 +113,16 @@ QVector2D* q_vector2d_operator_multiply_assign(void* self, float factor) {
     return QVector2D_OperatorMultiplyAssign((QVector2D*)self, factor);
 }
 
-QVector2D* q_vector2d_operator_multiply_assign_with_vector(void* self, void* vector) {
-    return QVector2D_OperatorMultiplyAssignWithVector((QVector2D*)self, (QVector2D*)vector);
+QVector2D* q_vector2d_operator_multiply_assign2(void* self, void* vector) {
+    return QVector2D_OperatorMultiplyAssign2((QVector2D*)self, (QVector2D*)vector);
 }
 
 QVector2D* q_vector2d_operator_divide_assign(void* self, float divisor) {
     return QVector2D_OperatorDivideAssign((QVector2D*)self, divisor);
 }
 
-QVector2D* q_vector2d_operator_divide_assign_with_vector(void* self, void* vector) {
-    return QVector2D_OperatorDivideAssignWithVector((QVector2D*)self, (QVector2D*)vector);
+QVector2D* q_vector2d_operator_divide_assign2(void* self, void* vector) {
+    return QVector2D_OperatorDivideAssign2((QVector2D*)self, (QVector2D*)vector);
 }
 
 float q_vector2d_dot_product(void* v1, void* v2) {
@@ -265,16 +265,16 @@ QVector3D* q_vector3d_operator_multiply_assign(void* self, float factor) {
     return QVector3D_OperatorMultiplyAssign((QVector3D*)self, factor);
 }
 
-QVector3D* q_vector3d_operator_multiply_assign_with_vector(void* self, void* vector) {
-    return QVector3D_OperatorMultiplyAssignWithVector((QVector3D*)self, (QVector3D*)vector);
+QVector3D* q_vector3d_operator_multiply_assign2(void* self, void* vector) {
+    return QVector3D_OperatorMultiplyAssign2((QVector3D*)self, (QVector3D*)vector);
 }
 
 QVector3D* q_vector3d_operator_divide_assign(void* self, float divisor) {
     return QVector3D_OperatorDivideAssign((QVector3D*)self, divisor);
 }
 
-QVector3D* q_vector3d_operator_divide_assign_with_vector(void* self, void* vector) {
-    return QVector3D_OperatorDivideAssignWithVector((QVector3D*)self, (QVector3D*)vector);
+QVector3D* q_vector3d_operator_divide_assign2(void* self, void* vector) {
+    return QVector3D_OperatorDivideAssign2((QVector3D*)self, (QVector3D*)vector);
 }
 
 float q_vector3d_dot_product(void* v1, void* v2) {
@@ -465,16 +465,16 @@ QVector4D* q_vector4d_operator_multiply_assign(void* self, float factor) {
     return QVector4D_OperatorMultiplyAssign((QVector4D*)self, factor);
 }
 
-QVector4D* q_vector4d_operator_multiply_assign_with_vector(void* self, void* vector) {
-    return QVector4D_OperatorMultiplyAssignWithVector((QVector4D*)self, (QVector4D*)vector);
+QVector4D* q_vector4d_operator_multiply_assign2(void* self, void* vector) {
+    return QVector4D_OperatorMultiplyAssign2((QVector4D*)self, (QVector4D*)vector);
 }
 
 QVector4D* q_vector4d_operator_divide_assign(void* self, float divisor) {
     return QVector4D_OperatorDivideAssign((QVector4D*)self, divisor);
 }
 
-QVector4D* q_vector4d_operator_divide_assign_with_vector(void* self, void* vector) {
-    return QVector4D_OperatorDivideAssignWithVector((QVector4D*)self, (QVector4D*)vector);
+QVector4D* q_vector4d_operator_divide_assign2(void* self, void* vector) {
+    return QVector4D_OperatorDivideAssign2((QVector4D*)self, (QVector4D*)vector);
 }
 
 float q_vector4d_dot_product(void* v1, void* v2) {

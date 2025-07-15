@@ -211,8 +211,8 @@ uint32_t q_color_rgb(void* self) {
     return QColor_Rgb((QColor*)self);
 }
 
-void q_color_set_rgb_with_rgb(void* self, uint32_t rgb) {
-    QColor_SetRgbWithRgb((QColor*)self, rgb);
+void q_color_set_rgb2(void* self, uint32_t rgb) {
+    QColor_SetRgb2((QColor*)self, rgb);
 }
 
 int32_t q_color_hue(void* self) {
@@ -403,8 +403,8 @@ QColor* q_color_from_rgba64(unsigned short r, unsigned short g, unsigned short b
     return QColor_FromRgba64(r, g, b);
 }
 
-QColor* q_color_from_rgba64_with_rgba(void* rgba) {
-    return QColor_FromRgba64WithRgba((QRgba64*)rgba);
+QColor* q_color_from_rgba642(void* rgba) {
+    return QColor_FromRgba642((QRgba64*)rgba);
 }
 
 QColor* q_color_from_hsv(int h, int s, int v) {

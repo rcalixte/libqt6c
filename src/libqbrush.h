@@ -142,7 +142,7 @@ void q_brush_set_color(void* self, void* color);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#setColor)
 ///
 /// ``` QBrush* self, enum Qt__GlobalColor color ```
-void q_brush_set_color_with_color(void* self, int64_t color);
+void q_brush_set_color2(void* self, int64_t color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#gradient)
 ///

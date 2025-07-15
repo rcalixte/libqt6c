@@ -219,8 +219,8 @@ void q_scilexerfortran_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexerfortran_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexerfortran_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexerfortran_children(void* self) {
@@ -252,8 +252,8 @@ bool q_scilexerfortran_disconnect(void* sender, void* signal, void* receiver, vo
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexerfortran_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexerfortran_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexerfortran_dump_object_tree(void* self) {
@@ -319,8 +319,8 @@ bool q_scilexerfortran_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexerfortran_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexerfortran_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexerfortran_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
@@ -571,16 +571,16 @@ void q_scilexerfortran_on_paper(void* self, QColor* (*slot)(void*, int)) {
     QsciLexerFortran_OnPaper((QsciLexerFortran*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexerfortran_default_color_with_style(void* self, int style) {
-    return QsciLexerFortran_DefaultColorWithStyle((QsciLexerFortran*)self, style);
+QColor* q_scilexerfortran_default_color2(void* self, int style) {
+    return QsciLexerFortran_DefaultColor2((QsciLexerFortran*)self, style);
 }
 
-QColor* q_scilexerfortran_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexerFortran_QBaseDefaultColorWithStyle((QsciLexerFortran*)self, style);
+QColor* q_scilexerfortran_qbase_default_color2(void* self, int style) {
+    return QsciLexerFortran_QBaseDefaultColor2((QsciLexerFortran*)self, style);
 }
 
-void q_scilexerfortran_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerFortran_OnDefaultColorWithStyle((QsciLexerFortran*)self, (intptr_t)slot);
+void q_scilexerfortran_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerFortran_OnDefaultColor2((QsciLexerFortran*)self, (intptr_t)slot);
 }
 
 bool q_scilexerfortran_default_eol_fill(void* self, int style) {
@@ -595,28 +595,28 @@ void q_scilexerfortran_on_default_eol_fill(void* self, bool (*slot)(void*, int))
     QsciLexerFortran_OnDefaultEolFill((QsciLexerFortran*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexerfortran_default_font_with_style(void* self, int style) {
-    return QsciLexerFortran_DefaultFontWithStyle((QsciLexerFortran*)self, style);
+QFont* q_scilexerfortran_default_font2(void* self, int style) {
+    return QsciLexerFortran_DefaultFont2((QsciLexerFortran*)self, style);
 }
 
-QFont* q_scilexerfortran_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexerFortran_QBaseDefaultFontWithStyle((QsciLexerFortran*)self, style);
+QFont* q_scilexerfortran_qbase_default_font2(void* self, int style) {
+    return QsciLexerFortran_QBaseDefaultFont2((QsciLexerFortran*)self, style);
 }
 
-void q_scilexerfortran_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerFortran_OnDefaultFontWithStyle((QsciLexerFortran*)self, (intptr_t)slot);
+void q_scilexerfortran_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexerFortran_OnDefaultFont2((QsciLexerFortran*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexerfortran_default_paper_with_style(void* self, int style) {
-    return QsciLexerFortran_DefaultPaperWithStyle((QsciLexerFortran*)self, style);
+QColor* q_scilexerfortran_default_paper2(void* self, int style) {
+    return QsciLexerFortran_DefaultPaper2((QsciLexerFortran*)self, style);
 }
 
-QColor* q_scilexerfortran_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexerFortran_QBaseDefaultPaperWithStyle((QsciLexerFortran*)self, style);
+QColor* q_scilexerfortran_qbase_default_paper2(void* self, int style) {
+    return QsciLexerFortran_QBaseDefaultPaper2((QsciLexerFortran*)self, style);
 }
 
-void q_scilexerfortran_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerFortran_OnDefaultPaperWithStyle((QsciLexerFortran*)self, (intptr_t)slot);
+void q_scilexerfortran_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexerFortran_OnDefaultPaper2((QsciLexerFortran*)self, (intptr_t)slot);
 }
 
 void q_scilexerfortran_set_editor(void* self, void* editor) {

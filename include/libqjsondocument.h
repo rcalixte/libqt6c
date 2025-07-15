@@ -141,7 +141,7 @@ const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key)
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator[])
 ///
 /// ``` QJsonDocument* self, int64_t i ```
-const QJsonValue* q_jsondocument_operator_subscript_with_qsizetype(void* self, int64_t i);
+const QJsonValue* q_jsondocument_operator_subscript4(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isNull)
 ///

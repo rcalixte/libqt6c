@@ -42,7 +42,7 @@ void q_url_operator_assign(void* self, void* copyVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator=)
 ///
 /// ``` QUrl* self, const char* url ```
-void q_url_operator_assign_with_url(void* self, const char* url);
+void q_url_operator_assign2(void* self, const char* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#swap)
 ///
@@ -202,7 +202,7 @@ void q_url_set_query(void* self, const char* query);
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setQuery)
 ///
 /// ``` QUrl* self, QUrlQuery* query ```
-void q_url_set_query_with_query(void* self, void* query);
+void q_url_set_query2(void* self, void* query);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#query)
 ///
@@ -397,7 +397,7 @@ const char* q_url_file_name1(void* self, int64_t options);
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#setQuery)
 ///
 /// ``` QUrl* self, const char* query, enum QUrl__ParsingMode mode ```
-void q_url_set_query2(void* self, const char* query, int64_t mode);
+void q_url_set_query22(void* self, const char* query, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#query)
 ///

@@ -59,16 +59,16 @@ bool q_pieseries_append(void* self, void* slice) {
     return QPieSeries_Append((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-bool q_pieseries_append_with_slices(void* self, libqt_list slices) {
-    return QPieSeries_AppendWithSlices((QPieSeries*)self, slices);
+bool q_pieseries_append2(void* self, libqt_list slices) {
+    return QPieSeries_Append2((QPieSeries*)self, slices);
 }
 
 QPieSeries* q_pieseries_operator_shift_left(void* self, void* slice) {
     return QPieSeries_OperatorShiftLeft((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-QPieSlice* q_pieseries_append2(void* self, const char* label, double value) {
-    return QPieSeries_Append2((QPieSeries*)self, qstring(label), value);
+QPieSlice* q_pieseries_append3(void* self, const char* label, double value) {
+    return QPieSeries_Append3((QPieSeries*)self, qstring(label), value);
 }
 
 bool q_pieseries_insert(void* self, int index, void* slice) {
@@ -397,8 +397,8 @@ void q_pieseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_pieseries_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_pieseries_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_pieseries_children(void* self) {
@@ -430,8 +430,8 @@ bool q_pieseries_disconnect(void* sender, void* signal, void* receiver, void* me
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_pieseries_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_pieseries_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_pieseries_dump_object_tree(void* self) {
@@ -497,8 +497,8 @@ bool q_pieseries_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_pieseries_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_pieseries_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_pieseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

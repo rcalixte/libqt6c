@@ -400,7 +400,7 @@ void q_graphicseffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsEffect* self, enum Qt__TimerId id ```
-void q_graphicseffect_kill_timer_with_id(void* self, int64_t id);
+void q_graphicseffect_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -456,7 +456,7 @@ bool q_graphicseffect_disconnect(void* sender, void* signal, void* receiver, voi
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicseffect_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicseffect_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -554,7 +554,7 @@ bool q_graphicseffect_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsEffect* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicseffect_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicseffect_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1128,7 +1128,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsColorizeEffect* self, enum Qt__TimerId id ```
-void q_graphicscolorizeeffect_kill_timer_with_id(void* self, int64_t id);
+void q_graphicscolorizeeffect_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -1184,7 +1184,7 @@ bool q_graphicscolorizeeffect_disconnect(void* sender, void* signal, void* recei
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicscolorizeeffect_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicscolorizeeffect_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -1282,7 +1282,7 @@ bool q_graphicscolorizeeffect_move_to_thread2(void* self, void* thread, void* pa
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsColorizeEffect* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicscolorizeeffect_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2064,7 +2064,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsBlurEffect* self, enum Qt__TimerId id ```
-void q_graphicsblureffect_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsblureffect_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -2120,7 +2120,7 @@ bool q_graphicsblureffect_disconnect(void* sender, void* signal, void* receiver,
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsblureffect_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsblureffect_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -2218,7 +2218,7 @@ bool q_graphicsblureffect_move_to_thread2(void* self, void* thread, void* param2
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsBlurEffect* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsblureffect_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2818,7 +2818,7 @@ void q_graphicsdropshadoweffect_set_offset2(void* self, double dx, double dy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#setOffset)
 ///
 /// ``` QGraphicsDropShadowEffect* self, double d ```
-void q_graphicsdropshadoweffect_set_offset_with_qreal(void* self, double d);
+void q_graphicsdropshadoweffect_set_offset3(void* self, double d);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#setXOffset)
 ///
@@ -3023,7 +3023,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsDropShadowEffect* self, enum Qt__TimerId id ```
-void q_graphicsdropshadoweffect_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsdropshadoweffect_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3079,7 +3079,7 @@ bool q_graphicsdropshadoweffect_disconnect(void* sender, void* signal, void* rec
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsdropshadoweffect_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsdropshadoweffect_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -3177,7 +3177,7 @@ bool q_graphicsdropshadoweffect_move_to_thread2(void* self, void* thread, void* 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsDropShadowEffect* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsdropshadoweffect_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3913,7 +3913,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QGraphicsOpacityEffect* self, enum Qt__TimerId id ```
-void q_graphicsopacityeffect_kill_timer_with_id(void* self, int64_t id);
+void q_graphicsopacityeffect_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -3969,7 +3969,7 @@ bool q_graphicsopacityeffect_disconnect(void* sender, void* signal, void* receiv
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_graphicsopacityeffect_disconnect_with_q_meta_object_connection(void* param1);
+bool q_graphicsopacityeffect_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -4067,7 +4067,7 @@ bool q_graphicsopacityeffect_move_to_thread2(void* self, void* thread, void* par
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QGraphicsOpacityEffect* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_graphicsopacityeffect_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

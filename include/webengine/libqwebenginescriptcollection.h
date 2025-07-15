@@ -42,7 +42,7 @@ void q_webenginescriptcollection_insert(void* self, void* param1);
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#insert)
 ///
 /// ``` QWebEngineScriptCollection* self, libqt_list /* of QWebEngineScript* */ list ```
-void q_webenginescriptcollection_insert_with_list(void* self, libqt_list list);
+void q_webenginescriptcollection_insert2(void* self, libqt_list list);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#remove)
 ///

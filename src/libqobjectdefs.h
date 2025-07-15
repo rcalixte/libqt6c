@@ -169,7 +169,7 @@ QObject* q_metaobject_cast(void* self, void* obj);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#cast)
 ///
 /// ``` QMetaObject* self, QObject* obj ```
-const QObject* q_metaobject_cast_with_obj(void* self, void* obj);
+const QObject* q_metaobject_cast2(void* self, void* obj);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

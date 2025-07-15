@@ -89,8 +89,8 @@ QJsonValueRef* q_jsonarray_operator_subscript(void* self, int64_t i) {
     return QJsonArray_OperatorSubscript((QJsonArray*)self, i);
 }
 
-QJsonValue* q_jsonarray_operator_subscript_with_qsizetype(void* self, int64_t i) {
-    return QJsonArray_OperatorSubscriptWithQsizetype((QJsonArray*)self, i);
+QJsonValue* q_jsonarray_operator_subscript2(void* self, int64_t i) {
+    return QJsonArray_OperatorSubscript2((QJsonArray*)self, i);
 }
 
 void q_jsonarray_swap(void* self, void* other) {

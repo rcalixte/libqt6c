@@ -57,12 +57,12 @@ void q_fileinfo_set_file(void* self, const char* file);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
 /// ``` QFileInfo* self, QFileDevice* file ```
-void q_fileinfo_set_file_with_file(void* self, void* file);
+void q_fileinfo_set_file2(void* self, void* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
 /// ``` QFileInfo* self, QDir* dir, const char* file ```
-void q_fileinfo_set_file2(void* self, void* dir, const char* file);
+void q_fileinfo_set_file3(void* self, void* dir, const char* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#exists)
 ///
@@ -72,7 +72,7 @@ bool q_fileinfo_exists(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#exists)
 ///
 /// ``` const char* file ```
-bool q_fileinfo_exists_with_file(const char* file);
+bool q_fileinfo_exists2(const char* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#refresh)
 ///
@@ -312,22 +312,22 @@ QDateTime* q_fileinfo_file_time(void* self, int64_t time);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///
 /// ``` QFileInfo* self, QTimeZone* tz ```
-QDateTime* q_fileinfo_birth_time_with_tz(void* self, void* tz);
+QDateTime* q_fileinfo_birth_time2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#metadataChangeTime)
 ///
 /// ``` QFileInfo* self, QTimeZone* tz ```
-QDateTime* q_fileinfo_metadata_change_time_with_tz(void* self, void* tz);
+QDateTime* q_fileinfo_metadata_change_time2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastModified)
 ///
 /// ``` QFileInfo* self, QTimeZone* tz ```
-QDateTime* q_fileinfo_last_modified_with_tz(void* self, void* tz);
+QDateTime* q_fileinfo_last_modified2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastRead)
 ///
 /// ``` QFileInfo* self, QTimeZone* tz ```
-QDateTime* q_fileinfo_last_read_with_tz(void* self, void* tz);
+QDateTime* q_fileinfo_last_read2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#fileTime)
 ///

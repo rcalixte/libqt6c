@@ -312,16 +312,16 @@ QColor* q_scilexer_default_color(void* self) {
     return QsciLexer_DefaultColor((QsciLexer*)self);
 }
 
-QColor* q_scilexer_default_color_with_style(void* self, int style) {
-    return QsciLexer_DefaultColorWithStyle((QsciLexer*)self, style);
+QColor* q_scilexer_default_color2(void* self, int style) {
+    return QsciLexer_DefaultColor2((QsciLexer*)self, style);
 }
 
-void q_scilexer_on_default_color_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexer_OnDefaultColorWithStyle((QsciLexer*)self, (intptr_t)slot);
+void q_scilexer_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexer_OnDefaultColor2((QsciLexer*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexer_qbase_default_color_with_style(void* self, int style) {
-    return QsciLexer_QBaseDefaultColorWithStyle((QsciLexer*)self, style);
+QColor* q_scilexer_qbase_default_color2(void* self, int style) {
+    return QsciLexer_QBaseDefaultColor2((QsciLexer*)self, style);
 }
 
 bool q_scilexer_default_eol_fill(void* self, int style) {
@@ -340,32 +340,32 @@ QFont* q_scilexer_default_font(void* self) {
     return QsciLexer_DefaultFont((QsciLexer*)self);
 }
 
-QFont* q_scilexer_default_font_with_style(void* self, int style) {
-    return QsciLexer_DefaultFontWithStyle((QsciLexer*)self, style);
+QFont* q_scilexer_default_font2(void* self, int style) {
+    return QsciLexer_DefaultFont2((QsciLexer*)self, style);
 }
 
-void q_scilexer_on_default_font_with_style(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexer_OnDefaultFontWithStyle((QsciLexer*)self, (intptr_t)slot);
+void q_scilexer_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
+    QsciLexer_OnDefaultFont2((QsciLexer*)self, (intptr_t)slot);
 }
 
-QFont* q_scilexer_qbase_default_font_with_style(void* self, int style) {
-    return QsciLexer_QBaseDefaultFontWithStyle((QsciLexer*)self, style);
+QFont* q_scilexer_qbase_default_font2(void* self, int style) {
+    return QsciLexer_QBaseDefaultFont2((QsciLexer*)self, style);
 }
 
 QColor* q_scilexer_default_paper(void* self) {
     return QsciLexer_DefaultPaper((QsciLexer*)self);
 }
 
-QColor* q_scilexer_default_paper_with_style(void* self, int style) {
-    return QsciLexer_DefaultPaperWithStyle((QsciLexer*)self, style);
+QColor* q_scilexer_default_paper2(void* self, int style) {
+    return QsciLexer_DefaultPaper2((QsciLexer*)self, style);
 }
 
-void q_scilexer_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexer_OnDefaultPaperWithStyle((QsciLexer*)self, (intptr_t)slot);
+void q_scilexer_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
+    QsciLexer_OnDefaultPaper2((QsciLexer*)self, (intptr_t)slot);
 }
 
-QColor* q_scilexer_qbase_default_paper_with_style(void* self, int style) {
-    return QsciLexer_QBaseDefaultPaperWithStyle((QsciLexer*)self, style);
+QColor* q_scilexer_qbase_default_paper2(void* self, int style) {
+    return QsciLexer_QBaseDefaultPaper2((QsciLexer*)self, style);
 }
 
 QsciScintilla* q_scilexer_editor(void* self) {
@@ -673,8 +673,8 @@ void q_scilexer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexer_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_scilexer_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_scilexer_children(void* self) {
@@ -706,8 +706,8 @@ bool q_scilexer_disconnect(void* sender, void* signal, void* receiver, void* mem
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_scilexer_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_scilexer_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_scilexer_dump_object_tree(void* self) {
@@ -773,8 +773,8 @@ bool q_scilexer_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexer_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_scilexer_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_scilexer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

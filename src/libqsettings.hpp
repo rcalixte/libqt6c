@@ -66,7 +66,7 @@ libqt_list /* of libqt_string */ QSettings_ChildGroups(const QSettings* self);
 bool QSettings_IsWritable(const QSettings* self);
 void QSettings_SetValue(QSettings* self, char* key, const QVariant* value);
 QVariant* QSettings_Value(const QSettings* self, char* key, const QVariant* defaultValue);
-QVariant* QSettings_ValueWithKey(const QSettings* self, char* key);
+QVariant* QSettings_Value2(const QSettings* self, char* key);
 void QSettings_Remove(QSettings* self, char* key);
 bool QSettings_Contains(const QSettings* self, char* key);
 void QSettings_SetFallbacksEnabled(QSettings* self, bool b);

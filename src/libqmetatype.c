@@ -42,8 +42,8 @@ int32_t q_metatype_type(const char* typeName) {
     return QMetaType_Type(typeName);
 }
 
-int32_t q_metatype_type_with_type_name(const char* typeName) {
-    return QMetaType_TypeWithTypeName(qstring(typeName));
+int32_t q_metatype_type2(const char* typeName) {
+    return QMetaType_Type2(qstring(typeName));
 }
 
 const char* q_metatype_type_name(int typeVal) {
@@ -122,16 +122,16 @@ void* q_metatype_create2(void* self) {
     return QMetaType_Create2((QMetaType*)self);
 }
 
-void q_metatype_destroy_with_data(void* self, void* data) {
-    QMetaType_DestroyWithData((QMetaType*)self, data);
+void q_metatype_destroy2(void* self, void* data) {
+    QMetaType_Destroy2((QMetaType*)self, data);
 }
 
-void* q_metatype_construct_with_where(void* self, void* where) {
-    return QMetaType_ConstructWithWhere((QMetaType*)self, where);
+void* q_metatype_construct2(void* self, void* where) {
+    return QMetaType_Construct2((QMetaType*)self, where);
 }
 
-void q_metatype_destruct_with_data(void* self, void* data) {
-    QMetaType_DestructWithData((QMetaType*)self, data);
+void q_metatype_destruct2(void* self, void* data) {
+    QMetaType_Destruct2((QMetaType*)self, data);
 }
 
 QPartialOrdering* q_metatype_compare(void* self, void* lhs, void* rhs) {
@@ -207,8 +207,8 @@ bool q_metatype_debug_stream2(void* dbg, void* rhs, int typeId) {
     return QMetaType_DebugStream2((QDebug*)dbg, rhs, typeId);
 }
 
-bool q_metatype_has_registered_debug_stream_operator_with_type_id(int typeId) {
-    return QMetaType_HasRegisteredDebugStreamOperatorWithTypeId(typeId);
+bool q_metatype_has_registered_debug_stream_operator2(int typeId) {
+    return QMetaType_HasRegisteredDebugStreamOperator2(typeId);
 }
 
 bool q_metatype_convert(void* fromType, void* from, void* toType, void* to) {
@@ -271,8 +271,8 @@ void* q_metatype_create1(void* self, void* copyVal) {
     return QMetaType_Create1((QMetaType*)self, copyVal);
 }
 
-void* q_metatype_construct2(void* self, void* where, void* copyVal) {
-    return QMetaType_Construct2((QMetaType*)self, where, copyVal);
+void* q_metatype_construct22(void* self, void* where, void* copyVal) {
+    return QMetaType_Construct22((QMetaType*)self, where, copyVal);
 }
 
 void q_metatype_delete(void* self) {

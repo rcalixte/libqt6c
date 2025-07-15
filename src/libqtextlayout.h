@@ -480,7 +480,7 @@ double q_textline_cursor_to_x(void* self, int* cursorPos);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
 /// ``` QTextLine* self, int cursorPos ```
-double q_textline_cursor_to_x_with_cursor_pos(void* self, int cursorPos);
+double q_textline_cursor_to_x2(void* self, int cursorPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#xToCursor)
 ///
@@ -545,12 +545,12 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
 /// ``` QTextLine* self, int* cursorPos, enum QTextLine__Edge edge ```
-double q_textline_cursor_to_x2(void* self, int* cursorPos, int64_t edge);
+double q_textline_cursor_to_x22(void* self, int* cursorPos, int64_t edge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
 /// ``` QTextLine* self, int cursorPos, enum QTextLine__Edge edge ```
-double q_textline_cursor_to_x22(void* self, int cursorPos, int64_t edge);
+double q_textline_cursor_to_x23(void* self, int cursorPos, int64_t edge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#xToCursor)
 ///

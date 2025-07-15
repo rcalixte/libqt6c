@@ -41,46 +41,21 @@ QIcon* q_fileiconprovider_qbase_icon(void* self, int64_t typeVal);
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// ``` QFileIconProvider* self, QFileInfo* info ```
-QIcon* q_fileiconprovider_icon_with_info(void* self, void* info);
+QIcon* q_fileiconprovider_icon2(void* self, void* info);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QFileIconProvider* self, QIcon* (*slot)(QFileIconProvider*, QFileInfo*) ```
-void q_fileiconprovider_on_icon_with_info(void* self, QIcon* (*slot)(void*, void*));
+void q_fileiconprovider_on_icon2(void* self, QIcon* (*slot)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileiconprovider.html#icon)
 ///
 /// Base class method implementation
 ///
 /// ``` QFileIconProvider* self, QFileInfo* info ```
-QIcon* q_fileiconprovider_qbase_icon_with_info(void* self, void* info);
-
-/// Inherited from QAbstractFileIconProvider
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
-///
-/// ``` QFileIconProvider* self, QFileInfo* param1 ```
-QIcon* q_fileiconprovider_icon_with_q_file_info(void* self, void* param1);
-
-/// Inherited from QAbstractFileIconProvider
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
-///
-/// Allows for overriding the related default method
-///
-/// ``` QAbstractFileIconProvider* self, QIcon* (*slot)(QAbstractFileIconProvider*, QFileInfo*) ```
-void q_fileiconprovider_on_icon_with_q_file_info(void* self, QIcon* (*slot)(void*, void*));
-
-/// Inherited from QAbstractFileIconProvider
-///
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
-///
-/// Base class method implementation
-///
-/// ``` QFileIconProvider* self, QFileInfo* param1 ```
-QIcon* q_fileiconprovider_qbase_icon_with_q_file_info(void* self, void* param1);
+QIcon* q_fileiconprovider_qbase_icon2(void* self, void* info);
 
 /// Inherited from QAbstractFileIconProvider
 ///

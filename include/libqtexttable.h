@@ -182,7 +182,7 @@ void q_texttable_merge_cells(void* self, int row, int col, int numRows, int numC
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#mergeCells)
 ///
 /// ``` QTextTable* self, QTextCursor* cursor ```
-void q_texttable_merge_cells_with_cursor(void* self, void* cursor);
+void q_texttable_merge_cells2(void* self, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#splitCell)
 ///
@@ -207,12 +207,12 @@ QTextTableCell* q_texttable_cell_at(void* self, int row, int col);
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
 /// ``` QTextTable* self, int position ```
-QTextTableCell* q_texttable_cell_at_with_position(void* self, int position);
+QTextTableCell* q_texttable_cell_at2(void* self, int position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
 /// ``` QTextTable* self, QTextCursor* c ```
-QTextTableCell* q_texttable_cell_at_with_q_text_cursor(void* self, void* c);
+QTextTableCell* q_texttable_cell_at3(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#rowStart)
 ///
@@ -417,7 +417,7 @@ void q_texttable_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QTextTable* self, enum Qt__TimerId id ```
-void q_texttable_kill_timer_with_id(void* self, int64_t id);
+void q_texttable_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -473,7 +473,7 @@ bool q_texttable_disconnect(void* sender, void* signal, void* receiver, void* me
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_texttable_disconnect_with_q_meta_object_connection(void* param1);
+bool q_texttable_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -571,7 +571,7 @@ bool q_texttable_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QTextTable* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_texttable_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_texttable_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///

@@ -88,8 +88,8 @@ QModelIndex* q_filesystemmodel_qbase_index(void* self, int row, int column, void
     return QFileSystemModel_QBaseIndex((QFileSystemModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* q_filesystemmodel_index_with_path(void* self, const char* path) {
-    return QFileSystemModel_IndexWithPath((QFileSystemModel*)self, qstring(path));
+QModelIndex* q_filesystemmodel_index2(void* self, const char* path) {
+    return QFileSystemModel_Index2((QFileSystemModel*)self, qstring(path));
 }
 
 QModelIndex* q_filesystemmodel_parent(void* self, void* child) {
@@ -517,8 +517,8 @@ const char* q_filesystemmodel_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QModelIndex* q_filesystemmodel_index2(void* self, const char* path, int column) {
-    return QFileSystemModel_Index2((QFileSystemModel*)self, qstring(path), column);
+QModelIndex* q_filesystemmodel_index22(void* self, const char* path, int column) {
+    return QFileSystemModel_Index22((QFileSystemModel*)self, qstring(path), column);
 }
 
 QVariant* q_filesystemmodel_my_computer1(void* self, int role) {
@@ -704,8 +704,8 @@ void q_filesystemmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_filesystemmodel_kill_timer_with_id(void* self, int64_t id) {
-    QObject_KillTimerWithId((QObject*)self, id);
+void q_filesystemmodel_kill_timer2(void* self, int64_t id) {
+    QObject_KillTimer2((QObject*)self, id);
 }
 
 libqt_list /* of QObject* */ q_filesystemmodel_children(void* self) {
@@ -737,8 +737,8 @@ bool q_filesystemmodel_disconnect(void* sender, void* signal, void* receiver, vo
     return QObject_Disconnect((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)member);
 }
 
-bool q_filesystemmodel_disconnect_with_q_meta_object_connection(void* param1) {
-    return QObject_DisconnectWithQMetaObjectConnection((QMetaObject__Connection*)param1);
+bool q_filesystemmodel_disconnect2(void* param1) {
+    return QObject_Disconnect2((QMetaObject__Connection*)param1);
 }
 
 void q_filesystemmodel_dump_object_tree(void* self) {
@@ -800,8 +800,8 @@ bool q_filesystemmodel_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_filesystemmodel_start_timer2(void* self, int interval, int64_t timerType) {
-    return QObject_StartTimer2((QObject*)self, interval, timerType);
+int32_t q_filesystemmodel_start_timer22(void* self, int interval, int64_t timerType) {
+    return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
 QMetaObject__Connection* q_filesystemmodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {

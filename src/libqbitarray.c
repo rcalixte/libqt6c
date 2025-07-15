@@ -33,8 +33,8 @@ int64_t q_bitarray_count(void* self) {
     return QBitArray_Count((QBitArray*)self);
 }
 
-int64_t q_bitarray_count_with_on(void* self, bool on) {
-    return QBitArray_CountWithOn((QBitArray*)self, on);
+int64_t q_bitarray_count2(void* self, bool on) {
+    return QBitArray_Count2((QBitArray*)self, on);
 }
 
 bool q_bitarray_is_empty(void* self) {
@@ -89,8 +89,8 @@ QBitRef* q_bitarray_operator_subscript(void* self, int64_t i) {
     return QBitArray_OperatorSubscript((QBitArray*)self, i);
 }
 
-bool q_bitarray_operator_subscript_with_qsizetype(void* self, int64_t i) {
-    return QBitArray_OperatorSubscriptWithQsizetype((QBitArray*)self, i);
+bool q_bitarray_operator_subscript2(void* self, int64_t i) {
+    return QBitArray_OperatorSubscript2((QBitArray*)self, i);
 }
 
 void q_bitarray_operator_bitwise_and_assign(void* self, void* param1) {
@@ -161,8 +161,8 @@ void q_bitref_operator_assign(void* self, void* val) {
     QBitRef_OperatorAssign((QBitRef*)self, (QBitRef*)val);
 }
 
-void q_bitref_operator_assign_with_val(void* self, bool val) {
-    QBitRef_OperatorAssignWithVal((QBitRef*)self, val);
+void q_bitref_operator_assign2(void* self, bool val) {
+    QBitRef_OperatorAssign2((QBitRef*)self, val);
 }
 
 void q_bitref_delete(void* self) {

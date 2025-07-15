@@ -222,7 +222,7 @@ void q_surfaceformat_set_color_space(void* self, void* colorSpace);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setColorSpace)
 ///
 /// ``` QSurfaceFormat* self, enum QSurfaceFormat__ColorSpace colorSpace ```
-void q_surfaceformat_set_color_space_with_color_space(void* self, int64_t colorSpace);
+void q_surfaceformat_set_color_space2(void* self, int64_t colorSpace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setDefaultFormat)
 ///

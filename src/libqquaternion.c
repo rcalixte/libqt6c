@@ -139,8 +139,8 @@ QQuaternion* q_quaternion_operator_multiply_assign(void* self, float factor) {
     return QQuaternion_OperatorMultiplyAssign((QQuaternion*)self, factor);
 }
 
-QQuaternion* q_quaternion_operator_multiply_assign_with_quaternion(void* self, void* quaternion) {
-    return QQuaternion_OperatorMultiplyAssignWithQuaternion((QQuaternion*)self, (QQuaternion*)quaternion);
+QQuaternion* q_quaternion_operator_multiply_assign2(void* self, void* quaternion) {
+    return QQuaternion_OperatorMultiplyAssign2((QQuaternion*)self, (QQuaternion*)quaternion);
 }
 
 QQuaternion* q_quaternion_operator_divide_assign(void* self, float divisor) {

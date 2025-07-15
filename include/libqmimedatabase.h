@@ -32,7 +32,7 @@ QMimeType* q_mimedatabase_mime_type_for_file(void* self, const char* fileName);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForFile)
 ///
 /// ``` QMimeDatabase* self, QFileInfo* fileInfo ```
-QMimeType* q_mimedatabase_mime_type_for_file_with_file_info(void* self, void* fileInfo);
+QMimeType* q_mimedatabase_mime_type_for_file2(void* self, void* fileInfo);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypesForFileName)
 ///
@@ -47,7 +47,7 @@ QMimeType* q_mimedatabase_mime_type_for_data(void* self, const char* data);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForData)
 ///
 /// ``` QMimeDatabase* self, QIODevice* device ```
-QMimeType* q_mimedatabase_mime_type_for_data_with_device(void* self, void* device);
+QMimeType* q_mimedatabase_mime_type_for_data2(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForUrl)
 ///
@@ -77,12 +77,12 @@ libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForFile)
 ///
 /// ``` QMimeDatabase* self, const char* fileName, enum QMimeDatabase__MatchMode mode ```
-QMimeType* q_mimedatabase_mime_type_for_file2(void* self, const char* fileName, int64_t mode);
+QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForFile)
 ///
 /// ``` QMimeDatabase* self, QFileInfo* fileInfo, enum QMimeDatabase__MatchMode mode ```
-QMimeType* q_mimedatabase_mime_type_for_file22(void* self, void* fileInfo, int64_t mode);
+QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#dtor.QMimeDatabase)
 ///

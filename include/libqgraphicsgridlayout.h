@@ -236,21 +236,21 @@ int32_t q_graphicsgridlayout_qbase_count(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
 /// ``` QGraphicsGridLayout* self, int index ```
-QGraphicsLayoutItem* q_graphicsgridlayout_item_at_with_index(void* self, int index);
+QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QGraphicsGridLayout* self, QGraphicsLayoutItem* (*slot)(QGraphicsGridLayout*, int) ```
-void q_graphicsgridlayout_on_item_at_with_index(void* self, QGraphicsLayoutItem* (*slot)(void*, int));
+void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*slot)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
 /// Base class method implementation
 ///
 /// ``` QGraphicsGridLayout* self, int index ```
-QGraphicsLayoutItem* q_graphicsgridlayout_qbase_item_at_with_index(void* self, int index);
+QGraphicsLayoutItem* q_graphicsgridlayout_qbase_item_at2(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#removeAt)
 ///

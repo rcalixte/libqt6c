@@ -396,7 +396,7 @@ void q_scilexeryaml_kill_timer(void* self, int id);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
 /// ``` QsciLexerYAML* self, enum Qt__TimerId id ```
-void q_scilexeryaml_kill_timer_with_id(void* self, int64_t id);
+void q_scilexeryaml_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
@@ -452,7 +452,7 @@ bool q_scilexeryaml_disconnect(void* sender, void* signal, void* receiver, void*
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
 /// ``` QMetaObject__Connection* param1 ```
-bool q_scilexeryaml_disconnect_with_q_meta_object_connection(void* param1);
+bool q_scilexeryaml_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
@@ -550,7 +550,7 @@ bool q_scilexeryaml_move_to_thread2(void* self, void* thread, void* param2);
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
 /// ``` QsciLexerYAML* self, int interval, enum Qt__TimerType timerType ```
-int32_t q_scilexeryaml_start_timer2(void* self, int interval, int64_t timerType);
+int32_t q_scilexeryaml_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
@@ -992,7 +992,7 @@ void q_scilexeryaml_on_paper(void* self, QColor* (*slot)(void*, int));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, int style ```
-QColor* q_scilexeryaml_default_color_with_style(void* self, int style);
+QColor* q_scilexeryaml_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1001,7 +1001,7 @@ QColor* q_scilexeryaml_default_color_with_style(void* self, int style);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, int style ```
-QColor* q_scilexeryaml_qbase_default_color_with_style(void* self, int style);
+QColor* q_scilexeryaml_qbase_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1010,7 +1010,7 @@ QColor* q_scilexeryaml_qbase_default_color_with_style(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, QColor* (*slot)(QsciLexerYAML*, int) ```
-void q_scilexeryaml_on_default_color_with_style(void* self, QColor* (*slot)(void*, int));
+void q_scilexeryaml_on_default_color2(void* self, QColor* (*slot)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1019,7 +1019,7 @@ void q_scilexeryaml_on_default_color_with_style(void* self, QColor* (*slot)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, int style ```
-QFont* q_scilexeryaml_default_font_with_style(void* self, int style);
+QFont* q_scilexeryaml_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1028,7 +1028,7 @@ QFont* q_scilexeryaml_default_font_with_style(void* self, int style);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, int style ```
-QFont* q_scilexeryaml_qbase_default_font_with_style(void* self, int style);
+QFont* q_scilexeryaml_qbase_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1037,7 +1037,7 @@ QFont* q_scilexeryaml_qbase_default_font_with_style(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, QFont* (*slot)(QsciLexerYAML*, int) ```
-void q_scilexeryaml_on_default_font_with_style(void* self, QFont* (*slot)(void*, int));
+void q_scilexeryaml_on_default_font2(void* self, QFont* (*slot)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1046,7 +1046,7 @@ void q_scilexeryaml_on_default_font_with_style(void* self, QFont* (*slot)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, int style ```
-QColor* q_scilexeryaml_default_paper_with_style(void* self, int style);
+QColor* q_scilexeryaml_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1055,7 +1055,7 @@ QColor* q_scilexeryaml_default_paper_with_style(void* self, int style);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, int style ```
-QColor* q_scilexeryaml_qbase_default_paper_with_style(void* self, int style);
+QColor* q_scilexeryaml_qbase_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
 ///
@@ -1064,7 +1064,7 @@ QColor* q_scilexeryaml_qbase_default_paper_with_style(void* self, int style);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// ``` QsciLexerYAML* self, QColor* (*slot)(QsciLexerYAML*, int) ```
-void q_scilexeryaml_on_default_paper_with_style(void* self, QColor* (*slot)(void*, int));
+void q_scilexeryaml_on_default_paper2(void* self, QColor* (*slot)(void*, int));
 
 /// Inherited from QsciLexer
 ///

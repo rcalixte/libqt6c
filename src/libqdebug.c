@@ -82,73 +82,73 @@ QDebug* q_debug_operator_shift_left(void* self, void* t) {
     return QDebug_OperatorShiftLeft((QDebug*)self, (QChar*)t);
 }
 
-QDebug* q_debug_operator_shift_left_with_bool(void* self, bool t) {
-    return QDebug_OperatorShiftLeftWithBool((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_char(void* self, char t) {
-    return QDebug_OperatorShiftLeftWithChar((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_short(void* self, short t) {
-    return QDebug_OperatorShiftLeftWithShort((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_unsignedshort(void* self, unsigned short t) {
-    return QDebug_OperatorShiftLeftWithUnsignedshort((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_int(void* self, int t) {
-    return QDebug_OperatorShiftLeftWithInt((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_unsignedint(void* self, uint32_t t) {
-    return QDebug_OperatorShiftLeftWithUnsignedint((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_long(void* self, int64_t t) {
-    return QDebug_OperatorShiftLeftWithLong((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_unsignedlong(void* self, uint64_t t) {
-    return QDebug_OperatorShiftLeftWithUnsignedlong((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_qint64(void* self, long long t) {
-    return QDebug_OperatorShiftLeftWithQint64((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_quint64(void* self, uint64_t t) {
-    return QDebug_OperatorShiftLeftWithQuint64((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_float(void* self, float t) {
-    return QDebug_OperatorShiftLeftWithFloat((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left_with_double(void* self, double t) {
-    return QDebug_OperatorShiftLeftWithDouble((QDebug*)self, t);
-}
-
-QDebug* q_debug_operator_shift_left2(void* self, const char* t) {
+QDebug* q_debug_operator_shift_left2(void* self, bool t) {
     return QDebug_OperatorShiftLeft2((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left_with_q_string(void* self, const char* t) {
-    return QDebug_OperatorShiftLeftWithQString((QDebug*)self, qstring(t));
+QDebug* q_debug_operator_shift_left3(void* self, char t) {
+    return QDebug_OperatorShiftLeft3((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left_with_q_byte_array(void* self, const char* t) {
-    return QDebug_OperatorShiftLeftWithQByteArray((QDebug*)self, qstring(t));
+QDebug* q_debug_operator_shift_left4(void* self, short t) {
+    return QDebug_OperatorShiftLeft4((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left_with_q_byte_array_view(void* self, const char* t) {
+QDebug* q_debug_operator_shift_left5(void* self, unsigned short t) {
+    return QDebug_OperatorShiftLeft5((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left8(void* self, int t) {
+    return QDebug_OperatorShiftLeft8((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left9(void* self, uint32_t t) {
+    return QDebug_OperatorShiftLeft9((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left10(void* self, int64_t t) {
+    return QDebug_OperatorShiftLeft10((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left11(void* self, uint64_t t) {
+    return QDebug_OperatorShiftLeft11((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left12(void* self, long long t) {
+    return QDebug_OperatorShiftLeft12((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left13(void* self, uint64_t t) {
+    return QDebug_OperatorShiftLeft13((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left15(void* self, float t) {
+    return QDebug_OperatorShiftLeft15((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left16(void* self, double t) {
+    return QDebug_OperatorShiftLeft16((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left17(void* self, const char* t) {
+    return QDebug_OperatorShiftLeft17((QDebug*)self, t);
+}
+
+QDebug* q_debug_operator_shift_left19(void* self, const char* t) {
+    return QDebug_OperatorShiftLeft19((QDebug*)self, qstring(t));
+}
+
+QDebug* q_debug_operator_shift_left23(void* self, const char* t) {
+    return QDebug_OperatorShiftLeft23((QDebug*)self, qstring(t));
+}
+
+QDebug* q_debug_operator_shift_left24(void* self, const char* t) {
     libqt_strview t_strview = qstrview(t);
-    return QDebug_OperatorShiftLeftWithQByteArrayView((QDebug*)self, (QByteArrayView*)&t_strview);
+    return QDebug_OperatorShiftLeft24((QDebug*)self, (QByteArrayView*)&t_strview);
 }
 
-QDebug* q_debug_operator_shift_left_with_void(void* self, void* t) {
-    return QDebug_OperatorShiftLeftWithVoid((QDebug*)self, t);
+QDebug* q_debug_operator_shift_left25(void* self, void* t) {
+    return QDebug_OperatorShiftLeft25((QDebug*)self, t);
 }
 
 QDebug* q_debug_maybe_quote1(void* self, char c) {

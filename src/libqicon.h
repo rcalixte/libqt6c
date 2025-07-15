@@ -67,17 +67,17 @@ QPixmap* q_icon_pixmap2(void* self, int w, int h);
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
 /// ``` QIcon* self, int extent ```
-QPixmap* q_icon_pixmap_with_extent(void* self, int extent);
+QPixmap* q_icon_pixmap3(void* self, int extent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
 /// ``` QIcon* self, QSize* size, double devicePixelRatio ```
-QPixmap* q_icon_pixmap3(void* self, void* size, double devicePixelRatio);
+QPixmap* q_icon_pixmap4(void* self, void* size, double devicePixelRatio);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#pixmap)
 ///
 /// ``` QIcon* self, QWindow* window, QSize* size ```
-QPixmap* q_icon_pixmap4(void* self, void* window, void* size);
+QPixmap* q_icon_pixmap5(void* self, void* window, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#actualSize)
 ///
@@ -167,17 +167,17 @@ bool q_icon_has_theme_icon(const char* name);
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#fromTheme)
 ///
 /// ``` enum QIcon__ThemeIcon icon ```
-QIcon* q_icon_from_theme_with_icon(int64_t icon);
+QIcon* q_icon_from_theme3(int64_t icon);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#fromTheme)
 ///
 /// ``` enum QIcon__ThemeIcon icon, QIcon* fallback ```
-QIcon* q_icon_from_theme3(int64_t icon, void* fallback);
+QIcon* q_icon_from_theme4(int64_t icon, void* fallback);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#hasThemeIcon)
 ///
 /// ``` enum QIcon__ThemeIcon icon ```
-bool q_icon_has_theme_icon_with_icon(int64_t icon);
+bool q_icon_has_theme_icon2(int64_t icon);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#themeSearchPaths)
 ///

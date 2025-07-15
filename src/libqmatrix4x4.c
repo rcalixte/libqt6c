@@ -107,8 +107,8 @@ QMatrix4x4* q_matrix4x4_operator_multiply_assign(void* self, void* other) {
     return QMatrix4x4_OperatorMultiplyAssign((QMatrix4x4*)self, (QMatrix4x4*)other);
 }
 
-QMatrix4x4* q_matrix4x4_operator_multiply_assign_with_factor(void* self, float factor) {
-    return QMatrix4x4_OperatorMultiplyAssignWithFactor((QMatrix4x4*)self, factor);
+QMatrix4x4* q_matrix4x4_operator_multiply_assign2(void* self, float factor) {
+    return QMatrix4x4_OperatorMultiplyAssign2((QMatrix4x4*)self, factor);
 }
 
 QMatrix4x4* q_matrix4x4_operator_divide_assign(void* self, float divisor) {
@@ -143,8 +143,8 @@ void q_matrix4x4_scale3(void* self, float x, float y, float z) {
     QMatrix4x4_Scale3((QMatrix4x4*)self, x, y, z);
 }
 
-void q_matrix4x4_scale_with_factor(void* self, float factor) {
-    QMatrix4x4_ScaleWithFactor((QMatrix4x4*)self, factor);
+void q_matrix4x4_scale4(void* self, float factor) {
+    QMatrix4x4_Scale4((QMatrix4x4*)self, factor);
 }
 
 void q_matrix4x4_translate2(void* self, float x, float y) {
@@ -159,20 +159,20 @@ void q_matrix4x4_rotate2(void* self, float angle, float x, float y) {
     QMatrix4x4_Rotate2((QMatrix4x4*)self, angle, x, y);
 }
 
-void q_matrix4x4_rotate_with_quaternion(void* self, void* quaternion) {
-    QMatrix4x4_RotateWithQuaternion((QMatrix4x4*)self, (QQuaternion*)quaternion);
+void q_matrix4x4_rotate3(void* self, void* quaternion) {
+    QMatrix4x4_Rotate3((QMatrix4x4*)self, (QQuaternion*)quaternion);
 }
 
 void q_matrix4x4_ortho(void* self, void* rect) {
     QMatrix4x4_Ortho((QMatrix4x4*)self, (QRect*)rect);
 }
 
-void q_matrix4x4_ortho_with_rect(void* self, void* rect) {
-    QMatrix4x4_OrthoWithRect((QMatrix4x4*)self, (QRectF*)rect);
+void q_matrix4x4_ortho2(void* self, void* rect) {
+    QMatrix4x4_Ortho2((QMatrix4x4*)self, (QRectF*)rect);
 }
 
-void q_matrix4x4_ortho2(void* self, float left, float right, float bottom, float top, float nearPlane, float farPlane) {
-    QMatrix4x4_Ortho2((QMatrix4x4*)self, left, right, bottom, top, nearPlane, farPlane);
+void q_matrix4x4_ortho3(void* self, float left, float right, float bottom, float top, float nearPlane, float farPlane) {
+    QMatrix4x4_Ortho3((QMatrix4x4*)self, left, right, bottom, top, nearPlane, farPlane);
 }
 
 void q_matrix4x4_frustum(void* self, float left, float right, float bottom, float top, float nearPlane, float farPlane) {
@@ -207,36 +207,36 @@ QTransform* q_matrix4x4_to_transform(void* self) {
     return QMatrix4x4_ToTransform((QMatrix4x4*)self);
 }
 
-QTransform* q_matrix4x4_to_transform_with_distance_to_plane(void* self, float distanceToPlane) {
-    return QMatrix4x4_ToTransformWithDistanceToPlane((QMatrix4x4*)self, distanceToPlane);
+QTransform* q_matrix4x4_to_transform2(void* self, float distanceToPlane) {
+    return QMatrix4x4_ToTransform2((QMatrix4x4*)self, distanceToPlane);
 }
 
 QPoint* q_matrix4x4_map(void* self, void* point) {
     return QMatrix4x4_Map((QMatrix4x4*)self, (QPoint*)point);
 }
 
-QPointF* q_matrix4x4_map_with_point(void* self, void* point) {
-    return QMatrix4x4_MapWithPoint((QMatrix4x4*)self, (QPointF*)point);
+QPointF* q_matrix4x4_map2(void* self, void* point) {
+    return QMatrix4x4_Map2((QMatrix4x4*)self, (QPointF*)point);
 }
 
-QVector3D* q_matrix4x4_map2(void* self, void* point) {
-    return QMatrix4x4_Map2((QMatrix4x4*)self, (QVector3D*)point);
+QVector3D* q_matrix4x4_map3(void* self, void* point) {
+    return QMatrix4x4_Map3((QMatrix4x4*)self, (QVector3D*)point);
 }
 
 QVector3D* q_matrix4x4_map_vector(void* self, void* vector) {
     return QMatrix4x4_MapVector((QMatrix4x4*)self, (QVector3D*)vector);
 }
 
-QVector4D* q_matrix4x4_map3(void* self, void* point) {
-    return QMatrix4x4_Map3((QMatrix4x4*)self, (QVector4D*)point);
+QVector4D* q_matrix4x4_map4(void* self, void* point) {
+    return QMatrix4x4_Map4((QMatrix4x4*)self, (QVector4D*)point);
 }
 
 QRect* q_matrix4x4_map_rect(void* self, void* rect) {
     return QMatrix4x4_MapRect((QMatrix4x4*)self, (QRect*)rect);
 }
 
-QRectF* q_matrix4x4_map_rect_with_rect(void* self, void* rect) {
-    return QMatrix4x4_MapRectWithRect((QMatrix4x4*)self, (QRectF*)rect);
+QRectF* q_matrix4x4_map_rect2(void* self, void* rect) {
+    return QMatrix4x4_MapRect2((QMatrix4x4*)self, (QRectF*)rect);
 }
 
 float* q_matrix4x4_data(void* self) {
