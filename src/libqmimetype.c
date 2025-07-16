@@ -65,7 +65,7 @@ const char** q_mimetype_glob_patterns(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -80,7 +80,7 @@ const char** q_mimetype_parent_mime_types(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -95,7 +95,7 @@ const char** q_mimetype_all_ancestors(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -110,7 +110,7 @@ const char** q_mimetype_aliases(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -125,7 +125,7 @@ const char** q_mimetype_suffixes(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 

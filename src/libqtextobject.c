@@ -180,7 +180,7 @@ const char** q_textobject_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -408,7 +408,7 @@ const char** q_textblockgroup_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -546,6 +546,14 @@ libqt_list /* of QTextFrame* */ q_textframe_child_frames(void* self) {
 
 QTextFrame* q_textframe_parent_frame(void* self) {
     return QTextFrame_ParentFrame((QTextFrame*)self);
+}
+
+QTextFrame__iterator* q_textframe_begin(void* self) {
+    return QTextFrame_Begin((QTextFrame*)self);
+}
+
+QTextFrame__iterator* q_textframe_end(void* self) {
+    return QTextFrame_End((QTextFrame*)self);
 }
 
 const char* q_textframe_tr2(const char* s, const char* c) {
@@ -689,7 +697,7 @@ const char** q_textframe_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -1041,6 +1049,14 @@ int32_t q_textblock_line_count(void* self) {
     return QTextBlock_LineCount((QTextBlock*)self);
 }
 
+QTextBlock__iterator* q_textblock_begin(void* self) {
+    return QTextBlock_Begin((QTextBlock*)self);
+}
+
+QTextBlock__iterator* q_textblock_end(void* self) {
+    return QTextBlock_End((QTextBlock*)self);
+}
+
 QTextBlock* q_textblock_next(void* self) {
     return QTextBlock_Next((QTextBlock*)self);
 }
@@ -1129,4 +1145,132 @@ libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs2(void* self, int from, 
 
 void q_textfragment_delete(void* self) {
     QTextFragment_Delete((QTextFragment*)(self));
+}
+
+QTextFrame__iterator* q_textframe__iterator_new(void* other) {
+    return QTextFrame__iterator_new((QTextFrame__iterator*)other);
+}
+
+QTextFrame__iterator* q_textframe__iterator_new2(void* other) {
+    return QTextFrame__iterator_new2((QTextFrame__iterator*)other);
+}
+
+QTextFrame__iterator* q_textframe__iterator_new3() {
+    return QTextFrame__iterator_new3();
+}
+
+QTextFrame__iterator* q_textframe__iterator_new4(void* param1) {
+    return QTextFrame__iterator_new4((QTextFrame__iterator*)param1);
+}
+
+void q_textframe__iterator_copy_assign(void* self, void* other) {
+    QTextFrame__iterator_CopyAssign((QTextFrame__iterator*)self, (QTextFrame__iterator*)other);
+}
+
+void q_textframe__iterator_move_assign(void* self, void* other) {
+    QTextFrame__iterator_MoveAssign((QTextFrame__iterator*)self, (QTextFrame__iterator*)other);
+}
+
+QTextFrame* q_textframe__iterator_parent_frame(void* self) {
+    return QTextFrame__iterator_ParentFrame((QTextFrame__iterator*)self);
+}
+
+QTextFrame* q_textframe__iterator_current_frame(void* self) {
+    return QTextFrame__iterator_CurrentFrame((QTextFrame__iterator*)self);
+}
+
+QTextBlock* q_textframe__iterator_current_block(void* self) {
+    return QTextFrame__iterator_CurrentBlock((QTextFrame__iterator*)self);
+}
+
+bool q_textframe__iterator_at_end(void* self) {
+    return QTextFrame__iterator_AtEnd((QTextFrame__iterator*)self);
+}
+
+bool q_textframe__iterator_operator_equal(void* self, void* o) {
+    return QTextFrame__iterator_OperatorEqual((QTextFrame__iterator*)self, (QTextFrame__iterator*)o);
+}
+
+bool q_textframe__iterator_operator_not_equal(void* self, void* o) {
+    return QTextFrame__iterator_OperatorNotEqual((QTextFrame__iterator*)self, (QTextFrame__iterator*)o);
+}
+
+QTextFrame__iterator* q_textframe__iterator_operator_plus_plus(void* self) {
+    return QTextFrame__iterator_OperatorPlusPlus((QTextFrame__iterator*)self);
+}
+
+QTextFrame__iterator* q_textframe__iterator_operator_plus_plus2(void* self, int param1) {
+    return QTextFrame__iterator_OperatorPlusPlus2((QTextFrame__iterator*)self, param1);
+}
+
+QTextFrame__iterator* q_textframe__iterator_operator_minus_minus(void* self) {
+    return QTextFrame__iterator_OperatorMinusMinus((QTextFrame__iterator*)self);
+}
+
+QTextFrame__iterator* q_textframe__iterator_operator_minus_minus2(void* self, int param1) {
+    return QTextFrame__iterator_OperatorMinusMinus2((QTextFrame__iterator*)self, param1);
+}
+
+void q_textframe__iterator_delete(void* self) {
+    QTextFrame__iterator_Delete((QTextFrame__iterator*)(self));
+}
+
+QTextBlock__iterator* q_textblock__iterator_new(void* other) {
+    return QTextBlock__iterator_new((QTextBlock__iterator*)other);
+}
+
+QTextBlock__iterator* q_textblock__iterator_new2(void* other) {
+    return QTextBlock__iterator_new2((QTextBlock__iterator*)other);
+}
+
+QTextBlock__iterator* q_textblock__iterator_new3() {
+    return QTextBlock__iterator_new3();
+}
+
+QTextBlock__iterator* q_textblock__iterator_new4(void* param1) {
+    return QTextBlock__iterator_new4((QTextBlock__iterator*)param1);
+}
+
+void q_textblock__iterator_copy_assign(void* self, void* other) {
+    QTextBlock__iterator_CopyAssign((QTextBlock__iterator*)self, (QTextBlock__iterator*)other);
+}
+
+void q_textblock__iterator_move_assign(void* self, void* other) {
+    QTextBlock__iterator_MoveAssign((QTextBlock__iterator*)self, (QTextBlock__iterator*)other);
+}
+
+QTextFragment* q_textblock__iterator_fragment(void* self) {
+    return QTextBlock__iterator_Fragment((QTextBlock__iterator*)self);
+}
+
+bool q_textblock__iterator_at_end(void* self) {
+    return QTextBlock__iterator_AtEnd((QTextBlock__iterator*)self);
+}
+
+bool q_textblock__iterator_operator_equal(void* self, void* o) {
+    return QTextBlock__iterator_OperatorEqual((QTextBlock__iterator*)self, (QTextBlock__iterator*)o);
+}
+
+bool q_textblock__iterator_operator_not_equal(void* self, void* o) {
+    return QTextBlock__iterator_OperatorNotEqual((QTextBlock__iterator*)self, (QTextBlock__iterator*)o);
+}
+
+QTextBlock__iterator* q_textblock__iterator_operator_plus_plus(void* self) {
+    return QTextBlock__iterator_OperatorPlusPlus((QTextBlock__iterator*)self);
+}
+
+QTextBlock__iterator* q_textblock__iterator_operator_plus_plus2(void* self, int param1) {
+    return QTextBlock__iterator_OperatorPlusPlus2((QTextBlock__iterator*)self, param1);
+}
+
+QTextBlock__iterator* q_textblock__iterator_operator_minus_minus(void* self) {
+    return QTextBlock__iterator_OperatorMinusMinus((QTextBlock__iterator*)self);
+}
+
+QTextBlock__iterator* q_textblock__iterator_operator_minus_minus2(void* self, int param1) {
+    return QTextBlock__iterator_OperatorMinusMinus2((QTextBlock__iterator*)self, param1);
+}
+
+void q_textblock__iterator_delete(void* self) {
+    QTextBlock__iterator_Delete((QTextBlock__iterator*)(self));
 }

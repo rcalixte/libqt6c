@@ -74,8 +74,8 @@ QTimeZone* q_timezone_as_backend_zone(void* self) {
 }
 
 bool q_timezone_has_alternative_name(void* self, const char* alias) {
-    libqt_strview alias_strview = qstrview(alias);
-    return QTimeZone_HasAlternativeName((QTimeZone*)self, (QByteArrayView*)&alias_strview);
+    libqt_string alias_string = qstring(alias);
+    return QTimeZone_HasAlternativeName((QTimeZone*)self, (QByteArrayView*)&alias_string);
 }
 
 char* q_timezone_id(void* self) {
@@ -192,7 +192,7 @@ const char** q_timezone_available_time_zone_ids() {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -207,7 +207,7 @@ const char** q_timezone_available_time_zone_ids2(int64_t territory) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -222,7 +222,7 @@ const char** q_timezone_available_time_zone_ids3(int offsetSeconds) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -258,7 +258,7 @@ const char** q_timezone_windows_id_to_iana_ids(const char* windowsId) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -273,7 +273,7 @@ const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, int64_t t
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 

@@ -406,8 +406,8 @@ bool q_image_load2(void* self, const char* fileName) {
 }
 
 bool q_image_load_from_data(void* self, const char* data) {
-    libqt_strview data_strview = qstrview(data);
-    return QImage_LoadFromData((QImage*)self, (QByteArrayView*)&data_strview);
+    libqt_string data_string = qstring(data);
+    return QImage_LoadFromData((QImage*)self, (QByteArrayView*)&data_string);
 }
 
 bool q_image_load_from_data2(void* self, unsigned char* buf, int lenVal) {
@@ -427,8 +427,8 @@ bool q_image_save2(void* self, void* device) {
 }
 
 QImage* q_image_from_data(const char* data) {
-    libqt_strview data_strview = qstrview(data);
-    return QImage_FromData((QByteArrayView*)&data_strview);
+    libqt_string data_string = qstring(data);
+    return QImage_FromData((QByteArrayView*)&data_string);
 }
 
 QImage* q_image_from_data2(unsigned char* data, int size) {
@@ -490,7 +490,7 @@ const char** q_image_text_keys(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -726,8 +726,8 @@ bool q_image_load22(void* self, const char* fileName, const char* format) {
 }
 
 bool q_image_load_from_data22(void* self, const char* data, const char* format) {
-    libqt_strview data_strview = qstrview(data);
-    return QImage_LoadFromData22((QImage*)self, (QByteArrayView*)&data_strview, format);
+    libqt_string data_string = qstring(data);
+    return QImage_LoadFromData22((QImage*)self, (QByteArrayView*)&data_string, format);
 }
 
 bool q_image_load_from_data32(void* self, unsigned char* buf, int lenVal, const char* format) {
@@ -755,8 +755,8 @@ bool q_image_save32(void* self, void* device, const char* format, int quality) {
 }
 
 QImage* q_image_from_data22(const char* data, const char* format) {
-    libqt_strview data_strview = qstrview(data);
-    return QImage_FromData22((QByteArrayView*)&data_strview, format);
+    libqt_string data_string = qstring(data);
+    return QImage_FromData22((QByteArrayView*)&data_string, format);
 }
 
 QImage* q_image_from_data32(unsigned char* data, int size, const char* format) {

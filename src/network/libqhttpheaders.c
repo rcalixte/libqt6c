@@ -76,21 +76,15 @@ void q_httpheaders_remove_at(void* self, int64_t i) {
 }
 
 const char* q_httpheaders_value(void* self, char* name) {
-    QByteArrayView* _view = QHttpHeaders_Value((QHttpHeaders*)self, name);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QHttpHeaders_Value((QHttpHeaders*)self, name);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_httpheaders_value2(void* self, int64_t name) {
-    QByteArrayView* _view = QHttpHeaders_Value2((QHttpHeaders*)self, name);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QHttpHeaders_Value2((QHttpHeaders*)self, name);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char** q_httpheaders_values(void* self, char* name) {
@@ -104,7 +98,7 @@ const char** q_httpheaders_values(void* self, char* name) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -119,17 +113,14 @@ const char** q_httpheaders_values2(void* self, int64_t name) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
 const char* q_httpheaders_value_at(void* self, int64_t i) {
-    QByteArrayView* _view = QHttpHeaders_ValueAt((QHttpHeaders*)self, i);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QHttpHeaders_ValueAt((QHttpHeaders*)self, i);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 char* q_httpheaders_combined_value(void* self, char* name) {
@@ -159,12 +150,9 @@ bool q_httpheaders_is_empty(void* self) {
 }
 
 const char* q_httpheaders_well_known_header_name(int64_t name) {
-    QByteArrayView* _view = QHttpHeaders_WellKnownHeaderName(name);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QHttpHeaders_WellKnownHeaderName(name);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair  tuple of char* and char*  */ headers) {
@@ -177,23 +165,17 @@ libqt_list /* of libqt_pair  tuple of char* and char*  */ q_httpheaders_to_list_
 }
 
 const char* q_httpheaders_value22(void* self, char* name, const char* defaultValue) {
-    libqt_strview defaultValue_strview = qstrview(defaultValue);
-    QByteArrayView* _view = QHttpHeaders_Value22((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_strview);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string defaultValue_string = qstring(defaultValue);
+    QByteArrayView* _str = QHttpHeaders_Value22((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_string);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_httpheaders_value23(void* self, int64_t name, const char* defaultValue) {
-    libqt_strview defaultValue_strview = qstrview(defaultValue);
-    QByteArrayView* _view = QHttpHeaders_Value23((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_strview);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string defaultValue_string = qstring(defaultValue);
+    QByteArrayView* _str = QHttpHeaders_Value23((QHttpHeaders*)self, name, (QByteArrayView*)&defaultValue_string);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 void q_httpheaders_delete(void* self) {

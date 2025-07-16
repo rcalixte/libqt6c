@@ -54,6 +54,16 @@ int64_t q_dirlisting_iterator_flags(void* self);
 /// ``` QDirListing* self ```
 const char** q_dirlisting_name_filters(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#begin)
+///
+/// ``` QDirListing* self ```
+QDirListing__const_iterator* q_dirlisting_begin(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#cbegin)
+///
+/// ``` QDirListing* self ```
+QDirListing__const_iterator* q_dirlisting_cbegin(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#end)
 ///
 /// ``` QDirListing* self ```
@@ -63,6 +73,11 @@ QDirListing__sentinel* q_dirlisting_end(void* self);
 ///
 /// ``` QDirListing* self ```
 QDirListing__sentinel* q_dirlisting_cend(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#constBegin)
+///
+/// ``` QDirListing* self ```
+QDirListing__const_iterator* q_dirlisting_const_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#constEnd)
 ///
@@ -283,6 +298,40 @@ void q_dirlisting__sentinel_move_assign(void* self, void* other);
 ///
 /// ``` QDirListing__sentinel* self ```
 void q_dirlisting__sentinel_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qdirlisting-const_iterator.html
+
+/// q_dirlisting__const_iterator_new2 constructs a new QDirListing::const_iterator object and invalidates the source QDirListing::const_iterator object.
+///
+/// ``` QDirListing__const_iterator* other ```
+QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other);
+
+/// q_dirlisting__const_iterator_move_assign moves `other` into `self` and invalidates `other`.
+///
+/// ``` QDirListing__const_iterator* self, QDirListing__const_iterator* other ```
+void q_dirlisting__const_iterator_move_assign(void* self, void* other);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator*)
+///
+/// ``` QDirListing__const_iterator* self ```
+const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator++)
+///
+/// ``` QDirListing__const_iterator* self ```
+QDirListing__const_iterator* q_dirlisting__const_iterator_operator_plus_plus(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator++)
+///
+/// ``` QDirListing__const_iterator* self, int param1 ```
+void q_dirlisting__const_iterator_operator_plus_plus2(void* self, int param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::const_iterator.html#dtor.QDirListing::const_iterator)
+///
+/// Delete this object from C++ memory.
+///
+/// ``` QDirListing__const_iterator* self ```
+void q_dirlisting__const_iterator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdirlisting.html#types
 

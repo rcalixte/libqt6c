@@ -465,8 +465,8 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 
 	} else if p.ParameterType == "QByteArrayView" || p.ParameterType == "QStringView" {
 		// Take the address of the pointer and cast it to the expected type
-		preamble += "libqt_strview " + nameprefix + "_strview = qstrview(" + p.ParameterName + ");\n"
-		rvalue = "(" + p.ParameterType + "*)&" + nameprefix + "_strview"
+		preamble += "libqt_string " + nameprefix + "_string = qstring(" + p.ParameterName + ");\n"
+		rvalue = "(" + p.ParameterType + "*)&" + nameprefix + "_string"
 
 	} else if t, ok := p.QListOf(); ok {
 		// QList<T>
@@ -548,18 +548,15 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		return shouldReturn + rvalue + ";\n" + afterword
 
 	} else if rt.ParameterType == "QByteArrayView" {
-		shouldReturn := rt.ParameterType + "* " + namePrefix + "_view = "
-		afterword += "libqt_strview " + namePrefix + "_ret = {\n"
-		afterword += "    .ptr = " + rt.ParameterType + "_Data(" + namePrefix + "_view),\n"
-		afterword += "    .len = " + rt.ParameterType + "_Size(" + namePrefix + "_view),\n"
-		afterword += "};\n"
+		shouldReturn := rt.ParameterType + "* " + namePrefix + "_str = "
+		afterword += "const char* " + namePrefix + "_ret = " + rt.ParameterType + "_Data(" + namePrefix + "_str);\n"
 
-		afterword += assignExpr + " " + namePrefix + "_ret.ptr;\n"
+		afterword += assignExpr + " " + namePrefix + "_ret;\n"
 		return shouldReturn + " " + rvalue + ";\n" + afterword
 
 	} else if rt.ParameterType == "QAnyStringView" {
-		shouldReturn := "libqt_strview " + namePrefix + "_view = "
-		afterword += assignExpr + " &" + namePrefix + "_view;\n"
+		shouldReturn := "libqt_string " + namePrefix + "_str = "
+		afterword += assignExpr + " &" + namePrefix + "_str;\n"
 		return shouldReturn + rvalue + ";\n" + afterword
 
 	} else if rt.ParameterType == "char" && rt.Pointer {
@@ -585,7 +582,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			afterword += "for (size_t _i = 0; _i < " + namePrefix + "_arr.len; ++_i) {\n"
 			afterword += "    libqt_string_free((libqt_string*)&" + namePrefix + "_qstr[_i]);\n"
 			afterword += "}\n"
-			afterword += "free((void*)" + namePrefix + "_arr.data.ptr);\n"
+			afterword += "libqt_free(" + namePrefix + "_arr.data.ptr);\n"
 			afterword += assignExpr + " " + namePrefix + "_ret;\n"
 			return shouldReturn + rvalue + ";\n" + afterword
 		} else {
@@ -844,6 +841,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 
 		for i, ctor := range c.Ctors {
+			if _, ok := moveCtorOnly[c.ClassName]; ok && !ctor.IsMoveCtor {
+				continue
+			}
+
 			var backticks, maybeMoveCtor string
 
 			if len(ctor.Parameters) > 0 {
@@ -863,7 +864,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				cStructName + `* ` + cMethodPrefix + `_new` + maybeSuffix(i) + `(` + cfs.emitParametersC(ctor.Parameters, false) + `);` + "\n\n")
 		}
 
-		if c.HasTrivialCopyAssign && cStructName != "QCborValueConstRef" && cStructName != "QJsonValueConstRef" {
+		if c.HasTrivialCopyAssign {
 			ret.WriteString("/// " + cMethodPrefix + "_copy_assign shallow copies `other` into `self`.\n" + "///\n" +
 				"/// ``` " + cStructName + "* self, " + cStructName + "* other ```\n" +
 				"void " + cMethodPrefix + "_copy_assign(void* self, void* other);\n\n")
@@ -943,14 +944,16 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			mSafeMethodName := m.SafeMethodName()
+
+			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
 			}
 
 			var showHiddenParams bool
-			if _, ok := seenMethodVariants[m.SafeMethodName()]; ok {
+			if _, ok := seenMethodVariants[mSafeMethodName]; ok {
 				continue
 			}
 			if b, ok := seenMethodVariants[m.MethodName]; ok {
@@ -962,9 +965,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 			}
 			seenMethodVariants[m.MethodName] = false
-			seenMethodVariants[m.SafeMethodName()] = false
+			seenMethodVariants[mSafeMethodName] = false
 
-			mSafeMethodName := m.SafeMethodName()
 			if _, ok := previousMethods[mSafeMethodName]; ok {
 				continue
 			}
@@ -1109,14 +1111,16 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			mSafeMethodName := m.SafeMethodName()
+
+			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
 			}
 
 			var showHiddenParams bool
-			if _, ok := seenVirtuals[m.SafeMethodName()]; ok {
+			if _, ok := seenVirtuals[mSafeMethodName]; ok {
 				continue
 			}
 			if b, ok := seenVirtuals[m.MethodName]; ok {
@@ -1128,17 +1132,17 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 			}
 			seenVirtuals[m.MethodName] = false
-			seenVirtuals[m.SafeMethodName()] = false
+			seenVirtuals[mSafeMethodName] = false
 
 			if _, ok := previousMethods[m.MethodName]; ok {
 				continue
 			}
 			previousMethods[m.MethodName] = struct{}{}
-			previousMethods[m.SafeMethodName()] = struct{}{}
+			previousMethods[mSafeMethodName] = struct{}{}
 
 			cmdStructName := cStructName
 			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
-			safeMethodName := cSafeMethodName(m.SafeMethodName())
+			safeMethodName := cSafeMethodName(mSafeMethodName)
 
 			var inheritedFrom, commaParams string
 			if len(m.Parameters) > 0 {
@@ -1495,6 +1499,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		ret.WriteString("\n")
 
 		for i, ctor := range c.Ctors {
+			if _, ok := moveCtorOnly[c.ClassName]; ok && !ctor.IsMoveCtor {
+				continue
+			}
+
 			cfs.castType = cStructName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(ctor)
 
@@ -1521,7 +1529,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
-		if c.HasTrivialCopyAssign && cStructName != "QCborValueConstRef" && cStructName != "QJsonValueConstRef" {
+		if c.HasTrivialCopyAssign {
 			ret.WriteString("void " + cMethodPrefix + "_copy_assign(void* self, void* other) {\n" +
 				cStructName + "_CopyAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n" + "}\n\n")
 		}
@@ -1599,14 +1607,16 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			mSafeMethodName := m.SafeMethodName()
+
+			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
 			}
 
 			var showHiddenParams bool
-			if _, ok := seenMethodVariants[m.SafeMethodName()]; ok {
+			if _, ok := seenMethodVariants[mSafeMethodName]; ok {
 				continue
 			}
 			if b, ok := seenMethodVariants[m.MethodName]; ok {
@@ -1618,9 +1628,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 			}
 			seenMethodVariants[m.MethodName] = false
-			seenMethodVariants[m.SafeMethodName()] = false
-
-			mSafeMethodName := m.SafeMethodName()
+			seenMethodVariants[mSafeMethodName] = false
 
 			if _, ok := previousMethods[mSafeMethodName]; ok {
 				continue
@@ -1642,7 +1650,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cfs.castType = cmdStructName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
 			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
-			rvalue := cmdStructName + `_` + mSafeMethodName + `(` + forwarding + `)`
+			rvalue := cmdStructName + "_" + mSafeMethodName + "(" + forwarding + ")"
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, rvalue)
 
 			var commaParams string
@@ -1650,9 +1658,9 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams = ", "
 			}
 
-			method := safeMethodName + `(void* self` + commaParams
+			method := safeMethodName + "(void* self" + commaParams
 			if m.IsStatic {
-				method = safeMethodName + `(`
+				method = safeMethodName + "("
 			}
 
 			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
@@ -1716,11 +1724,11 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 				ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 					`(*slot)(` + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + `)` + `) {
-` + cmdStructName + `_On` + mSafeMethodName + `((` + cmdStructName + `*)` + `self, (intptr_t)slot);
+` + cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)" + `self, (intptr_t)slot);
 }` + "\n\n")
 
 				baseMethodName := "q_" + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
-				baseCallTarget := cmdStructName + `_QBase` + mSafeMethodName + `(` + forwarding + `)`
+				baseCallTarget := cmdStructName + "_QBase" + mSafeMethodName + "(" + forwarding + ")"
 				basereturnFunc := cfs.emitCabiToC("return ", m.ReturnType, baseCallTarget)
 
 				ret.WriteString(returnTypeDecl + " " + baseMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
@@ -1748,14 +1756,16 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			if _, ok := skippedMethods[c.ClassName+"_"+m.SafeMethodName()]; ok {
+			mSafeMethodName := m.SafeMethodName()
+
+			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
 				if m.InheritedFrom == "" {
 					continue
 				}
 			}
 
 			var showHiddenParams bool
-			if _, ok := seenVirtuals[m.SafeMethodName()]; ok {
+			if _, ok := seenVirtuals[mSafeMethodName]; ok {
 				continue
 			}
 			if b, ok := seenVirtuals[m.MethodName]; ok {
@@ -1767,17 +1777,17 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 			}
 			seenVirtuals[m.MethodName] = false
-			seenVirtuals[m.SafeMethodName()] = false
+			seenVirtuals[mSafeMethodName] = false
 
 			if _, ok := previousMethods[m.MethodName]; ok {
 				continue
 			}
 			previousMethods[m.MethodName] = struct{}{}
-			previousMethods[m.SafeMethodName()] = struct{}{}
+			previousMethods[mSafeMethodName] = struct{}{}
 
 			cmdStructName := cStructName
 			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
-			safeMethodName := cSafeMethodName(m.SafeMethodName())
+			safeMethodName := cSafeMethodName(mSafeMethodName)
 
 			var commaParams string
 			if len(m.Parameters) > 0 {
@@ -1791,7 +1801,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			forwarding = strings.TrimPrefix(forwarding, `self`)
 			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
-			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+`_`+m.SafeMethodName()+`(`+forwarding+`)`)
+			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_"+mSafeMethodName+"("+forwarding+")")
 
 			ret.WriteString(returnTypeDecl + ` ` + cmdMethodName + safeMethodName + `(void* self` + commaParams + cfsParams + `) {` +
 				"\n    " + preamble +
@@ -1802,7 +1812,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
-			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+`_QBase`+m.SafeMethodName()+`(`+forwarding+`)`)
+			returnFunc = cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_QBase"+mSafeMethodName+"("+forwarding+")")
 
 			ret.WriteString(returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `) {` +
 				"\n    " + preamble +
@@ -1822,7 +1832,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			ret.WriteString(`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 				`(*slot)(` + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + `)` + `) {
-` + cmdStructName + `_On` + m.SafeMethodName() + `((` + cmdStructName + `*)` + `self, (intptr_t)slot);
+` + cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)" + `self, (intptr_t)slot);
 }` + "\n\n")
 
 		}

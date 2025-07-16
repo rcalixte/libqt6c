@@ -61,8 +61,16 @@ const char** q_dirlisting_name_filters(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
+}
+
+QDirListing__const_iterator* q_dirlisting_begin(void* self) {
+    return QDirListing_Begin((QDirListing*)self);
+}
+
+QDirListing__const_iterator* q_dirlisting_cbegin(void* self) {
+    return QDirListing_Cbegin((QDirListing*)self);
 }
 
 QDirListing__sentinel* q_dirlisting_end(void* self) {
@@ -71,6 +79,10 @@ QDirListing__sentinel* q_dirlisting_end(void* self) {
 
 QDirListing__sentinel* q_dirlisting_cend(void* self) {
     return QDirListing_Cend((QDirListing*)self);
+}
+
+QDirListing__const_iterator* q_dirlisting_const_begin(void* self) {
+    return QDirListing_ConstBegin((QDirListing*)self);
 }
 
 QDirListing__sentinel* q_dirlisting_const_end(void* self) {
@@ -269,4 +281,28 @@ void q_dirlisting__sentinel_move_assign(void* self, void* other) {
 
 void q_dirlisting__sentinel_delete(void* self) {
     QDirListing__sentinel_Delete((QDirListing__sentinel*)(self));
+}
+
+QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other) {
+    return QDirListing__const_iterator_new2((QDirListing__const_iterator*)other);
+}
+
+void q_dirlisting__const_iterator_move_assign(void* self, void* other) {
+    QDirListing__const_iterator_MoveAssign((QDirListing__const_iterator*)self, (QDirListing__const_iterator*)other);
+}
+
+const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(void* self) {
+    return QDirListing__const_iterator_OperatorMultiply((QDirListing__const_iterator*)self);
+}
+
+QDirListing__const_iterator* q_dirlisting__const_iterator_operator_plus_plus(void* self) {
+    return QDirListing__const_iterator_OperatorPlusPlus((QDirListing__const_iterator*)self);
+}
+
+void q_dirlisting__const_iterator_operator_plus_plus2(void* self, int param1) {
+    QDirListing__const_iterator_OperatorPlusPlus2((QDirListing__const_iterator*)self, param1);
+}
+
+void q_dirlisting__const_iterator_delete(void* self) {
+    QDirListing__const_iterator_Delete((QDirListing__const_iterator*)(self));
 }

@@ -74,6 +74,14 @@ bool q_texttablecell_operator_not_equal(void* self, void* other) {
     return QTextTableCell_OperatorNotEqual((QTextTableCell*)self, (QTextTableCell*)other);
 }
 
+QTextFrame__iterator* q_texttablecell_begin(void* self) {
+    return QTextTableCell_Begin((QTextTableCell*)self);
+}
+
+QTextFrame__iterator* q_texttablecell_end(void* self) {
+    return QTextTableCell_End((QTextTableCell*)self);
+}
+
 int32_t q_texttablecell_table_cell_format_index(void* self) {
     return QTextTableCell_TableCellFormatIndex((QTextTableCell*)self);
 }
@@ -244,6 +252,14 @@ QTextFrame* q_texttable_parent_frame(void* self) {
     return QTextFrame_ParentFrame((QTextFrame*)self);
 }
 
+QTextFrame__iterator* q_texttable_begin(void* self) {
+    return QTextFrame_Begin((QTextFrame*)self);
+}
+
+QTextFrame__iterator* q_texttable_end(void* self) {
+    return QTextFrame_End((QTextFrame*)self);
+}
+
 int32_t q_texttable_format_index(void* self) {
     return QTextObject_FormatIndex((QTextObject*)self);
 }
@@ -367,7 +383,7 @@ const char** q_texttable_dynamic_property_names(void* self) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
