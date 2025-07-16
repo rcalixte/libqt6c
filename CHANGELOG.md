@@ -1,4 +1,8 @@
 
+### 6.8.2 rev3 (15 July 2025)
+
+* Add projection for iterator types (#15)
+
 ### 6.8.2 rev2 (14 July 2025)
 
 * **BREAKING CHANGE:** Remove non-digit method overloads (#14)
