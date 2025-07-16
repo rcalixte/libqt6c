@@ -60,7 +60,7 @@ const char** q_stringencoder_available_codecs() {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -93,13 +93,13 @@ int64_t q_stringdecoder_required_space(void* self, int64_t inputLength) {
 }
 
 QChar* q_stringdecoder_append_to_buffer(void* self, void* out, const char* ba) {
-    libqt_strview ba_strview = qstrview(ba);
-    return QStringDecoder_AppendToBuffer((QStringDecoder*)self, (QChar*)out, (QByteArrayView*)&ba_strview);
+    libqt_string ba_string = qstring(ba);
+    return QStringDecoder_AppendToBuffer((QStringDecoder*)self, (QChar*)out, (QByteArrayView*)&ba_string);
 }
 
 QStringDecoder* q_stringdecoder_decoder_for_html(const char* data) {
-    libqt_strview data_strview = qstrview(data);
-    return QStringDecoder_DecoderForHtml((QByteArrayView*)&data_strview);
+    libqt_string data_string = qstring(data);
+    return QStringDecoder_DecoderForHtml((QByteArrayView*)&data_string);
 }
 
 bool q_stringdecoder_is_valid(void* self) {
@@ -133,7 +133,7 @@ const char** q_stringdecoder_available_codecs() {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 

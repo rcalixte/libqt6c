@@ -19,14 +19,12 @@ extern "C" {
 // Forward declarations
 
 struct libqt_string;
-struct libqt_strview;
 struct libqt_list;
 struct libqt_bitarray;
 struct libqt_map;
 struct libqt_pair;
 
 typedef struct libqt_string libqt_string;
-typedef struct libqt_strview libqt_strview;
 typedef struct libqt_list libqt_list;
 typedef struct libqt_bitarray libqt_bitarray;
 typedef struct libqt_map libqt_map;
@@ -38,12 +36,6 @@ typedef struct libqt_pair libqt_pair;
 struct libqt_string {
     size_t len;
     const char* data;
-};
-
-// QAnyStringView, QByteArrayView, and similar view types
-struct libqt_strview {
-    size_t len;
-    const char* ptr;
 };
 
 // QList
@@ -89,27 +81,9 @@ static libqt_string qstring(const char* string) {
     libqt_string str = {0}; // Initialize to zero
     if (string) {
         str.len = strlen(string);
-        // we malloc char* to ensure proper alignment even though
-        // it is wasteful... we can do better
-        char* temp = (char*)malloc((str.len + 1) * sizeof(char*));
-        if (temp) {
-            memcpy(temp, string, str.len);
-            temp[str.len] = '\0';
-            str.data = temp;
-        } else {
-            str.len = 0;
-        }
+        str.data = string;
     }
     return str;
-}
-
-static libqt_strview qstrview(const char* string) {
-    libqt_strview view = {0}; // Initialize to zero
-    if (string) {
-        view.ptr = string;
-        view.len = strlen(string);
-    }
-    return view;
 }
 
 static libqt_list qlist(void* items, size_t len) {

@@ -94,6 +94,16 @@ bool q_texttablecell_operator_equal(void* self, void* other);
 /// ``` QTextTableCell* self, QTextTableCell* other ```
 bool q_texttablecell_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#begin)
+///
+/// ``` QTextTableCell* self ```
+QTextFrame__iterator* q_texttablecell_begin(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#end)
+///
+/// ``` QTextTableCell* self ```
+QTextFrame__iterator* q_texttablecell_end(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#tableCellFormatIndex)
 ///
 /// ``` QTextTableCell* self ```
@@ -313,6 +323,20 @@ libqt_list /* of QTextFrame* */ q_texttable_child_frames(void* self);
 ///
 /// ``` QTextTable* self ```
 QTextFrame* q_texttable_parent_frame(void* self);
+
+/// Inherited from QTextFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#begin)
+///
+/// ``` QTextTable* self ```
+QTextFrame__iterator* q_texttable_begin(void* self);
+
+/// Inherited from QTextFrame
+///
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#end)
+///
+/// ``` QTextTable* self ```
+QTextFrame__iterator* q_texttable_end(void* self);
 
 /// Inherited from QTextObject
 ///

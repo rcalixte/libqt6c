@@ -24,8 +24,8 @@ void q_cryptographichash_add_data(void* self, const char* data, int64_t length) 
 }
 
 void q_cryptographichash_add_data2(void* self, const char* data) {
-    libqt_strview data_strview = qstrview(data);
-    QCryptographicHash_AddData2((QCryptographicHash*)self, (QByteArrayView*)&data_strview);
+    libqt_string data_string = qstring(data);
+    QCryptographicHash_AddData2((QCryptographicHash*)self, (QByteArrayView*)&data_string);
 }
 
 bool q_cryptographichash_add_data3(void* self, void* device) {
@@ -40,58 +40,43 @@ char* q_cryptographichash_result(void* self) {
 }
 
 const char* q_cryptographichash_result_view(void* self) {
-    QByteArrayView* _view = QCryptographicHash_ResultView((QCryptographicHash*)self);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QCryptographicHash_ResultView((QCryptographicHash*)self);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 char* q_cryptographichash_hash(const char* data, int64_t method) {
-    libqt_strview data_strview = qstrview(data);
-    libqt_string _str = QCryptographicHash_Hash((QByteArrayView*)&data_strview, method);
+    libqt_string data_string = qstring(data);
+    libqt_string _str = QCryptographicHash_Hash((QByteArrayView*)&data_string, method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int64_t method) {
-    libqt_strview data_strview = qstrview(data);
-    QByteArrayView* _view = QCryptographicHash_HashInto(buffer, (QByteArrayView*)&data_strview, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string data_string = qstring(data);
+    QByteArrayView* _str = QCryptographicHash_HashInto(buffer, (QByteArrayView*)&data_string, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int64_t method) {
-    libqt_strview data_strview = qstrview(data);
-    QByteArrayView* _view = QCryptographicHash_HashInto2(buffer, (QByteArrayView*)&data_strview, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string data_string = qstring(data);
+    QByteArrayView* _str = QCryptographicHash_HashInto2(buffer, (QByteArrayView*)&data_string, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int64_t method) {
-    QByteArrayView* _view = QCryptographicHash_HashInto4(buffer, data, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QCryptographicHash_HashInto4(buffer, data, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int64_t method) {
-    QByteArrayView* _view = QCryptographicHash_HashInto5(buffer, data, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QCryptographicHash_HashInto5(buffer, data, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 int32_t q_cryptographichash_hash_length(int64_t method) {

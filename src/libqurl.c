@@ -65,8 +65,8 @@ char* q_url_to_encoded(void* self) {
 }
 
 QUrl* q_url_from_encoded(const char* input) {
-    libqt_strview input_strview = qstrview(input);
-    return QUrl_FromEncoded((QByteArrayView*)&input_strview);
+    libqt_string input_string = qstring(input);
+    return QUrl_FromEncoded((QByteArrayView*)&input_string);
 }
 
 QUrl* q_url_from_user_input(const char* userInput) {
@@ -292,7 +292,7 @@ const char** q_url_idn_whitelist() {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -307,7 +307,7 @@ const char** q_url_to_string_list(libqt_list uris) {
     for (size_t _i = 0; _i < _arr.len; ++_i) {
         libqt_string_free((libqt_string*)&_qstr[_i]);
     }
-    free((void*)_arr.data.ptr);
+    libqt_free(_arr.data.ptr);
     return _ret;
 }
 
@@ -337,8 +337,8 @@ void q_url_set_url2(void* self, const char* url, int64_t mode) {
 }
 
 QUrl* q_url_from_encoded2(const char* input, int64_t mode) {
-    libqt_strview input_strview = qstrview(input);
-    return QUrl_FromEncoded2((QByteArrayView*)&input_strview, mode);
+    libqt_string input_string = qstring(input);
+    return QUrl_FromEncoded2((QByteArrayView*)&input_string, mode);
 }
 
 QUrl* q_url_from_user_input2(const char* userInput, const char* workingDirectory) {

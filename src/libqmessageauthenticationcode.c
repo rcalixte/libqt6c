@@ -8,9 +8,9 @@ QMessageAuthenticationCode* q_messageauthenticationcode_new(int64_t method) {
 }
 
 QMessageAuthenticationCode* q_messageauthenticationcode_new2(int64_t method, const char* key) {
-    libqt_strview key_strview = qstrview(key);
+    libqt_string key_string = qstring(key);
 
-    return QMessageAuthenticationCode_new2(method, (QByteArrayView*)&key_strview);
+    return QMessageAuthenticationCode_new2(method, (QByteArrayView*)&key_string);
 }
 
 void q_messageauthenticationcode_swap(void* self, void* other) {
@@ -22,8 +22,8 @@ void q_messageauthenticationcode_reset(void* self) {
 }
 
 void q_messageauthenticationcode_set_key(void* self, const char* key) {
-    libqt_strview key_strview = qstrview(key);
-    QMessageAuthenticationCode_SetKey((QMessageAuthenticationCode*)self, (QByteArrayView*)&key_strview);
+    libqt_string key_string = qstring(key);
+    QMessageAuthenticationCode_SetKey((QMessageAuthenticationCode*)self, (QByteArrayView*)&key_string);
 }
 
 void q_messageauthenticationcode_add_data(void* self, const char* data, int64_t length) {
@@ -31,8 +31,8 @@ void q_messageauthenticationcode_add_data(void* self, const char* data, int64_t 
 }
 
 void q_messageauthenticationcode_add_data2(void* self, const char* data) {
-    libqt_strview data_strview = qstrview(data);
-    QMessageAuthenticationCode_AddData2((QMessageAuthenticationCode*)self, (QByteArrayView*)&data_strview);
+    libqt_string data_string = qstring(data);
+    QMessageAuthenticationCode_AddData2((QMessageAuthenticationCode*)self, (QByteArrayView*)&data_string);
 }
 
 bool q_messageauthenticationcode_add_data3(void* self, void* device) {
@@ -40,12 +40,9 @@ bool q_messageauthenticationcode_add_data3(void* self, void* device) {
 }
 
 const char* q_messageauthenticationcode_result_view(void* self) {
-    QByteArrayView* _view = QMessageAuthenticationCode_ResultView((QMessageAuthenticationCode*)self);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    QByteArrayView* _str = QMessageAuthenticationCode_ResultView((QMessageAuthenticationCode*)self);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 char* q_messageauthenticationcode_result(void* self) {
@@ -56,54 +53,42 @@ char* q_messageauthenticationcode_result(void* self) {
 }
 
 char* q_messageauthenticationcode_hash(const char* message, const char* key, int64_t method) {
-    libqt_strview message_strview = qstrview(message);
-    libqt_strview key_strview = qstrview(key);
-    libqt_string _str = QMessageAuthenticationCode_Hash((QByteArrayView*)&message_strview, (QByteArrayView*)&key_strview, method);
+    libqt_string message_string = qstring(message);
+    libqt_string key_string = qstring(key);
+    libqt_string _str = QMessageAuthenticationCode_Hash((QByteArrayView*)&message_string, (QByteArrayView*)&key_string, method);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
 const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char* message, const char* key, int64_t method) {
-    libqt_strview message_strview = qstrview(message);
-    libqt_strview key_strview = qstrview(key);
-    QByteArrayView* _view = QMessageAuthenticationCode_HashInto(buffer, (QByteArrayView*)&message_strview, (QByteArrayView*)&key_strview, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string message_string = qstring(message);
+    libqt_string key_string = qstring(key);
+    QByteArrayView* _str = QMessageAuthenticationCode_HashInto(buffer, (QByteArrayView*)&message_string, (QByteArrayView*)&key_string, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char* message, const char* key, int64_t method) {
-    libqt_strview message_strview = qstrview(message);
-    libqt_strview key_strview = qstrview(key);
-    QByteArrayView* _view = QMessageAuthenticationCode_HashInto2(buffer, (QByteArrayView*)&message_strview, (QByteArrayView*)&key_strview, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string message_string = qstring(message);
+    libqt_string key_string = qstring(key);
+    QByteArrayView* _str = QMessageAuthenticationCode_HashInto2(buffer, (QByteArrayView*)&message_string, (QByteArrayView*)&key_string, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list messageParts, const char* key, int64_t method) {
-    libqt_strview key_strview = qstrview(key);
-    QByteArrayView* _view = QMessageAuthenticationCode_HashInto4(buffer, messageParts, (QByteArrayView*)&key_strview, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string key_string = qstring(key);
+    QByteArrayView* _str = QMessageAuthenticationCode_HashInto4(buffer, messageParts, (QByteArrayView*)&key_string, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 const char* q_messageauthenticationcode_hash_into5(libqt_list buffer, libqt_list messageParts, const char* key, int64_t method) {
-    libqt_strview key_strview = qstrview(key);
-    QByteArrayView* _view = QMessageAuthenticationCode_HashInto5(buffer, messageParts, (QByteArrayView*)&key_strview, method);
-    libqt_strview _ret = {
-        .ptr = QByteArrayView_Data(_view),
-        .len = QByteArrayView_Size(_view),
-    };
-    return _ret.ptr;
+    libqt_string key_string = qstring(key);
+    QByteArrayView* _str = QMessageAuthenticationCode_HashInto5(buffer, messageParts, (QByteArrayView*)&key_string, method);
+    const char* _ret = QByteArrayView_Data(_str);
+    return _ret;
 }
 
 void q_messageauthenticationcode_delete(void* self) {
