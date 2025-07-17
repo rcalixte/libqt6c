@@ -19,7 +19,7 @@
 /// ``` QWebEngineDesktopMediaRequest* other ```
 QWebEngineDesktopMediaRequest* q_webenginedesktopmediarequest_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#operator-eq)
 ///
 /// ``` QWebEngineDesktopMediaRequest* self, QWebEngineDesktopMediaRequest* other ```
 void q_webenginedesktopmediarequest_operator_assign(void* self, void* other);

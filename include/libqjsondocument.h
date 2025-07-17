@@ -68,7 +68,7 @@ QJsonDocument* q_jsondocument_new3(void* array);
 /// ``` QJsonDocument* other ```
 QJsonDocument* q_jsondocument_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-eq)
 ///
 /// ``` QJsonDocument* self, QJsonDocument* other ```
 void q_jsondocument_operator_assign(void* self, void* other);
@@ -133,12 +133,12 @@ void q_jsondocument_set_object(void* self, void* object);
 /// ``` QJsonDocument* self, QJsonArray* array ```
 void q_jsondocument_set_array(void* self, void* array);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
 /// ``` QJsonDocument* self, const char* key ```
 const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
 /// ``` QJsonDocument* self, int64_t i ```
 const QJsonValue* q_jsondocument_operator_subscript4(void* self, int64_t i);

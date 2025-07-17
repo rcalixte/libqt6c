@@ -39,17 +39,17 @@ QEventPoint* q_eventpoint_new4(int id);
 /// ``` int id, QPointingDevice* device ```
 QEventPoint* q_eventpoint_new5(int id, void* device);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#operator-eq)
 ///
 /// ``` QEventPoint* self, QEventPoint* other ```
 void q_eventpoint_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#operator-eq-eq)
 ///
 /// ``` QEventPoint* self, QEventPoint* other ```
 bool q_eventpoint_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#operator-not-eq)
 ///
 /// ``` QEventPoint* self, QEventPoint* other ```
 bool q_eventpoint_operator_not_equal(void* self, void* other);

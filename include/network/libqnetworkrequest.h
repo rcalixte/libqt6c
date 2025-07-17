@@ -29,7 +29,7 @@ QNetworkRequest* q_networkrequest_new2(void* url);
 /// ``` QNetworkRequest* other ```
 QNetworkRequest* q_networkrequest_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator-eq)
 ///
 /// ``` QNetworkRequest* self, QNetworkRequest* other ```
 void q_networkrequest_operator_assign(void* self, void* other);
@@ -39,12 +39,12 @@ void q_networkrequest_operator_assign(void* self, void* other);
 /// ``` QNetworkRequest* self, QNetworkRequest* other ```
 void q_networkrequest_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator-eq-eq)
 ///
 /// ``` QNetworkRequest* self, QNetworkRequest* other ```
 bool q_networkrequest_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator-not-eq)
 ///
 /// ``` QNetworkRequest* self, QNetworkRequest* other ```
 bool q_networkrequest_operator_not_equal(void* self, void* other);

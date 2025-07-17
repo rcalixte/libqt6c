@@ -29,7 +29,7 @@ QProcessEnvironment* q_processenvironment_new2(int64_t param1);
 /// ``` QProcessEnvironment* other ```
 QProcessEnvironment* q_processenvironment_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprocessenvironment.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocessenvironment.html#operator-eq)
 ///
 /// ``` QProcessEnvironment* self, QProcessEnvironment* other ```
 void q_processenvironment_operator_assign(void* self, void* other);

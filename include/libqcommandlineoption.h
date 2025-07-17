@@ -59,7 +59,7 @@ QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* de
 /// ``` const char* names[], const char* description, const char* valueName, const char* defaultValue ```
 QCommandLineOption* q_commandlineoption_new9(const char* names[], const char* description, const char* valueName, const char* defaultValue);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineoption.html#operator-eq)
 ///
 /// ``` QCommandLineOption* self, QCommandLineOption* other ```
 void q_commandlineoption_operator_assign(void* self, void* other);

@@ -24,7 +24,7 @@ QMimeType* q_mimetype_new();
 /// ``` QMimeType* other ```
 QMimeType* q_mimetype_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#operator-eq)
 ///
 /// ``` QMimeType* self, QMimeType* other ```
 void q_mimetype_operator_assign(void* self, void* other);

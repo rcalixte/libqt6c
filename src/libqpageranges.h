@@ -24,7 +24,7 @@ QPageRanges* q_pageranges_new();
 /// ``` QPageRanges* other ```
 QPageRanges* q_pageranges_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#operator-eq)
 ///
 /// ``` QPageRanges* self, QPageRanges* other ```
 void q_pageranges_operator_assign(void* self, void* other);

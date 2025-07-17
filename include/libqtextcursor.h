@@ -39,7 +39,7 @@ QTextCursor* q_textcursor_new4(void* block);
 /// ``` QTextCursor* cursor ```
 QTextCursor* q_textcursor_new5(void* cursor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-eq)
 ///
 /// ``` QTextCursor* self, QTextCursor* other ```
 void q_textcursor_operator_assign(void* self, void* other);
@@ -364,32 +364,32 @@ void q_textcursor_join_previous_edit_block(void* self);
 /// ``` QTextCursor* self ```
 void q_textcursor_end_edit_block(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-not-eq)
 ///
 /// ``` QTextCursor* self, QTextCursor* rhs ```
 bool q_textcursor_operator_not_equal(void* self, void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-lt)
 ///
 /// ``` QTextCursor* self, QTextCursor* rhs ```
 bool q_textcursor_operator_lesser(void* self, void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator<=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-lt-eq)
 ///
 /// ``` QTextCursor* self, QTextCursor* rhs ```
 bool q_textcursor_operator_lesser_or_equal(void* self, void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-eq-eq)
 ///
 /// ``` QTextCursor* self, QTextCursor* rhs ```
 bool q_textcursor_operator_equal(void* self, void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator>=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-gt-eq)
 ///
 /// ``` QTextCursor* self, QTextCursor* rhs ```
 bool q_textcursor_operator_greater_or_equal(void* self, void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator>)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#operator-gt)
 ///
 /// ``` QTextCursor* self, QTextCursor* rhs ```
 bool q_textcursor_operator_greater(void* self, void* rhs);

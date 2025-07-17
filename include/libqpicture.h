@@ -117,7 +117,7 @@ QRect* q_picture_bounding_rect(void* self);
 /// ``` QPicture* self, QRect* r ```
 void q_picture_set_bounding_rect(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#operator-eq)
 ///
 /// ``` QPicture* self, QPicture* p ```
 void q_picture_operator_assign(void* self, void* p);

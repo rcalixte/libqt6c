@@ -24,7 +24,7 @@ QCborArray* q_cborarray_new();
 /// ``` QCborArray* other ```
 QCborArray* q_cborarray_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator-eq)
 ///
 /// ``` QCborArray* self, QCborArray* other ```
 void q_cborarray_operator_assign(void* self, void* other);
@@ -69,7 +69,7 @@ QCborValue* q_cborarray_first(void* self);
 /// ``` QCborArray* self ```
 QCborValue* q_cborarray_last(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator-5b-5d)
 ///
 /// ``` QCborArray* self, int64_t i ```
 const QCborValue* q_cborarray_operator_subscript(void* self, int64_t i);
@@ -84,7 +84,7 @@ QCborValueRef* q_cborarray_first2(void* self);
 /// ``` QCborArray* self ```
 QCborValueRef* q_cborarray_last2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator-5b-5d)
 ///
 /// ``` QCborArray* self, int64_t i ```
 QCborValueRef* q_cborarray_operator_subscript2(void* self, int64_t i);
@@ -239,17 +239,17 @@ void q_cborarray_pop_back(void* self);
 /// ``` QCborArray* self ```
 bool q_cborarray_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator-2b)
 ///
 /// ``` QCborArray* self, QCborValue* v ```
 QCborArray* q_cborarray_operator_plus(void* self, void* v);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator-2b-eq)
 ///
 /// ``` QCborArray* self, QCborValue* v ```
 QCborArray* q_cborarray_operator_plus_assign(void* self, void* v);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#operator-lt-lt)
 ///
 /// ``` QCborArray* self, QCborValue* v ```
 QCborArray* q_cborarray_operator_shift_left(void* self, void* v);
@@ -293,37 +293,37 @@ QCborArray__Iterator* q_cborarray__iterator_new2();
 /// ``` QCborArray__Iterator* param1 ```
 QCborArray__Iterator* q_cborarray__iterator_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-eq)
 ///
 /// ``` QCborArray__Iterator* self, QCborArray__Iterator* other ```
 void q_cborarray__iterator_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-2a)
 ///
 /// ``` QCborArray__Iterator* self ```
 QCborValueRef* q_cborarray__iterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator--gt)
 ///
 /// ``` QCborArray__Iterator* self ```
 QCborValueRef* q_cborarray__iterator_operator_minus_greater(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator--gt)
 ///
 /// ``` QCborArray__Iterator* self ```
 const QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-5b-5d)
 ///
 /// ``` QCborArray__Iterator* self, int64_t j ```
 QCborValueRef* q_cborarray__iterator_operator_subscript(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-2b-2b)
 ///
 /// ``` QCborArray__Iterator* self ```
 QCborArray__Iterator* q_cborarray__iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-2b-2b)
 ///
 /// ``` QCborArray__Iterator* self, int param1 ```
 QCborArray__Iterator* q_cborarray__iterator_operator_plus_plus2(void* self, int param1);
@@ -338,17 +338,17 @@ QCborArray__Iterator* q_cborarray__iterator_operator_minus_minus(void* self);
 /// ``` QCborArray__Iterator* self, int param1 ```
 QCborArray__Iterator* q_cborarray__iterator_operator_minus_minus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-2b-eq)
 ///
 /// ``` QCborArray__Iterator* self, int64_t j ```
 QCborArray__Iterator* q_cborarray__iterator_operator_plus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator--eq)
 ///
 /// ``` QCborArray__Iterator* self, int64_t j ```
 QCborArray__Iterator* q_cborarray__iterator_operator_minus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__iterator.html#operator-2b)
 ///
 /// ``` QCborArray__Iterator* self, int64_t j ```
 QCborArray__Iterator* q_cborarray__iterator_operator_plus(void* self, int64_t j);
@@ -387,32 +387,32 @@ QCborArray__ConstIterator* q_cborarray__constiterator_new2();
 /// ``` QCborArray__ConstIterator* param1 ```
 QCborArray__ConstIterator* q_cborarray__constiterator_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-eq)
 ///
 /// ``` QCborArray__ConstIterator* self, QCborArray__ConstIterator* other ```
 void q_cborarray__constiterator_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-2a)
 ///
 /// ``` QCborArray__ConstIterator* self ```
 QCborValueConstRef* q_cborarray__constiterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator--gt)
 ///
 /// ``` QCborArray__ConstIterator* self ```
 const QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-5b-5d)
 ///
 /// ``` QCborArray__ConstIterator* self, int64_t j ```
 QCborValueConstRef* q_cborarray__constiterator_operator_subscript(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-2b-2b)
 ///
 /// ``` QCborArray__ConstIterator* self ```
 QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-2b-2b)
 ///
 /// ``` QCborArray__ConstIterator* self, int param1 ```
 QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus_plus2(void* self, int param1);
@@ -427,17 +427,17 @@ QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_minus(void*
 /// ``` QCborArray__ConstIterator* self, int param1 ```
 QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_minus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-2b-eq)
 ///
 /// ``` QCborArray__ConstIterator* self, int64_t j ```
 QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator--eq)
 ///
 /// ``` QCborArray__ConstIterator* self, int64_t j ```
 QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray__constiterator.html#operator-2b)
 ///
 /// ``` QCborArray__ConstIterator* self, int64_t j ```
 QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus(void* self, int64_t j);

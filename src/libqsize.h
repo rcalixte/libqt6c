@@ -134,22 +134,22 @@ QSize* q_size_grown_by(void* self, void* m);
 /// ``` QSize* self, QMargins* m ```
 QSize* q_size_shrunk_by(void* self, void* m);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator-2b-eq)
 ///
 /// ``` QSize* self, QSize* param1 ```
 QSize* q_size_operator_plus_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator--eq)
 ///
 /// ``` QSize* self, QSize* param1 ```
 QSize* q_size_operator_minus_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator-2a-eq)
 ///
 /// ``` QSize* self, double c ```
 QSize* q_size_operator_multiply_assign(void* self, double c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#operator-2f-eq)
 ///
 /// ``` QSize* self, double c ```
 QSize* q_size_operator_divide_assign(void* self, double c);
@@ -293,22 +293,22 @@ QSizeF* q_sizef_grown_by(void* self, void* m);
 /// ``` QSizeF* self, QMarginsF* m ```
 QSizeF* q_sizef_shrunk_by(void* self, void* m);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator-2b-eq)
 ///
 /// ``` QSizeF* self, QSizeF* param1 ```
 QSizeF* q_sizef_operator_plus_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator--eq)
 ///
 /// ``` QSizeF* self, QSizeF* param1 ```
 QSizeF* q_sizef_operator_minus_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator-2a-eq)
 ///
 /// ``` QSizeF* self, double c ```
 QSizeF* q_sizef_operator_multiply_assign(void* self, double c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#operator-2f-eq)
 ///
 /// ``` QSizeF* self, double c ```
 QSizeF* q_sizef_operator_divide_assign(void* self, double c);

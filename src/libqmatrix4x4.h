@@ -124,37 +124,37 @@ QMatrix4x4* q_matrix4x4_inverted(void* self);
 /// ``` QMatrix4x4* self ```
 QMatrix4x4* q_matrix4x4_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2b-eq)
 ///
 /// ``` QMatrix4x4* self, QMatrix4x4* other ```
 QMatrix4x4* q_matrix4x4_operator_plus_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator--eq)
 ///
 /// ``` QMatrix4x4* self, QMatrix4x4* other ```
 QMatrix4x4* q_matrix4x4_operator_minus_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2a-eq)
 ///
 /// ``` QMatrix4x4* self, QMatrix4x4* other ```
 QMatrix4x4* q_matrix4x4_operator_multiply_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2a-eq)
 ///
 /// ``` QMatrix4x4* self, float factor ```
 QMatrix4x4* q_matrix4x4_operator_multiply_assign2(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-2f-eq)
 ///
 /// ``` QMatrix4x4* self, float divisor ```
 QMatrix4x4* q_matrix4x4_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-eq-eq)
 ///
 /// ``` QMatrix4x4* self, QMatrix4x4* other ```
 bool q_matrix4x4_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator-not-eq)
 ///
 /// ``` QMatrix4x4* self, QMatrix4x4* other ```
 bool q_matrix4x4_operator_not_equal(void* self, void* other);
@@ -324,7 +324,7 @@ const float* q_matrix4x4_const_data(void* self);
 /// ``` QMatrix4x4* self ```
 void q_matrix4x4_optimize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmatrix4x4.html#operator)
 ///
 /// ``` QMatrix4x4* self ```
 QVariant* q_matrix4x4_to_q_variant(void* self);

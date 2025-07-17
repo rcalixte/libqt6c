@@ -115,7 +115,7 @@ libqt_list /* of QInputDevice* */ q_inputdevice_devices();
 ///
 const QInputDevice* q_inputdevice_primary_keyboard();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#operator-eq-eq)
 ///
 /// ``` QInputDevice* self, QInputDevice* other ```
 bool q_inputdevice_operator_equal(void* self, void* other);

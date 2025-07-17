@@ -49,7 +49,7 @@ QRegion* q_region_new6(int x, int y, int w, int h, int64_t t);
 /// ``` QRect* r, enum QRegion__RegionType t ```
 QRegion* q_region_new7(void* r, int64_t t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-eq)
 ///
 /// ``` QRegion* self, QRegion* param1 ```
 void q_region_operator_assign(void* self, void* param1);
@@ -184,27 +184,27 @@ libqt_list /* of QRect* */ q_region_rects(void* self);
 /// ``` QRegion* self ```
 int32_t q_region_rect_count(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator|)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-7c)
 ///
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_bitwise_or(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-2b)
 ///
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_plus(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-2b)
 ///
 /// ``` QRegion* self, QRect* r ```
 QRegion* q_region_operator_plus2(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-and)
 ///
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_bitwise_and(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-and)
 ///
 /// ``` QRegion* self, QRect* r ```
 QRegion* q_region_operator_bitwise_and2(void* self, void* r);
@@ -214,57 +214,57 @@ QRegion* q_region_operator_bitwise_and2(void* self, void* r);
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_minus(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator^)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-5e)
 ///
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_bitwise_not(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator|=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-7c-eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 void q_region_operator_bitwise_or_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-2b-eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_plus_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-2b-eq)
 ///
 /// ``` QRegion* self, QRect* r ```
 QRegion* q_region_operator_plus_assign2(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-and-eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 void q_region_operator_bitwise_and_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator&=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-and-eq)
 ///
 /// ``` QRegion* self, QRect* r ```
 void q_region_operator_bitwise_and_assign2(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator--eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 QRegion* q_region_operator_minus_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator^=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-5e-eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 void q_region_operator_bitwise_not_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-eq-eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 bool q_region_operator_equal(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-not-eq)
 ///
 /// ``` QRegion* self, QRegion* r ```
 bool q_region_operator_not_equal(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator)
 ///
 /// ``` QRegion* self ```
 QVariant* q_region_to_q_variant(void* self);

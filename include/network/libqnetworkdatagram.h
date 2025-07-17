@@ -39,7 +39,7 @@ QNetworkDatagram* q_networkdatagram_new4(const char* data, void* destinationAddr
 /// ``` const char* data, QHostAddress* destinationAddress, unsigned short port ```
 QNetworkDatagram* q_networkdatagram_new5(const char* data, void* destinationAddress, unsigned short port);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdatagram.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdatagram.html#operator-eq)
 ///
 /// ``` QNetworkDatagram* self, QNetworkDatagram* other ```
 void q_networkdatagram_operator_assign(void* self, void* other);

@@ -29,7 +29,7 @@ QTextOption* q_textoption_new2(int64_t alignment);
 /// ``` QTextOption* o ```
 QTextOption* q_textoption_new3(void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#operator-eq)
 ///
 /// ``` QTextOption* self, QTextOption* o ```
 void q_textoption_operator_assign(void* self, void* o);
@@ -158,12 +158,12 @@ void q_textoption__tab_copy_assign(void* self, void* other);
 /// ``` QTextOption__Tab* self, QTextOption__Tab* other ```
 void q_textoption__tab_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption__tab.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption__tab.html#operator-eq-eq)
 ///
 /// ``` QTextOption__Tab* self, QTextOption__Tab* other ```
 bool q_textoption__tab_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption__tab.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption__tab.html#operator-not-eq)
 ///
 /// ``` QTextOption__Tab* self, QTextOption__Tab* other ```
 bool q_textoption__tab_operator_not_equal(void* self, void* other);

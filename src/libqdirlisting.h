@@ -248,7 +248,7 @@ QDateTime* q_dirlisting__direntry_last_read(void* self, void* tz);
 /// ``` QDirListing__DirEntry* self, enum QFileDevice__FileTime typeVal, QTimeZone* tz ```
 QDateTime* q_dirlisting__direntry_file_time(void* self, int64_t typeVal, void* tz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#operator-eq)
 ///
 /// ``` QDirListing__DirEntry* self, QDirListing__DirEntry* param1 ```
 void q_dirlisting__direntry_operator_assign(void* self, void* param1);
@@ -311,17 +311,17 @@ QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other);
 /// ``` QDirListing__const_iterator* self, QDirListing__const_iterator* other ```
 void q_dirlisting__const_iterator_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator-2a)
 ///
 /// ``` QDirListing__const_iterator* self ```
 const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator-2b-2b)
 ///
 /// ``` QDirListing__const_iterator* self ```
 QDirListing__const_iterator* q_dirlisting__const_iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator-2b-2b)
 ///
 /// ``` QDirListing__const_iterator* self, int param1 ```
 void q_dirlisting__const_iterator_operator_plus_plus2(void* self, int param1);

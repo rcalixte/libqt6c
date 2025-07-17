@@ -24,7 +24,7 @@ void q_abstractundoitem_undo(void* self);
 /// ``` QAbstractUndoItem* self ```
 void q_abstractundoitem_redo(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#operator-eq)
 ///
 /// ``` QAbstractUndoItem* self, QAbstractUndoItem* param1 ```
 void q_abstractundoitem_operator_assign(void* self, void* param1);

@@ -24,7 +24,7 @@ QDnsDomainNameRecord* q_dnsdomainnamerecord_new();
 /// ``` QDnsDomainNameRecord* other ```
 QDnsDomainNameRecord* q_dnsdomainnamerecord_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnsdomainnamerecord.html#operator-eq)
 ///
 /// ``` QDnsDomainNameRecord* self, QDnsDomainNameRecord* other ```
 void q_dnsdomainnamerecord_operator_assign(void* self, void* other);
@@ -68,7 +68,7 @@ QDnsHostAddressRecord* q_dnshostaddressrecord_new();
 /// ``` QDnsHostAddressRecord* other ```
 QDnsHostAddressRecord* q_dnshostaddressrecord_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnshostaddressrecord.html#operator-eq)
 ///
 /// ``` QDnsHostAddressRecord* self, QDnsHostAddressRecord* other ```
 void q_dnshostaddressrecord_operator_assign(void* self, void* other);
@@ -112,7 +112,7 @@ QDnsMailExchangeRecord* q_dnsmailexchangerecord_new();
 /// ``` QDnsMailExchangeRecord* other ```
 QDnsMailExchangeRecord* q_dnsmailexchangerecord_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#operator-eq)
 ///
 /// ``` QDnsMailExchangeRecord* self, QDnsMailExchangeRecord* other ```
 void q_dnsmailexchangerecord_operator_assign(void* self, void* other);
@@ -161,7 +161,7 @@ QDnsServiceRecord* q_dnsservicerecord_new();
 /// ``` QDnsServiceRecord* other ```
 QDnsServiceRecord* q_dnsservicerecord_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdnsservicerecord.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnsservicerecord.html#operator-eq)
 ///
 /// ``` QDnsServiceRecord* self, QDnsServiceRecord* other ```
 void q_dnsservicerecord_operator_assign(void* self, void* other);
@@ -220,7 +220,7 @@ QDnsTextRecord* q_dnstextrecord_new();
 /// ``` QDnsTextRecord* other ```
 QDnsTextRecord* q_dnstextrecord_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdnstextrecord.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstextrecord.html#operator-eq)
 ///
 /// ``` QDnsTextRecord* self, QDnsTextRecord* other ```
 void q_dnstextrecord_operator_assign(void* self, void* other);
@@ -264,7 +264,7 @@ QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new();
 /// ``` QDnsTlsAssociationRecord* other ```
 QDnsTlsAssociationRecord* q_dnstlsassociationrecord_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdnstlsassociationrecord.html#operator-eq)
 ///
 /// ``` QDnsTlsAssociationRecord* self, QDnsTlsAssociationRecord* other ```
 void q_dnstlsassociationrecord_operator_assign(void* self, void* other);

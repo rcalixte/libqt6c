@@ -34,12 +34,12 @@ QUrl* q_url_new3(const char* url);
 /// ``` const char* url, enum QUrl__ParsingMode mode ```
 QUrl* q_url_new4(const char* url, int64_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator-eq)
 ///
 /// ``` QUrl* self, QUrl* copyVal ```
 void q_url_operator_assign(void* self, void* copyVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qurl.html#operator-eq)
 ///
 /// ``` QUrl* self, const char* url ```
 void q_url_operator_assign2(void* self, const char* url);

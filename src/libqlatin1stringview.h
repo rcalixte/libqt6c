@@ -124,7 +124,7 @@ bool q_latin1string_empty(void* self);
 /// ``` QLatin1String* self, int64_t i ```
 QLatin1Char* q_latin1string_at(void* self, int64_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#operator-5b-5d)
 ///
 /// ``` QLatin1String* self, int64_t i ```
 QLatin1Char* q_latin1string_operator_subscript(void* self, int64_t i);

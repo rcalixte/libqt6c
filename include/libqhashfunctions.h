@@ -44,7 +44,7 @@ void q_hashseed_copy_assign(void* self, void* other);
 /// ``` QHashSeed* self, QHashSeed* other ```
 void q_hashseed_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#operator unsigned long)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhashseed.html#operator)
 ///
 /// ``` QHashSeed* self ```
 uint64_t q_hashseed_to_unsigned_long(void* self);

@@ -44,7 +44,7 @@ QNativeIpcKey* q_nativeipckey_new5(const char* k, int64_t typeVal);
 ///
 int64_t q_nativeipckey_legacy_default_type_for_os();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnativeipckey.html#operator-eq)
 ///
 /// ``` QNativeIpcKey* self, QNativeIpcKey* other ```
 void q_nativeipckey_operator_assign(void* self, void* other);

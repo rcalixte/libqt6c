@@ -44,7 +44,7 @@ int64_t q_regularexpression_pattern_options(void* self);
 /// ``` QRegularExpression* self, int options ```
 void q_regularexpression_set_pattern_options(void* self, int64_t options);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#operator-eq)
 ///
 /// ``` QRegularExpression* self, QRegularExpression* re ```
 void q_regularexpression_operator_assign(void* self, void* re);
@@ -173,7 +173,7 @@ QRegularExpressionMatch* q_regularexpressionmatch_new();
 /// ``` QRegularExpressionMatch* match ```
 QRegularExpressionMatch* q_regularexpressionmatch_new2(void* match);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#operator-eq)
 ///
 /// ``` QRegularExpressionMatch* self, QRegularExpressionMatch* match ```
 void q_regularexpressionmatch_operator_assign(void* self, void* match);
@@ -312,7 +312,7 @@ QRegularExpressionMatchIterator* q_regularexpressionmatchiterator_new();
 /// ``` QRegularExpressionMatchIterator* iterator ```
 QRegularExpressionMatchIterator* q_regularexpressionmatchiterator_new2(void* iterator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#operator-eq)
 ///
 /// ``` QRegularExpressionMatchIterator* self, QRegularExpressionMatchIterator* iterator ```
 void q_regularexpressionmatchiterator_operator_assign(void* self, void* iterator);

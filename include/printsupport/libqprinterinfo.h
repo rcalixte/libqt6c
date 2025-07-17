@@ -29,7 +29,7 @@ QPrinterInfo* q_printerinfo_new2(void* other);
 /// ``` QPrinter* printer ```
 QPrinterInfo* q_printerinfo_new3(void* printer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#operator-eq)
 ///
 /// ``` QPrinterInfo* self, QPrinterInfo* other ```
 void q_printerinfo_operator_assign(void* self, void* other);

@@ -24,7 +24,7 @@ QColorTransform* q_colortransform_new();
 /// ``` QColorTransform* colorTransform ```
 QColorTransform* q_colortransform_new2(void* colorTransform);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolortransform.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolortransform.html#operator-eq)
 ///
 /// ``` QColorTransform* self, QColorTransform* other ```
 void q_colortransform_operator_assign(void* self, void* other);

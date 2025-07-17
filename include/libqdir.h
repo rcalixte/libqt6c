@@ -44,7 +44,7 @@ QDir* q_dir_new5(const char* path, const char* nameFilter, int64_t sort);
 /// ``` const char* path, const char* nameFilter, int sort, int filter ```
 QDir* q_dir_new6(const char* path, const char* nameFilter, int64_t sort, int64_t filter);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator-eq)
 ///
 /// ``` QDir* self, QDir* param1 ```
 void q_dir_operator_assign(void* self, void* param1);
@@ -169,7 +169,7 @@ int64_t q_dir_count(void* self);
 /// ``` QDir* self ```
 bool q_dir_is_empty(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator-5b-5d)
 ///
 /// ``` QDir* self, long long param1 ```
 const char* q_dir_operator_subscript(void* self, long long param1);

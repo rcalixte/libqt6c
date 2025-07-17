@@ -650,7 +650,7 @@ QMetaObject__Connection* q_metaobject__connection_new();
 /// ``` QMetaObject__Connection* other ```
 QMetaObject__Connection* q_metaobject__connection_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__connection.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__connection.html#operator-eq)
 ///
 /// ``` QMetaObject__Connection* self, QMetaObject__Connection* other ```
 void q_metaobject__connection_operator_assign(void* self, void* other);
@@ -684,17 +684,17 @@ QMetaObject__SuperData* q_metaobject__superdata_new2(void* mo);
 /// ``` QMetaObject__SuperData* param1 ```
 QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator--gt)
 ///
 /// ``` QMetaObject__SuperData* self ```
 const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator const QMetaObject *)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator-2a)
 ///
 /// ``` QMetaObject__SuperData* self ```
 const QMetaObject* q_metaobject__superdata_to_const_q_meta_object_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__superdata.html#operator-eq)
 ///
 /// ``` QMetaObject__SuperData* self, QMetaObject__SuperData* param1 ```
 void q_metaobject__superdata_operator_assign(void* self, void* param1);
@@ -718,7 +718,7 @@ QMetaObject__Data* q_metaobject__data_new();
 /// ``` QMetaObject__Data* param1 ```
 QMetaObject__Data* q_metaobject__data_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__data.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject__data.html#operator-eq)
 ///
 /// ``` QMetaObject__Data* self, QMetaObject__Data* param1 ```
 void q_metaobject__data_operator_assign(void* self, void* param1);

@@ -24,17 +24,17 @@ QScrollerProperties* q_scrollerproperties_new();
 /// ``` QScrollerProperties* sp ```
 QScrollerProperties* q_scrollerproperties_new2(void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq)
 ///
 /// ``` QScrollerProperties* self, QScrollerProperties* sp ```
 void q_scrollerproperties_operator_assign(void* self, void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq-eq)
 ///
 /// ``` QScrollerProperties* self, QScrollerProperties* sp ```
 bool q_scrollerproperties_operator_equal(void* self, void* sp);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-not-eq)
 ///
 /// ``` QScrollerProperties* self, QScrollerProperties* sp ```
 bool q_scrollerproperties_operator_not_equal(void* self, void* sp);

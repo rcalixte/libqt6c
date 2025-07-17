@@ -49,7 +49,7 @@ QPalette* q_palette_new6(void* windowText, void* window, void* light, void* dark
 /// ``` QPalette* palette ```
 QPalette* q_palette_new7(void* palette);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator-eq)
 ///
 /// ``` QPalette* self, QPalette* palette ```
 void q_palette_operator_assign(void* self, void* palette);
@@ -59,7 +59,7 @@ void q_palette_operator_assign(void* self, void* palette);
 /// ``` QPalette* self, QPalette* other ```
 void q_palette_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator)
 ///
 /// ``` QPalette* self ```
 QVariant* q_palette_to_q_variant(void* self);
@@ -234,12 +234,12 @@ const QBrush* q_palette_placeholder_text(void* self);
 /// ``` QPalette* self ```
 const QBrush* q_palette_accent(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator-eq-eq)
 ///
 /// ``` QPalette* self, QPalette* p ```
 bool q_palette_operator_equal(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#operator-not-eq)
 ///
 /// ``` QPalette* self, QPalette* p ```
 bool q_palette_operator_not_equal(void* self, void* p);

@@ -34,7 +34,7 @@ QUrlQuery* q_urlquery_new3(const char* queryString);
 /// ``` QUrlQuery* other ```
 QUrlQuery* q_urlquery_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qurlquery.html#operator-eq)
 ///
 /// ``` QUrlQuery* self, QUrlQuery* other ```
 void q_urlquery_operator_assign(void* self, void* other);

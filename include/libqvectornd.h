@@ -99,7 +99,7 @@ void q_vector2d_set_x(void* self, float x);
 /// ``` QVector2D* self, float y ```
 void q_vector2d_set_y(void* self, float y);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-5b-5d)
 ///
 /// ``` QVector2D* self, int i ```
 float q_vector2d_operator_subscript(void* self, int i);
@@ -134,32 +134,32 @@ float q_vector2d_distance_to_point(void* self, void* point);
 /// ``` QVector2D* self, QVector2D* point, QVector2D* direction ```
 float q_vector2d_distance_to_line(void* self, void* point, void* direction);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2b-eq)
 ///
 /// ``` QVector2D* self, QVector2D* vector ```
 QVector2D* q_vector2d_operator_plus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator--eq)
 ///
 /// ``` QVector2D* self, QVector2D* vector ```
 QVector2D* q_vector2d_operator_minus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2a-eq)
 ///
 /// ``` QVector2D* self, float factor ```
 QVector2D* q_vector2d_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2a-eq)
 ///
 /// ``` QVector2D* self, QVector2D* vector ```
 QVector2D* q_vector2d_operator_multiply_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2f-eq)
 ///
 /// ``` QVector2D* self, float divisor ```
 QVector2D* q_vector2d_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator-2f-eq)
 ///
 /// ``` QVector2D* self, QVector2D* vector ```
 QVector2D* q_vector2d_operator_divide_assign2(void* self, void* vector);
@@ -189,7 +189,7 @@ QPoint* q_vector2d_to_point(void* self);
 /// ``` QVector2D* self ```
 QPointF* q_vector2d_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector2d.html#operator)
 ///
 /// ``` QVector2D* self ```
 QVariant* q_vector2d_to_q_variant(void* self);
@@ -303,7 +303,7 @@ void q_vector3d_set_y(void* self, float y);
 /// ``` QVector3D* self, float z ```
 void q_vector3d_set_z(void* self, float z);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-5b-5d)
 ///
 /// ``` QVector3D* self, int i ```
 float q_vector3d_operator_subscript(void* self, int i);
@@ -328,32 +328,32 @@ QVector3D* q_vector3d_normalized(void* self);
 /// ``` QVector3D* self ```
 void q_vector3d_normalize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2b-eq)
 ///
 /// ``` QVector3D* self, QVector3D* vector ```
 QVector3D* q_vector3d_operator_plus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator--eq)
 ///
 /// ``` QVector3D* self, QVector3D* vector ```
 QVector3D* q_vector3d_operator_minus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2a-eq)
 ///
 /// ``` QVector3D* self, float factor ```
 QVector3D* q_vector3d_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2a-eq)
 ///
 /// ``` QVector3D* self, QVector3D* vector ```
 QVector3D* q_vector3d_operator_multiply_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2f-eq)
 ///
 /// ``` QVector3D* self, float divisor ```
 QVector3D* q_vector3d_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator-2f-eq)
 ///
 /// ``` QVector3D* self, QVector3D* vector ```
 QVector3D* q_vector3d_operator_divide_assign2(void* self, void* vector);
@@ -428,7 +428,7 @@ QPoint* q_vector3d_to_point(void* self);
 /// ``` QVector3D* self ```
 QPointF* q_vector3d_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector3d.html#operator)
 ///
 /// ``` QVector3D* self ```
 QVariant* q_vector3d_to_q_variant(void* self);
@@ -557,7 +557,7 @@ void q_vector4d_set_z(void* self, float z);
 /// ``` QVector4D* self, float w ```
 void q_vector4d_set_w(void* self, float w);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-5b-5d)
 ///
 /// ``` QVector4D* self, int i ```
 float q_vector4d_operator_subscript(void* self, int i);
@@ -582,32 +582,32 @@ QVector4D* q_vector4d_normalized(void* self);
 /// ``` QVector4D* self ```
 void q_vector4d_normalize(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2b-eq)
 ///
 /// ``` QVector4D* self, QVector4D* vector ```
 QVector4D* q_vector4d_operator_plus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator--eq)
 ///
 /// ``` QVector4D* self, QVector4D* vector ```
 QVector4D* q_vector4d_operator_minus_assign(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2a-eq)
 ///
 /// ``` QVector4D* self, float factor ```
 QVector4D* q_vector4d_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2a-eq)
 ///
 /// ``` QVector4D* self, QVector4D* vector ```
 QVector4D* q_vector4d_operator_multiply_assign2(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2f-eq)
 ///
 /// ``` QVector4D* self, float divisor ```
 QVector4D* q_vector4d_operator_divide_assign(void* self, float divisor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator-2f-eq)
 ///
 /// ``` QVector4D* self, QVector4D* vector ```
 QVector4D* q_vector4d_operator_divide_assign2(void* self, void* vector);
@@ -647,7 +647,7 @@ QPoint* q_vector4d_to_point(void* self);
 /// ``` QVector4D* self ```
 QPointF* q_vector4d_to_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvector4d.html#operator)
 ///
 /// ``` QVector4D* self ```
 QVariant* q_vector4d_to_q_variant(void* self);

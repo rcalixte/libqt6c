@@ -24,7 +24,7 @@ QPdfLink* q_pdflink_new();
 /// ``` QPdfLink* other ```
 QPdfLink* q_pdflink_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdflink.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdflink.html#operator-eq)
 ///
 /// ``` QPdfLink* self, QPdfLink* other ```
 void q_pdflink_operator_assign(void* self, void* other);

@@ -299,7 +299,7 @@ void q_iconengine_delete(void* self);
 /// ``` QIconEngine__ScaledPixmapArgument* param1 ```
 QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine__scaledpixmapargument.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine__scaledpixmapargument.html#operator-eq)
 ///
 /// ``` QIconEngine__ScaledPixmapArgument* self, QIconEngine__ScaledPixmapArgument* param1 ```
 void q_iconengine__scaledpixmapargument_operator_assign(void* self, void* param1);

@@ -522,7 +522,7 @@ QDateTime* q_datetime_new7(void* date, void* time, void* timeZone, int64_t resol
 /// ``` QDate* date, QTime* time, enum QDateTime__TransitionResolution resolve ```
 QDateTime* q_datetime_new8(void* date, void* time, int64_t resolve);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdatetime.html#operator-eq)
 ///
 /// ``` QDateTime* self, QDateTime* other ```
 void q_datetime_operator_assign(void* self, void* other);

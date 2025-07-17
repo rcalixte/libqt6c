@@ -34,7 +34,7 @@ QBitArray* q_bitarray_new3(void* other);
 /// ``` int64_t size, bool val ```
 QBitArray* q_bitarray_new4(int64_t size, bool val);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-eq)
 ///
 /// ``` QBitArray* self, QBitArray* other ```
 void q_bitarray_operator_assign(void* self, void* other);
@@ -119,27 +119,27 @@ bool q_bitarray_toggle_bit(void* self, int64_t i);
 /// ``` QBitArray* self, int64_t i ```
 bool q_bitarray_at(void* self, int64_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
 /// ``` QBitArray* self, int64_t i ```
 QBitRef* q_bitarray_operator_subscript(void* self, int64_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
 /// ``` QBitArray* self, int64_t i ```
 bool q_bitarray_operator_subscript2(void* self, int64_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator&=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-and-eq)
 ///
 /// ``` QBitArray* self, QBitArray* param1 ```
 void q_bitarray_operator_bitwise_and_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator|=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-7c-eq)
 ///
 /// ``` QBitArray* self, QBitArray* param1 ```
 void q_bitarray_operator_bitwise_or_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator^=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-5e-eq)
 ///
 /// ``` QBitArray* self, QBitArray* param1 ```
 void q_bitarray_operator_bitwise_not_assign(void* self, void* param1);
@@ -203,22 +203,22 @@ QBitRef* q_bitref_new(void* other);
 /// ``` QBitRef* param1 ```
 QBitRef* q_bitref_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator bool)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator)
 ///
 /// ``` QBitRef* self ```
 bool q_bitref_to_bool(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator!)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator-not)
 ///
 /// ``` QBitRef* self ```
 bool q_bitref_operator_not(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator-eq)
 ///
 /// ``` QBitRef* self, QBitRef* val ```
 void q_bitref_operator_assign(void* self, void* val);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator-eq)
 ///
 /// ``` QBitRef* self, bool val ```
 void q_bitref_operator_assign2(void* self, bool val);

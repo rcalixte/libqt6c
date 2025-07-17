@@ -44,7 +44,7 @@ int32_t q_printengine_metric(void* self, int64_t param1);
 /// ``` QPrintEngine* self ```
 int64_t q_printengine_printer_state(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
 ///
 /// ``` QPrintEngine* self, QPrintEngine* param1 ```
 void q_printengine_operator_assign(void* self, void* param1);

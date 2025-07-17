@@ -49,7 +49,7 @@ QPixmap* q_pixmap_new6(const char* fileName, const char* format);
 /// ``` const char* fileName, const char* format, int flags ```
 QPixmap* q_pixmap_new7(const char* fileName, const char* format, int64_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator-eq)
 ///
 /// ``` QPixmap* self, QPixmap* param1 ```
 void q_pixmap_operator_assign(void* self, void* param1);
@@ -59,7 +59,7 @@ void q_pixmap_operator_assign(void* self, void* param1);
 /// ``` QPixmap* self, QPixmap* other ```
 void q_pixmap_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator)
 ///
 /// ``` QPixmap* self ```
 QVariant* q_pixmap_to_q_variant(void* self);
@@ -302,7 +302,7 @@ void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*slot)());
 /// ``` QPixmap* self ```
 QPaintEngine* q_pixmap_qbase_paint_engine(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator!)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator-not)
 ///
 /// ``` QPixmap* self ```
 bool q_pixmap_operator_not(void* self);

@@ -29,7 +29,7 @@ QSurfaceFormat* q_surfaceformat_new2(int64_t options);
 /// ``` QSurfaceFormat* other ```
 QSurfaceFormat* q_surfaceformat_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#operator-eq)
 ///
 /// ``` QSurfaceFormat* self, QSurfaceFormat* other ```
 void q_surfaceformat_operator_assign(void* self, void* other);

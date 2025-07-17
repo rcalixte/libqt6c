@@ -4767,7 +4767,7 @@ void q_textedit_delete(void* self);
 /// ``` QTextEdit__ExtraSelection* param1 ```
 QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit__extraselection.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit__extraselection.html#operator-eq)
 ///
 /// ``` QTextEdit__ExtraSelection* self, QTextEdit__ExtraSelection* param1 ```
 void q_textedit__extraselection_operator_assign(void* self, void* param1);

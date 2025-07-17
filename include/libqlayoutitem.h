@@ -324,19 +324,19 @@ void q_layoutitem_on_control_types(void* self, int64_t (*slot)());
 /// ``` QLayoutItem* self ```
 int64_t q_layoutitem_qbase_control_types(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
 ///
 /// ``` QLayoutItem* self, QLayoutItem* param1 ```
 void q_layoutitem_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QLayoutItem* self, void (*slot)(QLayoutItem*, QLayoutItem*) ```
 void q_layoutitem_on_operator_assign(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlayoutitem.html#operator-eq)
 ///
 /// Base class method implementation
 ///

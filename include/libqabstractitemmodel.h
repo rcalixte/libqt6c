@@ -39,7 +39,7 @@ const QVariant* q_modelroledata_data2(void* self);
 /// ``` QModelRoleData* self ```
 void q_modelroledata_clear_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmodelroledata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmodelroledata.html#operator-eq)
 ///
 /// ``` QModelRoleData* self, QModelRoleData* param1 ```
 void q_modelroledata_operator_assign(void* self, void* param1);
@@ -118,7 +118,7 @@ QModelRoleData* q_modelroledataspan_begin(void* self);
 /// ``` QModelRoleDataSpan* self ```
 QModelRoleData* q_modelroledataspan_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmodelroledataspan.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qmodelroledataspan.html#operator-5b-5d)
 ///
 /// ``` QModelRoleDataSpan* self, int64_t index ```
 QModelRoleData* q_modelroledataspan_operator_subscript(void* self, int64_t index);
@@ -266,7 +266,7 @@ QPersistentModelIndex* q_persistentmodelindex_new2(void* index);
 /// ``` QPersistentModelIndex* other ```
 QPersistentModelIndex* q_persistentmodelindex_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator-eq)
 ///
 /// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
 void q_persistentmodelindex_operator_assign(void* self, void* other);
@@ -276,12 +276,12 @@ void q_persistentmodelindex_operator_assign(void* self, void* other);
 /// ``` QPersistentModelIndex* self, QPersistentModelIndex* other ```
 void q_persistentmodelindex_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator-eq)
 ///
 /// ``` QPersistentModelIndex* self, QModelIndex* other ```
 void q_persistentmodelindex_operator_assign2(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator QModelIndex)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpersistentmodelindex.html#operator)
 ///
 /// ``` QPersistentModelIndex* self ```
 QModelIndex* q_persistentmodelindex_to_q_model_index(void* self);

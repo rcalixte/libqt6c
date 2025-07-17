@@ -24,7 +24,7 @@ QSslPreSharedKeyAuthenticator* q_sslpresharedkeyauthenticator_new();
 /// ``` QSslPreSharedKeyAuthenticator* authenticator ```
 QSslPreSharedKeyAuthenticator* q_sslpresharedkeyauthenticator_new2(void* authenticator);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslpresharedkeyauthenticator.html#operator-eq)
 ///
 /// ``` QSslPreSharedKeyAuthenticator* self, QSslPreSharedKeyAuthenticator* authenticator ```
 void q_sslpresharedkeyauthenticator_operator_assign(void* self, void* authenticator);

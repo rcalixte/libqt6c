@@ -29,7 +29,7 @@ QMediaFormat* q_mediaformat_new2(void* other);
 /// ``` enum QMediaFormat__FileFormat format ```
 QMediaFormat* q_mediaformat_new3(int64_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator-eq)
 ///
 /// ``` QMediaFormat* self, QMediaFormat* other ```
 void q_mediaformat_operator_assign(void* self, void* other);
@@ -124,12 +124,12 @@ const char* q_mediaformat_audio_codec_description(int64_t codec);
 /// ``` enum QMediaFormat__VideoCodec codec ```
 const char* q_mediaformat_video_codec_description(int64_t codec);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator-eq-eq)
 ///
 /// ``` QMediaFormat* self, QMediaFormat* other ```
 bool q_mediaformat_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator-not-eq)
 ///
 /// ``` QMediaFormat* self, QMediaFormat* other ```
 bool q_mediaformat_operator_not_equal(void* self, void* other);

@@ -24,7 +24,7 @@ QFontInfo* q_fontinfo_new(void* param1);
 /// ``` QFontInfo* param1 ```
 QFontInfo* q_fontinfo_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#operator-eq)
 ///
 /// ``` QFontInfo* self, QFontInfo* param1 ```
 void q_fontinfo_operator_assign(void* self, void* param1);

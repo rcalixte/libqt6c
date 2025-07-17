@@ -34,7 +34,7 @@ QTextDocumentFragment* q_textdocumentfragment_new3(void* range);
 /// ``` QTextDocumentFragment* rhs ```
 QTextDocumentFragment* q_textdocumentfragment_new4(void* rhs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentfragment.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextdocumentfragment.html#operator-eq)
 ///
 /// ``` QTextDocumentFragment* self, QTextDocumentFragment* rhs ```
 void q_textdocumentfragment_operator_assign(void* self, void* rhs);

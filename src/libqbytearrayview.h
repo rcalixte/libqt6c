@@ -64,7 +64,7 @@ const char* q_bytearrayview_data(void* self);
 /// ``` QByteArrayView* self ```
 const char* q_bytearrayview_const_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#operator-5b-5d)
 ///
 /// ``` QByteArrayView* self, int64_t n ```
 char q_bytearrayview_operator_subscript(void* self, int64_t n);

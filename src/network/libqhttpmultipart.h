@@ -24,7 +24,7 @@ QHttpPart* q_httppart_new();
 /// ``` QHttpPart* other ```
 QHttpPart* q_httppart_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator-eq)
 ///
 /// ``` QHttpPart* self, QHttpPart* other ```
 void q_httppart_operator_assign(void* self, void* other);
@@ -34,12 +34,12 @@ void q_httppart_operator_assign(void* self, void* other);
 /// ``` QHttpPart* self, QHttpPart* other ```
 void q_httppart_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator-eq-eq)
 ///
 /// ``` QHttpPart* self, QHttpPart* other ```
 bool q_httppart_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator-not-eq)
 ///
 /// ``` QHttpPart* self, QHttpPart* other ```
 bool q_httppart_operator_not_equal(void* self, void* other);

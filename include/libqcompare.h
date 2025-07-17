@@ -73,7 +73,7 @@ void q_weak_ordering_copy_assign(void* self, void* other);
 /// ``` weak_ordering* self, weak_ordering* other ```
 void q_weak_ordering_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/weak_ordering.html#operator partial_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/weak_ordering.html#operator)
 ///
 /// ``` weak_ordering* self ```
 partial_ordering* q_weak_ordering_to_partial_ordering(void* self);
@@ -112,12 +112,12 @@ void q_strong_ordering_copy_assign(void* self, void* other);
 /// ``` strong_ordering* self, strong_ordering* other ```
 void q_strong_ordering_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/strong_ordering.html#operator partial_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/strong_ordering.html#operator)
 ///
 /// ``` strong_ordering* self ```
 partial_ordering* q_strong_ordering_to_partial_ordering(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/strong_ordering.html#operator weak_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/strong_ordering.html#operator)
 ///
 /// ``` strong_ordering* self ```
 weak_ordering* q_strong_ordering_to_weak_ordering(void* self);
@@ -171,7 +171,7 @@ void q_partialordering_copy_assign(void* self, void* other);
 /// ``` QPartialOrdering* self, QPartialOrdering* other ```
 void q_partialordering_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpartialordering.html#operator partial_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpartialordering.html#operator)
 ///
 /// ``` QPartialOrdering* self ```
 partial_ordering* q_partialordering_to_partial_ordering(void* self);

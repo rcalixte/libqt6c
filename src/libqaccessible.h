@@ -241,7 +241,7 @@ void q_accessibletextinterface_scroll_to_substring(void* self, int startIndex, i
 /// ``` QAccessibleTextInterface* self, int offset, int* startOffset, int* endOffset ```
 const char* q_accessibletextinterface_attributes(void* self, int offset, int* startOffset, int* endOffset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinterface.html#operator-eq)
 ///
 /// ``` QAccessibleTextInterface* self, QAccessibleTextInterface* param1 ```
 void q_accessibletextinterface_operator_assign(void* self, void* param1);
@@ -270,7 +270,7 @@ void q_accessibleeditabletextinterface_insert_text(void* self, int offset, const
 /// ``` QAccessibleEditableTextInterface* self, int startOffset, int endOffset, const char* text ```
 void q_accessibleeditabletextinterface_replace_text(void* self, int startOffset, int endOffset, const char* text);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleeditabletextinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleeditabletextinterface.html#operator-eq)
 ///
 /// ``` QAccessibleEditableTextInterface* self, QAccessibleEditableTextInterface* param1 ```
 void q_accessibleeditabletextinterface_operator_assign(void* self, void* param1);
@@ -309,7 +309,7 @@ QVariant* q_accessiblevalueinterface_minimum_value(void* self);
 /// ``` QAccessibleValueInterface* self ```
 QVariant* q_accessiblevalueinterface_minimum_step_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblevalueinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblevalueinterface.html#operator-eq)
 ///
 /// ``` QAccessibleValueInterface* self, QAccessibleValueInterface* param1 ```
 void q_accessiblevalueinterface_operator_assign(void* self, void* param1);
@@ -363,7 +363,7 @@ int32_t q_accessibletablecellinterface_row_extent(void* self);
 /// ``` QAccessibleTableCellInterface* self ```
 QAccessibleInterface* q_accessibletablecellinterface_table(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablecellinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablecellinterface.html#operator-eq)
 ///
 /// ``` QAccessibleTableCellInterface* self, QAccessibleTableCellInterface* param1 ```
 void q_accessibletablecellinterface_operator_assign(void* self, void* param1);
@@ -576,7 +576,7 @@ const char* q_accessibleactioninterface_next_page_action();
 ///
 const char* q_accessibleactioninterface_previous_page_action();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleactioninterface.html#operator-eq)
 ///
 /// ``` QAccessibleActionInterface* self, QAccessibleActionInterface* param1 ```
 void q_accessibleactioninterface_operator_assign(void* self, void* param1);
@@ -615,7 +615,7 @@ QSize* q_accessibleimageinterface_image_size(void* self);
 /// ``` QAccessibleImageInterface* self ```
 QPoint* q_accessibleimageinterface_image_position(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleimageinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleimageinterface.html#operator-eq)
 ///
 /// ``` QAccessibleImageInterface* self, QAccessibleImageInterface* param1 ```
 void q_accessibleimageinterface_operator_assign(void* self, void* param1);
@@ -654,7 +654,7 @@ int32_t q_accessiblehyperlinkinterface_end_index(void* self);
 /// ``` QAccessibleHyperlinkInterface* self ```
 bool q_accessiblehyperlinkinterface_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblehyperlinkinterface.html#operator-eq)
 ///
 /// ``` QAccessibleHyperlinkInterface* self, QAccessibleHyperlinkInterface* param1 ```
 void q_accessiblehyperlinkinterface_operator_assign(void* self, void* param1);
@@ -708,7 +708,7 @@ bool q_accessibleselectioninterface_select_all(void* self);
 /// ``` QAccessibleSelectionInterface* self ```
 bool q_accessibleselectioninterface_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleselectioninterface.html#operator-eq)
 ///
 /// ``` QAccessibleSelectionInterface* self, QAccessibleSelectionInterface* param1 ```
 void q_accessibleselectioninterface_operator_assign(void* self, void* param1);
@@ -732,7 +732,7 @@ libqt_list /* of int64_t */ q_accessibleattributesinterface_attribute_keys(void*
 /// ``` QAccessibleAttributesInterface* self, enum QAccessible__Attribute key ```
 QVariant* q_accessibleattributesinterface_attribute_value(void* self, int64_t key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#operator-eq)
 ///
 /// ``` QAccessibleAttributesInterface* self, QAccessibleAttributesInterface* param1 ```
 void q_accessibleattributesinterface_operator_assign(void* self, void* param1);

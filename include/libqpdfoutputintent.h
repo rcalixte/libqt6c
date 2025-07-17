@@ -24,7 +24,7 @@ QPdfOutputIntent* q_pdfoutputintent_new();
 /// ``` QPdfOutputIntent* other ```
 QPdfOutputIntent* q_pdfoutputintent_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#operator-eq)
 ///
 /// ``` QPdfOutputIntent* self, QPdfOutputIntent* other ```
 void q_pdfoutputintent_operator_assign(void* self, void* other);

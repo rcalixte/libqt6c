@@ -34,7 +34,7 @@ QStorageInfo* q_storageinfo_new3(void* dir);
 /// ``` QStorageInfo* other ```
 QStorageInfo* q_storageinfo_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstorageinfo.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstorageinfo.html#operator-eq)
 ///
 /// ``` QStorageInfo* self, QStorageInfo* other ```
 void q_storageinfo_operator_assign(void* self, void* other);

@@ -39,7 +39,7 @@ QFileInfo* q_fileinfo_new4(void* dir, const char* file);
 /// ``` QFileInfo* fileinfo ```
 QFileInfo* q_fileinfo_new5(void* fileinfo);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#operator-eq)
 ///
 /// ``` QFileInfo* self, QFileInfo* fileinfo ```
 void q_fileinfo_operator_assign(void* self, void* fileinfo);

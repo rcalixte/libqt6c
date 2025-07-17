@@ -34,7 +34,7 @@ void q_colormap_cleanup();
 ///
 QColormap* q_colormap_instance();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#operator-eq)
 ///
 /// ``` QColormap* self, QColormap* colormap ```
 void q_colormap_operator_assign(void* self, void* colormap);

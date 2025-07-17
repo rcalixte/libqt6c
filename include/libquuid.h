@@ -168,7 +168,7 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new();
 /// ``` QUuid__Id128Bytes* param1 ```
 QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid__id128bytes.html#operator QByteArrayView)
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid__id128bytes.html#operator)
 ///
 /// ``` QUuid__Id128Bytes* self ```
 const char* q_uuid__id128bytes_to_q_byte_array_view(void* self);

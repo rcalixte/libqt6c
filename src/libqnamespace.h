@@ -162,7 +162,7 @@ QKeyCombination* q_keycombination_from_combined(int combined);
 /// ``` QKeyCombination* self ```
 int32_t q_keycombination_to_combined(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#operator int)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#operator)
 ///
 /// ``` QKeyCombination* self ```
 int32_t q_keycombination_to_int(void* self);

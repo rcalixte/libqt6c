@@ -59,12 +59,12 @@ QUrl* q_webenginequotarequest_origin(void* self);
 /// ``` QWebEngineQuotaRequest* self ```
 long long q_webenginequotarequest_requested_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-eq-eq)
 ///
 /// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* param1 ```
 bool q_webenginequotarequest_operator_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-not-eq)
 ///
 /// ``` QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* param1 ```
 bool q_webenginequotarequest_operator_not_equal(void* self, void* param1);

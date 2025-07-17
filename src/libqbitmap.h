@@ -44,7 +44,7 @@ QBitmap* q_bitmap_new5(const char* fileName);
 /// ``` const char* fileName, const char* format ```
 QBitmap* q_bitmap_new6(const char* fileName, const char* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator-eq)
 ///
 /// ``` QBitmap* self, QPixmap* param1 ```
 void q_bitmap_operator_assign(void* self, void* param1);
@@ -54,7 +54,7 @@ void q_bitmap_operator_assign(void* self, void* param1);
 /// ``` QBitmap* self, QBitmap* other ```
 void q_bitmap_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator)
 ///
 /// ``` QBitmap* self ```
 QVariant* q_bitmap_to_q_variant(void* self);
@@ -84,7 +84,7 @@ QBitmap* q_bitmap_from_pixmap(void* pixmap);
 /// ``` QBitmap* self, QTransform* matrix ```
 QBitmap* q_bitmap_transformed(void* self, void* matrix);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbitmap.html#operator-eq)
 ///
 /// ``` QBitmap* self, QBitmap* param1 ```
 void q_bitmap_operator_assign2(void* self, void* param1);
@@ -367,7 +367,7 @@ bool q_bitmap_is_q_bitmap(void* self);
 
 /// Inherited from QPixmap
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator!)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#operator-not)
 ///
 /// ``` QBitmap* self ```
 bool q_bitmap_operator_not(void* self);

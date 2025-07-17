@@ -29,7 +29,7 @@ QStaticText* q_statictext_new2(const char* text);
 /// ``` QStaticText* other ```
 QStaticText* q_statictext_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-eq)
 ///
 /// ``` QStaticText* self, QStaticText* param1 ```
 void q_statictext_operator_assign(void* self, void* param1);
@@ -99,12 +99,12 @@ void q_statictext_set_performance_hint(void* self, int64_t performanceHint);
 /// ``` QStaticText* self ```
 int64_t q_statictext_performance_hint(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-eq-eq)
 ///
 /// ``` QStaticText* self, QStaticText* param1 ```
 bool q_statictext_operator_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-not-eq)
 ///
 /// ``` QStaticText* self, QStaticText* param1 ```
 bool q_statictext_operator_not_equal(void* self, void* param1);

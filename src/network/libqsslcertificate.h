@@ -44,7 +44,7 @@ QSslCertificate* q_sslcertificate_new5(const char* data);
 /// ``` const char* data, enum QSsl__EncodingFormat format ```
 QSslCertificate* q_sslcertificate_new6(const char* data, int64_t format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator-eq)
 ///
 /// ``` QSslCertificate* self, QSslCertificate* other ```
 void q_sslcertificate_operator_assign(void* self, void* other);
@@ -54,12 +54,12 @@ void q_sslcertificate_operator_assign(void* self, void* other);
 /// ``` QSslCertificate* self, QSslCertificate* other ```
 void q_sslcertificate_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator-eq-eq)
 ///
 /// ``` QSslCertificate* self, QSslCertificate* other ```
 bool q_sslcertificate_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator-not-eq)
 ///
 /// ``` QSslCertificate* self, QSslCertificate* other ```
 bool q_sslcertificate_operator_not_equal(void* self, void* other);

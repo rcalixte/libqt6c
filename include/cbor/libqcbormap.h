@@ -24,7 +24,7 @@ QCborMap* q_cbormap_new();
 /// ``` QCborMap* other ```
 QCborMap* q_cbormap_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-eq)
 ///
 /// ``` QCborMap* self, QCborMap* other ```
 void q_cbormap_operator_assign(void* self, void* other);
@@ -74,32 +74,32 @@ QCborValue* q_cbormap_value3(void* self, const char* key);
 /// ``` QCborMap* self, QCborValue* key ```
 QCborValue* q_cbormap_value4(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// ``` QCborMap* self, long long key ```
 const QCborValue* q_cbormap_operator_subscript(void* self, long long key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// ``` QCborMap* self, const char* key ```
 const QCborValue* q_cbormap_operator_subscript3(void* self, const char* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// ``` QCborMap* self, QCborValue* key ```
 const QCborValue* q_cbormap_operator_subscript4(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// ``` QCborMap* self, long long key ```
 QCborValueRef* q_cbormap_operator_subscript5(void* self, long long key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// ``` QCborMap* self, const char* key ```
 QCborValueRef* q_cbormap_operator_subscript7(void* self, const char* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// ``` QCborMap* self, QCborValue* key ```
 QCborValueRef* q_cbormap_operator_subscript8(void* self, void* key);
@@ -338,27 +338,27 @@ QCborMap__Iterator* q_cbormap__iterator_new2();
 /// ``` QCborMap__Iterator* param1 ```
 QCborMap__Iterator* q_cbormap__iterator_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-eq)
 ///
 /// ``` QCborMap__Iterator* self, QCborMap__Iterator* other ```
 void q_cbormap__iterator_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-2a)
 ///
 /// ``` QCborMap__Iterator* self ```
 libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-5b-5d)
 ///
 /// ``` QCborMap__Iterator* self, int64_t j ```
 libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__iterator_operator_subscript(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator--gt)
 ///
 /// ``` QCborMap__Iterator* self ```
 QCborValueRef* q_cbormap__iterator_operator_minus_greater(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator--gt)
 ///
 /// ``` QCborMap__Iterator* self ```
 const QCborValueConstRef* q_cbormap__iterator_operator_minus_greater2(void* self);
@@ -373,12 +373,12 @@ QCborValue* q_cbormap__iterator_key(void* self);
 /// ``` QCborMap__Iterator* self ```
 QCborValueRef* q_cbormap__iterator_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-2b-2b)
 ///
 /// ``` QCborMap__Iterator* self ```
 QCborMap__Iterator* q_cbormap__iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-2b-2b)
 ///
 /// ``` QCborMap__Iterator* self, int param1 ```
 QCborMap__Iterator* q_cbormap__iterator_operator_plus_plus2(void* self, int param1);
@@ -393,17 +393,17 @@ QCborMap__Iterator* q_cbormap__iterator_operator_minus_minus(void* self);
 /// ``` QCborMap__Iterator* self, int param1 ```
 QCborMap__Iterator* q_cbormap__iterator_operator_minus_minus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-2b-eq)
 ///
 /// ``` QCborMap__Iterator* self, int64_t j ```
 QCborMap__Iterator* q_cbormap__iterator_operator_plus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator--eq)
 ///
 /// ``` QCborMap__Iterator* self, int64_t j ```
 QCborMap__Iterator* q_cbormap__iterator_operator_minus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__iterator.html#operator-2b)
 ///
 /// ``` QCborMap__Iterator* self, int64_t j ```
 QCborMap__Iterator* q_cbormap__iterator_operator_plus(void* self, int64_t j);
@@ -442,22 +442,22 @@ QCborMap__ConstIterator* q_cbormap__constiterator_new2();
 /// ``` QCborMap__ConstIterator* param1 ```
 QCborMap__ConstIterator* q_cbormap__constiterator_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-eq)
 ///
 /// ``` QCborMap__ConstIterator* self, QCborMap__ConstIterator* other ```
 void q_cbormap__constiterator_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-2a)
 ///
 /// ``` QCborMap__ConstIterator* self ```
 libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-5b-5d)
 ///
 /// ``` QCborMap__ConstIterator* self, int64_t j ```
 libqt_pair /* tuple of QCborValue* and QCborValue* */ q_cbormap__constiterator_operator_subscript(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator->)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator--gt)
 ///
 /// ``` QCborMap__ConstIterator* self ```
 const QCborValueConstRef* q_cbormap__constiterator_operator_minus_greater(void* self);
@@ -472,12 +472,12 @@ QCborValue* q_cbormap__constiterator_key(void* self);
 /// ``` QCborMap__ConstIterator* self ```
 QCborValueConstRef* q_cbormap__constiterator_value(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-2b-2b)
 ///
 /// ``` QCborMap__ConstIterator* self ```
 QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-2b-2b)
 ///
 /// ``` QCborMap__ConstIterator* self, int param1 ```
 QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus_plus2(void* self, int param1);
@@ -492,17 +492,17 @@ QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus_minus(void* sel
 /// ``` QCborMap__ConstIterator* self, int param1 ```
 QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus_minus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-2b-eq)
 ///
 /// ``` QCborMap__ConstIterator* self, int64_t j ```
 QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator--eq)
 ///
 /// ``` QCborMap__ConstIterator* self, int64_t j ```
 QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus_assign(void* self, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap__constiterator.html#operator-2b)
 ///
 /// ``` QCborMap__ConstIterator* self, int64_t j ```
 QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus(void* self, int64_t j);

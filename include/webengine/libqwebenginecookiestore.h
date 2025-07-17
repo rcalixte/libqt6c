@@ -398,7 +398,7 @@ void q_webenginecookiestore_delete(void* self);
 /// ``` QWebEngineCookieStore__FilterRequest* param1 ```
 QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore__filterrequest.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore__filterrequest.html#operator-eq)
 ///
 /// ``` QWebEngineCookieStore__FilterRequest* self, QWebEngineCookieStore__FilterRequest* param1 ```
 void q_webenginecookiestore__filterrequest_operator_assign(void* self, void* param1);

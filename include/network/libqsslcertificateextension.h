@@ -24,7 +24,7 @@ QSslCertificateExtension* q_sslcertificateextension_new();
 /// ``` QSslCertificateExtension* other ```
 QSslCertificateExtension* q_sslcertificateextension_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificateextension.html#operator-eq)
 ///
 /// ``` QSslCertificateExtension* self, QSslCertificateExtension* other ```
 void q_sslcertificateextension_operator_assign(void* self, void* other);

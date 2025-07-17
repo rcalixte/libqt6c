@@ -59,7 +59,7 @@ void q_transform_copy_assign(void* self, void* other);
 /// ``` QTransform* self, QTransform* other ```
 void q_transform_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-eq)
 ///
 /// ``` QTransform* self, QTransform* param1 ```
 void q_transform_operator_assign(void* self, void* param1);
@@ -214,27 +214,27 @@ QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, doubl
 /// ``` QTransform* self, double a ```
 QTransform* q_transform_rotate_radians2(void* self, double a);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-eq-eq)
 ///
 /// ``` QTransform* self, QTransform* param1 ```
 bool q_transform_operator_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-not-eq)
 ///
 /// ``` QTransform* self, QTransform* param1 ```
 bool q_transform_operator_not_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-2a-eq)
 ///
 /// ``` QTransform* self, QTransform* param1 ```
 QTransform* q_transform_operator_multiply_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-2a)
 ///
 /// ``` QTransform* self, QTransform* o ```
 QTransform* q_transform_operator_multiply(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator)
 ///
 /// ``` QTransform* self ```
 QVariant* q_transform_to_q_variant(void* self);
@@ -294,22 +294,22 @@ void q_transform_map9(void* self, int x, int y, int* tx, int* ty);
 /// ``` QTransform* self, double x, double y, double* tx, double* ty ```
 void q_transform_map10(void* self, double x, double y, double* tx, double* ty);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-2a-eq)
 ///
 /// ``` QTransform* self, double div ```
 QTransform* q_transform_operator_multiply_assign2(void* self, double div);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-2f-eq)
 ///
 /// ``` QTransform* self, double div ```
 QTransform* q_transform_operator_divide_assign(void* self, double div);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-2b-eq)
 ///
 /// ``` QTransform* self, double div ```
 QTransform* q_transform_operator_plus_assign(void* self, double div);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#operator--eq)
 ///
 /// ``` QTransform* self, double div ```
 QTransform* q_transform_operator_minus_assign(void* self, double div);

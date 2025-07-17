@@ -124,17 +124,17 @@ QKeySequence* q_keysequence_mnemonic(const char* text);
 /// ``` enum QKeySequence__StandardKey key ```
 libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int64_t key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator)
 ///
 /// ``` QKeySequence* self ```
 QVariant* q_keysequence_to_q_variant(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-5b-5d)
 ///
 /// ``` QKeySequence* self, uint32_t i ```
 QKeyCombination* q_keysequence_operator_subscript(void* self, uint32_t i);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-eq)
 ///
 /// ``` QKeySequence* self, QKeySequence* other ```
 void q_keysequence_operator_assign(void* self, void* other);
@@ -144,32 +144,32 @@ void q_keysequence_operator_assign(void* self, void* other);
 /// ``` QKeySequence* self, QKeySequence* other ```
 void q_keysequence_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-eq-eq)
 ///
 /// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-not-eq)
 ///
 /// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-lt)
 ///
 /// ``` QKeySequence* self, QKeySequence* ks ```
 bool q_keysequence_operator_lesser(void* self, void* ks);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator>)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-gt)
 ///
 /// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_greater(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator<=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-lt-eq)
 ///
 /// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_lesser_or_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator>=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator-gt-eq)
 ///
 /// ``` QKeySequence* self, QKeySequence* other ```
 bool q_keysequence_operator_greater_or_equal(void* self, void* other);

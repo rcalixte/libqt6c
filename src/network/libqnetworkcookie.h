@@ -34,7 +34,7 @@ QNetworkCookie* q_networkcookie_new3(const char* name);
 /// ``` const char* name, const char* value ```
 QNetworkCookie* q_networkcookie_new4(const char* name, const char* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-eq)
 ///
 /// ``` QNetworkCookie* self, QNetworkCookie* other ```
 void q_networkcookie_operator_assign(void* self, void* other);
@@ -44,12 +44,12 @@ void q_networkcookie_operator_assign(void* self, void* other);
 /// ``` QNetworkCookie* self, QNetworkCookie* other ```
 void q_networkcookie_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-eq-eq)
 ///
 /// ``` QNetworkCookie* self, QNetworkCookie* other ```
 bool q_networkcookie_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-not-eq)
 ///
 /// ``` QNetworkCookie* self, QNetworkCookie* other ```
 bool q_networkcookie_operator_not_equal(void* self, void* other);

@@ -74,7 +74,7 @@ QSslKey* q_sslkey_new11(void* device, int64_t algorithm, int64_t format, int64_t
 /// ``` void* handle, enum QSsl__KeyType typeVal ```
 QSslKey* q_sslkey_new12(void* handle, int64_t typeVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-eq)
 ///
 /// ``` QSslKey* self, QSslKey* other ```
 void q_sslkey_operator_assign(void* self, void* other);
@@ -124,12 +124,12 @@ char* q_sslkey_to_der(void* self);
 /// ``` QSslKey* self ```
 void* q_sslkey_handle(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-eq-eq)
 ///
 /// ``` QSslKey* self, QSslKey* key ```
 bool q_sslkey_operator_equal(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-not-eq)
 ///
 /// ``` QSslKey* self, QSslKey* key ```
 bool q_sslkey_operator_not_equal(void* self, void* key);

@@ -84,32 +84,32 @@ int32_t q_point_manhattan_length(void* self);
 /// ``` QPoint* self ```
 QPoint* q_point_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2b-eq)
 ///
 /// ``` QPoint* self, QPoint* p ```
 QPoint* q_point_operator_plus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator--eq)
 ///
 /// ``` QPoint* self, QPoint* p ```
 QPoint* q_point_operator_minus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
 ///
 /// ``` QPoint* self, float factor ```
 QPoint* q_point_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
 ///
 /// ``` QPoint* self, double factor ```
 QPoint* q_point_operator_multiply_assign2(void* self, double factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2a-eq)
 ///
 /// ``` QPoint* self, int factor ```
 QPoint* q_point_operator_multiply_assign3(void* self, int factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpoint.html#operator-2f-eq)
 ///
 /// ``` QPoint* self, double divisor ```
 QPoint* q_point_operator_divide_assign(void* self, double divisor);
@@ -208,22 +208,22 @@ void q_pointf_set_y(void* self, double y);
 /// ``` QPointF* self ```
 QPointF* q_pointf_transposed(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2b-eq)
 ///
 /// ``` QPointF* self, QPointF* p ```
 QPointF* q_pointf_operator_plus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator--eq)
 ///
 /// ``` QPointF* self, QPointF* p ```
 QPointF* q_pointf_operator_minus_assign(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2a-eq)
 ///
 /// ``` QPointF* self, double c ```
 QPointF* q_pointf_operator_multiply_assign(void* self, double c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointf.html#operator-2f-eq)
 ///
 /// ``` QPointF* self, double c ```
 QPointF* q_pointf_operator_divide_assign(void* self, double c);

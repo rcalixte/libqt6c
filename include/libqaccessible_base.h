@@ -147,7 +147,7 @@ void q_accessible__state_delete(void* self);
 /// ``` QAccessible__ActivationObserver* self, bool active ```
 void q_accessible__activationobserver_accessibility_active_changed(void* self, bool active);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible__activationobserver.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible__activationobserver.html#operator-eq)
 ///
 /// ``` QAccessible__ActivationObserver* self, QAccessible__ActivationObserver* param1 ```
 void q_accessible__activationobserver_operator_assign(void* self, void* param1);

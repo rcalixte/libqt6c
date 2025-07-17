@@ -1000,7 +1000,7 @@ QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_ne
 ///
 QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new2();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher__timerinfov2.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher__timerinfov2.html#operator-eq)
 ///
 /// ``` QAbstractEventDispatcher__TimerInfoV2* self, QAbstractEventDispatcher__TimerInfoV2* param1 ```
 void q_abstracteventdispatcher__timerinfov2_operator_assign(void* self, void* param1);

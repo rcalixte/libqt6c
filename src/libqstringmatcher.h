@@ -44,7 +44,7 @@ QStringMatcher* q_stringmatcher_new5(const char* pattern, int64_t cs);
 /// ``` QChar* uc, int64_t lenVal, enum Qt__CaseSensitivity cs ```
 QStringMatcher* q_stringmatcher_new6(void* uc, int64_t lenVal, int64_t cs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringmatcher.html#operator-eq)
 ///
 /// ``` QStringMatcher* self, QStringMatcher* other ```
 void q_stringmatcher_operator_assign(void* self, void* other);

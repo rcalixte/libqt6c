@@ -24,7 +24,7 @@ QTextTableCell* q_texttablecell_new();
 /// ``` QTextTableCell* o ```
 QTextTableCell* q_texttablecell_new2(void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator-eq)
 ///
 /// ``` QTextTableCell* self, QTextTableCell* o ```
 void q_texttablecell_operator_assign(void* self, void* o);
@@ -84,12 +84,12 @@ int32_t q_texttablecell_first_position(void* self);
 /// ``` QTextTableCell* self ```
 int32_t q_texttablecell_last_position(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator-eq-eq)
 ///
 /// ``` QTextTableCell* self, QTextTableCell* other ```
 bool q_texttablecell_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator-not-eq)
 ///
 /// ``` QTextTableCell* self, QTextTableCell* other ```
 bool q_texttablecell_operator_not_equal(void* self, void* other);

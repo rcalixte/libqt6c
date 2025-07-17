@@ -39,17 +39,17 @@ void q_videoframeformat_swap(void* self, void* other);
 /// ``` QVideoFrameFormat* self ```
 void q_videoframeformat_detach(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#operator-eq)
 ///
 /// ``` QVideoFrameFormat* self, QVideoFrameFormat* format ```
 void q_videoframeformat_operator_assign(void* self, void* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#operator-eq-eq)
 ///
 /// ``` QVideoFrameFormat* self, QVideoFrameFormat* format ```
 bool q_videoframeformat_operator_equal(void* self, void* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#operator-not-eq)
 ///
 /// ``` QVideoFrameFormat* self, QVideoFrameFormat* format ```
 bool q_videoframeformat_operator_not_equal(void* self, void* format);

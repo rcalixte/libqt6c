@@ -39,7 +39,7 @@ QIcon* q_icon_new4(const char* fileName);
 /// ``` QIconEngine* engine ```
 QIcon* q_icon_new5(void* engine);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#operator-eq)
 ///
 /// ``` QIcon* self, QIcon* other ```
 void q_icon_operator_assign(void* self, void* other);
@@ -49,7 +49,7 @@ void q_icon_operator_assign(void* self, void* other);
 /// ``` QIcon* self, QIcon* other ```
 void q_icon_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qicon.html#operator)
 ///
 /// ``` QIcon* self ```
 QVariant* q_icon_to_q_variant(void* self);

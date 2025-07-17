@@ -99,7 +99,7 @@ void q_color_move_assign(void* self, void* other);
 /// ``` char* name ```
 QColor* q_color_from_string(char* name);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator-eq)
 ///
 /// ``` QColor* self, enum Qt__GlobalColor color ```
 void q_color_operator_assign(void* self, int64_t color);
@@ -539,17 +539,17 @@ QColor* q_color_lighter(void* self);
 /// ``` QColor* self ```
 QColor* q_color_darker(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator-eq-eq)
 ///
 /// ``` QColor* self, QColor* c ```
 bool q_color_operator_equal(void* self, void* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator-not-eq)
 ///
 /// ``` QColor* self, QColor* c ```
 bool q_color_operator_not_equal(void* self, void* c);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#operator)
 ///
 /// ``` QColor* self ```
 QVariant* q_color_to_q_variant(void* self);

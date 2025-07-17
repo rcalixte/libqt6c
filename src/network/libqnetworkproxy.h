@@ -64,7 +64,7 @@ QNetworkProxyQuery* q_networkproxyquery_new9(unsigned short bindPort, const char
 /// ``` unsigned short bindPort, const char* protocolTag, enum QNetworkProxyQuery__QueryType queryType ```
 QNetworkProxyQuery* q_networkproxyquery_new10(unsigned short bindPort, const char* protocolTag, int64_t queryType);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator-eq)
 ///
 /// ``` QNetworkProxyQuery* self, QNetworkProxyQuery* other ```
 void q_networkproxyquery_operator_assign(void* self, void* other);
@@ -74,12 +74,12 @@ void q_networkproxyquery_operator_assign(void* self, void* other);
 /// ``` QNetworkProxyQuery* self, QNetworkProxyQuery* other ```
 void q_networkproxyquery_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator-eq-eq)
 ///
 /// ``` QNetworkProxyQuery* self, QNetworkProxyQuery* other ```
 bool q_networkproxyquery_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator-not-eq)
 ///
 /// ``` QNetworkProxyQuery* self, QNetworkProxyQuery* other ```
 bool q_networkproxyquery_operator_not_equal(void* self, void* other);
@@ -188,7 +188,7 @@ QNetworkProxy* q_networkproxy_new6(int64_t typeVal, const char* hostName, unsign
 /// ``` enum QNetworkProxy__ProxyType typeVal, const char* hostName, unsigned short port, const char* user, const char* password ```
 QNetworkProxy* q_networkproxy_new7(int64_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-eq)
 ///
 /// ``` QNetworkProxy* self, QNetworkProxy* other ```
 void q_networkproxy_operator_assign(void* self, void* other);
@@ -198,12 +198,12 @@ void q_networkproxy_operator_assign(void* self, void* other);
 /// ``` QNetworkProxy* self, QNetworkProxy* other ```
 void q_networkproxy_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-eq-eq)
 ///
 /// ``` QNetworkProxy* self, QNetworkProxy* other ```
 bool q_networkproxy_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-not-eq)
 ///
 /// ``` QNetworkProxy* self, QNetworkProxy* other ```
 bool q_networkproxy_operator_not_equal(void* self, void* other);
@@ -386,7 +386,7 @@ libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_proxy_for_query(void* q
 ///
 libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_system_proxy_for_query();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#operator-eq)
 ///
 /// ``` QNetworkProxyFactory* self, QNetworkProxyFactory* param1 ```
 void q_networkproxyfactory_operator_assign(void* self, void* param1);

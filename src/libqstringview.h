@@ -49,7 +49,7 @@ const QChar* q_stringview_data(void* self);
 /// ``` QStringView* self ```
 const QChar* q_stringview_const_data(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#operator-5b-5d)
 ///
 /// ``` QStringView* self, int64_t n ```
 QChar* q_stringview_operator_subscript(void* self, int64_t n);

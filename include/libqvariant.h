@@ -159,7 +159,7 @@ QVariant* q_variant_new28(int64_t typeVal);
 /// ``` QMetaType* typeVal, void* copyVal ```
 QVariant* q_variant_new29(void* typeVal, void* copyVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///
 /// ``` QVariant* self, QVariant* other ```
 void q_variant_operator_assign(void* self, void* other);

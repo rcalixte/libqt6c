@@ -29,7 +29,7 @@ QEasingCurve* q_easingcurve_new2(void* other);
 /// ``` enum QEasingCurve__Type typeVal ```
 QEasingCurve* q_easingcurve_new3(int64_t typeVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator-eq)
 ///
 /// ``` QEasingCurve* self, QEasingCurve* other ```
 void q_easingcurve_operator_assign(void* self, void* other);

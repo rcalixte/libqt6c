@@ -34,7 +34,7 @@ QHstsPolicy* q_hstspolicy_new3(void* rhs);
 /// ``` QDateTime* expiry, int flags, const char* host, enum QUrl__ParsingMode mode ```
 QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int64_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#operator-eq)
 ///
 /// ``` QHstsPolicy* self, QHstsPolicy* rhs ```
 void q_hstspolicy_operator_assign(void* self, void* rhs);

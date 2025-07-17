@@ -49,7 +49,7 @@ QLocale* q_locale_new6(int64_t language, int64_t script);
 /// ``` enum QLocale__Language language, enum QLocale__Script script, enum QLocale__Country territory ```
 QLocale* q_locale_new7(int64_t language, int64_t script, int64_t territory);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#operator-eq)
 ///
 /// ``` QLocale* self, QLocale* other ```
 void q_locale_operator_assign(void* self, void* other);

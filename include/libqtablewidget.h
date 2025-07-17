@@ -330,19 +330,19 @@ void q_tablewidgetitem_on_set_data(void* self, void (*slot)(void*, int, void*));
 /// ``` QTableWidgetItem* self, int role, QVariant* value ```
 void q_tablewidgetitem_qbase_set_data(void* self, int role, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-lt)
 ///
 /// ``` QTableWidgetItem* self, QTableWidgetItem* other ```
 bool q_tablewidgetitem_operator_lesser(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-lt)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QTableWidgetItem* self, bool (*slot)(QTableWidgetItem*, QTableWidgetItem*) ```
 void q_tablewidgetitem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-lt)
 ///
 /// Base class method implementation
 ///
@@ -387,7 +387,7 @@ void q_tablewidgetitem_on_write(void* self, void (*slot)(void*, void*));
 /// ``` QTableWidgetItem* self, QDataStream* out ```
 void q_tablewidgetitem_qbase_write(void* self, void* out);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtablewidgetitem.html#operator-eq)
 ///
 /// ``` QTableWidgetItem* self, QTableWidgetItem* other ```
 void q_tablewidgetitem_operator_assign(void* self, void* other);

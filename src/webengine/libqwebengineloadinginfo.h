@@ -19,7 +19,7 @@
 /// ``` QWebEngineLoadingInfo* other ```
 QWebEngineLoadingInfo* q_webengineloadinginfo_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#operator-eq)
 ///
 /// ``` QWebEngineLoadingInfo* self, QWebEngineLoadingInfo* other ```
 void q_webengineloadinginfo_operator_assign(void* self, void* other);

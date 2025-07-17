@@ -59,7 +59,7 @@ QCursor* q_cursor_new8(void* pixmap, int hotX);
 /// ``` QPixmap* pixmap, int hotX, int hotY ```
 QCursor* q_cursor_new9(void* pixmap, int hotX, int hotY);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#operator-eq)
 ///
 /// ``` QCursor* self, QCursor* cursor ```
 void q_cursor_operator_assign(void* self, void* cursor);
@@ -69,7 +69,7 @@ void q_cursor_operator_assign(void* self, void* cursor);
 /// ``` QCursor* self, QCursor* other ```
 void q_cursor_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#operator)
 ///
 /// ``` QCursor* self ```
 QVariant* q_cursor_to_q_variant(void* self);

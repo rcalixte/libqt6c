@@ -979,7 +979,7 @@ QSizeF* q_textobjectinterface_intrinsic_size(void* self, void* doc, int posInDoc
 /// ``` QTextObjectInterface* self, QPainter* painter, QRectF* rect, QTextDocument* doc, int posInDocument, QTextFormat* format ```
 void q_textobjectinterface_draw_object(void* self, void* painter, void* rect, void* doc, int posInDocument, void* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextobjectinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextobjectinterface.html#operator-eq)
 ///
 /// ``` QTextObjectInterface* self, QTextObjectInterface* param1 ```
 void q_textobjectinterface_operator_assign(void* self, void* param1);
@@ -998,7 +998,7 @@ void q_textobjectinterface_delete(void* self);
 ///
 QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout__selection.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout__selection.html#operator-eq)
 ///
 /// ``` QAbstractTextDocumentLayout__Selection* self, QAbstractTextDocumentLayout__Selection* param1 ```
 void q_abstracttextdocumentlayout__selection_operator_assign(void* self, void* param1);
@@ -1017,7 +1017,7 @@ void q_abstracttextdocumentlayout__selection_delete(void* self);
 ///
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout__paintcontext.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout__paintcontext.html#operator-eq)
 ///
 /// ``` QAbstractTextDocumentLayout__PaintContext* self, QAbstractTextDocumentLayout__PaintContext* param1 ```
 void q_abstracttextdocumentlayout__paintcontext_operator_assign(void* self, void* param1);

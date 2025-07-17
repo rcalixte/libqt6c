@@ -29,7 +29,7 @@ QNetworkRequestFactory* q_networkrequestfactory_new2(void* baseUrl);
 /// ``` QNetworkRequestFactory* other ```
 QNetworkRequestFactory* q_networkrequestfactory_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#operator-eq)
 ///
 /// ``` QNetworkRequestFactory* self, QNetworkRequestFactory* other ```
 void q_networkrequestfactory_operator_assign(void* self, void* other);
