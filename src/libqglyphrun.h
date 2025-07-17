@@ -24,7 +24,7 @@ QGlyphRun* q_glyphrun_new();
 /// ``` QGlyphRun* other ```
 QGlyphRun* q_glyphrun_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#operator-eq)
 ///
 /// ``` QGlyphRun* self, QGlyphRun* other ```
 void q_glyphrun_operator_assign(void* self, void* other);
@@ -74,12 +74,12 @@ void q_glyphrun_set_positions(void* self, libqt_list positions);
 /// ``` QGlyphRun* self ```
 void q_glyphrun_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#operator-eq-eq)
 ///
 /// ``` QGlyphRun* self, QGlyphRun* other ```
 bool q_glyphrun_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#operator-not-eq)
 ///
 /// ``` QGlyphRun* self, QGlyphRun* other ```
 bool q_glyphrun_operator_not_equal(void* self, void* other);

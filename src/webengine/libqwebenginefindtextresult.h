@@ -34,7 +34,7 @@ int32_t q_webenginefindtextresult_number_of_matches(void* self);
 /// ``` QWebEngineFindTextResult* self ```
 int32_t q_webenginefindtextresult_active_match(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefindtextresult.html#operator-eq)
 ///
 /// ``` QWebEngineFindTextResult* self, QWebEngineFindTextResult* other ```
 void q_webenginefindtextresult_operator_assign(void* self, void* other);

@@ -364,27 +364,27 @@ libqt_list /* of QFont__Tag* */ q_font_variable_axis_tags(void* self);
 /// ``` QFont* self ```
 bool q_font_exact_match(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator-eq)
 ///
 /// ``` QFont* self, QFont* param1 ```
 void q_font_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator-eq-eq)
 ///
 /// ``` QFont* self, QFont* param1 ```
 bool q_font_operator_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator-not-eq)
 ///
 /// ``` QFont* self, QFont* param1 ```
 bool q_font_operator_not_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator-lt)
 ///
 /// ``` QFont* self, QFont* param1 ```
 bool q_font_operator_lesser(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#operator)
 ///
 /// ``` QFont* self ```
 QVariant* q_font_to_q_variant(void* self);

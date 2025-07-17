@@ -39,17 +39,17 @@ QSslError* q_sslerror_new4(void* other);
 /// ``` QSslError* self, QSslError* other ```
 void q_sslerror_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator-eq)
 ///
 /// ``` QSslError* self, QSslError* other ```
 void q_sslerror_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator-eq-eq)
 ///
 /// ``` QSslError* self, QSslError* other ```
 bool q_sslerror_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#operator-not-eq)
 ///
 /// ``` QSslError* self, QSslError* other ```
 bool q_sslerror_operator_not_equal(void* self, void* other);

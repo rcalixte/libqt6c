@@ -24,7 +24,7 @@ QWebEnginePermission* q_webenginepermission_new();
 /// ``` QWebEnginePermission* other ```
 QWebEnginePermission* q_webenginepermission_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#operator-eq)
 ///
 /// ``` QWebEnginePermission* self, QWebEnginePermission* other ```
 void q_webenginepermission_operator_assign(void* self, void* other);

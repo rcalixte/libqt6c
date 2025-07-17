@@ -24,17 +24,17 @@ QAuthenticator* q_authenticator_new();
 /// ``` QAuthenticator* other ```
 QAuthenticator* q_authenticator_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#operator-eq)
 ///
 /// ``` QAuthenticator* self, QAuthenticator* other ```
 void q_authenticator_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#operator-eq-eq)
 ///
 /// ``` QAuthenticator* self, QAuthenticator* other ```
 bool q_authenticator_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qauthenticator.html#operator-not-eq)
 ///
 /// ``` QAuthenticator* self, QAuthenticator* other ```
 bool q_authenticator_operator_not_equal(void* self, void* other);

@@ -87,7 +87,7 @@ QPropertyBindingError* q_propertybindingerror_new3(void* other);
 /// ``` enum QPropertyBindingError__Type typeVal, const char* description ```
 QPropertyBindingError* q_propertybindingerror_new4(int64_t typeVal, const char* description);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#operator-eq)
 ///
 /// ``` QPropertyBindingError* self, QPropertyBindingError* other ```
 void q_propertybindingerror_operator_assign(void* self, void* other);
@@ -126,7 +126,7 @@ QUntypedPropertyBinding* q_untypedpropertybinding_new();
 /// ``` QUntypedPropertyBinding* other ```
 QUntypedPropertyBinding* q_untypedpropertybinding_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertybinding.html#operator-eq)
 ///
 /// ``` QUntypedPropertyBinding* self, QUntypedPropertyBinding* other ```
 void q_untypedpropertybinding_operator_assign(void* self, void* other);

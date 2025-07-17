@@ -19,7 +19,7 @@
 /// ``` QWebEngineClientCertificateSelection* param1 ```
 QWebEngineClientCertificateSelection* q_webengineclientcertificateselection_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#operator-eq)
 ///
 /// ``` QWebEngineClientCertificateSelection* self, QWebEngineClientCertificateSelection* param1 ```
 void q_webengineclientcertificateselection_operator_assign(void* self, void* param1);

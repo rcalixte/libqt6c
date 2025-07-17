@@ -19,7 +19,7 @@
 /// ``` QWebEngineFullScreenRequest* other ```
 QWebEngineFullScreenRequest* q_webenginefullscreenrequest_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefullscreenrequest.html#operator-eq)
 ///
 /// ``` QWebEngineFullScreenRequest* self, QWebEngineFullScreenRequest* other ```
 void q_webenginefullscreenrequest_operator_assign(void* self, void* other);

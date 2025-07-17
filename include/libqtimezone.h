@@ -54,7 +54,7 @@ QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* na
 /// ``` const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, enum QLocale__Country territory, const char* comment ```
 QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory, const char* comment);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone.html#operator-eq)
 ///
 /// ``` QTimeZone* self, QTimeZone* other ```
 void q_timezone_operator_assign(void* self, void* other);
@@ -288,7 +288,7 @@ QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1);
 ///
 QTimeZone__OffsetData* q_timezone__offsetdata_new2();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone__offsetdata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone__offsetdata.html#operator-eq)
 ///
 /// ``` QTimeZone__OffsetData* self, QTimeZone__OffsetData* param1 ```
 void q_timezone__offsetdata_operator_assign(void* self, void* param1);

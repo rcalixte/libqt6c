@@ -24,7 +24,7 @@ QCapturableWindow* q_capturablewindow_new();
 /// ``` QCapturableWindow* other ```
 QCapturableWindow* q_capturablewindow_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#operator-eq)
 ///
 /// ``` QCapturableWindow* self, QCapturableWindow* other ```
 void q_capturablewindow_operator_assign(void* self, void* other);

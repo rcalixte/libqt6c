@@ -39,7 +39,7 @@ void q_scopedpointerpoddeleter_move_assign(void* self, void* other);
 /// ``` void* pointer ```
 void q_scopedpointerpoddeleter_cleanup(void* pointer);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#operator())
+/// [Qt documentation](https://doc.qt.io/qt-6/qscopedpointerpoddeleter.html#operator-28-29)
 ///
 /// ``` QScopedPointerPodDeleter* self, void* pointer ```
 void q_scopedpointerpoddeleter_operator_call(void* self, void* pointer);

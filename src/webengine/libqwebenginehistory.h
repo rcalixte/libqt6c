@@ -19,7 +19,7 @@
 /// ``` QWebEngineHistoryItem* other ```
 QWebEngineHistoryItem* q_webenginehistoryitem_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#operator-eq)
 ///
 /// ``` QWebEngineHistoryItem* self, QWebEngineHistoryItem* other ```
 void q_webenginehistoryitem_operator_assign(void* self, void* other);

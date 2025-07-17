@@ -74,7 +74,7 @@ QBrush* q_brush_new11(void* color, int64_t bs);
 /// ``` enum Qt__GlobalColor color, enum Qt__BrushStyle bs ```
 QBrush* q_brush_new12(int64_t color, int64_t bs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator-eq)
 ///
 /// ``` QBrush* self, QBrush* brush ```
 void q_brush_operator_assign(void* self, void* brush);
@@ -84,7 +84,7 @@ void q_brush_operator_assign(void* self, void* brush);
 /// ``` QBrush* self, QBrush* other ```
 void q_brush_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator)
 ///
 /// ``` QBrush* self ```
 QVariant* q_brush_to_q_variant(void* self);
@@ -154,12 +154,12 @@ const QGradient* q_brush_gradient(void* self);
 /// ``` QBrush* self ```
 bool q_brush_is_opaque(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator-eq-eq)
 ///
 /// ``` QBrush* self, QBrush* b ```
 bool q_brush_operator_equal(void* self, void* b);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrush.html#operator-not-eq)
 ///
 /// ``` QBrush* self, QBrush* b ```
 bool q_brush_operator_not_equal(void* self, void* b);
@@ -183,7 +183,7 @@ void q_brush_delete(void* self);
 /// ``` QBrushData* param1 ```
 QBrushData* q_brushdata_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbrushdata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbrushdata.html#operator-eq)
 ///
 /// ``` QBrushData* self, QBrushData* param1 ```
 void q_brushdata_operator_assign(void* self, void* param1);
@@ -257,12 +257,12 @@ int64_t q_gradient_interpolation_mode(void* self);
 /// ``` QGradient* self, enum QGradient__InterpolationMode mode ```
 void q_gradient_set_interpolation_mode(void* self, int64_t mode);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-eq-eq)
 ///
 /// ``` QGradient* self, QGradient* gradient ```
 bool q_gradient_operator_equal(void* self, void* gradient);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-not-eq)
 ///
 /// ``` QGradient* self, QGradient* other ```
 bool q_gradient_operator_not_equal(void* self, void* other);
@@ -391,14 +391,14 @@ void q_lineargradient_set_interpolation_mode(void* self, int64_t mode);
 
 /// Inherited from QGradient
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-eq-eq)
 ///
 /// ``` QLinearGradient* self, QGradient* gradient ```
 bool q_lineargradient_operator_equal(void* self, void* gradient);
 
 /// Inherited from QGradient
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-not-eq)
 ///
 /// ``` QLinearGradient* self, QGradient* other ```
 bool q_lineargradient_operator_not_equal(void* self, void* other);
@@ -577,14 +577,14 @@ void q_radialgradient_set_interpolation_mode(void* self, int64_t mode);
 
 /// Inherited from QGradient
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-eq-eq)
 ///
 /// ``` QRadialGradient* self, QGradient* gradient ```
 bool q_radialgradient_operator_equal(void* self, void* gradient);
 
 /// Inherited from QGradient
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-not-eq)
 ///
 /// ``` QRadialGradient* self, QGradient* other ```
 bool q_radialgradient_operator_not_equal(void* self, void* other);
@@ -708,14 +708,14 @@ void q_conicalgradient_set_interpolation_mode(void* self, int64_t mode);
 
 /// Inherited from QGradient
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-eq-eq)
 ///
 /// ``` QConicalGradient* self, QGradient* gradient ```
 bool q_conicalgradient_operator_equal(void* self, void* gradient);
 
 /// Inherited from QGradient
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgradient.html#operator-not-eq)
 ///
 /// ``` QConicalGradient* self, QGradient* other ```
 bool q_conicalgradient_operator_not_equal(void* self, void* other);

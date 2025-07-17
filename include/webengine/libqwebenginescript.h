@@ -24,7 +24,7 @@ QWebEngineScript* q_webenginescript_new();
 /// ``` QWebEngineScript* other ```
 QWebEngineScript* q_webenginescript_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator-eq)
 ///
 /// ``` QWebEngineScript* self, QWebEngineScript* other ```
 void q_webenginescript_operator_assign(void* self, void* other);
@@ -89,12 +89,12 @@ bool q_webenginescript_runs_on_sub_frames(void* self);
 /// ``` QWebEngineScript* self, bool on ```
 void q_webenginescript_set_runs_on_sub_frames(void* self, bool on);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator-eq-eq)
 ///
 /// ``` QWebEngineScript* self, QWebEngineScript* other ```
 bool q_webenginescript_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#operator-not-eq)
 ///
 /// ``` QWebEngineScript* self, QWebEngineScript* other ```
 bool q_webenginescript_operator_not_equal(void* self, void* other);

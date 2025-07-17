@@ -351,19 +351,19 @@ void q_treewidgetitem_on_set_data(void* self, void (*slot)(void*, int, int, void
 /// ``` QTreeWidgetItem* self, int column, int role, QVariant* value ```
 void q_treewidgetitem_qbase_set_data(void* self, int column, int role, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator-lt)
 ///
 /// ``` QTreeWidgetItem* self, QTreeWidgetItem* other ```
 bool q_treewidgetitem_operator_lesser(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator-lt)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QTreeWidgetItem* self, bool (*slot)(QTreeWidgetItem*, QTreeWidgetItem*) ```
 void q_treewidgetitem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator-lt)
 ///
 /// Base class method implementation
 ///
@@ -408,7 +408,7 @@ void q_treewidgetitem_on_write(void* self, void (*slot)(void*, void*));
 /// ``` QTreeWidgetItem* self, QDataStream* out ```
 void q_treewidgetitem_qbase_write(void* self, void* out);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitem.html#operator-eq)
 ///
 /// ``` QTreeWidgetItem* self, QTreeWidgetItem* other ```
 void q_treewidgetitem_operator_assign(void* self, void* other);

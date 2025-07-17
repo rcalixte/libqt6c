@@ -324,22 +324,22 @@ void q_rect_set_height(void* self, int h);
 /// ``` QRect* self, QSize* s ```
 void q_rect_set_size(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator|)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-7c)
 ///
 /// ``` QRect* self, QRect* r ```
 QRect* q_rect_operator_bitwise_or(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator&)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-and)
 ///
 /// ``` QRect* self, QRect* r ```
 QRect* q_rect_operator_bitwise_and(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator|=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-7c-eq)
 ///
 /// ``` QRect* self, QRect* r ```
 void q_rect_operator_bitwise_or_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator&=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-and-eq)
 ///
 /// ``` QRect* self, QRect* r ```
 void q_rect_operator_bitwise_and_assign(void* self, void* r);
@@ -389,12 +389,12 @@ QRect* q_rect_margins_added(void* self, void* margins);
 /// ``` QRect* self, QMargins* margins ```
 QRect* q_rect_margins_removed(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-2b-eq)
 ///
 /// ``` QRect* self, QMargins* margins ```
 QRect* q_rect_operator_plus_assign(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrect.html#operator--eq)
 ///
 /// ``` QRect* self, QMargins* margins ```
 QRect* q_rect_operator_minus_assign(void* self, void* margins);
@@ -743,22 +743,22 @@ void q_rectf_set_height(void* self, double h);
 /// ``` QRectF* self, QSizeF* s ```
 void q_rectf_set_size(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator|)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-7c)
 ///
 /// ``` QRectF* self, QRectF* r ```
 QRectF* q_rectf_operator_bitwise_or(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator&)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-and)
 ///
 /// ``` QRectF* self, QRectF* r ```
 QRectF* q_rectf_operator_bitwise_and(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator|=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-7c-eq)
 ///
 /// ``` QRectF* self, QRectF* r ```
 void q_rectf_operator_bitwise_or_assign(void* self, void* r);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator&=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-and-eq)
 ///
 /// ``` QRectF* self, QRectF* r ```
 void q_rectf_operator_bitwise_and_assign(void* self, void* r);
@@ -803,12 +803,12 @@ QRectF* q_rectf_margins_added(void* self, void* margins);
 /// ``` QRectF* self, QMarginsF* margins ```
 QRectF* q_rectf_margins_removed(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-2b-eq)
 ///
 /// ``` QRectF* self, QMarginsF* margins ```
 QRectF* q_rectf_operator_plus_assign(void* self, void* margins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrectf.html#operator--eq)
 ///
 /// ``` QRectF* self, QMarginsF* margins ```
 QRectF* q_rectf_operator_minus_assign(void* self, void* margins);

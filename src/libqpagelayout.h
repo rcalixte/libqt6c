@@ -39,7 +39,7 @@ QPageLayout* q_pagelayout_new4(void* pageSize, int64_t orientation, void* margin
 /// ``` QPageSize* pageSize, enum QPageLayout__Orientation orientation, QMarginsF* margins, enum QPageLayout__Unit units, QMarginsF* minMargins ```
 QPageLayout* q_pagelayout_new5(void* pageSize, int64_t orientation, void* margins, int64_t units, void* minMargins);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#operator-eq)
 ///
 /// ``` QPageLayout* self, QPageLayout* other ```
 void q_pagelayout_operator_assign(void* self, void* other);

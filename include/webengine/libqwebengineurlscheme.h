@@ -29,17 +29,17 @@ QWebEngineUrlScheme* q_webengineurlscheme_new2(const char* name);
 /// ``` QWebEngineUrlScheme* that ```
 QWebEngineUrlScheme* q_webengineurlscheme_new3(void* that);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator-eq)
 ///
 /// ``` QWebEngineUrlScheme* self, QWebEngineUrlScheme* that ```
 void q_webengineurlscheme_operator_assign(void* self, void* that);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator-eq-eq)
 ///
 /// ``` QWebEngineUrlScheme* self, QWebEngineUrlScheme* that ```
 bool q_webengineurlscheme_operator_equal(void* self, void* that);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#operator-not-eq)
 ///
 /// ``` QWebEngineUrlScheme* self, QWebEngineUrlScheme* that ```
 bool q_webengineurlscheme_operator_not_equal(void* self, void* that);

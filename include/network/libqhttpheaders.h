@@ -24,7 +24,7 @@ QHttpHeaders* q_httpheaders_new();
 /// ``` QHttpHeaders* other ```
 QHttpHeaders* q_httpheaders_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#operator-eq)
 ///
 /// ``` QHttpHeaders* self, QHttpHeaders* other ```
 void q_httpheaders_operator_assign(void* self, void* other);

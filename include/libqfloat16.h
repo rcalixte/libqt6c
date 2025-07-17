@@ -39,7 +39,7 @@ void q_qfloat16_copy_assign(void* self, void* other);
 /// ``` qfloat16* self, qfloat16* other ```
 void q_qfloat16_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfloat16.html#operator float)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfloat16.html#operator)
 ///
 /// ``` qfloat16* self ```
 float q_qfloat16_to_float(void* self);

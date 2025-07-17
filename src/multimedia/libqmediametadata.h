@@ -44,7 +44,7 @@ void q_mediametadata_remove(void* self, int64_t k);
 /// ``` QMediaMetaData* self ```
 libqt_list /* of int64_t */ q_mediametadata_keys(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#operator-5b-5d)
 ///
 /// ``` QMediaMetaData* self, enum QMediaMetaData__Key k ```
 QVariant* q_mediametadata_operator_subscript(void* self, int64_t k);

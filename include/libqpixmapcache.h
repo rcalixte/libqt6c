@@ -103,17 +103,17 @@ QPixmapCache__Key* q_pixmapcache__key_new();
 /// ``` QPixmapCache__Key* other ```
 QPixmapCache__Key* q_pixmapcache__key_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache__key.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache__key.html#operator-eq-eq)
 ///
 /// ``` QPixmapCache__Key* self, QPixmapCache__Key* key ```
 bool q_pixmapcache__key_operator_equal(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache__key.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache__key.html#operator-not-eq)
 ///
 /// ``` QPixmapCache__Key* self, QPixmapCache__Key* key ```
 bool q_pixmapcache__key_operator_not_equal(void* self, void* key);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache__key.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache__key.html#operator-eq)
 ///
 /// ``` QPixmapCache__Key* self, QPixmapCache__Key* other ```
 void q_pixmapcache__key_operator_assign(void* self, void* other);

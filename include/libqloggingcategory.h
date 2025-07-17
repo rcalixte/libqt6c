@@ -44,12 +44,12 @@ bool q_loggingcategory_is_critical_enabled(void* self);
 /// ``` QLoggingCategory* self ```
 const char* q_loggingcategory_category_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#operator())
+/// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#operator-28-29)
 ///
 /// ``` QLoggingCategory* self ```
 QLoggingCategory* q_loggingcategory_operator_call(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#operator())
+/// [Qt documentation](https://doc.qt.io/qt-6/qloggingcategory.html#operator-28-29)
 ///
 /// ``` QLoggingCategory* self ```
 const QLoggingCategory* q_loggingcategory_operator_call2(void* self);

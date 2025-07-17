@@ -24,7 +24,7 @@ QHttp1Configuration* q_http1configuration_new();
 /// ``` QHttp1Configuration* other ```
 QHttp1Configuration* q_http1configuration_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhttp1configuration.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhttp1configuration.html#operator-eq)
 ///
 /// ``` QHttp1Configuration* self, QHttp1Configuration* other ```
 void q_http1configuration_operator_assign(void* self, void* other);

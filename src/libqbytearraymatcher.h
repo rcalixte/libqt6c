@@ -44,7 +44,7 @@ QByteArrayMatcher* q_bytearraymatcher_new5(void* other);
 /// ``` const char* pattern, int64_t length ```
 QByteArrayMatcher* q_bytearraymatcher_new6(const char* pattern, int64_t length);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbytearraymatcher.html#operator-eq)
 ///
 /// ``` QByteArrayMatcher* self, QByteArrayMatcher* other ```
 void q_bytearraymatcher_operator_assign(void* self, void* other);

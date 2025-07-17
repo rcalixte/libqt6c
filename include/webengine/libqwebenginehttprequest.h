@@ -34,7 +34,7 @@ QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url);
 /// ``` QUrl* url, enum QWebEngineHttpRequest__Method* method ```
 QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int64_t* method);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq)
 ///
 /// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
 void q_webenginehttprequest_operator_assign(void* self, void* other);
@@ -49,12 +49,12 @@ QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map 
 /// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
 void q_webenginehttprequest_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq-eq)
 ///
 /// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
 bool q_webenginehttprequest_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-not-eq)
 ///
 /// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
 bool q_webenginehttprequest_operator_not_equal(void* self, void* other);

@@ -19,7 +19,7 @@
 /// ``` QWidgetData* param1 ```
 QWidgetData* q_widgetdata_new(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#operator-eq)
 ///
 /// ``` QWidgetData* self, QWidgetData* param1 ```
 void q_widgetdata_operator_assign(void* self, void* param1);

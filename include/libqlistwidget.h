@@ -276,19 +276,19 @@ void q_listwidgetitem_on_set_data(void* self, void (*slot)(void*, int, void*));
 /// ``` QListWidgetItem* self, int role, QVariant* value ```
 void q_listwidgetitem_qbase_set_data(void* self, int role, void* value);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
 /// ``` QListWidgetItem* self, QListWidgetItem* other ```
 bool q_listwidgetitem_operator_lesser(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QListWidgetItem* self, bool (*slot)(QListWidgetItem*, QListWidgetItem*) ```
 void q_listwidgetitem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-lt)
 ///
 /// Base class method implementation
 ///
@@ -333,7 +333,7 @@ void q_listwidgetitem_on_write(void* self, void (*slot)(void*, void*));
 /// ``` QListWidgetItem* self, QDataStream* out ```
 void q_listwidgetitem_qbase_write(void* self, void* out);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlistwidgetitem.html#operator-eq)
 ///
 /// ``` QListWidgetItem* self, QListWidgetItem* other ```
 void q_listwidgetitem_operator_assign(void* self, void* other);

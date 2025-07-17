@@ -29,7 +29,7 @@ QFutureInterfaceBase* q_futureinterfacebase_new2(void* other);
 /// ``` enum QFutureInterfaceBase__State initialState ```
 QFutureInterfaceBase* q_futureinterfacebase_new3(int64_t initialState);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq)
 ///
 /// ``` QFutureInterfaceBase* self, QFutureInterfaceBase* other ```
 void q_futureinterfacebase_operator_assign(void* self, void* other);
@@ -264,12 +264,12 @@ QMutex* q_futureinterfacebase_mutex(void* self);
 /// ``` QFutureInterfaceBase* self ```
 bool q_futureinterfacebase_has_exception(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq-eq)
 ///
 /// ``` QFutureInterfaceBase* self, QFutureInterfaceBase* other ```
 bool q_futureinterfacebase_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-not-eq)
 ///
 /// ``` QFutureInterfaceBase* self, QFutureInterfaceBase* other ```
 bool q_futureinterfacebase_operator_not_equal(void* self, void* other);

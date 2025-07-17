@@ -64,7 +64,7 @@ QImage* q_image_new9(void* param1);
 /// ``` const char* fileName, const char* format ```
 QImage* q_image_new10(const char* fileName, const char* format);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator-eq)
 ///
 /// ``` QImage* self, QImage* param1 ```
 void q_image_operator_assign(void* self, void* param1);
@@ -98,17 +98,17 @@ void q_image_on_dev_type(void* self, int32_t (*slot)());
 /// ``` QImage* self ```
 int32_t q_image_qbase_dev_type(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator-eq-eq)
 ///
 /// ``` QImage* self, QImage* param1 ```
 bool q_image_operator_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator-not-eq)
 ///
 /// ``` QImage* self, QImage* param1 ```
 bool q_image_operator_not_equal(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#operator)
 ///
 /// ``` QImage* self ```
 QVariant* q_image_to_q_variant(void* self);

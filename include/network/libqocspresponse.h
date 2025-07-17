@@ -24,7 +24,7 @@ QOcspResponse* q_ocspresponse_new();
 /// ``` QOcspResponse* other ```
 QOcspResponse* q_ocspresponse_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#operator-eq)
 ///
 /// ``` QOcspResponse* self, QOcspResponse* other ```
 void q_ocspresponse_operator_assign(void* self, void* other);

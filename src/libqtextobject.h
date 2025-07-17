@@ -696,7 +696,7 @@ void q_textblockgroup_on_object_name_changed(void* self, void (*slot)(void*, con
 
 /// https://doc.qt.io/qt-6/qtextframelayoutdata.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframelayoutdata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframelayoutdata.html#operator-eq)
 ///
 /// ``` QTextFrameLayoutData* self, QTextFrameLayoutData* param1 ```
 void q_textframelayoutdata_operator_assign(void* self, void* param1);
@@ -1447,7 +1447,7 @@ void q_textframe_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextblockuserdata.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockuserdata.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblockuserdata.html#operator-eq)
 ///
 /// ``` QTextBlockUserData* self, QTextBlockUserData* param1 ```
 void q_textblockuserdata_operator_assign(void* self, void* param1);
@@ -1471,7 +1471,7 @@ QTextBlock* q_textblock_new();
 /// ``` QTextBlock* o ```
 QTextBlock* q_textblock_new2(void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-eq)
 ///
 /// ``` QTextBlock* self, QTextBlock* o ```
 void q_textblock_operator_assign(void* self, void* o);
@@ -1481,17 +1481,17 @@ void q_textblock_operator_assign(void* self, void* o);
 /// ``` QTextBlock* self ```
 bool q_textblock_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-eq-eq)
 ///
 /// ``` QTextBlock* self, QTextBlock* o ```
 bool q_textblock_operator_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-not-eq)
 ///
 /// ``` QTextBlock* self, QTextBlock* o ```
 bool q_textblock_operator_not_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-lt)
 ///
 /// ``` QTextBlock* self, QTextBlock* o ```
 bool q_textblock_operator_lesser(void* self, void* o);
@@ -1670,7 +1670,7 @@ QTextFragment* q_textfragment_new();
 /// ``` QTextFragment* o ```
 QTextFragment* q_textfragment_new2(void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-eq)
 ///
 /// ``` QTextFragment* self, QTextFragment* o ```
 void q_textfragment_operator_assign(void* self, void* o);
@@ -1680,17 +1680,17 @@ void q_textfragment_operator_assign(void* self, void* o);
 /// ``` QTextFragment* self ```
 bool q_textfragment_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-eq-eq)
 ///
 /// ``` QTextFragment* self, QTextFragment* o ```
 bool q_textfragment_operator_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-not-eq)
 ///
 /// ``` QTextFragment* self, QTextFragment* o ```
 bool q_textfragment_operator_not_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-lt)
 ///
 /// ``` QTextFragment* self, QTextFragment* o ```
 bool q_textfragment_operator_lesser(void* self, void* o);
@@ -1799,22 +1799,22 @@ QTextBlock* q_textframe__iterator_current_block(void* self);
 /// ``` QTextFrame__iterator* self ```
 bool q_textframe__iterator_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-eq-eq)
 ///
 /// ``` QTextFrame__iterator* self, QTextFrame__iterator* o ```
 bool q_textframe__iterator_operator_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-not-eq)
 ///
 /// ``` QTextFrame__iterator* self, QTextFrame__iterator* o ```
 bool q_textframe__iterator_operator_not_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-2b-2b)
 ///
 /// ``` QTextFrame__iterator* self ```
 QTextFrame__iterator* q_textframe__iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-2b-2b)
 ///
 /// ``` QTextFrame__iterator* self, int param1 ```
 QTextFrame__iterator* q_textframe__iterator_operator_plus_plus2(void* self, int param1);
@@ -1878,22 +1878,22 @@ QTextFragment* q_textblock__iterator_fragment(void* self);
 /// ``` QTextBlock__iterator* self ```
 bool q_textblock__iterator_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-eq-eq)
 ///
 /// ``` QTextBlock__iterator* self, QTextBlock__iterator* o ```
 bool q_textblock__iterator_operator_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-not-eq)
 ///
 /// ``` QTextBlock__iterator* self, QTextBlock__iterator* o ```
 bool q_textblock__iterator_operator_not_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-2b-2b)
 ///
 /// ``` QTextBlock__iterator* self ```
 QTextBlock__iterator* q_textblock__iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-2b-2b)
 ///
 /// ``` QTextBlock__iterator* self, int param1 ```
 QTextBlock__iterator* q_textblock__iterator_operator_plus_plus2(void* self, int param1);

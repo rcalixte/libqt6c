@@ -144,12 +144,12 @@ QDeadlineTimer* q_deadlinetimer_add_n_secs(void* dt, long long nsecs);
 ///
 QDeadlineTimer* q_deadlinetimer_current();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator-2b-eq)
 ///
 /// ``` QDeadlineTimer* self, long long msecs ```
 QDeadlineTimer* q_deadlinetimer_operator_plus_assign(void* self, long long msecs);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdeadlinetimer.html#operator--eq)
 ///
 /// ``` QDeadlineTimer* self, long long msecs ```
 QDeadlineTimer* q_deadlinetimer_operator_minus_assign(void* self, long long msecs);

@@ -84,7 +84,7 @@ QColorSpace* q_colorspace_new13(int64_t primaries, int64_t transferFunction, flo
 /// ``` QPointF* whitePoint, QPointF* redPoint, QPointF* greenPoint, QPointF* bluePoint, enum QColorSpace__TransferFunction transferFunction, float gamma ```
 QColorSpace* q_colorspace_new14(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int64_t transferFunction, float gamma);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator-eq)
 ///
 /// ``` QColorSpace* self, QColorSpace* colorSpace ```
 void q_colorspace_operator_assign(void* self, void* colorSpace);
@@ -209,7 +209,7 @@ char* q_colorspace_icc_profile(void* self);
 /// ``` QColorSpace* self, QColorSpace* colorspace ```
 QColorTransform* q_colorspace_transformation_to_color_space(void* self, void* colorspace);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator)
 ///
 /// ``` QColorSpace* self ```
 QVariant* q_colorspace_to_q_variant(void* self);

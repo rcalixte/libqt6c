@@ -14,7 +14,7 @@
 
 /// https://doc.qt.io/qt-6/qcborerror.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#operator QCborError::Code)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#operator)
 ///
 /// ``` QCborError* self ```
 int64_t q_cborerror_to_q_cbor_error___code(void* self);

@@ -29,7 +29,7 @@ QHostInfo* q_hostinfo_new2(void* d);
 /// ``` int lookupId ```
 QHostInfo* q_hostinfo_new3(int lookupId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#operator-eq)
 ///
 /// ``` QHostInfo* self, QHostInfo* d ```
 void q_hostinfo_operator_assign(void* self, void* d);

@@ -200,14 +200,14 @@ const QPointF* q_lineseries_at(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator-lt-lt)
 ///
 /// ``` QLineSeries* self, QPointF* point ```
 QXYSeries* q_lineseries_operator_shift_left(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator-lt-lt)
 ///
 /// ``` QLineSeries* self, libqt_list /* of QPointF* */ points ```
 QXYSeries* q_lineseries_operator_shift_left2(void* self, libqt_list points);

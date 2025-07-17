@@ -19,7 +19,7 @@
 /// ``` QPdfSelection* other ```
 QPdfSelection* q_pdfselection_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#operator-eq)
 ///
 /// ``` QPdfSelection* self, QPdfSelection* other ```
 void q_pdfselection_operator_assign(void* self, void* other);

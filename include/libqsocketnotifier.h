@@ -715,7 +715,7 @@ void q_socketdescriptor_copy_assign(void* self, void* other);
 /// ``` QSocketDescriptor* self, QSocketDescriptor* other ```
 void q_socketdescriptor_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsocketdescriptor.html#operator int)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsocketdescriptor.html#operator)
 ///
 /// ``` QSocketDescriptor* self ```
 int32_t q_socketdescriptor_to_int(void* self);

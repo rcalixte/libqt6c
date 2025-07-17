@@ -70,7 +70,7 @@ void q_barset_append(void* self, double value);
 /// ``` QBarSet* self, libqt_list /* of double */ values ```
 void q_barset_append2(void* self, libqt_list values);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator-lt-lt)
 ///
 /// ``` QBarSet* self, double* value ```
 QBarSet* q_barset_operator_shift_left(void* self, double* value);
@@ -95,7 +95,7 @@ void q_barset_replace(void* self, int index, double value);
 /// ``` QBarSet* self, int index ```
 double q_barset_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#operator-5b-5d)
 ///
 /// ``` QBarSet* self, int index ```
 double q_barset_operator_subscript(void* self, int index);

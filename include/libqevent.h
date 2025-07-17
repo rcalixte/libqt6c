@@ -8896,7 +8896,7 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int64_t typ, int
 /// ``` enum QInputMethodEvent__AttributeType typ, int s, int l ```
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int64_t typ, int s, int l);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent__attribute.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent__attribute.html#operator-eq)
 ///
 /// ``` QInputMethodEvent__Attribute* self, QInputMethodEvent__Attribute* param1 ```
 void q_inputmethodevent__attribute_operator_assign(void* self, void* param1);

@@ -24,7 +24,7 @@ QCameraFormat* q_cameraformat_new();
 /// ``` QCameraFormat* other ```
 QCameraFormat* q_cameraformat_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator-eq)
 ///
 /// ``` QCameraFormat* self, QCameraFormat* other ```
 void q_cameraformat_operator_assign(void* self, void* other);
@@ -54,12 +54,12 @@ float q_cameraformat_max_frame_rate(void* self);
 /// ``` QCameraFormat* self ```
 bool q_cameraformat_is_null(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator-eq-eq)
 ///
 /// ``` QCameraFormat* self, QCameraFormat* other ```
 bool q_cameraformat_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#operator-not-eq)
 ///
 /// ``` QCameraFormat* self, QCameraFormat* other ```
 bool q_cameraformat_operator_not_equal(void* self, void* other);
@@ -83,17 +83,17 @@ QCameraDevice* q_cameradevice_new();
 /// ``` QCameraDevice* other ```
 QCameraDevice* q_cameradevice_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator-eq)
 ///
 /// ``` QCameraDevice* self, QCameraDevice* other ```
 void q_cameradevice_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator-eq-eq)
 ///
 /// ``` QCameraDevice* self, QCameraDevice* other ```
 bool q_cameradevice_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#operator-not-eq)
 ///
 /// ``` QCameraDevice* self, QCameraDevice* other ```
 bool q_cameradevice_operator_not_equal(void* self, void* other);

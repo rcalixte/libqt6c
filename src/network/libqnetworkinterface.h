@@ -24,7 +24,7 @@ QNetworkAddressEntry* q_networkaddressentry_new();
 /// ``` QNetworkAddressEntry* other ```
 QNetworkAddressEntry* q_networkaddressentry_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-eq)
 ///
 /// ``` QNetworkAddressEntry* self, QNetworkAddressEntry* other ```
 void q_networkaddressentry_operator_assign(void* self, void* other);
@@ -34,12 +34,12 @@ void q_networkaddressentry_operator_assign(void* self, void* other);
 /// ``` QNetworkAddressEntry* self, QNetworkAddressEntry* other ```
 void q_networkaddressentry_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-eq-eq)
 ///
 /// ``` QNetworkAddressEntry* self, QNetworkAddressEntry* other ```
 bool q_networkaddressentry_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#operator-not-eq)
 ///
 /// ``` QNetworkAddressEntry* self, QNetworkAddressEntry* other ```
 bool q_networkaddressentry_operator_not_equal(void* self, void* other);
@@ -148,7 +148,7 @@ QNetworkInterface* q_networkinterface_new();
 /// ``` QNetworkInterface* other ```
 QNetworkInterface* q_networkinterface_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#operator-eq)
 ///
 /// ``` QNetworkInterface* self, QNetworkInterface* other ```
 void q_networkinterface_operator_assign(void* self, void* other);

@@ -29,17 +29,17 @@ QAudioDevice* q_audiodevice_new2(void* other);
 /// ``` QAudioDevice* self, QAudioDevice* other ```
 void q_audiodevice_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#operator-eq)
 ///
 /// ``` QAudioDevice* self, QAudioDevice* other ```
 void q_audiodevice_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#operator-eq-eq)
 ///
 /// ``` QAudioDevice* self, QAudioDevice* other ```
 bool q_audiodevice_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#operator-not-eq)
 ///
 /// ``` QAudioDevice* self, QAudioDevice* other ```
 bool q_audiodevice_operator_not_equal(void* self, void* other);

@@ -44,12 +44,12 @@ QUrl* q_webengineregisterprotocolhandlerrequest_origin(void* self);
 /// ``` QWebEngineRegisterProtocolHandlerRequest* self ```
 const char* q_webengineregisterprotocolhandlerrequest_scheme(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-eq-eq)
 ///
 /// ``` QWebEngineRegisterProtocolHandlerRequest* self, QWebEngineRegisterProtocolHandlerRequest* that ```
 bool q_webengineregisterprotocolhandlerrequest_operator_equal(void* self, void* that);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-not-eq)
 ///
 /// ``` QWebEngineRegisterProtocolHandlerRequest* self, QWebEngineRegisterProtocolHandlerRequest* that ```
 bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(void* self, void* that);

@@ -164,7 +164,7 @@ QPointingDeviceUniqueId* q_pointingdevice_unique_id(void* self);
 ///
 const QPointingDevice* q_pointingdevice_primary_pointing_device();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#operator-eq-eq)
 ///
 /// ``` QPointingDevice* self, QPointingDevice* other ```
 bool q_pointingdevice_operator_equal(void* self, void* other);

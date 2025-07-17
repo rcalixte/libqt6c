@@ -59,12 +59,12 @@ void q_flag_copy_assign(void* self, void* other);
 /// ``` QFlag* self, QFlag* other ```
 void q_flag_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator int)
+/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator)
 ///
 /// ``` QFlag* self ```
 int32_t q_flag_to_int(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator unsigned int)
+/// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator)
 ///
 /// ``` QFlag* self ```
 uint32_t q_flag_to_unsigned_int(void* self);
@@ -108,7 +108,7 @@ void q_incompatibleflag_copy_assign(void* self, void* other);
 /// ``` QIncompatibleFlag* self, QIncompatibleFlag* other ```
 void q_incompatibleflag_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qincompatibleflag.html#operator int)
+/// [Qt documentation](https://doc.qt.io/qt-6/qincompatibleflag.html#operator)
 ///
 /// ``` QIncompatibleFlag* self ```
 int32_t q_incompatibleflag_to_int(void* self);

@@ -39,17 +39,17 @@ QVideoFrame* q_videoframe_new4(void* other);
 /// ``` QVideoFrame* self, QVideoFrame* other ```
 void q_videoframe_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#operator-eq)
 ///
 /// ``` QVideoFrame* self, QVideoFrame* other ```
 void q_videoframe_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#operator-eq-eq)
 ///
 /// ``` QVideoFrame* self, QVideoFrame* other ```
 bool q_videoframe_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#operator-not-eq)
 ///
 /// ``` QVideoFrame* self, QVideoFrame* other ```
 bool q_videoframe_operator_not_equal(void* self, void* other);

@@ -19,7 +19,7 @@
 /// ``` QWebEngineCertificateError* other ```
 QWebEngineCertificateError* q_webenginecertificateerror_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#operator-eq)
 ///
 /// ``` QWebEngineCertificateError* self, QWebEngineCertificateError* other ```
 void q_webenginecertificateerror_operator_assign(void* self, void* other);

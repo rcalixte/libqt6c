@@ -29,7 +29,7 @@ QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(void* other);
 ///
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_default_parameters();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#operator-eq)
 ///
 /// ``` QSslDiffieHellmanParameters* self, QSslDiffieHellmanParameters* other ```
 void q_ssldiffiehellmanparameters_operator_assign(void* self, void* other);

@@ -34,7 +34,7 @@ QSslCipher* q_sslcipher_new3(const char* name, int64_t protocol);
 /// ``` QSslCipher* other ```
 QSslCipher* q_sslcipher_new4(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#operator-eq)
 ///
 /// ``` QSslCipher* self, QSslCipher* other ```
 void q_sslcipher_operator_assign(void* self, void* other);
@@ -44,12 +44,12 @@ void q_sslcipher_operator_assign(void* self, void* other);
 /// ``` QSslCipher* self, QSslCipher* other ```
 void q_sslcipher_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#operator-eq-eq)
 ///
 /// ``` QSslCipher* self, QSslCipher* other ```
 bool q_sslcipher_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#operator-not-eq)
 ///
 /// ``` QSslCipher* self, QSslCipher* other ```
 bool q_sslcipher_operator_not_equal(void* self, void* other);

@@ -44,7 +44,7 @@ QAudioBuffer* q_audiobuffer_new5(const char* data, void* format, long long start
 /// ``` int numFrames, QAudioFormat* format, long long startTime ```
 QAudioBuffer* q_audiobuffer_new6(int numFrames, void* format, long long startTime);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudiobuffer.html#operator-eq)
 ///
 /// ``` QAudioBuffer* self, QAudioBuffer* other ```
 void q_audiobuffer_operator_assign(void* self, void* other);

@@ -109,17 +109,17 @@ void q_sizepolicy_set_width_for_height(void* self, bool b);
 /// ``` QSizePolicy* self ```
 bool q_sizepolicy_has_width_for_height(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator-eq-eq)
 ///
 /// ``` QSizePolicy* self, QSizePolicy* s ```
 bool q_sizepolicy_operator_equal(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator-not-eq)
 ///
 /// ``` QSizePolicy* self, QSizePolicy* s ```
 bool q_sizepolicy_operator_not_equal(void* self, void* s);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsizepolicy.html#operator)
 ///
 /// ``` QSizePolicy* self ```
 QVariant* q_sizepolicy_to_q_variant(void* self);

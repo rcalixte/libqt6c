@@ -34,7 +34,7 @@ QMediaTimeRange* q_mediatimerange_new3(void* param1);
 /// ``` QMediaTimeRange* range ```
 QMediaTimeRange* q_mediatimerange_new4(void* range);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator-eq)
 ///
 /// ``` QMediaTimeRange* self, QMediaTimeRange* param1 ```
 void q_mediatimerange_operator_assign(void* self, void* param1);
@@ -49,7 +49,7 @@ void q_mediatimerange_swap(void* self, void* other);
 /// ``` QMediaTimeRange* self ```
 void q_mediatimerange_detach(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator-eq)
 ///
 /// ``` QMediaTimeRange* self, QMediaTimeRange__Interval* param1 ```
 void q_mediatimerange_operator_assign2(void* self, void* param1);
@@ -114,22 +114,22 @@ void q_mediatimerange_remove_interval2(void* self, void* interval);
 /// ``` QMediaTimeRange* self, QMediaTimeRange* param1 ```
 void q_mediatimerange_remove_time_range(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator-2b-eq)
 ///
 /// ``` QMediaTimeRange* self, QMediaTimeRange* param1 ```
 QMediaTimeRange* q_mediatimerange_operator_plus_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator-2b-eq)
 ///
 /// ``` QMediaTimeRange* self, QMediaTimeRange__Interval* param1 ```
 QMediaTimeRange* q_mediatimerange_operator_plus_assign2(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator--eq)
 ///
 /// ``` QMediaTimeRange* self, QMediaTimeRange* param1 ```
 QMediaTimeRange* q_mediatimerange_operator_minus_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange.html#operator--eq)
 ///
 /// ``` QMediaTimeRange* self, QMediaTimeRange__Interval* param1 ```
 QMediaTimeRange* q_mediatimerange_operator_minus_assign2(void* self, void* param1);

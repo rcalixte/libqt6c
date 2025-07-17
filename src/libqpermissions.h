@@ -73,7 +73,7 @@ void q_locationpermission_set_availability(void* self, int64_t availability);
 /// ``` QLocationPermission* self ```
 int64_t q_locationpermission_availability(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#operator-eq)
 ///
 /// ``` QLocationPermission* self, QLocationPermission* other ```
 void q_locationpermission_operator_assign(void* self, void* other);
@@ -112,7 +112,7 @@ void q_calendarpermission_set_access_mode(void* self, int64_t mode);
 /// ``` QCalendarPermission* self ```
 int64_t q_calendarpermission_access_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#operator-eq)
 ///
 /// ``` QCalendarPermission* self, QCalendarPermission* other ```
 void q_calendarpermission_operator_assign(void* self, void* other);
@@ -151,7 +151,7 @@ void q_contactspermission_set_access_mode(void* self, int64_t mode);
 /// ``` QContactsPermission* self ```
 int64_t q_contactspermission_access_mode(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#operator-eq)
 ///
 /// ``` QContactsPermission* self, QContactsPermission* other ```
 void q_contactspermission_operator_assign(void* self, void* other);
@@ -190,7 +190,7 @@ void q_bluetoothpermission_set_communication_modes(void* self, int64_t modes);
 /// ``` QBluetoothPermission* self ```
 int64_t q_bluetoothpermission_communication_modes(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#operator-eq)
 ///
 /// ``` QBluetoothPermission* self, QBluetoothPermission* other ```
 void q_bluetoothpermission_operator_assign(void* self, void* other);
@@ -219,7 +219,7 @@ QCameraPermission* q_camerapermission_new();
 /// ``` QCameraPermission* other ```
 QCameraPermission* q_camerapermission_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcamerapermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcamerapermission.html#operator-eq)
 ///
 /// ``` QCameraPermission* self, QCameraPermission* other ```
 void q_camerapermission_operator_assign(void* self, void* other);
@@ -248,7 +248,7 @@ QMicrophonePermission* q_microphonepermission_new();
 /// ``` QMicrophonePermission* other ```
 QMicrophonePermission* q_microphonepermission_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmicrophonepermission.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qmicrophonepermission.html#operator-eq)
 ///
 /// ``` QMicrophonePermission* self, QMicrophonePermission* other ```
 void q_microphonepermission_operator_assign(void* self, void* other);

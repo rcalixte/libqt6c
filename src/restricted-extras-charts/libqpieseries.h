@@ -79,7 +79,7 @@ bool q_pieseries_append(void* self, void* slice);
 /// ``` QPieSeries* self, libqt_list /* of QPieSlice* */ slices ```
 bool q_pieseries_append2(void* self, libqt_list slices);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#operator-lt-lt)
 ///
 /// ``` QPieSeries* self, QPieSlice* slice ```
 QPieSeries* q_pieseries_operator_shift_left(void* self, void* slice);

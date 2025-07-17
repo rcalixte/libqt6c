@@ -24,7 +24,7 @@ QWidget* q_itemeditorcreatorbase_create_widget(void* self, void* parent);
 /// ``` QItemEditorCreatorBase* self ```
 char* q_itemeditorcreatorbase_value_property_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#operator-eq)
 ///
 /// ``` QItemEditorCreatorBase* self, QItemEditorCreatorBase* param1 ```
 void q_itemeditorcreatorbase_operator_assign(void* self, void* param1);

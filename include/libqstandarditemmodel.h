@@ -552,38 +552,38 @@ void q_standarditem_on_write(void* self, void (*slot)(void*, void*));
 /// ``` QStandardItem* self, QDataStream* out ```
 void q_standarditem_qbase_write(void* self, void* out);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
 ///
 /// ``` QStandardItem* self, QStandardItem* other ```
 bool q_standarditem_operator_lesser(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, bool (*slot)(QStandardItem*, QStandardItem*) ```
 void q_standarditem_on_operator_lesser(void* self, bool (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-lt)
 ///
 /// Base class method implementation
 ///
 /// ``` QStandardItem* self, QStandardItem* other ```
 bool q_standarditem_qbase_operator_lesser(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
 ///
 /// ``` QStandardItem* self, QStandardItem* other ```
 void q_standarditem_operator_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
 ///
 /// Allows for overriding the related default method
 ///
 /// ``` QStandardItem* self, void (*slot)(QStandardItem*, QStandardItem*) ```
 void q_standarditem_on_operator_assign(void* self, void (*slot)(void*, void*));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstandarditem.html#operator-eq)
 ///
 /// Base class method implementation
 ///

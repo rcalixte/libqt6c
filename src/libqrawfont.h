@@ -44,7 +44,7 @@ QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int64_t hinting
 /// ``` const char* fontData, double pixelSize, enum QFont__HintingPreference hintingPreference ```
 QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int64_t hintingPreference);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator-eq)
 ///
 /// ``` QRawFont* self, QRawFont* other ```
 void q_rawfont_operator_assign(void* self, void* other);
@@ -59,12 +59,12 @@ void q_rawfont_swap(void* self, void* other);
 /// ``` QRawFont* self ```
 bool q_rawfont_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator-eq-eq)
 ///
 /// ``` QRawFont* self, QRawFont* other ```
 bool q_rawfont_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator-not-eq)
 ///
 /// ``` QRawFont* self, QRawFont* other ```
 bool q_rawfont_operator_not_equal(void* self, void* other);

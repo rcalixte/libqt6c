@@ -24,7 +24,7 @@ QSslConfiguration* q_sslconfiguration_new();
 /// ``` QSslConfiguration* other ```
 QSslConfiguration* q_sslconfiguration_new2(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#operator-eq)
 ///
 /// ``` QSslConfiguration* self, QSslConfiguration* other ```
 void q_sslconfiguration_operator_assign(void* self, void* other);
@@ -34,12 +34,12 @@ void q_sslconfiguration_operator_assign(void* self, void* other);
 /// ``` QSslConfiguration* self, QSslConfiguration* other ```
 void q_sslconfiguration_swap(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#operator-eq-eq)
 ///
 /// ``` QSslConfiguration* self, QSslConfiguration* other ```
 bool q_sslconfiguration_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#operator-not-eq)
 ///
 /// ``` QSslConfiguration* self, QSslConfiguration* other ```
 bool q_sslconfiguration_operator_not_equal(void* self, void* other);

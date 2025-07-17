@@ -1478,7 +1478,7 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 /// ``` QDtlsClientVerifier__GeneratorParameters* param1 ```
 QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier__generatorparameters.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier__generatorparameters.html#operator-eq)
 ///
 /// ``` QDtlsClientVerifier__GeneratorParameters* self, QDtlsClientVerifier__GeneratorParameters* param1 ```
 void q_dtlsclientverifier__generatorparameters_operator_assign(void* self, void* param1);

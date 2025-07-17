@@ -44,7 +44,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new5(int64_t typeVal, void* chars, int
 /// ``` enum QTextBoundaryFinder__BoundaryType typeVal, QChar* chars, int64_t length, unsigned char* buffer, int64_t bufferSize ```
 QTextBoundaryFinder* q_textboundaryfinder_new6(int64_t typeVal, void* chars, int64_t length, unsigned char* buffer, int64_t bufferSize);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#operator-eq)
 ///
 /// ``` QTextBoundaryFinder* self, QTextBoundaryFinder* other ```
 void q_textboundaryfinder_operator_assign(void* self, void* other);

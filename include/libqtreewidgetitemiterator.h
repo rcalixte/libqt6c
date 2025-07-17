@@ -39,22 +39,22 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_new4(void* widget, int64_t fla
 /// ``` QTreeWidgetItem* item, int flags ```
 QTreeWidgetItemIterator* q_treewidgetitemiterator_new5(void* item, int64_t flags);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-eq)
 ///
 /// ``` QTreeWidgetItemIterator* self, QTreeWidgetItemIterator* it ```
 void q_treewidgetitemiterator_operator_assign(void* self, void* it);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-2b)
 ///
 /// ``` QTreeWidgetItemIterator* self ```
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator++)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-2b)
 ///
 /// ``` QTreeWidgetItemIterator* self, int param1 ```
 const QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_plus_plus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2b-eq)
 ///
 /// ``` QTreeWidgetItemIterator* self, int n ```
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_plus_assign(void* self, int n);
@@ -69,12 +69,12 @@ QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_minus(void* sel
 /// ``` QTreeWidgetItemIterator* self, int param1 ```
 const QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_minus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator--eq)
 ///
 /// ``` QTreeWidgetItemIterator* self, int n ```
 QTreeWidgetItemIterator* q_treewidgetitemiterator_operator_minus_assign(void* self, int n);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator*)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtreewidgetitemiterator.html#operator-2a)
 ///
 /// ``` QTreeWidgetItemIterator* self ```
 QTreeWidgetItem* q_treewidgetitemiterator_operator_multiply(void* self);

@@ -115,12 +115,12 @@ libqt_list /* of QPointF* */ q_xyseries_points_vector(void* self);
 /// ``` QXYSeries* self, int index ```
 const QPointF* q_xyseries_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator-lt-lt)
 ///
 /// ``` QXYSeries* self, QPointF* point ```
 QXYSeries* q_xyseries_operator_shift_left(void* self, void* point);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#operator-lt-lt)
 ///
 /// ``` QXYSeries* self, libqt_list /* of QPointF* */ points ```
 QXYSeries* q_xyseries_operator_shift_left2(void* self, libqt_list points);

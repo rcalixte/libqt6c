@@ -95,7 +95,7 @@ void q_boxset_set_label(void* self, const char* label);
 /// ``` QBoxSet* self ```
 const char* q_boxset_label(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#operator-lt-lt)
 ///
 /// ``` QBoxSet* self, double* value ```
 QBoxSet* q_boxset_operator_shift_left(void* self, double* value);
@@ -110,7 +110,7 @@ void q_boxset_set_value(void* self, int index, double value);
 /// ``` QBoxSet* self, int index ```
 double q_boxset_at(void* self, int index);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#operator[])
+/// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#operator-5b-5d)
 ///
 /// ``` QBoxSet* self, int index ```
 double q_boxset_operator_subscript(void* self, int index);

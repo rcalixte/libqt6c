@@ -54,7 +54,7 @@ QPen* q_pen_new7(void* brush, double width, int64_t s, int64_t c);
 /// ``` QBrush* brush, double width, enum Qt__PenStyle s, enum Qt__PenCapStyle c, enum Qt__PenJoinStyle j ```
 QPen* q_pen_new8(void* brush, double width, int64_t s, int64_t c, int64_t j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-eq)
 ///
 /// ``` QPen* self, QPen* pen ```
 void q_pen_operator_assign(void* self, void* pen);
@@ -179,17 +179,17 @@ bool q_pen_is_cosmetic(void* self);
 /// ``` QPen* self, bool cosmetic ```
 void q_pen_set_cosmetic(void* self, bool cosmetic);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-eq-eq)
 ///
 /// ``` QPen* self, QPen* p ```
 bool q_pen_operator_equal(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-not-eq)
 ///
 /// ``` QPen* self, QPen* p ```
 bool q_pen_operator_not_equal(void* self, void* p);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator)
 ///
 /// ``` QPen* self ```
 QVariant* q_pen_to_q_variant(void* self);

@@ -19,7 +19,7 @@
 /// ``` QCollatorSortKey* other ```
 QCollatorSortKey* q_collatorsortkey_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcollatorsortkey.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcollatorsortkey.html#operator-eq)
 ///
 /// ``` QCollatorSortKey* self, QCollatorSortKey* other ```
 void q_collatorsortkey_operator_assign(void* self, void* other);
@@ -58,7 +58,7 @@ QCollator* q_collator_new2(void* locale);
 /// ``` QCollator* param1 ```
 QCollator* q_collator_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#operator-eq)
 ///
 /// ``` QCollator* self, QCollator* param1 ```
 void q_collator_operator_assign(void* self, void* param1);
@@ -118,7 +118,7 @@ int32_t q_collator_compare(void* self, const char* s1, const char* s2);
 /// ``` QCollator* self, QChar* s1, int64_t len1, QChar* s2, int64_t len2 ```
 int32_t q_collator_compare2(void* self, void* s1, int64_t len1, void* s2, int64_t len2);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#operator())
+/// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#operator-28-29)
 ///
 /// ``` QCollator* self, const char* s1, const char* s2 ```
 bool q_collator_operator_call(void* self, const char* s1, const char* s2);

@@ -86,7 +86,7 @@ int64_t q_gesturerecognizer_register_recognizer(void* recognizer);
 /// ``` enum Qt__GestureType typeVal ```
 void q_gesturerecognizer_unregister_recognizer(int64_t typeVal);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qgesturerecognizer.html#operator-eq)
 ///
 /// ``` QGestureRecognizer* self, QGestureRecognizer* param1 ```
 void q_gesturerecognizer_operator_assign(void* self, void* param1);

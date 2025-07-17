@@ -29,7 +29,7 @@ QPainterPath* q_painterpath_new2(void* startPoint);
 /// ``` QPainterPath* other ```
 QPainterPath* q_painterpath_new3(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 void q_painterpath_operator_assign(void* self, void* other);
@@ -319,27 +319,27 @@ QPainterPath* q_painterpath_subtracted(void* self, void* r);
 /// ``` QPainterPath* self ```
 QPainterPath* q_painterpath_simplified(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-eq-eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 bool q_painterpath_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-not-eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 bool q_painterpath_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator&)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-and)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 QPainterPath* q_painterpath_operator_bitwise_and(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator|)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-7c)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 QPainterPath* q_painterpath_operator_bitwise_or(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator+)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-2b)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 QPainterPath* q_painterpath_operator_plus(void* self, void* other);
@@ -349,22 +349,22 @@ QPainterPath* q_painterpath_operator_plus(void* self, void* other);
 /// ``` QPainterPath* self, QPainterPath* other ```
 QPainterPath* q_painterpath_operator_minus(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator&=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-and-eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 void q_painterpath_operator_bitwise_and_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator|=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-7c-eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 void q_painterpath_operator_bitwise_or_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-2b-eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 QPainterPath* q_painterpath_operator_plus_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#operator--eq)
 ///
 /// ``` QPainterPath* self, QPainterPath* other ```
 QPainterPath* q_painterpath_operator_minus_assign(void* self, void* other);
@@ -512,17 +512,17 @@ bool q_painterpath__element_is_line_to(void* self);
 /// ``` QPainterPath__Element* self ```
 bool q_painterpath__element_is_curve_to(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#operator QPointF)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#operator)
 ///
 /// ``` QPainterPath__Element* self ```
 QPointF* q_painterpath__element_to_q_point_f(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#operator-eq-eq)
 ///
 /// ``` QPainterPath__Element* self, QPainterPath__Element* e ```
 bool q_painterpath__element_operator_equal(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath__element.html#operator-not-eq)
 ///
 /// ``` QPainterPath__Element* self, QPainterPath__Element* e ```
 bool q_painterpath__element_operator_not_equal(void* self, void* e);

@@ -59,7 +59,7 @@ QPageSize* q_pagesize_new8(void* size, int64_t units, const char* name);
 /// ``` QSizeF* size, enum QPageSize__Unit units, const char* name, enum QPageSize__SizeMatchPolicy matchPolicy ```
 QPageSize* q_pagesize_new9(void* size, int64_t units, const char* name, int64_t matchPolicy);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpagesize.html#operator-eq)
 ///
 /// ``` QPageSize* self, QPageSize* other ```
 void q_pagesize_operator_assign(void* self, void* other);

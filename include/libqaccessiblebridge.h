@@ -24,7 +24,7 @@ void q_accessiblebridge_set_root_object(void* self, void* rootObject);
 /// ``` QAccessibleBridge* self, QAccessibleEvent* event ```
 void q_accessiblebridge_notify_accessibility_update(void* self, void* event);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblebridge.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblebridge.html#operator-eq)
 ///
 /// ``` QAccessibleBridge* self, QAccessibleBridge* param1 ```
 void q_accessiblebridge_operator_assign(void* self, void* param1);

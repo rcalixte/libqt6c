@@ -24,7 +24,7 @@ QDebug* q_debug_new(void* device);
 /// ``` QDebug* o ```
 QDebug* q_debug_new2(void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-eq)
 ///
 /// ``` QDebug* self, QDebug* other ```
 void q_debug_operator_assign(void* self, void* other);
@@ -104,92 +104,92 @@ QDebug* q_debug_noquote(void* self);
 /// ``` QDebug* self ```
 QDebug* q_debug_maybe_quote(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, QChar* t ```
 QDebug* q_debug_operator_shift_left(void* self, void* t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, bool t ```
 QDebug* q_debug_operator_shift_left2(void* self, bool t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, char t ```
 QDebug* q_debug_operator_shift_left3(void* self, char t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, short t ```
 QDebug* q_debug_operator_shift_left4(void* self, short t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, unsigned short t ```
 QDebug* q_debug_operator_shift_left5(void* self, unsigned short t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, int t ```
 QDebug* q_debug_operator_shift_left8(void* self, int t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, uint32_t t ```
 QDebug* q_debug_operator_shift_left9(void* self, uint32_t t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, int64_t t ```
 QDebug* q_debug_operator_shift_left10(void* self, int64_t t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, uint64_t t ```
 QDebug* q_debug_operator_shift_left11(void* self, uint64_t t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, long long t ```
 QDebug* q_debug_operator_shift_left12(void* self, long long t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, uint64_t t ```
 QDebug* q_debug_operator_shift_left13(void* self, uint64_t t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, float t ```
 QDebug* q_debug_operator_shift_left15(void* self, float t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, double t ```
 QDebug* q_debug_operator_shift_left16(void* self, double t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, const char* t ```
 QDebug* q_debug_operator_shift_left17(void* self, const char* t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, const char* t ```
 QDebug* q_debug_operator_shift_left19(void* self, const char* t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, const char* t ```
 QDebug* q_debug_operator_shift_left23(void* self, const char* t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, const char* t ```
 QDebug* q_debug_operator_shift_left24(void* self, const char* t);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator<<)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// ``` QDebug* self, void* t ```
 QDebug* q_debug_operator_shift_left25(void* self, void* t);

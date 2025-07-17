@@ -19,7 +19,7 @@
 /// ``` QWebEngineFileSystemAccessRequest* other ```
 QWebEngineFileSystemAccessRequest* q_webenginefilesystemaccessrequest_new(void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#operator-eq)
 ///
 /// ``` QWebEngineFileSystemAccessRequest* self, QWebEngineFileSystemAccessRequest* other ```
 void q_webenginefilesystemaccessrequest_operator_assign(void* self, void* other);

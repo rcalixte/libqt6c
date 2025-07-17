@@ -169,27 +169,27 @@ QQuaternion* q_quaternion_conjugated(void* self);
 /// ``` QQuaternion* self, QVector3D* vector ```
 QVector3D* q_quaternion_rotated_vector(void* self, void* vector);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator+=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator-2b-eq)
 ///
 /// ``` QQuaternion* self, QQuaternion* quaternion ```
 QQuaternion* q_quaternion_operator_plus_assign(void* self, void* quaternion);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator-=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator--eq)
 ///
 /// ``` QQuaternion* self, QQuaternion* quaternion ```
 QQuaternion* q_quaternion_operator_minus_assign(void* self, void* quaternion);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator-2a-eq)
 ///
 /// ``` QQuaternion* self, float factor ```
 QQuaternion* q_quaternion_operator_multiply_assign(void* self, float factor);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator*=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator-2a-eq)
 ///
 /// ``` QQuaternion* self, QQuaternion* quaternion ```
 QQuaternion* q_quaternion_operator_multiply_assign2(void* self, void* quaternion);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator/=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator-2f-eq)
 ///
 /// ``` QQuaternion* self, float divisor ```
 QQuaternion* q_quaternion_operator_divide_assign(void* self, float divisor);
@@ -199,7 +199,7 @@ QQuaternion* q_quaternion_operator_divide_assign(void* self, float divisor);
 /// ``` QQuaternion* self ```
 QVector4D* q_quaternion_to_vector4_d(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator QVariant)
+/// [Qt documentation](https://doc.qt.io/qt-6/qquaternion.html#operator)
 ///
 /// ``` QQuaternion* self ```
 QVariant* q_quaternion_to_q_variant(void* self);

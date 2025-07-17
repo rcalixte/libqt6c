@@ -29,7 +29,7 @@ QFontMetrics* q_fontmetrics_new2(void* font, void* pd);
 /// ``` QFontMetrics* param1 ```
 QFontMetrics* q_fontmetrics_new3(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#operator-eq)
 ///
 /// ``` QFontMetrics* self, QFontMetrics* param1 ```
 void q_fontmetrics_operator_assign(void* self, void* param1);
@@ -199,12 +199,12 @@ int32_t q_fontmetrics_line_width(void* self);
 /// ``` QFontMetrics* self ```
 double q_fontmetrics_font_dpi(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#operator-eq-eq)
 ///
 /// ``` QFontMetrics* self, QFontMetrics* other ```
 bool q_fontmetrics_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#operator-not-eq)
 ///
 /// ``` QFontMetrics* self, QFontMetrics* other ```
 bool q_fontmetrics_operator_not_equal(void* self, void* other);
@@ -278,12 +278,12 @@ QFontMetricsF* q_fontmetricsf_new3(void* param1);
 /// ``` QFontMetricsF* param1 ```
 QFontMetricsF* q_fontmetricsf_new4(void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-eq)
 ///
 /// ``` QFontMetricsF* self, QFontMetricsF* param1 ```
 void q_fontmetricsf_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-eq)
 ///
 /// ``` QFontMetricsF* self, QFontMetrics* param1 ```
 void q_fontmetricsf_operator_assign2(void* self, void* param1);
@@ -448,12 +448,12 @@ double q_fontmetricsf_line_width(void* self);
 /// ``` QFontMetricsF* self ```
 double q_fontmetricsf_font_dpi(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator==)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-eq-eq)
 ///
 /// ``` QFontMetricsF* self, QFontMetricsF* other ```
 bool q_fontmetricsf_operator_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator!=)
+/// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#operator-not-eq)
 ///
 /// ``` QFontMetricsF* self, QFontMetricsF* other ```
 bool q_fontmetricsf_operator_not_equal(void* self, void* other);
