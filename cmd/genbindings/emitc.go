@@ -127,7 +127,7 @@ func cSafeMethodName(name string) string {
 	return strings.TrimSuffix(string(result), "_")
 }
 
-func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType bool, fullEnumName bool) string {
+func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bool) string {
 	if (p.Pointer && p.ParameterType == "char") || p.ParameterType == "QByteArray" ||
 		p.ParameterType == "QAnyStringView" {
 		if p.Const {
@@ -141,7 +141,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType bool, fullEnumNa
 		return "const char*"
 	}
 
-	if t, ok := p.QListOf(); ok {
+	if t, _, ok := p.QListOf(); ok {
 		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" {
 			return "const char*" + ifv(isReturnType, "*", "")
 		} else if !isReturnType {
@@ -160,7 +160,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType bool, fullEnumNa
 		panic("QSet<> arguments are not supported") // n.b. doesn't seem to exist in QtCore/QtGui/QtWidgets at all
 	}
 
-	if k, v, ok := p.QMapOf(); ok {
+	if k, v, _, ok := p.QMapOf(); ok {
 		return "libqt_map " + cppComment("of "+k.RenderTypeC(cfs, isReturnType, fullEnumName)+" to "+v.RenderTypeC(cfs, isReturnType, fullEnumName))
 	}
 
@@ -375,7 +375,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			pName := p.ParameterName
 			pType := p.RenderTypeC(cfs, false, true)
 			var pTypeSlot string
-			if t, ok := p.QListOf(); ok {
+			if t, _, ok := p.QListOf(); ok {
 				if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 					t.IntType() {
 					pName = cppComment("of "+t.RenderTypeC(cfs, false, true)) + " " + p.ParameterName
@@ -414,7 +414,7 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			// Ordinary parameter
 			pName := p.ParameterName
 			pType := p.RenderTypeC(cfs, false, false)
-			if t, ok := p.QListOf(); ok {
+			if t, _, ok := p.QListOf(); ok {
 				if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 					t.IntType() {
 					pName = p.ParameterName
@@ -503,7 +503,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		preamble += "libqt_string " + nameprefix + "_string = qstring(" + p.ParameterName + ");\n"
 		rvalue = "(" + p.ParameterType + "*)&" + nameprefix + "_string"
 
-	} else if t, ok := p.QListOf(); ok {
+	} else if t, _, ok := p.QListOf(); ok {
 		// QList<T>
 		// Return the C list struct without allocation if we can
 
@@ -524,7 +524,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 	} else if _, ok := p.QSetOf(); ok {
 		panic("QSet<> arguments are not yet implemented") // n.b. doesn't seem to exist in QtCore/QtGui/QtWidgets at all
 
-	} else if _, _, ok := p.QMapOf(); ok {
+	} else if _, _, _, ok := p.QMapOf(); ok {
 		// QMap<K,V>
 		rvalue = nameprefix
 
@@ -541,7 +541,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		// We want our functions to accept the C wrapper type, and forward as a pointer
 		rvalue = "(" + p.RenderTypeC(cfs, true, false) + ")" + p.ParameterName
 
-	} else if p.IntType() || p.IsFlagType() || p.IsKnownEnum() || p.ParameterType == "WId" {
+	} else if p.IntType() || p.IsFlagType() || p.IsKnownEnum() {
 		rvalue = p.ParameterName
 
 	} else if p.ParameterType == "bool" {
@@ -605,7 +605,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		// and therefore we don't have to free it either.
 		return shouldReturn + " " + rvalue + ";\n"
 
-	} else if t, ok := rt.QListOf(); ok {
+	} else if t, _, ok := rt.QListOf(); ok {
 		if t.ParameterType == "QString" || t.ParameterType == "QByteArray" {
 			shouldReturn = "libqt_list " + namePrefix + "_arr = "
 			afterword += "const libqt_string* " + namePrefix + "_qstr = (libqt_string*)" + namePrefix + "_arr.data.ptr;\n"
@@ -630,7 +630,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 	} else if _, ok := rt.QSetOf(); ok {
 		panic("QSet<> arguments are not supported")
 
-	} else if _, _, ok := rt.QMapOf(); ok {
+	} else if _, _, _, ok := rt.QMapOf(); ok {
 		return shouldReturn + " " + rvalue + ";\n"
 
 	} else if _, _, ok := rt.QPairOf(); ok {
