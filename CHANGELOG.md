@@ -1,4 +1,9 @@
 
+### 6.8.2 rev4 (18 July 2025)
+
+* **BREAKING CHANGE:** Update container type invocations and unblock QVariantList (#17)
+* Update documentation URL for operator methods (#16)
+
 ### 6.8.2 rev3 (15 July 2025)
 
 * Add projection for iterator types (#15)
