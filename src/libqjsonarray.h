@@ -34,6 +34,16 @@ void q_jsonarray_operator_assign(void* self, void* other);
 /// ``` const char* list[] ```
 QJsonArray* q_jsonarray_from_string_list(const char* list[]);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#fromVariantList)
+///
+/// ``` libqt_list /* of QVariant* */ list ```
+QJsonArray* q_jsonarray_from_variant_list(libqt_list list);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#toVariantList)
+///
+/// ``` QJsonArray* self ```
+libqt_list /* of QVariant* */ q_jsonarray_to_variant_list(void* self);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonarray.html#size)
 ///
 /// ``` QJsonArray* self ```

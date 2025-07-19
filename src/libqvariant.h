@@ -111,53 +111,58 @@ QVariant* q_variant_new19(void* jsonObject);
 
 /// q_variant_new20 constructs a new QVariant object.
 ///
-/// ``` QLocale* locale ```
-QVariant* q_variant_new20(void* locale);
+/// ``` libqt_list /* of QVariant* */ list ```
+QVariant* q_variant_new20(libqt_list list);
 
 /// q_variant_new21 constructs a new QVariant object.
 ///
-/// ``` libqt_map /* of const char* to QVariant* */ mapVal ```
-QVariant* q_variant_new21(libqt_map /* of const char* to QVariant* */ mapVal);
+/// ``` QLocale* locale ```
+QVariant* q_variant_new21(void* locale);
 
 /// q_variant_new22 constructs a new QVariant object.
 ///
-/// ``` QRegularExpression* re ```
-QVariant* q_variant_new22(void* re);
+/// ``` libqt_map /* of const char* to QVariant* */ mapVal ```
+QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal);
 
 /// q_variant_new23 constructs a new QVariant object.
 ///
-/// ``` const char* stringVal ```
-QVariant* q_variant_new23(const char* stringVal);
+/// ``` QRegularExpression* re ```
+QVariant* q_variant_new23(void* re);
 
 /// q_variant_new24 constructs a new QVariant object.
 ///
-/// ``` const char* stringlist[] ```
-QVariant* q_variant_new24(const char* stringlist[]);
+/// ``` const char* stringVal ```
+QVariant* q_variant_new24(const char* stringVal);
 
 /// q_variant_new25 constructs a new QVariant object.
 ///
-/// ``` QUrl* url ```
-QVariant* q_variant_new25(void* url);
+/// ``` const char* stringlist[] ```
+QVariant* q_variant_new25(const char* stringlist[]);
 
 /// q_variant_new26 constructs a new QVariant object.
 ///
-/// ``` QSize* size ```
-QVariant* q_variant_new26(void* size);
+/// ``` QUrl* url ```
+QVariant* q_variant_new26(void* url);
 
 /// q_variant_new27 constructs a new QVariant object.
 ///
-/// ``` QPoint* pt ```
-QVariant* q_variant_new27(void* pt);
+/// ``` QSize* size ```
+QVariant* q_variant_new27(void* size);
 
 /// q_variant_new28 constructs a new QVariant object.
 ///
-/// ``` enum QVariant__Type typeVal ```
-QVariant* q_variant_new28(int64_t typeVal);
+/// ``` QPoint* pt ```
+QVariant* q_variant_new28(void* pt);
 
 /// q_variant_new29 constructs a new QVariant object.
 ///
+/// ``` enum QVariant__Type typeVal ```
+QVariant* q_variant_new29(int64_t typeVal);
+
+/// q_variant_new30 constructs a new QVariant object.
+///
 /// ``` QMetaType* typeVal, void* copyVal ```
-QVariant* q_variant_new29(void* typeVal, void* copyVal);
+QVariant* q_variant_new30(void* typeVal, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///
@@ -318,6 +323,11 @@ QTime* q_variant_to_time(void* self);
 ///
 /// ``` QVariant* self ```
 QDateTime* q_variant_to_date_time(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toList)
+///
+/// ``` QVariant* self ```
+libqt_list /* of QVariant* */ q_variant_to_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toMap)
 ///
