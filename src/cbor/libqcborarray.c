@@ -1,6 +1,7 @@
 #include "libqcborvalue.hpp"
 #include "../libqjsonarray.hpp"
 #include <string.h>
+#include "../libqvariant.hpp"
 #include "libqcborarray.hpp"
 #include "libqcborarray.h"
 
@@ -206,8 +207,17 @@ QCborArray* q_cborarray_from_string_list(const char* list[]) {
     return QCborArray_FromStringList(list_list);
 }
 
+QCborArray* q_cborarray_from_variant_list(libqt_list list) {
+    return QCborArray_FromVariantList(list);
+}
+
 QCborArray* q_cborarray_from_json_array(void* array) {
     return QCborArray_FromJsonArray((QJsonArray*)array);
+}
+
+libqt_list /* of QVariant* */ q_cborarray_to_variant_list(void* self) {
+    libqt_list _arr = QCborArray_ToVariantList((QCborArray*)self);
+    return _arr;
 }
 
 QJsonArray* q_cborarray_to_json_array(void* self) {

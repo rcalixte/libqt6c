@@ -259,10 +259,20 @@ QCborArray* q_cborarray_operator_shift_left(void* self, void* v);
 /// ``` const char* list[] ```
 QCborArray* q_cborarray_from_string_list(const char* list[]);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#fromVariantList)
+///
+/// ``` libqt_list /* of QVariant* */ list ```
+QCborArray* q_cborarray_from_variant_list(libqt_list list);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#fromJsonArray)
 ///
 /// ``` QJsonArray* array ```
 QCborArray* q_cborarray_from_json_array(void* array);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#toVariantList)
+///
+/// ``` QCborArray* self ```
+libqt_list /* of QVariant* */ q_cborarray_to_variant_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborarray.html#toJsonArray)
 ///

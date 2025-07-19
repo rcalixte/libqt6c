@@ -98,23 +98,27 @@ QVariant* q_variant_new19(void* jsonObject) {
     return QVariant_new19((QJsonObject*)jsonObject);
 }
 
-QVariant* q_variant_new20(void* locale) {
-    return QVariant_new20((QLocale*)locale);
+QVariant* q_variant_new20(libqt_list list) {
+    return QVariant_new20(list);
 }
 
-QVariant* q_variant_new21(libqt_map /* of const char* to QVariant* */ mapVal) {
-    return QVariant_new21(mapVal);
+QVariant* q_variant_new21(void* locale) {
+    return QVariant_new21((QLocale*)locale);
 }
 
-QVariant* q_variant_new22(void* re) {
-    return QVariant_new22((QRegularExpression*)re);
+QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal) {
+    return QVariant_new22(mapVal);
 }
 
-QVariant* q_variant_new23(const char* stringVal) {
-    return QVariant_new23(qstring(stringVal));
+QVariant* q_variant_new23(void* re) {
+    return QVariant_new23((QRegularExpression*)re);
 }
 
-QVariant* q_variant_new24(const char* stringlist[]) {
+QVariant* q_variant_new24(const char* stringVal) {
+    return QVariant_new24(qstring(stringVal));
+}
+
+QVariant* q_variant_new25(const char* stringlist[]) {
     size_t stringlist_len = libqt_strv_length(stringlist);
     libqt_string* stringlist_qstr = malloc(stringlist_len * sizeof(libqt_string));
     for (size_t _i = 0; _i < stringlist_len; ++_i) {
@@ -122,27 +126,27 @@ QVariant* q_variant_new24(const char* stringlist[]) {
     }
     libqt_list stringlist_list = qlist(stringlist_qstr, stringlist_len);
 
-    return QVariant_new24(stringlist_list);
+    return QVariant_new25(stringlist_list);
 }
 
-QVariant* q_variant_new25(void* url) {
-    return QVariant_new25((QUrl*)url);
+QVariant* q_variant_new26(void* url) {
+    return QVariant_new26((QUrl*)url);
 }
 
-QVariant* q_variant_new26(void* size) {
-    return QVariant_new26((QSize*)size);
+QVariant* q_variant_new27(void* size) {
+    return QVariant_new27((QSize*)size);
 }
 
-QVariant* q_variant_new27(void* pt) {
-    return QVariant_new27((QPoint*)pt);
+QVariant* q_variant_new28(void* pt) {
+    return QVariant_new28((QPoint*)pt);
 }
 
-QVariant* q_variant_new28(int64_t typeVal) {
-    return QVariant_new28(typeVal);
+QVariant* q_variant_new29(int64_t typeVal) {
+    return QVariant_new29(typeVal);
 }
 
-QVariant* q_variant_new29(void* typeVal, void* copyVal) {
-    return QVariant_new29((QMetaType*)typeVal, copyVal);
+QVariant* q_variant_new30(void* typeVal, void* copyVal) {
+    return QVariant_new30((QMetaType*)typeVal, copyVal);
 }
 
 void q_variant_operator_assign(void* self, void* other) {
@@ -288,6 +292,11 @@ QTime* q_variant_to_time(void* self) {
 
 QDateTime* q_variant_to_date_time(void* self) {
     return QVariant_ToDateTime((QVariant*)self);
+}
+
+libqt_list /* of QVariant* */ q_variant_to_list(void* self) {
+    libqt_list _arr = QVariant_ToList((QVariant*)self);
+    return _arr;
 }
 
 libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self) {

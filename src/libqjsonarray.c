@@ -1,5 +1,6 @@
 #include "libqjsonvalue.hpp"
 #include <string.h>
+#include "libqvariant.hpp"
 #include "libqjsonarray.hpp"
 #include "libqjsonarray.h"
 
@@ -23,6 +24,15 @@ QJsonArray* q_jsonarray_from_string_list(const char* list[]) {
     }
     libqt_list list_list = qlist(list_qstr, list_len);
     return QJsonArray_FromStringList(list_list);
+}
+
+QJsonArray* q_jsonarray_from_variant_list(libqt_list list) {
+    return QJsonArray_FromVariantList(list);
+}
+
+libqt_list /* of QVariant* */ q_jsonarray_to_variant_list(void* self) {
+    libqt_list _arr = QJsonArray_ToVariantList((QJsonArray*)self);
+    return _arr;
 }
 
 int64_t q_jsonarray_size(void* self) {
