@@ -2329,7 +2329,7 @@ void q_webengineview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QWebEngineView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, const char*) ```
 void q_webengineview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2343,7 +2343,7 @@ void q_webengineview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QWebEngineView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, QIcon*) ```
 void q_webengineview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2357,7 +2357,7 @@ void q_webengineview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QWebEngineView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, const char*) ```
 void q_webengineview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2371,7 +2371,7 @@ void q_webengineview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QWebEngineView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, QPoint*) ```
 void q_webengineview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2686,7 +2686,7 @@ void q_webengineview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineView* self, void (*slot)(QObject*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*) ```
 void q_webengineview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2749,7 +2749,7 @@ void q_webengineview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, QObject*) ```
 void q_webengineview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4118,7 +4118,7 @@ void q_webengineview_on_get_decoded_metric_f(void* self, double (*slot)(void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebEngineView* self, void (*slot)(QWebEngineView*, const char*) ```
 void q_webengineview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#dtor.QWebEngineView)

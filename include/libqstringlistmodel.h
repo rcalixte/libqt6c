@@ -347,7 +347,7 @@ QModelIndex* q_stringlistmodel_parent(void* self, void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, QModelIndex* (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QStringListModel* self, QModelIndex* (*slot)(QStringListModel*, QModelIndex*) ```
 void q_stringlistmodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -372,7 +372,7 @@ int32_t q_stringlistmodel_column_count(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, int32_t (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QStringListModel* self, int32_t (*slot)(QStringListModel*, QModelIndex*) ```
 void q_stringlistmodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -397,7 +397,7 @@ bool q_stringlistmodel_has_children(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, bool (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QStringListModel* self, bool (*slot)(QStringListModel*, QModelIndex*) ```
 void q_stringlistmodel_on_has_children(void* self, bool (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -469,7 +469,7 @@ void q_stringlistmodel_data_changed(void* self, void* topLeft, void* bottomRight
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, QModelIndex*) ```
 void q_stringlistmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -483,7 +483,7 @@ void q_stringlistmodel_header_data_changed(void* self, int64_t orientation, int 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, enum Qt__Orientation, int, int) ```
 void q_stringlistmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -497,7 +497,7 @@ void q_stringlistmodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*) ```
 void q_stringlistmodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -511,7 +511,7 @@ void q_stringlistmodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*) ```
 void q_stringlistmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -567,7 +567,7 @@ void q_stringlistmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_stringlistmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -581,7 +581,7 @@ void q_stringlistmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_stringlistmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -595,7 +595,7 @@ void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int64_t h
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_stringlistmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -609,7 +609,7 @@ void q_stringlistmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -623,7 +623,7 @@ void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -826,7 +826,7 @@ void q_stringlistmodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStringListModel* self, void (*slot)(QObject*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*) ```
 void q_stringlistmodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -882,7 +882,7 @@ void q_stringlistmodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStringListModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QObject*) ```
 void q_stringlistmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractListModel
@@ -2295,7 +2295,7 @@ void q_stringlistmodel_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2304,7 +2304,7 @@ void q_stringlistmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2313,7 +2313,7 @@ void q_stringlistmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2322,7 +2322,7 @@ void q_stringlistmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2331,7 +2331,7 @@ void q_stringlistmodel_on_rows_removed(void* self, void (*slot)(void*, void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2340,7 +2340,7 @@ void q_stringlistmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2349,7 +2349,7 @@ void q_stringlistmodel_on_columns_inserted(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2358,7 +2358,7 @@ void q_stringlistmodel_on_columns_about_to_be_removed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int) ```
 void q_stringlistmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2367,7 +2367,7 @@ void q_stringlistmodel_on_columns_removed(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*) ```
 void q_stringlistmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2376,7 +2376,7 @@ void q_stringlistmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*) ```
 void q_stringlistmodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2385,7 +2385,7 @@ void q_stringlistmodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_stringlistmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2394,7 +2394,7 @@ void q_stringlistmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_stringlistmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2403,7 +2403,7 @@ void q_stringlistmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_stringlistmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2412,7 +2412,7 @@ void q_stringlistmodel_on_columns_about_to_be_moved(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_stringlistmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2421,7 +2421,7 @@ void q_stringlistmodel_on_columns_moved(void* self, void (*slot)(void*, void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStringListModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QStringListModel* self, void (*slot)(QStringListModel*, const char*) ```
 void q_stringlistmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#dtor.QStringListModel)

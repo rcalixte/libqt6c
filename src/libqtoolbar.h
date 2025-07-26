@@ -2105,7 +2105,7 @@ void q_toolbar_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QToolBar* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*, const char*) ```
 void q_toolbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2119,7 +2119,7 @@ void q_toolbar_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QToolBar* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*, QIcon*) ```
 void q_toolbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2133,7 +2133,7 @@ void q_toolbar_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QToolBar* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*, const char*) ```
 void q_toolbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2147,7 +2147,7 @@ void q_toolbar_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QToolBar* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*, QPoint*) ```
 void q_toolbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2462,7 +2462,7 @@ void q_toolbar_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QToolBar* self, void (*slot)(QObject*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*) ```
 void q_toolbar_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2525,7 +2525,7 @@ void q_toolbar_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QToolBar* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*, QObject*) ```
 void q_toolbar_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4056,7 +4056,7 @@ void q_toolbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QToolBar* self, void (*slot)(QObject*, const char*) ```
+/// ``` QToolBar* self, void (*slot)(QToolBar*, const char*) ```
 void q_toolbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbar.html#dtor.QToolBar)

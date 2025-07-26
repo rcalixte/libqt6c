@@ -179,7 +179,7 @@ void q_printpreviewdialog_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QDialog*, int) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, int) ```
 void q_printpreviewdialog_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -193,7 +193,7 @@ void q_printpreviewdialog_accepted(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QDialog*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*) ```
 void q_printpreviewdialog_on_accepted(void* self, void (*slot)(void*));
 
 /// Inherited from QDialog
@@ -207,7 +207,7 @@ void q_printpreviewdialog_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QDialog*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*) ```
 void q_printpreviewdialog_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -1950,7 +1950,7 @@ void q_printpreviewdialog_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, const char*) ```
 void q_printpreviewdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -1964,7 +1964,7 @@ void q_printpreviewdialog_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, QIcon*) ```
 void q_printpreviewdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -1978,7 +1978,7 @@ void q_printpreviewdialog_window_icon_text_changed(void* self, const char* iconT
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, const char*) ```
 void q_printpreviewdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -1992,7 +1992,7 @@ void q_printpreviewdialog_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, QPoint*) ```
 void q_printpreviewdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2307,7 +2307,7 @@ void q_printpreviewdialog_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QObject*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*) ```
 void q_printpreviewdialog_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2370,7 +2370,7 @@ void q_printpreviewdialog_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, QObject*) ```
 void q_printpreviewdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4117,7 +4117,7 @@ void q_printpreviewdialog_on_get_decoded_metric_f(void* self, double (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPrintPreviewDialog* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPrintPreviewDialog* self, void (*slot)(QPrintPreviewDialog*, const char*) ```
 void q_printpreviewdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewdialog.html#dtor.QPrintPreviewDialog)

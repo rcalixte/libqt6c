@@ -580,7 +580,7 @@ void q_networkreply_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QIODevice*) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*) ```
 void q_networkreply_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -594,7 +594,7 @@ void q_networkreply_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QIODevice*, int) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*, int) ```
 void q_networkreply_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -608,7 +608,7 @@ void q_networkreply_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*, long long) ```
 void q_networkreply_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -622,7 +622,7 @@ void q_networkreply_channel_bytes_written(void* self, int channel, long long byt
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*, int, long long) ```
 void q_networkreply_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -636,7 +636,7 @@ void q_networkreply_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QIODevice*) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*) ```
 void q_networkreply_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -650,7 +650,7 @@ void q_networkreply_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QIODevice*) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*) ```
 void q_networkreply_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -874,7 +874,7 @@ void q_networkreply_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QObject*) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*) ```
 void q_networkreply_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -937,7 +937,7 @@ void q_networkreply_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QNetworkReply* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*, QObject*) ```
 void q_networkreply_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -946,7 +946,7 @@ void q_networkreply_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QNetworkReply* self, void (*slot)(QObject*, const char*) ```
+/// ``` QNetworkReply* self, void (*slot)(QNetworkReply*, const char*) ```
 void q_networkreply_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkreply.html#dtor.QNetworkReply)

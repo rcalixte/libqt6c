@@ -2245,7 +2245,7 @@ void q_calendarwidget_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*, const char*) ```
 void q_calendarwidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2259,7 +2259,7 @@ void q_calendarwidget_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*, QIcon*) ```
 void q_calendarwidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2273,7 +2273,7 @@ void q_calendarwidget_window_icon_text_changed(void* self, const char* iconText)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*, const char*) ```
 void q_calendarwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2287,7 +2287,7 @@ void q_calendarwidget_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*, QPoint*) ```
 void q_calendarwidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2602,7 +2602,7 @@ void q_calendarwidget_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QObject*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*) ```
 void q_calendarwidget_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2665,7 +2665,7 @@ void q_calendarwidget_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*, QObject*) ```
 void q_calendarwidget_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4115,7 +4115,7 @@ void q_calendarwidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCalendarWidget* self, void (*slot)(QObject*, const char*) ```
+/// ``` QCalendarWidget* self, void (*slot)(QCalendarWidget*, const char*) ```
 void q_calendarwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#dtor.QCalendarWidget)

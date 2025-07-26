@@ -2099,7 +2099,7 @@ void q_groupbox_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QGroupBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*, const char*) ```
 void q_groupbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2113,7 +2113,7 @@ void q_groupbox_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QGroupBox* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*, QIcon*) ```
 void q_groupbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2127,7 +2127,7 @@ void q_groupbox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QGroupBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*, const char*) ```
 void q_groupbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2141,7 +2141,7 @@ void q_groupbox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QGroupBox* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*, QPoint*) ```
 void q_groupbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2456,7 +2456,7 @@ void q_groupbox_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGroupBox* self, void (*slot)(QObject*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*) ```
 void q_groupbox_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2519,7 +2519,7 @@ void q_groupbox_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGroupBox* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*, QObject*) ```
 void q_groupbox_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3888,7 +3888,7 @@ void q_groupbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGroupBox* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGroupBox* self, void (*slot)(QGroupBox*, const char*) ```
 void q_groupbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgroupbox.html#dtor.QGroupBox)

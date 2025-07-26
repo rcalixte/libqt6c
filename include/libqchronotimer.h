@@ -314,7 +314,7 @@ void q_chronotimer_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QChronoTimer* self, void (*slot)(QObject*) ```
+/// ``` QChronoTimer* self, void (*slot)(QChronoTimer*) ```
 void q_chronotimer_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -377,7 +377,7 @@ void q_chronotimer_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QChronoTimer* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QChronoTimer* self, void (*slot)(QChronoTimer*, QObject*) ```
 void q_chronotimer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -663,7 +663,7 @@ void q_chronotimer_on_timeout(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QChronoTimer* self, void (*slot)(QObject*, const char*) ```
+/// ``` QChronoTimer* self, void (*slot)(QChronoTimer*, const char*) ```
 void q_chronotimer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchronotimer.html#dtor.QChronoTimer)

@@ -292,7 +292,7 @@ void q_parallelanimationgroup_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QAbstractAnimation*) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*) ```
 void q_parallelanimationgroup_on_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -306,7 +306,7 @@ void q_parallelanimationgroup_state_changed(void* self, int64_t newState, int64_
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_parallelanimationgroup_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -320,7 +320,7 @@ void q_parallelanimationgroup_current_loop_changed(void* self, int currentLoop);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QAbstractAnimation*, int) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*, int) ```
 void q_parallelanimationgroup_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -334,7 +334,7 @@ void q_parallelanimationgroup_direction_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*, enum QAbstractAnimation__Direction) ```
 void q_parallelanimationgroup_on_direction_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -586,7 +586,7 @@ void q_parallelanimationgroup_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QObject*) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*) ```
 void q_parallelanimationgroup_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -649,7 +649,7 @@ void q_parallelanimationgroup_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*, QObject*) ```
 void q_parallelanimationgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -928,7 +928,7 @@ void q_parallelanimationgroup_on_is_signal_connected(void* self, bool (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QParallelAnimationGroup* self, void (*slot)(QObject*, const char*) ```
+/// ``` QParallelAnimationGroup* self, void (*slot)(QParallelAnimationGroup*, const char*) ```
 void q_parallelanimationgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#dtor.QParallelAnimationGroup)

@@ -2063,7 +2063,7 @@ void q_lcdnumber_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, const char*) ```
 void q_lcdnumber_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2077,7 +2077,7 @@ void q_lcdnumber_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QIcon*) ```
 void q_lcdnumber_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2091,7 +2091,7 @@ void q_lcdnumber_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, const char*) ```
 void q_lcdnumber_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2105,7 +2105,7 @@ void q_lcdnumber_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QPoint*) ```
 void q_lcdnumber_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2420,7 +2420,7 @@ void q_lcdnumber_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QObject*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*) ```
 void q_lcdnumber_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2483,7 +2483,7 @@ void q_lcdnumber_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QObject*) ```
 void q_lcdnumber_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4095,7 +4095,7 @@ void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLCDNumber* self, void (*slot)(QObject*, const char*) ```
+/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, const char*) ```
 void q_lcdnumber_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#dtor.QLCDNumber)

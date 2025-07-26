@@ -681,7 +681,7 @@ void q_localsocket_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*) ```
 void q_localsocket_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -695,7 +695,7 @@ void q_localsocket_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QIODevice*, int) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*, int) ```
 void q_localsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -709,7 +709,7 @@ void q_localsocket_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*, long long) ```
 void q_localsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -723,7 +723,7 @@ void q_localsocket_channel_bytes_written(void* self, int channel, long long byte
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*, int, long long) ```
 void q_localsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -737,7 +737,7 @@ void q_localsocket_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*) ```
 void q_localsocket_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -751,7 +751,7 @@ void q_localsocket_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*) ```
 void q_localsocket_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -961,7 +961,7 @@ void q_localsocket_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QObject*) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*) ```
 void q_localsocket_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1024,7 +1024,7 @@ void q_localsocket_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLocalSocket* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*, QObject*) ```
 void q_localsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1519,7 +1519,7 @@ void q_localsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLocalSocket* self, void (*slot)(QObject*, const char*) ```
+/// ``` QLocalSocket* self, void (*slot)(QLocalSocket*, const char*) ```
 void q_localsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalsocket.html#dtor.QLocalSocket)

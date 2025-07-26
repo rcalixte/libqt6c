@@ -272,7 +272,7 @@ void q_scilexerruby_color_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QColor*, int) ```
 void q_scilexerruby_on_color_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -286,7 +286,7 @@ void q_scilexerruby_eol_fill_changed(void* self, bool eolfilled, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexer*, bool, int) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, bool, int) ```
 void q_scilexerruby_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -300,7 +300,7 @@ void q_scilexerruby_font_changed(void* self, void* f, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexer*, QFont*, int) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QFont*, int) ```
 void q_scilexerruby_on_font_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -314,7 +314,7 @@ void q_scilexerruby_paper_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QColor*, int) ```
 void q_scilexerruby_on_paper_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -328,7 +328,7 @@ void q_scilexerruby_property_changed(void* self, const char* prop, const char* v
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexer*, const char*, const char*) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, const char*, const char*) ```
 void q_scilexerruby_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -545,7 +545,7 @@ void q_scilexerruby_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QObject*) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*) ```
 void q_scilexerruby_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -608,7 +608,7 @@ void q_scilexerruby_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QObject*) ```
 void q_scilexerruby_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1562,7 +1562,7 @@ void q_scilexerruby_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QObject*, const char*) ```
+/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, const char*) ```
 void q_scilexerruby_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)

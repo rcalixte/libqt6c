@@ -722,7 +722,7 @@ void q_filesystemmodel_data_changed(void* self, void* topLeft, void* bottomRight
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, QModelIndex*) ```
 void q_filesystemmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -736,7 +736,7 @@ void q_filesystemmodel_header_data_changed(void* self, int64_t orientation, int 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, enum Qt__Orientation, int, int) ```
 void q_filesystemmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -750,7 +750,7 @@ void q_filesystemmodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*) ```
 void q_filesystemmodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -764,7 +764,7 @@ void q_filesystemmodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*) ```
 void q_filesystemmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -820,7 +820,7 @@ void q_filesystemmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_filesystemmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -834,7 +834,7 @@ void q_filesystemmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_filesystemmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -848,7 +848,7 @@ void q_filesystemmodel_layout_changed2(void* self, libqt_list parents, int64_t h
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_filesystemmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -862,7 +862,7 @@ void q_filesystemmodel_layout_about_to_be_changed1(void* self, libqt_list parent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_filesystemmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -876,7 +876,7 @@ void q_filesystemmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -1079,7 +1079,7 @@ void q_filesystemmodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QObject*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*) ```
 void q_filesystemmodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1135,7 +1135,7 @@ void q_filesystemmodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QObject*) ```
 void q_filesystemmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2440,7 +2440,7 @@ void q_filesystemmodel_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2449,7 +2449,7 @@ void q_filesystemmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2458,7 +2458,7 @@ void q_filesystemmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2467,7 +2467,7 @@ void q_filesystemmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2476,7 +2476,7 @@ void q_filesystemmodel_on_rows_removed(void* self, void (*slot)(void*, void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2485,7 +2485,7 @@ void q_filesystemmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2494,7 +2494,7 @@ void q_filesystemmodel_on_columns_inserted(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2503,7 +2503,7 @@ void q_filesystemmodel_on_columns_about_to_be_removed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int) ```
 void q_filesystemmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2512,7 +2512,7 @@ void q_filesystemmodel_on_columns_removed(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*) ```
 void q_filesystemmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2521,7 +2521,7 @@ void q_filesystemmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*) ```
 void q_filesystemmodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2530,7 +2530,7 @@ void q_filesystemmodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_filesystemmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2539,7 +2539,7 @@ void q_filesystemmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_filesystemmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2548,7 +2548,7 @@ void q_filesystemmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_filesystemmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2557,7 +2557,7 @@ void q_filesystemmodel_on_columns_about_to_be_moved(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_filesystemmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2566,7 +2566,7 @@ void q_filesystemmodel_on_columns_moved(void* self, void (*slot)(void*, void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFileSystemModel* self, void (*slot)(QFileSystemModel*, const char*) ```
 void q_filesystemmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemmodel.html#dtor.QFileSystemModel)

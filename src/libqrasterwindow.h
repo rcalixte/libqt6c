@@ -877,7 +877,7 @@ void q_rasterwindow_screen_changed(void* self, void* screen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, QScreen*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, QScreen*) ```
 void q_rasterwindow_on_screen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
@@ -891,7 +891,7 @@ void q_rasterwindow_modality_changed(void* self, int64_t modality);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, enum Qt__WindowModality) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, enum Qt__WindowModality) ```
 void q_rasterwindow_on_modality_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -905,7 +905,7 @@ void q_rasterwindow_window_state_changed(void* self, int64_t windowState);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, enum Qt__WindowState) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, enum Qt__WindowState) ```
 void q_rasterwindow_on_window_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -919,7 +919,7 @@ void q_rasterwindow_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, const char*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, const char*) ```
 void q_rasterwindow_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWindow
@@ -933,7 +933,7 @@ void q_rasterwindow_x_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_x_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -947,7 +947,7 @@ void q_rasterwindow_y_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_y_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -961,7 +961,7 @@ void q_rasterwindow_width_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_width_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -975,7 +975,7 @@ void q_rasterwindow_height_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_height_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -989,7 +989,7 @@ void q_rasterwindow_minimum_width_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_minimum_width_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -1003,7 +1003,7 @@ void q_rasterwindow_minimum_height_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_minimum_height_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -1017,7 +1017,7 @@ void q_rasterwindow_maximum_width_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_maximum_width_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -1031,7 +1031,7 @@ void q_rasterwindow_maximum_height_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, int) ```
 void q_rasterwindow_on_maximum_height_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -1045,7 +1045,7 @@ void q_rasterwindow_visible_changed(void* self, bool arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, bool) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, bool) ```
 void q_rasterwindow_on_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QWindow
@@ -1059,7 +1059,7 @@ void q_rasterwindow_visibility_changed(void* self, int64_t visibility);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, enum QWindow__Visibility) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, enum QWindow__Visibility) ```
 void q_rasterwindow_on_visibility_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -1073,7 +1073,7 @@ void q_rasterwindow_active_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*) ```
 void q_rasterwindow_on_active_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QWindow
@@ -1087,7 +1087,7 @@ void q_rasterwindow_content_orientation_changed(void* self, int64_t orientation)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, enum Qt__ScreenOrientation) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, enum Qt__ScreenOrientation) ```
 void q_rasterwindow_on_content_orientation_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -1101,7 +1101,7 @@ void q_rasterwindow_focus_object_changed(void* self, void* object);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, QObject*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, QObject*) ```
 void q_rasterwindow_on_focus_object_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
@@ -1115,7 +1115,7 @@ void q_rasterwindow_opacity_changed(void* self, double opacity);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, double) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, double) ```
 void q_rasterwindow_on_opacity_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QWindow
@@ -1129,7 +1129,7 @@ void q_rasterwindow_transient_parent_changed(void* self, void* transientParent);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QWindow*, QWindow*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, QWindow*) ```
 void q_rasterwindow_on_transient_parent_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
@@ -1346,7 +1346,7 @@ void q_rasterwindow_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QObject*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*) ```
 void q_rasterwindow_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1402,7 +1402,7 @@ void q_rasterwindow_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRasterWindow* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, QObject*) ```
 void q_rasterwindow_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QSurface
@@ -2569,7 +2569,7 @@ void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*slot)(void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QRasterWindow* self, void (*slot)(QObject*, const char*) ```
+/// ``` QRasterWindow* self, void (*slot)(QRasterWindow*, const char*) ```
 void q_rasterwindow_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#dtor.QRasterWindow)

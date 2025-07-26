@@ -899,7 +899,7 @@ void q_abstractaxis_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAxis* self, void (*slot)(QObject*) ```
+/// ``` QAbstractAxis* self, void (*slot)(QAbstractAxis*) ```
 void q_abstractaxis_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -962,7 +962,7 @@ void q_abstractaxis_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAxis* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractAxis* self, void (*slot)(QAbstractAxis*, QObject*) ```
 void q_abstractaxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -971,7 +971,7 @@ void q_abstractaxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractAxis* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractAxis* self, void (*slot)(QAbstractAxis*, const char*) ```
 void q_abstractaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis-qtcharts.html#dtor.QAbstractAxis)

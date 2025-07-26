@@ -318,7 +318,7 @@ void q_validator_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QValidator* self, void (*slot)(QObject*) ```
+/// ``` QValidator* self, void (*slot)(QValidator*) ```
 void q_validator_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -381,7 +381,7 @@ void q_validator_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QValidator* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QValidator* self, void (*slot)(QValidator*, QObject*) ```
 void q_validator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -687,7 +687,7 @@ void q_validator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QValidator* self, void (*slot)(QObject*, const char*) ```
+/// ``` QValidator* self, void (*slot)(QValidator*, const char*) ```
 void q_validator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#dtor.QValidator)
@@ -863,7 +863,7 @@ void q_intvalidator_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QIntValidator* self, void (*slot)(QValidator*) ```
+/// ``` QIntValidator* self, void (*slot)(QIntValidator*) ```
 void q_intvalidator_on_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1066,7 +1066,7 @@ void q_intvalidator_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIntValidator* self, void (*slot)(QObject*) ```
+/// ``` QIntValidator* self, void (*slot)(QIntValidator*) ```
 void q_intvalidator_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1129,7 +1129,7 @@ void q_intvalidator_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIntValidator* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QObject*) ```
 void q_intvalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1435,7 +1435,7 @@ void q_intvalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIntValidator* self, void (*slot)(QObject*, const char*) ```
+/// ``` QIntValidator* self, void (*slot)(QIntValidator*, const char*) ```
 void q_intvalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#dtor.QIntValidator)
@@ -1656,7 +1656,7 @@ void q_doublevalidator_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QValidator*) ```
+/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*) ```
 void q_doublevalidator_on_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1859,7 +1859,7 @@ void q_doublevalidator_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QObject*) ```
+/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*) ```
 void q_doublevalidator_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1922,7 +1922,7 @@ void q_doublevalidator_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QObject*) ```
 void q_doublevalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -2228,7 +2228,7 @@ void q_doublevalidator_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, const char*) ```
 void q_doublevalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#dtor.QDoubleValidator)
@@ -2360,7 +2360,7 @@ void q_regularexpressionvalidator_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QValidator*) ```
+/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*) ```
 void q_regularexpressionvalidator_on_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2563,7 +2563,7 @@ void q_regularexpressionvalidator_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QObject*) ```
+/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*) ```
 void q_regularexpressionvalidator_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2626,7 +2626,7 @@ void q_regularexpressionvalidator_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QObject*) ```
 void q_regularexpressionvalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QValidator
@@ -2959,7 +2959,7 @@ void q_regularexpressionvalidator_on_is_signal_connected(void* self, bool (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QObject*, const char*) ```
+/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, const char*) ```
 void q_regularexpressionvalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#dtor.QRegularExpressionValidator)

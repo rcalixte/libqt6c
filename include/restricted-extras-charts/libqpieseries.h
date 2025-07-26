@@ -413,7 +413,7 @@ void q_pieseries_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -427,7 +427,7 @@ void q_pieseries_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -441,7 +441,7 @@ void q_pieseries_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -455,7 +455,7 @@ void q_pieseries_use_open_g_l_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QPieSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -672,7 +672,7 @@ void q_pieseries_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPieSeries* self, void (*slot)(QObject*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*) ```
 void q_pieseries_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -735,7 +735,7 @@ void q_pieseries_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPieSeries* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*, QObject*) ```
 void q_pieseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1041,7 +1041,7 @@ void q_pieseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPieSeries* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPieSeries* self, void (*slot)(QPieSeries*, const char*) ```
 void q_pieseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpieseries-qtcharts.html#dtor.QPieSeries)

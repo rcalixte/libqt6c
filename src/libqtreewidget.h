@@ -1048,7 +1048,7 @@ void q_treewidget_set_model(void* self, void* model);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTreeView* self, void (*slot)(QTreeView*, QAbstractItemModel*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QAbstractItemModel*) ```
 void q_treewidget_on_set_model(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTreeView
@@ -1358,7 +1358,7 @@ void q_treewidget_expanded(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#expanded)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QTreeView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_expanded(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTreeView
@@ -1372,7 +1372,7 @@ void q_treewidget_collapsed(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#collapsed)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QTreeView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_collapsed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTreeView
@@ -1841,7 +1841,7 @@ void q_treewidget_pressed(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_pressed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1855,7 +1855,7 @@ void q_treewidget_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1869,7 +1869,7 @@ void q_treewidget_double_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_double_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1883,7 +1883,7 @@ void q_treewidget_activated(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_activated(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1897,7 +1897,7 @@ void q_treewidget_entered(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QModelIndex*) ```
 void q_treewidget_on_entered(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1911,7 +1911,7 @@ void q_treewidget_viewport_entered(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*) ```
 void q_treewidget_on_viewport_entered(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1925,7 +1925,7 @@ void q_treewidget_icon_size_changed(void* self, void* size);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QAbstractItemView*, QSize*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QSize*) ```
 void q_treewidget_on_icon_size_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3871,7 +3871,7 @@ void q_treewidget_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, const char*) ```
 void q_treewidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3885,7 +3885,7 @@ void q_treewidget_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QIcon*) ```
 void q_treewidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3899,7 +3899,7 @@ void q_treewidget_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, const char*) ```
 void q_treewidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3913,7 +3913,7 @@ void q_treewidget_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QPoint*) ```
 void q_treewidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -4228,7 +4228,7 @@ void q_treewidget_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QObject*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*) ```
 void q_treewidget_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -4291,7 +4291,7 @@ void q_treewidget_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTreeWidget* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, QObject*) ```
 void q_treewidget_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -7658,7 +7658,7 @@ void q_treewidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTreeWidget* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTreeWidget* self, void (*slot)(QTreeWidget*, const char*) ```
 void q_treewidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreewidget.html#dtor.QTreeWidget)

@@ -1925,7 +1925,7 @@ void q_splashscreen_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QSplashScreen* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*, const char*) ```
 void q_splashscreen_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -1939,7 +1939,7 @@ void q_splashscreen_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QSplashScreen* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*, QIcon*) ```
 void q_splashscreen_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -1953,7 +1953,7 @@ void q_splashscreen_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QSplashScreen* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*, const char*) ```
 void q_splashscreen_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -1967,7 +1967,7 @@ void q_splashscreen_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QSplashScreen* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*, QPoint*) ```
 void q_splashscreen_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2282,7 +2282,7 @@ void q_splashscreen_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSplashScreen* self, void (*slot)(QObject*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*) ```
 void q_splashscreen_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2345,7 +2345,7 @@ void q_splashscreen_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSplashScreen* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*, QObject*) ```
 void q_splashscreen_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3930,7 +3930,7 @@ void q_splashscreen_on_get_decoded_metric_f(void* self, double (*slot)(void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSplashScreen* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSplashScreen* self, void (*slot)(QSplashScreen*, const char*) ```
 void q_splashscreen_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplashscreen.html#dtor.QSplashScreen)

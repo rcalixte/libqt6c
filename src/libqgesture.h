@@ -300,7 +300,7 @@ void q_gesture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGesture* self, void (*slot)(QObject*) ```
+/// ``` QGesture* self, void (*slot)(QGesture*) ```
 void q_gesture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -363,7 +363,7 @@ void q_gesture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGesture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGesture* self, void (*slot)(QGesture*, QObject*) ```
 void q_gesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -669,7 +669,7 @@ void q_gesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGesture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGesture* self, void (*slot)(QGesture*, const char*) ```
 void q_gesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesture.html#dtor.QGesture)
@@ -1018,7 +1018,7 @@ void q_pangesture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPanGesture* self, void (*slot)(QObject*) ```
+/// ``` QPanGesture* self, void (*slot)(QPanGesture*) ```
 void q_pangesture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1081,7 +1081,7 @@ void q_pangesture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPanGesture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPanGesture* self, void (*slot)(QPanGesture*, QObject*) ```
 void q_pangesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1387,7 +1387,7 @@ void q_pangesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPanGesture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPanGesture* self, void (*slot)(QPanGesture*, const char*) ```
 void q_pangesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpangesture.html#dtor.QPanGesture)
@@ -1811,7 +1811,7 @@ void q_pinchgesture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPinchGesture* self, void (*slot)(QObject*) ```
+/// ``` QPinchGesture* self, void (*slot)(QPinchGesture*) ```
 void q_pinchgesture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1874,7 +1874,7 @@ void q_pinchgesture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPinchGesture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPinchGesture* self, void (*slot)(QPinchGesture*, QObject*) ```
 void q_pinchgesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -2180,7 +2180,7 @@ void q_pinchgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPinchGesture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPinchGesture* self, void (*slot)(QPinchGesture*, const char*) ```
 void q_pinchgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpinchgesture.html#dtor.QPinchGesture)
@@ -2514,7 +2514,7 @@ void q_swipegesture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSwipeGesture* self, void (*slot)(QObject*) ```
+/// ``` QSwipeGesture* self, void (*slot)(QSwipeGesture*) ```
 void q_swipegesture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2577,7 +2577,7 @@ void q_swipegesture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSwipeGesture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSwipeGesture* self, void (*slot)(QSwipeGesture*, QObject*) ```
 void q_swipegesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -2883,7 +2883,7 @@ void q_swipegesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSwipeGesture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSwipeGesture* self, void (*slot)(QSwipeGesture*, const char*) ```
 void q_swipegesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qswipegesture.html#dtor.QSwipeGesture)
@@ -3207,7 +3207,7 @@ void q_tapgesture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTapGesture* self, void (*slot)(QObject*) ```
+/// ``` QTapGesture* self, void (*slot)(QTapGesture*) ```
 void q_tapgesture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3270,7 +3270,7 @@ void q_tapgesture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTapGesture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTapGesture* self, void (*slot)(QTapGesture*, QObject*) ```
 void q_tapgesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -3576,7 +3576,7 @@ void q_tapgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTapGesture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTapGesture* self, void (*slot)(QTapGesture*, const char*) ```
 void q_tapgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtapgesture.html#dtor.QTapGesture)
@@ -3910,7 +3910,7 @@ void q_tapandholdgesture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTapAndHoldGesture* self, void (*slot)(QObject*) ```
+/// ``` QTapAndHoldGesture* self, void (*slot)(QTapAndHoldGesture*) ```
 void q_tapandholdgesture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3973,7 +3973,7 @@ void q_tapandholdgesture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTapAndHoldGesture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTapAndHoldGesture* self, void (*slot)(QTapAndHoldGesture*, QObject*) ```
 void q_tapandholdgesture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -4279,7 +4279,7 @@ void q_tapandholdgesture_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTapAndHoldGesture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTapAndHoldGesture* self, void (*slot)(QTapAndHoldGesture*, const char*) ```
 void q_tapandholdgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtapandholdgesture.html#dtor.QTapAndHoldGesture)

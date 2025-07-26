@@ -348,7 +348,7 @@ void q_undoview_indexes_moved(void* self, libqt_list indexes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
-/// ``` QUndoView* self, void (*slot)(QListView*, libqt_list /* of QModelIndex* */ indexes ) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, libqt_list /* of QModelIndex* */ indexes ) ```
 void q_undoview_on_indexes_moved(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
@@ -761,7 +761,7 @@ void q_undoview_pressed(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
 void q_undoview_on_pressed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -775,7 +775,7 @@ void q_undoview_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
 void q_undoview_on_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -789,7 +789,7 @@ void q_undoview_double_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
 void q_undoview_on_double_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -803,7 +803,7 @@ void q_undoview_activated(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
 void q_undoview_on_activated(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -817,7 +817,7 @@ void q_undoview_entered(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
 void q_undoview_on_entered(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -831,7 +831,7 @@ void q_undoview_viewport_entered(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*) ```
 void q_undoview_on_viewport_entered(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemView
@@ -845,7 +845,7 @@ void q_undoview_icon_size_changed(void* self, void* size);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QAbstractItemView*, QSize*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QSize*) ```
 void q_undoview_on_icon_size_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -2791,7 +2791,7 @@ void q_undoview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
 void q_undoview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2805,7 +2805,7 @@ void q_undoview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QIcon*) ```
 void q_undoview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2819,7 +2819,7 @@ void q_undoview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
 void q_undoview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2833,7 +2833,7 @@ void q_undoview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QUndoView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QPoint*) ```
 void q_undoview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3148,7 +3148,7 @@ void q_undoview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoView* self, void (*slot)(QObject*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*) ```
 void q_undoview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3211,7 +3211,7 @@ void q_undoview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, QObject*) ```
 void q_undoview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -6524,7 +6524,7 @@ void q_undoview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QUndoView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
 void q_undoview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#dtor.QUndoView)

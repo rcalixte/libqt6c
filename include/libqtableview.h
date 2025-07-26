@@ -1302,7 +1302,7 @@ void q_tableview_pressed(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QModelIndex*) ```
 void q_tableview_on_pressed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1316,7 +1316,7 @@ void q_tableview_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QModelIndex*) ```
 void q_tableview_on_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1330,7 +1330,7 @@ void q_tableview_double_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QModelIndex*) ```
 void q_tableview_on_double_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1344,7 +1344,7 @@ void q_tableview_activated(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QModelIndex*) ```
 void q_tableview_on_activated(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1358,7 +1358,7 @@ void q_tableview_entered(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QModelIndex*) ```
 void q_tableview_on_entered(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1372,7 +1372,7 @@ void q_tableview_viewport_entered(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*) ```
 void q_tableview_on_viewport_entered(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1386,7 +1386,7 @@ void q_tableview_icon_size_changed(void* self, void* size);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
-/// ``` QTableView* self, void (*slot)(QAbstractItemView*, QSize*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QSize*) ```
 void q_tableview_on_icon_size_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3332,7 +3332,7 @@ void q_tableview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTableView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, const char*) ```
 void q_tableview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3346,7 +3346,7 @@ void q_tableview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTableView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QIcon*) ```
 void q_tableview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3360,7 +3360,7 @@ void q_tableview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTableView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, const char*) ```
 void q_tableview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3374,7 +3374,7 @@ void q_tableview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTableView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QPoint*) ```
 void q_tableview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3689,7 +3689,7 @@ void q_tableview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTableView* self, void (*slot)(QObject*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*) ```
 void q_tableview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3752,7 +3752,7 @@ void q_tableview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTableView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, QObject*) ```
 void q_tableview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -6228,7 +6228,7 @@ void q_tableview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTableView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTableView* self, void (*slot)(QTableView*, const char*) ```
 void q_tableview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtableview.html#dtor.QTableView)

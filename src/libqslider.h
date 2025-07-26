@@ -421,7 +421,7 @@ void q_slider_value_changed(void* self, int value);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
-/// ``` QSlider* self, void (*slot)(QAbstractSlider*, int) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, int) ```
 void q_slider_on_value_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -435,7 +435,7 @@ void q_slider_slider_pressed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
-/// ``` QSlider* self, void (*slot)(QAbstractSlider*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*) ```
 void q_slider_on_slider_pressed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSlider
@@ -449,7 +449,7 @@ void q_slider_slider_moved(void* self, int position);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
-/// ``` QSlider* self, void (*slot)(QAbstractSlider*, int) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, int) ```
 void q_slider_on_slider_moved(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractSlider
@@ -463,7 +463,7 @@ void q_slider_slider_released(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
-/// ``` QSlider* self, void (*slot)(QAbstractSlider*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*) ```
 void q_slider_on_slider_released(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSlider
@@ -477,7 +477,7 @@ void q_slider_range_changed(void* self, int min, int max);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
-/// ``` QSlider* self, void (*slot)(QAbstractSlider*, int, int) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, int, int) ```
 void q_slider_on_range_changed(void* self, void (*slot)(void*, int, int));
 
 /// Inherited from QAbstractSlider
@@ -491,7 +491,7 @@ void q_slider_action_triggered(void* self, int action);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
-/// ``` QSlider* self, void (*slot)(QAbstractSlider*, int) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, int) ```
 void q_slider_on_action_triggered(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWidget
@@ -2234,7 +2234,7 @@ void q_slider_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QSlider* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, const char*) ```
 void q_slider_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2248,7 +2248,7 @@ void q_slider_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QSlider* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, QIcon*) ```
 void q_slider_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2262,7 +2262,7 @@ void q_slider_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QSlider* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, const char*) ```
 void q_slider_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2276,7 +2276,7 @@ void q_slider_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QSlider* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, QPoint*) ```
 void q_slider_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2591,7 +2591,7 @@ void q_slider_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSlider* self, void (*slot)(QObject*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*) ```
 void q_slider_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2654,7 +2654,7 @@ void q_slider_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSlider* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, QObject*) ```
 void q_slider_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4185,7 +4185,7 @@ void q_slider_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSlider* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSlider* self, void (*slot)(QSlider*, const char*) ```
 void q_slider_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qslider.html#dtor.QSlider)

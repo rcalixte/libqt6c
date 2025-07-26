@@ -300,7 +300,7 @@ void q_filesystemwatcher_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileSystemWatcher* self, void (*slot)(QObject*) ```
+/// ``` QFileSystemWatcher* self, void (*slot)(QFileSystemWatcher*) ```
 void q_filesystemwatcher_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -363,7 +363,7 @@ void q_filesystemwatcher_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileSystemWatcher* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFileSystemWatcher* self, void (*slot)(QFileSystemWatcher*, QObject*) ```
 void q_filesystemwatcher_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -683,7 +683,7 @@ void q_filesystemwatcher_on_directory_changed(void* self, void (*slot)(void*, co
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileSystemWatcher* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFileSystemWatcher* self, void (*slot)(QFileSystemWatcher*, const char*) ```
 void q_filesystemwatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfilesystemwatcher.html#dtor.QFileSystemWatcher)

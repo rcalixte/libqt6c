@@ -321,7 +321,7 @@ void q_textlist_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextList* self, void (*slot)(QObject*) ```
+/// ``` QTextList* self, void (*slot)(QTextList*) ```
 void q_textlist_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -384,7 +384,7 @@ void q_textlist_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextList* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTextList* self, void (*slot)(QTextList*, QObject*) ```
 void q_textlist_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTextBlockGroup
@@ -798,7 +798,7 @@ void q_textlist_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextList* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTextList* self, void (*slot)(QTextList*, const char*) ```
 void q_textlist_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlist.html#dtor.QTextList)

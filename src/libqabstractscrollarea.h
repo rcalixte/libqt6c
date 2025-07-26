@@ -2432,7 +2432,7 @@ void q_abstractscrollarea_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*, const char*) ```
 void q_abstractscrollarea_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2446,7 +2446,7 @@ void q_abstractscrollarea_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*, QIcon*) ```
 void q_abstractscrollarea_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2460,7 +2460,7 @@ void q_abstractscrollarea_window_icon_text_changed(void* self, const char* iconT
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*, const char*) ```
 void q_abstractscrollarea_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2474,7 +2474,7 @@ void q_abstractscrollarea_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*, QPoint*) ```
 void q_abstractscrollarea_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2789,7 +2789,7 @@ void q_abstractscrollarea_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QObject*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*) ```
 void q_abstractscrollarea_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2852,7 +2852,7 @@ void q_abstractscrollarea_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*, QObject*) ```
 void q_abstractscrollarea_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4086,7 +4086,7 @@ void q_abstractscrollarea_on_get_decoded_metric_f(void* self, double (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractScrollArea* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractScrollArea* self, void (*slot)(QAbstractScrollArea*, const char*) ```
 void q_abstractscrollarea_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#dtor.QAbstractScrollArea)

@@ -283,7 +283,7 @@ void q_colordialog_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QColorDialog* self, void (*slot)(QDialog*, int) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, int) ```
 void q_colordialog_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -297,7 +297,7 @@ void q_colordialog_accepted(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QColorDialog* self, void (*slot)(QDialog*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*) ```
 void q_colordialog_on_accepted(void* self, void (*slot)(void*));
 
 /// Inherited from QDialog
@@ -311,7 +311,7 @@ void q_colordialog_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QColorDialog* self, void (*slot)(QDialog*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*) ```
 void q_colordialog_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2054,7 +2054,7 @@ void q_colordialog_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QColorDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, const char*) ```
 void q_colordialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2068,7 +2068,7 @@ void q_colordialog_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QColorDialog* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, QIcon*) ```
 void q_colordialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2082,7 +2082,7 @@ void q_colordialog_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QColorDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, const char*) ```
 void q_colordialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2096,7 +2096,7 @@ void q_colordialog_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QColorDialog* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, QPoint*) ```
 void q_colordialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2411,7 +2411,7 @@ void q_colordialog_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QColorDialog* self, void (*slot)(QObject*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*) ```
 void q_colordialog_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2474,7 +2474,7 @@ void q_colordialog_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QColorDialog* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, QObject*) ```
 void q_colordialog_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4194,7 +4194,7 @@ void q_colordialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QColorDialog* self, void (*slot)(QObject*, const char*) ```
+/// ``` QColorDialog* self, void (*slot)(QColorDialog*, const char*) ```
 void q_colordialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolordialog.html#dtor.QColorDialog)

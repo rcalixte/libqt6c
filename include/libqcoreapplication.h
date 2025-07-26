@@ -627,7 +627,7 @@ void q_coreapplication_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCoreApplication* self, void (*slot)(QObject*) ```
+/// ``` QCoreApplication* self, void (*slot)(QCoreApplication*) ```
 void q_coreapplication_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -690,7 +690,7 @@ void q_coreapplication_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCoreApplication* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QCoreApplication* self, void (*slot)(QCoreApplication*, QObject*) ```
 void q_coreapplication_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -976,7 +976,7 @@ void q_coreapplication_on_about_to_quit(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCoreApplication* self, void (*slot)(QObject*, const char*) ```
+/// ``` QCoreApplication* self, void (*slot)(QCoreApplication*, const char*) ```
 void q_coreapplication_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#dtor.QCoreApplication)

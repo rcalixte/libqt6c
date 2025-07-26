@@ -2289,7 +2289,7 @@ void q_pdfview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPdfView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*, const char*) ```
 void q_pdfview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2303,7 +2303,7 @@ void q_pdfview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPdfView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QIcon*) ```
 void q_pdfview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2317,7 +2317,7 @@ void q_pdfview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPdfView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*, const char*) ```
 void q_pdfview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2331,7 +2331,7 @@ void q_pdfview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPdfView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QPoint*) ```
 void q_pdfview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2646,7 +2646,7 @@ void q_pdfview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfView* self, void (*slot)(QObject*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*) ```
 void q_pdfview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2709,7 +2709,7 @@ void q_pdfview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*, QObject*) ```
 void q_pdfview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4402,7 +4402,7 @@ void q_pdfview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPdfView* self, void (*slot)(QPdfView*, const char*) ```
 void q_pdfview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfview.html#dtor.QPdfView)

@@ -1085,12 +1085,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				}
 
 				if addConnect {
-					var slotComma string
-					if len(m.Parameters) != 0 {
-						slotComma = ", "
-					}
+					slotComma := ifv(len(m.Parameters) != 0, ", ", "")
 					ret.WriteString(inheritedFrom + docCommentUrl + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
-						cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
+						cStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
 
 					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*slot)(void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
@@ -1107,7 +1104,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				var maybeStruct, maybeVoid, maybeComma string
+				var maybeCommentStruct, maybeVoid, maybeComma string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
@@ -1115,17 +1112,17 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeComma = ", "
 				}
 				if len(m.Parameters) != 0 {
-					maybeStruct = cmdStructName + "*" + maybeComma
+					maybeCommentStruct = cStructName + "*" + maybeComma
 					maybeVoid = "void*"
 				}
 				if showHiddenParams && len(m.HiddenParams) != 0 {
-					maybeStruct = cmdStructName + "*" + maybeComma
+					maybeCommentStruct = cStructName + "*" + maybeComma
 					maybeVoid = "void*"
 				}
 
 				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
-				ret.WriteString(inheritedFrom + docCommentUrl + onDocComment + "\n/// ``` " + cmdStructName +
-					"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
+				ret.WriteString(inheritedFrom + docCommentUrl + onDocComment + "\n/// ``` " + cStructName +
+					"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeCommentStruct +
 					cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
 					`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 					`(*slot)(` + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + `)` + `);` + "\n")
@@ -1225,24 +1222,24 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				commaParams + cfs.emitCommentParametersC(m.Parameters, false) + " ```\n" +
 				returnTypeDecl + ` ` + cmdMethodName + "_qbase" + safeMethodName + `(void* self` + commaParams + cfsParams + `);` + "\n")
 
-			var maybeStruct, maybeVoid string
+			var maybeCommentStruct, maybeVoid string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 				commaParams = ", "
 			}
 
 			if len(m.Parameters) != 0 {
-				maybeStruct = cmdStructName + "*" + commaParams
+				maybeCommentStruct = cStructName + "*" + commaParams
 				maybeVoid = "void*"
 			}
 			if showHiddenParams && len(m.HiddenParams) != 0 {
-				maybeStruct = cmdStructName + "*" + commaParams
+				maybeCommentStruct = cStructName + "*" + commaParams
 				maybeVoid = "void*"
 			}
 
 			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
 
-			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cmdStructName +
-				"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeStruct +
+			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// ``` " + cStructName +
+				"* self, " + m.ReturnType.renderReturnTypeC(&cfs) + " (*slot)(" + maybeCommentStruct +
 				cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n" +
 				`void ` + cmdMethodName + "_on" + safeMethodName + `(void* self, ` + m.ReturnType.renderReturnTypeC(&cfs) +
 				`(*slot)(` + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + `)` + `);` + "\n")
@@ -1282,7 +1279,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			headerComment := "/// Wrapper to allow calling private signal\n///"
 
 			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// ``` " + cStructName + "* self, void (*slot)(" +
-				cmdStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
+				cStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ") ```\n")
 
 			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*slot)(void*" +
 				slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")

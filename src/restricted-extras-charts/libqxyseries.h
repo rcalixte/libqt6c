@@ -811,7 +811,7 @@ void q_xyseries_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -825,7 +825,7 @@ void q_xyseries_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -839,7 +839,7 @@ void q_xyseries_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -853,7 +853,7 @@ void q_xyseries_use_open_g_l_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QXYSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -1084,7 +1084,7 @@ void q_xyseries_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYSeries* self, void (*slot)(QObject*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*) ```
 void q_xyseries_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1147,7 +1147,7 @@ void q_xyseries_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYSeries* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*, QObject*) ```
 void q_xyseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1156,7 +1156,7 @@ void q_xyseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QXYSeries* self, void (*slot)(QObject*, const char*) ```
+/// ``` QXYSeries* self, void (*slot)(QXYSeries*, const char*) ```
 void q_xyseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#dtor.QXYSeries)

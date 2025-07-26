@@ -271,7 +271,7 @@ void q_styleditemdelegate_commit_data(void* self, void* editor);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*, QWidget*) ```
 void q_styleditemdelegate_on_commit_data(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemDelegate
@@ -285,7 +285,7 @@ void q_styleditemdelegate_close_editor(void* self, void* editor);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*, QWidget*) ```
 void q_styleditemdelegate_on_close_editor(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemDelegate
@@ -299,7 +299,7 @@ void q_styleditemdelegate_size_hint_changed(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHintChanged)
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QModelIndex*) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*, QModelIndex*) ```
 void q_styleditemdelegate_on_size_hint_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemDelegate
@@ -313,7 +313,7 @@ void q_styleditemdelegate_close_editor2(void* self, void* editor, int64_t hint);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemdelegate.html#closeEditor)
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QAbstractItemDelegate*, QWidget*, enum QAbstractItemDelegate__EndEditHint) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*, QWidget*, enum QAbstractItemDelegate__EndEditHint) ```
 void q_styleditemdelegate_on_close_editor2(void* self, void (*slot)(void*, void*, int64_t));
 
 /// Inherited from QObject
@@ -516,7 +516,7 @@ void q_styleditemdelegate_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QObject*) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*) ```
 void q_styleditemdelegate_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -579,7 +579,7 @@ void q_styleditemdelegate_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*, QObject*) ```
 void q_styleditemdelegate_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemDelegate
@@ -939,7 +939,7 @@ void q_styleditemdelegate_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStyledItemDelegate* self, void (*slot)(QObject*, const char*) ```
+/// ``` QStyledItemDelegate* self, void (*slot)(QStyledItemDelegate*, const char*) ```
 void q_styleditemdelegate_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleditemdelegate.html#dtor.QStyledItemDelegate)

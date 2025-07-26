@@ -660,7 +660,7 @@ void q_chartview_rubber_band_changed(void* self, void* viewportRect, void* fromS
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#rubberBandChanged)
 ///
-/// ``` QChartView* self, void (*slot)(QGraphicsView*, QRect*, QPointF*, QPointF*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, QRect*, QPointF*, QPointF*) ```
 void q_chartview_on_rubber_band_changed(void* self, void (*slot)(void*, void*, void*, void*));
 
 /// Inherited from QGraphicsView
@@ -2739,7 +2739,7 @@ void q_chartview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QChartView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, const char*) ```
 void q_chartview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2753,7 +2753,7 @@ void q_chartview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QChartView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, QIcon*) ```
 void q_chartview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2767,7 +2767,7 @@ void q_chartview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QChartView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, const char*) ```
 void q_chartview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2781,7 +2781,7 @@ void q_chartview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QChartView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, QPoint*) ```
 void q_chartview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3082,7 +3082,7 @@ void q_chartview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QChartView* self, void (*slot)(QObject*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*) ```
 void q_chartview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3145,7 +3145,7 @@ void q_chartview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QChartView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, QObject*) ```
 void q_chartview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4946,7 +4946,7 @@ void q_chartview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QChartView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QChartView* self, void (*slot)(QChartView*, const char*) ```
 void q_chartview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchartview-qtcharts.html#dtor.QChartView)

@@ -2018,7 +2018,7 @@ void q_graphicsobject_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsObject* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsObject* self, void (*slot)(QGraphicsObject*) ```
 void q_graphicsobject_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2081,7 +2081,7 @@ void q_graphicsobject_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsObject* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsObject* self, void (*slot)(QGraphicsObject*, QObject*) ```
 void q_graphicsobject_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4541,7 +4541,7 @@ void q_graphicsobject_on_prepare_geometry_change(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsObject* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsObject* self, void (*slot)(QGraphicsObject*, const char*) ```
 void q_graphicsobject_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#dtor.QGraphicsObject)
@@ -20755,7 +20755,7 @@ void q_graphicstextitem_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20769,7 +20769,7 @@ void q_graphicstextitem_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20783,7 +20783,7 @@ void q_graphicstextitem_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20797,7 +20797,7 @@ void q_graphicstextitem_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20811,7 +20811,7 @@ void q_graphicstextitem_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20825,7 +20825,7 @@ void q_graphicstextitem_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20839,7 +20839,7 @@ void q_graphicstextitem_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20853,7 +20853,7 @@ void q_graphicstextitem_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20867,7 +20867,7 @@ void q_graphicstextitem_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20881,7 +20881,7 @@ void q_graphicstextitem_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20895,7 +20895,7 @@ void q_graphicstextitem_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -20909,7 +20909,7 @@ void q_graphicstextitem_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -21119,7 +21119,7 @@ void q_graphicstextitem_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*) ```
 void q_graphicstextitem_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -21182,7 +21182,7 @@ void q_graphicstextitem_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*, QObject*) ```
 void q_graphicstextitem_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -22913,7 +22913,7 @@ void q_graphicstextitem_on_prepare_geometry_change(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsTextItem* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsTextItem* self, void (*slot)(QGraphicsTextItem*, const char*) ```
 void q_graphicstextitem_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicstextitem.html#dtor.QGraphicsTextItem)

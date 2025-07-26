@@ -410,7 +410,7 @@ void q_undogroup_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoGroup* self, void (*slot)(QObject*) ```
+/// ``` QUndoGroup* self, void (*slot)(QUndoGroup*) ```
 void q_undogroup_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -473,7 +473,7 @@ void q_undogroup_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoGroup* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, QObject*) ```
 void q_undogroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -779,7 +779,7 @@ void q_undogroup_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QUndoGroup* self, void (*slot)(QObject*, const char*) ```
+/// ``` QUndoGroup* self, void (*slot)(QUndoGroup*, const char*) ```
 void q_undogroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundogroup.html#dtor.QUndoGroup)

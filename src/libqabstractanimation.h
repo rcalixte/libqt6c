@@ -480,7 +480,7 @@ void q_abstractanimation_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QObject*) ```
+/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*) ```
 void q_abstractanimation_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -543,7 +543,7 @@ void q_abstractanimation_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QObject*) ```
 void q_abstractanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -822,7 +822,7 @@ void q_abstractanimation_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, const char*) ```
 void q_abstractanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#dtor.QAbstractAnimation)
@@ -1210,7 +1210,7 @@ void q_animationdriver_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QObject*) ```
+/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*) ```
 void q_animationdriver_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1273,7 +1273,7 @@ void q_animationdriver_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QObject*) ```
 void q_animationdriver_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1579,7 +1579,7 @@ void q_animationdriver_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, const char*) ```
 void q_animationdriver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#dtor.QAnimationDriver)

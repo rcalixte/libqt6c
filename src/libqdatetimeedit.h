@@ -857,7 +857,7 @@ void q_datetimeedit_editing_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QAbstractSpinBox*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*) ```
 void q_datetimeedit_on_editing_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2600,7 +2600,7 @@ void q_datetimeedit_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, const char*) ```
 void q_datetimeedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2614,7 +2614,7 @@ void q_datetimeedit_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QIcon*) ```
 void q_datetimeedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2628,7 +2628,7 @@ void q_datetimeedit_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, const char*) ```
 void q_datetimeedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2642,7 +2642,7 @@ void q_datetimeedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QPoint*) ```
 void q_datetimeedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2957,7 +2957,7 @@ void q_datetimeedit_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QObject*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*) ```
 void q_datetimeedit_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3020,7 +3020,7 @@ void q_datetimeedit_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, QObject*) ```
 void q_datetimeedit_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4497,7 +4497,7 @@ void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDateTimeEdit* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDateTimeEdit* self, void (*slot)(QDateTimeEdit*, const char*) ```
 void q_datetimeedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dtor.QDateTimeEdit)
@@ -4901,7 +4901,7 @@ void q_timeedit_date_time_changed(void* self, void* dateTime);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QDateTimeEdit*, QDateTime*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QDateTime*) ```
 void q_timeedit_on_date_time_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -4915,7 +4915,7 @@ void q_timeedit_time_changed(void* self, void* time);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QDateTimeEdit*, QTime*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QTime*) ```
 void q_timeedit_on_time_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -4929,7 +4929,7 @@ void q_timeedit_date_changed(void* self, void* date);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QDateTimeEdit*, QDate*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QDate*) ```
 void q_timeedit_on_date_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -5146,7 +5146,7 @@ void q_timeedit_editing_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QAbstractSpinBox*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*) ```
 void q_timeedit_on_editing_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -6889,7 +6889,7 @@ void q_timeedit_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, const char*) ```
 void q_timeedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6903,7 +6903,7 @@ void q_timeedit_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QIcon*) ```
 void q_timeedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -6917,7 +6917,7 @@ void q_timeedit_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, const char*) ```
 void q_timeedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6931,7 +6931,7 @@ void q_timeedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QPoint*) ```
 void q_timeedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -7246,7 +7246,7 @@ void q_timeedit_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QObject*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*) ```
 void q_timeedit_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -7309,7 +7309,7 @@ void q_timeedit_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimeEdit* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, QObject*) ```
 void q_timeedit_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -9218,7 +9218,7 @@ void q_timeedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimeEdit* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTimeEdit* self, void (*slot)(QTimeEdit*, const char*) ```
 void q_timeedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeedit.html#dtor.QTimeEdit)
@@ -9622,7 +9622,7 @@ void q_dateedit_date_time_changed(void* self, void* dateTime);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
-/// ``` QDateEdit* self, void (*slot)(QDateTimeEdit*, QDateTime*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, QDateTime*) ```
 void q_dateedit_on_date_time_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -9636,7 +9636,7 @@ void q_dateedit_time_changed(void* self, void* time);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeChanged)
 ///
-/// ``` QDateEdit* self, void (*slot)(QDateTimeEdit*, QTime*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, QTime*) ```
 void q_dateedit_on_time_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -9650,7 +9650,7 @@ void q_dateedit_date_changed(void* self, void* date);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#dateChanged)
 ///
-/// ``` QDateEdit* self, void (*slot)(QDateTimeEdit*, QDate*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, QDate*) ```
 void q_dateedit_on_date_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QDateTimeEdit
@@ -9867,7 +9867,7 @@ void q_dateedit_editing_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
-/// ``` QDateEdit* self, void (*slot)(QAbstractSpinBox*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*) ```
 void q_dateedit_on_editing_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -11610,7 +11610,7 @@ void q_dateedit_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDateEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, const char*) ```
 void q_dateedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -11624,7 +11624,7 @@ void q_dateedit_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDateEdit* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, QIcon*) ```
 void q_dateedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -11638,7 +11638,7 @@ void q_dateedit_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDateEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, const char*) ```
 void q_dateedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -11652,7 +11652,7 @@ void q_dateedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDateEdit* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, QPoint*) ```
 void q_dateedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -11967,7 +11967,7 @@ void q_dateedit_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDateEdit* self, void (*slot)(QObject*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*) ```
 void q_dateedit_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -12030,7 +12030,7 @@ void q_dateedit_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDateEdit* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, QObject*) ```
 void q_dateedit_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -13939,7 +13939,7 @@ void q_dateedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDateEdit* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDateEdit* self, void (*slot)(QDateEdit*, const char*) ```
 void q_dateedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdateedit.html#dtor.QDateEdit)

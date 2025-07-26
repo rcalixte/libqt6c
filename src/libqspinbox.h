@@ -458,7 +458,7 @@ void q_spinbox_editing_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
-/// ``` QSpinBox* self, void (*slot)(QAbstractSpinBox*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*) ```
 void q_spinbox_on_editing_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2201,7 +2201,7 @@ void q_spinbox_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QSpinBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*, const char*) ```
 void q_spinbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2215,7 +2215,7 @@ void q_spinbox_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QSpinBox* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*, QIcon*) ```
 void q_spinbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2229,7 +2229,7 @@ void q_spinbox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QSpinBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*, const char*) ```
 void q_spinbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2243,7 +2243,7 @@ void q_spinbox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QSpinBox* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*, QPoint*) ```
 void q_spinbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2558,7 +2558,7 @@ void q_spinbox_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSpinBox* self, void (*slot)(QObject*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*) ```
 void q_spinbox_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2621,7 +2621,7 @@ void q_spinbox_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSpinBox* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*, QObject*) ```
 void q_spinbox_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4395,7 +4395,7 @@ void q_spinbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSpinBox* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSpinBox* self, void (*slot)(QSpinBox*, const char*) ```
 void q_spinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspinbox.html#dtor.QSpinBox)
@@ -4832,7 +4832,7 @@ void q_doublespinbox_editing_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractspinbox.html#editingFinished)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QAbstractSpinBox*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*) ```
 void q_doublespinbox_on_editing_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -6575,7 +6575,7 @@ void q_doublespinbox_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*, const char*) ```
 void q_doublespinbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6589,7 +6589,7 @@ void q_doublespinbox_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*, QIcon*) ```
 void q_doublespinbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -6603,7 +6603,7 @@ void q_doublespinbox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*, const char*) ```
 void q_doublespinbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6617,7 +6617,7 @@ void q_doublespinbox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*, QPoint*) ```
 void q_doublespinbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -6932,7 +6932,7 @@ void q_doublespinbox_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QObject*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*) ```
 void q_doublespinbox_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -6995,7 +6995,7 @@ void q_doublespinbox_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*, QObject*) ```
 void q_doublespinbox_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8796,7 +8796,7 @@ void q_doublespinbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDoubleSpinBox* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDoubleSpinBox* self, void (*slot)(QDoubleSpinBox*, const char*) ```
 void q_doublespinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublespinbox.html#dtor.QDoubleSpinBox)

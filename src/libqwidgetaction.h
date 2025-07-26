@@ -552,7 +552,7 @@ void q_widgetaction_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#changed)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*) ```
 void q_widgetaction_on_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAction
@@ -566,7 +566,7 @@ void q_widgetaction_enabled_changed(void* self, bool enabled);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#enabledChanged)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, bool) ```
 void q_widgetaction_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAction
@@ -580,7 +580,7 @@ void q_widgetaction_checkable_changed(void* self, bool checkable);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#checkableChanged)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, bool) ```
 void q_widgetaction_on_checkable_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAction
@@ -594,7 +594,7 @@ void q_widgetaction_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#visibleChanged)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*) ```
 void q_widgetaction_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAction
@@ -608,7 +608,7 @@ void q_widgetaction_triggered(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*) ```
 void q_widgetaction_on_triggered(void* self, void (*slot)(void*));
 
 /// Inherited from QAction
@@ -622,7 +622,7 @@ void q_widgetaction_hovered(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#hovered)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*) ```
 void q_widgetaction_on_hovered(void* self, void (*slot)(void*));
 
 /// Inherited from QAction
@@ -636,7 +636,7 @@ void q_widgetaction_toggled(void* self, bool param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#toggled)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, bool) ```
 void q_widgetaction_on_toggled(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAction
@@ -657,7 +657,7 @@ void q_widgetaction_triggered1(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#triggered)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QAction*, bool) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, bool) ```
 void q_widgetaction_on_triggered1(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QObject
@@ -860,7 +860,7 @@ void q_widgetaction_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QObject*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*) ```
 void q_widgetaction_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -923,7 +923,7 @@ void q_widgetaction_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWidgetAction* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, QObject*) ```
 void q_widgetaction_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1175,7 +1175,7 @@ void q_widgetaction_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWidgetAction* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWidgetAction* self, void (*slot)(QWidgetAction*, const char*) ```
 void q_widgetaction_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetaction.html#dtor.QWidgetAction)

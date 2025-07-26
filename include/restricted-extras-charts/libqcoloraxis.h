@@ -638,7 +638,7 @@ void q_coloraxis_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -652,7 +652,7 @@ void q_coloraxis_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QPen*) ```
 void q_coloraxis_on_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -666,7 +666,7 @@ void q_coloraxis_line_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_line_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -680,7 +680,7 @@ void q_coloraxis_labels_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -694,7 +694,7 @@ void q_coloraxis_labels_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QBrush*) ```
 void q_coloraxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -708,7 +708,7 @@ void q_coloraxis_labels_font_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QFont*) ```
 void q_coloraxis_on_labels_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -722,7 +722,7 @@ void q_coloraxis_labels_angle_changed(void* self, int angle);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, int) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, int) ```
 void q_coloraxis_on_labels_angle_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -736,7 +736,7 @@ void q_coloraxis_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QPen*) ```
 void q_coloraxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -750,7 +750,7 @@ void q_coloraxis_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -764,7 +764,7 @@ void q_coloraxis_minor_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -778,7 +778,7 @@ void q_coloraxis_minor_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QPen*) ```
 void q_coloraxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -792,7 +792,7 @@ void q_coloraxis_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QColor*) ```
 void q_coloraxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -806,7 +806,7 @@ void q_coloraxis_minor_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QColor*) ```
 void q_coloraxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -820,7 +820,7 @@ void q_coloraxis_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QColor*) ```
 void q_coloraxis_on_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -834,7 +834,7 @@ void q_coloraxis_labels_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QColor*) ```
 void q_coloraxis_on_labels_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -848,7 +848,7 @@ void q_coloraxis_title_text_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, const char*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, const char*) ```
 void q_coloraxis_on_title_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -862,7 +862,7 @@ void q_coloraxis_title_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QBrush*) ```
 void q_coloraxis_on_title_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -876,7 +876,7 @@ void q_coloraxis_title_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_title_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -890,7 +890,7 @@ void q_coloraxis_title_font_changed(void* self, void* font);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QFont*) ```
 void q_coloraxis_on_title_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -904,7 +904,7 @@ void q_coloraxis_shades_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -918,7 +918,7 @@ void q_coloraxis_shades_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QColor*) ```
 void q_coloraxis_on_shades_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -932,7 +932,7 @@ void q_coloraxis_shades_border_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QColor*) ```
 void q_coloraxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -946,7 +946,7 @@ void q_coloraxis_shades_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QPen*) ```
 void q_coloraxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -960,7 +960,7 @@ void q_coloraxis_shades_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QBrush*) ```
 void q_coloraxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -974,7 +974,7 @@ void q_coloraxis_reverse_changed(void* self, bool reverse);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_reverse_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -988,7 +988,7 @@ void q_coloraxis_labels_editable_changed(void* self, bool editable);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1002,7 +1002,7 @@ void q_coloraxis_labels_truncated_changed(void* self, bool labelsTruncated);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1016,7 +1016,7 @@ void q_coloraxis_truncate_labels_changed(void* self, bool truncateLabels);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
-/// ``` QColorAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, bool) ```
 void q_coloraxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1289,7 +1289,7 @@ void q_coloraxis_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QColorAxis* self, void (*slot)(QObject*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*) ```
 void q_coloraxis_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1352,7 +1352,7 @@ void q_coloraxis_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QColorAxis* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, QObject*) ```
 void q_coloraxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1658,7 +1658,7 @@ void q_coloraxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QColorAxis* self, void (*slot)(QObject*, const char*) ```
+/// ``` QColorAxis* self, void (*slot)(QColorAxis*, const char*) ```
 void q_coloraxis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoloraxis-qtcharts.html#dtor.QColorAxis)

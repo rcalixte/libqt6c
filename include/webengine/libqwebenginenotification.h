@@ -319,7 +319,7 @@ void q_webenginenotification_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QObject*) ```
+/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*) ```
 void q_webenginenotification_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -382,7 +382,7 @@ void q_webenginenotification_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*, QObject*) ```
 void q_webenginenotification_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -391,7 +391,7 @@ void q_webenginenotification_on_destroyed1(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*, const char*) ```
 void q_webenginenotification_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#dtor.QWebEngineNotification)

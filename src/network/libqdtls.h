@@ -290,7 +290,7 @@ void q_dtlsclientverifier_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDtlsClientVerifier* self, void (*slot)(QObject*) ```
+/// ``` QDtlsClientVerifier* self, void (*slot)(QDtlsClientVerifier*) ```
 void q_dtlsclientverifier_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -353,7 +353,7 @@ void q_dtlsclientverifier_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDtlsClientVerifier* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDtlsClientVerifier* self, void (*slot)(QDtlsClientVerifier*, QObject*) ```
 void q_dtlsclientverifier_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -659,7 +659,7 @@ void q_dtlsclientverifier_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDtlsClientVerifier* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDtlsClientVerifier* self, void (*slot)(QDtlsClientVerifier*, const char*) ```
 void q_dtlsclientverifier_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier.html#dtor.QDtlsClientVerifier)
@@ -1082,7 +1082,7 @@ void q_dtls_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDtls* self, void (*slot)(QObject*) ```
+/// ``` QDtls* self, void (*slot)(QDtls*) ```
 void q_dtls_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1145,7 +1145,7 @@ void q_dtls_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDtls* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDtls* self, void (*slot)(QDtls*, QObject*) ```
 void q_dtls_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1451,7 +1451,7 @@ void q_dtls_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDtls* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDtls* self, void (*slot)(QDtls*, const char*) ```
 void q_dtls_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#dtor.QDtls)

@@ -412,7 +412,7 @@ void q_filedevice_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QFileDevice* self, void (*slot)(QIODevice*) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
 void q_filedevice_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -426,7 +426,7 @@ void q_filedevice_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QFileDevice* self, void (*slot)(QIODevice*, int) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*, int) ```
 void q_filedevice_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -440,7 +440,7 @@ void q_filedevice_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QFileDevice* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*, long long) ```
 void q_filedevice_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -454,7 +454,7 @@ void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QFileDevice* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*, int, long long) ```
 void q_filedevice_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -468,7 +468,7 @@ void q_filedevice_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QFileDevice* self, void (*slot)(QIODevice*) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
 void q_filedevice_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -482,7 +482,7 @@ void q_filedevice_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QFileDevice* self, void (*slot)(QIODevice*) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
 void q_filedevice_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -706,7 +706,7 @@ void q_filedevice_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileDevice* self, void (*slot)(QObject*) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
 void q_filedevice_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -769,7 +769,7 @@ void q_filedevice_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileDevice* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*, QObject*) ```
 void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -778,7 +778,7 @@ void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileDevice* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFileDevice* self, void (*slot)(QFileDevice*, const char*) ```
 void q_filedevice_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#dtor.QFileDevice)

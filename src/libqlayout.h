@@ -846,7 +846,7 @@ void q_layout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLayout* self, void (*slot)(QObject*) ```
+/// ``` QLayout* self, void (*slot)(QLayout*) ```
 void q_layout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -909,7 +909,7 @@ void q_layout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QLayout* self, void (*slot)(QLayout*, QObject*) ```
 void q_layout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1357,7 +1357,7 @@ void q_layout_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QLayout* self, void (*slot)(QLayout*, const char*) ```
 void q_layout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#dtor.QLayout)

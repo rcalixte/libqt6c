@@ -485,7 +485,7 @@ void q_imagecapture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QImageCapture* self, void (*slot)(QObject*) ```
+/// ``` QImageCapture* self, void (*slot)(QImageCapture*) ```
 void q_imagecapture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -548,7 +548,7 @@ void q_imagecapture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QImageCapture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QImageCapture* self, void (*slot)(QImageCapture*, QObject*) ```
 void q_imagecapture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -854,7 +854,7 @@ void q_imagecapture_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QImageCapture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QImageCapture* self, void (*slot)(QImageCapture*, const char*) ```
 void q_imagecapture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#dtor.QImageCapture)

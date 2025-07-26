@@ -207,7 +207,7 @@ void q_boxplotlegendmarker_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -221,7 +221,7 @@ void q_boxplotlegendmarker_hovered(void* self, bool status);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*, bool) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*, bool) ```
 void q_boxplotlegendmarker_on_hovered(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QLegendMarker
@@ -235,7 +235,7 @@ void q_boxplotlegendmarker_label_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_label_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -249,7 +249,7 @@ void q_boxplotlegendmarker_label_brush_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_label_brush_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -263,7 +263,7 @@ void q_boxplotlegendmarker_font_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_font_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -277,7 +277,7 @@ void q_boxplotlegendmarker_pen_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_pen_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -291,7 +291,7 @@ void q_boxplotlegendmarker_brush_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_brush_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -305,7 +305,7 @@ void q_boxplotlegendmarker_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -319,7 +319,7 @@ void q_boxplotlegendmarker_shape_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_shape_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -522,7 +522,7 @@ void q_boxplotlegendmarker_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QObject*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*) ```
 void q_boxplotlegendmarker_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -585,7 +585,7 @@ void q_boxplotlegendmarker_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*, QObject*) ```
 void q_boxplotlegendmarker_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -891,7 +891,7 @@ void q_boxplotlegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QBoxPlotLegendMarker* self, void (*slot)(QObject*, const char*) ```
+/// ``` QBoxPlotLegendMarker* self, void (*slot)(QBoxPlotLegendMarker*, const char*) ```
 void q_boxplotlegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotlegendmarker-qtcharts.html#dtor.QBoxPlotLegendMarker)

@@ -212,7 +212,7 @@ void q_barlegendmarker_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -226,7 +226,7 @@ void q_barlegendmarker_hovered(void* self, bool status);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*, bool) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*, bool) ```
 void q_barlegendmarker_on_hovered(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QLegendMarker
@@ -240,7 +240,7 @@ void q_barlegendmarker_label_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_label_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -254,7 +254,7 @@ void q_barlegendmarker_label_brush_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_label_brush_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -268,7 +268,7 @@ void q_barlegendmarker_font_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_font_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -282,7 +282,7 @@ void q_barlegendmarker_pen_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_pen_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -296,7 +296,7 @@ void q_barlegendmarker_brush_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_brush_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -310,7 +310,7 @@ void q_barlegendmarker_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -324,7 +324,7 @@ void q_barlegendmarker_shape_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_shape_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -527,7 +527,7 @@ void q_barlegendmarker_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QObject*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*) ```
 void q_barlegendmarker_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -590,7 +590,7 @@ void q_barlegendmarker_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*, QObject*) ```
 void q_barlegendmarker_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -896,7 +896,7 @@ void q_barlegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QBarLegendMarker* self, void (*slot)(QObject*, const char*) ```
+/// ``` QBarLegendMarker* self, void (*slot)(QBarLegendMarker*, const char*) ```
 void q_barlegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#dtor.QBarLegendMarker)

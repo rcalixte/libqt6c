@@ -1984,7 +1984,7 @@ void q_frame_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QFrame* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*, const char*) ```
 void q_frame_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -1998,7 +1998,7 @@ void q_frame_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QFrame* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*, QIcon*) ```
 void q_frame_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2012,7 +2012,7 @@ void q_frame_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QFrame* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*, const char*) ```
 void q_frame_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2026,7 +2026,7 @@ void q_frame_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QFrame* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*, QPoint*) ```
 void q_frame_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2341,7 +2341,7 @@ void q_frame_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFrame* self, void (*slot)(QObject*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*) ```
 void q_frame_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2404,7 +2404,7 @@ void q_frame_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFrame* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*, QObject*) ```
 void q_frame_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3935,7 +3935,7 @@ void q_frame_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFrame* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFrame* self, void (*slot)(QFrame*, const char*) ```
 void q_frame_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#dtor.QFrame)

@@ -374,7 +374,7 @@ void q_abstracteventdispatcher_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractEventDispatcher* self, void (*slot)(QObject*) ```
+/// ``` QAbstractEventDispatcher* self, void (*slot)(QAbstractEventDispatcher*) ```
 void q_abstracteventdispatcher_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -437,7 +437,7 @@ void q_abstracteventdispatcher_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractEventDispatcher* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractEventDispatcher* self, void (*slot)(QAbstractEventDispatcher*, QObject*) ```
 void q_abstracteventdispatcher_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -446,7 +446,7 @@ void q_abstracteventdispatcher_on_destroyed1(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractEventDispatcher* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractEventDispatcher* self, void (*slot)(QAbstractEventDispatcher*, const char*) ```
 void q_abstracteventdispatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#dtor.QAbstractEventDispatcher)
@@ -629,7 +629,7 @@ void q_abstracteventdispatcherv2_about_to_block(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#aboutToBlock)
 ///
-/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcher*) ```
+/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcherV2*) ```
 void q_abstracteventdispatcherv2_on_about_to_block(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractEventDispatcher
@@ -643,7 +643,7 @@ void q_abstracteventdispatcherv2_awake(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#awake)
 ///
-/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcher*) ```
+/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcherV2*) ```
 void q_abstracteventdispatcherv2_on_awake(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractEventDispatcher
@@ -867,7 +867,7 @@ void q_abstracteventdispatcherv2_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QObject*) ```
+/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcherV2*) ```
 void q_abstracteventdispatcherv2_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -930,7 +930,7 @@ void q_abstracteventdispatcherv2_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcherV2*, QObject*) ```
 void q_abstracteventdispatcherv2_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -939,7 +939,7 @@ void q_abstracteventdispatcherv2_on_destroyed1(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractEventDispatcherV2* self, void (*slot)(QAbstractEventDispatcherV2*, const char*) ```
 void q_abstracteventdispatcherv2_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#dtor.QAbstractEventDispatcherV2)

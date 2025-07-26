@@ -2524,7 +2524,7 @@ void q_tabbar_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*, const char*) ```
 void q_tabbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2538,7 +2538,7 @@ void q_tabbar_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*, QIcon*) ```
 void q_tabbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2552,7 +2552,7 @@ void q_tabbar_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*, const char*) ```
 void q_tabbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2566,7 +2566,7 @@ void q_tabbar_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTabBar* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*, QPoint*) ```
 void q_tabbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2881,7 +2881,7 @@ void q_tabbar_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTabBar* self, void (*slot)(QObject*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*) ```
 void q_tabbar_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2944,7 +2944,7 @@ void q_tabbar_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTabBar* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*, QObject*) ```
 void q_tabbar_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4178,7 +4178,7 @@ void q_tabbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTabBar* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTabBar* self, void (*slot)(QTabBar*, const char*) ```
 void q_tabbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#dtor.QTabBar)

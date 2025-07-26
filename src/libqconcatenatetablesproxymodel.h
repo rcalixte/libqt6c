@@ -437,7 +437,7 @@ void q_concatenatetablesproxymodel_data_changed(void* self, void* topLeft, void*
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*) ```
 void q_concatenatetablesproxymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -451,7 +451,7 @@ void q_concatenatetablesproxymodel_header_data_changed(void* self, int64_t orien
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, enum Qt__Orientation, int, int) ```
 void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -465,7 +465,7 @@ void q_concatenatetablesproxymodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
 void q_concatenatetablesproxymodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -479,7 +479,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
 void q_concatenatetablesproxymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -535,7 +535,7 @@ void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -549,7 +549,7 @@ void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -563,7 +563,7 @@ void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -577,7 +577,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -591,7 +591,7 @@ void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -794,7 +794,7 @@ void q_concatenatetablesproxymodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QObject*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
 void q_concatenatetablesproxymodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -850,7 +850,7 @@ void q_concatenatetablesproxymodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QObject*) ```
 void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2290,7 +2290,7 @@ void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2299,7 +2299,7 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2308,7 +2308,7 @@ void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2317,7 +2317,7 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2326,7 +2326,7 @@ void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2335,7 +2335,7 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2344,7 +2344,7 @@ void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2353,7 +2353,7 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
 void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2362,7 +2362,7 @@ void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
 void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2371,7 +2371,7 @@ void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
 void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2380,7 +2380,7 @@ void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2389,7 +2389,7 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2398,7 +2398,7 @@ void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2407,7 +2407,7 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2416,7 +2416,7 @@ void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, const char*) ```
 void q_concatenatetablesproxymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dtor.QConcatenateTablesProxyModel)

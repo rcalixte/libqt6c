@@ -388,7 +388,7 @@ void q_boxplotseries_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -402,7 +402,7 @@ void q_boxplotseries_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -416,7 +416,7 @@ void q_boxplotseries_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -430,7 +430,7 @@ void q_boxplotseries_use_open_g_l_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -647,7 +647,7 @@ void q_boxplotseries_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QObject*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*) ```
 void q_boxplotseries_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -710,7 +710,7 @@ void q_boxplotseries_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, QObject*) ```
 void q_boxplotseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1016,7 +1016,7 @@ void q_boxplotseries_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QBoxPlotSeries* self, void (*slot)(QObject*, const char*) ```
+/// ``` QBoxPlotSeries* self, void (*slot)(QBoxPlotSeries*, const char*) ```
 void q_boxplotseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxplotseries-qtcharts.html#dtor.QBoxPlotSeries)

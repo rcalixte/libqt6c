@@ -279,7 +279,7 @@ void q_webenginenewwindowrequest_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QObject*) ```
+/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QWebEngineNewWindowRequest*) ```
 void q_webenginenewwindowrequest_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -342,7 +342,7 @@ void q_webenginenewwindowrequest_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QWebEngineNewWindowRequest*, QObject*) ```
 void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -351,7 +351,7 @@ void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QWebEngineNewWindowRequest*, const char*) ```
 void q_webenginenewwindowrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#dtor.QWebEngineNewWindowRequest)

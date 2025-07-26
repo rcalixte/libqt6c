@@ -633,7 +633,7 @@ void q_logvalueaxis_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -647,7 +647,7 @@ void q_logvalueaxis_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QPen*) ```
 void q_logvalueaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -661,7 +661,7 @@ void q_logvalueaxis_line_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -675,7 +675,7 @@ void q_logvalueaxis_labels_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -689,7 +689,7 @@ void q_logvalueaxis_labels_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QBrush*) ```
 void q_logvalueaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -703,7 +703,7 @@ void q_logvalueaxis_labels_font_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QFont*) ```
 void q_logvalueaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -717,7 +717,7 @@ void q_logvalueaxis_labels_angle_changed(void* self, int angle);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, int) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, int) ```
 void q_logvalueaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -731,7 +731,7 @@ void q_logvalueaxis_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QPen*) ```
 void q_logvalueaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -745,7 +745,7 @@ void q_logvalueaxis_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -759,7 +759,7 @@ void q_logvalueaxis_minor_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -773,7 +773,7 @@ void q_logvalueaxis_minor_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QPen*) ```
 void q_logvalueaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -787,7 +787,7 @@ void q_logvalueaxis_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QColor*) ```
 void q_logvalueaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -801,7 +801,7 @@ void q_logvalueaxis_minor_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QColor*) ```
 void q_logvalueaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -815,7 +815,7 @@ void q_logvalueaxis_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QColor*) ```
 void q_logvalueaxis_on_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -829,7 +829,7 @@ void q_logvalueaxis_labels_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QColor*) ```
 void q_logvalueaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -843,7 +843,7 @@ void q_logvalueaxis_title_text_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, const char*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, const char*) ```
 void q_logvalueaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -857,7 +857,7 @@ void q_logvalueaxis_title_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QBrush*) ```
 void q_logvalueaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -871,7 +871,7 @@ void q_logvalueaxis_title_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -885,7 +885,7 @@ void q_logvalueaxis_title_font_changed(void* self, void* font);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QFont*) ```
 void q_logvalueaxis_on_title_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -899,7 +899,7 @@ void q_logvalueaxis_shades_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -913,7 +913,7 @@ void q_logvalueaxis_shades_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QColor*) ```
 void q_logvalueaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -927,7 +927,7 @@ void q_logvalueaxis_shades_border_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QColor*) ```
 void q_logvalueaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -941,7 +941,7 @@ void q_logvalueaxis_shades_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QPen*) ```
 void q_logvalueaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -955,7 +955,7 @@ void q_logvalueaxis_shades_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QBrush*) ```
 void q_logvalueaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -969,7 +969,7 @@ void q_logvalueaxis_reverse_changed(void* self, bool reverse);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_reverse_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -983,7 +983,7 @@ void q_logvalueaxis_labels_editable_changed(void* self, bool editable);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -997,7 +997,7 @@ void q_logvalueaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1011,7 +1011,7 @@ void q_logvalueaxis_truncate_labels_changed(void* self, bool truncateLabels);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, bool) ```
 void q_logvalueaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1284,7 +1284,7 @@ void q_logvalueaxis_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QObject*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*) ```
 void q_logvalueaxis_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1347,7 +1347,7 @@ void q_logvalueaxis_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, QObject*) ```
 void q_logvalueaxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1653,7 +1653,7 @@ void q_logvalueaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLogValueAxis* self, void (*slot)(QObject*, const char*) ```
+/// ``` QLogValueAxis* self, void (*slot)(QLogValueAxis*, const char*) ```
 void q_logvalueaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlogvalueaxis-qtcharts.html#dtor.QLogValueAxis)

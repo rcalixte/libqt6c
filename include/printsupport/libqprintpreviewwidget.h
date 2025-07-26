@@ -1979,7 +1979,7 @@ void q_printpreviewwidget_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, const char*) ```
 void q_printpreviewwidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -1993,7 +1993,7 @@ void q_printpreviewwidget_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QIcon*) ```
 void q_printpreviewwidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2007,7 +2007,7 @@ void q_printpreviewwidget_window_icon_text_changed(void* self, const char* iconT
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, const char*) ```
 void q_printpreviewwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2021,7 +2021,7 @@ void q_printpreviewwidget_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QPoint*) ```
 void q_printpreviewwidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2336,7 +2336,7 @@ void q_printpreviewwidget_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QObject*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*) ```
 void q_printpreviewwidget_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2399,7 +2399,7 @@ void q_printpreviewwidget_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QObject*) ```
 void q_printpreviewwidget_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4011,7 +4011,7 @@ void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, const char*) ```
 void q_printpreviewwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#dtor.QPrintPreviewWidget)

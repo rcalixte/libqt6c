@@ -274,7 +274,7 @@ void q_textobject_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextObject* self, void (*slot)(QObject*) ```
+/// ``` QTextObject* self, void (*slot)(QTextObject*) ```
 void q_textobject_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -337,7 +337,7 @@ void q_textobject_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextObject* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTextObject* self, void (*slot)(QTextObject*, QObject*) ```
 void q_textobject_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -346,7 +346,7 @@ void q_textobject_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextObject* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTextObject* self, void (*slot)(QTextObject*, const char*) ```
 void q_textobject_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qtextblockgroup.html
@@ -619,7 +619,7 @@ void q_textblockgroup_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBlockGroup* self, void (*slot)(QObject*) ```
+/// ``` QTextBlockGroup* self, void (*slot)(QTextBlockGroup*) ```
 void q_textblockgroup_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -682,7 +682,7 @@ void q_textblockgroup_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBlockGroup* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTextBlockGroup* self, void (*slot)(QTextBlockGroup*, QObject*) ```
 void q_textblockgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -691,7 +691,7 @@ void q_textblockgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextBlockGroup* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTextBlockGroup* self, void (*slot)(QTextBlockGroup*, const char*) ```
 void q_textblockgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qtextframelayoutdata.html
@@ -1039,7 +1039,7 @@ void q_textframe_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextFrame* self, void (*slot)(QObject*) ```
+/// ``` QTextFrame* self, void (*slot)(QTextFrame*) ```
 void q_textframe_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1102,7 +1102,7 @@ void q_textframe_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextFrame* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QObject*) ```
 void q_textframe_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1435,7 +1435,7 @@ void q_textframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextFrame* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTextFrame* self, void (*slot)(QTextFrame*, const char*) ```
 void q_textframe_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#dtor.QTextFrame)

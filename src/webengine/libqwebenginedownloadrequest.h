@@ -459,7 +459,7 @@ void q_webenginedownloadrequest_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineDownloadRequest* self, void (*slot)(QObject*) ```
+/// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*) ```
 void q_webenginedownloadrequest_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -522,7 +522,7 @@ void q_webenginedownloadrequest_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineDownloadRequest* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*, QObject*) ```
 void q_webenginedownloadrequest_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -531,7 +531,7 @@ void q_webenginedownloadrequest_on_destroyed1(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineDownloadRequest* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebEngineDownloadRequest* self, void (*slot)(QWebEngineDownloadRequest*, const char*) ```
 void q_webenginedownloadrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#dtor.QWebEngineDownloadRequest)

@@ -438,7 +438,7 @@ void q_sciapis_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QObject*) ```
+/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*) ```
 void q_sciapis_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -501,7 +501,7 @@ void q_sciapis_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QObject*) ```
 void q_sciapis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -780,7 +780,7 @@ void q_sciapis_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciAPIs* self, void (*slot)(QObject*, const char*) ```
+/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, const char*) ```
 void q_sciapis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)

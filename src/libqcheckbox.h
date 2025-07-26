@@ -479,7 +479,7 @@ void q_checkbox_pressed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
-/// ``` QCheckBox* self, void (*slot)(QAbstractButton*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*) ```
 void q_checkbox_on_pressed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -493,7 +493,7 @@ void q_checkbox_released(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
-/// ``` QCheckBox* self, void (*slot)(QAbstractButton*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*) ```
 void q_checkbox_on_released(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -507,7 +507,7 @@ void q_checkbox_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCheckBox* self, void (*slot)(QAbstractButton*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*) ```
 void q_checkbox_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -521,7 +521,7 @@ void q_checkbox_toggled(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
-/// ``` QCheckBox* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, bool) ```
 void q_checkbox_on_toggled(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -535,7 +535,7 @@ void q_checkbox_clicked1(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCheckBox* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, bool) ```
 void q_checkbox_on_clicked1(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QWidget
@@ -2278,7 +2278,7 @@ void q_checkbox_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QCheckBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, const char*) ```
 void q_checkbox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2292,7 +2292,7 @@ void q_checkbox_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QCheckBox* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, QIcon*) ```
 void q_checkbox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2306,7 +2306,7 @@ void q_checkbox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QCheckBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, const char*) ```
 void q_checkbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2320,7 +2320,7 @@ void q_checkbox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QCheckBox* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, QPoint*) ```
 void q_checkbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2635,7 +2635,7 @@ void q_checkbox_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCheckBox* self, void (*slot)(QObject*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*) ```
 void q_checkbox_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2698,7 +2698,7 @@ void q_checkbox_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCheckBox* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, QObject*) ```
 void q_checkbox_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4202,7 +4202,7 @@ void q_checkbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCheckBox* self, void (*slot)(QObject*, const char*) ```
+/// ``` QCheckBox* self, void (*slot)(QCheckBox*, const char*) ```
 void q_checkbox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcheckbox.html#dtor.QCheckBox)

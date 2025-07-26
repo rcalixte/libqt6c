@@ -275,7 +275,7 @@ void q_pointingdevice_available_virtual_geometry_changed(void* self, void* area)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#availableVirtualGeometryChanged)
 ///
-/// ``` QPointingDevice* self, void (*slot)(QInputDevice*, QRect*) ```
+/// ``` QPointingDevice* self, void (*slot)(QPointingDevice*, QRect*) ```
 void q_pointingdevice_on_available_virtual_geometry_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QInputDevice
@@ -485,7 +485,7 @@ void q_pointingdevice_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPointingDevice* self, void (*slot)(QObject*) ```
+/// ``` QPointingDevice* self, void (*slot)(QPointingDevice*) ```
 void q_pointingdevice_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -548,7 +548,7 @@ void q_pointingdevice_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPointingDevice* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPointingDevice* self, void (*slot)(QPointingDevice*, QObject*) ```
 void q_pointingdevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -854,7 +854,7 @@ void q_pointingdevice_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPointingDevice* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPointingDevice* self, void (*slot)(QPointingDevice*, const char*) ```
 void q_pointingdevice_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#dtor.QPointingDevice)

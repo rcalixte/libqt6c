@@ -789,7 +789,7 @@ void q_chart_geometry_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_geometry_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -803,7 +803,7 @@ void q_chart_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -866,7 +866,7 @@ void q_chart_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -880,7 +880,7 @@ void q_chart_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -894,7 +894,7 @@ void q_chart_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -908,7 +908,7 @@ void q_chart_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -922,7 +922,7 @@ void q_chart_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -936,7 +936,7 @@ void q_chart_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -950,7 +950,7 @@ void q_chart_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -964,7 +964,7 @@ void q_chart_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -978,7 +978,7 @@ void q_chart_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -992,7 +992,7 @@ void q_chart_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1006,7 +1006,7 @@ void q_chart_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1020,7 +1020,7 @@ void q_chart_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1230,7 +1230,7 @@ void q_chart_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QChart* self, void (*slot)(QObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*) ```
 void q_chart_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1293,7 +1293,7 @@ void q_chart_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QChart* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QChart* self, void (*slot)(QChart*, QObject*) ```
 void q_chart_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4686,7 +4686,7 @@ void q_chart_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QChart* self, void (*slot)(QObject*, const char*) ```
+/// ``` QChart* self, void (*slot)(QChart*, const char*) ```
 void q_chart_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart-qtcharts.html#dtor.QChart)

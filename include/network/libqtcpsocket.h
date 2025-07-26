@@ -219,7 +219,7 @@ void q_tcpsocket_host_found(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_host_found(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -233,7 +233,7 @@ void q_tcpsocket_connected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_connected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -247,7 +247,7 @@ void q_tcpsocket_disconnected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_disconnected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -261,7 +261,7 @@ void q_tcpsocket_state_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketState) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, enum QAbstractSocket__SocketState) ```
 void q_tcpsocket_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -275,7 +275,7 @@ void q_tcpsocket_error_occurred(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketError) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, enum QAbstractSocket__SocketError) ```
 void q_tcpsocket_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -289,7 +289,7 @@ void q_tcpsocket_proxy_authentication_required(void* self, void* proxy, void* au
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QAbstractSocket*, QNetworkProxy*, QAuthenticator*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, QNetworkProxy*, QAuthenticator*) ```
 void q_tcpsocket_on_proxy_authentication_required(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -541,7 +541,7 @@ void q_tcpsocket_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -555,7 +555,7 @@ void q_tcpsocket_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QIODevice*, int) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, int) ```
 void q_tcpsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -569,7 +569,7 @@ void q_tcpsocket_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, long long) ```
 void q_tcpsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -583,7 +583,7 @@ void q_tcpsocket_channel_bytes_written(void* self, int channel, long long bytes)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, int, long long) ```
 void q_tcpsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -597,7 +597,7 @@ void q_tcpsocket_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -611,7 +611,7 @@ void q_tcpsocket_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -821,7 +821,7 @@ void q_tcpsocket_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QObject*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*) ```
 void q_tcpsocket_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -884,7 +884,7 @@ void q_tcpsocket_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTcpSocket* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, QObject*) ```
 void q_tcpsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2162,7 +2162,7 @@ void q_tcpsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTcpSocket* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTcpSocket* self, void (*slot)(QTcpSocket*, const char*) ```
 void q_tcpsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpsocket.html#dtor.QTcpSocket)

@@ -275,7 +275,7 @@ void q_objectcleanuphandler_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QObjectCleanupHandler* self, void (*slot)(QObject*) ```
+/// ``` QObjectCleanupHandler* self, void (*slot)(QObjectCleanupHandler*) ```
 void q_objectcleanuphandler_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -338,7 +338,7 @@ void q_objectcleanuphandler_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QObjectCleanupHandler* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QObjectCleanupHandler* self, void (*slot)(QObjectCleanupHandler*, QObject*) ```
 void q_objectcleanuphandler_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -644,7 +644,7 @@ void q_objectcleanuphandler_on_is_signal_connected(void* self, bool (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QObjectCleanupHandler* self, void (*slot)(QObject*, const char*) ```
+/// ``` QObjectCleanupHandler* self, void (*slot)(QObjectCleanupHandler*, const char*) ```
 void q_objectcleanuphandler_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobjectcleanuphandler.html#dtor.QObjectCleanupHandler)

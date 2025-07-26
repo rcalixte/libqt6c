@@ -171,7 +171,7 @@ void q_scilexermatlab_color_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, QColor*, int) ```
 void q_scilexermatlab_on_color_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -185,7 +185,7 @@ void q_scilexermatlab_eol_fill_changed(void* self, bool eolfilled, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexer*, bool, int) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, bool, int) ```
 void q_scilexermatlab_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -199,7 +199,7 @@ void q_scilexermatlab_font_changed(void* self, void* f, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexer*, QFont*, int) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, QFont*, int) ```
 void q_scilexermatlab_on_font_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -213,7 +213,7 @@ void q_scilexermatlab_paper_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, QColor*, int) ```
 void q_scilexermatlab_on_paper_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -227,7 +227,7 @@ void q_scilexermatlab_property_changed(void* self, const char* prop, const char*
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexer*, const char*, const char*) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, const char*, const char*) ```
 void q_scilexermatlab_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -444,7 +444,7 @@ void q_scilexermatlab_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QObject*) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*) ```
 void q_scilexermatlab_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -507,7 +507,7 @@ void q_scilexermatlab_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, QObject*) ```
 void q_scilexermatlab_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1677,7 +1677,7 @@ void q_scilexermatlab_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerMatlab* self, void (*slot)(QObject*, const char*) ```
+/// ``` QsciLexerMatlab* self, void (*slot)(QsciLexerMatlab*, const char*) ```
 void q_scilexermatlab_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMatlab.html)

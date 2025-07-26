@@ -230,7 +230,7 @@ void q_horizontalbarseries_clicked(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, int, QBarSet*) ```
 void q_horizontalbarseries_on_clicked(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -244,7 +244,7 @@ void q_horizontalbarseries_hovered(void* self, bool status, int index, void* bar
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, bool, int, QBarSet*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, bool, int, QBarSet*) ```
 void q_horizontalbarseries_on_hovered(void* self, void (*slot)(void*, bool, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -258,7 +258,7 @@ void q_horizontalbarseries_pressed(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, int, QBarSet*) ```
 void q_horizontalbarseries_on_pressed(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -272,7 +272,7 @@ void q_horizontalbarseries_released(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, int, QBarSet*) ```
 void q_horizontalbarseries_on_released(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -286,7 +286,7 @@ void q_horizontalbarseries_double_clicked(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, int, QBarSet*) ```
 void q_horizontalbarseries_on_double_clicked(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -300,7 +300,7 @@ void q_horizontalbarseries_count_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_count_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -314,7 +314,7 @@ void q_horizontalbarseries_labels_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_labels_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -328,7 +328,7 @@ void q_horizontalbarseries_labels_format_changed(void* self, const char* format)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, const char*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, const char*) ```
 void q_horizontalbarseries_on_labels_format_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QAbstractBarSeries
@@ -342,7 +342,7 @@ void q_horizontalbarseries_labels_position_changed(void* self, int64_t position)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, enum QAbstractBarSeries__LabelsPosition) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, enum QAbstractBarSeries__LabelsPosition) ```
 void q_horizontalbarseries_on_labels_position_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractBarSeries
@@ -356,7 +356,7 @@ void q_horizontalbarseries_labels_angle_changed(void* self, double angle);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, double) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, double) ```
 void q_horizontalbarseries_on_labels_angle_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QAbstractBarSeries
@@ -370,7 +370,7 @@ void q_horizontalbarseries_labels_precision_changed(void* self, int precision);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, int) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, int) ```
 void q_horizontalbarseries_on_labels_precision_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractBarSeries
@@ -384,7 +384,7 @@ void q_horizontalbarseries_barsets_added(void* self, libqt_list sets);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
 void q_horizontalbarseries_on_barsets_added(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -398,7 +398,7 @@ void q_horizontalbarseries_barsets_removed(void* self, libqt_list sets);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
 void q_horizontalbarseries_on_barsets_removed(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -517,7 +517,7 @@ void q_horizontalbarseries_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -531,7 +531,7 @@ void q_horizontalbarseries_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -545,7 +545,7 @@ void q_horizontalbarseries_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -559,7 +559,7 @@ void q_horizontalbarseries_use_open_g_l_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -776,7 +776,7 @@ void q_horizontalbarseries_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QObject*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*) ```
 void q_horizontalbarseries_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -839,7 +839,7 @@ void q_horizontalbarseries_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, QObject*) ```
 void q_horizontalbarseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1145,7 +1145,7 @@ void q_horizontalbarseries_on_is_signal_connected(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QHorizontalBarSeries* self, void (*slot)(QObject*, const char*) ```
+/// ``` QHorizontalBarSeries* self, void (*slot)(QHorizontalBarSeries*, const char*) ```
 void q_horizontalbarseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhorizontalbarseries-qtcharts.html#dtor.QHorizontalBarSeries)

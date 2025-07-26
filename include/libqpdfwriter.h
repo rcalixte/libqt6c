@@ -407,7 +407,7 @@ void q_pdfwriter_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfWriter* self, void (*slot)(QObject*) ```
+/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*) ```
 void q_pdfwriter_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -470,7 +470,7 @@ void q_pdfwriter_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfWriter* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QObject*) ```
 void q_pdfwriter_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
@@ -1165,7 +1165,7 @@ void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfWriter* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, const char*) ```
 void q_pdfwriter_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#dtor.QPdfWriter)

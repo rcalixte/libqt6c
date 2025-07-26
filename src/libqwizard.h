@@ -541,7 +541,7 @@ void q_wizard_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QWizard* self, void (*slot)(QDialog*, int) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, int) ```
 void q_wizard_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -555,7 +555,7 @@ void q_wizard_accepted(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QWizard* self, void (*slot)(QDialog*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*) ```
 void q_wizard_on_accepted(void* self, void (*slot)(void*));
 
 /// Inherited from QDialog
@@ -569,7 +569,7 @@ void q_wizard_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QWizard* self, void (*slot)(QDialog*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*) ```
 void q_wizard_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2312,7 +2312,7 @@ void q_wizard_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QWizard* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, const char*) ```
 void q_wizard_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2326,7 +2326,7 @@ void q_wizard_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QWizard* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, QIcon*) ```
 void q_wizard_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2340,7 +2340,7 @@ void q_wizard_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QWizard* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, const char*) ```
 void q_wizard_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2354,7 +2354,7 @@ void q_wizard_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QWizard* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, QPoint*) ```
 void q_wizard_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2669,7 +2669,7 @@ void q_wizard_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWizard* self, void (*slot)(QObject*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*) ```
 void q_wizard_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2732,7 +2732,7 @@ void q_wizard_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWizard* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, QObject*) ```
 void q_wizard_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4371,7 +4371,7 @@ void q_wizard_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWizard* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWizard* self, void (*slot)(QWizard*, const char*) ```
 void q_wizard_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizard.html#dtor.QWizard)
@@ -6448,7 +6448,7 @@ void q_wizardpage_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QWizardPage* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*, const char*) ```
 void q_wizardpage_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6462,7 +6462,7 @@ void q_wizardpage_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QWizardPage* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*, QIcon*) ```
 void q_wizardpage_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -6476,7 +6476,7 @@ void q_wizardpage_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QWizardPage* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*, const char*) ```
 void q_wizardpage_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -6490,7 +6490,7 @@ void q_wizardpage_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QWizardPage* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*, QPoint*) ```
 void q_wizardpage_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -6805,7 +6805,7 @@ void q_wizardpage_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWizardPage* self, void (*slot)(QObject*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*) ```
 void q_wizardpage_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -6868,7 +6868,7 @@ void q_wizardpage_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWizardPage* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*, QObject*) ```
 void q_wizardpage_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -8507,7 +8507,7 @@ void q_wizardpage_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWizardPage* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWizardPage* self, void (*slot)(QWizardPage*, const char*) ```
 void q_wizardpage_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwizardpage.html#dtor.QWizardPage)

@@ -518,7 +518,7 @@ void q_graphicseffect_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsEffect* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*) ```
 void q_graphicseffect_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -581,7 +581,7 @@ void q_graphicseffect_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsEffect* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*, QObject*) ```
 void q_graphicseffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -887,7 +887,7 @@ void q_graphicseffect_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsEffect* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsEffect* self, void (*slot)(QGraphicsEffect*, const char*) ```
 void q_graphicseffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#dtor.QGraphicsEffect)
@@ -1043,7 +1043,7 @@ void q_graphicscolorizeeffect_enabled_changed(void* self, bool enabled);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
-/// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
+/// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*, bool) ```
 void q_graphicscolorizeeffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QObject
@@ -1246,7 +1246,7 @@ void q_graphicscolorizeeffect_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsColorizeEffect* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*) ```
 void q_graphicscolorizeeffect_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1309,7 +1309,7 @@ void q_graphicscolorizeeffect_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsColorizeEffect* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*, QObject*) ```
 void q_graphicscolorizeeffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsEffect
@@ -1804,7 +1804,7 @@ void q_graphicscolorizeeffect_on_is_signal_connected(void* self, bool (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsColorizeEffect* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsColorizeEffect* self, void (*slot)(QGraphicsColorizeEffect*, const char*) ```
 void q_graphicscolorizeeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicscolorizeeffect.html#dtor.QGraphicsColorizeEffect)
@@ -1979,7 +1979,7 @@ void q_graphicsblureffect_enabled_changed(void* self, bool enabled);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
-/// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
+/// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*, bool) ```
 void q_graphicsblureffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QObject
@@ -2182,7 +2182,7 @@ void q_graphicsblureffect_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsBlurEffect* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*) ```
 void q_graphicsblureffect_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2245,7 +2245,7 @@ void q_graphicsblureffect_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsBlurEffect* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*, QObject*) ```
 void q_graphicsblureffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsEffect
@@ -2713,7 +2713,7 @@ void q_graphicsblureffect_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsBlurEffect* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsBlurEffect* self, void (*slot)(QGraphicsBlurEffect*, const char*) ```
 void q_graphicsblureffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsblureffect.html#dtor.QGraphicsBlurEffect)
@@ -2938,7 +2938,7 @@ void q_graphicsdropshadoweffect_enabled_changed(void* self, bool enabled);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
-/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
+/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, bool) ```
 void q_graphicsdropshadoweffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QObject
@@ -3141,7 +3141,7 @@ void q_graphicsdropshadoweffect_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*) ```
 void q_graphicsdropshadoweffect_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3204,7 +3204,7 @@ void q_graphicsdropshadoweffect_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, QObject*) ```
 void q_graphicsdropshadoweffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsEffect
@@ -3672,7 +3672,7 @@ void q_graphicsdropshadoweffect_on_is_signal_connected(void* self, bool (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsDropShadowEffect* self, void (*slot)(QGraphicsDropShadowEffect*, const char*) ```
 void q_graphicsdropshadoweffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsdropshadoweffect.html#dtor.QGraphicsDropShadowEffect)
@@ -3828,7 +3828,7 @@ void q_graphicsopacityeffect_enabled_changed(void* self, bool enabled);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#enabledChanged)
 ///
-/// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsEffect*, bool) ```
+/// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*, bool) ```
 void q_graphicsopacityeffect_on_enabled_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QObject
@@ -4031,7 +4031,7 @@ void q_graphicsopacityeffect_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsOpacityEffect* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*) ```
 void q_graphicsopacityeffect_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -4094,7 +4094,7 @@ void q_graphicsopacityeffect_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsOpacityEffect* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*, QObject*) ```
 void q_graphicsopacityeffect_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsEffect
@@ -4589,7 +4589,7 @@ void q_graphicsopacityeffect_on_is_signal_connected(void* self, bool (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsOpacityEffect* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsOpacityEffect* self, void (*slot)(QGraphicsOpacityEffect*, const char*) ```
 void q_graphicsopacityeffect_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsopacityeffect.html#dtor.QGraphicsOpacityEffect)
