@@ -878,7 +878,7 @@ void q_process_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QProcess* self, void (*slot)(QIODevice*) ```
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
 void q_process_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -892,7 +892,7 @@ void q_process_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QProcess* self, void (*slot)(QIODevice*, int) ```
+/// ``` QProcess* self, void (*slot)(QProcess*, int) ```
 void q_process_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -906,7 +906,7 @@ void q_process_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QProcess* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QProcess* self, void (*slot)(QProcess*, long long) ```
 void q_process_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -920,7 +920,7 @@ void q_process_channel_bytes_written(void* self, int channel, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QProcess* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QProcess* self, void (*slot)(QProcess*, int, long long) ```
 void q_process_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -934,7 +934,7 @@ void q_process_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QProcess* self, void (*slot)(QIODevice*) ```
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
 void q_process_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -948,7 +948,7 @@ void q_process_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QProcess* self, void (*slot)(QIODevice*) ```
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
 void q_process_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1158,7 +1158,7 @@ void q_process_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QProcess* self, void (*slot)(QObject*) ```
+/// ``` QProcess* self, void (*slot)(QProcess*) ```
 void q_process_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1221,7 +1221,7 @@ void q_process_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QProcess* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QProcess* self, void (*slot)(QProcess*, QObject*) ```
 void q_process_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1852,7 +1852,7 @@ void q_process_on_ready_read_standard_error(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QProcess* self, void (*slot)(QObject*, const char*) ```
+/// ``` QProcess* self, void (*slot)(QProcess*, const char*) ```
 void q_process_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#dtor.QProcess)

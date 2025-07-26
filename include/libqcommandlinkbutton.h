@@ -460,7 +460,7 @@ void q_commandlinkbutton_pressed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
 void q_commandlinkbutton_on_pressed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -474,7 +474,7 @@ void q_commandlinkbutton_released(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
 void q_commandlinkbutton_on_released(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -488,7 +488,7 @@ void q_commandlinkbutton_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
 void q_commandlinkbutton_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -502,7 +502,7 @@ void q_commandlinkbutton_toggled(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, bool) ```
 void q_commandlinkbutton_on_toggled(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -516,7 +516,7 @@ void q_commandlinkbutton_clicked1(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, bool) ```
 void q_commandlinkbutton_on_clicked1(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QWidget
@@ -2259,7 +2259,7 @@ void q_commandlinkbutton_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, const char*) ```
 void q_commandlinkbutton_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2273,7 +2273,7 @@ void q_commandlinkbutton_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QIcon*) ```
 void q_commandlinkbutton_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2287,7 +2287,7 @@ void q_commandlinkbutton_window_icon_text_changed(void* self, const char* iconTe
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, const char*) ```
 void q_commandlinkbutton_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2301,7 +2301,7 @@ void q_commandlinkbutton_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QPoint*) ```
 void q_commandlinkbutton_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2616,7 +2616,7 @@ void q_commandlinkbutton_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QObject*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
 void q_commandlinkbutton_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2679,7 +2679,7 @@ void q_commandlinkbutton_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QObject*) ```
 void q_commandlinkbutton_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4264,7 +4264,7 @@ void q_commandlinkbutton_on_get_decoded_metric_f(void* self, double (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QObject*, const char*) ```
+/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, const char*) ```
 void q_commandlinkbutton_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#dtor.QCommandLinkButton)

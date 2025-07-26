@@ -661,7 +661,7 @@ int32_t q_formlayout_index_of2(void* self, void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
+/// ``` QFormLayout* self, int32_t (*slot)(QFormLayout*, QLayoutItem*) ```
 void q_formlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
@@ -929,7 +929,7 @@ void q_formlayout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFormLayout* self, void (*slot)(QObject*) ```
+/// ``` QFormLayout* self, void (*slot)(QFormLayout*) ```
 void q_formlayout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -992,7 +992,7 @@ void q_formlayout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFormLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFormLayout* self, void (*slot)(QFormLayout*, QObject*) ```
 void q_formlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1710,7 +1710,7 @@ void q_formlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFormLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFormLayout* self, void (*slot)(QFormLayout*, const char*) ```
 void q_formlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformlayout.html#dtor.QFormLayout)

@@ -213,7 +213,7 @@ void q_pauseanimation_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QAbstractAnimation*) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*) ```
 void q_pauseanimation_on_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -227,7 +227,7 @@ void q_pauseanimation_state_changed(void* self, int64_t newState, int64_t oldSta
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_pauseanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -241,7 +241,7 @@ void q_pauseanimation_current_loop_changed(void* self, int currentLoop);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QAbstractAnimation*, int) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*, int) ```
 void q_pauseanimation_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -255,7 +255,7 @@ void q_pauseanimation_direction_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*, enum QAbstractAnimation__Direction) ```
 void q_pauseanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -507,7 +507,7 @@ void q_pauseanimation_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QObject*) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*) ```
 void q_pauseanimation_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -570,7 +570,7 @@ void q_pauseanimation_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*, QObject*) ```
 void q_pauseanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAnimation
@@ -903,7 +903,7 @@ void q_pauseanimation_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPauseAnimation* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPauseAnimation* self, void (*slot)(QPauseAnimation*, const char*) ```
 void q_pauseanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpauseanimation.html#dtor.QPauseAnimation)

@@ -1098,7 +1098,7 @@ void q_textbrowser_text_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
 void q_textbrowser_on_text_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QTextEdit
@@ -1112,7 +1112,7 @@ void q_textbrowser_undo_available(void* self, bool b);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undoAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*, bool) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
 void q_textbrowser_on_undo_available(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1126,7 +1126,7 @@ void q_textbrowser_redo_available(void* self, bool b);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redoAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*, bool) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
 void q_textbrowser_on_redo_available(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1140,7 +1140,7 @@ void q_textbrowser_current_char_format_changed(void* self, void* format);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormatChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*, QTextCharFormat*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QTextCharFormat*) ```
 void q_textbrowser_on_current_char_format_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTextEdit
@@ -1154,7 +1154,7 @@ void q_textbrowser_copy_available(void* self, bool b);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copyAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*, bool) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
 void q_textbrowser_on_copy_available(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QTextEdit
@@ -1168,7 +1168,7 @@ void q_textbrowser_selection_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
 void q_textbrowser_on_selection_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QTextEdit
@@ -1182,7 +1182,7 @@ void q_textbrowser_cursor_position_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextEdit*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
 void q_textbrowser_on_cursor_position_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QTextEdit
@@ -3170,7 +3170,7 @@ void q_textbrowser_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, const char*) ```
 void q_textbrowser_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3184,7 +3184,7 @@ void q_textbrowser_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QIcon*) ```
 void q_textbrowser_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3198,7 +3198,7 @@ void q_textbrowser_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, const char*) ```
 void q_textbrowser_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3212,7 +3212,7 @@ void q_textbrowser_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QPoint*) ```
 void q_textbrowser_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3527,7 +3527,7 @@ void q_textbrowser_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QObject*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
 void q_textbrowser_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3590,7 +3590,7 @@ void q_textbrowser_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QObject*) ```
 void q_textbrowser_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -5364,7 +5364,7 @@ void q_textbrowser_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextBrowser* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, const char*) ```
 void q_textbrowser_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#dtor.QTextBrowser)

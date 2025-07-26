@@ -495,7 +495,7 @@ void q_transposeproxymodel_data_changed(void* self, void* topLeft, void* bottomR
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, QModelIndex*) ```
 void q_transposeproxymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -509,7 +509,7 @@ void q_transposeproxymodel_header_data_changed(void* self, int64_t orientation, 
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, enum Qt__Orientation, int, int) ```
 void q_transposeproxymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -523,7 +523,7 @@ void q_transposeproxymodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*) ```
 void q_transposeproxymodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -537,7 +537,7 @@ void q_transposeproxymodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*) ```
 void q_transposeproxymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -593,7 +593,7 @@ void q_transposeproxymodel_data_changed3(void* self, void* topLeft, void* bottom
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_transposeproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -607,7 +607,7 @@ void q_transposeproxymodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_transposeproxymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -621,7 +621,7 @@ void q_transposeproxymodel_layout_changed2(void* self, libqt_list parents, int64
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_transposeproxymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -635,7 +635,7 @@ void q_transposeproxymodel_layout_about_to_be_changed1(void* self, libqt_list pa
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_transposeproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -649,7 +649,7 @@ void q_transposeproxymodel_layout_about_to_be_changed2(void* self, libqt_list pa
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_transposeproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -852,7 +852,7 @@ void q_transposeproxymodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QObject*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*) ```
 void q_transposeproxymodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -908,7 +908,7 @@ void q_transposeproxymodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QObject*) ```
 void q_transposeproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2402,7 +2402,7 @@ void q_transposeproxymodel_on_is_signal_connected(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractProxyModel*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*) ```
 void q_transposeproxymodel_on_source_model_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2411,7 +2411,7 @@ void q_transposeproxymodel_on_source_model_changed(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2420,7 +2420,7 @@ void q_transposeproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2429,7 +2429,7 @@ void q_transposeproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2438,7 +2438,7 @@ void q_transposeproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2447,7 +2447,7 @@ void q_transposeproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2456,7 +2456,7 @@ void q_transposeproxymodel_on_columns_about_to_be_inserted(void* self, void (*sl
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2465,7 +2465,7 @@ void q_transposeproxymodel_on_columns_inserted(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2474,7 +2474,7 @@ void q_transposeproxymodel_on_columns_about_to_be_removed(void* self, void (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int) ```
 void q_transposeproxymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2483,7 +2483,7 @@ void q_transposeproxymodel_on_columns_removed(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*) ```
 void q_transposeproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2492,7 +2492,7 @@ void q_transposeproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*) ```
 void q_transposeproxymodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2501,7 +2501,7 @@ void q_transposeproxymodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_transposeproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2510,7 +2510,7 @@ void q_transposeproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_transposeproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2519,7 +2519,7 @@ void q_transposeproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_transposeproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2528,7 +2528,7 @@ void q_transposeproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_transposeproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2537,7 +2537,7 @@ void q_transposeproxymodel_on_columns_moved(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTransposeProxyModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTransposeProxyModel* self, void (*slot)(QTransposeProxyModel*, const char*) ```
 void q_transposeproxymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransposeproxymodel.html#dtor.QTransposeProxyModel)

@@ -612,7 +612,7 @@ void q_inputdialog_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QInputDialog* self, void (*slot)(QDialog*, int) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, int) ```
 void q_inputdialog_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -626,7 +626,7 @@ void q_inputdialog_accepted(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QInputDialog* self, void (*slot)(QDialog*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*) ```
 void q_inputdialog_on_accepted(void* self, void (*slot)(void*));
 
 /// Inherited from QDialog
@@ -640,7 +640,7 @@ void q_inputdialog_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QInputDialog* self, void (*slot)(QDialog*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*) ```
 void q_inputdialog_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2383,7 +2383,7 @@ void q_inputdialog_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
 void q_inputdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2397,7 +2397,7 @@ void q_inputdialog_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QIcon*) ```
 void q_inputdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2411,7 +2411,7 @@ void q_inputdialog_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
 void q_inputdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2425,7 +2425,7 @@ void q_inputdialog_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QInputDialog* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QPoint*) ```
 void q_inputdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2740,7 +2740,7 @@ void q_inputdialog_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDialog* self, void (*slot)(QObject*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*) ```
 void q_inputdialog_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2803,7 +2803,7 @@ void q_inputdialog_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDialog* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QObject*) ```
 void q_inputdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4496,7 +4496,7 @@ void q_inputdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QInputDialog* self, void (*slot)(QObject*, const char*) ```
+/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
 void q_inputdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#dtor.QInputDialog)

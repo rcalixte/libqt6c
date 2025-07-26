@@ -2974,7 +2974,7 @@ void q_graphicsview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QGraphicsView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*, const char*) ```
 void q_graphicsview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2988,7 +2988,7 @@ void q_graphicsview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QGraphicsView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*, QIcon*) ```
 void q_graphicsview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3002,7 +3002,7 @@ void q_graphicsview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QGraphicsView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*, const char*) ```
 void q_graphicsview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3016,7 +3016,7 @@ void q_graphicsview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QGraphicsView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*, QPoint*) ```
 void q_graphicsview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3317,7 +3317,7 @@ void q_graphicsview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsView* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*) ```
 void q_graphicsview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3380,7 +3380,7 @@ void q_graphicsview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*, QObject*) ```
 void q_graphicsview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4560,7 +4560,7 @@ void q_graphicsview_on_get_decoded_metric_f(void* self, double (*slot)(void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsView* self, void (*slot)(QGraphicsView*, const char*) ```
 void q_graphicsview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsview.html#dtor.QGraphicsView)

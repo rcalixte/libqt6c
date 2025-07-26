@@ -414,7 +414,7 @@ void q_datawidgetmapper_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDataWidgetMapper* self, void (*slot)(QObject*) ```
+/// ``` QDataWidgetMapper* self, void (*slot)(QDataWidgetMapper*) ```
 void q_datawidgetmapper_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -477,7 +477,7 @@ void q_datawidgetmapper_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDataWidgetMapper* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDataWidgetMapper* self, void (*slot)(QDataWidgetMapper*, QObject*) ```
 void q_datawidgetmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -783,7 +783,7 @@ void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDataWidgetMapper* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDataWidgetMapper* self, void (*slot)(QDataWidgetMapper*, const char*) ```
 void q_datawidgetmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#dtor.QDataWidgetMapper)

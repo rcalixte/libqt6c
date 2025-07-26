@@ -1004,7 +1004,7 @@ void q_sslsocket_host_found(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
-/// ``` QSslSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_host_found(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -1018,7 +1018,7 @@ void q_sslsocket_connected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
-/// ``` QSslSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_connected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -1032,7 +1032,7 @@ void q_sslsocket_disconnected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
-/// ``` QSslSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_disconnected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -1046,7 +1046,7 @@ void q_sslsocket_state_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
-/// ``` QSslSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketState) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, enum QAbstractSocket__SocketState) ```
 void q_sslsocket_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -1060,7 +1060,7 @@ void q_sslsocket_error_occurred(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
-/// ``` QSslSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketError) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, enum QAbstractSocket__SocketError) ```
 void q_sslsocket_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -1074,7 +1074,7 @@ void q_sslsocket_proxy_authentication_required(void* self, void* proxy, void* au
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
-/// ``` QSslSocket* self, void (*slot)(QAbstractSocket*, QNetworkProxy*, QAuthenticator*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, QNetworkProxy*, QAuthenticator*) ```
 void q_sslsocket_on_proxy_authentication_required(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -1326,7 +1326,7 @@ void q_sslsocket_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QSslSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1340,7 +1340,7 @@ void q_sslsocket_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QSslSocket* self, void (*slot)(QIODevice*, int) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, int) ```
 void q_sslsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -1354,7 +1354,7 @@ void q_sslsocket_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QSslSocket* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, long long) ```
 void q_sslsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1368,7 +1368,7 @@ void q_sslsocket_channel_bytes_written(void* self, int channel, long long bytes)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QSslSocket* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, int, long long) ```
 void q_sslsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -1382,7 +1382,7 @@ void q_sslsocket_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QSslSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1396,7 +1396,7 @@ void q_sslsocket_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QSslSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1606,7 +1606,7 @@ void q_sslsocket_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSslSocket* self, void (*slot)(QObject*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*) ```
 void q_sslsocket_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1669,7 +1669,7 @@ void q_sslsocket_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSslSocket* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, QObject*) ```
 void q_sslsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2461,7 +2461,7 @@ void q_sslsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSslSocket* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSslSocket* self, void (*slot)(QSslSocket*, const char*) ```
 void q_sslsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#dtor.QSslSocket)

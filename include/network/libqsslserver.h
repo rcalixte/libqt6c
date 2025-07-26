@@ -316,7 +316,7 @@ void q_sslserver_new_connection(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#newConnection)
 ///
-/// ``` QSslServer* self, void (*slot)(QTcpServer*) ```
+/// ``` QSslServer* self, void (*slot)(QSslServer*) ```
 void q_sslserver_on_new_connection(void* self, void (*slot)(void*));
 
 /// Inherited from QTcpServer
@@ -330,7 +330,7 @@ void q_sslserver_accept_error(void* self, int64_t socketError);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#acceptError)
 ///
-/// ``` QSslServer* self, void (*slot)(QTcpServer*, enum QAbstractSocket__SocketError) ```
+/// ``` QSslServer* self, void (*slot)(QSslServer*, enum QAbstractSocket__SocketError) ```
 void q_sslserver_on_accept_error(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QTcpServer
@@ -561,7 +561,7 @@ void q_sslserver_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSslServer* self, void (*slot)(QObject*) ```
+/// ``` QSslServer* self, void (*slot)(QSslServer*) ```
 void q_sslserver_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -624,7 +624,7 @@ void q_sslserver_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSslServer* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSslServer* self, void (*slot)(QSslServer*, QObject*) ```
 void q_sslserver_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -1011,7 +1011,7 @@ void q_sslserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSslServer* self, void (*slot)(QTcpServer*) ```
+/// ``` QSslServer* self, void (*slot)(QSslServer*) ```
 void q_sslserver_on_pending_connection_available(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1020,7 +1020,7 @@ void q_sslserver_on_pending_connection_available(void* self, void (*slot)(void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSslServer* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSslServer* self, void (*slot)(QSslServer*, const char*) ```
 void q_sslserver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#dtor.QSslServer)

@@ -601,7 +601,7 @@ void q_fontcombobox_edit_text_changed(void* self, const char* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#editTextChanged)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_edit_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -615,7 +615,7 @@ void q_fontcombobox_activated(void* self, int index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#activated)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, int) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, int) ```
 void q_fontcombobox_on_activated(void* self, void (*slot)(void*, int));
 
 /// Inherited from QComboBox
@@ -629,7 +629,7 @@ void q_fontcombobox_text_activated(void* self, const char* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textActivated)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_text_activated(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -643,7 +643,7 @@ void q_fontcombobox_highlighted(void* self, int index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#highlighted)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, int) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, int) ```
 void q_fontcombobox_on_highlighted(void* self, void (*slot)(void*, int));
 
 /// Inherited from QComboBox
@@ -657,7 +657,7 @@ void q_fontcombobox_text_highlighted(void* self, const char* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#textHighlighted)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_text_highlighted(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -671,7 +671,7 @@ void q_fontcombobox_current_index_changed(void* self, int index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentIndexChanged)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, int) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, int) ```
 void q_fontcombobox_on_current_index_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QComboBox
@@ -685,7 +685,7 @@ void q_fontcombobox_current_text_changed(void* self, const char* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcombobox.html#currentTextChanged)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QComboBox*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_current_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QComboBox
@@ -2498,7 +2498,7 @@ void q_fontcombobox_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2512,7 +2512,7 @@ void q_fontcombobox_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, QIcon*) ```
 void q_fontcombobox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2526,7 +2526,7 @@ void q_fontcombobox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2540,7 +2540,7 @@ void q_fontcombobox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, QPoint*) ```
 void q_fontcombobox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2855,7 +2855,7 @@ void q_fontcombobox_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QObject*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*) ```
 void q_fontcombobox_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2918,7 +2918,7 @@ void q_fontcombobox_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFontComboBox* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, QObject*) ```
 void q_fontcombobox_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4611,7 +4611,7 @@ void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*slot)(void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFontComboBox* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFontComboBox* self, void (*slot)(QFontComboBox*, const char*) ```
 void q_fontcombobox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#dtor.QFontComboBox)

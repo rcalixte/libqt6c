@@ -277,7 +277,7 @@ void q_scilexerverilog_color_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, QColor*, int) ```
 void q_scilexerverilog_on_color_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -291,7 +291,7 @@ void q_scilexerverilog_eol_fill_changed(void* self, bool eolfilled, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexer*, bool, int) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, bool, int) ```
 void q_scilexerverilog_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -305,7 +305,7 @@ void q_scilexerverilog_font_changed(void* self, void* f, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexer*, QFont*, int) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, QFont*, int) ```
 void q_scilexerverilog_on_font_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -319,7 +319,7 @@ void q_scilexerverilog_paper_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, QColor*, int) ```
 void q_scilexerverilog_on_paper_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -333,7 +333,7 @@ void q_scilexerverilog_property_changed(void* self, const char* prop, const char
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexer*, const char*, const char*) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, const char*, const char*) ```
 void q_scilexerverilog_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -550,7 +550,7 @@ void q_scilexerverilog_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QObject*) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*) ```
 void q_scilexerverilog_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -613,7 +613,7 @@ void q_scilexerverilog_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, QObject*) ```
 void q_scilexerverilog_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QsciLexer
@@ -1621,7 +1621,7 @@ void q_scilexerverilog_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerVerilog* self, void (*slot)(QObject*, const char*) ```
+/// ``` QsciLexerVerilog* self, void (*slot)(QsciLexerVerilog*, const char*) ```
 void q_scilexerverilog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerVerilog.html)

@@ -522,7 +522,7 @@ void q_buffer_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QBuffer* self, void (*slot)(QIODevice*) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*) ```
 void q_buffer_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -536,7 +536,7 @@ void q_buffer_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QBuffer* self, void (*slot)(QIODevice*, int) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*, int) ```
 void q_buffer_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -550,7 +550,7 @@ void q_buffer_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QBuffer* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*, long long) ```
 void q_buffer_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -564,7 +564,7 @@ void q_buffer_channel_bytes_written(void* self, int channel, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QBuffer* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*, int, long long) ```
 void q_buffer_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -578,7 +578,7 @@ void q_buffer_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QBuffer* self, void (*slot)(QIODevice*) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*) ```
 void q_buffer_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -592,7 +592,7 @@ void q_buffer_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QBuffer* self, void (*slot)(QIODevice*) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*) ```
 void q_buffer_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -802,7 +802,7 @@ void q_buffer_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBuffer* self, void (*slot)(QObject*) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*) ```
 void q_buffer_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -865,7 +865,7 @@ void q_buffer_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBuffer* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*, QObject*) ```
 void q_buffer_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1387,7 +1387,7 @@ void q_buffer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QBuffer* self, void (*slot)(QObject*, const char*) ```
+/// ``` QBuffer* self, void (*slot)(QBuffer*, const char*) ```
 void q_buffer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbuffer.html#dtor.QBuffer)

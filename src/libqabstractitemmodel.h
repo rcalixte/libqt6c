@@ -1887,7 +1887,7 @@ void q_abstractitemmodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractItemModel* self, void (*slot)(QObject*) ```
+/// ``` QAbstractItemModel* self, void (*slot)(QAbstractItemModel*) ```
 void q_abstractitemmodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1943,7 +1943,7 @@ void q_abstractitemmodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractItemModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractItemModel* self, void (*slot)(QAbstractItemModel*, QObject*) ```
 void q_abstractitemmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -2347,7 +2347,7 @@ void q_abstractitemmodel_on_columns_moved(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractItemModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractItemModel* self, void (*slot)(QAbstractItemModel*, const char*) ```
 void q_abstractitemmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dtor.QAbstractItemModel)
@@ -2501,7 +2501,7 @@ QModelIndex* q_abstracttablemodel_parent(void* self, void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, QModelIndex* (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QAbstractTableModel* self, QModelIndex* (*slot)(QAbstractTableModel*, QModelIndex*) ```
 void q_abstracttablemodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2526,7 +2526,7 @@ bool q_abstracttablemodel_has_children(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, bool (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QAbstractTableModel* self, bool (*slot)(QAbstractTableModel*, QModelIndex*) ```
 void q_abstracttablemodel_on_has_children(void* self, bool (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2598,7 +2598,7 @@ void q_abstracttablemodel_data_changed(void* self, void* topLeft, void* bottomRi
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, QModelIndex*) ```
 void q_abstracttablemodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2612,7 +2612,7 @@ void q_abstracttablemodel_header_data_changed(void* self, int64_t orientation, i
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, enum Qt__Orientation, int, int) ```
 void q_abstracttablemodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2626,7 +2626,7 @@ void q_abstracttablemodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*) ```
 void q_abstracttablemodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2640,7 +2640,7 @@ void q_abstracttablemodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*) ```
 void q_abstracttablemodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2696,7 +2696,7 @@ void q_abstracttablemodel_data_changed3(void* self, void* topLeft, void* bottomR
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_abstracttablemodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2710,7 +2710,7 @@ void q_abstracttablemodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_abstracttablemodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2724,7 +2724,7 @@ void q_abstracttablemodel_layout_changed2(void* self, libqt_list parents, int64_
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_abstracttablemodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -2738,7 +2738,7 @@ void q_abstracttablemodel_layout_about_to_be_changed1(void* self, libqt_list par
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_abstracttablemodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -2752,7 +2752,7 @@ void q_abstracttablemodel_layout_about_to_be_changed2(void* self, libqt_list par
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_abstracttablemodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -2955,7 +2955,7 @@ void q_abstracttablemodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QObject*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*) ```
 void q_abstracttablemodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3011,7 +3011,7 @@ void q_abstracttablemodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QObject*) ```
 void q_abstracttablemodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -4694,7 +4694,7 @@ void q_abstracttablemodel_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4703,7 +4703,7 @@ void q_abstracttablemodel_on_rows_about_to_be_inserted(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4712,7 +4712,7 @@ void q_abstracttablemodel_on_rows_inserted(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4721,7 +4721,7 @@ void q_abstracttablemodel_on_rows_about_to_be_removed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4730,7 +4730,7 @@ void q_abstracttablemodel_on_rows_removed(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4739,7 +4739,7 @@ void q_abstracttablemodel_on_columns_about_to_be_inserted(void* self, void (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4748,7 +4748,7 @@ void q_abstracttablemodel_on_columns_inserted(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4757,7 +4757,7 @@ void q_abstracttablemodel_on_columns_about_to_be_removed(void* self, void (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int) ```
 void q_abstracttablemodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -4766,7 +4766,7 @@ void q_abstracttablemodel_on_columns_removed(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*) ```
 void q_abstracttablemodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -4775,7 +4775,7 @@ void q_abstracttablemodel_on_model_about_to_be_reset(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*) ```
 void q_abstracttablemodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -4784,7 +4784,7 @@ void q_abstracttablemodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstracttablemodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -4793,7 +4793,7 @@ void q_abstracttablemodel_on_rows_about_to_be_moved(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstracttablemodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -4802,7 +4802,7 @@ void q_abstracttablemodel_on_rows_moved(void* self, void (*slot)(void*, void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstracttablemodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -4811,7 +4811,7 @@ void q_abstracttablemodel_on_columns_about_to_be_moved(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstracttablemodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -4820,7 +4820,7 @@ void q_abstracttablemodel_on_columns_moved(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractTableModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractTableModel* self, void (*slot)(QAbstractTableModel*, const char*) ```
 void q_abstracttablemodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttablemodel.html#dtor.QAbstractTableModel)
@@ -4974,7 +4974,7 @@ QModelIndex* q_abstractlistmodel_parent(void* self, void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, QModelIndex* (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QAbstractListModel* self, QModelIndex* (*slot)(QAbstractListModel*, QModelIndex*) ```
 void q_abstractlistmodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -4999,7 +4999,7 @@ int32_t q_abstractlistmodel_column_count(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, int32_t (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QAbstractListModel* self, int32_t (*slot)(QAbstractListModel*, QModelIndex*) ```
 void q_abstractlistmodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -5024,7 +5024,7 @@ bool q_abstractlistmodel_has_children(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, bool (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QAbstractListModel* self, bool (*slot)(QAbstractListModel*, QModelIndex*) ```
 void q_abstractlistmodel_on_has_children(void* self, bool (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -5096,7 +5096,7 @@ void q_abstractlistmodel_data_changed(void* self, void* topLeft, void* bottomRig
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, QModelIndex*) ```
 void q_abstractlistmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -5110,7 +5110,7 @@ void q_abstractlistmodel_header_data_changed(void* self, int64_t orientation, in
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, enum Qt__Orientation, int, int) ```
 void q_abstractlistmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -5124,7 +5124,7 @@ void q_abstractlistmodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*) ```
 void q_abstractlistmodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -5138,7 +5138,7 @@ void q_abstractlistmodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*) ```
 void q_abstractlistmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -5194,7 +5194,7 @@ void q_abstractlistmodel_data_changed3(void* self, void* topLeft, void* bottomRi
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_abstractlistmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -5208,7 +5208,7 @@ void q_abstractlistmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_abstractlistmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -5222,7 +5222,7 @@ void q_abstractlistmodel_layout_changed2(void* self, libqt_list parents, int64_t
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_abstractlistmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -5236,7 +5236,7 @@ void q_abstractlistmodel_layout_about_to_be_changed1(void* self, libqt_list pare
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_abstractlistmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -5250,7 +5250,7 @@ void q_abstractlistmodel_layout_about_to_be_changed2(void* self, libqt_list pare
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_abstractlistmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -5453,7 +5453,7 @@ void q_abstractlistmodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QObject*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*) ```
 void q_abstractlistmodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -5509,7 +5509,7 @@ void q_abstractlistmodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QObject*) ```
 void q_abstractlistmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -7165,7 +7165,7 @@ void q_abstractlistmodel_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7174,7 +7174,7 @@ void q_abstractlistmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7183,7 +7183,7 @@ void q_abstractlistmodel_on_rows_inserted(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7192,7 +7192,7 @@ void q_abstractlistmodel_on_rows_about_to_be_removed(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7201,7 +7201,7 @@ void q_abstractlistmodel_on_rows_removed(void* self, void (*slot)(void*, void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7210,7 +7210,7 @@ void q_abstractlistmodel_on_columns_about_to_be_inserted(void* self, void (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7219,7 +7219,7 @@ void q_abstractlistmodel_on_columns_inserted(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7228,7 +7228,7 @@ void q_abstractlistmodel_on_columns_about_to_be_removed(void* self, void (*slot)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int) ```
 void q_abstractlistmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -7237,7 +7237,7 @@ void q_abstractlistmodel_on_columns_removed(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*) ```
 void q_abstractlistmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -7246,7 +7246,7 @@ void q_abstractlistmodel_on_model_about_to_be_reset(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*) ```
 void q_abstractlistmodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -7255,7 +7255,7 @@ void q_abstractlistmodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractlistmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -7264,7 +7264,7 @@ void q_abstractlistmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractlistmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -7273,7 +7273,7 @@ void q_abstractlistmodel_on_rows_moved(void* self, void (*slot)(void*, void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractlistmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -7282,7 +7282,7 @@ void q_abstractlistmodel_on_columns_about_to_be_moved(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_abstractlistmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -7291,7 +7291,7 @@ void q_abstractlistmodel_on_columns_moved(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractListModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractListModel* self, void (*slot)(QAbstractListModel*, const char*) ```
 void q_abstractlistmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#dtor.QAbstractListModel)

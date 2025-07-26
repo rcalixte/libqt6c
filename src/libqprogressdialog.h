@@ -360,7 +360,7 @@ void q_progressdialog_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QDialog*, int) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, int) ```
 void q_progressdialog_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -374,7 +374,7 @@ void q_progressdialog_accepted(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QDialog*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*) ```
 void q_progressdialog_on_accepted(void* self, void (*slot)(void*));
 
 /// Inherited from QDialog
@@ -388,7 +388,7 @@ void q_progressdialog_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QDialog*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*) ```
 void q_progressdialog_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2131,7 +2131,7 @@ void q_progressdialog_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, const char*) ```
 void q_progressdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2145,7 +2145,7 @@ void q_progressdialog_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QIcon*) ```
 void q_progressdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2159,7 +2159,7 @@ void q_progressdialog_window_icon_text_changed(void* self, const char* iconText)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, const char*) ```
 void q_progressdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2173,7 +2173,7 @@ void q_progressdialog_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QPoint*) ```
 void q_progressdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2488,7 +2488,7 @@ void q_progressdialog_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QObject*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*) ```
 void q_progressdialog_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2551,7 +2551,7 @@ void q_progressdialog_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QProgressDialog* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, QObject*) ```
 void q_progressdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4217,7 +4217,7 @@ void q_progressdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QProgressDialog* self, void (*slot)(QObject*, const char*) ```
+/// ``` QProgressDialog* self, void (*slot)(QProgressDialog*, const char*) ```
 void q_progressdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprogressdialog.html#dtor.QProgressDialog)

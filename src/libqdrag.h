@@ -355,7 +355,7 @@ void q_drag_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDrag* self, void (*slot)(QObject*) ```
+/// ``` QDrag* self, void (*slot)(QDrag*) ```
 void q_drag_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -418,7 +418,7 @@ void q_drag_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDrag* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDrag* self, void (*slot)(QDrag*, QObject*) ```
 void q_drag_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -724,7 +724,7 @@ void q_drag_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDrag* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDrag* self, void (*slot)(QDrag*, const char*) ```
 void q_drag_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdrag.html#dtor.QDrag)

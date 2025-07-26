@@ -765,7 +765,7 @@ void q_guiapplication_install_native_event_filter(void* self, void* filterObj);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*, QAbstractNativeEventFilter*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*, QAbstractNativeEventFilter*) ```
 void q_guiapplication_on_install_native_event_filter(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QCoreApplication
@@ -779,7 +779,7 @@ void q_guiapplication_remove_native_event_filter(void* self, void* filterObj);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*, QAbstractNativeEventFilter*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*, QAbstractNativeEventFilter*) ```
 void q_guiapplication_on_remove_native_event_filter(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QCoreApplication
@@ -821,7 +821,7 @@ void q_guiapplication_organization_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*) ```
 void q_guiapplication_on_organization_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QCoreApplication
@@ -835,7 +835,7 @@ void q_guiapplication_organization_domain_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*) ```
 void q_guiapplication_on_organization_domain_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QCoreApplication
@@ -849,7 +849,7 @@ void q_guiapplication_application_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*) ```
 void q_guiapplication_on_application_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QCoreApplication
@@ -863,7 +863,7 @@ void q_guiapplication_application_version_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*) ```
 void q_guiapplication_on_application_version_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QCoreApplication
@@ -1129,7 +1129,7 @@ void q_guiapplication_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QObject*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*) ```
 void q_guiapplication_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1192,7 +1192,7 @@ void q_guiapplication_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGuiApplication* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*, QObject*) ```
 void q_guiapplication_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1471,7 +1471,7 @@ void q_guiapplication_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGuiApplication* self, void (*slot)(QCoreApplication*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*) ```
 void q_guiapplication_on_about_to_quit(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1480,7 +1480,7 @@ void q_guiapplication_on_about_to_quit(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGuiApplication* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGuiApplication* self, void (*slot)(QGuiApplication*, const char*) ```
 void q_guiapplication_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#dtor.QGuiApplication)

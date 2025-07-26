@@ -2025,7 +2025,7 @@ void q_dockwidget_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDockWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*, const char*) ```
 void q_dockwidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2039,7 +2039,7 @@ void q_dockwidget_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDockWidget* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*, QIcon*) ```
 void q_dockwidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2053,7 +2053,7 @@ void q_dockwidget_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDockWidget* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*, const char*) ```
 void q_dockwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2067,7 +2067,7 @@ void q_dockwidget_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDockWidget* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*, QPoint*) ```
 void q_dockwidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2382,7 +2382,7 @@ void q_dockwidget_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDockWidget* self, void (*slot)(QObject*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*) ```
 void q_dockwidget_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2445,7 +2445,7 @@ void q_dockwidget_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDockWidget* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*, QObject*) ```
 void q_dockwidget_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3976,7 +3976,7 @@ void q_dockwidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDockWidget* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDockWidget* self, void (*slot)(QDockWidget*, const char*) ```
 void q_dockwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdockwidget.html#dtor.QDockWidget)

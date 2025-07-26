@@ -319,7 +319,7 @@ void q_sctpsocket_host_found(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_host_found(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -333,7 +333,7 @@ void q_sctpsocket_connected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_connected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -347,7 +347,7 @@ void q_sctpsocket_disconnected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_disconnected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -361,7 +361,7 @@ void q_sctpsocket_state_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketState) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, enum QAbstractSocket__SocketState) ```
 void q_sctpsocket_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -375,7 +375,7 @@ void q_sctpsocket_error_occurred(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketError) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, enum QAbstractSocket__SocketError) ```
 void q_sctpsocket_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -389,7 +389,7 @@ void q_sctpsocket_proxy_authentication_required(void* self, void* proxy, void* a
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QAbstractSocket*, QNetworkProxy*, QAuthenticator*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, QNetworkProxy*, QAuthenticator*) ```
 void q_sctpsocket_on_proxy_authentication_required(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -641,7 +641,7 @@ void q_sctpsocket_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -655,7 +655,7 @@ void q_sctpsocket_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QIODevice*, int) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, int) ```
 void q_sctpsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -669,7 +669,7 @@ void q_sctpsocket_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, long long) ```
 void q_sctpsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -683,7 +683,7 @@ void q_sctpsocket_channel_bytes_written(void* self, int channel, long long bytes
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, int, long long) ```
 void q_sctpsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -697,7 +697,7 @@ void q_sctpsocket_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -711,7 +711,7 @@ void q_sctpsocket_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -921,7 +921,7 @@ void q_sctpsocket_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QObject*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*) ```
 void q_sctpsocket_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -984,7 +984,7 @@ void q_sctpsocket_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSctpSocket* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, QObject*) ```
 void q_sctpsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2181,7 +2181,7 @@ void q_sctpsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSctpSocket* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSctpSocket* self, void (*slot)(QSctpSocket*, const char*) ```
 void q_sctpsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsctpsocket.html#dtor.QSctpSocket)

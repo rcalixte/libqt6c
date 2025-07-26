@@ -584,7 +584,7 @@ void q_stylehints_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStyleHints* self, void (*slot)(QObject*) ```
+/// ``` QStyleHints* self, void (*slot)(QStyleHints*) ```
 void q_stylehints_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -647,7 +647,7 @@ void q_stylehints_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStyleHints* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QStyleHints* self, void (*slot)(QStyleHints*, QObject*) ```
 void q_stylehints_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -656,7 +656,7 @@ void q_stylehints_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStyleHints* self, void (*slot)(QObject*, const char*) ```
+/// ``` QStyleHints* self, void (*slot)(QStyleHints*, const char*) ```
 void q_stylehints_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#dtor.QStyleHints)

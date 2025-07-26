@@ -598,7 +598,7 @@ void q_datetimeaxis_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -612,7 +612,7 @@ void q_datetimeaxis_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QPen*) ```
 void q_datetimeaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -626,7 +626,7 @@ void q_datetimeaxis_line_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -640,7 +640,7 @@ void q_datetimeaxis_labels_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -654,7 +654,7 @@ void q_datetimeaxis_labels_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QBrush*) ```
 void q_datetimeaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -668,7 +668,7 @@ void q_datetimeaxis_labels_font_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QFont*) ```
 void q_datetimeaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -682,7 +682,7 @@ void q_datetimeaxis_labels_angle_changed(void* self, int angle);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, int) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, int) ```
 void q_datetimeaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -696,7 +696,7 @@ void q_datetimeaxis_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QPen*) ```
 void q_datetimeaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -710,7 +710,7 @@ void q_datetimeaxis_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -724,7 +724,7 @@ void q_datetimeaxis_minor_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -738,7 +738,7 @@ void q_datetimeaxis_minor_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QPen*) ```
 void q_datetimeaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -752,7 +752,7 @@ void q_datetimeaxis_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QColor*) ```
 void q_datetimeaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -766,7 +766,7 @@ void q_datetimeaxis_minor_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QColor*) ```
 void q_datetimeaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -780,7 +780,7 @@ void q_datetimeaxis_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QColor*) ```
 void q_datetimeaxis_on_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -794,7 +794,7 @@ void q_datetimeaxis_labels_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QColor*) ```
 void q_datetimeaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -808,7 +808,7 @@ void q_datetimeaxis_title_text_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, const char*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, const char*) ```
 void q_datetimeaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -822,7 +822,7 @@ void q_datetimeaxis_title_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QBrush*) ```
 void q_datetimeaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -836,7 +836,7 @@ void q_datetimeaxis_title_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -850,7 +850,7 @@ void q_datetimeaxis_title_font_changed(void* self, void* font);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QFont*) ```
 void q_datetimeaxis_on_title_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -864,7 +864,7 @@ void q_datetimeaxis_shades_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -878,7 +878,7 @@ void q_datetimeaxis_shades_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QColor*) ```
 void q_datetimeaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -892,7 +892,7 @@ void q_datetimeaxis_shades_border_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QColor*) ```
 void q_datetimeaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -906,7 +906,7 @@ void q_datetimeaxis_shades_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QPen*) ```
 void q_datetimeaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -920,7 +920,7 @@ void q_datetimeaxis_shades_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QBrush*) ```
 void q_datetimeaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -934,7 +934,7 @@ void q_datetimeaxis_reverse_changed(void* self, bool reverse);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_reverse_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -948,7 +948,7 @@ void q_datetimeaxis_labels_editable_changed(void* self, bool editable);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -962,7 +962,7 @@ void q_datetimeaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -976,7 +976,7 @@ void q_datetimeaxis_truncate_labels_changed(void* self, bool truncateLabels);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, bool) ```
 void q_datetimeaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1249,7 +1249,7 @@ void q_datetimeaxis_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QObject*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*) ```
 void q_datetimeaxis_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1312,7 +1312,7 @@ void q_datetimeaxis_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, QObject*) ```
 void q_datetimeaxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1618,7 +1618,7 @@ void q_datetimeaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDateTimeAxis* self, void (*slot)(QObject*, const char*) ```
+/// ``` QDateTimeAxis* self, void (*slot)(QDateTimeAxis*, const char*) ```
 void q_datetimeaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeaxis-qtcharts.html#dtor.QDateTimeAxis)

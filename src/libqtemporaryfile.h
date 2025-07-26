@@ -593,7 +593,7 @@ void q_temporaryfile_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QIODevice*) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*) ```
 void q_temporaryfile_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -607,7 +607,7 @@ void q_temporaryfile_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QIODevice*, int) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*, int) ```
 void q_temporaryfile_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -621,7 +621,7 @@ void q_temporaryfile_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*, long long) ```
 void q_temporaryfile_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -635,7 +635,7 @@ void q_temporaryfile_channel_bytes_written(void* self, int channel, long long by
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*, int, long long) ```
 void q_temporaryfile_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -649,7 +649,7 @@ void q_temporaryfile_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QIODevice*) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*) ```
 void q_temporaryfile_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -663,7 +663,7 @@ void q_temporaryfile_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QIODevice*) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*) ```
 void q_temporaryfile_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -873,7 +873,7 @@ void q_temporaryfile_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QObject*) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*) ```
 void q_temporaryfile_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -936,7 +936,7 @@ void q_temporaryfile_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*, QObject*) ```
 void q_temporaryfile_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QFile
@@ -1809,7 +1809,7 @@ void q_temporaryfile_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTemporaryFile* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTemporaryFile* self, void (*slot)(QTemporaryFile*, const char*) ```
 void q_temporaryfile_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtemporaryfile.html#dtor.QTemporaryFile)

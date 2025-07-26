@@ -292,7 +292,7 @@ void q_printdialog_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QDialog*, int) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, int) ```
 void q_printdialog_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -306,7 +306,7 @@ void q_printdialog_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QDialog*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*) ```
 void q_printdialog_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2049,7 +2049,7 @@ void q_printdialog_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, const char*) ```
 void q_printdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2063,7 +2063,7 @@ void q_printdialog_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, QIcon*) ```
 void q_printdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2077,7 +2077,7 @@ void q_printdialog_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, const char*) ```
 void q_printdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2091,7 +2091,7 @@ void q_printdialog_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, QPoint*) ```
 void q_printdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2406,7 +2406,7 @@ void q_printdialog_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QObject*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*) ```
 void q_printdialog_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2469,7 +2469,7 @@ void q_printdialog_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintDialog* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, QObject*) ```
 void q_printdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4162,7 +4162,7 @@ void q_printdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPrintDialog* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPrintDialog* self, void (*slot)(QPrintDialog*, const char*) ```
 void q_printdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintdialog.html#dtor.QPrintDialog)

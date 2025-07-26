@@ -399,7 +399,7 @@ void q_pdfpagenavigator_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfPageNavigator* self, void (*slot)(QObject*) ```
+/// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*) ```
 void q_pdfpagenavigator_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -462,7 +462,7 @@ void q_pdfpagenavigator_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfPageNavigator* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, QObject*) ```
 void q_pdfpagenavigator_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -768,7 +768,7 @@ void q_pdfpagenavigator_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfPageNavigator* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPdfPageNavigator* self, void (*slot)(QPdfPageNavigator*, const char*) ```
 void q_pdfpagenavigator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagenavigator.html#dtor.QPdfPageNavigator)

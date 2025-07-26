@@ -291,7 +291,7 @@ void q_categoryaxis_min_changed(void* self, double min);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#minChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, double) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, double) ```
 void q_categoryaxis_on_min_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QValueAxis
@@ -305,7 +305,7 @@ void q_categoryaxis_max_changed(void* self, double max);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#maxChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, double) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, double) ```
 void q_categoryaxis_on_max_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QValueAxis
@@ -319,7 +319,7 @@ void q_categoryaxis_range_changed(void* self, double min, double max);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#rangeChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, double, double) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, double, double) ```
 void q_categoryaxis_on_range_changed(void* self, void (*slot)(void*, double, double));
 
 /// Inherited from QValueAxis
@@ -333,7 +333,7 @@ void q_categoryaxis_tick_count_changed(void* self, int tickCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#tickCountChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, int) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, int) ```
 void q_categoryaxis_on_tick_count_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QValueAxis
@@ -347,7 +347,7 @@ void q_categoryaxis_minor_tick_count_changed(void* self, int tickCount);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#minorTickCountChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, int) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, int) ```
 void q_categoryaxis_on_minor_tick_count_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QValueAxis
@@ -361,7 +361,7 @@ void q_categoryaxis_label_format_changed(void* self, const char* format);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#labelFormatChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, const char*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, const char*) ```
 void q_categoryaxis_on_label_format_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QValueAxis
@@ -375,7 +375,7 @@ void q_categoryaxis_tick_interval_changed(void* self, double interval);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#tickIntervalChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, double) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, double) ```
 void q_categoryaxis_on_tick_interval_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QValueAxis
@@ -389,7 +389,7 @@ void q_categoryaxis_tick_anchor_changed(void* self, double anchor);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#tickAnchorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, double) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, double) ```
 void q_categoryaxis_on_tick_anchor_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QValueAxis
@@ -403,7 +403,7 @@ void q_categoryaxis_tick_type_changed(void* self, int64_t typeVal);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis.html#tickTypeChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QValueAxis*, enum QValueAxis__TickType) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, enum QValueAxis__TickType) ```
 void q_categoryaxis_on_tick_type_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractAxis
@@ -830,7 +830,7 @@ void q_categoryaxis_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#visibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -844,7 +844,7 @@ void q_categoryaxis_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#linePenChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QPen*) ```
 void q_categoryaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -858,7 +858,7 @@ void q_categoryaxis_line_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#lineVisibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -872,7 +872,7 @@ void q_categoryaxis_labels_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsVisibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -886,7 +886,7 @@ void q_categoryaxis_labels_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsBrushChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QBrush*) ```
 void q_categoryaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -900,7 +900,7 @@ void q_categoryaxis_labels_font_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsFontChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QFont*) ```
 void q_categoryaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -914,7 +914,7 @@ void q_categoryaxis_labels_angle_changed(void* self, int angle);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsAngleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, int) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, int) ```
 void q_categoryaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAxis
@@ -928,7 +928,7 @@ void q_categoryaxis_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLinePenChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QPen*) ```
 void q_categoryaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -942,7 +942,7 @@ void q_categoryaxis_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridVisibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -956,7 +956,7 @@ void q_categoryaxis_minor_grid_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridVisibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -970,7 +970,7 @@ void q_categoryaxis_minor_grid_line_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLinePenChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QPen*) ```
 void q_categoryaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -984,7 +984,7 @@ void q_categoryaxis_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#gridLineColorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QColor*) ```
 void q_categoryaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -998,7 +998,7 @@ void q_categoryaxis_minor_grid_line_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#minorGridLineColorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QColor*) ```
 void q_categoryaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1012,7 +1012,7 @@ void q_categoryaxis_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#colorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QColor*) ```
 void q_categoryaxis_on_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1026,7 +1026,7 @@ void q_categoryaxis_labels_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsColorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QColor*) ```
 void q_categoryaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1040,7 +1040,7 @@ void q_categoryaxis_title_text_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleTextChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, const char*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, const char*) ```
 void q_categoryaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QAbstractAxis
@@ -1054,7 +1054,7 @@ void q_categoryaxis_title_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleBrushChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QBrush*) ```
 void q_categoryaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1068,7 +1068,7 @@ void q_categoryaxis_title_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleVisibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1082,7 +1082,7 @@ void q_categoryaxis_title_font_changed(void* self, void* font);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#titleFontChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QFont*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QFont*) ```
 void q_categoryaxis_on_title_font_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1096,7 +1096,7 @@ void q_categoryaxis_shades_visible_changed(void* self, bool visible);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesVisibleChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1110,7 +1110,7 @@ void q_categoryaxis_shades_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesColorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QColor*) ```
 void q_categoryaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1124,7 +1124,7 @@ void q_categoryaxis_shades_border_color_changed(void* self, void* color);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBorderColorChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QColor*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QColor*) ```
 void q_categoryaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1138,7 +1138,7 @@ void q_categoryaxis_shades_pen_changed(void* self, void* pen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesPenChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QPen*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QPen*) ```
 void q_categoryaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1152,7 +1152,7 @@ void q_categoryaxis_shades_brush_changed(void* self, void* brush);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#shadesBrushChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, QBrush*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QBrush*) ```
 void q_categoryaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAxis
@@ -1166,7 +1166,7 @@ void q_categoryaxis_reverse_changed(void* self, bool reverse);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#reverseChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_reverse_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1180,7 +1180,7 @@ void q_categoryaxis_labels_editable_changed(void* self, bool editable);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsEditableChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1194,7 +1194,7 @@ void q_categoryaxis_labels_truncated_changed(void* self, bool labelsTruncated);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#labelsTruncatedChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1208,7 +1208,7 @@ void q_categoryaxis_truncate_labels_changed(void* self, bool truncateLabels);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractaxis.html#truncateLabelsChanged)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QAbstractAxis*, bool) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, bool) ```
 void q_categoryaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractAxis
@@ -1481,7 +1481,7 @@ void q_categoryaxis_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QObject*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*) ```
 void q_categoryaxis_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1544,7 +1544,7 @@ void q_categoryaxis_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, QObject*) ```
 void q_categoryaxis_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1850,7 +1850,7 @@ void q_categoryaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCategoryAxis* self, void (*slot)(QObject*, const char*) ```
+/// ``` QCategoryAxis* self, void (*slot)(QCategoryAxis*, const char*) ```
 void q_categoryaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#dtor.QCategoryAxis)

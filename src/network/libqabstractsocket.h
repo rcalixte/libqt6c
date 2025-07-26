@@ -990,7 +990,7 @@ void q_abstractsocket_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1004,7 +1004,7 @@ void q_abstractsocket_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QIODevice*, int) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, int) ```
 void q_abstractsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -1018,7 +1018,7 @@ void q_abstractsocket_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, long long) ```
 void q_abstractsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -1032,7 +1032,7 @@ void q_abstractsocket_channel_bytes_written(void* self, int channel, long long b
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, int, long long) ```
 void q_abstractsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -1046,7 +1046,7 @@ void q_abstractsocket_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1060,7 +1060,7 @@ void q_abstractsocket_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -1270,7 +1270,7 @@ void q_abstractsocket_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QObject*) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*) ```
 void q_abstractsocket_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1333,7 +1333,7 @@ void q_abstractsocket_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, QObject*) ```
 void q_abstractsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1882,7 +1882,7 @@ void q_abstractsocket_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractSocket* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAbstractSocket* self, void (*slot)(QAbstractSocket*, const char*) ```
 void q_abstractsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#dtor.QAbstractSocket)

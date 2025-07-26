@@ -559,7 +559,7 @@ void q_texttable_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextTable* self, void (*slot)(QObject*) ```
+/// ``` QTextTable* self, void (*slot)(QTextTable*) ```
 void q_texttable_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -622,7 +622,7 @@ void q_texttable_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextTable* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTextTable* self, void (*slot)(QTextTable*, QObject*) ```
 void q_texttable_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -928,7 +928,7 @@ void q_texttable_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextTable* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTextTable* self, void (*slot)(QTextTable*, const char*) ```
 void q_texttable_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#dtor.QTextTable)

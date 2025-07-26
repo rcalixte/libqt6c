@@ -988,7 +988,7 @@ void q_graphicswidget_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1002,7 +1002,7 @@ void q_graphicswidget_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1016,7 +1016,7 @@ void q_graphicswidget_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1030,7 +1030,7 @@ void q_graphicswidget_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1044,7 +1044,7 @@ void q_graphicswidget_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1058,7 +1058,7 @@ void q_graphicswidget_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1072,7 +1072,7 @@ void q_graphicswidget_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1086,7 +1086,7 @@ void q_graphicswidget_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1100,7 +1100,7 @@ void q_graphicswidget_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1114,7 +1114,7 @@ void q_graphicswidget_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1128,7 +1128,7 @@ void q_graphicswidget_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1142,7 +1142,7 @@ void q_graphicswidget_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1352,7 +1352,7 @@ void q_graphicswidget_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*) ```
 void q_graphicswidget_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1415,7 +1415,7 @@ void q_graphicswidget_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, QObject*) ```
 void q_graphicswidget_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3951,7 +3951,7 @@ void q_graphicswidget_on_set_owned_by_layout(void* self, void (*slot)(void*, boo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsWidget* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsWidget* self, void (*slot)(QGraphicsWidget*, const char*) ```
 void q_graphicswidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#dtor.QGraphicsWidget)

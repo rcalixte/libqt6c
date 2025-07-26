@@ -477,7 +477,7 @@ void q_futurewatcherbase_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QObject*) ```
+/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
 void q_futurewatcherbase_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -540,7 +540,7 @@ void q_futurewatcherbase_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, QObject*) ```
 void q_futurewatcherbase_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -549,7 +549,7 @@ void q_futurewatcherbase_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QObject*, const char*) ```
+/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, const char*) ```
 void q_futurewatcherbase_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#dtor.QFutureWatcherBase)

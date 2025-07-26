@@ -303,7 +303,7 @@ void q_accessiblebridgeplugin_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAccessibleBridgePlugin* self, void (*slot)(QObject*) ```
+/// ``` QAccessibleBridgePlugin* self, void (*slot)(QAccessibleBridgePlugin*) ```
 void q_accessiblebridgeplugin_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -366,7 +366,7 @@ void q_accessiblebridgeplugin_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAccessibleBridgePlugin* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QAccessibleBridgePlugin* self, void (*slot)(QAccessibleBridgePlugin*, QObject*) ```
 void q_accessiblebridgeplugin_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -672,7 +672,7 @@ void q_accessiblebridgeplugin_on_is_signal_connected(void* self, bool (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAccessibleBridgePlugin* self, void (*slot)(QObject*, const char*) ```
+/// ``` QAccessibleBridgePlugin* self, void (*slot)(QAccessibleBridgePlugin*, const char*) ```
 void q_accessiblebridgeplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessiblebridgeplugin.html#dtor.QAccessibleBridgePlugin)

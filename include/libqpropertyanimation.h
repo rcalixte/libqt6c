@@ -242,7 +242,7 @@ void q_propertyanimation_value_changed(void* self, void* value);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#valueChanged)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QVariantAnimation*, QVariant*) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, QVariant*) ```
 void q_propertyanimation_on_value_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAnimation
@@ -326,7 +326,7 @@ void q_propertyanimation_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*) ```
 void q_propertyanimation_on_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -340,7 +340,7 @@ void q_propertyanimation_state_changed(void* self, int64_t newState, int64_t old
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_propertyanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -354,7 +354,7 @@ void q_propertyanimation_current_loop_changed(void* self, int currentLoop);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*, int) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, int) ```
 void q_propertyanimation_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -368,7 +368,7 @@ void q_propertyanimation_direction_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, enum QAbstractAnimation__Direction) ```
 void q_propertyanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -620,7 +620,7 @@ void q_propertyanimation_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QObject*) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*) ```
 void q_propertyanimation_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -683,7 +683,7 @@ void q_propertyanimation_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, QObject*) ```
 void q_propertyanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QVariantAnimation
@@ -1070,7 +1070,7 @@ void q_propertyanimation_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPropertyAnimation* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPropertyAnimation* self, void (*slot)(QPropertyAnimation*, const char*) ```
 void q_propertyanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#dtor.QPropertyAnimation)

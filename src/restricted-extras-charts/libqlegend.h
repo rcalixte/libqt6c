@@ -692,7 +692,7 @@ void q_legend_geometry_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_geometry_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -706,7 +706,7 @@ void q_legend_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -769,7 +769,7 @@ void q_legend_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -783,7 +783,7 @@ void q_legend_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -797,7 +797,7 @@ void q_legend_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -811,7 +811,7 @@ void q_legend_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -825,7 +825,7 @@ void q_legend_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -839,7 +839,7 @@ void q_legend_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -853,7 +853,7 @@ void q_legend_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -867,7 +867,7 @@ void q_legend_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -881,7 +881,7 @@ void q_legend_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -895,7 +895,7 @@ void q_legend_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -909,7 +909,7 @@ void q_legend_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -923,7 +923,7 @@ void q_legend_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QLegend* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1140,7 +1140,7 @@ void q_legend_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLegend* self, void (*slot)(QObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*) ```
 void q_legend_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1203,7 +1203,7 @@ void q_legend_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLegend* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*, QObject*) ```
 void q_legend_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -2654,7 +2654,7 @@ QSizeF* q_legend_effective_size_hint2(void* self, int64_t which, void* constrain
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLegend* self, void (*slot)(QObject*, const char*) ```
+/// ``` QLegend* self, void (*slot)(QLegend*, const char*) ```
 void q_legend_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegend-qtcharts.html#dtor.QLegend)

@@ -466,7 +466,7 @@ void q_tcpserver_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTcpServer* self, void (*slot)(QObject*) ```
+/// ``` QTcpServer* self, void (*slot)(QTcpServer*) ```
 void q_tcpserver_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -529,7 +529,7 @@ void q_tcpserver_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTcpServer* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QTcpServer* self, void (*slot)(QTcpServer*, QObject*) ```
 void q_tcpserver_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -842,7 +842,7 @@ void q_tcpserver_on_pending_connection_available(void* self, void (*slot)(void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTcpServer* self, void (*slot)(QObject*, const char*) ```
+/// ``` QTcpServer* self, void (*slot)(QTcpServer*, const char*) ```
 void q_tcpserver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#dtor.QTcpServer)

@@ -520,7 +520,7 @@ void q_webengineprofile_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineProfile* self, void (*slot)(QObject*) ```
+/// ``` QWebEngineProfile* self, void (*slot)(QWebEngineProfile*) ```
 void q_webengineprofile_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -583,7 +583,7 @@ void q_webengineprofile_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineProfile* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebEngineProfile* self, void (*slot)(QWebEngineProfile*, QObject*) ```
 void q_webengineprofile_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -889,7 +889,7 @@ void q_webengineprofile_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineProfile* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebEngineProfile* self, void (*slot)(QWebEngineProfile*, const char*) ```
 void q_webengineprofile_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#dtor.QWebEngineProfile)

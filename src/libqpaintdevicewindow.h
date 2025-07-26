@@ -829,7 +829,7 @@ void q_paintdevicewindow_screen_changed(void* self, void* screen);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#screenChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, QScreen*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, QScreen*) ```
 void q_paintdevicewindow_on_screen_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
@@ -843,7 +843,7 @@ void q_paintdevicewindow_modality_changed(void* self, int64_t modality);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, enum Qt__WindowModality) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, enum Qt__WindowModality) ```
 void q_paintdevicewindow_on_modality_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -857,7 +857,7 @@ void q_paintdevicewindow_window_state_changed(void* self, int64_t windowState);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, enum Qt__WindowState) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, enum Qt__WindowState) ```
 void q_paintdevicewindow_on_window_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -871,7 +871,7 @@ void q_paintdevicewindow_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, const char*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, const char*) ```
 void q_paintdevicewindow_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWindow
@@ -885,7 +885,7 @@ void q_paintdevicewindow_x_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#xChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_x_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -899,7 +899,7 @@ void q_paintdevicewindow_y_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#yChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_y_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -913,7 +913,7 @@ void q_paintdevicewindow_width_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#widthChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_width_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -927,7 +927,7 @@ void q_paintdevicewindow_height_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#heightChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_height_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -941,7 +941,7 @@ void q_paintdevicewindow_minimum_width_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumWidthChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_minimum_width_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -955,7 +955,7 @@ void q_paintdevicewindow_minimum_height_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#minimumHeightChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_minimum_height_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -969,7 +969,7 @@ void q_paintdevicewindow_maximum_width_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumWidthChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_maximum_width_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -983,7 +983,7 @@ void q_paintdevicewindow_maximum_height_changed(void* self, int arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#maximumHeightChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, int) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, int) ```
 void q_paintdevicewindow_on_maximum_height_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QWindow
@@ -997,7 +997,7 @@ void q_paintdevicewindow_visible_changed(void* self, bool arg);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibleChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, bool) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, bool) ```
 void q_paintdevicewindow_on_visible_changed(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QWindow
@@ -1011,7 +1011,7 @@ void q_paintdevicewindow_visibility_changed(void* self, int64_t visibility);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, enum QWindow__Visibility) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, enum QWindow__Visibility) ```
 void q_paintdevicewindow_on_visibility_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -1025,7 +1025,7 @@ void q_paintdevicewindow_active_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*) ```
 void q_paintdevicewindow_on_active_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QWindow
@@ -1039,7 +1039,7 @@ void q_paintdevicewindow_content_orientation_changed(void* self, int64_t orienta
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, enum Qt__ScreenOrientation) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, enum Qt__ScreenOrientation) ```
 void q_paintdevicewindow_on_content_orientation_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QWindow
@@ -1053,7 +1053,7 @@ void q_paintdevicewindow_focus_object_changed(void* self, void* object);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, QObject*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, QObject*) ```
 void q_paintdevicewindow_on_focus_object_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
@@ -1067,7 +1067,7 @@ void q_paintdevicewindow_opacity_changed(void* self, double opacity);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#opacityChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, double) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, double) ```
 void q_paintdevicewindow_on_opacity_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QWindow
@@ -1081,7 +1081,7 @@ void q_paintdevicewindow_transient_parent_changed(void* self, void* transientPar
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#transientParentChanged)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QWindow*, QWindow*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, QWindow*) ```
 void q_paintdevicewindow_on_transient_parent_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWindow
@@ -1305,7 +1305,7 @@ void q_paintdevicewindow_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QObject*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*) ```
 void q_paintdevicewindow_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1361,7 +1361,7 @@ void q_paintdevicewindow_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, QObject*) ```
 void q_paintdevicewindow_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QSurface
@@ -1482,7 +1482,7 @@ int32_t q_paintdevicewindow_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPaintDeviceWindow* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPaintDeviceWindow* self, void (*slot)(QPaintDeviceWindow*, const char*) ```
 void q_paintdevicewindow_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevicewindow.html#dtor.QPaintDeviceWindow)

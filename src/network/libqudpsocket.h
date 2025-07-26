@@ -299,7 +299,7 @@ void q_udpsocket_host_found(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#hostFound)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_host_found(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -313,7 +313,7 @@ void q_udpsocket_connected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connected)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_connected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -327,7 +327,7 @@ void q_udpsocket_disconnected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#disconnected)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QAbstractSocket*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_disconnected(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSocket
@@ -341,7 +341,7 @@ void q_udpsocket_state_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketState) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, enum QAbstractSocket__SocketState) ```
 void q_udpsocket_on_state_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -355,7 +355,7 @@ void q_udpsocket_error_occurred(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QAbstractSocket*, enum QAbstractSocket__SocketError) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, enum QAbstractSocket__SocketError) ```
 void q_udpsocket_on_error_occurred(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
@@ -369,7 +369,7 @@ void q_udpsocket_proxy_authentication_required(void* self, void* proxy, void* au
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QAbstractSocket*, QNetworkProxy*, QAuthenticator*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, QNetworkProxy*, QAuthenticator*) ```
 void q_udpsocket_on_proxy_authentication_required(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -621,7 +621,7 @@ void q_udpsocket_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -635,7 +635,7 @@ void q_udpsocket_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QIODevice*, int) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, int) ```
 void q_udpsocket_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -649,7 +649,7 @@ void q_udpsocket_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, long long) ```
 void q_udpsocket_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -663,7 +663,7 @@ void q_udpsocket_channel_bytes_written(void* self, int channel, long long bytes)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, int, long long) ```
 void q_udpsocket_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -677,7 +677,7 @@ void q_udpsocket_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -691,7 +691,7 @@ void q_udpsocket_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QIODevice*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -901,7 +901,7 @@ void q_udpsocket_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QObject*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*) ```
 void q_udpsocket_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -964,7 +964,7 @@ void q_udpsocket_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUdpSocket* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, QObject*) ```
 void q_udpsocket_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractSocket
@@ -2242,7 +2242,7 @@ void q_udpsocket_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QUdpSocket* self, void (*slot)(QObject*, const char*) ```
+/// ``` QUdpSocket* self, void (*slot)(QUdpSocket*, const char*) ```
 void q_udpsocket_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qudpsocket.html#dtor.QUdpSocket)

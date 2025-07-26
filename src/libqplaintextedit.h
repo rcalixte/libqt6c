@@ -3123,7 +3123,7 @@ void q_plaintextedit_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, const char*) ```
 void q_plaintextedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3137,7 +3137,7 @@ void q_plaintextedit_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QIcon*) ```
 void q_plaintextedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3151,7 +3151,7 @@ void q_plaintextedit_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, const char*) ```
 void q_plaintextedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3165,7 +3165,7 @@ void q_plaintextedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QPoint*) ```
 void q_plaintextedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3480,7 +3480,7 @@ void q_plaintextedit_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QObject*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*) ```
 void q_plaintextedit_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3543,7 +3543,7 @@ void q_plaintextedit_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, QObject*) ```
 void q_plaintextedit_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4750,7 +4750,7 @@ void q_plaintextedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPlainTextEdit* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPlainTextEdit* self, void (*slot)(QPlainTextEdit*, const char*) ```
 void q_plaintextedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#dtor.QPlainTextEdit)
@@ -5037,7 +5037,7 @@ void q_plaintextdocumentlayout_update(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#update)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*) ```
 void q_plaintextdocumentlayout_on_update(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractTextDocumentLayout
@@ -5051,7 +5051,7 @@ void q_plaintextdocumentlayout_update_block(void* self, void* block);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#updateBlock)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, QTextBlock*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, QTextBlock*) ```
 void q_plaintextdocumentlayout_on_update_block(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractTextDocumentLayout
@@ -5065,7 +5065,7 @@ void q_plaintextdocumentlayout_document_size_changed(void* self, void* newSize);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSizeChanged)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, QSizeF*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, QSizeF*) ```
 void q_plaintextdocumentlayout_on_document_size_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractTextDocumentLayout
@@ -5079,7 +5079,7 @@ void q_plaintextdocumentlayout_page_count_changed(void* self, int newPages);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#pageCountChanged)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, int) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, int) ```
 void q_plaintextdocumentlayout_on_page_count_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractTextDocumentLayout
@@ -5100,7 +5100,7 @@ void q_plaintextdocumentlayout_update1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#update)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QAbstractTextDocumentLayout*, QRectF*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, QRectF*) ```
 void q_plaintextdocumentlayout_on_update1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -5303,7 +5303,7 @@ void q_plaintextdocumentlayout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QObject*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*) ```
 void q_plaintextdocumentlayout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -5366,7 +5366,7 @@ void q_plaintextdocumentlayout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, QObject*) ```
 void q_plaintextdocumentlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractTextDocumentLayout
@@ -5807,7 +5807,7 @@ void q_plaintextdocumentlayout_on_is_signal_connected(void* self, bool (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPlainTextDocumentLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPlainTextDocumentLayout* self, void (*slot)(QPlainTextDocumentLayout*, const char*) ```
 void q_plaintextdocumentlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#dtor.QPlainTextDocumentLayout)

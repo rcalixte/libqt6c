@@ -1066,7 +1066,7 @@ void q_graphicsproxywidget_geometry_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_geometry_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -1080,7 +1080,7 @@ void q_graphicsproxywidget_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -1143,7 +1143,7 @@ void q_graphicsproxywidget_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1157,7 +1157,7 @@ void q_graphicsproxywidget_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1171,7 +1171,7 @@ void q_graphicsproxywidget_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1185,7 +1185,7 @@ void q_graphicsproxywidget_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1199,7 +1199,7 @@ void q_graphicsproxywidget_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1213,7 +1213,7 @@ void q_graphicsproxywidget_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1227,7 +1227,7 @@ void q_graphicsproxywidget_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1241,7 +1241,7 @@ void q_graphicsproxywidget_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1255,7 +1255,7 @@ void q_graphicsproxywidget_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1269,7 +1269,7 @@ void q_graphicsproxywidget_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1283,7 +1283,7 @@ void q_graphicsproxywidget_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1297,7 +1297,7 @@ void q_graphicsproxywidget_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1507,7 +1507,7 @@ void q_graphicsproxywidget_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
 void q_graphicsproxywidget_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1570,7 +1570,7 @@ void q_graphicsproxywidget_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QObject*) ```
 void q_graphicsproxywidget_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4106,7 +4106,7 @@ void q_graphicsproxywidget_on_set_owned_by_layout(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, const char*) ```
 void q_graphicsproxywidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dtor.QGraphicsProxyWidget)

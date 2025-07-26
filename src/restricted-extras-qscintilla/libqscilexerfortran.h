@@ -177,7 +177,7 @@ void q_scilexerfortran_color_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, QColor*, int) ```
 void q_scilexerfortran_on_color_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -191,7 +191,7 @@ void q_scilexerfortran_eol_fill_changed(void* self, bool eolfilled, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QsciLexer*, bool, int) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, bool, int) ```
 void q_scilexerfortran_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -205,7 +205,7 @@ void q_scilexerfortran_font_changed(void* self, void* f, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QsciLexer*, QFont*, int) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, QFont*, int) ```
 void q_scilexerfortran_on_font_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -219,7 +219,7 @@ void q_scilexerfortran_paper_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, QColor*, int) ```
 void q_scilexerfortran_on_paper_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -233,7 +233,7 @@ void q_scilexerfortran_property_changed(void* self, const char* prop, const char
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QsciLexer*, const char*, const char*) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, const char*, const char*) ```
 void q_scilexerfortran_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -450,7 +450,7 @@ void q_scilexerfortran_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QObject*) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*) ```
 void q_scilexerfortran_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -513,7 +513,7 @@ void q_scilexerfortran_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, QObject*) ```
 void q_scilexerfortran_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QsciLexerFortran77
@@ -1737,7 +1737,7 @@ void q_scilexerfortran_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerFortran* self, void (*slot)(QObject*, const char*) ```
+/// ``` QsciLexerFortran* self, void (*slot)(QsciLexerFortran*, const char*) ```
 void q_scilexerfortran_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerFortran.html)

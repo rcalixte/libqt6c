@@ -380,7 +380,7 @@ void q_hbarmodelmapper_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHBarModelMapper* self, void (*slot)(QObject*) ```
+/// ``` QHBarModelMapper* self, void (*slot)(QHBarModelMapper*) ```
 void q_hbarmodelmapper_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -443,7 +443,7 @@ void q_hbarmodelmapper_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHBarModelMapper* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QHBarModelMapper* self, void (*slot)(QHBarModelMapper*, QObject*) ```
 void q_hbarmodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1019,7 +1019,7 @@ void q_hbarmodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QHBarModelMapper* self, void (*slot)(QObject*, const char*) ```
+/// ``` QHBarModelMapper* self, void (*slot)(QHBarModelMapper*, const char*) ```
 void q_hbarmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhbarmodelmapper-qtcharts.html#dtor.QHBarModelMapper)

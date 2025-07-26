@@ -207,7 +207,7 @@ void q_xylegendmarker_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#clicked)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -221,7 +221,7 @@ void q_xylegendmarker_hovered(void* self, bool status);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#hovered)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*, bool) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*, bool) ```
 void q_xylegendmarker_on_hovered(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QLegendMarker
@@ -235,7 +235,7 @@ void q_xylegendmarker_label_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_label_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -249,7 +249,7 @@ void q_xylegendmarker_label_brush_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#labelBrushChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_label_brush_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -263,7 +263,7 @@ void q_xylegendmarker_font_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#fontChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_font_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -277,7 +277,7 @@ void q_xylegendmarker_pen_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#penChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_pen_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -291,7 +291,7 @@ void q_xylegendmarker_brush_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#brushChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_brush_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -305,7 +305,7 @@ void q_xylegendmarker_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#visibleChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QLegendMarker
@@ -319,7 +319,7 @@ void q_xylegendmarker_shape_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlegendmarker.html#shapeChanged)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QLegendMarker*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_shape_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -522,7 +522,7 @@ void q_xylegendmarker_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QObject*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*) ```
 void q_xylegendmarker_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -585,7 +585,7 @@ void q_xylegendmarker_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*, QObject*) ```
 void q_xylegendmarker_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -891,7 +891,7 @@ void q_xylegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QXYLegendMarker* self, void (*slot)(QObject*, const char*) ```
+/// ``` QXYLegendMarker* self, void (*slot)(QXYLegendMarker*, const char*) ```
 void q_xylegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#dtor.QXYLegendMarker)

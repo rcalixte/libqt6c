@@ -345,7 +345,7 @@ void q_screencapture_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QObject*) ```
+/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*) ```
 void q_screencapture_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -408,7 +408,7 @@ void q_screencapture_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QObject*) ```
 void q_screencapture_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -714,7 +714,7 @@ void q_screencapture_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QScreenCapture* self, void (*slot)(QObject*, const char*) ```
+/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, const char*) ```
 void q_screencapture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#dtor.QScreenCapture)

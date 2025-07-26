@@ -1028,7 +1028,7 @@ void q_sortfilterproxymodel_data_changed(void* self, void* topLeft, void* bottom
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, QModelIndex*) ```
 void q_sortfilterproxymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1042,7 +1042,7 @@ void q_sortfilterproxymodel_header_data_changed(void* self, int64_t orientation,
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, enum Qt__Orientation, int, int) ```
 void q_sortfilterproxymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -1056,7 +1056,7 @@ void q_sortfilterproxymodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*) ```
 void q_sortfilterproxymodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1070,7 +1070,7 @@ void q_sortfilterproxymodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*) ```
 void q_sortfilterproxymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -1126,7 +1126,7 @@ void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* botto
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_sortfilterproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1140,7 +1140,7 @@ void q_sortfilterproxymodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_sortfilterproxymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1154,7 +1154,7 @@ void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int6
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_sortfilterproxymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -1168,7 +1168,7 @@ void q_sortfilterproxymodel_layout_about_to_be_changed1(void* self, libqt_list p
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_sortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -1182,7 +1182,7 @@ void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list p
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_sortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -1385,7 +1385,7 @@ void q_sortfilterproxymodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QObject*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*) ```
 void q_sortfilterproxymodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1441,7 +1441,7 @@ void q_sortfilterproxymodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QObject*) ```
 void q_sortfilterproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2638,7 +2638,7 @@ void q_sortfilterproxymodel_on_is_signal_connected(void* self, bool (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractProxyModel*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*) ```
 void q_sortfilterproxymodel_on_source_model_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2647,7 +2647,7 @@ void q_sortfilterproxymodel_on_source_model_changed(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2656,7 +2656,7 @@ void q_sortfilterproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2665,7 +2665,7 @@ void q_sortfilterproxymodel_on_rows_inserted(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2674,7 +2674,7 @@ void q_sortfilterproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2683,7 +2683,7 @@ void q_sortfilterproxymodel_on_rows_removed(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2692,7 +2692,7 @@ void q_sortfilterproxymodel_on_columns_about_to_be_inserted(void* self, void (*s
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2701,7 +2701,7 @@ void q_sortfilterproxymodel_on_columns_inserted(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2710,7 +2710,7 @@ void q_sortfilterproxymodel_on_columns_about_to_be_removed(void* self, void (*sl
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int) ```
 void q_sortfilterproxymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2719,7 +2719,7 @@ void q_sortfilterproxymodel_on_columns_removed(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*) ```
 void q_sortfilterproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2728,7 +2728,7 @@ void q_sortfilterproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*) ```
 void q_sortfilterproxymodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2737,7 +2737,7 @@ void q_sortfilterproxymodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_sortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2746,7 +2746,7 @@ void q_sortfilterproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_sortfilterproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2755,7 +2755,7 @@ void q_sortfilterproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_sortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2764,7 +2764,7 @@ void q_sortfilterproxymodel_on_columns_about_to_be_moved(void* self, void (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_sortfilterproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2773,7 +2773,7 @@ void q_sortfilterproxymodel_on_columns_moved(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSortFilterProxyModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSortFilterProxyModel* self, void (*slot)(QSortFilterProxyModel*, const char*) ```
 void q_sortfilterproxymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dtor.QSortFilterProxyModel)

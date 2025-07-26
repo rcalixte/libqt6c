@@ -258,7 +258,7 @@ void q_hcandlestickmodelmapper_model_replaced(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#modelReplaced)
 ///
-/// ``` QHCandlestickModelMapper* self, void (*slot)(QCandlestickModelMapper*) ```
+/// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_model_replaced(void* self, void (*slot)(void*));
 
 /// Inherited from QCandlestickModelMapper
@@ -272,7 +272,7 @@ void q_hcandlestickmodelmapper_series_replaced(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickmodelmapper.html#seriesReplaced)
 ///
-/// ``` QHCandlestickModelMapper* self, void (*slot)(QCandlestickModelMapper*) ```
+/// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_series_replaced(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -475,7 +475,7 @@ void q_hcandlestickmodelmapper_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHCandlestickModelMapper* self, void (*slot)(QObject*) ```
+/// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*) ```
 void q_hcandlestickmodelmapper_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -538,7 +538,7 @@ void q_hcandlestickmodelmapper_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHCandlestickModelMapper* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*, QObject*) ```
 void q_hcandlestickmodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1222,7 +1222,7 @@ void q_hcandlestickmodelmapper_on_is_signal_connected(void* self, bool (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QHCandlestickModelMapper* self, void (*slot)(QObject*, const char*) ```
+/// ``` QHCandlestickModelMapper* self, void (*slot)(QHCandlestickModelMapper*, const char*) ```
 void q_hcandlestickmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhcandlestickmodelmapper-qtcharts.html#dtor.QHCandlestickModelMapper)

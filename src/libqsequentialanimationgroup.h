@@ -317,7 +317,7 @@ void q_sequentialanimationgroup_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*) ```
 void q_sequentialanimationgroup_on_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -331,7 +331,7 @@ void q_sequentialanimationgroup_state_changed(void* self, int64_t newState, int6
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_sequentialanimationgroup_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -345,7 +345,7 @@ void q_sequentialanimationgroup_current_loop_changed(void* self, int currentLoop
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*, int) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, int) ```
 void q_sequentialanimationgroup_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -359,7 +359,7 @@ void q_sequentialanimationgroup_direction_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, enum QAbstractAnimation__Direction) ```
 void q_sequentialanimationgroup_on_direction_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -611,7 +611,7 @@ void q_sequentialanimationgroup_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QObject*) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*) ```
 void q_sequentialanimationgroup_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -674,7 +674,7 @@ void q_sequentialanimationgroup_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, QObject*) ```
 void q_sequentialanimationgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -953,7 +953,7 @@ void q_sequentialanimationgroup_on_is_signal_connected(void* self, bool (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSequentialAnimationGroup* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSequentialAnimationGroup* self, void (*slot)(QSequentialAnimationGroup*, const char*) ```
 void q_sequentialanimationgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsequentialanimationgroup.html#dtor.QSequentialAnimationGroup)

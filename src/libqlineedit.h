@@ -2638,7 +2638,7 @@ void q_lineedit_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QLineEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*, const char*) ```
 void q_lineedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2652,7 +2652,7 @@ void q_lineedit_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QLineEdit* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*, QIcon*) ```
 void q_lineedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2666,7 +2666,7 @@ void q_lineedit_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QLineEdit* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*, const char*) ```
 void q_lineedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2680,7 +2680,7 @@ void q_lineedit_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QLineEdit* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*, QPoint*) ```
 void q_lineedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2995,7 +2995,7 @@ void q_lineedit_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLineEdit* self, void (*slot)(QObject*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*) ```
 void q_lineedit_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3058,7 +3058,7 @@ void q_lineedit_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLineEdit* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*, QObject*) ```
 void q_lineedit_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4130,7 +4130,7 @@ void q_lineedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLineEdit* self, void (*slot)(QObject*, const char*) ```
+/// ``` QLineEdit* self, void (*slot)(QLineEdit*, const char*) ```
 void q_lineedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineedit.html#dtor.QLineEdit)

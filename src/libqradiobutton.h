@@ -396,7 +396,7 @@ void q_radiobutton_pressed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
-/// ``` QRadioButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*) ```
 void q_radiobutton_on_pressed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -410,7 +410,7 @@ void q_radiobutton_released(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
-/// ``` QRadioButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*) ```
 void q_radiobutton_on_released(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -424,7 +424,7 @@ void q_radiobutton_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QRadioButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*) ```
 void q_radiobutton_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -438,7 +438,7 @@ void q_radiobutton_toggled(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
-/// ``` QRadioButton* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, bool) ```
 void q_radiobutton_on_toggled(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -452,7 +452,7 @@ void q_radiobutton_clicked1(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QRadioButton* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, bool) ```
 void q_radiobutton_on_clicked1(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QWidget
@@ -2195,7 +2195,7 @@ void q_radiobutton_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QRadioButton* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, const char*) ```
 void q_radiobutton_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2209,7 +2209,7 @@ void q_radiobutton_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QRadioButton* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, QIcon*) ```
 void q_radiobutton_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2223,7 +2223,7 @@ void q_radiobutton_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QRadioButton* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, const char*) ```
 void q_radiobutton_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2237,7 +2237,7 @@ void q_radiobutton_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QRadioButton* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, QPoint*) ```
 void q_radiobutton_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2552,7 +2552,7 @@ void q_radiobutton_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRadioButton* self, void (*slot)(QObject*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*) ```
 void q_radiobutton_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2615,7 +2615,7 @@ void q_radiobutton_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRadioButton* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, QObject*) ```
 void q_radiobutton_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4173,7 +4173,7 @@ void q_radiobutton_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QRadioButton* self, void (*slot)(QObject*, const char*) ```
+/// ``` QRadioButton* self, void (*slot)(QRadioButton*, const char*) ```
 void q_radiobutton_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qradiobutton.html#dtor.QRadioButton)

@@ -231,7 +231,7 @@ void q_sctpserver_new_connection(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#newConnection)
 ///
-/// ``` QSctpServer* self, void (*slot)(QTcpServer*) ```
+/// ``` QSctpServer* self, void (*slot)(QSctpServer*) ```
 void q_sctpserver_on_new_connection(void* self, void (*slot)(void*));
 
 /// Inherited from QTcpServer
@@ -245,7 +245,7 @@ void q_sctpserver_accept_error(void* self, int64_t socketError);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#acceptError)
 ///
-/// ``` QSctpServer* self, void (*slot)(QTcpServer*, enum QAbstractSocket__SocketError) ```
+/// ``` QSctpServer* self, void (*slot)(QSctpServer*, enum QAbstractSocket__SocketError) ```
 void q_sctpserver_on_accept_error(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QTcpServer
@@ -476,7 +476,7 @@ void q_sctpserver_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSctpServer* self, void (*slot)(QObject*) ```
+/// ``` QSctpServer* self, void (*slot)(QSctpServer*) ```
 void q_sctpserver_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -539,7 +539,7 @@ void q_sctpserver_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSctpServer* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QSctpServer* self, void (*slot)(QSctpServer*, QObject*) ```
 void q_sctpserver_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QTcpServer
@@ -926,7 +926,7 @@ void q_sctpserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSctpServer* self, void (*slot)(QTcpServer*) ```
+/// ``` QSctpServer* self, void (*slot)(QSctpServer*) ```
 void q_sctpserver_on_pending_connection_available(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -935,7 +935,7 @@ void q_sctpserver_on_pending_connection_available(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSctpServer* self, void (*slot)(QObject*, const char*) ```
+/// ``` QSctpServer* self, void (*slot)(QSctpServer*, const char*) ```
 void q_sctpserver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsctpserver.html#dtor.QSctpServer)

@@ -279,7 +279,7 @@ void q_webengineurlschemehandler_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineUrlSchemeHandler* self, void (*slot)(QObject*) ```
+/// ``` QWebEngineUrlSchemeHandler* self, void (*slot)(QWebEngineUrlSchemeHandler*) ```
 void q_webengineurlschemehandler_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -342,7 +342,7 @@ void q_webengineurlschemehandler_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineUrlSchemeHandler* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebEngineUrlSchemeHandler* self, void (*slot)(QWebEngineUrlSchemeHandler*, QObject*) ```
 void q_webengineurlschemehandler_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -648,7 +648,7 @@ void q_webengineurlschemehandler_on_is_signal_connected(void* self, bool (*slot)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineUrlSchemeHandler* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebEngineUrlSchemeHandler* self, void (*slot)(QWebEngineUrlSchemeHandler*, const char*) ```
 void q_webengineurlschemehandler_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlschemehandler.html#dtor.QWebEngineUrlSchemeHandler)

@@ -289,7 +289,7 @@ void q_webchannelabstracttransport_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebChannelAbstractTransport* self, void (*slot)(QObject*) ```
+/// ``` QWebChannelAbstractTransport* self, void (*slot)(QWebChannelAbstractTransport*) ```
 void q_webchannelabstracttransport_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -352,7 +352,7 @@ void q_webchannelabstracttransport_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebChannelAbstractTransport* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWebChannelAbstractTransport* self, void (*slot)(QWebChannelAbstractTransport*, QObject*) ```
 void q_webchannelabstracttransport_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -658,7 +658,7 @@ void q_webchannelabstracttransport_on_is_signal_connected(void* self, bool (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebChannelAbstractTransport* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWebChannelAbstractTransport* self, void (*slot)(QWebChannelAbstractTransport*, const char*) ```
 void q_webchannelabstracttransport_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebchannelabstracttransport.html#dtor.QWebChannelAbstractTransport)

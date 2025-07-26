@@ -607,7 +607,7 @@ int32_t q_boxlayout_index_of2(void* self, void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
+/// ``` QBoxLayout* self, int32_t (*slot)(QBoxLayout*, QLayoutItem*) ```
 void q_boxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
@@ -875,7 +875,7 @@ void q_boxlayout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxLayout* self, void (*slot)(QObject*) ```
+/// ``` QBoxLayout* self, void (*slot)(QBoxLayout*) ```
 void q_boxlayout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -938,7 +938,7 @@ void q_boxlayout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QBoxLayout* self, void (*slot)(QBoxLayout*, QObject*) ```
 void q_boxlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1602,7 +1602,7 @@ void q_boxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QBoxLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QBoxLayout* self, void (*slot)(QBoxLayout*, const char*) ```
 void q_boxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#dtor.QBoxLayout)
@@ -1974,7 +1974,7 @@ int32_t q_hboxlayout_index_of2(void* self, void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
+/// ``` QHBoxLayout* self, int32_t (*slot)(QHBoxLayout*, QLayoutItem*) ```
 void q_hboxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
@@ -2242,7 +2242,7 @@ void q_hboxlayout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHBoxLayout* self, void (*slot)(QObject*) ```
+/// ``` QHBoxLayout* self, void (*slot)(QHBoxLayout*) ```
 void q_hboxlayout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2305,7 +2305,7 @@ void q_hboxlayout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHBoxLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QHBoxLayout* self, void (*slot)(QHBoxLayout*, QObject*) ```
 void q_hboxlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -3374,7 +3374,7 @@ void q_hboxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QHBoxLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QHBoxLayout* self, void (*slot)(QHBoxLayout*, const char*) ```
 void q_hboxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhboxlayout.html#dtor.QHBoxLayout)
@@ -3746,7 +3746,7 @@ int32_t q_vboxlayout_index_of2(void* self, void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
+/// ``` QVBoxLayout* self, int32_t (*slot)(QVBoxLayout*, QLayoutItem*) ```
 void q_vboxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
@@ -4014,7 +4014,7 @@ void q_vboxlayout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVBoxLayout* self, void (*slot)(QObject*) ```
+/// ``` QVBoxLayout* self, void (*slot)(QVBoxLayout*) ```
 void q_vboxlayout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -4077,7 +4077,7 @@ void q_vboxlayout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVBoxLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QVBoxLayout* self, void (*slot)(QVBoxLayout*, QObject*) ```
 void q_vboxlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -5146,7 +5146,7 @@ void q_vboxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QVBoxLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QVBoxLayout* self, void (*slot)(QVBoxLayout*, const char*) ```
 void q_vboxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvboxlayout.html#dtor.QVBoxLayout)

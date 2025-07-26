@@ -642,7 +642,7 @@ int32_t q_gridlayout_index_of2(void* self, void* param1);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLayout* self, int32_t (*slot)(QLayout*, QLayoutItem*) ```
+/// ``` QGridLayout* self, int32_t (*slot)(QGridLayout*, QLayoutItem*) ```
 void q_gridlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QLayout
@@ -910,7 +910,7 @@ void q_gridlayout_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGridLayout* self, void (*slot)(QObject*) ```
+/// ``` QGridLayout* self, void (*slot)(QGridLayout*) ```
 void q_gridlayout_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -973,7 +973,7 @@ void q_gridlayout_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGridLayout* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGridLayout* self, void (*slot)(QGridLayout*, QObject*) ```
 void q_gridlayout_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QLayoutItem
@@ -1637,7 +1637,7 @@ void q_gridlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGridLayout* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGridLayout* self, void (*slot)(QGridLayout*, const char*) ```
 void q_gridlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgridlayout.html#dtor.QGridLayout)

@@ -471,7 +471,7 @@ void q_wavedecoder_ready_read(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QIODevice*) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
 void q_wavedecoder_on_ready_read(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -485,7 +485,7 @@ void q_wavedecoder_channel_ready_read(void* self, int channel);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QIODevice*, int) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, int) ```
 void q_wavedecoder_on_channel_ready_read(void* self, void (*slot)(void*, int));
 
 /// Inherited from QIODevice
@@ -499,7 +499,7 @@ void q_wavedecoder_bytes_written(void* self, long long bytes);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QIODevice*, long long) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, long long) ```
 void q_wavedecoder_on_bytes_written(void* self, void (*slot)(void*, long long));
 
 /// Inherited from QIODevice
@@ -513,7 +513,7 @@ void q_wavedecoder_channel_bytes_written(void* self, int channel, long long byte
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QIODevice*, int, long long) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, int, long long) ```
 void q_wavedecoder_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
 
 /// Inherited from QIODevice
@@ -527,7 +527,7 @@ void q_wavedecoder_about_to_close(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QIODevice*) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
 void q_wavedecoder_on_about_to_close(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -541,7 +541,7 @@ void q_wavedecoder_read_channel_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QIODevice*) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
 void q_wavedecoder_on_read_channel_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QIODevice
@@ -751,7 +751,7 @@ void q_wavedecoder_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QObject*) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
 void q_wavedecoder_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -814,7 +814,7 @@ void q_wavedecoder_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QObject*) ```
 void q_wavedecoder_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QIODevice
@@ -1390,7 +1390,7 @@ void q_wavedecoder_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QObject*, const char*) ```
+/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, const char*) ```
 void q_wavedecoder_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#dtor.QWaveDecoder)

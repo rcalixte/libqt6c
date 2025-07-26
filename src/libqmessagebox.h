@@ -730,7 +730,7 @@ void q_messagebox_finished(void* self, int result);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QMessageBox* self, void (*slot)(QDialog*, int) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, int) ```
 void q_messagebox_on_finished(void* self, void (*slot)(void*, int));
 
 /// Inherited from QDialog
@@ -744,7 +744,7 @@ void q_messagebox_accepted(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QMessageBox* self, void (*slot)(QDialog*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*) ```
 void q_messagebox_on_accepted(void* self, void (*slot)(void*));
 
 /// Inherited from QDialog
@@ -758,7 +758,7 @@ void q_messagebox_rejected(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QMessageBox* self, void (*slot)(QDialog*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*) ```
 void q_messagebox_on_rejected(void* self, void (*slot)(void*));
 
 /// Inherited from QWidget
@@ -2487,7 +2487,7 @@ void q_messagebox_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QMessageBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, const char*) ```
 void q_messagebox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2501,7 +2501,7 @@ void q_messagebox_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QMessageBox* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QIcon*) ```
 void q_messagebox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2515,7 +2515,7 @@ void q_messagebox_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QMessageBox* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, const char*) ```
 void q_messagebox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2529,7 +2529,7 @@ void q_messagebox_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QMessageBox* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QPoint*) ```
 void q_messagebox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2844,7 +2844,7 @@ void q_messagebox_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMessageBox* self, void (*slot)(QObject*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*) ```
 void q_messagebox_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2907,7 +2907,7 @@ void q_messagebox_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMessageBox* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QObject*) ```
 void q_messagebox_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4546,7 +4546,7 @@ void q_messagebox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QMessageBox* self, void (*slot)(QObject*, const char*) ```
+/// ``` QMessageBox* self, void (*slot)(QMessageBox*, const char*) ```
 void q_messagebox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#dtor.QMessageBox)

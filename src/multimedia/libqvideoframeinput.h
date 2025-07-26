@@ -295,7 +295,7 @@ void q_videoframeinput_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVideoFrameInput* self, void (*slot)(QObject*) ```
+/// ``` QVideoFrameInput* self, void (*slot)(QVideoFrameInput*) ```
 void q_videoframeinput_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -358,7 +358,7 @@ void q_videoframeinput_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVideoFrameInput* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QVideoFrameInput* self, void (*slot)(QVideoFrameInput*, QObject*) ```
 void q_videoframeinput_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -664,7 +664,7 @@ void q_videoframeinput_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QVideoFrameInput* self, void (*slot)(QObject*, const char*) ```
+/// ``` QVideoFrameInput* self, void (*slot)(QVideoFrameInput*, const char*) ```
 void q_videoframeinput_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeinput.html#dtor.QVideoFrameInput)

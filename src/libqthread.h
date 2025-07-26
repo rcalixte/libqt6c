@@ -462,7 +462,7 @@ void q_thread_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThread* self, void (*slot)(QObject*) ```
+/// ``` QThread* self, void (*slot)(QThread*) ```
 void q_thread_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -525,7 +525,7 @@ void q_thread_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThread* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QThread* self, void (*slot)(QThread*, QObject*) ```
 void q_thread_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -818,7 +818,7 @@ void q_thread_on_finished(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QThread* self, void (*slot)(QObject*, const char*) ```
+/// ``` QThread* self, void (*slot)(QThread*, const char*) ```
 void q_thread_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#dtor.QThread)

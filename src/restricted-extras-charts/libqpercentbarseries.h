@@ -230,7 +230,7 @@ void q_percentbarseries_clicked(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#clicked)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, int, QBarSet*) ```
 void q_percentbarseries_on_clicked(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -244,7 +244,7 @@ void q_percentbarseries_hovered(void* self, bool status, int index, void* barset
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#hovered)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, bool, int, QBarSet*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, bool, int, QBarSet*) ```
 void q_percentbarseries_on_hovered(void* self, void (*slot)(void*, bool, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -258,7 +258,7 @@ void q_percentbarseries_pressed(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#pressed)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, int, QBarSet*) ```
 void q_percentbarseries_on_pressed(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -272,7 +272,7 @@ void q_percentbarseries_released(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#released)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, int, QBarSet*) ```
 void q_percentbarseries_on_released(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -286,7 +286,7 @@ void q_percentbarseries_double_clicked(void* self, int index, void* barset);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#doubleClicked)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, int, QBarSet*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, int, QBarSet*) ```
 void q_percentbarseries_on_double_clicked(void* self, void (*slot)(void*, int, void*));
 
 /// Inherited from QAbstractBarSeries
@@ -300,7 +300,7 @@ void q_percentbarseries_count_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#countChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_count_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -314,7 +314,7 @@ void q_percentbarseries_labels_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsVisibleChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_labels_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractBarSeries
@@ -328,7 +328,7 @@ void q_percentbarseries_labels_format_changed(void* self, const char* format);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsFormatChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, const char*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, const char*) ```
 void q_percentbarseries_on_labels_format_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QAbstractBarSeries
@@ -342,7 +342,7 @@ void q_percentbarseries_labels_position_changed(void* self, int64_t position);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPositionChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, enum QAbstractBarSeries__LabelsPosition) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, enum QAbstractBarSeries__LabelsPosition) ```
 void q_percentbarseries_on_labels_position_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractBarSeries
@@ -356,7 +356,7 @@ void q_percentbarseries_labels_angle_changed(void* self, double angle);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsAngleChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, double) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, double) ```
 void q_percentbarseries_on_labels_angle_changed(void* self, void (*slot)(void*, double));
 
 /// Inherited from QAbstractBarSeries
@@ -370,7 +370,7 @@ void q_percentbarseries_labels_precision_changed(void* self, int precision);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#labelsPrecisionChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, int) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, int) ```
 void q_percentbarseries_on_labels_precision_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractBarSeries
@@ -384,7 +384,7 @@ void q_percentbarseries_barsets_added(void* self, libqt_list sets);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsAdded)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
 void q_percentbarseries_on_barsets_added(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -398,7 +398,7 @@ void q_percentbarseries_barsets_removed(void* self, libqt_list sets);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbarseries.html#barsetsRemoved)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, libqt_list /* of QBarSet* */ sets ) ```
 void q_percentbarseries_on_barsets_removed(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractBarSeries
@@ -517,7 +517,7 @@ void q_percentbarseries_name_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_name_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -531,7 +531,7 @@ void q_percentbarseries_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -545,7 +545,7 @@ void q_percentbarseries_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -559,7 +559,7 @@ void q_percentbarseries_use_open_g_l_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QAbstractSeries*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractSeries
@@ -776,7 +776,7 @@ void q_percentbarseries_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QObject*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*) ```
 void q_percentbarseries_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -839,7 +839,7 @@ void q_percentbarseries_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, QObject*) ```
 void q_percentbarseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1145,7 +1145,7 @@ void q_percentbarseries_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPercentBarSeries* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPercentBarSeries* self, void (*slot)(QPercentBarSeries*, const char*) ```
 void q_percentbarseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpercentbarseries-qtcharts.html#dtor.QPercentBarSeries)

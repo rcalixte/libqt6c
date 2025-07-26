@@ -514,7 +514,7 @@ void q_polarchart_plot_area_changed(void* self, void* plotArea);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qchart.html#plotAreaChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QChart*, QRectF*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*, QRectF*) ```
 void q_polarchart_on_plot_area_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QChart
@@ -934,7 +934,7 @@ void q_polarchart_geometry_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_geometry_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -948,7 +948,7 @@ void q_polarchart_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsWidget*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsWidget
@@ -1011,7 +1011,7 @@ void q_polarchart_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1025,7 +1025,7 @@ void q_polarchart_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1039,7 +1039,7 @@ void q_polarchart_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1053,7 +1053,7 @@ void q_polarchart_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1067,7 +1067,7 @@ void q_polarchart_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1081,7 +1081,7 @@ void q_polarchart_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1095,7 +1095,7 @@ void q_polarchart_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1109,7 +1109,7 @@ void q_polarchart_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1123,7 +1123,7 @@ void q_polarchart_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1137,7 +1137,7 @@ void q_polarchart_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1151,7 +1151,7 @@ void q_polarchart_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1165,7 +1165,7 @@ void q_polarchart_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QPolarChart* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -1375,7 +1375,7 @@ void q_polarchart_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPolarChart* self, void (*slot)(QObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*) ```
 void q_polarchart_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1438,7 +1438,7 @@ void q_polarchart_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPolarChart* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*, QObject*) ```
 void q_polarchart_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -4831,7 +4831,7 @@ void q_polarchart_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPolarChart* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPolarChart* self, void (*slot)(QPolarChart*, const char*) ```
 void q_polarchart_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpolarchart-qtcharts.html#dtor.QPolarChart)

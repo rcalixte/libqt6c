@@ -240,7 +240,7 @@ QModelIndex* q_pdfsearchmodel_parent(void* self, void* child);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, QModelIndex* (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QPdfSearchModel* self, QModelIndex* (*slot)(QPdfSearchModel*, QModelIndex*) ```
 void q_pdfsearchmodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -265,7 +265,7 @@ int32_t q_pdfsearchmodel_column_count(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, int32_t (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QPdfSearchModel* self, int32_t (*slot)(QPdfSearchModel*, QModelIndex*) ```
 void q_pdfsearchmodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -290,7 +290,7 @@ bool q_pdfsearchmodel_has_children(void* self, void* parent);
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractItemModel* self, bool (*slot)(QAbstractItemModel*, QModelIndex*) ```
+/// ``` QPdfSearchModel* self, bool (*slot)(QPdfSearchModel*, QModelIndex*) ```
 void q_pdfsearchmodel_on_has_children(void* self, bool (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -362,7 +362,7 @@ void q_pdfsearchmodel_data_changed(void* self, void* topLeft, void* bottomRight)
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, QModelIndex*) ```
 void q_pdfsearchmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -376,7 +376,7 @@ void q_pdfsearchmodel_header_data_changed(void* self, int64_t orientation, int f
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, enum Qt__Orientation, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, enum Qt__Orientation, int, int) ```
 void q_pdfsearchmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -390,7 +390,7 @@ void q_pdfsearchmodel_layout_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
 void q_pdfsearchmodel_on_layout_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -404,7 +404,7 @@ void q_pdfsearchmodel_layout_about_to_be_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
 void q_pdfsearchmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -460,7 +460,7 @@ void q_pdfsearchmodel_data_changed3(void* self, void* topLeft, void* bottomRight
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
 void q_pdfsearchmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -474,7 +474,7 @@ void q_pdfsearchmodel_layout_changed1(void* self, libqt_list parents);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_pdfsearchmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -488,7 +488,7 @@ void q_pdfsearchmodel_layout_changed2(void* self, libqt_list parents, int64_t hi
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_pdfsearchmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
@@ -502,7 +502,7 @@ void q_pdfsearchmodel_layout_about_to_be_changed1(void* self, libqt_list parents
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
 void q_pdfsearchmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
@@ -516,7 +516,7 @@ void q_pdfsearchmodel_layout_about_to_be_changed2(void* self, libqt_list parents
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
 void q_pdfsearchmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
@@ -719,7 +719,7 @@ void q_pdfsearchmodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QObject*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
 void q_pdfsearchmodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -775,7 +775,7 @@ void q_pdfsearchmodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QObject*) ```
 void q_pdfsearchmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractListModel
@@ -2431,7 +2431,7 @@ void q_pdfsearchmodel_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2440,7 +2440,7 @@ void q_pdfsearchmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2449,7 +2449,7 @@ void q_pdfsearchmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2458,7 +2458,7 @@ void q_pdfsearchmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2467,7 +2467,7 @@ void q_pdfsearchmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2476,7 +2476,7 @@ void q_pdfsearchmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2485,7 +2485,7 @@ void q_pdfsearchmodel_on_columns_inserted(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2494,7 +2494,7 @@ void q_pdfsearchmodel_on_columns_about_to_be_removed(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int) ```
 void q_pdfsearchmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
@@ -2503,7 +2503,7 @@ void q_pdfsearchmodel_on_columns_removed(void* self, void (*slot)(void*, void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
 void q_pdfsearchmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2512,7 +2512,7 @@ void q_pdfsearchmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*) ```
 void q_pdfsearchmodel_on_model_reset(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemModel
@@ -2521,7 +2521,7 @@ void q_pdfsearchmodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_pdfsearchmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2530,7 +2530,7 @@ void q_pdfsearchmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_pdfsearchmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2539,7 +2539,7 @@ void q_pdfsearchmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_pdfsearchmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -2548,7 +2548,7 @@ void q_pdfsearchmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QAbstractItemModel*, QModelIndex*, int, int, QModelIndex*, int) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, QModelIndex*, int, int, QModelIndex*, int) ```
 void q_pdfsearchmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
@@ -2557,7 +2557,7 @@ void q_pdfsearchmodel_on_columns_moved(void* self, void (*slot)(void*, void*, in
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfSearchModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPdfSearchModel* self, void (*slot)(QPdfSearchModel*, const char*) ```
 void q_pdfsearchmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfsearchmodel.html#dtor.QPdfSearchModel)

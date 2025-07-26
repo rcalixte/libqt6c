@@ -1338,7 +1338,7 @@ void q_listview_pressed(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QModelIndex*) ```
 void q_listview_on_pressed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1352,7 +1352,7 @@ void q_listview_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QModelIndex*) ```
 void q_listview_on_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1366,7 +1366,7 @@ void q_listview_double_clicked(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QModelIndex*) ```
 void q_listview_on_double_clicked(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1380,7 +1380,7 @@ void q_listview_activated(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QModelIndex*) ```
 void q_listview_on_activated(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1394,7 +1394,7 @@ void q_listview_entered(void* self, void* index);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*, QModelIndex*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QModelIndex*) ```
 void q_listview_on_entered(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractItemView
@@ -1408,7 +1408,7 @@ void q_listview_viewport_entered(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*) ```
+/// ``` QListView* self, void (*slot)(QListView*) ```
 void q_listview_on_viewport_entered(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractItemView
@@ -1422,7 +1422,7 @@ void q_listview_icon_size_changed(void* self, void* size);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
-/// ``` QListView* self, void (*slot)(QAbstractItemView*, QSize*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QSize*) ```
 void q_listview_on_icon_size_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
@@ -3368,7 +3368,7 @@ void q_listview_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QListView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QListView* self, void (*slot)(QListView*, const char*) ```
 void q_listview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3382,7 +3382,7 @@ void q_listview_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QListView* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QIcon*) ```
 void q_listview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3396,7 +3396,7 @@ void q_listview_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QListView* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QListView* self, void (*slot)(QListView*, const char*) ```
 void q_listview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -3410,7 +3410,7 @@ void q_listview_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QListView* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QPoint*) ```
 void q_listview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -3725,7 +3725,7 @@ void q_listview_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QListView* self, void (*slot)(QObject*) ```
+/// ``` QListView* self, void (*slot)(QListView*) ```
 void q_listview_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -3788,7 +3788,7 @@ void q_listview_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QListView* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QListView* self, void (*slot)(QListView*, QObject*) ```
 void q_listview_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -6102,7 +6102,7 @@ void q_listview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QListView* self, void (*slot)(QObject*, const char*) ```
+/// ``` QListView* self, void (*slot)(QListView*, const char*) ```
 void q_listview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#dtor.QListView)

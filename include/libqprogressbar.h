@@ -2029,7 +2029,7 @@ void q_progressbar_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QProgressBar* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*, const char*) ```
 void q_progressbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2043,7 +2043,7 @@ void q_progressbar_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QProgressBar* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*, QIcon*) ```
 void q_progressbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2057,7 +2057,7 @@ void q_progressbar_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QProgressBar* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*, const char*) ```
 void q_progressbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2071,7 +2071,7 @@ void q_progressbar_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QProgressBar* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*, QPoint*) ```
 void q_progressbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2386,7 +2386,7 @@ void q_progressbar_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QProgressBar* self, void (*slot)(QObject*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*) ```
 void q_progressbar_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2449,7 +2449,7 @@ void q_progressbar_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QProgressBar* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*, QObject*) ```
 void q_progressbar_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -3980,7 +3980,7 @@ void q_progressbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QProgressBar* self, void (*slot)(QObject*, const char*) ```
+/// ``` QProgressBar* self, void (*slot)(QProgressBar*, const char*) ```
 void q_progressbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprogressbar.html#dtor.QProgressBar)

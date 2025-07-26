@@ -298,7 +298,7 @@ void q_graphicstransform_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsTransform* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsTransform* self, void (*slot)(QGraphicsTransform*) ```
 void q_graphicstransform_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -361,7 +361,7 @@ void q_graphicstransform_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsTransform* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsTransform* self, void (*slot)(QGraphicsTransform*, QObject*) ```
 void q_graphicstransform_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -667,7 +667,7 @@ void q_graphicstransform_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsTransform* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsTransform* self, void (*slot)(QGraphicsTransform*, const char*) ```
 void q_graphicstransform_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicstransform.html#dtor.QGraphicsTransform)
@@ -1034,7 +1034,7 @@ void q_graphicsscale_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsScale* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsScale* self, void (*slot)(QGraphicsScale*) ```
 void q_graphicsscale_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1097,7 +1097,7 @@ void q_graphicsscale_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsScale* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsScale* self, void (*slot)(QGraphicsScale*, QObject*) ```
 void q_graphicsscale_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1430,7 +1430,7 @@ void q_graphicsscale_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsScale* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsScale* self, void (*slot)(QGraphicsScale*, const char*) ```
 void q_graphicsscale_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscale.html#dtor.QGraphicsScale)
@@ -1772,7 +1772,7 @@ void q_graphicsrotation_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsRotation* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsRotation* self, void (*slot)(QGraphicsRotation*) ```
 void q_graphicsrotation_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -1835,7 +1835,7 @@ void q_graphicsrotation_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsRotation* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsRotation* self, void (*slot)(QGraphicsRotation*, QObject*) ```
 void q_graphicsrotation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -2168,7 +2168,7 @@ void q_graphicsrotation_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsRotation* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsRotation* self, void (*slot)(QGraphicsRotation*, const char*) ```
 void q_graphicsrotation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsrotation.html#dtor.QGraphicsRotation)

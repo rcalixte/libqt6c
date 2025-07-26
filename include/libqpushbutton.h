@@ -508,7 +508,7 @@ void q_pushbutton_pressed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
-/// ``` QPushButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*) ```
 void q_pushbutton_on_pressed(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -522,7 +522,7 @@ void q_pushbutton_released(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
-/// ``` QPushButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*) ```
 void q_pushbutton_on_released(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -536,7 +536,7 @@ void q_pushbutton_clicked(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QPushButton* self, void (*slot)(QAbstractButton*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*) ```
 void q_pushbutton_on_clicked(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractButton
@@ -550,7 +550,7 @@ void q_pushbutton_toggled(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
-/// ``` QPushButton* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, bool) ```
 void q_pushbutton_on_toggled(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QAbstractButton
@@ -564,7 +564,7 @@ void q_pushbutton_clicked1(void* self, bool checked);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QPushButton* self, void (*slot)(QAbstractButton*, bool) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, bool) ```
 void q_pushbutton_on_clicked1(void* self, void (*slot)(void*, bool));
 
 /// Inherited from QWidget
@@ -2307,7 +2307,7 @@ void q_pushbutton_window_title_changed(void* self, const char* title);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPushButton* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, const char*) ```
 void q_pushbutton_on_window_title_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2321,7 +2321,7 @@ void q_pushbutton_window_icon_changed(void* self, void* icon);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPushButton* self, void (*slot)(QWidget*, QIcon*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, QIcon*) ```
 void q_pushbutton_on_window_icon_changed(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2335,7 +2335,7 @@ void q_pushbutton_window_icon_text_changed(void* self, const char* iconText);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPushButton* self, void (*slot)(QWidget*, const char*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, const char*) ```
 void q_pushbutton_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
 
 /// Inherited from QWidget
@@ -2349,7 +2349,7 @@ void q_pushbutton_custom_context_menu_requested(void* self, void* pos);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPushButton* self, void (*slot)(QWidget*, QPoint*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, QPoint*) ```
 void q_pushbutton_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QWidget
@@ -2664,7 +2664,7 @@ void q_pushbutton_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPushButton* self, void (*slot)(QObject*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*) ```
 void q_pushbutton_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -2727,7 +2727,7 @@ void q_pushbutton_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPushButton* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, QObject*) ```
 void q_pushbutton_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QPaintDevice
@@ -4204,7 +4204,7 @@ void q_pushbutton_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPushButton* self, void (*slot)(QObject*, const char*) ```
+/// ``` QPushButton* self, void (*slot)(QPushButton*, const char*) ```
 void q_pushbutton_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#dtor.QPushButton)

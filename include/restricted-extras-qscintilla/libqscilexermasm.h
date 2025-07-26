@@ -193,7 +193,7 @@ void q_scilexermasm_color_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, QColor*, int) ```
 void q_scilexermasm_on_color_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -207,7 +207,7 @@ void q_scilexermasm_eol_fill_changed(void* self, bool eolfilled, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QsciLexer*, bool, int) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, bool, int) ```
 void q_scilexermasm_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
 
 /// Inherited from QsciLexer
@@ -221,7 +221,7 @@ void q_scilexermasm_font_changed(void* self, void* f, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QsciLexer*, QFont*, int) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, QFont*, int) ```
 void q_scilexermasm_on_font_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -235,7 +235,7 @@ void q_scilexermasm_paper_changed(void* self, void* c, int style);
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QsciLexer*, QColor*, int) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, QColor*, int) ```
 void q_scilexermasm_on_paper_changed(void* self, void (*slot)(void*, void*, int));
 
 /// Inherited from QsciLexer
@@ -249,7 +249,7 @@ void q_scilexermasm_property_changed(void* self, const char* prop, const char* v
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QsciLexer*, const char*, const char*) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, const char*, const char*) ```
 void q_scilexermasm_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
@@ -466,7 +466,7 @@ void q_scilexermasm_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QObject*) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*) ```
 void q_scilexermasm_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -529,7 +529,7 @@ void q_scilexermasm_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, QObject*) ```
 void q_scilexermasm_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QsciLexerAsm
@@ -1861,7 +1861,7 @@ void q_scilexermasm_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerMASM* self, void (*slot)(QObject*, const char*) ```
+/// ``` QsciLexerMASM* self, void (*slot)(QsciLexerMASM*, const char*) ```
 void q_scilexermasm_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMASM.html)

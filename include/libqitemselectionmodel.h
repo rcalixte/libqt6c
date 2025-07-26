@@ -667,7 +667,7 @@ void q_itemselectionmodel_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QItemSelectionModel* self, void (*slot)(QObject*) ```
+/// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*) ```
 void q_itemselectionmodel_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -730,7 +730,7 @@ void q_itemselectionmodel_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QItemSelectionModel* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, QObject*) ```
 void q_itemselectionmodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1036,7 +1036,7 @@ void q_itemselectionmodel_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QItemSelectionModel* self, void (*slot)(QObject*, const char*) ```
+/// ``` QItemSelectionModel* self, void (*slot)(QItemSelectionModel*, const char*) ```
 void q_itemselectionmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemselectionmodel.html#dtor.QItemSelectionModel)

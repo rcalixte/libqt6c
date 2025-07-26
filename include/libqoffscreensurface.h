@@ -386,7 +386,7 @@ void q_offscreensurface_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QOffscreenSurface* self, void (*slot)(QObject*) ```
+/// ``` QOffscreenSurface* self, void (*slot)(QOffscreenSurface*) ```
 void q_offscreensurface_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -449,7 +449,7 @@ void q_offscreensurface_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QOffscreenSurface* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QOffscreenSurface* self, void (*slot)(QOffscreenSurface*, QObject*) ```
 void q_offscreensurface_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QSurface
@@ -769,7 +769,7 @@ void q_offscreensurface_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QOffscreenSurface* self, void (*slot)(QObject*, const char*) ```
+/// ``` QOffscreenSurface* self, void (*slot)(QOffscreenSurface*, const char*) ```
 void q_offscreensurface_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoffscreensurface.html#dtor.QOffscreenSurface)

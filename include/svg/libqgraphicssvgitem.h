@@ -192,7 +192,7 @@ void q_graphicssvgitem_parent_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_parent_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -206,7 +206,7 @@ void q_graphicssvgitem_opacity_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_opacity_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -220,7 +220,7 @@ void q_graphicssvgitem_visible_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_visible_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -234,7 +234,7 @@ void q_graphicssvgitem_enabled_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_enabled_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -248,7 +248,7 @@ void q_graphicssvgitem_x_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_x_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -262,7 +262,7 @@ void q_graphicssvgitem_y_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_y_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -276,7 +276,7 @@ void q_graphicssvgitem_z_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_z_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -290,7 +290,7 @@ void q_graphicssvgitem_rotation_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_rotation_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -304,7 +304,7 @@ void q_graphicssvgitem_scale_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_scale_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -318,7 +318,7 @@ void q_graphicssvgitem_children_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_children_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -332,7 +332,7 @@ void q_graphicssvgitem_width_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_width_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -346,7 +346,7 @@ void q_graphicssvgitem_height_changed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_height_changed(void* self, void (*slot)(void*));
 
 /// Inherited from QGraphicsObject
@@ -556,7 +556,7 @@ void q_graphicssvgitem_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*) ```
 void q_graphicssvgitem_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -619,7 +619,7 @@ void q_graphicssvgitem_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*, QObject*) ```
 void q_graphicssvgitem_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QGraphicsItem
@@ -3052,7 +3052,7 @@ void q_graphicssvgitem_on_prepare_geometry_change(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsSvgItem* self, void (*slot)(QObject*, const char*) ```
+/// ``` QGraphicsSvgItem* self, void (*slot)(QGraphicsSvgItem*, const char*) ```
 void q_graphicssvgitem_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssvgitem.html#dtor.QGraphicsSvgItem)

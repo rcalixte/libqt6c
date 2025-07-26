@@ -380,7 +380,7 @@ void q_vxymodelmapper_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QObject*) ```
+/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
 void q_vxymodelmapper_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -443,7 +443,7 @@ void q_vxymodelmapper_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QObject*) ```
 void q_vxymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QObject
@@ -1019,7 +1019,7 @@ void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QObject*, const char*) ```
+/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, const char*) ```
 void q_vxymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#dtor.QVXYModelMapper)

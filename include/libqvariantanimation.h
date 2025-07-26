@@ -325,7 +325,7 @@ void q_variantanimation_finished(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QAbstractAnimation*) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*) ```
 void q_variantanimation_on_finished(void* self, void (*slot)(void*));
 
 /// Inherited from QAbstractAnimation
@@ -339,7 +339,7 @@ void q_variantanimation_state_changed(void* self, int64_t newState, int64_t oldS
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
 void q_variantanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -353,7 +353,7 @@ void q_variantanimation_current_loop_changed(void* self, int currentLoop);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QAbstractAnimation*, int) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*, int) ```
 void q_variantanimation_on_current_loop_changed(void* self, void (*slot)(void*, int));
 
 /// Inherited from QAbstractAnimation
@@ -367,7 +367,7 @@ void q_variantanimation_direction_changed(void* self, int64_t param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*, enum QAbstractAnimation__Direction) ```
 void q_variantanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t));
 
 /// Inherited from QAbstractAnimation
@@ -619,7 +619,7 @@ void q_variantanimation_destroyed(void* self);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QObject*) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*) ```
 void q_variantanimation_on_destroyed(void* self, void (*slot)(void*));
 
 /// Inherited from QObject
@@ -682,7 +682,7 @@ void q_variantanimation_destroyed1(void* self, void* param1);
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QObject*, QObject*) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*, QObject*) ```
 void q_variantanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 
 /// Inherited from QAbstractAnimation
@@ -988,7 +988,7 @@ void q_variantanimation_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QVariantAnimation* self, void (*slot)(QObject*, const char*) ```
+/// ``` QVariantAnimation* self, void (*slot)(QVariantAnimation*, const char*) ```
 void q_variantanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#dtor.QVariantAnimation)
