@@ -1,6 +1,5 @@
 #include "libqchar.hpp"
 #include "libqregularexpression.hpp"
-#include <string.h>
 #include "libqstringview.hpp"
 #include "libqstringview.h"
 

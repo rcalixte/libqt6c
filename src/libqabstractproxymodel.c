@@ -1,14 +1,13 @@
 #include "libqabstractitemmodel.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqdatastream.hpp"
 #include "libqitemselectionmodel.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmimedata.hpp"
 #include "libqobject.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqabstractproxymodel.hpp"
 #include "libqabstractproxymodel.h"
 

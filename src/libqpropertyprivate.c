@@ -1,4 +1,3 @@
-#include "libqproperty.hpp"
 #include "libqpropertyprivate.hpp"
 #include "libqpropertyprivate.h"
 

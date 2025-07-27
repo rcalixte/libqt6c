@@ -10,7 +10,6 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtransform.hpp"
 #include "libqvariant.hpp"
 #include "libqimage.hpp"

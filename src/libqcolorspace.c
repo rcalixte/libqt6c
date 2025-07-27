@@ -1,6 +1,5 @@
 #include "libqcolortransform.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqcolorspace.hpp"
 #include "libqcolorspace.h"

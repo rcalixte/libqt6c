@@ -1,10 +1,9 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "libqnetworkcookie.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqnetworkcookiejar.hpp"
 #include "libqnetworkcookiejar.h"
 

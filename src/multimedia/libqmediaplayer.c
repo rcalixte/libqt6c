@@ -1,15 +1,14 @@
 #include "libqaudiobufferoutput.hpp"
 #include "libqaudiooutput.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "libqmediametadata.hpp"
 #include "libqmediatimerange.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqvideosink.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqmediaplayer.hpp"
 #include "libqmediaplayer.h"
 

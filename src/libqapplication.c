@@ -1,16 +1,15 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcoreapplication.hpp"
 #include "libqfont.hpp"
 #include "libqfontmetrics.hpp"
 #include "libqguiapplication.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpalette.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
 #include "libqstyle.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqapplication.hpp"
 #include "libqapplication.h"
 

@@ -1,4 +1,5 @@
 #include "../libqsettings.hpp"
+#include "libqscicommand.hpp"
 #include "libqscicommandset.hpp"
 #include "libqscicommandset.h"
 

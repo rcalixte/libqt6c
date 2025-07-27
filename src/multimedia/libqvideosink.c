@@ -1,10 +1,9 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "libqvideoframe.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqvideosink.hpp"
 #include "libqvideosink.h"
 

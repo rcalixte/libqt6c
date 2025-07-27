@@ -1,4 +1,5 @@
 #include "libqaction.hpp"
+#include "libqcoreevent.hpp"
 #include "libqeventpoint.hpp"
 #include "libqfile.hpp"
 #include "libqinputdevice.hpp"
@@ -13,11 +14,9 @@
 #include "libqscreen.hpp"
 #include "libqshortcut.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
 #include "libqwindow.hpp"
-#include "libqcoreevent.hpp"
 #include "libqevent.hpp"
 #include "libqevent.h"
 

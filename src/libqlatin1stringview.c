@@ -1,6 +1,5 @@
 #include "libqbytearrayview.hpp"
 #include "libqchar.hpp"
-#include <string.h>
 #include "libqlatin1stringview.hpp"
 #include "libqlatin1stringview.h"
 

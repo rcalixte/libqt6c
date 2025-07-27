@@ -1,4 +1,5 @@
-#include <string.h>
+#include "libqsciscintillabase.hpp"
+#include "libqscistyle.hpp"
 #include "libqscistyledtext.hpp"
 #include "libqscistyledtext.h"
 

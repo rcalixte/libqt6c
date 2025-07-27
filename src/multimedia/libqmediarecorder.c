@@ -1,14 +1,13 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "libqmediacapturesession.hpp"
 #include "libqmediaformat.hpp"
 #include "libqmediametadata.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqmediarecorder.hpp"
 #include "libqmediarecorder.h"
 

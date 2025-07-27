@@ -1,7 +1,6 @@
 #include "libqfileinfo.hpp"
 #include "libqiodevice.hpp"
 #include "libqmimetype.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libqmimedatabase.hpp"
 #include "libqmimedatabase.h"

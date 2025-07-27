@@ -1,10 +1,10 @@
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtransform.hpp"
 #include "libqscreen.hpp"
 #include "libqscreen.h"

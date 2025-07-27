@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqtextcursor.hpp"
 #include "libqtextdocument.hpp"
 #include "libqtextdocumentfragment.hpp"

@@ -1,5 +1,3 @@
-#include <string.h>
-#include "libqstringconverter.hpp"
 #include "libqstringconverter_base.hpp"
 #include "libqstringconverter_base.h"
 

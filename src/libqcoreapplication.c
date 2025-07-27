@@ -1,13 +1,12 @@
 #include "libqabstracteventdispatcher.hpp"
 #include "libqabstractnativeeventfilter.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpermissions.hpp"
-#include <string.h>
 #include "libqtranslator.hpp"
-#include "libqcoreevent.hpp"
 #include "libqcoreapplication.hpp"
 #include "libqcoreapplication.h"
 

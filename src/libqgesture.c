@@ -1,10 +1,9 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqgesture.hpp"
 #include "libqgesture.h"
 

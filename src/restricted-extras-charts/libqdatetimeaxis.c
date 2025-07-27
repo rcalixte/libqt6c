@@ -1,10 +1,9 @@
 #include "libqabstractaxis.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqdatetime.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqdatetimeaxis.hpp"
 #include "libqdatetimeaxis.h"
 

@@ -1,5 +1,4 @@
 #include "libqhttpheaders.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "libqnetworkproxy.hpp"

@@ -10,6 +10,7 @@
 #include "../printsupport/libqprintengine.hpp"
 #include "../printsupport/libqprinter.hpp"
 #include "../libqrect.hpp"
+#include "libqsciscintillabase.hpp"
 #include "libqsciprinter.hpp"
 #include "libqsciprinter.h"
 

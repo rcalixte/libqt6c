@@ -1,16 +1,15 @@
 #include "../libqabstractitemmodel.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqimage.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqpdfdocumentrenderoptions.hpp"
 #include "libqpdfselection.hpp"
 #include "../libqpoint.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqpdfdocument.hpp"
 #include "libqpdfdocument.h"
 

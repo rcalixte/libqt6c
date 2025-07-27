@@ -1,5 +1,4 @@
 #include "libqnamespace.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqkeysequence.hpp"
 #include "libqkeysequence.h"

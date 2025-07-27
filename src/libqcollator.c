@@ -1,6 +1,5 @@
 #include "libqchar.hpp"
 #include "libqlocale.hpp"
-#include <string.h>
 #include "libqcollator.hpp"
 #include "libqcollator.h"
 

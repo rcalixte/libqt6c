@@ -1,5 +1,4 @@
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libqdesktopservices.hpp"
 #include "libqdesktopservices.h"

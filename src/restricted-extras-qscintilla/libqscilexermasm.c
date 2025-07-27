@@ -1,14 +1,14 @@
 #include "../libqchar.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqsettings.hpp"
-#include <string.h>
 #include "libqscilexer.hpp"
 #include "libqscilexerasm.hpp"
-#include "../libqcoreevent.hpp"
+#include "libqsciscintilla.hpp"
 #include "libqscilexermasm.hpp"
 #include "libqscilexermasm.h"
 

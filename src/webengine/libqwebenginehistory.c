@@ -2,8 +2,8 @@
 #include "../libqdatastream.hpp"
 #include "../libqdatetime.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "libqwebenginehistory.hpp"

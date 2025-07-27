@@ -3,7 +3,6 @@
 #include "libqpixmap.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqwindow.hpp"
 #include "libqicon.hpp"

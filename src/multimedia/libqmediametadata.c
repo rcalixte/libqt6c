@@ -1,4 +1,3 @@
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqmediametadata.hpp"
 #include "libqmediametadata.h"

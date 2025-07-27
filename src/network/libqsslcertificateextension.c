@@ -1,4 +1,3 @@
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqsslcertificateextension.hpp"
 #include "libqsslcertificateextension.h"

@@ -1,11 +1,10 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqlegend.hpp"
 #include "libqlegendmarker.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqxyseries.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqxylegendmarker.hpp"
 #include "libqxylegendmarker.h"
 

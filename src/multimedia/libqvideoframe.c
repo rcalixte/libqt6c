@@ -2,7 +2,6 @@
 #include "../libqpainter.hpp"
 #include "../libqrect.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "libqvideoframeformat.hpp"
 #include "libqvideoframe.hpp"
 #include "libqvideoframe.h"

@@ -1,9 +1,8 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqtipccommon.hpp"
 #include "libqobject.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqsharedmemory.hpp"
 #include "libqsharedmemory.h"
 

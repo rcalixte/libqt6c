@@ -1,9 +1,9 @@
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqscrollerproperties.hpp"
-#include <string.h>
 #include "libqscroller.hpp"
 #include "libqscroller.h"
 

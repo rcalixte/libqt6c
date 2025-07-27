@@ -1,6 +1,5 @@
 #include "libqanystringview.hpp"
 #include "libqbytearrayview.hpp"
-#include <string.h>
 #include "libquuid.hpp"
 #include "libquuid.h"
 

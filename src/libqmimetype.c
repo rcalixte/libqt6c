@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqmimetype.hpp"
 #include "libqmimetype.h"
 

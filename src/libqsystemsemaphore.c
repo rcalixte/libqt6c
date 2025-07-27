@@ -1,5 +1,4 @@
 #include "libqtipccommon.hpp"
-#include <string.h>
 #include "libqsystemsemaphore.hpp"
 #include "libqsystemsemaphore.h"
 

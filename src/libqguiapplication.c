@@ -1,4 +1,4 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqclipboard.hpp"
 #include "libqcoreapplication.hpp"
 #include "libqcursor.hpp"
@@ -6,15 +6,14 @@
 #include "libqicon.hpp"
 #include "libqinputmethod.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpalette.hpp"
 #include "libqpoint.hpp"
 #include "libqscreen.hpp"
 #include "libqsessionmanager.hpp"
-#include <string.h>
 #include "libqstylehints.hpp"
 #include "libqwindow.hpp"
-#include "libqcoreevent.hpp"
 #include "libqguiapplication.hpp"
 #include "libqguiapplication.h"
 

@@ -1,12 +1,11 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqfile.hpp"
 #include "libqfiledevice.hpp"
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqtemporaryfile.hpp"
 #include "libqtemporaryfile.h"
 

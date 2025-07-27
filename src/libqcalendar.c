@@ -1,7 +1,6 @@
 #include "libqanystringview.hpp"
 #include "libqdatetime.hpp"
 #include "libqlocale.hpp"
-#include <string.h>
 #include "libqcalendar.hpp"
 #include "libqcalendar.h"
 

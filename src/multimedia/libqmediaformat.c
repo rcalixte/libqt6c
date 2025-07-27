@@ -1,5 +1,4 @@
 #include "../libqmimetype.hpp"
-#include <string.h>
 #include "libqmediaformat.hpp"
 #include "libqmediaformat.h"
 

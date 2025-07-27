@@ -1,5 +1,4 @@
 #include "libqsslcertificate.hpp"
-#include <string.h>
 #include "libqsslerror.hpp"
 #include "libqsslerror.h"
 

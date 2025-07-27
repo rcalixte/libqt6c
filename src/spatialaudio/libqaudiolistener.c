@@ -1,10 +1,9 @@
 #include "libqaudioengine.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
 #include "../libqobject.hpp"
 #include "../libqquaternion.hpp"
 #include "../libqvectornd.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqaudiolistener.hpp"
 #include "libqaudiolistener.h"
 

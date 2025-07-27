@@ -1,5 +1,4 @@
 #include "../libqrect.hpp"
-#include <string.h>
 #include "libqpdfselection.hpp"
 #include "libqpdfselection.h"
 

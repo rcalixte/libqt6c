@@ -3,7 +3,6 @@
 #include "libqimage.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqimagereader.hpp"
 #include "libqimagereader.h"
 

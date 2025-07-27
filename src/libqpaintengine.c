@@ -11,7 +11,6 @@
 #include "libqrect.hpp"
 #include "libqregion.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtransform.hpp"
 #include "libqpaintengine.hpp"
 #include "libqpaintengine.h"

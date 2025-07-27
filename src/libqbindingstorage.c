@@ -1,4 +1,4 @@
-#include "libqproperty.hpp"
+#include "libqpropertyprivate.hpp"
 #include "libqbindingstorage.hpp"
 #include "libqbindingstorage.h"
 

@@ -3,7 +3,6 @@
 #include "libqcolor.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqwidget.hpp"
 #include "libqwindow.hpp"
 #include "libqaccessiblewidget.hpp"

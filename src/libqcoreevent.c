@@ -1,4 +1,3 @@
-#include "libqevent.hpp"
 #include "libqobject.hpp"
 #include "libqcoreevent.hpp"
 #include "libqcoreevent.h"

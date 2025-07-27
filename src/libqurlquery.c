@@ -1,5 +1,4 @@
 #include "libqchar.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libqurlquery.hpp"
 #include "libqurlquery.h"

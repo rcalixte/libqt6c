@@ -2,6 +2,7 @@
 #include "libqevent.hpp"
 #include "libqbackingstore.hpp"
 #include "libqbitmap.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcursor.hpp"
 #include "libqfont.hpp"
 #include "libqfontinfo.hpp"
@@ -14,6 +15,7 @@
 #include "libqlocale.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
@@ -26,11 +28,9 @@
 #include "libqscreen.hpp"
 #include "libqsize.hpp"
 #include "libqsizepolicy.hpp"
-#include <string.h>
 #include "libqstyle.hpp"
 #include "libqvariant.hpp"
 #include "libqwindow.hpp"
-#include "libqcoreevent.hpp"
 #include "libqwidget.hpp"
 #include "libqwidget.h"
 

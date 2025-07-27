@@ -1,6 +1,5 @@
 #include "libqdatetime.hpp"
 #include "libqfileinfo.hpp"
-#include <string.h>
 #include "libqtimezone.hpp"
 #include "libqdirlisting.hpp"
 #include "libqdirlisting.h"

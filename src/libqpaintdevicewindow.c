@@ -1,13 +1,13 @@
+#include "libqcoreevent.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include <string.h>
 #include "libqsurface.hpp"
 #include "libqwindow.hpp"
-#include "libqcoreevent.hpp"
 #include "libqpaintdevicewindow.hpp"
 #include "libqpaintdevicewindow.h"
 

@@ -4,10 +4,10 @@
 #include "../libqfont.hpp"
 #include "../libqimage.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
 #include "../libqpoint.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqxyseries.hpp"
 #include "libqxyseries.h"

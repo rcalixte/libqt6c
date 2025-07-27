@@ -1,14 +1,13 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqsslconfiguration.hpp"
 #include "libqsslerror.hpp"
 #include "libqsslpresharedkeyauthenticator.hpp"
 #include "libqsslsocket.hpp"
-#include <string.h>
 #include "libqtcpserver.hpp"
 #include "libqtcpsocket.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqsslserver.hpp"
 #include "libqsslserver.h"
 

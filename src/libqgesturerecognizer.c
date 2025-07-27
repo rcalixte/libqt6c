@@ -1,7 +1,6 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqgesture.hpp"
 #include "libqobject.hpp"
-#include "libqcoreevent.hpp"
 #include "libqgesturerecognizer.hpp"
 #include "libqgesturerecognizer.h"
 

@@ -1,5 +1,4 @@
 #include "../libqsize.hpp"
-#include <string.h>
 #include "libqcameradevice.hpp"
 #include "libqcameradevice.h"
 

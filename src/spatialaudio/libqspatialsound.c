@@ -1,12 +1,11 @@
 #include "libqaudioengine.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqquaternion.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "../libqvectornd.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqspatialsound.hpp"
 #include "libqspatialsound.h"
 

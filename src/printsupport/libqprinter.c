@@ -10,7 +10,6 @@
 #include "libqprintengine.hpp"
 #include "libqprinterinfo.hpp"
 #include "../libqrect.hpp"
-#include <string.h>
 #include "libqprinter.hpp"
 #include "libqprinter.h"
 

@@ -1,4 +1,3 @@
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebenginehttprequest.hpp"
 #include "libqwebenginehttprequest.h"

@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqstandardpaths.hpp"
 #include "libqstandardpaths.h"
 

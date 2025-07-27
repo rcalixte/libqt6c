@@ -1,5 +1,4 @@
 #include "libqnetworkreply.hpp"
-#include <string.h>
 #include "libqrestreply.hpp"
 #include "libqrestreply.h"
 

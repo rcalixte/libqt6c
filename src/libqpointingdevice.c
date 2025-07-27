@@ -1,10 +1,10 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqeventpoint.hpp"
 #include "libqinputdevice.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
+#include "libqevent.hpp"
 #include "libqpointingdevice.hpp"
 #include "libqpointingdevice.h"
 

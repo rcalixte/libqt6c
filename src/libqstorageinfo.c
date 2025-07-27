@@ -1,5 +1,4 @@
 #include "libqdir.hpp"
-#include <string.h>
 #include "libqstorageinfo.hpp"
 #include "libqstorageinfo.h"
 

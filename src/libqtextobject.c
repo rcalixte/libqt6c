@@ -1,14 +1,13 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqglyphrun.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqtextformat.hpp"
 #include "libqtextcursor.hpp"
 #include "libqtextdocument.hpp"
 #include "libqtextlayout.hpp"
 #include "libqtextlist.hpp"
-#include "libqcoreevent.hpp"
 #include "libqtextobject.hpp"
 #include "libqtextobject.h"
 

@@ -1,8 +1,8 @@
 #include "../libqabstractitemmodel.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqpieseries.hpp"
-#include <string.h>
 #include "libqpiemodelmapper.hpp"
 #include "libqpiemodelmapper.h"
 

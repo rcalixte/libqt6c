@@ -16,7 +16,6 @@
 #include "libqrect.hpp"
 #include "libqregularexpression.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libquuid.hpp"
 #include "libqvariant.hpp"

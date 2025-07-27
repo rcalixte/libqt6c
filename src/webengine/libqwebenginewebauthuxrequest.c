@@ -1,6 +1,6 @@
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqwebenginewebauthuxrequest.hpp"
 #include "libqwebenginewebauthuxrequest.h"
 

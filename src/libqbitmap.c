@@ -5,7 +5,6 @@
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtransform.hpp"
 #include "libqvariant.hpp"
 #include "libqbitmap.hpp"

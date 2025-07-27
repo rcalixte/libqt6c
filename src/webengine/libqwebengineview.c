@@ -1,8 +1,10 @@
 #include "../libqaction.hpp"
 #include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqicon.hpp"
 #include "../libqmenu.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpagelayout.hpp"
 #include "../libqpageranges.hpp"
@@ -12,7 +14,6 @@
 #include "../libqpoint.hpp"
 #include "../printsupport/libqprinter.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "libqwebenginecontextmenurequest.hpp"
@@ -23,7 +24,6 @@
 #include "libqwebengineprofile.hpp"
 #include "libqwebenginesettings.hpp"
 #include "../libqwidget.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqwebengineview.hpp"
 #include "libqwebengineview.h"
 

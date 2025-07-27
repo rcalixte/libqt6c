@@ -1,5 +1,4 @@
 #include "../libqiodevice.hpp"
-#include <string.h>
 #include "libqssldiffiehellmanparameters.hpp"
 #include "libqssldiffiehellmanparameters.h"
 

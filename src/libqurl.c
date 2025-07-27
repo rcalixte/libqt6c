@@ -1,5 +1,4 @@
 #include "libqbytearrayview.hpp"
-#include <string.h>
 #include "libqurlquery.hpp"
 #include "libqurl.hpp"
 #include "libqurl.h"

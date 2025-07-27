@@ -750,34 +750,6 @@ func collectInheritedPrivateSignals(class string, seenSignals map[string]struct{
 // Useful at the package level since we need to do the same thing
 // for headers and code
 var (
-	skipRefs = map[string]struct{}{
-		"QByteArray": {}, "QHash": {}, "QList": {},
-		"QMap": {}, "QPair": {}, "QSet": {}, "QSpan": {},
-	}
-
-	// We need to brute force these for now
-	skipFunction = map[string]struct{}{
-		"QFileDevice_Close":        {},
-		"QPaintDevice_PaintEngine": {},
-	}
-
-	undoIncludePrefixMap = map[string]struct{}{
-		"qabstractaxis": {}, "qabstractbar": {}, "qabstractnetwork": {},
-		"qabstractprint": {}, "qabstractseries": {}, "qareaseries": {},
-		"qaudio": {}, "qauth": {}, "qbarmodel": {}, "qbarset": {},
-		"qboxplot": {}, "qboxset": {}, "qcamera": {}, "qcandlestick": {},
-		"qcaptur": {}, "qcbor": {}, "qchart": {}, "qhost": {}, "qhst": {},
-		"qhttp": {}, "qimagecapture": {}, "qlegend": {}, "qlineseries": {},
-		"qmedia": {}, "qnet": {}, "qocsp": {}, "qpdf": {}, "qpie": {},
-		"qprint": {}, "qscreencapture": {}, "qssl": {}, "qsvg": {},
-		"qtcp": {}, "qudp": {}, "qvalueaxis": {}, "qvideo": {}, "qweb": {},
-		"qwindowcapture": {}, "qxymodel": {}, "qxyseries": {},
-	}
-
-	undoIncludeSuffixMap = map[string]struct{}{
-		"socket": {}, "headers": {},
-	}
-
 	qtMethodUrlOverrides = map[string]string{
 		"metaObject":  "qobject",
 		"qt_metacall": "",
@@ -785,21 +757,10 @@ var (
 		"tr":          "qobject",
 	}
 
-	lexerLookup = map[string]string{
-		"qsciapis":            "qsciabstractapis",
-		"qscilexercsharp":     "qscilexercpp",
-		"qscilexerfortran":    "qscilexerfortran77",
-		"qscilexeridl":        "qscilexercpp",
-		"qscilexerintelhex":   "qscilexerhex",
-		"qscilexerjava":       "qscilexercpp",
-		"qscilexerjavascript": "qscilexercpp",
-		"qscilexermasm":       "qscilexerasm",
-		"qscilexernasm":       "qscilexerasm",
-		"qscilexeroctave":     "qscilexermatlab",
-		"qscilexersrec":       "qscilexerhex",
-		"qscilexertekhex":     "qscilexerhex",
-		"qscilexerxml":        "qscilexerhtml",
-		"qsciscintilla":       "qsciscintillabase",
+	// We need to brute force these for now
+	skipFunction = map[string]struct{}{
+		"QFileDevice_Close":        {},
+		"QPaintDevice_PaintEngine": {},
 	}
 
 	linuxOnlyLookup = map[string]struct{}{
@@ -818,15 +779,18 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 
-	if strings.Contains(packageName, `/`) {
-		bindingInclude = "../" + bindingInclude
-		maybeDots = "../"
-	}
+	dirRoot := strings.TrimPrefix(packageName, "src/")
+	dirRoot = strings.TrimPrefix(dirRoot, "src")
 
 	cfs := cFileState{
 		imports:            map[string]struct{}{},
-		currentPackageName: packageName,
+		currentPackageName: dirRoot,
 		currentHeaderName:  strings.TrimSuffix(headerName, ".h"),
+	}
+
+	if dirRoot != "" {
+		bindingInclude = "../" + bindingInclude
+		maybeDots = "../"
 	}
 
 	ret.WriteString(`#pragma once
@@ -841,7 +805,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-#include "` + bindingInclude + "\"\n\n")
+#include "` + bindingInclude + `"` + "\n\n")
 
 	for _, c := range src.Classes {
 		virtualMethods := c.VirtualMethods()
@@ -1334,7 +1298,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 		if _, ok := KnownEnums[cEnumName]; ok {
 			cEnumName += "__"
 		}
-		// one more hack
+		// this is an enum class workaround
 		if cEnumName == "QCborSimpleType__" {
 			cEnumName = strings.ToUpper(cfs.currentHeaderName) + "_" + cEnumName
 		}
@@ -1354,20 +1318,24 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	ret := strings.Builder{}
 
 	var parentInclude string
+
+	dirRoot := strings.TrimPrefix(packageName, "src/")
+	dirRoot = strings.TrimPrefix(dirRoot, "src")
+
 	cfs := cFileState{
 		imports:            map[string]struct{}{},
-		currentPackageName: packageName,
+		currentPackageName: dirRoot,
 		currentHeaderName:  strings.TrimSuffix(headerName, ".h"),
 	}
 
 	seenRefs := map[string]struct{}{cfs.currentHeaderName: {}}
 
 	for _, ref := range getReferencedTypes(src) {
-		if strings.Contains(packageName, `/`) {
+		if dirRoot != "" {
 			parentInclude = "../"
 		}
 
-		if _, ok := skipRefs[ref]; ok {
+		if cabiPreventStructDeclaration(ref) {
 			continue
 		}
 
@@ -1376,87 +1344,34 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 		seenRefs[ref] = struct{}{}
 
-		refInc, _ := refLookup(strings.ToLower(ref))
+		if strings.Contains(ref, "::") || !ImportHeaderForClass(ref, false) {
+			continue
+		}
+
+		var refInc string
+		include, ok := KnownIncludes[ref]
+		if ok {
+			refInc = include.Filename[:len(include.Filename)-2]
+		} else {
+			continue
+		}
+
 		if _, ok := seenRefs[refInc]; ok {
 			continue
 		}
 		seenRefs[refInc] = struct{}{}
 
-		if ref == "QString" {
-			ret.WriteString("#include <string.h>\n")
-			continue
-		}
-
-		if strings.Contains(ref, `::`) {
-			continue
-		}
-
-		if !ImportHeaderForClass(ref) {
-			continue
-		}
-
-		for prefix := range undoIncludePrefixMap {
-			if strings.HasPrefix(refInc, prefix) {
-				parentInclude = ""
-				break
+		if include.PackageName != cfs.currentPackageName {
+			if include.PackageName == "" {
+				parentInclude = "../"
+			} else {
+				parentInclude = "../" + include.PackageName + "/"
 			}
+		} else {
+			parentInclude = ""
 		}
 
-		for suffix := range undoIncludeSuffixMap {
-			if strings.HasSuffix(refInc, suffix) {
-				parentInclude = ""
-				break
-			}
-		}
-
-		if strings.HasPrefix(headerName, "qweb") && strings.HasPrefix(refInc, "qnet") {
-			parentInclude = "../network/"
-		}
-
-		if strings.HasPrefix(headerName, "qweb") && strings.HasPrefix(refInc, "qssl") {
-			parentInclude = "../network/"
-		}
-
-		if strings.HasPrefix(headerName, "qweb") && strings.HasPrefix(refInc, "qprint") {
-			parentInclude = "../printsupport/"
-		}
-
-		if strings.HasPrefix(headerName, "qsciprinter") && strings.HasPrefix(refInc, "qprint") {
-			parentInclude = "../printsupport/"
-		}
-
-		if strings.HasPrefix(headerName, "qwebenginepage") && strings.HasPrefix(refInc, "qauth") {
-			parentInclude = "../network/"
-		}
-
-		if strings.HasPrefix(headerName, "qwebenginepage") && strings.HasPrefix(refInc, "qwebchannel") {
-			parentInclude = "../webchannel/"
-		}
-
-		if strings.HasPrefix(headerName, "qaudioengine") && strings.HasPrefix(refInc, "qaudiodevice") {
-			parentInclude = "../multimedia/"
-		}
-
-		ret.WriteString(`#include "` + parentInclude + `lib` + refInc + ".hpp\"\n")
-		if refInc == "qevent" {
-			cfs.imports["qcoreevent"] = struct{}{}
-		}
-	}
-
-	if cfs.currentHeaderName == "qstringconverter" {
-		ret.WriteString(`#include "libqstringconverter_base.hpp"` + "\n")
-	}
-
-	if cfs.currentHeaderName == "qevent" {
-		ret.WriteString(`#include "libqcoreevent.hpp"` + "\n")
-	}
-
-	if strings.HasPrefix(headerName, "qscilexer") && cfs.currentHeaderName != "qscilexer" {
-		ret.WriteString(`#include "libqscilexer.hpp"` + "\n")
-	}
-
-	if inc, ok := lexerLookup[cfs.currentHeaderName]; ok {
-		ret.WriteString(`#include "lib` + inc + `.hpp"` + "\n")
+		ret.WriteString(`#include "` + parentInclude + `lib` + refInc + `.hpp"` + "\n")
 	}
 
 	if _, ok := linuxOnlyLookup[cfs.currentHeaderName]; ok {
@@ -1903,7 +1818,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		for k := range cfs.imports {
 			if !strings.Contains(cSrc, "lib"+k+".hpp") {
 				dotInclude := ""
-				if strings.Contains(packageName, `/`) && k == "qcoreevent" {
+				if packageName != "" && k == "qcoreevent" {
 					dotInclude = "../"
 				}
 

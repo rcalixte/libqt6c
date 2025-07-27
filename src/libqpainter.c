@@ -16,7 +16,6 @@
 #include "libqrect.hpp"
 #include "libqregion.hpp"
 #include "libqstatictext.hpp"
-#include <string.h>
 #include "libqtextoption.hpp"
 #include "libqtransform.hpp"
 #include "libqpainter.hpp"

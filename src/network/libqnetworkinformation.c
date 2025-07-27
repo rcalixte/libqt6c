@@ -1,6 +1,6 @@
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqnetworkinformation.hpp"
 #include "libqnetworkinformation.h"
 

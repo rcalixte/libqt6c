@@ -1,11 +1,10 @@
 #include "libqabstractnetworkcache.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqnetworkdiskcache.hpp"
 #include "libqnetworkdiskcache.h"
 

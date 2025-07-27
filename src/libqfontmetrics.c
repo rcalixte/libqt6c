@@ -3,7 +3,6 @@
 #include "libqpaintdevice.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtextoption.hpp"
 #include "libqfontmetrics.hpp"
 #include "libqfontmetrics.h"

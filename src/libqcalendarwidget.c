@@ -1,7 +1,9 @@
 #include "libqevent.hpp"
 #include "libqcalendar.hpp"
+#include "libqcoreevent.hpp"
 #include "libqdatetime.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
@@ -9,11 +11,9 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtextformat.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqcalendarwidget.hpp"
 #include "libqcalendarwidget.h"
 

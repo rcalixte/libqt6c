@@ -1,5 +1,4 @@
 #include "libqcolorspace.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libqpdfoutputintent.hpp"
 #include "libqpdfoutputintent.h"

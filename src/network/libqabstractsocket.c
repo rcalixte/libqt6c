@@ -1,14 +1,13 @@
 #include "libqauthenticator.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqabstractsocket.hpp"
 #include "libqabstractsocket.h"
 

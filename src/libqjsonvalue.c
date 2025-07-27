@@ -1,6 +1,5 @@
 #include "libqjsonarray.hpp"
 #include "libqjsonobject.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqjsonvalue.hpp"
 #include "libqjsonvalue.h"

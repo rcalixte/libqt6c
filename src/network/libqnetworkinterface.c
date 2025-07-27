@@ -1,6 +1,5 @@
 #include "../libqdeadlinetimer.hpp"
 #include "libqhostaddress.hpp"
-#include <string.h>
 #include "libqnetworkinterface.hpp"
 #include "libqnetworkinterface.h"
 

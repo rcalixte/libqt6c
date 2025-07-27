@@ -1,10 +1,9 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqlocale.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqregularexpression.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqvalidator.hpp"
 #include "libqvalidator.h"
 

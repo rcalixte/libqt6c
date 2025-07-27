@@ -1,9 +1,8 @@
 #include "libqaudiodevice.hpp"
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
 #include "libqaudioinput.hpp"
 #include "libqaudioinput.h"
 

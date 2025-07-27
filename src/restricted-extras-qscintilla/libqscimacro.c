@@ -1,8 +1,8 @@
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
+#include "libqsciscintilla.hpp"
 #include "libqscimacro.hpp"
 #include "libqscimacro.h"
 

@@ -1,14 +1,14 @@
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
+#include "libqcoreevent.hpp"
 #include "libqevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpainter.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqstyleoption.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqabstractitemdelegate.hpp"
 #include "libqabstractitemdelegate.h"
 

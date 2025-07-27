@@ -1,8 +1,10 @@
 #include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqdockwidget.hpp"
 #include "libqmenu.hpp"
 #include "libqmenubar.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
@@ -10,11 +12,9 @@
 #include "libqpoint.hpp"
 #include "libqsize.hpp"
 #include "libqstatusbar.hpp"
-#include <string.h>
 #include "libqtoolbar.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqmainwindow.hpp"
 #include "libqmainwindow.h"
 

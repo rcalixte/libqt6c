@@ -1,9 +1,9 @@
 #include "libqabstractnativeeventfilter.hpp"
 #include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqsocketnotifier.hpp"
-#include <string.h>
 #include "libqthread.hpp"
 #include "libqabstracteventdispatcher.hpp"
 #include "libqabstracteventdispatcher.h"

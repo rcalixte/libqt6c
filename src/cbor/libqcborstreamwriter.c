@@ -1,4 +1,3 @@
-#include "libqcborcommon.hpp"
 #include "../libqiodevice.hpp"
 #include "libqcborstreamwriter.hpp"
 #include "libqcborstreamwriter.h"

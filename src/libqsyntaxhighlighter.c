@@ -1,13 +1,12 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcolor.hpp"
 #include "libqfont.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqtextobject.hpp"
 #include "libqtextformat.hpp"
 #include "libqtextdocument.hpp"
-#include "libqcoreevent.hpp"
 #include "libqsyntaxhighlighter.hpp"
 #include "libqsyntaxhighlighter.h"
 

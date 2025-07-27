@@ -1,6 +1,5 @@
 #include "libqcborvalue.hpp"
 #include "../libqjsonobject.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqcbormap.hpp"
 #include "libqcbormap.h"

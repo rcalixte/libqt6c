@@ -1,5 +1,4 @@
 #include "libqchar.hpp"
-#include <string.h>
 #include "libqanystringview.hpp"
 #include "libqanystringview.h"
 

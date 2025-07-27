@@ -67,8 +67,8 @@ func Widgets_AllowHeader(fullpath string) bool {
 	return true
 }
 
-func ImportHeaderForClass(className string) bool {
-	if className[0] != 'Q' {
+func ImportHeaderForClass(className string, excludeQsci bool) bool {
+	if !IsKnownClass(className) && !cabiPreventStructDeclaration(className) {
 		return false
 	}
 
@@ -80,9 +80,11 @@ func ImportHeaderForClass(className string) bool {
 		return false
 	}
 
-	if strings.HasPrefix(className, "Qsci") {
-		// QScintilla - does not produce imports
-		return false
+	if excludeQsci {
+		if strings.HasPrefix(className, "Qsci") {
+			// QScintilla - does not produce imports
+			return false
+		}
 	}
 
 	switch className {
@@ -92,6 +94,7 @@ func ImportHeaderForClass(className string) bool {
 		"QText",                 // e.g. qtextcursor.h
 		"QVLABaseBase",          // e.g. Qt 6 qvarlengtharray.h
 		"QAdoptSharedDataTag",   // Qt 6 qshareddata.h
+		"qfloat16",              // Qt 6 qfloat16.h
 		"QFormDataPartBuilder",  // Qt 6.8 qformdatabuilder.h
 		"QGenericRunnable",      // Qt 6.8 qrunnable.h
 		"QCameraPermission",     // Qt 6.8 qpermissions.h
@@ -574,6 +577,8 @@ func AllowType(p CppParameter, isReturnType bool) error {
 		"QWebFrameAdapter",                // Qt 5 Webkit: Used by e.g. qwebframe.h but never defined anywhere
 		"QWebPageAdapter",                 // ...
 		"QQmlWebChannelAttached",          // Qt 5 qqmlwebchannel.h. Need to add QML support for this to work
+		"QQmlEngine",                      // Qt 6 qqmlengine.h, need to add QtQml for this to work
+		"QJSEngine",                       // Qt 6 qjsengine.h, need to add QtQml for this to work
 		"____last____":
 		return ErrTooComplex
 	}

@@ -1,13 +1,10 @@
-#include "libqevent.hpp"
 #include "libqcolor.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqwindow.hpp"
-#include "libqcoreevent.hpp"
 #include "libqaccessible.hpp"
 #include "libqaccessible.h"
 

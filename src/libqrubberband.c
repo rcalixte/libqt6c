@@ -1,5 +1,7 @@
 #include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
@@ -7,11 +9,9 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqstyleoption.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqrubberband.hpp"
 #include "libqrubberband.h"
 

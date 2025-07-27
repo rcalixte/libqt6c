@@ -1,13 +1,12 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpainter.hpp"
 #include "../libqrect.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "../libqtransform.hpp"
 #include "../libqxmlstream.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqsvgrenderer.hpp"
 #include "libqsvgrenderer.h"
 

@@ -1,4 +1,3 @@
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqauthenticator.hpp"
 #include "libqauthenticator.h"

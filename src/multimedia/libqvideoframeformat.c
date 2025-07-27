@@ -1,6 +1,5 @@
 #include "../libqrect.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "libqvideoframeformat.hpp"
 #include "libqvideoframeformat.h"
 

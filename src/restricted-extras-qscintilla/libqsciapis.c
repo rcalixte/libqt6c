@@ -1,9 +1,9 @@
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
-#include "libqsciabstractapis.hpp"
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
+#include "libqsciabstractapis.hpp"
+#include "libqscilexer.hpp"
 #include "libqsciapis.hpp"
 #include "libqsciapis.h"
 

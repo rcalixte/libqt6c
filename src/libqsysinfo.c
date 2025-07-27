@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqsysinfo.hpp"
 #include "libqsysinfo.h"
 

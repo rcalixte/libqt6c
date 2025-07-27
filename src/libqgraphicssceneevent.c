@@ -1,9 +1,8 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmimedata.hpp"
 #include "libqpoint.hpp"
 #include "libqsize.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqgraphicssceneevent.hpp"
 #include "libqgraphicssceneevent.h"
 

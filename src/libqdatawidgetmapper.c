@@ -1,11 +1,10 @@
 #include "libqabstractitemdelegate.hpp"
 #include "libqabstractitemmodel.hpp"
-#include "libqevent.hpp"
-#include "libqmetaobject.hpp"
-#include "libqobject.hpp"
-#include <string.h>
-#include "libqwidget.hpp"
 #include "libqcoreevent.hpp"
+#include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
+#include "libqobject.hpp"
+#include "libqwidget.hpp"
 #include "libqdatawidgetmapper.hpp"
 #include "libqdatawidgetmapper.h"
 

@@ -1,14 +1,13 @@
 #include "libqabstractseries.hpp"
 #include "../libqbrush.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqcolor.hpp"
 #include "libqlineseries.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
-#include <string.h>
 #include "libqxyseries.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqsplineseries.hpp"
 #include "libqsplineseries.h"
 

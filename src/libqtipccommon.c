@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqtipccommon.hpp"
 #include "libqtipccommon.h"
 

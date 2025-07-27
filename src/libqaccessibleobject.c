@@ -2,7 +2,6 @@
 #include "libqcolor.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqwindow.hpp"
 #include "libqaccessibleobject.hpp"
 #include "libqaccessibleobject.h"

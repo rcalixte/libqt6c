@@ -1,9 +1,10 @@
 #include "libqapplication.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcommonstyle.hpp"
 #include "libqfontmetrics.hpp"
 #include "libqicon.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpainter.hpp"
 #include "libqpalette.hpp"
@@ -11,11 +12,9 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqproxystyle.hpp"
 #include "libqproxystyle.h"
 

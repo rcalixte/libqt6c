@@ -1,15 +1,14 @@
 #include "libqabstractsocket.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "libqnetworkdatagram.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqtcpsocket.hpp"
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqsctpsocket.hpp"
 #include "libqsctpsocket.h"
 

@@ -1,7 +1,6 @@
 #include "libqabstractfileiconprovider.hpp"
 #include "libqfileinfo.hpp"
 #include "libqicon.hpp"
-#include <string.h>
 #include "libqfileiconprovider.hpp"
 #include "libqfileiconprovider.h"
 

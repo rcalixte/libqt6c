@@ -1,11 +1,10 @@
 #include "libqabstractbarseries.hpp"
 #include "../libqabstractitemmodel.hpp"
 #include "libqbarmodelmapper.hpp"
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
 #include "libqvbarmodelmapper.hpp"
 #include "libqvbarmodelmapper.h"
 

@@ -1,7 +1,7 @@
 #include "libqbytearrayview.hpp"
 #include "libqdatastream.hpp"
 #include "libqdebug.hpp"
-#include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqcompare.hpp"
 #include "libqmetatype.hpp"
 #include "libqmetatype.h"

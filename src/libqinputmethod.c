@@ -1,8 +1,8 @@
 #include "libqlocale.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqtransform.hpp"
 #include "libqvariant.hpp"
 #include "libqinputmethod.hpp"
