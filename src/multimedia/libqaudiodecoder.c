@@ -1,12 +1,11 @@
 #include "libqaudiobuffer.hpp"
 #include "libqaudioformat.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqaudiodecoder.hpp"
 #include "libqaudiodecoder.h"
 

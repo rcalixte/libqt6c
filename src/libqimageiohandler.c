@@ -1,10 +1,10 @@
 #include "libqiodevice.hpp"
 #include "libqimage.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqimageiohandler.hpp"
 #include "libqimageiohandler.h"

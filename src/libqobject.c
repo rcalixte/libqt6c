@@ -1,11 +1,10 @@
 #include "libqanystringview.hpp"
 #include "libqbindingstorage.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
-#include <string.h>
+#include "libqobjectdefs.hpp"
 #include "libqthread.hpp"
 #include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqobject.hpp"
 #include "libqobject.h"
 

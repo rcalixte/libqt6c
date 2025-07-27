@@ -1,9 +1,8 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqlocale.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqtranslator.hpp"
 #include "libqtranslator.h"
 

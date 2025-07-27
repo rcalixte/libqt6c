@@ -1,9 +1,8 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqjsonobject.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqwebchannelabstracttransport.hpp"
 #include "libqwebchannelabstracttransport.h"
 

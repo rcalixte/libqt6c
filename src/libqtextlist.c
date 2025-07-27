@@ -1,11 +1,10 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqtextobject.hpp"
 #include "libqtextdocument.hpp"
 #include "libqtextformat.hpp"
-#include "libqcoreevent.hpp"
 #include "libqtextlist.hpp"
 #include "libqtextlist.h"
 

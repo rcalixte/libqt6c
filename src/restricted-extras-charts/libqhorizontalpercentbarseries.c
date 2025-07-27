@@ -1,10 +1,9 @@
 #include "libqabstractbarseries.hpp"
 #include "libqabstractseries.hpp"
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
 #include "libqhorizontalpercentbarseries.hpp"
 #include "libqhorizontalpercentbarseries.h"
 

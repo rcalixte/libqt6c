@@ -1,7 +1,6 @@
 #include "libqbytearrayview.hpp"
 #include "libqdatetime.hpp"
 #include "libqlocale.hpp"
-#include <string.h>
 #include "libqtimezone.hpp"
 #include "libqtimezone.h"
 

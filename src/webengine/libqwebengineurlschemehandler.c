@@ -1,9 +1,8 @@
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
-#include "libqwebengineurlrequestjob.hpp"
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
+#include "libqwebengineurlrequestjob.hpp"
 #include "libqwebengineurlschemehandler.hpp"
 #include "libqwebengineurlschemehandler.h"
 

@@ -1,10 +1,9 @@
 #include "../libqbrush.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqboxset.hpp"
 #include "libqboxset.h"
 

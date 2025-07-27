@@ -1,14 +1,13 @@
 #include "libqbrush.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcolor.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpainter.hpp"
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqgraphicseffect.hpp"
 #include "libqgraphicseffect.h"
 

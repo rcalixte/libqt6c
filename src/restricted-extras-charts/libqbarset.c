@@ -1,12 +1,11 @@
 #include "../libqbrush.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqbarset.hpp"
 #include "libqbarset.h"
 

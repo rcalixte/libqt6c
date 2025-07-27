@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqtemporarydir.hpp"
 #include "libqtemporarydir.h"
 

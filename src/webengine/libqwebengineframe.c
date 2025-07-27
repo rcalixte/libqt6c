@@ -1,5 +1,4 @@
 #include "../libqsize.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebengineframe.hpp"
 #include "libqwebengineframe.h"

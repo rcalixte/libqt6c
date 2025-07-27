@@ -1,6 +1,5 @@
 #include "libqanystringview.hpp"
 #include "libqiodevice.hpp"
-#include <string.h>
 #include "libqxmlstream.hpp"
 #include "libqxmlstream.h"
 

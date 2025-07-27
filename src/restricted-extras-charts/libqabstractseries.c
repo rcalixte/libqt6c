@@ -1,8 +1,8 @@
 #include "libqabstractaxis.hpp"
 #include "libqchart.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqabstractseries.hpp"
 #include "libqabstractseries.h"
 

@@ -1,6 +1,5 @@
 #include "libqmutex.hpp"
 #include "libqrunnable.hpp"
-#include <string.h>
 #include "libqthreadpool.hpp"
 #include "libqfutureinterface.hpp"
 #include "libqfutureinterface.h"

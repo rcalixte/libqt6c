@@ -1,11 +1,10 @@
 #include "libqaudiodevice.hpp"
 #include "libqaudioformat.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqaudiosink.hpp"
 #include "libqaudiosink.h"
 

@@ -1,14 +1,13 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcolor.hpp"
 #include "libqiodevice.hpp"
 #include "libqimage.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpixmap.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqmovie.hpp"
 #include "libqmovie.h"
 

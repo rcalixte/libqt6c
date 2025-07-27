@@ -1,7 +1,7 @@
 #include "../libqabstractitemmodel.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqxyseries.hpp"
 #include "libqxymodelmapper.hpp"
 #include "libqxymodelmapper.h"

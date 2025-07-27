@@ -2,7 +2,6 @@
 #include "libqpalette.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqwidget.hpp"
 #include "libqtooltip.hpp"
 #include "libqtooltip.h"

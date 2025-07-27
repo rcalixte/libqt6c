@@ -2,7 +2,6 @@
 #include "libqchar.hpp"
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
-#include <string.h>
 #include "libqdebug.hpp"
 #include "libqdebug.h"
 

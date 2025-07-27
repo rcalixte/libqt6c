@@ -1,8 +1,8 @@
 #include "../libqabstractitemmodel.hpp"
 #include "libqboxplotseries.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqboxplotmodelmapper.hpp"
 #include "libqboxplotmodelmapper.h"
 

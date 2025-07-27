@@ -1,10 +1,9 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmatrix4x4.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqvectornd.hpp"
-#include "libqcoreevent.hpp"
 #include "libqgraphicstransform.hpp"
 #include "libqgraphicstransform.h"
 

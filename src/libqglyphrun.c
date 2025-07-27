@@ -1,7 +1,6 @@
 #include "libqpoint.hpp"
 #include "libqrawfont.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqglyphrun.hpp"
 #include "libqglyphrun.h"
 

@@ -1,10 +1,9 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqpdflink.hpp"
 #include "../libqpoint.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqpdfpagenavigator.hpp"
 #include "libqpdfpagenavigator.h"
 

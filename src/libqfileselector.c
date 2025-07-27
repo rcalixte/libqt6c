@@ -1,9 +1,8 @@
-#include "libqevent.hpp"
-#include "libqmetaobject.hpp"
-#include "libqobject.hpp"
-#include <string.h>
-#include "libqurl.hpp"
 #include "libqcoreevent.hpp"
+#include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
+#include "libqobject.hpp"
+#include "libqurl.hpp"
 #include "libqfileselector.hpp"
 #include "libqfileselector.h"
 

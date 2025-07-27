@@ -1,11 +1,10 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmimedata.hpp"
 #include "libqobject.hpp"
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqdrag.hpp"
 #include "libqdrag.h"
 

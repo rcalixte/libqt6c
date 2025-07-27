@@ -4,7 +4,6 @@
 #include "libqpainterpath.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqtransform.hpp"
 #include "libqrawfont.hpp"
 #include "libqrawfont.h"

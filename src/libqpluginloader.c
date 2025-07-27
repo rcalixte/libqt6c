@@ -1,10 +1,9 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqjsonobject.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqplugin.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqpluginloader.hpp"
 #include "libqpluginloader.h"
 

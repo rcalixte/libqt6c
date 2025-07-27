@@ -1,10 +1,9 @@
 #include "libqcapturablewindow.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqmediacapturesession.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqwindowcapture.hpp"
 #include "libqwindowcapture.h"
 

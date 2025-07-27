@@ -1,10 +1,9 @@
 #include "libqaction.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqicon.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqactiongroup.hpp"
 #include "libqactiongroup.h"
 

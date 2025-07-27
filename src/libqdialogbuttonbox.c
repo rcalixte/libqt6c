@@ -1,6 +1,8 @@
 #include "libqabstractbutton.hpp"
 #include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
@@ -8,10 +10,8 @@
 #include "libqpoint.hpp"
 #include "libqpushbutton.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqdialogbuttonbox.hpp"
 #include "libqdialogbuttonbox.h"
 

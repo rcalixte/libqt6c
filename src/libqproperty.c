@@ -1,5 +1,4 @@
 #include "libqmetatype.hpp"
-#include <string.h>
 #include "libqproperty.hpp"
 #include "libqproperty.h"
 

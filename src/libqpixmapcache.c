@@ -1,5 +1,4 @@
 #include "libqpixmap.hpp"
-#include <string.h>
 #include "libqpixmapcache.hpp"
 #include "libqpixmapcache.h"
 

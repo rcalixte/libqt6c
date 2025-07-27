@@ -3,7 +3,6 @@
 #include "libqsslcertificateextension.hpp"
 #include "libqsslerror.hpp"
 #include "libqsslkey.hpp"
-#include <string.h>
 #include "libqsslcertificate.hpp"
 #include "libqsslcertificate.h"
 

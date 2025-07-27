@@ -1,6 +1,5 @@
 #include "libqcalendar.hpp"
 #include "libqdatetime.hpp"
-#include <string.h>
 #include "libqlocale.hpp"
 #include "libqlocale.h"
 

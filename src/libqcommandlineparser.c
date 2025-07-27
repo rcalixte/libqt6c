@@ -1,6 +1,5 @@
 #include "libqcommandlineoption.hpp"
 #include "libqcoreapplication.hpp"
-#include <string.h>
 #include "libqcommandlineparser.hpp"
 #include "libqcommandlineparser.h"
 

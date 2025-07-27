@@ -1,11 +1,10 @@
 #include "libqcameradevice.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqmediacapturesession.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpoint.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqcamera.hpp"
 #include "libqcamera.h"
 

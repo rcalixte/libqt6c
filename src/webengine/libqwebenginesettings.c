@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqwebenginesettings.hpp"
 #include "libqwebenginesettings.h"
 

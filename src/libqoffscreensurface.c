@@ -1,12 +1,11 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqsurface.hpp"
 #include "libqsurfaceformat.hpp"
-#include "libqcoreevent.hpp"
 #include "libqoffscreensurface.hpp"
 #include "libqoffscreensurface.h"
 

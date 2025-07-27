@@ -1,4 +1,3 @@
-#include "libqversionnumber.hpp"
 #include "libqtyperevision.hpp"
 #include "libqtyperevision.h"
 

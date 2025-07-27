@@ -1,5 +1,4 @@
 #include "libqiodevice.hpp"
-#include <string.h>
 #include "libqtextdocument.hpp"
 #include "libqtextdocumentfragment.hpp"
 #include "libqtextdocumentwriter.hpp"

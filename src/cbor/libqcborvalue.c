@@ -1,11 +1,10 @@
 #include "libqcborarray.hpp"
 #include "libqcbormap.hpp"
 #include "libqcborstreamreader.hpp"
-#include "libqcborcommon.hpp"
+#include "libqcborstreamwriter.hpp"
 #include "../libqdatetime.hpp"
 #include "../libqjsonvalue.hpp"
 #include "../libqregularexpression.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "../libquuid.hpp"
 #include "../libqvariant.hpp"

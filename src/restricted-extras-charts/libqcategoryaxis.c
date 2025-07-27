@@ -1,10 +1,9 @@
 #include "libqabstractaxis.hpp"
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
-#include "libqvalueaxis.hpp"
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
+#include "libqvalueaxis.hpp"
 #include "libqcategoryaxis.hpp"
 #include "libqcategoryaxis.h"
 

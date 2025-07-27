@@ -1,6 +1,5 @@
 #include "libqcborvalue.hpp"
 #include "../libqjsonarray.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqcborarray.hpp"
 #include "libqcborarray.h"

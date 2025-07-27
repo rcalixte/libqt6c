@@ -1,6 +1,8 @@
 #include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqframe.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmovie.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
@@ -10,11 +12,9 @@
 #include "libqpixmap.hpp"
 #include "libqpoint.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqstyleoption.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqlabel.hpp"
 #include "libqlabel.h"
 

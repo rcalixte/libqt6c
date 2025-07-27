@@ -8,13 +8,12 @@
 #include "../libqevent.hpp"
 #include "libqlegendmarker.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpainter.hpp"
 #include "../libqpen.hpp"
-#include <string.h>
 #include "../libqstyleoption.hpp"
 #include "../libqwidget.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqlegend.hpp"
 #include "libqlegend.h"
 

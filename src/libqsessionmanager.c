@@ -1,6 +1,6 @@
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqsessionmanager.hpp"
 #include "libqsessionmanager.h"
 

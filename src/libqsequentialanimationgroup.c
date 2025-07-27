@@ -1,11 +1,10 @@
 #include "libqabstractanimation.hpp"
 #include "libqanimationgroup.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpauseanimation.hpp"
-#include <string.h>
-#include "libqcoreevent.hpp"
 #include "libqsequentialanimationgroup.hpp"
 #include "libqsequentialanimationgroup.h"
 

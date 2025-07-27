@@ -1,5 +1,4 @@
 #include "libqimage.hpp"
-#include <string.h>
 #include "libqtextobject.hpp"
 #include "libqtextformat.hpp"
 #include "libqtextdocument.hpp"

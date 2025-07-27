@@ -1,6 +1,5 @@
 #include "libqiodevice.hpp"
 #include "libqimage.hpp"
-#include <string.h>
 #include "libqimagewriter.hpp"
 #include "libqimagewriter.h"
 

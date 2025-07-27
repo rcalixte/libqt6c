@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqcommandlineoption.hpp"
 #include "libqcommandlineoption.h"
 

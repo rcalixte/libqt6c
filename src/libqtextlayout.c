@@ -5,7 +5,6 @@
 #include "libqpoint.hpp"
 #include "libqrawfont.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqtextobject.hpp"
 #include "libqtextformat.hpp"
 #include "libqtextoption.hpp"

@@ -1,8 +1,6 @@
 #include "libqaccessible.hpp"
-#include "libqevent.hpp"
 #include "libqobject.hpp"
 #include "libqtextcursor.hpp"
-#include "libqcoreevent.hpp"
 #include "libqaccessible_base.hpp"
 #include "libqaccessible_base.h"
 

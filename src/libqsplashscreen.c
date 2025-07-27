@@ -1,6 +1,8 @@
 #include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqcolor.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpaintengine.hpp"
@@ -9,10 +11,8 @@
 #include "libqpoint.hpp"
 #include "libqscreen.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqsplashscreen.hpp"
 #include "libqsplashscreen.h"
 

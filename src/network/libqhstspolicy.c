@@ -1,5 +1,4 @@
 #include "../libqdatetime.hpp"
-#include <string.h>
 #include "libqhstspolicy.hpp"
 #include "libqhstspolicy.h"
 

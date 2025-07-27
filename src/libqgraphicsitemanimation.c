@@ -1,12 +1,11 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqgraphicsitem.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
 #include "libqtimeline.hpp"
 #include "libqtransform.hpp"
-#include "libqcoreevent.hpp"
 #include "libqgraphicsitemanimation.hpp"
 #include "libqgraphicsitemanimation.h"
 

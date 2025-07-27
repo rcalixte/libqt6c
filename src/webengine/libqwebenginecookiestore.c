@@ -1,7 +1,7 @@
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../network/libqnetworkcookie.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebenginecookiestore.hpp"
 #include "libqwebenginecookiestore.h"

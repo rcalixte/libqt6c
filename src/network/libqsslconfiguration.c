@@ -3,7 +3,6 @@
 #include "libqssldiffiehellmanparameters.hpp"
 #include "libqsslellipticcurve.hpp"
 #include "libqsslkey.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqsslconfiguration.hpp"
 #include "libqsslconfiguration.h"

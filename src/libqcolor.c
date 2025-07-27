@@ -1,6 +1,5 @@
 #include "libqanystringview.hpp"
 #include "libqrgba64.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqcolor.hpp"
 #include "libqcolor.h"

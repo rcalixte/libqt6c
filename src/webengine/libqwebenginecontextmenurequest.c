@@ -1,7 +1,7 @@
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpoint.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebenginecontextmenurequest.hpp"
 #include "libqwebenginecontextmenurequest.h"

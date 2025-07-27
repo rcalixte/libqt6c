@@ -1,8 +1,8 @@
 #include "libqabstractseries.hpp"
 #include "libqbarset.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqabstractbarseries.hpp"
 #include "libqabstractbarseries.h"
 

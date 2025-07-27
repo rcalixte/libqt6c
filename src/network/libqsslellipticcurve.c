@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqsslellipticcurve.hpp"
 #include "libqsslellipticcurve.h"
 

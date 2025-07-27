@@ -1,9 +1,9 @@
 #include "libqimage.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmimedata.hpp"
 #include "libqobject.hpp"
 #include "libqpixmap.hpp"
-#include <string.h>
 #include "libqclipboard.hpp"
 #include "libqclipboard.h"
 

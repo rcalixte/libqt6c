@@ -1,6 +1,6 @@
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
-#include <string.h>
+#include "libqsciscintillabase.hpp"
 #include "libqscistyle.hpp"
 #include "libqscistyle.h"
 

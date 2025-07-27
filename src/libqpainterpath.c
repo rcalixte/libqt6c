@@ -3,7 +3,6 @@
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqregion.hpp"
-#include <string.h>
 #include "libqpainterpath.hpp"
 #include "libqpainterpath.h"
 

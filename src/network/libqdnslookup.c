@@ -1,10 +1,9 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqsslconfiguration.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqdnslookup.hpp"
 #include "libqdnslookup.h"
 

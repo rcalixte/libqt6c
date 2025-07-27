@@ -1,9 +1,8 @@
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
-#include "libqwebengineurlrequestinfo.hpp"
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
+#include "libqwebengineurlrequestinfo.hpp"
 #include "libqwebengineurlrequestinterceptor.hpp"
 #include "libqwebengineurlrequestinterceptor.h"
 

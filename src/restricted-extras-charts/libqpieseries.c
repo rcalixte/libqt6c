@@ -1,10 +1,9 @@
 #include "libqabstractseries.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqpieslice.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqpieseries.hpp"
 #include "libqpieseries.h"
 

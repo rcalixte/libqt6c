@@ -1,11 +1,10 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmetatype.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqmimedata.hpp"
 #include "libqmimedata.h"
 

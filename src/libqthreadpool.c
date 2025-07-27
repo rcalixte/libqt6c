@@ -1,11 +1,10 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqdeadlinetimer.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqrunnable.hpp"
-#include <string.h>
 #include "libqthread.hpp"
-#include "libqcoreevent.hpp"
 #include "libqthreadpool.hpp"
 #include "libqthreadpool.h"
 

@@ -5,7 +5,6 @@
 #include "../libqpoint.hpp"
 #include "../libqrect.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
 #include "libqsvggenerator.hpp"
 #include "libqsvggenerator.h"
 

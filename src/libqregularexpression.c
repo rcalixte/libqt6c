@@ -1,5 +1,4 @@
 #include "libqanystringview.hpp"
-#include <string.h>
 #include "libqregularexpression.hpp"
 #include "libqregularexpression.h"
 

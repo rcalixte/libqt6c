@@ -2,7 +2,6 @@
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
 #include "libqlocale.hpp"
-#include <string.h>
 #include "libqtextstream.hpp"
 #include "libqtextstream.h"
 

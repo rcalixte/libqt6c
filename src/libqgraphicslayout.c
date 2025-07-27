@@ -1,9 +1,8 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqgraphicsitem.hpp"
 #include "libqgraphicslayoutitem.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include "libqcoreevent.hpp"
 #include "libqgraphicslayout.hpp"
 #include "libqgraphicslayout.h"
 

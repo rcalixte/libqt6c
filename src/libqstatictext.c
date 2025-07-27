@@ -1,6 +1,5 @@
 #include "libqfont.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqtextoption.hpp"
 #include "libqtransform.hpp"
 #include "libqstatictext.hpp"

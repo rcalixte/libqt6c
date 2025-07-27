@@ -1,7 +1,7 @@
 #include "libqchar.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqstylehints.hpp"
 #include "libqstylehints.h"
 

@@ -2,9 +2,9 @@
 #include "../libqbrush.hpp"
 #include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
-#include <string.h>
 #include "libqlegendmarker.hpp"
 #include "libqlegendmarker.h"
 

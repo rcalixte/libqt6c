@@ -1,5 +1,4 @@
 #include "libqaudioformat.hpp"
-#include <string.h>
 #include "libqaudiodevice.hpp"
 #include "libqaudiodevice.h"
 

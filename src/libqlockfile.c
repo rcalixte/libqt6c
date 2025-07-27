@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqlockfile.hpp"
 #include "libqlockfile.h"
 

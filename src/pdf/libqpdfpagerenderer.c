@@ -1,12 +1,11 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqimage.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqpdfdocument.hpp"
 #include "libqpdfdocumentrenderoptions.hpp"
 #include "../libqsize.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqpdfpagerenderer.hpp"
 #include "libqpdfpagerenderer.h"
 

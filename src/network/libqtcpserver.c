@@ -1,11 +1,10 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "libqnetworkproxy.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqtcpsocket.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqtcpserver.hpp"
 #include "libqtcpserver.h"
 

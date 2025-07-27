@@ -1,10 +1,11 @@
 #include "libqabstractnetworkcache.hpp"
 #include "libqauthenticator.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhstspolicy.hpp"
 #include "libqhttpmultipart.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "libqnetworkcookiejar.hpp"
 #include "libqnetworkproxy.hpp"
 #include "libqnetworkreply.hpp"
@@ -13,8 +14,6 @@
 #include "libqsslconfiguration.hpp"
 #include "libqsslerror.hpp"
 #include "libqsslpresharedkeyauthenticator.hpp"
-#include <string.h>
-#include "../libqcoreevent.hpp"
 #include "libqnetworkaccessmanager.hpp"
 #include "libqnetworkaccessmanager.h"
 

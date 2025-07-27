@@ -1,5 +1,4 @@
 #include "libqpaintdevice.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqfont.hpp"
 #include "libqfont.h"

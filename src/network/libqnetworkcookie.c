@@ -1,6 +1,5 @@
 #include "../libqbytearrayview.hpp"
 #include "../libqdatetime.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqnetworkcookie.hpp"
 #include "libqnetworkcookie.h"

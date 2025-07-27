@@ -1,6 +1,5 @@
 #include "../libqpoint.hpp"
 #include "../libqrect.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqpdflink.hpp"
 #include "libqpdflink.h"

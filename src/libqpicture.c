@@ -4,7 +4,6 @@
 #include "libqpainter.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqpicture.hpp"
 #include "libqpicture.h"
 

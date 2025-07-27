@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqcborcommon.hpp"
 #include "libqcborcommon.h"
 

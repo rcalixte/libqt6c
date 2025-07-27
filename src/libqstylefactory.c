@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqstyle.hpp"
 #include "libqstylefactory.hpp"
 #include "libqstylefactory.h"

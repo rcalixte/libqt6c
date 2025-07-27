@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqwebenginescript.hpp"
 #include "libqwebenginescriptcollection.hpp"
 #include "libqwebenginescriptcollection.h"

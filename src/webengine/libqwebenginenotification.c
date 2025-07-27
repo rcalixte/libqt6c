@@ -1,7 +1,7 @@
 #include "../libqimage.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebenginenotification.hpp"
 #include "libqwebenginenotification.h"

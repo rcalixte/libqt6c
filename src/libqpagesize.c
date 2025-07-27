@@ -1,6 +1,5 @@
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqpagesize.hpp"
 #include "libqpagesize.h"
 

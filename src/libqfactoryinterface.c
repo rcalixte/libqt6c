@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqfactoryinterface.hpp"
 #include "libqfactoryinterface.h"
 

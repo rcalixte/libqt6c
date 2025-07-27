@@ -4,7 +4,6 @@
 #include "libqhttpheaders.hpp"
 #include "../libqobject.hpp"
 #include "libqsslconfiguration.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "../libqvariant.hpp"
 #include "libqnetworkrequest.hpp"

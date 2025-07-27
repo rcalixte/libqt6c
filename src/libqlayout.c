@@ -1,13 +1,12 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqlayoutitem.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqlayout.hpp"
 #include "libqlayout.h"
 

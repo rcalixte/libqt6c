@@ -1,9 +1,8 @@
 #include "libqanimationgroup.hpp"
-#include "libqevent.hpp"
-#include "libqmetaobject.hpp"
-#include "libqobject.hpp"
-#include <string.h>
 #include "libqcoreevent.hpp"
+#include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
+#include "libqobject.hpp"
 #include "libqabstractanimation.hpp"
 #include "libqabstractanimation.h"
 

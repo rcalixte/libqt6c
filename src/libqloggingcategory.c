@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqloggingcategory.hpp"
 #include "libqloggingcategory.h"
 

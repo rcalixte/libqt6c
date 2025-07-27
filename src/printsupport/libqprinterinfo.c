@@ -1,6 +1,5 @@
 #include "../libqpagesize.hpp"
 #include "libqprinter.hpp"
-#include <string.h>
 #include "libqprinterinfo.hpp"
 #include "libqprinterinfo.h"
 

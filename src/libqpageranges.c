@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqpageranges.hpp"
 #include "libqpageranges.h"
 

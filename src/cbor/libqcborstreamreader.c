@@ -1,6 +1,5 @@
 #include "libqcborcommon.hpp"
 #include "../libqiodevice.hpp"
-#include <string.h>
 #include "libqcborstreamreader.hpp"
 #include "libqcborstreamreader.h"
 

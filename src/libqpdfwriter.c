@@ -1,7 +1,8 @@
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqiodevice.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpagelayout.hpp"
 #include "libqpageranges.hpp"
@@ -12,9 +13,7 @@
 #include "libqpainter.hpp"
 #include "libqpdfoutputintent.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
 #include "libquuid.hpp"
-#include "libqcoreevent.hpp"
 #include "libqpdfwriter.hpp"
 #include "libqpdfwriter.h"
 

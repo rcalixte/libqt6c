@@ -1,11 +1,10 @@
 #include "../libqabstractitemmodel.hpp"
 #include "libqboxplotmodelmapper.hpp"
 #include "libqboxplotseries.hpp"
-#include "../libqevent.hpp"
-#include "../libqmetaobject.hpp"
-#include "../libqobject.hpp"
-#include <string.h>
 #include "../libqcoreevent.hpp"
+#include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
+#include "../libqobject.hpp"
 #include "libqvboxplotmodelmapper.hpp"
 #include "libqvboxplotmodelmapper.h"
 

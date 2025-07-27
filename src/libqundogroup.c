@@ -1,10 +1,9 @@
 #include "libqaction.hpp"
-#include "libqevent.hpp"
-#include "libqmetaobject.hpp"
-#include "libqobject.hpp"
-#include <string.h>
-#include "libqundostack.hpp"
 #include "libqcoreevent.hpp"
+#include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
+#include "libqobject.hpp"
+#include "libqundostack.hpp"
 #include "libqundogroup.hpp"
 #include "libqundogroup.h"
 

@@ -1,9 +1,10 @@
 #include "libqabstractsocket.hpp"
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhostaddress.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqiodevicebase.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "libqocspresponse.hpp"
 #include "libqsslcertificate.hpp"
@@ -12,10 +13,8 @@
 #include "libqsslerror.hpp"
 #include "libqsslkey.hpp"
 #include "libqsslpresharedkeyauthenticator.hpp"
-#include <string.h>
 #include "libqtcpsocket.hpp"
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqsslsocket.hpp"
 #include "libqsslsocket.h"
 

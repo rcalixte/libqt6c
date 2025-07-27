@@ -1,5 +1,4 @@
 #include "../network/libqsslcertificate.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebenginecertificateerror.hpp"
 #include "libqwebenginecertificateerror.h"

@@ -3,7 +3,6 @@
 #include "libqpalette.hpp"
 #include "libqpixmap.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqstyle.hpp"
 #include "libqstyleoption.hpp"
 #include "libqwidget.hpp"

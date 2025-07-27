@@ -1,5 +1,4 @@
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqgenericpluginfactory.hpp"
 #include "libqgenericpluginfactory.h"
 

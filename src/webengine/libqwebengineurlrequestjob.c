@@ -1,7 +1,7 @@
 #include "../libqiodevice.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebengineurlrequestjob.hpp"
 #include "libqwebengineurlrequestjob.h"

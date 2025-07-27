@@ -1,11 +1,10 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqmediacapturesession.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "libqvideoframe.hpp"
 #include "libqvideoframeformat.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqvideoframeinput.hpp"
 #include "libqvideoframeinput.h"
 

@@ -1,7 +1,7 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqurl.hpp"
 #include "libqwebengineclientcertificatestore.hpp"
 #include "libqwebengineclienthints.hpp"
@@ -12,7 +12,6 @@
 #include "libqwebenginesettings.hpp"
 #include "libqwebengineurlrequestinterceptor.hpp"
 #include "libqwebengineurlschemehandler.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqwebengineprofile.hpp"
 #include "libqwebengineprofile.h"
 

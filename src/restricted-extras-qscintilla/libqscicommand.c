@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqscicommand.hpp"
 #include "libqscicommand.h"
 

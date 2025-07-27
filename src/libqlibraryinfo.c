@@ -1,4 +1,3 @@
-#include <string.h>
 #include "libqversionnumber.hpp"
 #include "libqlibraryinfo.hpp"
 #include "libqlibraryinfo.h"

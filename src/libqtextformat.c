@@ -2,7 +2,6 @@
 #include "libqcolor.hpp"
 #include "libqfont.hpp"
 #include "libqpen.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
 #include "libqtextformat.hpp"
 #include "libqtextformat.h"

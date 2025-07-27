@@ -1,6 +1,5 @@
 #include "libqfont.hpp"
 #include "libqfontinfo.hpp"
-#include <string.h>
 #include "libqfontdatabase.hpp"
 #include "libqfontdatabase.h"
 

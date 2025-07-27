@@ -3,7 +3,6 @@
 #include "libqpixmap.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqiconengine.hpp"
 #include "libqiconengine.h"
 

@@ -1,7 +1,6 @@
 #include "libqmetaobject.hpp"
 #include "libqmetatype.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqobjectdefs.hpp"
 #include "libqobjectdefs.h"
 

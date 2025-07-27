@@ -2,8 +2,8 @@
 #include "libqiodevice.hpp"
 #include "libqiodevicebase.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqfiledevice.hpp"
 #include "libqfiledevice.h"
 

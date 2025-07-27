@@ -1,12 +1,11 @@
 #include "libqabstractitemmodel.hpp"
 #include "libqabstractitemview.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqrect.hpp"
-#include <string.h>
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqcompleter.hpp"
 #include "libqcompleter.h"
 

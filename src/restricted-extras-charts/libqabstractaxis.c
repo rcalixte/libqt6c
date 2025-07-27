@@ -2,9 +2,9 @@
 #include "../libqcolor.hpp"
 #include "../libqfont.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "../libqobject.hpp"
 #include "../libqpen.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
 #include "libqabstractaxis.hpp"
 #include "libqabstractaxis.h"

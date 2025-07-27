@@ -1,13 +1,12 @@
 #include "libqactiongroup.hpp"
-#include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqfont.hpp"
 #include "libqicon.hpp"
 #include "libqkeysequence.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <string.h>
 #include "libqvariant.hpp"
-#include "libqcoreevent.hpp"
 #include "libqaction.hpp"
 #include "libqaction.h"
 

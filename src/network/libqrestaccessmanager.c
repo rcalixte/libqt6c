@@ -1,15 +1,14 @@
-#include "../libqevent.hpp"
+#include "../libqcoreevent.hpp"
 #include "libqhttpmultipart.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqjsondocument.hpp"
 #include "../libqmetaobject.hpp"
+#include "../libqobjectdefs.hpp"
 #include "libqnetworkaccessmanager.hpp"
 #include "libqnetworkreply.hpp"
 #include "libqnetworkrequest.hpp"
 #include "../libqobject.hpp"
-#include <string.h>
 #include "../libqvariant.hpp"
-#include "../libqcoreevent.hpp"
 #include "libqrestaccessmanager.hpp"
 #include "libqrestaccessmanager.h"
 

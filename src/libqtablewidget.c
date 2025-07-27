@@ -3,6 +3,7 @@
 #include "libqabstractscrollarea.hpp"
 #include "libqevent.hpp"
 #include "libqbrush.hpp"
+#include "libqcoreevent.hpp"
 #include "libqdatastream.hpp"
 #include "libqfont.hpp"
 #include "libqframe.hpp"
@@ -10,6 +11,7 @@
 #include "libqitemselectionmodel.hpp"
 #include "libqmargins.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmimedata.hpp"
 #include "libqabstractitemmodel.hpp"
 #include "libqobject.hpp"
@@ -20,12 +22,10 @@
 #include "libqrect.hpp"
 #include "libqregion.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqstyleoption.hpp"
 #include "libqtableview.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqtablewidget.hpp"
 #include "libqtablewidget.h"
 

@@ -1,5 +1,4 @@
 #include "libqhostaddress.hpp"
-#include <string.h>
 #include "libqhostinfo.hpp"
 #include "libqhostinfo.h"
 

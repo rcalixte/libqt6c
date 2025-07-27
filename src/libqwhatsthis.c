@@ -1,7 +1,6 @@
 #include "libqaction.hpp"
 #include "libqobject.hpp"
 #include "libqpoint.hpp"
-#include <string.h>
 #include "libqwidget.hpp"
 #include "libqwhatsthis.hpp"
 #include "libqwhatsthis.h"

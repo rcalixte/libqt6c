@@ -1,10 +1,12 @@
 #include "libqabstractscrollarea.hpp"
 #include "libqabstracttextdocumentlayout.hpp"
 #include "libqevent.hpp"
+#include "libqcoreevent.hpp"
 #include "libqframe.hpp"
 #include "libqmargins.hpp"
 #include "libqmenu.hpp"
 #include "libqmetaobject.hpp"
+#include "libqobjectdefs.hpp"
 #include "libqmimedata.hpp"
 #include "libqobject.hpp"
 #include "libqpagedpaintdevice.hpp"
@@ -15,7 +17,6 @@
 #include "libqrect.hpp"
 #include "libqregularexpression.hpp"
 #include "libqsize.hpp"
-#include <string.h>
 #include "libqstyleoption.hpp"
 #include "libqtextobject.hpp"
 #include "libqtextformat.hpp"
@@ -25,7 +26,6 @@
 #include "libqurl.hpp"
 #include "libqvariant.hpp"
 #include "libqwidget.hpp"
-#include "libqcoreevent.hpp"
 #include "libqplaintextedit.hpp"
 #include "libqplaintextedit.h"
 

@@ -1,5 +1,4 @@
 #include "libqcalendar.hpp"
-#include <string.h>
 #include "libqtimezone.hpp"
 #include "libqdatetime.hpp"
 #include "libqdatetime.h"
