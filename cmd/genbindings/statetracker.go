@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"path/filepath"
+	"strings"
+)
 
 type lookupResultClass struct {
 	PackageName string
@@ -17,17 +20,20 @@ type lookupResultEnum struct {
 	Enum        CppEnum
 }
 
-var (
-	KnownClassnames map[string]lookupResultClass // Entries of the form QFoo::Bar if it is an inner class
-	KnownTypedefs   map[string]lookupResultTypedef
-	KnownEnums      map[string]lookupResultEnum
-)
-
-func flushKnownTypes() {
-	KnownClassnames = make(map[string]lookupResultClass)
-	KnownTypedefs = make(map[string]lookupResultTypedef)
-	KnownEnums = make(map[string]lookupResultEnum)
+type lookupResultInclude struct {
+	PackageName string
+	Filename    string
 }
+
+var (
+	KnownClassnames = make(map[string]lookupResultClass) // Entries of the form QFoo::Bar if it is an inner class
+	KnownTypedefs   = make(map[string]lookupResultTypedef)
+	KnownEnums      = make(map[string]lookupResultEnum)
+
+	KnownIncludes = map[string]lookupResultInclude{
+		"Qt": {"", "qnamespace.h"}, // Qt is a special case
+	}
+)
 
 // Handle child classes recursively
 func registerChildClasses(class CppClass, packageName string) {
@@ -42,6 +48,10 @@ func registerChildClasses(class CppClass, packageName string) {
 
 func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	for _, c := range parsed.Classes {
+		if parsed.Filename != "" && !strings.Contains(c.ClassName, "::") {
+			KnownIncludes[c.ClassName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
+		}
+
 		KnownClassnames[c.ClassName] = lookupResultClass{packageName, c /* copy */}
 
 		// If it's a nested class, also register its local name
@@ -89,6 +99,11 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	}
 
 	for _, en := range parsed.Enums {
+		if parsed.Filename != "" && en.EnumName != "" && !strings.Contains(en.EnumName, "::") {
+			// enum classes... in Qt 6, these are found in qcborcommon.h, qdtls.h, qlogging.h, qmetatype.h, qocspresponse.h
+			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
+		}
+
 		KnownEnums[en.EnumName] = lookupResultEnum{packageName, en /* copy */}
 
 		// Register short name if it's a scoped enum
@@ -104,6 +119,12 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 		if strings.Contains(en.EnumName, "::") {
 			KnownEnums[en.CabiEnumName()+"s"] = lookupResultEnum{packageName, flagsEnum}
 		}
+	}
+
+	if len(parsed.Classes) == 0 && len(parsed.Enums) != 0 && parsed.Filename != "" && strings.Contains(parsed.Enums[0].EnumName, "::") {
+		// Some headers only have enums we can process, e.g. QSsl, QtVideo
+		importName := strings.Split(parsed.Enums[0].EnumName, "::")[0]
+		KnownIncludes[importName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
 	}
 
 	// Register detected flags
