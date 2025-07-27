@@ -779,369 +779,6 @@ func cabiPreventStructDeclaration(className string) bool {
 	}
 }
 
-func refLookup(ref string) (string, bool) {
-	if strings.HasPrefix(ref, "q") && strings.HasSuffix(ref, "event") {
-		return "qevent", true
-	}
-
-	if strings.HasPrefix(ref, "q") && strings.HasSuffix(ref, "gesture") {
-		return "qgesture", true
-	}
-
-	if strings.HasPrefix(ref, "q") && strings.HasSuffix(ref, "gradient") {
-		return "qbrush", true
-	}
-
-	if strings.HasPrefix(ref, "q") && strings.HasSuffix(ref, "mutex") {
-		return "qmutex", true
-	}
-
-	if strings.HasPrefix(ref, "qdns") && strings.HasSuffix(ref, "record") {
-		return "qdnslookup", true
-	}
-
-	if strings.HasPrefix(ref, "q") && strings.HasSuffix(ref, "validator") {
-		return "qvalidator", true
-	}
-	if strings.HasPrefix(ref, "qstylehintreturn") || strings.HasPrefix(ref, "qstyleoption") {
-		return "qstyleoption", true
-	}
-
-	if strings.HasPrefix(ref, "qtext") && strings.HasSuffix(ref, "format") {
-		return "qtextformat", true
-	}
-
-	if strings.HasPrefix(ref, "qpropertybinding") || strings.HasPrefix(ref, "qpropertyobserver") ||
-		strings.HasPrefix(ref, "qpropertynotifier") || strings.HasPrefix(ref, "qscopedproperty") ||
-		strings.HasPrefix(ref, "quntyped") {
-		return "qproperty", true
-	}
-
-	if strings.HasPrefix(ref, "qitemselection") {
-		return "qitemselectionmodel", true
-	}
-
-	if strings.HasPrefix(ref, "qjsonvalue") {
-		return "qjsonvalue", true
-	}
-
-	if strings.HasPrefix(ref, "qnetworkproxy") {
-		return "qnetworkproxy", true
-	}
-
-	if strings.HasPrefix(ref, "qprocess") {
-		return "qprocess", true
-	}
-
-	if strings.HasPrefix(ref, "qrandom") {
-		return "qrandom", true
-	}
-
-	if strings.HasPrefix(ref, "qtablewidget") {
-		return "qtablewidget", true
-	}
-
-	if strings.HasPrefix(ref, "qwebenginehistory") {
-		return "qwebenginehistory", true
-	}
-
-	if strings.HasPrefix(ref, "qwidgetitem") {
-		return "qlayoutitem", true
-	}
-
-	if strings.HasPrefix(ref, "qxmlstream") {
-		return "qxmlstream", true
-	}
-
-	if strings.HasPrefix(ref, "qvector") {
-		return "qvectornd", true
-	}
-
-	switch ref {
-	case "qabstractlistmodel", "qabstracttablemodel", "qmodelroledata", "qmodelroledataspan":
-		return "qabstractitemmodel", true
-
-	case "qabstractundoitem":
-		return "qtextdocument", true
-
-	case "qaccessibleapplication":
-		return "qaccessibleobject", true
-
-	case "qaccessiblebridgeplugin":
-		return "qaccessiblebridge", true
-
-	case "qaccessibleattributesinterface", "qaccessibleinterface", "qaccessibleactioninterface", "qaccessibleeditabletextinterface",
-		"qaccessiblehyperlinkinterface", "qaccessibleimageinterface", "qaccessibleselectioninterface", "qaccessibletablecellinterface",
-		"qaccessibletableinterface", "qaccessibletextinterface", "qaccessiblevalueinterface":
-		return "qaccessible", true
-
-	case "qanimationdriver":
-		return "qabstractanimation", true
-
-	case "qbindingstatus":
-		return "qbindingstorage", true
-
-	case "qbitref":
-		return "qbitarray", true
-
-	case "qbrushdata":
-		return "qbrush", true
-
-	case "qcameraformat":
-		return "qcameradevice", true
-
-	case "qcborstreamwriter", "qcborerror":
-		return "qcborcommon", true
-
-	case "qcborparsererror", "qcborvalueconstref", "qcborvalueref":
-		return "qcborvalue", true
-
-	case "qcontiguouscachedata":
-		return "qcontiguouscache", true
-
-	case "qcollatorsortkey":
-		return "qcollator", true
-
-	case "qdate", "qtime":
-		return "qdatetime", true
-
-	case "qdateedit", "qtimeedit":
-		return "qdatetimeedit", true
-
-	case "qdebugstatesaver", "qnodebug":
-		return "qdebug", true
-
-	case "qdoublespinbox":
-		return "qspinbox", true
-
-	case "qdtlsclientverifier":
-		return "qdtls", true
-
-	case "qeventlooplocker":
-		return "qeventloop", true
-
-	case "qfontmetricsf":
-		return "qfontmetrics", true
-
-	case "qfutureinterfacebase":
-		return "qfutureinterface", true
-
-	case "qfuturewatcherbase":
-		return "qfuturewatcher", true
-
-	case "qgenericargument", "qgenericreturnargument", "qmetamethodargument",
-		"qmetamethodreturnargument", "qmethodrawarguments":
-		return "qobjectdefs", true
-
-	case "qgraphicsanchor":
-		return "qgraphicsanchorlayout", true
-
-	case "qgraphicsblureffect", "qgraphicscolorizeeffect", "qgraphicsdropshadoweffect",
-		"qgraphicsopacityeffect":
-		return "qgraphicseffect", true
-
-	case "qgraphicsobject", "qabstractgraphicsshapeitem", "qgraphicsellipseitem",
-		"qgraphicsitemgroup", "qgraphicslineitem", "qgraphicspathitem",
-		"qgraphicspixmapitem", "qgraphicspolygonitem", "qgraphicsrectitem",
-		"qgraphicssimpletextitem", "qgraphicstextitem":
-		return "qgraphicsitem", true
-
-	case "qgraphicsrotation", "qgraphicsscale":
-		return "qgraphicstransform", true
-
-	case "qhashseed":
-		return "qhashfunctions", true
-
-	case "qhboxlayout", "qvboxlayout":
-		return "qboxlayout", true
-
-	case "qhttppart":
-		return "qhttpmultipart", true
-
-	case "qimageioplugin":
-		return "qimageiohandler", true
-
-	case "qipv6address":
-		return "qhostaddress", true
-
-	case "qitemeditorcreatorbase":
-		return "qitemeditorfactory", true
-
-	case "qjsonparseerror":
-		return "qjsondocument", true
-
-	case "qlatin1char":
-		return "qchar", true
-
-	case "qlinef":
-		return "qline", true
-
-	case "qlistwidgetitem":
-		return "qlistwidget", true
-
-	case "qkeycombination", "qinternal":
-		return "qnamespace", true
-
-	case "qmarginsf":
-		return "qmargins", true
-
-	case "qmetaassociation", "qmetasequence":
-		return "qmetacontainer", true
-
-	case "qmetamethod", "qmetaclassinfo", "qmetaenum", "qmetaproperty":
-		return "qmetaobject", true
-
-	case "qmodelindex", "qpersistentmodelindex":
-		return "qabstractitemmodel", true
-
-	case "qnetworkaddressentry":
-		return "qnetworkinterface", true
-
-	case "qnetworkcachemetadata":
-		return "qabstractnetworkcache", true
-
-	case "qobjectdata", "qsignalblocker":
-		return "qobject", true
-
-	case "qoperatingsystemversionbase", "qoperatingsystemversionunexported":
-		return "qoperatingsystemversion", true
-
-	case "qpaintenginestate", "qtextitem":
-		return "qpaintengine", true
-
-	case "qpainterpathstroker":
-		return "qpainterpath", true
-
-	case "qpartialordering":
-		return "qcompare", true
-
-	case "qplaintextdocumentlayout":
-		return "qplaintextedit", true
-
-	case "qpluginmetadata":
-		return "qplugin", true
-
-	case "qpointf":
-		return "qpoint", true
-
-	case "qpointingdeviceuniqueid":
-		return "qpointingdevice", true
-
-	case "qpropertyproxybindingdata":
-		return "qpropertyprivate", true
-
-	case "qreadlocker", "qwritelocker":
-		return "qreadwritelock", true
-
-	case "qrectf":
-		return "qrect", true
-
-	case "qregularexpressionmatch", "qregularexpressionmatchiterator":
-		return "qregularexpression", true
-
-	case "qscopedpointerpoddeleter":
-		return "qscopedpointer", true
-
-	case "qsemaphorereleaser":
-		return "qsemaphore", true
-
-	case "qsizef":
-		return "qsize", true
-
-	case "qsocketdescriptor":
-		return "qsocketnotifier", true
-
-	case "qspaceritem":
-		return "qlayoutitem", true
-
-	case "qsplitterhandle":
-		return "qsplitter", true
-
-	case "qstandarditem":
-		return "qstandarditemmodel", true
-
-	case "qstaticbytearraymatcherbase":
-		return "qbytearraymatcher", true
-
-	case "qstaticplugin":
-		return "qplugin", true
-
-	case "qstringconverterbase", "qstringdecoder", "qstringencoder":
-		return "qstringconverter", true
-
-	case "qstringtokenizerbasebase":
-		return "qstringtokenizer", true
-
-	case "qstyleoptionbutton":
-		return "qstyleoption", true
-
-	case "qtextblock", "qtextblockgroup", "qtextblockuserdata", "qtextfragment",
-		"qtextframe", "qtextframelayoutdata":
-		return "qtextobject", true
-
-	case "qtextlength":
-		return "qtextformat", true
-
-	case "qtextinlineobject", "qtextline":
-		return "qtextlayout", true
-
-	case "qtextobjectinterface":
-		return "qabstracttextdocumentlayout", true
-
-	case "qtexttablecell":
-		return "qtexttable", true
-
-	case "qthreadstoragedata":
-		return "qthreadstorage", true
-
-	case "qtilerules":
-		return "qdrawutil", true
-
-	case "qtreewidgetitem":
-		return "qtreewidget", true
-
-	case "qtyperevision":
-		return "qversionnumber", true
-
-	case "qundocommand":
-		return "qundostack", true
-
-	case "qvariantconstpointer":
-		return "qvariant", true
-
-	case "qwebenginewebauthpinrequest":
-		return "qwebenginewebauthuxrequest", true
-
-	case "qwidgetdata":
-		return "qwidget", true
-
-	case "qwizardpage":
-		return "qwizard", true
-
-	case "qnativeipckey":
-		return "qtipccommon", true
-
-	case "qbluetoothpermission", "qcalendarpermission", "qcontactspermission",
-		"qlocationpermission", "qpermission":
-		return "qpermissions", true
-
-	case "qabstracteventdispatcherv2":
-		return "qabstracteventdispatcher", true
-
-	case "qflag", "qincompatibleflag":
-		return "qflags", true
-
-	case "qmessagelogcontext", "qmessagelogger":
-		return "qlogging", true
-
-	case "qlatin1string":
-		return "qlatin1stringview", true
-
-	default:
-		return ref, false
-	}
-}
-
 var (
 	noQtConnect = map[string]struct{}{
 		"QAudioDecoder":         {},
@@ -1196,7 +833,6 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 	ret := strings.Builder{}
 
 	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "C_LIBVIRTUAL" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, `.`, `_`), `-`, `_`))
-	extraInclude := ifv(filename == "qsequentialiterable.h", "#include \"libqvariant.h\"", "")
 	bindingInclude := "qtlibc.h"
 
 	if strings.Contains(packageName, `/`) {
@@ -1213,7 +849,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-#include "` + bindingInclude + "\"\n" + extraInclude + "\n\n")
+#include "` + bindingInclude + `"` + "\n\n\n")
 
 	for _, c := range src.Classes {
 		cppClassName := c.ClassName
@@ -1461,7 +1097,6 @@ func emitBindingHeader(src *CppParsedHeader, filename, packageName string) (stri
 	qttypedefs := make(map[string]struct{})
 
 	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, `.`, `_`), `-`, `_`)+"pp")
-	extraInclude := ifv(filename == "qsequentialiterable.h", "#include \"libqvariant.h\"", "")
 	bindingInclude := "qtlibc.h"
 
 	if strings.Contains(packageName, `/`) {
@@ -1478,7 +1113,7 @@ func emitBindingHeader(src *CppParsedHeader, filename, packageName string) (stri
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-#include "` + bindingInclude + "\"\n" + extraInclude + "\n" + `
+#include "` + bindingInclude + `"` + "\n\n" + `
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -1730,7 +1365,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			continue
 		}
 
-		if !ImportHeaderForClass(ref) {
+		if !ImportHeaderForClass(ref, true) {
 			continue
 		}
 
@@ -1745,7 +1380,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 	}
 
 	ret.WriteString(`#include <` + filename + ">\n")
-	ret.WriteString(`#include "lib` + filename + "pp\"\n")
+	ret.WriteString(`#include "lib` + filename + `pp"` + "\n")
 	ret.WriteString(`#include "lib` + filename + `xx"` + "\n\n")
 
 	for _, c := range src.Classes {
@@ -2141,7 +1776,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				// The exceptions are QString and QByteArray.
 				var emptyReturn string
 				maybeSelf := ifv(m.IsPrivate || m.IsProtected, vVar+"->", "((Virtual"+cppClassName+"*)self)->")
-				maybeElse := "\t} else {\nreturn new " + m.ReturnType.RenderTypeQtCpp() + "(" + maybeSelf + vbCallTarget + ");\n}"
+				nonConstReturn := strings.TrimPrefix(m.ReturnType.RenderTypeQtCpp(), "const ")
+				maybeElse := "\t} else {\nreturn new " + nonConstReturn + "(" + maybeSelf + vbCallTarget + ");\n}"
 
 				// private hack/workaround
 				if m.IsProtected || ((methodPrefixName == "QAbstractListModel" || methodPrefixName == "QAbstractTableModel") && m.MethodName == "parent") {
@@ -2154,7 +1790,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						emitParametersCabi(m, maybeConst+cppClassName+"*") + ") {" +
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
 						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
-						"\t\treturn new " + m.ReturnType.RenderTypeQtCpp() + "(" + vVar + "->" + vbCallTarget + ");\n" +
+						"\t\treturn new " + nonConstReturn + "(" + vVar + "->" + vbCallTarget + ");\n" +
 						maybeElse + emptyReturn + "\n}\n\n")
 
 				ret.WriteString("// Base class handler implementation\n")
@@ -2165,7 +1801,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
 						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
 						vVar + "->set" + isBaseName + "(true);\n" +
-						"\t\treturn new " + m.ReturnType.RenderTypeQtCpp() + "(" + vVar + "->" + vbCallTarget + ");\n" +
+						"\t\treturn new " + nonConstReturn + "(" + vVar + "->" + vbCallTarget + ");\n" +
 						maybeElse + emptyReturn + "\n}\n\n")
 
 			} else {
