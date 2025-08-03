@@ -113,7 +113,7 @@ FreeBSD (native)
 For dynamic linking with the Qt 6 system libraries:
 
 ```bash
-sudo pkg install qt6-base qt6-charts qt6-multimedia qt6-pdf qt6-svg qt6-webchannel qt6-webengine qscintilla2-qt6 zig
+sudo pkg install llvm qt6-base qt6-charts qt6-multimedia qt6-pdf qt6-svg qt6-webchannel qt6-webengine qscintilla2-qt6 zig
 ```
 
 > [!NOTE]
@@ -137,7 +137,7 @@ For dynamic linking with the Qt 6 system libraries:
 - __Debian-based distributions__:
 
 ```bash
-sudo apt install qt6-base-dev libqscintilla2-qt6-dev qt6-base-private-dev qt6-charts-dev qt6-multimedia-dev qt6-pdf-dev qt6-svg-dev qt6-webchannel-dev qt6-webengine-dev
+sudo apt install clang-format qt6-base-dev libqscintilla2-qt6-dev qt6-base-private-dev qt6-charts-dev qt6-multimedia-dev qt6-pdf-dev qt6-svg-dev qt6-webchannel-dev qt6-webengine-dev
 ```
 
 > [!NOTE]
@@ -146,7 +146,7 @@ sudo apt install qt6-base-dev libqscintilla2-qt6-dev qt6-base-private-dev qt6-ch
 - __Fedora-based distributions__:
 
 ```bash
-sudo dnf install qt6-qtbase-devel qscintilla-qt6-devel qt6-qtcharts-devel qt6-qtmultimedia-devel qt6-qtpdf-devel qt6-qtsvg-devel qt6-qtwebchannel-devel qt6-qtwebengine-devel zig
+sudo dnf install clang-tools-extra qt6-qtbase-devel qscintilla-qt6-devel qt6-qtcharts-devel qt6-qtmultimedia-devel qt6-qtpdf-devel qt6-qtsvg-devel qt6-qtwebchannel-devel qt6-qtwebengine-devel zig
 ```
 
 > [!NOTE]
@@ -155,7 +155,7 @@ sudo dnf install qt6-qtbase-devel qscintilla-qt6-devel qt6-qtcharts-devel qt6-qt
 - __Arch-based distributions__:
 
 ```bash
-sudo pacman -S qt6-base qscintilla-qt6 qt6-charts qt6-multimedia qt6-svg qt6-webchannel qt6-webengine zig
+sudo pacman -S clang qt6-base qscintilla-qt6 qt6-charts qt6-multimedia qt6-svg qt6-webchannel qt6-webengine zig
 ```
 
 Once the required packages are installed, the library can be built from the root of the repository:
@@ -316,7 +316,7 @@ q_widget_on_custom_event(widget, on_custom_event);
 
 ```cpp
 // Qt 6 C++ API
-Qt::AlignmentFlag alignment = Qt::AlignLeft | Qt::AlignTop;
+Qt::AlignmentFlag alignment = Qt::AlignmentFlag::AlignLeft | Qt::AlignmentFlag::AlignTop;
 ```
 
 ```c
@@ -344,13 +344,54 @@ zig build --release=safe
 
 In theory, any build system that supports both C and C++ should work. However, this has only been lightly tested and is therefore unsupported and left as an exercise for the interested reader.
 
-### Q6. Can I use Qt Designer and the Qt Resource system?
+### Q6. Can I use Qt Creator/Designer and the Qt Resource system?
 
-MIQT (the upstream Qt bindings for Go) has a custom implementation of Qt `uic` and `rcc` tools, to allow using [Qt Designer](https://doc.qt.io/qt-6/qtdesigner-manual.html) for form design and resource management. There is work in progress to support Qt Designer with this library in the future.
+There is a custom implementation of Qt's `uic` and `rcc` tools to allow using [Qt Creator](https://doc.qt.io/qtcreator/index.html) or [Qt Designer](https://doc.qt.io/qt-6/qtdesigner-manual.html) for form design and resource management with this library. The programs and their respective documentation are located at [`uic-c`](https://github.com/rcalixte/libqt6c/tree/master/cmd/uic-c) and [`qrc-c`](https://github.com/rcalixte/libqt6c/tree/master/cmd/qrc-c).
+
+> [!NOTE]
+> Only Qt Creator 16.0 (or higher) and Qt Designer 6.8.2 (or higher) are supported for use. Any existing `.ui` or `.qrc` files should be saved/exported from one of them for proper usage with these tools. Older versions can result in panics during execution and are not supported.
+
+While optional for the `uic-c` program, there is a hard requirement for the `qrc-c` program:
+
+FreeBSD
+-------
+
+These tools are already installed with `qt6-base` and located at:
+
+- `/usr/local/libexec/qt6/rcc`
+- `/usr/local/libexec/qt6/uic`
+
+Linux
+-----
+
+- __Debian-based distributions__:
+
+```bash
+sudo apt install qt6-base-dev-tools
+```
+
+Once installed, the tools are located at:
+
+- `/usr/lib/qt6/libexec/rcc`
+- `/usr/lib/qt6/libexec/uic`
+
+- __Fedora-based distributions__:
+
+These tools are already installed with `qt6-qtbase-devel` and located at:
+
+- `/usr/lib64/qt6/libexec/rcc`
+- `/usr/lib64/qt6/libexec/uic`
+
+- __Arch-based distributions__:
+
+These tools are already installed with `qt6-base` and located at:
+
+- `/usr/lib/qt6/rcc`
+- `/usr/lib/qt6/uic`
 
 ### Q7. How can I add bindings for another Qt library?
 
-Fork this repository and add your library to the `genbindings/config-libraries` file. [Read more »](cmd/genbindings/README.md)
+Fork this repository and add your library to the `genbindings/config-libraries` file. [Read more »](https://github.com/rcalixte/libqt6c/tree/master/cmd/genbindings/README.md)
 
 Special Thanks
 --------------
