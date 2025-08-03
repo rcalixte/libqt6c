@@ -2,4 +2,6 @@
 .zig-cache
 cachedir
 cmd/genbindings/genbindings
+cmd/qrc-c/qrc-c
+cmd/uic-c/uic-c
 zig-out
