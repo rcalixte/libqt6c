@@ -1,4 +1,11 @@
 
+### 6.8.2 rev5 (3 August 2025)
+
+* Add qrc-c and uic-c for use with the Qt Resource System (#23)
+* Replace brute force resolutions with data structures (#21)
+* Update vtable information in documentation comments (#20)
+* Add library support for Homebrew on macOS
+
 ### 6.8.2 rev4 (18 July 2025)
 
 * **BREAKING CHANGE:** Update container type invocations and unblock QVariantList (#17)
