@@ -24,8 +24,68 @@ var archMap = map[string]string{
 	"arm64": "aarch64",
 }
 
+type FormatBatch struct {
+	files  []string          // Files to format
+	copies map[string]string // source -> dest mapping
+}
+
+func processFormatBatch(batch *FormatBatch) error {
+	numCPU := runtime.NumCPU()
+	var wg sync.WaitGroup
+	errors := make(chan error, numCPU)
+
+	// Split files into chunks
+	chunkSize := (len(batch.files) + numCPU - 1) / numCPU
+	for i := 0; i < len(batch.files); i += chunkSize {
+		end := min(i+chunkSize, len(batch.files))
+
+		chunk := batch.files[i:end]
+		wg.Add(1)
+		go func(files []string) {
+			defer wg.Done()
+
+			args := append([]string{"-i"}, files...)
+			cmd := exec.Command("clang-format", args...)
+			if err := cmd.Run(); err != nil {
+				errors <- fmt.Errorf("clang-format failed: %v", err)
+				return
+			}
+
+			// Handle any copies for this chunk
+			for _, file := range files {
+				if dest, ok := batch.copies[file]; ok {
+					content, err := os.ReadFile(file)
+					if err != nil {
+						errors <- fmt.Errorf("read failed for %s: %v", file, err)
+						return
+					}
+					if err := os.WriteFile(dest, content, 0644); err != nil {
+						errors <- fmt.Errorf("write failed for %s: %v", dest, err)
+						return
+					}
+				}
+			}
+		}(chunk)
+	}
+
+	// Wait for completion or first error
+	done := make(chan struct{})
+	go func() {
+		wg.Wait()
+		close(done)
+		close(errors)
+	}()
+
+	select {
+	case err := <-errors:
+		return err
+	case <-done:
+		return nil
+	}
+}
+
 func cacheFilePath(inputHeader string) string {
-	return filepath.Join("cachedir", strings.ReplaceAll(inputHeader, `/`, `__`)+".json")
+	return filepath.Join("cachedir", strings.ReplaceAll(inputHeader, "/", "__")+".json")
 }
 
 func findHeadersInDir(srcDir string, allowHeader func(string) bool) []string {
@@ -40,7 +100,7 @@ func findHeadersInDir(srcDir string, allowHeader func(string) bool) []string {
 		if includeFile.IsDir() {
 			continue
 		}
-		if !strings.HasSuffix(includeFile.Name(), `.h`) {
+		if !strings.HasSuffix(includeFile.Name(), ".h") {
 			continue
 		}
 		fullPath := filepath.Join(srcDir, includeFile.Name())
@@ -68,7 +128,7 @@ func cleanGeneratedFilesInDir(dirpath string) {
 		if e.IsDir() {
 			continue
 		}
-		if !strings.HasPrefix(e.Name(), `libq`) {
+		if !strings.HasPrefix(e.Name(), "lib") {
 			continue
 		}
 		// One of ours, clean up
@@ -85,7 +145,7 @@ func cleanGeneratedFilesInDir(dirpath string) {
 }
 
 func pkgConfigCflags(packageName string) string {
-	stdout, err := exec.Command(`pkg-config`, `--cflags`, packageName).Output()
+	stdout, err := exec.Command("pkg-config", "--cflags", packageName).Output()
 	if err != nil {
 		panic(err)
 	}
@@ -99,7 +159,7 @@ func (header *CppParsedHeader) RegisterFlags() map[string]CppFlagProperty {
 	}
 
 	for _, typedef := range header.Typedefs {
-		typeClass := strings.Split(typedef.Alias, `::`)[0]
+		typeClass := strings.Split(typedef.Alias, "::")[0]
 
 		// Skip private/internal types
 		if strings.HasSuffix(typedef.Alias, "Private") ||
@@ -115,13 +175,13 @@ func (header *CppParsedHeader) RegisterFlags() map[string]CppFlagProperty {
 		}
 
 		if strings.Contains(typedef.Alias, "::") {
-			flagDef := strings.Split(typedef.Alias, `::`)
+			flagDef := strings.Split(typedef.Alias, "::")
 			if len(flagDef) <= 1 {
 				continue
 			}
 
 			className := flagDef[0]
-			flagName := strings.Join(flagDef[1:], ``)
+			flagName := strings.Join(flagDef[1:], "")
 
 			flagProperty := CppFlagProperty{
 				PropertyName: typedef.Alias, // Fully qualified name
@@ -209,7 +269,7 @@ func gatherTypes(name string, dirs []string, allowHeader func(string) bool, clan
 
 	var includeFiles []string
 	for _, srcDir := range dirs {
-		if strings.HasSuffix(srcDir, `.h`) {
+		if strings.HasSuffix(srcDir, ".h") {
 			includeFiles = append(includeFiles, srcDir)
 		} else {
 			includeFiles = append(includeFiles, findHeadersInDir(srcDir, allowHeader)...)
@@ -287,14 +347,14 @@ func gatherTypes(name string, dirs []string, allowHeader func(string) bool, clan
 	// The cache should now be fully populated
 }
 
-func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs, qttypedefs map[string]struct{}) {
+func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs, qttypedefs map[string]struct{}) *FormatBatch {
 
 	packageName := "src" + ifv(srcName != "", "/"+srcName, "")
 	includePath := "include" + ifv(srcName != "", "/"+srcName, "")
 
 	var includeFiles []string
 	for _, srcDir := range srcDirs {
-		if strings.HasSuffix(srcDir, `.h`) {
+		if strings.HasSuffix(srcDir, ".h") {
 			includeFiles = append(includeFiles, srcDir) // single .h
 		} else {
 			includeFiles = append(includeFiles, findHeadersInDir(srcDir, allowHeaderFn)...)
@@ -365,6 +425,10 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 	// PASS 2
 	//
 
+	batch := &FormatBatch{
+		copies: make(map[string]string),
+	}
+
 	for _, parsed := range processHeaders {
 
 		log.Printf("Processing %q...", parsed.Filename)
@@ -422,6 +486,17 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			counter++
 		}
 
+		batch.files = append(batch.files,
+			outputName+".cpp",
+			outputName+".hpp",
+			outputName+".hxx",
+			outputName+".c",
+			outputName+".h",
+		)
+
+		includeFile := filepath.Join(includeDir, filepath.Base(outputName+".h"))
+		batch.copies[outputName+".h"] = includeFile
+
 		bindingCppSrc, err := emitBindingCpp(parsed, filepath.Base(parsed.Filename))
 		if err != nil {
 			panic(err)
@@ -460,27 +535,6 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		cmd := exec.Command("clang-format", "-i", outputName+".cpp")
-		cmd.Stderr = os.Stderr
-		err = cmd.Start()
-		if err != nil {
-			panic(err)
-		}
-
-		cmd = exec.Command("clang-format", "-i", outputName+".hpp")
-		cmd.Stderr = os.Stderr
-		err = cmd.Start()
-		if err != nil {
-			panic(err)
-		}
-
-		cmd = exec.Command("clang-format", "-i", outputName+".hxx")
-		cmd.Stderr = os.Stderr
-		err = cmd.Start()
-		if err != nil {
-			panic(err)
-		}
-
 		srcC, err := emitC(parsed, filepath.Base(parsed.Filename), packageName)
 		if err != nil {
 			panic(err)
@@ -501,39 +555,16 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		cmd = exec.Command("clang-format", "-i", outputName+".c")
-		cmd.Stderr = os.Stderr
-		err = cmd.Run()
-		if err != nil {
-			panic(err)
-		}
-
-		cmd = exec.Command("clang-format", "-i", outputName+".h")
-		cmd.Stderr = os.Stderr
-		err = cmd.Run()
-		if err != nil {
-			panic(err)
-		}
-
-		formattedHeader, err := os.ReadFile(outputName + ".h")
-		if err != nil {
-			panic(err)
-		}
-
-		includeFile := filepath.Join(includeDir, filepath.Base(outputName+".h"))
-
 		err = os.MkdirAll(filepath.Dir(includeDir), 0755)
 		if err != nil {
 			panic(err)
 		}
 
-		err = os.WriteFile(includeFile, formattedHeader, 0644)
-		if err != nil {
-			panic(err)
-		}
 	}
 
 	log.Printf("Processing %d file(s) completed", len(includeFiles))
+
+	return batch
 }
 
 func generateClangCaches(includeFiles []string, clangBin string, cflags []string, matcher ClangMatcher) {
@@ -604,7 +635,7 @@ func main() {
 	}
 
 	clang := flag.String("clang", "clang", "Custom path to clang")
-	outDir := flag.String("outdir", "../../", "Output directory for generated gen_** files")
+	outDir := flag.String("outdir", "../../", "Output directory for generated lib** files")
 	extraLibsDir := flag.String("extralibs", "/usr/local/src/", "Base directory to find extra library checkouts")
 
 	flag.Parse()
