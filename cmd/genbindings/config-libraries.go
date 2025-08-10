@@ -1,8 +1,8 @@
 package main
 
 import (
+	"maps"
 	"os"
-	"os/exec"
 	"path/filepath"
 	"runtime"
 	"sort"
@@ -12,7 +12,7 @@ import (
 func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	AllowAllHeaders := func(string) bool { return true }
 
-	InsertTypedefs(true)
+	InsertTypedefs()
 
 	headerList := []string{}
 	qtstructdefs := make(map[string]struct{})
@@ -30,6 +30,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 
 	// Qt 6 modules
 	modules := []moduleConfig{
+		// Qt 6 Core, Gui, Widgets
 		{
 			path: "",
 			dirs: []string{
@@ -47,6 +48,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			},
 			cflags: "--std=c++17 " + pkgConfigCflags("Qt6Widgets"),
 		},
+
+		// Qt CBOR
 		{
 			path: "cbor",
 			dirs: []string{
@@ -61,6 +64,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 QtPrintSupport
+		// Depends on QtCore/Gui/Widgets
 		{
 			path: "printsupport",
 			dirs: []string{
@@ -71,6 +75,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 SVG
+		// Depends on QtCore/Gui/Widgets
 		{
 			path: "svg",
 			dirs: []string{
@@ -82,6 +87,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 QtNetwork
+		// Depends on QtCore
 		{
 			path: "network",
 			dirs: []string{
@@ -95,6 +101,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 QtMultimedia
+		// Depends on QtCore/Gui/Widgets
 		{
 			path: "multimedia",
 			dirs: []string{
@@ -106,6 +113,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 Spatial Audio (on Debian this is a dependency of Qt6Multimedia)
+		// Depends on QtCore
 		{
 			path: "spatialaudio",
 			dirs: []string{
@@ -116,6 +124,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 QWebChannel
+		// Depends on QtCore
 		{
 			path: "webchannel",
 			dirs: []string{
@@ -126,6 +135,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 QWebEngine
+		// Depends on QtCore/Gui/Widgets
 		{
 			path: "webengine",
 			dirs: []string{
@@ -185,9 +195,11 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		)
 	}
 
+	var allBatches []*FormatBatch
+
 	// PASS 2: Generate bindings with complete type information
 	for _, mod := range modules {
-		generate(
+		batch := generate(
 			mod.path,
 			mod.dirs,
 			mod.allowHeader,
@@ -196,6 +208,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			qtstructdefs,
 			qttypedefs,
 		)
+		allBatches = append(allBatches, batch)
 	}
 
 	// Post-processing to generate auxiliary files
@@ -223,12 +236,6 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	if err != nil {
 		panic(err)
 	}
-	cmd := exec.Command("clang-format", "-i", outputName)
-	cmd.Stderr = os.Stderr
-	err = cmd.Run()
-	if err != nil {
-		panic(err)
-	}
 
 	typesFile := filepath.Join(outDir, "src", "libqttypedefs.h")
 	err = os.WriteFile(typesFile, []byte(typedefHeader), 0644)
@@ -236,17 +243,6 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		panic(err)
 	}
 
-	cmd = exec.Command("clang-format", "-i", typesFile)
-	cmd.Stderr = os.Stderr
-	err = cmd.Run()
-	if err != nil {
-		panic(err)
-	}
-
-	formattedHeader, err := os.ReadFile(typesFile)
-	if err != nil {
-		panic(err)
-	}
 	includeHeader := filepath.Join(outDir, "include", "libqttypedefs.h")
 
 	err = os.MkdirAll(filepath.Dir(includeHeader), 0755)
@@ -254,8 +250,30 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		panic(err)
 	}
 
-	err = os.WriteFile(includeHeader, formattedHeader, 0644)
-	if err != nil {
+	finalBatch := &FormatBatch{
+		files: []string{
+			outputName,
+			typesFile,
+		},
+		copies: map[string]string{
+			typesFile: includeHeader,
+		},
+	}
+
+	allBatches = append(allBatches, finalBatch)
+
+	var allFiles []string
+	allCopies := make(map[string]string)
+
+	for _, batch := range allBatches {
+		allFiles = append(allFiles, batch.files...)
+		maps.Copy(allCopies, batch.copies)
+	}
+
+	if err := processFormatBatch(&FormatBatch{
+		files:  allFiles,
+		copies: allCopies,
+	}); err != nil {
 		panic(err)
 	}
 
