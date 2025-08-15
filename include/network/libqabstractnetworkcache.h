@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,463 +15,536 @@
 
 /// q_networkcachemetadata_new constructs a new QNetworkCacheMetaData object.
 ///
-///
 QNetworkCacheMetaData* q_networkcachemetadata_new();
 
 /// q_networkcachemetadata_new2 constructs a new QNetworkCacheMetaData object.
 ///
-/// ``` QNetworkCacheMetaData* other ```
+/// @param other QNetworkCacheMetaData*
 QNetworkCacheMetaData* q_networkcachemetadata_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#operator-eq)
 ///
-/// ``` QNetworkCacheMetaData* self, QNetworkCacheMetaData* other ```
+/// @param self QNetworkCacheMetaData*
+/// @param other QNetworkCacheMetaData*
 void q_networkcachemetadata_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#swap)
 ///
-/// ``` QNetworkCacheMetaData* self, QNetworkCacheMetaData* other ```
+/// @param self QNetworkCacheMetaData*
+/// @param other QNetworkCacheMetaData*
 void q_networkcachemetadata_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#operator-eq-eq)
 ///
-/// ``` QNetworkCacheMetaData* self, QNetworkCacheMetaData* other ```
+/// @param self QNetworkCacheMetaData*
+/// @param other QNetworkCacheMetaData*
 bool q_networkcachemetadata_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#operator-not-eq)
 ///
-/// ``` QNetworkCacheMetaData* self, QNetworkCacheMetaData* other ```
+/// @param self QNetworkCacheMetaData*
+/// @param other QNetworkCacheMetaData*
 bool q_networkcachemetadata_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#isValid)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 bool q_networkcachemetadata_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#url)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 QUrl* q_networkcachemetadata_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setUrl)
 ///
-/// ``` QNetworkCacheMetaData* self, QUrl* url ```
+/// @param self QNetworkCacheMetaData*
+/// @param url QUrl*
 void q_networkcachemetadata_set_url(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#rawHeaders)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 libqt_list /* of libqt_pair  tuple of char* and char*  */ q_networkcachemetadata_raw_headers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setRawHeaders)
 ///
-/// ``` QNetworkCacheMetaData* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers ```
+/// @param self QNetworkCacheMetaData*
+/// @param headers libqt_list /* of libqt_pair  tuple of char* and char*  */
 void q_networkcachemetadata_set_raw_headers(void* self, libqt_list /* of libqt_pair  tuple of char* and char*  */ headers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#headers)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 QHttpHeaders* q_networkcachemetadata_headers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setHeaders)
 ///
-/// ``` QNetworkCacheMetaData* self, QHttpHeaders* headers ```
+/// @param self QNetworkCacheMetaData*
+/// @param headers QHttpHeaders*
 void q_networkcachemetadata_set_headers(void* self, void* headers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#lastModified)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 QDateTime* q_networkcachemetadata_last_modified(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setLastModified)
 ///
-/// ``` QNetworkCacheMetaData* self, QDateTime* dateTime ```
+/// @param self QNetworkCacheMetaData*
+/// @param dateTime QDateTime*
 void q_networkcachemetadata_set_last_modified(void* self, void* dateTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#expirationDate)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 QDateTime* q_networkcachemetadata_expiration_date(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setExpirationDate)
 ///
-/// ``` QNetworkCacheMetaData* self, QDateTime* dateTime ```
+/// @param self QNetworkCacheMetaData*
+/// @param dateTime QDateTime*
 void q_networkcachemetadata_set_expiration_date(void* self, void* dateTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#saveToDisk)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 bool q_networkcachemetadata_save_to_disk(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setSaveToDisk)
 ///
-/// ``` QNetworkCacheMetaData* self, bool allow ```
+/// @param self QNetworkCacheMetaData*
+/// @param allow bool
 void q_networkcachemetadata_set_save_to_disk(void* self, bool allow);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#attributes)
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 libqt_map /* of int64_t to QVariant* */ q_networkcachemetadata_attributes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setAttributes)
 ///
-/// ``` QNetworkCacheMetaData* self, libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */ attributes ```
+/// @param self QNetworkCacheMetaData*
+/// @param attributes libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */
 void q_networkcachemetadata_set_attributes(void* self, libqt_map /* of int64_t to QVariant* */ attributes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#dtor.QNetworkCacheMetaData)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QNetworkCacheMetaData* self ```
+/// @param self QNetworkCacheMetaData*
 void q_networkcachemetadata_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qabstractnetworkcache.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 const QMetaObject* q_abstractnetworkcache_meta_object(void* self);
 
-/// ``` QAbstractNetworkCache* self, const char* param1 ```
+/// @param self QAbstractNetworkCache*
+/// @param param1 const char*
 void* q_abstractnetworkcache_metacast(void* self, const char* param1);
 
-/// ``` QAbstractNetworkCache* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAbstractNetworkCache*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_abstractnetworkcache_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_abstractnetworkcache_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#metaData)
 ///
-/// ``` QAbstractNetworkCache* self, QUrl* url ```
+/// @param self QAbstractNetworkCache*
+/// @param url QUrl*
 QNetworkCacheMetaData* q_abstractnetworkcache_meta_data(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#updateMetaData)
 ///
-/// ``` QAbstractNetworkCache* self, QNetworkCacheMetaData* metaData ```
+/// @param self QAbstractNetworkCache*
+/// @param metaData QNetworkCacheMetaData*
 void q_abstractnetworkcache_update_meta_data(void* self, void* metaData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#data)
 ///
-/// ``` QAbstractNetworkCache* self, QUrl* url ```
+/// @param self QAbstractNetworkCache*
+/// @param url QUrl*
 QIODevice* q_abstractnetworkcache_data(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#remove)
 ///
-/// ``` QAbstractNetworkCache* self, QUrl* url ```
+/// @param self QAbstractNetworkCache*
+/// @param url QUrl*
 bool q_abstractnetworkcache_remove(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#cacheSize)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 long long q_abstractnetworkcache_cache_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#prepare)
 ///
-/// ``` QAbstractNetworkCache* self, QNetworkCacheMetaData* metaData ```
+/// @param self QAbstractNetworkCache*
+/// @param metaData QNetworkCacheMetaData*
 QIODevice* q_abstractnetworkcache_prepare(void* self, void* metaData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#insert)
 ///
-/// ``` QAbstractNetworkCache* self, QIODevice* device ```
+/// @param self QAbstractNetworkCache*
+/// @param device QIODevice*
 void q_abstractnetworkcache_insert(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#clear)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 void q_abstractnetworkcache_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_abstractnetworkcache_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_abstractnetworkcache_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QAbstractNetworkCache* self, QEvent* event ```
+/// @param self QAbstractNetworkCache*
+/// @param event QEvent*
 bool q_abstractnetworkcache_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* watched, QEvent* event ```
+/// @param self QAbstractNetworkCache*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_abstractnetworkcache_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractNetworkCache*
 const char* q_abstractnetworkcache_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractNetworkCache* self, char* name ```
+/// @param self QAbstractNetworkCache*
+/// @param name char*
 void q_abstractnetworkcache_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 bool q_abstractnetworkcache_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 bool q_abstractnetworkcache_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 bool q_abstractnetworkcache_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 bool q_abstractnetworkcache_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QAbstractNetworkCache* self, bool b ```
+/// @param self QAbstractNetworkCache*
+/// @param b bool
 bool q_abstractnetworkcache_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 QThread* q_abstractnetworkcache_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAbstractNetworkCache* self, QThread* thread ```
+/// @param self QAbstractNetworkCache*
+/// @param thread QThread*
 bool q_abstractnetworkcache_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAbstractNetworkCache* self, int interval ```
+/// @param self QAbstractNetworkCache*
+/// @param interval int
 int32_t q_abstractnetworkcache_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAbstractNetworkCache* self, int id ```
+/// @param self QAbstractNetworkCache*
+/// @param id int
 void q_abstractnetworkcache_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAbstractNetworkCache* self, enum Qt__TimerId id ```
+/// @param self QAbstractNetworkCache*
+/// @param id enum Qt__TimerId
 void q_abstractnetworkcache_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 libqt_list /* of QObject* */ q_abstractnetworkcache_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* parent ```
+/// @param self QAbstractNetworkCache*
+/// @param parent QObject*
 void q_abstractnetworkcache_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* filterObj ```
+/// @param self QAbstractNetworkCache*
+/// @param filterObj QObject*
 void q_abstractnetworkcache_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* obj ```
+/// @param self QAbstractNetworkCache*
+/// @param obj QObject*
 void q_abstractnetworkcache_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_abstractnetworkcache_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QAbstractNetworkCache*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_abstractnetworkcache_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_abstractnetworkcache_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_abstractnetworkcache_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 void q_abstractnetworkcache_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 void q_abstractnetworkcache_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QAbstractNetworkCache* self, const char* name, QVariant* value ```
+/// @param self QAbstractNetworkCache*
+/// @param name const char*
+/// @param value QVariant*
 bool q_abstractnetworkcache_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QAbstractNetworkCache* self, const char* name ```
+/// @param self QAbstractNetworkCache*
+/// @param name const char*
 QVariant* q_abstractnetworkcache_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractNetworkCache*
 const char** q_abstractnetworkcache_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 QBindingStorage* q_abstractnetworkcache_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 const QBindingStorage* q_abstractnetworkcache_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 void q_abstractnetworkcache_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractNetworkCache* self, void (*slot)(QAbstractNetworkCache*) ```
-void q_abstractnetworkcache_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QAbstractNetworkCache*
+/// @param callback void fn(QAbstractNetworkCache*)
+void q_abstractnetworkcache_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 QObject* q_abstractnetworkcache_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QAbstractNetworkCache* self, const char* classname ```
+/// @param self QAbstractNetworkCache*
+/// @param classname const char*
 bool q_abstractnetworkcache_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 void q_abstractnetworkcache_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAbstractNetworkCache* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QAbstractNetworkCache*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_abstractnetworkcache_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAbstractNetworkCache* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QAbstractNetworkCache*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_abstractnetworkcache_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_abstractnetworkcache_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QAbstractNetworkCache*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_abstractnetworkcache_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractNetworkCache* self, QObject* param1 ```
+/// @param self QAbstractNetworkCache*
+/// @param param1 QObject*
 void q_abstractnetworkcache_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractNetworkCache* self, void (*slot)(QAbstractNetworkCache*, QObject*) ```
-void q_abstractnetworkcache_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractNetworkCache*
+/// @param callback void fn(QAbstractNetworkCache*, QObject*)
+void q_abstractnetworkcache_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -480,14 +552,15 @@ void q_abstractnetworkcache_on_destroyed1(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractNetworkCache* self, void (*slot)(QAbstractNetworkCache*, const char*) ```
-void q_abstractnetworkcache_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAbstractNetworkCache*
+/// @param callback void fn(QAbstractNetworkCache*, const char*)
+void q_abstractnetworkcache_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractnetworkcache.html#dtor.QAbstractNetworkCache)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAbstractNetworkCache* self ```
+/// @param self QAbstractNetworkCache*
 void q_abstractnetworkcache_delete(void* self);
 
 #endif

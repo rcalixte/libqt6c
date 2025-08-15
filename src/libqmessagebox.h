@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1819 +15,2287 @@
 
 /// q_messagebox_new constructs a new QMessageBox object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QMessageBox* q_messagebox_new(void* parent);
 
 /// q_messagebox_new2 constructs a new QMessageBox object.
-///
 ///
 QMessageBox* q_messagebox_new2();
 
 /// q_messagebox_new3 constructs a new QMessageBox object.
 ///
-/// ``` enum QMessageBox__Icon icon, const char* title, const char* text ```
+/// @param icon enum QMessageBox__Icon
+/// @param title const char*
+/// @param text const char*
 QMessageBox* q_messagebox_new3(int64_t icon, const char* title, const char* text);
 
 /// q_messagebox_new4 constructs a new QMessageBox object.
 ///
-/// ``` const char* title, const char* text, enum QMessageBox__Icon icon, int button0, int button1, int button2 ```
+/// @param title const char*
+/// @param text const char*
+/// @param icon enum QMessageBox__Icon
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
 QMessageBox* q_messagebox_new4(const char* title, const char* text, int64_t icon, int button0, int button1, int button2);
 
 /// q_messagebox_new5 constructs a new QMessageBox object.
 ///
-/// ``` enum QMessageBox__Icon icon, const char* title, const char* text, int buttons ```
+/// @param icon enum QMessageBox__Icon
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
 QMessageBox* q_messagebox_new5(int64_t icon, const char* title, const char* text, int64_t buttons);
 
 /// q_messagebox_new6 constructs a new QMessageBox object.
 ///
-/// ``` enum QMessageBox__Icon icon, const char* title, const char* text, int buttons, QWidget* parent ```
+/// @param icon enum QMessageBox__Icon
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+/// @param parent QWidget*
 QMessageBox* q_messagebox_new6(int64_t icon, const char* title, const char* text, int64_t buttons, void* parent);
 
 /// q_messagebox_new7 constructs a new QMessageBox object.
 ///
-/// ``` enum QMessageBox__Icon icon, const char* title, const char* text, int buttons, QWidget* parent, int flags ```
+/// @param icon enum QMessageBox__Icon
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QMessageBox* q_messagebox_new7(int64_t icon, const char* title, const char* text, int64_t buttons, void* parent, int64_t flags);
 
 /// q_messagebox_new8 constructs a new QMessageBox object.
 ///
-/// ``` const char* title, const char* text, enum QMessageBox__Icon icon, int button0, int button1, int button2, QWidget* parent ```
+/// @param title const char*
+/// @param text const char*
+/// @param icon enum QMessageBox__Icon
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
+/// @param parent QWidget*
 QMessageBox* q_messagebox_new8(const char* title, const char* text, int64_t icon, int button0, int button1, int button2, void* parent);
 
 /// q_messagebox_new9 constructs a new QMessageBox object.
 ///
-/// ``` const char* title, const char* text, enum QMessageBox__Icon icon, int button0, int button1, int button2, QWidget* parent, int f ```
+/// @param title const char*
+/// @param text const char*
+/// @param icon enum QMessageBox__Icon
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 QMessageBox* q_messagebox_new9(const char* title, const char* text, int64_t icon, int button0, int button1, int button2, void* parent, int64_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 const QMetaObject* q_messagebox_meta_object(void* self);
 
-/// ``` QMessageBox* self, const char* param1 ```
+/// @param self QMessageBox*
+/// @param param1 const char*
 void* q_messagebox_metacast(void* self, const char* param1);
 
-/// ``` QMessageBox* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QMessageBox*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_messagebox_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)(QMessageBox*, enum QMetaObject__Call, int, void*) ```
-void q_messagebox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QMessageBox*
+/// @param callback int32_t fn(QMessageBox*, enum QMetaObject__Call, int, void*)
+void q_messagebox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QMessageBox*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_messagebox_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_messagebox_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#addButton)
 ///
-/// ``` QMessageBox* self, QAbstractButton* button, enum QMessageBox__ButtonRole role ```
+/// @param self QMessageBox*
+/// @param button QAbstractButton*
+/// @param role enum QMessageBox__ButtonRole
 void q_messagebox_add_button(void* self, void* button, int64_t role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#addButton)
 ///
-/// ``` QMessageBox* self, const char* text, enum QMessageBox__ButtonRole role ```
+/// @param self QMessageBox*
+/// @param text const char*
+/// @param role enum QMessageBox__ButtonRole
 QPushButton* q_messagebox_add_button2(void* self, const char* text, int64_t role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#addButton)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__StandardButton button ```
+/// @param self QMessageBox*
+/// @param button enum QMessageBox__StandardButton
 QPushButton* q_messagebox_add_button3(void* self, int64_t button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#removeButton)
 ///
-/// ``` QMessageBox* self, QAbstractButton* button ```
+/// @param self QMessageBox*
+/// @param button QAbstractButton*
 void q_messagebox_remove_button(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#buttons)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 libqt_list /* of QAbstractButton* */ q_messagebox_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#buttonRole)
 ///
-/// ``` QMessageBox* self, QAbstractButton* button ```
+/// @param self QMessageBox*
+/// @param button QAbstractButton*
+///
+/// @return enum QMessageBox__ButtonRole
 int64_t q_messagebox_button_role(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setStandardButtons)
 ///
-/// ``` QMessageBox* self, int buttons ```
+/// @param self QMessageBox*
+/// @param buttons flag of enum QMessageBox__StandardButton
 void q_messagebox_set_standard_buttons(void* self, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#standardButtons)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return flag of enum QMessageBox__StandardButton
 int64_t q_messagebox_standard_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#standardButton)
 ///
-/// ``` QMessageBox* self, QAbstractButton* button ```
+/// @param self QMessageBox*
+/// @param button QAbstractButton*
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_standard_button(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#button)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__StandardButton which ```
+/// @param self QMessageBox*
+/// @param which enum QMessageBox__StandardButton
 QAbstractButton* q_messagebox_button(void* self, int64_t which);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#defaultButton)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPushButton* q_messagebox_default_button(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setDefaultButton)
 ///
-/// ``` QMessageBox* self, QPushButton* button ```
+/// @param self QMessageBox*
+/// @param button QPushButton*
 void q_messagebox_set_default_button(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setDefaultButton)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__StandardButton button ```
+/// @param self QMessageBox*
+/// @param button enum QMessageBox__StandardButton
 void q_messagebox_set_default_button2(void* self, int64_t button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#escapeButton)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QAbstractButton* q_messagebox_escape_button(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setEscapeButton)
 ///
-/// ``` QMessageBox* self, QAbstractButton* button ```
+/// @param self QMessageBox*
+/// @param button QAbstractButton*
 void q_messagebox_set_escape_button(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setEscapeButton)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__StandardButton button ```
+/// @param self QMessageBox*
+/// @param button enum QMessageBox__StandardButton
 void q_messagebox_set_escape_button2(void* self, int64_t button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#clickedButton)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QAbstractButton* q_messagebox_clicked_button(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#text)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setText)
 ///
-/// ``` QMessageBox* self, const char* text ```
+/// @param self QMessageBox*
+/// @param text const char*
 void q_messagebox_set_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#icon)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum QMessageBox__Icon
 int64_t q_messagebox_icon(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setIcon)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__Icon icon ```
+/// @param self QMessageBox*
+/// @param icon enum QMessageBox__Icon
 void q_messagebox_set_icon(void* self, int64_t icon);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#iconPixmap)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPixmap* q_messagebox_icon_pixmap(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setIconPixmap)
 ///
-/// ``` QMessageBox* self, QPixmap* pixmap ```
+/// @param self QMessageBox*
+/// @param pixmap QPixmap*
 void q_messagebox_set_icon_pixmap(void* self, void* pixmap);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#textFormat)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum Qt__TextFormat
 int64_t q_messagebox_text_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setTextFormat)
 ///
-/// ``` QMessageBox* self, enum Qt__TextFormat format ```
+/// @param self QMessageBox*
+/// @param format enum Qt__TextFormat
 void q_messagebox_set_text_format(void* self, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setTextInteractionFlags)
 ///
-/// ``` QMessageBox* self, int flags ```
+/// @param self QMessageBox*
+/// @param flags flag of enum Qt__TextInteractionFlag
 void q_messagebox_set_text_interaction_flags(void* self, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#textInteractionFlags)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return flag of enum Qt__TextInteractionFlag
 int64_t q_messagebox_text_interaction_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setCheckBox)
 ///
-/// ``` QMessageBox* self, QCheckBox* cb ```
+/// @param self QMessageBox*
+/// @param cb QCheckBox*
 void q_messagebox_set_check_box(void* self, void* cb);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#checkBox)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QCheckBox* q_messagebox_check_box(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setOption)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__Option option ```
+/// @param self QMessageBox*
+/// @param option enum QMessageBox__Option
 void q_messagebox_set_option(void* self, int64_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#testOption)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__Option option ```
+/// @param self QMessageBox*
+/// @param option enum QMessageBox__Option
 bool q_messagebox_test_option(void* self, int64_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setOptions)
 ///
-/// ``` QMessageBox* self, int options ```
+/// @param self QMessageBox*
+/// @param options flag of enum QMessageBox__Option
 void q_messagebox_set_options(void* self, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#options)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return flag of enum QMessageBox__Option
 int64_t q_messagebox_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_information(void* parent, const char* title, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, enum QMessageBox__StandardButton button0 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_information2(void* parent, const char* title, const char* text, int64_t button0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_question(void* parent, const char* title, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, enum QMessageBox__StandardButton button0, enum QMessageBox__StandardButton button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 enum QMessageBox__StandardButton
+/// @param button1 enum QMessageBox__StandardButton
 int32_t q_messagebox_question2(void* parent, const char* title, const char* text, int64_t button0, int64_t button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_warning(void* parent, const char* title, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, enum QMessageBox__StandardButton button0, enum QMessageBox__StandardButton button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 enum QMessageBox__StandardButton
+/// @param button1 enum QMessageBox__StandardButton
 int32_t q_messagebox_warning2(void* parent, const char* title, const char* text, int64_t button0, int64_t button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_critical(void* parent, const char* title, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, enum QMessageBox__StandardButton button0, enum QMessageBox__StandardButton button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 enum QMessageBox__StandardButton
+/// @param button1 enum QMessageBox__StandardButton
 int32_t q_messagebox_critical2(void* parent, const char* title, const char* text, int64_t button0, int64_t button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#about)
 ///
-/// ``` QWidget* parent, const char* title, const char* text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
 void q_messagebox_about(void* parent, const char* title, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#aboutQt)
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 void q_messagebox_about_qt(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
 int32_t q_messagebox_information3(void* parent, const char* title, const char* text, int button0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
 int32_t q_messagebox_information4(void* parent, const char* title, const char* text, const char* button0Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
 int32_t q_messagebox_question3(void* parent, const char* title, const char* text, int button0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
 int32_t q_messagebox_question4(void* parent, const char* title, const char* text, const char* button0Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
 int32_t q_messagebox_warning3(void* parent, const char* title, const char* text, int button0, int button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
 int32_t q_messagebox_warning4(void* parent, const char* title, const char* text, const char* button0Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
 int32_t q_messagebox_critical3(void* parent, const char* title, const char* text, int button0, int button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
 int32_t q_messagebox_critical4(void* parent, const char* title, const char* text, const char* button0Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#buttonText)
 ///
-/// ``` QMessageBox* self, int button ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
+/// @param button int
 const char* q_messagebox_button_text(void* self, int button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setButtonText)
 ///
-/// ``` QMessageBox* self, int button, const char* text ```
+/// @param self QMessageBox*
+/// @param button int
+/// @param text const char*
 void q_messagebox_set_button_text(void* self, int button, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#informativeText)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_informative_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setInformativeText)
 ///
-/// ``` QMessageBox* self, const char* text ```
+/// @param self QMessageBox*
+/// @param text const char*
 void q_messagebox_set_informative_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#detailedText)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_detailed_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setDetailedText)
 ///
-/// ``` QMessageBox* self, const char* text ```
+/// @param self QMessageBox*
+/// @param text const char*
 void q_messagebox_set_detailed_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setWindowTitle)
 ///
-/// ``` QMessageBox* self, const char* title ```
+/// @param self QMessageBox*
+/// @param title const char*
 void q_messagebox_set_window_title(void* self, const char* title);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setWindowModality)
 ///
-/// ``` QMessageBox* self, enum Qt__WindowModality windowModality ```
+/// @param self QMessageBox*
+/// @param windowModality enum Qt__WindowModality
 void q_messagebox_set_window_modality(void* self, int64_t windowModality);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#standardIcon)
 ///
-/// ``` enum QMessageBox__Icon icon ```
+/// @param icon enum QMessageBox__Icon
 QPixmap* q_messagebox_standard_icon(int64_t icon);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#buttonClicked)
 ///
-/// ``` QMessageBox* self, QAbstractButton* button ```
+/// @param self QMessageBox*
+/// @param button QAbstractButton*
 void q_messagebox_button_clicked(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#buttonClicked)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QAbstractButton*) ```
-void q_messagebox_on_button_clicked(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QAbstractButton*)
+void q_messagebox_on_button_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#event)
 ///
-/// ``` QMessageBox* self, QEvent* e ```
+/// @param self QMessageBox*
+/// @param e QEvent*
 bool q_messagebox_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, bool (*slot)(QMessageBox*, QEvent*) ```
-void q_messagebox_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback bool fn(QMessageBox*, QEvent*)
+void q_messagebox_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, QEvent* e ```
+/// @param self QMessageBox*
+/// @param e QEvent*
 bool q_messagebox_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#resizeEvent)
 ///
-/// ``` QMessageBox* self, QResizeEvent* event ```
+/// @param self QMessageBox*
+/// @param event QResizeEvent*
 void q_messagebox_resize_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QResizeEvent*) ```
-void q_messagebox_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QResizeEvent*)
+void q_messagebox_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, QResizeEvent* event ```
+/// @param self QMessageBox*
+/// @param event QResizeEvent*
 void q_messagebox_qbase_resize_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#showEvent)
 ///
-/// ``` QMessageBox* self, QShowEvent* event ```
+/// @param self QMessageBox*
+/// @param event QShowEvent*
 void q_messagebox_show_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QShowEvent*) ```
-void q_messagebox_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QShowEvent*)
+void q_messagebox_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#showEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, QShowEvent* event ```
+/// @param self QMessageBox*
+/// @param event QShowEvent*
 void q_messagebox_qbase_show_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#closeEvent)
 ///
-/// ``` QMessageBox* self, QCloseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QCloseEvent*
 void q_messagebox_close_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#closeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QCloseEvent*) ```
-void q_messagebox_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QCloseEvent*)
+void q_messagebox_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#closeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, QCloseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QCloseEvent*
 void q_messagebox_qbase_close_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#keyPressEvent)
 ///
-/// ``` QMessageBox* self, QKeyEvent* event ```
+/// @param self QMessageBox*
+/// @param event QKeyEvent*
 void q_messagebox_key_press_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QKeyEvent*) ```
-void q_messagebox_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QKeyEvent*)
+void q_messagebox_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, QKeyEvent* event ```
+/// @param self QMessageBox*
+/// @param event QKeyEvent*
 void q_messagebox_qbase_key_press_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#changeEvent)
 ///
-/// ``` QMessageBox* self, QEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEvent*
 void q_messagebox_change_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QEvent*) ```
-void q_messagebox_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QEvent*)
+void q_messagebox_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#changeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QMessageBox* self, QEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEvent*
 void q_messagebox_qbase_change_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_messagebox_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_messagebox_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#setOption)
 ///
-/// ``` QMessageBox* self, enum QMessageBox__Option option, bool on ```
+/// @param self QMessageBox*
+/// @param option enum QMessageBox__Option
+/// @param on bool
 void q_messagebox_set_option2(void* self, int64_t option, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_information42(void* parent, const char* title, const char* text, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons, enum QMessageBox__StandardButton defaultButton ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+/// @param defaultButton enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_information5(void* parent, const char* title, const char* text, int64_t buttons, int64_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, enum QMessageBox__StandardButton button0, enum QMessageBox__StandardButton button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 enum QMessageBox__StandardButton
+/// @param button1 enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_information52(void* parent, const char* title, const char* text, int64_t button0, int64_t button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_question42(void* parent, const char* title, const char* text, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons, enum QMessageBox__StandardButton defaultButton ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+/// @param defaultButton enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_question5(void* parent, const char* title, const char* text, int64_t buttons, int64_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_warning42(void* parent, const char* title, const char* text, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons, enum QMessageBox__StandardButton defaultButton ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+/// @param defaultButton enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_warning5(void* parent, const char* title, const char* text, int64_t buttons, int64_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_critical42(void* parent, const char* title, const char* text, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int buttons, enum QMessageBox__StandardButton defaultButton ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param buttons flag of enum QMessageBox__StandardButton
+/// @param defaultButton enum QMessageBox__StandardButton
+///
+/// @return enum QMessageBox__StandardButton
 int64_t q_messagebox_critical5(void* parent, const char* title, const char* text, int64_t buttons, int64_t defaultButton);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#aboutQt)
 ///
-/// ``` QWidget* parent, const char* title ```
+/// @param parent QWidget*
+/// @param title const char*
 void q_messagebox_about_qt2(void* parent, const char* title);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
 int32_t q_messagebox_information53(void* parent, const char* title, const char* text, int button0, int button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1, int button2 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
 int32_t q_messagebox_information6(void* parent, const char* title, const char* text, int button0, int button1, int button2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
 int32_t q_messagebox_information54(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
 int32_t q_messagebox_information62(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
 int32_t q_messagebox_information7(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#information)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
+/// @param escapeButtonNumber int
 int32_t q_messagebox_information8(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
 int32_t q_messagebox_question52(void* parent, const char* title, const char* text, int button0, int button1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1, int button2 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
 int32_t q_messagebox_question6(void* parent, const char* title, const char* text, int button0, int button1, int button2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
 int32_t q_messagebox_question53(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
 int32_t q_messagebox_question62(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
 int32_t q_messagebox_question7(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#question)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
+/// @param escapeButtonNumber int
 int32_t q_messagebox_question8(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1, int button2 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
 int32_t q_messagebox_warning6(void* parent, const char* title, const char* text, int button0, int button1, int button2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
 int32_t q_messagebox_warning52(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
 int32_t q_messagebox_warning62(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
 int32_t q_messagebox_warning7(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#warning)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
+/// @param escapeButtonNumber int
 int32_t q_messagebox_warning8(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, int button0, int button1, int button2 ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0 int
+/// @param button1 int
+/// @param button2 int
 int32_t q_messagebox_critical6(void* parent, const char* title, const char* text, int button0, int button1, int button2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
 int32_t q_messagebox_critical52(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
 int32_t q_messagebox_critical62(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
 int32_t q_messagebox_critical7(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#critical)
 ///
-/// ``` QWidget* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param text const char*
+/// @param button0Text const char*
+/// @param button1Text const char*
+/// @param button2Text const char*
+/// @param defaultButtonNumber int
+/// @param escapeButtonNumber int
 int32_t q_messagebox_critical8(void* parent, const char* title, const char* text, const char* button0Text, const char* button1Text, const char* button2Text, int defaultButtonNumber, int escapeButtonNumber);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_result(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setSizeGripEnabled)
 ///
-/// ``` QMessageBox* self, bool sizeGripEnabled ```
+/// @param self QMessageBox*
+/// @param sizeGripEnabled bool
 void q_messagebox_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_size_grip_enabled(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setModal)
 ///
-/// ``` QMessageBox* self, bool modal ```
+/// @param self QMessageBox*
+/// @param modal bool
 void q_messagebox_set_modal(void* self, bool modal);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setResult)
 ///
-/// ``` QMessageBox* self, int r ```
+/// @param self QMessageBox*
+/// @param r int
 void q_messagebox_set_result(void* self, int r);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QMessageBox* self, int result ```
+/// @param self QMessageBox*
+/// @param result int
 void q_messagebox_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, int) ```
-void q_messagebox_on_finished(void* self, void (*slot)(void*, int));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, int)
+void q_messagebox_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_accepted(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*) ```
-void q_messagebox_on_accepted(void* self, void (*slot)(void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*)
+void q_messagebox_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_rejected(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*) ```
-void q_messagebox_on_rejected(void* self, void (*slot)(void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*)
+void q_messagebox_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 uintptr_t q_messagebox_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 uintptr_t q_messagebox_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 uintptr_t q_messagebox_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QStyle* q_messagebox_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QMessageBox* self, QStyle* style ```
+/// @param self QMessageBox*
+/// @param style QStyle*
 void q_messagebox_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum Qt__WindowModality
 int64_t q_messagebox_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QMessageBox* self, QWidget* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
 bool q_messagebox_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QMessageBox* self, bool enabled ```
+/// @param self QMessageBox*
+/// @param enabled bool
 void q_messagebox_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QMessageBox* self, bool disabled ```
+/// @param self QMessageBox*
+/// @param disabled bool
 void q_messagebox_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QMessageBox* self, bool windowModified ```
+/// @param self QMessageBox*
+/// @param windowModified bool
 void q_messagebox_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRect* q_messagebox_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 const QRect* q_messagebox_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRect* q_messagebox_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPoint* q_messagebox_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRect* q_messagebox_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRect* q_messagebox_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRegion* q_messagebox_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QMessageBox* self, QSize* minimumSize ```
+/// @param self QMessageBox*
+/// @param minimumSize QSize*
 void q_messagebox_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QMessageBox* self, int minw, int minh ```
+/// @param self QMessageBox*
+/// @param minw int
+/// @param minh int
 void q_messagebox_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QMessageBox* self, QSize* maximumSize ```
+/// @param self QMessageBox*
+/// @param maximumSize QSize*
 void q_messagebox_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QMessageBox* self, int maxw, int maxh ```
+/// @param self QMessageBox*
+/// @param maxw int
+/// @param maxh int
 void q_messagebox_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QMessageBox* self, int minw ```
+/// @param self QMessageBox*
+/// @param minw int
 void q_messagebox_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QMessageBox* self, int minh ```
+/// @param self QMessageBox*
+/// @param minh int
 void q_messagebox_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QMessageBox* self, int maxw ```
+/// @param self QMessageBox*
+/// @param maxw int
 void q_messagebox_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QMessageBox* self, int maxh ```
+/// @param self QMessageBox*
+/// @param maxh int
 void q_messagebox_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QMessageBox* self, QSize* sizeIncrement ```
+/// @param self QMessageBox*
+/// @param sizeIncrement QSize*
 void q_messagebox_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QMessageBox* self, int w, int h ```
+/// @param self QMessageBox*
+/// @param w int
+/// @param h int
 void q_messagebox_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QMessageBox* self, QSize* baseSize ```
+/// @param self QMessageBox*
+/// @param baseSize QSize*
 void q_messagebox_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QMessageBox* self, int basew, int baseh ```
+/// @param self QMessageBox*
+/// @param basew int
+/// @param baseh int
 void q_messagebox_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QMessageBox* self, QSize* fixedSize ```
+/// @param self QMessageBox*
+/// @param fixedSize QSize*
 void q_messagebox_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QMessageBox* self, int w, int h ```
+/// @param self QMessageBox*
+/// @param w int
+/// @param h int
 void q_messagebox_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QMessageBox* self, int w ```
+/// @param self QMessageBox*
+/// @param w int
 void q_messagebox_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QMessageBox* self, int h ```
+/// @param self QMessageBox*
+/// @param h int
 void q_messagebox_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QMessageBox* self, QPointF* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPointF*
 QPointF* q_messagebox_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QMessageBox* self, QPoint* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPoint*
 QPoint* q_messagebox_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QMessageBox* self, QPointF* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPointF*
 QPointF* q_messagebox_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QMessageBox* self, QPoint* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPoint*
 QPoint* q_messagebox_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QMessageBox* self, QPointF* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPointF*
 QPointF* q_messagebox_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QMessageBox* self, QPoint* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPoint*
 QPoint* q_messagebox_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QMessageBox* self, QPointF* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPointF*
 QPointF* q_messagebox_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QMessageBox* self, QPoint* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPoint*
 QPoint* q_messagebox_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QMessageBox* self, QWidget* param1, QPointF* param2 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_messagebox_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QMessageBox* self, QWidget* param1, QPoint* param2 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_messagebox_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QMessageBox* self, QWidget* param1, QPointF* param2 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_messagebox_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QMessageBox* self, QWidget* param1, QPoint* param2 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_messagebox_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 const QPalette* q_messagebox_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QMessageBox* self, QPalette* palette ```
+/// @param self QMessageBox*
+/// @param palette QPalette*
 void q_messagebox_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QMessageBox* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QMessageBox*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_messagebox_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_messagebox_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QMessageBox* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QMessageBox*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_messagebox_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_messagebox_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 const QFont* q_messagebox_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QMessageBox* self, QFont* font ```
+/// @param self QMessageBox*
+/// @param font QFont*
 void q_messagebox_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QFontMetrics* q_messagebox_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QFontInfo* q_messagebox_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QCursor* q_messagebox_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QMessageBox* self, QCursor* cursor ```
+/// @param self QMessageBox*
+/// @param cursor QCursor*
 void q_messagebox_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QMessageBox* self, bool enable ```
+/// @param self QMessageBox*
+/// @param enable bool
 void q_messagebox_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QMessageBox* self, bool enable ```
+/// @param self QMessageBox*
+/// @param enable bool
 void q_messagebox_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QMessageBox* self, QBitmap* mask ```
+/// @param self QMessageBox*
+/// @param mask QBitmap*
 void q_messagebox_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QMessageBox* self, QRegion* mask ```
+/// @param self QMessageBox*
+/// @param mask QRegion*
 void q_messagebox_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRegion* q_messagebox_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPaintDevice* target ```
+/// @param self QMessageBox*
+/// @param target QPaintDevice*
 void q_messagebox_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPainter* painter ```
+/// @param self QMessageBox*
+/// @param painter QPainter*
 void q_messagebox_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPixmap* q_messagebox_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QGraphicsEffect* q_messagebox_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QMessageBox* self, QGraphicsEffect* effect ```
+/// @param self QMessageBox*
+/// @param effect QGraphicsEffect*
 void q_messagebox_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QMessageBox* self, enum Qt__GestureType typeVal ```
+/// @param self QMessageBox*
+/// @param typeVal enum Qt__GestureType
 void q_messagebox_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QMessageBox* self, enum Qt__GestureType typeVal ```
+/// @param self QMessageBox*
+/// @param typeVal enum Qt__GestureType
 void q_messagebox_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QMessageBox* self, const char* styleSheet ```
+/// @param self QMessageBox*
+/// @param styleSheet const char*
 void q_messagebox_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QMessageBox* self, QIcon* icon ```
+/// @param self QMessageBox*
+/// @param icon QIcon*
 void q_messagebox_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QIcon* q_messagebox_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QMessageBox* self, const char* windowIconText ```
+/// @param self QMessageBox*
+/// @param windowIconText const char*
 void q_messagebox_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QMessageBox* self, const char* windowRole ```
+/// @param self QMessageBox*
+/// @param windowRole const char*
 void q_messagebox_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QMessageBox* self, const char* filePath ```
+/// @param self QMessageBox*
+/// @param filePath const char*
 void q_messagebox_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QMessageBox* self, double level ```
+/// @param self QMessageBox*
+/// @param level double
 void q_messagebox_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 double q_messagebox_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QMessageBox* self, const char* toolTip ```
+/// @param self QMessageBox*
+/// @param toolTip const char*
 void q_messagebox_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QMessageBox* self, int msec ```
+/// @param self QMessageBox*
+/// @param msec int
 void q_messagebox_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QMessageBox* self, const char* statusTip ```
+/// @param self QMessageBox*
+/// @param statusTip const char*
 void q_messagebox_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QMessageBox* self, const char* whatsThis ```
+/// @param self QMessageBox*
+/// @param whatsThis const char*
 void q_messagebox_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QMessageBox* self, const char* name ```
+/// @param self QMessageBox*
+/// @param name const char*
 void q_messagebox_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QMessageBox* self, const char* description ```
+/// @param self QMessageBox*
+/// @param description const char*
 void q_messagebox_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QMessageBox* self, enum Qt__LayoutDirection direction ```
+/// @param self QMessageBox*
+/// @param direction enum Qt__LayoutDirection
 void q_messagebox_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_messagebox_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QMessageBox* self, QLocale* locale ```
+/// @param self QMessageBox*
+/// @param locale QLocale*
 void q_messagebox_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QLocale* q_messagebox_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QMessageBox* self, enum Qt__FocusReason reason ```
+/// @param self QMessageBox*
+/// @param reason enum Qt__FocusReason
 void q_messagebox_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_messagebox_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QMessageBox* self, enum Qt__FocusPolicy policy ```
+/// @param self QMessageBox*
+/// @param policy enum Qt__FocusPolicy
 void q_messagebox_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_messagebox_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QMessageBox* self, QWidget* focusProxy ```
+/// @param self QMessageBox*
+/// @param focusProxy QWidget*
 void q_messagebox_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_messagebox_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QMessageBox* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QMessageBox*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_messagebox_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QMessageBox* self, QCursor* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QCursor*
 void q_messagebox_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QMessageBox* self, QKeySequence* key ```
+/// @param self QMessageBox*
+/// @param key QKeySequence*
 int32_t q_messagebox_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QMessageBox* self, int id ```
+/// @param self QMessageBox*
+/// @param id int
 void q_messagebox_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QMessageBox* self, int id ```
+/// @param self QMessageBox*
+/// @param id int
 void q_messagebox_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QMessageBox* self, int id ```
+/// @param self QMessageBox*
+/// @param id int
 void q_messagebox_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_messagebox_mouse_grabber();
 
@@ -1836,1161 +2303,1327 @@ QWidget* q_messagebox_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_messagebox_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QMessageBox* self, bool enable ```
+/// @param self QMessageBox*
+/// @param enable bool
 void q_messagebox_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QGraphicsProxyWidget* q_messagebox_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QMessageBox* self, int x, int y, int w, int h ```
+/// @param self QMessageBox*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_messagebox_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QMessageBox* self, QRect* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QRect*
 void q_messagebox_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QMessageBox* self, QRegion* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QRegion*
 void q_messagebox_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QMessageBox* self, int x, int y, int w, int h ```
+/// @param self QMessageBox*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_messagebox_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QMessageBox* self, QRect* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QRect*
 void q_messagebox_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QMessageBox* self, QRegion* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QRegion*
 void q_messagebox_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QMessageBox* self, bool hidden ```
+/// @param self QMessageBox*
+/// @param hidden bool
 void q_messagebox_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QMessageBox* self, QWidget* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
 void q_messagebox_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QMessageBox* self, int x, int y ```
+/// @param self QMessageBox*
+/// @param x int
+/// @param y int
 void q_messagebox_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QMessageBox* self, QPoint* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QPoint*
 void q_messagebox_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QMessageBox* self, int w, int h ```
+/// @param self QMessageBox*
+/// @param w int
+/// @param h int
 void q_messagebox_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QMessageBox* self, QSize* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QSize*
 void q_messagebox_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QMessageBox* self, int x, int y, int w, int h ```
+/// @param self QMessageBox*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_messagebox_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QMessageBox* self, QRect* geometry ```
+/// @param self QMessageBox*
+/// @param geometry QRect*
 void q_messagebox_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 char* q_messagebox_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QMessageBox* self, const char* geometry ```
+/// @param self QMessageBox*
+/// @param geometry const char*
 bool q_messagebox_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QMessageBox* self, QWidget* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
 bool q_messagebox_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_messagebox_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QMessageBox* self, int state ```
+/// @param self QMessageBox*
+/// @param state flag of enum Qt__WindowState
 void q_messagebox_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QMessageBox* self, int state ```
+/// @param self QMessageBox*
+/// @param state flag of enum Qt__WindowState
 void q_messagebox_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSizePolicy* q_messagebox_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QMessageBox* self, QSizePolicy* sizePolicy ```
+/// @param self QMessageBox*
+/// @param sizePolicy QSizePolicy*
 void q_messagebox_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QMessageBox* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QMessageBox*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_messagebox_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRegion* q_messagebox_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QMessageBox* self, int left, int top, int right, int bottom ```
+/// @param self QMessageBox*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_messagebox_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QMessageBox* self, QMargins* margins ```
+/// @param self QMessageBox*
+/// @param margins QMargins*
 void q_messagebox_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QMargins* q_messagebox_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QRect* q_messagebox_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QLayout* q_messagebox_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QMessageBox* self, QLayout* layout ```
+/// @param self QMessageBox*
+/// @param layout QLayout*
 void q_messagebox_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QMessageBox* self, QWidget* parent ```
+/// @param self QMessageBox*
+/// @param parent QWidget*
 void q_messagebox_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QMessageBox* self, QWidget* parent, int f ```
+/// @param self QMessageBox*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_messagebox_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QMessageBox* self, int dx, int dy ```
+/// @param self QMessageBox*
+/// @param dx int
+/// @param dy int
 void q_messagebox_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QMessageBox* self, int dx, int dy, QRect* param3 ```
+/// @param self QMessageBox*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_messagebox_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QMessageBox* self, bool on ```
+/// @param self QMessageBox*
+/// @param on bool
 void q_messagebox_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QMessageBox* self, QAction* action ```
+/// @param self QMessageBox*
+/// @param action QAction*
 void q_messagebox_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QMessageBox* self, libqt_list /* of QAction* */ actions ```
+/// @param self QMessageBox*
+/// @param actions libqt_list /* of QAction* */
 void q_messagebox_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QMessageBox* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QMessageBox*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_messagebox_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QMessageBox* self, QAction* before, QAction* action ```
+/// @param self QMessageBox*
+/// @param before QAction*
+/// @param action QAction*
 void q_messagebox_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QMessageBox* self, QAction* action ```
+/// @param self QMessageBox*
+/// @param action QAction*
 void q_messagebox_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 libqt_list /* of QAction* */ q_messagebox_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QMessageBox* self, const char* text ```
+/// @param self QMessageBox*
+/// @param text const char*
 QAction* q_messagebox_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QMessageBox* self, QIcon* icon, const char* text ```
+/// @param self QMessageBox*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_messagebox_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QMessageBox* self, const char* text, QKeySequence* shortcut ```
+/// @param self QMessageBox*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_messagebox_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QMessageBox* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QMessageBox*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_messagebox_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWidget* q_messagebox_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QMessageBox* self, int typeVal ```
+/// @param self QMessageBox*
+/// @param typeVal flag of enum Qt__WindowType
 void q_messagebox_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_messagebox_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QMessageBox* self, enum Qt__WindowType param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__WindowType
 void q_messagebox_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QMessageBox* self, int typeVal ```
+/// @param self QMessageBox*
+/// @param typeVal flag of enum Qt__WindowType
 void q_messagebox_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return enum Qt__WindowType
 int64_t q_messagebox_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_messagebox_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QMessageBox* self, int x, int y ```
+/// @param self QMessageBox*
+/// @param x int
+/// @param y int
 QWidget* q_messagebox_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QMessageBox* self, QPoint* p ```
+/// @param self QMessageBox*
+/// @param p QPoint*
 QWidget* q_messagebox_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QMessageBox* self, QPointF* p ```
+/// @param self QMessageBox*
+/// @param p QPointF*
 QWidget* q_messagebox_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QMessageBox* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__WidgetAttribute
 void q_messagebox_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QMessageBox* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_messagebox_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QMessageBox* self, QWidget* child ```
+/// @param self QMessageBox*
+/// @param child QWidget*
 bool q_messagebox_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QMessageBox* self, bool enabled ```
+/// @param self QMessageBox*
+/// @param enabled bool
 void q_messagebox_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QBackingStore* q_messagebox_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QWindow* q_messagebox_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QScreen* q_messagebox_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QMessageBox* self, QScreen* screen ```
+/// @param self QMessageBox*
+/// @param screen QScreen*
 void q_messagebox_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_messagebox_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QMessageBox* self, const char* title ```
+/// @param self QMessageBox*
+/// @param title const char*
 void q_messagebox_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, const char*) ```
-void q_messagebox_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, const char*)
+void q_messagebox_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QMessageBox* self, QIcon* icon ```
+/// @param self QMessageBox*
+/// @param icon QIcon*
 void q_messagebox_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QIcon*) ```
-void q_messagebox_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QIcon*)
+void q_messagebox_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QMessageBox* self, const char* iconText ```
+/// @param self QMessageBox*
+/// @param iconText const char*
 void q_messagebox_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, const char*) ```
-void q_messagebox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, const char*)
+void q_messagebox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QMessageBox* self, QPoint* pos ```
+/// @param self QMessageBox*
+/// @param pos QPoint*
 void q_messagebox_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QPoint*) ```
-void q_messagebox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QPoint*)
+void q_messagebox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_messagebox_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QMessageBox* self, int hints ```
+/// @param self QMessageBox*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_messagebox_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QMessageBox*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_messagebox_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QMessageBox*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_messagebox_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QMessageBox*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_messagebox_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QMessageBox*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_messagebox_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QMessageBox*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_messagebox_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QMessageBox* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QMessageBox*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_messagebox_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QMessageBox* self, QRect* rectangle ```
+/// @param self QMessageBox*
+/// @param rectangle QRect*
 QPixmap* q_messagebox_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QMessageBox* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QMessageBox*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_messagebox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QMessageBox* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QMessageBox*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_messagebox_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QMessageBox* self, int id, bool enable ```
+/// @param self QMessageBox*
+/// @param id int
+/// @param enable bool
 void q_messagebox_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QMessageBox* self, int id, bool enable ```
+/// @param self QMessageBox*
+/// @param id int
+/// @param enable bool
 void q_messagebox_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QMessageBox* self, enum Qt__WindowType param1, bool on ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_messagebox_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QMessageBox* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_messagebox_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_messagebox_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_messagebox_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char* q_messagebox_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMessageBox* self, char* name ```
+/// @param self QMessageBox*
+/// @param name char*
 void q_messagebox_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QMessageBox* self, bool b ```
+/// @param self QMessageBox*
+/// @param b bool
 bool q_messagebox_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QThread* q_messagebox_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QMessageBox* self, QThread* thread ```
+/// @param self QMessageBox*
+/// @param thread QThread*
 bool q_messagebox_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QMessageBox* self, int interval ```
+/// @param self QMessageBox*
+/// @param interval int
 int32_t q_messagebox_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QMessageBox* self, int id ```
+/// @param self QMessageBox*
+/// @param id int
 void q_messagebox_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QMessageBox* self, enum Qt__TimerId id ```
+/// @param self QMessageBox*
+/// @param id enum Qt__TimerId
 void q_messagebox_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 libqt_list /* of QObject* */ q_messagebox_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QMessageBox* self, QObject* filterObj ```
+/// @param self QMessageBox*
+/// @param filterObj QObject*
 void q_messagebox_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QMessageBox* self, QObject* obj ```
+/// @param self QMessageBox*
+/// @param obj QObject*
 void q_messagebox_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_messagebox_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QMessageBox* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QMessageBox*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_messagebox_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_messagebox_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_messagebox_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QMessageBox* self, const char* name, QVariant* value ```
+/// @param self QMessageBox*
+/// @param name const char*
+/// @param value QVariant*
 bool q_messagebox_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QMessageBox* self, const char* name ```
+/// @param self QMessageBox*
+/// @param name const char*
 QVariant* q_messagebox_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QMessageBox* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageBox*
 const char** q_messagebox_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QBindingStorage* q_messagebox_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 const QBindingStorage* q_messagebox_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*) ```
-void q_messagebox_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*)
+void q_messagebox_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QObject* q_messagebox_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QMessageBox* self, const char* classname ```
+/// @param self QMessageBox*
+/// @param classname const char*
 bool q_messagebox_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QMessageBox* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QMessageBox*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_messagebox_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QMessageBox* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QMessageBox*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_messagebox_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_messagebox_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QMessageBox* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QMessageBox*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_messagebox_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMessageBox* self, QObject* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QObject*
 void q_messagebox_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QObject*) ```
-void q_messagebox_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QObject*)
+void q_messagebox_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 double q_messagebox_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 double q_messagebox_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_messagebox_device_pixel_ratio_f_scale();
 
@@ -2998,7 +3631,8 @@ double q_messagebox_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_messagebox_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QDialog
@@ -3007,7 +3641,8 @@ int32_t q_messagebox_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, bool visible ```
+/// @param self QMessageBox*
+/// @param visible bool
 void q_messagebox_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
@@ -3016,7 +3651,8 @@ void q_messagebox_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool visible ```
+/// @param self QMessageBox*
+/// @param visible bool
 void q_messagebox_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
@@ -3025,8 +3661,9 @@ void q_messagebox_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, bool) ```
-void q_messagebox_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, bool)
+void q_messagebox_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QDialog
 ///
@@ -3034,7 +3671,7 @@ void q_messagebox_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -3043,7 +3680,7 @@ QSize* q_messagebox_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_qbase_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -3052,8 +3689,9 @@ QSize* q_messagebox_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QSize* (*slot)() ```
-void q_messagebox_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QMessageBox*
+/// @param callback QSize* fn()
+void q_messagebox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3061,7 +3699,7 @@ void q_messagebox_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -3070,7 +3708,7 @@ QSize* q_messagebox_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QSize* q_messagebox_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
@@ -3079,8 +3717,9 @@ QSize* q_messagebox_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QSize* (*slot)() ```
-void q_messagebox_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QMessageBox*
+/// @param callback QSize* fn()
+void q_messagebox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3088,7 +3727,7 @@ void q_messagebox_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_open(void* self);
 
 /// Inherited from QDialog
@@ -3097,7 +3736,7 @@ void q_messagebox_open(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_qbase_open(void* self);
 
 /// Inherited from QDialog
@@ -3106,8 +3745,9 @@ void q_messagebox_qbase_open(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)() ```
-void q_messagebox_on_open(void* self, void (*slot)());
+/// @param self QMessageBox*
+/// @param callback void fn()
+void q_messagebox_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3115,7 +3755,7 @@ void q_messagebox_on_open(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_exec(void* self);
 
 /// Inherited from QDialog
@@ -3124,7 +3764,7 @@ int32_t q_messagebox_exec(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_qbase_exec(void* self);
 
 /// Inherited from QDialog
@@ -3133,8 +3773,9 @@ int32_t q_messagebox_qbase_exec(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)() ```
-void q_messagebox_on_exec(void* self, int32_t (*slot)());
+/// @param self QMessageBox*
+/// @param callback int32_t fn()
+void q_messagebox_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3142,7 +3783,8 @@ void q_messagebox_on_exec(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, int param1 ```
+/// @param self QMessageBox*
+/// @param param1 int
 void q_messagebox_done(void* self, int param1);
 
 /// Inherited from QDialog
@@ -3151,7 +3793,8 @@ void q_messagebox_done(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int param1 ```
+/// @param self QMessageBox*
+/// @param param1 int
 void q_messagebox_qbase_done(void* self, int param1);
 
 /// Inherited from QDialog
@@ -3160,8 +3803,9 @@ void q_messagebox_qbase_done(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, int) ```
-void q_messagebox_on_done(void* self, void (*slot)(void*, int));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, int)
+void q_messagebox_on_done(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
 ///
@@ -3169,7 +3813,7 @@ void q_messagebox_on_done(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_accept(void* self);
 
 /// Inherited from QDialog
@@ -3178,7 +3822,7 @@ void q_messagebox_accept(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_qbase_accept(void* self);
 
 /// Inherited from QDialog
@@ -3187,8 +3831,9 @@ void q_messagebox_qbase_accept(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)() ```
-void q_messagebox_on_accept(void* self, void (*slot)());
+/// @param self QMessageBox*
+/// @param callback void fn()
+void q_messagebox_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3196,7 +3841,7 @@ void q_messagebox_on_accept(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_reject(void* self);
 
 /// Inherited from QDialog
@@ -3205,7 +3850,7 @@ void q_messagebox_reject(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_qbase_reject(void* self);
 
 /// Inherited from QDialog
@@ -3214,8 +3859,9 @@ void q_messagebox_qbase_reject(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)() ```
-void q_messagebox_on_reject(void* self, void (*slot)());
+/// @param self QMessageBox*
+/// @param callback void fn()
+void q_messagebox_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3223,7 +3869,8 @@ void q_messagebox_on_reject(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QContextMenuEvent* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QContextMenuEvent*
 void q_messagebox_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3232,7 +3879,8 @@ void q_messagebox_context_menu_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QContextMenuEvent* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QContextMenuEvent*
 void q_messagebox_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3241,8 +3889,9 @@ void q_messagebox_qbase_context_menu_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QContextMenuEvent*) ```
-void q_messagebox_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QContextMenuEvent*)
+void q_messagebox_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -3250,7 +3899,9 @@ void q_messagebox_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QObject* param1, QEvent* param2 ```
+/// @param self QMessageBox*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_messagebox_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
@@ -3259,7 +3910,9 @@ bool q_messagebox_event_filter(void* self, void* param1, void* param2);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QObject* param1, QEvent* param2 ```
+/// @param self QMessageBox*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_messagebox_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
@@ -3268,8 +3921,9 @@ bool q_messagebox_qbase_event_filter(void* self, void* param1, void* param2);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)(QMessageBox*, QObject*, QEvent*) ```
-void q_messagebox_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QMessageBox*
+/// @param callback bool fn(QMessageBox*, QObject*, QEvent*)
+void q_messagebox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3277,7 +3931,7 @@ void q_messagebox_on_event_filter(void* self, bool (*slot)(void*, void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3286,7 +3940,7 @@ int32_t q_messagebox_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3295,8 +3949,9 @@ int32_t q_messagebox_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)() ```
-void q_messagebox_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QMessageBox*
+/// @param callback int32_t fn()
+void q_messagebox_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3304,7 +3959,8 @@ void q_messagebox_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, int param1 ```
+/// @param self QMessageBox*
+/// @param param1 int
 int32_t q_messagebox_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3313,7 +3969,8 @@ int32_t q_messagebox_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int param1 ```
+/// @param self QMessageBox*
+/// @param param1 int
 int32_t q_messagebox_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3322,8 +3979,9 @@ int32_t q_messagebox_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)(QMessageBox*, int) ```
-void q_messagebox_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QMessageBox*
+/// @param callback int32_t fn(QMessageBox*, int)
+void q_messagebox_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3331,7 +3989,7 @@ void q_messagebox_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3340,7 +3998,7 @@ bool q_messagebox_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3349,8 +4007,9 @@ bool q_messagebox_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)() ```
-void q_messagebox_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QMessageBox*
+/// @param callback bool fn()
+void q_messagebox_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3358,7 +4017,7 @@ void q_messagebox_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPaintEngine* q_messagebox_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3367,7 +4026,7 @@ QPaintEngine* q_messagebox_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPaintEngine* q_messagebox_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3376,8 +4035,9 @@ QPaintEngine* q_messagebox_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QPaintEngine* (*slot)() ```
-void q_messagebox_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QMessageBox*
+/// @param callback QPaintEngine* fn()
+void q_messagebox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3385,7 +4045,8 @@ void q_messagebox_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3394,7 +4055,8 @@ void q_messagebox_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3403,8 +4065,9 @@ void q_messagebox_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMouseEvent*) ```
-void q_messagebox_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMouseEvent*)
+void q_messagebox_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3412,7 +4075,8 @@ void q_messagebox_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3421,7 +4085,8 @@ void q_messagebox_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3430,8 +4095,9 @@ void q_messagebox_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMouseEvent*) ```
-void q_messagebox_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMouseEvent*)
+void q_messagebox_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3439,7 +4105,8 @@ void q_messagebox_on_mouse_release_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3448,7 +4115,8 @@ void q_messagebox_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3457,8 +4125,9 @@ void q_messagebox_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMouseEvent*) ```
-void q_messagebox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMouseEvent*)
+void q_messagebox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3466,7 +4135,8 @@ void q_messagebox_on_mouse_double_click_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3475,7 +4145,8 @@ void q_messagebox_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMouseEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMouseEvent*
 void q_messagebox_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3484,8 +4155,9 @@ void q_messagebox_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMouseEvent*) ```
-void q_messagebox_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMouseEvent*)
+void q_messagebox_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3493,7 +4165,8 @@ void q_messagebox_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QWheelEvent* event ```
+/// @param self QMessageBox*
+/// @param event QWheelEvent*
 void q_messagebox_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3502,7 +4175,8 @@ void q_messagebox_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QWheelEvent* event ```
+/// @param self QMessageBox*
+/// @param event QWheelEvent*
 void q_messagebox_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3511,8 +4185,9 @@ void q_messagebox_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QWheelEvent*) ```
-void q_messagebox_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QWheelEvent*)
+void q_messagebox_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3520,7 +4195,8 @@ void q_messagebox_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QKeyEvent* event ```
+/// @param self QMessageBox*
+/// @param event QKeyEvent*
 void q_messagebox_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3529,7 +4205,8 @@ void q_messagebox_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QKeyEvent* event ```
+/// @param self QMessageBox*
+/// @param event QKeyEvent*
 void q_messagebox_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3538,8 +4215,9 @@ void q_messagebox_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QKeyEvent*) ```
-void q_messagebox_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QKeyEvent*)
+void q_messagebox_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3547,7 +4225,8 @@ void q_messagebox_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QFocusEvent* event ```
+/// @param self QMessageBox*
+/// @param event QFocusEvent*
 void q_messagebox_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3556,7 +4235,8 @@ void q_messagebox_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QFocusEvent* event ```
+/// @param self QMessageBox*
+/// @param event QFocusEvent*
 void q_messagebox_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3565,8 +4245,9 @@ void q_messagebox_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QFocusEvent*) ```
-void q_messagebox_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QFocusEvent*)
+void q_messagebox_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3574,7 +4255,8 @@ void q_messagebox_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QFocusEvent* event ```
+/// @param self QMessageBox*
+/// @param event QFocusEvent*
 void q_messagebox_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3583,7 +4265,8 @@ void q_messagebox_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QFocusEvent* event ```
+/// @param self QMessageBox*
+/// @param event QFocusEvent*
 void q_messagebox_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3592,8 +4275,9 @@ void q_messagebox_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QFocusEvent*) ```
-void q_messagebox_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QFocusEvent*)
+void q_messagebox_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3601,7 +4285,8 @@ void q_messagebox_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QEnterEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEnterEvent*
 void q_messagebox_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3610,7 +4295,8 @@ void q_messagebox_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QEnterEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEnterEvent*
 void q_messagebox_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3619,8 +4305,9 @@ void q_messagebox_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QEnterEvent*) ```
-void q_messagebox_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QEnterEvent*)
+void q_messagebox_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3628,7 +4315,8 @@ void q_messagebox_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEvent*
 void q_messagebox_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3637,7 +4325,8 @@ void q_messagebox_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEvent*
 void q_messagebox_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3646,8 +4335,9 @@ void q_messagebox_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QEvent*) ```
-void q_messagebox_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QEvent*)
+void q_messagebox_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3655,7 +4345,8 @@ void q_messagebox_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QPaintEvent* event ```
+/// @param self QMessageBox*
+/// @param event QPaintEvent*
 void q_messagebox_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3664,7 +4355,8 @@ void q_messagebox_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QPaintEvent* event ```
+/// @param self QMessageBox*
+/// @param event QPaintEvent*
 void q_messagebox_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3673,8 +4365,9 @@ void q_messagebox_qbase_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QPaintEvent*) ```
-void q_messagebox_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QPaintEvent*)
+void q_messagebox_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3682,7 +4375,8 @@ void q_messagebox_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMoveEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMoveEvent*
 void q_messagebox_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3691,7 +4385,8 @@ void q_messagebox_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMoveEvent* event ```
+/// @param self QMessageBox*
+/// @param event QMoveEvent*
 void q_messagebox_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3700,8 +4395,9 @@ void q_messagebox_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMoveEvent*) ```
-void q_messagebox_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMoveEvent*)
+void q_messagebox_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3709,7 +4405,8 @@ void q_messagebox_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QTabletEvent* event ```
+/// @param self QMessageBox*
+/// @param event QTabletEvent*
 void q_messagebox_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3718,7 +4415,8 @@ void q_messagebox_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QTabletEvent* event ```
+/// @param self QMessageBox*
+/// @param event QTabletEvent*
 void q_messagebox_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3727,8 +4425,9 @@ void q_messagebox_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QTabletEvent*) ```
-void q_messagebox_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QTabletEvent*)
+void q_messagebox_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3736,7 +4435,8 @@ void q_messagebox_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QActionEvent* event ```
+/// @param self QMessageBox*
+/// @param event QActionEvent*
 void q_messagebox_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3745,7 +4445,8 @@ void q_messagebox_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QActionEvent* event ```
+/// @param self QMessageBox*
+/// @param event QActionEvent*
 void q_messagebox_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3754,8 +4455,9 @@ void q_messagebox_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QActionEvent*) ```
-void q_messagebox_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QActionEvent*)
+void q_messagebox_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3763,7 +4465,8 @@ void q_messagebox_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QDragEnterEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDragEnterEvent*
 void q_messagebox_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3772,7 +4475,8 @@ void q_messagebox_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QDragEnterEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDragEnterEvent*
 void q_messagebox_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3781,8 +4485,9 @@ void q_messagebox_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QDragEnterEvent*) ```
-void q_messagebox_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QDragEnterEvent*)
+void q_messagebox_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3790,7 +4495,8 @@ void q_messagebox_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QDragMoveEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDragMoveEvent*
 void q_messagebox_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3799,7 +4505,8 @@ void q_messagebox_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QDragMoveEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDragMoveEvent*
 void q_messagebox_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3808,8 +4515,9 @@ void q_messagebox_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QDragMoveEvent*) ```
-void q_messagebox_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QDragMoveEvent*)
+void q_messagebox_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3817,7 +4525,8 @@ void q_messagebox_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QDragLeaveEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDragLeaveEvent*
 void q_messagebox_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3826,7 +4535,8 @@ void q_messagebox_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QDragLeaveEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDragLeaveEvent*
 void q_messagebox_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3835,8 +4545,9 @@ void q_messagebox_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QDragLeaveEvent*) ```
-void q_messagebox_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QDragLeaveEvent*)
+void q_messagebox_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3844,7 +4555,8 @@ void q_messagebox_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QDropEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDropEvent*
 void q_messagebox_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3853,7 +4565,8 @@ void q_messagebox_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QDropEvent* event ```
+/// @param self QMessageBox*
+/// @param event QDropEvent*
 void q_messagebox_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3862,8 +4575,9 @@ void q_messagebox_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QDropEvent*) ```
-void q_messagebox_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QDropEvent*)
+void q_messagebox_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3871,7 +4585,8 @@ void q_messagebox_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QHideEvent* event ```
+/// @param self QMessageBox*
+/// @param event QHideEvent*
 void q_messagebox_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3880,7 +4595,8 @@ void q_messagebox_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QHideEvent* event ```
+/// @param self QMessageBox*
+/// @param event QHideEvent*
 void q_messagebox_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3889,8 +4605,9 @@ void q_messagebox_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QHideEvent*) ```
-void q_messagebox_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QHideEvent*)
+void q_messagebox_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3898,7 +4615,10 @@ void q_messagebox_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QMessageBox*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_messagebox_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3907,7 +4627,10 @@ bool q_messagebox_native_event(void* self, const char* eventType, void* message,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QMessageBox*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_messagebox_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3916,8 +4639,9 @@ bool q_messagebox_qbase_native_event(void* self, const char* eventType, void* me
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)(QMessageBox*, const char*, void*, intptr_t*) ```
-void q_messagebox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QMessageBox*
+/// @param callback bool fn(QMessageBox*, const char*, void*, intptr_t*)
+void q_messagebox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3925,7 +4649,8 @@ void q_messagebox_on_native_event(void* self, bool (*slot)(void*, const char*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_messagebox_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3934,7 +4659,8 @@ int32_t q_messagebox_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_messagebox_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3943,8 +4669,9 @@ int32_t q_messagebox_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)(QMessageBox*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_messagebox_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QMessageBox*
+/// @param callback int32_t fn(QMessageBox*, enum QPaintDevice__PaintDeviceMetric)
+void q_messagebox_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3952,7 +4679,8 @@ void q_messagebox_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QPainter* painter ```
+/// @param self QMessageBox*
+/// @param painter QPainter*
 void q_messagebox_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3961,7 +4689,8 @@ void q_messagebox_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QPainter* painter ```
+/// @param self QMessageBox*
+/// @param painter QPainter*
 void q_messagebox_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3970,8 +4699,9 @@ void q_messagebox_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QPainter*) ```
-void q_messagebox_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QPainter*)
+void q_messagebox_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3979,7 +4709,8 @@ void q_messagebox_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QPoint* offset ```
+/// @param self QMessageBox*
+/// @param offset QPoint*
 QPaintDevice* q_messagebox_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3988,7 +4719,8 @@ QPaintDevice* q_messagebox_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QPoint* offset ```
+/// @param self QMessageBox*
+/// @param offset QPoint*
 QPaintDevice* q_messagebox_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3997,8 +4729,9 @@ QPaintDevice* q_messagebox_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QPaintDevice* (*slot)(QMessageBox*, QPoint*) ```
-void q_messagebox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback QPaintDevice* fn(QMessageBox*, QPoint*)
+void q_messagebox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4006,7 +4739,7 @@ void q_messagebox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPainter* q_messagebox_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4015,7 +4748,7 @@ QPainter* q_messagebox_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QPainter* q_messagebox_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4024,8 +4757,9 @@ QPainter* q_messagebox_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QPainter* (*slot)() ```
-void q_messagebox_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QMessageBox*
+/// @param callback QPainter* fn()
+void q_messagebox_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4033,7 +4767,8 @@ void q_messagebox_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QInputMethodEvent* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QInputMethodEvent*
 void q_messagebox_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4042,7 +4777,8 @@ void q_messagebox_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QInputMethodEvent* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QInputMethodEvent*
 void q_messagebox_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4051,8 +4787,9 @@ void q_messagebox_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QInputMethodEvent*) ```
-void q_messagebox_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QInputMethodEvent*)
+void q_messagebox_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4060,7 +4797,8 @@ void q_messagebox_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_messagebox_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4069,7 +4807,8 @@ QVariant* q_messagebox_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QMessageBox*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_messagebox_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4078,8 +4817,9 @@ QVariant* q_messagebox_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QVariant* (*slot)(QMessageBox*, enum Qt__InputMethodQuery) ```
-void q_messagebox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QMessageBox*
+/// @param callback QVariant* fn(QMessageBox*, enum Qt__InputMethodQuery)
+void q_messagebox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -4087,7 +4827,8 @@ void q_messagebox_on_input_method_query(void* self, QVariant* (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, bool next ```
+/// @param self QMessageBox*
+/// @param next bool
 bool q_messagebox_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4096,7 +4837,8 @@ bool q_messagebox_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool next ```
+/// @param self QMessageBox*
+/// @param next bool
 bool q_messagebox_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4105,8 +4847,9 @@ bool q_messagebox_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)(QMessageBox*, bool) ```
-void q_messagebox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QMessageBox*
+/// @param callback bool fn(QMessageBox*, bool)
+void q_messagebox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -4114,7 +4857,8 @@ void q_messagebox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QTimerEvent* event ```
+/// @param self QMessageBox*
+/// @param event QTimerEvent*
 void q_messagebox_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4123,7 +4867,8 @@ void q_messagebox_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QTimerEvent* event ```
+/// @param self QMessageBox*
+/// @param event QTimerEvent*
 void q_messagebox_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4132,8 +4877,9 @@ void q_messagebox_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QTimerEvent*) ```
-void q_messagebox_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QTimerEvent*)
+void q_messagebox_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4141,7 +4887,8 @@ void q_messagebox_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QChildEvent* event ```
+/// @param self QMessageBox*
+/// @param event QChildEvent*
 void q_messagebox_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4150,7 +4897,8 @@ void q_messagebox_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QChildEvent* event ```
+/// @param self QMessageBox*
+/// @param event QChildEvent*
 void q_messagebox_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4159,8 +4907,9 @@ void q_messagebox_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QChildEvent*) ```
-void q_messagebox_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QChildEvent*)
+void q_messagebox_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4168,7 +4917,8 @@ void q_messagebox_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEvent*
 void q_messagebox_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4177,7 +4927,8 @@ void q_messagebox_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QEvent* event ```
+/// @param self QMessageBox*
+/// @param event QEvent*
 void q_messagebox_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4186,8 +4937,9 @@ void q_messagebox_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QEvent*) ```
-void q_messagebox_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QEvent*)
+void q_messagebox_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4195,7 +4947,8 @@ void q_messagebox_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMetaMethod* signal ```
+/// @param self QMessageBox*
+/// @param signal QMetaMethod*
 void q_messagebox_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4204,7 +4957,8 @@ void q_messagebox_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMetaMethod* signal ```
+/// @param self QMessageBox*
+/// @param signal QMetaMethod*
 void q_messagebox_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4213,8 +4967,9 @@ void q_messagebox_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMetaMethod*) ```
-void q_messagebox_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMetaMethod*)
+void q_messagebox_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4222,7 +4977,8 @@ void q_messagebox_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMetaMethod* signal ```
+/// @param self QMessageBox*
+/// @param signal QMetaMethod*
 void q_messagebox_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4231,7 +4987,8 @@ void q_messagebox_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMetaMethod* signal ```
+/// @param self QMessageBox*
+/// @param signal QMetaMethod*
 void q_messagebox_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4240,8 +4997,9 @@ void q_messagebox_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QMetaMethod*) ```
-void q_messagebox_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QMetaMethod*)
+void q_messagebox_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -4249,7 +5007,8 @@ void q_messagebox_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QWidget* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
 void q_messagebox_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -4258,7 +5017,8 @@ void q_messagebox_adjust_position(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QWidget* param1 ```
+/// @param self QMessageBox*
+/// @param param1 QWidget*
 void q_messagebox_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -4267,8 +5027,9 @@ void q_messagebox_qbase_adjust_position(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, QWidget*) ```
-void q_messagebox_on_adjust_position(void* self, void (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, QWidget*)
+void q_messagebox_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4276,7 +5037,7 @@ void q_messagebox_on_adjust_position(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4285,7 +5046,7 @@ void q_messagebox_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4294,8 +5055,9 @@ void q_messagebox_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)() ```
-void q_messagebox_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QMessageBox*
+/// @param callback void fn()
+void q_messagebox_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4303,7 +5065,7 @@ void q_messagebox_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_create(void* self);
 
 /// Inherited from QWidget
@@ -4312,7 +5074,7 @@ void q_messagebox_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4321,8 +5083,9 @@ void q_messagebox_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)() ```
-void q_messagebox_on_create(void* self, void (*slot)());
+/// @param self QMessageBox*
+/// @param callback void fn()
+void q_messagebox_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4330,7 +5093,7 @@ void q_messagebox_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4339,7 +5102,7 @@ void q_messagebox_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4348,8 +5111,9 @@ void q_messagebox_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, void (*slot)() ```
-void q_messagebox_on_destroy(void* self, void (*slot)());
+/// @param self QMessageBox*
+/// @param callback void fn()
+void q_messagebox_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4357,7 +5121,7 @@ void q_messagebox_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4366,7 +5130,7 @@ bool q_messagebox_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4375,8 +5139,9 @@ bool q_messagebox_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)() ```
-void q_messagebox_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QMessageBox*
+/// @param callback bool fn()
+void q_messagebox_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4384,7 +5149,7 @@ void q_messagebox_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4393,7 +5158,7 @@ bool q_messagebox_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 bool q_messagebox_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4402,8 +5167,9 @@ bool q_messagebox_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)() ```
-void q_messagebox_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QMessageBox*
+/// @param callback bool fn()
+void q_messagebox_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4411,7 +5177,7 @@ void q_messagebox_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QObject* q_messagebox_sender(void* self);
 
 /// Inherited from QObject
@@ -4420,7 +5186,7 @@ QObject* q_messagebox_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 QObject* q_messagebox_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4429,8 +5195,9 @@ QObject* q_messagebox_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QObject* (*slot)() ```
-void q_messagebox_on_sender(void* self, QObject* (*slot)());
+/// @param self QMessageBox*
+/// @param callback QObject* fn()
+void q_messagebox_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4438,7 +5205,7 @@ void q_messagebox_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4447,7 +5214,7 @@ int32_t q_messagebox_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 int32_t q_messagebox_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4456,8 +5223,9 @@ int32_t q_messagebox_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)() ```
-void q_messagebox_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QMessageBox*
+/// @param callback int32_t fn()
+void q_messagebox_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4465,7 +5233,8 @@ void q_messagebox_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, const char* signal ```
+/// @param self QMessageBox*
+/// @param signal const char*
 int32_t q_messagebox_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4474,7 +5243,8 @@ int32_t q_messagebox_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, const char* signal ```
+/// @param self QMessageBox*
+/// @param signal const char*
 int32_t q_messagebox_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4483,8 +5253,9 @@ int32_t q_messagebox_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, int32_t (*slot)(QMessageBox*, const char*) ```
-void q_messagebox_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QMessageBox*
+/// @param callback int32_t fn(QMessageBox*, const char*)
+void q_messagebox_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4492,7 +5263,8 @@ void q_messagebox_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, QMetaMethod* signal ```
+/// @param self QMessageBox*
+/// @param signal QMetaMethod*
 bool q_messagebox_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4501,7 +5273,8 @@ bool q_messagebox_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, QMetaMethod* signal ```
+/// @param self QMessageBox*
+/// @param signal QMetaMethod*
 bool q_messagebox_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4510,8 +5283,9 @@ bool q_messagebox_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, bool (*slot)(QMessageBox*, QMetaMethod*) ```
-void q_messagebox_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QMessageBox*
+/// @param callback bool fn(QMessageBox*, QMetaMethod*)
+void q_messagebox_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4519,7 +5293,9 @@ void q_messagebox_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMessageBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QMessageBox*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_messagebox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4528,7 +5304,9 @@ double q_messagebox_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMessageBox* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QMessageBox*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_messagebox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4537,8 +5315,9 @@ double q_messagebox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMessageBox* self, double (*slot)(QMessageBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_messagebox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QMessageBox*
+/// @param callback double fn(QMessageBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_messagebox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4546,14 +5325,15 @@ void q_messagebox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QMessageBox* self, void (*slot)(QMessageBox*, const char*) ```
-void q_messagebox_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QMessageBox*
+/// @param callback void fn(QMessageBox*, const char*)
+void q_messagebox_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagebox.html#dtor.QMessageBox)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QMessageBox* self ```
+/// @param self QMessageBox*
 void q_messagebox_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qmessagebox.html#types

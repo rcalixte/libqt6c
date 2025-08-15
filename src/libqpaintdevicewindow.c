@@ -502,152 +502,152 @@ void q_paintdevicewindow_screen_changed(void* self, void* screen) {
     QWindow_ScreenChanged((QWindow*)self, (QScreen*)screen);
 }
 
-void q_paintdevicewindow_on_screen_changed(void* self, void (*slot)(void*, void*)) {
-    QWindow_Connect_ScreenChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_screen_changed(void* self, void (*callback)(void*, void*)) {
+    QWindow_Connect_ScreenChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_modality_changed(void* self, int64_t modality) {
     QWindow_ModalityChanged((QWindow*)self, modality);
 }
 
-void q_paintdevicewindow_on_modality_changed(void* self, void (*slot)(void*, int64_t)) {
-    QWindow_Connect_ModalityChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_modality_changed(void* self, void (*callback)(void*, int64_t)) {
+    QWindow_Connect_ModalityChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_window_state_changed(void* self, int64_t windowState) {
     QWindow_WindowStateChanged((QWindow*)self, windowState);
 }
 
-void q_paintdevicewindow_on_window_state_changed(void* self, void (*slot)(void*, int64_t)) {
-    QWindow_Connect_WindowStateChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_window_state_changed(void* self, void (*callback)(void*, int64_t)) {
+    QWindow_Connect_WindowStateChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_window_title_changed(void* self, const char* title) {
     QWindow_WindowTitleChanged((QWindow*)self, qstring(title));
 }
 
-void q_paintdevicewindow_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWindow_Connect_WindowTitleChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWindow_Connect_WindowTitleChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_x_changed(void* self, int arg) {
     QWindow_XChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_x_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_XChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_x_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_XChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_y_changed(void* self, int arg) {
     QWindow_YChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_y_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_YChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_y_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_YChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_width_changed(void* self, int arg) {
     QWindow_WidthChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_width_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_WidthChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_width_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_WidthChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_height_changed(void* self, int arg) {
     QWindow_HeightChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_height_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_HeightChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_height_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_HeightChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_minimum_width_changed(void* self, int arg) {
     QWindow_MinimumWidthChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_minimum_width_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_MinimumWidthChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_minimum_width_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_MinimumWidthChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_minimum_height_changed(void* self, int arg) {
     QWindow_MinimumHeightChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_minimum_height_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_MinimumHeightChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_minimum_height_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_MinimumHeightChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_maximum_width_changed(void* self, int arg) {
     QWindow_MaximumWidthChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_maximum_width_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_MaximumWidthChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_maximum_width_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_MaximumWidthChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_maximum_height_changed(void* self, int arg) {
     QWindow_MaximumHeightChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_maximum_height_changed(void* self, void (*slot)(void*, int)) {
-    QWindow_Connect_MaximumHeightChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_maximum_height_changed(void* self, void (*callback)(void*, int)) {
+    QWindow_Connect_MaximumHeightChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_visible_changed(void* self, bool arg) {
     QWindow_VisibleChanged((QWindow*)self, arg);
 }
 
-void q_paintdevicewindow_on_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QWindow_Connect_VisibleChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QWindow_Connect_VisibleChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_visibility_changed(void* self, int64_t visibility) {
     QWindow_VisibilityChanged((QWindow*)self, visibility);
 }
 
-void q_paintdevicewindow_on_visibility_changed(void* self, void (*slot)(void*, int64_t)) {
-    QWindow_Connect_VisibilityChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_visibility_changed(void* self, void (*callback)(void*, int64_t)) {
+    QWindow_Connect_VisibilityChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_active_changed(void* self) {
     QWindow_ActiveChanged((QWindow*)self);
 }
 
-void q_paintdevicewindow_on_active_changed(void* self, void (*slot)(void*)) {
-    QWindow_Connect_ActiveChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_active_changed(void* self, void (*callback)(void*)) {
+    QWindow_Connect_ActiveChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_content_orientation_changed(void* self, int64_t orientation) {
     QWindow_ContentOrientationChanged((QWindow*)self, orientation);
 }
 
-void q_paintdevicewindow_on_content_orientation_changed(void* self, void (*slot)(void*, int64_t)) {
-    QWindow_Connect_ContentOrientationChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_content_orientation_changed(void* self, void (*callback)(void*, int64_t)) {
+    QWindow_Connect_ContentOrientationChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_focus_object_changed(void* self, void* object) {
     QWindow_FocusObjectChanged((QWindow*)self, (QObject*)object);
 }
 
-void q_paintdevicewindow_on_focus_object_changed(void* self, void (*slot)(void*, void*)) {
-    QWindow_Connect_FocusObjectChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_focus_object_changed(void* self, void (*callback)(void*, void*)) {
+    QWindow_Connect_FocusObjectChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_opacity_changed(void* self, double opacity) {
     QWindow_OpacityChanged((QWindow*)self, opacity);
 }
 
-void q_paintdevicewindow_on_opacity_changed(void* self, void (*slot)(void*, double)) {
-    QWindow_Connect_OpacityChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_opacity_changed(void* self, void (*callback)(void*, double)) {
+    QWindow_Connect_OpacityChanged((QWindow*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_transient_parent_changed(void* self, void* transientParent) {
     QWindow_TransientParentChanged((QWindow*)self, (QWindow*)transientParent);
 }
 
-void q_paintdevicewindow_on_transient_parent_changed(void* self, void (*slot)(void*, void*)) {
-    QWindow_Connect_TransientParentChanged((QWindow*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_transient_parent_changed(void* self, void (*callback)(void*, void*)) {
+    QWindow_Connect_TransientParentChanged((QWindow*)self, (intptr_t)callback);
 }
 
 QWindow* q_paintdevicewindow_parent1(void* self, int64_t mode) {
@@ -766,12 +766,16 @@ const char** q_paintdevicewindow_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_paintdevicewindow_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -789,8 +793,8 @@ void q_paintdevicewindow_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_paintdevicewindow_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 bool q_paintdevicewindow_inherits(void* self, const char* classname) {
@@ -821,8 +825,8 @@ void q_paintdevicewindow_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_paintdevicewindow_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 int64_t q_paintdevicewindow_surface_class(void* self) {
@@ -889,8 +893,8 @@ int32_t q_paintdevicewindow_encode_metric_f(int64_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
-void q_paintdevicewindow_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_paintdevicewindow_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_paintdevicewindow_delete(void* self) {

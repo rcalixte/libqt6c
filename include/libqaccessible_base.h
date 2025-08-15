@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,147 +15,151 @@
 
 /// q_accessible_new constructs a new QAccessible object.
 ///
-/// ``` QAccessible* other ```
+/// @param other QAccessible*
 QAccessible* q_accessible_new(void* other);
 
 /// q_accessible_new2 constructs a new QAccessible object and invalidates the source QAccessible object.
 ///
-/// ``` QAccessible* other ```
+/// @param other QAccessible*
 QAccessible* q_accessible_new2(void* other);
 
 /// q_accessible_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QAccessible* self, QAccessible* other ```
+/// @param self QAccessible*
+/// @param other QAccessible*
 void q_accessible_copy_assign(void* self, void* other);
 
 /// q_accessible_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QAccessible* self, QAccessible* other ```
+/// @param self QAccessible*
+/// @param other QAccessible*
 void q_accessible_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#installActivationObserver)
 ///
-/// ``` QAccessible__ActivationObserver* param1 ```
+/// @param param1 QAccessible__ActivationObserver*
 void q_accessible_install_activation_observer(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#removeActivationObserver)
 ///
-/// ``` QAccessible__ActivationObserver* param1 ```
+/// @param param1 QAccessible__ActivationObserver*
 void q_accessible_remove_activation_observer(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#queryAccessibleInterface)
 ///
-/// ``` QObject* param1 ```
+/// @param param1 QObject*
 QAccessibleInterface* q_accessible_query_accessible_interface(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#uniqueId)
 ///
-/// ``` QAccessibleInterface* iface ```
+/// @param iface QAccessibleInterface*
 uint32_t q_accessible_unique_id(void* iface);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#accessibleInterface)
 ///
-/// ``` uint32_t uniqueId ```
+/// @param uniqueId uint32_t
 QAccessibleInterface* q_accessible_accessible_interface(uint32_t uniqueId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#registerAccessibleInterface)
 ///
-/// ``` QAccessibleInterface* iface ```
+/// @param iface QAccessibleInterface*
 uint32_t q_accessible_register_accessible_interface(void* iface);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#deleteAccessibleInterface)
 ///
-/// ``` uint32_t uniqueId ```
+/// @param uniqueId uint32_t
 void q_accessible_delete_accessible_interface(uint32_t uniqueId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#updateAccessibility)
 ///
-/// ``` QAccessibleEvent* event ```
+/// @param event QAccessibleEvent*
 void q_accessible_update_accessibility(void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#isActive)
-///
 ///
 bool q_accessible_is_active();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#setActive)
 ///
-/// ``` bool active ```
+/// @param active bool
 void q_accessible_set_active(bool active);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#setRootObject)
 ///
-/// ``` QObject* object ```
+/// @param object QObject*
 void q_accessible_set_root_object(void* object);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#cleanup)
-///
 ///
 void q_accessible_cleanup();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#qAccessibleTextBoundaryHelper)
 ///
-/// ``` QTextCursor* cursor, enum QAccessible__TextBoundaryType boundaryType ```
+/// @param cursor QTextCursor*
+/// @param boundaryType enum QAccessible__TextBoundaryType
 libqt_pair /* tuple of int and int */ q_accessible_q_accessible_text_boundary_helper(void* cursor, int64_t boundaryType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible.html#dtor.QAccessible)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAccessible* self ```
+/// @param self QAccessible*
 void q_accessible_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaccessible-state.html
 
 /// q_accessible__state_new constructs a new QAccessible::State object.
 ///
-/// ``` QAccessible__State* other ```
+/// @param other QAccessible__State*
 QAccessible__State* q_accessible__state_new(void* other);
 
 /// q_accessible__state_new2 constructs a new QAccessible::State object and invalidates the source QAccessible::State object.
 ///
-/// ``` QAccessible__State* other ```
+/// @param other QAccessible__State*
 QAccessible__State* q_accessible__state_new2(void* other);
 
 /// q_accessible__state_new3 constructs a new QAccessible::State object.
-///
 ///
 QAccessible__State* q_accessible__state_new3();
 
 /// q_accessible__state_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QAccessible__State* self, QAccessible__State* other ```
+/// @param self QAccessible__State*
+/// @param other QAccessible__State*
 void q_accessible__state_copy_assign(void* self, void* other);
 
 /// q_accessible__state_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QAccessible__State* self, QAccessible__State* other ```
+/// @param self QAccessible__State*
+/// @param other QAccessible__State*
 void q_accessible__state_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible::state.html#dtor.QAccessible::State)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAccessible__State* self ```
+/// @param self QAccessible__State*
 void q_accessible__state_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaccessible-activationobserver.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible__activationobserver.html#accessibilityActiveChanged)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#accessibilityActiveChanged)
 ///
-/// ``` QAccessible__ActivationObserver* self, bool active ```
+/// @param self QAccessible__ActivationObserver*
+/// @param active bool
 void q_accessible__activationobserver_accessibility_active_changed(void* self, bool active);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible__activationobserver.html#operator-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qaccessible-activationobserver.html#operator-eq)
 ///
-/// ``` QAccessible__ActivationObserver* self, QAccessible__ActivationObserver* param1 ```
+/// @param self QAccessible__ActivationObserver*
+/// @param param1 QAccessible__ActivationObserver*
 void q_accessible__activationobserver_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessible::activationobserver.html#dtor.QAccessible::ActivationObserver)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAccessible__ActivationObserver* self ```
+/// @param self QAccessible__ActivationObserver*
 void q_accessible__activationobserver_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaccessible_base.html#types

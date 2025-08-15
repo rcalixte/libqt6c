@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,374 +15,441 @@
 
 /// q_textstream_new constructs a new QTextStream object.
 ///
-///
 QTextStream* q_textstream_new();
 
 /// q_textstream_new2 constructs a new QTextStream object.
 ///
-/// ``` QIODevice* device ```
+/// @param device QIODevice*
 QTextStream* q_textstream_new2(void* device);
 
 /// q_textstream_new3 constructs a new QTextStream object.
 ///
-/// ``` const char* array ```
+/// @param array const char*
 QTextStream* q_textstream_new3(const char* array);
 
 /// q_textstream_new4 constructs a new QTextStream object.
 ///
-/// ``` const char* array, int openMode ```
+/// @param array const char*
+/// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 QTextStream* q_textstream_new4(const char* array, int64_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setEncoding)
 ///
-/// ``` QTextStream* self, enum QStringConverter__Encoding encoding ```
+/// @param self QTextStream*
+/// @param encoding enum QStringConverter__Encoding
 void q_textstream_set_encoding(void* self, int64_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#encoding)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
+///
+/// @return enum QStringConverter__Encoding
 int64_t q_textstream_encoding(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setAutoDetectUnicode)
 ///
-/// ``` QTextStream* self, bool enabled ```
+/// @param self QTextStream*
+/// @param enabled bool
 void q_textstream_set_auto_detect_unicode(void* self, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#autoDetectUnicode)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 bool q_textstream_auto_detect_unicode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setGenerateByteOrderMark)
 ///
-/// ``` QTextStream* self, bool generate ```
+/// @param self QTextStream*
+/// @param generate bool
 void q_textstream_set_generate_byte_order_mark(void* self, bool generate);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#generateByteOrderMark)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 bool q_textstream_generate_byte_order_mark(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setLocale)
 ///
-/// ``` QTextStream* self, QLocale* locale ```
+/// @param self QTextStream*
+/// @param locale QLocale*
 void q_textstream_set_locale(void* self, void* locale);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#locale)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 QLocale* q_textstream_locale(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setDevice)
 ///
-/// ``` QTextStream* self, QIODevice* device ```
+/// @param self QTextStream*
+/// @param device QIODevice*
 void q_textstream_set_device(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#device)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 QIODevice* q_textstream_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#string)
 ///
-/// ``` QTextStream* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextStream*
 const char* q_textstream_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#status)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
+///
+/// @return enum QTextStream__Status
 int64_t q_textstream_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setStatus)
 ///
-/// ``` QTextStream* self, enum QTextStream__Status status ```
+/// @param self QTextStream*
+/// @param status enum QTextStream__Status
 void q_textstream_set_status(void* self, int64_t status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#resetStatus)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 void q_textstream_reset_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#atEnd)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 bool q_textstream_at_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#reset)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 void q_textstream_reset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#flush)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 void q_textstream_flush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#seek)
 ///
-/// ``` QTextStream* self, long long pos ```
+/// @param self QTextStream*
+/// @param pos long long
 bool q_textstream_seek(void* self, long long pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#pos)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 long long q_textstream_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#skipWhiteSpace)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 void q_textstream_skip_white_space(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#readLine)
 ///
-/// ``` QTextStream* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextStream*
 const char* q_textstream_read_line(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#readAll)
 ///
-/// ``` QTextStream* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextStream*
 const char* q_textstream_read_all(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#read)
 ///
-/// ``` QTextStream* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextStream*
+/// @param maxlen long long
 const char* q_textstream_read(void* self, long long maxlen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setFieldAlignment)
 ///
-/// ``` QTextStream* self, enum QTextStream__FieldAlignment alignment ```
+/// @param self QTextStream*
+/// @param alignment enum QTextStream__FieldAlignment
 void q_textstream_set_field_alignment(void* self, int64_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#fieldAlignment)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
+///
+/// @return enum QTextStream__FieldAlignment
 int64_t q_textstream_field_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setPadChar)
 ///
-/// ``` QTextStream* self, QChar* ch ```
+/// @param self QTextStream*
+/// @param ch QChar*
 void q_textstream_set_pad_char(void* self, void* ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#padChar)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 QChar* q_textstream_pad_char(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setFieldWidth)
 ///
-/// ``` QTextStream* self, int width ```
+/// @param self QTextStream*
+/// @param width int
 void q_textstream_set_field_width(void* self, int width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#fieldWidth)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 int32_t q_textstream_field_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setNumberFlags)
 ///
-/// ``` QTextStream* self, int flags ```
+/// @param self QTextStream*
+/// @param flags flag of enum QTextStream__NumberFlag
 void q_textstream_set_number_flags(void* self, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#numberFlags)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
+///
+/// @return flag of enum QTextStream__NumberFlag
 int64_t q_textstream_number_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setIntegerBase)
 ///
-/// ``` QTextStream* self, int base ```
+/// @param self QTextStream*
+/// @param base int
 void q_textstream_set_integer_base(void* self, int base);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#integerBase)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 int32_t q_textstream_integer_base(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setRealNumberNotation)
 ///
-/// ``` QTextStream* self, enum QTextStream__RealNumberNotation notation ```
+/// @param self QTextStream*
+/// @param notation enum QTextStream__RealNumberNotation
 void q_textstream_set_real_number_notation(void* self, int64_t notation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#realNumberNotation)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
+///
+/// @return enum QTextStream__RealNumberNotation
 int64_t q_textstream_real_number_notation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setRealNumberPrecision)
 ///
-/// ``` QTextStream* self, int precision ```
+/// @param self QTextStream*
+/// @param precision int
 void q_textstream_set_real_number_precision(void* self, int precision);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#realNumberPrecision)
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 int32_t q_textstream_real_number_precision(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, QChar* ch ```
+/// @param self QTextStream*
+/// @param ch QChar*
 QTextStream* q_textstream_operator_shift_right(void* self, void* ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, char* ch ```
+/// @param self QTextStream*
+/// @param ch char*
 QTextStream* q_textstream_operator_shift_right2(void* self, char* ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, short* i ```
+/// @param self QTextStream*
+/// @param i short*
 QTextStream* q_textstream_operator_shift_right4(void* self, short* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, unsigned short* i ```
+/// @param self QTextStream*
+/// @param i unsigned short*
 QTextStream* q_textstream_operator_shift_right5(void* self, unsigned short* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, int* i ```
+/// @param self QTextStream*
+/// @param i int*
 QTextStream* q_textstream_operator_shift_right6(void* self, int* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, uint32_t* i ```
+/// @param self QTextStream*
+/// @param i uint32_t*
 QTextStream* q_textstream_operator_shift_right7(void* self, uint32_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, int64_t* i ```
+/// @param self QTextStream*
+/// @param i int64_t*
 QTextStream* q_textstream_operator_shift_right8(void* self, int64_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, uint64_t* i ```
+/// @param self QTextStream*
+/// @param i uint64_t*
 QTextStream* q_textstream_operator_shift_right9(void* self, uint64_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, long long* i ```
+/// @param self QTextStream*
+/// @param i long long*
 QTextStream* q_textstream_operator_shift_right10(void* self, long long* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, uint64_t* i ```
+/// @param self QTextStream*
+/// @param i uint64_t*
 QTextStream* q_textstream_operator_shift_right11(void* self, uint64_t* i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, float* f ```
+/// @param self QTextStream*
+/// @param f float*
 QTextStream* q_textstream_operator_shift_right12(void* self, float* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, double* f ```
+/// @param self QTextStream*
+/// @param f double*
 QTextStream* q_textstream_operator_shift_right13(void* self, double* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, const char* s ```
+/// @param self QTextStream*
+/// @param s const char*
 QTextStream* q_textstream_operator_shift_right14(void* self, const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, char* array ```
+/// @param self QTextStream*
+/// @param array char*
 QTextStream* q_textstream_operator_shift_right15(void* self, char* array);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
-/// ``` QTextStream* self, char* c ```
+/// @param self QTextStream*
+/// @param c char*
 QTextStream* q_textstream_operator_shift_right16(void* self, char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, QChar* ch ```
+/// @param self QTextStream*
+/// @param ch QChar*
 QTextStream* q_textstream_operator_shift_left(void* self, void* ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, char ch ```
+/// @param self QTextStream*
+/// @param ch char
 QTextStream* q_textstream_operator_shift_left2(void* self, char ch);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, short i ```
+/// @param self QTextStream*
+/// @param i short
 QTextStream* q_textstream_operator_shift_left4(void* self, short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, unsigned short i ```
+/// @param self QTextStream*
+/// @param i unsigned short
 QTextStream* q_textstream_operator_shift_left5(void* self, unsigned short i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, int i ```
+/// @param self QTextStream*
+/// @param i int
 QTextStream* q_textstream_operator_shift_left6(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, uint32_t i ```
+/// @param self QTextStream*
+/// @param i uint32_t
 QTextStream* q_textstream_operator_shift_left7(void* self, uint32_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, int64_t i ```
+/// @param self QTextStream*
+/// @param i int64_t
 QTextStream* q_textstream_operator_shift_left8(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, uint64_t i ```
+/// @param self QTextStream*
+/// @param i uint64_t
 QTextStream* q_textstream_operator_shift_left9(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, long long i ```
+/// @param self QTextStream*
+/// @param i long long
 QTextStream* q_textstream_operator_shift_left10(void* self, long long i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, uint64_t i ```
+/// @param self QTextStream*
+/// @param i uint64_t
 QTextStream* q_textstream_operator_shift_left11(void* self, uint64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, float f ```
+/// @param self QTextStream*
+/// @param f float
 QTextStream* q_textstream_operator_shift_left12(void* self, float f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, double f ```
+/// @param self QTextStream*
+/// @param f double
 QTextStream* q_textstream_operator_shift_left13(void* self, double f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, const char* s ```
+/// @param self QTextStream*
+/// @param s const char*
 QTextStream* q_textstream_operator_shift_left14(void* self, const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, const char* array ```
+/// @param self QTextStream*
+/// @param array const char*
 QTextStream* q_textstream_operator_shift_left17(void* self, const char* array);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, const char* c ```
+/// @param self QTextStream*
+/// @param c const char*
 QTextStream* q_textstream_operator_shift_left18(void* self, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
-/// ``` QTextStream* self, void* ptr ```
+/// @param self QTextStream*
+/// @param ptr void*
 QTextStream* q_textstream_operator_shift_left19(void* self, void* ptr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#readLine)
 ///
-/// ``` QTextStream* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextStream*
+/// @param maxlen long long
 const char* q_textstream_read_line1(void* self, long long maxlen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#dtor.QTextStream)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextStream* self ```
+/// @param self QTextStream*
 void q_textstream_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextstream.html#types

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,69 +15,78 @@
 
 /// q_pdfoutputintent_new constructs a new QPdfOutputIntent object.
 ///
-///
 QPdfOutputIntent* q_pdfoutputintent_new();
 
 /// q_pdfoutputintent_new2 constructs a new QPdfOutputIntent object.
 ///
-/// ``` QPdfOutputIntent* other ```
+/// @param other QPdfOutputIntent*
 QPdfOutputIntent* q_pdfoutputintent_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#operator-eq)
 ///
-/// ``` QPdfOutputIntent* self, QPdfOutputIntent* other ```
+/// @param self QPdfOutputIntent*
+/// @param other QPdfOutputIntent*
 void q_pdfoutputintent_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#swap)
 ///
-/// ``` QPdfOutputIntent* self, QPdfOutputIntent* other ```
+/// @param self QPdfOutputIntent*
+/// @param other QPdfOutputIntent*
 void q_pdfoutputintent_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputConditionIdentifier)
 ///
-/// ``` QPdfOutputIntent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfOutputIntent*
 const char* q_pdfoutputintent_output_condition_identifier(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputConditionIdentifier)
 ///
-/// ``` QPdfOutputIntent* self, const char* identifier ```
+/// @param self QPdfOutputIntent*
+/// @param identifier const char*
 void q_pdfoutputintent_set_output_condition_identifier(void* self, const char* identifier);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputCondition)
 ///
-/// ``` QPdfOutputIntent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfOutputIntent*
 const char* q_pdfoutputintent_output_condition(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputCondition)
 ///
-/// ``` QPdfOutputIntent* self, const char* condition ```
+/// @param self QPdfOutputIntent*
+/// @param condition const char*
 void q_pdfoutputintent_set_output_condition(void* self, const char* condition);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#registryName)
 ///
-/// ``` QPdfOutputIntent* self ```
+/// @param self QPdfOutputIntent*
 QUrl* q_pdfoutputintent_registry_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setRegistryName)
 ///
-/// ``` QPdfOutputIntent* self, QUrl* name ```
+/// @param self QPdfOutputIntent*
+/// @param name QUrl*
 void q_pdfoutputintent_set_registry_name(void* self, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#outputProfile)
 ///
-/// ``` QPdfOutputIntent* self ```
+/// @param self QPdfOutputIntent*
 QColorSpace* q_pdfoutputintent_output_profile(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#setOutputProfile)
 ///
-/// ``` QPdfOutputIntent* self, QColorSpace* profile ```
+/// @param self QPdfOutputIntent*
+/// @param profile QColorSpace*
 void q_pdfoutputintent_set_output_profile(void* self, void* profile);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfoutputintent.html#dtor.QPdfOutputIntent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPdfOutputIntent* self ```
+/// @param self QPdfOutputIntent*
 void q_pdfoutputintent_delete(void* self);
 
 #endif

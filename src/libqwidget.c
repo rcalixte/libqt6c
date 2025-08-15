@@ -70,8 +70,8 @@ int32_t q_widget_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QWidget_Metacall((QWidget*)self, param1, param2, param3);
 }
 
-void q_widget_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QWidget_OnMetacall((QWidget*)self, (intptr_t)slot);
+void q_widget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QWidget_OnMetacall((QWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_widget_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -89,8 +89,8 @@ int32_t q_widget_dev_type(void* self) {
     return QWidget_DevType((QWidget*)self);
 }
 
-void q_widget_on_dev_type(void* self, int32_t (*slot)()) {
-    QWidget_OnDevType((QWidget*)self, (intptr_t)slot);
+void q_widget_on_dev_type(void* self, int32_t (*callback)()) {
+    QWidget_OnDevType((QWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_widget_qbase_dev_type(void* self) {
@@ -799,8 +799,8 @@ void q_widget_set_visible(void* self, bool visible) {
     QWidget_SetVisible((QWidget*)self, visible);
 }
 
-void q_widget_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QWidget_OnSetVisible((QWidget*)self, (intptr_t)slot);
+void q_widget_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QWidget_OnSetVisible((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_set_visible(void* self, bool visible) {
@@ -930,8 +930,8 @@ QSize* q_widget_size_hint(void* self) {
     return QWidget_SizeHint((QWidget*)self);
 }
 
-void q_widget_on_size_hint(void* self, QSize* (*slot)()) {
-    QWidget_OnSizeHint((QWidget*)self, (intptr_t)slot);
+void q_widget_on_size_hint(void* self, QSize* (*callback)()) {
+    QWidget_OnSizeHint((QWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_widget_qbase_size_hint(void* self) {
@@ -942,8 +942,8 @@ QSize* q_widget_minimum_size_hint(void* self) {
     return QWidget_MinimumSizeHint((QWidget*)self);
 }
 
-void q_widget_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QWidget_OnMinimumSizeHint((QWidget*)self, (intptr_t)slot);
+void q_widget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QWidget_OnMinimumSizeHint((QWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_widget_qbase_minimum_size_hint(void* self) {
@@ -966,8 +966,8 @@ int32_t q_widget_height_for_width(void* self, int param1) {
     return QWidget_HeightForWidth((QWidget*)self, param1);
 }
 
-void q_widget_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QWidget_OnHeightForWidth((QWidget*)self, (intptr_t)slot);
+void q_widget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QWidget_OnHeightForWidth((QWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_widget_qbase_height_for_width(void* self, int param1) {
@@ -978,8 +978,8 @@ bool q_widget_has_height_for_width(void* self) {
     return QWidget_HasHeightForWidth((QWidget*)self);
 }
 
-void q_widget_on_has_height_for_width(void* self, bool (*slot)()) {
-    QWidget_OnHasHeightForWidth((QWidget*)self, (intptr_t)slot);
+void q_widget_on_has_height_for_width(void* self, bool (*callback)()) {
+    QWidget_OnHasHeightForWidth((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_qbase_has_height_for_width(void* self) {
@@ -1147,8 +1147,8 @@ QPaintEngine* q_widget_paint_engine(void* self) {
     return QWidget_PaintEngine((QWidget*)self);
 }
 
-void q_widget_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QWidget_OnPaintEngine((QWidget*)self, (intptr_t)slot);
+void q_widget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QWidget_OnPaintEngine((QWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_widget_qbase_paint_engine(void* self) {
@@ -1195,40 +1195,40 @@ void q_widget_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_widget_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_widget_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_widget_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_widget_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_widget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_widget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_widget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_widget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_event(void* self, void* event) {
     return QWidget_Event((QWidget*)self, (QEvent*)event);
 }
 
-void q_widget_on_event(void* self, bool (*slot)(void*, void*)) {
-    QWidget_OnEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_event(void* self, bool (*callback)(void*, void*)) {
+    QWidget_OnEvent((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_qbase_event(void* self, void* event) {
@@ -1239,8 +1239,8 @@ void q_widget_mouse_press_event(void* self, void* event) {
     QWidget_MousePressEvent((QWidget*)self, (QMouseEvent*)event);
 }
 
-void q_widget_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnMousePressEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnMousePressEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_mouse_press_event(void* self, void* event) {
@@ -1251,8 +1251,8 @@ void q_widget_mouse_release_event(void* self, void* event) {
     QWidget_MouseReleaseEvent((QWidget*)self, (QMouseEvent*)event);
 }
 
-void q_widget_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnMouseReleaseEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnMouseReleaseEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_mouse_release_event(void* self, void* event) {
@@ -1263,8 +1263,8 @@ void q_widget_mouse_double_click_event(void* self, void* event) {
     QWidget_MouseDoubleClickEvent((QWidget*)self, (QMouseEvent*)event);
 }
 
-void q_widget_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnMouseDoubleClickEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnMouseDoubleClickEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_mouse_double_click_event(void* self, void* event) {
@@ -1275,8 +1275,8 @@ void q_widget_mouse_move_event(void* self, void* event) {
     QWidget_MouseMoveEvent((QWidget*)self, (QMouseEvent*)event);
 }
 
-void q_widget_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnMouseMoveEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnMouseMoveEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_mouse_move_event(void* self, void* event) {
@@ -1287,8 +1287,8 @@ void q_widget_wheel_event(void* self, void* event) {
     QWidget_WheelEvent((QWidget*)self, (QWheelEvent*)event);
 }
 
-void q_widget_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnWheelEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnWheelEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_wheel_event(void* self, void* event) {
@@ -1299,8 +1299,8 @@ void q_widget_key_press_event(void* self, void* event) {
     QWidget_KeyPressEvent((QWidget*)self, (QKeyEvent*)event);
 }
 
-void q_widget_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnKeyPressEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnKeyPressEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_key_press_event(void* self, void* event) {
@@ -1311,8 +1311,8 @@ void q_widget_key_release_event(void* self, void* event) {
     QWidget_KeyReleaseEvent((QWidget*)self, (QKeyEvent*)event);
 }
 
-void q_widget_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnKeyReleaseEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnKeyReleaseEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_key_release_event(void* self, void* event) {
@@ -1323,8 +1323,8 @@ void q_widget_focus_in_event(void* self, void* event) {
     QWidget_FocusInEvent((QWidget*)self, (QFocusEvent*)event);
 }
 
-void q_widget_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnFocusInEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnFocusInEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_focus_in_event(void* self, void* event) {
@@ -1335,8 +1335,8 @@ void q_widget_focus_out_event(void* self, void* event) {
     QWidget_FocusOutEvent((QWidget*)self, (QFocusEvent*)event);
 }
 
-void q_widget_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnFocusOutEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnFocusOutEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_focus_out_event(void* self, void* event) {
@@ -1347,8 +1347,8 @@ void q_widget_enter_event(void* self, void* event) {
     QWidget_EnterEvent((QWidget*)self, (QEnterEvent*)event);
 }
 
-void q_widget_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnEnterEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnEnterEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_enter_event(void* self, void* event) {
@@ -1359,8 +1359,8 @@ void q_widget_leave_event(void* self, void* event) {
     QWidget_LeaveEvent((QWidget*)self, (QEvent*)event);
 }
 
-void q_widget_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnLeaveEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnLeaveEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_leave_event(void* self, void* event) {
@@ -1371,8 +1371,8 @@ void q_widget_paint_event(void* self, void* event) {
     QWidget_PaintEvent((QWidget*)self, (QPaintEvent*)event);
 }
 
-void q_widget_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnPaintEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnPaintEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_paint_event(void* self, void* event) {
@@ -1383,8 +1383,8 @@ void q_widget_move_event(void* self, void* event) {
     QWidget_MoveEvent((QWidget*)self, (QMoveEvent*)event);
 }
 
-void q_widget_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnMoveEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnMoveEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_move_event(void* self, void* event) {
@@ -1395,8 +1395,8 @@ void q_widget_resize_event(void* self, void* event) {
     QWidget_ResizeEvent((QWidget*)self, (QResizeEvent*)event);
 }
 
-void q_widget_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnResizeEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnResizeEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_resize_event(void* self, void* event) {
@@ -1407,8 +1407,8 @@ void q_widget_close_event(void* self, void* event) {
     QWidget_CloseEvent((QWidget*)self, (QCloseEvent*)event);
 }
 
-void q_widget_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnCloseEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnCloseEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_close_event(void* self, void* event) {
@@ -1419,8 +1419,8 @@ void q_widget_context_menu_event(void* self, void* event) {
     QWidget_ContextMenuEvent((QWidget*)self, (QContextMenuEvent*)event);
 }
 
-void q_widget_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnContextMenuEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnContextMenuEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_context_menu_event(void* self, void* event) {
@@ -1431,8 +1431,8 @@ void q_widget_tablet_event(void* self, void* event) {
     QWidget_TabletEvent((QWidget*)self, (QTabletEvent*)event);
 }
 
-void q_widget_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnTabletEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnTabletEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_tablet_event(void* self, void* event) {
@@ -1443,8 +1443,8 @@ void q_widget_action_event(void* self, void* event) {
     QWidget_ActionEvent((QWidget*)self, (QActionEvent*)event);
 }
 
-void q_widget_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnActionEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnActionEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_action_event(void* self, void* event) {
@@ -1455,8 +1455,8 @@ void q_widget_drag_enter_event(void* self, void* event) {
     QWidget_DragEnterEvent((QWidget*)self, (QDragEnterEvent*)event);
 }
 
-void q_widget_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnDragEnterEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnDragEnterEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_drag_enter_event(void* self, void* event) {
@@ -1467,8 +1467,8 @@ void q_widget_drag_move_event(void* self, void* event) {
     QWidget_DragMoveEvent((QWidget*)self, (QDragMoveEvent*)event);
 }
 
-void q_widget_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnDragMoveEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnDragMoveEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_drag_move_event(void* self, void* event) {
@@ -1479,8 +1479,8 @@ void q_widget_drag_leave_event(void* self, void* event) {
     QWidget_DragLeaveEvent((QWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void q_widget_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnDragLeaveEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnDragLeaveEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_drag_leave_event(void* self, void* event) {
@@ -1491,8 +1491,8 @@ void q_widget_drop_event(void* self, void* event) {
     QWidget_DropEvent((QWidget*)self, (QDropEvent*)event);
 }
 
-void q_widget_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnDropEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnDropEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_drop_event(void* self, void* event) {
@@ -1503,8 +1503,8 @@ void q_widget_show_event(void* self, void* event) {
     QWidget_ShowEvent((QWidget*)self, (QShowEvent*)event);
 }
 
-void q_widget_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnShowEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnShowEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_show_event(void* self, void* event) {
@@ -1515,8 +1515,8 @@ void q_widget_hide_event(void* self, void* event) {
     QWidget_HideEvent((QWidget*)self, (QHideEvent*)event);
 }
 
-void q_widget_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnHideEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnHideEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_hide_event(void* self, void* event) {
@@ -1527,8 +1527,8 @@ bool q_widget_native_event(void* self, const char* eventType, void* message, int
     return QWidget_NativeEvent((QWidget*)self, qstring(eventType), message, result);
 }
 
-void q_widget_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QWidget_OnNativeEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QWidget_OnNativeEvent((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1539,8 +1539,8 @@ void q_widget_change_event(void* self, void* param1) {
     QWidget_ChangeEvent((QWidget*)self, (QEvent*)param1);
 }
 
-void q_widget_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnChangeEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnChangeEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_change_event(void* self, void* param1) {
@@ -1551,8 +1551,8 @@ int32_t q_widget_metric(void* self, int64_t param1) {
     return QWidget_Metric((QWidget*)self, param1);
 }
 
-void q_widget_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QWidget_OnMetric((QWidget*)self, (intptr_t)slot);
+void q_widget_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QWidget_OnMetric((QWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_widget_qbase_metric(void* self, int64_t param1) {
@@ -1563,8 +1563,8 @@ void q_widget_init_painter(void* self, void* painter) {
     QWidget_InitPainter((QWidget*)self, (QPainter*)painter);
 }
 
-void q_widget_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnInitPainter((QWidget*)self, (intptr_t)slot);
+void q_widget_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnInitPainter((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_init_painter(void* self, void* painter) {
@@ -1575,8 +1575,8 @@ QPaintDevice* q_widget_redirected(void* self, void* offset) {
     return QWidget_Redirected((QWidget*)self, (QPoint*)offset);
 }
 
-void q_widget_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QWidget_OnRedirected((QWidget*)self, (intptr_t)slot);
+void q_widget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QWidget_OnRedirected((QWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_widget_qbase_redirected(void* self, void* offset) {
@@ -1587,8 +1587,8 @@ QPainter* q_widget_shared_painter(void* self) {
     return QWidget_SharedPainter((QWidget*)self);
 }
 
-void q_widget_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QWidget_OnSharedPainter((QWidget*)self, (intptr_t)slot);
+void q_widget_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QWidget_OnSharedPainter((QWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_widget_qbase_shared_painter(void* self) {
@@ -1599,8 +1599,8 @@ void q_widget_input_method_event(void* self, void* param1) {
     QWidget_InputMethodEvent((QWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void q_widget_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnInputMethodEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnInputMethodEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_input_method_event(void* self, void* param1) {
@@ -1611,8 +1611,8 @@ QVariant* q_widget_input_method_query(void* self, int64_t param1) {
     return QWidget_InputMethodQuery((QWidget*)self, param1);
 }
 
-void q_widget_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QWidget_OnInputMethodQuery((QWidget*)self, (intptr_t)slot);
+void q_widget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QWidget_OnInputMethodQuery((QWidget*)self, (intptr_t)callback);
 }
 
 QVariant* q_widget_qbase_input_method_query(void* self, int64_t param1) {
@@ -1631,8 +1631,8 @@ void q_widget_update_micro_focus(void* self) {
     QWidget_UpdateMicroFocus((QWidget*)self);
 }
 
-void q_widget_on_update_micro_focus(void* self, void (*slot)()) {
-    QWidget_OnUpdateMicroFocus((QWidget*)self, (intptr_t)slot);
+void q_widget_on_update_micro_focus(void* self, void (*callback)()) {
+    QWidget_OnUpdateMicroFocus((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_update_micro_focus(void* self) {
@@ -1643,8 +1643,8 @@ void q_widget_create(void* self) {
     QWidget_Create((QWidget*)self);
 }
 
-void q_widget_on_create(void* self, void (*slot)()) {
-    QWidget_OnCreate((QWidget*)self, (intptr_t)slot);
+void q_widget_on_create(void* self, void (*callback)()) {
+    QWidget_OnCreate((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_create(void* self) {
@@ -1655,8 +1655,8 @@ void q_widget_destroy(void* self) {
     QWidget_Destroy((QWidget*)self);
 }
 
-void q_widget_on_destroy(void* self, void (*slot)()) {
-    QWidget_OnDestroy((QWidget*)self, (intptr_t)slot);
+void q_widget_on_destroy(void* self, void (*callback)()) {
+    QWidget_OnDestroy((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_destroy(void* self) {
@@ -1667,8 +1667,8 @@ bool q_widget_focus_next_prev_child(void* self, bool next) {
     return QWidget_FocusNextPrevChild((QWidget*)self, next);
 }
 
-void q_widget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QWidget_OnFocusNextPrevChild((QWidget*)self, (intptr_t)slot);
+void q_widget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QWidget_OnFocusNextPrevChild((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_qbase_focus_next_prev_child(void* self, bool next) {
@@ -1679,8 +1679,8 @@ bool q_widget_focus_next_child(void* self) {
     return QWidget_FocusNextChild((QWidget*)self);
 }
 
-void q_widget_on_focus_next_child(void* self, bool (*slot)()) {
-    QWidget_OnFocusNextChild((QWidget*)self, (intptr_t)slot);
+void q_widget_on_focus_next_child(void* self, bool (*callback)()) {
+    QWidget_OnFocusNextChild((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_qbase_focus_next_child(void* self) {
@@ -1691,8 +1691,8 @@ bool q_widget_focus_previous_child(void* self) {
     return QWidget_FocusPreviousChild((QWidget*)self);
 }
 
-void q_widget_on_focus_previous_child(void* self, bool (*slot)()) {
-    QWidget_OnFocusPreviousChild((QWidget*)self, (intptr_t)slot);
+void q_widget_on_focus_previous_child(void* self, bool (*callback)()) {
+    QWidget_OnFocusPreviousChild((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_qbase_focus_previous_child(void* self) {
@@ -1777,8 +1777,8 @@ void q_widget_update_micro_focus1(void* self, int64_t query) {
     QWidget_UpdateMicroFocus1((QWidget*)self, query);
 }
 
-void q_widget_on_update_micro_focus1(void* self, void (*slot)(void*, int64_t)) {
-    QWidget_OnUpdateMicroFocus1((QWidget*)self, (intptr_t)slot);
+void q_widget_on_update_micro_focus1(void* self, void (*callback)(void*, int64_t)) {
+    QWidget_OnUpdateMicroFocus1((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_update_micro_focus1(void* self, int64_t query) {
@@ -1789,8 +1789,8 @@ void q_widget_create1(void* self, uint64_t param1) {
     QWidget_Create1((QWidget*)self, param1);
 }
 
-void q_widget_on_create1(void* self, void (*slot)(void*, uint64_t)) {
-    QWidget_OnCreate1((QWidget*)self, (intptr_t)slot);
+void q_widget_on_create1(void* self, void (*callback)(void*, uint64_t)) {
+    QWidget_OnCreate1((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_create1(void* self, uint64_t param1) {
@@ -1801,8 +1801,8 @@ void q_widget_create2(void* self, uint64_t param1, bool initializeWindow) {
     QWidget_Create2((QWidget*)self, param1, initializeWindow);
 }
 
-void q_widget_on_create2(void* self, void (*slot)(void*, uint64_t, bool)) {
-    QWidget_OnCreate2((QWidget*)self, (intptr_t)slot);
+void q_widget_on_create2(void* self, void (*callback)(void*, uint64_t, bool)) {
+    QWidget_OnCreate2((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_create2(void* self, uint64_t param1, bool initializeWindow) {
@@ -1813,8 +1813,8 @@ void q_widget_create3(void* self, uint64_t param1, bool initializeWindow, bool d
     QWidget_Create3((QWidget*)self, param1, initializeWindow, destroyOldWindow);
 }
 
-void q_widget_on_create3(void* self, void (*slot)(void*, uint64_t, bool, bool)) {
-    QWidget_OnCreate3((QWidget*)self, (intptr_t)slot);
+void q_widget_on_create3(void* self, void (*callback)(void*, uint64_t, bool, bool)) {
+    QWidget_OnCreate3((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_create3(void* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow) {
@@ -1825,8 +1825,8 @@ void q_widget_destroy1(void* self, bool destroyWindow) {
     QWidget_Destroy1((QWidget*)self, destroyWindow);
 }
 
-void q_widget_on_destroy1(void* self, void (*slot)(void*, bool)) {
-    QWidget_OnDestroy1((QWidget*)self, (intptr_t)slot);
+void q_widget_on_destroy1(void* self, void (*callback)(void*, bool)) {
+    QWidget_OnDestroy1((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_destroy1(void* self, bool destroyWindow) {
@@ -1837,8 +1837,8 @@ void q_widget_destroy2(void* self, bool destroyWindow, bool destroySubWindows) {
     QWidget_Destroy2((QWidget*)self, destroyWindow, destroySubWindows);
 }
 
-void q_widget_on_destroy2(void* self, void (*slot)(void*, bool, bool)) {
-    QWidget_OnDestroy2((QWidget*)self, (intptr_t)slot);
+void q_widget_on_destroy2(void* self, void (*callback)(void*, bool, bool)) {
+    QWidget_OnDestroy2((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_qbase_destroy2(void* self, bool destroyWindow, bool destroySubWindows) {
@@ -1945,12 +1945,16 @@ const char** q_widget_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_widget_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1968,8 +1972,8 @@ void q_widget_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_widget_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_widget_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_widget_parent(void* self) {
@@ -2004,8 +2008,8 @@ void q_widget_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_widget_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_widget_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_widget_painting_active(void* self) {
@@ -2068,8 +2072,8 @@ bool q_widget_qbase_event_filter(void* self, void* watched, void* event) {
     return QWidget_QBaseEventFilter((QWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_widget_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QWidget_OnEventFilter((QWidget*)self, (intptr_t)slot);
+void q_widget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QWidget_OnEventFilter((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_timer_event(void* self, void* event) {
@@ -2080,8 +2084,8 @@ void q_widget_qbase_timer_event(void* self, void* event) {
     QWidget_QBaseTimerEvent((QWidget*)self, (QTimerEvent*)event);
 }
 
-void q_widget_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnTimerEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnTimerEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_child_event(void* self, void* event) {
@@ -2092,8 +2096,8 @@ void q_widget_qbase_child_event(void* self, void* event) {
     QWidget_QBaseChildEvent((QWidget*)self, (QChildEvent*)event);
 }
 
-void q_widget_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnChildEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnChildEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_custom_event(void* self, void* event) {
@@ -2104,8 +2108,8 @@ void q_widget_qbase_custom_event(void* self, void* event) {
     QWidget_QBaseCustomEvent((QWidget*)self, (QEvent*)event);
 }
 
-void q_widget_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnCustomEvent((QWidget*)self, (intptr_t)slot);
+void q_widget_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnCustomEvent((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_connect_notify(void* self, void* signal) {
@@ -2116,8 +2120,8 @@ void q_widget_qbase_connect_notify(void* self, void* signal) {
     QWidget_QBaseConnectNotify((QWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_widget_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnConnectNotify((QWidget*)self, (intptr_t)slot);
+void q_widget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnConnectNotify((QWidget*)self, (intptr_t)callback);
 }
 
 void q_widget_disconnect_notify(void* self, void* signal) {
@@ -2128,8 +2132,8 @@ void q_widget_qbase_disconnect_notify(void* self, void* signal) {
     QWidget_QBaseDisconnectNotify((QWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_widget_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QWidget_OnDisconnectNotify((QWidget*)self, (intptr_t)slot);
+void q_widget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QWidget_OnDisconnectNotify((QWidget*)self, (intptr_t)callback);
 }
 
 QObject* q_widget_sender(void* self) {
@@ -2140,8 +2144,8 @@ QObject* q_widget_qbase_sender(void* self) {
     return QWidget_QBaseSender((QWidget*)self);
 }
 
-void q_widget_on_sender(void* self, QObject* (*slot)()) {
-    QWidget_OnSender((QWidget*)self, (intptr_t)slot);
+void q_widget_on_sender(void* self, QObject* (*callback)()) {
+    QWidget_OnSender((QWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_widget_sender_signal_index(void* self) {
@@ -2152,8 +2156,8 @@ int32_t q_widget_qbase_sender_signal_index(void* self) {
     return QWidget_QBaseSenderSignalIndex((QWidget*)self);
 }
 
-void q_widget_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QWidget_OnSenderSignalIndex((QWidget*)self, (intptr_t)slot);
+void q_widget_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QWidget_OnSenderSignalIndex((QWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_widget_receivers(void* self, const char* signal) {
@@ -2164,8 +2168,8 @@ int32_t q_widget_qbase_receivers(void* self, const char* signal) {
     return QWidget_QBaseReceivers((QWidget*)self, signal);
 }
 
-void q_widget_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QWidget_OnReceivers((QWidget*)self, (intptr_t)slot);
+void q_widget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QWidget_OnReceivers((QWidget*)self, (intptr_t)callback);
 }
 
 bool q_widget_is_signal_connected(void* self, void* signal) {
@@ -2176,8 +2180,8 @@ bool q_widget_qbase_is_signal_connected(void* self, void* signal) {
     return QWidget_QBaseIsSignalConnected((QWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_widget_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QWidget_OnIsSignalConnected((QWidget*)self, (intptr_t)slot);
+void q_widget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QWidget_OnIsSignalConnected((QWidget*)self, (intptr_t)callback);
 }
 
 double q_widget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2188,12 +2192,12 @@ double q_widget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
     return QWidget_QBaseGetDecodedMetricF((QWidget*)self, metricA, metricB);
 }
 
-void q_widget_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QWidget_OnGetDecodedMetricF((QWidget*)self, (intptr_t)slot);
+void q_widget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QWidget_OnGetDecodedMetricF((QWidget*)self, (intptr_t)callback);
 }
 
-void q_widget_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_widget_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_widget_delete(void* self) {

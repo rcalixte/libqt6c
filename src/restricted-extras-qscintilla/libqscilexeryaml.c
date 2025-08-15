@@ -30,8 +30,8 @@ int32_t q_scilexeryaml_metacall(void* self, int64_t param1, int param2, void* pa
     return QsciLexerYAML_Metacall((QsciLexerYAML*)self, param1, param2, param3);
 }
 
-void q_scilexeryaml_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QsciLexerYAML_OnMetacall((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QsciLexerYAML_OnMetacall((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -92,8 +92,8 @@ void q_scilexeryaml_set_fold_comments(void* self, bool fold) {
     QsciLexerYAML_SetFoldComments((QsciLexerYAML*)self, fold);
 }
 
-void q_scilexeryaml_on_set_fold_comments(void* self, void (*slot)(void*, bool)) {
-    QsciLexerYAML_OnSetFoldComments((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_fold_comments(void* self, void (*callback)(void*, bool)) {
+    QsciLexerYAML_OnSetFoldComments((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_qbase_set_fold_comments(void* self, bool fold) {
@@ -104,8 +104,8 @@ bool q_scilexeryaml_read_properties(void* self, void* qs, const char* prefix) {
     return QsciLexerYAML_ReadProperties((QsciLexerYAML*)self, (QSettings*)qs, qstring(prefix));
 }
 
-void q_scilexeryaml_on_read_properties(void* self, bool (*slot)(void*, void*, const char*)) {
-    QsciLexerYAML_OnReadProperties((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_read_properties(void* self, bool (*callback)(void*, void*, const char*)) {
+    QsciLexerYAML_OnReadProperties((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_qbase_read_properties(void* self, void* qs, const char* prefix) {
@@ -116,8 +116,8 @@ bool q_scilexeryaml_write_properties(void* self, void* qs, const char* prefix) {
     return QsciLexerYAML_WriteProperties((QsciLexerYAML*)self, (QSettings*)qs, qstring(prefix));
 }
 
-void q_scilexeryaml_on_write_properties(void* self, bool (*slot)(void*, void*, const char*)) {
-    QsciLexerYAML_OnWriteProperties((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_write_properties(void* self, bool (*callback)(void*, void*, const char*)) {
+    QsciLexerYAML_OnWriteProperties((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_qbase_write_properties(void* self, void* qs, const char* prefix) {
@@ -178,40 +178,40 @@ void q_scilexeryaml_color_changed(void* self, void* c, int style) {
     QsciLexer_ColorChanged((QsciLexer*)self, (QColor*)c, style);
 }
 
-void q_scilexeryaml_on_color_changed(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexer_Connect_ColorChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexeryaml_on_color_changed(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexer_Connect_ColorChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_eol_fill_changed(void* self, bool eolfilled, int style) {
     QsciLexer_EolFillChanged((QsciLexer*)self, eolfilled, style);
 }
 
-void q_scilexeryaml_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int)) {
-    QsciLexer_Connect_EolFillChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexeryaml_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int)) {
+    QsciLexer_Connect_EolFillChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_font_changed(void* self, void* f, int style) {
     QsciLexer_FontChanged((QsciLexer*)self, (QFont*)f, style);
 }
 
-void q_scilexeryaml_on_font_changed(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexer_Connect_FontChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexeryaml_on_font_changed(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexer_Connect_FontChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_paper_changed(void* self, void* c, int style) {
     QsciLexer_PaperChanged((QsciLexer*)self, (QColor*)c, style);
 }
 
-void q_scilexeryaml_on_paper_changed(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexer_Connect_PaperChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexeryaml_on_paper_changed(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexer_Connect_PaperChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_property_changed(void* self, const char* prop, const char* val) {
     QsciLexer_PropertyChanged((QsciLexer*)self, prop, val);
 }
 
-void q_scilexeryaml_on_property_changed(void* self, void (*slot)(void*, const char*, const char*)) {
-    QsciLexer_Connect_PropertyChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexeryaml_on_property_changed(void* self, void (*callback)(void*, const char*, const char*)) {
+    QsciLexer_Connect_PropertyChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_read_settings2(void* self, void* qs, const char* prefix) {
@@ -326,12 +326,16 @@ const char** q_scilexeryaml_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scilexeryaml_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -349,8 +353,8 @@ void q_scilexeryaml_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_scilexeryaml_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_scilexeryaml_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_scilexeryaml_parent(void* self) {
@@ -385,8 +389,8 @@ void q_scilexeryaml_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_scilexeryaml_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_scilexeryaml_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_lexer_id(void* self) {
@@ -397,8 +401,8 @@ int32_t q_scilexeryaml_qbase_lexer_id(void* self) {
     return QsciLexerYAML_QBaseLexerId((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_lexer_id(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnLexerId((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_lexer_id(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnLexerId((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char* q_scilexeryaml_auto_completion_fillups(void* self) {
@@ -409,20 +413,24 @@ const char* q_scilexeryaml_qbase_auto_completion_fillups(void* self) {
     return QsciLexerYAML_QBaseAutoCompletionFillups((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_auto_completion_fillups(void* self, const char* (*slot)()) {
-    QsciLexerYAML_OnAutoCompletionFillups((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_auto_completion_fillups(void* self, const char* (*callback)()) {
+    QsciLexerYAML_OnAutoCompletionFillups((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char** q_scilexeryaml_auto_completion_word_separators(void* self) {
     libqt_list _arr = QsciLexerYAML_AutoCompletionWordSeparators((QsciLexerYAML*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scilexeryaml_auto_completion_word_separators");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -432,19 +440,23 @@ const char** q_scilexeryaml_qbase_auto_completion_word_separators(void* self) {
     libqt_list _arr = QsciLexerYAML_QBaseAutoCompletionWordSeparators((QsciLexerYAML*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scilexeryaml_auto_completion_word_separators");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_scilexeryaml_on_auto_completion_word_separators(void* self, const char** (*slot)()) {
-    QsciLexerYAML_OnAutoCompletionWordSeparators((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_auto_completion_word_separators(void* self, const char** (*callback)()) {
+    QsciLexerYAML_OnAutoCompletionWordSeparators((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char* q_scilexeryaml_block_end(void* self, int* style) {
@@ -455,8 +467,8 @@ const char* q_scilexeryaml_qbase_block_end(void* self, int* style) {
     return QsciLexerYAML_QBaseBlockEnd((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_block_end(void* self, const char* (*slot)(void*, int*)) {
-    QsciLexerYAML_OnBlockEnd((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_block_end(void* self, const char* (*callback)(void*, int*)) {
+    QsciLexerYAML_OnBlockEnd((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_block_lookback(void* self) {
@@ -467,8 +479,8 @@ int32_t q_scilexeryaml_qbase_block_lookback(void* self) {
     return QsciLexerYAML_QBaseBlockLookback((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_block_lookback(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnBlockLookback((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_block_lookback(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnBlockLookback((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char* q_scilexeryaml_block_start(void* self, int* style) {
@@ -479,8 +491,8 @@ const char* q_scilexeryaml_qbase_block_start(void* self, int* style) {
     return QsciLexerYAML_QBaseBlockStart((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_block_start(void* self, const char* (*slot)(void*, int*)) {
-    QsciLexerYAML_OnBlockStart((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_block_start(void* self, const char* (*callback)(void*, int*)) {
+    QsciLexerYAML_OnBlockStart((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char* q_scilexeryaml_block_start_keyword(void* self, int* style) {
@@ -491,8 +503,8 @@ const char* q_scilexeryaml_qbase_block_start_keyword(void* self, int* style) {
     return QsciLexerYAML_QBaseBlockStartKeyword((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_block_start_keyword(void* self, const char* (*slot)(void*, int*)) {
-    QsciLexerYAML_OnBlockStartKeyword((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_block_start_keyword(void* self, const char* (*callback)(void*, int*)) {
+    QsciLexerYAML_OnBlockStartKeyword((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_brace_style(void* self) {
@@ -503,8 +515,8 @@ int32_t q_scilexeryaml_qbase_brace_style(void* self) {
     return QsciLexerYAML_QBaseBraceStyle((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_brace_style(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnBraceStyle((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_brace_style(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnBraceStyle((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_case_sensitive(void* self) {
@@ -515,8 +527,8 @@ bool q_scilexeryaml_qbase_case_sensitive(void* self) {
     return QsciLexerYAML_QBaseCaseSensitive((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_case_sensitive(void* self, bool (*slot)()) {
-    QsciLexerYAML_OnCaseSensitive((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_case_sensitive(void* self, bool (*callback)()) {
+    QsciLexerYAML_OnCaseSensitive((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexeryaml_color(void* self, int style) {
@@ -527,8 +539,8 @@ QColor* q_scilexeryaml_qbase_color(void* self, int style) {
     return QsciLexerYAML_QBaseColor((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_color(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerYAML_OnColor((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_color(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerYAML_OnColor((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_eol_fill(void* self, int style) {
@@ -539,8 +551,8 @@ bool q_scilexeryaml_qbase_eol_fill(void* self, int style) {
     return QsciLexerYAML_QBaseEolFill((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_eol_fill(void* self, bool (*slot)(void*, int)) {
-    QsciLexerYAML_OnEolFill((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_eol_fill(void* self, bool (*callback)(void*, int)) {
+    QsciLexerYAML_OnEolFill((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexeryaml_font(void* self, int style) {
@@ -551,8 +563,8 @@ QFont* q_scilexeryaml_qbase_font(void* self, int style) {
     return QsciLexerYAML_QBaseFont((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_font(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerYAML_OnFont((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_font(void* self, QFont* (*callback)(void*, int)) {
+    QsciLexerYAML_OnFont((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_indentation_guide_view(void* self) {
@@ -563,8 +575,8 @@ int32_t q_scilexeryaml_qbase_indentation_guide_view(void* self) {
     return QsciLexerYAML_QBaseIndentationGuideView((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_indentation_guide_view(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnIndentationGuideView((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_indentation_guide_view(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnIndentationGuideView((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_default_style(void* self) {
@@ -575,8 +587,8 @@ int32_t q_scilexeryaml_qbase_default_style(void* self) {
     return QsciLexerYAML_QBaseDefaultStyle((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_default_style(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnDefaultStyle((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_default_style(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnDefaultStyle((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexeryaml_paper(void* self, int style) {
@@ -587,8 +599,8 @@ QColor* q_scilexeryaml_qbase_paper(void* self, int style) {
     return QsciLexerYAML_QBasePaper((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_paper(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerYAML_OnPaper((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_paper(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerYAML_OnPaper((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexeryaml_default_color2(void* self, int style) {
@@ -599,8 +611,8 @@ QColor* q_scilexeryaml_qbase_default_color2(void* self, int style) {
     return QsciLexerYAML_QBaseDefaultColor2((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerYAML_OnDefaultColor2((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerYAML_OnDefaultColor2((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexeryaml_default_font2(void* self, int style) {
@@ -611,8 +623,8 @@ QFont* q_scilexeryaml_qbase_default_font2(void* self, int style) {
     return QsciLexerYAML_QBaseDefaultFont2((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerYAML_OnDefaultFont2((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
+    QsciLexerYAML_OnDefaultFont2((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexeryaml_default_paper2(void* self, int style) {
@@ -623,8 +635,8 @@ QColor* q_scilexeryaml_qbase_default_paper2(void* self, int style) {
     return QsciLexerYAML_QBaseDefaultPaper2((QsciLexerYAML*)self, style);
 }
 
-void q_scilexeryaml_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerYAML_OnDefaultPaper2((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerYAML_OnDefaultPaper2((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_set_editor(void* self, void* editor) {
@@ -635,8 +647,8 @@ void q_scilexeryaml_qbase_set_editor(void* self, void* editor) {
     QsciLexerYAML_QBaseSetEditor((QsciLexerYAML*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexeryaml_on_set_editor(void* self, void (*slot)(void*, void*)) {
-    QsciLexerYAML_OnSetEditor((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_editor(void* self, void (*callback)(void*, void*)) {
+    QsciLexerYAML_OnSetEditor((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_style_bits_needed(void* self) {
@@ -647,8 +659,8 @@ int32_t q_scilexeryaml_qbase_style_bits_needed(void* self) {
     return QsciLexerYAML_QBaseStyleBitsNeeded((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_style_bits_needed(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnStyleBitsNeeded((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_style_bits_needed(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnStyleBitsNeeded((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char* q_scilexeryaml_word_characters(void* self) {
@@ -659,8 +671,8 @@ const char* q_scilexeryaml_qbase_word_characters(void* self) {
     return QsciLexerYAML_QBaseWordCharacters((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_word_characters(void* self, const char* (*slot)()) {
-    QsciLexerYAML_OnWordCharacters((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_word_characters(void* self, const char* (*callback)()) {
+    QsciLexerYAML_OnWordCharacters((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_set_auto_indent_style(void* self, int autoindentstyle) {
@@ -671,8 +683,8 @@ void q_scilexeryaml_qbase_set_auto_indent_style(void* self, int autoindentstyle)
     QsciLexerYAML_QBaseSetAutoIndentStyle((QsciLexerYAML*)self, autoindentstyle);
 }
 
-void q_scilexeryaml_on_set_auto_indent_style(void* self, void (*slot)(void*, int)) {
-    QsciLexerYAML_OnSetAutoIndentStyle((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
+    QsciLexerYAML_OnSetAutoIndentStyle((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_set_color(void* self, void* c, int style) {
@@ -683,8 +695,8 @@ void q_scilexeryaml_qbase_set_color(void* self, void* c, int style) {
     QsciLexerYAML_QBaseSetColor((QsciLexerYAML*)self, (QColor*)c, style);
 }
 
-void q_scilexeryaml_on_set_color(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexerYAML_OnSetColor((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_color(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexerYAML_OnSetColor((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_set_eol_fill(void* self, bool eoffill, int style) {
@@ -695,8 +707,8 @@ void q_scilexeryaml_qbase_set_eol_fill(void* self, bool eoffill, int style) {
     QsciLexerYAML_QBaseSetEolFill((QsciLexerYAML*)self, eoffill, style);
 }
 
-void q_scilexeryaml_on_set_eol_fill(void* self, void (*slot)(void*, bool, int)) {
-    QsciLexerYAML_OnSetEolFill((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
+    QsciLexerYAML_OnSetEolFill((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_set_font(void* self, void* f, int style) {
@@ -707,8 +719,8 @@ void q_scilexeryaml_qbase_set_font(void* self, void* f, int style) {
     QsciLexerYAML_QBaseSetFont((QsciLexerYAML*)self, (QFont*)f, style);
 }
 
-void q_scilexeryaml_on_set_font(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexerYAML_OnSetFont((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_font(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexerYAML_OnSetFont((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_set_paper(void* self, void* c, int style) {
@@ -719,8 +731,8 @@ void q_scilexeryaml_qbase_set_paper(void* self, void* c, int style) {
     QsciLexerYAML_QBaseSetPaper((QsciLexerYAML*)self, (QColor*)c, style);
 }
 
-void q_scilexeryaml_on_set_paper(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexerYAML_OnSetPaper((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexerYAML_OnSetPaper((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_event(void* self, void* event) {
@@ -731,8 +743,8 @@ bool q_scilexeryaml_qbase_event(void* self, void* event) {
     return QsciLexerYAML_QBaseEvent((QsciLexerYAML*)self, (QEvent*)event);
 }
 
-void q_scilexeryaml_on_event(void* self, bool (*slot)(void*, void*)) {
-    QsciLexerYAML_OnEvent((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_event(void* self, bool (*callback)(void*, void*)) {
+    QsciLexerYAML_OnEvent((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_event_filter(void* self, void* watched, void* event) {
@@ -743,8 +755,8 @@ bool q_scilexeryaml_qbase_event_filter(void* self, void* watched, void* event) {
     return QsciLexerYAML_QBaseEventFilter((QsciLexerYAML*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_scilexeryaml_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QsciLexerYAML_OnEventFilter((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QsciLexerYAML_OnEventFilter((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_timer_event(void* self, void* event) {
@@ -755,8 +767,8 @@ void q_scilexeryaml_qbase_timer_event(void* self, void* event) {
     QsciLexerYAML_QBaseTimerEvent((QsciLexerYAML*)self, (QTimerEvent*)event);
 }
 
-void q_scilexeryaml_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QsciLexerYAML_OnTimerEvent((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QsciLexerYAML_OnTimerEvent((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_child_event(void* self, void* event) {
@@ -767,8 +779,8 @@ void q_scilexeryaml_qbase_child_event(void* self, void* event) {
     QsciLexerYAML_QBaseChildEvent((QsciLexerYAML*)self, (QChildEvent*)event);
 }
 
-void q_scilexeryaml_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QsciLexerYAML_OnChildEvent((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QsciLexerYAML_OnChildEvent((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_custom_event(void* self, void* event) {
@@ -779,8 +791,8 @@ void q_scilexeryaml_qbase_custom_event(void* self, void* event) {
     QsciLexerYAML_QBaseCustomEvent((QsciLexerYAML*)self, (QEvent*)event);
 }
 
-void q_scilexeryaml_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QsciLexerYAML_OnCustomEvent((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QsciLexerYAML_OnCustomEvent((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_connect_notify(void* self, void* signal) {
@@ -791,8 +803,8 @@ void q_scilexeryaml_qbase_connect_notify(void* self, void* signal) {
     QsciLexerYAML_QBaseConnectNotify((QsciLexerYAML*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexeryaml_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciLexerYAML_OnConnectNotify((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciLexerYAML_OnConnectNotify((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_disconnect_notify(void* self, void* signal) {
@@ -803,8 +815,8 @@ void q_scilexeryaml_qbase_disconnect_notify(void* self, void* signal) {
     QsciLexerYAML_QBaseDisconnectNotify((QsciLexerYAML*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexeryaml_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciLexerYAML_OnDisconnectNotify((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciLexerYAML_OnDisconnectNotify((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 char* q_scilexeryaml_text_as_bytes(void* self, const char* text) {
@@ -821,8 +833,8 @@ char* q_scilexeryaml_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexeryaml_on_text_as_bytes(void* self, char* (*slot)(void*, const char*)) {
-    QsciLexerYAML_OnTextAsBytes((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+    QsciLexerYAML_OnTextAsBytes((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 const char* q_scilexeryaml_bytes_as_text(void* self, const char* bytes, int size) {
@@ -839,8 +851,8 @@ const char* q_scilexeryaml_qbase_bytes_as_text(void* self, const char* bytes, in
     return _ret;
 }
 
-void q_scilexeryaml_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int)) {
-    QsciLexerYAML_OnBytesAsText((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int)) {
+    QsciLexerYAML_OnBytesAsText((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 QObject* q_scilexeryaml_sender(void* self) {
@@ -851,8 +863,8 @@ QObject* q_scilexeryaml_qbase_sender(void* self) {
     return QsciLexerYAML_QBaseSender((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_sender(void* self, QObject* (*slot)()) {
-    QsciLexerYAML_OnSender((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_sender(void* self, QObject* (*callback)()) {
+    QsciLexerYAML_OnSender((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_sender_signal_index(void* self) {
@@ -863,8 +875,8 @@ int32_t q_scilexeryaml_qbase_sender_signal_index(void* self) {
     return QsciLexerYAML_QBaseSenderSignalIndex((QsciLexerYAML*)self);
 }
 
-void q_scilexeryaml_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QsciLexerYAML_OnSenderSignalIndex((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QsciLexerYAML_OnSenderSignalIndex((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexeryaml_receivers(void* self, const char* signal) {
@@ -875,8 +887,8 @@ int32_t q_scilexeryaml_qbase_receivers(void* self, const char* signal) {
     return QsciLexerYAML_QBaseReceivers((QsciLexerYAML*)self, signal);
 }
 
-void q_scilexeryaml_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QsciLexerYAML_OnReceivers((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QsciLexerYAML_OnReceivers((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
 bool q_scilexeryaml_is_signal_connected(void* self, void* signal) {
@@ -887,12 +899,12 @@ bool q_scilexeryaml_qbase_is_signal_connected(void* self, void* signal) {
     return QsciLexerYAML_QBaseIsSignalConnected((QsciLexerYAML*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexeryaml_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QsciLexerYAML_OnIsSignalConnected((QsciLexerYAML*)self, (intptr_t)slot);
+void q_scilexeryaml_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QsciLexerYAML_OnIsSignalConnected((QsciLexerYAML*)self, (intptr_t)callback);
 }
 
-void q_scilexeryaml_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_scilexeryaml_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_scilexeryaml_delete(void* self) {

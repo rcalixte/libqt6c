@@ -23,8 +23,8 @@ int32_t q_sciapis_metacall(void* self, int64_t param1, int param2, void* param3)
     return QsciAPIs_Metacall((QsciAPIs*)self, param1, param2, param3);
 }
 
-void q_sciapis_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QsciAPIs_OnMetacall((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QsciAPIs_OnMetacall((QsciAPIs*)self, (intptr_t)callback);
 }
 
 int32_t q_sciapis_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -83,35 +83,54 @@ bool q_sciapis_save_prepared(void* self) {
 
 void q_sciapis_update_auto_completion_list(void* self, const char* context[], const char* list[]) {
     size_t context_len = libqt_strv_length(context);
-    libqt_string* context_qstr = malloc(context_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < context_len; ++_i) {
-        context_qstr[_i] = qstring(context[_i]);
+    libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
+    if (context_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_update_auto_completion_list");
+        abort();
+    }
+    for (size_t i = 0; i < context_len; ++i) {
+        context_qstr[i] = qstring(context[i]);
     }
     libqt_list context_list = qlist(context_qstr, context_len);
     size_t list_len = libqt_strv_length(list);
-    libqt_string* list_qstr = malloc(list_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < list_len; ++_i) {
-        list_qstr[_i] = qstring(list[_i]);
+    libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
+    if (list_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_update_auto_completion_list");
+        abort();
+    }
+    for (size_t i = 0; i < list_len; ++i) {
+        list_qstr[i] = qstring(list[i]);
     }
     libqt_list list_list = qlist(list_qstr, list_len);
     QsciAPIs_UpdateAutoCompletionList((QsciAPIs*)self, context_list, list_list);
+    free(context_qstr);
+
+    free(list_qstr);
 }
 
-void q_sciapis_on_update_auto_completion_list(void* self, void (*slot)(void*, const char*, const char*)) {
-    QsciAPIs_OnUpdateAutoCompletionList((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**)) {
+    QsciAPIs_OnUpdateAutoCompletionList((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[], const char* list[]) {
     size_t context_len = libqt_strv_length(context);
-    libqt_string* context_qstr = malloc(context_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < context_len; ++_i) {
-        context_qstr[_i] = qstring(context[_i]);
+    libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
+    if (context_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_update_auto_completion_list");
+        abort();
+    }
+    for (size_t i = 0; i < context_len; ++i) {
+        context_qstr[i] = qstring(context[i]);
     }
     libqt_list context_list = qlist(context_qstr, context_len);
     size_t list_len = libqt_strv_length(list);
-    libqt_string* list_qstr = malloc(list_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < list_len; ++_i) {
-        list_qstr[_i] = qstring(list[_i]);
+    libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
+    if (list_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_update_auto_completion_list");
+        abort();
+    }
+    for (size_t i = 0; i < list_len; ++i) {
+        list_qstr[i] = qstring(list[i]);
     }
     libqt_list list_list = qlist(list_qstr, list_len);
     QsciAPIs_QBaseUpdateAutoCompletionList((QsciAPIs*)self, context_list, list_list);
@@ -121,8 +140,8 @@ void q_sciapis_auto_completion_selected(void* self, const char* sel) {
     QsciAPIs_AutoCompletionSelected((QsciAPIs*)self, qstring(sel));
 }
 
-void q_sciapis_on_auto_completion_selected(void* self, void (*slot)(void*, const char*)) {
-    QsciAPIs_OnAutoCompletionSelected((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_auto_completion_selected(void* self, void (*callback)(void*, const char*)) {
+    QsciAPIs_OnAutoCompletionSelected((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel) {
@@ -131,45 +150,62 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel) {
 
 const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
-    libqt_string* context_qstr = malloc(context_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < context_len; ++_i) {
-        context_qstr[_i] = qstring(context[_i]);
+    libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
+    if (context_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_call_tips");
+        abort();
+    }
+    for (size_t i = 0; i < context_len; ++i) {
+        context_qstr[i] = qstring(context[i]);
     }
     libqt_list context_list = qlist(context_qstr, context_len);
     libqt_list _arr = QsciAPIs_CallTips((QsciAPIs*)self, context_list, commas, style, shifts);
+    free(context_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_call_tips");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_sciapis_on_call_tips(void* self, const char** (*slot)(void*, const char*, int, int64_t, libqt_list)) {
-    QsciAPIs_OnCallTips((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int64_t, libqt_list)) {
+    QsciAPIs_OnCallTips((QsciAPIs*)self, (intptr_t)callback);
 }
 
 const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
-    libqt_string* context_qstr = malloc(context_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < context_len; ++_i) {
-        context_qstr[_i] = qstring(context[_i]);
+    libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
+    if (context_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_call_tips");
+        abort();
+    }
+    for (size_t i = 0; i < context_len; ++i) {
+        context_qstr[i] = qstring(context[i]);
     }
     libqt_list context_list = qlist(context_qstr, context_len);
     libqt_list _arr = QsciAPIs_QBaseCallTips((QsciAPIs*)self, context_list, commas, style, shifts);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_call_tips");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -179,8 +215,8 @@ bool q_sciapis_event(void* self, void* e) {
     return QsciAPIs_Event((QsciAPIs*)self, (QEvent*)e);
 }
 
-void q_sciapis_on_event(void* self, bool (*slot)(void*, void*)) {
-    QsciAPIs_OnEvent((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_event(void* self, bool (*callback)(void*, void*)) {
+    QsciAPIs_OnEvent((QsciAPIs*)self, (intptr_t)callback);
 }
 
 bool q_sciapis_qbase_event(void* self, void* e) {
@@ -191,12 +227,16 @@ const char** q_sciapis_installed_a_p_i_files(void* self) {
     libqt_list _arr = QsciAPIs_InstalledAPIFiles((QsciAPIs*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_installed_a_p_i_files");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -206,24 +246,24 @@ void q_sciapis_api_preparation_cancelled(void* self) {
     QsciAPIs_ApiPreparationCancelled((QsciAPIs*)self);
 }
 
-void q_sciapis_on_api_preparation_cancelled(void* self, void (*slot)(void*)) {
-    QsciAPIs_Connect_ApiPreparationCancelled((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_api_preparation_cancelled(void* self, void (*callback)(void*)) {
+    QsciAPIs_Connect_ApiPreparationCancelled((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_api_preparation_started(void* self) {
     QsciAPIs_ApiPreparationStarted((QsciAPIs*)self);
 }
 
-void q_sciapis_on_api_preparation_started(void* self, void (*slot)(void*)) {
-    QsciAPIs_Connect_ApiPreparationStarted((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_api_preparation_started(void* self, void (*callback)(void*)) {
+    QsciAPIs_Connect_ApiPreparationStarted((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_api_preparation_finished(void* self) {
     QsciAPIs_ApiPreparationFinished((QsciAPIs*)self);
 }
 
-void q_sciapis_on_api_preparation_finished(void* self, void (*slot)(void*)) {
-    QsciAPIs_Connect_ApiPreparationFinished((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_api_preparation_finished(void* self, void (*callback)(void*)) {
+    QsciAPIs_Connect_ApiPreparationFinished((QsciAPIs*)self, (intptr_t)callback);
 }
 
 const char* q_sciapis_tr2(const char* s, const char* c) {
@@ -360,12 +400,16 @@ const char** q_sciapis_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciapis_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -383,8 +427,8 @@ void q_sciapis_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_sciapis_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_sciapis_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_sciapis_parent(void* self) {
@@ -419,8 +463,8 @@ void q_sciapis_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_sciapis_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_sciapis_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_sciapis_event_filter(void* self, void* watched, void* event) {
@@ -431,8 +475,8 @@ bool q_sciapis_qbase_event_filter(void* self, void* watched, void* event) {
     return QsciAPIs_QBaseEventFilter((QsciAPIs*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_sciapis_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QsciAPIs_OnEventFilter((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QsciAPIs_OnEventFilter((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_timer_event(void* self, void* event) {
@@ -443,8 +487,8 @@ void q_sciapis_qbase_timer_event(void* self, void* event) {
     QsciAPIs_QBaseTimerEvent((QsciAPIs*)self, (QTimerEvent*)event);
 }
 
-void q_sciapis_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QsciAPIs_OnTimerEvent((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QsciAPIs_OnTimerEvent((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_child_event(void* self, void* event) {
@@ -455,8 +499,8 @@ void q_sciapis_qbase_child_event(void* self, void* event) {
     QsciAPIs_QBaseChildEvent((QsciAPIs*)self, (QChildEvent*)event);
 }
 
-void q_sciapis_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QsciAPIs_OnChildEvent((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QsciAPIs_OnChildEvent((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_custom_event(void* self, void* event) {
@@ -467,8 +511,8 @@ void q_sciapis_qbase_custom_event(void* self, void* event) {
     QsciAPIs_QBaseCustomEvent((QsciAPIs*)self, (QEvent*)event);
 }
 
-void q_sciapis_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QsciAPIs_OnCustomEvent((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QsciAPIs_OnCustomEvent((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_connect_notify(void* self, void* signal) {
@@ -479,8 +523,8 @@ void q_sciapis_qbase_connect_notify(void* self, void* signal) {
     QsciAPIs_QBaseConnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
-void q_sciapis_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciAPIs_OnConnectNotify((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciAPIs_OnConnectNotify((QsciAPIs*)self, (intptr_t)callback);
 }
 
 void q_sciapis_disconnect_notify(void* self, void* signal) {
@@ -491,8 +535,8 @@ void q_sciapis_qbase_disconnect_notify(void* self, void* signal) {
     QsciAPIs_QBaseDisconnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
-void q_sciapis_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciAPIs_OnDisconnectNotify((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciAPIs_OnDisconnectNotify((QsciAPIs*)self, (intptr_t)callback);
 }
 
 QObject* q_sciapis_sender(void* self) {
@@ -503,8 +547,8 @@ QObject* q_sciapis_qbase_sender(void* self) {
     return QsciAPIs_QBaseSender((QsciAPIs*)self);
 }
 
-void q_sciapis_on_sender(void* self, QObject* (*slot)()) {
-    QsciAPIs_OnSender((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_sender(void* self, QObject* (*callback)()) {
+    QsciAPIs_OnSender((QsciAPIs*)self, (intptr_t)callback);
 }
 
 int32_t q_sciapis_sender_signal_index(void* self) {
@@ -515,8 +559,8 @@ int32_t q_sciapis_qbase_sender_signal_index(void* self) {
     return QsciAPIs_QBaseSenderSignalIndex((QsciAPIs*)self);
 }
 
-void q_sciapis_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QsciAPIs_OnSenderSignalIndex((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QsciAPIs_OnSenderSignalIndex((QsciAPIs*)self, (intptr_t)callback);
 }
 
 int32_t q_sciapis_receivers(void* self, const char* signal) {
@@ -527,8 +571,8 @@ int32_t q_sciapis_qbase_receivers(void* self, const char* signal) {
     return QsciAPIs_QBaseReceivers((QsciAPIs*)self, signal);
 }
 
-void q_sciapis_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QsciAPIs_OnReceivers((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QsciAPIs_OnReceivers((QsciAPIs*)self, (intptr_t)callback);
 }
 
 bool q_sciapis_is_signal_connected(void* self, void* signal) {
@@ -539,12 +583,12 @@ bool q_sciapis_qbase_is_signal_connected(void* self, void* signal) {
     return QsciAPIs_QBaseIsSignalConnected((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
-void q_sciapis_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QsciAPIs_OnIsSignalConnected((QsciAPIs*)self, (intptr_t)slot);
+void q_sciapis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QsciAPIs_OnIsSignalConnected((QsciAPIs*)self, (intptr_t)callback);
 }
 
-void q_sciapis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_sciapis_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_sciapis_delete(void* self) {

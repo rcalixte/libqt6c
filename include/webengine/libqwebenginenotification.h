@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,374 +15,443 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 const QMetaObject* q_webenginenotification_meta_object(void* self);
 
-/// ``` QWebEngineNotification* self, const char* param1 ```
+/// @param self QWebEngineNotification*
+/// @param param1 const char*
 void* q_webenginenotification_metacast(void* self, const char* param1);
 
-/// ``` QWebEngineNotification* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QWebEngineNotification*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_webenginenotification_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_webenginenotification_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#matches)
 ///
-/// ``` QWebEngineNotification* self, QWebEngineNotification* other ```
+/// @param self QWebEngineNotification*
+/// @param other QWebEngineNotification*
 bool q_webenginenotification_matches(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#origin)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 QUrl* q_webenginenotification_origin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#icon)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 QImage* q_webenginenotification_icon(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#title)
 ///
-/// ``` QWebEngineNotification* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNotification*
 const char* q_webenginenotification_title(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#message)
 ///
-/// ``` QWebEngineNotification* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNotification*
 const char* q_webenginenotification_message(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#tag)
 ///
-/// ``` QWebEngineNotification* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNotification*
 const char* q_webenginenotification_tag(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#language)
 ///
-/// ``` QWebEngineNotification* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNotification*
 const char* q_webenginenotification_language(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#direction)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_webenginenotification_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#show)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_show(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#click)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_click(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#close)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_close(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#closed)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_closed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#closed)
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*) ```
-void q_webenginenotification_on_closed(void* self, void (*slot)(void*));
+/// @param self QWebEngineNotification*
+/// @param callback void fn(QWebEngineNotification*)
+void q_webenginenotification_on_closed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_webenginenotification_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_webenginenotification_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QWebEngineNotification* self, QEvent* event ```
+/// @param self QWebEngineNotification*
+/// @param event QEvent*
 bool q_webenginenotification_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QWebEngineNotification* self, QObject* watched, QEvent* event ```
+/// @param self QWebEngineNotification*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_webenginenotification_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QWebEngineNotification* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNotification*
 const char* q_webenginenotification_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineNotification* self, char* name ```
+/// @param self QWebEngineNotification*
+/// @param name char*
 void q_webenginenotification_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 bool q_webenginenotification_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 bool q_webenginenotification_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 bool q_webenginenotification_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 bool q_webenginenotification_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QWebEngineNotification* self, bool b ```
+/// @param self QWebEngineNotification*
+/// @param b bool
 bool q_webenginenotification_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 QThread* q_webenginenotification_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineNotification* self, QThread* thread ```
+/// @param self QWebEngineNotification*
+/// @param thread QThread*
 bool q_webenginenotification_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineNotification* self, int interval ```
+/// @param self QWebEngineNotification*
+/// @param interval int
 int32_t q_webenginenotification_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineNotification* self, int id ```
+/// @param self QWebEngineNotification*
+/// @param id int
 void q_webenginenotification_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineNotification* self, enum Qt__TimerId id ```
+/// @param self QWebEngineNotification*
+/// @param id enum Qt__TimerId
 void q_webenginenotification_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 libqt_list /* of QObject* */ q_webenginenotification_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QWebEngineNotification* self, QObject* parent ```
+/// @param self QWebEngineNotification*
+/// @param parent QObject*
 void q_webenginenotification_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QWebEngineNotification* self, QObject* filterObj ```
+/// @param self QWebEngineNotification*
+/// @param filterObj QObject*
 void q_webenginenotification_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QWebEngineNotification* self, QObject* obj ```
+/// @param self QWebEngineNotification*
+/// @param obj QObject*
 void q_webenginenotification_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_webenginenotification_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineNotification* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QWebEngineNotification*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_webenginenotification_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_webenginenotification_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_webenginenotification_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QWebEngineNotification* self, const char* name, QVariant* value ```
+/// @param self QWebEngineNotification*
+/// @param name const char*
+/// @param value QVariant*
 bool q_webenginenotification_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QWebEngineNotification* self, const char* name ```
+/// @param self QWebEngineNotification*
+/// @param name const char*
 QVariant* q_webenginenotification_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QWebEngineNotification* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNotification*
 const char** q_webenginenotification_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 QBindingStorage* q_webenginenotification_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 const QBindingStorage* q_webenginenotification_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*) ```
-void q_webenginenotification_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QWebEngineNotification*
+/// @param callback void fn(QWebEngineNotification*)
+void q_webenginenotification_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 QObject* q_webenginenotification_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QWebEngineNotification* self, const char* classname ```
+/// @param self QWebEngineNotification*
+/// @param classname const char*
 bool q_webenginenotification_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineNotification* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QWebEngineNotification*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_webenginenotification_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineNotification* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QWebEngineNotification*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_webenginenotification_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginenotification_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineNotification* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QWebEngineNotification*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginenotification_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNotification* self, QObject* param1 ```
+/// @param self QWebEngineNotification*
+/// @param param1 QObject*
 void q_webenginenotification_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*, QObject*) ```
-void q_webenginenotification_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QWebEngineNotification*
+/// @param callback void fn(QWebEngineNotification*, QObject*)
+void q_webenginenotification_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -391,14 +459,15 @@ void q_webenginenotification_on_destroyed1(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineNotification* self, void (*slot)(QWebEngineNotification*, const char*) ```
-void q_webenginenotification_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QWebEngineNotification*
+/// @param callback void fn(QWebEngineNotification*, const char*)
+void q_webenginenotification_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenotification.html#dtor.QWebEngineNotification)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineNotification* self ```
+/// @param self QWebEngineNotification*
 void q_webenginenotification_delete(void* self);
 
 #endif

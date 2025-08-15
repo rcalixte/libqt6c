@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,21 +15,24 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#add)
 ///
-/// ``` QWebEngineClientCertificateStore* self, QSslCertificate* certificate, QSslKey* privateKey ```
+/// @param self QWebEngineClientCertificateStore*
+/// @param certificate QSslCertificate*
+/// @param privateKey QSslKey*
 void q_webengineclientcertificatestore_add(void* self, void* certificate, void* privateKey);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#certificates)
 ///
-/// ``` QWebEngineClientCertificateStore* self ```
+/// @param self QWebEngineClientCertificateStore*
 libqt_list /* of QSslCertificate* */ q_webengineclientcertificatestore_certificates(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#remove)
 ///
-/// ``` QWebEngineClientCertificateStore* self, QSslCertificate* certificate ```
+/// @param self QWebEngineClientCertificateStore*
+/// @param certificate QSslCertificate*
 void q_webengineclientcertificatestore_remove(void* self, void* certificate);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificatestore.html#clear)
 ///
-/// ``` QWebEngineClientCertificateStore* self ```
+/// @param self QWebEngineClientCertificateStore*
 void q_webengineclientcertificatestore_clear(void* self);
 #endif

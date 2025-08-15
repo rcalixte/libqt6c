@@ -27,8 +27,8 @@ int32_t q_thread_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QThread_Metacall((QThread*)self, param1, param2, param3);
 }
 
-void q_thread_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QThread_OnMetacall((QThread*)self, (intptr_t)slot);
+void q_thread_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QThread_OnMetacall((QThread*)self, (intptr_t)callback);
 }
 
 int32_t q_thread_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -106,8 +106,8 @@ bool q_thread_event(void* self, void* event) {
     return QThread_Event((QThread*)self, (QEvent*)event);
 }
 
-void q_thread_on_event(void* self, bool (*slot)(void*, void*)) {
-    QThread_OnEvent((QThread*)self, (intptr_t)slot);
+void q_thread_on_event(void* self, bool (*callback)(void*, void*)) {
+    QThread_OnEvent((QThread*)self, (intptr_t)callback);
 }
 
 bool q_thread_qbase_event(void* self, void* event) {
@@ -162,8 +162,8 @@ void q_thread_run(void* self) {
     QThread_Run((QThread*)self);
 }
 
-void q_thread_on_run(void* self, void (*slot)()) {
-    QThread_OnRun((QThread*)self, (intptr_t)slot);
+void q_thread_on_run(void* self, void (*callback)()) {
+    QThread_OnRun((QThread*)self, (intptr_t)callback);
 }
 
 void q_thread_qbase_run(void* self) {
@@ -174,8 +174,8 @@ int32_t q_thread_exec(void* self) {
     return QThread_Exec((QThread*)self);
 }
 
-void q_thread_on_exec(void* self, int32_t (*slot)()) {
-    QThread_OnExec((QThread*)self, (intptr_t)slot);
+void q_thread_on_exec(void* self, int32_t (*callback)()) {
+    QThread_OnExec((QThread*)self, (intptr_t)callback);
 }
 
 int32_t q_thread_qbase_exec(void* self) {
@@ -312,12 +312,16 @@ const char** q_thread_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_thread_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -335,8 +339,8 @@ void q_thread_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_thread_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_thread_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_thread_parent(void* self) {
@@ -371,8 +375,8 @@ void q_thread_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_thread_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_thread_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_thread_event_filter(void* self, void* watched, void* event) {
@@ -383,8 +387,8 @@ bool q_thread_qbase_event_filter(void* self, void* watched, void* event) {
     return QThread_QBaseEventFilter((QThread*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_thread_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QThread_OnEventFilter((QThread*)self, (intptr_t)slot);
+void q_thread_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QThread_OnEventFilter((QThread*)self, (intptr_t)callback);
 }
 
 void q_thread_timer_event(void* self, void* event) {
@@ -395,8 +399,8 @@ void q_thread_qbase_timer_event(void* self, void* event) {
     QThread_QBaseTimerEvent((QThread*)self, (QTimerEvent*)event);
 }
 
-void q_thread_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QThread_OnTimerEvent((QThread*)self, (intptr_t)slot);
+void q_thread_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QThread_OnTimerEvent((QThread*)self, (intptr_t)callback);
 }
 
 void q_thread_child_event(void* self, void* event) {
@@ -407,8 +411,8 @@ void q_thread_qbase_child_event(void* self, void* event) {
     QThread_QBaseChildEvent((QThread*)self, (QChildEvent*)event);
 }
 
-void q_thread_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QThread_OnChildEvent((QThread*)self, (intptr_t)slot);
+void q_thread_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QThread_OnChildEvent((QThread*)self, (intptr_t)callback);
 }
 
 void q_thread_custom_event(void* self, void* event) {
@@ -419,8 +423,8 @@ void q_thread_qbase_custom_event(void* self, void* event) {
     QThread_QBaseCustomEvent((QThread*)self, (QEvent*)event);
 }
 
-void q_thread_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QThread_OnCustomEvent((QThread*)self, (intptr_t)slot);
+void q_thread_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QThread_OnCustomEvent((QThread*)self, (intptr_t)callback);
 }
 
 void q_thread_connect_notify(void* self, void* signal) {
@@ -431,8 +435,8 @@ void q_thread_qbase_connect_notify(void* self, void* signal) {
     QThread_QBaseConnectNotify((QThread*)self, (QMetaMethod*)signal);
 }
 
-void q_thread_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QThread_OnConnectNotify((QThread*)self, (intptr_t)slot);
+void q_thread_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QThread_OnConnectNotify((QThread*)self, (intptr_t)callback);
 }
 
 void q_thread_disconnect_notify(void* self, void* signal) {
@@ -443,8 +447,8 @@ void q_thread_qbase_disconnect_notify(void* self, void* signal) {
     QThread_QBaseDisconnectNotify((QThread*)self, (QMetaMethod*)signal);
 }
 
-void q_thread_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QThread_OnDisconnectNotify((QThread*)self, (intptr_t)slot);
+void q_thread_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QThread_OnDisconnectNotify((QThread*)self, (intptr_t)callback);
 }
 
 QObject* q_thread_sender(void* self) {
@@ -455,8 +459,8 @@ QObject* q_thread_qbase_sender(void* self) {
     return QThread_QBaseSender((QThread*)self);
 }
 
-void q_thread_on_sender(void* self, QObject* (*slot)()) {
-    QThread_OnSender((QThread*)self, (intptr_t)slot);
+void q_thread_on_sender(void* self, QObject* (*callback)()) {
+    QThread_OnSender((QThread*)self, (intptr_t)callback);
 }
 
 int32_t q_thread_sender_signal_index(void* self) {
@@ -467,8 +471,8 @@ int32_t q_thread_qbase_sender_signal_index(void* self) {
     return QThread_QBaseSenderSignalIndex((QThread*)self);
 }
 
-void q_thread_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QThread_OnSenderSignalIndex((QThread*)self, (intptr_t)slot);
+void q_thread_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QThread_OnSenderSignalIndex((QThread*)self, (intptr_t)callback);
 }
 
 int32_t q_thread_receivers(void* self, const char* signal) {
@@ -479,8 +483,8 @@ int32_t q_thread_qbase_receivers(void* self, const char* signal) {
     return QThread_QBaseReceivers((QThread*)self, signal);
 }
 
-void q_thread_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QThread_OnReceivers((QThread*)self, (intptr_t)slot);
+void q_thread_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QThread_OnReceivers((QThread*)self, (intptr_t)callback);
 }
 
 bool q_thread_is_signal_connected(void* self, void* signal) {
@@ -491,20 +495,20 @@ bool q_thread_qbase_is_signal_connected(void* self, void* signal) {
     return QThread_QBaseIsSignalConnected((QThread*)self, (QMetaMethod*)signal);
 }
 
-void q_thread_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QThread_OnIsSignalConnected((QThread*)self, (intptr_t)slot);
+void q_thread_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QThread_OnIsSignalConnected((QThread*)self, (intptr_t)callback);
 }
 
-void q_thread_on_started(void* self, void (*slot)(void*)) {
-    QThread_Connect_Started((QThread*)self, (intptr_t)slot);
+void q_thread_on_started(void* self, void (*callback)(void*)) {
+    QThread_Connect_Started((QThread*)self, (intptr_t)callback);
 }
 
-void q_thread_on_finished(void* self, void (*slot)(void*)) {
-    QThread_Connect_Finished((QThread*)self, (intptr_t)slot);
+void q_thread_on_finished(void* self, void (*callback)(void*)) {
+    QThread_Connect_Finished((QThread*)self, (intptr_t)callback);
 }
 
-void q_thread_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_thread_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_thread_delete(void* self) {

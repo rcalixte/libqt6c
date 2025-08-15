@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,761 +15,883 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 const QMetaObject* q_filedevice_meta_object(void* self);
 
-/// ``` QFileDevice* self, const char* param1 ```
+/// @param self QFileDevice*
+/// @param param1 const char*
 void* q_filedevice_metacast(void* self, const char* param1);
 
-/// ``` QFileDevice* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QFileDevice*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_filedevice_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_filedevice_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#error)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
+///
+/// @return enum QFileDevice__FileError
 int64_t q_filedevice_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#unsetError)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_unset_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#close)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_close(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#isSequential)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_sequential(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#handle)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 int32_t q_filedevice_handle(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#fileName)
 ///
-/// ``` QFileDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
 const char* q_filedevice_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#pos)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 long long q_filedevice_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#seek)
 ///
-/// ``` QFileDevice* self, long long offset ```
+/// @param self QFileDevice*
+/// @param offset long long
 bool q_filedevice_seek(void* self, long long offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_at_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#flush)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_flush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#size)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 long long q_filedevice_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#resize)
 ///
-/// ``` QFileDevice* self, long long sz ```
+/// @param self QFileDevice*
+/// @param sz long long
 bool q_filedevice_resize(void* self, long long sz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
+///
+/// @return flag of enum QFileDevice__Permission
 int64_t q_filedevice_permissions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setPermissions)
 ///
-/// ``` QFileDevice* self, int permissionSpec ```
+/// @param self QFileDevice*
+/// @param permissionSpec flag of enum QFileDevice__Permission
 bool q_filedevice_set_permissions(void* self, int64_t permissionSpec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
-/// ``` QFileDevice* self, long long offset, long long size ```
+/// @param self QFileDevice*
+/// @param offset long long
+/// @param size long long
 unsigned char* q_filedevice_map(void* self, long long offset, long long size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#unmap)
 ///
-/// ``` QFileDevice* self, unsigned char* address ```
+/// @param self QFileDevice*
+/// @param address unsigned char*
 bool q_filedevice_unmap(void* self, unsigned char* address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#fileTime)
 ///
-/// ``` QFileDevice* self, enum QFileDevice__FileTime time ```
+/// @param self QFileDevice*
+/// @param time enum QFileDevice__FileTime
 QDateTime* q_filedevice_file_time(void* self, int64_t time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#setFileTime)
 ///
-/// ``` QFileDevice* self, QDateTime* newDate, enum QFileDevice__FileTime fileTime ```
+/// @param self QFileDevice*
+/// @param newDate QDateTime*
+/// @param fileTime enum QFileDevice__FileTime
 bool q_filedevice_set_file_time(void* self, void* newDate, int64_t fileTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_filedevice_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_filedevice_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
-/// ``` QFileDevice* self, long long offset, long long size, int flags ```
+/// @param self QFileDevice*
+/// @param offset long long
+/// @param size long long
+/// @param flags flag of enum QFileDevice__MemoryMapFlag
 unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int64_t flags);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
+///
+/// @return flag of enum QIODeviceBase__OpenModeFlag
 int64_t q_filedevice_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setTextModeEnabled)
 ///
-/// ``` QFileDevice* self, bool enabled ```
+/// @param self QFileDevice*
+/// @param enabled bool
 void q_filedevice_set_text_mode_enabled(void* self, bool enabled);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_text_mode_enabled(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_open(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_readable(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_writable(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 int32_t q_filedevice_read_channel_count(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 int32_t q_filedevice_write_channel_count(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 int32_t q_filedevice_current_read_channel(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setCurrentReadChannel)
 ///
-/// ``` QFileDevice* self, int channel ```
+/// @param self QFileDevice*
+/// @param channel int
 void q_filedevice_set_current_read_channel(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 int32_t q_filedevice_current_write_channel(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setCurrentWriteChannel)
 ///
-/// ``` QFileDevice* self, int channel ```
+/// @param self QFileDevice*
+/// @param channel int
 void q_filedevice_set_current_write_channel(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#open)
 ///
-/// ``` QFileDevice* self, int mode ```
+/// @param self QFileDevice*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
 bool q_filedevice_open(void* self, int64_t mode);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_reset(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 long long q_filedevice_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 long long q_filedevice_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// ``` QFileDevice* self, char* data, long long maxlen ```
+/// @param self QFileDevice*
+/// @param data char*
+/// @param maxlen long long
 long long q_filedevice_read(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// ``` QFileDevice* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
+/// @param maxlen long long
 char* q_filedevice_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// ``` QFileDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
 char* q_filedevice_read_all(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// ``` QFileDevice* self, char* data, long long maxlen ```
+/// @param self QFileDevice*
+/// @param data char*
+/// @param maxlen long long
 long long q_filedevice_read_line(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// ``` QFileDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
 char* q_filedevice_read_line2(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_can_read_line(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#startTransaction)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_start_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#commitTransaction)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_commit_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#rollbackTransaction)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_rollback_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_transaction_started(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
-/// ``` QFileDevice* self, const char* data, long long lenVal ```
+/// @param self QFileDevice*
+/// @param data const char*
+/// @param lenVal long long
 long long q_filedevice_write(void* self, const char* data, long long lenVal);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
-/// ``` QFileDevice* self, const char* data ```
+/// @param self QFileDevice*
+/// @param data const char*
 long long q_filedevice_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
-/// ``` QFileDevice* self, const char* data ```
+/// @param self QFileDevice*
+/// @param data const char*
 long long q_filedevice_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// ``` QFileDevice* self, char* data, long long maxlen ```
+/// @param self QFileDevice*
+/// @param data char*
+/// @param maxlen long long
 long long q_filedevice_peek(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// ``` QFileDevice* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
+/// @param maxlen long long
 char* q_filedevice_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
-/// ``` QFileDevice* self, long long maxSize ```
+/// @param self QFileDevice*
+/// @param maxSize long long
 long long q_filedevice_skip(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
 ///
-/// ``` QFileDevice* self, int msecs ```
+/// @param self QFileDevice*
+/// @param msecs int
 bool q_filedevice_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
 ///
-/// ``` QFileDevice* self, int msecs ```
+/// @param self QFileDevice*
+/// @param msecs int
 bool q_filedevice_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#ungetChar)
 ///
-/// ``` QFileDevice* self, char c ```
+/// @param self QFileDevice*
+/// @param c char
 void q_filedevice_unget_char(void* self, char c);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#putChar)
 ///
-/// ``` QFileDevice* self, char c ```
+/// @param self QFileDevice*
+/// @param c char
 bool q_filedevice_put_char(void* self, char c);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#getChar)
 ///
-/// ``` QFileDevice* self, char* c ```
+/// @param self QFileDevice*
+/// @param c char*
 bool q_filedevice_get_char(void* self, char* c);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// ``` QFileDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
 const char* q_filedevice_error_string(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
-void q_filedevice_on_ready_read(void* self, void (*slot)(void*));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*)
+void q_filedevice_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QFileDevice* self, int channel ```
+/// @param self QFileDevice*
+/// @param channel int
 void q_filedevice_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*, int) ```
-void q_filedevice_on_channel_ready_read(void* self, void (*slot)(void*, int));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*, int)
+void q_filedevice_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QFileDevice* self, long long bytes ```
+/// @param self QFileDevice*
+/// @param bytes long long
 void q_filedevice_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*, long long) ```
-void q_filedevice_on_bytes_written(void* self, void (*slot)(void*, long long));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*, long long)
+void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QFileDevice* self, int channel, long long bytes ```
+/// @param self QFileDevice*
+/// @param channel int
+/// @param bytes long long
 void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*, int, long long) ```
-void q_filedevice_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*, int, long long)
+void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
-void q_filedevice_on_about_to_close(void* self, void (*slot)(void*));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*)
+void q_filedevice_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
-void q_filedevice_on_read_channel_finished(void* self, void (*slot)(void*));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*)
+void q_filedevice_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// ``` QFileDevice* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
+/// @param maxlen long long
 char* q_filedevice_read_line1(void* self, long long maxlen);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QFileDevice* self, QEvent* event ```
+/// @param self QFileDevice*
+/// @param event QEvent*
 bool q_filedevice_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QFileDevice* self, QObject* watched, QEvent* event ```
+/// @param self QFileDevice*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_filedevice_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QFileDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
 const char* q_filedevice_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFileDevice* self, char* name ```
+/// @param self QFileDevice*
+/// @param name char*
 void q_filedevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 bool q_filedevice_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QFileDevice* self, bool b ```
+/// @param self QFileDevice*
+/// @param b bool
 bool q_filedevice_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 QThread* q_filedevice_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QFileDevice* self, QThread* thread ```
+/// @param self QFileDevice*
+/// @param thread QThread*
 bool q_filedevice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QFileDevice* self, int interval ```
+/// @param self QFileDevice*
+/// @param interval int
 int32_t q_filedevice_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QFileDevice* self, int id ```
+/// @param self QFileDevice*
+/// @param id int
 void q_filedevice_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QFileDevice* self, enum Qt__TimerId id ```
+/// @param self QFileDevice*
+/// @param id enum Qt__TimerId
 void q_filedevice_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 libqt_list /* of QObject* */ q_filedevice_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QFileDevice* self, QObject* parent ```
+/// @param self QFileDevice*
+/// @param parent QObject*
 void q_filedevice_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QFileDevice* self, QObject* filterObj ```
+/// @param self QFileDevice*
+/// @param filterObj QObject*
 void q_filedevice_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QFileDevice* self, QObject* obj ```
+/// @param self QFileDevice*
+/// @param obj QObject*
 void q_filedevice_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_filedevice_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QFileDevice* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QFileDevice*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_filedevice_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_filedevice_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_filedevice_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QFileDevice* self, const char* name, QVariant* value ```
+/// @param self QFileDevice*
+/// @param name const char*
+/// @param value QVariant*
 bool q_filedevice_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QFileDevice* self, const char* name ```
+/// @param self QFileDevice*
+/// @param name const char*
 QVariant* q_filedevice_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QFileDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileDevice*
 const char** q_filedevice_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 QBindingStorage* q_filedevice_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 const QBindingStorage* q_filedevice_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*) ```
-void q_filedevice_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*)
+void q_filedevice_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 QObject* q_filedevice_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QFileDevice* self, const char* classname ```
+/// @param self QFileDevice*
+/// @param classname const char*
 bool q_filedevice_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QFileDevice* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QFileDevice*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_filedevice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QFileDevice* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QFileDevice*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_filedevice_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_filedevice_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QFileDevice* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QFileDevice*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_filedevice_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileDevice* self, QObject* param1 ```
+/// @param self QFileDevice*
+/// @param param1 QObject*
 void q_filedevice_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*, QObject*) ```
-void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*, QObject*)
+void q_filedevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -778,14 +899,15 @@ void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFileDevice* self, void (*slot)(QFileDevice*, const char*) ```
-void q_filedevice_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QFileDevice*
+/// @param callback void fn(QFileDevice*, const char*)
+void q_filedevice_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledevice.html#dtor.QFileDevice)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFileDevice* self ```
+/// @param self QFileDevice*
 void q_filedevice_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qfiledevice.html#types

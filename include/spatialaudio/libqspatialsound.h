@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,610 +15,698 @@
 
 /// q_spatialsound_new constructs a new QSpatialSound object.
 ///
-/// ``` QAudioEngine* engine ```
+/// @param engine QAudioEngine*
 QSpatialSound* q_spatialsound_new(void* engine);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 const QMetaObject* q_spatialsound_meta_object(void* self);
 
-/// ``` QSpatialSound* self, const char* param1 ```
+/// @param self QSpatialSound*
+/// @param param1 const char*
 void* q_spatialsound_metacast(void* self, const char* param1);
 
-/// ``` QSpatialSound* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QSpatialSound*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_spatialsound_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QSpatialSound* self, int32_t (*slot)(QSpatialSound*, enum QMetaObject__Call, int, void*) ```
-void q_spatialsound_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QSpatialSound*
+/// @param callback int32_t fn(QSpatialSound*, enum QMetaObject__Call, int, void*)
+void q_spatialsound_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QSpatialSound* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QSpatialSound*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_spatialsound_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_spatialsound_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setSource)
 ///
-/// ``` QSpatialSound* self, QUrl* url ```
+/// @param self QSpatialSound*
+/// @param url QUrl*
 void q_spatialsound_set_source(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#source)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QUrl* q_spatialsound_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#loops)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 int32_t q_spatialsound_loops(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setLoops)
 ///
-/// ``` QSpatialSound* self, int loops ```
+/// @param self QSpatialSound*
+/// @param loops int
 void q_spatialsound_set_loops(void* self, int loops);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#autoPlay)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 bool q_spatialsound_auto_play(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setAutoPlay)
 ///
-/// ``` QSpatialSound* self, bool autoPlay ```
+/// @param self QSpatialSound*
+/// @param autoPlay bool
 void q_spatialsound_set_auto_play(void* self, bool autoPlay);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setPosition)
 ///
-/// ``` QSpatialSound* self, QVector3D* pos ```
+/// @param self QSpatialSound*
+/// @param pos QVector3D*
 void q_spatialsound_set_position(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#position)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QVector3D* q_spatialsound_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setRotation)
 ///
-/// ``` QSpatialSound* self, QQuaternion* q ```
+/// @param self QSpatialSound*
+/// @param q QQuaternion*
 void q_spatialsound_set_rotation(void* self, void* q);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#rotation)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QQuaternion* q_spatialsound_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setVolume)
 ///
-/// ``` QSpatialSound* self, float volume ```
+/// @param self QSpatialSound*
+/// @param volume float
 void q_spatialsound_set_volume(void* self, float volume);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#volume)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_volume(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setDistanceModel)
 ///
-/// ``` QSpatialSound* self, enum QSpatialSound__DistanceModel model ```
+/// @param self QSpatialSound*
+/// @param model enum QSpatialSound__DistanceModel
 void q_spatialsound_set_distance_model(void* self, int64_t model);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#distanceModel)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
+///
+/// @return enum QSpatialSound__DistanceModel
 int64_t q_spatialsound_distance_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setSize)
 ///
-/// ``` QSpatialSound* self, float size ```
+/// @param self QSpatialSound*
+/// @param size float
 void q_spatialsound_set_size(void* self, float size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#size)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setDistanceCutoff)
 ///
-/// ``` QSpatialSound* self, float cutoff ```
+/// @param self QSpatialSound*
+/// @param cutoff float
 void q_spatialsound_set_distance_cutoff(void* self, float cutoff);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#distanceCutoff)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_distance_cutoff(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setManualAttenuation)
 ///
-/// ``` QSpatialSound* self, float attenuation ```
+/// @param self QSpatialSound*
+/// @param attenuation float
 void q_spatialsound_set_manual_attenuation(void* self, float attenuation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#manualAttenuation)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_manual_attenuation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setOcclusionIntensity)
 ///
-/// ``` QSpatialSound* self, float occlusion ```
+/// @param self QSpatialSound*
+/// @param occlusion float
 void q_spatialsound_set_occlusion_intensity(void* self, float occlusion);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#occlusionIntensity)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_occlusion_intensity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setDirectivity)
 ///
-/// ``` QSpatialSound* self, float alpha ```
+/// @param self QSpatialSound*
+/// @param alpha float
 void q_spatialsound_set_directivity(void* self, float alpha);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#directivity)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_directivity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setDirectivityOrder)
 ///
-/// ``` QSpatialSound* self, float alpha ```
+/// @param self QSpatialSound*
+/// @param alpha float
 void q_spatialsound_set_directivity_order(void* self, float alpha);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#directivityOrder)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_directivity_order(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#setNearFieldGain)
 ///
-/// ``` QSpatialSound* self, float gain ```
+/// @param self QSpatialSound*
+/// @param gain float
 void q_spatialsound_set_near_field_gain(void* self, float gain);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#nearFieldGain)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 float q_spatialsound_near_field_gain(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#engine)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QAudioEngine* q_spatialsound_engine(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#sourceChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_source_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#sourceChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_source_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_source_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#loopsChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_loops_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#loopsChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_loops_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_loops_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#autoPlayChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_auto_play_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#autoPlayChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_auto_play_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_auto_play_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#positionChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_position_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#positionChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_position_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_position_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#rotationChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_rotation_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#rotationChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_rotation_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#volumeChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_volume_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#volumeChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_volume_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_volume_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#distanceModelChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_distance_model_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#distanceModelChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_distance_model_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_distance_model_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#sizeChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_size_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#sizeChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_size_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_size_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#distanceCutoffChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_distance_cutoff_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#distanceCutoffChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_distance_cutoff_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_distance_cutoff_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#manualAttenuationChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_manual_attenuation_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#manualAttenuationChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_manual_attenuation_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_manual_attenuation_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#occlusionIntensityChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_occlusion_intensity_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#occlusionIntensityChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_occlusion_intensity_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_occlusion_intensity_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#directivityChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_directivity_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#directivityChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_directivity_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_directivity_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#directivityOrderChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_directivity_order_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#directivityOrderChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_directivity_order_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_directivity_order_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#nearFieldGainChanged)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_near_field_gain_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#nearFieldGainChanged)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_near_field_gain_changed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_near_field_gain_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#play)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_play(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#pause)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_pause(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#stop)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_spatialsound_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_spatialsound_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QSpatialSound* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSpatialSound*
 const char* q_spatialsound_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSpatialSound* self, char* name ```
+/// @param self QSpatialSound*
+/// @param name char*
 void q_spatialsound_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 bool q_spatialsound_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 bool q_spatialsound_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 bool q_spatialsound_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 bool q_spatialsound_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QSpatialSound* self, bool b ```
+/// @param self QSpatialSound*
+/// @param b bool
 bool q_spatialsound_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QThread* q_spatialsound_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QSpatialSound* self, QThread* thread ```
+/// @param self QSpatialSound*
+/// @param thread QThread*
 bool q_spatialsound_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QSpatialSound* self, int interval ```
+/// @param self QSpatialSound*
+/// @param interval int
 int32_t q_spatialsound_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QSpatialSound* self, int id ```
+/// @param self QSpatialSound*
+/// @param id int
 void q_spatialsound_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QSpatialSound* self, enum Qt__TimerId id ```
+/// @param self QSpatialSound*
+/// @param id enum Qt__TimerId
 void q_spatialsound_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 libqt_list /* of QObject* */ q_spatialsound_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QSpatialSound* self, QObject* parent ```
+/// @param self QSpatialSound*
+/// @param parent QObject*
 void q_spatialsound_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QSpatialSound* self, QObject* filterObj ```
+/// @param self QSpatialSound*
+/// @param filterObj QObject*
 void q_spatialsound_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QSpatialSound* self, QObject* obj ```
+/// @param self QSpatialSound*
+/// @param obj QObject*
 void q_spatialsound_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_spatialsound_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QSpatialSound* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QSpatialSound*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_spatialsound_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_spatialsound_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_spatialsound_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QSpatialSound* self, const char* name, QVariant* value ```
+/// @param self QSpatialSound*
+/// @param name const char*
+/// @param value QVariant*
 bool q_spatialsound_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QSpatialSound* self, const char* name ```
+/// @param self QSpatialSound*
+/// @param name const char*
 QVariant* q_spatialsound_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QSpatialSound* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSpatialSound*
 const char** q_spatialsound_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QBindingStorage* q_spatialsound_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 const QBindingStorage* q_spatialsound_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*) ```
-void q_spatialsound_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*)
+void q_spatialsound_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QObject* q_spatialsound_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QSpatialSound* self, const char* classname ```
+/// @param self QSpatialSound*
+/// @param classname const char*
 bool q_spatialsound_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QSpatialSound* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QSpatialSound*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_spatialsound_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QSpatialSound* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QSpatialSound*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_spatialsound_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_spatialsound_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QSpatialSound* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QSpatialSound*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_spatialsound_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSpatialSound* self, QObject* param1 ```
+/// @param self QSpatialSound*
+/// @param param1 QObject*
 void q_spatialsound_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, QObject*) ```
-void q_spatialsound_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, QObject*)
+void q_spatialsound_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -627,7 +714,8 @@ void q_spatialsound_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QEvent*
 bool q_spatialsound_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -636,7 +724,8 @@ bool q_spatialsound_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QEvent*
 bool q_spatialsound_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -645,8 +734,9 @@ bool q_spatialsound_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, bool (*slot)(QSpatialSound*, QEvent*) ```
-void q_spatialsound_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback bool fn(QSpatialSound*, QEvent*)
+void q_spatialsound_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -654,7 +744,9 @@ void q_spatialsound_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QObject* watched, QEvent* event ```
+/// @param self QSpatialSound*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_spatialsound_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -663,7 +755,9 @@ bool q_spatialsound_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QObject* watched, QEvent* event ```
+/// @param self QSpatialSound*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_spatialsound_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -672,8 +766,9 @@ bool q_spatialsound_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, bool (*slot)(QSpatialSound*, QObject*, QEvent*) ```
-void q_spatialsound_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QSpatialSound*
+/// @param callback bool fn(QSpatialSound*, QObject*, QEvent*)
+void q_spatialsound_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -681,7 +776,8 @@ void q_spatialsound_on_event_filter(void* self, bool (*slot)(void*, void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QTimerEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QTimerEvent*
 void q_spatialsound_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -690,7 +786,8 @@ void q_spatialsound_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QTimerEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QTimerEvent*
 void q_spatialsound_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -699,8 +796,9 @@ void q_spatialsound_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, QTimerEvent*) ```
-void q_spatialsound_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, QTimerEvent*)
+void q_spatialsound_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -708,7 +806,8 @@ void q_spatialsound_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QChildEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QChildEvent*
 void q_spatialsound_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -717,7 +816,8 @@ void q_spatialsound_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QChildEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QChildEvent*
 void q_spatialsound_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -726,8 +826,9 @@ void q_spatialsound_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, QChildEvent*) ```
-void q_spatialsound_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, QChildEvent*)
+void q_spatialsound_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -735,7 +836,8 @@ void q_spatialsound_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QEvent*
 void q_spatialsound_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -744,7 +846,8 @@ void q_spatialsound_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QEvent* event ```
+/// @param self QSpatialSound*
+/// @param event QEvent*
 void q_spatialsound_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -753,8 +856,9 @@ void q_spatialsound_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, QEvent*) ```
-void q_spatialsound_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, QEvent*)
+void q_spatialsound_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -762,7 +866,8 @@ void q_spatialsound_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QMetaMethod* signal ```
+/// @param self QSpatialSound*
+/// @param signal QMetaMethod*
 void q_spatialsound_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -771,7 +876,8 @@ void q_spatialsound_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QMetaMethod* signal ```
+/// @param self QSpatialSound*
+/// @param signal QMetaMethod*
 void q_spatialsound_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -780,8 +886,9 @@ void q_spatialsound_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, QMetaMethod*) ```
-void q_spatialsound_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, QMetaMethod*)
+void q_spatialsound_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -789,7 +896,8 @@ void q_spatialsound_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QMetaMethod* signal ```
+/// @param self QSpatialSound*
+/// @param signal QMetaMethod*
 void q_spatialsound_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -798,7 +906,8 @@ void q_spatialsound_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QMetaMethod* signal ```
+/// @param self QSpatialSound*
+/// @param signal QMetaMethod*
 void q_spatialsound_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -807,8 +916,9 @@ void q_spatialsound_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, QMetaMethod*) ```
-void q_spatialsound_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, QMetaMethod*)
+void q_spatialsound_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -816,7 +926,7 @@ void q_spatialsound_on_disconnect_notify(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QObject* q_spatialsound_sender(void* self);
 
 /// Inherited from QObject
@@ -825,7 +935,7 @@ QObject* q_spatialsound_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 QObject* q_spatialsound_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -834,8 +944,9 @@ QObject* q_spatialsound_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QObject* (*slot)() ```
-void q_spatialsound_on_sender(void* self, QObject* (*slot)());
+/// @param self QSpatialSound*
+/// @param callback QObject* fn()
+void q_spatialsound_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -843,7 +954,7 @@ void q_spatialsound_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 int32_t q_spatialsound_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -852,7 +963,7 @@ int32_t q_spatialsound_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 int32_t q_spatialsound_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -861,8 +972,9 @@ int32_t q_spatialsound_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, int32_t (*slot)() ```
-void q_spatialsound_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QSpatialSound*
+/// @param callback int32_t fn()
+void q_spatialsound_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -870,7 +982,8 @@ void q_spatialsound_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, const char* signal ```
+/// @param self QSpatialSound*
+/// @param signal const char*
 int32_t q_spatialsound_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -879,7 +992,8 @@ int32_t q_spatialsound_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, const char* signal ```
+/// @param self QSpatialSound*
+/// @param signal const char*
 int32_t q_spatialsound_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -888,8 +1002,9 @@ int32_t q_spatialsound_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, int32_t (*slot)(QSpatialSound*, const char*) ```
-void q_spatialsound_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QSpatialSound*
+/// @param callback int32_t fn(QSpatialSound*, const char*)
+void q_spatialsound_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -897,7 +1012,8 @@ void q_spatialsound_on_receivers(void* self, int32_t (*slot)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSpatialSound* self, QMetaMethod* signal ```
+/// @param self QSpatialSound*
+/// @param signal QMetaMethod*
 bool q_spatialsound_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -906,7 +1022,8 @@ bool q_spatialsound_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, QMetaMethod* signal ```
+/// @param self QSpatialSound*
+/// @param signal QMetaMethod*
 bool q_spatialsound_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -915,8 +1032,9 @@ bool q_spatialsound_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSpatialSound* self, bool (*slot)(QSpatialSound*, QMetaMethod*) ```
-void q_spatialsound_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QSpatialSound*
+/// @param callback bool fn(QSpatialSound*, QMetaMethod*)
+void q_spatialsound_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -924,14 +1042,15 @@ void q_spatialsound_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSpatialSound* self, void (*slot)(QSpatialSound*, const char*) ```
-void q_spatialsound_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QSpatialSound*
+/// @param callback void fn(QSpatialSound*, const char*)
+void q_spatialsound_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspatialsound.html#dtor.QSpatialSound)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QSpatialSound* self ```
+/// @param self QSpatialSound*
 void q_spatialsound_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qspatialsound.html#types

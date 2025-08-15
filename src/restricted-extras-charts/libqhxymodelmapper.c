@@ -28,8 +28,8 @@ int32_t q_hxymodelmapper_metacall(void* self, int64_t param1, int param2, void* 
     return QHXYModelMapper_Metacall((QHXYModelMapper*)self, param1, param2, param3);
 }
 
-void q_hxymodelmapper_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QHXYModelMapper_OnMetacall((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QHXYModelMapper_OnMetacall((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -95,48 +95,48 @@ void q_hxymodelmapper_series_replaced(void* self) {
     QHXYModelMapper_SeriesReplaced((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_series_replaced(void* self, void (*slot)(void*)) {
-    QHXYModelMapper_Connect_SeriesReplaced((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_series_replaced(void* self, void (*callback)(void*)) {
+    QHXYModelMapper_Connect_SeriesReplaced((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_model_replaced(void* self) {
     QHXYModelMapper_ModelReplaced((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_model_replaced(void* self, void (*slot)(void*)) {
-    QHXYModelMapper_Connect_ModelReplaced((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_model_replaced(void* self, void (*callback)(void*)) {
+    QHXYModelMapper_Connect_ModelReplaced((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_x_row_changed(void* self) {
     QHXYModelMapper_XRowChanged((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_x_row_changed(void* self, void (*slot)(void*)) {
-    QHXYModelMapper_Connect_XRowChanged((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_x_row_changed(void* self, void (*callback)(void*)) {
+    QHXYModelMapper_Connect_XRowChanged((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_y_row_changed(void* self) {
     QHXYModelMapper_YRowChanged((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_y_row_changed(void* self, void (*slot)(void*)) {
-    QHXYModelMapper_Connect_YRowChanged((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_y_row_changed(void* self, void (*callback)(void*)) {
+    QHXYModelMapper_Connect_YRowChanged((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_first_column_changed(void* self) {
     QHXYModelMapper_FirstColumnChanged((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_first_column_changed(void* self, void (*slot)(void*)) {
-    QHXYModelMapper_Connect_FirstColumnChanged((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_first_column_changed(void* self, void (*callback)(void*)) {
+    QHXYModelMapper_Connect_FirstColumnChanged((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_column_count_changed(void* self) {
     QHXYModelMapper_ColumnCountChanged((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_column_count_changed(void* self, void (*slot)(void*)) {
-    QHXYModelMapper_Connect_ColumnCountChanged((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_column_count_changed(void* self, void (*callback)(void*)) {
+    QHXYModelMapper_Connect_ColumnCountChanged((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 const char* q_hxymodelmapper_tr2(const char* s, const char* c) {
@@ -257,12 +257,16 @@ const char** q_hxymodelmapper_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_hxymodelmapper_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -280,8 +284,8 @@ void q_hxymodelmapper_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_hxymodelmapper_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_hxymodelmapper_parent(void* self) {
@@ -316,8 +320,8 @@ void q_hxymodelmapper_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_hxymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_hxymodelmapper_event(void* self, void* event) {
@@ -328,8 +332,8 @@ bool q_hxymodelmapper_qbase_event(void* self, void* event) {
     return QHXYModelMapper_QBaseEvent((QHXYModelMapper*)self, (QEvent*)event);
 }
 
-void q_hxymodelmapper_on_event(void* self, bool (*slot)(void*, void*)) {
-    QHXYModelMapper_OnEvent((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
+    QHXYModelMapper_OnEvent((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_hxymodelmapper_event_filter(void* self, void* watched, void* event) {
@@ -340,8 +344,8 @@ bool q_hxymodelmapper_qbase_event_filter(void* self, void* watched, void* event)
     return QHXYModelMapper_QBaseEventFilter((QHXYModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_hxymodelmapper_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QHXYModelMapper_OnEventFilter((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QHXYModelMapper_OnEventFilter((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_timer_event(void* self, void* event) {
@@ -352,8 +356,8 @@ void q_hxymodelmapper_qbase_timer_event(void* self, void* event) {
     QHXYModelMapper_QBaseTimerEvent((QHXYModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_hxymodelmapper_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QHXYModelMapper_OnTimerEvent((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QHXYModelMapper_OnTimerEvent((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_child_event(void* self, void* event) {
@@ -364,8 +368,8 @@ void q_hxymodelmapper_qbase_child_event(void* self, void* event) {
     QHXYModelMapper_QBaseChildEvent((QHXYModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_hxymodelmapper_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QHXYModelMapper_OnChildEvent((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QHXYModelMapper_OnChildEvent((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_custom_event(void* self, void* event) {
@@ -376,8 +380,8 @@ void q_hxymodelmapper_qbase_custom_event(void* self, void* event) {
     QHXYModelMapper_QBaseCustomEvent((QHXYModelMapper*)self, (QEvent*)event);
 }
 
-void q_hxymodelmapper_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QHXYModelMapper_OnCustomEvent((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QHXYModelMapper_OnCustomEvent((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_connect_notify(void* self, void* signal) {
@@ -388,8 +392,8 @@ void q_hxymodelmapper_qbase_connect_notify(void* self, void* signal) {
     QHXYModelMapper_QBaseConnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hxymodelmapper_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QHXYModelMapper_OnConnectNotify((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QHXYModelMapper_OnConnectNotify((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_disconnect_notify(void* self, void* signal) {
@@ -400,8 +404,8 @@ void q_hxymodelmapper_qbase_disconnect_notify(void* self, void* signal) {
     QHXYModelMapper_QBaseDisconnectNotify((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hxymodelmapper_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QHXYModelMapper_OnDisconnectNotify((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QHXYModelMapper_OnDisconnectNotify((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_first(void* self) {
@@ -412,8 +416,8 @@ int32_t q_hxymodelmapper_qbase_first(void* self) {
     return QHXYModelMapper_QBaseFirst((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_first(void* self, int32_t (*slot)()) {
-    QHXYModelMapper_OnFirst((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_first(void* self, int32_t (*callback)()) {
+    QHXYModelMapper_OnFirst((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_set_first(void* self, int first) {
@@ -424,8 +428,8 @@ void q_hxymodelmapper_qbase_set_first(void* self, int first) {
     QHXYModelMapper_QBaseSetFirst((QHXYModelMapper*)self, first);
 }
 
-void q_hxymodelmapper_on_set_first(void* self, void (*slot)(void*, int)) {
-    QHXYModelMapper_OnSetFirst((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
+    QHXYModelMapper_OnSetFirst((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_count(void* self) {
@@ -436,8 +440,8 @@ int32_t q_hxymodelmapper_qbase_count(void* self) {
     return QHXYModelMapper_QBaseCount((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_count(void* self, int32_t (*slot)()) {
-    QHXYModelMapper_OnCount((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_count(void* self, int32_t (*callback)()) {
+    QHXYModelMapper_OnCount((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_set_count(void* self, int count) {
@@ -448,8 +452,8 @@ void q_hxymodelmapper_qbase_set_count(void* self, int count) {
     QHXYModelMapper_QBaseSetCount((QHXYModelMapper*)self, count);
 }
 
-void q_hxymodelmapper_on_set_count(void* self, void (*slot)(void*, int)) {
-    QHXYModelMapper_OnSetCount((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
+    QHXYModelMapper_OnSetCount((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int64_t q_hxymodelmapper_orientation(void* self) {
@@ -460,8 +464,8 @@ int64_t q_hxymodelmapper_qbase_orientation(void* self) {
     return QHXYModelMapper_QBaseOrientation((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_orientation(void* self, int64_t (*slot)()) {
-    QHXYModelMapper_OnOrientation((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_orientation(void* self, int64_t (*callback)()) {
+    QHXYModelMapper_OnOrientation((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_set_orientation(void* self, int64_t orientation) {
@@ -472,8 +476,8 @@ void q_hxymodelmapper_qbase_set_orientation(void* self, int64_t orientation) {
     QHXYModelMapper_QBaseSetOrientation((QHXYModelMapper*)self, orientation);
 }
 
-void q_hxymodelmapper_on_set_orientation(void* self, void (*slot)(void*, int64_t)) {
-    QHXYModelMapper_OnSetOrientation((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t)) {
+    QHXYModelMapper_OnSetOrientation((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_x_section(void* self) {
@@ -484,8 +488,8 @@ int32_t q_hxymodelmapper_qbase_x_section(void* self) {
     return QHXYModelMapper_QBaseXSection((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_x_section(void* self, int32_t (*slot)()) {
-    QHXYModelMapper_OnXSection((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_x_section(void* self, int32_t (*callback)()) {
+    QHXYModelMapper_OnXSection((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_set_x_section(void* self, int xSection) {
@@ -496,8 +500,8 @@ void q_hxymodelmapper_qbase_set_x_section(void* self, int xSection) {
     QHXYModelMapper_QBaseSetXSection((QHXYModelMapper*)self, xSection);
 }
 
-void q_hxymodelmapper_on_set_x_section(void* self, void (*slot)(void*, int)) {
-    QHXYModelMapper_OnSetXSection((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_set_x_section(void* self, void (*callback)(void*, int)) {
+    QHXYModelMapper_OnSetXSection((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_y_section(void* self) {
@@ -508,8 +512,8 @@ int32_t q_hxymodelmapper_qbase_y_section(void* self) {
     return QHXYModelMapper_QBaseYSection((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_y_section(void* self, int32_t (*slot)()) {
-    QHXYModelMapper_OnYSection((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_y_section(void* self, int32_t (*callback)()) {
+    QHXYModelMapper_OnYSection((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_set_y_section(void* self, int ySection) {
@@ -520,8 +524,8 @@ void q_hxymodelmapper_qbase_set_y_section(void* self, int ySection) {
     QHXYModelMapper_QBaseSetYSection((QHXYModelMapper*)self, ySection);
 }
 
-void q_hxymodelmapper_on_set_y_section(void* self, void (*slot)(void*, int)) {
-    QHXYModelMapper_OnSetYSection((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_set_y_section(void* self, void (*callback)(void*, int)) {
+    QHXYModelMapper_OnSetYSection((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 QObject* q_hxymodelmapper_sender(void* self) {
@@ -532,8 +536,8 @@ QObject* q_hxymodelmapper_qbase_sender(void* self) {
     return QHXYModelMapper_QBaseSender((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_sender(void* self, QObject* (*slot)()) {
-    QHXYModelMapper_OnSender((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_sender(void* self, QObject* (*callback)()) {
+    QHXYModelMapper_OnSender((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_sender_signal_index(void* self) {
@@ -544,8 +548,8 @@ int32_t q_hxymodelmapper_qbase_sender_signal_index(void* self) {
     return QHXYModelMapper_QBaseSenderSignalIndex((QHXYModelMapper*)self);
 }
 
-void q_hxymodelmapper_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QHXYModelMapper_OnSenderSignalIndex((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QHXYModelMapper_OnSenderSignalIndex((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hxymodelmapper_receivers(void* self, const char* signal) {
@@ -556,8 +560,8 @@ int32_t q_hxymodelmapper_qbase_receivers(void* self, const char* signal) {
     return QHXYModelMapper_QBaseReceivers((QHXYModelMapper*)self, signal);
 }
 
-void q_hxymodelmapper_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QHXYModelMapper_OnReceivers((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QHXYModelMapper_OnReceivers((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_hxymodelmapper_is_signal_connected(void* self, void* signal) {
@@ -568,12 +572,12 @@ bool q_hxymodelmapper_qbase_is_signal_connected(void* self, void* signal) {
     return QHXYModelMapper_QBaseIsSignalConnected((QHXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hxymodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QHXYModelMapper_OnIsSignalConnected((QHXYModelMapper*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QHXYModelMapper_OnIsSignalConnected((QHXYModelMapper*)self, (intptr_t)callback);
 }
 
-void q_hxymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_hxymodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_hxymodelmapper_delete(void* self) {

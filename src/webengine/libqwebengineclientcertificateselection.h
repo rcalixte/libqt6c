@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,39 +15,41 @@
 
 /// q_webengineclientcertificateselection_new constructs a new QWebEngineClientCertificateSelection object.
 ///
-/// ``` QWebEngineClientCertificateSelection* param1 ```
+/// @param param1 QWebEngineClientCertificateSelection*
 QWebEngineClientCertificateSelection* q_webengineclientcertificateselection_new(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#operator-eq)
 ///
-/// ``` QWebEngineClientCertificateSelection* self, QWebEngineClientCertificateSelection* param1 ```
+/// @param self QWebEngineClientCertificateSelection*
+/// @param param1 QWebEngineClientCertificateSelection*
 void q_webengineclientcertificateselection_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#host)
 ///
-/// ``` QWebEngineClientCertificateSelection* self ```
+/// @param self QWebEngineClientCertificateSelection*
 QUrl* q_webengineclientcertificateselection_host(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#select)
 ///
-/// ``` QWebEngineClientCertificateSelection* self, QSslCertificate* certificate ```
+/// @param self QWebEngineClientCertificateSelection*
+/// @param certificate QSslCertificate*
 void q_webengineclientcertificateselection_select(void* self, void* certificate);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#selectNone)
 ///
-/// ``` QWebEngineClientCertificateSelection* self ```
+/// @param self QWebEngineClientCertificateSelection*
 void q_webengineclientcertificateselection_select_none(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#certificates)
 ///
-/// ``` QWebEngineClientCertificateSelection* self ```
+/// @param self QWebEngineClientCertificateSelection*
 libqt_list /* of QSslCertificate* */ q_webengineclientcertificateselection_certificates(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineclientcertificateselection.html#dtor.QWebEngineClientCertificateSelection)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineClientCertificateSelection* self ```
+/// @param self QWebEngineClientCertificateSelection*
 void q_webengineclientcertificateselection_delete(void* self);
 
 #endif

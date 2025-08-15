@@ -27,8 +27,8 @@ int32_t q_gesture_metacall(void* self, int64_t param1, int param2, void* param3)
     return QGesture_Metacall((QGesture*)self, param1, param2, param3);
 }
 
-void q_gesture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QGesture_OnMetacall((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QGesture_OnMetacall((QGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_gesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -192,12 +192,16 @@ const char** q_gesture_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_gesture_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -215,8 +219,8 @@ void q_gesture_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_gesture_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_gesture_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_gesture_parent(void* self) {
@@ -251,8 +255,8 @@ void q_gesture_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_gesture_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_gesture_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_gesture_event(void* self, void* event) {
@@ -263,8 +267,8 @@ bool q_gesture_qbase_event(void* self, void* event) {
     return QGesture_QBaseEvent((QGesture*)self, (QEvent*)event);
 }
 
-void q_gesture_on_event(void* self, bool (*slot)(void*, void*)) {
-    QGesture_OnEvent((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_event(void* self, bool (*callback)(void*, void*)) {
+    QGesture_OnEvent((QGesture*)self, (intptr_t)callback);
 }
 
 bool q_gesture_event_filter(void* self, void* watched, void* event) {
@@ -275,8 +279,8 @@ bool q_gesture_qbase_event_filter(void* self, void* watched, void* event) {
     return QGesture_QBaseEventFilter((QGesture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_gesture_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QGesture_OnEventFilter((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QGesture_OnEventFilter((QGesture*)self, (intptr_t)callback);
 }
 
 void q_gesture_timer_event(void* self, void* event) {
@@ -287,8 +291,8 @@ void q_gesture_qbase_timer_event(void* self, void* event) {
     QGesture_QBaseTimerEvent((QGesture*)self, (QTimerEvent*)event);
 }
 
-void q_gesture_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QGesture_OnTimerEvent((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QGesture_OnTimerEvent((QGesture*)self, (intptr_t)callback);
 }
 
 void q_gesture_child_event(void* self, void* event) {
@@ -299,8 +303,8 @@ void q_gesture_qbase_child_event(void* self, void* event) {
     QGesture_QBaseChildEvent((QGesture*)self, (QChildEvent*)event);
 }
 
-void q_gesture_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QGesture_OnChildEvent((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QGesture_OnChildEvent((QGesture*)self, (intptr_t)callback);
 }
 
 void q_gesture_custom_event(void* self, void* event) {
@@ -311,8 +315,8 @@ void q_gesture_qbase_custom_event(void* self, void* event) {
     QGesture_QBaseCustomEvent((QGesture*)self, (QEvent*)event);
 }
 
-void q_gesture_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QGesture_OnCustomEvent((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QGesture_OnCustomEvent((QGesture*)self, (intptr_t)callback);
 }
 
 void q_gesture_connect_notify(void* self, void* signal) {
@@ -323,8 +327,8 @@ void q_gesture_qbase_connect_notify(void* self, void* signal) {
     QGesture_QBaseConnectNotify((QGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_gesture_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QGesture_OnConnectNotify((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QGesture_OnConnectNotify((QGesture*)self, (intptr_t)callback);
 }
 
 void q_gesture_disconnect_notify(void* self, void* signal) {
@@ -335,8 +339,8 @@ void q_gesture_qbase_disconnect_notify(void* self, void* signal) {
     QGesture_QBaseDisconnectNotify((QGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_gesture_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QGesture_OnDisconnectNotify((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QGesture_OnDisconnectNotify((QGesture*)self, (intptr_t)callback);
 }
 
 QObject* q_gesture_sender(void* self) {
@@ -347,8 +351,8 @@ QObject* q_gesture_qbase_sender(void* self) {
     return QGesture_QBaseSender((QGesture*)self);
 }
 
-void q_gesture_on_sender(void* self, QObject* (*slot)()) {
-    QGesture_OnSender((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_sender(void* self, QObject* (*callback)()) {
+    QGesture_OnSender((QGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_gesture_sender_signal_index(void* self) {
@@ -359,8 +363,8 @@ int32_t q_gesture_qbase_sender_signal_index(void* self) {
     return QGesture_QBaseSenderSignalIndex((QGesture*)self);
 }
 
-void q_gesture_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QGesture_OnSenderSignalIndex((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QGesture_OnSenderSignalIndex((QGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_gesture_receivers(void* self, const char* signal) {
@@ -371,8 +375,8 @@ int32_t q_gesture_qbase_receivers(void* self, const char* signal) {
     return QGesture_QBaseReceivers((QGesture*)self, signal);
 }
 
-void q_gesture_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QGesture_OnReceivers((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QGesture_OnReceivers((QGesture*)self, (intptr_t)callback);
 }
 
 bool q_gesture_is_signal_connected(void* self, void* signal) {
@@ -383,12 +387,12 @@ bool q_gesture_qbase_is_signal_connected(void* self, void* signal) {
     return QGesture_QBaseIsSignalConnected((QGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_gesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QGesture_OnIsSignalConnected((QGesture*)self, (intptr_t)slot);
+void q_gesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QGesture_OnIsSignalConnected((QGesture*)self, (intptr_t)callback);
 }
 
-void q_gesture_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_gesture_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_gesture_delete(void* self) {
@@ -415,8 +419,8 @@ int32_t q_pangesture_metacall(void* self, int64_t param1, int param2, void* para
     return QPanGesture_Metacall((QPanGesture*)self, param1, param2, param3);
 }
 
-void q_pangesture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPanGesture_OnMetacall((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPanGesture_OnMetacall((QPanGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_pangesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -608,12 +612,16 @@ const char** q_pangesture_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pangesture_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -631,8 +639,8 @@ void q_pangesture_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pangesture_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pangesture_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_pangesture_parent(void* self) {
@@ -667,8 +675,8 @@ void q_pangesture_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pangesture_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pangesture_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_pangesture_event(void* self, void* event) {
@@ -679,8 +687,8 @@ bool q_pangesture_qbase_event(void* self, void* event) {
     return QPanGesture_QBaseEvent((QPanGesture*)self, (QEvent*)event);
 }
 
-void q_pangesture_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPanGesture_OnEvent((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPanGesture_OnEvent((QPanGesture*)self, (intptr_t)callback);
 }
 
 bool q_pangesture_event_filter(void* self, void* watched, void* event) {
@@ -691,8 +699,8 @@ bool q_pangesture_qbase_event_filter(void* self, void* watched, void* event) {
     return QPanGesture_QBaseEventFilter((QPanGesture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pangesture_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPanGesture_OnEventFilter((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPanGesture_OnEventFilter((QPanGesture*)self, (intptr_t)callback);
 }
 
 void q_pangesture_timer_event(void* self, void* event) {
@@ -703,8 +711,8 @@ void q_pangesture_qbase_timer_event(void* self, void* event) {
     QPanGesture_QBaseTimerEvent((QPanGesture*)self, (QTimerEvent*)event);
 }
 
-void q_pangesture_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPanGesture_OnTimerEvent((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPanGesture_OnTimerEvent((QPanGesture*)self, (intptr_t)callback);
 }
 
 void q_pangesture_child_event(void* self, void* event) {
@@ -715,8 +723,8 @@ void q_pangesture_qbase_child_event(void* self, void* event) {
     QPanGesture_QBaseChildEvent((QPanGesture*)self, (QChildEvent*)event);
 }
 
-void q_pangesture_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPanGesture_OnChildEvent((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPanGesture_OnChildEvent((QPanGesture*)self, (intptr_t)callback);
 }
 
 void q_pangesture_custom_event(void* self, void* event) {
@@ -727,8 +735,8 @@ void q_pangesture_qbase_custom_event(void* self, void* event) {
     QPanGesture_QBaseCustomEvent((QPanGesture*)self, (QEvent*)event);
 }
 
-void q_pangesture_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPanGesture_OnCustomEvent((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPanGesture_OnCustomEvent((QPanGesture*)self, (intptr_t)callback);
 }
 
 void q_pangesture_connect_notify(void* self, void* signal) {
@@ -739,8 +747,8 @@ void q_pangesture_qbase_connect_notify(void* self, void* signal) {
     QPanGesture_QBaseConnectNotify((QPanGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_pangesture_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPanGesture_OnConnectNotify((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPanGesture_OnConnectNotify((QPanGesture*)self, (intptr_t)callback);
 }
 
 void q_pangesture_disconnect_notify(void* self, void* signal) {
@@ -751,8 +759,8 @@ void q_pangesture_qbase_disconnect_notify(void* self, void* signal) {
     QPanGesture_QBaseDisconnectNotify((QPanGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_pangesture_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPanGesture_OnDisconnectNotify((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPanGesture_OnDisconnectNotify((QPanGesture*)self, (intptr_t)callback);
 }
 
 QObject* q_pangesture_sender(void* self) {
@@ -763,8 +771,8 @@ QObject* q_pangesture_qbase_sender(void* self) {
     return QPanGesture_QBaseSender((QPanGesture*)self);
 }
 
-void q_pangesture_on_sender(void* self, QObject* (*slot)()) {
-    QPanGesture_OnSender((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_sender(void* self, QObject* (*callback)()) {
+    QPanGesture_OnSender((QPanGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_pangesture_sender_signal_index(void* self) {
@@ -775,8 +783,8 @@ int32_t q_pangesture_qbase_sender_signal_index(void* self) {
     return QPanGesture_QBaseSenderSignalIndex((QPanGesture*)self);
 }
 
-void q_pangesture_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPanGesture_OnSenderSignalIndex((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPanGesture_OnSenderSignalIndex((QPanGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_pangesture_receivers(void* self, const char* signal) {
@@ -787,8 +795,8 @@ int32_t q_pangesture_qbase_receivers(void* self, const char* signal) {
     return QPanGesture_QBaseReceivers((QPanGesture*)self, signal);
 }
 
-void q_pangesture_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPanGesture_OnReceivers((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPanGesture_OnReceivers((QPanGesture*)self, (intptr_t)callback);
 }
 
 bool q_pangesture_is_signal_connected(void* self, void* signal) {
@@ -799,12 +807,12 @@ bool q_pangesture_qbase_is_signal_connected(void* self, void* signal) {
     return QPanGesture_QBaseIsSignalConnected((QPanGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_pangesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPanGesture_OnIsSignalConnected((QPanGesture*)self, (intptr_t)slot);
+void q_pangesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPanGesture_OnIsSignalConnected((QPanGesture*)self, (intptr_t)callback);
 }
 
-void q_pangesture_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pangesture_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pangesture_delete(void* self) {
@@ -831,8 +839,8 @@ int32_t q_pinchgesture_metacall(void* self, int64_t param1, int param2, void* pa
     return QPinchGesture_Metacall((QPinchGesture*)self, param1, param2, param3);
 }
 
-void q_pinchgesture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPinchGesture_OnMetacall((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPinchGesture_OnMetacall((QPinchGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_pinchgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -1084,12 +1092,16 @@ const char** q_pinchgesture_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pinchgesture_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1107,8 +1119,8 @@ void q_pinchgesture_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pinchgesture_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pinchgesture_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_pinchgesture_parent(void* self) {
@@ -1143,8 +1155,8 @@ void q_pinchgesture_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pinchgesture_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pinchgesture_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_pinchgesture_event(void* self, void* event) {
@@ -1155,8 +1167,8 @@ bool q_pinchgesture_qbase_event(void* self, void* event) {
     return QPinchGesture_QBaseEvent((QPinchGesture*)self, (QEvent*)event);
 }
 
-void q_pinchgesture_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPinchGesture_OnEvent((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPinchGesture_OnEvent((QPinchGesture*)self, (intptr_t)callback);
 }
 
 bool q_pinchgesture_event_filter(void* self, void* watched, void* event) {
@@ -1167,8 +1179,8 @@ bool q_pinchgesture_qbase_event_filter(void* self, void* watched, void* event) {
     return QPinchGesture_QBaseEventFilter((QPinchGesture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pinchgesture_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPinchGesture_OnEventFilter((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPinchGesture_OnEventFilter((QPinchGesture*)self, (intptr_t)callback);
 }
 
 void q_pinchgesture_timer_event(void* self, void* event) {
@@ -1179,8 +1191,8 @@ void q_pinchgesture_qbase_timer_event(void* self, void* event) {
     QPinchGesture_QBaseTimerEvent((QPinchGesture*)self, (QTimerEvent*)event);
 }
 
-void q_pinchgesture_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPinchGesture_OnTimerEvent((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPinchGesture_OnTimerEvent((QPinchGesture*)self, (intptr_t)callback);
 }
 
 void q_pinchgesture_child_event(void* self, void* event) {
@@ -1191,8 +1203,8 @@ void q_pinchgesture_qbase_child_event(void* self, void* event) {
     QPinchGesture_QBaseChildEvent((QPinchGesture*)self, (QChildEvent*)event);
 }
 
-void q_pinchgesture_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPinchGesture_OnChildEvent((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPinchGesture_OnChildEvent((QPinchGesture*)self, (intptr_t)callback);
 }
 
 void q_pinchgesture_custom_event(void* self, void* event) {
@@ -1203,8 +1215,8 @@ void q_pinchgesture_qbase_custom_event(void* self, void* event) {
     QPinchGesture_QBaseCustomEvent((QPinchGesture*)self, (QEvent*)event);
 }
 
-void q_pinchgesture_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPinchGesture_OnCustomEvent((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPinchGesture_OnCustomEvent((QPinchGesture*)self, (intptr_t)callback);
 }
 
 void q_pinchgesture_connect_notify(void* self, void* signal) {
@@ -1215,8 +1227,8 @@ void q_pinchgesture_qbase_connect_notify(void* self, void* signal) {
     QPinchGesture_QBaseConnectNotify((QPinchGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_pinchgesture_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPinchGesture_OnConnectNotify((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPinchGesture_OnConnectNotify((QPinchGesture*)self, (intptr_t)callback);
 }
 
 void q_pinchgesture_disconnect_notify(void* self, void* signal) {
@@ -1227,8 +1239,8 @@ void q_pinchgesture_qbase_disconnect_notify(void* self, void* signal) {
     QPinchGesture_QBaseDisconnectNotify((QPinchGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_pinchgesture_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPinchGesture_OnDisconnectNotify((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPinchGesture_OnDisconnectNotify((QPinchGesture*)self, (intptr_t)callback);
 }
 
 QObject* q_pinchgesture_sender(void* self) {
@@ -1239,8 +1251,8 @@ QObject* q_pinchgesture_qbase_sender(void* self) {
     return QPinchGesture_QBaseSender((QPinchGesture*)self);
 }
 
-void q_pinchgesture_on_sender(void* self, QObject* (*slot)()) {
-    QPinchGesture_OnSender((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_sender(void* self, QObject* (*callback)()) {
+    QPinchGesture_OnSender((QPinchGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_pinchgesture_sender_signal_index(void* self) {
@@ -1251,8 +1263,8 @@ int32_t q_pinchgesture_qbase_sender_signal_index(void* self) {
     return QPinchGesture_QBaseSenderSignalIndex((QPinchGesture*)self);
 }
 
-void q_pinchgesture_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPinchGesture_OnSenderSignalIndex((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPinchGesture_OnSenderSignalIndex((QPinchGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_pinchgesture_receivers(void* self, const char* signal) {
@@ -1263,8 +1275,8 @@ int32_t q_pinchgesture_qbase_receivers(void* self, const char* signal) {
     return QPinchGesture_QBaseReceivers((QPinchGesture*)self, signal);
 }
 
-void q_pinchgesture_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPinchGesture_OnReceivers((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPinchGesture_OnReceivers((QPinchGesture*)self, (intptr_t)callback);
 }
 
 bool q_pinchgesture_is_signal_connected(void* self, void* signal) {
@@ -1275,12 +1287,12 @@ bool q_pinchgesture_qbase_is_signal_connected(void* self, void* signal) {
     return QPinchGesture_QBaseIsSignalConnected((QPinchGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_pinchgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPinchGesture_OnIsSignalConnected((QPinchGesture*)self, (intptr_t)slot);
+void q_pinchgesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPinchGesture_OnIsSignalConnected((QPinchGesture*)self, (intptr_t)callback);
 }
 
-void q_pinchgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pinchgesture_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pinchgesture_delete(void* self) {
@@ -1307,8 +1319,8 @@ int32_t q_swipegesture_metacall(void* self, int64_t param1, int param2, void* pa
     return QSwipeGesture_Metacall((QSwipeGesture*)self, param1, param2, param3);
 }
 
-void q_swipegesture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSwipeGesture_OnMetacall((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSwipeGesture_OnMetacall((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_swipegesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -1488,12 +1500,16 @@ const char** q_swipegesture_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_swipegesture_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1511,8 +1527,8 @@ void q_swipegesture_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_swipegesture_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_swipegesture_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_swipegesture_parent(void* self) {
@@ -1547,8 +1563,8 @@ void q_swipegesture_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_swipegesture_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_swipegesture_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_swipegesture_event(void* self, void* event) {
@@ -1559,8 +1575,8 @@ bool q_swipegesture_qbase_event(void* self, void* event) {
     return QSwipeGesture_QBaseEvent((QSwipeGesture*)self, (QEvent*)event);
 }
 
-void q_swipegesture_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSwipeGesture_OnEvent((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSwipeGesture_OnEvent((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 bool q_swipegesture_event_filter(void* self, void* watched, void* event) {
@@ -1571,8 +1587,8 @@ bool q_swipegesture_qbase_event_filter(void* self, void* watched, void* event) {
     return QSwipeGesture_QBaseEventFilter((QSwipeGesture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_swipegesture_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSwipeGesture_OnEventFilter((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSwipeGesture_OnEventFilter((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 void q_swipegesture_timer_event(void* self, void* event) {
@@ -1583,8 +1599,8 @@ void q_swipegesture_qbase_timer_event(void* self, void* event) {
     QSwipeGesture_QBaseTimerEvent((QSwipeGesture*)self, (QTimerEvent*)event);
 }
 
-void q_swipegesture_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSwipeGesture_OnTimerEvent((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSwipeGesture_OnTimerEvent((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 void q_swipegesture_child_event(void* self, void* event) {
@@ -1595,8 +1611,8 @@ void q_swipegesture_qbase_child_event(void* self, void* event) {
     QSwipeGesture_QBaseChildEvent((QSwipeGesture*)self, (QChildEvent*)event);
 }
 
-void q_swipegesture_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSwipeGesture_OnChildEvent((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSwipeGesture_OnChildEvent((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 void q_swipegesture_custom_event(void* self, void* event) {
@@ -1607,8 +1623,8 @@ void q_swipegesture_qbase_custom_event(void* self, void* event) {
     QSwipeGesture_QBaseCustomEvent((QSwipeGesture*)self, (QEvent*)event);
 }
 
-void q_swipegesture_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSwipeGesture_OnCustomEvent((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSwipeGesture_OnCustomEvent((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 void q_swipegesture_connect_notify(void* self, void* signal) {
@@ -1619,8 +1635,8 @@ void q_swipegesture_qbase_connect_notify(void* self, void* signal) {
     QSwipeGesture_QBaseConnectNotify((QSwipeGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_swipegesture_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSwipeGesture_OnConnectNotify((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSwipeGesture_OnConnectNotify((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 void q_swipegesture_disconnect_notify(void* self, void* signal) {
@@ -1631,8 +1647,8 @@ void q_swipegesture_qbase_disconnect_notify(void* self, void* signal) {
     QSwipeGesture_QBaseDisconnectNotify((QSwipeGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_swipegesture_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSwipeGesture_OnDisconnectNotify((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSwipeGesture_OnDisconnectNotify((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 QObject* q_swipegesture_sender(void* self) {
@@ -1643,8 +1659,8 @@ QObject* q_swipegesture_qbase_sender(void* self) {
     return QSwipeGesture_QBaseSender((QSwipeGesture*)self);
 }
 
-void q_swipegesture_on_sender(void* self, QObject* (*slot)()) {
-    QSwipeGesture_OnSender((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_sender(void* self, QObject* (*callback)()) {
+    QSwipeGesture_OnSender((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_swipegesture_sender_signal_index(void* self) {
@@ -1655,8 +1671,8 @@ int32_t q_swipegesture_qbase_sender_signal_index(void* self) {
     return QSwipeGesture_QBaseSenderSignalIndex((QSwipeGesture*)self);
 }
 
-void q_swipegesture_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSwipeGesture_OnSenderSignalIndex((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSwipeGesture_OnSenderSignalIndex((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_swipegesture_receivers(void* self, const char* signal) {
@@ -1667,8 +1683,8 @@ int32_t q_swipegesture_qbase_receivers(void* self, const char* signal) {
     return QSwipeGesture_QBaseReceivers((QSwipeGesture*)self, signal);
 }
 
-void q_swipegesture_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSwipeGesture_OnReceivers((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSwipeGesture_OnReceivers((QSwipeGesture*)self, (intptr_t)callback);
 }
 
 bool q_swipegesture_is_signal_connected(void* self, void* signal) {
@@ -1679,12 +1695,12 @@ bool q_swipegesture_qbase_is_signal_connected(void* self, void* signal) {
     return QSwipeGesture_QBaseIsSignalConnected((QSwipeGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_swipegesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSwipeGesture_OnIsSignalConnected((QSwipeGesture*)self, (intptr_t)slot);
+void q_swipegesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSwipeGesture_OnIsSignalConnected((QSwipeGesture*)self, (intptr_t)callback);
 }
 
-void q_swipegesture_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_swipegesture_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_swipegesture_delete(void* self) {
@@ -1711,8 +1727,8 @@ int32_t q_tapgesture_metacall(void* self, int64_t param1, int param2, void* para
     return QTapGesture_Metacall((QTapGesture*)self, param1, param2, param3);
 }
 
-void q_tapgesture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTapGesture_OnMetacall((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTapGesture_OnMetacall((QTapGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_tapgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -1884,12 +1900,16 @@ const char** q_tapgesture_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_tapgesture_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1907,8 +1927,8 @@ void q_tapgesture_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_tapgesture_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_tapgesture_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_tapgesture_parent(void* self) {
@@ -1943,8 +1963,8 @@ void q_tapgesture_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_tapgesture_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_tapgesture_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_tapgesture_event(void* self, void* event) {
@@ -1955,8 +1975,8 @@ bool q_tapgesture_qbase_event(void* self, void* event) {
     return QTapGesture_QBaseEvent((QTapGesture*)self, (QEvent*)event);
 }
 
-void q_tapgesture_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTapGesture_OnEvent((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTapGesture_OnEvent((QTapGesture*)self, (intptr_t)callback);
 }
 
 bool q_tapgesture_event_filter(void* self, void* watched, void* event) {
@@ -1967,8 +1987,8 @@ bool q_tapgesture_qbase_event_filter(void* self, void* watched, void* event) {
     return QTapGesture_QBaseEventFilter((QTapGesture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_tapgesture_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTapGesture_OnEventFilter((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTapGesture_OnEventFilter((QTapGesture*)self, (intptr_t)callback);
 }
 
 void q_tapgesture_timer_event(void* self, void* event) {
@@ -1979,8 +1999,8 @@ void q_tapgesture_qbase_timer_event(void* self, void* event) {
     QTapGesture_QBaseTimerEvent((QTapGesture*)self, (QTimerEvent*)event);
 }
 
-void q_tapgesture_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTapGesture_OnTimerEvent((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTapGesture_OnTimerEvent((QTapGesture*)self, (intptr_t)callback);
 }
 
 void q_tapgesture_child_event(void* self, void* event) {
@@ -1991,8 +2011,8 @@ void q_tapgesture_qbase_child_event(void* self, void* event) {
     QTapGesture_QBaseChildEvent((QTapGesture*)self, (QChildEvent*)event);
 }
 
-void q_tapgesture_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTapGesture_OnChildEvent((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTapGesture_OnChildEvent((QTapGesture*)self, (intptr_t)callback);
 }
 
 void q_tapgesture_custom_event(void* self, void* event) {
@@ -2003,8 +2023,8 @@ void q_tapgesture_qbase_custom_event(void* self, void* event) {
     QTapGesture_QBaseCustomEvent((QTapGesture*)self, (QEvent*)event);
 }
 
-void q_tapgesture_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTapGesture_OnCustomEvent((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTapGesture_OnCustomEvent((QTapGesture*)self, (intptr_t)callback);
 }
 
 void q_tapgesture_connect_notify(void* self, void* signal) {
@@ -2015,8 +2035,8 @@ void q_tapgesture_qbase_connect_notify(void* self, void* signal) {
     QTapGesture_QBaseConnectNotify((QTapGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_tapgesture_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTapGesture_OnConnectNotify((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTapGesture_OnConnectNotify((QTapGesture*)self, (intptr_t)callback);
 }
 
 void q_tapgesture_disconnect_notify(void* self, void* signal) {
@@ -2027,8 +2047,8 @@ void q_tapgesture_qbase_disconnect_notify(void* self, void* signal) {
     QTapGesture_QBaseDisconnectNotify((QTapGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_tapgesture_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTapGesture_OnDisconnectNotify((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTapGesture_OnDisconnectNotify((QTapGesture*)self, (intptr_t)callback);
 }
 
 QObject* q_tapgesture_sender(void* self) {
@@ -2039,8 +2059,8 @@ QObject* q_tapgesture_qbase_sender(void* self) {
     return QTapGesture_QBaseSender((QTapGesture*)self);
 }
 
-void q_tapgesture_on_sender(void* self, QObject* (*slot)()) {
-    QTapGesture_OnSender((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_sender(void* self, QObject* (*callback)()) {
+    QTapGesture_OnSender((QTapGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_tapgesture_sender_signal_index(void* self) {
@@ -2051,8 +2071,8 @@ int32_t q_tapgesture_qbase_sender_signal_index(void* self) {
     return QTapGesture_QBaseSenderSignalIndex((QTapGesture*)self);
 }
 
-void q_tapgesture_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTapGesture_OnSenderSignalIndex((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTapGesture_OnSenderSignalIndex((QTapGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_tapgesture_receivers(void* self, const char* signal) {
@@ -2063,8 +2083,8 @@ int32_t q_tapgesture_qbase_receivers(void* self, const char* signal) {
     return QTapGesture_QBaseReceivers((QTapGesture*)self, signal);
 }
 
-void q_tapgesture_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTapGesture_OnReceivers((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTapGesture_OnReceivers((QTapGesture*)self, (intptr_t)callback);
 }
 
 bool q_tapgesture_is_signal_connected(void* self, void* signal) {
@@ -2075,12 +2095,12 @@ bool q_tapgesture_qbase_is_signal_connected(void* self, void* signal) {
     return QTapGesture_QBaseIsSignalConnected((QTapGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_tapgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTapGesture_OnIsSignalConnected((QTapGesture*)self, (intptr_t)slot);
+void q_tapgesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTapGesture_OnIsSignalConnected((QTapGesture*)self, (intptr_t)callback);
 }
 
-void q_tapgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_tapgesture_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_tapgesture_delete(void* self) {
@@ -2107,8 +2127,8 @@ int32_t q_tapandholdgesture_metacall(void* self, int64_t param1, int param2, voi
     return QTapAndHoldGesture_Metacall((QTapAndHoldGesture*)self, param1, param2, param3);
 }
 
-void q_tapandholdgesture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTapAndHoldGesture_OnMetacall((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTapAndHoldGesture_OnMetacall((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_tapandholdgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -2288,12 +2308,16 @@ const char** q_tapandholdgesture_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_tapandholdgesture_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2311,8 +2335,8 @@ void q_tapandholdgesture_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_tapandholdgesture_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_tapandholdgesture_parent(void* self) {
@@ -2347,8 +2371,8 @@ void q_tapandholdgesture_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_tapandholdgesture_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_tapandholdgesture_event(void* self, void* event) {
@@ -2359,8 +2383,8 @@ bool q_tapandholdgesture_qbase_event(void* self, void* event) {
     return QTapAndHoldGesture_QBaseEvent((QTapAndHoldGesture*)self, (QEvent*)event);
 }
 
-void q_tapandholdgesture_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnEvent((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnEvent((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 bool q_tapandholdgesture_event_filter(void* self, void* watched, void* event) {
@@ -2371,8 +2395,8 @@ bool q_tapandholdgesture_qbase_event_filter(void* self, void* watched, void* eve
     return QTapAndHoldGesture_QBaseEventFilter((QTapAndHoldGesture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_tapandholdgesture_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTapAndHoldGesture_OnEventFilter((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTapAndHoldGesture_OnEventFilter((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 void q_tapandholdgesture_timer_event(void* self, void* event) {
@@ -2383,8 +2407,8 @@ void q_tapandholdgesture_qbase_timer_event(void* self, void* event) {
     QTapAndHoldGesture_QBaseTimerEvent((QTapAndHoldGesture*)self, (QTimerEvent*)event);
 }
 
-void q_tapandholdgesture_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnTimerEvent((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnTimerEvent((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 void q_tapandholdgesture_child_event(void* self, void* event) {
@@ -2395,8 +2419,8 @@ void q_tapandholdgesture_qbase_child_event(void* self, void* event) {
     QTapAndHoldGesture_QBaseChildEvent((QTapAndHoldGesture*)self, (QChildEvent*)event);
 }
 
-void q_tapandholdgesture_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnChildEvent((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnChildEvent((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 void q_tapandholdgesture_custom_event(void* self, void* event) {
@@ -2407,8 +2431,8 @@ void q_tapandholdgesture_qbase_custom_event(void* self, void* event) {
     QTapAndHoldGesture_QBaseCustomEvent((QTapAndHoldGesture*)self, (QEvent*)event);
 }
 
-void q_tapandholdgesture_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnCustomEvent((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnCustomEvent((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 void q_tapandholdgesture_connect_notify(void* self, void* signal) {
@@ -2419,8 +2443,8 @@ void q_tapandholdgesture_qbase_connect_notify(void* self, void* signal) {
     QTapAndHoldGesture_QBaseConnectNotify((QTapAndHoldGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_tapandholdgesture_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnConnectNotify((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnConnectNotify((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 void q_tapandholdgesture_disconnect_notify(void* self, void* signal) {
@@ -2431,8 +2455,8 @@ void q_tapandholdgesture_qbase_disconnect_notify(void* self, void* signal) {
     QTapAndHoldGesture_QBaseDisconnectNotify((QTapAndHoldGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_tapandholdgesture_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnDisconnectNotify((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnDisconnectNotify((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 QObject* q_tapandholdgesture_sender(void* self) {
@@ -2443,8 +2467,8 @@ QObject* q_tapandholdgesture_qbase_sender(void* self) {
     return QTapAndHoldGesture_QBaseSender((QTapAndHoldGesture*)self);
 }
 
-void q_tapandholdgesture_on_sender(void* self, QObject* (*slot)()) {
-    QTapAndHoldGesture_OnSender((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_sender(void* self, QObject* (*callback)()) {
+    QTapAndHoldGesture_OnSender((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_tapandholdgesture_sender_signal_index(void* self) {
@@ -2455,8 +2479,8 @@ int32_t q_tapandholdgesture_qbase_sender_signal_index(void* self) {
     return QTapAndHoldGesture_QBaseSenderSignalIndex((QTapAndHoldGesture*)self);
 }
 
-void q_tapandholdgesture_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTapAndHoldGesture_OnSenderSignalIndex((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTapAndHoldGesture_OnSenderSignalIndex((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 int32_t q_tapandholdgesture_receivers(void* self, const char* signal) {
@@ -2467,8 +2491,8 @@ int32_t q_tapandholdgesture_qbase_receivers(void* self, const char* signal) {
     return QTapAndHoldGesture_QBaseReceivers((QTapAndHoldGesture*)self, signal);
 }
 
-void q_tapandholdgesture_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTapAndHoldGesture_OnReceivers((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTapAndHoldGesture_OnReceivers((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
 bool q_tapandholdgesture_is_signal_connected(void* self, void* signal) {
@@ -2479,12 +2503,12 @@ bool q_tapandholdgesture_qbase_is_signal_connected(void* self, void* signal) {
     return QTapAndHoldGesture_QBaseIsSignalConnected((QTapAndHoldGesture*)self, (QMetaMethod*)signal);
 }
 
-void q_tapandholdgesture_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTapAndHoldGesture_OnIsSignalConnected((QTapAndHoldGesture*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTapAndHoldGesture_OnIsSignalConnected((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
-void q_tapandholdgesture_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_tapandholdgesture_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_tapandholdgesture_delete(void* self) {
@@ -2598,8 +2622,8 @@ QEvent* q_gestureevent_qbase_clone(void* self) {
     return QGestureEvent_QBaseClone((QGestureEvent*)self);
 }
 
-void q_gestureevent_on_clone(void* self, QEvent* (*slot)()) {
-    QGestureEvent_OnClone((QGestureEvent*)self, (intptr_t)slot);
+void q_gestureevent_on_clone(void* self, QEvent* (*callback)()) {
+    QGestureEvent_OnClone((QGestureEvent*)self, (intptr_t)callback);
 }
 
 void q_gestureevent_delete(void* self) {

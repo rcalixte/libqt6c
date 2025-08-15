@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,194 +15,224 @@
 
 /// q_pen_new constructs a new QPen object.
 ///
-///
 QPen* q_pen_new();
 
 /// q_pen_new2 constructs a new QPen object.
 ///
-/// ``` enum Qt__PenStyle param1 ```
+/// @param param1 enum Qt__PenStyle
 QPen* q_pen_new2(int64_t param1);
 
 /// q_pen_new3 constructs a new QPen object.
 ///
-/// ``` QColor* color ```
+/// @param color QColor*
 QPen* q_pen_new3(void* color);
 
 /// q_pen_new4 constructs a new QPen object.
 ///
-/// ``` QBrush* brush, double width ```
+/// @param brush QBrush*
+/// @param width double
 QPen* q_pen_new4(void* brush, double width);
 
 /// q_pen_new5 constructs a new QPen object.
 ///
-/// ``` QPen* pen ```
+/// @param pen QPen*
 QPen* q_pen_new5(void* pen);
 
 /// q_pen_new6 constructs a new QPen object.
 ///
-/// ``` QBrush* brush, double width, enum Qt__PenStyle s ```
+/// @param brush QBrush*
+/// @param width double
+/// @param s enum Qt__PenStyle
 QPen* q_pen_new6(void* brush, double width, int64_t s);
 
 /// q_pen_new7 constructs a new QPen object.
 ///
-/// ``` QBrush* brush, double width, enum Qt__PenStyle s, enum Qt__PenCapStyle c ```
+/// @param brush QBrush*
+/// @param width double
+/// @param s enum Qt__PenStyle
+/// @param c enum Qt__PenCapStyle
 QPen* q_pen_new7(void* brush, double width, int64_t s, int64_t c);
 
 /// q_pen_new8 constructs a new QPen object.
 ///
-/// ``` QBrush* brush, double width, enum Qt__PenStyle s, enum Qt__PenCapStyle c, enum Qt__PenJoinStyle j ```
+/// @param brush QBrush*
+/// @param width double
+/// @param s enum Qt__PenStyle
+/// @param c enum Qt__PenCapStyle
+/// @param j enum Qt__PenJoinStyle
 QPen* q_pen_new8(void* brush, double width, int64_t s, int64_t c, int64_t j);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-eq)
 ///
-/// ``` QPen* self, QPen* pen ```
+/// @param self QPen*
+/// @param pen QPen*
 void q_pen_operator_assign(void* self, void* pen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#swap)
 ///
-/// ``` QPen* self, QPen* other ```
+/// @param self QPen*
+/// @param other QPen*
 void q_pen_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#style)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
+///
+/// @return enum Qt__PenStyle
 int64_t q_pen_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setStyle)
 ///
-/// ``` QPen* self, enum Qt__PenStyle style ```
+/// @param self QPen*
+/// @param style enum Qt__PenStyle
 void q_pen_set_style(void* self, int64_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#dashPattern)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 libqt_list /* of double */ q_pen_dash_pattern(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setDashPattern)
 ///
-/// ``` QPen* self, libqt_list /* of double */ pattern ```
+/// @param self QPen*
+/// @param pattern libqt_list /* of double */
 void q_pen_set_dash_pattern(void* self, libqt_list pattern);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#dashOffset)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 double q_pen_dash_offset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setDashOffset)
 ///
-/// ``` QPen* self, double doffset ```
+/// @param self QPen*
+/// @param doffset double
 void q_pen_set_dash_offset(void* self, double doffset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#miterLimit)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 double q_pen_miter_limit(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setMiterLimit)
 ///
-/// ``` QPen* self, double limit ```
+/// @param self QPen*
+/// @param limit double
 void q_pen_set_miter_limit(void* self, double limit);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#widthF)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 double q_pen_width_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setWidthF)
 ///
-/// ``` QPen* self, double width ```
+/// @param self QPen*
+/// @param width double
 void q_pen_set_width_f(void* self, double width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#width)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 int32_t q_pen_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setWidth)
 ///
-/// ``` QPen* self, int width ```
+/// @param self QPen*
+/// @param width int
 void q_pen_set_width(void* self, int width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#color)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 QColor* q_pen_color(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setColor)
 ///
-/// ``` QPen* self, QColor* color ```
+/// @param self QPen*
+/// @param color QColor*
 void q_pen_set_color(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#brush)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 QBrush* q_pen_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setBrush)
 ///
-/// ``` QPen* self, QBrush* brush ```
+/// @param self QPen*
+/// @param brush QBrush*
 void q_pen_set_brush(void* self, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#isSolid)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 bool q_pen_is_solid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#capStyle)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
+///
+/// @return enum Qt__PenCapStyle
 int64_t q_pen_cap_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setCapStyle)
 ///
-/// ``` QPen* self, enum Qt__PenCapStyle pcs ```
+/// @param self QPen*
+/// @param pcs enum Qt__PenCapStyle
 void q_pen_set_cap_style(void* self, int64_t pcs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#joinStyle)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
+///
+/// @return enum Qt__PenJoinStyle
 int64_t q_pen_join_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setJoinStyle)
 ///
-/// ``` QPen* self, enum Qt__PenJoinStyle pcs ```
+/// @param self QPen*
+/// @param pcs enum Qt__PenJoinStyle
 void q_pen_set_join_style(void* self, int64_t pcs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#isCosmetic)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 bool q_pen_is_cosmetic(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setCosmetic)
 ///
-/// ``` QPen* self, bool cosmetic ```
+/// @param self QPen*
+/// @param cosmetic bool
 void q_pen_set_cosmetic(void* self, bool cosmetic);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-eq-eq)
 ///
-/// ``` QPen* self, QPen* p ```
+/// @param self QPen*
+/// @param p QPen*
 bool q_pen_operator_equal(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-not-eq)
 ///
-/// ``` QPen* self, QPen* p ```
+/// @param self QPen*
+/// @param p QPen*
 bool q_pen_operator_not_equal(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 QVariant* q_pen_to_q_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#isDetached)
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 bool q_pen_is_detached(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#dtor.QPen)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPen* self ```
+/// @param self QPen*
 void q_pen_delete(void* self);
 
 #endif

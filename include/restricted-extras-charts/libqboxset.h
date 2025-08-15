@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,505 +15,602 @@
 
 /// q_boxset_new constructs a new QBoxSet object.
 ///
-///
 QBoxSet* q_boxset_new();
 
 /// q_boxset_new2 constructs a new QBoxSet object.
 ///
-/// ``` double le, double lq, double m, double uq, double ue ```
+/// @param le double
+/// @param lq double
+/// @param m double
+/// @param uq double
+/// @param ue double
 QBoxSet* q_boxset_new2(double le, double lq, double m, double uq, double ue);
 
 /// q_boxset_new3 constructs a new QBoxSet object.
 ///
-/// ``` const char* label ```
+/// @param label const char*
 QBoxSet* q_boxset_new3(const char* label);
 
 /// q_boxset_new4 constructs a new QBoxSet object.
 ///
-/// ``` const char* label, QObject* parent ```
+/// @param label const char*
+/// @param parent QObject*
 QBoxSet* q_boxset_new4(const char* label, void* parent);
 
 /// q_boxset_new5 constructs a new QBoxSet object.
 ///
-/// ``` double le, double lq, double m, double uq, double ue, const char* label ```
+/// @param le double
+/// @param lq double
+/// @param m double
+/// @param uq double
+/// @param ue double
+/// @param label const char*
 QBoxSet* q_boxset_new5(double le, double lq, double m, double uq, double ue, const char* label);
 
 /// q_boxset_new6 constructs a new QBoxSet object.
 ///
-/// ``` double le, double lq, double m, double uq, double ue, const char* label, QObject* parent ```
+/// @param le double
+/// @param lq double
+/// @param m double
+/// @param uq double
+/// @param ue double
+/// @param label const char*
+/// @param parent QObject*
 QBoxSet* q_boxset_new6(double le, double lq, double m, double uq, double ue, const char* label, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 const QMetaObject* q_boxset_meta_object(void* self);
 
-/// ``` QBoxSet* self, const char* param1 ```
+/// @param self QBoxSet*
+/// @param param1 const char*
 void* q_boxset_metacast(void* self, const char* param1);
 
-/// ``` QBoxSet* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QBoxSet*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_boxset_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QBoxSet* self, int32_t (*slot)(QBoxSet*, enum QMetaObject__Call, int, void*) ```
-void q_boxset_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QBoxSet*
+/// @param callback int32_t fn(QBoxSet*, enum QMetaObject__Call, int, void*)
+void q_boxset_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QBoxSet* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QBoxSet*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_boxset_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_boxset_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#append)
 ///
-/// ``` QBoxSet* self, double value ```
+/// @param self QBoxSet*
+/// @param value double
 void q_boxset_append(void* self, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#append)
 ///
-/// ``` QBoxSet* self, libqt_list /* of double */ values ```
+/// @param self QBoxSet*
+/// @param values libqt_list /* of double */
 void q_boxset_append2(void* self, libqt_list values);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#clear)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#setLabel)
 ///
-/// ``` QBoxSet* self, const char* label ```
+/// @param self QBoxSet*
+/// @param label const char*
 void q_boxset_set_label(void* self, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#label)
 ///
-/// ``` QBoxSet* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QBoxSet*
 const char* q_boxset_label(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#operator-lt-lt)
 ///
-/// ``` QBoxSet* self, double* value ```
+/// @param self QBoxSet*
+/// @param value double*
 QBoxSet* q_boxset_operator_shift_left(void* self, double* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#setValue)
 ///
-/// ``` QBoxSet* self, int index, double value ```
+/// @param self QBoxSet*
+/// @param index int
+/// @param value double
 void q_boxset_set_value(void* self, int index, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#at)
 ///
-/// ``` QBoxSet* self, int index ```
+/// @param self QBoxSet*
+/// @param index int
 double q_boxset_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#operator-5b-5d)
 ///
-/// ``` QBoxSet* self, int index ```
+/// @param self QBoxSet*
+/// @param index int
 double q_boxset_operator_subscript(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#count)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 int32_t q_boxset_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#setPen)
 ///
-/// ``` QBoxSet* self, QPen* pen ```
+/// @param self QBoxSet*
+/// @param pen QPen*
 void q_boxset_set_pen(void* self, void* pen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#pen)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QPen* q_boxset_pen(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#setBrush)
 ///
-/// ``` QBoxSet* self, QBrush* brush ```
+/// @param self QBoxSet*
+/// @param brush QBrush*
 void q_boxset_set_brush(void* self, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#brush)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QBrush* q_boxset_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#clicked)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_clicked(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#clicked)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_clicked(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#hovered)
 ///
-/// ``` QBoxSet* self, bool status ```
+/// @param self QBoxSet*
+/// @param status bool
 void q_boxset_hovered(void* self, bool status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#hovered)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, bool) ```
-void q_boxset_on_hovered(void* self, void (*slot)(void*, bool));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, bool)
+void q_boxset_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#pressed)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_pressed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#pressed)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_pressed(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_pressed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#released)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_released(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#released)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_released(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_released(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#doubleClicked)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_double_clicked(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#doubleClicked)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_double_clicked(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_double_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#penChanged)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_pen_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#penChanged)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_pen_changed(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_pen_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#brushChanged)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_brush_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#brushChanged)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_brush_changed(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#valuesChanged)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_values_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#valuesChanged)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_values_changed(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_values_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#valueChanged)
 ///
-/// ``` QBoxSet* self, int index ```
+/// @param self QBoxSet*
+/// @param index int
 void q_boxset_value_changed(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#valueChanged)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, int) ```
-void q_boxset_on_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, int)
+void q_boxset_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#cleared)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_cleared(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#cleared)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_cleared(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_cleared(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_boxset_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_boxset_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QBoxSet* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QBoxSet*
 const char* q_boxset_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QBoxSet* self, char* name ```
+/// @param self QBoxSet*
+/// @param name char*
 void q_boxset_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 bool q_boxset_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 bool q_boxset_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 bool q_boxset_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 bool q_boxset_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QBoxSet* self, bool b ```
+/// @param self QBoxSet*
+/// @param b bool
 bool q_boxset_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QThread* q_boxset_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QBoxSet* self, QThread* thread ```
+/// @param self QBoxSet*
+/// @param thread QThread*
 bool q_boxset_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QBoxSet* self, int interval ```
+/// @param self QBoxSet*
+/// @param interval int
 int32_t q_boxset_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QBoxSet* self, int id ```
+/// @param self QBoxSet*
+/// @param id int
 void q_boxset_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QBoxSet* self, enum Qt__TimerId id ```
+/// @param self QBoxSet*
+/// @param id enum Qt__TimerId
 void q_boxset_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 libqt_list /* of QObject* */ q_boxset_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QBoxSet* self, QObject* parent ```
+/// @param self QBoxSet*
+/// @param parent QObject*
 void q_boxset_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QBoxSet* self, QObject* filterObj ```
+/// @param self QBoxSet*
+/// @param filterObj QObject*
 void q_boxset_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QBoxSet* self, QObject* obj ```
+/// @param self QBoxSet*
+/// @param obj QObject*
 void q_boxset_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_boxset_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QBoxSet* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QBoxSet*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_boxset_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_boxset_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_boxset_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QBoxSet* self, const char* name, QVariant* value ```
+/// @param self QBoxSet*
+/// @param name const char*
+/// @param value QVariant*
 bool q_boxset_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QBoxSet* self, const char* name ```
+/// @param self QBoxSet*
+/// @param name const char*
 QVariant* q_boxset_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QBoxSet* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QBoxSet*
 const char** q_boxset_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QBindingStorage* q_boxset_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 const QBindingStorage* q_boxset_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*) ```
-void q_boxset_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*)
+void q_boxset_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QObject* q_boxset_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QBoxSet* self, const char* classname ```
+/// @param self QBoxSet*
+/// @param classname const char*
 bool q_boxset_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QBoxSet* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QBoxSet*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_boxset_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QBoxSet* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QBoxSet*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_boxset_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_boxset_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QBoxSet* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QBoxSet*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_boxset_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxSet* self, QObject* param1 ```
+/// @param self QBoxSet*
+/// @param param1 QObject*
 void q_boxset_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, QObject*) ```
-void q_boxset_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, QObject*)
+void q_boxset_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -522,7 +618,8 @@ void q_boxset_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QEvent* event ```
+/// @param self QBoxSet*
+/// @param event QEvent*
 bool q_boxset_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -531,7 +628,8 @@ bool q_boxset_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QEvent* event ```
+/// @param self QBoxSet*
+/// @param event QEvent*
 bool q_boxset_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -540,8 +638,9 @@ bool q_boxset_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, bool (*slot)(QBoxSet*, QEvent*) ```
-void q_boxset_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback bool fn(QBoxSet*, QEvent*)
+void q_boxset_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -549,7 +648,9 @@ void q_boxset_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QObject* watched, QEvent* event ```
+/// @param self QBoxSet*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_boxset_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -558,7 +659,9 @@ bool q_boxset_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QObject* watched, QEvent* event ```
+/// @param self QBoxSet*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_boxset_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -567,8 +670,9 @@ bool q_boxset_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, bool (*slot)(QBoxSet*, QObject*, QEvent*) ```
-void q_boxset_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QBoxSet*
+/// @param callback bool fn(QBoxSet*, QObject*, QEvent*)
+void q_boxset_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -576,7 +680,8 @@ void q_boxset_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QTimerEvent* event ```
+/// @param self QBoxSet*
+/// @param event QTimerEvent*
 void q_boxset_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -585,7 +690,8 @@ void q_boxset_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QTimerEvent* event ```
+/// @param self QBoxSet*
+/// @param event QTimerEvent*
 void q_boxset_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -594,8 +700,9 @@ void q_boxset_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, QTimerEvent*) ```
-void q_boxset_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, QTimerEvent*)
+void q_boxset_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -603,7 +710,8 @@ void q_boxset_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QChildEvent* event ```
+/// @param self QBoxSet*
+/// @param event QChildEvent*
 void q_boxset_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -612,7 +720,8 @@ void q_boxset_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QChildEvent* event ```
+/// @param self QBoxSet*
+/// @param event QChildEvent*
 void q_boxset_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -621,8 +730,9 @@ void q_boxset_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, QChildEvent*) ```
-void q_boxset_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, QChildEvent*)
+void q_boxset_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -630,7 +740,8 @@ void q_boxset_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QEvent* event ```
+/// @param self QBoxSet*
+/// @param event QEvent*
 void q_boxset_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -639,7 +750,8 @@ void q_boxset_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QEvent* event ```
+/// @param self QBoxSet*
+/// @param event QEvent*
 void q_boxset_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -648,8 +760,9 @@ void q_boxset_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, QEvent*) ```
-void q_boxset_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, QEvent*)
+void q_boxset_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -657,7 +770,8 @@ void q_boxset_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QMetaMethod* signal ```
+/// @param self QBoxSet*
+/// @param signal QMetaMethod*
 void q_boxset_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -666,7 +780,8 @@ void q_boxset_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QMetaMethod* signal ```
+/// @param self QBoxSet*
+/// @param signal QMetaMethod*
 void q_boxset_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -675,8 +790,9 @@ void q_boxset_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, QMetaMethod*) ```
-void q_boxset_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, QMetaMethod*)
+void q_boxset_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -684,7 +800,8 @@ void q_boxset_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QMetaMethod* signal ```
+/// @param self QBoxSet*
+/// @param signal QMetaMethod*
 void q_boxset_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -693,7 +810,8 @@ void q_boxset_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QMetaMethod* signal ```
+/// @param self QBoxSet*
+/// @param signal QMetaMethod*
 void q_boxset_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -702,8 +820,9 @@ void q_boxset_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, QMetaMethod*) ```
-void q_boxset_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, QMetaMethod*)
+void q_boxset_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -711,7 +830,7 @@ void q_boxset_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QObject* q_boxset_sender(void* self);
 
 /// Inherited from QObject
@@ -720,7 +839,7 @@ QObject* q_boxset_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 QObject* q_boxset_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -729,8 +848,9 @@ QObject* q_boxset_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QObject* (*slot)() ```
-void q_boxset_on_sender(void* self, QObject* (*slot)());
+/// @param self QBoxSet*
+/// @param callback QObject* fn()
+void q_boxset_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -738,7 +858,7 @@ void q_boxset_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 int32_t q_boxset_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -747,7 +867,7 @@ int32_t q_boxset_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 int32_t q_boxset_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -756,8 +876,9 @@ int32_t q_boxset_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, int32_t (*slot)() ```
-void q_boxset_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QBoxSet*
+/// @param callback int32_t fn()
+void q_boxset_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -765,7 +886,8 @@ void q_boxset_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, const char* signal ```
+/// @param self QBoxSet*
+/// @param signal const char*
 int32_t q_boxset_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -774,7 +896,8 @@ int32_t q_boxset_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, const char* signal ```
+/// @param self QBoxSet*
+/// @param signal const char*
 int32_t q_boxset_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -783,8 +906,9 @@ int32_t q_boxset_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, int32_t (*slot)(QBoxSet*, const char*) ```
-void q_boxset_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QBoxSet*
+/// @param callback int32_t fn(QBoxSet*, const char*)
+void q_boxset_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -792,7 +916,8 @@ void q_boxset_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QBoxSet* self, QMetaMethod* signal ```
+/// @param self QBoxSet*
+/// @param signal QMetaMethod*
 bool q_boxset_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -801,7 +926,8 @@ bool q_boxset_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QBoxSet* self, QMetaMethod* signal ```
+/// @param self QBoxSet*
+/// @param signal QMetaMethod*
 bool q_boxset_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -810,8 +936,9 @@ bool q_boxset_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QBoxSet* self, bool (*slot)(QBoxSet*, QMetaMethod*) ```
-void q_boxset_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QBoxSet*
+/// @param callback bool fn(QBoxSet*, QMetaMethod*)
+void q_boxset_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -819,14 +946,15 @@ void q_boxset_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QBoxSet* self, void (*slot)(QBoxSet*, const char*) ```
-void q_boxset_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QBoxSet*
+/// @param callback void fn(QBoxSet*, const char*)
+void q_boxset_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxset-qtcharts.html#dtor.QBoxSet)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QBoxSet* self ```
+/// @param self QBoxSet*
 void q_boxset_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qboxset-qtcharts.html#types

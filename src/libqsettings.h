@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,559 +15,679 @@
 
 /// q_settings_new constructs a new QSettings object.
 ///
-/// ``` const char* organization ```
+/// @param organization const char*
 QSettings* q_settings_new(const char* organization);
 
 /// q_settings_new2 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Scope scope, const char* organization ```
+/// @param scope enum QSettings__Scope
+/// @param organization const char*
 QSettings* q_settings_new2(int64_t scope, const char* organization);
 
 /// q_settings_new3 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Format format, enum QSettings__Scope scope, const char* organization ```
+/// @param format enum QSettings__Format
+/// @param scope enum QSettings__Scope
+/// @param organization const char*
 QSettings* q_settings_new3(int64_t format, int64_t scope, const char* organization);
 
 /// q_settings_new4 constructs a new QSettings object.
 ///
-/// ``` const char* fileName, enum QSettings__Format format ```
+/// @param fileName const char*
+/// @param format enum QSettings__Format
 QSettings* q_settings_new4(const char* fileName, int64_t format);
 
 /// q_settings_new5 constructs a new QSettings object.
-///
 ///
 QSettings* q_settings_new5();
 
 /// q_settings_new6 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Scope scope ```
+/// @param scope enum QSettings__Scope
 QSettings* q_settings_new6(int64_t scope);
 
 /// q_settings_new7 constructs a new QSettings object.
 ///
-/// ``` const char* organization, const char* application ```
+/// @param organization const char*
+/// @param application const char*
 QSettings* q_settings_new7(const char* organization, const char* application);
 
 /// q_settings_new8 constructs a new QSettings object.
 ///
-/// ``` const char* organization, const char* application, QObject* parent ```
+/// @param organization const char*
+/// @param application const char*
+/// @param parent QObject*
 QSettings* q_settings_new8(const char* organization, const char* application, void* parent);
 
 /// q_settings_new9 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Scope scope, const char* organization, const char* application ```
+/// @param scope enum QSettings__Scope
+/// @param organization const char*
+/// @param application const char*
 QSettings* q_settings_new9(int64_t scope, const char* organization, const char* application);
 
 /// q_settings_new10 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Scope scope, const char* organization, const char* application, QObject* parent ```
+/// @param scope enum QSettings__Scope
+/// @param organization const char*
+/// @param application const char*
+/// @param parent QObject*
 QSettings* q_settings_new10(int64_t scope, const char* organization, const char* application, void* parent);
 
 /// q_settings_new11 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Format format, enum QSettings__Scope scope, const char* organization, const char* application ```
+/// @param format enum QSettings__Format
+/// @param scope enum QSettings__Scope
+/// @param organization const char*
+/// @param application const char*
 QSettings* q_settings_new11(int64_t format, int64_t scope, const char* organization, const char* application);
 
 /// q_settings_new12 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Format format, enum QSettings__Scope scope, const char* organization, const char* application, QObject* parent ```
+/// @param format enum QSettings__Format
+/// @param scope enum QSettings__Scope
+/// @param organization const char*
+/// @param application const char*
+/// @param parent QObject*
 QSettings* q_settings_new12(int64_t format, int64_t scope, const char* organization, const char* application, void* parent);
 
 /// q_settings_new13 constructs a new QSettings object.
 ///
-/// ``` const char* fileName, enum QSettings__Format format, QObject* parent ```
+/// @param fileName const char*
+/// @param format enum QSettings__Format
+/// @param parent QObject*
 QSettings* q_settings_new13(const char* fileName, int64_t format, void* parent);
 
 /// q_settings_new14 constructs a new QSettings object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QSettings* q_settings_new14(void* parent);
 
 /// q_settings_new15 constructs a new QSettings object.
 ///
-/// ``` enum QSettings__Scope scope, QObject* parent ```
+/// @param scope enum QSettings__Scope
+/// @param parent QObject*
 QSettings* q_settings_new15(int64_t scope, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 const QMetaObject* q_settings_meta_object(void* self);
 
-/// ``` QSettings* self, const char* param1 ```
+/// @param self QSettings*
+/// @param param1 const char*
 void* q_settings_metacast(void* self, const char* param1);
 
-/// ``` QSettings* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QSettings*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_settings_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QSettings* self, int32_t (*slot)(QSettings*, enum QMetaObject__Call, int, void*) ```
-void q_settings_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QSettings*
+/// @param callback int32_t fn(QSettings*, enum QMetaObject__Call, int, void*)
+void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QSettings* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QSettings*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_settings_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_settings_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#clear)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#sync)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_sync(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#status)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
+///
+/// @return enum QSettings__Status
 int64_t q_settings_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#isAtomicSyncRequired)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_is_atomic_sync_required(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setAtomicSyncRequired)
 ///
-/// ``` QSettings* self, bool enable ```
+/// @param self QSettings*
+/// @param enable bool
 void q_settings_set_atomic_sync_required(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginGroup)
 ///
-/// ``` QSettings* self, char* prefix ```
+/// @param self QSettings*
+/// @param prefix char*
 void q_settings_begin_group(void* self, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#endGroup)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_end_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#group)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char* q_settings_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginReadArray)
 ///
-/// ``` QSettings* self, char* prefix ```
+/// @param self QSettings*
+/// @param prefix char*
 int32_t q_settings_begin_read_array(void* self, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
 ///
-/// ``` QSettings* self, char* prefix ```
+/// @param self QSettings*
+/// @param prefix char*
 void q_settings_begin_write_array(void* self, char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#endArray)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_end_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setArrayIndex)
 ///
-/// ``` QSettings* self, int i ```
+/// @param self QSettings*
+/// @param i int
 void q_settings_set_array_index(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#allKeys)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char** q_settings_all_keys(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#childKeys)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char** q_settings_child_keys(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#childGroups)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char** q_settings_child_groups(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#isWritable)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_is_writable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setValue)
 ///
-/// ``` QSettings* self, char* key, QVariant* value ```
+/// @param self QSettings*
+/// @param key char*
+/// @param value QVariant*
 void q_settings_set_value(void* self, char* key, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
-/// ``` QSettings* self, char* key, QVariant* defaultValue ```
+/// @param self QSettings*
+/// @param key char*
+/// @param defaultValue QVariant*
 QVariant* q_settings_value(void* self, char* key, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#value)
 ///
-/// ``` QSettings* self, char* key ```
+/// @param self QSettings*
+/// @param key char*
 QVariant* q_settings_value2(void* self, char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#remove)
 ///
-/// ``` QSettings* self, char* key ```
+/// @param self QSettings*
+/// @param key char*
 void q_settings_remove(void* self, char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#contains)
 ///
-/// ``` QSettings* self, char* key ```
+/// @param self QSettings*
+/// @param key char*
 bool q_settings_contains(void* self, char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setFallbacksEnabled)
 ///
-/// ``` QSettings* self, bool b ```
+/// @param self QSettings*
+/// @param b bool
 void q_settings_set_fallbacks_enabled(void* self, bool b);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#fallbacksEnabled)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_fallbacks_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#fileName)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char* q_settings_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#format)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
+///
+/// @return enum QSettings__Format
 int64_t q_settings_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#scope)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
+///
+/// @return enum QSettings__Scope
 int64_t q_settings_scope(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#organizationName)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char* q_settings_organization_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#applicationName)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char* q_settings_application_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setDefaultFormat)
 ///
-/// ``` enum QSettings__Format format ```
+/// @param format enum QSettings__Format
 void q_settings_set_default_format(int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#defaultFormat)
 ///
 ///
+/// @return enum QSettings__Format
 int64_t q_settings_default_format();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setPath)
 ///
-/// ``` enum QSettings__Format format, enum QSettings__Scope scope, const char* path ```
+/// @param format enum QSettings__Format
+/// @param scope enum QSettings__Scope
+/// @param path const char*
 void q_settings_set_path(int64_t format, int64_t scope, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#event)
 ///
-/// ``` QSettings* self, QEvent* event ```
+/// @param self QSettings*
+/// @param event QEvent*
 bool q_settings_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QSettings* self, bool (*slot)(QSettings*, QEvent*) ```
-void q_settings_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback bool fn(QSettings*, QEvent*)
+void q_settings_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QSettings* self, QEvent* event ```
+/// @param self QSettings*
+/// @param event QEvent*
 bool q_settings_qbase_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_settings_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_settings_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#beginWriteArray)
 ///
-/// ``` QSettings* self, char* prefix, int size ```
+/// @param self QSettings*
+/// @param prefix char*
+/// @param size int
 void q_settings_begin_write_array2(void* self, char* prefix, int size);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char* q_settings_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QSettings* self, char* name ```
+/// @param self QSettings*
+/// @param name char*
 void q_settings_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 bool q_settings_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QSettings* self, bool b ```
+/// @param self QSettings*
+/// @param b bool
 bool q_settings_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 QThread* q_settings_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QSettings* self, QThread* thread ```
+/// @param self QSettings*
+/// @param thread QThread*
 bool q_settings_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QSettings* self, int interval ```
+/// @param self QSettings*
+/// @param interval int
 int32_t q_settings_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QSettings* self, int id ```
+/// @param self QSettings*
+/// @param id int
 void q_settings_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QSettings* self, enum Qt__TimerId id ```
+/// @param self QSettings*
+/// @param id enum Qt__TimerId
 void q_settings_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 libqt_list /* of QObject* */ q_settings_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QSettings* self, QObject* parent ```
+/// @param self QSettings*
+/// @param parent QObject*
 void q_settings_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QSettings* self, QObject* filterObj ```
+/// @param self QSettings*
+/// @param filterObj QObject*
 void q_settings_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QSettings* self, QObject* obj ```
+/// @param self QSettings*
+/// @param obj QObject*
 void q_settings_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_settings_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QSettings* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QSettings*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_settings_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_settings_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_settings_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QSettings* self, const char* name, QVariant* value ```
+/// @param self QSettings*
+/// @param name const char*
+/// @param value QVariant*
 bool q_settings_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QSettings* self, const char* name ```
+/// @param self QSettings*
+/// @param name const char*
 QVariant* q_settings_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QSettings* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSettings*
 const char** q_settings_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 QBindingStorage* q_settings_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 const QBindingStorage* q_settings_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*) ```
-void q_settings_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*)
+void q_settings_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 QObject* q_settings_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QSettings* self, const char* classname ```
+/// @param self QSettings*
+/// @param classname const char*
 bool q_settings_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QSettings* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QSettings*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_settings_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QSettings* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QSettings*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_settings_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QSettings* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QSettings*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_settings_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSettings* self, QObject* param1 ```
+/// @param self QSettings*
+/// @param param1 QObject*
 void q_settings_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, QObject*) ```
-void q_settings_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, QObject*)
+void q_settings_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -576,7 +695,9 @@ void q_settings_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QObject* watched, QEvent* event ```
+/// @param self QSettings*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_settings_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -585,7 +706,9 @@ bool q_settings_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QObject* watched, QEvent* event ```
+/// @param self QSettings*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_settings_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -594,8 +717,9 @@ bool q_settings_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, bool (*slot)(QSettings*, QObject*, QEvent*) ```
-void q_settings_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QSettings*
+/// @param callback bool fn(QSettings*, QObject*, QEvent*)
+void q_settings_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -603,7 +727,8 @@ void q_settings_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QTimerEvent* event ```
+/// @param self QSettings*
+/// @param event QTimerEvent*
 void q_settings_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -612,7 +737,8 @@ void q_settings_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QTimerEvent* event ```
+/// @param self QSettings*
+/// @param event QTimerEvent*
 void q_settings_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -621,8 +747,9 @@ void q_settings_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, QTimerEvent*) ```
-void q_settings_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, QTimerEvent*)
+void q_settings_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -630,7 +757,8 @@ void q_settings_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QChildEvent* event ```
+/// @param self QSettings*
+/// @param event QChildEvent*
 void q_settings_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -639,7 +767,8 @@ void q_settings_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QChildEvent* event ```
+/// @param self QSettings*
+/// @param event QChildEvent*
 void q_settings_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -648,8 +777,9 @@ void q_settings_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, QChildEvent*) ```
-void q_settings_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, QChildEvent*)
+void q_settings_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -657,7 +787,8 @@ void q_settings_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QEvent* event ```
+/// @param self QSettings*
+/// @param event QEvent*
 void q_settings_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -666,7 +797,8 @@ void q_settings_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QEvent* event ```
+/// @param self QSettings*
+/// @param event QEvent*
 void q_settings_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -675,8 +807,9 @@ void q_settings_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, QEvent*) ```
-void q_settings_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, QEvent*)
+void q_settings_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -684,7 +817,8 @@ void q_settings_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QMetaMethod* signal ```
+/// @param self QSettings*
+/// @param signal QMetaMethod*
 void q_settings_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -693,7 +827,8 @@ void q_settings_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QMetaMethod* signal ```
+/// @param self QSettings*
+/// @param signal QMetaMethod*
 void q_settings_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -702,8 +837,9 @@ void q_settings_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, QMetaMethod*) ```
-void q_settings_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, QMetaMethod*)
+void q_settings_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -711,7 +847,8 @@ void q_settings_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QMetaMethod* signal ```
+/// @param self QSettings*
+/// @param signal QMetaMethod*
 void q_settings_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -720,7 +857,8 @@ void q_settings_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QMetaMethod* signal ```
+/// @param self QSettings*
+/// @param signal QMetaMethod*
 void q_settings_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -729,8 +867,9 @@ void q_settings_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, QMetaMethod*) ```
-void q_settings_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, QMetaMethod*)
+void q_settings_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -738,7 +877,7 @@ void q_settings_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 QObject* q_settings_sender(void* self);
 
 /// Inherited from QObject
@@ -747,7 +886,7 @@ QObject* q_settings_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 QObject* q_settings_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -756,8 +895,9 @@ QObject* q_settings_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, QObject* (*slot)() ```
-void q_settings_on_sender(void* self, QObject* (*slot)());
+/// @param self QSettings*
+/// @param callback QObject* fn()
+void q_settings_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -765,7 +905,7 @@ void q_settings_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 int32_t q_settings_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -774,7 +914,7 @@ int32_t q_settings_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 int32_t q_settings_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -783,8 +923,9 @@ int32_t q_settings_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, int32_t (*slot)() ```
-void q_settings_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QSettings*
+/// @param callback int32_t fn()
+void q_settings_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -792,7 +933,8 @@ void q_settings_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, const char* signal ```
+/// @param self QSettings*
+/// @param signal const char*
 int32_t q_settings_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -801,7 +943,8 @@ int32_t q_settings_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, const char* signal ```
+/// @param self QSettings*
+/// @param signal const char*
 int32_t q_settings_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -810,8 +953,9 @@ int32_t q_settings_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, int32_t (*slot)(QSettings*, const char*) ```
-void q_settings_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QSettings*
+/// @param callback int32_t fn(QSettings*, const char*)
+void q_settings_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -819,7 +963,8 @@ void q_settings_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QSettings* self, QMetaMethod* signal ```
+/// @param self QSettings*
+/// @param signal QMetaMethod*
 bool q_settings_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -828,7 +973,8 @@ bool q_settings_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QSettings* self, QMetaMethod* signal ```
+/// @param self QSettings*
+/// @param signal QMetaMethod*
 bool q_settings_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -837,8 +983,9 @@ bool q_settings_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QSettings* self, bool (*slot)(QSettings*, QMetaMethod*) ```
-void q_settings_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QSettings*
+/// @param callback bool fn(QSettings*, QMetaMethod*)
+void q_settings_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -846,14 +993,15 @@ void q_settings_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QSettings* self, void (*slot)(QSettings*, const char*) ```
-void q_settings_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QSettings*
+/// @param callback void fn(QSettings*, const char*)
+void q_settings_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#dtor.QSettings)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QSettings* self ```
+/// @param self QSettings*
 void q_settings_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsettings.html#types

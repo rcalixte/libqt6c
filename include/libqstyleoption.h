@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,928 +15,956 @@
 
 /// q_styleoption_new constructs a new QStyleOption object.
 ///
-///
 QStyleOption* q_styleoption_new();
 
 /// q_styleoption_new2 constructs a new QStyleOption object.
 ///
-/// ``` QStyleOption* other ```
+/// @param other QStyleOption*
 QStyleOption* q_styleoption_new2(void* other);
 
 /// q_styleoption_new3 constructs a new QStyleOption object.
 ///
-/// ``` int version ```
+/// @param version int
 QStyleOption* q_styleoption_new3(int version);
 
 /// q_styleoption_new4 constructs a new QStyleOption object.
 ///
-/// ``` int version, int typeVal ```
+/// @param version int
+/// @param typeVal int
 QStyleOption* q_styleoption_new4(int version, int typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOption* self, QWidget* w ```
+/// @param self QStyleOption*
+/// @param w QWidget*
 void q_styleoption_init_from(void* self, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOption* self, QStyleOption* other ```
+/// @param self QStyleOption*
+/// @param other QStyleOption*
 void q_styleoption_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#dtor.QStyleOption)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOption* self ```
+/// @param self QStyleOption*
 void q_styleoption_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionfocusrect.html
 
 /// q_styleoptionfocusrect_new constructs a new QStyleOptionFocusRect object.
 ///
-///
 QStyleOptionFocusRect* q_styleoptionfocusrect_new();
 
 /// q_styleoptionfocusrect_new2 constructs a new QStyleOptionFocusRect object.
 ///
-/// ``` QStyleOptionFocusRect* other ```
+/// @param other QStyleOptionFocusRect*
 QStyleOptionFocusRect* q_styleoptionfocusrect_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionFocusRect* self, QWidget* w ```
+/// @param self QStyleOptionFocusRect*
+/// @param w QWidget*
 void q_styleoptionfocusrect_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionFocusRect* self, QStyleOption* other ```
+/// @param self QStyleOptionFocusRect*
+/// @param other QStyleOption*
 void q_styleoptionfocusrect_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionfocusrect.html#dtor.QStyleOptionFocusRect)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionFocusRect* self ```
+/// @param self QStyleOptionFocusRect*
 void q_styleoptionfocusrect_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionframe.html
 
 /// q_styleoptionframe_new constructs a new QStyleOptionFrame object.
 ///
-///
 QStyleOptionFrame* q_styleoptionframe_new();
 
 /// q_styleoptionframe_new2 constructs a new QStyleOptionFrame object.
 ///
-/// ``` QStyleOptionFrame* other ```
+/// @param other QStyleOptionFrame*
 QStyleOptionFrame* q_styleoptionframe_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionFrame* self, QWidget* w ```
+/// @param self QStyleOptionFrame*
+/// @param w QWidget*
 void q_styleoptionframe_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionFrame* self, QStyleOption* other ```
+/// @param self QStyleOptionFrame*
+/// @param other QStyleOption*
 void q_styleoptionframe_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionframe.html#dtor.QStyleOptionFrame)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionFrame* self ```
+/// @param self QStyleOptionFrame*
 void q_styleoptionframe_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html
 
 /// q_styleoptiontabwidgetframe_new constructs a new QStyleOptionTabWidgetFrame object.
 ///
-///
 QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new();
 
 /// q_styleoptiontabwidgetframe_new2 constructs a new QStyleOptionTabWidgetFrame object.
 ///
-/// ``` QStyleOptionTabWidgetFrame* other ```
+/// @param other QStyleOptionTabWidgetFrame*
 QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionTabWidgetFrame* self, QWidget* w ```
+/// @param self QStyleOptionTabWidgetFrame*
+/// @param w QWidget*
 void q_styleoptiontabwidgetframe_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionTabWidgetFrame* self, QStyleOption* other ```
+/// @param self QStyleOptionTabWidgetFrame*
+/// @param other QStyleOption*
 void q_styleoptiontabwidgetframe_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontabwidgetframe.html#dtor.QStyleOptionTabWidgetFrame)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionTabWidgetFrame* self ```
+/// @param self QStyleOptionTabWidgetFrame*
 void q_styleoptiontabwidgetframe_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html
 
 /// q_styleoptiontabbarbase_new constructs a new QStyleOptionTabBarBase object.
 ///
-///
 QStyleOptionTabBarBase* q_styleoptiontabbarbase_new();
 
 /// q_styleoptiontabbarbase_new2 constructs a new QStyleOptionTabBarBase object.
 ///
-/// ``` QStyleOptionTabBarBase* other ```
+/// @param other QStyleOptionTabBarBase*
 QStyleOptionTabBarBase* q_styleoptiontabbarbase_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionTabBarBase* self, QWidget* w ```
+/// @param self QStyleOptionTabBarBase*
+/// @param w QWidget*
 void q_styleoptiontabbarbase_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionTabBarBase* self, QStyleOption* other ```
+/// @param self QStyleOptionTabBarBase*
+/// @param other QStyleOption*
 void q_styleoptiontabbarbase_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontabbarbase.html#dtor.QStyleOptionTabBarBase)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionTabBarBase* self ```
+/// @param self QStyleOptionTabBarBase*
 void q_styleoptiontabbarbase_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionheader.html
 
 /// q_styleoptionheader_new constructs a new QStyleOptionHeader object.
 ///
-///
 QStyleOptionHeader* q_styleoptionheader_new();
 
 /// q_styleoptionheader_new2 constructs a new QStyleOptionHeader object.
 ///
-/// ``` QStyleOptionHeader* other ```
+/// @param other QStyleOptionHeader*
 QStyleOptionHeader* q_styleoptionheader_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionHeader* self, QWidget* w ```
+/// @param self QStyleOptionHeader*
+/// @param w QWidget*
 void q_styleoptionheader_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionHeader* self, QStyleOption* other ```
+/// @param self QStyleOptionHeader*
+/// @param other QStyleOption*
 void q_styleoptionheader_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheader.html#dtor.QStyleOptionHeader)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionHeader* self ```
+/// @param self QStyleOptionHeader*
 void q_styleoptionheader_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionheaderv2.html
 
 /// q_styleoptionheaderv2_new constructs a new QStyleOptionHeaderV2 object.
 ///
-///
 QStyleOptionHeaderV2* q_styleoptionheaderv2_new();
 
 /// q_styleoptionheaderv2_new2 constructs a new QStyleOptionHeaderV2 object.
 ///
-/// ``` QStyleOptionHeaderV2* other ```
+/// @param other QStyleOptionHeaderV2*
 QStyleOptionHeaderV2* q_styleoptionheaderv2_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionHeaderV2* self, QWidget* w ```
+/// @param self QStyleOptionHeaderV2*
+/// @param w QWidget*
 void q_styleoptionheaderv2_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionHeaderV2* self, QStyleOption* other ```
+/// @param self QStyleOptionHeaderV2*
+/// @param other QStyleOption*
 void q_styleoptionheaderv2_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionheaderv2.html#dtor.QStyleOptionHeaderV2)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionHeaderV2* self ```
+/// @param self QStyleOptionHeaderV2*
 void q_styleoptionheaderv2_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionbutton.html
 
 /// q_styleoptionbutton_new constructs a new QStyleOptionButton object.
 ///
-///
 QStyleOptionButton* q_styleoptionbutton_new();
 
 /// q_styleoptionbutton_new2 constructs a new QStyleOptionButton object.
 ///
-/// ``` QStyleOptionButton* other ```
+/// @param other QStyleOptionButton*
 QStyleOptionButton* q_styleoptionbutton_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionButton* self, QWidget* w ```
+/// @param self QStyleOptionButton*
+/// @param w QWidget*
 void q_styleoptionbutton_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionButton* self, QStyleOption* other ```
+/// @param self QStyleOptionButton*
+/// @param other QStyleOption*
 void q_styleoptionbutton_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionbutton.html#dtor.QStyleOptionButton)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionButton* self ```
+/// @param self QStyleOptionButton*
 void q_styleoptionbutton_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontab.html
 
 /// q_styleoptiontab_new constructs a new QStyleOptionTab object.
 ///
-///
 QStyleOptionTab* q_styleoptiontab_new();
 
 /// q_styleoptiontab_new2 constructs a new QStyleOptionTab object.
 ///
-/// ``` QStyleOptionTab* other ```
+/// @param other QStyleOptionTab*
 QStyleOptionTab* q_styleoptiontab_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionTab* self, QWidget* w ```
+/// @param self QStyleOptionTab*
+/// @param w QWidget*
 void q_styleoptiontab_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionTab* self, QStyleOption* other ```
+/// @param self QStyleOptionTab*
+/// @param other QStyleOption*
 void q_styleoptiontab_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontab.html#dtor.QStyleOptionTab)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionTab* self ```
+/// @param self QStyleOptionTab*
 void q_styleoptiontab_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontoolbar.html
 
 /// q_styleoptiontoolbar_new constructs a new QStyleOptionToolBar object.
 ///
-///
 QStyleOptionToolBar* q_styleoptiontoolbar_new();
 
 /// q_styleoptiontoolbar_new2 constructs a new QStyleOptionToolBar object.
 ///
-/// ``` QStyleOptionToolBar* other ```
+/// @param other QStyleOptionToolBar*
 QStyleOptionToolBar* q_styleoptiontoolbar_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionToolBar* self, QWidget* w ```
+/// @param self QStyleOptionToolBar*
+/// @param w QWidget*
 void q_styleoptiontoolbar_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionToolBar* self, QStyleOption* other ```
+/// @param self QStyleOptionToolBar*
+/// @param other QStyleOption*
 void q_styleoptiontoolbar_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbar.html#dtor.QStyleOptionToolBar)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionToolBar* self ```
+/// @param self QStyleOptionToolBar*
 void q_styleoptiontoolbar_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionprogressbar.html
 
 /// q_styleoptionprogressbar_new constructs a new QStyleOptionProgressBar object.
 ///
-///
 QStyleOptionProgressBar* q_styleoptionprogressbar_new();
 
 /// q_styleoptionprogressbar_new2 constructs a new QStyleOptionProgressBar object.
 ///
-/// ``` QStyleOptionProgressBar* other ```
+/// @param other QStyleOptionProgressBar*
 QStyleOptionProgressBar* q_styleoptionprogressbar_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionProgressBar* self, QWidget* w ```
+/// @param self QStyleOptionProgressBar*
+/// @param w QWidget*
 void q_styleoptionprogressbar_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionProgressBar* self, QStyleOption* other ```
+/// @param self QStyleOptionProgressBar*
+/// @param other QStyleOption*
 void q_styleoptionprogressbar_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionprogressbar.html#dtor.QStyleOptionProgressBar)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionProgressBar* self ```
+/// @param self QStyleOptionProgressBar*
 void q_styleoptionprogressbar_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionmenuitem.html
 
 /// q_styleoptionmenuitem_new constructs a new QStyleOptionMenuItem object.
 ///
-///
 QStyleOptionMenuItem* q_styleoptionmenuitem_new();
 
 /// q_styleoptionmenuitem_new2 constructs a new QStyleOptionMenuItem object.
 ///
-/// ``` QStyleOptionMenuItem* other ```
+/// @param other QStyleOptionMenuItem*
 QStyleOptionMenuItem* q_styleoptionmenuitem_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionMenuItem* self, QWidget* w ```
+/// @param self QStyleOptionMenuItem*
+/// @param w QWidget*
 void q_styleoptionmenuitem_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionMenuItem* self, QStyleOption* other ```
+/// @param self QStyleOptionMenuItem*
+/// @param other QStyleOption*
 void q_styleoptionmenuitem_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionmenuitem.html#dtor.QStyleOptionMenuItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionMenuItem* self ```
+/// @param self QStyleOptionMenuItem*
 void q_styleoptionmenuitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiondockwidget.html
 
 /// q_styleoptiondockwidget_new constructs a new QStyleOptionDockWidget object.
 ///
-///
 QStyleOptionDockWidget* q_styleoptiondockwidget_new();
 
 /// q_styleoptiondockwidget_new2 constructs a new QStyleOptionDockWidget object.
 ///
-/// ``` QStyleOptionDockWidget* other ```
+/// @param other QStyleOptionDockWidget*
 QStyleOptionDockWidget* q_styleoptiondockwidget_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionDockWidget* self, QWidget* w ```
+/// @param self QStyleOptionDockWidget*
+/// @param w QWidget*
 void q_styleoptiondockwidget_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionDockWidget* self, QStyleOption* other ```
+/// @param self QStyleOptionDockWidget*
+/// @param other QStyleOption*
 void q_styleoptiondockwidget_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiondockwidget.html#dtor.QStyleOptionDockWidget)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionDockWidget* self ```
+/// @param self QStyleOptionDockWidget*
 void q_styleoptiondockwidget_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionviewitem.html
 
 /// q_styleoptionviewitem_new constructs a new QStyleOptionViewItem object.
 ///
-///
 QStyleOptionViewItem* q_styleoptionviewitem_new();
 
 /// q_styleoptionviewitem_new2 constructs a new QStyleOptionViewItem object.
 ///
-/// ``` QStyleOptionViewItem* other ```
+/// @param other QStyleOptionViewItem*
 QStyleOptionViewItem* q_styleoptionviewitem_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionViewItem* self, QWidget* w ```
+/// @param self QStyleOptionViewItem*
+/// @param w QWidget*
 void q_styleoptionviewitem_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionViewItem* self, QStyleOption* other ```
+/// @param self QStyleOptionViewItem*
+/// @param other QStyleOption*
 void q_styleoptionviewitem_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionviewitem.html#dtor.QStyleOptionViewItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionViewItem* self ```
+/// @param self QStyleOptionViewItem*
 void q_styleoptionviewitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontoolbox.html
 
 /// q_styleoptiontoolbox_new constructs a new QStyleOptionToolBox object.
 ///
-///
 QStyleOptionToolBox* q_styleoptiontoolbox_new();
 
 /// q_styleoptiontoolbox_new2 constructs a new QStyleOptionToolBox object.
 ///
-/// ``` QStyleOptionToolBox* other ```
+/// @param other QStyleOptionToolBox*
 QStyleOptionToolBox* q_styleoptiontoolbox_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionToolBox* self, QWidget* w ```
+/// @param self QStyleOptionToolBox*
+/// @param w QWidget*
 void q_styleoptiontoolbox_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionToolBox* self, QStyleOption* other ```
+/// @param self QStyleOptionToolBox*
+/// @param other QStyleOption*
 void q_styleoptiontoolbox_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbox.html#dtor.QStyleOptionToolBox)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionToolBox* self ```
+/// @param self QStyleOptionToolBox*
 void q_styleoptiontoolbox_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionrubberband.html
 
 /// q_styleoptionrubberband_new constructs a new QStyleOptionRubberBand object.
 ///
-///
 QStyleOptionRubberBand* q_styleoptionrubberband_new();
 
 /// q_styleoptionrubberband_new2 constructs a new QStyleOptionRubberBand object.
 ///
-/// ``` QStyleOptionRubberBand* other ```
+/// @param other QStyleOptionRubberBand*
 QStyleOptionRubberBand* q_styleoptionrubberband_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionRubberBand* self, QWidget* w ```
+/// @param self QStyleOptionRubberBand*
+/// @param w QWidget*
 void q_styleoptionrubberband_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionRubberBand* self, QStyleOption* other ```
+/// @param self QStyleOptionRubberBand*
+/// @param other QStyleOption*
 void q_styleoptionrubberband_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionrubberband.html#dtor.QStyleOptionRubberBand)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionRubberBand* self ```
+/// @param self QStyleOptionRubberBand*
 void q_styleoptionrubberband_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptioncomplex.html
 
 /// q_styleoptioncomplex_new constructs a new QStyleOptionComplex object.
 ///
-///
 QStyleOptionComplex* q_styleoptioncomplex_new();
 
 /// q_styleoptioncomplex_new2 constructs a new QStyleOptionComplex object.
 ///
-/// ``` QStyleOptionComplex* other ```
+/// @param other QStyleOptionComplex*
 QStyleOptionComplex* q_styleoptioncomplex_new2(void* other);
 
 /// q_styleoptioncomplex_new3 constructs a new QStyleOptionComplex object.
 ///
-/// ``` int version ```
+/// @param version int
 QStyleOptionComplex* q_styleoptioncomplex_new3(int version);
 
 /// q_styleoptioncomplex_new4 constructs a new QStyleOptionComplex object.
 ///
-/// ``` int version, int typeVal ```
+/// @param version int
+/// @param typeVal int
 QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int typeVal);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionComplex* self, QWidget* w ```
+/// @param self QStyleOptionComplex*
+/// @param w QWidget*
 void q_styleoptioncomplex_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionComplex* self, QStyleOption* other ```
+/// @param self QStyleOptionComplex*
+/// @param other QStyleOption*
 void q_styleoptioncomplex_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptioncomplex.html#dtor.QStyleOptionComplex)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionComplex* self ```
+/// @param self QStyleOptionComplex*
 void q_styleoptioncomplex_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionslider.html
 
 /// q_styleoptionslider_new constructs a new QStyleOptionSlider object.
 ///
-///
 QStyleOptionSlider* q_styleoptionslider_new();
 
 /// q_styleoptionslider_new2 constructs a new QStyleOptionSlider object.
 ///
-/// ``` QStyleOptionSlider* other ```
+/// @param other QStyleOptionSlider*
 QStyleOptionSlider* q_styleoptionslider_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionSlider* self, QWidget* w ```
+/// @param self QStyleOptionSlider*
+/// @param w QWidget*
 void q_styleoptionslider_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionSlider* self, QStyleOption* other ```
+/// @param self QStyleOptionSlider*
+/// @param other QStyleOption*
 void q_styleoptionslider_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionslider.html#dtor.QStyleOptionSlider)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionSlider* self ```
+/// @param self QStyleOptionSlider*
 void q_styleoptionslider_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionspinbox.html
 
 /// q_styleoptionspinbox_new constructs a new QStyleOptionSpinBox object.
 ///
-///
 QStyleOptionSpinBox* q_styleoptionspinbox_new();
 
 /// q_styleoptionspinbox_new2 constructs a new QStyleOptionSpinBox object.
 ///
-/// ``` QStyleOptionSpinBox* other ```
+/// @param other QStyleOptionSpinBox*
 QStyleOptionSpinBox* q_styleoptionspinbox_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionSpinBox* self, QWidget* w ```
+/// @param self QStyleOptionSpinBox*
+/// @param w QWidget*
 void q_styleoptionspinbox_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionSpinBox* self, QStyleOption* other ```
+/// @param self QStyleOptionSpinBox*
+/// @param other QStyleOption*
 void q_styleoptionspinbox_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionspinbox.html#dtor.QStyleOptionSpinBox)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionSpinBox* self ```
+/// @param self QStyleOptionSpinBox*
 void q_styleoptionspinbox_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html
 
 /// q_styleoptiontoolbutton_new constructs a new QStyleOptionToolButton object.
 ///
-///
 QStyleOptionToolButton* q_styleoptiontoolbutton_new();
 
 /// q_styleoptiontoolbutton_new2 constructs a new QStyleOptionToolButton object.
 ///
-/// ``` QStyleOptionToolButton* other ```
+/// @param other QStyleOptionToolButton*
 QStyleOptionToolButton* q_styleoptiontoolbutton_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionToolButton* self, QWidget* w ```
+/// @param self QStyleOptionToolButton*
+/// @param w QWidget*
 void q_styleoptiontoolbutton_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionToolButton* self, QStyleOption* other ```
+/// @param self QStyleOptionToolButton*
+/// @param other QStyleOption*
 void q_styleoptiontoolbutton_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontoolbutton.html#dtor.QStyleOptionToolButton)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionToolButton* self ```
+/// @param self QStyleOptionToolButton*
 void q_styleoptiontoolbutton_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptioncombobox.html
 
 /// q_styleoptioncombobox_new constructs a new QStyleOptionComboBox object.
 ///
-///
 QStyleOptionComboBox* q_styleoptioncombobox_new();
 
 /// q_styleoptioncombobox_new2 constructs a new QStyleOptionComboBox object.
 ///
-/// ``` QStyleOptionComboBox* other ```
+/// @param other QStyleOptionComboBox*
 QStyleOptionComboBox* q_styleoptioncombobox_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionComboBox* self, QWidget* w ```
+/// @param self QStyleOptionComboBox*
+/// @param w QWidget*
 void q_styleoptioncombobox_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionComboBox* self, QStyleOption* other ```
+/// @param self QStyleOptionComboBox*
+/// @param other QStyleOption*
 void q_styleoptioncombobox_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptioncombobox.html#dtor.QStyleOptionComboBox)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionComboBox* self ```
+/// @param self QStyleOptionComboBox*
 void q_styleoptioncombobox_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiontitlebar.html
 
 /// q_styleoptiontitlebar_new constructs a new QStyleOptionTitleBar object.
 ///
-///
 QStyleOptionTitleBar* q_styleoptiontitlebar_new();
 
 /// q_styleoptiontitlebar_new2 constructs a new QStyleOptionTitleBar object.
 ///
-/// ``` QStyleOptionTitleBar* other ```
+/// @param other QStyleOptionTitleBar*
 QStyleOptionTitleBar* q_styleoptiontitlebar_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionTitleBar* self, QWidget* w ```
+/// @param self QStyleOptionTitleBar*
+/// @param w QWidget*
 void q_styleoptiontitlebar_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionTitleBar* self, QStyleOption* other ```
+/// @param self QStyleOptionTitleBar*
+/// @param other QStyleOption*
 void q_styleoptiontitlebar_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiontitlebar.html#dtor.QStyleOptionTitleBar)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionTitleBar* self ```
+/// @param self QStyleOptionTitleBar*
 void q_styleoptiontitlebar_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiongroupbox.html
 
 /// q_styleoptiongroupbox_new constructs a new QStyleOptionGroupBox object.
 ///
-///
 QStyleOptionGroupBox* q_styleoptiongroupbox_new();
 
 /// q_styleoptiongroupbox_new2 constructs a new QStyleOptionGroupBox object.
 ///
-/// ``` QStyleOptionGroupBox* other ```
+/// @param other QStyleOptionGroupBox*
 QStyleOptionGroupBox* q_styleoptiongroupbox_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionGroupBox* self, QWidget* w ```
+/// @param self QStyleOptionGroupBox*
+/// @param w QWidget*
 void q_styleoptiongroupbox_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionGroupBox* self, QStyleOption* other ```
+/// @param self QStyleOptionGroupBox*
+/// @param other QStyleOption*
 void q_styleoptiongroupbox_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongroupbox.html#dtor.QStyleOptionGroupBox)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionGroupBox* self ```
+/// @param self QStyleOptionGroupBox*
 void q_styleoptiongroupbox_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptionsizegrip.html
 
 /// q_styleoptionsizegrip_new constructs a new QStyleOptionSizeGrip object.
 ///
-///
 QStyleOptionSizeGrip* q_styleoptionsizegrip_new();
 
 /// q_styleoptionsizegrip_new2 constructs a new QStyleOptionSizeGrip object.
 ///
-/// ``` QStyleOptionSizeGrip* other ```
+/// @param other QStyleOptionSizeGrip*
 QStyleOptionSizeGrip* q_styleoptionsizegrip_new2(void* other);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionSizeGrip* self, QWidget* w ```
+/// @param self QStyleOptionSizeGrip*
+/// @param w QWidget*
 void q_styleoptionsizegrip_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionSizeGrip* self, QStyleOption* other ```
+/// @param self QStyleOptionSizeGrip*
+/// @param other QStyleOption*
 void q_styleoptionsizegrip_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptionsizegrip.html#dtor.QStyleOptionSizeGrip)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionSizeGrip* self ```
+/// @param self QStyleOptionSizeGrip*
 void q_styleoptionsizegrip_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html
 
 /// q_styleoptiongraphicsitem_new constructs a new QStyleOptionGraphicsItem object.
 ///
-///
 QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new();
 
 /// q_styleoptiongraphicsitem_new2 constructs a new QStyleOptionGraphicsItem object.
 ///
-/// ``` QStyleOptionGraphicsItem* other ```
+/// @param other QStyleOptionGraphicsItem*
 QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#levelOfDetailFromTransform)
 ///
-/// ``` QTransform* worldTransform ```
+/// @param worldTransform QTransform*
 double q_styleoptiongraphicsitem_level_of_detail_from_transform(void* worldTransform);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#initFrom)
 ///
-/// ``` QStyleOptionGraphicsItem* self, QWidget* w ```
+/// @param self QStyleOptionGraphicsItem*
+/// @param w QWidget*
 void q_styleoptiongraphicsitem_init_from(void* self, void* w);
 
 /// Inherited from QStyleOption
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoption.html#operator-eq)
 ///
-/// ``` QStyleOptionGraphicsItem* self, QStyleOption* other ```
+/// @param self QStyleOptionGraphicsItem*
+/// @param other QStyleOption*
 void q_styleoptiongraphicsitem_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyleoptiongraphicsitem.html#dtor.QStyleOptionGraphicsItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleOptionGraphicsItem* self ```
+/// @param self QStyleOptionGraphicsItem*
 void q_styleoptiongraphicsitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstylehintreturn.html
 
 /// q_stylehintreturn_new constructs a new QStyleHintReturn object.
 ///
-///
 QStyleHintReturn* q_stylehintreturn_new();
 
 /// q_stylehintreturn_new2 constructs a new QStyleHintReturn object.
 ///
-/// ``` QStyleHintReturn* param1 ```
+/// @param param1 QStyleHintReturn*
 QStyleHintReturn* q_stylehintreturn_new2(void* param1);
 
 /// q_stylehintreturn_new3 constructs a new QStyleHintReturn object.
 ///
-/// ``` int version ```
+/// @param version int
 QStyleHintReturn* q_stylehintreturn_new3(int version);
 
 /// q_stylehintreturn_new4 constructs a new QStyleHintReturn object.
 ///
-/// ``` int version, int typeVal ```
+/// @param version int
+/// @param typeVal int
 QStyleHintReturn* q_stylehintreturn_new4(int version, int typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturn.html#operator-eq)
 ///
-/// ``` QStyleHintReturn* self, QStyleHintReturn* param1 ```
+/// @param self QStyleHintReturn*
+/// @param param1 QStyleHintReturn*
 void q_stylehintreturn_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturn.html#dtor.QStyleHintReturn)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleHintReturn* self ```
+/// @param self QStyleHintReturn*
 void q_stylehintreturn_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstylehintreturnmask.html
 
 /// q_stylehintreturnmask_new constructs a new QStyleHintReturnMask object.
 ///
-///
 QStyleHintReturnMask* q_stylehintreturnmask_new();
 
 /// q_stylehintreturnmask_new2 constructs a new QStyleHintReturnMask object.
 ///
-/// ``` QStyleHintReturnMask* param1 ```
+/// @param param1 QStyleHintReturnMask*
 QStyleHintReturnMask* q_stylehintreturnmask_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnmask.html#operator-eq)
 ///
-/// ``` QStyleHintReturnMask* self, QStyleHintReturnMask* param1 ```
+/// @param self QStyleHintReturnMask*
+/// @param param1 QStyleHintReturnMask*
 void q_stylehintreturnmask_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnmask.html#dtor.QStyleHintReturnMask)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleHintReturnMask* self ```
+/// @param self QStyleHintReturnMask*
 void q_stylehintreturnmask_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstylehintreturnvariant.html
 
 /// q_stylehintreturnvariant_new constructs a new QStyleHintReturnVariant object.
 ///
-///
 QStyleHintReturnVariant* q_stylehintreturnvariant_new();
 
 /// q_stylehintreturnvariant_new2 constructs a new QStyleHintReturnVariant object.
 ///
-/// ``` QStyleHintReturnVariant* param1 ```
+/// @param param1 QStyleHintReturnVariant*
 QStyleHintReturnVariant* q_stylehintreturnvariant_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnvariant.html#operator-eq)
 ///
-/// ``` QStyleHintReturnVariant* self, QStyleHintReturnVariant* param1 ```
+/// @param self QStyleHintReturnVariant*
+/// @param param1 QStyleHintReturnVariant*
 void q_stylehintreturnvariant_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehintreturnvariant.html#dtor.QStyleHintReturnVariant)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStyleHintReturnVariant* self ```
+/// @param self QStyleHintReturnVariant*
 void q_stylehintreturnvariant_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstyleoption.html#types

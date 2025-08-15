@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,39 +15,42 @@
 
 /// q_capturablewindow_new constructs a new QCapturableWindow object.
 ///
-///
 QCapturableWindow* q_capturablewindow_new();
 
 /// q_capturablewindow_new2 constructs a new QCapturableWindow object.
 ///
-/// ``` QCapturableWindow* other ```
+/// @param other QCapturableWindow*
 QCapturableWindow* q_capturablewindow_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#operator-eq)
 ///
-/// ``` QCapturableWindow* self, QCapturableWindow* other ```
+/// @param self QCapturableWindow*
+/// @param other QCapturableWindow*
 void q_capturablewindow_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#swap)
 ///
-/// ``` QCapturableWindow* self, QCapturableWindow* other ```
+/// @param self QCapturableWindow*
+/// @param other QCapturableWindow*
 void q_capturablewindow_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#isValid)
 ///
-/// ``` QCapturableWindow* self ```
+/// @param self QCapturableWindow*
 bool q_capturablewindow_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#description)
 ///
-/// ``` QCapturableWindow* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCapturableWindow*
 const char* q_capturablewindow_description(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcapturablewindow.html#dtor.QCapturableWindow)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCapturableWindow* self ```
+/// @param self QCapturableWindow*
 void q_capturablewindow_delete(void* self);
 
 #endif

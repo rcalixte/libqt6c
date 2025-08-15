@@ -12,8 +12,8 @@ QGesture* q_gesturerecognizer_create(void* self, void* target) {
     return QGestureRecognizer_Create((QGestureRecognizer*)self, (QObject*)target);
 }
 
-void q_gesturerecognizer_on_create(void* self, QGesture* (*slot)(void*, void*)) {
-    QGestureRecognizer_OnCreate((QGestureRecognizer*)self, (intptr_t)slot);
+void q_gesturerecognizer_on_create(void* self, QGesture* (*callback)(void*, void*)) {
+    QGestureRecognizer_OnCreate((QGestureRecognizer*)self, (intptr_t)callback);
 }
 
 QGesture* q_gesturerecognizer_qbase_create(void* self, void* target) {
@@ -24,8 +24,8 @@ int64_t q_gesturerecognizer_recognize(void* self, void* state, void* watched, vo
     return QGestureRecognizer_Recognize((QGestureRecognizer*)self, (QGesture*)state, (QObject*)watched, (QEvent*)event);
 }
 
-void q_gesturerecognizer_on_recognize(void* self, int64_t (*slot)(void*, void*, void*, void*)) {
-    QGestureRecognizer_OnRecognize((QGestureRecognizer*)self, (intptr_t)slot);
+void q_gesturerecognizer_on_recognize(void* self, int64_t (*callback)(void*, void*, void*, void*)) {
+    QGestureRecognizer_OnRecognize((QGestureRecognizer*)self, (intptr_t)callback);
 }
 
 int64_t q_gesturerecognizer_qbase_recognize(void* self, void* state, void* watched, void* event) {
@@ -36,8 +36,8 @@ void q_gesturerecognizer_reset(void* self, void* state) {
     QGestureRecognizer_Reset((QGestureRecognizer*)self, (QGesture*)state);
 }
 
-void q_gesturerecognizer_on_reset(void* self, void (*slot)(void*, void*)) {
-    QGestureRecognizer_OnReset((QGestureRecognizer*)self, (intptr_t)slot);
+void q_gesturerecognizer_on_reset(void* self, void (*callback)(void*, void*)) {
+    QGestureRecognizer_OnReset((QGestureRecognizer*)self, (intptr_t)callback);
 }
 
 void q_gesturerecognizer_qbase_reset(void* self, void* state) {

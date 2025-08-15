@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,334 +15,394 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 const QMetaObject* q_webenginenewwindowrequest_meta_object(void* self);
 
-/// ``` QWebEngineNewWindowRequest* self, const char* param1 ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param param1 const char*
 void* q_webenginenewwindowrequest_metacast(void* self, const char* param1);
 
-/// ``` QWebEngineNewWindowRequest* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_webenginenewwindowrequest_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_webenginenewwindowrequest_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#destination)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
+///
+/// @return enum QWebEngineNewWindowRequest__DestinationType
 int64_t q_webenginenewwindowrequest_destination(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#requestedUrl)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 QUrl* q_webenginenewwindowrequest_requested_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#requestedGeometry)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 QRect* q_webenginenewwindowrequest_requested_geometry(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#isUserInitiated)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 bool q_webenginenewwindowrequest_is_user_initiated(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#openIn)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QWebEnginePage* param1 ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param param1 QWebEnginePage*
 void q_webenginenewwindowrequest_open_in(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_webenginenewwindowrequest_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_webenginenewwindowrequest_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QEvent* event ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param event QEvent*
 bool q_webenginenewwindowrequest_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* watched, QEvent* event ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_webenginenewwindowrequest_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNewWindowRequest*
 const char* q_webenginenewwindowrequest_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineNewWindowRequest* self, char* name ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param name char*
 void q_webenginenewwindowrequest_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 bool q_webenginenewwindowrequest_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 bool q_webenginenewwindowrequest_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 bool q_webenginenewwindowrequest_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 bool q_webenginenewwindowrequest_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QWebEngineNewWindowRequest* self, bool b ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param b bool
 bool q_webenginenewwindowrequest_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 QThread* q_webenginenewwindowrequest_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QThread* thread ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param thread QThread*
 bool q_webenginenewwindowrequest_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineNewWindowRequest* self, int interval ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param interval int
 int32_t q_webenginenewwindowrequest_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineNewWindowRequest* self, int id ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param id int
 void q_webenginenewwindowrequest_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineNewWindowRequest* self, enum Qt__TimerId id ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param id enum Qt__TimerId
 void q_webenginenewwindowrequest_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 libqt_list /* of QObject* */ q_webenginenewwindowrequest_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* parent ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param parent QObject*
 void q_webenginenewwindowrequest_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* filterObj ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param filterObj QObject*
 void q_webenginenewwindowrequest_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* obj ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param obj QObject*
 void q_webenginenewwindowrequest_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_webenginenewwindowrequest_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_webenginenewwindowrequest_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_webenginenewwindowrequest_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_webenginenewwindowrequest_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 void q_webenginenewwindowrequest_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 void q_webenginenewwindowrequest_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QWebEngineNewWindowRequest* self, const char* name, QVariant* value ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param name const char*
+/// @param value QVariant*
 bool q_webenginenewwindowrequest_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QWebEngineNewWindowRequest* self, const char* name ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param name const char*
 QVariant* q_webenginenewwindowrequest_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineNewWindowRequest*
 const char** q_webenginenewwindowrequest_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 QBindingStorage* q_webenginenewwindowrequest_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 const QBindingStorage* q_webenginenewwindowrequest_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 void q_webenginenewwindowrequest_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QWebEngineNewWindowRequest*) ```
-void q_webenginenewwindowrequest_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QWebEngineNewWindowRequest*
+/// @param callback void fn(QWebEngineNewWindowRequest*)
+void q_webenginenewwindowrequest_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 QObject* q_webenginenewwindowrequest_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QWebEngineNewWindowRequest* self, const char* classname ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param classname const char*
 bool q_webenginenewwindowrequest_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 void q_webenginenewwindowrequest_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_webenginenewwindowrequest_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineNewWindowRequest* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_webenginenewwindowrequest_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginenewwindowrequest_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginenewwindowrequest_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNewWindowRequest* self, QObject* param1 ```
+/// @param self QWebEngineNewWindowRequest*
+/// @param param1 QObject*
 void q_webenginenewwindowrequest_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QWebEngineNewWindowRequest*, QObject*) ```
-void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QWebEngineNewWindowRequest*
+/// @param callback void fn(QWebEngineNewWindowRequest*, QObject*)
+void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -351,14 +410,15 @@ void q_webenginenewwindowrequest_on_destroyed1(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineNewWindowRequest* self, void (*slot)(QWebEngineNewWindowRequest*, const char*) ```
-void q_webenginenewwindowrequest_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QWebEngineNewWindowRequest*
+/// @param callback void fn(QWebEngineNewWindowRequest*, const char*)
+void q_webenginenewwindowrequest_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#dtor.QWebEngineNewWindowRequest)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineNewWindowRequest* self ```
+/// @param self QWebEngineNewWindowRequest*
 void q_webenginenewwindowrequest_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginenewwindowrequest.html#types

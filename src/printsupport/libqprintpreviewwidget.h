@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,1311 +15,1463 @@
 
 /// q_printpreviewwidget_new constructs a new QPrintPreviewWidget object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QPrintPreviewWidget* q_printpreviewwidget_new(void* parent);
 
 /// q_printpreviewwidget_new2 constructs a new QPrintPreviewWidget object.
 ///
-/// ``` QPrinter* printer ```
+/// @param printer QPrinter*
 QPrintPreviewWidget* q_printpreviewwidget_new2(void* printer);
 
 /// q_printpreviewwidget_new3 constructs a new QPrintPreviewWidget object.
-///
 ///
 QPrintPreviewWidget* q_printpreviewwidget_new3();
 
 /// q_printpreviewwidget_new4 constructs a new QPrintPreviewWidget object.
 ///
-/// ``` QPrinter* printer, QWidget* parent ```
+/// @param printer QPrinter*
+/// @param parent QWidget*
 QPrintPreviewWidget* q_printpreviewwidget_new4(void* printer, void* parent);
 
 /// q_printpreviewwidget_new5 constructs a new QPrintPreviewWidget object.
 ///
-/// ``` QPrinter* printer, QWidget* parent, int flags ```
+/// @param printer QPrinter*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QPrintPreviewWidget* q_printpreviewwidget_new5(void* printer, void* parent, int64_t flags);
 
 /// q_printpreviewwidget_new6 constructs a new QPrintPreviewWidget object.
 ///
-/// ``` QWidget* parent, int flags ```
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QPrintPreviewWidget* q_printpreviewwidget_new6(void* parent, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 const QMetaObject* q_printpreviewwidget_meta_object(void* self);
 
-/// ``` QPrintPreviewWidget* self, const char* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 const char*
 void* q_printpreviewwidget_metacast(void* self, const char* param1);
 
-/// ``` QPrintPreviewWidget* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_printpreviewwidget_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QPrintPreviewWidget* self, int32_t (*slot)(QPrintPreviewWidget*, enum QMetaObject__Call, int, void*) ```
-void q_printpreviewwidget_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback int32_t fn(QPrintPreviewWidget*, enum QMetaObject__Call, int, void*)
+void q_printpreviewwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QPrintPreviewWidget* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_printpreviewwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_printpreviewwidget_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomFactor)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 double q_printpreviewwidget_zoom_factor(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#orientation)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum QPageLayout__Orientation
 int64_t q_printpreviewwidget_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#viewMode)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum QPrintPreviewWidget__ViewMode
 int64_t q_printpreviewwidget_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomMode)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum QPrintPreviewWidget__ZoomMode
 int64_t q_printpreviewwidget_zoom_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#currentPage)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_current_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#pageCount)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_page_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setVisible)
 ///
-/// ``` QPrintPreviewWidget* self, bool visible ```
+/// @param self QPrintPreviewWidget*
+/// @param visible bool
 void q_printpreviewwidget_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setVisible)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, bool) ```
-void q_printpreviewwidget_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, bool)
+void q_printpreviewwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setVisible)
 ///
 /// Base class method implementation
 ///
-/// ``` QPrintPreviewWidget* self, bool visible ```
+/// @param self QPrintPreviewWidget*
+/// @param visible bool
 void q_printpreviewwidget_qbase_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#print)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_print(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomIn)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_zoom_in(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomOut)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_zoom_out(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setZoomFactor)
 ///
-/// ``` QPrintPreviewWidget* self, double zoomFactor ```
+/// @param self QPrintPreviewWidget*
+/// @param zoomFactor double
 void q_printpreviewwidget_set_zoom_factor(void* self, double zoomFactor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setOrientation)
 ///
-/// ``` QPrintPreviewWidget* self, enum QPageLayout__Orientation orientation ```
+/// @param self QPrintPreviewWidget*
+/// @param orientation enum QPageLayout__Orientation
 void q_printpreviewwidget_set_orientation(void* self, int64_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setViewMode)
 ///
-/// ``` QPrintPreviewWidget* self, enum QPrintPreviewWidget__ViewMode viewMode ```
+/// @param self QPrintPreviewWidget*
+/// @param viewMode enum QPrintPreviewWidget__ViewMode
 void q_printpreviewwidget_set_view_mode(void* self, int64_t viewMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setZoomMode)
 ///
-/// ``` QPrintPreviewWidget* self, enum QPrintPreviewWidget__ZoomMode zoomMode ```
+/// @param self QPrintPreviewWidget*
+/// @param zoomMode enum QPrintPreviewWidget__ZoomMode
 void q_printpreviewwidget_set_zoom_mode(void* self, int64_t zoomMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setCurrentPage)
 ///
-/// ``` QPrintPreviewWidget* self, int pageNumber ```
+/// @param self QPrintPreviewWidget*
+/// @param pageNumber int
 void q_printpreviewwidget_set_current_page(void* self, int pageNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#fitToWidth)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_fit_to_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#fitInView)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_fit_in_view(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setLandscapeOrientation)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_set_landscape_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setPortraitOrientation)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_set_portrait_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setSinglePageViewMode)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_set_single_page_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setFacingPagesViewMode)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_set_facing_pages_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setAllPagesViewMode)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_set_all_pages_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#updatePreview)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_update_preview(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#paintRequested)
 ///
-/// ``` QPrintPreviewWidget* self, QPrinter* printer ```
+/// @param self QPrintPreviewWidget*
+/// @param printer QPrinter*
 void q_printpreviewwidget_paint_requested(void* self, void* printer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#paintRequested)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QPrinter*) ```
-void q_printpreviewwidget_on_paint_requested(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QPrinter*)
+void q_printpreviewwidget_on_paint_requested(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#previewChanged)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_preview_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#previewChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*) ```
-void q_printpreviewwidget_on_preview_changed(void* self, void (*slot)(void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*)
+void q_printpreviewwidget_on_preview_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_printpreviewwidget_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_printpreviewwidget_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomIn)
 ///
-/// ``` QPrintPreviewWidget* self, double zoom ```
+/// @param self QPrintPreviewWidget*
+/// @param zoom double
 void q_printpreviewwidget_zoom_in1(void* self, double zoom);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomOut)
 ///
-/// ``` QPrintPreviewWidget* self, double zoom ```
+/// @param self QPrintPreviewWidget*
+/// @param zoom double
 void q_printpreviewwidget_zoom_out1(void* self, double zoom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 uintptr_t q_printpreviewwidget_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 uintptr_t q_printpreviewwidget_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 uintptr_t q_printpreviewwidget_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QStyle* q_printpreviewwidget_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QPrintPreviewWidget* self, QStyle* style ```
+/// @param self QPrintPreviewWidget*
+/// @param style QStyle*
 void q_printpreviewwidget_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum Qt__WindowModality
 int64_t q_printpreviewwidget_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__WindowModality windowModality ```
+/// @param self QPrintPreviewWidget*
+/// @param windowModality enum Qt__WindowModality
 void q_printpreviewwidget_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
 bool q_printpreviewwidget_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QPrintPreviewWidget* self, bool enabled ```
+/// @param self QPrintPreviewWidget*
+/// @param enabled bool
 void q_printpreviewwidget_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QPrintPreviewWidget* self, bool disabled ```
+/// @param self QPrintPreviewWidget*
+/// @param disabled bool
 void q_printpreviewwidget_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QPrintPreviewWidget* self, bool windowModified ```
+/// @param self QPrintPreviewWidget*
+/// @param windowModified bool
 void q_printpreviewwidget_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRect* q_printpreviewwidget_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 const QRect* q_printpreviewwidget_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRect* q_printpreviewwidget_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QPoint* q_printpreviewwidget_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRect* q_printpreviewwidget_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRect* q_printpreviewwidget_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRegion* q_printpreviewwidget_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QPrintPreviewWidget* self, QSize* minimumSize ```
+/// @param self QPrintPreviewWidget*
+/// @param minimumSize QSize*
 void q_printpreviewwidget_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QPrintPreviewWidget* self, int minw, int minh ```
+/// @param self QPrintPreviewWidget*
+/// @param minw int
+/// @param minh int
 void q_printpreviewwidget_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QPrintPreviewWidget* self, QSize* maximumSize ```
+/// @param self QPrintPreviewWidget*
+/// @param maximumSize QSize*
 void q_printpreviewwidget_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QPrintPreviewWidget* self, int maxw, int maxh ```
+/// @param self QPrintPreviewWidget*
+/// @param maxw int
+/// @param maxh int
 void q_printpreviewwidget_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QPrintPreviewWidget* self, int minw ```
+/// @param self QPrintPreviewWidget*
+/// @param minw int
 void q_printpreviewwidget_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QPrintPreviewWidget* self, int minh ```
+/// @param self QPrintPreviewWidget*
+/// @param minh int
 void q_printpreviewwidget_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QPrintPreviewWidget* self, int maxw ```
+/// @param self QPrintPreviewWidget*
+/// @param maxw int
 void q_printpreviewwidget_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QPrintPreviewWidget* self, int maxh ```
+/// @param self QPrintPreviewWidget*
+/// @param maxh int
 void q_printpreviewwidget_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QPrintPreviewWidget* self, QSize* sizeIncrement ```
+/// @param self QPrintPreviewWidget*
+/// @param sizeIncrement QSize*
 void q_printpreviewwidget_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QPrintPreviewWidget* self, int w, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param w int
+/// @param h int
 void q_printpreviewwidget_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QPrintPreviewWidget* self, QSize* baseSize ```
+/// @param self QPrintPreviewWidget*
+/// @param baseSize QSize*
 void q_printpreviewwidget_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QPrintPreviewWidget* self, int basew, int baseh ```
+/// @param self QPrintPreviewWidget*
+/// @param basew int
+/// @param baseh int
 void q_printpreviewwidget_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QPrintPreviewWidget* self, QSize* fixedSize ```
+/// @param self QPrintPreviewWidget*
+/// @param fixedSize QSize*
 void q_printpreviewwidget_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QPrintPreviewWidget* self, int w, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param w int
+/// @param h int
 void q_printpreviewwidget_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QPrintPreviewWidget* self, int w ```
+/// @param self QPrintPreviewWidget*
+/// @param w int
 void q_printpreviewwidget_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QPrintPreviewWidget* self, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param h int
 void q_printpreviewwidget_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QPrintPreviewWidget* self, QPointF* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPointF*
 QPointF* q_printpreviewwidget_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPoint*
 QPoint* q_printpreviewwidget_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QPrintPreviewWidget* self, QPointF* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPointF*
 QPointF* q_printpreviewwidget_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPoint*
 QPoint* q_printpreviewwidget_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QPrintPreviewWidget* self, QPointF* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPointF*
 QPointF* q_printpreviewwidget_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPoint*
 QPoint* q_printpreviewwidget_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QPrintPreviewWidget* self, QPointF* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPointF*
 QPointF* q_printpreviewwidget_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPoint*
 QPoint* q_printpreviewwidget_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1, QPointF* param2 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_printpreviewwidget_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1, QPoint* param2 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_printpreviewwidget_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1, QPointF* param2 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_printpreviewwidget_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1, QPoint* param2 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_printpreviewwidget_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 const QPalette* q_printpreviewwidget_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QPrintPreviewWidget* self, QPalette* palette ```
+/// @param self QPrintPreviewWidget*
+/// @param palette QPalette*
 void q_printpreviewwidget_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QPrintPreviewWidget* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QPrintPreviewWidget*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_printpreviewwidget_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_printpreviewwidget_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QPrintPreviewWidget* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QPrintPreviewWidget*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_printpreviewwidget_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_printpreviewwidget_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 const QFont* q_printpreviewwidget_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QPrintPreviewWidget* self, QFont* font ```
+/// @param self QPrintPreviewWidget*
+/// @param font QFont*
 void q_printpreviewwidget_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QFontMetrics* q_printpreviewwidget_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QFontInfo* q_printpreviewwidget_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QCursor* q_printpreviewwidget_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QPrintPreviewWidget* self, QCursor* cursor ```
+/// @param self QPrintPreviewWidget*
+/// @param cursor QCursor*
 void q_printpreviewwidget_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QPrintPreviewWidget* self, bool enable ```
+/// @param self QPrintPreviewWidget*
+/// @param enable bool
 void q_printpreviewwidget_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QPrintPreviewWidget* self, bool enable ```
+/// @param self QPrintPreviewWidget*
+/// @param enable bool
 void q_printpreviewwidget_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QPrintPreviewWidget* self, QBitmap* mask ```
+/// @param self QPrintPreviewWidget*
+/// @param mask QBitmap*
 void q_printpreviewwidget_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QPrintPreviewWidget* self, QRegion* mask ```
+/// @param self QPrintPreviewWidget*
+/// @param mask QRegion*
 void q_printpreviewwidget_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRegion* q_printpreviewwidget_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPaintDevice* target ```
+/// @param self QPrintPreviewWidget*
+/// @param target QPaintDevice*
 void q_printpreviewwidget_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* painter ```
+/// @param self QPrintPreviewWidget*
+/// @param painter QPainter*
 void q_printpreviewwidget_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QPixmap* q_printpreviewwidget_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QGraphicsEffect* q_printpreviewwidget_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QPrintPreviewWidget* self, QGraphicsEffect* effect ```
+/// @param self QPrintPreviewWidget*
+/// @param effect QGraphicsEffect*
 void q_printpreviewwidget_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__GestureType typeVal ```
+/// @param self QPrintPreviewWidget*
+/// @param typeVal enum Qt__GestureType
 void q_printpreviewwidget_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__GestureType typeVal ```
+/// @param self QPrintPreviewWidget*
+/// @param typeVal enum Qt__GestureType
 void q_printpreviewwidget_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QPrintPreviewWidget* self, const char* windowTitle ```
+/// @param self QPrintPreviewWidget*
+/// @param windowTitle const char*
 void q_printpreviewwidget_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QPrintPreviewWidget* self, const char* styleSheet ```
+/// @param self QPrintPreviewWidget*
+/// @param styleSheet const char*
 void q_printpreviewwidget_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QPrintPreviewWidget* self, QIcon* icon ```
+/// @param self QPrintPreviewWidget*
+/// @param icon QIcon*
 void q_printpreviewwidget_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QIcon* q_printpreviewwidget_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QPrintPreviewWidget* self, const char* windowIconText ```
+/// @param self QPrintPreviewWidget*
+/// @param windowIconText const char*
 void q_printpreviewwidget_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QPrintPreviewWidget* self, const char* windowRole ```
+/// @param self QPrintPreviewWidget*
+/// @param windowRole const char*
 void q_printpreviewwidget_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QPrintPreviewWidget* self, const char* filePath ```
+/// @param self QPrintPreviewWidget*
+/// @param filePath const char*
 void q_printpreviewwidget_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QPrintPreviewWidget* self, double level ```
+/// @param self QPrintPreviewWidget*
+/// @param level double
 void q_printpreviewwidget_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 double q_printpreviewwidget_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QPrintPreviewWidget* self, const char* toolTip ```
+/// @param self QPrintPreviewWidget*
+/// @param toolTip const char*
 void q_printpreviewwidget_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QPrintPreviewWidget* self, int msec ```
+/// @param self QPrintPreviewWidget*
+/// @param msec int
 void q_printpreviewwidget_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QPrintPreviewWidget* self, const char* statusTip ```
+/// @param self QPrintPreviewWidget*
+/// @param statusTip const char*
 void q_printpreviewwidget_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QPrintPreviewWidget* self, const char* whatsThis ```
+/// @param self QPrintPreviewWidget*
+/// @param whatsThis const char*
 void q_printpreviewwidget_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QPrintPreviewWidget* self, const char* name ```
+/// @param self QPrintPreviewWidget*
+/// @param name const char*
 void q_printpreviewwidget_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QPrintPreviewWidget* self, const char* description ```
+/// @param self QPrintPreviewWidget*
+/// @param description const char*
 void q_printpreviewwidget_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__LayoutDirection direction ```
+/// @param self QPrintPreviewWidget*
+/// @param direction enum Qt__LayoutDirection
 void q_printpreviewwidget_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_printpreviewwidget_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QPrintPreviewWidget* self, QLocale* locale ```
+/// @param self QPrintPreviewWidget*
+/// @param locale QLocale*
 void q_printpreviewwidget_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QLocale* q_printpreviewwidget_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__FocusReason reason ```
+/// @param self QPrintPreviewWidget*
+/// @param reason enum Qt__FocusReason
 void q_printpreviewwidget_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_printpreviewwidget_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__FocusPolicy policy ```
+/// @param self QPrintPreviewWidget*
+/// @param policy enum Qt__FocusPolicy
 void q_printpreviewwidget_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_printpreviewwidget_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* focusProxy ```
+/// @param self QPrintPreviewWidget*
+/// @param focusProxy QWidget*
 void q_printpreviewwidget_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_printpreviewwidget_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QPrintPreviewWidget*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_printpreviewwidget_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QPrintPreviewWidget* self, QCursor* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QCursor*
 void q_printpreviewwidget_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QPrintPreviewWidget* self, QKeySequence* key ```
+/// @param self QPrintPreviewWidget*
+/// @param key QKeySequence*
 int32_t q_printpreviewwidget_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QPrintPreviewWidget* self, int id ```
+/// @param self QPrintPreviewWidget*
+/// @param id int
 void q_printpreviewwidget_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QPrintPreviewWidget* self, int id ```
+/// @param self QPrintPreviewWidget*
+/// @param id int
 void q_printpreviewwidget_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QPrintPreviewWidget* self, int id ```
+/// @param self QPrintPreviewWidget*
+/// @param id int
 void q_printpreviewwidget_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_printpreviewwidget_mouse_grabber();
 
@@ -1328,1161 +1479,1327 @@ QWidget* q_printpreviewwidget_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_printpreviewwidget_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QPrintPreviewWidget* self, bool enable ```
+/// @param self QPrintPreviewWidget*
+/// @param enable bool
 void q_printpreviewwidget_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QGraphicsProxyWidget* q_printpreviewwidget_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QPrintPreviewWidget* self, int x, int y, int w, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_printpreviewwidget_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QPrintPreviewWidget* self, QRect* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QRect*
 void q_printpreviewwidget_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QPrintPreviewWidget* self, QRegion* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QRegion*
 void q_printpreviewwidget_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QPrintPreviewWidget* self, int x, int y, int w, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_printpreviewwidget_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QPrintPreviewWidget* self, QRect* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QRect*
 void q_printpreviewwidget_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QPrintPreviewWidget* self, QRegion* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QRegion*
 void q_printpreviewwidget_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QPrintPreviewWidget* self, bool hidden ```
+/// @param self QPrintPreviewWidget*
+/// @param hidden bool
 void q_printpreviewwidget_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
 void q_printpreviewwidget_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QPrintPreviewWidget* self, int x, int y ```
+/// @param self QPrintPreviewWidget*
+/// @param x int
+/// @param y int
 void q_printpreviewwidget_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QPoint*
 void q_printpreviewwidget_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QPrintPreviewWidget* self, int w, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param w int
+/// @param h int
 void q_printpreviewwidget_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QPrintPreviewWidget* self, QSize* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QSize*
 void q_printpreviewwidget_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QPrintPreviewWidget* self, int x, int y, int w, int h ```
+/// @param self QPrintPreviewWidget*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_printpreviewwidget_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QPrintPreviewWidget* self, QRect* geometry ```
+/// @param self QPrintPreviewWidget*
+/// @param geometry QRect*
 void q_printpreviewwidget_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 char* q_printpreviewwidget_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QPrintPreviewWidget* self, const char* geometry ```
+/// @param self QPrintPreviewWidget*
+/// @param geometry const char*
 bool q_printpreviewwidget_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QWidget*
 bool q_printpreviewwidget_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_printpreviewwidget_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QPrintPreviewWidget* self, int state ```
+/// @param self QPrintPreviewWidget*
+/// @param state flag of enum Qt__WindowState
 void q_printpreviewwidget_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QPrintPreviewWidget* self, int state ```
+/// @param self QPrintPreviewWidget*
+/// @param state flag of enum Qt__WindowState
 void q_printpreviewwidget_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSizePolicy* q_printpreviewwidget_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QPrintPreviewWidget* self, QSizePolicy* sizePolicy ```
+/// @param self QPrintPreviewWidget*
+/// @param sizePolicy QSizePolicy*
 void q_printpreviewwidget_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QPrintPreviewWidget* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QPrintPreviewWidget*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_printpreviewwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRegion* q_printpreviewwidget_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QPrintPreviewWidget* self, int left, int top, int right, int bottom ```
+/// @param self QPrintPreviewWidget*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_printpreviewwidget_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QPrintPreviewWidget* self, QMargins* margins ```
+/// @param self QPrintPreviewWidget*
+/// @param margins QMargins*
 void q_printpreviewwidget_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QMargins* q_printpreviewwidget_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QRect* q_printpreviewwidget_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QLayout* q_printpreviewwidget_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QPrintPreviewWidget* self, QLayout* layout ```
+/// @param self QPrintPreviewWidget*
+/// @param layout QLayout*
 void q_printpreviewwidget_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* parent ```
+/// @param self QPrintPreviewWidget*
+/// @param parent QWidget*
 void q_printpreviewwidget_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* parent, int f ```
+/// @param self QPrintPreviewWidget*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_printpreviewwidget_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QPrintPreviewWidget* self, int dx, int dy ```
+/// @param self QPrintPreviewWidget*
+/// @param dx int
+/// @param dy int
 void q_printpreviewwidget_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QPrintPreviewWidget* self, int dx, int dy, QRect* param3 ```
+/// @param self QPrintPreviewWidget*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_printpreviewwidget_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QPrintPreviewWidget* self, bool on ```
+/// @param self QPrintPreviewWidget*
+/// @param on bool
 void q_printpreviewwidget_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QPrintPreviewWidget* self, QAction* action ```
+/// @param self QPrintPreviewWidget*
+/// @param action QAction*
 void q_printpreviewwidget_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QPrintPreviewWidget* self, libqt_list /* of QAction* */ actions ```
+/// @param self QPrintPreviewWidget*
+/// @param actions libqt_list /* of QAction* */
 void q_printpreviewwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QPrintPreviewWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QPrintPreviewWidget*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_printpreviewwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QPrintPreviewWidget* self, QAction* before, QAction* action ```
+/// @param self QPrintPreviewWidget*
+/// @param before QAction*
+/// @param action QAction*
 void q_printpreviewwidget_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QPrintPreviewWidget* self, QAction* action ```
+/// @param self QPrintPreviewWidget*
+/// @param action QAction*
 void q_printpreviewwidget_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 libqt_list /* of QAction* */ q_printpreviewwidget_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QPrintPreviewWidget* self, const char* text ```
+/// @param self QPrintPreviewWidget*
+/// @param text const char*
 QAction* q_printpreviewwidget_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QPrintPreviewWidget* self, QIcon* icon, const char* text ```
+/// @param self QPrintPreviewWidget*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_printpreviewwidget_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QPrintPreviewWidget* self, const char* text, QKeySequence* shortcut ```
+/// @param self QPrintPreviewWidget*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_printpreviewwidget_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QPrintPreviewWidget* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QPrintPreviewWidget*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_printpreviewwidget_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWidget* q_printpreviewwidget_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QPrintPreviewWidget* self, int typeVal ```
+/// @param self QPrintPreviewWidget*
+/// @param typeVal flag of enum Qt__WindowType
 void q_printpreviewwidget_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_printpreviewwidget_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__WindowType param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__WindowType
 void q_printpreviewwidget_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QPrintPreviewWidget* self, int typeVal ```
+/// @param self QPrintPreviewWidget*
+/// @param typeVal flag of enum Qt__WindowType
 void q_printpreviewwidget_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return enum Qt__WindowType
 int64_t q_printpreviewwidget_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_printpreviewwidget_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QPrintPreviewWidget* self, int x, int y ```
+/// @param self QPrintPreviewWidget*
+/// @param x int
+/// @param y int
 QWidget* q_printpreviewwidget_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* p ```
+/// @param self QPrintPreviewWidget*
+/// @param p QPoint*
 QWidget* q_printpreviewwidget_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QPrintPreviewWidget* self, QPointF* p ```
+/// @param self QPrintPreviewWidget*
+/// @param p QPointF*
 QWidget* q_printpreviewwidget_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__WidgetAttribute
 void q_printpreviewwidget_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_printpreviewwidget_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QPrintPreviewWidget* self, QWidget* child ```
+/// @param self QPrintPreviewWidget*
+/// @param child QWidget*
 bool q_printpreviewwidget_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QPrintPreviewWidget* self, bool enabled ```
+/// @param self QPrintPreviewWidget*
+/// @param enabled bool
 void q_printpreviewwidget_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QBackingStore* q_printpreviewwidget_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QWindow* q_printpreviewwidget_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QScreen* q_printpreviewwidget_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QPrintPreviewWidget* self, QScreen* screen ```
+/// @param self QPrintPreviewWidget*
+/// @param screen QScreen*
 void q_printpreviewwidget_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_printpreviewwidget_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPrintPreviewWidget* self, const char* title ```
+/// @param self QPrintPreviewWidget*
+/// @param title const char*
 void q_printpreviewwidget_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, const char*) ```
-void q_printpreviewwidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, const char*)
+void q_printpreviewwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPrintPreviewWidget* self, QIcon* icon ```
+/// @param self QPrintPreviewWidget*
+/// @param icon QIcon*
 void q_printpreviewwidget_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QIcon*) ```
-void q_printpreviewwidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QIcon*)
+void q_printpreviewwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPrintPreviewWidget* self, const char* iconText ```
+/// @param self QPrintPreviewWidget*
+/// @param iconText const char*
 void q_printpreviewwidget_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, const char*) ```
-void q_printpreviewwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, const char*)
+void q_printpreviewwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* pos ```
+/// @param self QPrintPreviewWidget*
+/// @param pos QPoint*
 void q_printpreviewwidget_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QPoint*) ```
-void q_printpreviewwidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QPoint*)
+void q_printpreviewwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_printpreviewwidget_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QPrintPreviewWidget* self, int hints ```
+/// @param self QPrintPreviewWidget*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_printpreviewwidget_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QPrintPreviewWidget*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_printpreviewwidget_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QPrintPreviewWidget*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_printpreviewwidget_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QPrintPreviewWidget*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_printpreviewwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QPrintPreviewWidget*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_printpreviewwidget_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QPrintPreviewWidget*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_printpreviewwidget_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QPrintPreviewWidget*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_printpreviewwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QPrintPreviewWidget* self, QRect* rectangle ```
+/// @param self QPrintPreviewWidget*
+/// @param rectangle QRect*
 QPixmap* q_printpreviewwidget_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QPrintPreviewWidget*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_printpreviewwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QPrintPreviewWidget* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QPrintPreviewWidget*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_printpreviewwidget_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QPrintPreviewWidget* self, int id, bool enable ```
+/// @param self QPrintPreviewWidget*
+/// @param id int
+/// @param enable bool
 void q_printpreviewwidget_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QPrintPreviewWidget* self, int id, bool enable ```
+/// @param self QPrintPreviewWidget*
+/// @param id int
+/// @param enable bool
 void q_printpreviewwidget_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__WindowType param1, bool on ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_printpreviewwidget_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_printpreviewwidget_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_printpreviewwidget_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_printpreviewwidget_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char* q_printpreviewwidget_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPrintPreviewWidget* self, char* name ```
+/// @param self QPrintPreviewWidget*
+/// @param name char*
 void q_printpreviewwidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QPrintPreviewWidget* self, bool b ```
+/// @param self QPrintPreviewWidget*
+/// @param b bool
 bool q_printpreviewwidget_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QThread* q_printpreviewwidget_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QPrintPreviewWidget* self, QThread* thread ```
+/// @param self QPrintPreviewWidget*
+/// @param thread QThread*
 bool q_printpreviewwidget_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QPrintPreviewWidget* self, int interval ```
+/// @param self QPrintPreviewWidget*
+/// @param interval int
 int32_t q_printpreviewwidget_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QPrintPreviewWidget* self, int id ```
+/// @param self QPrintPreviewWidget*
+/// @param id int
 void q_printpreviewwidget_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__TimerId id ```
+/// @param self QPrintPreviewWidget*
+/// @param id enum Qt__TimerId
 void q_printpreviewwidget_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 libqt_list /* of QObject* */ q_printpreviewwidget_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QPrintPreviewWidget* self, QObject* filterObj ```
+/// @param self QPrintPreviewWidget*
+/// @param filterObj QObject*
 void q_printpreviewwidget_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QPrintPreviewWidget* self, QObject* obj ```
+/// @param self QPrintPreviewWidget*
+/// @param obj QObject*
 void q_printpreviewwidget_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_printpreviewwidget_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QPrintPreviewWidget* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QPrintPreviewWidget*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_printpreviewwidget_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_printpreviewwidget_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_printpreviewwidget_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QPrintPreviewWidget* self, const char* name, QVariant* value ```
+/// @param self QPrintPreviewWidget*
+/// @param name const char*
+/// @param value QVariant*
 bool q_printpreviewwidget_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QPrintPreviewWidget* self, const char* name ```
+/// @param self QPrintPreviewWidget*
+/// @param name const char*
 QVariant* q_printpreviewwidget_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrintPreviewWidget*
 const char** q_printpreviewwidget_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QBindingStorage* q_printpreviewwidget_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 const QBindingStorage* q_printpreviewwidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*) ```
-void q_printpreviewwidget_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*)
+void q_printpreviewwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QObject* q_printpreviewwidget_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QPrintPreviewWidget* self, const char* classname ```
+/// @param self QPrintPreviewWidget*
+/// @param classname const char*
 bool q_printpreviewwidget_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QPrintPreviewWidget* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QPrintPreviewWidget*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_printpreviewwidget_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QPrintPreviewWidget* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QPrintPreviewWidget*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_printpreviewwidget_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_printpreviewwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QPrintPreviewWidget* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QPrintPreviewWidget*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_printpreviewwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewWidget* self, QObject* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QObject*
 void q_printpreviewwidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QObject*) ```
-void q_printpreviewwidget_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QObject*)
+void q_printpreviewwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 double q_printpreviewwidget_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 double q_printpreviewwidget_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_printpreviewwidget_device_pixel_ratio_f_scale();
 
@@ -2490,7 +2807,8 @@ double q_printpreviewwidget_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_printpreviewwidget_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -2499,7 +2817,7 @@ int32_t q_printpreviewwidget_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2508,7 +2826,7 @@ int32_t q_printpreviewwidget_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2517,8 +2835,9 @@ int32_t q_printpreviewwidget_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int32_t (*slot)() ```
-void q_printpreviewwidget_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback int32_t fn()
+void q_printpreviewwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2526,7 +2845,7 @@ void q_printpreviewwidget_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2535,7 +2854,7 @@ QSize* q_printpreviewwidget_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2544,8 +2863,9 @@ QSize* q_printpreviewwidget_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QSize* (*slot)() ```
-void q_printpreviewwidget_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback QSize* fn()
+void q_printpreviewwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2553,7 +2873,7 @@ void q_printpreviewwidget_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2562,7 +2882,7 @@ QSize* q_printpreviewwidget_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QSize* q_printpreviewwidget_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2571,8 +2891,9 @@ QSize* q_printpreviewwidget_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QSize* (*slot)() ```
-void q_printpreviewwidget_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback QSize* fn()
+void q_printpreviewwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2580,7 +2901,8 @@ void q_printpreviewwidget_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 int
 int32_t q_printpreviewwidget_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2589,7 +2911,8 @@ int32_t q_printpreviewwidget_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 int
 int32_t q_printpreviewwidget_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2598,8 +2921,9 @@ int32_t q_printpreviewwidget_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int32_t (*slot)(QPrintPreviewWidget*, int) ```
-void q_printpreviewwidget_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QPrintPreviewWidget*
+/// @param callback int32_t fn(QPrintPreviewWidget*, int)
+void q_printpreviewwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2607,7 +2931,7 @@ void q_printpreviewwidget_on_height_for_width(void* self, int32_t (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2616,7 +2940,7 @@ bool q_printpreviewwidget_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2625,8 +2949,9 @@ bool q_printpreviewwidget_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)() ```
-void q_printpreviewwidget_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn()
+void q_printpreviewwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2634,7 +2959,7 @@ void q_printpreviewwidget_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QPaintEngine* q_printpreviewwidget_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2643,7 +2968,7 @@ QPaintEngine* q_printpreviewwidget_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QPaintEngine* q_printpreviewwidget_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2652,8 +2977,9 @@ QPaintEngine* q_printpreviewwidget_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPaintEngine* (*slot)() ```
-void q_printpreviewwidget_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback QPaintEngine* fn()
+void q_printpreviewwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2661,7 +2987,8 @@ void q_printpreviewwidget_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEvent*
 bool q_printpreviewwidget_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2670,7 +2997,8 @@ bool q_printpreviewwidget_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEvent*
 bool q_printpreviewwidget_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2679,8 +3007,9 @@ bool q_printpreviewwidget_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)(QPrintPreviewWidget*, QEvent*) ```
-void q_printpreviewwidget_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn(QPrintPreviewWidget*, QEvent*)
+void q_printpreviewwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2688,7 +3017,8 @@ void q_printpreviewwidget_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2697,7 +3027,8 @@ void q_printpreviewwidget_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2706,8 +3037,9 @@ void q_printpreviewwidget_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMouseEvent*) ```
-void q_printpreviewwidget_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+void q_printpreviewwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2715,7 +3047,8 @@ void q_printpreviewwidget_on_mouse_press_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2724,7 +3057,8 @@ void q_printpreviewwidget_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2733,8 +3067,9 @@ void q_printpreviewwidget_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMouseEvent*) ```
-void q_printpreviewwidget_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+void q_printpreviewwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2742,7 +3077,8 @@ void q_printpreviewwidget_on_mouse_release_event(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2751,7 +3087,8 @@ void q_printpreviewwidget_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2760,8 +3097,9 @@ void q_printpreviewwidget_qbase_mouse_double_click_event(void* self, void* event
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMouseEvent*) ```
-void q_printpreviewwidget_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+void q_printpreviewwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2769,7 +3107,8 @@ void q_printpreviewwidget_on_mouse_double_click_event(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2778,7 +3117,8 @@ void q_printpreviewwidget_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMouseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMouseEvent*
 void q_printpreviewwidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2787,8 +3127,9 @@ void q_printpreviewwidget_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMouseEvent*) ```
-void q_printpreviewwidget_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMouseEvent*)
+void q_printpreviewwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2796,7 +3137,8 @@ void q_printpreviewwidget_on_mouse_move_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QWheelEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QWheelEvent*
 void q_printpreviewwidget_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2805,7 +3147,8 @@ void q_printpreviewwidget_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QWheelEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QWheelEvent*
 void q_printpreviewwidget_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2814,8 +3157,9 @@ void q_printpreviewwidget_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QWheelEvent*) ```
-void q_printpreviewwidget_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QWheelEvent*)
+void q_printpreviewwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2823,7 +3167,8 @@ void q_printpreviewwidget_on_wheel_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QKeyEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QKeyEvent*
 void q_printpreviewwidget_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2832,7 +3177,8 @@ void q_printpreviewwidget_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QKeyEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QKeyEvent*
 void q_printpreviewwidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2841,8 +3187,9 @@ void q_printpreviewwidget_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QKeyEvent*) ```
-void q_printpreviewwidget_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QKeyEvent*)
+void q_printpreviewwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2850,7 +3197,8 @@ void q_printpreviewwidget_on_key_press_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QKeyEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QKeyEvent*
 void q_printpreviewwidget_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2859,7 +3207,8 @@ void q_printpreviewwidget_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QKeyEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QKeyEvent*
 void q_printpreviewwidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2868,8 +3217,9 @@ void q_printpreviewwidget_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QKeyEvent*) ```
-void q_printpreviewwidget_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QKeyEvent*)
+void q_printpreviewwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2877,7 +3227,8 @@ void q_printpreviewwidget_on_key_release_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QFocusEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QFocusEvent*
 void q_printpreviewwidget_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2886,7 +3237,8 @@ void q_printpreviewwidget_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QFocusEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QFocusEvent*
 void q_printpreviewwidget_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2895,8 +3247,9 @@ void q_printpreviewwidget_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QFocusEvent*) ```
-void q_printpreviewwidget_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QFocusEvent*)
+void q_printpreviewwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2904,7 +3257,8 @@ void q_printpreviewwidget_on_focus_in_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QFocusEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QFocusEvent*
 void q_printpreviewwidget_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2913,7 +3267,8 @@ void q_printpreviewwidget_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QFocusEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QFocusEvent*
 void q_printpreviewwidget_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2922,8 +3277,9 @@ void q_printpreviewwidget_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QFocusEvent*) ```
-void q_printpreviewwidget_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QFocusEvent*)
+void q_printpreviewwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2931,7 +3287,8 @@ void q_printpreviewwidget_on_focus_out_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEnterEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEnterEvent*
 void q_printpreviewwidget_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2940,7 +3297,8 @@ void q_printpreviewwidget_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEnterEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEnterEvent*
 void q_printpreviewwidget_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2949,8 +3307,9 @@ void q_printpreviewwidget_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QEnterEvent*) ```
-void q_printpreviewwidget_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QEnterEvent*)
+void q_printpreviewwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2958,7 +3317,8 @@ void q_printpreviewwidget_on_enter_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEvent*
 void q_printpreviewwidget_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2967,7 +3327,8 @@ void q_printpreviewwidget_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEvent*
 void q_printpreviewwidget_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2976,8 +3337,9 @@ void q_printpreviewwidget_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QEvent*) ```
-void q_printpreviewwidget_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QEvent*)
+void q_printpreviewwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2985,7 +3347,8 @@ void q_printpreviewwidget_on_leave_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPaintEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QPaintEvent*
 void q_printpreviewwidget_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2994,7 +3357,8 @@ void q_printpreviewwidget_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPaintEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QPaintEvent*
 void q_printpreviewwidget_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3003,8 +3367,9 @@ void q_printpreviewwidget_qbase_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QPaintEvent*) ```
-void q_printpreviewwidget_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QPaintEvent*)
+void q_printpreviewwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3012,7 +3377,8 @@ void q_printpreviewwidget_on_paint_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMoveEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMoveEvent*
 void q_printpreviewwidget_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3021,7 +3387,8 @@ void q_printpreviewwidget_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMoveEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QMoveEvent*
 void q_printpreviewwidget_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3030,8 +3397,9 @@ void q_printpreviewwidget_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMoveEvent*) ```
-void q_printpreviewwidget_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMoveEvent*)
+void q_printpreviewwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3039,7 +3407,8 @@ void q_printpreviewwidget_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QResizeEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QResizeEvent*
 void q_printpreviewwidget_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3048,7 +3417,8 @@ void q_printpreviewwidget_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QResizeEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QResizeEvent*
 void q_printpreviewwidget_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3057,8 +3427,9 @@ void q_printpreviewwidget_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QResizeEvent*) ```
-void q_printpreviewwidget_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QResizeEvent*)
+void q_printpreviewwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3066,7 +3437,8 @@ void q_printpreviewwidget_on_resize_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QCloseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QCloseEvent*
 void q_printpreviewwidget_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3075,7 +3447,8 @@ void q_printpreviewwidget_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QCloseEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QCloseEvent*
 void q_printpreviewwidget_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3084,8 +3457,9 @@ void q_printpreviewwidget_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QCloseEvent*) ```
-void q_printpreviewwidget_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QCloseEvent*)
+void q_printpreviewwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3093,7 +3467,8 @@ void q_printpreviewwidget_on_close_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QContextMenuEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QContextMenuEvent*
 void q_printpreviewwidget_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3102,7 +3477,8 @@ void q_printpreviewwidget_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QContextMenuEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QContextMenuEvent*
 void q_printpreviewwidget_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3111,8 +3487,9 @@ void q_printpreviewwidget_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QContextMenuEvent*) ```
-void q_printpreviewwidget_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QContextMenuEvent*)
+void q_printpreviewwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3120,7 +3497,8 @@ void q_printpreviewwidget_on_context_menu_event(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QTabletEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QTabletEvent*
 void q_printpreviewwidget_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3129,7 +3507,8 @@ void q_printpreviewwidget_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QTabletEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QTabletEvent*
 void q_printpreviewwidget_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3138,8 +3517,9 @@ void q_printpreviewwidget_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QTabletEvent*) ```
-void q_printpreviewwidget_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QTabletEvent*)
+void q_printpreviewwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3147,7 +3527,8 @@ void q_printpreviewwidget_on_tablet_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QActionEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QActionEvent*
 void q_printpreviewwidget_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3156,7 +3537,8 @@ void q_printpreviewwidget_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QActionEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QActionEvent*
 void q_printpreviewwidget_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3165,8 +3547,9 @@ void q_printpreviewwidget_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QActionEvent*) ```
-void q_printpreviewwidget_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QActionEvent*)
+void q_printpreviewwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3174,7 +3557,8 @@ void q_printpreviewwidget_on_action_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDragEnterEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDragEnterEvent*
 void q_printpreviewwidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3183,7 +3567,8 @@ void q_printpreviewwidget_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDragEnterEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDragEnterEvent*
 void q_printpreviewwidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3192,8 +3577,9 @@ void q_printpreviewwidget_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QDragEnterEvent*) ```
-void q_printpreviewwidget_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QDragEnterEvent*)
+void q_printpreviewwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3201,7 +3587,8 @@ void q_printpreviewwidget_on_drag_enter_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDragMoveEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDragMoveEvent*
 void q_printpreviewwidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3210,7 +3597,8 @@ void q_printpreviewwidget_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDragMoveEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDragMoveEvent*
 void q_printpreviewwidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3219,8 +3607,9 @@ void q_printpreviewwidget_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QDragMoveEvent*) ```
-void q_printpreviewwidget_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QDragMoveEvent*)
+void q_printpreviewwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3228,7 +3617,8 @@ void q_printpreviewwidget_on_drag_move_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDragLeaveEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDragLeaveEvent*
 void q_printpreviewwidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3237,7 +3627,8 @@ void q_printpreviewwidget_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDragLeaveEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDragLeaveEvent*
 void q_printpreviewwidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3246,8 +3637,9 @@ void q_printpreviewwidget_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QDragLeaveEvent*) ```
-void q_printpreviewwidget_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QDragLeaveEvent*)
+void q_printpreviewwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3255,7 +3647,8 @@ void q_printpreviewwidget_on_drag_leave_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDropEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDropEvent*
 void q_printpreviewwidget_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3264,7 +3657,8 @@ void q_printpreviewwidget_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QDropEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QDropEvent*
 void q_printpreviewwidget_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3273,8 +3667,9 @@ void q_printpreviewwidget_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QDropEvent*) ```
-void q_printpreviewwidget_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QDropEvent*)
+void q_printpreviewwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3282,7 +3677,8 @@ void q_printpreviewwidget_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QShowEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QShowEvent*
 void q_printpreviewwidget_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3291,7 +3687,8 @@ void q_printpreviewwidget_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QShowEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QShowEvent*
 void q_printpreviewwidget_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3300,8 +3697,9 @@ void q_printpreviewwidget_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QShowEvent*) ```
-void q_printpreviewwidget_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QShowEvent*)
+void q_printpreviewwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3309,7 +3707,8 @@ void q_printpreviewwidget_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QHideEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QHideEvent*
 void q_printpreviewwidget_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3318,7 +3717,8 @@ void q_printpreviewwidget_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QHideEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QHideEvent*
 void q_printpreviewwidget_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3327,8 +3727,9 @@ void q_printpreviewwidget_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QHideEvent*) ```
-void q_printpreviewwidget_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QHideEvent*)
+void q_printpreviewwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3336,7 +3737,10 @@ void q_printpreviewwidget_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QPrintPreviewWidget*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_printpreviewwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3345,7 +3749,10 @@ bool q_printpreviewwidget_native_event(void* self, const char* eventType, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QPrintPreviewWidget*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_printpreviewwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3354,8 +3761,9 @@ bool q_printpreviewwidget_qbase_native_event(void* self, const char* eventType, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)(QPrintPreviewWidget*, const char*, void*, intptr_t*) ```
-void q_printpreviewwidget_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn(QPrintPreviewWidget*, const char*, void*, intptr_t*)
+void q_printpreviewwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3363,7 +3771,8 @@ void q_printpreviewwidget_on_native_event(void* self, bool (*slot)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QEvent*
 void q_printpreviewwidget_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3372,7 +3781,8 @@ void q_printpreviewwidget_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QEvent*
 void q_printpreviewwidget_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3381,8 +3791,9 @@ void q_printpreviewwidget_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QEvent*) ```
-void q_printpreviewwidget_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QEvent*)
+void q_printpreviewwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3390,7 +3801,8 @@ void q_printpreviewwidget_on_change_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_printpreviewwidget_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3399,7 +3811,8 @@ int32_t q_printpreviewwidget_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_printpreviewwidget_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3408,8 +3821,9 @@ int32_t q_printpreviewwidget_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int32_t (*slot)(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_printpreviewwidget_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QPrintPreviewWidget*
+/// @param callback int32_t fn(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric)
+void q_printpreviewwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3417,7 +3831,8 @@ void q_printpreviewwidget_on_metric(void* self, int32_t (*slot)(void*, int64_t))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* painter ```
+/// @param self QPrintPreviewWidget*
+/// @param painter QPainter*
 void q_printpreviewwidget_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3426,7 +3841,8 @@ void q_printpreviewwidget_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* painter ```
+/// @param self QPrintPreviewWidget*
+/// @param painter QPainter*
 void q_printpreviewwidget_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3435,8 +3851,9 @@ void q_printpreviewwidget_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QPainter*) ```
-void q_printpreviewwidget_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QPainter*)
+void q_printpreviewwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3444,7 +3861,8 @@ void q_printpreviewwidget_on_init_painter(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* offset ```
+/// @param self QPrintPreviewWidget*
+/// @param offset QPoint*
 QPaintDevice* q_printpreviewwidget_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3453,7 +3871,8 @@ QPaintDevice* q_printpreviewwidget_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPoint* offset ```
+/// @param self QPrintPreviewWidget*
+/// @param offset QPoint*
 QPaintDevice* q_printpreviewwidget_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3462,8 +3881,9 @@ QPaintDevice* q_printpreviewwidget_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPaintDevice* (*slot)(QPrintPreviewWidget*, QPoint*) ```
-void q_printpreviewwidget_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback QPaintDevice* fn(QPrintPreviewWidget*, QPoint*)
+void q_printpreviewwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3471,7 +3891,7 @@ void q_printpreviewwidget_on_redirected(void* self, QPaintDevice* (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QPainter* q_printpreviewwidget_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3480,7 +3900,7 @@ QPainter* q_printpreviewwidget_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QPainter* q_printpreviewwidget_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3489,8 +3909,9 @@ QPainter* q_printpreviewwidget_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QPainter* (*slot)() ```
-void q_printpreviewwidget_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback QPainter* fn()
+void q_printpreviewwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3498,7 +3919,8 @@ void q_printpreviewwidget_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QInputMethodEvent* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QInputMethodEvent*
 void q_printpreviewwidget_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3507,7 +3929,8 @@ void q_printpreviewwidget_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QInputMethodEvent* param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 QInputMethodEvent*
 void q_printpreviewwidget_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3516,8 +3939,9 @@ void q_printpreviewwidget_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QInputMethodEvent*) ```
-void q_printpreviewwidget_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QInputMethodEvent*)
+void q_printpreviewwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3525,7 +3949,8 @@ void q_printpreviewwidget_on_input_method_event(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_printpreviewwidget_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3534,7 +3959,8 @@ QVariant* q_printpreviewwidget_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QPrintPreviewWidget*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_printpreviewwidget_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3543,8 +3969,9 @@ QVariant* q_printpreviewwidget_qbase_input_method_query(void* self, int64_t para
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QVariant* (*slot)(QPrintPreviewWidget*, enum Qt__InputMethodQuery) ```
-void q_printpreviewwidget_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QPrintPreviewWidget*
+/// @param callback QVariant* fn(QPrintPreviewWidget*, enum Qt__InputMethodQuery)
+void q_printpreviewwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3552,7 +3979,8 @@ void q_printpreviewwidget_on_input_method_query(void* self, QVariant* (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool next ```
+/// @param self QPrintPreviewWidget*
+/// @param next bool
 bool q_printpreviewwidget_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3561,7 +3989,8 @@ bool q_printpreviewwidget_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool next ```
+/// @param self QPrintPreviewWidget*
+/// @param next bool
 bool q_printpreviewwidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3570,8 +3999,9 @@ bool q_printpreviewwidget_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)(QPrintPreviewWidget*, bool) ```
-void q_printpreviewwidget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn(QPrintPreviewWidget*, bool)
+void q_printpreviewwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3579,7 +4009,9 @@ void q_printpreviewwidget_on_focus_next_prev_child(void* self, bool (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QObject* watched, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_printpreviewwidget_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3588,7 +4020,9 @@ bool q_printpreviewwidget_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QObject* watched, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_printpreviewwidget_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3597,8 +4031,9 @@ bool q_printpreviewwidget_qbase_event_filter(void* self, void* watched, void* ev
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)(QPrintPreviewWidget*, QObject*, QEvent*) ```
-void q_printpreviewwidget_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn(QPrintPreviewWidget*, QObject*, QEvent*)
+void q_printpreviewwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3606,7 +4041,8 @@ void q_printpreviewwidget_on_event_filter(void* self, bool (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QTimerEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QTimerEvent*
 void q_printpreviewwidget_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3615,7 +4051,8 @@ void q_printpreviewwidget_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QTimerEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QTimerEvent*
 void q_printpreviewwidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3624,8 +4061,9 @@ void q_printpreviewwidget_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QTimerEvent*) ```
-void q_printpreviewwidget_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QTimerEvent*)
+void q_printpreviewwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3633,7 +4071,8 @@ void q_printpreviewwidget_on_timer_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QChildEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QChildEvent*
 void q_printpreviewwidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3642,7 +4081,8 @@ void q_printpreviewwidget_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QChildEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QChildEvent*
 void q_printpreviewwidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3651,8 +4091,9 @@ void q_printpreviewwidget_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QChildEvent*) ```
-void q_printpreviewwidget_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QChildEvent*)
+void q_printpreviewwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3660,7 +4101,8 @@ void q_printpreviewwidget_on_child_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEvent*
 void q_printpreviewwidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3669,7 +4111,8 @@ void q_printpreviewwidget_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QEvent* event ```
+/// @param self QPrintPreviewWidget*
+/// @param event QEvent*
 void q_printpreviewwidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3678,8 +4121,9 @@ void q_printpreviewwidget_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QEvent*) ```
-void q_printpreviewwidget_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QEvent*)
+void q_printpreviewwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3687,7 +4131,8 @@ void q_printpreviewwidget_on_custom_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMetaMethod* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal QMetaMethod*
 void q_printpreviewwidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3696,7 +4141,8 @@ void q_printpreviewwidget_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMetaMethod* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal QMetaMethod*
 void q_printpreviewwidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3705,8 +4151,9 @@ void q_printpreviewwidget_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMetaMethod*) ```
-void q_printpreviewwidget_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMetaMethod*)
+void q_printpreviewwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3714,7 +4161,8 @@ void q_printpreviewwidget_on_connect_notify(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMetaMethod* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal QMetaMethod*
 void q_printpreviewwidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3723,7 +4171,8 @@ void q_printpreviewwidget_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMetaMethod* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal QMetaMethod*
 void q_printpreviewwidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3732,8 +4181,9 @@ void q_printpreviewwidget_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, QMetaMethod*) ```
-void q_printpreviewwidget_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, QMetaMethod*)
+void q_printpreviewwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3741,7 +4191,7 @@ void q_printpreviewwidget_on_disconnect_notify(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3750,7 +4200,7 @@ void q_printpreviewwidget_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3759,8 +4209,9 @@ void q_printpreviewwidget_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)() ```
-void q_printpreviewwidget_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn()
+void q_printpreviewwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3768,7 +4219,7 @@ void q_printpreviewwidget_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_create(void* self);
 
 /// Inherited from QWidget
@@ -3777,7 +4228,7 @@ void q_printpreviewwidget_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3786,8 +4237,9 @@ void q_printpreviewwidget_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)() ```
-void q_printpreviewwidget_on_create(void* self, void (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn()
+void q_printpreviewwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3795,7 +4247,7 @@ void q_printpreviewwidget_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3804,7 +4256,7 @@ void q_printpreviewwidget_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3813,8 +4265,9 @@ void q_printpreviewwidget_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)() ```
-void q_printpreviewwidget_on_destroy(void* self, void (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn()
+void q_printpreviewwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3822,7 +4275,7 @@ void q_printpreviewwidget_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3831,7 +4284,7 @@ bool q_printpreviewwidget_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3840,8 +4293,9 @@ bool q_printpreviewwidget_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)() ```
-void q_printpreviewwidget_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn()
+void q_printpreviewwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3849,7 +4303,7 @@ void q_printpreviewwidget_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3858,7 +4312,7 @@ bool q_printpreviewwidget_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 bool q_printpreviewwidget_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3867,8 +4321,9 @@ bool q_printpreviewwidget_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)() ```
-void q_printpreviewwidget_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn()
+void q_printpreviewwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3876,7 +4331,7 @@ void q_printpreviewwidget_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QObject* q_printpreviewwidget_sender(void* self);
 
 /// Inherited from QObject
@@ -3885,7 +4340,7 @@ QObject* q_printpreviewwidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 QObject* q_printpreviewwidget_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3894,8 +4349,9 @@ QObject* q_printpreviewwidget_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QObject* (*slot)() ```
-void q_printpreviewwidget_on_sender(void* self, QObject* (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback QObject* fn()
+void q_printpreviewwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3903,7 +4359,7 @@ void q_printpreviewwidget_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3912,7 +4368,7 @@ int32_t q_printpreviewwidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 int32_t q_printpreviewwidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3921,8 +4377,9 @@ int32_t q_printpreviewwidget_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int32_t (*slot)() ```
-void q_printpreviewwidget_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QPrintPreviewWidget*
+/// @param callback int32_t fn()
+void q_printpreviewwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3930,7 +4387,8 @@ void q_printpreviewwidget_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, const char* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal const char*
 int32_t q_printpreviewwidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3939,7 +4397,8 @@ int32_t q_printpreviewwidget_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, const char* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal const char*
 int32_t q_printpreviewwidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3948,8 +4407,9 @@ int32_t q_printpreviewwidget_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, int32_t (*slot)(QPrintPreviewWidget*, const char*) ```
-void q_printpreviewwidget_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QPrintPreviewWidget*
+/// @param callback int32_t fn(QPrintPreviewWidget*, const char*)
+void q_printpreviewwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3957,7 +4417,8 @@ void q_printpreviewwidget_on_receivers(void* self, int32_t (*slot)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMetaMethod* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal QMetaMethod*
 bool q_printpreviewwidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3966,7 +4427,8 @@ bool q_printpreviewwidget_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, QMetaMethod* signal ```
+/// @param self QPrintPreviewWidget*
+/// @param signal QMetaMethod*
 bool q_printpreviewwidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3975,8 +4437,9 @@ bool q_printpreviewwidget_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, bool (*slot)(QPrintPreviewWidget*, QMetaMethod*) ```
-void q_printpreviewwidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QPrintPreviewWidget*
+/// @param callback bool fn(QPrintPreviewWidget*, QMetaMethod*)
+void q_printpreviewwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3984,7 +4447,9 @@ void q_printpreviewwidget_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QPrintPreviewWidget*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_printpreviewwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3993,7 +4458,9 @@ double q_printpreviewwidget_get_decoded_metric_f(void* self, int64_t metricA, in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QPrintPreviewWidget*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_printpreviewwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4002,8 +4469,9 @@ double q_printpreviewwidget_qbase_get_decoded_metric_f(void* self, int64_t metri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPrintPreviewWidget* self, double (*slot)(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QPrintPreviewWidget*
+/// @param callback double fn(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4011,14 +4479,15 @@ void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPrintPreviewWidget* self, void (*slot)(QPrintPreviewWidget*, const char*) ```
-void q_printpreviewwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QPrintPreviewWidget*
+/// @param callback void fn(QPrintPreviewWidget*, const char*)
+void q_printpreviewwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#dtor.QPrintPreviewWidget)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPrintPreviewWidget* self ```
+/// @param self QPrintPreviewWidget*
 void q_printpreviewwidget_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qprintpreviewwidget.html#types

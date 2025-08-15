@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,109 +15,119 @@
 
 /// q_fontinfo_new constructs a new QFontInfo object.
 ///
-/// ``` QFont* param1 ```
+/// @param param1 QFont*
 QFontInfo* q_fontinfo_new(void* param1);
 
 /// q_fontinfo_new2 constructs a new QFontInfo object.
 ///
-/// ``` QFontInfo* param1 ```
+/// @param param1 QFontInfo*
 QFontInfo* q_fontinfo_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#operator-eq)
 ///
-/// ``` QFontInfo* self, QFontInfo* param1 ```
+/// @param self QFontInfo*
+/// @param param1 QFontInfo*
 void q_fontinfo_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#swap)
 ///
-/// ``` QFontInfo* self, QFontInfo* other ```
+/// @param self QFontInfo*
+/// @param other QFontInfo*
 void q_fontinfo_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#family)
 ///
-/// ``` QFontInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFontInfo*
 const char* q_fontinfo_family(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#styleName)
 ///
-/// ``` QFontInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFontInfo*
 const char* q_fontinfo_style_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#pixelSize)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 int32_t q_fontinfo_pixel_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#pointSize)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 int32_t q_fontinfo_point_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#pointSizeF)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 double q_fontinfo_point_size_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#italic)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_italic(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#style)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
+///
+/// @return enum QFont__Style
 int64_t q_fontinfo_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#weight)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 int32_t q_fontinfo_weight(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#bold)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_bold(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#underline)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_underline(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#overline)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_overline(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#strikeOut)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_strike_out(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#fixedPitch)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_fixed_pitch(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#styleHint)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
+///
+/// @return enum QFont__StyleHint
 int64_t q_fontinfo_style_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#legacyWeight)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 int32_t q_fontinfo_legacy_weight(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#exactMatch)
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 bool q_fontinfo_exact_match(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#dtor.QFontInfo)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFontInfo* self ```
+/// @param self QFontInfo*
 void q_fontinfo_delete(void* self);
 
 #endif

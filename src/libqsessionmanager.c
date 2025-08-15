@@ -63,24 +63,33 @@ int64_t q_sessionmanager_restart_hint(void* self) {
 
 void q_sessionmanager_set_restart_command(void* self, const char* restartCommand[]) {
     size_t restartCommand_len = libqt_strv_length(restartCommand);
-    libqt_string* restartCommand_qstr = malloc(restartCommand_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < restartCommand_len; ++_i) {
-        restartCommand_qstr[_i] = qstring(restartCommand[_i]);
+    libqt_string* restartCommand_qstr = (libqt_string*)malloc(restartCommand_len * sizeof(libqt_string));
+    if (restartCommand_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sessionmanager_set_restart_command");
+        abort();
+    }
+    for (size_t i = 0; i < restartCommand_len; ++i) {
+        restartCommand_qstr[i] = qstring(restartCommand[i]);
     }
     libqt_list restartCommand_list = qlist(restartCommand_qstr, restartCommand_len);
     QSessionManager_SetRestartCommand((QSessionManager*)self, restartCommand_list);
+    free(restartCommand_qstr);
 }
 
 const char** q_sessionmanager_restart_command(void* self) {
     libqt_list _arr = QSessionManager_RestartCommand((QSessionManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sessionmanager_restart_command");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -88,24 +97,33 @@ const char** q_sessionmanager_restart_command(void* self) {
 
 void q_sessionmanager_set_discard_command(void* self, const char* discardCommand[]) {
     size_t discardCommand_len = libqt_strv_length(discardCommand);
-    libqt_string* discardCommand_qstr = malloc(discardCommand_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < discardCommand_len; ++_i) {
-        discardCommand_qstr[_i] = qstring(discardCommand[_i]);
+    libqt_string* discardCommand_qstr = (libqt_string*)malloc(discardCommand_len * sizeof(libqt_string));
+    if (discardCommand_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sessionmanager_set_discard_command");
+        abort();
+    }
+    for (size_t i = 0; i < discardCommand_len; ++i) {
+        discardCommand_qstr[i] = qstring(discardCommand[i]);
     }
     libqt_list discardCommand_list = qlist(discardCommand_qstr, discardCommand_len);
     QSessionManager_SetDiscardCommand((QSessionManager*)self, discardCommand_list);
+    free(discardCommand_qstr);
 }
 
 const char** q_sessionmanager_discard_command(void* self) {
     libqt_list _arr = QSessionManager_DiscardCommand((QSessionManager*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sessionmanager_discard_command");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -117,12 +135,17 @@ void q_sessionmanager_set_manager_property(void* self, const char* name, const c
 
 void q_sessionmanager_set_manager_property2(void* self, const char* name, const char* value[]) {
     size_t value_len = libqt_strv_length(value);
-    libqt_string* value_qstr = malloc(value_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < value_len; ++_i) {
-        value_qstr[_i] = qstring(value[_i]);
+    libqt_string* value_qstr = (libqt_string*)malloc(value_len * sizeof(libqt_string));
+    if (value_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sessionmanager_set_manager_property2");
+        abort();
+    }
+    for (size_t i = 0; i < value_len; ++i) {
+        value_qstr[i] = qstring(value[i]);
     }
     libqt_list value_list = qlist(value_qstr, value_len);
     QSessionManager_SetManagerProperty2((QSessionManager*)self, qstring(name), value_list);
+    free(value_qstr);
 }
 
 bool q_sessionmanager_is_phase2(void* self) {
@@ -259,12 +282,16 @@ const char** q_sessionmanager_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sessionmanager_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -282,8 +309,8 @@ void q_sessionmanager_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_sessionmanager_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_sessionmanager_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_sessionmanager_parent(void* self) {
@@ -318,10 +345,10 @@ void q_sessionmanager_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_sessionmanager_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_sessionmanager_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_sessionmanager_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_sessionmanager_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }

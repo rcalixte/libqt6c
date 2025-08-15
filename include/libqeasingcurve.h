@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,94 +15,109 @@
 
 /// q_easingcurve_new constructs a new QEasingCurve object.
 ///
-///
 QEasingCurve* q_easingcurve_new();
 
 /// q_easingcurve_new2 constructs a new QEasingCurve object.
 ///
-/// ``` QEasingCurve* other ```
+/// @param other QEasingCurve*
 QEasingCurve* q_easingcurve_new2(void* other);
 
 /// q_easingcurve_new3 constructs a new QEasingCurve object.
 ///
-/// ``` enum QEasingCurve__Type typeVal ```
+/// @param typeVal enum QEasingCurve__Type
 QEasingCurve* q_easingcurve_new3(int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator-eq)
 ///
-/// ``` QEasingCurve* self, QEasingCurve* other ```
+/// @param self QEasingCurve*
+/// @param other QEasingCurve*
 void q_easingcurve_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#swap)
 ///
-/// ``` QEasingCurve* self, QEasingCurve* other ```
+/// @param self QEasingCurve*
+/// @param other QEasingCurve*
 void q_easingcurve_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#amplitude)
 ///
-/// ``` QEasingCurve* self ```
+/// @param self QEasingCurve*
 double q_easingcurve_amplitude(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#setAmplitude)
 ///
-/// ``` QEasingCurve* self, double amplitude ```
+/// @param self QEasingCurve*
+/// @param amplitude double
 void q_easingcurve_set_amplitude(void* self, double amplitude);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#period)
 ///
-/// ``` QEasingCurve* self ```
+/// @param self QEasingCurve*
 double q_easingcurve_period(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#setPeriod)
 ///
-/// ``` QEasingCurve* self, double period ```
+/// @param self QEasingCurve*
+/// @param period double
 void q_easingcurve_set_period(void* self, double period);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#overshoot)
 ///
-/// ``` QEasingCurve* self ```
+/// @param self QEasingCurve*
 double q_easingcurve_overshoot(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#setOvershoot)
 ///
-/// ``` QEasingCurve* self, double overshoot ```
+/// @param self QEasingCurve*
+/// @param overshoot double
 void q_easingcurve_set_overshoot(void* self, double overshoot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#addCubicBezierSegment)
 ///
-/// ``` QEasingCurve* self, QPointF* c1, QPointF* c2, QPointF* endPoint ```
+/// @param self QEasingCurve*
+/// @param c1 QPointF*
+/// @param c2 QPointF*
+/// @param endPoint QPointF*
 void q_easingcurve_add_cubic_bezier_segment(void* self, void* c1, void* c2, void* endPoint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#addTCBSegment)
 ///
-/// ``` QEasingCurve* self, QPointF* nextPoint, double t, double c, double b ```
+/// @param self QEasingCurve*
+/// @param nextPoint QPointF*
+/// @param t double
+/// @param c double
+/// @param b double
 void q_easingcurve_add_t_c_b_segment(void* self, void* nextPoint, double t, double c, double b);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#toCubicSpline)
 ///
-/// ``` QEasingCurve* self ```
+/// @param self QEasingCurve*
 libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#type)
 ///
-/// ``` QEasingCurve* self ```
+/// @param self QEasingCurve*
+///
+/// @return enum QEasingCurve__Type
 int64_t q_easingcurve_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#setType)
 ///
-/// ``` QEasingCurve* self, enum QEasingCurve__Type typeVal ```
+/// @param self QEasingCurve*
+/// @param typeVal enum QEasingCurve__Type
 void q_easingcurve_set_type(void* self, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#valueForProgress)
 ///
-/// ``` QEasingCurve* self, double progress ```
+/// @param self QEasingCurve*
+/// @param progress double
 double q_easingcurve_value_for_progress(void* self, double progress);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#dtor.QEasingCurve)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QEasingCurve* self ```
+/// @param self QEasingCurve*
 void q_easingcurve_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qeasingcurve.html#types

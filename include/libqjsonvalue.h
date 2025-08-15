@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,492 +15,536 @@
 
 /// q_jsonvalue_new constructs a new QJsonValue object.
 ///
-///
 QJsonValue* q_jsonvalue_new();
 
 /// q_jsonvalue_new2 constructs a new QJsonValue object.
 ///
-/// ``` bool b ```
+/// @param b bool
 QJsonValue* q_jsonvalue_new2(bool b);
 
 /// q_jsonvalue_new3 constructs a new QJsonValue object.
 ///
-/// ``` double n ```
+/// @param n double
 QJsonValue* q_jsonvalue_new3(double n);
 
 /// q_jsonvalue_new4 constructs a new QJsonValue object.
 ///
-/// ``` int n ```
+/// @param n int
 QJsonValue* q_jsonvalue_new4(int n);
 
 /// q_jsonvalue_new5 constructs a new QJsonValue object.
 ///
-/// ``` long long v ```
+/// @param v long long
 QJsonValue* q_jsonvalue_new5(long long v);
 
 /// q_jsonvalue_new6 constructs a new QJsonValue object.
 ///
-/// ``` const char* s ```
+/// @param s const char*
 QJsonValue* q_jsonvalue_new6(const char* s);
 
 /// q_jsonvalue_new7 constructs a new QJsonValue object.
 ///
-/// ``` const char* s ```
+/// @param s const char*
 QJsonValue* q_jsonvalue_new7(const char* s);
 
 /// q_jsonvalue_new8 constructs a new QJsonValue object.
 ///
-/// ``` QJsonArray* a ```
+/// @param a QJsonArray*
 QJsonValue* q_jsonvalue_new8(void* a);
 
 /// q_jsonvalue_new9 constructs a new QJsonValue object.
 ///
-/// ``` QJsonObject* o ```
+/// @param o QJsonObject*
 QJsonValue* q_jsonvalue_new9(void* o);
 
 /// q_jsonvalue_new10 constructs a new QJsonValue object.
 ///
-/// ``` QJsonValue* other ```
+/// @param other QJsonValue*
 QJsonValue* q_jsonvalue_new10(void* other);
 
 /// q_jsonvalue_new11 constructs a new QJsonValue object.
 ///
-/// ``` enum QJsonValue__Type param1 ```
+/// @param param1 enum QJsonValue__Type
 QJsonValue* q_jsonvalue_new11(int64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator-eq)
 ///
-/// ``` QJsonValue* self, QJsonValue* other ```
+/// @param self QJsonValue*
+/// @param other QJsonValue*
 void q_jsonvalue_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#swap)
 ///
-/// ``` QJsonValue* self, QJsonValue* other ```
+/// @param self QJsonValue*
+/// @param other QJsonValue*
 void q_jsonvalue_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#fromVariant)
 ///
-/// ``` QVariant* variant ```
+/// @param variant QVariant*
 QJsonValue* q_jsonvalue_from_variant(void* variant);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toVariant)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 QVariant* q_jsonvalue_to_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#type)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
+///
+/// @return enum QJsonValue__Type
 int64_t q_jsonvalue_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isNull)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isBool)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isDouble)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isString)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isArray)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isObject)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isUndefined)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_is_undefined(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toBool)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 bool q_jsonvalue_to_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toInt)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 int32_t q_jsonvalue_to_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toInteger)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 long long q_jsonvalue_to_integer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toDouble)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 double q_jsonvalue_to_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toString)
 ///
-/// ``` QJsonValue* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonValue*
 const char* q_jsonvalue_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toString)
 ///
-/// ``` QJsonValue* self, const char* defaultValue ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonValue*
+/// @param defaultValue const char*
 const char* q_jsonvalue_to_string2(void* self, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toArray)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 QJsonArray* q_jsonvalue_to_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toArray)
 ///
-/// ``` QJsonValue* self, QJsonArray* defaultValue ```
+/// @param self QJsonValue*
+/// @param defaultValue QJsonArray*
 QJsonArray* q_jsonvalue_to_array2(void* self, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toObject)
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 QJsonObject* q_jsonvalue_to_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toObject)
 ///
-/// ``` QJsonValue* self, QJsonObject* defaultValue ```
+/// @param self QJsonValue*
+/// @param defaultValue QJsonObject*
 QJsonObject* q_jsonvalue_to_object2(void* self, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
 ///
-/// ``` QJsonValue* self, const char* key ```
+/// @param self QJsonValue*
+/// @param key const char*
 const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
 ///
-/// ``` QJsonValue* self, int64_t i ```
+/// @param self QJsonValue*
+/// @param i int64_t
 const QJsonValue* q_jsonvalue_operator_subscript4(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toBool)
 ///
-/// ``` QJsonValue* self, bool defaultValue ```
+/// @param self QJsonValue*
+/// @param defaultValue bool
 bool q_jsonvalue_to_bool1(void* self, bool defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toInt)
 ///
-/// ``` QJsonValue* self, int defaultValue ```
+/// @param self QJsonValue*
+/// @param defaultValue int
 int32_t q_jsonvalue_to_int1(void* self, int defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toInteger)
 ///
-/// ``` QJsonValue* self, long long defaultValue ```
+/// @param self QJsonValue*
+/// @param defaultValue long long
 long long q_jsonvalue_to_integer1(void* self, long long defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#toDouble)
 ///
-/// ``` QJsonValue* self, double defaultValue ```
+/// @param self QJsonValue*
+/// @param defaultValue double
 double q_jsonvalue_to_double1(void* self, double defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#dtor.QJsonValue)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QJsonValue* self ```
+/// @param self QJsonValue*
 void q_jsonvalue_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qjsonvalueconstref.html
 
 /// q_jsonvalueconstref_new constructs a new QJsonValueConstRef object.
 ///
-/// ``` QJsonValueConstRef* other ```
+/// @param other QJsonValueConstRef*
 QJsonValueConstRef* q_jsonvalueconstref_new(void* other);
 
 /// q_jsonvalueconstref_new2 constructs a new QJsonValueConstRef object.
 ///
-/// ``` QJsonValueConstRef* param1 ```
+/// @param param1 QJsonValueConstRef*
 QJsonValueConstRef* q_jsonvalueconstref_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 QJsonValue* q_jsonvalueconstref_to_q_json_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toVariant)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 QVariant* q_jsonvalueconstref_to_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#type)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
+///
+/// @return enum QJsonValue__Type
 int64_t q_jsonvalueconstref_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isNull)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isBool)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isDouble)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isString)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isArray)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isObject)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isUndefined)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_is_undefined(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toBool)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 bool q_jsonvalueconstref_to_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toInt)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 int32_t q_jsonvalueconstref_to_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toInteger)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 long long q_jsonvalueconstref_to_integer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toDouble)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 double q_jsonvalueconstref_to_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toString)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonValueConstRef*
 const char* q_jsonvalueconstref_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toArray)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 QJsonArray* q_jsonvalueconstref_to_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toObject)
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 QJsonObject* q_jsonvalueconstref_to_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-5b-5d)
 ///
-/// ``` QJsonValueConstRef* self, int64_t i ```
+/// @param self QJsonValueConstRef*
+/// @param i int64_t
 const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toBool)
 ///
-/// ``` QJsonValueConstRef* self, bool defaultValue ```
+/// @param self QJsonValueConstRef*
+/// @param defaultValue bool
 bool q_jsonvalueconstref_to_bool1(void* self, bool defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toInt)
 ///
-/// ``` QJsonValueConstRef* self, int defaultValue ```
+/// @param self QJsonValueConstRef*
+/// @param defaultValue int
 int32_t q_jsonvalueconstref_to_int1(void* self, int defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toInteger)
 ///
-/// ``` QJsonValueConstRef* self, long long defaultValue ```
+/// @param self QJsonValueConstRef*
+/// @param defaultValue long long
 long long q_jsonvalueconstref_to_integer1(void* self, long long defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toDouble)
 ///
-/// ``` QJsonValueConstRef* self, double defaultValue ```
+/// @param self QJsonValueConstRef*
+/// @param defaultValue double
 double q_jsonvalueconstref_to_double1(void* self, double defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toString)
 ///
-/// ``` QJsonValueConstRef* self, const char* defaultValue ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonValueConstRef*
+/// @param defaultValue const char*
 const char* q_jsonvalueconstref_to_string1(void* self, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#dtor.QJsonValueConstRef)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QJsonValueConstRef* self ```
+/// @param self QJsonValueConstRef*
 void q_jsonvalueconstref_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qjsonvalueref.html
 
 /// q_jsonvalueref_new constructs a new QJsonValueRef object.
 ///
-/// ``` QJsonValueRef* other ```
+/// @param other QJsonValueRef*
 QJsonValueRef* q_jsonvalueref_new(void* other);
 
 /// q_jsonvalueref_new2 constructs a new QJsonValueRef object.
 ///
-/// ``` QJsonValueRef* param1 ```
+/// @param param1 QJsonValueRef*
 QJsonValueRef* q_jsonvalueref_new2(void* param1);
 
 /// q_jsonvalueref_new3 constructs a new QJsonValueRef object.
 ///
-/// ``` QJsonArray* array, int64_t idx ```
+/// @param array QJsonArray*
+/// @param idx int64_t
 QJsonValueRef* q_jsonvalueref_new3(void* array, int64_t idx);
 
 /// q_jsonvalueref_new4 constructs a new QJsonValueRef object.
 ///
-/// ``` QJsonObject* object, int64_t idx ```
+/// @param object QJsonObject*
+/// @param idx int64_t
 QJsonValueRef* q_jsonvalueref_new4(void* object, int64_t idx);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-eq)
 ///
-/// ``` QJsonValueRef* self, QJsonValue* val ```
+/// @param self QJsonValueRef*
+/// @param val QJsonValue*
 void q_jsonvalueref_operator_assign(void* self, void* val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-eq)
 ///
-/// ``` QJsonValueRef* self, QJsonValueRef* val ```
+/// @param self QJsonValueRef*
+/// @param val QJsonValueRef*
 void q_jsonvalueref_operator_assign2(void* self, void* val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 QJsonValue* q_jsonvalueref_to_q_json_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toVariant)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 QVariant* q_jsonvalueref_to_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#type)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
+///
+/// @return enum QJsonValue__Type
 int64_t q_jsonvalueref_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isNull)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isBool)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isDouble)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isString)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isArray)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isObject)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isUndefined)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_is_undefined(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toBool)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 bool q_jsonvalueref_to_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toInt)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 int32_t q_jsonvalueref_to_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toInteger)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 long long q_jsonvalueref_to_integer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toDouble)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 double q_jsonvalueref_to_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toString)
 ///
-/// ``` QJsonValueRef* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonValueRef*
 const char* q_jsonvalueref_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toArray)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 QJsonArray* q_jsonvalueref_to_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toObject)
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 QJsonObject* q_jsonvalueref_to_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-5b-5d)
 ///
-/// ``` QJsonValueRef* self, int64_t i ```
+/// @param self QJsonValueRef*
+/// @param i int64_t
 const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toBool)
 ///
-/// ``` QJsonValueRef* self, bool defaultValue ```
+/// @param self QJsonValueRef*
+/// @param defaultValue bool
 bool q_jsonvalueref_to_bool1(void* self, bool defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toInt)
 ///
-/// ``` QJsonValueRef* self, int defaultValue ```
+/// @param self QJsonValueRef*
+/// @param defaultValue int
 int32_t q_jsonvalueref_to_int1(void* self, int defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toInteger)
 ///
-/// ``` QJsonValueRef* self, long long defaultValue ```
+/// @param self QJsonValueRef*
+/// @param defaultValue long long
 long long q_jsonvalueref_to_integer1(void* self, long long defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toDouble)
 ///
-/// ``` QJsonValueRef* self, double defaultValue ```
+/// @param self QJsonValueRef*
+/// @param defaultValue double
 double q_jsonvalueref_to_double1(void* self, double defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#toString)
 ///
-/// ``` QJsonValueRef* self, const char* defaultValue ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonValueRef*
+/// @param defaultValue const char*
 const char* q_jsonvalueref_to_string1(void* self, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#dtor.QJsonValueRef)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QJsonValueRef* self ```
+/// @param self QJsonValueRef*
 void q_jsonvalueref_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qjsonvalue.html#types

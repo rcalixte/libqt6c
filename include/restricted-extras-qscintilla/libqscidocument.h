@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,24 +15,24 @@
 
 /// q_scidocument_new constructs a new QsciDocument object.
 ///
-///
 QsciDocument* q_scidocument_new();
 
 /// q_scidocument_new2 constructs a new QsciDocument object.
 ///
-/// ``` QsciDocument* param1 ```
+/// @param param1 QsciDocument*
 QsciDocument* q_scidocument_new2(void* param1);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///
-/// ``` QsciDocument* self, QsciDocument* param1 ```
+/// @param self QsciDocument*
+/// @param param1 QsciDocument*
 void q_scidocument_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciDocument.html)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QsciDocument* self ```
+/// @param self QsciDocument*
 void q_scidocument_delete(void* self);
 
 #endif

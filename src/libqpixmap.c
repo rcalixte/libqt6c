@@ -63,8 +63,8 @@ int32_t q_pixmap_dev_type(void* self) {
     return QPixmap_DevType((QPixmap*)self);
 }
 
-void q_pixmap_on_dev_type(void* self, int32_t (*slot)()) {
-    QPixmap_OnDevType((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_dev_type(void* self, int32_t (*callback)()) {
+    QPixmap_OnDevType((QPixmap*)self, (intptr_t)callback);
 }
 
 int32_t q_pixmap_qbase_dev_type(void* self) {
@@ -231,8 +231,8 @@ QPaintEngine* q_pixmap_paint_engine(void* self) {
     return QPixmap_PaintEngine((QPixmap*)self);
 }
 
-void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QPixmap_OnPaintEngine((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QPixmap_OnPaintEngine((QPixmap*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_pixmap_qbase_paint_engine(void* self) {
@@ -247,8 +247,8 @@ int32_t q_pixmap_metric(void* self, int64_t param1) {
     return QPixmap_Metric((QPixmap*)self, param1);
 }
 
-void q_pixmap_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QPixmap_OnMetric((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QPixmap_OnMetric((QPixmap*)self, (intptr_t)callback);
 }
 
 int32_t q_pixmap_qbase_metric(void* self, int64_t param1) {
@@ -411,8 +411,8 @@ void q_pixmap_qbase_init_painter(void* self, void* painter) {
     QPixmap_QBaseInitPainter((QPixmap*)self, (QPainter*)painter);
 }
 
-void q_pixmap_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QPixmap_OnInitPainter((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QPixmap_OnInitPainter((QPixmap*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_pixmap_redirected(void* self, void* offset) {
@@ -423,8 +423,8 @@ QPaintDevice* q_pixmap_qbase_redirected(void* self, void* offset) {
     return QPixmap_QBaseRedirected((QPixmap*)self, (QPoint*)offset);
 }
 
-void q_pixmap_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QPixmap_OnRedirected((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QPixmap_OnRedirected((QPixmap*)self, (intptr_t)callback);
 }
 
 QPainter* q_pixmap_shared_painter(void* self) {
@@ -435,8 +435,8 @@ QPainter* q_pixmap_qbase_shared_painter(void* self) {
     return QPixmap_QBaseSharedPainter((QPixmap*)self);
 }
 
-void q_pixmap_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QPixmap_OnSharedPainter((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QPixmap_OnSharedPainter((QPixmap*)self, (intptr_t)callback);
 }
 
 double q_pixmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -447,8 +447,8 @@ double q_pixmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
     return QPixmap_QBaseGetDecodedMetricF((QPixmap*)self, metricA, metricB);
 }
 
-void q_pixmap_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QPixmap_OnGetDecodedMetricF((QPixmap*)self, (intptr_t)slot);
+void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QPixmap_OnGetDecodedMetricF((QPixmap*)self, (intptr_t)callback);
 }
 
 void q_pixmap_delete(void* self) {

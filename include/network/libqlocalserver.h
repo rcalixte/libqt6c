@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,496 +15,580 @@
 
 /// q_localserver_new constructs a new QLocalServer object.
 ///
-///
 QLocalServer* q_localserver_new();
 
 /// q_localserver_new2 constructs a new QLocalServer object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QLocalServer* q_localserver_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 const QMetaObject* q_localserver_meta_object(void* self);
 
-/// ``` QLocalServer* self, const char* param1 ```
+/// @param self QLocalServer*
+/// @param param1 const char*
 void* q_localserver_metacast(void* self, const char* param1);
 
-/// ``` QLocalServer* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QLocalServer*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_localserver_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QLocalServer* self, int32_t (*slot)(QLocalServer*, enum QMetaObject__Call, int, void*) ```
-void q_localserver_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QLocalServer*
+/// @param callback int32_t fn(QLocalServer*, enum QMetaObject__Call, int, void*)
+void q_localserver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QLocalServer* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QLocalServer*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_localserver_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_localserver_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#newConnection)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_new_connection(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#newConnection)
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*) ```
-void q_localserver_on_new_connection(void* self, void (*slot)(void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*)
+void q_localserver_on_new_connection(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#close)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_close(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#errorString)
 ///
-/// ``` QLocalServer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLocalServer*
 const char* q_localserver_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#hasPendingConnections)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_has_pending_connections(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#hasPendingConnections)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLocalServer* self, bool (*slot)() ```
-void q_localserver_on_has_pending_connections(void* self, bool (*slot)());
+/// @param self QLocalServer*
+/// @param callback bool fn()
+void q_localserver_on_has_pending_connections(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#hasPendingConnections)
 ///
 /// Base class method implementation
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_qbase_has_pending_connections(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#isListening)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_is_listening(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#listen)
 ///
-/// ``` QLocalServer* self, const char* name ```
+/// @param self QLocalServer*
+/// @param name const char*
 bool q_localserver_listen(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#listen)
 ///
-/// ``` QLocalServer* self, intptr_t socketDescriptor ```
+/// @param self QLocalServer*
+/// @param socketDescriptor intptr_t
 bool q_localserver_listen2(void* self, intptr_t socketDescriptor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#maxPendingConnections)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 int32_t q_localserver_max_pending_connections(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#nextPendingConnection)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QLocalSocket* q_localserver_next_pending_connection(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#nextPendingConnection)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLocalServer* self, QLocalSocket* (*slot)() ```
-void q_localserver_on_next_pending_connection(void* self, QLocalSocket* (*slot)());
+/// @param self QLocalServer*
+/// @param callback QLocalSocket* fn()
+void q_localserver_on_next_pending_connection(void* self, QLocalSocket* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#nextPendingConnection)
 ///
 /// Base class method implementation
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QLocalSocket* q_localserver_qbase_next_pending_connection(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#serverName)
 ///
-/// ``` QLocalServer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLocalServer*
 const char* q_localserver_server_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#fullServerName)
 ///
-/// ``` QLocalServer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLocalServer*
 const char* q_localserver_full_server_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#removeServer)
 ///
-/// ``` const char* name ```
+/// @param name const char*
 bool q_localserver_remove_server(const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#serverError)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
+///
+/// @return enum QAbstractSocket__SocketError
 int64_t q_localserver_server_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#setMaxPendingConnections)
 ///
-/// ``` QLocalServer* self, int numConnections ```
+/// @param self QLocalServer*
+/// @param numConnections int
 void q_localserver_set_max_pending_connections(void* self, int numConnections);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#waitForNewConnection)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_wait_for_new_connection(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#setListenBacklogSize)
 ///
-/// ``` QLocalServer* self, int size ```
+/// @param self QLocalServer*
+/// @param size int
 void q_localserver_set_listen_backlog_size(void* self, int size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#listenBacklogSize)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 int32_t q_localserver_listen_backlog_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#setSocketOptions)
 ///
-/// ``` QLocalServer* self, int options ```
+/// @param self QLocalServer*
+/// @param options flag of enum QLocalServer__SocketOption
 void q_localserver_set_socket_options(void* self, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#socketOptions)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
+///
+/// @return flag of enum QLocalServer__SocketOption
 int64_t q_localserver_socket_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#socketDescriptor)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 intptr_t q_localserver_socket_descriptor(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#incomingConnection)
 ///
-/// ``` QLocalServer* self, uintptr_t socketDescriptor ```
+/// @param self QLocalServer*
+/// @param socketDescriptor uintptr_t
 void q_localserver_incoming_connection(void* self, uintptr_t socketDescriptor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#incomingConnection)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, uintptr_t) ```
-void q_localserver_on_incoming_connection(void* self, void (*slot)(void*, uintptr_t));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, uintptr_t)
+void q_localserver_on_incoming_connection(void* self, void (*callback)(void*, uintptr_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#incomingConnection)
 ///
 /// Base class method implementation
 ///
-/// ``` QLocalServer* self, uintptr_t socketDescriptor ```
+/// @param self QLocalServer*
+/// @param socketDescriptor uintptr_t
 void q_localserver_qbase_incoming_connection(void* self, uintptr_t socketDescriptor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
 ///
-/// ``` QLocalServer* self, QLocalSocket* socket ```
+/// @param self QLocalServer*
+/// @param socket QLocalSocket*
 void q_localserver_add_pending_connection(void* self, void* socket);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QLocalSocket*) ```
-void q_localserver_on_add_pending_connection(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QLocalSocket*)
+void q_localserver_on_add_pending_connection(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#addPendingConnection)
 ///
 /// Base class method implementation
 ///
-/// ``` QLocalServer* self, QLocalSocket* socket ```
+/// @param self QLocalServer*
+/// @param socket QLocalSocket*
 void q_localserver_qbase_add_pending_connection(void* self, void* socket);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_localserver_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_localserver_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#waitForNewConnection)
 ///
-/// ``` QLocalServer* self, int msec ```
+/// @param self QLocalServer*
+/// @param msec int
 bool q_localserver_wait_for_new_connection1(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#waitForNewConnection)
 ///
-/// ``` QLocalServer* self, int msec, bool* timedOut ```
+/// @param self QLocalServer*
+/// @param msec int
+/// @param timedOut bool*
 bool q_localserver_wait_for_new_connection2(void* self, int msec, bool* timedOut);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QLocalServer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLocalServer*
 const char* q_localserver_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLocalServer* self, char* name ```
+/// @param self QLocalServer*
+/// @param name char*
 void q_localserver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 bool q_localserver_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QLocalServer* self, bool b ```
+/// @param self QLocalServer*
+/// @param b bool
 bool q_localserver_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QThread* q_localserver_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QLocalServer* self, QThread* thread ```
+/// @param self QLocalServer*
+/// @param thread QThread*
 bool q_localserver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QLocalServer* self, int interval ```
+/// @param self QLocalServer*
+/// @param interval int
 int32_t q_localserver_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QLocalServer* self, int id ```
+/// @param self QLocalServer*
+/// @param id int
 void q_localserver_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QLocalServer* self, enum Qt__TimerId id ```
+/// @param self QLocalServer*
+/// @param id enum Qt__TimerId
 void q_localserver_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 libqt_list /* of QObject* */ q_localserver_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QLocalServer* self, QObject* parent ```
+/// @param self QLocalServer*
+/// @param parent QObject*
 void q_localserver_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QLocalServer* self, QObject* filterObj ```
+/// @param self QLocalServer*
+/// @param filterObj QObject*
 void q_localserver_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QLocalServer* self, QObject* obj ```
+/// @param self QLocalServer*
+/// @param obj QObject*
 void q_localserver_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_localserver_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QLocalServer* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QLocalServer*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_localserver_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_localserver_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_localserver_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QLocalServer* self, const char* name, QVariant* value ```
+/// @param self QLocalServer*
+/// @param name const char*
+/// @param value QVariant*
 bool q_localserver_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QLocalServer* self, const char* name ```
+/// @param self QLocalServer*
+/// @param name const char*
 QVariant* q_localserver_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QLocalServer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLocalServer*
 const char** q_localserver_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QBindingStorage* q_localserver_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 const QBindingStorage* q_localserver_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*) ```
-void q_localserver_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*)
+void q_localserver_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QObject* q_localserver_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QLocalServer* self, const char* classname ```
+/// @param self QLocalServer*
+/// @param classname const char*
 bool q_localserver_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QLocalServer* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QLocalServer*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_localserver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QLocalServer* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QLocalServer*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_localserver_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_localserver_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QLocalServer* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QLocalServer*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_localserver_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLocalServer* self, QObject* param1 ```
+/// @param self QLocalServer*
+/// @param param1 QObject*
 void q_localserver_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QObject*) ```
-void q_localserver_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QObject*)
+void q_localserver_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -513,7 +596,8 @@ void q_localserver_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QEvent* event ```
+/// @param self QLocalServer*
+/// @param event QEvent*
 bool q_localserver_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -522,7 +606,8 @@ bool q_localserver_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QEvent* event ```
+/// @param self QLocalServer*
+/// @param event QEvent*
 bool q_localserver_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -531,8 +616,9 @@ bool q_localserver_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, bool (*slot)(QLocalServer*, QEvent*) ```
-void q_localserver_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback bool fn(QLocalServer*, QEvent*)
+void q_localserver_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -540,7 +626,9 @@ void q_localserver_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QObject* watched, QEvent* event ```
+/// @param self QLocalServer*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_localserver_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -549,7 +637,9 @@ bool q_localserver_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QObject* watched, QEvent* event ```
+/// @param self QLocalServer*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_localserver_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -558,8 +648,9 @@ bool q_localserver_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, bool (*slot)(QLocalServer*, QObject*, QEvent*) ```
-void q_localserver_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QLocalServer*
+/// @param callback bool fn(QLocalServer*, QObject*, QEvent*)
+void q_localserver_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -567,7 +658,8 @@ void q_localserver_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QTimerEvent* event ```
+/// @param self QLocalServer*
+/// @param event QTimerEvent*
 void q_localserver_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -576,7 +668,8 @@ void q_localserver_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QTimerEvent* event ```
+/// @param self QLocalServer*
+/// @param event QTimerEvent*
 void q_localserver_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -585,8 +678,9 @@ void q_localserver_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QTimerEvent*) ```
-void q_localserver_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QTimerEvent*)
+void q_localserver_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -594,7 +688,8 @@ void q_localserver_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QChildEvent* event ```
+/// @param self QLocalServer*
+/// @param event QChildEvent*
 void q_localserver_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -603,7 +698,8 @@ void q_localserver_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QChildEvent* event ```
+/// @param self QLocalServer*
+/// @param event QChildEvent*
 void q_localserver_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -612,8 +708,9 @@ void q_localserver_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QChildEvent*) ```
-void q_localserver_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QChildEvent*)
+void q_localserver_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -621,7 +718,8 @@ void q_localserver_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QEvent* event ```
+/// @param self QLocalServer*
+/// @param event QEvent*
 void q_localserver_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -630,7 +728,8 @@ void q_localserver_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QEvent* event ```
+/// @param self QLocalServer*
+/// @param event QEvent*
 void q_localserver_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -639,8 +738,9 @@ void q_localserver_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QEvent*) ```
-void q_localserver_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QEvent*)
+void q_localserver_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -648,7 +748,8 @@ void q_localserver_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QMetaMethod* signal ```
+/// @param self QLocalServer*
+/// @param signal QMetaMethod*
 void q_localserver_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -657,7 +758,8 @@ void q_localserver_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QMetaMethod* signal ```
+/// @param self QLocalServer*
+/// @param signal QMetaMethod*
 void q_localserver_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -666,8 +768,9 @@ void q_localserver_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QMetaMethod*) ```
-void q_localserver_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QMetaMethod*)
+void q_localserver_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -675,7 +778,8 @@ void q_localserver_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QMetaMethod* signal ```
+/// @param self QLocalServer*
+/// @param signal QMetaMethod*
 void q_localserver_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -684,7 +788,8 @@ void q_localserver_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QMetaMethod* signal ```
+/// @param self QLocalServer*
+/// @param signal QMetaMethod*
 void q_localserver_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -693,8 +798,9 @@ void q_localserver_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, QMetaMethod*) ```
-void q_localserver_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, QMetaMethod*)
+void q_localserver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -702,7 +808,7 @@ void q_localserver_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QObject* q_localserver_sender(void* self);
 
 /// Inherited from QObject
@@ -711,7 +817,7 @@ QObject* q_localserver_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 QObject* q_localserver_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -720,8 +826,9 @@ QObject* q_localserver_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QObject* (*slot)() ```
-void q_localserver_on_sender(void* self, QObject* (*slot)());
+/// @param self QLocalServer*
+/// @param callback QObject* fn()
+void q_localserver_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -729,7 +836,7 @@ void q_localserver_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 int32_t q_localserver_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -738,7 +845,7 @@ int32_t q_localserver_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 int32_t q_localserver_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -747,8 +854,9 @@ int32_t q_localserver_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, int32_t (*slot)() ```
-void q_localserver_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QLocalServer*
+/// @param callback int32_t fn()
+void q_localserver_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -756,7 +864,8 @@ void q_localserver_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, const char* signal ```
+/// @param self QLocalServer*
+/// @param signal const char*
 int32_t q_localserver_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -765,7 +874,8 @@ int32_t q_localserver_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, const char* signal ```
+/// @param self QLocalServer*
+/// @param signal const char*
 int32_t q_localserver_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -774,8 +884,9 @@ int32_t q_localserver_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, int32_t (*slot)(QLocalServer*, const char*) ```
-void q_localserver_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QLocalServer*
+/// @param callback int32_t fn(QLocalServer*, const char*)
+void q_localserver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -783,7 +894,8 @@ void q_localserver_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLocalServer* self, QMetaMethod* signal ```
+/// @param self QLocalServer*
+/// @param signal QMetaMethod*
 bool q_localserver_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -792,7 +904,8 @@ bool q_localserver_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLocalServer* self, QMetaMethod* signal ```
+/// @param self QLocalServer*
+/// @param signal QMetaMethod*
 bool q_localserver_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -801,8 +914,9 @@ bool q_localserver_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLocalServer* self, bool (*slot)(QLocalServer*, QMetaMethod*) ```
-void q_localserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QLocalServer*
+/// @param callback bool fn(QLocalServer*, QMetaMethod*)
+void q_localserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -810,14 +924,15 @@ void q_localserver_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLocalServer* self, void (*slot)(QLocalServer*, const char*) ```
-void q_localserver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QLocalServer*
+/// @param callback void fn(QLocalServer*, const char*)
+void q_localserver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocalserver.html#dtor.QLocalServer)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLocalServer* self ```
+/// @param self QLocalServer*
 void q_localserver_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlocalserver.html#types

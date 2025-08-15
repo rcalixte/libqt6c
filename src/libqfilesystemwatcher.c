@@ -11,13 +11,19 @@ QFileSystemWatcher* q_filesystemwatcher_new() {
 
 QFileSystemWatcher* q_filesystemwatcher_new2(const char* paths[]) {
     size_t paths_len = libqt_strv_length(paths);
-    libqt_string* paths_qstr = malloc(paths_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < paths_len; ++_i) {
-        paths_qstr[_i] = qstring(paths[_i]);
+    libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
+    if (paths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_new2");
+        abort();
+    }
+    for (size_t i = 0; i < paths_len; ++i) {
+        paths_qstr[i] = qstring(paths[i]);
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
 
-    return QFileSystemWatcher_new2(paths_list);
+    QFileSystemWatcher* _out = QFileSystemWatcher_new2(paths_list);
+    free(paths_qstr);
+    return _out;
 }
 
 QFileSystemWatcher* q_filesystemwatcher_new3(void* parent) {
@@ -26,13 +32,19 @@ QFileSystemWatcher* q_filesystemwatcher_new3(void* parent) {
 
 QFileSystemWatcher* q_filesystemwatcher_new4(const char* paths[], void* parent) {
     size_t paths_len = libqt_strv_length(paths);
-    libqt_string* paths_qstr = malloc(paths_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < paths_len; ++_i) {
-        paths_qstr[_i] = qstring(paths[_i]);
+    libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
+    if (paths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_new4");
+        abort();
+    }
+    for (size_t i = 0; i < paths_len; ++i) {
+        paths_qstr[i] = qstring(paths[i]);
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
 
-    return QFileSystemWatcher_new4(paths_list, (QObject*)parent);
+    QFileSystemWatcher* _out = QFileSystemWatcher_new4(paths_list, (QObject*)parent);
+    free(paths_qstr);
+    return _out;
 }
 
 const QMetaObject* q_filesystemwatcher_meta_object(void* self) {
@@ -47,8 +59,8 @@ int32_t q_filesystemwatcher_metacall(void* self, int64_t param1, int param2, voi
     return QFileSystemWatcher_Metacall((QFileSystemWatcher*)self, param1, param2, param3);
 }
 
-void q_filesystemwatcher_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QFileSystemWatcher_OnMetacall((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QFileSystemWatcher_OnMetacall((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 int32_t q_filesystemwatcher_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -68,20 +80,29 @@ bool q_filesystemwatcher_add_path(void* self, const char* file) {
 
 const char** q_filesystemwatcher_add_paths(void* self, const char* files[]) {
     size_t files_len = libqt_strv_length(files);
-    libqt_string* files_qstr = malloc(files_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < files_len; ++_i) {
-        files_qstr[_i] = qstring(files[_i]);
+    libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
+    if (files_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_add_paths");
+        abort();
+    }
+    for (size_t i = 0; i < files_len; ++i) {
+        files_qstr[i] = qstring(files[i]);
     }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_list _arr = QFileSystemWatcher_AddPaths((QFileSystemWatcher*)self, files_list);
+    free(files_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_add_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -93,20 +114,29 @@ bool q_filesystemwatcher_remove_path(void* self, const char* file) {
 
 const char** q_filesystemwatcher_remove_paths(void* self, const char* files[]) {
     size_t files_len = libqt_strv_length(files);
-    libqt_string* files_qstr = malloc(files_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < files_len; ++_i) {
-        files_qstr[_i] = qstring(files[_i]);
+    libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
+    if (files_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_remove_paths");
+        abort();
+    }
+    for (size_t i = 0; i < files_len; ++i) {
+        files_qstr[i] = qstring(files[i]);
     }
     libqt_list files_list = qlist(files_qstr, files_len);
     libqt_list _arr = QFileSystemWatcher_RemovePaths((QFileSystemWatcher*)self, files_list);
+    free(files_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_remove_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -116,12 +146,16 @@ const char** q_filesystemwatcher_files(void* self) {
     libqt_list _arr = QFileSystemWatcher_Files((QFileSystemWatcher*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_files");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -131,12 +165,16 @@ const char** q_filesystemwatcher_directories(void* self) {
     libqt_list _arr = QFileSystemWatcher_Directories((QFileSystemWatcher*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_directories");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -260,12 +298,16 @@ const char** q_filesystemwatcher_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filesystemwatcher_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -283,8 +325,8 @@ void q_filesystemwatcher_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_filesystemwatcher_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_filesystemwatcher_parent(void* self) {
@@ -319,8 +361,8 @@ void q_filesystemwatcher_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_filesystemwatcher_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_filesystemwatcher_event(void* self, void* event) {
@@ -331,8 +373,8 @@ bool q_filesystemwatcher_qbase_event(void* self, void* event) {
     return QFileSystemWatcher_QBaseEvent((QFileSystemWatcher*)self, (QEvent*)event);
 }
 
-void q_filesystemwatcher_on_event(void* self, bool (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnEvent((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_event(void* self, bool (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnEvent((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 bool q_filesystemwatcher_event_filter(void* self, void* watched, void* event) {
@@ -343,8 +385,8 @@ bool q_filesystemwatcher_qbase_event_filter(void* self, void* watched, void* eve
     return QFileSystemWatcher_QBaseEventFilter((QFileSystemWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_filesystemwatcher_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QFileSystemWatcher_OnEventFilter((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QFileSystemWatcher_OnEventFilter((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 void q_filesystemwatcher_timer_event(void* self, void* event) {
@@ -355,8 +397,8 @@ void q_filesystemwatcher_qbase_timer_event(void* self, void* event) {
     QFileSystemWatcher_QBaseTimerEvent((QFileSystemWatcher*)self, (QTimerEvent*)event);
 }
 
-void q_filesystemwatcher_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnTimerEvent((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnTimerEvent((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 void q_filesystemwatcher_child_event(void* self, void* event) {
@@ -367,8 +409,8 @@ void q_filesystemwatcher_qbase_child_event(void* self, void* event) {
     QFileSystemWatcher_QBaseChildEvent((QFileSystemWatcher*)self, (QChildEvent*)event);
 }
 
-void q_filesystemwatcher_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnChildEvent((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnChildEvent((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 void q_filesystemwatcher_custom_event(void* self, void* event) {
@@ -379,8 +421,8 @@ void q_filesystemwatcher_qbase_custom_event(void* self, void* event) {
     QFileSystemWatcher_QBaseCustomEvent((QFileSystemWatcher*)self, (QEvent*)event);
 }
 
-void q_filesystemwatcher_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnCustomEvent((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnCustomEvent((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 void q_filesystemwatcher_connect_notify(void* self, void* signal) {
@@ -391,8 +433,8 @@ void q_filesystemwatcher_qbase_connect_notify(void* self, void* signal) {
     QFileSystemWatcher_QBaseConnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_filesystemwatcher_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnConnectNotify((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnConnectNotify((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 void q_filesystemwatcher_disconnect_notify(void* self, void* signal) {
@@ -403,8 +445,8 @@ void q_filesystemwatcher_qbase_disconnect_notify(void* self, void* signal) {
     QFileSystemWatcher_QBaseDisconnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_filesystemwatcher_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnDisconnectNotify((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnDisconnectNotify((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 QObject* q_filesystemwatcher_sender(void* self) {
@@ -415,8 +457,8 @@ QObject* q_filesystemwatcher_qbase_sender(void* self) {
     return QFileSystemWatcher_QBaseSender((QFileSystemWatcher*)self);
 }
 
-void q_filesystemwatcher_on_sender(void* self, QObject* (*slot)()) {
-    QFileSystemWatcher_OnSender((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_sender(void* self, QObject* (*callback)()) {
+    QFileSystemWatcher_OnSender((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 int32_t q_filesystemwatcher_sender_signal_index(void* self) {
@@ -427,8 +469,8 @@ int32_t q_filesystemwatcher_qbase_sender_signal_index(void* self) {
     return QFileSystemWatcher_QBaseSenderSignalIndex((QFileSystemWatcher*)self);
 }
 
-void q_filesystemwatcher_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QFileSystemWatcher_OnSenderSignalIndex((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QFileSystemWatcher_OnSenderSignalIndex((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 int32_t q_filesystemwatcher_receivers(void* self, const char* signal) {
@@ -439,8 +481,8 @@ int32_t q_filesystemwatcher_qbase_receivers(void* self, const char* signal) {
     return QFileSystemWatcher_QBaseReceivers((QFileSystemWatcher*)self, signal);
 }
 
-void q_filesystemwatcher_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QFileSystemWatcher_OnReceivers((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QFileSystemWatcher_OnReceivers((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
 bool q_filesystemwatcher_is_signal_connected(void* self, void* signal) {
@@ -451,20 +493,20 @@ bool q_filesystemwatcher_qbase_is_signal_connected(void* self, void* signal) {
     return QFileSystemWatcher_QBaseIsSignalConnected((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QFileSystemWatcher_OnIsSignalConnected((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QFileSystemWatcher_OnIsSignalConnected((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
-void q_filesystemwatcher_on_file_changed(void* self, void (*slot)(void*, const char*)) {
-    QFileSystemWatcher_Connect_FileChanged((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_file_changed(void* self, void (*callback)(void*, const char*)) {
+    QFileSystemWatcher_Connect_FileChanged((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
-void q_filesystemwatcher_on_directory_changed(void* self, void (*slot)(void*, const char*)) {
-    QFileSystemWatcher_Connect_DirectoryChanged((QFileSystemWatcher*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_directory_changed(void* self, void (*callback)(void*, const char*)) {
+    QFileSystemWatcher_Connect_DirectoryChanged((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
-void q_filesystemwatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_filesystemwatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_filesystemwatcher_delete(void* self) {

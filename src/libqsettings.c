@@ -79,8 +79,8 @@ int32_t q_settings_metacall(void* self, int64_t param1, int param2, void* param3
     return QSettings_Metacall((QSettings*)self, param1, param2, param3);
 }
 
-void q_settings_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSettings_OnMetacall((QSettings*)self, (intptr_t)slot);
+void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSettings_OnMetacall((QSettings*)self, (intptr_t)callback);
 }
 
 int32_t q_settings_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -149,12 +149,16 @@ const char** q_settings_all_keys(void* self) {
     libqt_list _arr = QSettings_AllKeys((QSettings*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_settings_all_keys");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -164,12 +168,16 @@ const char** q_settings_child_keys(void* self) {
     libqt_list _arr = QSettings_ChildKeys((QSettings*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_settings_child_keys");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -179,12 +187,16 @@ const char** q_settings_child_groups(void* self) {
     libqt_list _arr = QSettings_ChildGroups((QSettings*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_settings_child_groups");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -267,8 +279,8 @@ bool q_settings_event(void* self, void* event) {
     return QSettings_Event((QSettings*)self, (QEvent*)event);
 }
 
-void q_settings_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSettings_OnEvent((QSettings*)self, (intptr_t)slot);
+void q_settings_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSettings_OnEvent((QSettings*)self, (intptr_t)callback);
 }
 
 bool q_settings_qbase_event(void* self, void* event) {
@@ -397,12 +409,16 @@ const char** q_settings_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_settings_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -420,8 +436,8 @@ void q_settings_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_settings_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_settings_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_settings_parent(void* self) {
@@ -456,8 +472,8 @@ void q_settings_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_settings_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_settings_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_settings_event_filter(void* self, void* watched, void* event) {
@@ -468,8 +484,8 @@ bool q_settings_qbase_event_filter(void* self, void* watched, void* event) {
     return QSettings_QBaseEventFilter((QSettings*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_settings_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSettings_OnEventFilter((QSettings*)self, (intptr_t)slot);
+void q_settings_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSettings_OnEventFilter((QSettings*)self, (intptr_t)callback);
 }
 
 void q_settings_timer_event(void* self, void* event) {
@@ -480,8 +496,8 @@ void q_settings_qbase_timer_event(void* self, void* event) {
     QSettings_QBaseTimerEvent((QSettings*)self, (QTimerEvent*)event);
 }
 
-void q_settings_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSettings_OnTimerEvent((QSettings*)self, (intptr_t)slot);
+void q_settings_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSettings_OnTimerEvent((QSettings*)self, (intptr_t)callback);
 }
 
 void q_settings_child_event(void* self, void* event) {
@@ -492,8 +508,8 @@ void q_settings_qbase_child_event(void* self, void* event) {
     QSettings_QBaseChildEvent((QSettings*)self, (QChildEvent*)event);
 }
 
-void q_settings_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSettings_OnChildEvent((QSettings*)self, (intptr_t)slot);
+void q_settings_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSettings_OnChildEvent((QSettings*)self, (intptr_t)callback);
 }
 
 void q_settings_custom_event(void* self, void* event) {
@@ -504,8 +520,8 @@ void q_settings_qbase_custom_event(void* self, void* event) {
     QSettings_QBaseCustomEvent((QSettings*)self, (QEvent*)event);
 }
 
-void q_settings_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSettings_OnCustomEvent((QSettings*)self, (intptr_t)slot);
+void q_settings_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSettings_OnCustomEvent((QSettings*)self, (intptr_t)callback);
 }
 
 void q_settings_connect_notify(void* self, void* signal) {
@@ -516,8 +532,8 @@ void q_settings_qbase_connect_notify(void* self, void* signal) {
     QSettings_QBaseConnectNotify((QSettings*)self, (QMetaMethod*)signal);
 }
 
-void q_settings_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSettings_OnConnectNotify((QSettings*)self, (intptr_t)slot);
+void q_settings_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSettings_OnConnectNotify((QSettings*)self, (intptr_t)callback);
 }
 
 void q_settings_disconnect_notify(void* self, void* signal) {
@@ -528,8 +544,8 @@ void q_settings_qbase_disconnect_notify(void* self, void* signal) {
     QSettings_QBaseDisconnectNotify((QSettings*)self, (QMetaMethod*)signal);
 }
 
-void q_settings_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSettings_OnDisconnectNotify((QSettings*)self, (intptr_t)slot);
+void q_settings_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSettings_OnDisconnectNotify((QSettings*)self, (intptr_t)callback);
 }
 
 QObject* q_settings_sender(void* self) {
@@ -540,8 +556,8 @@ QObject* q_settings_qbase_sender(void* self) {
     return QSettings_QBaseSender((QSettings*)self);
 }
 
-void q_settings_on_sender(void* self, QObject* (*slot)()) {
-    QSettings_OnSender((QSettings*)self, (intptr_t)slot);
+void q_settings_on_sender(void* self, QObject* (*callback)()) {
+    QSettings_OnSender((QSettings*)self, (intptr_t)callback);
 }
 
 int32_t q_settings_sender_signal_index(void* self) {
@@ -552,8 +568,8 @@ int32_t q_settings_qbase_sender_signal_index(void* self) {
     return QSettings_QBaseSenderSignalIndex((QSettings*)self);
 }
 
-void q_settings_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSettings_OnSenderSignalIndex((QSettings*)self, (intptr_t)slot);
+void q_settings_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSettings_OnSenderSignalIndex((QSettings*)self, (intptr_t)callback);
 }
 
 int32_t q_settings_receivers(void* self, const char* signal) {
@@ -564,8 +580,8 @@ int32_t q_settings_qbase_receivers(void* self, const char* signal) {
     return QSettings_QBaseReceivers((QSettings*)self, signal);
 }
 
-void q_settings_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSettings_OnReceivers((QSettings*)self, (intptr_t)slot);
+void q_settings_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSettings_OnReceivers((QSettings*)self, (intptr_t)callback);
 }
 
 bool q_settings_is_signal_connected(void* self, void* signal) {
@@ -576,12 +592,12 @@ bool q_settings_qbase_is_signal_connected(void* self, void* signal) {
     return QSettings_QBaseIsSignalConnected((QSettings*)self, (QMetaMethod*)signal);
 }
 
-void q_settings_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSettings_OnIsSignalConnected((QSettings*)self, (intptr_t)slot);
+void q_settings_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSettings_OnIsSignalConnected((QSettings*)self, (intptr_t)callback);
 }
 
-void q_settings_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_settings_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_settings_delete(void* self) {

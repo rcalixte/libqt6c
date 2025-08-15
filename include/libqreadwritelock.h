@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,122 +15,125 @@
 
 /// q_readwritelock_new constructs a new QReadWriteLock object.
 ///
-///
 QReadWriteLock* q_readwritelock_new();
 
 /// q_readwritelock_new2 constructs a new QReadWriteLock object.
 ///
-/// ``` enum QReadWriteLock__RecursionMode recursionMode ```
+/// @param recursionMode enum QReadWriteLock__RecursionMode
 QReadWriteLock* q_readwritelock_new2(int64_t recursionMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#lockForRead)
 ///
-/// ``` QReadWriteLock* self ```
+/// @param self QReadWriteLock*
 void q_readwritelock_lock_for_read(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForRead)
 ///
-/// ``` QReadWriteLock* self, int timeout ```
+/// @param self QReadWriteLock*
+/// @param timeout int
 bool q_readwritelock_try_lock_for_read(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForRead)
 ///
-/// ``` QReadWriteLock* self ```
+/// @param self QReadWriteLock*
 bool q_readwritelock_try_lock_for_read2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#lockForWrite)
 ///
-/// ``` QReadWriteLock* self ```
+/// @param self QReadWriteLock*
 void q_readwritelock_lock_for_write(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForWrite)
 ///
-/// ``` QReadWriteLock* self, int timeout ```
+/// @param self QReadWriteLock*
+/// @param timeout int
 bool q_readwritelock_try_lock_for_write(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForWrite)
 ///
-/// ``` QReadWriteLock* self ```
+/// @param self QReadWriteLock*
 bool q_readwritelock_try_lock_for_write2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#unlock)
 ///
-/// ``` QReadWriteLock* self ```
+/// @param self QReadWriteLock*
 void q_readwritelock_unlock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForRead)
 ///
-/// ``` QReadWriteLock* self, QDeadlineTimer* timeout ```
+/// @param self QReadWriteLock*
+/// @param timeout QDeadlineTimer*
 bool q_readwritelock_try_lock_for_read1(void* self, void* timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#tryLockForWrite)
 ///
-/// ``` QReadWriteLock* self, QDeadlineTimer* timeout ```
+/// @param self QReadWriteLock*
+/// @param timeout QDeadlineTimer*
 bool q_readwritelock_try_lock_for_write1(void* self, void* timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#dtor.QReadWriteLock)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QReadWriteLock* self ```
+/// @param self QReadWriteLock*
 void q_readwritelock_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qreadlocker.html
 
 /// q_readlocker_new constructs a new QReadLocker object.
 ///
-/// ``` QReadWriteLock* readWriteLock ```
+/// @param readWriteLock QReadWriteLock*
 QReadLocker* q_readlocker_new(void* readWriteLock);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadlocker.html#unlock)
 ///
-/// ``` QReadLocker* self ```
+/// @param self QReadLocker*
 void q_readlocker_unlock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadlocker.html#relock)
 ///
-/// ``` QReadLocker* self ```
+/// @param self QReadLocker*
 void q_readlocker_relock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadlocker.html#readWriteLock)
 ///
-/// ``` QReadLocker* self ```
+/// @param self QReadLocker*
 QReadWriteLock* q_readlocker_read_write_lock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadlocker.html#dtor.QReadLocker)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QReadLocker* self ```
+/// @param self QReadLocker*
 void q_readlocker_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwritelocker.html
 
 /// q_writelocker_new constructs a new QWriteLocker object.
 ///
-/// ``` QReadWriteLock* readWriteLock ```
+/// @param readWriteLock QReadWriteLock*
 QWriteLocker* q_writelocker_new(void* readWriteLock);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwritelocker.html#unlock)
 ///
-/// ``` QWriteLocker* self ```
+/// @param self QWriteLocker*
 void q_writelocker_unlock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwritelocker.html#relock)
 ///
-/// ``` QWriteLocker* self ```
+/// @param self QWriteLocker*
 void q_writelocker_relock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwritelocker.html#readWriteLock)
 ///
-/// ``` QWriteLocker* self ```
+/// @param self QWriteLocker*
 QReadWriteLock* q_writelocker_read_write_lock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwritelocker.html#dtor.QWriteLocker)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWriteLocker* self ```
+/// @param self QWriteLocker*
 void q_writelocker_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qreadwritelock.html#types

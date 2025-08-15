@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,572 +15,657 @@
 
 /// q_pdfwriter_new constructs a new QPdfWriter object.
 ///
-/// ``` const char* filename ```
+/// @param filename const char*
 QPdfWriter* q_pdfwriter_new(const char* filename);
 
 /// q_pdfwriter_new2 constructs a new QPdfWriter object.
 ///
-/// ``` QIODevice* device ```
+/// @param device QIODevice*
 QPdfWriter* q_pdfwriter_new2(void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 const QMetaObject* q_pdfwriter_meta_object(void* self);
 
-/// ``` QPdfWriter* self, const char* param1 ```
+/// @param self QPdfWriter*
+/// @param param1 const char*
 void* q_pdfwriter_metacast(void* self, const char* param1);
 
-/// ``` QPdfWriter* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QPdfWriter*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_pdfwriter_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QPdfWriter* self, int32_t (*slot)(QPdfWriter*, enum QMetaObject__Call, int, void*) ```
-void q_pdfwriter_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QPdfWriter*
+/// @param callback int32_t fn(QPdfWriter*, enum QMetaObject__Call, int, void*)
+void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QPdfWriter* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QPdfWriter*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_pdfwriter_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_pdfwriter_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setPdfVersion)
 ///
-/// ``` QPdfWriter* self, enum QPagedPaintDevice__PdfVersion version ```
+/// @param self QPdfWriter*
+/// @param version enum QPagedPaintDevice__PdfVersion
 void q_pdfwriter_set_pdf_version(void* self, int64_t version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#pdfVersion)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
+///
+/// @return enum QPagedPaintDevice__PdfVersion
 int64_t q_pdfwriter_pdf_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#title)
 ///
-/// ``` QPdfWriter* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfWriter*
 const char* q_pdfwriter_title(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setTitle)
 ///
-/// ``` QPdfWriter* self, const char* title ```
+/// @param self QPdfWriter*
+/// @param title const char*
 void q_pdfwriter_set_title(void* self, const char* title);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#creator)
 ///
-/// ``` QPdfWriter* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfWriter*
 const char* q_pdfwriter_creator(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setCreator)
 ///
-/// ``` QPdfWriter* self, const char* creator ```
+/// @param self QPdfWriter*
+/// @param creator const char*
 void q_pdfwriter_set_creator(void* self, const char* creator);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#documentId)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QUuid* q_pdfwriter_document_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setDocumentId)
 ///
-/// ``` QPdfWriter* self, QUuid* documentId ```
+/// @param self QPdfWriter*
+/// @param documentId QUuid*
 void q_pdfwriter_set_document_id(void* self, void* documentId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#newPage)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_new_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#newPage)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPdfWriter* self, bool (*slot)() ```
-void q_pdfwriter_on_new_page(void* self, bool (*slot)());
+/// @param self QPdfWriter*
+/// @param callback bool fn()
+void q_pdfwriter_on_new_page(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#newPage)
 ///
 /// Base class method implementation
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_qbase_new_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setResolution)
 ///
-/// ``` QPdfWriter* self, int resolution ```
+/// @param self QPdfWriter*
+/// @param resolution int
 void q_pdfwriter_set_resolution(void* self, int resolution);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#resolution)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_resolution(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setDocumentXmpMetadata)
 ///
-/// ``` QPdfWriter* self, const char* xmpMetadata ```
+/// @param self QPdfWriter*
+/// @param xmpMetadata const char*
 void q_pdfwriter_set_document_xmp_metadata(void* self, const char* xmpMetadata);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#documentXmpMetadata)
 ///
-/// ``` QPdfWriter* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfWriter*
 char* q_pdfwriter_document_xmp_metadata(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#addFileAttachment)
 ///
-/// ``` QPdfWriter* self, const char* fileName, const char* data ```
+/// @param self QPdfWriter*
+/// @param fileName const char*
+/// @param data const char*
 void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#colorModel)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
+///
+/// @return enum QPdfWriter__ColorModel
 int64_t q_pdfwriter_color_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setColorModel)
 ///
-/// ``` QPdfWriter* self, enum QPdfWriter__ColorModel model ```
+/// @param self QPdfWriter*
+/// @param model enum QPdfWriter__ColorModel
 void q_pdfwriter_set_color_model(void* self, int64_t model);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#outputIntent)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPdfOutputIntent* q_pdfwriter_output_intent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setOutputIntent)
 ///
-/// ``` QPdfWriter* self, QPdfOutputIntent* intent ```
+/// @param self QPdfWriter*
+/// @param intent QPdfOutputIntent*
 void q_pdfwriter_set_output_intent(void* self, void* intent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#paintEngine)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPaintEngine* q_pdfwriter_paint_engine(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPdfWriter* self, QPaintEngine* (*slot)() ```
-void q_pdfwriter_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QPdfWriter*
+/// @param callback QPaintEngine* fn()
+void q_pdfwriter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPaintEngine* q_pdfwriter_qbase_paint_engine(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#metric)
 ///
-/// ``` QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric id ```
+/// @param self QPdfWriter*
+/// @param id enum QPaintDevice__PaintDeviceMetric
 int32_t q_pdfwriter_metric(void* self, int64_t id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPdfWriter* self, int32_t (*slot)(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_pdfwriter_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QPdfWriter*
+/// @param callback int32_t fn(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric)
+void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#metric)
 ///
 /// Base class method implementation
 ///
-/// ``` QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric id ```
+/// @param self QPdfWriter*
+/// @param id enum QPaintDevice__PaintDeviceMetric
 int32_t q_pdfwriter_qbase_metric(void* self, int64_t id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_pdfwriter_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_pdfwriter_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#addFileAttachment)
 ///
-/// ``` QPdfWriter* self, const char* fileName, const char* data, const char* mimeType ```
+/// @param self QPdfWriter*
+/// @param fileName const char*
+/// @param data const char*
+/// @param mimeType const char*
 void q_pdfwriter_add_file_attachment3(void* self, const char* fileName, const char* data, const char* mimeType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QPdfWriter* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfWriter*
 const char* q_pdfwriter_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QPdfWriter* self, char* name ```
+/// @param self QPdfWriter*
+/// @param name char*
 void q_pdfwriter_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QPdfWriter* self, bool b ```
+/// @param self QPdfWriter*
+/// @param b bool
 bool q_pdfwriter_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QThread* q_pdfwriter_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QPdfWriter* self, QThread* thread ```
+/// @param self QPdfWriter*
+/// @param thread QThread*
 bool q_pdfwriter_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QPdfWriter* self, int interval ```
+/// @param self QPdfWriter*
+/// @param interval int
 int32_t q_pdfwriter_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QPdfWriter* self, int id ```
+/// @param self QPdfWriter*
+/// @param id int
 void q_pdfwriter_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QPdfWriter* self, enum Qt__TimerId id ```
+/// @param self QPdfWriter*
+/// @param id enum Qt__TimerId
 void q_pdfwriter_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 libqt_list /* of QObject* */ q_pdfwriter_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QPdfWriter* self, QObject* parent ```
+/// @param self QPdfWriter*
+/// @param parent QObject*
 void q_pdfwriter_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QPdfWriter* self, QObject* filterObj ```
+/// @param self QPdfWriter*
+/// @param filterObj QObject*
 void q_pdfwriter_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QPdfWriter* self, QObject* obj ```
+/// @param self QPdfWriter*
+/// @param obj QObject*
 void q_pdfwriter_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_pdfwriter_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QPdfWriter* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QPdfWriter*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_pdfwriter_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_pdfwriter_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_pdfwriter_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 void q_pdfwriter_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 void q_pdfwriter_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QPdfWriter* self, const char* name, QVariant* value ```
+/// @param self QPdfWriter*
+/// @param name const char*
+/// @param value QVariant*
 bool q_pdfwriter_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QPdfWriter* self, const char* name ```
+/// @param self QPdfWriter*
+/// @param name const char*
 QVariant* q_pdfwriter_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QPdfWriter* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfWriter*
 const char** q_pdfwriter_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QBindingStorage* q_pdfwriter_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 const QBindingStorage* q_pdfwriter_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 void q_pdfwriter_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*) ```
-void q_pdfwriter_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*)
+void q_pdfwriter_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QObject* q_pdfwriter_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QPdfWriter* self, const char* classname ```
+/// @param self QPdfWriter*
+/// @param classname const char*
 bool q_pdfwriter_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 void q_pdfwriter_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QPdfWriter* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QPdfWriter*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_pdfwriter_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QPdfWriter* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QPdfWriter*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_pdfwriter_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_pdfwriter_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QPdfWriter* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QPdfWriter*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_pdfwriter_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfWriter* self, QObject* param1 ```
+/// @param self QPdfWriter*
+/// @param param1 QObject*
 void q_pdfwriter_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QObject*) ```
-void q_pdfwriter_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QObject*)
+void q_pdfwriter_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageLayout)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPageLayout* q_pdfwriter_page_layout(void* self);
 
 /// Inherited from QPagedPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageRanges)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPageRanges* q_pdfwriter_page_ranges(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 bool q_pdfwriter_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_width(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_height(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 double q_pdfwriter_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 double q_pdfwriter_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_pdfwriter_device_pixel_ratio_f_scale();
 
@@ -589,7 +673,8 @@ double q_pdfwriter_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_pdfwriter_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QObject
@@ -598,7 +683,8 @@ int32_t q_pdfwriter_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QEvent*
 bool q_pdfwriter_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -607,7 +693,8 @@ bool q_pdfwriter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QEvent*
 bool q_pdfwriter_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -616,8 +703,9 @@ bool q_pdfwriter_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QEvent*) ```
-void q_pdfwriter_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, QEvent*)
+void q_pdfwriter_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -625,7 +713,9 @@ void q_pdfwriter_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QObject* watched, QEvent* event ```
+/// @param self QPdfWriter*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_pdfwriter_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -634,7 +724,9 @@ bool q_pdfwriter_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QObject* watched, QEvent* event ```
+/// @param self QPdfWriter*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_pdfwriter_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -643,8 +735,9 @@ bool q_pdfwriter_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QObject*, QEvent*) ```
-void q_pdfwriter_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, QObject*, QEvent*)
+void q_pdfwriter_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -652,7 +745,8 @@ void q_pdfwriter_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QTimerEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QTimerEvent*
 void q_pdfwriter_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -661,7 +755,8 @@ void q_pdfwriter_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QTimerEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QTimerEvent*
 void q_pdfwriter_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -670,8 +765,9 @@ void q_pdfwriter_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QTimerEvent*) ```
-void q_pdfwriter_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QTimerEvent*)
+void q_pdfwriter_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -679,7 +775,8 @@ void q_pdfwriter_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QChildEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QChildEvent*
 void q_pdfwriter_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -688,7 +785,8 @@ void q_pdfwriter_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QChildEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QChildEvent*
 void q_pdfwriter_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -697,8 +795,9 @@ void q_pdfwriter_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QChildEvent*) ```
-void q_pdfwriter_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QChildEvent*)
+void q_pdfwriter_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -706,7 +805,8 @@ void q_pdfwriter_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QEvent*
 void q_pdfwriter_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -715,7 +815,8 @@ void q_pdfwriter_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QEvent* event ```
+/// @param self QPdfWriter*
+/// @param event QEvent*
 void q_pdfwriter_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -724,8 +825,9 @@ void q_pdfwriter_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QEvent*) ```
-void q_pdfwriter_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QEvent*)
+void q_pdfwriter_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -733,7 +835,8 @@ void q_pdfwriter_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMetaMethod* signal ```
+/// @param self QPdfWriter*
+/// @param signal QMetaMethod*
 void q_pdfwriter_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -742,7 +845,8 @@ void q_pdfwriter_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMetaMethod* signal ```
+/// @param self QPdfWriter*
+/// @param signal QMetaMethod*
 void q_pdfwriter_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -751,8 +855,9 @@ void q_pdfwriter_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QMetaMethod*) ```
-void q_pdfwriter_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QMetaMethod*)
+void q_pdfwriter_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -760,7 +865,8 @@ void q_pdfwriter_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMetaMethod* signal ```
+/// @param self QPdfWriter*
+/// @param signal QMetaMethod*
 void q_pdfwriter_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -769,7 +875,8 @@ void q_pdfwriter_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMetaMethod* signal ```
+/// @param self QPdfWriter*
+/// @param signal QMetaMethod*
 void q_pdfwriter_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -778,8 +885,9 @@ void q_pdfwriter_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QMetaMethod*) ```
-void q_pdfwriter_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QMetaMethod*)
+void q_pdfwriter_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -787,7 +895,8 @@ void q_pdfwriter_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPageLayout* pageLayout ```
+/// @param self QPdfWriter*
+/// @param pageLayout QPageLayout*
 bool q_pdfwriter_set_page_layout(void* self, void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
@@ -796,7 +905,8 @@ bool q_pdfwriter_set_page_layout(void* self, void* pageLayout);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPageLayout* pageLayout ```
+/// @param self QPdfWriter*
+/// @param pageLayout QPageLayout*
 bool q_pdfwriter_qbase_set_page_layout(void* self, void* pageLayout);
 
 /// Inherited from QPagedPaintDevice
@@ -805,8 +915,9 @@ bool q_pdfwriter_qbase_set_page_layout(void* self, void* pageLayout);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QPageLayout*) ```
-void q_pdfwriter_on_set_page_layout(void* self, bool (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, QPageLayout*)
+void q_pdfwriter_on_set_page_layout(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -814,7 +925,8 @@ void q_pdfwriter_on_set_page_layout(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPageSize* pageSize ```
+/// @param self QPdfWriter*
+/// @param pageSize QPageSize*
 bool q_pdfwriter_set_page_size(void* self, void* pageSize);
 
 /// Inherited from QPagedPaintDevice
@@ -823,7 +935,8 @@ bool q_pdfwriter_set_page_size(void* self, void* pageSize);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPageSize* pageSize ```
+/// @param self QPdfWriter*
+/// @param pageSize QPageSize*
 bool q_pdfwriter_qbase_set_page_size(void* self, void* pageSize);
 
 /// Inherited from QPagedPaintDevice
@@ -832,8 +945,9 @@ bool q_pdfwriter_qbase_set_page_size(void* self, void* pageSize);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QPageSize*) ```
-void q_pdfwriter_on_set_page_size(void* self, bool (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, QPageSize*)
+void q_pdfwriter_on_set_page_size(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -841,7 +955,8 @@ void q_pdfwriter_on_set_page_size(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, enum QPageLayout__Orientation orientation ```
+/// @param self QPdfWriter*
+/// @param orientation enum QPageLayout__Orientation
 bool q_pdfwriter_set_page_orientation(void* self, int64_t orientation);
 
 /// Inherited from QPagedPaintDevice
@@ -850,7 +965,8 @@ bool q_pdfwriter_set_page_orientation(void* self, int64_t orientation);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, enum QPageLayout__Orientation orientation ```
+/// @param self QPdfWriter*
+/// @param orientation enum QPageLayout__Orientation
 bool q_pdfwriter_qbase_set_page_orientation(void* self, int64_t orientation);
 
 /// Inherited from QPagedPaintDevice
@@ -859,8 +975,9 @@ bool q_pdfwriter_qbase_set_page_orientation(void* self, int64_t orientation);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, enum QPageLayout__Orientation) ```
-void q_pdfwriter_on_set_page_orientation(void* self, bool (*slot)(void*, int64_t));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, enum QPageLayout__Orientation)
+void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -868,7 +985,9 @@ void q_pdfwriter_on_set_page_orientation(void* self, bool (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMarginsF* margins, enum QPageLayout__Unit units ```
+/// @param self QPdfWriter*
+/// @param margins QMarginsF*
+/// @param units enum QPageLayout__Unit
 bool q_pdfwriter_set_page_margins(void* self, void* margins, int64_t units);
 
 /// Inherited from QPagedPaintDevice
@@ -877,7 +996,9 @@ bool q_pdfwriter_set_page_margins(void* self, void* margins, int64_t units);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMarginsF* margins, enum QPageLayout__Unit units ```
+/// @param self QPdfWriter*
+/// @param margins QMarginsF*
+/// @param units enum QPageLayout__Unit
 bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int64_t units);
 
 /// Inherited from QPagedPaintDevice
@@ -886,8 +1007,9 @@ bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int64_t units
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QMarginsF*, enum QPageLayout__Unit) ```
-void q_pdfwriter_on_set_page_margins(void* self, bool (*slot)(void*, void*, int64_t));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, QMarginsF*, enum QPageLayout__Unit)
+void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int64_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -895,7 +1017,8 @@ void q_pdfwriter_on_set_page_margins(void* self, bool (*slot)(void*, void*, int6
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPageRanges* ranges ```
+/// @param self QPdfWriter*
+/// @param ranges QPageRanges*
 void q_pdfwriter_set_page_ranges(void* self, void* ranges);
 
 /// Inherited from QPagedPaintDevice
@@ -904,7 +1027,8 @@ void q_pdfwriter_set_page_ranges(void* self, void* ranges);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPageRanges* ranges ```
+/// @param self QPdfWriter*
+/// @param ranges QPageRanges*
 void q_pdfwriter_qbase_set_page_ranges(void* self, void* ranges);
 
 /// Inherited from QPagedPaintDevice
@@ -913,8 +1037,9 @@ void q_pdfwriter_qbase_set_page_ranges(void* self, void* ranges);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QPageRanges*) ```
-void q_pdfwriter_on_set_page_ranges(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QPageRanges*)
+void q_pdfwriter_on_set_page_ranges(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -922,7 +1047,7 @@ void q_pdfwriter_on_set_page_ranges(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_dev_type(void* self);
 
 /// Inherited from QPaintDevice
@@ -931,7 +1056,7 @@ int32_t q_pdfwriter_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_qbase_dev_type(void* self);
 
 /// Inherited from QPaintDevice
@@ -940,8 +1065,9 @@ int32_t q_pdfwriter_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, int32_t (*slot)() ```
-void q_pdfwriter_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QPdfWriter*
+/// @param callback int32_t fn()
+void q_pdfwriter_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QPaintDevice
 ///
@@ -949,7 +1075,8 @@ void q_pdfwriter_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPainter* painter ```
+/// @param self QPdfWriter*
+/// @param painter QPainter*
 void q_pdfwriter_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
@@ -958,7 +1085,8 @@ void q_pdfwriter_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPainter* painter ```
+/// @param self QPdfWriter*
+/// @param painter QPainter*
 void q_pdfwriter_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
@@ -967,8 +1095,9 @@ void q_pdfwriter_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, QPainter*) ```
-void q_pdfwriter_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, QPainter*)
+void q_pdfwriter_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -976,7 +1105,8 @@ void q_pdfwriter_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPoint* offset ```
+/// @param self QPdfWriter*
+/// @param offset QPoint*
 QPaintDevice* q_pdfwriter_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
@@ -985,7 +1115,8 @@ QPaintDevice* q_pdfwriter_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPoint* offset ```
+/// @param self QPdfWriter*
+/// @param offset QPoint*
 QPaintDevice* q_pdfwriter_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
@@ -994,8 +1125,9 @@ QPaintDevice* q_pdfwriter_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPaintDevice* (*slot)(QPdfWriter*, QPoint*) ```
-void q_pdfwriter_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback QPaintDevice* fn(QPdfWriter*, QPoint*)
+void q_pdfwriter_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1003,7 +1135,7 @@ void q_pdfwriter_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPainter* q_pdfwriter_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
@@ -1012,7 +1144,7 @@ QPainter* q_pdfwriter_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QPainter* q_pdfwriter_qbase_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
@@ -1021,8 +1153,9 @@ QPainter* q_pdfwriter_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QPainter* (*slot)() ```
-void q_pdfwriter_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QPdfWriter*
+/// @param callback QPainter* fn()
+void q_pdfwriter_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1030,7 +1163,7 @@ void q_pdfwriter_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QObject* q_pdfwriter_sender(void* self);
 
 /// Inherited from QObject
@@ -1039,7 +1172,7 @@ QObject* q_pdfwriter_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 QObject* q_pdfwriter_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1048,8 +1181,9 @@ QObject* q_pdfwriter_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QObject* (*slot)() ```
-void q_pdfwriter_on_sender(void* self, QObject* (*slot)());
+/// @param self QPdfWriter*
+/// @param callback QObject* fn()
+void q_pdfwriter_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1057,7 +1191,7 @@ void q_pdfwriter_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1066,7 +1200,7 @@ int32_t q_pdfwriter_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 int32_t q_pdfwriter_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1075,8 +1209,9 @@ int32_t q_pdfwriter_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, int32_t (*slot)() ```
-void q_pdfwriter_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QPdfWriter*
+/// @param callback int32_t fn()
+void q_pdfwriter_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1084,7 +1219,8 @@ void q_pdfwriter_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, const char* signal ```
+/// @param self QPdfWriter*
+/// @param signal const char*
 int32_t q_pdfwriter_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1093,7 +1229,8 @@ int32_t q_pdfwriter_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, const char* signal ```
+/// @param self QPdfWriter*
+/// @param signal const char*
 int32_t q_pdfwriter_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1102,8 +1239,9 @@ int32_t q_pdfwriter_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, int32_t (*slot)(QPdfWriter*, const char*) ```
-void q_pdfwriter_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QPdfWriter*
+/// @param callback int32_t fn(QPdfWriter*, const char*)
+void q_pdfwriter_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1111,7 +1249,8 @@ void q_pdfwriter_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMetaMethod* signal ```
+/// @param self QPdfWriter*
+/// @param signal QMetaMethod*
 bool q_pdfwriter_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1120,7 +1259,8 @@ bool q_pdfwriter_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, QMetaMethod* signal ```
+/// @param self QPdfWriter*
+/// @param signal QMetaMethod*
 bool q_pdfwriter_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1129,8 +1269,9 @@ bool q_pdfwriter_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, bool (*slot)(QPdfWriter*, QMetaMethod*) ```
-void q_pdfwriter_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QPdfWriter*
+/// @param callback bool fn(QPdfWriter*, QMetaMethod*)
+void q_pdfwriter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -1138,7 +1279,9 @@ void q_pdfwriter_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QPdfWriter*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -1147,7 +1290,9 @@ double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QPdfWriter*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -1156,8 +1301,9 @@ double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPdfWriter* self, double (*slot)(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QPdfWriter*
+/// @param callback double fn(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -1165,14 +1311,15 @@ void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QPdfWriter* self, void (*slot)(QPdfWriter*, const char*) ```
-void q_pdfwriter_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QPdfWriter*
+/// @param callback void fn(QPdfWriter*, const char*)
+void q_pdfwriter_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#dtor.QPdfWriter)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPdfWriter* self ```
+/// @param self QPdfWriter*
 void q_pdfwriter_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpdfwriter.html#types

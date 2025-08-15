@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,400 +15,471 @@
 
 /// q_screencapture_new constructs a new QScreenCapture object.
 ///
-///
 QScreenCapture* q_screencapture_new();
 
 /// q_screencapture_new2 constructs a new QScreenCapture object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QScreenCapture* q_screencapture_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 const QMetaObject* q_screencapture_meta_object(void* self);
 
-/// ``` QScreenCapture* self, const char* param1 ```
+/// @param self QScreenCapture*
+/// @param param1 const char*
 void* q_screencapture_metacast(void* self, const char* param1);
 
-/// ``` QScreenCapture* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QScreenCapture*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_screencapture_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QScreenCapture* self, int32_t (*slot)(QScreenCapture*, enum QMetaObject__Call, int, void*) ```
-void q_screencapture_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QScreenCapture*
+/// @param callback int32_t fn(QScreenCapture*, enum QMetaObject__Call, int, void*)
+void q_screencapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QScreenCapture* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QScreenCapture*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_screencapture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_screencapture_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#captureSession)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QMediaCaptureSession* q_screencapture_capture_session(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#setScreen)
 ///
-/// ``` QScreenCapture* self, QScreen* screen ```
+/// @param self QScreenCapture*
+/// @param screen QScreen*
 void q_screencapture_set_screen(void* self, void* screen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#screen)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QScreen* q_screencapture_screen(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#isActive)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 bool q_screencapture_is_active(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#error)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
+///
+/// @return enum QScreenCapture__Error
 int64_t q_screencapture_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorString)
 ///
-/// ``` QScreenCapture* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScreenCapture*
 const char* q_screencapture_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#setActive)
 ///
-/// ``` QScreenCapture* self, bool active ```
+/// @param self QScreenCapture*
+/// @param active bool
 void q_screencapture_set_active(void* self, bool active);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#start)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#stop)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#activeChanged)
 ///
-/// ``` QScreenCapture* self, bool param1 ```
+/// @param self QScreenCapture*
+/// @param param1 bool
 void q_screencapture_active_changed(void* self, bool param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#activeChanged)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, bool) ```
-void q_screencapture_on_active_changed(void* self, void (*slot)(void*, bool));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, bool)
+void q_screencapture_on_active_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorChanged)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_error_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorChanged)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*) ```
-void q_screencapture_on_error_changed(void* self, void (*slot)(void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*)
+void q_screencapture_on_error_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#screenChanged)
 ///
-/// ``` QScreenCapture* self, QScreen* param1 ```
+/// @param self QScreenCapture*
+/// @param param1 QScreen*
 void q_screencapture_screen_changed(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#screenChanged)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QScreen*) ```
-void q_screencapture_on_screen_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QScreen*)
+void q_screencapture_on_screen_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorOccurred)
 ///
-/// ``` QScreenCapture* self, enum QScreenCapture__Error errorVal, const char* errorString ```
+/// @param self QScreenCapture*
+/// @param errorVal enum QScreenCapture__Error
+/// @param errorString const char*
 void q_screencapture_error_occurred(void* self, int64_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorOccurred)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, enum QScreenCapture__Error, const char*) ```
-void q_screencapture_on_error_occurred(void* self, void (*slot)(void*, int64_t, const char*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, enum QScreenCapture__Error, const char*)
+void q_screencapture_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_screencapture_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_screencapture_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QScreenCapture* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScreenCapture*
 const char* q_screencapture_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QScreenCapture* self, char* name ```
+/// @param self QScreenCapture*
+/// @param name char*
 void q_screencapture_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 bool q_screencapture_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 bool q_screencapture_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 bool q_screencapture_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 bool q_screencapture_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QScreenCapture* self, bool b ```
+/// @param self QScreenCapture*
+/// @param b bool
 bool q_screencapture_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QThread* q_screencapture_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QScreenCapture* self, QThread* thread ```
+/// @param self QScreenCapture*
+/// @param thread QThread*
 bool q_screencapture_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QScreenCapture* self, int interval ```
+/// @param self QScreenCapture*
+/// @param interval int
 int32_t q_screencapture_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QScreenCapture* self, int id ```
+/// @param self QScreenCapture*
+/// @param id int
 void q_screencapture_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QScreenCapture* self, enum Qt__TimerId id ```
+/// @param self QScreenCapture*
+/// @param id enum Qt__TimerId
 void q_screencapture_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 libqt_list /* of QObject* */ q_screencapture_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QScreenCapture* self, QObject* parent ```
+/// @param self QScreenCapture*
+/// @param parent QObject*
 void q_screencapture_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QScreenCapture* self, QObject* filterObj ```
+/// @param self QScreenCapture*
+/// @param filterObj QObject*
 void q_screencapture_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QScreenCapture* self, QObject* obj ```
+/// @param self QScreenCapture*
+/// @param obj QObject*
 void q_screencapture_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_screencapture_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QScreenCapture* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QScreenCapture*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_screencapture_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_screencapture_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_screencapture_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QScreenCapture* self, const char* name, QVariant* value ```
+/// @param self QScreenCapture*
+/// @param name const char*
+/// @param value QVariant*
 bool q_screencapture_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QScreenCapture* self, const char* name ```
+/// @param self QScreenCapture*
+/// @param name const char*
 QVariant* q_screencapture_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QScreenCapture* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScreenCapture*
 const char** q_screencapture_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QBindingStorage* q_screencapture_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 const QBindingStorage* q_screencapture_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*) ```
-void q_screencapture_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*)
+void q_screencapture_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QObject* q_screencapture_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QScreenCapture* self, const char* classname ```
+/// @param self QScreenCapture*
+/// @param classname const char*
 bool q_screencapture_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QScreenCapture* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QScreenCapture*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_screencapture_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QScreenCapture* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QScreenCapture*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_screencapture_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_screencapture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QScreenCapture* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QScreenCapture*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_screencapture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScreenCapture* self, QObject* param1 ```
+/// @param self QScreenCapture*
+/// @param param1 QObject*
 void q_screencapture_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QObject*) ```
-void q_screencapture_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QObject*)
+void q_screencapture_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -417,7 +487,8 @@ void q_screencapture_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QEvent*
 bool q_screencapture_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -426,7 +497,8 @@ bool q_screencapture_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QEvent*
 bool q_screencapture_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -435,8 +507,9 @@ bool q_screencapture_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, bool (*slot)(QScreenCapture*, QEvent*) ```
-void q_screencapture_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback bool fn(QScreenCapture*, QEvent*)
+void q_screencapture_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -444,7 +517,9 @@ void q_screencapture_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QObject* watched, QEvent* event ```
+/// @param self QScreenCapture*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_screencapture_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -453,7 +528,9 @@ bool q_screencapture_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QObject* watched, QEvent* event ```
+/// @param self QScreenCapture*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_screencapture_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -462,8 +539,9 @@ bool q_screencapture_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, bool (*slot)(QScreenCapture*, QObject*, QEvent*) ```
-void q_screencapture_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QScreenCapture*
+/// @param callback bool fn(QScreenCapture*, QObject*, QEvent*)
+void q_screencapture_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -471,7 +549,8 @@ void q_screencapture_on_event_filter(void* self, bool (*slot)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QTimerEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QTimerEvent*
 void q_screencapture_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -480,7 +559,8 @@ void q_screencapture_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QTimerEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QTimerEvent*
 void q_screencapture_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -489,8 +569,9 @@ void q_screencapture_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QTimerEvent*) ```
-void q_screencapture_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QTimerEvent*)
+void q_screencapture_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -498,7 +579,8 @@ void q_screencapture_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QChildEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QChildEvent*
 void q_screencapture_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -507,7 +589,8 @@ void q_screencapture_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QChildEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QChildEvent*
 void q_screencapture_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -516,8 +599,9 @@ void q_screencapture_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QChildEvent*) ```
-void q_screencapture_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QChildEvent*)
+void q_screencapture_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -525,7 +609,8 @@ void q_screencapture_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QEvent*
 void q_screencapture_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -534,7 +619,8 @@ void q_screencapture_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QEvent* event ```
+/// @param self QScreenCapture*
+/// @param event QEvent*
 void q_screencapture_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -543,8 +629,9 @@ void q_screencapture_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QEvent*) ```
-void q_screencapture_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QEvent*)
+void q_screencapture_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -552,7 +639,8 @@ void q_screencapture_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QMetaMethod* signal ```
+/// @param self QScreenCapture*
+/// @param signal QMetaMethod*
 void q_screencapture_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -561,7 +649,8 @@ void q_screencapture_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QMetaMethod* signal ```
+/// @param self QScreenCapture*
+/// @param signal QMetaMethod*
 void q_screencapture_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -570,8 +659,9 @@ void q_screencapture_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QMetaMethod*) ```
-void q_screencapture_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QMetaMethod*)
+void q_screencapture_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -579,7 +669,8 @@ void q_screencapture_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QMetaMethod* signal ```
+/// @param self QScreenCapture*
+/// @param signal QMetaMethod*
 void q_screencapture_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -588,7 +679,8 @@ void q_screencapture_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QMetaMethod* signal ```
+/// @param self QScreenCapture*
+/// @param signal QMetaMethod*
 void q_screencapture_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -597,8 +689,9 @@ void q_screencapture_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, QMetaMethod*) ```
-void q_screencapture_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, QMetaMethod*)
+void q_screencapture_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -606,7 +699,7 @@ void q_screencapture_on_disconnect_notify(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QObject* q_screencapture_sender(void* self);
 
 /// Inherited from QObject
@@ -615,7 +708,7 @@ QObject* q_screencapture_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 QObject* q_screencapture_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -624,8 +717,9 @@ QObject* q_screencapture_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QObject* (*slot)() ```
-void q_screencapture_on_sender(void* self, QObject* (*slot)());
+/// @param self QScreenCapture*
+/// @param callback QObject* fn()
+void q_screencapture_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -633,7 +727,7 @@ void q_screencapture_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 int32_t q_screencapture_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -642,7 +736,7 @@ int32_t q_screencapture_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 int32_t q_screencapture_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -651,8 +745,9 @@ int32_t q_screencapture_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, int32_t (*slot)() ```
-void q_screencapture_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QScreenCapture*
+/// @param callback int32_t fn()
+void q_screencapture_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -660,7 +755,8 @@ void q_screencapture_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, const char* signal ```
+/// @param self QScreenCapture*
+/// @param signal const char*
 int32_t q_screencapture_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -669,7 +765,8 @@ int32_t q_screencapture_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, const char* signal ```
+/// @param self QScreenCapture*
+/// @param signal const char*
 int32_t q_screencapture_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -678,8 +775,9 @@ int32_t q_screencapture_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, int32_t (*slot)(QScreenCapture*, const char*) ```
-void q_screencapture_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QScreenCapture*
+/// @param callback int32_t fn(QScreenCapture*, const char*)
+void q_screencapture_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -687,7 +785,8 @@ void q_screencapture_on_receivers(void* self, int32_t (*slot)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenCapture* self, QMetaMethod* signal ```
+/// @param self QScreenCapture*
+/// @param signal QMetaMethod*
 bool q_screencapture_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -696,7 +795,8 @@ bool q_screencapture_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, QMetaMethod* signal ```
+/// @param self QScreenCapture*
+/// @param signal QMetaMethod*
 bool q_screencapture_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -705,8 +805,9 @@ bool q_screencapture_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenCapture* self, bool (*slot)(QScreenCapture*, QMetaMethod*) ```
-void q_screencapture_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QScreenCapture*
+/// @param callback bool fn(QScreenCapture*, QMetaMethod*)
+void q_screencapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -714,14 +815,15 @@ void q_screencapture_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QScreenCapture* self, void (*slot)(QScreenCapture*, const char*) ```
-void q_screencapture_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QScreenCapture*
+/// @param callback void fn(QScreenCapture*, const char*)
+void q_screencapture_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#dtor.QScreenCapture)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QScreenCapture* self ```
+/// @param self QScreenCapture*
 void q_screencapture_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscreencapture.html#types

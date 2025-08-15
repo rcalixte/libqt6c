@@ -32,8 +32,8 @@ int32_t q_style_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QStyle_Metacall((QStyle*)self, param1, param2, param3);
 }
 
-void q_style_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QStyle_OnMetacall((QStyle*)self, (intptr_t)slot);
+void q_style_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QStyle_OnMetacall((QStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_style_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void q_style_polish(void* self, void* widget) {
     QStyle_Polish((QStyle*)self, (QWidget*)widget);
 }
 
-void q_style_on_polish(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolish((QStyle*)self, (intptr_t)slot);
+void q_style_on_polish(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnPolish((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_polish(void* self, void* widget) {
@@ -70,8 +70,8 @@ void q_style_unpolish(void* self, void* widget) {
     QStyle_Unpolish((QStyle*)self, (QWidget*)widget);
 }
 
-void q_style_on_unpolish(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnUnpolish((QStyle*)self, (intptr_t)slot);
+void q_style_on_unpolish(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnUnpolish((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_unpolish(void* self, void* widget) {
@@ -82,8 +82,8 @@ void q_style_polish2(void* self, void* application) {
     QStyle_Polish2((QStyle*)self, (QApplication*)application);
 }
 
-void q_style_on_polish2(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolish2((QStyle*)self, (intptr_t)slot);
+void q_style_on_polish2(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnPolish2((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_polish2(void* self, void* application) {
@@ -94,8 +94,8 @@ void q_style_unpolish2(void* self, void* application) {
     QStyle_Unpolish2((QStyle*)self, (QApplication*)application);
 }
 
-void q_style_on_unpolish2(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnUnpolish2((QStyle*)self, (intptr_t)slot);
+void q_style_on_unpolish2(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnUnpolish2((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_unpolish2(void* self, void* application) {
@@ -106,8 +106,8 @@ void q_style_polish3(void* self, void* palette) {
     QStyle_Polish3((QStyle*)self, (QPalette*)palette);
 }
 
-void q_style_on_polish3(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnPolish3((QStyle*)self, (intptr_t)slot);
+void q_style_on_polish3(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnPolish3((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_polish3(void* self, void* palette) {
@@ -118,8 +118,8 @@ QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool ena
     return QStyle_ItemTextRect((QStyle*)self, (QFontMetrics*)fm, (QRect*)r, flags, enabled, qstring(text));
 }
 
-void q_style_on_item_text_rect(void* self, QRect* (*slot)(void*, void*, void*, int, bool, const char*)) {
-    QStyle_OnItemTextRect((QStyle*)self, (intptr_t)slot);
+void q_style_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*)) {
+    QStyle_OnItemTextRect((QStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_style_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text) {
@@ -130,8 +130,8 @@ QRect* q_style_item_pixmap_rect(void* self, void* r, int flags, void* pixmap) {
     return QStyle_ItemPixmapRect((QStyle*)self, (QRect*)r, flags, (QPixmap*)pixmap);
 }
 
-void q_style_on_item_pixmap_rect(void* self, QRect* (*slot)(void*, void*, int, void*)) {
-    QStyle_OnItemPixmapRect((QStyle*)self, (intptr_t)slot);
+void q_style_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*)) {
+    QStyle_OnItemPixmapRect((QStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_style_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap) {
@@ -142,8 +142,8 @@ void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, vo
     QStyle_DrawItemText((QStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
-void q_style_on_draw_item_text(void* self, void (*slot)(void*, void*, void*, int, void*, bool, const char*, int64_t)) {
-    QStyle_OnDrawItemText((QStyle*)self, (intptr_t)slot);
+void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int64_t)) {
+    QStyle_OnDrawItemText((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole) {
@@ -154,8 +154,8 @@ void q_style_draw_item_pixmap(void* self, void* painter, void* rect, int alignme
     QStyle_DrawItemPixmap((QStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
 }
 
-void q_style_on_draw_item_pixmap(void* self, void (*slot)(void*, void*, void*, int, void*)) {
-    QStyle_OnDrawItemPixmap((QStyle*)self, (intptr_t)slot);
+void q_style_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*)) {
+    QStyle_OnDrawItemPixmap((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap) {
@@ -166,8 +166,8 @@ QPalette* q_style_standard_palette(void* self) {
     return QStyle_StandardPalette((QStyle*)self);
 }
 
-void q_style_on_standard_palette(void* self, QPalette* (*slot)()) {
-    QStyle_OnStandardPalette((QStyle*)self, (intptr_t)slot);
+void q_style_on_standard_palette(void* self, QPalette* (*callback)()) {
+    QStyle_OnStandardPalette((QStyle*)self, (intptr_t)callback);
 }
 
 QPalette* q_style_qbase_standard_palette(void* self) {
@@ -178,8 +178,8 @@ void q_style_draw_primitive(void* self, int64_t pe, void* opt, void* p, void* w)
     QStyle_DrawPrimitive((QStyle*)self, pe, (QStyleOption*)opt, (QPainter*)p, (QWidget*)w);
 }
 
-void q_style_on_draw_primitive(void* self, void (*slot)(void*, int64_t, void*, void*, void*)) {
-    QStyle_OnDrawPrimitive((QStyle*)self, (intptr_t)slot);
+void q_style_on_draw_primitive(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+    QStyle_OnDrawPrimitive((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_draw_primitive(void* self, int64_t pe, void* opt, void* p, void* w) {
@@ -190,8 +190,8 @@ void q_style_draw_control(void* self, int64_t element, void* opt, void* p, void*
     QStyle_DrawControl((QStyle*)self, element, (QStyleOption*)opt, (QPainter*)p, (QWidget*)w);
 }
 
-void q_style_on_draw_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*)) {
-    QStyle_OnDrawControl((QStyle*)self, (intptr_t)slot);
+void q_style_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+    QStyle_OnDrawControl((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_draw_control(void* self, int64_t element, void* opt, void* p, void* w) {
@@ -202,8 +202,8 @@ QRect* q_style_sub_element_rect(void* self, int64_t subElement, void* option, vo
     return QStyle_SubElementRect((QStyle*)self, subElement, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_style_on_sub_element_rect(void* self, QRect* (*slot)(void*, int64_t, void*, void*)) {
-    QStyle_OnSubElementRect((QStyle*)self, (intptr_t)slot);
+void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*)) {
+    QStyle_OnSubElementRect((QStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_style_qbase_sub_element_rect(void* self, int64_t subElement, void* option, void* widget) {
@@ -214,8 +214,8 @@ void q_style_draw_complex_control(void* self, int64_t cc, void* opt, void* p, vo
     QStyle_DrawComplexControl((QStyle*)self, cc, (QStyleOptionComplex*)opt, (QPainter*)p, (QWidget*)widget);
 }
 
-void q_style_on_draw_complex_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*)) {
-    QStyle_OnDrawComplexControl((QStyle*)self, (intptr_t)slot);
+void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+    QStyle_OnDrawComplexControl((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_qbase_draw_complex_control(void* self, int64_t cc, void* opt, void* p, void* widget) {
@@ -226,8 +226,8 @@ int64_t q_style_hit_test_complex_control(void* self, int64_t cc, void* opt, void
     return QStyle_HitTestComplexControl((QStyle*)self, cc, (QStyleOptionComplex*)opt, (QPoint*)pt, (QWidget*)widget);
 }
 
-void q_style_on_hit_test_complex_control(void* self, int64_t (*slot)(void*, int64_t, void*, void*, void*)) {
-    QStyle_OnHitTestComplexControl((QStyle*)self, (intptr_t)slot);
+void q_style_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*)) {
+    QStyle_OnHitTestComplexControl((QStyle*)self, (intptr_t)callback);
 }
 
 int64_t q_style_qbase_hit_test_complex_control(void* self, int64_t cc, void* opt, void* pt, void* widget) {
@@ -238,8 +238,8 @@ QRect* q_style_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, v
     return QStyle_SubControlRect((QStyle*)self, cc, (QStyleOptionComplex*)opt, sc, (QWidget*)widget);
 }
 
-void q_style_on_sub_control_rect(void* self, QRect* (*slot)(void*, int64_t, void*, int64_t, void*)) {
-    QStyle_OnSubControlRect((QStyle*)self, (intptr_t)slot);
+void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*)) {
+    QStyle_OnSubControlRect((QStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_style_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget) {
@@ -250,8 +250,8 @@ int32_t q_style_pixel_metric(void* self, int64_t metric, void* option, void* wid
     return QStyle_PixelMetric((QStyle*)self, metric, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_style_on_pixel_metric(void* self, int32_t (*slot)(void*, int64_t, void*, void*)) {
-    QStyle_OnPixelMetric((QStyle*)self, (intptr_t)slot);
+void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*)) {
+    QStyle_OnPixelMetric((QStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_style_qbase_pixel_metric(void* self, int64_t metric, void* option, void* widget) {
@@ -262,8 +262,8 @@ QSize* q_style_size_from_contents(void* self, int64_t ct, void* opt, void* conte
     return QStyle_SizeFromContents((QStyle*)self, ct, (QStyleOption*)opt, (QSize*)contentsSize, (QWidget*)w);
 }
 
-void q_style_on_size_from_contents(void* self, QSize* (*slot)(void*, int64_t, void*, void*, void*)) {
-    QStyle_OnSizeFromContents((QStyle*)self, (intptr_t)slot);
+void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*)) {
+    QStyle_OnSizeFromContents((QStyle*)self, (intptr_t)callback);
 }
 
 QSize* q_style_qbase_size_from_contents(void* self, int64_t ct, void* opt, void* contentsSize, void* w) {
@@ -274,8 +274,8 @@ int32_t q_style_style_hint(void* self, int64_t stylehint, void* opt, void* widge
     return QStyle_StyleHint((QStyle*)self, stylehint, (QStyleOption*)opt, (QWidget*)widget, (QStyleHintReturn*)returnData);
 }
 
-void q_style_on_style_hint(void* self, int32_t (*slot)(void*, int64_t, void*, void*, void*)) {
-    QStyle_OnStyleHint((QStyle*)self, (intptr_t)slot);
+void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*)) {
+    QStyle_OnStyleHint((QStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_style_qbase_style_hint(void* self, int64_t stylehint, void* opt, void* widget, void* returnData) {
@@ -286,8 +286,8 @@ QPixmap* q_style_standard_pixmap(void* self, int64_t standardPixmap, void* opt, 
     return QStyle_StandardPixmap((QStyle*)self, standardPixmap, (QStyleOption*)opt, (QWidget*)widget);
 }
 
-void q_style_on_standard_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*)) {
-    QStyle_OnStandardPixmap((QStyle*)self, (intptr_t)slot);
+void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*)) {
+    QStyle_OnStandardPixmap((QStyle*)self, (intptr_t)callback);
 }
 
 QPixmap* q_style_qbase_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget) {
@@ -298,8 +298,8 @@ QIcon* q_style_standard_icon(void* self, int64_t standardIcon, void* option, voi
     return QStyle_StandardIcon((QStyle*)self, standardIcon, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_style_on_standard_icon(void* self, QIcon* (*slot)(void*, int64_t, void*, void*)) {
-    QStyle_OnStandardIcon((QStyle*)self, (intptr_t)slot);
+void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*)) {
+    QStyle_OnStandardIcon((QStyle*)self, (intptr_t)callback);
 }
 
 QIcon* q_style_qbase_standard_icon(void* self, int64_t standardIcon, void* option, void* widget) {
@@ -310,8 +310,8 @@ QPixmap* q_style_generated_icon_pixmap(void* self, int64_t iconMode, void* pixma
     return QStyle_GeneratedIconPixmap((QStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
 }
 
-void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*)) {
-    QStyle_OnGeneratedIconPixmap((QStyle*)self, (intptr_t)slot);
+void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*)) {
+    QStyle_OnGeneratedIconPixmap((QStyle*)self, (intptr_t)callback);
 }
 
 QPixmap* q_style_qbase_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt) {
@@ -346,8 +346,8 @@ int32_t q_style_layout_spacing(void* self, int64_t control1, int64_t control2, i
     return QStyle_LayoutSpacing((QStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_style_on_layout_spacing(void* self, int32_t (*slot)(void*, int64_t, int64_t, int64_t, void*, void*)) {
-    QStyle_OnLayoutSpacing((QStyle*)self, (intptr_t)slot);
+void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int64_t, int64_t, int64_t, void*, void*)) {
+    QStyle_OnLayoutSpacing((QStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_style_qbase_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget) {
@@ -496,12 +496,16 @@ const char** q_style_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_style_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -519,8 +523,8 @@ void q_style_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_style_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_style_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_style_parent(void* self) {
@@ -555,8 +559,8 @@ void q_style_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_style_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_style_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_style_event(void* self, void* event) {
@@ -567,8 +571,8 @@ bool q_style_qbase_event(void* self, void* event) {
     return QStyle_QBaseEvent((QStyle*)self, (QEvent*)event);
 }
 
-void q_style_on_event(void* self, bool (*slot)(void*, void*)) {
-    QStyle_OnEvent((QStyle*)self, (intptr_t)slot);
+void q_style_on_event(void* self, bool (*callback)(void*, void*)) {
+    QStyle_OnEvent((QStyle*)self, (intptr_t)callback);
 }
 
 bool q_style_event_filter(void* self, void* watched, void* event) {
@@ -579,8 +583,8 @@ bool q_style_qbase_event_filter(void* self, void* watched, void* event) {
     return QStyle_QBaseEventFilter((QStyle*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_style_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QStyle_OnEventFilter((QStyle*)self, (intptr_t)slot);
+void q_style_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QStyle_OnEventFilter((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_timer_event(void* self, void* event) {
@@ -591,8 +595,8 @@ void q_style_qbase_timer_event(void* self, void* event) {
     QStyle_QBaseTimerEvent((QStyle*)self, (QTimerEvent*)event);
 }
 
-void q_style_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnTimerEvent((QStyle*)self, (intptr_t)slot);
+void q_style_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnTimerEvent((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_child_event(void* self, void* event) {
@@ -603,8 +607,8 @@ void q_style_qbase_child_event(void* self, void* event) {
     QStyle_QBaseChildEvent((QStyle*)self, (QChildEvent*)event);
 }
 
-void q_style_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnChildEvent((QStyle*)self, (intptr_t)slot);
+void q_style_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnChildEvent((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_custom_event(void* self, void* event) {
@@ -615,8 +619,8 @@ void q_style_qbase_custom_event(void* self, void* event) {
     QStyle_QBaseCustomEvent((QStyle*)self, (QEvent*)event);
 }
 
-void q_style_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnCustomEvent((QStyle*)self, (intptr_t)slot);
+void q_style_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnCustomEvent((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_connect_notify(void* self, void* signal) {
@@ -627,8 +631,8 @@ void q_style_qbase_connect_notify(void* self, void* signal) {
     QStyle_QBaseConnectNotify((QStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_style_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnConnectNotify((QStyle*)self, (intptr_t)slot);
+void q_style_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnConnectNotify((QStyle*)self, (intptr_t)callback);
 }
 
 void q_style_disconnect_notify(void* self, void* signal) {
@@ -639,8 +643,8 @@ void q_style_qbase_disconnect_notify(void* self, void* signal) {
     QStyle_QBaseDisconnectNotify((QStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_style_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QStyle_OnDisconnectNotify((QStyle*)self, (intptr_t)slot);
+void q_style_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QStyle_OnDisconnectNotify((QStyle*)self, (intptr_t)callback);
 }
 
 QObject* q_style_sender(void* self) {
@@ -651,8 +655,8 @@ QObject* q_style_qbase_sender(void* self) {
     return QStyle_QBaseSender((QStyle*)self);
 }
 
-void q_style_on_sender(void* self, QObject* (*slot)()) {
-    QStyle_OnSender((QStyle*)self, (intptr_t)slot);
+void q_style_on_sender(void* self, QObject* (*callback)()) {
+    QStyle_OnSender((QStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_style_sender_signal_index(void* self) {
@@ -663,8 +667,8 @@ int32_t q_style_qbase_sender_signal_index(void* self) {
     return QStyle_QBaseSenderSignalIndex((QStyle*)self);
 }
 
-void q_style_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QStyle_OnSenderSignalIndex((QStyle*)self, (intptr_t)slot);
+void q_style_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QStyle_OnSenderSignalIndex((QStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_style_receivers(void* self, const char* signal) {
@@ -675,8 +679,8 @@ int32_t q_style_qbase_receivers(void* self, const char* signal) {
     return QStyle_QBaseReceivers((QStyle*)self, signal);
 }
 
-void q_style_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QStyle_OnReceivers((QStyle*)self, (intptr_t)slot);
+void q_style_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QStyle_OnReceivers((QStyle*)self, (intptr_t)callback);
 }
 
 bool q_style_is_signal_connected(void* self, void* signal) {
@@ -687,12 +691,12 @@ bool q_style_qbase_is_signal_connected(void* self, void* signal) {
     return QStyle_QBaseIsSignalConnected((QStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_style_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QStyle_OnIsSignalConnected((QStyle*)self, (intptr_t)slot);
+void q_style_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QStyle_OnIsSignalConnected((QStyle*)self, (intptr_t)callback);
 }
 
-void q_style_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_style_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_style_delete(void* self) {

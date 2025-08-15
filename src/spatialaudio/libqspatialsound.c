@@ -25,8 +25,8 @@ int32_t q_spatialsound_metacall(void* self, int64_t param1, int param2, void* pa
     return QSpatialSound_Metacall((QSpatialSound*)self, param1, param2, param3);
 }
 
-void q_spatialsound_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSpatialSound_OnMetacall((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSpatialSound_OnMetacall((QSpatialSound*)self, (intptr_t)callback);
 }
 
 int32_t q_spatialsound_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -160,112 +160,112 @@ void q_spatialsound_source_changed(void* self) {
     QSpatialSound_SourceChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_source_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_SourceChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_source_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_SourceChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_loops_changed(void* self) {
     QSpatialSound_LoopsChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_loops_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_LoopsChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_loops_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_LoopsChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_auto_play_changed(void* self) {
     QSpatialSound_AutoPlayChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_auto_play_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_AutoPlayChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_auto_play_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_AutoPlayChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_position_changed(void* self) {
     QSpatialSound_PositionChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_position_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_PositionChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_position_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_PositionChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_rotation_changed(void* self) {
     QSpatialSound_RotationChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_rotation_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_RotationChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_rotation_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_RotationChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_volume_changed(void* self) {
     QSpatialSound_VolumeChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_volume_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_VolumeChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_volume_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_VolumeChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_distance_model_changed(void* self) {
     QSpatialSound_DistanceModelChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_distance_model_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_DistanceModelChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_distance_model_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_DistanceModelChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_size_changed(void* self) {
     QSpatialSound_SizeChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_size_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_SizeChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_size_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_SizeChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_distance_cutoff_changed(void* self) {
     QSpatialSound_DistanceCutoffChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_distance_cutoff_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_DistanceCutoffChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_distance_cutoff_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_DistanceCutoffChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_manual_attenuation_changed(void* self) {
     QSpatialSound_ManualAttenuationChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_manual_attenuation_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_ManualAttenuationChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_manual_attenuation_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_ManualAttenuationChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_occlusion_intensity_changed(void* self) {
     QSpatialSound_OcclusionIntensityChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_occlusion_intensity_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_OcclusionIntensityChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_occlusion_intensity_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_OcclusionIntensityChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_directivity_changed(void* self) {
     QSpatialSound_DirectivityChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_directivity_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_DirectivityChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_directivity_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_DirectivityChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_directivity_order_changed(void* self) {
     QSpatialSound_DirectivityOrderChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_directivity_order_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_DirectivityOrderChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_directivity_order_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_DirectivityOrderChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_near_field_gain_changed(void* self) {
     QSpatialSound_NearFieldGainChanged((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_near_field_gain_changed(void* self, void (*slot)(void*)) {
-    QSpatialSound_Connect_NearFieldGainChanged((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_near_field_gain_changed(void* self, void (*callback)(void*)) {
+    QSpatialSound_Connect_NearFieldGainChanged((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_play(void* self) {
@@ -398,12 +398,16 @@ const char** q_spatialsound_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_spatialsound_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -421,8 +425,8 @@ void q_spatialsound_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_spatialsound_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_spatialsound_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_spatialsound_parent(void* self) {
@@ -457,8 +461,8 @@ void q_spatialsound_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_spatialsound_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_spatialsound_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_spatialsound_event(void* self, void* event) {
@@ -469,8 +473,8 @@ bool q_spatialsound_qbase_event(void* self, void* event) {
     return QSpatialSound_QBaseEvent((QSpatialSound*)self, (QEvent*)event);
 }
 
-void q_spatialsound_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSpatialSound_OnEvent((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSpatialSound_OnEvent((QSpatialSound*)self, (intptr_t)callback);
 }
 
 bool q_spatialsound_event_filter(void* self, void* watched, void* event) {
@@ -481,8 +485,8 @@ bool q_spatialsound_qbase_event_filter(void* self, void* watched, void* event) {
     return QSpatialSound_QBaseEventFilter((QSpatialSound*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_spatialsound_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSpatialSound_OnEventFilter((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSpatialSound_OnEventFilter((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_timer_event(void* self, void* event) {
@@ -493,8 +497,8 @@ void q_spatialsound_qbase_timer_event(void* self, void* event) {
     QSpatialSound_QBaseTimerEvent((QSpatialSound*)self, (QTimerEvent*)event);
 }
 
-void q_spatialsound_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSpatialSound_OnTimerEvent((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSpatialSound_OnTimerEvent((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_child_event(void* self, void* event) {
@@ -505,8 +509,8 @@ void q_spatialsound_qbase_child_event(void* self, void* event) {
     QSpatialSound_QBaseChildEvent((QSpatialSound*)self, (QChildEvent*)event);
 }
 
-void q_spatialsound_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSpatialSound_OnChildEvent((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSpatialSound_OnChildEvent((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_custom_event(void* self, void* event) {
@@ -517,8 +521,8 @@ void q_spatialsound_qbase_custom_event(void* self, void* event) {
     QSpatialSound_QBaseCustomEvent((QSpatialSound*)self, (QEvent*)event);
 }
 
-void q_spatialsound_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSpatialSound_OnCustomEvent((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSpatialSound_OnCustomEvent((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_connect_notify(void* self, void* signal) {
@@ -529,8 +533,8 @@ void q_spatialsound_qbase_connect_notify(void* self, void* signal) {
     QSpatialSound_QBaseConnectNotify((QSpatialSound*)self, (QMetaMethod*)signal);
 }
 
-void q_spatialsound_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSpatialSound_OnConnectNotify((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSpatialSound_OnConnectNotify((QSpatialSound*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_disconnect_notify(void* self, void* signal) {
@@ -541,8 +545,8 @@ void q_spatialsound_qbase_disconnect_notify(void* self, void* signal) {
     QSpatialSound_QBaseDisconnectNotify((QSpatialSound*)self, (QMetaMethod*)signal);
 }
 
-void q_spatialsound_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSpatialSound_OnDisconnectNotify((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSpatialSound_OnDisconnectNotify((QSpatialSound*)self, (intptr_t)callback);
 }
 
 QObject* q_spatialsound_sender(void* self) {
@@ -553,8 +557,8 @@ QObject* q_spatialsound_qbase_sender(void* self) {
     return QSpatialSound_QBaseSender((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_sender(void* self, QObject* (*slot)()) {
-    QSpatialSound_OnSender((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_sender(void* self, QObject* (*callback)()) {
+    QSpatialSound_OnSender((QSpatialSound*)self, (intptr_t)callback);
 }
 
 int32_t q_spatialsound_sender_signal_index(void* self) {
@@ -565,8 +569,8 @@ int32_t q_spatialsound_qbase_sender_signal_index(void* self) {
     return QSpatialSound_QBaseSenderSignalIndex((QSpatialSound*)self);
 }
 
-void q_spatialsound_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSpatialSound_OnSenderSignalIndex((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSpatialSound_OnSenderSignalIndex((QSpatialSound*)self, (intptr_t)callback);
 }
 
 int32_t q_spatialsound_receivers(void* self, const char* signal) {
@@ -577,8 +581,8 @@ int32_t q_spatialsound_qbase_receivers(void* self, const char* signal) {
     return QSpatialSound_QBaseReceivers((QSpatialSound*)self, signal);
 }
 
-void q_spatialsound_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSpatialSound_OnReceivers((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSpatialSound_OnReceivers((QSpatialSound*)self, (intptr_t)callback);
 }
 
 bool q_spatialsound_is_signal_connected(void* self, void* signal) {
@@ -589,12 +593,12 @@ bool q_spatialsound_qbase_is_signal_connected(void* self, void* signal) {
     return QSpatialSound_QBaseIsSignalConnected((QSpatialSound*)self, (QMetaMethod*)signal);
 }
 
-void q_spatialsound_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSpatialSound_OnIsSignalConnected((QSpatialSound*)self, (intptr_t)slot);
+void q_spatialsound_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSpatialSound_OnIsSignalConnected((QSpatialSound*)self, (intptr_t)callback);
 }
 
-void q_spatialsound_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_spatialsound_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_spatialsound_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,29 +15,31 @@
 
 /// q_untypedpropertydata_new constructs a new QUntypedPropertyData object.
 ///
-/// ``` QUntypedPropertyData* other ```
+/// @param other QUntypedPropertyData*
 QUntypedPropertyData* q_untypedpropertydata_new(void* other);
 
 /// q_untypedpropertydata_new2 constructs a new QUntypedPropertyData object and invalidates the source QUntypedPropertyData object.
 ///
-/// ``` QUntypedPropertyData* other ```
+/// @param other QUntypedPropertyData*
 QUntypedPropertyData* q_untypedpropertydata_new2(void* other);
 
 /// q_untypedpropertydata_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QUntypedPropertyData* self, QUntypedPropertyData* other ```
+/// @param self QUntypedPropertyData*
+/// @param other QUntypedPropertyData*
 void q_untypedpropertydata_copy_assign(void* self, void* other);
 
 /// q_untypedpropertydata_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QUntypedPropertyData* self, QUntypedPropertyData* other ```
+/// @param self QUntypedPropertyData*
+/// @param other QUntypedPropertyData*
 void q_untypedpropertydata_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quntypedpropertydata.html#dtor.QUntypedPropertyData)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QUntypedPropertyData* self ```
+/// @param self QUntypedPropertyData*
 void q_untypedpropertydata_delete(void* self);
 
 #endif

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,64 +15,72 @@
 
 /// q_webengineframe_new constructs a new QWebEngineFrame object.
 ///
-/// ``` QWebEngineFrame* param1 ```
+/// @param param1 QWebEngineFrame*
 QWebEngineFrame* q_webengineframe_new(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#isValid)
 ///
-/// ``` QWebEngineFrame* self ```
+/// @param self QWebEngineFrame*
 bool q_webengineframe_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#name)
 ///
-/// ``` QWebEngineFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineFrame*
 const char* q_webengineframe_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#htmlName)
 ///
-/// ``` QWebEngineFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineFrame*
 const char* q_webengineframe_html_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#children)
 ///
-/// ``` QWebEngineFrame* self ```
+/// @param self QWebEngineFrame*
 libqt_list /* of QWebEngineFrame* */ q_webengineframe_children(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#url)
 ///
-/// ``` QWebEngineFrame* self ```
+/// @param self QWebEngineFrame*
 QUrl* q_webengineframe_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#size)
 ///
-/// ``` QWebEngineFrame* self ```
+/// @param self QWebEngineFrame*
 QSizeF* q_webengineframe_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#isMainFrame)
 ///
-/// ``` QWebEngineFrame* self ```
+/// @param self QWebEngineFrame*
 bool q_webengineframe_is_main_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
-/// ``` QWebEngineFrame* self, const char* script ```
+/// @param self QWebEngineFrame*
+/// @param script const char*
 void q_webengineframe_run_java_script(void* self, const char* script);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
 ///
-/// ``` QWebEngineFrame* self, const char* filePath ```
+/// @param self QWebEngineFrame*
+/// @param filePath const char*
 void q_webengineframe_print_to_pdf(void* self, const char* filePath);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///
-/// ``` QWebEngineFrame* self, const char* script, uint32_t worldId ```
+/// @param self QWebEngineFrame*
+/// @param script const char*
+/// @param worldId uint32_t
 void q_webengineframe_run_java_script22(void* self, const char* script, uint32_t worldId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineframe.html#dtor.QWebEngineFrame)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineFrame* self ```
+/// @param self QWebEngineFrame*
 void q_webengineframe_delete(void* self);
 
 #endif

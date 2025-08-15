@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,253 +15,275 @@
 
 /// q_permission_new constructs a new QPermission object.
 ///
-///
 QPermission* q_permission_new();
 
 /// q_permission_new2 constructs a new QPermission object.
 ///
-/// ``` QPermission* param1 ```
+/// @param param1 QPermission*
 QPermission* q_permission_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpermission.html#status)
 ///
-/// ``` QPermission* self ```
+/// @param self QPermission*
+///
+/// @return enum Qt__PermissionStatus
 int64_t q_permission_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpermission.html#type)
 ///
-/// ``` QPermission* self ```
+/// @param self QPermission*
 QMetaType* q_permission_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpermission.html#dtor.QPermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPermission* self ```
+/// @param self QPermission*
 void q_permission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlocationpermission.html
 
 /// q_locationpermission_new constructs a new QLocationPermission object.
 ///
-///
 QLocationPermission* q_locationpermission_new();
 
 /// q_locationpermission_new2 constructs a new QLocationPermission object.
 ///
-/// ``` QLocationPermission* other ```
+/// @param other QLocationPermission*
 QLocationPermission* q_locationpermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#setAccuracy)
 ///
-/// ``` QLocationPermission* self, enum QLocationPermission__Accuracy accuracy ```
+/// @param self QLocationPermission*
+/// @param accuracy enum QLocationPermission__Accuracy
 void q_locationpermission_set_accuracy(void* self, int64_t accuracy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#accuracy)
 ///
-/// ``` QLocationPermission* self ```
+/// @param self QLocationPermission*
+///
+/// @return enum QLocationPermission__Accuracy
 int64_t q_locationpermission_accuracy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#setAvailability)
 ///
-/// ``` QLocationPermission* self, enum QLocationPermission__Availability availability ```
+/// @param self QLocationPermission*
+/// @param availability enum QLocationPermission__Availability
 void q_locationpermission_set_availability(void* self, int64_t availability);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#availability)
 ///
-/// ``` QLocationPermission* self ```
+/// @param self QLocationPermission*
+///
+/// @return enum QLocationPermission__Availability
 int64_t q_locationpermission_availability(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#operator-eq)
 ///
-/// ``` QLocationPermission* self, QLocationPermission* other ```
+/// @param self QLocationPermission*
+/// @param other QLocationPermission*
 void q_locationpermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#swap)
 ///
-/// ``` QLocationPermission* self, QLocationPermission* other ```
+/// @param self QLocationPermission*
+/// @param other QLocationPermission*
 void q_locationpermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#dtor.QLocationPermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLocationPermission* self ```
+/// @param self QLocationPermission*
 void q_locationpermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcalendarpermission.html
 
 /// q_calendarpermission_new constructs a new QCalendarPermission object.
 ///
-///
 QCalendarPermission* q_calendarpermission_new();
 
 /// q_calendarpermission_new2 constructs a new QCalendarPermission object.
 ///
-/// ``` QCalendarPermission* other ```
+/// @param other QCalendarPermission*
 QCalendarPermission* q_calendarpermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#setAccessMode)
 ///
-/// ``` QCalendarPermission* self, enum QCalendarPermission__AccessMode mode ```
+/// @param self QCalendarPermission*
+/// @param mode enum QCalendarPermission__AccessMode
 void q_calendarpermission_set_access_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#accessMode)
 ///
-/// ``` QCalendarPermission* self ```
+/// @param self QCalendarPermission*
+///
+/// @return enum QCalendarPermission__AccessMode
 int64_t q_calendarpermission_access_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#operator-eq)
 ///
-/// ``` QCalendarPermission* self, QCalendarPermission* other ```
+/// @param self QCalendarPermission*
+/// @param other QCalendarPermission*
 void q_calendarpermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#swap)
 ///
-/// ``` QCalendarPermission* self, QCalendarPermission* other ```
+/// @param self QCalendarPermission*
+/// @param other QCalendarPermission*
 void q_calendarpermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#dtor.QCalendarPermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCalendarPermission* self ```
+/// @param self QCalendarPermission*
 void q_calendarpermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcontactspermission.html
 
 /// q_contactspermission_new constructs a new QContactsPermission object.
 ///
-///
 QContactsPermission* q_contactspermission_new();
 
 /// q_contactspermission_new2 constructs a new QContactsPermission object.
 ///
-/// ``` QContactsPermission* other ```
+/// @param other QContactsPermission*
 QContactsPermission* q_contactspermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#setAccessMode)
 ///
-/// ``` QContactsPermission* self, enum QContactsPermission__AccessMode mode ```
+/// @param self QContactsPermission*
+/// @param mode enum QContactsPermission__AccessMode
 void q_contactspermission_set_access_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#accessMode)
 ///
-/// ``` QContactsPermission* self ```
+/// @param self QContactsPermission*
+///
+/// @return enum QContactsPermission__AccessMode
 int64_t q_contactspermission_access_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#operator-eq)
 ///
-/// ``` QContactsPermission* self, QContactsPermission* other ```
+/// @param self QContactsPermission*
+/// @param other QContactsPermission*
 void q_contactspermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#swap)
 ///
-/// ``` QContactsPermission* self, QContactsPermission* other ```
+/// @param self QContactsPermission*
+/// @param other QContactsPermission*
 void q_contactspermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#dtor.QContactsPermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QContactsPermission* self ```
+/// @param self QContactsPermission*
 void q_contactspermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qbluetoothpermission.html
 
 /// q_bluetoothpermission_new constructs a new QBluetoothPermission object.
 ///
-///
 QBluetoothPermission* q_bluetoothpermission_new();
 
 /// q_bluetoothpermission_new2 constructs a new QBluetoothPermission object.
 ///
-/// ``` QBluetoothPermission* other ```
+/// @param other QBluetoothPermission*
 QBluetoothPermission* q_bluetoothpermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#setCommunicationModes)
 ///
-/// ``` QBluetoothPermission* self, uint8_t modes ```
+/// @param self QBluetoothPermission*
+/// @param modes flag of enum QBluetoothPermission__CommunicationMode
 void q_bluetoothpermission_set_communication_modes(void* self, int64_t modes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#communicationModes)
 ///
-/// ``` QBluetoothPermission* self ```
+/// @param self QBluetoothPermission*
+///
+/// @return flag of enum QBluetoothPermission__CommunicationMode
 int64_t q_bluetoothpermission_communication_modes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#operator-eq)
 ///
-/// ``` QBluetoothPermission* self, QBluetoothPermission* other ```
+/// @param self QBluetoothPermission*
+/// @param other QBluetoothPermission*
 void q_bluetoothpermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#swap)
 ///
-/// ``` QBluetoothPermission* self, QBluetoothPermission* other ```
+/// @param self QBluetoothPermission*
+/// @param other QBluetoothPermission*
 void q_bluetoothpermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbluetoothpermission.html#dtor.QBluetoothPermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QBluetoothPermission* self ```
+/// @param self QBluetoothPermission*
 void q_bluetoothpermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcamerapermission.html
 
 /// q_camerapermission_new constructs a new QCameraPermission object.
 ///
-///
 QCameraPermission* q_camerapermission_new();
 
 /// q_camerapermission_new2 constructs a new QCameraPermission object.
 ///
-/// ``` QCameraPermission* other ```
+/// @param other QCameraPermission*
 QCameraPermission* q_camerapermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamerapermission.html#operator-eq)
 ///
-/// ``` QCameraPermission* self, QCameraPermission* other ```
+/// @param self QCameraPermission*
+/// @param other QCameraPermission*
 void q_camerapermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamerapermission.html#swap)
 ///
-/// ``` QCameraPermission* self, QCameraPermission* other ```
+/// @param self QCameraPermission*
+/// @param other QCameraPermission*
 void q_camerapermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamerapermission.html#dtor.QCameraPermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCameraPermission* self ```
+/// @param self QCameraPermission*
 void q_camerapermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qmicrophonepermission.html
 
 /// q_microphonepermission_new constructs a new QMicrophonePermission object.
 ///
-///
 QMicrophonePermission* q_microphonepermission_new();
 
 /// q_microphonepermission_new2 constructs a new QMicrophonePermission object.
 ///
-/// ``` QMicrophonePermission* other ```
+/// @param other QMicrophonePermission*
 QMicrophonePermission* q_microphonepermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmicrophonepermission.html#operator-eq)
 ///
-/// ``` QMicrophonePermission* self, QMicrophonePermission* other ```
+/// @param self QMicrophonePermission*
+/// @param other QMicrophonePermission*
 void q_microphonepermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmicrophonepermission.html#swap)
 ///
-/// ``` QMicrophonePermission* self, QMicrophonePermission* other ```
+/// @param self QMicrophonePermission*
+/// @param other QMicrophonePermission*
 void q_microphonepermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmicrophonepermission.html#dtor.QMicrophonePermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QMicrophonePermission* self ```
+/// @param self QMicrophonePermission*
 void q_microphonepermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpermissions.html#types

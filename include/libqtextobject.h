@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,329 +15,386 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 const QMetaObject* q_textobject_meta_object(void* self);
 
-/// ``` QTextObject* self, const char* param1 ```
+/// @param self QTextObject*
+/// @param param1 const char*
 void* q_textobject_metacast(void* self, const char* param1);
 
-/// ``` QTextObject* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextObject*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textobject_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_textobject_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#format)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 QTextFormat* q_textobject_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#formatIndex)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 int32_t q_textobject_format_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#document)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 QTextDocument* q_textobject_document(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#objectIndex)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 int32_t q_textobject_object_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_textobject_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_textobject_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QTextObject* self, QEvent* event ```
+/// @param self QTextObject*
+/// @param event QEvent*
 bool q_textobject_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QTextObject* self, QObject* watched, QEvent* event ```
+/// @param self QTextObject*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_textobject_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTextObject* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextObject*
 const char* q_textobject_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextObject* self, char* name ```
+/// @param self QTextObject*
+/// @param name char*
 void q_textobject_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 bool q_textobject_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 bool q_textobject_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 bool q_textobject_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 bool q_textobject_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTextObject* self, bool b ```
+/// @param self QTextObject*
+/// @param b bool
 bool q_textobject_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 QThread* q_textobject_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextObject* self, QThread* thread ```
+/// @param self QTextObject*
+/// @param thread QThread*
 bool q_textobject_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextObject* self, int interval ```
+/// @param self QTextObject*
+/// @param interval int
 int32_t q_textobject_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextObject* self, int id ```
+/// @param self QTextObject*
+/// @param id int
 void q_textobject_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextObject* self, enum Qt__TimerId id ```
+/// @param self QTextObject*
+/// @param id enum Qt__TimerId
 void q_textobject_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 libqt_list /* of QObject* */ q_textobject_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTextObject* self, QObject* parent ```
+/// @param self QTextObject*
+/// @param parent QObject*
 void q_textobject_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTextObject* self, QObject* filterObj ```
+/// @param self QTextObject*
+/// @param filterObj QObject*
 void q_textobject_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTextObject* self, QObject* obj ```
+/// @param self QTextObject*
+/// @param obj QObject*
 void q_textobject_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_textobject_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextObject* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTextObject*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_textobject_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_textobject_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_textobject_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 void q_textobject_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 void q_textobject_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTextObject* self, const char* name, QVariant* value ```
+/// @param self QTextObject*
+/// @param name const char*
+/// @param value QVariant*
 bool q_textobject_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTextObject* self, const char* name ```
+/// @param self QTextObject*
+/// @param name const char*
 QVariant* q_textobject_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTextObject* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextObject*
 const char** q_textobject_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 QBindingStorage* q_textobject_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 const QBindingStorage* q_textobject_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 void q_textobject_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextObject* self, void (*slot)(QTextObject*) ```
-void q_textobject_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTextObject*
+/// @param callback void fn(QTextObject*)
+void q_textobject_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 QObject* q_textobject_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTextObject* self, const char* classname ```
+/// @param self QTextObject*
+/// @param classname const char*
 bool q_textobject_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTextObject* self ```
+/// @param self QTextObject*
 void q_textobject_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextObject* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTextObject*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_textobject_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextObject* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTextObject*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_textobject_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textobject_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextObject* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTextObject*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textobject_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextObject* self, QObject* param1 ```
+/// @param self QTextObject*
+/// @param param1 QObject*
 void q_textobject_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextObject* self, void (*slot)(QTextObject*, QObject*) ```
-void q_textobject_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTextObject*
+/// @param callback void fn(QTextObject*, QObject*)
+void q_textobject_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -346,344 +402,402 @@ void q_textobject_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextObject* self, void (*slot)(QTextObject*, const char*) ```
-void q_textobject_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextObject*
+/// @param callback void fn(QTextObject*, const char*)
+void q_textobject_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qtextblockgroup.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 const QMetaObject* q_textblockgroup_meta_object(void* self);
 
-/// ``` QTextBlockGroup* self, const char* param1 ```
+/// @param self QTextBlockGroup*
+/// @param param1 const char*
 void* q_textblockgroup_metacast(void* self, const char* param1);
 
-/// ``` QTextBlockGroup* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextBlockGroup*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textblockgroup_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_textblockgroup_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_textblockgroup_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_textblockgroup_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#format)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 QTextFormat* q_textblockgroup_format(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#formatIndex)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 int32_t q_textblockgroup_format_index(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#document)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 QTextDocument* q_textblockgroup_document(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#objectIndex)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 int32_t q_textblockgroup_object_index(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QTextBlockGroup* self, QEvent* event ```
+/// @param self QTextBlockGroup*
+/// @param event QEvent*
 bool q_textblockgroup_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QTextBlockGroup* self, QObject* watched, QEvent* event ```
+/// @param self QTextBlockGroup*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_textblockgroup_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTextBlockGroup* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBlockGroup*
 const char* q_textblockgroup_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextBlockGroup* self, char* name ```
+/// @param self QTextBlockGroup*
+/// @param name char*
 void q_textblockgroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 bool q_textblockgroup_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 bool q_textblockgroup_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 bool q_textblockgroup_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 bool q_textblockgroup_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTextBlockGroup* self, bool b ```
+/// @param self QTextBlockGroup*
+/// @param b bool
 bool q_textblockgroup_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 QThread* q_textblockgroup_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextBlockGroup* self, QThread* thread ```
+/// @param self QTextBlockGroup*
+/// @param thread QThread*
 bool q_textblockgroup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextBlockGroup* self, int interval ```
+/// @param self QTextBlockGroup*
+/// @param interval int
 int32_t q_textblockgroup_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextBlockGroup* self, int id ```
+/// @param self QTextBlockGroup*
+/// @param id int
 void q_textblockgroup_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextBlockGroup* self, enum Qt__TimerId id ```
+/// @param self QTextBlockGroup*
+/// @param id enum Qt__TimerId
 void q_textblockgroup_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 libqt_list /* of QObject* */ q_textblockgroup_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTextBlockGroup* self, QObject* parent ```
+/// @param self QTextBlockGroup*
+/// @param parent QObject*
 void q_textblockgroup_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTextBlockGroup* self, QObject* filterObj ```
+/// @param self QTextBlockGroup*
+/// @param filterObj QObject*
 void q_textblockgroup_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTextBlockGroup* self, QObject* obj ```
+/// @param self QTextBlockGroup*
+/// @param obj QObject*
 void q_textblockgroup_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_textblockgroup_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextBlockGroup* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTextBlockGroup*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_textblockgroup_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_textblockgroup_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_textblockgroup_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 void q_textblockgroup_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 void q_textblockgroup_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTextBlockGroup* self, const char* name, QVariant* value ```
+/// @param self QTextBlockGroup*
+/// @param name const char*
+/// @param value QVariant*
 bool q_textblockgroup_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTextBlockGroup* self, const char* name ```
+/// @param self QTextBlockGroup*
+/// @param name const char*
 QVariant* q_textblockgroup_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTextBlockGroup* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBlockGroup*
 const char** q_textblockgroup_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 QBindingStorage* q_textblockgroup_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 const QBindingStorage* q_textblockgroup_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 void q_textblockgroup_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBlockGroup* self, void (*slot)(QTextBlockGroup*) ```
-void q_textblockgroup_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTextBlockGroup*
+/// @param callback void fn(QTextBlockGroup*)
+void q_textblockgroup_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 QObject* q_textblockgroup_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTextBlockGroup* self, const char* classname ```
+/// @param self QTextBlockGroup*
+/// @param classname const char*
 bool q_textblockgroup_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTextBlockGroup* self ```
+/// @param self QTextBlockGroup*
 void q_textblockgroup_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextBlockGroup* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTextBlockGroup*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_textblockgroup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextBlockGroup* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTextBlockGroup*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_textblockgroup_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textblockgroup_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextBlockGroup* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTextBlockGroup*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textblockgroup_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBlockGroup* self, QObject* param1 ```
+/// @param self QTextBlockGroup*
+/// @param param1 QObject*
 void q_textblockgroup_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBlockGroup* self, void (*slot)(QTextBlockGroup*, QObject*) ```
-void q_textblockgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTextBlockGroup*
+/// @param callback void fn(QTextBlockGroup*, QObject*)
+void q_textblockgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -691,419 +805,481 @@ void q_textblockgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextBlockGroup* self, void (*slot)(QTextBlockGroup*, const char*) ```
-void q_textblockgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextBlockGroup*
+/// @param callback void fn(QTextBlockGroup*, const char*)
+void q_textblockgroup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qtextframelayoutdata.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframelayoutdata.html#operator-eq)
 ///
-/// ``` QTextFrameLayoutData* self, QTextFrameLayoutData* param1 ```
+/// @param self QTextFrameLayoutData*
+/// @param param1 QTextFrameLayoutData*
 void q_textframelayoutdata_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframelayoutdata.html#dtor.QTextFrameLayoutData)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextFrameLayoutData* self ```
+/// @param self QTextFrameLayoutData*
 void q_textframelayoutdata_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextframe.html
 
 /// q_textframe_new constructs a new QTextFrame object.
 ///
-/// ``` QTextDocument* doc ```
+/// @param doc QTextDocument*
 QTextFrame* q_textframe_new(void* doc);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 const QMetaObject* q_textframe_meta_object(void* self);
 
-/// ``` QTextFrame* self, const char* param1 ```
+/// @param self QTextFrame*
+/// @param param1 const char*
 void* q_textframe_metacast(void* self, const char* param1);
 
-/// ``` QTextFrame* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextFrame*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textframe_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTextFrame* self, int32_t (*slot)(QTextFrame*, enum QMetaObject__Call, int, void*) ```
-void q_textframe_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTextFrame*
+/// @param callback int32_t fn(QTextFrame*, enum QMetaObject__Call, int, void*)
+void q_textframe_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTextFrame* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextFrame*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textframe_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_textframe_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#setFrameFormat)
 ///
-/// ``` QTextFrame* self, QTextFrameFormat* format ```
+/// @param self QTextFrame*
+/// @param format QTextFrameFormat*
 void q_textframe_set_frame_format(void* self, void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#frameFormat)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextFrameFormat* q_textframe_frame_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#firstCursorPosition)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextCursor* q_textframe_first_cursor_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#lastCursorPosition)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextCursor* q_textframe_last_cursor_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#firstPosition)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 int32_t q_textframe_first_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#lastPosition)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 int32_t q_textframe_last_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#layoutData)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextFrameLayoutData* q_textframe_layout_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#setLayoutData)
 ///
-/// ``` QTextFrame* self, QTextFrameLayoutData* data ```
+/// @param self QTextFrame*
+/// @param data QTextFrameLayoutData*
 void q_textframe_set_layout_data(void* self, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#childFrames)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 libqt_list /* of QTextFrame* */ q_textframe_child_frames(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#parentFrame)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextFrame* q_textframe_parent_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#begin)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextFrame__iterator* q_textframe_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#end)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextFrame__iterator* q_textframe_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_textframe_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_textframe_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#format)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextFormat* q_textframe_format(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#formatIndex)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 int32_t q_textframe_format_index(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#document)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QTextDocument* q_textframe_document(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#objectIndex)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 int32_t q_textframe_object_index(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTextFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextFrame*
 const char* q_textframe_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextFrame* self, char* name ```
+/// @param self QTextFrame*
+/// @param name char*
 void q_textframe_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 bool q_textframe_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 bool q_textframe_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 bool q_textframe_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 bool q_textframe_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTextFrame* self, bool b ```
+/// @param self QTextFrame*
+/// @param b bool
 bool q_textframe_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QThread* q_textframe_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextFrame* self, QThread* thread ```
+/// @param self QTextFrame*
+/// @param thread QThread*
 bool q_textframe_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextFrame* self, int interval ```
+/// @param self QTextFrame*
+/// @param interval int
 int32_t q_textframe_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextFrame* self, int id ```
+/// @param self QTextFrame*
+/// @param id int
 void q_textframe_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextFrame* self, enum Qt__TimerId id ```
+/// @param self QTextFrame*
+/// @param id enum Qt__TimerId
 void q_textframe_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 libqt_list /* of QObject* */ q_textframe_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTextFrame* self, QObject* parent ```
+/// @param self QTextFrame*
+/// @param parent QObject*
 void q_textframe_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTextFrame* self, QObject* filterObj ```
+/// @param self QTextFrame*
+/// @param filterObj QObject*
 void q_textframe_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTextFrame* self, QObject* obj ```
+/// @param self QTextFrame*
+/// @param obj QObject*
 void q_textframe_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_textframe_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextFrame* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTextFrame*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_textframe_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_textframe_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_textframe_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 void q_textframe_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 void q_textframe_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTextFrame* self, const char* name, QVariant* value ```
+/// @param self QTextFrame*
+/// @param name const char*
+/// @param value QVariant*
 bool q_textframe_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTextFrame* self, const char* name ```
+/// @param self QTextFrame*
+/// @param name const char*
 QVariant* q_textframe_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTextFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextFrame*
 const char** q_textframe_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QBindingStorage* q_textframe_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 const QBindingStorage* q_textframe_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 void q_textframe_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*) ```
-void q_textframe_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*)
+void q_textframe_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QObject* q_textframe_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTextFrame* self, const char* classname ```
+/// @param self QTextFrame*
+/// @param classname const char*
 bool q_textframe_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 void q_textframe_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextFrame* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTextFrame*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_textframe_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextFrame* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTextFrame*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_textframe_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textframe_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextFrame* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTextFrame*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textframe_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextFrame* self, QObject* param1 ```
+/// @param self QTextFrame*
+/// @param param1 QObject*
 void q_textframe_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QObject*) ```
-void q_textframe_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QObject*)
+void q_textframe_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1111,7 +1287,8 @@ void q_textframe_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QEvent* event ```
+/// @param self QTextFrame*
+/// @param event QEvent*
 bool q_textframe_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1120,7 +1297,8 @@ bool q_textframe_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QEvent* event ```
+/// @param self QTextFrame*
+/// @param event QEvent*
 bool q_textframe_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1129,8 +1307,9 @@ bool q_textframe_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, bool (*slot)(QTextFrame*, QEvent*) ```
-void q_textframe_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback bool fn(QTextFrame*, QEvent*)
+void q_textframe_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1138,7 +1317,9 @@ void q_textframe_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QObject* watched, QEvent* event ```
+/// @param self QTextFrame*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_textframe_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1147,7 +1328,9 @@ bool q_textframe_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QObject* watched, QEvent* event ```
+/// @param self QTextFrame*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_textframe_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1156,8 +1339,9 @@ bool q_textframe_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, bool (*slot)(QTextFrame*, QObject*, QEvent*) ```
-void q_textframe_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTextFrame*
+/// @param callback bool fn(QTextFrame*, QObject*, QEvent*)
+void q_textframe_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1165,7 +1349,8 @@ void q_textframe_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QTimerEvent* event ```
+/// @param self QTextFrame*
+/// @param event QTimerEvent*
 void q_textframe_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1174,7 +1359,8 @@ void q_textframe_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QTimerEvent* event ```
+/// @param self QTextFrame*
+/// @param event QTimerEvent*
 void q_textframe_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1183,8 +1369,9 @@ void q_textframe_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QTimerEvent*) ```
-void q_textframe_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QTimerEvent*)
+void q_textframe_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1192,7 +1379,8 @@ void q_textframe_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QChildEvent* event ```
+/// @param self QTextFrame*
+/// @param event QChildEvent*
 void q_textframe_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1201,7 +1389,8 @@ void q_textframe_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QChildEvent* event ```
+/// @param self QTextFrame*
+/// @param event QChildEvent*
 void q_textframe_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1210,8 +1399,9 @@ void q_textframe_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QChildEvent*) ```
-void q_textframe_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QChildEvent*)
+void q_textframe_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1219,7 +1409,8 @@ void q_textframe_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QEvent* event ```
+/// @param self QTextFrame*
+/// @param event QEvent*
 void q_textframe_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1228,7 +1419,8 @@ void q_textframe_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QEvent* event ```
+/// @param self QTextFrame*
+/// @param event QEvent*
 void q_textframe_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1237,8 +1429,9 @@ void q_textframe_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QEvent*) ```
-void q_textframe_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QEvent*)
+void q_textframe_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1246,7 +1439,8 @@ void q_textframe_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QMetaMethod* signal ```
+/// @param self QTextFrame*
+/// @param signal QMetaMethod*
 void q_textframe_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1255,7 +1449,8 @@ void q_textframe_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QMetaMethod* signal ```
+/// @param self QTextFrame*
+/// @param signal QMetaMethod*
 void q_textframe_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1264,8 +1459,9 @@ void q_textframe_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QMetaMethod*) ```
-void q_textframe_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QMetaMethod*)
+void q_textframe_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1273,7 +1469,8 @@ void q_textframe_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QMetaMethod* signal ```
+/// @param self QTextFrame*
+/// @param signal QMetaMethod*
 void q_textframe_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1282,7 +1479,8 @@ void q_textframe_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QMetaMethod* signal ```
+/// @param self QTextFrame*
+/// @param signal QMetaMethod*
 void q_textframe_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1291,8 +1489,9 @@ void q_textframe_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QMetaMethod*) ```
-void q_textframe_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QMetaMethod*)
+void q_textframe_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextObject
 ///
@@ -1300,7 +1499,8 @@ void q_textframe_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QTextFormat* format ```
+/// @param self QTextFrame*
+/// @param format QTextFormat*
 void q_textframe_set_format(void* self, void* format);
 
 /// Inherited from QTextObject
@@ -1309,7 +1509,8 @@ void q_textframe_set_format(void* self, void* format);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QTextFormat* format ```
+/// @param self QTextFrame*
+/// @param format QTextFormat*
 void q_textframe_qbase_set_format(void* self, void* format);
 
 /// Inherited from QTextObject
@@ -1318,8 +1519,9 @@ void q_textframe_qbase_set_format(void* self, void* format);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, QTextFormat*) ```
-void q_textframe_on_set_format(void* self, void (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, QTextFormat*)
+void q_textframe_on_set_format(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1327,7 +1529,7 @@ void q_textframe_on_set_format(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QObject* q_textframe_sender(void* self);
 
 /// Inherited from QObject
@@ -1336,7 +1538,7 @@ QObject* q_textframe_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 QObject* q_textframe_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1345,8 +1547,9 @@ QObject* q_textframe_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QObject* (*slot)() ```
-void q_textframe_on_sender(void* self, QObject* (*slot)());
+/// @param self QTextFrame*
+/// @param callback QObject* fn()
+void q_textframe_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1354,7 +1557,7 @@ void q_textframe_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 int32_t q_textframe_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1363,7 +1566,7 @@ int32_t q_textframe_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 int32_t q_textframe_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1372,8 +1575,9 @@ int32_t q_textframe_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, int32_t (*slot)() ```
-void q_textframe_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTextFrame*
+/// @param callback int32_t fn()
+void q_textframe_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1381,7 +1585,8 @@ void q_textframe_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, const char* signal ```
+/// @param self QTextFrame*
+/// @param signal const char*
 int32_t q_textframe_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1390,7 +1595,8 @@ int32_t q_textframe_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, const char* signal ```
+/// @param self QTextFrame*
+/// @param signal const char*
 int32_t q_textframe_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1399,8 +1605,9 @@ int32_t q_textframe_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, int32_t (*slot)(QTextFrame*, const char*) ```
-void q_textframe_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTextFrame*
+/// @param callback int32_t fn(QTextFrame*, const char*)
+void q_textframe_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1408,7 +1615,8 @@ void q_textframe_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextFrame* self, QMetaMethod* signal ```
+/// @param self QTextFrame*
+/// @param signal QMetaMethod*
 bool q_textframe_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1417,7 +1625,8 @@ bool q_textframe_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextFrame* self, QMetaMethod* signal ```
+/// @param self QTextFrame*
+/// @param signal QMetaMethod*
 bool q_textframe_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1426,8 +1635,9 @@ bool q_textframe_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextFrame* self, bool (*slot)(QTextFrame*, QMetaMethod*) ```
-void q_textframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTextFrame*
+/// @param callback bool fn(QTextFrame*, QMetaMethod*)
+void q_textframe_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1435,484 +1645,518 @@ void q_textframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextFrame* self, void (*slot)(QTextFrame*, const char*) ```
-void q_textframe_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextFrame*
+/// @param callback void fn(QTextFrame*, const char*)
+void q_textframe_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#dtor.QTextFrame)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextFrame* self ```
+/// @param self QTextFrame*
 void q_textframe_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextblockuserdata.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockuserdata.html#operator-eq)
 ///
-/// ``` QTextBlockUserData* self, QTextBlockUserData* param1 ```
+/// @param self QTextBlockUserData*
+/// @param param1 QTextBlockUserData*
 void q_textblockuserdata_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockuserdata.html#dtor.QTextBlockUserData)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextBlockUserData* self ```
+/// @param self QTextBlockUserData*
 void q_textblockuserdata_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextblock.html
 
 /// q_textblock_new constructs a new QTextBlock object.
 ///
-///
 QTextBlock* q_textblock_new();
 
 /// q_textblock_new2 constructs a new QTextBlock object.
 ///
-/// ``` QTextBlock* o ```
+/// @param o QTextBlock*
 QTextBlock* q_textblock_new2(void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-eq)
 ///
-/// ``` QTextBlock* self, QTextBlock* o ```
+/// @param self QTextBlock*
+/// @param o QTextBlock*
 void q_textblock_operator_assign(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#isValid)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 bool q_textblock_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-eq-eq)
 ///
-/// ``` QTextBlock* self, QTextBlock* o ```
+/// @param self QTextBlock*
+/// @param o QTextBlock*
 bool q_textblock_operator_equal(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-not-eq)
 ///
-/// ``` QTextBlock* self, QTextBlock* o ```
+/// @param self QTextBlock*
+/// @param o QTextBlock*
 bool q_textblock_operator_not_equal(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#operator-lt)
 ///
-/// ``` QTextBlock* self, QTextBlock* o ```
+/// @param self QTextBlock*
+/// @param o QTextBlock*
 bool q_textblock_operator_lesser(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#position)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#length)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_length(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#contains)
 ///
-/// ``` QTextBlock* self, int position ```
+/// @param self QTextBlock*
+/// @param position int
 bool q_textblock_contains(void* self, int position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#layout)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextLayout* q_textblock_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#clearLayout)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 void q_textblock_clear_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#blockFormat)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextBlockFormat* q_textblock_block_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#blockFormatIndex)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_block_format_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#charFormat)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextCharFormat* q_textblock_char_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#charFormatIndex)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_char_format_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#textDirection)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_textblock_text_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#text)
 ///
-/// ``` QTextBlock* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBlock*
 const char* q_textblock_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#textFormats)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 libqt_list /* of QTextLayout__FormatRange* */ q_textblock_text_formats(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#document)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 const QTextDocument* q_textblock_document(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#textList)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextList* q_textblock_text_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#userData)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextBlockUserData* q_textblock_user_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#setUserData)
 ///
-/// ``` QTextBlock* self, QTextBlockUserData* data ```
+/// @param self QTextBlock*
+/// @param data QTextBlockUserData*
 void q_textblock_set_user_data(void* self, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#userState)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_user_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#setUserState)
 ///
-/// ``` QTextBlock* self, int state ```
+/// @param self QTextBlock*
+/// @param state int
 void q_textblock_set_user_state(void* self, int state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#revision)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_revision(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#setRevision)
 ///
-/// ``` QTextBlock* self, int rev ```
+/// @param self QTextBlock*
+/// @param rev int
 void q_textblock_set_revision(void* self, int rev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#isVisible)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 bool q_textblock_is_visible(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#setVisible)
 ///
-/// ``` QTextBlock* self, bool visible ```
+/// @param self QTextBlock*
+/// @param visible bool
 void q_textblock_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#blockNumber)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_block_number(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#firstLineNumber)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_first_line_number(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#setLineCount)
 ///
-/// ``` QTextBlock* self, int count ```
+/// @param self QTextBlock*
+/// @param count int
 void q_textblock_set_line_count(void* self, int count);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#lineCount)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_line_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#begin)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextBlock__iterator* q_textblock_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#end)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextBlock__iterator* q_textblock_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#next)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextBlock* q_textblock_next(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#previous)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 QTextBlock* q_textblock_previous(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#fragmentIndex)
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 int32_t q_textblock_fragment_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock.html#dtor.QTextBlock)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextBlock* self ```
+/// @param self QTextBlock*
 void q_textblock_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextfragment.html
 
 /// q_textfragment_new constructs a new QTextFragment object.
 ///
-///
 QTextFragment* q_textfragment_new();
 
 /// q_textfragment_new2 constructs a new QTextFragment object.
 ///
-/// ``` QTextFragment* o ```
+/// @param o QTextFragment*
 QTextFragment* q_textfragment_new2(void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-eq)
 ///
-/// ``` QTextFragment* self, QTextFragment* o ```
+/// @param self QTextFragment*
+/// @param o QTextFragment*
 void q_textfragment_operator_assign(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#isValid)
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 bool q_textfragment_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-eq-eq)
 ///
-/// ``` QTextFragment* self, QTextFragment* o ```
+/// @param self QTextFragment*
+/// @param o QTextFragment*
 bool q_textfragment_operator_equal(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-not-eq)
 ///
-/// ``` QTextFragment* self, QTextFragment* o ```
+/// @param self QTextFragment*
+/// @param o QTextFragment*
 bool q_textfragment_operator_not_equal(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#operator-lt)
 ///
-/// ``` QTextFragment* self, QTextFragment* o ```
+/// @param self QTextFragment*
+/// @param o QTextFragment*
 bool q_textfragment_operator_lesser(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#position)
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 int32_t q_textfragment_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#length)
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 int32_t q_textfragment_length(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#contains)
 ///
-/// ``` QTextFragment* self, int position ```
+/// @param self QTextFragment*
+/// @param position int
 bool q_textfragment_contains(void* self, int position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#charFormat)
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 QTextCharFormat* q_textfragment_char_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#charFormatIndex)
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 int32_t q_textfragment_char_format_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#text)
 ///
-/// ``` QTextFragment* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextFragment*
 const char* q_textfragment_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#glyphRuns)
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#glyphRuns)
 ///
-/// ``` QTextFragment* self, int from ```
+/// @param self QTextFragment*
+/// @param from int
 libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs1(void* self, int from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#glyphRuns)
 ///
-/// ``` QTextFragment* self, int from, int length ```
+/// @param self QTextFragment*
+/// @param from int
+/// @param length int
 libqt_list /* of QGlyphRun* */ q_textfragment_glyph_runs2(void* self, int from, int length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextfragment.html#dtor.QTextFragment)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextFragment* self ```
+/// @param self QTextFragment*
 void q_textfragment_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextframe-iterator.html
 
 /// q_textframe__iterator_new constructs a new QTextFrame::iterator object.
 ///
-/// ``` QTextFrame__iterator* other ```
+/// @param other QTextFrame__iterator*
 QTextFrame__iterator* q_textframe__iterator_new(void* other);
 
 /// q_textframe__iterator_new2 constructs a new QTextFrame::iterator object and invalidates the source QTextFrame::iterator object.
 ///
-/// ``` QTextFrame__iterator* other ```
+/// @param other QTextFrame__iterator*
 QTextFrame__iterator* q_textframe__iterator_new2(void* other);
 
 /// q_textframe__iterator_new3 constructs a new QTextFrame::iterator object.
-///
 ///
 QTextFrame__iterator* q_textframe__iterator_new3();
 
 /// q_textframe__iterator_new4 constructs a new QTextFrame::iterator object.
 ///
-/// ``` QTextFrame__iterator* param1 ```
+/// @param param1 QTextFrame__iterator*
 QTextFrame__iterator* q_textframe__iterator_new4(void* param1);
 
 /// q_textframe__iterator_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* other ```
+/// @param self QTextFrame__iterator*
+/// @param other QTextFrame__iterator*
 void q_textframe__iterator_copy_assign(void* self, void* other);
 
 /// q_textframe__iterator_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* other ```
+/// @param self QTextFrame__iterator*
+/// @param other QTextFrame__iterator*
 void q_textframe__iterator_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#parentFrame)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#parentFrame)
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 QTextFrame* q_textframe__iterator_parent_frame(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#currentFrame)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#currentFrame)
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 QTextFrame* q_textframe__iterator_current_frame(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#currentBlock)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#currentBlock)
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 QTextBlock* q_textframe__iterator_current_block(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#atEnd)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#atEnd)
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 bool q_textframe__iterator_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-eq-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#operator-eq-eq)
 ///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* o ```
+/// @param self QTextFrame__iterator*
+/// @param o QTextFrame__iterator*
 bool q_textframe__iterator_operator_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-not-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#operator-not-eq)
 ///
-/// ``` QTextFrame__iterator* self, QTextFrame__iterator* o ```
+/// @param self QTextFrame__iterator*
+/// @param o QTextFrame__iterator*
 bool q_textframe__iterator_operator_not_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#operator-2b-2b)
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 QTextFrame__iterator* q_textframe__iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#operator-2b-2b)
 ///
-/// ``` QTextFrame__iterator* self, int param1 ```
+/// @param self QTextFrame__iterator*
+/// @param param1 int
 QTextFrame__iterator* q_textframe__iterator_operator_plus_plus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator--)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#operator--)
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 QTextFrame__iterator* q_textframe__iterator_operator_minus_minus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe__iterator.html#operator--)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextframe-iterator.html#operator--)
 ///
-/// ``` QTextFrame__iterator* self, int param1 ```
+/// @param self QTextFrame__iterator*
+/// @param param1 int
 QTextFrame__iterator* q_textframe__iterator_operator_minus_minus2(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe::iterator.html#dtor.QTextFrame::iterator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextFrame__iterator* self ```
+/// @param self QTextFrame__iterator*
 void q_textframe__iterator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextblock-iterator.html
 
 /// q_textblock__iterator_new constructs a new QTextBlock::iterator object.
 ///
-/// ``` QTextBlock__iterator* other ```
+/// @param other QTextBlock__iterator*
 QTextBlock__iterator* q_textblock__iterator_new(void* other);
 
 /// q_textblock__iterator_new2 constructs a new QTextBlock::iterator object and invalidates the source QTextBlock::iterator object.
 ///
-/// ``` QTextBlock__iterator* other ```
+/// @param other QTextBlock__iterator*
 QTextBlock__iterator* q_textblock__iterator_new2(void* other);
 
 /// q_textblock__iterator_new3 constructs a new QTextBlock::iterator object.
-///
 ///
 QTextBlock__iterator* q_textblock__iterator_new3();
 
 /// q_textblock__iterator_new4 constructs a new QTextBlock::iterator object.
 ///
-/// ``` QTextBlock__iterator* param1 ```
+/// @param param1 QTextBlock__iterator*
 QTextBlock__iterator* q_textblock__iterator_new4(void* param1);
 
 /// q_textblock__iterator_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* other ```
+/// @param self QTextBlock__iterator*
+/// @param other QTextBlock__iterator*
 void q_textblock__iterator_copy_assign(void* self, void* other);
 
 /// q_textblock__iterator_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* other ```
+/// @param self QTextBlock__iterator*
+/// @param other QTextBlock__iterator*
 void q_textblock__iterator_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#fragment)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#fragment)
 ///
-/// ``` QTextBlock__iterator* self ```
+/// @param self QTextBlock__iterator*
 QTextFragment* q_textblock__iterator_fragment(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#atEnd)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#atEnd)
 ///
-/// ``` QTextBlock__iterator* self ```
+/// @param self QTextBlock__iterator*
 bool q_textblock__iterator_at_end(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-eq-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#operator-eq-eq)
 ///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* o ```
+/// @param self QTextBlock__iterator*
+/// @param o QTextBlock__iterator*
 bool q_textblock__iterator_operator_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-not-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#operator-not-eq)
 ///
-/// ``` QTextBlock__iterator* self, QTextBlock__iterator* o ```
+/// @param self QTextBlock__iterator*
+/// @param o QTextBlock__iterator*
 bool q_textblock__iterator_operator_not_equal(void* self, void* o);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#operator-2b-2b)
 ///
-/// ``` QTextBlock__iterator* self ```
+/// @param self QTextBlock__iterator*
 QTextBlock__iterator* q_textblock__iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#operator-2b-2b)
 ///
-/// ``` QTextBlock__iterator* self, int param1 ```
+/// @param self QTextBlock__iterator*
+/// @param param1 int
 QTextBlock__iterator* q_textblock__iterator_operator_plus_plus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator--)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#operator--)
 ///
-/// ``` QTextBlock__iterator* self ```
+/// @param self QTextBlock__iterator*
 QTextBlock__iterator* q_textblock__iterator_operator_minus_minus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock__iterator.html#operator--)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextblock-iterator.html#operator--)
 ///
-/// ``` QTextBlock__iterator* self, int param1 ```
+/// @param self QTextBlock__iterator*
+/// @param param1 int
 QTextBlock__iterator* q_textblock__iterator_operator_minus_minus2(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblock::iterator.html#dtor.QTextBlock::iterator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextBlock__iterator* self ```
+/// @param self QTextBlock__iterator*
 void q_textblock__iterator_delete(void* self);
 
 #endif

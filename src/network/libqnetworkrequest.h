@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,204 +15,238 @@
 
 /// q_networkrequest_new constructs a new QNetworkRequest object.
 ///
-///
 QNetworkRequest* q_networkrequest_new();
 
 /// q_networkrequest_new2 constructs a new QNetworkRequest object.
 ///
-/// ``` QUrl* url ```
+/// @param url QUrl*
 QNetworkRequest* q_networkrequest_new2(void* url);
 
 /// q_networkrequest_new3 constructs a new QNetworkRequest object.
 ///
-/// ``` QNetworkRequest* other ```
+/// @param other QNetworkRequest*
 QNetworkRequest* q_networkrequest_new3(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator-eq)
 ///
-/// ``` QNetworkRequest* self, QNetworkRequest* other ```
+/// @param self QNetworkRequest*
+/// @param other QNetworkRequest*
 void q_networkrequest_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#swap)
 ///
-/// ``` QNetworkRequest* self, QNetworkRequest* other ```
+/// @param self QNetworkRequest*
+/// @param other QNetworkRequest*
 void q_networkrequest_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator-eq-eq)
 ///
-/// ``` QNetworkRequest* self, QNetworkRequest* other ```
+/// @param self QNetworkRequest*
+/// @param other QNetworkRequest*
 bool q_networkrequest_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#operator-not-eq)
 ///
-/// ``` QNetworkRequest* self, QNetworkRequest* other ```
+/// @param self QNetworkRequest*
+/// @param other QNetworkRequest*
 bool q_networkrequest_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#url)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 QUrl* q_networkrequest_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setUrl)
 ///
-/// ``` QNetworkRequest* self, QUrl* url ```
+/// @param self QNetworkRequest*
+/// @param url QUrl*
 void q_networkrequest_set_url(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#headers)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 QHttpHeaders* q_networkrequest_headers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setHeaders)
 ///
-/// ``` QNetworkRequest* self, QHttpHeaders* newHeaders ```
+/// @param self QNetworkRequest*
+/// @param newHeaders QHttpHeaders*
 void q_networkrequest_set_headers(void* self, void* newHeaders);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#header)
 ///
-/// ``` QNetworkRequest* self, enum QNetworkRequest__KnownHeaders header ```
+/// @param self QNetworkRequest*
+/// @param header enum QNetworkRequest__KnownHeaders
 QVariant* q_networkrequest_header(void* self, int64_t header);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setHeader)
 ///
-/// ``` QNetworkRequest* self, enum QNetworkRequest__KnownHeaders header, QVariant* value ```
+/// @param self QNetworkRequest*
+/// @param header enum QNetworkRequest__KnownHeaders
+/// @param value QVariant*
 void q_networkrequest_set_header(void* self, int64_t header, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#hasRawHeader)
 ///
-/// ``` QNetworkRequest* self, char* headerName ```
+/// @param self QNetworkRequest*
+/// @param headerName char*
 bool q_networkrequest_has_raw_header(void* self, char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#rawHeaderList)
 ///
-/// ``` QNetworkRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkRequest*
 const char** q_networkrequest_raw_header_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#rawHeader)
 ///
-/// ``` QNetworkRequest* self, char* headerName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkRequest*
+/// @param headerName char*
 char* q_networkrequest_raw_header(void* self, char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setRawHeader)
 ///
-/// ``` QNetworkRequest* self, const char* headerName, const char* value ```
+/// @param self QNetworkRequest*
+/// @param headerName const char*
+/// @param value const char*
 void q_networkrequest_set_raw_header(void* self, const char* headerName, const char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#attribute)
 ///
-/// ``` QNetworkRequest* self, enum QNetworkRequest__Attribute code ```
+/// @param self QNetworkRequest*
+/// @param code enum QNetworkRequest__Attribute
 QVariant* q_networkrequest_attribute(void* self, int64_t code);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setAttribute)
 ///
-/// ``` QNetworkRequest* self, enum QNetworkRequest__Attribute code, QVariant* value ```
+/// @param self QNetworkRequest*
+/// @param code enum QNetworkRequest__Attribute
+/// @param value QVariant*
 void q_networkrequest_set_attribute(void* self, int64_t code, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#sslConfiguration)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 QSslConfiguration* q_networkrequest_ssl_configuration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setSslConfiguration)
 ///
-/// ``` QNetworkRequest* self, QSslConfiguration* configuration ```
+/// @param self QNetworkRequest*
+/// @param configuration QSslConfiguration*
 void q_networkrequest_set_ssl_configuration(void* self, void* configuration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setOriginatingObject)
 ///
-/// ``` QNetworkRequest* self, QObject* object ```
+/// @param self QNetworkRequest*
+/// @param object QObject*
 void q_networkrequest_set_originating_object(void* self, void* object);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#originatingObject)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 QObject* q_networkrequest_originating_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#priority)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
+///
+/// @return enum QNetworkRequest__Priority
 int64_t q_networkrequest_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setPriority)
 ///
-/// ``` QNetworkRequest* self, enum QNetworkRequest__Priority priority ```
+/// @param self QNetworkRequest*
+/// @param priority enum QNetworkRequest__Priority
 void q_networkrequest_set_priority(void* self, int64_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#maximumRedirectsAllowed)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 int32_t q_networkrequest_maximum_redirects_allowed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setMaximumRedirectsAllowed)
 ///
-/// ``` QNetworkRequest* self, int maximumRedirectsAllowed ```
+/// @param self QNetworkRequest*
+/// @param maximumRedirectsAllowed int
 void q_networkrequest_set_maximum_redirects_allowed(void* self, int maximumRedirectsAllowed);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#peerVerifyName)
 ///
-/// ``` QNetworkRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkRequest*
 const char* q_networkrequest_peer_verify_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setPeerVerifyName)
 ///
-/// ``` QNetworkRequest* self, const char* peerName ```
+/// @param self QNetworkRequest*
+/// @param peerName const char*
 void q_networkrequest_set_peer_verify_name(void* self, const char* peerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#http1Configuration)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 QHttp1Configuration* q_networkrequest_http1_configuration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setHttp1Configuration)
 ///
-/// ``` QNetworkRequest* self, QHttp1Configuration* configuration ```
+/// @param self QNetworkRequest*
+/// @param configuration QHttp1Configuration*
 void q_networkrequest_set_http1_configuration(void* self, void* configuration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#http2Configuration)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 QHttp2Configuration* q_networkrequest_http2_configuration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setHttp2Configuration)
 ///
-/// ``` QNetworkRequest* self, QHttp2Configuration* configuration ```
+/// @param self QNetworkRequest*
+/// @param configuration QHttp2Configuration*
 void q_networkrequest_set_http2_configuration(void* self, void* configuration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#decompressedSafetyCheckThreshold)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 long long q_networkrequest_decompressed_safety_check_threshold(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setDecompressedSafetyCheckThreshold)
 ///
-/// ``` QNetworkRequest* self, long long threshold ```
+/// @param self QNetworkRequest*
+/// @param threshold long long
 void q_networkrequest_set_decompressed_safety_check_threshold(void* self, long long threshold);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#transferTimeout)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 int32_t q_networkrequest_transfer_timeout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setTransferTimeout)
 ///
-/// ``` QNetworkRequest* self, int timeout ```
+/// @param self QNetworkRequest*
+/// @param timeout int
 void q_networkrequest_set_transfer_timeout(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setTransferTimeout)
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 void q_networkrequest_set_transfer_timeout2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#attribute)
 ///
-/// ``` QNetworkRequest* self, enum QNetworkRequest__Attribute code, QVariant* defaultValue ```
+/// @param self QNetworkRequest*
+/// @param code enum QNetworkRequest__Attribute
+/// @param defaultValue QVariant*
 QVariant* q_networkrequest_attribute2(void* self, int64_t code, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#dtor.QNetworkRequest)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QNetworkRequest* self ```
+/// @param self QNetworkRequest*
 void q_networkrequest_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qnetworkrequest.html#types

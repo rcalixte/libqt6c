@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,49 +15,52 @@
 
 /// q_webengineregisterprotocolhandlerrequest_new constructs a new QWebEngineRegisterProtocolHandlerRequest object.
 ///
-///
 QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new();
 
 /// q_webengineregisterprotocolhandlerrequest_new2 constructs a new QWebEngineRegisterProtocolHandlerRequest object.
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* param1 ```
+/// @param param1 QWebEngineRegisterProtocolHandlerRequest*
 QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#accept)
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self ```
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
 void q_webengineregisterprotocolhandlerrequest_accept(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#reject)
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self ```
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
 void q_webengineregisterprotocolhandlerrequest_reject(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#origin)
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self ```
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
 QUrl* q_webengineregisterprotocolhandlerrequest_origin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#scheme)
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
 const char* q_webengineregisterprotocolhandlerrequest_scheme(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-eq-eq)
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self, QWebEngineRegisterProtocolHandlerRequest* that ```
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param that QWebEngineRegisterProtocolHandlerRequest*
 bool q_webengineregisterprotocolhandlerrequest_operator_equal(void* self, void* that);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#operator-not-eq)
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self, QWebEngineRegisterProtocolHandlerRequest* that ```
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
+/// @param that QWebEngineRegisterProtocolHandlerRequest*
 bool q_webengineregisterprotocolhandlerrequest_operator_not_equal(void* self, void* that);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineregisterprotocolhandlerrequest.html#dtor.QWebEngineRegisterProtocolHandlerRequest)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineRegisterProtocolHandlerRequest* self ```
+/// @param self QWebEngineRegisterProtocolHandlerRequest*
 void q_webengineregisterprotocolhandlerrequest_delete(void* self);
 
 #endif

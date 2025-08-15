@@ -63,8 +63,8 @@ int32_t q_textdocument_metacall(void* self, int64_t param1, int param2, void* pa
     return QTextDocument_Metacall((QTextDocument*)self, param1, param2, param3);
 }
 
-void q_textdocument_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTextDocument_OnMetacall((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTextDocument_OnMetacall((QTextDocument*)self, (intptr_t)callback);
 }
 
 int32_t q_textdocument_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -90,8 +90,8 @@ void q_textdocument_clear(void* self) {
     QTextDocument_Clear((QTextDocument*)self);
 }
 
-void q_textdocument_on_clear(void* self, void (*slot)()) {
-    QTextDocument_OnClear((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_clear(void* self, void (*callback)()) {
+    QTextDocument_OnClear((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_qbase_clear(void* self) {
@@ -445,80 +445,80 @@ void q_textdocument_contents_change(void* self, int from, int charsRemoved, int 
     QTextDocument_ContentsChange((QTextDocument*)self, from, charsRemoved, charsAdded);
 }
 
-void q_textdocument_on_contents_change(void* self, void (*slot)(void*, int, int, int)) {
-    QTextDocument_Connect_ContentsChange((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_contents_change(void* self, void (*callback)(void*, int, int, int)) {
+    QTextDocument_Connect_ContentsChange((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_contents_changed(void* self) {
     QTextDocument_ContentsChanged((QTextDocument*)self);
 }
 
-void q_textdocument_on_contents_changed(void* self, void (*slot)(void*)) {
-    QTextDocument_Connect_ContentsChanged((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_contents_changed(void* self, void (*callback)(void*)) {
+    QTextDocument_Connect_ContentsChanged((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_undo_available(void* self, bool param1) {
     QTextDocument_UndoAvailable((QTextDocument*)self, param1);
 }
 
-void q_textdocument_on_undo_available(void* self, void (*slot)(void*, bool)) {
-    QTextDocument_Connect_UndoAvailable((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_undo_available(void* self, void (*callback)(void*, bool)) {
+    QTextDocument_Connect_UndoAvailable((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_redo_available(void* self, bool param1) {
     QTextDocument_RedoAvailable((QTextDocument*)self, param1);
 }
 
-void q_textdocument_on_redo_available(void* self, void (*slot)(void*, bool)) {
-    QTextDocument_Connect_RedoAvailable((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_redo_available(void* self, void (*callback)(void*, bool)) {
+    QTextDocument_Connect_RedoAvailable((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_undo_command_added(void* self) {
     QTextDocument_UndoCommandAdded((QTextDocument*)self);
 }
 
-void q_textdocument_on_undo_command_added(void* self, void (*slot)(void*)) {
-    QTextDocument_Connect_UndoCommandAdded((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_undo_command_added(void* self, void (*callback)(void*)) {
+    QTextDocument_Connect_UndoCommandAdded((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_modification_changed(void* self, bool m) {
     QTextDocument_ModificationChanged((QTextDocument*)self, m);
 }
 
-void q_textdocument_on_modification_changed(void* self, void (*slot)(void*, bool)) {
-    QTextDocument_Connect_ModificationChanged((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_modification_changed(void* self, void (*callback)(void*, bool)) {
+    QTextDocument_Connect_ModificationChanged((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_cursor_position_changed(void* self, void* cursor) {
     QTextDocument_CursorPositionChanged((QTextDocument*)self, (QTextCursor*)cursor);
 }
 
-void q_textdocument_on_cursor_position_changed(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_Connect_CursorPositionChanged((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_cursor_position_changed(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_Connect_CursorPositionChanged((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_block_count_changed(void* self, int newBlockCount) {
     QTextDocument_BlockCountChanged((QTextDocument*)self, newBlockCount);
 }
 
-void q_textdocument_on_block_count_changed(void* self, void (*slot)(void*, int)) {
-    QTextDocument_Connect_BlockCountChanged((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_block_count_changed(void* self, void (*callback)(void*, int)) {
+    QTextDocument_Connect_BlockCountChanged((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_base_url_changed(void* self, void* url) {
     QTextDocument_BaseUrlChanged((QTextDocument*)self, (QUrl*)url);
 }
 
-void q_textdocument_on_base_url_changed(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_Connect_BaseUrlChanged((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_base_url_changed(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_Connect_BaseUrlChanged((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_document_layout_changed(void* self) {
     QTextDocument_DocumentLayoutChanged((QTextDocument*)self);
 }
 
-void q_textdocument_on_document_layout_changed(void* self, void (*slot)(void*)) {
-    QTextDocument_Connect_DocumentLayoutChanged((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_document_layout_changed(void* self, void (*callback)(void*)) {
+    QTextDocument_Connect_DocumentLayoutChanged((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_undo2(void* self) {
@@ -541,8 +541,8 @@ QTextObject* q_textdocument_create_object(void* self, void* f) {
     return QTextDocument_CreateObject((QTextDocument*)self, (QTextFormat*)f);
 }
 
-void q_textdocument_on_create_object(void* self, QTextObject* (*slot)(void*, void*)) {
-    QTextDocument_OnCreateObject((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_create_object(void* self, QTextObject* (*callback)(void*, void*)) {
+    QTextDocument_OnCreateObject((QTextDocument*)self, (intptr_t)callback);
 }
 
 QTextObject* q_textdocument_qbase_create_object(void* self, void* f) {
@@ -553,8 +553,8 @@ QVariant* q_textdocument_load_resource(void* self, int typeVal, void* name) {
     return QTextDocument_LoadResource((QTextDocument*)self, typeVal, (QUrl*)name);
 }
 
-void q_textdocument_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*)) {
-    QTextDocument_OnLoadResource((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*)) {
+    QTextDocument_OnLoadResource((QTextDocument*)self, (intptr_t)callback);
 }
 
 QVariant* q_textdocument_qbase_load_resource(void* self, int typeVal, void* name) {
@@ -730,12 +730,16 @@ const char** q_textdocument_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textdocument_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -753,8 +757,8 @@ void q_textdocument_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_textdocument_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_textdocument_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_textdocument_parent(void* self) {
@@ -789,8 +793,8 @@ void q_textdocument_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_textdocument_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_textdocument_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_textdocument_event(void* self, void* event) {
@@ -801,8 +805,8 @@ bool q_textdocument_qbase_event(void* self, void* event) {
     return QTextDocument_QBaseEvent((QTextDocument*)self, (QEvent*)event);
 }
 
-void q_textdocument_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTextDocument_OnEvent((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTextDocument_OnEvent((QTextDocument*)self, (intptr_t)callback);
 }
 
 bool q_textdocument_event_filter(void* self, void* watched, void* event) {
@@ -813,8 +817,8 @@ bool q_textdocument_qbase_event_filter(void* self, void* watched, void* event) {
     return QTextDocument_QBaseEventFilter((QTextDocument*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_textdocument_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTextDocument_OnEventFilter((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTextDocument_OnEventFilter((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_timer_event(void* self, void* event) {
@@ -825,8 +829,8 @@ void q_textdocument_qbase_timer_event(void* self, void* event) {
     QTextDocument_QBaseTimerEvent((QTextDocument*)self, (QTimerEvent*)event);
 }
 
-void q_textdocument_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_OnTimerEvent((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_OnTimerEvent((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_child_event(void* self, void* event) {
@@ -837,8 +841,8 @@ void q_textdocument_qbase_child_event(void* self, void* event) {
     QTextDocument_QBaseChildEvent((QTextDocument*)self, (QChildEvent*)event);
 }
 
-void q_textdocument_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_OnChildEvent((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_OnChildEvent((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_custom_event(void* self, void* event) {
@@ -849,8 +853,8 @@ void q_textdocument_qbase_custom_event(void* self, void* event) {
     QTextDocument_QBaseCustomEvent((QTextDocument*)self, (QEvent*)event);
 }
 
-void q_textdocument_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_OnCustomEvent((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_OnCustomEvent((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_connect_notify(void* self, void* signal) {
@@ -861,8 +865,8 @@ void q_textdocument_qbase_connect_notify(void* self, void* signal) {
     QTextDocument_QBaseConnectNotify((QTextDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_textdocument_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_OnConnectNotify((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_OnConnectNotify((QTextDocument*)self, (intptr_t)callback);
 }
 
 void q_textdocument_disconnect_notify(void* self, void* signal) {
@@ -873,8 +877,8 @@ void q_textdocument_qbase_disconnect_notify(void* self, void* signal) {
     QTextDocument_QBaseDisconnectNotify((QTextDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_textdocument_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTextDocument_OnDisconnectNotify((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTextDocument_OnDisconnectNotify((QTextDocument*)self, (intptr_t)callback);
 }
 
 QObject* q_textdocument_sender(void* self) {
@@ -885,8 +889,8 @@ QObject* q_textdocument_qbase_sender(void* self) {
     return QTextDocument_QBaseSender((QTextDocument*)self);
 }
 
-void q_textdocument_on_sender(void* self, QObject* (*slot)()) {
-    QTextDocument_OnSender((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_sender(void* self, QObject* (*callback)()) {
+    QTextDocument_OnSender((QTextDocument*)self, (intptr_t)callback);
 }
 
 int32_t q_textdocument_sender_signal_index(void* self) {
@@ -897,8 +901,8 @@ int32_t q_textdocument_qbase_sender_signal_index(void* self) {
     return QTextDocument_QBaseSenderSignalIndex((QTextDocument*)self);
 }
 
-void q_textdocument_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTextDocument_OnSenderSignalIndex((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTextDocument_OnSenderSignalIndex((QTextDocument*)self, (intptr_t)callback);
 }
 
 int32_t q_textdocument_receivers(void* self, const char* signal) {
@@ -909,8 +913,8 @@ int32_t q_textdocument_qbase_receivers(void* self, const char* signal) {
     return QTextDocument_QBaseReceivers((QTextDocument*)self, signal);
 }
 
-void q_textdocument_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTextDocument_OnReceivers((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTextDocument_OnReceivers((QTextDocument*)self, (intptr_t)callback);
 }
 
 bool q_textdocument_is_signal_connected(void* self, void* signal) {
@@ -921,12 +925,12 @@ bool q_textdocument_qbase_is_signal_connected(void* self, void* signal) {
     return QTextDocument_QBaseIsSignalConnected((QTextDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_textdocument_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTextDocument_OnIsSignalConnected((QTextDocument*)self, (intptr_t)slot);
+void q_textdocument_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTextDocument_OnIsSignalConnected((QTextDocument*)self, (intptr_t)callback);
 }
 
-void q_textdocument_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_textdocument_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_textdocument_delete(void* self) {

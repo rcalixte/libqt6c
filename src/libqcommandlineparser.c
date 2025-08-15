@@ -59,12 +59,17 @@ void q_commandlineparser_clear_positional_arguments(void* self) {
 
 void q_commandlineparser_process(void* self, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_process");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QCommandLineParser_Process((QCommandLineParser*)self, arguments_list);
+    free(arguments_qstr);
 }
 
 void q_commandlineparser_process2(void* self, void* app) {
@@ -73,12 +78,18 @@ void q_commandlineparser_process2(void* self, void* app) {
 
 bool q_commandlineparser_parse(void* self, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_parse");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
-    return QCommandLineParser_Parse((QCommandLineParser*)self, arguments_list);
+    bool _out = QCommandLineParser_Parse((QCommandLineParser*)self, arguments_list);
+    free(arguments_qstr);
+    return _out;
 }
 
 const char* q_commandlineparser_error_text(void* self) {
@@ -103,12 +114,16 @@ const char** q_commandlineparser_values(void* self, const char* name) {
     libqt_list _arr = QCommandLineParser_Values((QCommandLineParser*)self, qstring(name));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_values");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -129,12 +144,16 @@ const char** q_commandlineparser_values2(void* self, void* option) {
     libqt_list _arr = QCommandLineParser_Values2((QCommandLineParser*)self, (QCommandLineOption*)option);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_values2");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -144,12 +163,16 @@ const char** q_commandlineparser_positional_arguments(void* self) {
     libqt_list _arr = QCommandLineParser_PositionalArguments((QCommandLineParser*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_positional_arguments");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -159,12 +182,16 @@ const char** q_commandlineparser_option_names(void* self) {
     libqt_list _arr = QCommandLineParser_OptionNames((QCommandLineParser*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_option_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -174,12 +201,16 @@ const char** q_commandlineparser_unknown_option_names(void* self) {
     libqt_list _arr = QCommandLineParser_UnknownOptionNames((QCommandLineParser*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineparser_unknown_option_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

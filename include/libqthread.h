@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,517 +15,583 @@
 
 /// q_thread_new constructs a new QThread object.
 ///
-///
 QThread* q_thread_new();
 
 /// q_thread_new2 constructs a new QThread object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QThread* q_thread_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 const QMetaObject* q_thread_meta_object(void* self);
 
-/// ``` QThread* self, const char* param1 ```
+/// @param self QThread*
+/// @param param1 const char*
 void* q_thread_metacast(void* self, const char* param1);
 
-/// ``` QThread* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QThread*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_thread_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QThread* self, int32_t (*slot)(QThread*, enum QMetaObject__Call, int, void*) ```
-void q_thread_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QThread*
+/// @param callback int32_t fn(QThread*, enum QMetaObject__Call, int, void*)
+void q_thread_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QThread* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QThread*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_thread_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_thread_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#currentThreadId)
-///
 ///
 void* q_thread_current_thread_id();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#currentThread)
 ///
-///
 QThread* q_thread_current_thread();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isMainThread)
-///
 ///
 bool q_thread_is_main_thread();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#idealThreadCount)
 ///
-///
 int32_t q_thread_ideal_thread_count();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#yieldCurrentThread)
-///
 ///
 void q_thread_yield_current_thread();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#setPriority)
 ///
-/// ``` QThread* self, enum QThread__Priority priority ```
+/// @param self QThread*
+/// @param priority enum QThread__Priority
 void q_thread_set_priority(void* self, int64_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#priority)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
+///
+/// @return enum QThread__Priority
 int64_t q_thread_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isFinished)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isRunning)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_running(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#requestInterruption)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_request_interruption(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isInterruptionRequested)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_interruption_requested(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#setStackSize)
 ///
-/// ``` QThread* self, uint32_t stackSize ```
+/// @param self QThread*
+/// @param stackSize uint32_t
 void q_thread_set_stack_size(void* self, uint32_t stackSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#stackSize)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 uint32_t q_thread_stack_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#eventDispatcher)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 QAbstractEventDispatcher* q_thread_event_dispatcher(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#setEventDispatcher)
 ///
-/// ``` QThread* self, QAbstractEventDispatcher* eventDispatcher ```
+/// @param self QThread*
+/// @param eventDispatcher QAbstractEventDispatcher*
 void q_thread_set_event_dispatcher(void* self, void* eventDispatcher);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#event)
 ///
-/// ``` QThread* self, QEvent* event ```
+/// @param self QThread*
+/// @param event QEvent*
 bool q_thread_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QThread* self, bool (*slot)(QThread*, QEvent*) ```
-void q_thread_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback bool fn(QThread*, QEvent*)
+void q_thread_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QThread* self, QEvent* event ```
+/// @param self QThread*
+/// @param event QEvent*
 bool q_thread_qbase_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#loopLevel)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 int32_t q_thread_loop_level(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isCurrentThread)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_current_thread(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#start)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#terminate)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_terminate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exit)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_exit(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#quit)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_quit(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#wait)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_wait(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#wait)
 ///
-/// ``` QThread* self, uint64_t time ```
+/// @param self QThread*
+/// @param time uint64_t
 bool q_thread_wait2(void* self, uint64_t time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#sleep)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 void q_thread_sleep(uint64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#msleep)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 void q_thread_msleep(uint64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#usleep)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 void q_thread_usleep(uint64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#run)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_run(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#run)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QThread* self, void (*slot)() ```
-void q_thread_on_run(void* self, void (*slot)());
+/// @param self QThread*
+/// @param callback void fn()
+void q_thread_on_run(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#run)
 ///
 /// Base class method implementation
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_qbase_run(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exec)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 int32_t q_thread_exec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exec)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QThread* self, int32_t (*slot)() ```
-void q_thread_on_exec(void* self, int32_t (*slot)());
+/// @param self QThread*
+/// @param callback int32_t fn()
+void q_thread_on_exec(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exec)
 ///
 /// Base class method implementation
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 int32_t q_thread_qbase_exec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_thread_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_thread_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#start)
 ///
-/// ``` QThread* self, enum QThread__Priority param1 ```
+/// @param self QThread*
+/// @param param1 enum QThread__Priority
 void q_thread_start1(void* self, int64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exit)
 ///
-/// ``` QThread* self, int retcode ```
+/// @param self QThread*
+/// @param retcode int
 void q_thread_exit1(void* self, int retcode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#wait)
 ///
-/// ``` QThread* self, QDeadlineTimer* deadline ```
+/// @param self QThread*
+/// @param deadline QDeadlineTimer*
 bool q_thread_wait1(void* self, void* deadline);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QThread* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QThread*
 const char* q_thread_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QThread* self, char* name ```
+/// @param self QThread*
+/// @param name char*
 void q_thread_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 bool q_thread_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QThread* self, bool b ```
+/// @param self QThread*
+/// @param b bool
 bool q_thread_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 QThread* q_thread_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QThread* self, QThread* thread ```
+/// @param self QThread*
+/// @param thread QThread*
 bool q_thread_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QThread* self, int interval ```
+/// @param self QThread*
+/// @param interval int
 int32_t q_thread_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QThread* self, int id ```
+/// @param self QThread*
+/// @param id int
 void q_thread_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QThread* self, enum Qt__TimerId id ```
+/// @param self QThread*
+/// @param id enum Qt__TimerId
 void q_thread_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 libqt_list /* of QObject* */ q_thread_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QThread* self, QObject* parent ```
+/// @param self QThread*
+/// @param parent QObject*
 void q_thread_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QThread* self, QObject* filterObj ```
+/// @param self QThread*
+/// @param filterObj QObject*
 void q_thread_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QThread* self, QObject* obj ```
+/// @param self QThread*
+/// @param obj QObject*
 void q_thread_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_thread_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QThread* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QThread*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_thread_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_thread_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_thread_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QThread* self, const char* name, QVariant* value ```
+/// @param self QThread*
+/// @param name const char*
+/// @param value QVariant*
 bool q_thread_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QThread* self, const char* name ```
+/// @param self QThread*
+/// @param name const char*
 QVariant* q_thread_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QThread* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QThread*
 const char** q_thread_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 QBindingStorage* q_thread_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 const QBindingStorage* q_thread_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThread* self, void (*slot)(QThread*) ```
-void q_thread_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*)
+void q_thread_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 QObject* q_thread_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QThread* self, const char* classname ```
+/// @param self QThread*
+/// @param classname const char*
 bool q_thread_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QThread* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QThread*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_thread_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QThread* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QThread*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_thread_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_thread_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QThread* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QThread*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_thread_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThread* self, QObject* param1 ```
+/// @param self QThread*
+/// @param param1 QObject*
 void q_thread_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThread* self, void (*slot)(QThread*, QObject*) ```
-void q_thread_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, QObject*)
+void q_thread_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -534,7 +599,9 @@ void q_thread_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QObject* watched, QEvent* event ```
+/// @param self QThread*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_thread_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -543,7 +610,9 @@ bool q_thread_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QObject* watched, QEvent* event ```
+/// @param self QThread*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_thread_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -552,8 +621,9 @@ bool q_thread_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, bool (*slot)(QThread*, QObject*, QEvent*) ```
-void q_thread_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QThread*
+/// @param callback bool fn(QThread*, QObject*, QEvent*)
+void q_thread_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -561,7 +631,8 @@ void q_thread_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QTimerEvent* event ```
+/// @param self QThread*
+/// @param event QTimerEvent*
 void q_thread_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -570,7 +641,8 @@ void q_thread_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QTimerEvent* event ```
+/// @param self QThread*
+/// @param event QTimerEvent*
 void q_thread_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -579,8 +651,9 @@ void q_thread_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, void (*slot)(QThread*, QTimerEvent*) ```
-void q_thread_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, QTimerEvent*)
+void q_thread_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -588,7 +661,8 @@ void q_thread_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QChildEvent* event ```
+/// @param self QThread*
+/// @param event QChildEvent*
 void q_thread_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -597,7 +671,8 @@ void q_thread_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QChildEvent* event ```
+/// @param self QThread*
+/// @param event QChildEvent*
 void q_thread_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -606,8 +681,9 @@ void q_thread_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, void (*slot)(QThread*, QChildEvent*) ```
-void q_thread_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, QChildEvent*)
+void q_thread_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -615,7 +691,8 @@ void q_thread_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QEvent* event ```
+/// @param self QThread*
+/// @param event QEvent*
 void q_thread_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -624,7 +701,8 @@ void q_thread_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QEvent* event ```
+/// @param self QThread*
+/// @param event QEvent*
 void q_thread_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -633,8 +711,9 @@ void q_thread_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, void (*slot)(QThread*, QEvent*) ```
-void q_thread_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, QEvent*)
+void q_thread_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -642,7 +721,8 @@ void q_thread_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QMetaMethod* signal ```
+/// @param self QThread*
+/// @param signal QMetaMethod*
 void q_thread_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -651,7 +731,8 @@ void q_thread_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QMetaMethod* signal ```
+/// @param self QThread*
+/// @param signal QMetaMethod*
 void q_thread_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -660,8 +741,9 @@ void q_thread_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, void (*slot)(QThread*, QMetaMethod*) ```
-void q_thread_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, QMetaMethod*)
+void q_thread_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -669,7 +751,8 @@ void q_thread_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QMetaMethod* signal ```
+/// @param self QThread*
+/// @param signal QMetaMethod*
 void q_thread_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -678,7 +761,8 @@ void q_thread_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QMetaMethod* signal ```
+/// @param self QThread*
+/// @param signal QMetaMethod*
 void q_thread_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -687,8 +771,9 @@ void q_thread_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, void (*slot)(QThread*, QMetaMethod*) ```
-void q_thread_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, QMetaMethod*)
+void q_thread_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -696,7 +781,7 @@ void q_thread_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 QObject* q_thread_sender(void* self);
 
 /// Inherited from QObject
@@ -705,7 +790,7 @@ QObject* q_thread_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 QObject* q_thread_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -714,8 +799,9 @@ QObject* q_thread_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, QObject* (*slot)() ```
-void q_thread_on_sender(void* self, QObject* (*slot)());
+/// @param self QThread*
+/// @param callback QObject* fn()
+void q_thread_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -723,7 +809,7 @@ void q_thread_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 int32_t q_thread_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -732,7 +818,7 @@ int32_t q_thread_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 int32_t q_thread_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -741,8 +827,9 @@ int32_t q_thread_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, int32_t (*slot)() ```
-void q_thread_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QThread*
+/// @param callback int32_t fn()
+void q_thread_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -750,7 +837,8 @@ void q_thread_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, const char* signal ```
+/// @param self QThread*
+/// @param signal const char*
 int32_t q_thread_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -759,7 +847,8 @@ int32_t q_thread_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, const char* signal ```
+/// @param self QThread*
+/// @param signal const char*
 int32_t q_thread_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -768,8 +857,9 @@ int32_t q_thread_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, int32_t (*slot)(QThread*, const char*) ```
-void q_thread_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QThread*
+/// @param callback int32_t fn(QThread*, const char*)
+void q_thread_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -777,7 +867,8 @@ void q_thread_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThread* self, QMetaMethod* signal ```
+/// @param self QThread*
+/// @param signal QMetaMethod*
 bool q_thread_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -786,7 +877,8 @@ bool q_thread_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThread* self, QMetaMethod* signal ```
+/// @param self QThread*
+/// @param signal QMetaMethod*
 bool q_thread_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -795,22 +887,25 @@ bool q_thread_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThread* self, bool (*slot)(QThread*, QMetaMethod*) ```
-void q_thread_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QThread*
+/// @param callback bool fn(QThread*, QMetaMethod*)
+void q_thread_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#started)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QThread* self, void (*slot)(QThread*) ```
-void q_thread_on_started(void* self, void (*slot)(void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*)
+void q_thread_on_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QThread* self, void (*slot)(QThread*) ```
-void q_thread_on_finished(void* self, void (*slot)(void*));
+/// @param self QThread*
+/// @param callback void fn(QThread*)
+void q_thread_on_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -818,14 +913,15 @@ void q_thread_on_finished(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QThread* self, void (*slot)(QThread*, const char*) ```
-void q_thread_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QThread*
+/// @param callback void fn(QThread*, const char*)
+void q_thread_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#dtor.QThread)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QThread* self ```
+/// @param self QThread*
 void q_thread_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qthread.html#types

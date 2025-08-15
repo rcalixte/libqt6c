@@ -51,8 +51,8 @@ int32_t q_graphicsview_metacall(void* self, int64_t param1, int param2, void* pa
     return QGraphicsView_Metacall((QGraphicsView*)self, param1, param2, param3);
 }
 
-void q_graphicsview_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QGraphicsView_OnMetacall((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QGraphicsView_OnMetacall((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -70,8 +70,8 @@ QSize* q_graphicsview_size_hint(void* self) {
     return QGraphicsView_SizeHint((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_size_hint(void* self, QSize* (*slot)()) {
-    QGraphicsView_OnSizeHint((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_size_hint(void* self, QSize* (*callback)()) {
+    QGraphicsView_OnSizeHint((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QSize* q_graphicsview_qbase_size_hint(void* self) {
@@ -336,8 +336,8 @@ QVariant* q_graphicsview_input_method_query(void* self, int64_t query) {
     return QGraphicsView_InputMethodQuery((QGraphicsView*)self, query);
 }
 
-void q_graphicsview_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QGraphicsView_OnInputMethodQuery((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QGraphicsView_OnInputMethodQuery((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QVariant* q_graphicsview_qbase_input_method_query(void* self, int64_t query) {
@@ -376,16 +376,16 @@ void q_graphicsview_rubber_band_changed(void* self, void* viewportRect, void* fr
     QGraphicsView_RubberBandChanged((QGraphicsView*)self, (QRect*)viewportRect, (QPointF*)fromScenePoint, (QPointF*)toScenePoint);
 }
 
-void q_graphicsview_on_rubber_band_changed(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QGraphicsView_Connect_RubberBandChanged((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_rubber_band_changed(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QGraphicsView_Connect_RubberBandChanged((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_setup_viewport(void* self, void* widget) {
     QGraphicsView_SetupViewport((QGraphicsView*)self, (QWidget*)widget);
 }
 
-void q_graphicsview_on_setup_viewport(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnSetupViewport((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnSetupViewport((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_setup_viewport(void* self, void* widget) {
@@ -396,8 +396,8 @@ bool q_graphicsview_event(void* self, void* event) {
     return QGraphicsView_Event((QGraphicsView*)self, (QEvent*)event);
 }
 
-void q_graphicsview_on_event(void* self, bool (*slot)(void*, void*)) {
-    QGraphicsView_OnEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_event(void* self, bool (*callback)(void*, void*)) {
+    QGraphicsView_OnEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_qbase_event(void* self, void* event) {
@@ -408,8 +408,8 @@ bool q_graphicsview_viewport_event(void* self, void* event) {
     return QGraphicsView_ViewportEvent((QGraphicsView*)self, (QEvent*)event);
 }
 
-void q_graphicsview_on_viewport_event(void* self, bool (*slot)(void*, void*)) {
-    QGraphicsView_OnViewportEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
+    QGraphicsView_OnViewportEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_qbase_viewport_event(void* self, void* event) {
@@ -420,8 +420,8 @@ void q_graphicsview_context_menu_event(void* self, void* event) {
     QGraphicsView_ContextMenuEvent((QGraphicsView*)self, (QContextMenuEvent*)event);
 }
 
-void q_graphicsview_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnContextMenuEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnContextMenuEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_context_menu_event(void* self, void* event) {
@@ -432,8 +432,8 @@ void q_graphicsview_drag_enter_event(void* self, void* event) {
     QGraphicsView_DragEnterEvent((QGraphicsView*)self, (QDragEnterEvent*)event);
 }
 
-void q_graphicsview_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnDragEnterEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnDragEnterEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_drag_enter_event(void* self, void* event) {
@@ -444,8 +444,8 @@ void q_graphicsview_drag_leave_event(void* self, void* event) {
     QGraphicsView_DragLeaveEvent((QGraphicsView*)self, (QDragLeaveEvent*)event);
 }
 
-void q_graphicsview_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnDragLeaveEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnDragLeaveEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_drag_leave_event(void* self, void* event) {
@@ -456,8 +456,8 @@ void q_graphicsview_drag_move_event(void* self, void* event) {
     QGraphicsView_DragMoveEvent((QGraphicsView*)self, (QDragMoveEvent*)event);
 }
 
-void q_graphicsview_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnDragMoveEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnDragMoveEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_drag_move_event(void* self, void* event) {
@@ -468,8 +468,8 @@ void q_graphicsview_drop_event(void* self, void* event) {
     QGraphicsView_DropEvent((QGraphicsView*)self, (QDropEvent*)event);
 }
 
-void q_graphicsview_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnDropEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnDropEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_drop_event(void* self, void* event) {
@@ -480,8 +480,8 @@ void q_graphicsview_focus_in_event(void* self, void* event) {
     QGraphicsView_FocusInEvent((QGraphicsView*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsview_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnFocusInEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnFocusInEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_focus_in_event(void* self, void* event) {
@@ -492,8 +492,8 @@ bool q_graphicsview_focus_next_prev_child(void* self, bool next) {
     return QGraphicsView_FocusNextPrevChild((QGraphicsView*)self, next);
 }
 
-void q_graphicsview_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QGraphicsView_OnFocusNextPrevChild((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QGraphicsView_OnFocusNextPrevChild((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_qbase_focus_next_prev_child(void* self, bool next) {
@@ -504,8 +504,8 @@ void q_graphicsview_focus_out_event(void* self, void* event) {
     QGraphicsView_FocusOutEvent((QGraphicsView*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsview_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnFocusOutEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnFocusOutEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_focus_out_event(void* self, void* event) {
@@ -516,8 +516,8 @@ void q_graphicsview_key_press_event(void* self, void* event) {
     QGraphicsView_KeyPressEvent((QGraphicsView*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsview_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnKeyPressEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnKeyPressEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_key_press_event(void* self, void* event) {
@@ -528,8 +528,8 @@ void q_graphicsview_key_release_event(void* self, void* event) {
     QGraphicsView_KeyReleaseEvent((QGraphicsView*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsview_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnKeyReleaseEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnKeyReleaseEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_key_release_event(void* self, void* event) {
@@ -540,8 +540,8 @@ void q_graphicsview_mouse_double_click_event(void* self, void* event) {
     QGraphicsView_MouseDoubleClickEvent((QGraphicsView*)self, (QMouseEvent*)event);
 }
 
-void q_graphicsview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnMouseDoubleClickEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnMouseDoubleClickEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_mouse_double_click_event(void* self, void* event) {
@@ -552,8 +552,8 @@ void q_graphicsview_mouse_press_event(void* self, void* event) {
     QGraphicsView_MousePressEvent((QGraphicsView*)self, (QMouseEvent*)event);
 }
 
-void q_graphicsview_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnMousePressEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnMousePressEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_mouse_press_event(void* self, void* event) {
@@ -564,8 +564,8 @@ void q_graphicsview_mouse_move_event(void* self, void* event) {
     QGraphicsView_MouseMoveEvent((QGraphicsView*)self, (QMouseEvent*)event);
 }
 
-void q_graphicsview_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnMouseMoveEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnMouseMoveEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_mouse_move_event(void* self, void* event) {
@@ -576,8 +576,8 @@ void q_graphicsview_mouse_release_event(void* self, void* event) {
     QGraphicsView_MouseReleaseEvent((QGraphicsView*)self, (QMouseEvent*)event);
 }
 
-void q_graphicsview_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnMouseReleaseEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnMouseReleaseEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_mouse_release_event(void* self, void* event) {
@@ -588,8 +588,8 @@ void q_graphicsview_wheel_event(void* self, void* event) {
     QGraphicsView_WheelEvent((QGraphicsView*)self, (QWheelEvent*)event);
 }
 
-void q_graphicsview_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnWheelEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnWheelEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_wheel_event(void* self, void* event) {
@@ -600,8 +600,8 @@ void q_graphicsview_paint_event(void* self, void* event) {
     QGraphicsView_PaintEvent((QGraphicsView*)self, (QPaintEvent*)event);
 }
 
-void q_graphicsview_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnPaintEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnPaintEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_paint_event(void* self, void* event) {
@@ -612,8 +612,8 @@ void q_graphicsview_resize_event(void* self, void* event) {
     QGraphicsView_ResizeEvent((QGraphicsView*)self, (QResizeEvent*)event);
 }
 
-void q_graphicsview_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnResizeEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnResizeEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_resize_event(void* self, void* event) {
@@ -624,8 +624,8 @@ void q_graphicsview_scroll_contents_by(void* self, int dx, int dy) {
     QGraphicsView_ScrollContentsBy((QGraphicsView*)self, dx, dy);
 }
 
-void q_graphicsview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int)) {
-    QGraphicsView_OnScrollContentsBy((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
+    QGraphicsView_OnScrollContentsBy((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_scroll_contents_by(void* self, int dx, int dy) {
@@ -636,8 +636,8 @@ void q_graphicsview_show_event(void* self, void* event) {
     QGraphicsView_ShowEvent((QGraphicsView*)self, (QShowEvent*)event);
 }
 
-void q_graphicsview_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnShowEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnShowEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_show_event(void* self, void* event) {
@@ -648,8 +648,8 @@ void q_graphicsview_input_method_event(void* self, void* event) {
     QGraphicsView_InputMethodEvent((QGraphicsView*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicsview_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnInputMethodEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnInputMethodEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_input_method_event(void* self, void* event) {
@@ -660,8 +660,8 @@ void q_graphicsview_draw_background(void* self, void* painter, void* rect) {
     QGraphicsView_DrawBackground((QGraphicsView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_graphicsview_on_draw_background(void* self, void (*slot)(void*, void*, void*)) {
-    QGraphicsView_OnDrawBackground((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_draw_background(void* self, void (*callback)(void*, void*, void*)) {
+    QGraphicsView_OnDrawBackground((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_draw_background(void* self, void* painter, void* rect) {
@@ -672,8 +672,8 @@ void q_graphicsview_draw_foreground(void* self, void* painter, void* rect) {
     QGraphicsView_DrawForeground((QGraphicsView*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_graphicsview_on_draw_foreground(void* self, void (*slot)(void*, void*, void*)) {
-    QGraphicsView_OnDrawForeground((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_draw_foreground(void* self, void (*callback)(void*, void*, void*)) {
+    QGraphicsView_OnDrawForeground((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_qbase_draw_foreground(void* self, void* painter, void* rect) {
@@ -1916,32 +1916,32 @@ void q_graphicsview_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_graphicsview_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_graphicsview_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_graphicsview_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_graphicsview_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_graphicsview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_graphicsview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_graphicsview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_graphicsview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_graphicsview_input_method_hints(void* self) {
@@ -2104,12 +2104,16 @@ const char** q_graphicsview_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_graphicsview_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2127,8 +2131,8 @@ void q_graphicsview_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_graphicsview_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_graphicsview_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_graphicsview_parent(void* self) {
@@ -2163,8 +2167,8 @@ void q_graphicsview_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_graphicsview_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_graphicsview_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_painting_active(void* self) {
@@ -2227,8 +2231,8 @@ QSize* q_graphicsview_qbase_minimum_size_hint(void* self) {
     return QGraphicsView_QBaseMinimumSizeHint((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QGraphicsView_OnMinimumSizeHint((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QGraphicsView_OnMinimumSizeHint((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_event_filter(void* self, void* param1, void* param2) {
@@ -2239,8 +2243,8 @@ bool q_graphicsview_qbase_event_filter(void* self, void* param1, void* param2) {
     return QGraphicsView_QBaseEventFilter((QGraphicsView*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_graphicsview_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QGraphicsView_OnEventFilter((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QGraphicsView_OnEventFilter((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QSize* q_graphicsview_viewport_size_hint(void* self) {
@@ -2251,8 +2255,8 @@ QSize* q_graphicsview_qbase_viewport_size_hint(void* self) {
     return QGraphicsView_QBaseViewportSizeHint((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_viewport_size_hint(void* self, QSize* (*slot)()) {
-    QGraphicsView_OnViewportSizeHint((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
+    QGraphicsView_OnViewportSizeHint((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_change_event(void* self, void* param1) {
@@ -2263,8 +2267,8 @@ void q_graphicsview_qbase_change_event(void* self, void* param1) {
     QGraphicsView_QBaseChangeEvent((QGraphicsView*)self, (QEvent*)param1);
 }
 
-void q_graphicsview_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnChangeEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnChangeEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_init_style_option(void* self, void* option) {
@@ -2275,8 +2279,8 @@ void q_graphicsview_qbase_init_style_option(void* self, void* option) {
     QGraphicsView_QBaseInitStyleOption((QGraphicsView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_graphicsview_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnInitStyleOption((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnInitStyleOption((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_dev_type(void* self) {
@@ -2287,8 +2291,8 @@ int32_t q_graphicsview_qbase_dev_type(void* self) {
     return QGraphicsView_QBaseDevType((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_dev_type(void* self, int32_t (*slot)()) {
-    QGraphicsView_OnDevType((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_dev_type(void* self, int32_t (*callback)()) {
+    QGraphicsView_OnDevType((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_set_visible(void* self, bool visible) {
@@ -2299,8 +2303,8 @@ void q_graphicsview_qbase_set_visible(void* self, bool visible) {
     QGraphicsView_QBaseSetVisible((QGraphicsView*)self, visible);
 }
 
-void q_graphicsview_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QGraphicsView_OnSetVisible((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QGraphicsView_OnSetVisible((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_height_for_width(void* self, int param1) {
@@ -2311,8 +2315,8 @@ int32_t q_graphicsview_qbase_height_for_width(void* self, int param1) {
     return QGraphicsView_QBaseHeightForWidth((QGraphicsView*)self, param1);
 }
 
-void q_graphicsview_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QGraphicsView_OnHeightForWidth((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QGraphicsView_OnHeightForWidth((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_has_height_for_width(void* self) {
@@ -2323,8 +2327,8 @@ bool q_graphicsview_qbase_has_height_for_width(void* self) {
     return QGraphicsView_QBaseHasHeightForWidth((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_has_height_for_width(void* self, bool (*slot)()) {
-    QGraphicsView_OnHasHeightForWidth((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_has_height_for_width(void* self, bool (*callback)()) {
+    QGraphicsView_OnHasHeightForWidth((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_graphicsview_paint_engine(void* self) {
@@ -2335,8 +2339,8 @@ QPaintEngine* q_graphicsview_qbase_paint_engine(void* self) {
     return QGraphicsView_QBasePaintEngine((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QGraphicsView_OnPaintEngine((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QGraphicsView_OnPaintEngine((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_enter_event(void* self, void* event) {
@@ -2347,8 +2351,8 @@ void q_graphicsview_qbase_enter_event(void* self, void* event) {
     QGraphicsView_QBaseEnterEvent((QGraphicsView*)self, (QEnterEvent*)event);
 }
 
-void q_graphicsview_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnEnterEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnEnterEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_leave_event(void* self, void* event) {
@@ -2359,8 +2363,8 @@ void q_graphicsview_qbase_leave_event(void* self, void* event) {
     QGraphicsView_QBaseLeaveEvent((QGraphicsView*)self, (QEvent*)event);
 }
 
-void q_graphicsview_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnLeaveEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnLeaveEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_move_event(void* self, void* event) {
@@ -2371,8 +2375,8 @@ void q_graphicsview_qbase_move_event(void* self, void* event) {
     QGraphicsView_QBaseMoveEvent((QGraphicsView*)self, (QMoveEvent*)event);
 }
 
-void q_graphicsview_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnMoveEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnMoveEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_close_event(void* self, void* event) {
@@ -2383,8 +2387,8 @@ void q_graphicsview_qbase_close_event(void* self, void* event) {
     QGraphicsView_QBaseCloseEvent((QGraphicsView*)self, (QCloseEvent*)event);
 }
 
-void q_graphicsview_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnCloseEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnCloseEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_tablet_event(void* self, void* event) {
@@ -2395,8 +2399,8 @@ void q_graphicsview_qbase_tablet_event(void* self, void* event) {
     QGraphicsView_QBaseTabletEvent((QGraphicsView*)self, (QTabletEvent*)event);
 }
 
-void q_graphicsview_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnTabletEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnTabletEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_action_event(void* self, void* event) {
@@ -2407,8 +2411,8 @@ void q_graphicsview_qbase_action_event(void* self, void* event) {
     QGraphicsView_QBaseActionEvent((QGraphicsView*)self, (QActionEvent*)event);
 }
 
-void q_graphicsview_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnActionEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnActionEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_hide_event(void* self, void* event) {
@@ -2419,8 +2423,8 @@ void q_graphicsview_qbase_hide_event(void* self, void* event) {
     QGraphicsView_QBaseHideEvent((QGraphicsView*)self, (QHideEvent*)event);
 }
 
-void q_graphicsview_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnHideEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnHideEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2431,8 +2435,8 @@ bool q_graphicsview_qbase_native_event(void* self, const char* eventType, void* 
     return QGraphicsView_QBaseNativeEvent((QGraphicsView*)self, qstring(eventType), message, result);
 }
 
-void q_graphicsview_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QGraphicsView_OnNativeEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QGraphicsView_OnNativeEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_metric(void* self, int64_t param1) {
@@ -2443,8 +2447,8 @@ int32_t q_graphicsview_qbase_metric(void* self, int64_t param1) {
     return QGraphicsView_QBaseMetric((QGraphicsView*)self, param1);
 }
 
-void q_graphicsview_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QGraphicsView_OnMetric((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QGraphicsView_OnMetric((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_init_painter(void* self, void* painter) {
@@ -2455,8 +2459,8 @@ void q_graphicsview_qbase_init_painter(void* self, void* painter) {
     QGraphicsView_QBaseInitPainter((QGraphicsView*)self, (QPainter*)painter);
 }
 
-void q_graphicsview_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnInitPainter((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnInitPainter((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_graphicsview_redirected(void* self, void* offset) {
@@ -2467,8 +2471,8 @@ QPaintDevice* q_graphicsview_qbase_redirected(void* self, void* offset) {
     return QGraphicsView_QBaseRedirected((QGraphicsView*)self, (QPoint*)offset);
 }
 
-void q_graphicsview_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QGraphicsView_OnRedirected((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QGraphicsView_OnRedirected((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QPainter* q_graphicsview_shared_painter(void* self) {
@@ -2479,8 +2483,8 @@ QPainter* q_graphicsview_qbase_shared_painter(void* self) {
     return QGraphicsView_QBaseSharedPainter((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QGraphicsView_OnSharedPainter((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QGraphicsView_OnSharedPainter((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_timer_event(void* self, void* event) {
@@ -2491,8 +2495,8 @@ void q_graphicsview_qbase_timer_event(void* self, void* event) {
     QGraphicsView_QBaseTimerEvent((QGraphicsView*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsview_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnTimerEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnTimerEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_child_event(void* self, void* event) {
@@ -2503,8 +2507,8 @@ void q_graphicsview_qbase_child_event(void* self, void* event) {
     QGraphicsView_QBaseChildEvent((QGraphicsView*)self, (QChildEvent*)event);
 }
 
-void q_graphicsview_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnChildEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnChildEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_custom_event(void* self, void* event) {
@@ -2515,8 +2519,8 @@ void q_graphicsview_qbase_custom_event(void* self, void* event) {
     QGraphicsView_QBaseCustomEvent((QGraphicsView*)self, (QEvent*)event);
 }
 
-void q_graphicsview_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnCustomEvent((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnCustomEvent((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_connect_notify(void* self, void* signal) {
@@ -2527,8 +2531,8 @@ void q_graphicsview_qbase_connect_notify(void* self, void* signal) {
     QGraphicsView_QBaseConnectNotify((QGraphicsView*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsview_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnConnectNotify((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnConnectNotify((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_disconnect_notify(void* self, void* signal) {
@@ -2539,8 +2543,8 @@ void q_graphicsview_qbase_disconnect_notify(void* self, void* signal) {
     QGraphicsView_QBaseDisconnectNotify((QGraphicsView*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsview_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnDisconnectNotify((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnDisconnectNotify((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
@@ -2551,8 +2555,8 @@ void q_graphicsview_qbase_set_viewport_margins(void* self, int left, int top, in
     QGraphicsView_QBaseSetViewportMargins((QGraphicsView*)self, left, top, right, bottom);
 }
 
-void q_graphicsview_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int)) {
-    QGraphicsView_OnSetViewportMargins((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
+    QGraphicsView_OnSetViewportMargins((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QMargins* q_graphicsview_viewport_margins(void* self) {
@@ -2563,8 +2567,8 @@ QMargins* q_graphicsview_qbase_viewport_margins(void* self) {
     return QGraphicsView_QBaseViewportMargins((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_viewport_margins(void* self, QMargins* (*slot)()) {
-    QGraphicsView_OnViewportMargins((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_viewport_margins(void* self, QMargins* (*callback)()) {
+    QGraphicsView_OnViewportMargins((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_draw_frame(void* self, void* param1) {
@@ -2575,8 +2579,8 @@ void q_graphicsview_qbase_draw_frame(void* self, void* param1) {
     QGraphicsView_QBaseDrawFrame((QGraphicsView*)self, (QPainter*)param1);
 }
 
-void q_graphicsview_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QGraphicsView_OnDrawFrame((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QGraphicsView_OnDrawFrame((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_update_micro_focus(void* self) {
@@ -2587,8 +2591,8 @@ void q_graphicsview_qbase_update_micro_focus(void* self) {
     QGraphicsView_QBaseUpdateMicroFocus((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_update_micro_focus(void* self, void (*slot)()) {
-    QGraphicsView_OnUpdateMicroFocus((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_update_micro_focus(void* self, void (*callback)()) {
+    QGraphicsView_OnUpdateMicroFocus((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_create(void* self) {
@@ -2599,8 +2603,8 @@ void q_graphicsview_qbase_create(void* self) {
     QGraphicsView_QBaseCreate((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_create(void* self, void (*slot)()) {
-    QGraphicsView_OnCreate((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_create(void* self, void (*callback)()) {
+    QGraphicsView_OnCreate((QGraphicsView*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_destroy(void* self) {
@@ -2611,8 +2615,8 @@ void q_graphicsview_qbase_destroy(void* self) {
     QGraphicsView_QBaseDestroy((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_destroy(void* self, void (*slot)()) {
-    QGraphicsView_OnDestroy((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_destroy(void* self, void (*callback)()) {
+    QGraphicsView_OnDestroy((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_focus_next_child(void* self) {
@@ -2623,8 +2627,8 @@ bool q_graphicsview_qbase_focus_next_child(void* self) {
     return QGraphicsView_QBaseFocusNextChild((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_focus_next_child(void* self, bool (*slot)()) {
-    QGraphicsView_OnFocusNextChild((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_focus_next_child(void* self, bool (*callback)()) {
+    QGraphicsView_OnFocusNextChild((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_focus_previous_child(void* self) {
@@ -2635,8 +2639,8 @@ bool q_graphicsview_qbase_focus_previous_child(void* self) {
     return QGraphicsView_QBaseFocusPreviousChild((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_focus_previous_child(void* self, bool (*slot)()) {
-    QGraphicsView_OnFocusPreviousChild((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_focus_previous_child(void* self, bool (*callback)()) {
+    QGraphicsView_OnFocusPreviousChild((QGraphicsView*)self, (intptr_t)callback);
 }
 
 QObject* q_graphicsview_sender(void* self) {
@@ -2647,8 +2651,8 @@ QObject* q_graphicsview_qbase_sender(void* self) {
     return QGraphicsView_QBaseSender((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_sender(void* self, QObject* (*slot)()) {
-    QGraphicsView_OnSender((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_sender(void* self, QObject* (*callback)()) {
+    QGraphicsView_OnSender((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_sender_signal_index(void* self) {
@@ -2659,8 +2663,8 @@ int32_t q_graphicsview_qbase_sender_signal_index(void* self) {
     return QGraphicsView_QBaseSenderSignalIndex((QGraphicsView*)self);
 }
 
-void q_graphicsview_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QGraphicsView_OnSenderSignalIndex((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QGraphicsView_OnSenderSignalIndex((QGraphicsView*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsview_receivers(void* self, const char* signal) {
@@ -2671,8 +2675,8 @@ int32_t q_graphicsview_qbase_receivers(void* self, const char* signal) {
     return QGraphicsView_QBaseReceivers((QGraphicsView*)self, signal);
 }
 
-void q_graphicsview_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QGraphicsView_OnReceivers((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QGraphicsView_OnReceivers((QGraphicsView*)self, (intptr_t)callback);
 }
 
 bool q_graphicsview_is_signal_connected(void* self, void* signal) {
@@ -2683,8 +2687,8 @@ bool q_graphicsview_qbase_is_signal_connected(void* self, void* signal) {
     return QGraphicsView_QBaseIsSignalConnected((QGraphicsView*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QGraphicsView_OnIsSignalConnected((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QGraphicsView_OnIsSignalConnected((QGraphicsView*)self, (intptr_t)callback);
 }
 
 double q_graphicsview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2695,12 +2699,12 @@ double q_graphicsview_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
     return QGraphicsView_QBaseGetDecodedMetricF((QGraphicsView*)self, metricA, metricB);
 }
 
-void q_graphicsview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QGraphicsView_OnGetDecodedMetricF((QGraphicsView*)self, (intptr_t)slot);
+void q_graphicsview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QGraphicsView_OnGetDecodedMetricF((QGraphicsView*)self, (intptr_t)callback);
 }
 
-void q_graphicsview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_graphicsview_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_graphicsview_delete(void* self) {

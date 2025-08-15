@@ -26,8 +26,8 @@ int32_t q_webchannel_metacall(void* self, int64_t param1, int param2, void* para
     return QWebChannel_Metacall((QWebChannel*)self, param1, param2, param3);
 }
 
-void q_webchannel_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QWebChannel_OnMetacall((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QWebChannel_OnMetacall((QWebChannel*)self, (intptr_t)callback);
 }
 
 int32_t q_webchannel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -77,8 +77,8 @@ void q_webchannel_block_updates_changed(void* self, bool block) {
     QWebChannel_BlockUpdatesChanged((QWebChannel*)self, block);
 }
 
-void q_webchannel_on_block_updates_changed(void* self, void (*slot)(void*, bool)) {
-    QWebChannel_Connect_BlockUpdatesChanged((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_block_updates_changed(void* self, void (*callback)(void*, bool)) {
+    QWebChannel_Connect_BlockUpdatesChanged((QWebChannel*)self, (intptr_t)callback);
 }
 
 void q_webchannel_connect_to(void* self, void* transport) {
@@ -207,12 +207,16 @@ const char** q_webchannel_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webchannel_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -230,8 +234,8 @@ void q_webchannel_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_webchannel_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_webchannel_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_webchannel_parent(void* self) {
@@ -266,8 +270,8 @@ void q_webchannel_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_webchannel_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_webchannel_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_webchannel_event(void* self, void* event) {
@@ -278,8 +282,8 @@ bool q_webchannel_qbase_event(void* self, void* event) {
     return QWebChannel_QBaseEvent((QWebChannel*)self, (QEvent*)event);
 }
 
-void q_webchannel_on_event(void* self, bool (*slot)(void*, void*)) {
-    QWebChannel_OnEvent((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_event(void* self, bool (*callback)(void*, void*)) {
+    QWebChannel_OnEvent((QWebChannel*)self, (intptr_t)callback);
 }
 
 bool q_webchannel_event_filter(void* self, void* watched, void* event) {
@@ -290,8 +294,8 @@ bool q_webchannel_qbase_event_filter(void* self, void* watched, void* event) {
     return QWebChannel_QBaseEventFilter((QWebChannel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_webchannel_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QWebChannel_OnEventFilter((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QWebChannel_OnEventFilter((QWebChannel*)self, (intptr_t)callback);
 }
 
 void q_webchannel_timer_event(void* self, void* event) {
@@ -302,8 +306,8 @@ void q_webchannel_qbase_timer_event(void* self, void* event) {
     QWebChannel_QBaseTimerEvent((QWebChannel*)self, (QTimerEvent*)event);
 }
 
-void q_webchannel_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QWebChannel_OnTimerEvent((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QWebChannel_OnTimerEvent((QWebChannel*)self, (intptr_t)callback);
 }
 
 void q_webchannel_child_event(void* self, void* event) {
@@ -314,8 +318,8 @@ void q_webchannel_qbase_child_event(void* self, void* event) {
     QWebChannel_QBaseChildEvent((QWebChannel*)self, (QChildEvent*)event);
 }
 
-void q_webchannel_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QWebChannel_OnChildEvent((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QWebChannel_OnChildEvent((QWebChannel*)self, (intptr_t)callback);
 }
 
 void q_webchannel_custom_event(void* self, void* event) {
@@ -326,8 +330,8 @@ void q_webchannel_qbase_custom_event(void* self, void* event) {
     QWebChannel_QBaseCustomEvent((QWebChannel*)self, (QEvent*)event);
 }
 
-void q_webchannel_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QWebChannel_OnCustomEvent((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QWebChannel_OnCustomEvent((QWebChannel*)self, (intptr_t)callback);
 }
 
 void q_webchannel_connect_notify(void* self, void* signal) {
@@ -338,8 +342,8 @@ void q_webchannel_qbase_connect_notify(void* self, void* signal) {
     QWebChannel_QBaseConnectNotify((QWebChannel*)self, (QMetaMethod*)signal);
 }
 
-void q_webchannel_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QWebChannel_OnConnectNotify((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QWebChannel_OnConnectNotify((QWebChannel*)self, (intptr_t)callback);
 }
 
 void q_webchannel_disconnect_notify(void* self, void* signal) {
@@ -350,8 +354,8 @@ void q_webchannel_qbase_disconnect_notify(void* self, void* signal) {
     QWebChannel_QBaseDisconnectNotify((QWebChannel*)self, (QMetaMethod*)signal);
 }
 
-void q_webchannel_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QWebChannel_OnDisconnectNotify((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QWebChannel_OnDisconnectNotify((QWebChannel*)self, (intptr_t)callback);
 }
 
 QObject* q_webchannel_sender(void* self) {
@@ -362,8 +366,8 @@ QObject* q_webchannel_qbase_sender(void* self) {
     return QWebChannel_QBaseSender((QWebChannel*)self);
 }
 
-void q_webchannel_on_sender(void* self, QObject* (*slot)()) {
-    QWebChannel_OnSender((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_sender(void* self, QObject* (*callback)()) {
+    QWebChannel_OnSender((QWebChannel*)self, (intptr_t)callback);
 }
 
 int32_t q_webchannel_sender_signal_index(void* self) {
@@ -374,8 +378,8 @@ int32_t q_webchannel_qbase_sender_signal_index(void* self) {
     return QWebChannel_QBaseSenderSignalIndex((QWebChannel*)self);
 }
 
-void q_webchannel_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QWebChannel_OnSenderSignalIndex((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QWebChannel_OnSenderSignalIndex((QWebChannel*)self, (intptr_t)callback);
 }
 
 int32_t q_webchannel_receivers(void* self, const char* signal) {
@@ -386,8 +390,8 @@ int32_t q_webchannel_qbase_receivers(void* self, const char* signal) {
     return QWebChannel_QBaseReceivers((QWebChannel*)self, signal);
 }
 
-void q_webchannel_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QWebChannel_OnReceivers((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QWebChannel_OnReceivers((QWebChannel*)self, (intptr_t)callback);
 }
 
 bool q_webchannel_is_signal_connected(void* self, void* signal) {
@@ -398,12 +402,12 @@ bool q_webchannel_qbase_is_signal_connected(void* self, void* signal) {
     return QWebChannel_QBaseIsSignalConnected((QWebChannel*)self, (QMetaMethod*)signal);
 }
 
-void q_webchannel_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QWebChannel_OnIsSignalConnected((QWebChannel*)self, (intptr_t)slot);
+void q_webchannel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QWebChannel_OnIsSignalConnected((QWebChannel*)self, (intptr_t)callback);
 }
 
-void q_webchannel_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_webchannel_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_webchannel_delete(void* self) {

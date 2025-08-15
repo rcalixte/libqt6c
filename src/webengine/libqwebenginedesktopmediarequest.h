@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,49 +15,53 @@
 
 /// q_webenginedesktopmediarequest_new constructs a new QWebEngineDesktopMediaRequest object.
 ///
-/// ``` QWebEngineDesktopMediaRequest* other ```
+/// @param other QWebEngineDesktopMediaRequest*
 QWebEngineDesktopMediaRequest* q_webenginedesktopmediarequest_new(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#operator-eq)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self, QWebEngineDesktopMediaRequest* other ```
+/// @param self QWebEngineDesktopMediaRequest*
+/// @param other QWebEngineDesktopMediaRequest*
 void q_webenginedesktopmediarequest_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#swap)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self, QWebEngineDesktopMediaRequest* other ```
+/// @param self QWebEngineDesktopMediaRequest*
+/// @param other QWebEngineDesktopMediaRequest*
 void q_webenginedesktopmediarequest_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#screensModel)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self ```
+/// @param self QWebEngineDesktopMediaRequest*
 QAbstractListModel* q_webenginedesktopmediarequest_screens_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#windowsModel)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self ```
+/// @param self QWebEngineDesktopMediaRequest*
 QAbstractListModel* q_webenginedesktopmediarequest_windows_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#selectScreen)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self, QModelIndex* index ```
+/// @param self QWebEngineDesktopMediaRequest*
+/// @param index QModelIndex*
 void q_webenginedesktopmediarequest_select_screen(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#selectWindow)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self, QModelIndex* index ```
+/// @param self QWebEngineDesktopMediaRequest*
+/// @param index QModelIndex*
 void q_webenginedesktopmediarequest_select_window(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#cancel)
 ///
-/// ``` QWebEngineDesktopMediaRequest* self ```
+/// @param self QWebEngineDesktopMediaRequest*
 void q_webenginedesktopmediarequest_cancel(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedesktopmediarequest.html#dtor.QWebEngineDesktopMediaRequest)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineDesktopMediaRequest* self ```
+/// @param self QWebEngineDesktopMediaRequest*
 void q_webenginedesktopmediarequest_delete(void* self);
 
 #endif

@@ -87,96 +87,96 @@ void q_futurewatcherbase_started(void* self) {
     QFutureWatcherBase_Started((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_started(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Started((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_started(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Started((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_finished(void* self) {
     QFutureWatcherBase_Finished((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_finished(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Finished((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_finished(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Finished((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_canceled(void* self) {
     QFutureWatcherBase_Canceled((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_canceled(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Canceled((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_canceled(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Canceled((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_paused(void* self) {
     QFutureWatcherBase_Paused((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_paused(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Paused((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_paused(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Paused((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_suspending(void* self) {
     QFutureWatcherBase_Suspending((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_suspending(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Suspending((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_suspending(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Suspending((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_suspended(void* self) {
     QFutureWatcherBase_Suspended((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_suspended(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Suspended((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_suspended(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Suspended((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_resumed(void* self) {
     QFutureWatcherBase_Resumed((QFutureWatcherBase*)self);
 }
 
-void q_futurewatcherbase_on_resumed(void* self, void (*slot)(void*)) {
-    QFutureWatcherBase_Connect_Resumed((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_resumed(void* self, void (*callback)(void*)) {
+    QFutureWatcherBase_Connect_Resumed((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_result_ready_at(void* self, int resultIndex) {
     QFutureWatcherBase_ResultReadyAt((QFutureWatcherBase*)self, resultIndex);
 }
 
-void q_futurewatcherbase_on_result_ready_at(void* self, void (*slot)(void*, int)) {
-    QFutureWatcherBase_Connect_ResultReadyAt((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_result_ready_at(void* self, void (*callback)(void*, int)) {
+    QFutureWatcherBase_Connect_ResultReadyAt((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_results_ready_at(void* self, int beginIndex, int endIndex) {
     QFutureWatcherBase_ResultsReadyAt((QFutureWatcherBase*)self, beginIndex, endIndex);
 }
 
-void q_futurewatcherbase_on_results_ready_at(void* self, void (*slot)(void*, int, int)) {
-    QFutureWatcherBase_Connect_ResultsReadyAt((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_results_ready_at(void* self, void (*callback)(void*, int, int)) {
+    QFutureWatcherBase_Connect_ResultsReadyAt((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_progress_range_changed(void* self, int minimum, int maximum) {
     QFutureWatcherBase_ProgressRangeChanged((QFutureWatcherBase*)self, minimum, maximum);
 }
 
-void q_futurewatcherbase_on_progress_range_changed(void* self, void (*slot)(void*, int, int)) {
-    QFutureWatcherBase_Connect_ProgressRangeChanged((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_progress_range_changed(void* self, void (*callback)(void*, int, int)) {
+    QFutureWatcherBase_Connect_ProgressRangeChanged((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_progress_value_changed(void* self, int progressValue) {
     QFutureWatcherBase_ProgressValueChanged((QFutureWatcherBase*)self, progressValue);
 }
 
-void q_futurewatcherbase_on_progress_value_changed(void* self, void (*slot)(void*, int)) {
-    QFutureWatcherBase_Connect_ProgressValueChanged((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_progress_value_changed(void* self, void (*callback)(void*, int)) {
+    QFutureWatcherBase_Connect_ProgressValueChanged((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_progress_text_changed(void* self, const char* progressText) {
     QFutureWatcherBase_ProgressTextChanged((QFutureWatcherBase*)self, qstring(progressText));
 }
 
-void q_futurewatcherbase_on_progress_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QFutureWatcherBase_Connect_ProgressTextChanged((QFutureWatcherBase*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_progress_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QFutureWatcherBase_Connect_ProgressTextChanged((QFutureWatcherBase*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_cancel(void* self) {
@@ -333,12 +333,16 @@ const char** q_futurewatcherbase_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_futurewatcherbase_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -356,8 +360,8 @@ void q_futurewatcherbase_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_futurewatcherbase_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_futurewatcherbase_parent(void* self) {
@@ -392,12 +396,12 @@ void q_futurewatcherbase_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_futurewatcherbase_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_futurewatcherbase_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_futurewatcherbase_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_futurewatcherbase_delete(void* self) {

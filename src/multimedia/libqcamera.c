@@ -44,8 +44,8 @@ int32_t q_camera_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QCamera_Metacall((QCamera*)self, param1, param2, param3);
 }
 
-void q_camera_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QCamera_OnMetacall((QCamera*)self, (intptr_t)slot);
+void q_camera_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QCamera_OnMetacall((QCamera*)self, (intptr_t)callback);
 }
 
 int32_t q_camera_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -286,224 +286,224 @@ void q_camera_active_changed(void* self, bool param1) {
     QCamera_ActiveChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_active_changed(void* self, void (*slot)(void*, bool)) {
-    QCamera_Connect_ActiveChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_active_changed(void* self, void (*callback)(void*, bool)) {
+    QCamera_Connect_ActiveChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_error_changed(void* self) {
     QCamera_ErrorChanged((QCamera*)self);
 }
 
-void q_camera_on_error_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_ErrorChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_error_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_ErrorChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_error_occurred(void* self, int64_t errorVal, const char* errorString) {
     QCamera_ErrorOccurred((QCamera*)self, errorVal, qstring(errorString));
 }
 
-void q_camera_on_error_occurred(void* self, void (*slot)(void*, int64_t, const char*)) {
-    QCamera_Connect_ErrorOccurred((QCamera*)self, (intptr_t)slot);
+void q_camera_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*)) {
+    QCamera_Connect_ErrorOccurred((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_camera_device_changed(void* self) {
     QCamera_CameraDeviceChanged((QCamera*)self);
 }
 
-void q_camera_on_camera_device_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_CameraDeviceChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_camera_device_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_CameraDeviceChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_camera_format_changed(void* self) {
     QCamera_CameraFormatChanged((QCamera*)self);
 }
 
-void q_camera_on_camera_format_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_CameraFormatChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_camera_format_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_CameraFormatChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_supported_features_changed(void* self) {
     QCamera_SupportedFeaturesChanged((QCamera*)self);
 }
 
-void q_camera_on_supported_features_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_SupportedFeaturesChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_supported_features_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_SupportedFeaturesChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_focus_mode_changed(void* self) {
     QCamera_FocusModeChanged((QCamera*)self);
 }
 
-void q_camera_on_focus_mode_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_FocusModeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_focus_mode_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_FocusModeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_zoom_factor_changed(void* self, float param1) {
     QCamera_ZoomFactorChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_zoom_factor_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_ZoomFactorChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_zoom_factor_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_ZoomFactorChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_minimum_zoom_factor_changed(void* self, float param1) {
     QCamera_MinimumZoomFactorChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_minimum_zoom_factor_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_MinimumZoomFactorChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_minimum_zoom_factor_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_MinimumZoomFactorChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_maximum_zoom_factor_changed(void* self, float param1) {
     QCamera_MaximumZoomFactorChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_maximum_zoom_factor_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_MaximumZoomFactorChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_maximum_zoom_factor_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_MaximumZoomFactorChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_focus_distance_changed(void* self, float param1) {
     QCamera_FocusDistanceChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_focus_distance_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_FocusDistanceChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_focus_distance_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_FocusDistanceChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_focus_point_changed(void* self) {
     QCamera_FocusPointChanged((QCamera*)self);
 }
 
-void q_camera_on_focus_point_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_FocusPointChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_focus_point_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_FocusPointChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_custom_focus_point_changed(void* self) {
     QCamera_CustomFocusPointChanged((QCamera*)self);
 }
 
-void q_camera_on_custom_focus_point_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_CustomFocusPointChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_custom_focus_point_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_CustomFocusPointChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_flash_ready(void* self, bool param1) {
     QCamera_FlashReady((QCamera*)self, param1);
 }
 
-void q_camera_on_flash_ready(void* self, void (*slot)(void*, bool)) {
-    QCamera_Connect_FlashReady((QCamera*)self, (intptr_t)slot);
+void q_camera_on_flash_ready(void* self, void (*callback)(void*, bool)) {
+    QCamera_Connect_FlashReady((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_flash_mode_changed(void* self) {
     QCamera_FlashModeChanged((QCamera*)self);
 }
 
-void q_camera_on_flash_mode_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_FlashModeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_flash_mode_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_FlashModeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_torch_mode_changed(void* self) {
     QCamera_TorchModeChanged((QCamera*)self);
 }
 
-void q_camera_on_torch_mode_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_TorchModeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_torch_mode_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_TorchModeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_exposure_time_changed(void* self, float speed) {
     QCamera_ExposureTimeChanged((QCamera*)self, speed);
 }
 
-void q_camera_on_exposure_time_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_ExposureTimeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_exposure_time_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_ExposureTimeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_manual_exposure_time_changed(void* self, float speed) {
     QCamera_ManualExposureTimeChanged((QCamera*)self, speed);
 }
 
-void q_camera_on_manual_exposure_time_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_ManualExposureTimeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_manual_exposure_time_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_ManualExposureTimeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_iso_sensitivity_changed(void* self, int param1) {
     QCamera_IsoSensitivityChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_iso_sensitivity_changed(void* self, void (*slot)(void*, int)) {
-    QCamera_Connect_IsoSensitivityChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_iso_sensitivity_changed(void* self, void (*callback)(void*, int)) {
+    QCamera_Connect_IsoSensitivityChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_manual_iso_sensitivity_changed(void* self, int param1) {
     QCamera_ManualIsoSensitivityChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_manual_iso_sensitivity_changed(void* self, void (*slot)(void*, int)) {
-    QCamera_Connect_ManualIsoSensitivityChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_manual_iso_sensitivity_changed(void* self, void (*callback)(void*, int)) {
+    QCamera_Connect_ManualIsoSensitivityChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_exposure_compensation_changed(void* self, float param1) {
     QCamera_ExposureCompensationChanged((QCamera*)self, param1);
 }
 
-void q_camera_on_exposure_compensation_changed(void* self, void (*slot)(void*, float)) {
-    QCamera_Connect_ExposureCompensationChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_exposure_compensation_changed(void* self, void (*callback)(void*, float)) {
+    QCamera_Connect_ExposureCompensationChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_exposure_mode_changed(void* self) {
     QCamera_ExposureModeChanged((QCamera*)self);
 }
 
-void q_camera_on_exposure_mode_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_ExposureModeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_exposure_mode_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_ExposureModeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_white_balance_mode_changed(void* self) {
     QCamera_WhiteBalanceModeChanged((QCamera*)self);
 }
 
-void q_camera_on_white_balance_mode_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_WhiteBalanceModeChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_white_balance_mode_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_WhiteBalanceModeChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_color_temperature_changed(void* self) {
     QCamera_ColorTemperatureChanged((QCamera*)self);
 }
 
-void q_camera_on_color_temperature_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_ColorTemperatureChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_color_temperature_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_ColorTemperatureChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_brightness_changed(void* self) {
     QCamera_BrightnessChanged((QCamera*)self);
 }
 
-void q_camera_on_brightness_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_BrightnessChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_brightness_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_BrightnessChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_contrast_changed(void* self) {
     QCamera_ContrastChanged((QCamera*)self);
 }
 
-void q_camera_on_contrast_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_ContrastChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_contrast_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_ContrastChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_saturation_changed(void* self) {
     QCamera_SaturationChanged((QCamera*)self);
 }
 
-void q_camera_on_saturation_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_SaturationChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_saturation_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_SaturationChanged((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_hue_changed(void* self) {
     QCamera_HueChanged((QCamera*)self);
 }
 
-void q_camera_on_hue_changed(void* self, void (*slot)(void*)) {
-    QCamera_Connect_HueChanged((QCamera*)self, (intptr_t)slot);
+void q_camera_on_hue_changed(void* self, void (*callback)(void*)) {
+    QCamera_Connect_HueChanged((QCamera*)self, (intptr_t)callback);
 }
 
 const char* q_camera_tr2(const char* s, const char* c) {
@@ -624,12 +624,16 @@ const char** q_camera_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_camera_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -647,8 +651,8 @@ void q_camera_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_camera_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_camera_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_camera_parent(void* self) {
@@ -683,8 +687,8 @@ void q_camera_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_camera_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_camera_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_camera_event(void* self, void* event) {
@@ -695,8 +699,8 @@ bool q_camera_qbase_event(void* self, void* event) {
     return QCamera_QBaseEvent((QCamera*)self, (QEvent*)event);
 }
 
-void q_camera_on_event(void* self, bool (*slot)(void*, void*)) {
-    QCamera_OnEvent((QCamera*)self, (intptr_t)slot);
+void q_camera_on_event(void* self, bool (*callback)(void*, void*)) {
+    QCamera_OnEvent((QCamera*)self, (intptr_t)callback);
 }
 
 bool q_camera_event_filter(void* self, void* watched, void* event) {
@@ -707,8 +711,8 @@ bool q_camera_qbase_event_filter(void* self, void* watched, void* event) {
     return QCamera_QBaseEventFilter((QCamera*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_camera_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QCamera_OnEventFilter((QCamera*)self, (intptr_t)slot);
+void q_camera_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QCamera_OnEventFilter((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_timer_event(void* self, void* event) {
@@ -719,8 +723,8 @@ void q_camera_qbase_timer_event(void* self, void* event) {
     QCamera_QBaseTimerEvent((QCamera*)self, (QTimerEvent*)event);
 }
 
-void q_camera_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QCamera_OnTimerEvent((QCamera*)self, (intptr_t)slot);
+void q_camera_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QCamera_OnTimerEvent((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_child_event(void* self, void* event) {
@@ -731,8 +735,8 @@ void q_camera_qbase_child_event(void* self, void* event) {
     QCamera_QBaseChildEvent((QCamera*)self, (QChildEvent*)event);
 }
 
-void q_camera_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QCamera_OnChildEvent((QCamera*)self, (intptr_t)slot);
+void q_camera_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QCamera_OnChildEvent((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_custom_event(void* self, void* event) {
@@ -743,8 +747,8 @@ void q_camera_qbase_custom_event(void* self, void* event) {
     QCamera_QBaseCustomEvent((QCamera*)self, (QEvent*)event);
 }
 
-void q_camera_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QCamera_OnCustomEvent((QCamera*)self, (intptr_t)slot);
+void q_camera_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QCamera_OnCustomEvent((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_connect_notify(void* self, void* signal) {
@@ -755,8 +759,8 @@ void q_camera_qbase_connect_notify(void* self, void* signal) {
     QCamera_QBaseConnectNotify((QCamera*)self, (QMetaMethod*)signal);
 }
 
-void q_camera_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QCamera_OnConnectNotify((QCamera*)self, (intptr_t)slot);
+void q_camera_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QCamera_OnConnectNotify((QCamera*)self, (intptr_t)callback);
 }
 
 void q_camera_disconnect_notify(void* self, void* signal) {
@@ -767,8 +771,8 @@ void q_camera_qbase_disconnect_notify(void* self, void* signal) {
     QCamera_QBaseDisconnectNotify((QCamera*)self, (QMetaMethod*)signal);
 }
 
-void q_camera_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QCamera_OnDisconnectNotify((QCamera*)self, (intptr_t)slot);
+void q_camera_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QCamera_OnDisconnectNotify((QCamera*)self, (intptr_t)callback);
 }
 
 QObject* q_camera_sender(void* self) {
@@ -779,8 +783,8 @@ QObject* q_camera_qbase_sender(void* self) {
     return QCamera_QBaseSender((QCamera*)self);
 }
 
-void q_camera_on_sender(void* self, QObject* (*slot)()) {
-    QCamera_OnSender((QCamera*)self, (intptr_t)slot);
+void q_camera_on_sender(void* self, QObject* (*callback)()) {
+    QCamera_OnSender((QCamera*)self, (intptr_t)callback);
 }
 
 int32_t q_camera_sender_signal_index(void* self) {
@@ -791,8 +795,8 @@ int32_t q_camera_qbase_sender_signal_index(void* self) {
     return QCamera_QBaseSenderSignalIndex((QCamera*)self);
 }
 
-void q_camera_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QCamera_OnSenderSignalIndex((QCamera*)self, (intptr_t)slot);
+void q_camera_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QCamera_OnSenderSignalIndex((QCamera*)self, (intptr_t)callback);
 }
 
 int32_t q_camera_receivers(void* self, const char* signal) {
@@ -803,8 +807,8 @@ int32_t q_camera_qbase_receivers(void* self, const char* signal) {
     return QCamera_QBaseReceivers((QCamera*)self, signal);
 }
 
-void q_camera_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QCamera_OnReceivers((QCamera*)self, (intptr_t)slot);
+void q_camera_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QCamera_OnReceivers((QCamera*)self, (intptr_t)callback);
 }
 
 bool q_camera_is_signal_connected(void* self, void* signal) {
@@ -815,12 +819,12 @@ bool q_camera_qbase_is_signal_connected(void* self, void* signal) {
     return QCamera_QBaseIsSignalConnected((QCamera*)self, (QMetaMethod*)signal);
 }
 
-void q_camera_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QCamera_OnIsSignalConnected((QCamera*)self, (intptr_t)slot);
+void q_camera_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QCamera_OnIsSignalConnected((QCamera*)self, (intptr_t)callback);
 }
 
-void q_camera_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_camera_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_camera_delete(void* self) {

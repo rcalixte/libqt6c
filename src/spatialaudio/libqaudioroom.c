@@ -24,8 +24,8 @@ int32_t q_audioroom_metacall(void* self, int64_t param1, int param2, void* param
     return QAudioRoom_Metacall((QAudioRoom*)self, param1, param2, param3);
 }
 
-void q_audioroom_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QAudioRoom_OnMetacall((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QAudioRoom_OnMetacall((QAudioRoom*)self, (intptr_t)callback);
 }
 
 int32_t q_audioroom_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -107,64 +107,64 @@ void q_audioroom_position_changed(void* self) {
     QAudioRoom_PositionChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_position_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_PositionChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_position_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_PositionChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_dimensions_changed(void* self) {
     QAudioRoom_DimensionsChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_dimensions_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_DimensionsChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_dimensions_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_DimensionsChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_rotation_changed(void* self) {
     QAudioRoom_RotationChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_rotation_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_RotationChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_rotation_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_RotationChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_walls_changed(void* self) {
     QAudioRoom_WallsChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_walls_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_WallsChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_walls_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_WallsChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_reflection_gain_changed(void* self) {
     QAudioRoom_ReflectionGainChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_reflection_gain_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_ReflectionGainChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_reflection_gain_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_ReflectionGainChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_reverb_gain_changed(void* self) {
     QAudioRoom_ReverbGainChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_reverb_gain_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_ReverbGainChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_reverb_gain_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_ReverbGainChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_reverb_time_changed(void* self) {
     QAudioRoom_ReverbTimeChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_reverb_time_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_ReverbTimeChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_reverb_time_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_ReverbTimeChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_reverb_brightness_changed(void* self) {
     QAudioRoom_ReverbBrightnessChanged((QAudioRoom*)self);
 }
 
-void q_audioroom_on_reverb_brightness_changed(void* self, void (*slot)(void*)) {
-    QAudioRoom_Connect_ReverbBrightnessChanged((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_reverb_brightness_changed(void* self, void (*callback)(void*)) {
+    QAudioRoom_Connect_ReverbBrightnessChanged((QAudioRoom*)self, (intptr_t)callback);
 }
 
 const char* q_audioroom_tr2(const char* s, const char* c) {
@@ -285,12 +285,16 @@ const char** q_audioroom_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_audioroom_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -308,8 +312,8 @@ void q_audioroom_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_audioroom_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_audioroom_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_audioroom_parent(void* self) {
@@ -344,8 +348,8 @@ void q_audioroom_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_audioroom_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_audioroom_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_audioroom_event(void* self, void* event) {
@@ -356,8 +360,8 @@ bool q_audioroom_qbase_event(void* self, void* event) {
     return QAudioRoom_QBaseEvent((QAudioRoom*)self, (QEvent*)event);
 }
 
-void q_audioroom_on_event(void* self, bool (*slot)(void*, void*)) {
-    QAudioRoom_OnEvent((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_event(void* self, bool (*callback)(void*, void*)) {
+    QAudioRoom_OnEvent((QAudioRoom*)self, (intptr_t)callback);
 }
 
 bool q_audioroom_event_filter(void* self, void* watched, void* event) {
@@ -368,8 +372,8 @@ bool q_audioroom_qbase_event_filter(void* self, void* watched, void* event) {
     return QAudioRoom_QBaseEventFilter((QAudioRoom*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_audioroom_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QAudioRoom_OnEventFilter((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QAudioRoom_OnEventFilter((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_timer_event(void* self, void* event) {
@@ -380,8 +384,8 @@ void q_audioroom_qbase_timer_event(void* self, void* event) {
     QAudioRoom_QBaseTimerEvent((QAudioRoom*)self, (QTimerEvent*)event);
 }
 
-void q_audioroom_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QAudioRoom_OnTimerEvent((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QAudioRoom_OnTimerEvent((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_child_event(void* self, void* event) {
@@ -392,8 +396,8 @@ void q_audioroom_qbase_child_event(void* self, void* event) {
     QAudioRoom_QBaseChildEvent((QAudioRoom*)self, (QChildEvent*)event);
 }
 
-void q_audioroom_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QAudioRoom_OnChildEvent((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QAudioRoom_OnChildEvent((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_custom_event(void* self, void* event) {
@@ -404,8 +408,8 @@ void q_audioroom_qbase_custom_event(void* self, void* event) {
     QAudioRoom_QBaseCustomEvent((QAudioRoom*)self, (QEvent*)event);
 }
 
-void q_audioroom_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QAudioRoom_OnCustomEvent((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QAudioRoom_OnCustomEvent((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_connect_notify(void* self, void* signal) {
@@ -416,8 +420,8 @@ void q_audioroom_qbase_connect_notify(void* self, void* signal) {
     QAudioRoom_QBaseConnectNotify((QAudioRoom*)self, (QMetaMethod*)signal);
 }
 
-void q_audioroom_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QAudioRoom_OnConnectNotify((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QAudioRoom_OnConnectNotify((QAudioRoom*)self, (intptr_t)callback);
 }
 
 void q_audioroom_disconnect_notify(void* self, void* signal) {
@@ -428,8 +432,8 @@ void q_audioroom_qbase_disconnect_notify(void* self, void* signal) {
     QAudioRoom_QBaseDisconnectNotify((QAudioRoom*)self, (QMetaMethod*)signal);
 }
 
-void q_audioroom_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QAudioRoom_OnDisconnectNotify((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QAudioRoom_OnDisconnectNotify((QAudioRoom*)self, (intptr_t)callback);
 }
 
 QObject* q_audioroom_sender(void* self) {
@@ -440,8 +444,8 @@ QObject* q_audioroom_qbase_sender(void* self) {
     return QAudioRoom_QBaseSender((QAudioRoom*)self);
 }
 
-void q_audioroom_on_sender(void* self, QObject* (*slot)()) {
-    QAudioRoom_OnSender((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_sender(void* self, QObject* (*callback)()) {
+    QAudioRoom_OnSender((QAudioRoom*)self, (intptr_t)callback);
 }
 
 int32_t q_audioroom_sender_signal_index(void* self) {
@@ -452,8 +456,8 @@ int32_t q_audioroom_qbase_sender_signal_index(void* self) {
     return QAudioRoom_QBaseSenderSignalIndex((QAudioRoom*)self);
 }
 
-void q_audioroom_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QAudioRoom_OnSenderSignalIndex((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QAudioRoom_OnSenderSignalIndex((QAudioRoom*)self, (intptr_t)callback);
 }
 
 int32_t q_audioroom_receivers(void* self, const char* signal) {
@@ -464,8 +468,8 @@ int32_t q_audioroom_qbase_receivers(void* self, const char* signal) {
     return QAudioRoom_QBaseReceivers((QAudioRoom*)self, signal);
 }
 
-void q_audioroom_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QAudioRoom_OnReceivers((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QAudioRoom_OnReceivers((QAudioRoom*)self, (intptr_t)callback);
 }
 
 bool q_audioroom_is_signal_connected(void* self, void* signal) {
@@ -476,12 +480,12 @@ bool q_audioroom_qbase_is_signal_connected(void* self, void* signal) {
     return QAudioRoom_QBaseIsSignalConnected((QAudioRoom*)self, (QMetaMethod*)signal);
 }
 
-void q_audioroom_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QAudioRoom_OnIsSignalConnected((QAudioRoom*)self, (intptr_t)slot);
+void q_audioroom_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QAudioRoom_OnIsSignalConnected((QAudioRoom*)self, (intptr_t)callback);
 }
 
-void q_audioroom_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_audioroom_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_audioroom_delete(void* self) {

@@ -27,8 +27,8 @@ int32_t q_eventloop_metacall(void* self, int64_t param1, int param2, void* param
     return QEventLoop_Metacall((QEventLoop*)self, param1, param2, param3);
 }
 
-void q_eventloop_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QEventLoop_OnMetacall((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QEventLoop_OnMetacall((QEventLoop*)self, (intptr_t)callback);
 }
 
 int32_t q_eventloop_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -70,8 +70,8 @@ bool q_eventloop_event(void* self, void* event) {
     return QEventLoop_Event((QEventLoop*)self, (QEvent*)event);
 }
 
-void q_eventloop_on_event(void* self, bool (*slot)(void*, void*)) {
-    QEventLoop_OnEvent((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_event(void* self, bool (*callback)(void*, void*)) {
+    QEventLoop_OnEvent((QEventLoop*)self, (intptr_t)callback);
 }
 
 bool q_eventloop_qbase_event(void* self, void* event) {
@@ -216,12 +216,16 @@ const char** q_eventloop_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_eventloop_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -239,8 +243,8 @@ void q_eventloop_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_eventloop_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_eventloop_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_eventloop_parent(void* self) {
@@ -275,8 +279,8 @@ void q_eventloop_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_eventloop_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_eventloop_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_eventloop_event_filter(void* self, void* watched, void* event) {
@@ -287,8 +291,8 @@ bool q_eventloop_qbase_event_filter(void* self, void* watched, void* event) {
     return QEventLoop_QBaseEventFilter((QEventLoop*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_eventloop_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QEventLoop_OnEventFilter((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QEventLoop_OnEventFilter((QEventLoop*)self, (intptr_t)callback);
 }
 
 void q_eventloop_timer_event(void* self, void* event) {
@@ -299,8 +303,8 @@ void q_eventloop_qbase_timer_event(void* self, void* event) {
     QEventLoop_QBaseTimerEvent((QEventLoop*)self, (QTimerEvent*)event);
 }
 
-void q_eventloop_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QEventLoop_OnTimerEvent((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QEventLoop_OnTimerEvent((QEventLoop*)self, (intptr_t)callback);
 }
 
 void q_eventloop_child_event(void* self, void* event) {
@@ -311,8 +315,8 @@ void q_eventloop_qbase_child_event(void* self, void* event) {
     QEventLoop_QBaseChildEvent((QEventLoop*)self, (QChildEvent*)event);
 }
 
-void q_eventloop_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QEventLoop_OnChildEvent((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QEventLoop_OnChildEvent((QEventLoop*)self, (intptr_t)callback);
 }
 
 void q_eventloop_custom_event(void* self, void* event) {
@@ -323,8 +327,8 @@ void q_eventloop_qbase_custom_event(void* self, void* event) {
     QEventLoop_QBaseCustomEvent((QEventLoop*)self, (QEvent*)event);
 }
 
-void q_eventloop_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QEventLoop_OnCustomEvent((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QEventLoop_OnCustomEvent((QEventLoop*)self, (intptr_t)callback);
 }
 
 void q_eventloop_connect_notify(void* self, void* signal) {
@@ -335,8 +339,8 @@ void q_eventloop_qbase_connect_notify(void* self, void* signal) {
     QEventLoop_QBaseConnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
-void q_eventloop_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QEventLoop_OnConnectNotify((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QEventLoop_OnConnectNotify((QEventLoop*)self, (intptr_t)callback);
 }
 
 void q_eventloop_disconnect_notify(void* self, void* signal) {
@@ -347,8 +351,8 @@ void q_eventloop_qbase_disconnect_notify(void* self, void* signal) {
     QEventLoop_QBaseDisconnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
-void q_eventloop_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QEventLoop_OnDisconnectNotify((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QEventLoop_OnDisconnectNotify((QEventLoop*)self, (intptr_t)callback);
 }
 
 QObject* q_eventloop_sender(void* self) {
@@ -359,8 +363,8 @@ QObject* q_eventloop_qbase_sender(void* self) {
     return QEventLoop_QBaseSender((QEventLoop*)self);
 }
 
-void q_eventloop_on_sender(void* self, QObject* (*slot)()) {
-    QEventLoop_OnSender((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_sender(void* self, QObject* (*callback)()) {
+    QEventLoop_OnSender((QEventLoop*)self, (intptr_t)callback);
 }
 
 int32_t q_eventloop_sender_signal_index(void* self) {
@@ -371,8 +375,8 @@ int32_t q_eventloop_qbase_sender_signal_index(void* self) {
     return QEventLoop_QBaseSenderSignalIndex((QEventLoop*)self);
 }
 
-void q_eventloop_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QEventLoop_OnSenderSignalIndex((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QEventLoop_OnSenderSignalIndex((QEventLoop*)self, (intptr_t)callback);
 }
 
 int32_t q_eventloop_receivers(void* self, const char* signal) {
@@ -383,8 +387,8 @@ int32_t q_eventloop_qbase_receivers(void* self, const char* signal) {
     return QEventLoop_QBaseReceivers((QEventLoop*)self, signal);
 }
 
-void q_eventloop_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QEventLoop_OnReceivers((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QEventLoop_OnReceivers((QEventLoop*)self, (intptr_t)callback);
 }
 
 bool q_eventloop_is_signal_connected(void* self, void* signal) {
@@ -395,12 +399,12 @@ bool q_eventloop_qbase_is_signal_connected(void* self, void* signal) {
     return QEventLoop_QBaseIsSignalConnected((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
-void q_eventloop_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QEventLoop_OnIsSignalConnected((QEventLoop*)self, (intptr_t)slot);
+void q_eventloop_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QEventLoop_OnIsSignalConnected((QEventLoop*)self, (intptr_t)callback);
 }
 
-void q_eventloop_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_eventloop_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_eventloop_delete(void* self) {

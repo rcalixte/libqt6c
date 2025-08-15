@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,535 +15,624 @@
 
 /// q_abstractanimation_new constructs a new QAbstractAnimation object.
 ///
-///
 QAbstractAnimation* q_abstractanimation_new();
 
 /// q_abstractanimation_new2 constructs a new QAbstractAnimation object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QAbstractAnimation* q_abstractanimation_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 const QMetaObject* q_abstractanimation_meta_object(void* self);
 
-/// ``` QAbstractAnimation* self, const char* param1 ```
+/// @param self QAbstractAnimation*
+/// @param param1 const char*
 void* q_abstractanimation_metacast(void* self, const char* param1);
 
-/// ``` QAbstractAnimation* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAbstractAnimation*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_abstractanimation_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractAnimation* self, int32_t (*slot)(QAbstractAnimation*, enum QMetaObject__Call, int, void*) ```
-void q_abstractanimation_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QAbstractAnimation*
+/// @param callback int32_t fn(QAbstractAnimation*, enum QMetaObject__Call, int, void*)
+void q_abstractanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QAbstractAnimation* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAbstractAnimation*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_abstractanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_abstractanimation_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#state)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
+///
+/// @return enum QAbstractAnimation__State
 int64_t q_abstractanimation_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#group)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 QAnimationGroup* q_abstractanimation_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#direction)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
+///
+/// @return enum QAbstractAnimation__Direction
 int64_t q_abstractanimation_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setDirection)
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__Direction direction ```
+/// @param self QAbstractAnimation*
+/// @param direction enum QAbstractAnimation__Direction
 void q_abstractanimation_set_direction(void* self, int64_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentTime)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_current_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopTime)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_current_loop_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#loopCount)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_loop_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setLoopCount)
 ///
-/// ``` QAbstractAnimation* self, int loopCount ```
+/// @param self QAbstractAnimation*
+/// @param loopCount int
 void q_abstractanimation_set_loop_count(void* self, int loopCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoop)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_current_loop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#duration)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_duration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#duration)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractAnimation* self, int32_t (*slot)() ```
-void q_abstractanimation_on_duration(void* self, int32_t (*slot)());
+/// @param self QAbstractAnimation*
+/// @param callback int32_t fn()
+void q_abstractanimation_on_duration(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#duration)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_qbase_duration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#totalDuration)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_total_duration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*) ```
-void q_abstractanimation_on_finished(void* self, void (*slot)(void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*)
+void q_abstractanimation_on_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
+/// @param self QAbstractAnimation*
+/// @param newState enum QAbstractAnimation__State
+/// @param oldState enum QAbstractAnimation__State
 void q_abstractanimation_state_changed(void* self, int64_t newState, int64_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
-void q_abstractanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+void q_abstractanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QAbstractAnimation* self, int currentLoop ```
+/// @param self QAbstractAnimation*
+/// @param currentLoop int
 void q_abstractanimation_current_loop_changed(void* self, int currentLoop);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, int) ```
-void q_abstractanimation_on_current_loop_changed(void* self, void (*slot)(void*, int));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, int)
+void q_abstractanimation_on_current_loop_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__Direction param1 ```
+/// @param self QAbstractAnimation*
+/// @param param1 enum QAbstractAnimation__Direction
 void q_abstractanimation_direction_changed(void* self, int64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
-void q_abstractanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__Direction)
+void q_abstractanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#start)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#pause)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_pause(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#resume)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_resume(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setPaused)
 ///
-/// ``` QAbstractAnimation* self, bool paused ```
+/// @param self QAbstractAnimation*
+/// @param paused bool
 void q_abstractanimation_set_paused(void* self, bool paused);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stop)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setCurrentTime)
 ///
-/// ``` QAbstractAnimation* self, int msecs ```
+/// @param self QAbstractAnimation*
+/// @param msecs int
 void q_abstractanimation_set_current_time(void* self, int msecs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#event)
 ///
-/// ``` QAbstractAnimation* self, QEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QEvent*
 bool q_abstractanimation_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractAnimation* self, bool (*slot)(QAbstractAnimation*, QEvent*) ```
-void q_abstractanimation_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback bool fn(QAbstractAnimation*, QEvent*)
+void q_abstractanimation_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractAnimation* self, QEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QEvent*
 bool q_abstractanimation_qbase_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateCurrentTime)
 ///
-/// ``` QAbstractAnimation* self, int currentTime ```
+/// @param self QAbstractAnimation*
+/// @param currentTime int
 void q_abstractanimation_update_current_time(void* self, int currentTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateCurrentTime)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, int) ```
-void q_abstractanimation_on_update_current_time(void* self, void (*slot)(void*, int));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, int)
+void q_abstractanimation_on_update_current_time(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateCurrentTime)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractAnimation* self, int currentTime ```
+/// @param self QAbstractAnimation*
+/// @param currentTime int
 void q_abstractanimation_qbase_update_current_time(void* self, int currentTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateState)
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
+/// @param self QAbstractAnimation*
+/// @param newState enum QAbstractAnimation__State
+/// @param oldState enum QAbstractAnimation__State
 void q_abstractanimation_update_state(void* self, int64_t newState, int64_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateState)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
-void q_abstractanimation_on_update_state(void* self, void (*slot)(void*, int64_t, int64_t));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+void q_abstractanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateState)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
+/// @param self QAbstractAnimation*
+/// @param newState enum QAbstractAnimation__State
+/// @param oldState enum QAbstractAnimation__State
 void q_abstractanimation_qbase_update_state(void* self, int64_t newState, int64_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__Direction direction ```
+/// @param self QAbstractAnimation*
+/// @param direction enum QAbstractAnimation__Direction
 void q_abstractanimation_update_direction(void* self, int64_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, enum QAbstractAnimation__Direction) ```
-void q_abstractanimation_on_update_direction(void* self, void (*slot)(void*, int64_t));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__Direction)
+void q_abstractanimation_on_update_direction(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__Direction direction ```
+/// @param self QAbstractAnimation*
+/// @param direction enum QAbstractAnimation__Direction
 void q_abstractanimation_qbase_update_direction(void* self, int64_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_abstractanimation_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_abstractanimation_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#start)
 ///
-/// ``` QAbstractAnimation* self, enum QAbstractAnimation__DeletionPolicy policy ```
+/// @param self QAbstractAnimation*
+/// @param policy enum QAbstractAnimation__DeletionPolicy
 void q_abstractanimation_start1(void* self, int64_t policy);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QAbstractAnimation* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractAnimation*
 const char* q_abstractanimation_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractAnimation* self, char* name ```
+/// @param self QAbstractAnimation*
+/// @param name char*
 void q_abstractanimation_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 bool q_abstractanimation_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 bool q_abstractanimation_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 bool q_abstractanimation_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 bool q_abstractanimation_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QAbstractAnimation* self, bool b ```
+/// @param self QAbstractAnimation*
+/// @param b bool
 bool q_abstractanimation_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 QThread* q_abstractanimation_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAbstractAnimation* self, QThread* thread ```
+/// @param self QAbstractAnimation*
+/// @param thread QThread*
 bool q_abstractanimation_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAbstractAnimation* self, int interval ```
+/// @param self QAbstractAnimation*
+/// @param interval int
 int32_t q_abstractanimation_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAbstractAnimation* self, int id ```
+/// @param self QAbstractAnimation*
+/// @param id int
 void q_abstractanimation_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAbstractAnimation* self, enum Qt__TimerId id ```
+/// @param self QAbstractAnimation*
+/// @param id enum Qt__TimerId
 void q_abstractanimation_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 libqt_list /* of QObject* */ q_abstractanimation_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QAbstractAnimation* self, QObject* parent ```
+/// @param self QAbstractAnimation*
+/// @param parent QObject*
 void q_abstractanimation_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QAbstractAnimation* self, QObject* filterObj ```
+/// @param self QAbstractAnimation*
+/// @param filterObj QObject*
 void q_abstractanimation_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QAbstractAnimation* self, QObject* obj ```
+/// @param self QAbstractAnimation*
+/// @param obj QObject*
 void q_abstractanimation_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_abstractanimation_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAbstractAnimation* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QAbstractAnimation*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_abstractanimation_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_abstractanimation_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_abstractanimation_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QAbstractAnimation* self, const char* name, QVariant* value ```
+/// @param self QAbstractAnimation*
+/// @param name const char*
+/// @param value QVariant*
 bool q_abstractanimation_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QAbstractAnimation* self, const char* name ```
+/// @param self QAbstractAnimation*
+/// @param name const char*
 QVariant* q_abstractanimation_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QAbstractAnimation* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractAnimation*
 const char** q_abstractanimation_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 QBindingStorage* q_abstractanimation_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 const QBindingStorage* q_abstractanimation_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*) ```
-void q_abstractanimation_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*)
+void q_abstractanimation_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 QObject* q_abstractanimation_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QAbstractAnimation* self, const char* classname ```
+/// @param self QAbstractAnimation*
+/// @param classname const char*
 bool q_abstractanimation_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAbstractAnimation* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QAbstractAnimation*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_abstractanimation_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAbstractAnimation* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QAbstractAnimation*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_abstractanimation_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_abstractanimation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAbstractAnimation* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QAbstractAnimation*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_abstractanimation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAnimation* self, QObject* param1 ```
+/// @param self QAbstractAnimation*
+/// @param param1 QObject*
 void q_abstractanimation_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QObject*) ```
-void q_abstractanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, QObject*)
+void q_abstractanimation_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -552,7 +640,9 @@ void q_abstractanimation_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QObject* watched, QEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_abstractanimation_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -561,7 +651,9 @@ bool q_abstractanimation_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QObject* watched, QEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_abstractanimation_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -570,8 +662,9 @@ bool q_abstractanimation_qbase_event_filter(void* self, void* watched, void* eve
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, bool (*slot)(QAbstractAnimation*, QObject*, QEvent*) ```
-void q_abstractanimation_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback bool fn(QAbstractAnimation*, QObject*, QEvent*)
+void q_abstractanimation_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -579,7 +672,8 @@ void q_abstractanimation_on_event_filter(void* self, bool (*slot)(void*, void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QTimerEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QTimerEvent*
 void q_abstractanimation_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -588,7 +682,8 @@ void q_abstractanimation_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QTimerEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QTimerEvent*
 void q_abstractanimation_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -597,8 +692,9 @@ void q_abstractanimation_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QTimerEvent*) ```
-void q_abstractanimation_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, QTimerEvent*)
+void q_abstractanimation_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -606,7 +702,8 @@ void q_abstractanimation_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QChildEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QChildEvent*
 void q_abstractanimation_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -615,7 +712,8 @@ void q_abstractanimation_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QChildEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QChildEvent*
 void q_abstractanimation_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -624,8 +722,9 @@ void q_abstractanimation_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QChildEvent*) ```
-void q_abstractanimation_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, QChildEvent*)
+void q_abstractanimation_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -633,7 +732,8 @@ void q_abstractanimation_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QEvent*
 void q_abstractanimation_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -642,7 +742,8 @@ void q_abstractanimation_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QEvent* event ```
+/// @param self QAbstractAnimation*
+/// @param event QEvent*
 void q_abstractanimation_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -651,8 +752,9 @@ void q_abstractanimation_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QEvent*) ```
-void q_abstractanimation_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, QEvent*)
+void q_abstractanimation_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -660,7 +762,8 @@ void q_abstractanimation_on_custom_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QMetaMethod* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal QMetaMethod*
 void q_abstractanimation_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -669,7 +772,8 @@ void q_abstractanimation_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QMetaMethod* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal QMetaMethod*
 void q_abstractanimation_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -678,8 +782,9 @@ void q_abstractanimation_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QMetaMethod*) ```
-void q_abstractanimation_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, QMetaMethod*)
+void q_abstractanimation_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -687,7 +792,8 @@ void q_abstractanimation_on_connect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QMetaMethod* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal QMetaMethod*
 void q_abstractanimation_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -696,7 +802,8 @@ void q_abstractanimation_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QMetaMethod* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal QMetaMethod*
 void q_abstractanimation_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -705,8 +812,9 @@ void q_abstractanimation_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, QMetaMethod*) ```
-void q_abstractanimation_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, QMetaMethod*)
+void q_abstractanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -714,7 +822,7 @@ void q_abstractanimation_on_disconnect_notify(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 QObject* q_abstractanimation_sender(void* self);
 
 /// Inherited from QObject
@@ -723,7 +831,7 @@ QObject* q_abstractanimation_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 QObject* q_abstractanimation_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -732,8 +840,9 @@ QObject* q_abstractanimation_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QObject* (*slot)() ```
-void q_abstractanimation_on_sender(void* self, QObject* (*slot)());
+/// @param self QAbstractAnimation*
+/// @param callback QObject* fn()
+void q_abstractanimation_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -741,7 +850,7 @@ void q_abstractanimation_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -750,7 +859,7 @@ int32_t q_abstractanimation_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 int32_t q_abstractanimation_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -759,8 +868,9 @@ int32_t q_abstractanimation_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, int32_t (*slot)() ```
-void q_abstractanimation_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QAbstractAnimation*
+/// @param callback int32_t fn()
+void q_abstractanimation_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -768,7 +878,8 @@ void q_abstractanimation_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, const char* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal const char*
 int32_t q_abstractanimation_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -777,7 +888,8 @@ int32_t q_abstractanimation_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, const char* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal const char*
 int32_t q_abstractanimation_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -786,8 +898,9 @@ int32_t q_abstractanimation_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, int32_t (*slot)(QAbstractAnimation*, const char*) ```
-void q_abstractanimation_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QAbstractAnimation*
+/// @param callback int32_t fn(QAbstractAnimation*, const char*)
+void q_abstractanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -795,7 +908,8 @@ void q_abstractanimation_on_receivers(void* self, int32_t (*slot)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QMetaMethod* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal QMetaMethod*
 bool q_abstractanimation_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -804,7 +918,8 @@ bool q_abstractanimation_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, QMetaMethod* signal ```
+/// @param self QAbstractAnimation*
+/// @param signal QMetaMethod*
 bool q_abstractanimation_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -813,8 +928,9 @@ bool q_abstractanimation_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractAnimation* self, bool (*slot)(QAbstractAnimation*, QMetaMethod*) ```
-void q_abstractanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QAbstractAnimation*
+/// @param callback bool fn(QAbstractAnimation*, QMetaMethod*)
+void q_abstractanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -822,459 +938,524 @@ void q_abstractanimation_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractAnimation* self, void (*slot)(QAbstractAnimation*, const char*) ```
-void q_abstractanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAbstractAnimation*
+/// @param callback void fn(QAbstractAnimation*, const char*)
+void q_abstractanimation_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#dtor.QAbstractAnimation)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAbstractAnimation* self ```
+/// @param self QAbstractAnimation*
 void q_abstractanimation_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qanimationdriver.html
 
 /// q_animationdriver_new constructs a new QAnimationDriver object.
 ///
-///
 QAnimationDriver* q_animationdriver_new();
 
 /// q_animationdriver_new2 constructs a new QAnimationDriver object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QAnimationDriver* q_animationdriver_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 const QMetaObject* q_animationdriver_meta_object(void* self);
 
-/// ``` QAnimationDriver* self, const char* param1 ```
+/// @param self QAnimationDriver*
+/// @param param1 const char*
 void* q_animationdriver_metacast(void* self, const char* param1);
 
-/// ``` QAnimationDriver* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAnimationDriver*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_animationdriver_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationDriver* self, int32_t (*slot)(QAnimationDriver*, enum QMetaObject__Call, int, void*) ```
-void q_animationdriver_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QAnimationDriver*
+/// @param callback int32_t fn(QAnimationDriver*, enum QMetaObject__Call, int, void*)
+void q_animationdriver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QAnimationDriver* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAnimationDriver*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_animationdriver_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_animationdriver_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#advance)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_advance(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#advance)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationDriver* self, void (*slot)() ```
-void q_animationdriver_on_advance(void* self, void (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback void fn()
+void q_animationdriver_on_advance(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#advance)
 ///
 /// Base class method implementation
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_qbase_advance(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#install)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_install(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#uninstall)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_uninstall(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#isRunning)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 bool q_animationdriver_is_running(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#elapsed)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 long long q_animationdriver_elapsed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#elapsed)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationDriver* self, long long (*slot)() ```
-void q_animationdriver_on_elapsed(void* self, long long (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback long long fn()
+void q_animationdriver_on_elapsed(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#elapsed)
 ///
 /// Base class method implementation
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 long long q_animationdriver_qbase_elapsed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#started)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_started(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#started)
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*) ```
-void q_animationdriver_on_started(void* self, void (*slot)(void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*)
+void q_animationdriver_on_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#stopped)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_stopped(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#stopped)
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*) ```
-void q_animationdriver_on_stopped(void* self, void (*slot)(void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*)
+void q_animationdriver_on_stopped(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#advanceAnimation)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_advance_animation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#advanceAnimation)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationDriver* self, void (*slot)() ```
-void q_animationdriver_on_advance_animation(void* self, void (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback void fn()
+void q_animationdriver_on_advance_animation(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#advanceAnimation)
 ///
 /// Base class method implementation
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_qbase_advance_animation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#start)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#start)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationDriver* self, void (*slot)() ```
-void q_animationdriver_on_start(void* self, void (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback void fn()
+void q_animationdriver_on_start(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#start)
 ///
 /// Base class method implementation
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_qbase_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#stop)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#stop)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationDriver* self, void (*slot)() ```
-void q_animationdriver_on_stop(void* self, void (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback void fn()
+void q_animationdriver_on_stop(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#stop)
 ///
 /// Base class method implementation
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_qbase_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_animationdriver_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_animationdriver_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QAnimationDriver* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAnimationDriver*
 const char* q_animationdriver_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAnimationDriver* self, char* name ```
+/// @param self QAnimationDriver*
+/// @param name char*
 void q_animationdriver_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 bool q_animationdriver_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 bool q_animationdriver_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 bool q_animationdriver_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 bool q_animationdriver_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QAnimationDriver* self, bool b ```
+/// @param self QAnimationDriver*
+/// @param b bool
 bool q_animationdriver_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 QThread* q_animationdriver_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAnimationDriver* self, QThread* thread ```
+/// @param self QAnimationDriver*
+/// @param thread QThread*
 bool q_animationdriver_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAnimationDriver* self, int interval ```
+/// @param self QAnimationDriver*
+/// @param interval int
 int32_t q_animationdriver_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAnimationDriver* self, int id ```
+/// @param self QAnimationDriver*
+/// @param id int
 void q_animationdriver_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAnimationDriver* self, enum Qt__TimerId id ```
+/// @param self QAnimationDriver*
+/// @param id enum Qt__TimerId
 void q_animationdriver_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 libqt_list /* of QObject* */ q_animationdriver_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QAnimationDriver* self, QObject* parent ```
+/// @param self QAnimationDriver*
+/// @param parent QObject*
 void q_animationdriver_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QAnimationDriver* self, QObject* filterObj ```
+/// @param self QAnimationDriver*
+/// @param filterObj QObject*
 void q_animationdriver_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QAnimationDriver* self, QObject* obj ```
+/// @param self QAnimationDriver*
+/// @param obj QObject*
 void q_animationdriver_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_animationdriver_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAnimationDriver* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QAnimationDriver*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_animationdriver_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_animationdriver_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_animationdriver_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QAnimationDriver* self, const char* name, QVariant* value ```
+/// @param self QAnimationDriver*
+/// @param name const char*
+/// @param value QVariant*
 bool q_animationdriver_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QAnimationDriver* self, const char* name ```
+/// @param self QAnimationDriver*
+/// @param name const char*
 QVariant* q_animationdriver_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QAnimationDriver* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAnimationDriver*
 const char** q_animationdriver_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 QBindingStorage* q_animationdriver_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 const QBindingStorage* q_animationdriver_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*) ```
-void q_animationdriver_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*)
+void q_animationdriver_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 QObject* q_animationdriver_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QAnimationDriver* self, const char* classname ```
+/// @param self QAnimationDriver*
+/// @param classname const char*
 bool q_animationdriver_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAnimationDriver* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QAnimationDriver*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_animationdriver_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAnimationDriver* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QAnimationDriver*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_animationdriver_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_animationdriver_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAnimationDriver* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QAnimationDriver*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_animationdriver_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationDriver* self, QObject* param1 ```
+/// @param self QAnimationDriver*
+/// @param param1 QObject*
 void q_animationdriver_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QObject*) ```
-void q_animationdriver_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, QObject*)
+void q_animationdriver_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1282,7 +1463,8 @@ void q_animationdriver_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QEvent*
 bool q_animationdriver_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1291,7 +1473,8 @@ bool q_animationdriver_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QEvent*
 bool q_animationdriver_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1300,8 +1483,9 @@ bool q_animationdriver_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, bool (*slot)(QAnimationDriver*, QEvent*) ```
-void q_animationdriver_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback bool fn(QAnimationDriver*, QEvent*)
+void q_animationdriver_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1309,7 +1493,9 @@ void q_animationdriver_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QObject* watched, QEvent* event ```
+/// @param self QAnimationDriver*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_animationdriver_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1318,7 +1504,9 @@ bool q_animationdriver_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QObject* watched, QEvent* event ```
+/// @param self QAnimationDriver*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_animationdriver_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1327,8 +1515,9 @@ bool q_animationdriver_qbase_event_filter(void* self, void* watched, void* event
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, bool (*slot)(QAnimationDriver*, QObject*, QEvent*) ```
-void q_animationdriver_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback bool fn(QAnimationDriver*, QObject*, QEvent*)
+void q_animationdriver_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1336,7 +1525,8 @@ void q_animationdriver_on_event_filter(void* self, bool (*slot)(void*, void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QTimerEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QTimerEvent*
 void q_animationdriver_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1345,7 +1535,8 @@ void q_animationdriver_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QTimerEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QTimerEvent*
 void q_animationdriver_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1354,8 +1545,9 @@ void q_animationdriver_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QTimerEvent*) ```
-void q_animationdriver_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, QTimerEvent*)
+void q_animationdriver_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1363,7 +1555,8 @@ void q_animationdriver_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QChildEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QChildEvent*
 void q_animationdriver_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1372,7 +1565,8 @@ void q_animationdriver_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QChildEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QChildEvent*
 void q_animationdriver_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1381,8 +1575,9 @@ void q_animationdriver_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QChildEvent*) ```
-void q_animationdriver_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, QChildEvent*)
+void q_animationdriver_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1390,7 +1585,8 @@ void q_animationdriver_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QEvent*
 void q_animationdriver_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1399,7 +1595,8 @@ void q_animationdriver_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QEvent* event ```
+/// @param self QAnimationDriver*
+/// @param event QEvent*
 void q_animationdriver_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1408,8 +1605,9 @@ void q_animationdriver_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QEvent*) ```
-void q_animationdriver_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, QEvent*)
+void q_animationdriver_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1417,7 +1615,8 @@ void q_animationdriver_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QMetaMethod* signal ```
+/// @param self QAnimationDriver*
+/// @param signal QMetaMethod*
 void q_animationdriver_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1426,7 +1625,8 @@ void q_animationdriver_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QMetaMethod* signal ```
+/// @param self QAnimationDriver*
+/// @param signal QMetaMethod*
 void q_animationdriver_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1435,8 +1635,9 @@ void q_animationdriver_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QMetaMethod*) ```
-void q_animationdriver_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, QMetaMethod*)
+void q_animationdriver_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1444,7 +1645,8 @@ void q_animationdriver_on_connect_notify(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QMetaMethod* signal ```
+/// @param self QAnimationDriver*
+/// @param signal QMetaMethod*
 void q_animationdriver_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1453,7 +1655,8 @@ void q_animationdriver_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QMetaMethod* signal ```
+/// @param self QAnimationDriver*
+/// @param signal QMetaMethod*
 void q_animationdriver_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1462,8 +1665,9 @@ void q_animationdriver_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, QMetaMethod*) ```
-void q_animationdriver_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, QMetaMethod*)
+void q_animationdriver_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1471,7 +1675,7 @@ void q_animationdriver_on_disconnect_notify(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 QObject* q_animationdriver_sender(void* self);
 
 /// Inherited from QObject
@@ -1480,7 +1684,7 @@ QObject* q_animationdriver_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 QObject* q_animationdriver_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1489,8 +1693,9 @@ QObject* q_animationdriver_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QObject* (*slot)() ```
-void q_animationdriver_on_sender(void* self, QObject* (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback QObject* fn()
+void q_animationdriver_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1498,7 +1703,7 @@ void q_animationdriver_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 int32_t q_animationdriver_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1507,7 +1712,7 @@ int32_t q_animationdriver_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 int32_t q_animationdriver_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1516,8 +1721,9 @@ int32_t q_animationdriver_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, int32_t (*slot)() ```
-void q_animationdriver_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QAnimationDriver*
+/// @param callback int32_t fn()
+void q_animationdriver_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1525,7 +1731,8 @@ void q_animationdriver_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, const char* signal ```
+/// @param self QAnimationDriver*
+/// @param signal const char*
 int32_t q_animationdriver_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1534,7 +1741,8 @@ int32_t q_animationdriver_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, const char* signal ```
+/// @param self QAnimationDriver*
+/// @param signal const char*
 int32_t q_animationdriver_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1543,8 +1751,9 @@ int32_t q_animationdriver_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, int32_t (*slot)(QAnimationDriver*, const char*) ```
-void q_animationdriver_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QAnimationDriver*
+/// @param callback int32_t fn(QAnimationDriver*, const char*)
+void q_animationdriver_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1552,7 +1761,8 @@ void q_animationdriver_on_receivers(void* self, int32_t (*slot)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QMetaMethod* signal ```
+/// @param self QAnimationDriver*
+/// @param signal QMetaMethod*
 bool q_animationdriver_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1561,7 +1771,8 @@ bool q_animationdriver_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, QMetaMethod* signal ```
+/// @param self QAnimationDriver*
+/// @param signal QMetaMethod*
 bool q_animationdriver_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1570,8 +1781,9 @@ bool q_animationdriver_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationDriver* self, bool (*slot)(QAnimationDriver*, QMetaMethod*) ```
-void q_animationdriver_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QAnimationDriver*
+/// @param callback bool fn(QAnimationDriver*, QMetaMethod*)
+void q_animationdriver_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1579,14 +1791,15 @@ void q_animationdriver_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAnimationDriver* self, void (*slot)(QAnimationDriver*, const char*) ```
-void q_animationdriver_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAnimationDriver*
+/// @param callback void fn(QAnimationDriver*, const char*)
+void q_animationdriver_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationdriver.html#dtor.QAnimationDriver)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAnimationDriver* self ```
+/// @param self QAnimationDriver*
 void q_animationdriver_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qabstractanimation.html#types

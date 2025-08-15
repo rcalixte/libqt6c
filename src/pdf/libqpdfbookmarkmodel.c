@@ -31,8 +31,8 @@ int32_t q_pdfbookmarkmodel_metacall(void* self, int64_t param1, int param2, void
     return QPdfBookmarkModel_Metacall((QPdfBookmarkModel*)self, param1, param2, param3);
 }
 
-void q_pdfbookmarkmodel_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPdfBookmarkModel_OnMetacall((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPdfBookmarkModel_OnMetacall((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ QVariant* q_pdfbookmarkmodel_data(void* self, void* index, int role) {
     return QPdfBookmarkModel_Data((QPdfBookmarkModel*)self, (QModelIndex*)index, role);
 }
 
-void q_pdfbookmarkmodel_on_data(void* self, QVariant* (*slot)(void*, void*, int)) {
-    QPdfBookmarkModel_OnData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
+    QPdfBookmarkModel_OnData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QVariant* q_pdfbookmarkmodel_qbase_data(void* self, void* index, int role) {
@@ -70,8 +70,8 @@ QModelIndex* q_pdfbookmarkmodel_index(void* self, int row, int column, void* par
     return QPdfBookmarkModel_Index((QPdfBookmarkModel*)self, row, column, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_index(void* self, QModelIndex* (*slot)(void*, int, int, void*)) {
-    QPdfBookmarkModel_OnIndex((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
+    QPdfBookmarkModel_OnIndex((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_pdfbookmarkmodel_qbase_index(void* self, int row, int column, void* parent) {
@@ -82,8 +82,8 @@ QModelIndex* q_pdfbookmarkmodel_parent(void* self, void* index) {
     return QPdfBookmarkModel_Parent((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnParent((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnParent((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_pdfbookmarkmodel_qbase_parent(void* self, void* index) {
@@ -94,8 +94,8 @@ int32_t q_pdfbookmarkmodel_row_count(void* self, void* parent) {
     return QPdfBookmarkModel_RowCount((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_row_count(void* self, int32_t (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnRowCount((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnRowCount((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_qbase_row_count(void* self, void* parent) {
@@ -106,8 +106,8 @@ int32_t q_pdfbookmarkmodel_column_count(void* self, void* parent) {
     return QPdfBookmarkModel_ColumnCount((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_column_count(void* self, int32_t (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnColumnCount((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnColumnCount((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_qbase_column_count(void* self, void* parent) {
@@ -118,8 +118,8 @@ libqt_map /* of int to char* */ q_pdfbookmarkmodel_role_names(void* self) {
     return QPdfBookmarkModel_RoleNames((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*slot)()) {
-    QPdfBookmarkModel_OnRoleNames((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)()) {
+    QPdfBookmarkModel_OnRoleNames((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to char* */ q_pdfbookmarkmodel_qbase_role_names(void* self) {
@@ -130,8 +130,8 @@ void q_pdfbookmarkmodel_document_changed(void* self, void* document) {
     QPdfBookmarkModel_DocumentChanged((QPdfBookmarkModel*)self, (QPdfDocument*)document);
 }
 
-void q_pdfbookmarkmodel_on_document_changed(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_Connect_DocumentChanged((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_document_changed(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_Connect_DocumentChanged((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 const char* q_pdfbookmarkmodel_tr2(const char* s, const char* c) {
@@ -184,32 +184,32 @@ void q_pdfbookmarkmodel_data_changed(void* self, void* topLeft, void* bottomRigh
     QAbstractItemModel_DataChanged((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight);
 }
 
-void q_pdfbookmarkmodel_on_data_changed(void* self, void (*slot)(void*, void*, void*)) {
-    QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_data_changed(void* self, void (*callback)(void*, void*, void*)) {
+    QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-void q_pdfbookmarkmodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int)) {
-    QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int)) {
+    QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_layout_changed(void* self) {
     QAbstractItemModel_LayoutChanged((QAbstractItemModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_layout_changed(void* self, void (*slot)(void*)) {
-    QAbstractItemModel_Connect_LayoutChanged((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_layout_changed(void* self, void (*callback)(void*)) {
+    QAbstractItemModel_Connect_LayoutChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_layout_about_to_be_changed(void* self) {
     QAbstractItemModel_LayoutAboutToBeChanged((QAbstractItemModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*)) {
-    QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*)) {
+    QAbstractItemModel_Connect_LayoutAboutToBeChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_has_index3(void* self, int row, int column, void* parent) {
@@ -240,40 +240,40 @@ void q_pdfbookmarkmodel_data_changed3(void* self, void* topLeft, void* bottomRig
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_pdfbookmarkmodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
-    QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+    QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_layout_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_pdfbookmarkmodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list)) {
-    QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list)) {
+    QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_pdfbookmarkmodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t)) {
-    QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+    QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_layout_about_to_be_changed1(void* self, libqt_list parents) {
     QAbstractItemModel_LayoutAboutToBeChanged1((QAbstractItemModel*)self, parents);
 }
 
-void q_pdfbookmarkmodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list)) {
-    QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list)) {
+    QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_pdfbookmarkmodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t)) {
-    QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+    QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
 const char* q_pdfbookmarkmodel_object_name(void* self) {
@@ -380,12 +380,16 @@ const char** q_pdfbookmarkmodel_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pdfbookmarkmodel_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -403,8 +407,8 @@ void q_pdfbookmarkmodel_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pdfbookmarkmodel_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_inherits(void* self, const char* classname) {
@@ -435,8 +439,8 @@ void q_pdfbookmarkmodel_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pdfbookmarkmodel_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_pdfbookmarkmodel_sibling(void* self, int row, int column, void* idx) {
@@ -447,8 +451,8 @@ QModelIndex* q_pdfbookmarkmodel_qbase_sibling(void* self, int row, int column, v
     return QPdfBookmarkModel_QBaseSibling((QPdfBookmarkModel*)self, row, column, (QModelIndex*)idx);
 }
 
-void q_pdfbookmarkmodel_on_sibling(void* self, QModelIndex* (*slot)(void*, int, int, void*)) {
-    QPdfBookmarkModel_OnSibling((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
+    QPdfBookmarkModel_OnSibling((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_has_children(void* self, void* parent) {
@@ -459,8 +463,8 @@ bool q_pdfbookmarkmodel_qbase_has_children(void* self, void* parent) {
     return QPdfBookmarkModel_QBaseHasChildren((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_has_children(void* self, bool (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnHasChildren((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnHasChildren((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_set_data(void* self, void* index, void* value, int role) {
@@ -471,8 +475,8 @@ bool q_pdfbookmarkmodel_qbase_set_data(void* self, void* index, void* value, int
     return QPdfBookmarkModel_QBaseSetData((QPdfBookmarkModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-void q_pdfbookmarkmodel_on_set_data(void* self, bool (*slot)(void*, void*, void*, int)) {
-    QPdfBookmarkModel_OnSetData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
+    QPdfBookmarkModel_OnSetData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QVariant* q_pdfbookmarkmodel_header_data(void* self, int section, int64_t orientation, int role) {
@@ -483,8 +487,8 @@ QVariant* q_pdfbookmarkmodel_qbase_header_data(void* self, int section, int64_t 
     return QPdfBookmarkModel_QBaseHeaderData((QPdfBookmarkModel*)self, section, orientation, role);
 }
 
-void q_pdfbookmarkmodel_on_header_data(void* self, QVariant* (*slot)(void*, int, int64_t, int)) {
-    QPdfBookmarkModel_OnHeaderData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int)) {
+    QPdfBookmarkModel_OnHeaderData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
@@ -495,8 +499,8 @@ bool q_pdfbookmarkmodel_qbase_set_header_data(void* self, int section, int64_t o
     return QPdfBookmarkModel_QBaseSetHeaderData((QPdfBookmarkModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void q_pdfbookmarkmodel_on_set_header_data(void* self, bool (*slot)(void*, int, int64_t, void*, int)) {
-    QPdfBookmarkModel_OnSetHeaderData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int)) {
+    QPdfBookmarkModel_OnSetHeaderData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 libqt_map /* of int to QVariant* */ q_pdfbookmarkmodel_item_data(void* self, void* index) {
@@ -507,8 +511,8 @@ libqt_map /* of int to QVariant* */ q_pdfbookmarkmodel_qbase_item_data(void* sel
     return QPdfBookmarkModel_QBaseItemData((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnItemData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnItemData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -519,8 +523,8 @@ bool q_pdfbookmarkmodel_qbase_set_item_data(void* self, void* index, libqt_map /
     return QPdfBookmarkModel_QBaseSetItemData((QPdfBookmarkModel*)self, (QModelIndex*)index, roles);
 }
 
-void q_pdfbookmarkmodel_on_set_item_data(void* self, bool (*slot)(void*, void*, libqt_map /* of int to QVariant* */)) {
-    QPdfBookmarkModel_OnSetItemData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */)) {
+    QPdfBookmarkModel_OnSetItemData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_clear_item_data(void* self, void* index) {
@@ -531,20 +535,24 @@ bool q_pdfbookmarkmodel_qbase_clear_item_data(void* self, void* index) {
     return QPdfBookmarkModel_QBaseClearItemData((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_clear_item_data(void* self, bool (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnClearItemData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnClearItemData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 const char** q_pdfbookmarkmodel_mime_types(void* self) {
     libqt_list _arr = QPdfBookmarkModel_MimeTypes((QPdfBookmarkModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pdfbookmarkmodel_mime_types");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -554,19 +562,23 @@ const char** q_pdfbookmarkmodel_qbase_mime_types(void* self) {
     libqt_list _arr = QPdfBookmarkModel_QBaseMimeTypes((QPdfBookmarkModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pdfbookmarkmodel_mime_types");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_pdfbookmarkmodel_on_mime_types(void* self, const char** (*slot)()) {
-    QPdfBookmarkModel_OnMimeTypes((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_mime_types(void* self, const char** (*callback)()) {
+    QPdfBookmarkModel_OnMimeTypes((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QMimeData* q_pdfbookmarkmodel_mime_data(void* self, libqt_list indexes) {
@@ -577,8 +589,8 @@ QMimeData* q_pdfbookmarkmodel_qbase_mime_data(void* self, libqt_list indexes) {
     return QPdfBookmarkModel_QBaseMimeData((QPdfBookmarkModel*)self, indexes);
 }
 
-void q_pdfbookmarkmodel_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list)) {
-    QPdfBookmarkModel_OnMimeData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list)) {
+    QPdfBookmarkModel_OnMimeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
@@ -589,8 +601,8 @@ bool q_pdfbookmarkmodel_qbase_can_drop_mime_data(void* self, void* data, int64_t
     return QPdfBookmarkModel_QBaseCanDropMimeData((QPdfBookmarkModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_can_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*)) {
-    QPdfBookmarkModel_OnCanDropMimeData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+    QPdfBookmarkModel_OnCanDropMimeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
@@ -601,8 +613,8 @@ bool q_pdfbookmarkmodel_qbase_drop_mime_data(void* self, void* data, int64_t act
     return QPdfBookmarkModel_QBaseDropMimeData((QPdfBookmarkModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*)) {
-    QPdfBookmarkModel_OnDropMimeData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+    QPdfBookmarkModel_OnDropMimeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int64_t q_pdfbookmarkmodel_supported_drop_actions(void* self) {
@@ -613,8 +625,8 @@ int64_t q_pdfbookmarkmodel_qbase_supported_drop_actions(void* self) {
     return QPdfBookmarkModel_QBaseSupportedDropActions((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_supported_drop_actions(void* self, int64_t (*slot)()) {
-    QPdfBookmarkModel_OnSupportedDropActions((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_supported_drop_actions(void* self, int64_t (*callback)()) {
+    QPdfBookmarkModel_OnSupportedDropActions((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int64_t q_pdfbookmarkmodel_supported_drag_actions(void* self) {
@@ -625,8 +637,8 @@ int64_t q_pdfbookmarkmodel_qbase_supported_drag_actions(void* self) {
     return QPdfBookmarkModel_QBaseSupportedDragActions((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_supported_drag_actions(void* self, int64_t (*slot)()) {
-    QPdfBookmarkModel_OnSupportedDragActions((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_supported_drag_actions(void* self, int64_t (*callback)()) {
+    QPdfBookmarkModel_OnSupportedDragActions((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_insert_rows(void* self, int row, int count, void* parent) {
@@ -637,8 +649,8 @@ bool q_pdfbookmarkmodel_qbase_insert_rows(void* self, int row, int count, void* 
     return QPdfBookmarkModel_QBaseInsertRows((QPdfBookmarkModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_insert_rows(void* self, bool (*slot)(void*, int, int, void*)) {
-    QPdfBookmarkModel_OnInsertRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+    QPdfBookmarkModel_OnInsertRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_insert_columns(void* self, int column, int count, void* parent) {
@@ -649,8 +661,8 @@ bool q_pdfbookmarkmodel_qbase_insert_columns(void* self, int column, int count, 
     return QPdfBookmarkModel_QBaseInsertColumns((QPdfBookmarkModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_insert_columns(void* self, bool (*slot)(void*, int, int, void*)) {
-    QPdfBookmarkModel_OnInsertColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+    QPdfBookmarkModel_OnInsertColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_remove_rows(void* self, int row, int count, void* parent) {
@@ -661,8 +673,8 @@ bool q_pdfbookmarkmodel_qbase_remove_rows(void* self, int row, int count, void* 
     return QPdfBookmarkModel_QBaseRemoveRows((QPdfBookmarkModel*)self, row, count, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_remove_rows(void* self, bool (*slot)(void*, int, int, void*)) {
-    QPdfBookmarkModel_OnRemoveRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
+    QPdfBookmarkModel_OnRemoveRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_remove_columns(void* self, int column, int count, void* parent) {
@@ -673,8 +685,8 @@ bool q_pdfbookmarkmodel_qbase_remove_columns(void* self, int column, int count, 
     return QPdfBookmarkModel_QBaseRemoveColumns((QPdfBookmarkModel*)self, column, count, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_remove_columns(void* self, bool (*slot)(void*, int, int, void*)) {
-    QPdfBookmarkModel_OnRemoveColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
+    QPdfBookmarkModel_OnRemoveColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
@@ -685,8 +697,8 @@ bool q_pdfbookmarkmodel_qbase_move_rows(void* self, void* sourceParent, int sour
     return QPdfBookmarkModel_QBaseMoveRows((QPdfBookmarkModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void q_pdfbookmarkmodel_on_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
-    QPdfBookmarkModel_OnMoveRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+    QPdfBookmarkModel_OnMoveRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
@@ -697,8 +709,8 @@ bool q_pdfbookmarkmodel_qbase_move_columns(void* self, void* sourceParent, int s
     return QPdfBookmarkModel_QBaseMoveColumns((QPdfBookmarkModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-void q_pdfbookmarkmodel_on_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
-    QPdfBookmarkModel_OnMoveColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+    QPdfBookmarkModel_OnMoveColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_fetch_more(void* self, void* parent) {
@@ -709,8 +721,8 @@ void q_pdfbookmarkmodel_qbase_fetch_more(void* self, void* parent) {
     QPdfBookmarkModel_QBaseFetchMore((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_fetch_more(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnFetchMore((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnFetchMore((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_can_fetch_more(void* self, void* parent) {
@@ -721,8 +733,8 @@ bool q_pdfbookmarkmodel_qbase_can_fetch_more(void* self, void* parent) {
     return QPdfBookmarkModel_QBaseCanFetchMore((QPdfBookmarkModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfbookmarkmodel_on_can_fetch_more(void* self, bool (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnCanFetchMore((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnCanFetchMore((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int64_t q_pdfbookmarkmodel_flags(void* self, void* index) {
@@ -733,8 +745,8 @@ int64_t q_pdfbookmarkmodel_qbase_flags(void* self, void* index) {
     return QPdfBookmarkModel_QBaseFlags((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_flags(void* self, int64_t (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnFlags((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_flags(void* self, int64_t (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnFlags((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_sort(void* self, int column, int64_t order) {
@@ -745,8 +757,8 @@ void q_pdfbookmarkmodel_qbase_sort(void* self, int column, int64_t order) {
     QPdfBookmarkModel_QBaseSort((QPdfBookmarkModel*)self, column, order);
 }
 
-void q_pdfbookmarkmodel_on_sort(void* self, void (*slot)(void*, int, int64_t)) {
-    QPdfBookmarkModel_OnSort((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_sort(void* self, void (*callback)(void*, int, int64_t)) {
+    QPdfBookmarkModel_OnSort((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_pdfbookmarkmodel_buddy(void* self, void* index) {
@@ -757,8 +769,8 @@ QModelIndex* q_pdfbookmarkmodel_qbase_buddy(void* self, void* index) {
     return QPdfBookmarkModel_QBaseBuddy((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_buddy(void* self, QModelIndex* (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnBuddy((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnBuddy((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags) {
@@ -771,8 +783,8 @@ libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_qbase_match(void* self, void
     return _arr;
 }
 
-void q_pdfbookmarkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*slot)(void*, void*, int, void*, int, int64_t)) {
-    QPdfBookmarkModel_OnMatch((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t)) {
+    QPdfBookmarkModel_OnMatch((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QSize* q_pdfbookmarkmodel_span(void* self, void* index) {
@@ -783,8 +795,8 @@ QSize* q_pdfbookmarkmodel_qbase_span(void* self, void* index) {
     return QPdfBookmarkModel_QBaseSpan((QPdfBookmarkModel*)self, (QModelIndex*)index);
 }
 
-void q_pdfbookmarkmodel_on_span(void* self, QSize* (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnSpan((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnSpan((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_multi_data(void* self, void* index, void* roleDataSpan) {
@@ -795,8 +807,8 @@ void q_pdfbookmarkmodel_qbase_multi_data(void* self, void* index, void* roleData
     QPdfBookmarkModel_QBaseMultiData((QPdfBookmarkModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_pdfbookmarkmodel_on_multi_data(void* self, void (*slot)(void*, void*, void*)) {
-    QPdfBookmarkModel_OnMultiData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
+    QPdfBookmarkModel_OnMultiData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_submit(void* self) {
@@ -807,8 +819,8 @@ bool q_pdfbookmarkmodel_qbase_submit(void* self) {
     return QPdfBookmarkModel_QBaseSubmit((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_submit(void* self, bool (*slot)()) {
-    QPdfBookmarkModel_OnSubmit((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_submit(void* self, bool (*callback)()) {
+    QPdfBookmarkModel_OnSubmit((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_revert(void* self) {
@@ -819,8 +831,8 @@ void q_pdfbookmarkmodel_qbase_revert(void* self) {
     QPdfBookmarkModel_QBaseRevert((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_revert(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnRevert((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_revert(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnRevert((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_reset_internal_data(void* self) {
@@ -831,8 +843,8 @@ void q_pdfbookmarkmodel_qbase_reset_internal_data(void* self) {
     QPdfBookmarkModel_QBaseResetInternalData((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_reset_internal_data(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnResetInternalData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_reset_internal_data(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnResetInternalData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_event(void* self, void* event) {
@@ -843,8 +855,8 @@ bool q_pdfbookmarkmodel_qbase_event(void* self, void* event) {
     return QPdfBookmarkModel_QBaseEvent((QPdfBookmarkModel*)self, (QEvent*)event);
 }
 
-void q_pdfbookmarkmodel_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnEvent((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnEvent((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_event_filter(void* self, void* watched, void* event) {
@@ -855,8 +867,8 @@ bool q_pdfbookmarkmodel_qbase_event_filter(void* self, void* watched, void* even
     return QPdfBookmarkModel_QBaseEventFilter((QPdfBookmarkModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pdfbookmarkmodel_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPdfBookmarkModel_OnEventFilter((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPdfBookmarkModel_OnEventFilter((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_timer_event(void* self, void* event) {
@@ -867,8 +879,8 @@ void q_pdfbookmarkmodel_qbase_timer_event(void* self, void* event) {
     QPdfBookmarkModel_QBaseTimerEvent((QPdfBookmarkModel*)self, (QTimerEvent*)event);
 }
 
-void q_pdfbookmarkmodel_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnTimerEvent((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnTimerEvent((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_child_event(void* self, void* event) {
@@ -879,8 +891,8 @@ void q_pdfbookmarkmodel_qbase_child_event(void* self, void* event) {
     QPdfBookmarkModel_QBaseChildEvent((QPdfBookmarkModel*)self, (QChildEvent*)event);
 }
 
-void q_pdfbookmarkmodel_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnChildEvent((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnChildEvent((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_custom_event(void* self, void* event) {
@@ -891,8 +903,8 @@ void q_pdfbookmarkmodel_qbase_custom_event(void* self, void* event) {
     QPdfBookmarkModel_QBaseCustomEvent((QPdfBookmarkModel*)self, (QEvent*)event);
 }
 
-void q_pdfbookmarkmodel_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnCustomEvent((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnCustomEvent((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_connect_notify(void* self, void* signal) {
@@ -903,8 +915,8 @@ void q_pdfbookmarkmodel_qbase_connect_notify(void* self, void* signal) {
     QPdfBookmarkModel_QBaseConnectNotify((QPdfBookmarkModel*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfbookmarkmodel_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnConnectNotify((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnConnectNotify((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_disconnect_notify(void* self, void* signal) {
@@ -915,8 +927,8 @@ void q_pdfbookmarkmodel_qbase_disconnect_notify(void* self, void* signal) {
     QPdfBookmarkModel_QBaseDisconnectNotify((QPdfBookmarkModel*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfbookmarkmodel_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnDisconnectNotify((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnDisconnectNotify((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_pdfbookmarkmodel_create_index(void* self, int row, int column) {
@@ -927,8 +939,8 @@ QModelIndex* q_pdfbookmarkmodel_qbase_create_index(void* self, int row, int colu
     return QPdfBookmarkModel_QBaseCreateIndex((QPdfBookmarkModel*)self, row, column);
 }
 
-void q_pdfbookmarkmodel_on_create_index(void* self, QModelIndex* (*slot)(void*, int, int)) {
-    QPdfBookmarkModel_OnCreateIndex((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
+    QPdfBookmarkModel_OnCreateIndex((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_encode_data(void* self, libqt_list indexes, void* stream) {
@@ -939,8 +951,8 @@ void q_pdfbookmarkmodel_qbase_encode_data(void* self, libqt_list indexes, void* 
     QPdfBookmarkModel_QBaseEncodeData((QPdfBookmarkModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_pdfbookmarkmodel_on_encode_data(void* self, void (*slot)(void*, libqt_list, void*)) {
-    QPdfBookmarkModel_OnEncodeData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*)) {
+    QPdfBookmarkModel_OnEncodeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_decode_data(void* self, int row, int column, void* parent, void* stream) {
@@ -951,8 +963,8 @@ bool q_pdfbookmarkmodel_qbase_decode_data(void* self, int row, int column, void*
     return QPdfBookmarkModel_QBaseDecodeData((QPdfBookmarkModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-void q_pdfbookmarkmodel_on_decode_data(void* self, bool (*slot)(void*, int, int, void*, void*)) {
-    QPdfBookmarkModel_OnDecodeData((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
+    QPdfBookmarkModel_OnDecodeData((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_begin_insert_rows(void* self, void* parent, int first, int last) {
@@ -963,8 +975,8 @@ void q_pdfbookmarkmodel_qbase_begin_insert_rows(void* self, void* parent, int fi
     QPdfBookmarkModel_QBaseBeginInsertRows((QPdfBookmarkModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfbookmarkmodel_on_begin_insert_rows(void* self, void (*slot)(void*, void*, int, int)) {
-    QPdfBookmarkModel_OnBeginInsertRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
+    QPdfBookmarkModel_OnBeginInsertRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_insert_rows(void* self) {
@@ -975,8 +987,8 @@ void q_pdfbookmarkmodel_qbase_end_insert_rows(void* self) {
     QPdfBookmarkModel_QBaseEndInsertRows((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_insert_rows(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndInsertRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_insert_rows(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndInsertRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_begin_remove_rows(void* self, void* parent, int first, int last) {
@@ -987,8 +999,8 @@ void q_pdfbookmarkmodel_qbase_begin_remove_rows(void* self, void* parent, int fi
     QPdfBookmarkModel_QBaseBeginRemoveRows((QPdfBookmarkModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfbookmarkmodel_on_begin_remove_rows(void* self, void (*slot)(void*, void*, int, int)) {
-    QPdfBookmarkModel_OnBeginRemoveRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
+    QPdfBookmarkModel_OnBeginRemoveRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_remove_rows(void* self) {
@@ -999,8 +1011,8 @@ void q_pdfbookmarkmodel_qbase_end_remove_rows(void* self) {
     QPdfBookmarkModel_QBaseEndRemoveRows((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_remove_rows(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndRemoveRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_remove_rows(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndRemoveRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
@@ -1011,8 +1023,8 @@ bool q_pdfbookmarkmodel_qbase_begin_move_rows(void* self, void* sourceParent, in
     return QPdfBookmarkModel_QBaseBeginMoveRows((QPdfBookmarkModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-void q_pdfbookmarkmodel_on_begin_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
-    QPdfBookmarkModel_OnBeginMoveRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+    QPdfBookmarkModel_OnBeginMoveRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_move_rows(void* self) {
@@ -1023,8 +1035,8 @@ void q_pdfbookmarkmodel_qbase_end_move_rows(void* self) {
     QPdfBookmarkModel_QBaseEndMoveRows((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_move_rows(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndMoveRows((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_move_rows(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndMoveRows((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_begin_insert_columns(void* self, void* parent, int first, int last) {
@@ -1035,8 +1047,8 @@ void q_pdfbookmarkmodel_qbase_begin_insert_columns(void* self, void* parent, int
     QPdfBookmarkModel_QBaseBeginInsertColumns((QPdfBookmarkModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfbookmarkmodel_on_begin_insert_columns(void* self, void (*slot)(void*, void*, int, int)) {
-    QPdfBookmarkModel_OnBeginInsertColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
+    QPdfBookmarkModel_OnBeginInsertColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_insert_columns(void* self) {
@@ -1047,8 +1059,8 @@ void q_pdfbookmarkmodel_qbase_end_insert_columns(void* self) {
     QPdfBookmarkModel_QBaseEndInsertColumns((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_insert_columns(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndInsertColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_insert_columns(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndInsertColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_begin_remove_columns(void* self, void* parent, int first, int last) {
@@ -1059,8 +1071,8 @@ void q_pdfbookmarkmodel_qbase_begin_remove_columns(void* self, void* parent, int
     QPdfBookmarkModel_QBaseBeginRemoveColumns((QPdfBookmarkModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfbookmarkmodel_on_begin_remove_columns(void* self, void (*slot)(void*, void*, int, int)) {
-    QPdfBookmarkModel_OnBeginRemoveColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
+    QPdfBookmarkModel_OnBeginRemoveColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_remove_columns(void* self) {
@@ -1071,8 +1083,8 @@ void q_pdfbookmarkmodel_qbase_end_remove_columns(void* self) {
     QPdfBookmarkModel_QBaseEndRemoveColumns((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_remove_columns(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndRemoveColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_remove_columns(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndRemoveColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
@@ -1083,8 +1095,8 @@ bool q_pdfbookmarkmodel_qbase_begin_move_columns(void* self, void* sourceParent,
     return QPdfBookmarkModel_QBaseBeginMoveColumns((QPdfBookmarkModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-void q_pdfbookmarkmodel_on_begin_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int)) {
-    QPdfBookmarkModel_OnBeginMoveColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
+    QPdfBookmarkModel_OnBeginMoveColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_move_columns(void* self) {
@@ -1095,8 +1107,8 @@ void q_pdfbookmarkmodel_qbase_end_move_columns(void* self) {
     QPdfBookmarkModel_QBaseEndMoveColumns((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_move_columns(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndMoveColumns((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_move_columns(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndMoveColumns((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_begin_reset_model(void* self) {
@@ -1107,8 +1119,8 @@ void q_pdfbookmarkmodel_qbase_begin_reset_model(void* self) {
     QPdfBookmarkModel_QBaseBeginResetModel((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_begin_reset_model(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnBeginResetModel((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_begin_reset_model(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnBeginResetModel((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_end_reset_model(void* self) {
@@ -1119,8 +1131,8 @@ void q_pdfbookmarkmodel_qbase_end_reset_model(void* self) {
     QPdfBookmarkModel_QBaseEndResetModel((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_end_reset_model(void* self, void (*slot)()) {
-    QPdfBookmarkModel_OnEndResetModel((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_end_reset_model(void* self, void (*callback)()) {
+    QPdfBookmarkModel_OnEndResetModel((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_change_persistent_index(void* self, void* from, void* to) {
@@ -1131,8 +1143,8 @@ void q_pdfbookmarkmodel_qbase_change_persistent_index(void* self, void* from, vo
     QPdfBookmarkModel_QBaseChangePersistentIndex((QPdfBookmarkModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void q_pdfbookmarkmodel_on_change_persistent_index(void* self, void (*slot)(void*, void*, void*)) {
-    QPdfBookmarkModel_OnChangePersistentIndex((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
+    QPdfBookmarkModel_OnChangePersistentIndex((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to) {
@@ -1143,8 +1155,8 @@ void q_pdfbookmarkmodel_qbase_change_persistent_index_list(void* self, libqt_lis
     QPdfBookmarkModel_QBaseChangePersistentIndexList((QPdfBookmarkModel*)self, from, to);
 }
 
-void q_pdfbookmarkmodel_on_change_persistent_index_list(void* self, void (*slot)(void*, libqt_list, libqt_list)) {
-    QPdfBookmarkModel_OnChangePersistentIndexList((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list)) {
+    QPdfBookmarkModel_OnChangePersistentIndexList((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_persistent_index_list(void* self) {
@@ -1157,8 +1169,8 @@ libqt_list /* of QModelIndex* */ q_pdfbookmarkmodel_qbase_persistent_index_list(
     return _arr;
 }
 
-void q_pdfbookmarkmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*slot)()) {
-    QPdfBookmarkModel_OnPersistentIndexList((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+    QPdfBookmarkModel_OnPersistentIndexList((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 QObject* q_pdfbookmarkmodel_sender(void* self) {
@@ -1169,8 +1181,8 @@ QObject* q_pdfbookmarkmodel_qbase_sender(void* self) {
     return QPdfBookmarkModel_QBaseSender((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_sender(void* self, QObject* (*slot)()) {
-    QPdfBookmarkModel_OnSender((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_sender(void* self, QObject* (*callback)()) {
+    QPdfBookmarkModel_OnSender((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_sender_signal_index(void* self) {
@@ -1181,8 +1193,8 @@ int32_t q_pdfbookmarkmodel_qbase_sender_signal_index(void* self) {
     return QPdfBookmarkModel_QBaseSenderSignalIndex((QPdfBookmarkModel*)self);
 }
 
-void q_pdfbookmarkmodel_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPdfBookmarkModel_OnSenderSignalIndex((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPdfBookmarkModel_OnSenderSignalIndex((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfbookmarkmodel_receivers(void* self, const char* signal) {
@@ -1193,8 +1205,8 @@ int32_t q_pdfbookmarkmodel_qbase_receivers(void* self, const char* signal) {
     return QPdfBookmarkModel_QBaseReceivers((QPdfBookmarkModel*)self, signal);
 }
 
-void q_pdfbookmarkmodel_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPdfBookmarkModel_OnReceivers((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPdfBookmarkModel_OnReceivers((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
 bool q_pdfbookmarkmodel_is_signal_connected(void* self, void* signal) {
@@ -1205,68 +1217,68 @@ bool q_pdfbookmarkmodel_qbase_is_signal_connected(void* self, void* signal) {
     return QPdfBookmarkModel_QBaseIsSignalConnected((QPdfBookmarkModel*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfbookmarkmodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPdfBookmarkModel_OnIsSignalConnected((QPdfBookmarkModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPdfBookmarkModel_OnIsSignalConnected((QPdfBookmarkModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_RowsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsAboutToBeInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsInserted((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsAboutToBeRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QAbstractItemModel_Connect_ColumnsRemoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_model_about_to_be_reset(void* self, void (*slot)(void*)) {
-    QAbstractItemModel_Connect_ModelAboutToBeReset((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_model_about_to_be_reset(void* self, void (*callback)(void*)) {
+    QAbstractItemModel_Connect_ModelAboutToBeReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_model_reset(void* self, void (*slot)(void*)) {
-    QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_model_reset(void* self, void (*callback)(void*)) {
+    QAbstractItemModel_Connect_ModelReset((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
-    QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_RowsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
-    QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_RowsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
-    QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_ColumnsAboutToBeMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int)) {
-    QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int)) {
+    QAbstractItemModel_Connect_ColumnsMoved((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_pdfbookmarkmodel_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pdfbookmarkmodel_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pdfbookmarkmodel_delete(void* self) {

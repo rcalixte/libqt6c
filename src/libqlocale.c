@@ -517,12 +517,16 @@ const char** q_locale_ui_languages(void* self) {
     libqt_list _arr = QLocale_UiLanguages((QLocale*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_locale_ui_languages");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -623,12 +627,17 @@ const char* q_locale_quote_string(void* self, const char* str) {
 
 const char* q_locale_create_separated_list(void* self, const char* strl[]) {
     size_t strl_len = libqt_strv_length(strl);
-    libqt_string* strl_qstr = malloc(strl_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < strl_len; ++_i) {
-        strl_qstr[_i] = qstring(strl[_i]);
+    libqt_string* strl_qstr = (libqt_string*)malloc(strl_len * sizeof(libqt_string));
+    if (strl_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_locale_create_separated_list");
+        abort();
+    }
+    for (size_t i = 0; i < strl_len; ++i) {
+        strl_qstr[i] = qstring(strl[i]);
     }
     libqt_list strl_list = qlist(strl_qstr, strl_len);
     libqt_string _str = QLocale_CreateSeparatedList((QLocale*)self, strl_list);
+    free(strl_qstr);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -925,12 +934,16 @@ const char** q_locale_ui_languages1(void* self, int64_t separator) {
     libqt_list _arr = QLocale_UiLanguages1((QLocale*)self, separator);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_locale_ui_languages1");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

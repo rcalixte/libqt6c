@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,842 +15,1035 @@
 
 /// q_concatenatetablesproxymodel_new constructs a new QConcatenateTablesProxyModel object.
 ///
-///
 QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new();
 
 /// q_concatenatetablesproxymodel_new2 constructs a new QConcatenateTablesProxyModel object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 const QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self);
 
-/// ``` QConcatenateTablesProxyModel* self, const char* param1 ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param param1 const char*
 void* q_concatenatetablesproxymodel_metacast(void* self, const char* param1);
 
-/// ``` QConcatenateTablesProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_concatenatetablesproxymodel_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int32_t (*slot)(QConcatenateTablesProxyModel*, enum QMetaObject__Call, int, void*) ```
-void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int32_t fn(QConcatenateTablesProxyModel*, enum QMetaObject__Call, int, void*)
+void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_concatenatetablesproxymodel_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#sourceModels)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 libqt_list /* of QAbstractItemModel* */ q_concatenatetablesproxymodel_source_models(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#addSourceModel)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QAbstractItemModel* sourceModel ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceModel QAbstractItemModel*
 void q_concatenatetablesproxymodel_add_source_model(void* self, void* sourceModel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#removeSourceModel)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QAbstractItemModel* sourceModel ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceModel QAbstractItemModel*
 void q_concatenatetablesproxymodel_remove_source_model(void* self, void* sourceModel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mapFromSource)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceIndex ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceIndex QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_map_from_source(void* self, void* sourceIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mapToSource)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* proxyIndex ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param proxyIndex QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_map_to_source(void* self, void* proxyIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param role int
 QVariant* q_concatenatetablesproxymodel_data(void* self, void* index, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QVariant* (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*slot)(void*, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QVariant* fn(QConcatenateTablesProxyModel*, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param role int
 QVariant* q_concatenatetablesproxymodel_qbase_data(void* self, void* index, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, QVariant* value, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param value QVariant*
+/// @param role int
 bool q_concatenatetablesproxymodel_set_data(void* self, void* index, void* value, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QVariant*, int) ```
-void q_concatenatetablesproxymodel_on_set_data(void* self, bool (*slot)(void*, void*, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*, QVariant*, int)
+void q_concatenatetablesproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, QVariant* value, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param value QVariant*
+/// @param role int
 bool q_concatenatetablesproxymodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* proxyIndex ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param proxyIndex QModelIndex*
 libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_item_data(void* self, void* proxyIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_map /* of int to QVariant* */ (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback libqt_map /* of int to QVariant* */ fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* proxyIndex ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param proxyIndex QModelIndex*
 libqt_map /* of int to QVariant* */ q_concatenatetablesproxymodel_qbase_item_data(void* self, void* proxyIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param roles libqt_map /* of int to QVariant* */
 bool q_concatenatetablesproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, libqt_map /* of int to QVariant* */) ```
-void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*slot)(void*, void*, libqt_map /* of int to QVariant* */));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param roles libqt_map /* of int to QVariant* */
 bool q_concatenatetablesproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+///
+/// @return flag of enum Qt__ItemFlag
 int64_t q_concatenatetablesproxymodel_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int64_t (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_flags(void* self, int64_t (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int64_t fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+///
+/// @return flag of enum Qt__ItemFlag
 int64_t q_concatenatetablesproxymodel_qbase_flags(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_index(void* self, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*slot)(void*, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QModelIndex* fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_parent(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QModelIndex* fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_qbase_parent(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 int32_t q_concatenatetablesproxymodel_row_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int32_t (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_row_count(void* self, int32_t (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int32_t fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 int32_t q_concatenatetablesproxymodel_qbase_row_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param role int
 QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int64_t orientation, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QVariant* (*slot)(QConcatenateTablesProxyModel*, int, enum Qt__Orientation, int) ```
-void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*slot)(void*, int, int64_t, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QVariant* fn(QConcatenateTablesProxyModel*, int, enum Qt__Orientation, int)
+void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param role int
 QVariant* q_concatenatetablesproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 int32_t q_concatenatetablesproxymodel_column_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int32_t (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int32_t fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 int32_t q_concatenatetablesproxymodel_qbase_column_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QConcatenateTablesProxyModel*
 const char** q_concatenatetablesproxymodel_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char** (*slot)() ```
-void q_concatenatetablesproxymodel_on_mime_types(void* self, const char** (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback const char** fn()
+void q_concatenatetablesproxymodel_on_mime_types(void* self, const char** (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 const char** q_concatenatetablesproxymodel_qbase_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ indexes ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMimeData* (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QModelIndex* */ indexes ) ```
-void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QMimeData* fn(QConcatenateTablesProxyModel*, libqt_list /* of QModelIndex* */)
+void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ indexes ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 QSize* q_concatenatetablesproxymodel_span(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QSize* (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QSize* fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
 ///
 /// Base class method implementation
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 QSize* q_concatenatetablesproxymodel_qbase_span(void* self, void* index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_concatenatetablesproxymodel_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_concatenatetablesproxymodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
 bool q_concatenatetablesproxymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
 bool q_concatenatetablesproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
 bool q_concatenatetablesproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
 bool q_concatenatetablesproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
 bool q_concatenatetablesproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceRow, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_concatenatetablesproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceColumn, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_concatenatetablesproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 bool q_concatenatetablesproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
 void q_concatenatetablesproxymodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, enum Qt__Orientation orientation, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param orientation enum Qt__Orientation
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, enum Qt__Orientation, int, int) ```
-void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, enum Qt__Orientation, int, int)
+void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
-void q_concatenatetablesproxymodel_on_layout_changed(void* self, void (*slot)(void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*)
+void q_concatenatetablesproxymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*)
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, int options ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param options flag of enum QAbstractItemModel__CheckIndexOption
 bool q_concatenatetablesproxymodel_check_index2(void* self, void* index, int64_t options);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
+/// @param roles libqt_list /* of int */
 void q_concatenatetablesproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
-void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
+void q_concatenatetablesproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
 void q_concatenatetablesproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
-void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */)
+void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param hint enum QAbstractItemModel__LayoutChangeHint
 void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
-void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
 void q_concatenatetablesproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */)
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param hint enum QAbstractItemModel__LayoutChangeHint
 void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QConcatenateTablesProxyModel*
 const char* q_concatenatetablesproxymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QConcatenateTablesProxyModel* self, char* name ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param name char*
 void q_concatenatetablesproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 bool q_concatenatetablesproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 bool q_concatenatetablesproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 bool q_concatenatetablesproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 bool q_concatenatetablesproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool b ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param b bool
 bool q_concatenatetablesproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 QThread* q_concatenatetablesproxymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QThread* thread ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param thread QThread*
 bool q_concatenatetablesproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int interval ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param interval int
 int32_t q_concatenatetablesproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int id ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param id int
 void q_concatenatetablesproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QConcatenateTablesProxyModel* self, enum Qt__TimerId id ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param id enum Qt__TimerId
 void q_concatenatetablesproxymodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 libqt_list /* of QObject* */ q_concatenatetablesproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QObject*
 void q_concatenatetablesproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* filterObj ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param filterObj QObject*
 void q_concatenatetablesproxymodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* obj ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param obj QObject*
 void q_concatenatetablesproxymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_concatenatetablesproxymodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_concatenatetablesproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char* name, QVariant* value ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param name const char*
+/// @param value QVariant*
 bool q_concatenatetablesproxymodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char* name ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param name const char*
 QVariant* q_concatenatetablesproxymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QConcatenateTablesProxyModel*
 const char** q_concatenatetablesproxymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 QBindingStorage* q_concatenatetablesproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 const QBindingStorage* q_concatenatetablesproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
-void q_concatenatetablesproxymodel_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*)
+void q_concatenatetablesproxymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char* classname ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param classname const char*
 bool q_concatenatetablesproxymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_concatenatetablesproxymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QConcatenateTablesProxyModel* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_concatenatetablesproxymodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_concatenatetablesproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* param1 ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param param1 QObject*
 void q_concatenatetablesproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QObject*) ```
-void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QObject*)
+void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -859,7 +1051,10 @@ void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* idx ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param idx QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -868,7 +1063,10 @@ QModelIndex* q_concatenatetablesproxymodel_sibling(void* self, int row, int colu
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* idx ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param idx QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
@@ -877,8 +1075,9 @@ QModelIndex* q_concatenatetablesproxymodel_qbase_sibling(void* self, int row, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*slot)(void*, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QModelIndex* fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -886,7 +1085,8 @@ void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -895,7 +1095,8 @@ bool q_concatenatetablesproxymodel_has_children(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -904,8 +1105,9 @@ bool q_concatenatetablesproxymodel_qbase_has_children(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -913,7 +1115,11 @@ void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param value QVariant*
+/// @param role int
 bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -922,7 +1128,11 @@ bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int6
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param value QVariant*
+/// @param role int
 bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
@@ -931,8 +1141,9 @@ bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, int, enum Qt__Orientation, QVariant*, int) ```
-void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*slot)(void*, int, int64_t, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, int, enum Qt__Orientation, QVariant*, int)
+void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -940,7 +1151,8 @@ void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 bool q_concatenatetablesproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -949,7 +1161,8 @@ bool q_concatenatetablesproxymodel_clear_item_data(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -958,8 +1171,9 @@ bool q_concatenatetablesproxymodel_qbase_clear_item_data(void* self, void* index
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -967,7 +1181,9 @@ void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_concatenatetablesproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -976,7 +1192,9 @@ int64_t q_concatenatetablesproxymodel_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -985,8 +1203,9 @@ int64_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int64_t (*slot)() ```
-void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int64_t (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int64_t fn()
+void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -994,7 +1213,9 @@ void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int64_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_concatenatetablesproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1003,7 +1224,9 @@ int64_t q_concatenatetablesproxymodel_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1012,8 +1235,9 @@ int64_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int64_t (*slot)() ```
-void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int64_t (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int64_t fn()
+void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1021,7 +1245,10 @@ void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int64_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1030,7 +1257,10 @@ bool q_concatenatetablesproxymodel_insert_rows(void* self, int row, int count, v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1039,8 +1269,9 @@ bool q_concatenatetablesproxymodel_qbase_insert_rows(void* self, int row, int co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_insert_rows(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1048,7 +1279,10 @@ void q_concatenatetablesproxymodel_on_insert_rows(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1057,7 +1291,10 @@ bool q_concatenatetablesproxymodel_insert_columns(void* self, int column, int co
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1066,8 +1303,9 @@ bool q_concatenatetablesproxymodel_qbase_insert_columns(void* self, int column, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_insert_columns(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1075,7 +1313,10 @@ void q_concatenatetablesproxymodel_on_insert_columns(void* self, bool (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1084,7 +1325,10 @@ bool q_concatenatetablesproxymodel_remove_rows(void* self, int row, int count, v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1093,8 +1337,9 @@ bool q_concatenatetablesproxymodel_qbase_remove_rows(void* self, int row, int co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_remove_rows(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1102,7 +1347,10 @@ void q_concatenatetablesproxymodel_on_remove_rows(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1111,7 +1359,10 @@ bool q_concatenatetablesproxymodel_remove_columns(void* self, int column, int co
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1120,8 +1371,9 @@ bool q_concatenatetablesproxymodel_qbase_remove_columns(void* self, int column, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_remove_columns(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*)
+void q_concatenatetablesproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1129,7 +1381,12 @@ void q_concatenatetablesproxymodel_on_remove_columns(void* self, bool (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_concatenatetablesproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1138,7 +1395,12 @@ bool q_concatenatetablesproxymodel_move_rows(void* self, void* sourceParent, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_concatenatetablesproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1147,8 +1409,9 @@ bool q_concatenatetablesproxymodel_qbase_move_rows(void* self, void* sourceParen
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1156,7 +1419,12 @@ void q_concatenatetablesproxymodel_on_move_rows(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_concatenatetablesproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1165,7 +1433,12 @@ bool q_concatenatetablesproxymodel_move_columns(void* self, void* sourceParent, 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_concatenatetablesproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
@@ -1174,8 +1447,9 @@ bool q_concatenatetablesproxymodel_qbase_move_columns(void* self, void* sourcePa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1183,7 +1457,8 @@ void q_concatenatetablesproxymodel_on_move_columns(void* self, bool (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 void q_concatenatetablesproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1192,7 +1467,8 @@ void q_concatenatetablesproxymodel_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 void q_concatenatetablesproxymodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1201,8 +1477,9 @@ void q_concatenatetablesproxymodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_fetch_more(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1210,7 +1487,8 @@ void q_concatenatetablesproxymodel_on_fetch_more(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1219,7 +1497,8 @@ bool q_concatenatetablesproxymodel_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
 bool q_concatenatetablesproxymodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
@@ -1228,8 +1507,9 @@ bool q_concatenatetablesproxymodel_qbase_can_fetch_more(void* self, void* parent
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1237,7 +1517,9 @@ void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, enum Qt__SortOrder order ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param order enum Qt__SortOrder
 void q_concatenatetablesproxymodel_sort(void* self, int column, int64_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1246,7 +1528,9 @@ void q_concatenatetablesproxymodel_sort(void* self, int column, int64_t order);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int column, enum Qt__SortOrder order ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param column int
+/// @param order enum Qt__SortOrder
 void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int64_t order);
 
 /// Inherited from QAbstractItemModel
@@ -1255,8 +1539,9 @@ void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int64_t or
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, int, enum Qt__SortOrder) ```
-void q_concatenatetablesproxymodel_on_sort(void* self, void (*slot)(void*, int, int64_t));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, int, enum Qt__SortOrder)
+void q_concatenatetablesproxymodel_on_sort(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1264,7 +1549,8 @@ void q_concatenatetablesproxymodel_on_sort(void* self, void (*slot)(void*, int, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1273,7 +1559,8 @@ QModelIndex* q_concatenatetablesproxymodel_buddy(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
 QModelIndex* q_concatenatetablesproxymodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
@@ -1282,8 +1569,9 @@ QModelIndex* q_concatenatetablesproxymodel_qbase_buddy(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* (*slot)(QConcatenateTablesProxyModel*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QModelIndex* fn(QConcatenateTablesProxyModel*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1291,7 +1579,12 @@ void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param start QModelIndex*
+/// @param role int
+/// @param value QVariant*
+/// @param hits int
+/// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1300,7 +1593,12 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_match(void* self,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param start QModelIndex*
+/// @param role int
+/// @param value QVariant*
+/// @param hits int
+/// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// Inherited from QAbstractItemModel
@@ -1309,8 +1607,9 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_match(void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, QVariant*, int, int) ```
-void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*slot)(void*, void*, int, void*, int, int64_t));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback libqt_list /* of QModelIndex* */ fn(QConcatenateTablesProxyModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1318,7 +1617,7 @@ void q_concatenatetablesproxymodel_on_match(void* self, libqt_list /* of QModelI
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1327,7 +1626,7 @@ libqt_map /* of int to char* */ q_concatenatetablesproxymodel_role_names(void* s
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 libqt_map /* of int to char* */ q_concatenatetablesproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1336,8 +1635,9 @@ libqt_map /* of int to char* */ q_concatenatetablesproxymodel_qbase_role_names(v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_map /* of int to char* */ (*slot)() ```
-void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback libqt_map /* of int to char* */ fn()
+void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1345,7 +1645,9 @@ void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map /* of int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param roleDataSpan QModelRoleDataSpan*
 void q_concatenatetablesproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1354,7 +1656,9 @@ void q_concatenatetablesproxymodel_multi_data(void* self, void* index, void* rol
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param index QModelIndex*
+/// @param roleDataSpan QModelRoleDataSpan*
 void q_concatenatetablesproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1363,8 +1667,9 @@ void q_concatenatetablesproxymodel_qbase_multi_data(void* self, void* index, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QModelRoleDataSpan*) ```
-void q_concatenatetablesproxymodel_on_multi_data(void* self, void (*slot)(void*, void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, QModelRoleDataSpan*)
+void q_concatenatetablesproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1372,7 +1677,7 @@ void q_concatenatetablesproxymodel_on_multi_data(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 bool q_concatenatetablesproxymodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1381,7 +1686,7 @@ bool q_concatenatetablesproxymodel_submit(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 bool q_concatenatetablesproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1390,8 +1695,9 @@ bool q_concatenatetablesproxymodel_qbase_submit(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)() ```
-void q_concatenatetablesproxymodel_on_submit(void* self, bool (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn()
+void q_concatenatetablesproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1399,7 +1705,7 @@ void q_concatenatetablesproxymodel_on_submit(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1408,7 +1714,7 @@ void q_concatenatetablesproxymodel_revert(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1417,8 +1723,9 @@ void q_concatenatetablesproxymodel_qbase_revert(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_revert(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1426,7 +1733,7 @@ void q_concatenatetablesproxymodel_on_revert(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1435,7 +1742,7 @@ void q_concatenatetablesproxymodel_reset_internal_data(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1444,8 +1751,9 @@ void q_concatenatetablesproxymodel_qbase_reset_internal_data(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_reset_internal_data(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1453,7 +1761,8 @@ void q_concatenatetablesproxymodel_on_reset_internal_data(void* self, void (*slo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QEvent*
 bool q_concatenatetablesproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1462,7 +1771,8 @@ bool q_concatenatetablesproxymodel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QEvent*
 bool q_concatenatetablesproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1471,8 +1781,9 @@ bool q_concatenatetablesproxymodel_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QEvent*) ```
-void q_concatenatetablesproxymodel_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QEvent*)
+void q_concatenatetablesproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1480,7 +1791,9 @@ void q_concatenatetablesproxymodel_on_event(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* watched, QEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_concatenatetablesproxymodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1489,7 +1802,9 @@ bool q_concatenatetablesproxymodel_event_filter(void* self, void* watched, void*
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* watched, QEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_concatenatetablesproxymodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1498,8 +1813,9 @@ bool q_concatenatetablesproxymodel_qbase_event_filter(void* self, void* watched,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QObject*, QEvent*) ```
-void q_concatenatetablesproxymodel_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QObject*, QEvent*)
+void q_concatenatetablesproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1507,7 +1823,8 @@ void q_concatenatetablesproxymodel_on_event_filter(void* self, bool (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QTimerEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QTimerEvent*
 void q_concatenatetablesproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1516,7 +1833,8 @@ void q_concatenatetablesproxymodel_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QTimerEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QTimerEvent*
 void q_concatenatetablesproxymodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1525,8 +1843,9 @@ void q_concatenatetablesproxymodel_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QTimerEvent*) ```
-void q_concatenatetablesproxymodel_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QTimerEvent*)
+void q_concatenatetablesproxymodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1534,7 +1853,8 @@ void q_concatenatetablesproxymodel_on_timer_event(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QChildEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QChildEvent*
 void q_concatenatetablesproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1543,7 +1863,8 @@ void q_concatenatetablesproxymodel_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QChildEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QChildEvent*
 void q_concatenatetablesproxymodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1552,8 +1873,9 @@ void q_concatenatetablesproxymodel_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QChildEvent*) ```
-void q_concatenatetablesproxymodel_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QChildEvent*)
+void q_concatenatetablesproxymodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1561,7 +1883,8 @@ void q_concatenatetablesproxymodel_on_child_event(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QEvent*
 void q_concatenatetablesproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1570,7 +1893,8 @@ void q_concatenatetablesproxymodel_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QEvent* event ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param event QEvent*
 void q_concatenatetablesproxymodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1579,8 +1903,9 @@ void q_concatenatetablesproxymodel_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QEvent*) ```
-void q_concatenatetablesproxymodel_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QEvent*)
+void q_concatenatetablesproxymodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1588,7 +1913,8 @@ void q_concatenatetablesproxymodel_on_custom_event(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMetaMethod* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal QMetaMethod*
 void q_concatenatetablesproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1597,7 +1923,8 @@ void q_concatenatetablesproxymodel_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMetaMethod* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal QMetaMethod*
 void q_concatenatetablesproxymodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1606,8 +1933,9 @@ void q_concatenatetablesproxymodel_qbase_connect_notify(void* self, void* signal
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QMetaMethod*) ```
-void q_concatenatetablesproxymodel_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QMetaMethod*)
+void q_concatenatetablesproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1615,7 +1943,8 @@ void q_concatenatetablesproxymodel_on_connect_notify(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMetaMethod* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal QMetaMethod*
 void q_concatenatetablesproxymodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1624,7 +1953,8 @@ void q_concatenatetablesproxymodel_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMetaMethod* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal QMetaMethod*
 void q_concatenatetablesproxymodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1633,8 +1963,9 @@ void q_concatenatetablesproxymodel_qbase_disconnect_notify(void* self, void* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QMetaMethod*) ```
-void q_concatenatetablesproxymodel_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QMetaMethod*)
+void q_concatenatetablesproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1642,7 +1973,9 @@ void q_concatenatetablesproxymodel_on_disconnect_notify(void* self, void (*slot)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
 QModelIndex* q_concatenatetablesproxymodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1651,7 +1984,9 @@ QModelIndex* q_concatenatetablesproxymodel_create_index(void* self, int row, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
 QModelIndex* q_concatenatetablesproxymodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1660,8 +1995,9 @@ QModelIndex* q_concatenatetablesproxymodel_qbase_create_index(void* self, int ro
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* (*slot)(QConcatenateTablesProxyModel*, int, int) ```
-void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*slot)(void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QModelIndex* fn(QConcatenateTablesProxyModel*, int, int)
+void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1669,7 +2005,9 @@ void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*sl
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
+/// @param stream QDataStream*
 void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1678,7 +2016,9 @@ void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
+/// @param stream QDataStream*
 void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1687,8 +2027,9 @@ void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list inde
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QModelIndex* */ indexes , QDataStream*) ```
-void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*slot)(void*, libqt_list, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1696,7 +2037,11 @@ void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
+/// @param stream QDataStream*
 bool q_concatenatetablesproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1705,7 +2050,11 @@ bool q_concatenatetablesproxymodel_decode_data(void* self, int row, int column, 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
+/// @param stream QDataStream*
 bool q_concatenatetablesproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1714,8 +2063,9 @@ bool q_concatenatetablesproxymodel_qbase_decode_data(void* self, int row, int co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, int, int, QModelIndex*, QDataStream*) ```
-void q_concatenatetablesproxymodel_on_decode_data(void* self, bool (*slot)(void*, int, int, void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, int, int, QModelIndex*, QDataStream*)
+void q_concatenatetablesproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1723,7 +2073,10 @@ void q_concatenatetablesproxymodel_on_decode_data(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1732,7 +2085,10 @@ void q_concatenatetablesproxymodel_begin_insert_rows(void* self, void* parent, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1741,8 +2097,9 @@ void q_concatenatetablesproxymodel_qbase_begin_insert_rows(void* self, void* par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_begin_insert_rows(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1750,7 +2107,7 @@ void q_concatenatetablesproxymodel_on_begin_insert_rows(void* self, void (*slot)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1759,7 +2116,7 @@ void q_concatenatetablesproxymodel_end_insert_rows(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1768,8 +2125,9 @@ void q_concatenatetablesproxymodel_qbase_end_insert_rows(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_insert_rows(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1777,7 +2135,10 @@ void q_concatenatetablesproxymodel_on_end_insert_rows(void* self, void (*slot)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1786,7 +2147,10 @@ void q_concatenatetablesproxymodel_begin_remove_rows(void* self, void* parent, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1795,8 +2159,9 @@ void q_concatenatetablesproxymodel_qbase_begin_remove_rows(void* self, void* par
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_begin_remove_rows(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1804,7 +2169,7 @@ void q_concatenatetablesproxymodel_on_begin_remove_rows(void* self, void (*slot)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1813,7 +2178,7 @@ void q_concatenatetablesproxymodel_end_remove_rows(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1822,8 +2187,9 @@ void q_concatenatetablesproxymodel_qbase_end_remove_rows(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_remove_rows(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1831,7 +2197,12 @@ void q_concatenatetablesproxymodel_on_end_remove_rows(void* self, void (*slot)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationRow int
 bool q_concatenatetablesproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -1840,7 +2211,12 @@ bool q_concatenatetablesproxymodel_begin_move_rows(void* self, void* sourceParen
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationRow int
 bool q_concatenatetablesproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -1849,8 +2225,9 @@ bool q_concatenatetablesproxymodel_qbase_begin_move_rows(void* self, void* sourc
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_begin_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1858,7 +2235,7 @@ void q_concatenatetablesproxymodel_on_begin_move_rows(void* self, bool (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1867,7 +2244,7 @@ void q_concatenatetablesproxymodel_end_move_rows(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1876,8 +2253,9 @@ void q_concatenatetablesproxymodel_qbase_end_move_rows(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_move_rows(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1885,7 +2263,10 @@ void q_concatenatetablesproxymodel_on_end_move_rows(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1894,7 +2275,10 @@ void q_concatenatetablesproxymodel_begin_insert_columns(void* self, void* parent
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1903,8 +2287,9 @@ void q_concatenatetablesproxymodel_qbase_begin_insert_columns(void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_begin_insert_columns(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1912,7 +2297,7 @@ void q_concatenatetablesproxymodel_on_begin_insert_columns(void* self, void (*sl
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1921,7 +2306,7 @@ void q_concatenatetablesproxymodel_end_insert_columns(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1930,8 +2315,9 @@ void q_concatenatetablesproxymodel_qbase_end_insert_columns(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_insert_columns(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1939,7 +2325,10 @@ void q_concatenatetablesproxymodel_on_end_insert_columns(void* self, void (*slot
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1948,7 +2337,10 @@ void q_concatenatetablesproxymodel_begin_remove_columns(void* self, void* parent
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_concatenatetablesproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1957,8 +2349,9 @@ void q_concatenatetablesproxymodel_qbase_begin_remove_columns(void* self, void* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_begin_remove_columns(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1966,7 +2359,7 @@ void q_concatenatetablesproxymodel_on_begin_remove_columns(void* self, void (*sl
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1975,7 +2368,7 @@ void q_concatenatetablesproxymodel_end_remove_columns(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1984,8 +2377,9 @@ void q_concatenatetablesproxymodel_qbase_end_remove_columns(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_remove_columns(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1993,7 +2387,12 @@ void q_concatenatetablesproxymodel_on_end_remove_columns(void* self, void (*slot
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationColumn int
 bool q_concatenatetablesproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2002,7 +2401,12 @@ bool q_concatenatetablesproxymodel_begin_move_columns(void* self, void* sourcePa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationColumn int
 bool q_concatenatetablesproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2011,8 +2415,9 @@ bool q_concatenatetablesproxymodel_qbase_begin_move_columns(void* self, void* so
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_begin_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2020,7 +2425,7 @@ void q_concatenatetablesproxymodel_on_begin_move_columns(void* self, bool (*slot
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2029,7 +2434,7 @@ void q_concatenatetablesproxymodel_end_move_columns(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2038,8 +2443,9 @@ void q_concatenatetablesproxymodel_qbase_end_move_columns(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_move_columns(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2047,7 +2453,7 @@ void q_concatenatetablesproxymodel_on_end_move_columns(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2056,7 +2462,7 @@ void q_concatenatetablesproxymodel_begin_reset_model(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2065,8 +2471,9 @@ void q_concatenatetablesproxymodel_qbase_begin_reset_model(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_begin_reset_model(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2074,7 +2481,7 @@ void q_concatenatetablesproxymodel_on_begin_reset_model(void* self, void (*slot)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2083,7 +2490,7 @@ void q_concatenatetablesproxymodel_end_reset_model(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2092,8 +2499,9 @@ void q_concatenatetablesproxymodel_qbase_end_reset_model(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)() ```
-void q_concatenatetablesproxymodel_on_end_reset_model(void* self, void (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn()
+void q_concatenatetablesproxymodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2101,7 +2509,9 @@ void q_concatenatetablesproxymodel_on_end_reset_model(void* self, void (*slot)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* from, QModelIndex* to ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param from QModelIndex*
+/// @param to QModelIndex*
 void q_concatenatetablesproxymodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2110,7 +2520,9 @@ void q_concatenatetablesproxymodel_change_persistent_index(void* self, void* fro
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QModelIndex* from, QModelIndex* to ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param from QModelIndex*
+/// @param to QModelIndex*
 void q_concatenatetablesproxymodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2119,8 +2531,9 @@ void q_concatenatetablesproxymodel_qbase_change_persistent_index(void* self, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*) ```
-void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (*slot)(void*, void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, QModelIndex*)
+void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2128,7 +2541,9 @@ void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param from libqt_list /* of QModelIndex* */
+/// @param to libqt_list /* of QModelIndex* */
 void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2137,7 +2552,9 @@ void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libq
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param from libqt_list /* of QModelIndex* */
+/// @param to libqt_list /* of QModelIndex* */
 void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2146,8 +2563,9 @@ void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, libqt_list /* of QModelIndex* */ from , libqt_list /* of QModelIndex* */ to ) ```
-void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*slot)(void*, libqt_list, libqt_list));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2155,7 +2573,7 @@ void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2164,7 +2582,7 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_persistent_index_
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2173,8 +2591,9 @@ libqt_list /* of QModelIndex* */ q_concatenatetablesproxymodel_qbase_persistent_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, libqt_list /* of QModelIndex* */ (*slot)() ```
-void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback libqt_list /* of QModelIndex* */ fn()
+void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2182,7 +2601,7 @@ void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, libqt_li
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 QObject* q_concatenatetablesproxymodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2191,7 +2610,7 @@ QObject* q_concatenatetablesproxymodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 QObject* q_concatenatetablesproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2200,8 +2619,9 @@ QObject* q_concatenatetablesproxymodel_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QObject* (*slot)() ```
-void q_concatenatetablesproxymodel_on_sender(void* self, QObject* (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback QObject* fn()
+void q_concatenatetablesproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2209,7 +2629,7 @@ void q_concatenatetablesproxymodel_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 int32_t q_concatenatetablesproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2218,7 +2638,7 @@ int32_t q_concatenatetablesproxymodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 int32_t q_concatenatetablesproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2227,8 +2647,9 @@ int32_t q_concatenatetablesproxymodel_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int32_t (*slot)() ```
-void q_concatenatetablesproxymodel_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int32_t fn()
+void q_concatenatetablesproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2236,7 +2657,8 @@ void q_concatenatetablesproxymodel_on_sender_signal_index(void* self, int32_t (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal const char*
 int32_t q_concatenatetablesproxymodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2245,7 +2667,8 @@ int32_t q_concatenatetablesproxymodel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, const char* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal const char*
 int32_t q_concatenatetablesproxymodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2254,8 +2677,9 @@ int32_t q_concatenatetablesproxymodel_qbase_receivers(void* self, const char* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, int32_t (*slot)(QConcatenateTablesProxyModel*, const char*) ```
-void q_concatenatetablesproxymodel_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback int32_t fn(QConcatenateTablesProxyModel*, const char*)
+void q_concatenatetablesproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2263,7 +2687,8 @@ void q_concatenatetablesproxymodel_on_receivers(void* self, int32_t (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMetaMethod* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal QMetaMethod*
 bool q_concatenatetablesproxymodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2272,7 +2697,8 @@ bool q_concatenatetablesproxymodel_is_signal_connected(void* self, void* signal)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, QMetaMethod* signal ```
+/// @param self QConcatenateTablesProxyModel*
+/// @param signal QMetaMethod*
 bool q_concatenatetablesproxymodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2281,8 +2707,9 @@ bool q_concatenatetablesproxymodel_qbase_is_signal_connected(void* self, void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QConcatenateTablesProxyModel* self, bool (*slot)(QConcatenateTablesProxyModel*, QMetaMethod*) ```
-void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback bool fn(QConcatenateTablesProxyModel*, QMetaMethod*)
+void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2290,8 +2717,9 @@ void q_concatenatetablesproxymodel_on_is_signal_connected(void* self, bool (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2299,8 +2727,9 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_inserted(void* self, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2308,8 +2737,9 @@ void q_concatenatetablesproxymodel_on_rows_inserted(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2317,8 +2747,9 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_removed(void* self, void 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2326,8 +2757,9 @@ void q_concatenatetablesproxymodel_on_rows_removed(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2335,8 +2767,9 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_inserted(void* self, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2344,8 +2777,9 @@ void q_concatenatetablesproxymodel_on_columns_inserted(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2353,8 +2787,9 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_removed(void* self, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int) ```
-void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int)
+void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2362,8 +2797,9 @@ void q_concatenatetablesproxymodel_on_columns_removed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
-void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*)
+void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2371,8 +2807,9 @@ void q_concatenatetablesproxymodel_on_model_about_to_be_reset(void* self, void (
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*) ```
-void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*slot)(void*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*)
+void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2380,8 +2817,9 @@ void q_concatenatetablesproxymodel_on_model_reset(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2389,8 +2827,9 @@ void q_concatenatetablesproxymodel_on_rows_about_to_be_moved(void* self, void (*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2398,8 +2837,9 @@ void q_concatenatetablesproxymodel_on_rows_moved(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2407,8 +2847,9 @@ void q_concatenatetablesproxymodel_on_columns_about_to_be_moved(void* self, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
 ///
@@ -2416,14 +2857,15 @@ void q_concatenatetablesproxymodel_on_columns_moved(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QConcatenateTablesProxyModel* self, void (*slot)(QConcatenateTablesProxyModel*, const char*) ```
-void q_concatenatetablesproxymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QConcatenateTablesProxyModel*
+/// @param callback void fn(QConcatenateTablesProxyModel*, const char*)
+void q_concatenatetablesproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dtor.QConcatenateTablesProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QConcatenateTablesProxyModel* self ```
+/// @param self QConcatenateTablesProxyModel*
 void q_concatenatetablesproxymodel_delete(void* self);
 
 #endif

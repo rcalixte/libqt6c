@@ -38,8 +38,8 @@ int32_t q_inputdevice_metacall(void* self, int64_t param1, int param2, void* par
     return QInputDevice_Metacall((QInputDevice*)self, param1, param2, param3);
 }
 
-void q_inputdevice_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QInputDevice_OnMetacall((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QInputDevice_OnMetacall((QInputDevice*)self, (intptr_t)callback);
 }
 
 int32_t q_inputdevice_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -91,12 +91,16 @@ const char** q_inputdevice_seat_names() {
     libqt_list _arr = QInputDevice_SeatNames();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_inputdevice_seat_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -119,8 +123,8 @@ void q_inputdevice_available_virtual_geometry_changed(void* self, void* area) {
     QInputDevice_AvailableVirtualGeometryChanged((QInputDevice*)self, (QRect*)area);
 }
 
-void q_inputdevice_on_available_virtual_geometry_changed(void* self, void (*slot)(void*, void*)) {
-    QInputDevice_Connect_AvailableVirtualGeometryChanged((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_available_virtual_geometry_changed(void* self, void (*callback)(void*, void*)) {
+    QInputDevice_Connect_AvailableVirtualGeometryChanged((QInputDevice*)self, (intptr_t)callback);
 }
 
 const char* q_inputdevice_tr2(const char* s, const char* c) {
@@ -245,12 +249,16 @@ const char** q_inputdevice_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_inputdevice_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -268,8 +276,8 @@ void q_inputdevice_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_inputdevice_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_inputdevice_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_inputdevice_parent(void* self) {
@@ -304,8 +312,8 @@ void q_inputdevice_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_inputdevice_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_inputdevice_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_inputdevice_event(void* self, void* event) {
@@ -316,8 +324,8 @@ bool q_inputdevice_qbase_event(void* self, void* event) {
     return QInputDevice_QBaseEvent((QInputDevice*)self, (QEvent*)event);
 }
 
-void q_inputdevice_on_event(void* self, bool (*slot)(void*, void*)) {
-    QInputDevice_OnEvent((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_event(void* self, bool (*callback)(void*, void*)) {
+    QInputDevice_OnEvent((QInputDevice*)self, (intptr_t)callback);
 }
 
 bool q_inputdevice_event_filter(void* self, void* watched, void* event) {
@@ -328,8 +336,8 @@ bool q_inputdevice_qbase_event_filter(void* self, void* watched, void* event) {
     return QInputDevice_QBaseEventFilter((QInputDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_inputdevice_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QInputDevice_OnEventFilter((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QInputDevice_OnEventFilter((QInputDevice*)self, (intptr_t)callback);
 }
 
 void q_inputdevice_timer_event(void* self, void* event) {
@@ -340,8 +348,8 @@ void q_inputdevice_qbase_timer_event(void* self, void* event) {
     QInputDevice_QBaseTimerEvent((QInputDevice*)self, (QTimerEvent*)event);
 }
 
-void q_inputdevice_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QInputDevice_OnTimerEvent((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QInputDevice_OnTimerEvent((QInputDevice*)self, (intptr_t)callback);
 }
 
 void q_inputdevice_child_event(void* self, void* event) {
@@ -352,8 +360,8 @@ void q_inputdevice_qbase_child_event(void* self, void* event) {
     QInputDevice_QBaseChildEvent((QInputDevice*)self, (QChildEvent*)event);
 }
 
-void q_inputdevice_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QInputDevice_OnChildEvent((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QInputDevice_OnChildEvent((QInputDevice*)self, (intptr_t)callback);
 }
 
 void q_inputdevice_custom_event(void* self, void* event) {
@@ -364,8 +372,8 @@ void q_inputdevice_qbase_custom_event(void* self, void* event) {
     QInputDevice_QBaseCustomEvent((QInputDevice*)self, (QEvent*)event);
 }
 
-void q_inputdevice_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QInputDevice_OnCustomEvent((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QInputDevice_OnCustomEvent((QInputDevice*)self, (intptr_t)callback);
 }
 
 void q_inputdevice_connect_notify(void* self, void* signal) {
@@ -376,8 +384,8 @@ void q_inputdevice_qbase_connect_notify(void* self, void* signal) {
     QInputDevice_QBaseConnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdevice_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QInputDevice_OnConnectNotify((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QInputDevice_OnConnectNotify((QInputDevice*)self, (intptr_t)callback);
 }
 
 void q_inputdevice_disconnect_notify(void* self, void* signal) {
@@ -388,8 +396,8 @@ void q_inputdevice_qbase_disconnect_notify(void* self, void* signal) {
     QInputDevice_QBaseDisconnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdevice_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QInputDevice_OnDisconnectNotify((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QInputDevice_OnDisconnectNotify((QInputDevice*)self, (intptr_t)callback);
 }
 
 QObject* q_inputdevice_sender(void* self) {
@@ -400,8 +408,8 @@ QObject* q_inputdevice_qbase_sender(void* self) {
     return QInputDevice_QBaseSender((QInputDevice*)self);
 }
 
-void q_inputdevice_on_sender(void* self, QObject* (*slot)()) {
-    QInputDevice_OnSender((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_sender(void* self, QObject* (*callback)()) {
+    QInputDevice_OnSender((QInputDevice*)self, (intptr_t)callback);
 }
 
 int32_t q_inputdevice_sender_signal_index(void* self) {
@@ -412,8 +420,8 @@ int32_t q_inputdevice_qbase_sender_signal_index(void* self) {
     return QInputDevice_QBaseSenderSignalIndex((QInputDevice*)self);
 }
 
-void q_inputdevice_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QInputDevice_OnSenderSignalIndex((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QInputDevice_OnSenderSignalIndex((QInputDevice*)self, (intptr_t)callback);
 }
 
 int32_t q_inputdevice_receivers(void* self, const char* signal) {
@@ -424,8 +432,8 @@ int32_t q_inputdevice_qbase_receivers(void* self, const char* signal) {
     return QInputDevice_QBaseReceivers((QInputDevice*)self, signal);
 }
 
-void q_inputdevice_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QInputDevice_OnReceivers((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QInputDevice_OnReceivers((QInputDevice*)self, (intptr_t)callback);
 }
 
 bool q_inputdevice_is_signal_connected(void* self, void* signal) {
@@ -436,12 +444,12 @@ bool q_inputdevice_qbase_is_signal_connected(void* self, void* signal) {
     return QInputDevice_QBaseIsSignalConnected((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdevice_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QInputDevice_OnIsSignalConnected((QInputDevice*)self, (intptr_t)slot);
+void q_inputdevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QInputDevice_OnIsSignalConnected((QInputDevice*)self, (intptr_t)callback);
 }
 
-void q_inputdevice_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_inputdevice_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_inputdevice_delete(void* self) {

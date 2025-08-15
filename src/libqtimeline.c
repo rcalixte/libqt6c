@@ -30,8 +30,8 @@ int32_t q_timeline_metacall(void* self, int64_t param1, int param2, void* param3
     return QTimeLine_Metacall((QTimeLine*)self, param1, param2, param3);
 }
 
-void q_timeline_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTimeLine_OnMetacall((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTimeLine_OnMetacall((QTimeLine*)self, (intptr_t)callback);
 }
 
 int32_t q_timeline_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -129,8 +129,8 @@ double q_timeline_value_for_time(void* self, int msec) {
     return QTimeLine_ValueForTime((QTimeLine*)self, msec);
 }
 
-void q_timeline_on_value_for_time(void* self, double (*slot)(void*, int)) {
-    QTimeLine_OnValueForTime((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_value_for_time(void* self, double (*callback)(void*, int)) {
+    QTimeLine_OnValueForTime((QTimeLine*)self, (intptr_t)callback);
 }
 
 double q_timeline_qbase_value_for_time(void* self, int msec) {
@@ -165,8 +165,8 @@ void q_timeline_timer_event(void* self, void* event) {
     QTimeLine_TimerEvent((QTimeLine*)self, (QTimerEvent*)event);
 }
 
-void q_timeline_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTimeLine_OnTimerEvent((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTimeLine_OnTimerEvent((QTimeLine*)self, (intptr_t)callback);
 }
 
 void q_timeline_qbase_timer_event(void* self, void* event) {
@@ -291,12 +291,16 @@ const char** q_timeline_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_timeline_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -314,8 +318,8 @@ void q_timeline_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_timeline_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_timeline_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_timeline_parent(void* self) {
@@ -350,8 +354,8 @@ void q_timeline_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_timeline_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_timeline_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_timeline_event(void* self, void* event) {
@@ -362,8 +366,8 @@ bool q_timeline_qbase_event(void* self, void* event) {
     return QTimeLine_QBaseEvent((QTimeLine*)self, (QEvent*)event);
 }
 
-void q_timeline_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTimeLine_OnEvent((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTimeLine_OnEvent((QTimeLine*)self, (intptr_t)callback);
 }
 
 bool q_timeline_event_filter(void* self, void* watched, void* event) {
@@ -374,8 +378,8 @@ bool q_timeline_qbase_event_filter(void* self, void* watched, void* event) {
     return QTimeLine_QBaseEventFilter((QTimeLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_timeline_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTimeLine_OnEventFilter((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTimeLine_OnEventFilter((QTimeLine*)self, (intptr_t)callback);
 }
 
 void q_timeline_child_event(void* self, void* event) {
@@ -386,8 +390,8 @@ void q_timeline_qbase_child_event(void* self, void* event) {
     QTimeLine_QBaseChildEvent((QTimeLine*)self, (QChildEvent*)event);
 }
 
-void q_timeline_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTimeLine_OnChildEvent((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTimeLine_OnChildEvent((QTimeLine*)self, (intptr_t)callback);
 }
 
 void q_timeline_custom_event(void* self, void* event) {
@@ -398,8 +402,8 @@ void q_timeline_qbase_custom_event(void* self, void* event) {
     QTimeLine_QBaseCustomEvent((QTimeLine*)self, (QEvent*)event);
 }
 
-void q_timeline_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTimeLine_OnCustomEvent((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTimeLine_OnCustomEvent((QTimeLine*)self, (intptr_t)callback);
 }
 
 void q_timeline_connect_notify(void* self, void* signal) {
@@ -410,8 +414,8 @@ void q_timeline_qbase_connect_notify(void* self, void* signal) {
     QTimeLine_QBaseConnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
-void q_timeline_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTimeLine_OnConnectNotify((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTimeLine_OnConnectNotify((QTimeLine*)self, (intptr_t)callback);
 }
 
 void q_timeline_disconnect_notify(void* self, void* signal) {
@@ -422,8 +426,8 @@ void q_timeline_qbase_disconnect_notify(void* self, void* signal) {
     QTimeLine_QBaseDisconnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
-void q_timeline_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTimeLine_OnDisconnectNotify((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTimeLine_OnDisconnectNotify((QTimeLine*)self, (intptr_t)callback);
 }
 
 QObject* q_timeline_sender(void* self) {
@@ -434,8 +438,8 @@ QObject* q_timeline_qbase_sender(void* self) {
     return QTimeLine_QBaseSender((QTimeLine*)self);
 }
 
-void q_timeline_on_sender(void* self, QObject* (*slot)()) {
-    QTimeLine_OnSender((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_sender(void* self, QObject* (*callback)()) {
+    QTimeLine_OnSender((QTimeLine*)self, (intptr_t)callback);
 }
 
 int32_t q_timeline_sender_signal_index(void* self) {
@@ -446,8 +450,8 @@ int32_t q_timeline_qbase_sender_signal_index(void* self) {
     return QTimeLine_QBaseSenderSignalIndex((QTimeLine*)self);
 }
 
-void q_timeline_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTimeLine_OnSenderSignalIndex((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTimeLine_OnSenderSignalIndex((QTimeLine*)self, (intptr_t)callback);
 }
 
 int32_t q_timeline_receivers(void* self, const char* signal) {
@@ -458,8 +462,8 @@ int32_t q_timeline_qbase_receivers(void* self, const char* signal) {
     return QTimeLine_QBaseReceivers((QTimeLine*)self, signal);
 }
 
-void q_timeline_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTimeLine_OnReceivers((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTimeLine_OnReceivers((QTimeLine*)self, (intptr_t)callback);
 }
 
 bool q_timeline_is_signal_connected(void* self, void* signal) {
@@ -470,28 +474,28 @@ bool q_timeline_qbase_is_signal_connected(void* self, void* signal) {
     return QTimeLine_QBaseIsSignalConnected((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
-void q_timeline_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTimeLine_OnIsSignalConnected((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTimeLine_OnIsSignalConnected((QTimeLine*)self, (intptr_t)callback);
 }
 
-void q_timeline_on_value_changed(void* self, void (*slot)(void*, double)) {
-    QTimeLine_Connect_ValueChanged((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_value_changed(void* self, void (*callback)(void*, double)) {
+    QTimeLine_Connect_ValueChanged((QTimeLine*)self, (intptr_t)callback);
 }
 
-void q_timeline_on_frame_changed(void* self, void (*slot)(void*, int)) {
-    QTimeLine_Connect_FrameChanged((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_frame_changed(void* self, void (*callback)(void*, int)) {
+    QTimeLine_Connect_FrameChanged((QTimeLine*)self, (intptr_t)callback);
 }
 
-void q_timeline_on_state_changed(void* self, void (*slot)(void*, int64_t)) {
-    QTimeLine_Connect_StateChanged((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+    QTimeLine_Connect_StateChanged((QTimeLine*)self, (intptr_t)callback);
 }
 
-void q_timeline_on_finished(void* self, void (*slot)(void*)) {
-    QTimeLine_Connect_Finished((QTimeLine*)self, (intptr_t)slot);
+void q_timeline_on_finished(void* self, void (*callback)(void*)) {
+    QTimeLine_Connect_Finished((QTimeLine*)self, (intptr_t)callback);
 }
 
-void q_timeline_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_timeline_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_timeline_delete(void* self) {

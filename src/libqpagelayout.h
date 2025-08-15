@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,224 +15,269 @@
 
 /// q_pagelayout_new constructs a new QPageLayout object.
 ///
-///
 QPageLayout* q_pagelayout_new();
 
 /// q_pagelayout_new2 constructs a new QPageLayout object.
 ///
-/// ``` QPageSize* pageSize, enum QPageLayout__Orientation orientation, QMarginsF* margins ```
+/// @param pageSize QPageSize*
+/// @param orientation enum QPageLayout__Orientation
+/// @param margins QMarginsF*
 QPageLayout* q_pagelayout_new2(void* pageSize, int64_t orientation, void* margins);
 
 /// q_pagelayout_new3 constructs a new QPageLayout object.
 ///
-/// ``` QPageLayout* other ```
+/// @param other QPageLayout*
 QPageLayout* q_pagelayout_new3(void* other);
 
 /// q_pagelayout_new4 constructs a new QPageLayout object.
 ///
-/// ``` QPageSize* pageSize, enum QPageLayout__Orientation orientation, QMarginsF* margins, enum QPageLayout__Unit units ```
+/// @param pageSize QPageSize*
+/// @param orientation enum QPageLayout__Orientation
+/// @param margins QMarginsF*
+/// @param units enum QPageLayout__Unit
 QPageLayout* q_pagelayout_new4(void* pageSize, int64_t orientation, void* margins, int64_t units);
 
 /// q_pagelayout_new5 constructs a new QPageLayout object.
 ///
-/// ``` QPageSize* pageSize, enum QPageLayout__Orientation orientation, QMarginsF* margins, enum QPageLayout__Unit units, QMarginsF* minMargins ```
+/// @param pageSize QPageSize*
+/// @param orientation enum QPageLayout__Orientation
+/// @param margins QMarginsF*
+/// @param units enum QPageLayout__Unit
+/// @param minMargins QMarginsF*
 QPageLayout* q_pagelayout_new5(void* pageSize, int64_t orientation, void* margins, int64_t units, void* minMargins);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#operator-eq)
 ///
-/// ``` QPageLayout* self, QPageLayout* other ```
+/// @param self QPageLayout*
+/// @param other QPageLayout*
 void q_pagelayout_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#swap)
 ///
-/// ``` QPageLayout* self, QPageLayout* other ```
+/// @param self QPageLayout*
+/// @param other QPageLayout*
 void q_pagelayout_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#isEquivalentTo)
 ///
-/// ``` QPageLayout* self, QPageLayout* other ```
+/// @param self QPageLayout*
+/// @param other QPageLayout*
 bool q_pagelayout_is_equivalent_to(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#isValid)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 bool q_pagelayout_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setMode)
 ///
-/// ``` QPageLayout* self, enum QPageLayout__Mode mode ```
+/// @param self QPageLayout*
+/// @param mode enum QPageLayout__Mode
 void q_pagelayout_set_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#mode)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
+///
+/// @return enum QPageLayout__Mode
 int64_t q_pagelayout_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setPageSize)
 ///
-/// ``` QPageLayout* self, QPageSize* pageSize ```
+/// @param self QPageLayout*
+/// @param pageSize QPageSize*
 void q_pagelayout_set_page_size(void* self, void* pageSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#pageSize)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QPageSize* q_pagelayout_page_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setOrientation)
 ///
-/// ``` QPageLayout* self, enum QPageLayout__Orientation orientation ```
+/// @param self QPageLayout*
+/// @param orientation enum QPageLayout__Orientation
 void q_pagelayout_set_orientation(void* self, int64_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#orientation)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
+///
+/// @return enum QPageLayout__Orientation
 int64_t q_pagelayout_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setUnits)
 ///
-/// ``` QPageLayout* self, enum QPageLayout__Unit units ```
+/// @param self QPageLayout*
+/// @param units enum QPageLayout__Unit
 void q_pagelayout_set_units(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#units)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
+///
+/// @return enum QPageLayout__Unit
 int64_t q_pagelayout_units(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setMargins)
 ///
-/// ``` QPageLayout* self, QMarginsF* margins ```
+/// @param self QPageLayout*
+/// @param margins QMarginsF*
 bool q_pagelayout_set_margins(void* self, void* margins);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setLeftMargin)
 ///
-/// ``` QPageLayout* self, double leftMargin ```
+/// @param self QPageLayout*
+/// @param leftMargin double
 bool q_pagelayout_set_left_margin(void* self, double leftMargin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setRightMargin)
 ///
-/// ``` QPageLayout* self, double rightMargin ```
+/// @param self QPageLayout*
+/// @param rightMargin double
 bool q_pagelayout_set_right_margin(void* self, double rightMargin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setTopMargin)
 ///
-/// ``` QPageLayout* self, double topMargin ```
+/// @param self QPageLayout*
+/// @param topMargin double
 bool q_pagelayout_set_top_margin(void* self, double topMargin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setBottomMargin)
 ///
-/// ``` QPageLayout* self, double bottomMargin ```
+/// @param self QPageLayout*
+/// @param bottomMargin double
 bool q_pagelayout_set_bottom_margin(void* self, double bottomMargin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#margins)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QMarginsF* q_pagelayout_margins(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#margins)
 ///
-/// ``` QPageLayout* self, enum QPageLayout__Unit units ```
+/// @param self QPageLayout*
+/// @param units enum QPageLayout__Unit
 QMarginsF* q_pagelayout_margins2(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#marginsPoints)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QMargins* q_pagelayout_margins_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#marginsPixels)
 ///
-/// ``` QPageLayout* self, int resolution ```
+/// @param self QPageLayout*
+/// @param resolution int
 QMargins* q_pagelayout_margins_pixels(void* self, int resolution);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setMinimumMargins)
 ///
-/// ``` QPageLayout* self, QMarginsF* minMargins ```
+/// @param self QPageLayout*
+/// @param minMargins QMarginsF*
 void q_pagelayout_set_minimum_margins(void* self, void* minMargins);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#minimumMargins)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QMarginsF* q_pagelayout_minimum_margins(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#maximumMargins)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QMarginsF* q_pagelayout_maximum_margins(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#fullRect)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QRectF* q_pagelayout_full_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#fullRect)
 ///
-/// ``` QPageLayout* self, enum QPageLayout__Unit units ```
+/// @param self QPageLayout*
+/// @param units enum QPageLayout__Unit
 QRectF* q_pagelayout_full_rect2(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#fullRectPoints)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QRect* q_pagelayout_full_rect_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#fullRectPixels)
 ///
-/// ``` QPageLayout* self, int resolution ```
+/// @param self QPageLayout*
+/// @param resolution int
 QRect* q_pagelayout_full_rect_pixels(void* self, int resolution);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#paintRect)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QRectF* q_pagelayout_paint_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#paintRect)
 ///
-/// ``` QPageLayout* self, enum QPageLayout__Unit units ```
+/// @param self QPageLayout*
+/// @param units enum QPageLayout__Unit
 QRectF* q_pagelayout_paint_rect2(void* self, int64_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#paintRectPoints)
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 QRect* q_pagelayout_paint_rect_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#paintRectPixels)
 ///
-/// ``` QPageLayout* self, int resolution ```
+/// @param self QPageLayout*
+/// @param resolution int
 QRect* q_pagelayout_paint_rect_pixels(void* self, int resolution);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setPageSize)
 ///
-/// ``` QPageLayout* self, QPageSize* pageSize, QMarginsF* minMargins ```
+/// @param self QPageLayout*
+/// @param pageSize QPageSize*
+/// @param minMargins QMarginsF*
 void q_pagelayout_set_page_size2(void* self, void* pageSize, void* minMargins);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setMargins)
 ///
-/// ``` QPageLayout* self, QMarginsF* margins, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+/// @param self QPageLayout*
+/// @param margins QMarginsF*
+/// @param outOfBoundsPolicy enum QPageLayout__OutOfBoundsPolicy
 bool q_pagelayout_set_margins2(void* self, void* margins, int64_t outOfBoundsPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setLeftMargin)
 ///
-/// ``` QPageLayout* self, double leftMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+/// @param self QPageLayout*
+/// @param leftMargin double
+/// @param outOfBoundsPolicy enum QPageLayout__OutOfBoundsPolicy
 bool q_pagelayout_set_left_margin2(void* self, double leftMargin, int64_t outOfBoundsPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setRightMargin)
 ///
-/// ``` QPageLayout* self, double rightMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+/// @param self QPageLayout*
+/// @param rightMargin double
+/// @param outOfBoundsPolicy enum QPageLayout__OutOfBoundsPolicy
 bool q_pagelayout_set_right_margin2(void* self, double rightMargin, int64_t outOfBoundsPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setTopMargin)
 ///
-/// ``` QPageLayout* self, double topMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+/// @param self QPageLayout*
+/// @param topMargin double
+/// @param outOfBoundsPolicy enum QPageLayout__OutOfBoundsPolicy
 bool q_pagelayout_set_top_margin2(void* self, double topMargin, int64_t outOfBoundsPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#setBottomMargin)
 ///
-/// ``` QPageLayout* self, double bottomMargin, enum QPageLayout__OutOfBoundsPolicy outOfBoundsPolicy ```
+/// @param self QPageLayout*
+/// @param bottomMargin double
+/// @param outOfBoundsPolicy enum QPageLayout__OutOfBoundsPolicy
 bool q_pagelayout_set_bottom_margin2(void* self, double bottomMargin, int64_t outOfBoundsPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagelayout.html#dtor.QPageLayout)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPageLayout* self ```
+/// @param self QPageLayout*
 void q_pagelayout_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpagelayout.html#types

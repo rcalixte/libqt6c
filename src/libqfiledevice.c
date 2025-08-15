@@ -290,48 +290,48 @@ void q_filedevice_ready_read(void* self) {
     QIODevice_ReadyRead((QIODevice*)self);
 }
 
-void q_filedevice_on_ready_read(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_filedevice_on_ready_read(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_filedevice_channel_ready_read(void* self, int channel) {
     QIODevice_ChannelReadyRead((QIODevice*)self, channel);
 }
 
-void q_filedevice_on_channel_ready_read(void* self, void (*slot)(void*, int)) {
-    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_filedevice_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
+    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_filedevice_bytes_written(void* self, long long bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_filedevice_on_bytes_written(void* self, void (*slot)(void*, long long)) {
-    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_filedevice_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long)) {
-    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_filedevice_about_to_close(void* self) {
     QIODevice_AboutToClose((QIODevice*)self);
 }
 
-void q_filedevice_on_about_to_close(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)slot);
+void q_filedevice_on_about_to_close(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_filedevice_read_channel_finished(void* self) {
     QIODevice_ReadChannelFinished((QIODevice*)self);
 }
 
-void q_filedevice_on_read_channel_finished(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)slot);
+void q_filedevice_on_read_channel_finished(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
 char* q_filedevice_read_line1(void* self, long long maxlen) {
@@ -453,12 +453,16 @@ const char** q_filedevice_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedevice_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -476,8 +480,8 @@ void q_filedevice_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_filedevice_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_filedevice_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_filedevice_parent(void* self) {
@@ -512,12 +516,12 @@ void q_filedevice_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_filedevice_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_filedevice_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_filedevice_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_filedevice_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_filedevice_delete(void* self) {

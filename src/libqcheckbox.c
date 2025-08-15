@@ -43,8 +43,8 @@ int32_t q_checkbox_metacall(void* self, int64_t param1, int param2, void* param3
     return QCheckBox_Metacall((QCheckBox*)self, param1, param2, param3);
 }
 
-void q_checkbox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QCheckBox_OnMetacall((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QCheckBox_OnMetacall((QCheckBox*)self, (intptr_t)callback);
 }
 
 int32_t q_checkbox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ QSize* q_checkbox_size_hint(void* self) {
     return QCheckBox_SizeHint((QCheckBox*)self);
 }
 
-void q_checkbox_on_size_hint(void* self, QSize* (*slot)()) {
-    QCheckBox_OnSizeHint((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_size_hint(void* self, QSize* (*callback)()) {
+    QCheckBox_OnSizeHint((QCheckBox*)self, (intptr_t)callback);
 }
 
 QSize* q_checkbox_qbase_size_hint(void* self) {
@@ -74,8 +74,8 @@ QSize* q_checkbox_minimum_size_hint(void* self) {
     return QCheckBox_MinimumSizeHint((QCheckBox*)self);
 }
 
-void q_checkbox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QCheckBox_OnMinimumSizeHint((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QCheckBox_OnMinimumSizeHint((QCheckBox*)self, (intptr_t)callback);
 }
 
 QSize* q_checkbox_qbase_minimum_size_hint(void* self) {
@@ -102,24 +102,24 @@ void q_checkbox_state_changed(void* self, int param1) {
     QCheckBox_StateChanged((QCheckBox*)self, param1);
 }
 
-void q_checkbox_on_state_changed(void* self, void (*slot)(void*, int)) {
-    QCheckBox_Connect_StateChanged((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_state_changed(void* self, void (*callback)(void*, int)) {
+    QCheckBox_Connect_StateChanged((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_check_state_changed(void* self, int64_t param1) {
     QCheckBox_CheckStateChanged((QCheckBox*)self, param1);
 }
 
-void q_checkbox_on_check_state_changed(void* self, void (*slot)(void*, int64_t)) {
-    QCheckBox_Connect_CheckStateChanged((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_check_state_changed(void* self, void (*callback)(void*, int64_t)) {
+    QCheckBox_Connect_CheckStateChanged((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_event(void* self, void* e) {
     return QCheckBox_Event((QCheckBox*)self, (QEvent*)e);
 }
 
-void q_checkbox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QCheckBox_OnEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QCheckBox_OnEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_qbase_event(void* self, void* e) {
@@ -130,8 +130,8 @@ bool q_checkbox_hit_button(void* self, void* pos) {
     return QCheckBox_HitButton((QCheckBox*)self, (QPoint*)pos);
 }
 
-void q_checkbox_on_hit_button(void* self, bool (*slot)(void*, void*)) {
-    QCheckBox_OnHitButton((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_hit_button(void* self, bool (*callback)(void*, void*)) {
+    QCheckBox_OnHitButton((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_qbase_hit_button(void* self, void* pos) {
@@ -142,8 +142,8 @@ void q_checkbox_check_state_set(void* self) {
     QCheckBox_CheckStateSet((QCheckBox*)self);
 }
 
-void q_checkbox_on_check_state_set(void* self, void (*slot)()) {
-    QCheckBox_OnCheckStateSet((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_check_state_set(void* self, void (*callback)()) {
+    QCheckBox_OnCheckStateSet((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_qbase_check_state_set(void* self) {
@@ -154,8 +154,8 @@ void q_checkbox_next_check_state(void* self) {
     QCheckBox_NextCheckState((QCheckBox*)self);
 }
 
-void q_checkbox_on_next_check_state(void* self, void (*slot)()) {
-    QCheckBox_OnNextCheckState((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_next_check_state(void* self, void (*callback)()) {
+    QCheckBox_OnNextCheckState((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_qbase_next_check_state(void* self) {
@@ -166,8 +166,8 @@ void q_checkbox_paint_event(void* self, void* param1) {
     QCheckBox_PaintEvent((QCheckBox*)self, (QPaintEvent*)param1);
 }
 
-void q_checkbox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnPaintEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnPaintEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_qbase_paint_event(void* self, void* param1) {
@@ -178,8 +178,8 @@ void q_checkbox_mouse_move_event(void* self, void* param1) {
     QCheckBox_MouseMoveEvent((QCheckBox*)self, (QMouseEvent*)param1);
 }
 
-void q_checkbox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnMouseMoveEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnMouseMoveEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_qbase_mouse_move_event(void* self, void* param1) {
@@ -190,8 +190,8 @@ void q_checkbox_init_style_option(void* self, void* option) {
     QCheckBox_InitStyleOption((QCheckBox*)self, (QStyleOptionButton*)option);
 }
 
-void q_checkbox_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnInitStyleOption((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnInitStyleOption((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_qbase_init_style_option(void* self, void* option) {
@@ -327,40 +327,40 @@ void q_checkbox_pressed(void* self) {
     QAbstractButton_Pressed((QAbstractButton*)self);
 }
 
-void q_checkbox_on_pressed(void* self, void (*slot)(void*)) {
-    QAbstractButton_Connect_Pressed((QAbstractButton*)self, (intptr_t)slot);
+void q_checkbox_on_pressed(void* self, void (*callback)(void*)) {
+    QAbstractButton_Connect_Pressed((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_checkbox_released(void* self) {
     QAbstractButton_Released((QAbstractButton*)self);
 }
 
-void q_checkbox_on_released(void* self, void (*slot)(void*)) {
-    QAbstractButton_Connect_Released((QAbstractButton*)self, (intptr_t)slot);
+void q_checkbox_on_released(void* self, void (*callback)(void*)) {
+    QAbstractButton_Connect_Released((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_checkbox_clicked(void* self) {
     QAbstractButton_Clicked((QAbstractButton*)self);
 }
 
-void q_checkbox_on_clicked(void* self, void (*slot)(void*)) {
-    QAbstractButton_Connect_Clicked((QAbstractButton*)self, (intptr_t)slot);
+void q_checkbox_on_clicked(void* self, void (*callback)(void*)) {
+    QAbstractButton_Connect_Clicked((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_checkbox_toggled(void* self, bool checked) {
     QAbstractButton_Toggled((QAbstractButton*)self, checked);
 }
 
-void q_checkbox_on_toggled(void* self, void (*slot)(void*, bool)) {
-    QAbstractButton_Connect_Toggled((QAbstractButton*)self, (intptr_t)slot);
+void q_checkbox_on_toggled(void* self, void (*callback)(void*, bool)) {
+    QAbstractButton_Connect_Toggled((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_checkbox_clicked1(void* self, bool checked) {
     QAbstractButton_Clicked1((QAbstractButton*)self, checked);
 }
 
-void q_checkbox_on_clicked1(void* self, void (*slot)(void*, bool)) {
-    QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)slot);
+void q_checkbox_on_clicked1(void* self, void (*callback)(void*, bool)) {
+    QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
 uintptr_t q_checkbox_win_id(void* self) {
@@ -1389,32 +1389,32 @@ void q_checkbox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_checkbox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_checkbox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_checkbox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_checkbox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_checkbox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_checkbox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_checkbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_checkbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_checkbox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_checkbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_checkbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_checkbox_input_method_hints(void* self) {
@@ -1585,12 +1585,16 @@ const char** q_checkbox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_checkbox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1608,8 +1612,8 @@ void q_checkbox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_checkbox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_checkbox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_checkbox_parent(void* self) {
@@ -1644,8 +1648,8 @@ void q_checkbox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_checkbox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_checkbox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_painting_active(void* self) {
@@ -1708,8 +1712,8 @@ void q_checkbox_qbase_key_press_event(void* self, void* e) {
     QCheckBox_QBaseKeyPressEvent((QCheckBox*)self, (QKeyEvent*)e);
 }
 
-void q_checkbox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnKeyPressEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnKeyPressEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_key_release_event(void* self, void* e) {
@@ -1720,8 +1724,8 @@ void q_checkbox_qbase_key_release_event(void* self, void* e) {
     QCheckBox_QBaseKeyReleaseEvent((QCheckBox*)self, (QKeyEvent*)e);
 }
 
-void q_checkbox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnKeyReleaseEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnKeyReleaseEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_mouse_press_event(void* self, void* e) {
@@ -1732,8 +1736,8 @@ void q_checkbox_qbase_mouse_press_event(void* self, void* e) {
     QCheckBox_QBaseMousePressEvent((QCheckBox*)self, (QMouseEvent*)e);
 }
 
-void q_checkbox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnMousePressEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnMousePressEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_mouse_release_event(void* self, void* e) {
@@ -1744,8 +1748,8 @@ void q_checkbox_qbase_mouse_release_event(void* self, void* e) {
     QCheckBox_QBaseMouseReleaseEvent((QCheckBox*)self, (QMouseEvent*)e);
 }
 
-void q_checkbox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnMouseReleaseEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnMouseReleaseEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_focus_in_event(void* self, void* e) {
@@ -1756,8 +1760,8 @@ void q_checkbox_qbase_focus_in_event(void* self, void* e) {
     QCheckBox_QBaseFocusInEvent((QCheckBox*)self, (QFocusEvent*)e);
 }
 
-void q_checkbox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnFocusInEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnFocusInEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_focus_out_event(void* self, void* e) {
@@ -1768,8 +1772,8 @@ void q_checkbox_qbase_focus_out_event(void* self, void* e) {
     QCheckBox_QBaseFocusOutEvent((QCheckBox*)self, (QFocusEvent*)e);
 }
 
-void q_checkbox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnFocusOutEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnFocusOutEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_change_event(void* self, void* e) {
@@ -1780,8 +1784,8 @@ void q_checkbox_qbase_change_event(void* self, void* e) {
     QCheckBox_QBaseChangeEvent((QCheckBox*)self, (QEvent*)e);
 }
 
-void q_checkbox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnChangeEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnChangeEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_timer_event(void* self, void* e) {
@@ -1792,8 +1796,8 @@ void q_checkbox_qbase_timer_event(void* self, void* e) {
     QCheckBox_QBaseTimerEvent((QCheckBox*)self, (QTimerEvent*)e);
 }
 
-void q_checkbox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnTimerEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnTimerEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 int32_t q_checkbox_dev_type(void* self) {
@@ -1804,8 +1808,8 @@ int32_t q_checkbox_qbase_dev_type(void* self) {
     return QCheckBox_QBaseDevType((QCheckBox*)self);
 }
 
-void q_checkbox_on_dev_type(void* self, int32_t (*slot)()) {
-    QCheckBox_OnDevType((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_dev_type(void* self, int32_t (*callback)()) {
+    QCheckBox_OnDevType((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_set_visible(void* self, bool visible) {
@@ -1816,8 +1820,8 @@ void q_checkbox_qbase_set_visible(void* self, bool visible) {
     QCheckBox_QBaseSetVisible((QCheckBox*)self, visible);
 }
 
-void q_checkbox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QCheckBox_OnSetVisible((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QCheckBox_OnSetVisible((QCheckBox*)self, (intptr_t)callback);
 }
 
 int32_t q_checkbox_height_for_width(void* self, int param1) {
@@ -1828,8 +1832,8 @@ int32_t q_checkbox_qbase_height_for_width(void* self, int param1) {
     return QCheckBox_QBaseHeightForWidth((QCheckBox*)self, param1);
 }
 
-void q_checkbox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QCheckBox_OnHeightForWidth((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QCheckBox_OnHeightForWidth((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_has_height_for_width(void* self) {
@@ -1840,8 +1844,8 @@ bool q_checkbox_qbase_has_height_for_width(void* self) {
     return QCheckBox_QBaseHasHeightForWidth((QCheckBox*)self);
 }
 
-void q_checkbox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QCheckBox_OnHasHeightForWidth((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QCheckBox_OnHasHeightForWidth((QCheckBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_checkbox_paint_engine(void* self) {
@@ -1852,8 +1856,8 @@ QPaintEngine* q_checkbox_qbase_paint_engine(void* self) {
     return QCheckBox_QBasePaintEngine((QCheckBox*)self);
 }
 
-void q_checkbox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QCheckBox_OnPaintEngine((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QCheckBox_OnPaintEngine((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_mouse_double_click_event(void* self, void* event) {
@@ -1864,8 +1868,8 @@ void q_checkbox_qbase_mouse_double_click_event(void* self, void* event) {
     QCheckBox_QBaseMouseDoubleClickEvent((QCheckBox*)self, (QMouseEvent*)event);
 }
 
-void q_checkbox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnMouseDoubleClickEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnMouseDoubleClickEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_wheel_event(void* self, void* event) {
@@ -1876,8 +1880,8 @@ void q_checkbox_qbase_wheel_event(void* self, void* event) {
     QCheckBox_QBaseWheelEvent((QCheckBox*)self, (QWheelEvent*)event);
 }
 
-void q_checkbox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnWheelEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnWheelEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_enter_event(void* self, void* event) {
@@ -1888,8 +1892,8 @@ void q_checkbox_qbase_enter_event(void* self, void* event) {
     QCheckBox_QBaseEnterEvent((QCheckBox*)self, (QEnterEvent*)event);
 }
 
-void q_checkbox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnEnterEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnEnterEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_leave_event(void* self, void* event) {
@@ -1900,8 +1904,8 @@ void q_checkbox_qbase_leave_event(void* self, void* event) {
     QCheckBox_QBaseLeaveEvent((QCheckBox*)self, (QEvent*)event);
 }
 
-void q_checkbox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnLeaveEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnLeaveEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_move_event(void* self, void* event) {
@@ -1912,8 +1916,8 @@ void q_checkbox_qbase_move_event(void* self, void* event) {
     QCheckBox_QBaseMoveEvent((QCheckBox*)self, (QMoveEvent*)event);
 }
 
-void q_checkbox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnMoveEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnMoveEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_resize_event(void* self, void* event) {
@@ -1924,8 +1928,8 @@ void q_checkbox_qbase_resize_event(void* self, void* event) {
     QCheckBox_QBaseResizeEvent((QCheckBox*)self, (QResizeEvent*)event);
 }
 
-void q_checkbox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnResizeEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnResizeEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_close_event(void* self, void* event) {
@@ -1936,8 +1940,8 @@ void q_checkbox_qbase_close_event(void* self, void* event) {
     QCheckBox_QBaseCloseEvent((QCheckBox*)self, (QCloseEvent*)event);
 }
 
-void q_checkbox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnCloseEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnCloseEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_context_menu_event(void* self, void* event) {
@@ -1948,8 +1952,8 @@ void q_checkbox_qbase_context_menu_event(void* self, void* event) {
     QCheckBox_QBaseContextMenuEvent((QCheckBox*)self, (QContextMenuEvent*)event);
 }
 
-void q_checkbox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnContextMenuEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnContextMenuEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_tablet_event(void* self, void* event) {
@@ -1960,8 +1964,8 @@ void q_checkbox_qbase_tablet_event(void* self, void* event) {
     QCheckBox_QBaseTabletEvent((QCheckBox*)self, (QTabletEvent*)event);
 }
 
-void q_checkbox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnTabletEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnTabletEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_action_event(void* self, void* event) {
@@ -1972,8 +1976,8 @@ void q_checkbox_qbase_action_event(void* self, void* event) {
     QCheckBox_QBaseActionEvent((QCheckBox*)self, (QActionEvent*)event);
 }
 
-void q_checkbox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnActionEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnActionEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_drag_enter_event(void* self, void* event) {
@@ -1984,8 +1988,8 @@ void q_checkbox_qbase_drag_enter_event(void* self, void* event) {
     QCheckBox_QBaseDragEnterEvent((QCheckBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_checkbox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnDragEnterEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnDragEnterEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_drag_move_event(void* self, void* event) {
@@ -1996,8 +2000,8 @@ void q_checkbox_qbase_drag_move_event(void* self, void* event) {
     QCheckBox_QBaseDragMoveEvent((QCheckBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_checkbox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnDragMoveEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnDragMoveEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_drag_leave_event(void* self, void* event) {
@@ -2008,8 +2012,8 @@ void q_checkbox_qbase_drag_leave_event(void* self, void* event) {
     QCheckBox_QBaseDragLeaveEvent((QCheckBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_checkbox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnDragLeaveEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnDragLeaveEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_drop_event(void* self, void* event) {
@@ -2020,8 +2024,8 @@ void q_checkbox_qbase_drop_event(void* self, void* event) {
     QCheckBox_QBaseDropEvent((QCheckBox*)self, (QDropEvent*)event);
 }
 
-void q_checkbox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnDropEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnDropEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_show_event(void* self, void* event) {
@@ -2032,8 +2036,8 @@ void q_checkbox_qbase_show_event(void* self, void* event) {
     QCheckBox_QBaseShowEvent((QCheckBox*)self, (QShowEvent*)event);
 }
 
-void q_checkbox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnShowEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnShowEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_hide_event(void* self, void* event) {
@@ -2044,8 +2048,8 @@ void q_checkbox_qbase_hide_event(void* self, void* event) {
     QCheckBox_QBaseHideEvent((QCheckBox*)self, (QHideEvent*)event);
 }
 
-void q_checkbox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnHideEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnHideEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2056,8 +2060,8 @@ bool q_checkbox_qbase_native_event(void* self, const char* eventType, void* mess
     return QCheckBox_QBaseNativeEvent((QCheckBox*)self, qstring(eventType), message, result);
 }
 
-void q_checkbox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QCheckBox_OnNativeEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QCheckBox_OnNativeEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 int32_t q_checkbox_metric(void* self, int64_t param1) {
@@ -2068,8 +2072,8 @@ int32_t q_checkbox_qbase_metric(void* self, int64_t param1) {
     return QCheckBox_QBaseMetric((QCheckBox*)self, param1);
 }
 
-void q_checkbox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QCheckBox_OnMetric((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QCheckBox_OnMetric((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_init_painter(void* self, void* painter) {
@@ -2080,8 +2084,8 @@ void q_checkbox_qbase_init_painter(void* self, void* painter) {
     QCheckBox_QBaseInitPainter((QCheckBox*)self, (QPainter*)painter);
 }
 
-void q_checkbox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnInitPainter((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnInitPainter((QCheckBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_checkbox_redirected(void* self, void* offset) {
@@ -2092,8 +2096,8 @@ QPaintDevice* q_checkbox_qbase_redirected(void* self, void* offset) {
     return QCheckBox_QBaseRedirected((QCheckBox*)self, (QPoint*)offset);
 }
 
-void q_checkbox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QCheckBox_OnRedirected((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QCheckBox_OnRedirected((QCheckBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_checkbox_shared_painter(void* self) {
@@ -2104,8 +2108,8 @@ QPainter* q_checkbox_qbase_shared_painter(void* self) {
     return QCheckBox_QBaseSharedPainter((QCheckBox*)self);
 }
 
-void q_checkbox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QCheckBox_OnSharedPainter((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QCheckBox_OnSharedPainter((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_input_method_event(void* self, void* param1) {
@@ -2116,8 +2120,8 @@ void q_checkbox_qbase_input_method_event(void* self, void* param1) {
     QCheckBox_QBaseInputMethodEvent((QCheckBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_checkbox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnInputMethodEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnInputMethodEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_checkbox_input_method_query(void* self, int64_t param1) {
@@ -2128,8 +2132,8 @@ QVariant* q_checkbox_qbase_input_method_query(void* self, int64_t param1) {
     return QCheckBox_QBaseInputMethodQuery((QCheckBox*)self, param1);
 }
 
-void q_checkbox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QCheckBox_OnInputMethodQuery((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QCheckBox_OnInputMethodQuery((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_focus_next_prev_child(void* self, bool next) {
@@ -2140,8 +2144,8 @@ bool q_checkbox_qbase_focus_next_prev_child(void* self, bool next) {
     return QCheckBox_QBaseFocusNextPrevChild((QCheckBox*)self, next);
 }
 
-void q_checkbox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QCheckBox_OnFocusNextPrevChild((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QCheckBox_OnFocusNextPrevChild((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_event_filter(void* self, void* watched, void* event) {
@@ -2152,8 +2156,8 @@ bool q_checkbox_qbase_event_filter(void* self, void* watched, void* event) {
     return QCheckBox_QBaseEventFilter((QCheckBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_checkbox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QCheckBox_OnEventFilter((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QCheckBox_OnEventFilter((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_child_event(void* self, void* event) {
@@ -2164,8 +2168,8 @@ void q_checkbox_qbase_child_event(void* self, void* event) {
     QCheckBox_QBaseChildEvent((QCheckBox*)self, (QChildEvent*)event);
 }
 
-void q_checkbox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnChildEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnChildEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_custom_event(void* self, void* event) {
@@ -2176,8 +2180,8 @@ void q_checkbox_qbase_custom_event(void* self, void* event) {
     QCheckBox_QBaseCustomEvent((QCheckBox*)self, (QEvent*)event);
 }
 
-void q_checkbox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnCustomEvent((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnCustomEvent((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_connect_notify(void* self, void* signal) {
@@ -2188,8 +2192,8 @@ void q_checkbox_qbase_connect_notify(void* self, void* signal) {
     QCheckBox_QBaseConnectNotify((QCheckBox*)self, (QMetaMethod*)signal);
 }
 
-void q_checkbox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnConnectNotify((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnConnectNotify((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_disconnect_notify(void* self, void* signal) {
@@ -2200,8 +2204,8 @@ void q_checkbox_qbase_disconnect_notify(void* self, void* signal) {
     QCheckBox_QBaseDisconnectNotify((QCheckBox*)self, (QMetaMethod*)signal);
 }
 
-void q_checkbox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QCheckBox_OnDisconnectNotify((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QCheckBox_OnDisconnectNotify((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_update_micro_focus(void* self) {
@@ -2212,8 +2216,8 @@ void q_checkbox_qbase_update_micro_focus(void* self) {
     QCheckBox_QBaseUpdateMicroFocus((QCheckBox*)self);
 }
 
-void q_checkbox_on_update_micro_focus(void* self, void (*slot)()) {
-    QCheckBox_OnUpdateMicroFocus((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_update_micro_focus(void* self, void (*callback)()) {
+    QCheckBox_OnUpdateMicroFocus((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_create(void* self) {
@@ -2224,8 +2228,8 @@ void q_checkbox_qbase_create(void* self) {
     QCheckBox_QBaseCreate((QCheckBox*)self);
 }
 
-void q_checkbox_on_create(void* self, void (*slot)()) {
-    QCheckBox_OnCreate((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_create(void* self, void (*callback)()) {
+    QCheckBox_OnCreate((QCheckBox*)self, (intptr_t)callback);
 }
 
 void q_checkbox_destroy(void* self) {
@@ -2236,8 +2240,8 @@ void q_checkbox_qbase_destroy(void* self) {
     QCheckBox_QBaseDestroy((QCheckBox*)self);
 }
 
-void q_checkbox_on_destroy(void* self, void (*slot)()) {
-    QCheckBox_OnDestroy((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_destroy(void* self, void (*callback)()) {
+    QCheckBox_OnDestroy((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_focus_next_child(void* self) {
@@ -2248,8 +2252,8 @@ bool q_checkbox_qbase_focus_next_child(void* self) {
     return QCheckBox_QBaseFocusNextChild((QCheckBox*)self);
 }
 
-void q_checkbox_on_focus_next_child(void* self, bool (*slot)()) {
-    QCheckBox_OnFocusNextChild((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_focus_next_child(void* self, bool (*callback)()) {
+    QCheckBox_OnFocusNextChild((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_focus_previous_child(void* self) {
@@ -2260,8 +2264,8 @@ bool q_checkbox_qbase_focus_previous_child(void* self) {
     return QCheckBox_QBaseFocusPreviousChild((QCheckBox*)self);
 }
 
-void q_checkbox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QCheckBox_OnFocusPreviousChild((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QCheckBox_OnFocusPreviousChild((QCheckBox*)self, (intptr_t)callback);
 }
 
 QObject* q_checkbox_sender(void* self) {
@@ -2272,8 +2276,8 @@ QObject* q_checkbox_qbase_sender(void* self) {
     return QCheckBox_QBaseSender((QCheckBox*)self);
 }
 
-void q_checkbox_on_sender(void* self, QObject* (*slot)()) {
-    QCheckBox_OnSender((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_sender(void* self, QObject* (*callback)()) {
+    QCheckBox_OnSender((QCheckBox*)self, (intptr_t)callback);
 }
 
 int32_t q_checkbox_sender_signal_index(void* self) {
@@ -2284,8 +2288,8 @@ int32_t q_checkbox_qbase_sender_signal_index(void* self) {
     return QCheckBox_QBaseSenderSignalIndex((QCheckBox*)self);
 }
 
-void q_checkbox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QCheckBox_OnSenderSignalIndex((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QCheckBox_OnSenderSignalIndex((QCheckBox*)self, (intptr_t)callback);
 }
 
 int32_t q_checkbox_receivers(void* self, const char* signal) {
@@ -2296,8 +2300,8 @@ int32_t q_checkbox_qbase_receivers(void* self, const char* signal) {
     return QCheckBox_QBaseReceivers((QCheckBox*)self, signal);
 }
 
-void q_checkbox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QCheckBox_OnReceivers((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QCheckBox_OnReceivers((QCheckBox*)self, (intptr_t)callback);
 }
 
 bool q_checkbox_is_signal_connected(void* self, void* signal) {
@@ -2308,8 +2312,8 @@ bool q_checkbox_qbase_is_signal_connected(void* self, void* signal) {
     return QCheckBox_QBaseIsSignalConnected((QCheckBox*)self, (QMetaMethod*)signal);
 }
 
-void q_checkbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QCheckBox_OnIsSignalConnected((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QCheckBox_OnIsSignalConnected((QCheckBox*)self, (intptr_t)callback);
 }
 
 double q_checkbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2320,12 +2324,12 @@ double q_checkbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
     return QCheckBox_QBaseGetDecodedMetricF((QCheckBox*)self, metricA, metricB);
 }
 
-void q_checkbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QCheckBox_OnGetDecodedMetricF((QCheckBox*)self, (intptr_t)slot);
+void q_checkbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QCheckBox_OnGetDecodedMetricF((QCheckBox*)self, (intptr_t)callback);
 }
 
-void q_checkbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_checkbox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_checkbox_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,334 +15,395 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 const QMetaObject* q_graphicsanchor_meta_object(void* self);
 
-/// ``` QGraphicsAnchor* self, const char* param1 ```
+/// @param self QGraphicsAnchor*
+/// @param param1 const char*
 void* q_graphicsanchor_metacast(void* self, const char* param1);
 
-/// ``` QGraphicsAnchor* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QGraphicsAnchor*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_graphicsanchor_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_graphicsanchor_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#setSpacing)
 ///
-/// ``` QGraphicsAnchor* self, double spacing ```
+/// @param self QGraphicsAnchor*
+/// @param spacing double
 void q_graphicsanchor_set_spacing(void* self, double spacing);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#unsetSpacing)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 void q_graphicsanchor_unset_spacing(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#spacing)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 double q_graphicsanchor_spacing(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#setSizePolicy)
 ///
-/// ``` QGraphicsAnchor* self, enum QSizePolicy__Policy policy ```
+/// @param self QGraphicsAnchor*
+/// @param policy enum QSizePolicy__Policy
 void q_graphicsanchor_set_size_policy(void* self, int64_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#sizePolicy)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
+///
+/// @return enum QSizePolicy__Policy
 int64_t q_graphicsanchor_size_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_graphicsanchor_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_graphicsanchor_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QGraphicsAnchor* self, QEvent* event ```
+/// @param self QGraphicsAnchor*
+/// @param event QEvent*
 bool q_graphicsanchor_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QGraphicsAnchor* self, QObject* watched, QEvent* event ```
+/// @param self QGraphicsAnchor*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_graphicsanchor_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsAnchor*
 const char* q_graphicsanchor_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsAnchor* self, char* name ```
+/// @param self QGraphicsAnchor*
+/// @param name char*
 void q_graphicsanchor_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 bool q_graphicsanchor_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 bool q_graphicsanchor_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 bool q_graphicsanchor_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 bool q_graphicsanchor_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QGraphicsAnchor* self, bool b ```
+/// @param self QGraphicsAnchor*
+/// @param b bool
 bool q_graphicsanchor_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 QThread* q_graphicsanchor_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QGraphicsAnchor* self, QThread* thread ```
+/// @param self QGraphicsAnchor*
+/// @param thread QThread*
 bool q_graphicsanchor_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QGraphicsAnchor* self, int interval ```
+/// @param self QGraphicsAnchor*
+/// @param interval int
 int32_t q_graphicsanchor_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QGraphicsAnchor* self, int id ```
+/// @param self QGraphicsAnchor*
+/// @param id int
 void q_graphicsanchor_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QGraphicsAnchor* self, enum Qt__TimerId id ```
+/// @param self QGraphicsAnchor*
+/// @param id enum Qt__TimerId
 void q_graphicsanchor_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 libqt_list /* of QObject* */ q_graphicsanchor_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QGraphicsAnchor* self, QObject* parent ```
+/// @param self QGraphicsAnchor*
+/// @param parent QObject*
 void q_graphicsanchor_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QGraphicsAnchor* self, QObject* filterObj ```
+/// @param self QGraphicsAnchor*
+/// @param filterObj QObject*
 void q_graphicsanchor_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QGraphicsAnchor* self, QObject* obj ```
+/// @param self QGraphicsAnchor*
+/// @param obj QObject*
 void q_graphicsanchor_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_graphicsanchor_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QGraphicsAnchor* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QGraphicsAnchor*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_graphicsanchor_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_graphicsanchor_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_graphicsanchor_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 void q_graphicsanchor_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 void q_graphicsanchor_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QGraphicsAnchor* self, const char* name, QVariant* value ```
+/// @param self QGraphicsAnchor*
+/// @param name const char*
+/// @param value QVariant*
 bool q_graphicsanchor_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QGraphicsAnchor* self, const char* name ```
+/// @param self QGraphicsAnchor*
+/// @param name const char*
 QVariant* q_graphicsanchor_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsAnchor*
 const char** q_graphicsanchor_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 QBindingStorage* q_graphicsanchor_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 const QBindingStorage* q_graphicsanchor_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 void q_graphicsanchor_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsAnchor* self, void (*slot)(QGraphicsAnchor*) ```
-void q_graphicsanchor_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QGraphicsAnchor*
+/// @param callback void fn(QGraphicsAnchor*)
+void q_graphicsanchor_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 QObject* q_graphicsanchor_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QGraphicsAnchor* self, const char* classname ```
+/// @param self QGraphicsAnchor*
+/// @param classname const char*
 bool q_graphicsanchor_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 void q_graphicsanchor_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QGraphicsAnchor* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QGraphicsAnchor*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_graphicsanchor_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QGraphicsAnchor* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QGraphicsAnchor*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_graphicsanchor_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QGraphicsAnchor* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QGraphicsAnchor*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_graphicsanchor_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsAnchor* self, QObject* param1 ```
+/// @param self QGraphicsAnchor*
+/// @param param1 QObject*
 void q_graphicsanchor_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsAnchor* self, void (*slot)(QGraphicsAnchor*, QObject*) ```
-void q_graphicsanchor_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsAnchor*
+/// @param callback void fn(QGraphicsAnchor*, QObject*)
+void q_graphicsanchor_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -351,224 +411,263 @@ void q_graphicsanchor_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsAnchor* self, void (*slot)(QGraphicsAnchor*, const char*) ```
-void q_graphicsanchor_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QGraphicsAnchor*
+/// @param callback void fn(QGraphicsAnchor*, const char*)
+void q_graphicsanchor_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#dtor.QGraphicsAnchor)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QGraphicsAnchor* self ```
+/// @param self QGraphicsAnchor*
 void q_graphicsanchor_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qgraphicsanchorlayout.html
 
 /// q_graphicsanchorlayout_new constructs a new QGraphicsAnchorLayout object.
 ///
-///
 QGraphicsAnchorLayout* q_graphicsanchorlayout_new();
 
 /// q_graphicsanchorlayout_new2 constructs a new QGraphicsAnchorLayout object.
 ///
-/// ``` QGraphicsLayoutItem* parent ```
+/// @param parent QGraphicsLayoutItem*
 QGraphicsAnchorLayout* q_graphicsanchorlayout_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchor)
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, enum Qt__AnchorPoint firstEdge, QGraphicsLayoutItem* secondItem, enum Qt__AnchorPoint secondEdge ```
+/// @param self QGraphicsAnchorLayout*
+/// @param firstItem QGraphicsLayoutItem*
+/// @param firstEdge enum Qt__AnchorPoint
+/// @param secondItem QGraphicsLayoutItem*
+/// @param secondEdge enum Qt__AnchorPoint
 QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int64_t firstEdge, void* secondItem, int64_t secondEdge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#anchor)
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, enum Qt__AnchorPoint firstEdge, QGraphicsLayoutItem* secondItem, enum Qt__AnchorPoint secondEdge ```
+/// @param self QGraphicsAnchorLayout*
+/// @param firstItem QGraphicsLayoutItem*
+/// @param firstEdge enum Qt__AnchorPoint
+/// @param secondItem QGraphicsLayoutItem*
+/// @param secondEdge enum Qt__AnchorPoint
 QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int64_t firstEdge, void* secondItem, int64_t secondEdge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addCornerAnchors)
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, enum Qt__Corner firstCorner, QGraphicsLayoutItem* secondItem, enum Qt__Corner secondCorner ```
+/// @param self QGraphicsAnchorLayout*
+/// @param firstItem QGraphicsLayoutItem*
+/// @param firstCorner enum Qt__Corner
+/// @param secondItem QGraphicsLayoutItem*
+/// @param secondCorner enum Qt__Corner
 void q_graphicsanchorlayout_add_corner_anchors(void* self, void* firstItem, int64_t firstCorner, void* secondItem, int64_t secondCorner);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, QGraphicsLayoutItem* secondItem ```
+/// @param self QGraphicsAnchorLayout*
+/// @param firstItem QGraphicsLayoutItem*
+/// @param secondItem QGraphicsLayoutItem*
 void q_graphicsanchorlayout_add_anchors(void* self, void* firstItem, void* secondItem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setHorizontalSpacing)
 ///
-/// ``` QGraphicsAnchorLayout* self, double spacing ```
+/// @param self QGraphicsAnchorLayout*
+/// @param spacing double
 void q_graphicsanchorlayout_set_horizontal_spacing(void* self, double spacing);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setVerticalSpacing)
 ///
-/// ``` QGraphicsAnchorLayout* self, double spacing ```
+/// @param self QGraphicsAnchorLayout*
+/// @param spacing double
 void q_graphicsanchorlayout_set_vertical_spacing(void* self, double spacing);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setSpacing)
 ///
-/// ``` QGraphicsAnchorLayout* self, double spacing ```
+/// @param self QGraphicsAnchorLayout*
+/// @param spacing double
 void q_graphicsanchorlayout_set_spacing(void* self, double spacing);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#horizontalSpacing)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_horizontal_spacing(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#verticalSpacing)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_vertical_spacing(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
-/// ``` QGraphicsAnchorLayout* self, int index ```
+/// @param self QGraphicsAnchorLayout*
+/// @param index int
 void q_graphicsanchorlayout_remove_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, int) ```
-void q_graphicsanchorlayout_on_remove_at(void* self, void (*slot)(void*, int));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, int)
+void q_graphicsanchorlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#removeAt)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsAnchorLayout* self, int index ```
+/// @param self QGraphicsAnchorLayout*
+/// @param index int
 void q_graphicsanchorlayout_qbase_remove_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
-/// ``` QGraphicsAnchorLayout* self, QRectF* rect ```
+/// @param self QGraphicsAnchorLayout*
+/// @param rect QRectF*
 void q_graphicsanchorlayout_set_geometry(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, QRectF*) ```
-void q_graphicsanchorlayout_on_set_geometry(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, QRectF*)
+void q_graphicsanchorlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#setGeometry)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsAnchorLayout* self, QRectF* rect ```
+/// @param self QGraphicsAnchorLayout*
+/// @param rect QRectF*
 void q_graphicsanchorlayout_qbase_set_geometry(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 int32_t q_graphicsanchorlayout_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsAnchorLayout* self, int32_t (*slot)() ```
-void q_graphicsanchorlayout_on_count(void* self, int32_t (*slot)());
+/// @param self QGraphicsAnchorLayout*
+/// @param callback int32_t fn()
+void q_graphicsanchorlayout_on_count(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#count)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 int32_t q_graphicsanchorlayout_qbase_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
-/// ``` QGraphicsAnchorLayout* self, int index ```
+/// @param self QGraphicsAnchorLayout*
+/// @param index int
 QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* (*slot)(QGraphicsAnchorLayout*, int) ```
-void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*slot)(void*, int));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback QGraphicsLayoutItem* fn(QGraphicsAnchorLayout*, int)
+void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#itemAt)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsAnchorLayout* self, int index ```
+/// @param self QGraphicsAnchorLayout*
+/// @param index int
 QGraphicsLayoutItem* q_graphicsanchorlayout_qbase_item_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_invalidate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)() ```
-void q_graphicsanchorlayout_on_invalidate(void* self, void (*slot)());
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn()
+void q_graphicsanchorlayout_on_invalidate(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#invalidate)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_qbase_invalidate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
-/// ``` QGraphicsAnchorLayout* self, enum Qt__SizeHint which, QSizeF* constraint ```
+/// @param self QGraphicsAnchorLayout*
+/// @param which enum Qt__SizeHint
+/// @param constraint QSizeF*
 QSizeF* q_graphicsanchorlayout_size_hint(void* self, int64_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsAnchorLayout* self, QSizeF* (*slot)(QGraphicsAnchorLayout*, enum Qt__SizeHint, QSizeF*) ```
-void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback QSizeF* fn(QGraphicsAnchorLayout*, enum Qt__SizeHint, QSizeF*)
+void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsAnchorLayout* self, enum Qt__SizeHint which, QSizeF* constraint ```
+/// @param self QGraphicsAnchorLayout*
+/// @param which enum Qt__SizeHint
+/// @param constraint QSizeF*
 QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int64_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, QGraphicsLayoutItem* secondItem, int orientations ```
+/// @param self QGraphicsAnchorLayout*
+/// @param firstItem QGraphicsLayoutItem*
+/// @param secondItem QGraphicsLayoutItem*
+/// @param orientations flag of enum Qt__Orientation
 void q_graphicsanchorlayout_add_anchors3(void* self, void* firstItem, void* secondItem, int64_t orientations);
 
 /// Inherited from QGraphicsLayout
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#setContentsMargins)
 ///
-/// ``` QGraphicsAnchorLayout* self, double left, double top, double right, double bottom ```
+/// @param self QGraphicsAnchorLayout*
+/// @param left double
+/// @param top double
+/// @param right double
+/// @param bottom double
 void q_graphicsanchorlayout_set_contents_margins(void* self, double left, double top, double right, double bottom);
 
 /// Inherited from QGraphicsLayout
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#activate)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_activate(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#isActivated)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_is_activated(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#setInstantInvalidatePropagation)
 ///
-/// ``` bool enable ```
+/// @param enable bool
 void q_graphicsanchorlayout_set_instant_invalidate_propagation(bool enable);
 
 /// Inherited from QGraphicsLayout
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayout.html#instantInvalidatePropagation)
-///
 ///
 bool q_graphicsanchorlayout_instant_invalidate_propagation();
 
@@ -576,238 +675,263 @@ bool q_graphicsanchorlayout_instant_invalidate_propagation();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
-/// ``` QGraphicsAnchorLayout* self, QSizePolicy* policy ```
+/// @param self QGraphicsAnchorLayout*
+/// @param policy QSizePolicy*
 void q_graphicsanchorlayout_set_size_policy(void* self, void* policy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
-/// ``` QGraphicsAnchorLayout* self, enum QSizePolicy__Policy hPolicy, enum QSizePolicy__Policy vPolicy ```
+/// @param self QGraphicsAnchorLayout*
+/// @param hPolicy enum QSizePolicy__Policy
+/// @param vPolicy enum QSizePolicy__Policy
 void q_graphicsanchorlayout_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QSizePolicy* q_graphicsanchorlayout_size_policy(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
 ///
-/// ``` QGraphicsAnchorLayout* self, QSizeF* size ```
+/// @param self QGraphicsAnchorLayout*
+/// @param size QSizeF*
 void q_graphicsanchorlayout_set_minimum_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
 ///
-/// ``` QGraphicsAnchorLayout* self, double w, double h ```
+/// @param self QGraphicsAnchorLayout*
+/// @param w double
+/// @param h double
 void q_graphicsanchorlayout_set_minimum_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumSize)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QSizeF* q_graphicsanchorlayout_minimum_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumWidth)
 ///
-/// ``` QGraphicsAnchorLayout* self, double width ```
+/// @param self QGraphicsAnchorLayout*
+/// @param width double
 void q_graphicsanchorlayout_set_minimum_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumWidth)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_minimum_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumHeight)
 ///
-/// ``` QGraphicsAnchorLayout* self, double height ```
+/// @param self QGraphicsAnchorLayout*
+/// @param height double
 void q_graphicsanchorlayout_set_minimum_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumHeight)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_minimum_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
 ///
-/// ``` QGraphicsAnchorLayout* self, QSizeF* size ```
+/// @param self QGraphicsAnchorLayout*
+/// @param size QSizeF*
 void q_graphicsanchorlayout_set_preferred_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
 ///
-/// ``` QGraphicsAnchorLayout* self, double w, double h ```
+/// @param self QGraphicsAnchorLayout*
+/// @param w double
+/// @param h double
 void q_graphicsanchorlayout_set_preferred_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredSize)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QSizeF* q_graphicsanchorlayout_preferred_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredWidth)
 ///
-/// ``` QGraphicsAnchorLayout* self, double width ```
+/// @param self QGraphicsAnchorLayout*
+/// @param width double
 void q_graphicsanchorlayout_set_preferred_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredWidth)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_preferred_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredHeight)
 ///
-/// ``` QGraphicsAnchorLayout* self, double height ```
+/// @param self QGraphicsAnchorLayout*
+/// @param height double
 void q_graphicsanchorlayout_set_preferred_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredHeight)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_preferred_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
 ///
-/// ``` QGraphicsAnchorLayout* self, QSizeF* size ```
+/// @param self QGraphicsAnchorLayout*
+/// @param size QSizeF*
 void q_graphicsanchorlayout_set_maximum_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
 ///
-/// ``` QGraphicsAnchorLayout* self, double w, double h ```
+/// @param self QGraphicsAnchorLayout*
+/// @param w double
+/// @param h double
 void q_graphicsanchorlayout_set_maximum_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumSize)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QSizeF* q_graphicsanchorlayout_maximum_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumWidth)
 ///
-/// ``` QGraphicsAnchorLayout* self, double width ```
+/// @param self QGraphicsAnchorLayout*
+/// @param width double
 void q_graphicsanchorlayout_set_maximum_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumWidth)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_maximum_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumHeight)
 ///
-/// ``` QGraphicsAnchorLayout* self, double height ```
+/// @param self QGraphicsAnchorLayout*
+/// @param height double
 void q_graphicsanchorlayout_set_maximum_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumHeight)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 double q_graphicsanchorlayout_maximum_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QRectF* q_graphicsanchorlayout_geometry(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QRectF* q_graphicsanchorlayout_contents_rect(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// ``` QGraphicsAnchorLayout* self, enum Qt__SizeHint which ```
+/// @param self QGraphicsAnchorLayout*
+/// @param which enum Qt__SizeHint
 QSizeF* q_graphicsanchorlayout_effective_size_hint(void* self, int64_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QGraphicsLayoutItem* q_graphicsanchorlayout_parent_layout_item(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setParentLayoutItem)
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* parent ```
+/// @param self QGraphicsAnchorLayout*
+/// @param parent QGraphicsLayoutItem*
 void q_graphicsanchorlayout_set_parent_layout_item(void* self, void* parent);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isLayout)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_is_layout(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#graphicsItem)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 QGraphicsItem* q_graphicsanchorlayout_graphics_item(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#ownedByLayout)
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_owned_by_layout(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
-/// ``` QGraphicsAnchorLayout* self, enum QSizePolicy__Policy hPolicy, enum QSizePolicy__Policy vPolicy, enum QSizePolicy__ControlType controlType ```
+/// @param self QGraphicsAnchorLayout*
+/// @param hPolicy enum QSizePolicy__Policy
+/// @param vPolicy enum QSizePolicy__Policy
+/// @param controlType enum QSizePolicy__ControlType
 void q_graphicsanchorlayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// ``` QGraphicsAnchorLayout* self, enum Qt__SizeHint which, QSizeF* constraint ```
+/// @param self QGraphicsAnchorLayout*
+/// @param which enum Qt__SizeHint
+/// @param constraint QSizeF*
 QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int64_t which, void* constraint);
 
 /// Inherited from QGraphicsLayout
@@ -816,7 +940,11 @@ QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int64_t which, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, double* left, double* top, double* right, double* bottom ```
+/// @param self QGraphicsAnchorLayout*
+/// @param left double*
+/// @param top double*
+/// @param right double*
+/// @param bottom double*
 void q_graphicsanchorlayout_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsLayout
@@ -825,7 +953,11 @@ void q_graphicsanchorlayout_get_contents_margins(void* self, double* left, doubl
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, double* left, double* top, double* right, double* bottom ```
+/// @param self QGraphicsAnchorLayout*
+/// @param left double*
+/// @param top double*
+/// @param right double*
+/// @param bottom double*
 void q_graphicsanchorlayout_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsLayout
@@ -834,8 +966,9 @@ void q_graphicsanchorlayout_qbase_get_contents_margins(void* self, double* left,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, double*, double*, double*, double*) ```
-void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*slot)(void*, double*, double*, double*, double*));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, double*, double*, double*, double*)
+void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsLayout
 ///
@@ -843,7 +976,7 @@ void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
@@ -852,7 +985,7 @@ void q_graphicsanchorlayout_update_geometry(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_qbase_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
@@ -861,8 +994,9 @@ void q_graphicsanchorlayout_qbase_update_geometry(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)() ```
-void q_graphicsanchorlayout_on_update_geometry(void* self, void (*slot)());
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn()
+void q_graphicsanchorlayout_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayout
 ///
@@ -870,7 +1004,8 @@ void q_graphicsanchorlayout_on_update_geometry(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, QEvent* e ```
+/// @param self QGraphicsAnchorLayout*
+/// @param e QEvent*
 void q_graphicsanchorlayout_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
@@ -879,7 +1014,8 @@ void q_graphicsanchorlayout_widget_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, QEvent* e ```
+/// @param self QGraphicsAnchorLayout*
+/// @param e QEvent*
 void q_graphicsanchorlayout_qbase_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
@@ -888,8 +1024,9 @@ void q_graphicsanchorlayout_qbase_widget_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, QEvent*) ```
-void q_graphicsanchorlayout_on_widget_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, QEvent*)
+void q_graphicsanchorlayout_on_widget_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -897,7 +1034,7 @@ void q_graphicsanchorlayout_on_widget_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
@@ -906,7 +1043,7 @@ bool q_graphicsanchorlayout_is_empty(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 bool q_graphicsanchorlayout_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
@@ -915,8 +1052,9 @@ bool q_graphicsanchorlayout_qbase_is_empty(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, bool (*slot)() ```
-void q_graphicsanchorlayout_on_is_empty(void* self, bool (*slot)());
+/// @param self QGraphicsAnchorLayout*
+/// @param callback bool fn()
+void q_graphicsanchorlayout_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsLayout
 ///
@@ -924,7 +1062,8 @@ void q_graphicsanchorlayout_on_is_empty(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* layoutItem ```
+/// @param self QGraphicsAnchorLayout*
+/// @param layoutItem QGraphicsLayoutItem*
 void q_graphicsanchorlayout_add_child_layout_item(void* self, void* layoutItem);
 
 /// Inherited from QGraphicsLayout
@@ -933,7 +1072,8 @@ void q_graphicsanchorlayout_add_child_layout_item(void* self, void* layoutItem);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsLayoutItem* layoutItem ```
+/// @param self QGraphicsAnchorLayout*
+/// @param layoutItem QGraphicsLayoutItem*
 void q_graphicsanchorlayout_qbase_add_child_layout_item(void* self, void* layoutItem);
 
 /// Inherited from QGraphicsLayout
@@ -942,8 +1082,9 @@ void q_graphicsanchorlayout_qbase_add_child_layout_item(void* self, void* layout
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, QGraphicsLayoutItem*) ```
-void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, QGraphicsLayoutItem*)
+void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -951,7 +1092,8 @@ void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsItem* item ```
+/// @param self QGraphicsAnchorLayout*
+/// @param item QGraphicsItem*
 void q_graphicsanchorlayout_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
@@ -960,7 +1102,8 @@ void q_graphicsanchorlayout_set_graphics_item(void* self, void* item);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, QGraphicsItem* item ```
+/// @param self QGraphicsAnchorLayout*
+/// @param item QGraphicsItem*
 void q_graphicsanchorlayout_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
@@ -969,8 +1112,9 @@ void q_graphicsanchorlayout_qbase_set_graphics_item(void* self, void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, QGraphicsItem*) ```
-void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, QGraphicsItem*)
+void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -978,7 +1122,8 @@ void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, bool ownedByLayout ```
+/// @param self QGraphicsAnchorLayout*
+/// @param ownedByLayout bool
 void q_graphicsanchorlayout_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
@@ -987,7 +1132,8 @@ void q_graphicsanchorlayout_set_owned_by_layout(void* self, bool ownedByLayout);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, bool ownedByLayout ```
+/// @param self QGraphicsAnchorLayout*
+/// @param ownedByLayout bool
 void q_graphicsanchorlayout_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
@@ -996,14 +1142,15 @@ void q_graphicsanchorlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsAnchorLayout* self, void (*slot)(QGraphicsAnchorLayout*, bool) ```
-void q_graphicsanchorlayout_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
+/// @param self QGraphicsAnchorLayout*
+/// @param callback void fn(QGraphicsAnchorLayout*, bool)
+void q_graphicsanchorlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#dtor.QGraphicsAnchorLayout)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QGraphicsAnchorLayout* self ```
+/// @param self QGraphicsAnchorLayout*
 void q_graphicsanchorlayout_delete(void* self);
 
 #endif

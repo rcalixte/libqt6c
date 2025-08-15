@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,17 +15,18 @@
 
 /// q_stringtokenizerbasebase_new constructs a new QStringTokenizerBaseBase object.
 ///
-/// ``` QStringTokenizerBaseBase* other ```
+/// @param other QStringTokenizerBaseBase*
 QStringTokenizerBaseBase* q_stringtokenizerbasebase_new(void* other);
 
 /// q_stringtokenizerbasebase_new2 constructs a new QStringTokenizerBaseBase object.
 ///
-/// ``` QStringTokenizerBaseBase* param1 ```
+/// @param param1 QStringTokenizerBaseBase*
 QStringTokenizerBaseBase* q_stringtokenizerbasebase_new2(void* param1);
 
 /// q_stringtokenizerbasebase_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QStringTokenizerBaseBase* self, QStringTokenizerBaseBase* other ```
+/// @param self QStringTokenizerBaseBase*
+/// @param other QStringTokenizerBaseBase*
 void q_stringtokenizerbasebase_copy_assign(void* self, void* other);
 
 #endif

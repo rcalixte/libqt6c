@@ -27,8 +27,8 @@ int32_t q_pieseries_metacall(void* self, int64_t param1, int param2, void* param
     return QPieSeries_Metacall((QPieSeries*)self, param1, param2, param3);
 }
 
-void q_pieseries_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPieSeries_OnMetacall((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPieSeries_OnMetacall((QPieSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_pieseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ int64_t q_pieseries_type(void* self) {
     return QPieSeries_Type((QPieSeries*)self);
 }
 
-void q_pieseries_on_type(void* self, int64_t (*slot)()) {
-    QPieSeries_OnType((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_type(void* self, int64_t (*callback)()) {
+    QPieSeries_OnType((QPieSeries*)self, (intptr_t)callback);
 }
 
 int64_t q_pieseries_qbase_type(void* self) {
@@ -163,72 +163,72 @@ void q_pieseries_added(void* self, libqt_list slices) {
     QPieSeries_Added((QPieSeries*)self, slices);
 }
 
-void q_pieseries_on_added(void* self, void (*slot)(void*, libqt_list)) {
-    QPieSeries_Connect_Added((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_added(void* self, void (*callback)(void*, libqt_list)) {
+    QPieSeries_Connect_Added((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_removed(void* self, libqt_list slices) {
     QPieSeries_Removed((QPieSeries*)self, slices);
 }
 
-void q_pieseries_on_removed(void* self, void (*slot)(void*, libqt_list)) {
-    QPieSeries_Connect_Removed((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_removed(void* self, void (*callback)(void*, libqt_list)) {
+    QPieSeries_Connect_Removed((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_clicked(void* self, void* slice) {
     QPieSeries_Clicked((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-void q_pieseries_on_clicked(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_Connect_Clicked((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_clicked(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_Connect_Clicked((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_hovered(void* self, void* slice, bool state) {
     QPieSeries_Hovered((QPieSeries*)self, (QPieSlice*)slice, state);
 }
 
-void q_pieseries_on_hovered(void* self, void (*slot)(void*, void*, bool)) {
-    QPieSeries_Connect_Hovered((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_hovered(void* self, void (*callback)(void*, void*, bool)) {
+    QPieSeries_Connect_Hovered((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_pressed(void* self, void* slice) {
     QPieSeries_Pressed((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-void q_pieseries_on_pressed(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_Connect_Pressed((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_pressed(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_Connect_Pressed((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_released(void* self, void* slice) {
     QPieSeries_Released((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-void q_pieseries_on_released(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_Connect_Released((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_released(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_Connect_Released((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_double_clicked(void* self, void* slice) {
     QPieSeries_DoubleClicked((QPieSeries*)self, (QPieSlice*)slice);
 }
 
-void q_pieseries_on_double_clicked(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_Connect_DoubleClicked((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_double_clicked(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_Connect_DoubleClicked((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_count_changed(void* self) {
     QPieSeries_CountChanged((QPieSeries*)self);
 }
 
-void q_pieseries_on_count_changed(void* self, void (*slot)(void*)) {
-    QPieSeries_Connect_CountChanged((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_count_changed(void* self, void (*callback)(void*)) {
+    QPieSeries_Connect_CountChanged((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_sum_changed(void* self) {
     QPieSeries_SumChanged((QPieSeries*)self);
 }
 
-void q_pieseries_on_sum_changed(void* self, void (*slot)(void*)) {
-    QPieSeries_Connect_SumChanged((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_sum_changed(void* self, void (*callback)(void*)) {
+    QPieSeries_Connect_SumChanged((QPieSeries*)self, (intptr_t)callback);
 }
 
 const char* q_pieseries_tr2(const char* s, const char* c) {
@@ -313,32 +313,32 @@ void q_pieseries_name_changed(void* self) {
     QAbstractSeries_NameChanged((QAbstractSeries*)self);
 }
 
-void q_pieseries_on_name_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_pieseries_on_name_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_visible_changed(void* self) {
     QAbstractSeries_VisibleChanged((QAbstractSeries*)self);
 }
 
-void q_pieseries_on_visible_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_pieseries_on_visible_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_opacity_changed(void* self) {
     QAbstractSeries_OpacityChanged((QAbstractSeries*)self);
 }
 
-void q_pieseries_on_opacity_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_pieseries_on_opacity_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_use_open_g_l_changed(void* self) {
     QAbstractSeries_UseOpenGLChanged((QAbstractSeries*)self);
 }
 
-void q_pieseries_on_use_open_g_l_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_pieseries_on_use_open_g_l_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_set_visible1(void* self, bool visible) {
@@ -453,12 +453,16 @@ const char** q_pieseries_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pieseries_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -476,8 +480,8 @@ void q_pieseries_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pieseries_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pieseries_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_pieseries_parent(void* self) {
@@ -512,8 +516,8 @@ void q_pieseries_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pieseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pieseries_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_pieseries_event(void* self, void* event) {
@@ -524,8 +528,8 @@ bool q_pieseries_qbase_event(void* self, void* event) {
     return QPieSeries_QBaseEvent((QPieSeries*)self, (QEvent*)event);
 }
 
-void q_pieseries_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPieSeries_OnEvent((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPieSeries_OnEvent((QPieSeries*)self, (intptr_t)callback);
 }
 
 bool q_pieseries_event_filter(void* self, void* watched, void* event) {
@@ -536,8 +540,8 @@ bool q_pieseries_qbase_event_filter(void* self, void* watched, void* event) {
     return QPieSeries_QBaseEventFilter((QPieSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pieseries_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPieSeries_OnEventFilter((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPieSeries_OnEventFilter((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_timer_event(void* self, void* event) {
@@ -548,8 +552,8 @@ void q_pieseries_qbase_timer_event(void* self, void* event) {
     QPieSeries_QBaseTimerEvent((QPieSeries*)self, (QTimerEvent*)event);
 }
 
-void q_pieseries_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_OnTimerEvent((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_OnTimerEvent((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_child_event(void* self, void* event) {
@@ -560,8 +564,8 @@ void q_pieseries_qbase_child_event(void* self, void* event) {
     QPieSeries_QBaseChildEvent((QPieSeries*)self, (QChildEvent*)event);
 }
 
-void q_pieseries_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_OnChildEvent((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_OnChildEvent((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_custom_event(void* self, void* event) {
@@ -572,8 +576,8 @@ void q_pieseries_qbase_custom_event(void* self, void* event) {
     QPieSeries_QBaseCustomEvent((QPieSeries*)self, (QEvent*)event);
 }
 
-void q_pieseries_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_OnCustomEvent((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_OnCustomEvent((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_connect_notify(void* self, void* signal) {
@@ -584,8 +588,8 @@ void q_pieseries_qbase_connect_notify(void* self, void* signal) {
     QPieSeries_QBaseConnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_pieseries_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_OnConnectNotify((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_OnConnectNotify((QPieSeries*)self, (intptr_t)callback);
 }
 
 void q_pieseries_disconnect_notify(void* self, void* signal) {
@@ -596,8 +600,8 @@ void q_pieseries_qbase_disconnect_notify(void* self, void* signal) {
     QPieSeries_QBaseDisconnectNotify((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_pieseries_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPieSeries_OnDisconnectNotify((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPieSeries_OnDisconnectNotify((QPieSeries*)self, (intptr_t)callback);
 }
 
 QObject* q_pieseries_sender(void* self) {
@@ -608,8 +612,8 @@ QObject* q_pieseries_qbase_sender(void* self) {
     return QPieSeries_QBaseSender((QPieSeries*)self);
 }
 
-void q_pieseries_on_sender(void* self, QObject* (*slot)()) {
-    QPieSeries_OnSender((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_sender(void* self, QObject* (*callback)()) {
+    QPieSeries_OnSender((QPieSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_pieseries_sender_signal_index(void* self) {
@@ -620,8 +624,8 @@ int32_t q_pieseries_qbase_sender_signal_index(void* self) {
     return QPieSeries_QBaseSenderSignalIndex((QPieSeries*)self);
 }
 
-void q_pieseries_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPieSeries_OnSenderSignalIndex((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPieSeries_OnSenderSignalIndex((QPieSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_pieseries_receivers(void* self, const char* signal) {
@@ -632,8 +636,8 @@ int32_t q_pieseries_qbase_receivers(void* self, const char* signal) {
     return QPieSeries_QBaseReceivers((QPieSeries*)self, signal);
 }
 
-void q_pieseries_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPieSeries_OnReceivers((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPieSeries_OnReceivers((QPieSeries*)self, (intptr_t)callback);
 }
 
 bool q_pieseries_is_signal_connected(void* self, void* signal) {
@@ -644,12 +648,12 @@ bool q_pieseries_qbase_is_signal_connected(void* self, void* signal) {
     return QPieSeries_QBaseIsSignalConnected((QPieSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_pieseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPieSeries_OnIsSignalConnected((QPieSeries*)self, (intptr_t)slot);
+void q_pieseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPieSeries_OnIsSignalConnected((QPieSeries*)self, (intptr_t)callback);
 }
 
-void q_pieseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pieseries_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pieseries_delete(void* self) {

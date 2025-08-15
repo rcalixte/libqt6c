@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,19 +15,23 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#operator)
 ///
-/// ``` QCborError* self ```
+/// @param self QCborError*
+///
+/// @return enum QCborError__Code
 int64_t q_cborerror_to_q_cbor_error___code(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#toString)
 ///
-/// ``` QCborError* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCborError*
 const char* q_cborerror_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#dtor.QCborError)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCborError* self ```
+/// @param self QCborError*
 void q_cborerror_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcborcommon.html#types

@@ -98,72 +98,72 @@ void q_legendmarker_clicked(void* self) {
     QLegendMarker_Clicked((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_clicked(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_Clicked((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_clicked(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_Clicked((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_hovered(void* self, bool status) {
     QLegendMarker_Hovered((QLegendMarker*)self, status);
 }
 
-void q_legendmarker_on_hovered(void* self, void (*slot)(void*, bool)) {
-    QLegendMarker_Connect_Hovered((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_hovered(void* self, void (*callback)(void*, bool)) {
+    QLegendMarker_Connect_Hovered((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_label_changed(void* self) {
     QLegendMarker_LabelChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_label_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_LabelChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_label_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_LabelChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_label_brush_changed(void* self) {
     QLegendMarker_LabelBrushChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_label_brush_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_LabelBrushChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_label_brush_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_LabelBrushChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_font_changed(void* self) {
     QLegendMarker_FontChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_font_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_FontChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_font_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_FontChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_pen_changed(void* self) {
     QLegendMarker_PenChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_pen_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_PenChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_pen_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_PenChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_brush_changed(void* self) {
     QLegendMarker_BrushChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_brush_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_BrushChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_brush_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_BrushChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_visible_changed(void* self) {
     QLegendMarker_VisibleChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_visible_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_VisibleChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_visible_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_VisibleChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_shape_changed(void* self) {
     QLegendMarker_ShapeChanged((QLegendMarker*)self);
 }
 
-void q_legendmarker_on_shape_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_ShapeChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_legendmarker_on_shape_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_ShapeChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 const char* q_legendmarker_tr2(const char* s, const char* c) {
@@ -292,12 +292,16 @@ const char** q_legendmarker_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_legendmarker_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -315,8 +319,8 @@ void q_legendmarker_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_legendmarker_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_legendmarker_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_legendmarker_parent(void* self) {
@@ -351,12 +355,12 @@ void q_legendmarker_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_legendmarker_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_legendmarker_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_legendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_legendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_legendmarker_delete(void* self) {

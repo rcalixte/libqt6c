@@ -28,8 +28,8 @@ int32_t q_hbarmodelmapper_metacall(void* self, int64_t param1, int param2, void*
     return QHBarModelMapper_Metacall((QHBarModelMapper*)self, param1, param2, param3);
 }
 
-void q_hbarmodelmapper_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QHBarModelMapper_OnMetacall((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QHBarModelMapper_OnMetacall((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -95,48 +95,48 @@ void q_hbarmodelmapper_series_replaced(void* self) {
     QHBarModelMapper_SeriesReplaced((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_series_replaced(void* self, void (*slot)(void*)) {
-    QHBarModelMapper_Connect_SeriesReplaced((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_series_replaced(void* self, void (*callback)(void*)) {
+    QHBarModelMapper_Connect_SeriesReplaced((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_model_replaced(void* self) {
     QHBarModelMapper_ModelReplaced((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_model_replaced(void* self, void (*slot)(void*)) {
-    QHBarModelMapper_Connect_ModelReplaced((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_model_replaced(void* self, void (*callback)(void*)) {
+    QHBarModelMapper_Connect_ModelReplaced((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_first_bar_set_row_changed(void* self) {
     QHBarModelMapper_FirstBarSetRowChanged((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_first_bar_set_row_changed(void* self, void (*slot)(void*)) {
-    QHBarModelMapper_Connect_FirstBarSetRowChanged((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_first_bar_set_row_changed(void* self, void (*callback)(void*)) {
+    QHBarModelMapper_Connect_FirstBarSetRowChanged((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_last_bar_set_row_changed(void* self) {
     QHBarModelMapper_LastBarSetRowChanged((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_last_bar_set_row_changed(void* self, void (*slot)(void*)) {
-    QHBarModelMapper_Connect_LastBarSetRowChanged((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_last_bar_set_row_changed(void* self, void (*callback)(void*)) {
+    QHBarModelMapper_Connect_LastBarSetRowChanged((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_first_column_changed(void* self) {
     QHBarModelMapper_FirstColumnChanged((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_first_column_changed(void* self, void (*slot)(void*)) {
-    QHBarModelMapper_Connect_FirstColumnChanged((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_first_column_changed(void* self, void (*callback)(void*)) {
+    QHBarModelMapper_Connect_FirstColumnChanged((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_column_count_changed(void* self) {
     QHBarModelMapper_ColumnCountChanged((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_column_count_changed(void* self, void (*slot)(void*)) {
-    QHBarModelMapper_Connect_ColumnCountChanged((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_column_count_changed(void* self, void (*callback)(void*)) {
+    QHBarModelMapper_Connect_ColumnCountChanged((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 const char* q_hbarmodelmapper_tr2(const char* s, const char* c) {
@@ -257,12 +257,16 @@ const char** q_hbarmodelmapper_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_hbarmodelmapper_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -280,8 +284,8 @@ void q_hbarmodelmapper_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_hbarmodelmapper_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_hbarmodelmapper_parent(void* self) {
@@ -316,8 +320,8 @@ void q_hbarmodelmapper_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_hbarmodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_hbarmodelmapper_event(void* self, void* event) {
@@ -328,8 +332,8 @@ bool q_hbarmodelmapper_qbase_event(void* self, void* event) {
     return QHBarModelMapper_QBaseEvent((QHBarModelMapper*)self, (QEvent*)event);
 }
 
-void q_hbarmodelmapper_on_event(void* self, bool (*slot)(void*, void*)) {
-    QHBarModelMapper_OnEvent((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
+    QHBarModelMapper_OnEvent((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_hbarmodelmapper_event_filter(void* self, void* watched, void* event) {
@@ -340,8 +344,8 @@ bool q_hbarmodelmapper_qbase_event_filter(void* self, void* watched, void* event
     return QHBarModelMapper_QBaseEventFilter((QHBarModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_hbarmodelmapper_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QHBarModelMapper_OnEventFilter((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QHBarModelMapper_OnEventFilter((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_timer_event(void* self, void* event) {
@@ -352,8 +356,8 @@ void q_hbarmodelmapper_qbase_timer_event(void* self, void* event) {
     QHBarModelMapper_QBaseTimerEvent((QHBarModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_hbarmodelmapper_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QHBarModelMapper_OnTimerEvent((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QHBarModelMapper_OnTimerEvent((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_child_event(void* self, void* event) {
@@ -364,8 +368,8 @@ void q_hbarmodelmapper_qbase_child_event(void* self, void* event) {
     QHBarModelMapper_QBaseChildEvent((QHBarModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_hbarmodelmapper_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QHBarModelMapper_OnChildEvent((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QHBarModelMapper_OnChildEvent((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_custom_event(void* self, void* event) {
@@ -376,8 +380,8 @@ void q_hbarmodelmapper_qbase_custom_event(void* self, void* event) {
     QHBarModelMapper_QBaseCustomEvent((QHBarModelMapper*)self, (QEvent*)event);
 }
 
-void q_hbarmodelmapper_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QHBarModelMapper_OnCustomEvent((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QHBarModelMapper_OnCustomEvent((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_connect_notify(void* self, void* signal) {
@@ -388,8 +392,8 @@ void q_hbarmodelmapper_qbase_connect_notify(void* self, void* signal) {
     QHBarModelMapper_QBaseConnectNotify((QHBarModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hbarmodelmapper_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QHBarModelMapper_OnConnectNotify((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QHBarModelMapper_OnConnectNotify((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_disconnect_notify(void* self, void* signal) {
@@ -400,8 +404,8 @@ void q_hbarmodelmapper_qbase_disconnect_notify(void* self, void* signal) {
     QHBarModelMapper_QBaseDisconnectNotify((QHBarModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hbarmodelmapper_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QHBarModelMapper_OnDisconnectNotify((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QHBarModelMapper_OnDisconnectNotify((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_first(void* self) {
@@ -412,8 +416,8 @@ int32_t q_hbarmodelmapper_qbase_first(void* self) {
     return QHBarModelMapper_QBaseFirst((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_first(void* self, int32_t (*slot)()) {
-    QHBarModelMapper_OnFirst((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_first(void* self, int32_t (*callback)()) {
+    QHBarModelMapper_OnFirst((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_set_first(void* self, int first) {
@@ -424,8 +428,8 @@ void q_hbarmodelmapper_qbase_set_first(void* self, int first) {
     QHBarModelMapper_QBaseSetFirst((QHBarModelMapper*)self, first);
 }
 
-void q_hbarmodelmapper_on_set_first(void* self, void (*slot)(void*, int)) {
-    QHBarModelMapper_OnSetFirst((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
+    QHBarModelMapper_OnSetFirst((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_count(void* self) {
@@ -436,8 +440,8 @@ int32_t q_hbarmodelmapper_qbase_count(void* self) {
     return QHBarModelMapper_QBaseCount((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_count(void* self, int32_t (*slot)()) {
-    QHBarModelMapper_OnCount((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_count(void* self, int32_t (*callback)()) {
+    QHBarModelMapper_OnCount((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_set_count(void* self, int count) {
@@ -448,8 +452,8 @@ void q_hbarmodelmapper_qbase_set_count(void* self, int count) {
     QHBarModelMapper_QBaseSetCount((QHBarModelMapper*)self, count);
 }
 
-void q_hbarmodelmapper_on_set_count(void* self, void (*slot)(void*, int)) {
-    QHBarModelMapper_OnSetCount((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
+    QHBarModelMapper_OnSetCount((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_first_bar_set_section(void* self) {
@@ -460,8 +464,8 @@ int32_t q_hbarmodelmapper_qbase_first_bar_set_section(void* self) {
     return QHBarModelMapper_QBaseFirstBarSetSection((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_first_bar_set_section(void* self, int32_t (*slot)()) {
-    QHBarModelMapper_OnFirstBarSetSection((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_first_bar_set_section(void* self, int32_t (*callback)()) {
+    QHBarModelMapper_OnFirstBarSetSection((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_set_first_bar_set_section(void* self, int firstBarSetSection) {
@@ -472,8 +476,8 @@ void q_hbarmodelmapper_qbase_set_first_bar_set_section(void* self, int firstBarS
     QHBarModelMapper_QBaseSetFirstBarSetSection((QHBarModelMapper*)self, firstBarSetSection);
 }
 
-void q_hbarmodelmapper_on_set_first_bar_set_section(void* self, void (*slot)(void*, int)) {
-    QHBarModelMapper_OnSetFirstBarSetSection((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_set_first_bar_set_section(void* self, void (*callback)(void*, int)) {
+    QHBarModelMapper_OnSetFirstBarSetSection((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_last_bar_set_section(void* self) {
@@ -484,8 +488,8 @@ int32_t q_hbarmodelmapper_qbase_last_bar_set_section(void* self) {
     return QHBarModelMapper_QBaseLastBarSetSection((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_last_bar_set_section(void* self, int32_t (*slot)()) {
-    QHBarModelMapper_OnLastBarSetSection((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_last_bar_set_section(void* self, int32_t (*callback)()) {
+    QHBarModelMapper_OnLastBarSetSection((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_set_last_bar_set_section(void* self, int lastBarSetSection) {
@@ -496,8 +500,8 @@ void q_hbarmodelmapper_qbase_set_last_bar_set_section(void* self, int lastBarSet
     QHBarModelMapper_QBaseSetLastBarSetSection((QHBarModelMapper*)self, lastBarSetSection);
 }
 
-void q_hbarmodelmapper_on_set_last_bar_set_section(void* self, void (*slot)(void*, int)) {
-    QHBarModelMapper_OnSetLastBarSetSection((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_set_last_bar_set_section(void* self, void (*callback)(void*, int)) {
+    QHBarModelMapper_OnSetLastBarSetSection((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int64_t q_hbarmodelmapper_orientation(void* self) {
@@ -508,8 +512,8 @@ int64_t q_hbarmodelmapper_qbase_orientation(void* self) {
     return QHBarModelMapper_QBaseOrientation((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_orientation(void* self, int64_t (*slot)()) {
-    QHBarModelMapper_OnOrientation((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_orientation(void* self, int64_t (*callback)()) {
+    QHBarModelMapper_OnOrientation((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_set_orientation(void* self, int64_t orientation) {
@@ -520,8 +524,8 @@ void q_hbarmodelmapper_qbase_set_orientation(void* self, int64_t orientation) {
     QHBarModelMapper_QBaseSetOrientation((QHBarModelMapper*)self, orientation);
 }
 
-void q_hbarmodelmapper_on_set_orientation(void* self, void (*slot)(void*, int64_t)) {
-    QHBarModelMapper_OnSetOrientation((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t)) {
+    QHBarModelMapper_OnSetOrientation((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 QObject* q_hbarmodelmapper_sender(void* self) {
@@ -532,8 +536,8 @@ QObject* q_hbarmodelmapper_qbase_sender(void* self) {
     return QHBarModelMapper_QBaseSender((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_sender(void* self, QObject* (*slot)()) {
-    QHBarModelMapper_OnSender((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_sender(void* self, QObject* (*callback)()) {
+    QHBarModelMapper_OnSender((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_sender_signal_index(void* self) {
@@ -544,8 +548,8 @@ int32_t q_hbarmodelmapper_qbase_sender_signal_index(void* self) {
     return QHBarModelMapper_QBaseSenderSignalIndex((QHBarModelMapper*)self);
 }
 
-void q_hbarmodelmapper_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QHBarModelMapper_OnSenderSignalIndex((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QHBarModelMapper_OnSenderSignalIndex((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hbarmodelmapper_receivers(void* self, const char* signal) {
@@ -556,8 +560,8 @@ int32_t q_hbarmodelmapper_qbase_receivers(void* self, const char* signal) {
     return QHBarModelMapper_QBaseReceivers((QHBarModelMapper*)self, signal);
 }
 
-void q_hbarmodelmapper_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QHBarModelMapper_OnReceivers((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QHBarModelMapper_OnReceivers((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_hbarmodelmapper_is_signal_connected(void* self, void* signal) {
@@ -568,12 +572,12 @@ bool q_hbarmodelmapper_qbase_is_signal_connected(void* self, void* signal) {
     return QHBarModelMapper_QBaseIsSignalConnected((QHBarModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hbarmodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QHBarModelMapper_OnIsSignalConnected((QHBarModelMapper*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QHBarModelMapper_OnIsSignalConnected((QHBarModelMapper*)self, (intptr_t)callback);
 }
 
-void q_hbarmodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_hbarmodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_hbarmodelmapper_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,373 +15,401 @@
 
 /// q_application_new constructs a new QApplication object.
 ///
-/// ``` int *argc, char *argv[] ```
+/// @param argc int*
+/// @param argv char**
 QApplication* q_application_new(int* argc, char* argv[]);
 
 /// q_application_new2 constructs a new QApplication object.
 ///
-/// ``` int *argc, char *argv[], int param3 ```
+/// @param argc int*
+/// @param argv char**
+/// @param param3 int
 QApplication* q_application_new2(int* argc, char* argv[], int param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 const QMetaObject* q_application_meta_object(void* self);
 
-/// ``` QApplication* self, const char* param1 ```
+/// @param self QApplication*
+/// @param param1 const char*
 void* q_application_metacast(void* self, const char* param1);
 
-/// ``` QApplication* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QApplication*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_application_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QApplication* self, int32_t (*slot)(QApplication*, enum QMetaObject__Call, int, void*) ```
-void q_application_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QApplication*
+/// @param callback int32_t fn(QApplication*, enum QMetaObject__Call, int, void*)
+void q_application_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QApplication* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QApplication*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_application_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_application_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#style)
-///
 ///
 QStyle* q_application_style();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyle)
 ///
-/// ``` QStyle* style ```
+/// @param style QStyle*
 void q_application_set_style(void* style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyle)
 ///
-/// ``` const char* style ```
+/// @param style const char*
 QStyle* q_application_set_style2(const char* style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
-/// ``` QWidget* param1 ```
+/// @param param1 QWidget*
 QPalette* q_application_palette(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#palette)
 ///
-/// ``` const char* className ```
+/// @param className const char*
 QPalette* q_application_palette2(const char* className);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setPalette)
 ///
-/// ``` QPalette* param1 ```
+/// @param param1 QPalette*
 void q_application_set_palette(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
-///
 ///
 QFont* q_application_font();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
-/// ``` QWidget* param1 ```
+/// @param param1 QWidget*
 QFont* q_application_font2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#font)
 ///
-/// ``` const char* className ```
+/// @param className const char*
 QFont* q_application_font3(const char* className);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setFont)
 ///
-/// ``` QFont* param1 ```
+/// @param param1 QFont*
 void q_application_set_font(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#fontMetrics)
-///
 ///
 QFontMetrics* q_application_font_metrics();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#allWidgets)
 ///
-///
 libqt_list /* of QWidget* */ q_application_all_widgets();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#topLevelWidgets)
-///
 ///
 libqt_list /* of QWidget* */ q_application_top_level_widgets();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#activePopupWidget)
 ///
-///
 QWidget* q_application_active_popup_widget();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#activeModalWidget)
-///
 ///
 QWidget* q_application_active_modal_widget();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#focusWidget)
 ///
-///
 QWidget* q_application_focus_widget();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#activeWindow)
-///
 ///
 QWidget* q_application_active_window();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setActiveWindow)
 ///
-/// ``` QWidget* act ```
+/// @param act QWidget*
 void q_application_set_active_window(void* act);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
 ///
-/// ``` QPoint* p ```
+/// @param p QPoint*
 QWidget* q_application_widget_at(void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#widgetAt)
 ///
-/// ``` int x, int y ```
+/// @param x int
+/// @param y int
 QWidget* q_application_widget_at2(int x, int y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
 ///
-/// ``` QPoint* p ```
+/// @param p QPoint*
 QWidget* q_application_top_level_at(void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#topLevelAt)
 ///
-/// ``` int x, int y ```
+/// @param x int
+/// @param y int
 QWidget* q_application_top_level_at2(int x, int y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#beep)
-///
 ///
 void q_application_beep();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#alert)
 ///
-/// ``` QWidget* widget ```
+/// @param widget QWidget*
 void q_application_alert(void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setCursorFlashTime)
 ///
-/// ``` int cursorFlashTime ```
+/// @param cursorFlashTime int
 void q_application_set_cursor_flash_time(int cursorFlashTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#cursorFlashTime)
-///
 ///
 int32_t q_application_cursor_flash_time();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setDoubleClickInterval)
 ///
-/// ``` int doubleClickInterval ```
+/// @param doubleClickInterval int
 void q_application_set_double_click_interval(int doubleClickInterval);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#doubleClickInterval)
-///
 ///
 int32_t q_application_double_click_interval();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setKeyboardInputInterval)
 ///
-/// ``` int keyboardInputInterval ```
+/// @param keyboardInputInterval int
 void q_application_set_keyboard_input_interval(int keyboardInputInterval);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#keyboardInputInterval)
-///
 ///
 int32_t q_application_keyboard_input_interval();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setWheelScrollLines)
 ///
-/// ``` int wheelScrollLines ```
+/// @param wheelScrollLines int
 void q_application_set_wheel_scroll_lines(int wheelScrollLines);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#wheelScrollLines)
-///
 ///
 int32_t q_application_wheel_scroll_lines();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStartDragTime)
 ///
-/// ``` int ms ```
+/// @param ms int
 void q_application_set_start_drag_time(int ms);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#startDragTime)
-///
 ///
 int32_t q_application_start_drag_time();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStartDragDistance)
 ///
-/// ``` int l ```
+/// @param l int
 void q_application_set_start_drag_distance(int l);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#startDragDistance)
-///
 ///
 int32_t q_application_start_drag_distance();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#isEffectEnabled)
 ///
-/// ``` enum Qt__UIEffect param1 ```
+/// @param param1 enum Qt__UIEffect
 bool q_application_is_effect_enabled(int64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
 ///
-/// ``` enum Qt__UIEffect param1 ```
+/// @param param1 enum Qt__UIEffect
 void q_application_set_effect_enabled(int64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#exec)
-///
 ///
 int32_t q_application_exec();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#notify)
 ///
-/// ``` QApplication* self, QObject* param1, QEvent* param2 ```
+/// @param self QApplication*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_application_notify(void* self, void* param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#notify)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QApplication* self, bool (*slot)(QApplication*, QObject*, QEvent*) ```
-void q_application_on_notify(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QApplication*
+/// @param callback bool fn(QApplication*, QObject*, QEvent*)
+void q_application_on_notify(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#notify)
 ///
 /// Base class method implementation
 ///
-/// ``` QApplication* self, QObject* param1, QEvent* param2 ```
+/// @param self QApplication*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_application_qbase_notify(void* self, void* param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
-/// ``` QApplication* self, const char* name, int revision ```
+/// @param self QApplication*
+/// @param name const char*
+/// @param revision int
 void* q_application_resolve_interface(void* self, const char* name, int revision);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QApplication* self, void* (*slot)(QApplication*, const char*, int) ```
-void q_application_on_resolve_interface(void* self, void* (*slot)(void*, const char*, int));
+/// @param self QApplication*
+/// @param callback void* fn(QApplication*, const char*, int)
+void q_application_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#resolveInterface)
 ///
 /// Base class method implementation
 ///
-/// ``` QApplication* self, const char* name, int revision ```
+/// @param self QApplication*
+/// @param name const char*
+/// @param revision int
 void* q_application_qbase_resolve_interface(void* self, const char* name, int revision);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
 ///
-/// ``` QApplication* self, QWidget* old, QWidget* now ```
+/// @param self QApplication*
+/// @param old QWidget*
+/// @param now QWidget*
 void q_application_focus_changed(void* self, void* old, void* now);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#focusChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QWidget*, QWidget*) ```
-void q_application_on_focus_changed(void* self, void (*slot)(void*, void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QWidget*, QWidget*)
+void q_application_on_focus_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#styleSheet)
 ///
-/// ``` QApplication* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QApplication*
 const char* q_application_style_sheet(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#autoSipEnabled)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_auto_sip_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setStyleSheet)
 ///
-/// ``` QApplication* self, const char* sheet ```
+/// @param self QApplication*
+/// @param sheet const char*
 void q_application_set_style_sheet(void* self, const char* sheet);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setAutoSipEnabled)
 ///
-/// ``` QApplication* self, bool enabled ```
+/// @param self QApplication*
+/// @param enabled bool
 void q_application_set_auto_sip_enabled(void* self, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#closeAllWindows)
-///
 ///
 void q_application_close_all_windows();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#aboutQt)
 ///
-///
 void q_application_about_qt();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#event)
 ///
-/// ``` QApplication* self, QEvent* param1 ```
+/// @param self QApplication*
+/// @param param1 QEvent*
 bool q_application_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QApplication* self, bool (*slot)(QApplication*, QEvent*) ```
-void q_application_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback bool fn(QApplication*, QEvent*)
+void q_application_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QApplication* self, QEvent* param1 ```
+/// @param self QApplication*
+/// @param param1 QEvent*
 bool q_application_qbase_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_application_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_application_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setPalette)
 ///
-/// ``` QPalette* param1, const char* className ```
+/// @param param1 QPalette*
+/// @param className const char*
 void q_application_set_palette2(void* param1, const char* className);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setFont)
 ///
-/// ``` QFont* param1, const char* className ```
+/// @param param1 QFont*
+/// @param className const char*
 void q_application_set_font2(void* param1, const char* className);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#alert)
 ///
-/// ``` QWidget* widget, int duration ```
+/// @param widget QWidget*
+/// @param duration int
 void q_application_alert2(void* widget, int duration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
 ///
-/// ``` enum Qt__UIEffect param1, bool enable ```
+/// @param param1 enum Qt__UIEffect
+/// @param enable bool
 void q_application_set_effect_enabled2(int64_t param1, bool enable);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setApplicationDisplayName)
 ///
-/// ``` const char* name ```
+/// @param name const char*
 void q_application_set_application_display_name(const char* name);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_application_display_name();
 
@@ -390,20 +417,22 @@ const char* q_application_application_display_name();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber)
 ///
-/// ``` QApplication* self, long long number ```
+/// @param self QApplication*
+/// @param number long long
 void q_application_set_badge_number(void* self, long long number);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopFileName)
 ///
-/// ``` const char* name ```
+/// @param name const char*
 void q_application_set_desktop_file_name(const char* name);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#desktopFileName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_desktop_file_name();
 
@@ -411,13 +440,11 @@ const char* q_application_desktop_file_name();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#allWindows)
 ///
-///
 libqt_list /* of QWindow* */ q_application_all_windows();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#topLevelWindows)
-///
 ///
 libqt_list /* of QWindow* */ q_application_top_level_windows();
 
@@ -425,13 +452,12 @@ libqt_list /* of QWindow* */ q_application_top_level_windows();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setWindowIcon)
 ///
-/// ``` QIcon* icon ```
+/// @param icon QIcon*
 void q_application_set_window_icon(void* icon);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#windowIcon)
-///
 ///
 QIcon* q_application_window_icon();
 
@@ -439,6 +465,7 @@ QIcon* q_application_window_icon();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#platformName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_platform_name();
 
@@ -446,13 +473,11 @@ const char* q_application_platform_name();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#modalWindow)
 ///
-///
 QWindow* q_application_modal_window();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindow)
-///
 ///
 QWindow* q_application_focus_window();
 
@@ -460,13 +485,11 @@ QWindow* q_application_focus_window();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObject)
 ///
-///
 QObject* q_application_focus_object();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreen)
-///
 ///
 QScreen* q_application_primary_screen();
 
@@ -474,27 +497,25 @@ QScreen* q_application_primary_screen();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screens)
 ///
-///
 libqt_list /* of QScreen* */ q_application_screens();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAt)
 ///
-/// ``` QPoint* point ```
+/// @param point QPoint*
 QScreen* q_application_screen_at(void* point);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#devicePixelRatio)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 double q_application_device_pixel_ratio(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#overrideCursor)
-///
 ///
 QCursor* q_application_override_cursor();
 
@@ -502,27 +523,25 @@ QCursor* q_application_override_cursor();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setOverrideCursor)
 ///
-/// ``` QCursor* overrideCursor ```
+/// @param overrideCursor QCursor*
 void q_application_set_override_cursor(void* overrideCursor);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#changeOverrideCursor)
 ///
-/// ``` QCursor* param1 ```
+/// @param param1 QCursor*
 void q_application_change_override_cursor(void* param1);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#restoreOverrideCursor)
 ///
-///
 void q_application_restore_override_cursor();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#clipboard)
-///
 ///
 QClipboard* q_application_clipboard();
 
@@ -531,6 +550,7 @@ QClipboard* q_application_clipboard();
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#keyboardModifiers)
 ///
 ///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_application_keyboard_modifiers();
 
 /// Inherited from QGuiApplication
@@ -538,6 +558,7 @@ int64_t q_application_keyboard_modifiers();
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#queryKeyboardModifiers)
 ///
 ///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_application_query_keyboard_modifiers();
 
 /// Inherited from QGuiApplication
@@ -545,13 +566,14 @@ int64_t q_application_query_keyboard_modifiers();
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#mouseButtons)
 ///
 ///
+/// @return flag of enum Qt__MouseButton
 int64_t q_application_mouse_buttons();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setLayoutDirection)
 ///
-/// ``` enum Qt__LayoutDirection direction ```
+/// @param direction enum Qt__LayoutDirection
 void q_application_set_layout_direction(int64_t direction);
 
 /// Inherited from QGuiApplication
@@ -559,12 +581,12 @@ void q_application_set_layout_direction(int64_t direction);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirection)
 ///
 ///
+/// @return enum Qt__LayoutDirection
 int64_t q_application_layout_direction();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isRightToLeft)
-///
 ///
 bool q_application_is_right_to_left();
 
@@ -572,13 +594,11 @@ bool q_application_is_right_to_left();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isLeftToRight)
 ///
-///
 bool q_application_is_left_to_right();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#styleHints)
-///
 ///
 QStyleHints* q_application_style_hints();
 
@@ -586,13 +606,12 @@ QStyleHints* q_application_style_hints();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopSettingsAware)
 ///
-/// ``` bool on ```
+/// @param on bool
 void q_application_set_desktop_settings_aware(bool on);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#desktopSettingsAware)
-///
 ///
 bool q_application_desktop_settings_aware();
 
@@ -600,20 +619,18 @@ bool q_application_desktop_settings_aware();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#inputMethod)
 ///
-///
 QInputMethod* q_application_input_method();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setQuitOnLastWindowClosed)
 ///
-/// ``` bool quit ```
+/// @param quit bool
 void q_application_set_quit_on_last_window_closed(bool quit);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#quitOnLastWindowClosed)
-///
 ///
 bool q_application_quit_on_last_window_closed();
 
@@ -622,13 +639,14 @@ bool q_application_quit_on_last_window_closed();
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationState)
 ///
 ///
+/// @return enum Qt__ApplicationState
 int64_t q_application_application_state();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setHighDpiScaleFactorRoundingPolicy)
 ///
-/// ``` enum Qt__HighDpiScaleFactorRoundingPolicy policy ```
+/// @param policy enum Qt__HighDpiScaleFactorRoundingPolicy
 void q_application_set_high_dpi_scale_factor_rounding_policy(int64_t policy);
 
 /// Inherited from QGuiApplication
@@ -636,40 +654,44 @@ void q_application_set_high_dpi_scale_factor_rounding_policy(int64_t policy);
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#highDpiScaleFactorRoundingPolicy)
 ///
 ///
+/// @return enum Qt__HighDpiScaleFactorRoundingPolicy
 int64_t q_application_high_dpi_scale_factor_rounding_policy();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isSessionRestored)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_is_session_restored(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#sessionId)
 ///
-/// ``` QApplication* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QApplication*
 const char* q_application_session_id(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#sessionKey)
 ///
-/// ``` QApplication* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QApplication*
 const char* q_application_session_key(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#isSavingSession)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_is_saving_session(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#sync)
-///
 ///
 void q_application_sync();
 
@@ -677,202 +699,228 @@ void q_application_sync();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_font_database_changed(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontDatabaseChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_font_database_changed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_font_database_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
 ///
-/// ``` QApplication* self, QScreen* screen ```
+/// @param self QApplication*
+/// @param screen QScreen*
 void q_application_screen_added(void* self, void* screen);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenAdded)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QScreen*) ```
-void q_application_on_screen_added(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QScreen*)
+void q_application_on_screen_added(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
 ///
-/// ``` QApplication* self, QScreen* screen ```
+/// @param self QApplication*
+/// @param screen QScreen*
 void q_application_screen_removed(void* self, void* screen);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#screenRemoved)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QScreen*) ```
-void q_application_on_screen_removed(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QScreen*)
+void q_application_on_screen_removed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
 ///
-/// ``` QApplication* self, QScreen* screen ```
+/// @param self QApplication*
+/// @param screen QScreen*
 void q_application_primary_screen_changed(void* self, void* screen);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#primaryScreenChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QScreen*) ```
-void q_application_on_primary_screen_changed(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QScreen*)
+void q_application_on_primary_screen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_last_window_closed(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#lastWindowClosed)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_last_window_closed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_last_window_closed(void* self, void (*callback)(void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
 ///
-/// ``` QApplication* self, QObject* focusObject ```
+/// @param self QApplication*
+/// @param focusObject QObject*
 void q_application_focus_object_changed(void* self, void* focusObject);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusObjectChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QObject*) ```
-void q_application_on_focus_object_changed(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QObject*)
+void q_application_on_focus_object_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
 ///
-/// ``` QApplication* self, QWindow* focusWindow ```
+/// @param self QApplication*
+/// @param focusWindow QWindow*
 void q_application_focus_window_changed(void* self, void* focusWindow);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#focusWindowChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QWindow*) ```
-void q_application_on_focus_window_changed(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QWindow*)
+void q_application_on_focus_window_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
 ///
-/// ``` QApplication* self, enum Qt__ApplicationState state ```
+/// @param self QApplication*
+/// @param state enum Qt__ApplicationState
 void q_application_application_state_changed(void* self, int64_t state);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationStateChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, enum Qt__ApplicationState) ```
-void q_application_on_application_state_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, enum Qt__ApplicationState)
+void q_application_on_application_state_changed(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
 ///
-/// ``` QApplication* self, enum Qt__LayoutDirection direction ```
+/// @param self QApplication*
+/// @param direction enum Qt__LayoutDirection
 void q_application_layout_direction_changed(void* self, int64_t direction);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#layoutDirectionChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, enum Qt__LayoutDirection) ```
-void q_application_on_layout_direction_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, enum Qt__LayoutDirection)
+void q_application_on_layout_direction_changed(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
 ///
-/// ``` QApplication* self, QSessionManager* sessionManager ```
+/// @param self QApplication*
+/// @param sessionManager QSessionManager*
 void q_application_commit_data_request(void* self, void* sessionManager);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#commitDataRequest)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QSessionManager*) ```
-void q_application_on_commit_data_request(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QSessionManager*)
+void q_application_on_commit_data_request(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
 ///
-/// ``` QApplication* self, QSessionManager* sessionManager ```
+/// @param self QApplication*
+/// @param sessionManager QSessionManager*
 void q_application_save_state_request(void* self, void* sessionManager);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#saveStateRequest)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QSessionManager*) ```
-void q_application_on_save_state_request(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QSessionManager*)
+void q_application_on_save_state_request(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_application_display_name_changed(void* self);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#applicationDisplayNameChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_application_display_name_changed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_application_display_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
 ///
-/// ``` QApplication* self, QPalette* pal ```
+/// @param self QApplication*
+/// @param pal QPalette*
 void q_application_palette_changed(void* self, void* pal);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#paletteChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QPalette*) ```
-void q_application_on_palette_changed(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QPalette*)
+void q_application_on_palette_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
 ///
-/// ``` QApplication* self, QFont* font ```
+/// @param self QApplication*
+/// @param font QFont*
 void q_application_font_changed(void* self, void* font);
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#fontChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QFont*) ```
-void q_application_on_font_changed(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QFont*)
+void q_application_on_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#arguments)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char** q_application_arguments();
 
@@ -880,27 +928,28 @@ const char** q_application_arguments();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
 ///
-/// ``` enum Qt__ApplicationAttribute attribute ```
+/// @param attribute enum Qt__ApplicationAttribute
 void q_application_set_attribute(int64_t attribute);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#testAttribute)
 ///
-/// ``` enum Qt__ApplicationAttribute attribute ```
+/// @param attribute enum Qt__ApplicationAttribute
 bool q_application_test_attribute(int64_t attribute);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationDomain)
 ///
-/// ``` const char* orgDomain ```
+/// @param orgDomain const char*
 void q_application_set_organization_domain(const char* orgDomain);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomain)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_organization_domain();
 
@@ -908,13 +957,14 @@ const char* q_application_organization_domain();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationName)
 ///
-/// ``` const char* orgName ```
+/// @param orgName const char*
 void q_application_set_organization_name(const char* orgName);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_organization_name();
 
@@ -922,13 +972,14 @@ const char* q_application_organization_name();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setApplicationName)
 ///
-/// ``` const char* application ```
+/// @param application const char*
 void q_application_set_application_name(const char* application);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_application_name();
 
@@ -936,13 +987,14 @@ const char* q_application_application_name();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setApplicationVersion)
 ///
-/// ``` const char* version ```
+/// @param version const char*
 void q_application_set_application_version(const char* version);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersion)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_application_version();
 
@@ -950,13 +1002,12 @@ const char* q_application_application_version();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setSetuidAllowed)
 ///
-/// ``` bool allow ```
+/// @param allow bool
 void q_application_set_setuid_allowed(bool allow);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#isSetuidAllowed)
-///
 ///
 bool q_application_is_setuid_allowed();
 
@@ -964,13 +1015,11 @@ bool q_application_is_setuid_allowed();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#instance)
 ///
-///
 QCoreApplication* q_application_instance();
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
-///
 ///
 void q_application_process_events();
 
@@ -978,34 +1027,37 @@ void q_application_process_events();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
-/// ``` int flags, int maxtime ```
+/// @param flags flag of enum QEventLoop__ProcessEventsFlag
+/// @param maxtime int
 void q_application_process_events2(int64_t flags, int maxtime);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
-/// ``` int flags, QDeadlineTimer* deadline ```
+/// @param flags flag of enum QEventLoop__ProcessEventsFlag
+/// @param deadline QDeadlineTimer*
 void q_application_process_events3(int64_t flags, void* deadline);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendEvent)
 ///
-/// ``` QObject* receiver, QEvent* event ```
+/// @param receiver QObject*
+/// @param event QEvent*
 bool q_application_send_event(void* receiver, void* event);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
 ///
-/// ``` QObject* receiver, QEvent* event ```
+/// @param receiver QObject*
+/// @param event QEvent*
 void q_application_post_event(void* receiver, void* event);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
-///
 ///
 void q_application_send_posted_events();
 
@@ -1013,13 +1065,12 @@ void q_application_send_posted_events();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removePostedEvents)
 ///
-/// ``` QObject* receiver ```
+/// @param receiver QObject*
 void q_application_remove_posted_events(void* receiver);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#eventDispatcher)
-///
 ///
 QAbstractEventDispatcher* q_application_event_dispatcher();
 
@@ -1027,13 +1078,12 @@ QAbstractEventDispatcher* q_application_event_dispatcher();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setEventDispatcher)
 ///
-/// ``` QAbstractEventDispatcher* eventDispatcher ```
+/// @param eventDispatcher QAbstractEventDispatcher*
 void q_application_set_event_dispatcher(void* eventDispatcher);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#startingUp)
-///
 ///
 bool q_application_starting_up();
 
@@ -1041,13 +1091,13 @@ bool q_application_starting_up();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#closingDown)
 ///
-///
 bool q_application_closing_down();
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationDirPath)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_application_dir_path();
 
@@ -1055,6 +1105,7 @@ const char* q_application_application_dir_path();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationFilePath)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_application_application_file_path();
 
@@ -1062,27 +1113,30 @@ const char* q_application_application_file_path();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationPid)
 ///
-///
 long long q_application_application_pid();
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
 ///
-/// ``` QApplication* self, QPermission* permission ```
+/// @param self QApplication*
+/// @param permission QPermission*
+///
+/// @return enum Qt__PermissionStatus
 int64_t q_application_check_permission(void* self, void* permission);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
 ///
-/// ``` const char* libraryPaths[] ```
+/// @param libraryPaths const char**
 void q_application_set_library_paths(const char* libraryPaths[]);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#libraryPaths)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char** q_application_library_paths();
 
@@ -1090,69 +1144,75 @@ const char** q_application_library_paths();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#addLibraryPath)
 ///
-/// ``` const char* param1 ```
+/// @param param1 const char*
 void q_application_add_library_path(const char* param1);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeLibraryPath)
 ///
-/// ``` const char* param1 ```
+/// @param param1 const char*
 void q_application_remove_library_path(const char* param1);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installTranslator)
 ///
-/// ``` QTranslator* messageFile ```
+/// @param messageFile QTranslator*
 bool q_application_install_translator(void* messageFile);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeTranslator)
 ///
-/// ``` QTranslator* messageFile ```
+/// @param messageFile QTranslator*
 bool q_application_remove_translator(void* messageFile);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// ``` const char* context, const char* key ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param context const char*
+/// @param key const char*
 const char* q_application_translate(const char* context, const char* key);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
-/// ``` QApplication* self, QAbstractNativeEventFilter* filterObj ```
+/// @param self QApplication*
+/// @param filterObj QAbstractNativeEventFilter*
 void q_application_install_native_event_filter(void* self, void* filterObj);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#installNativeEventFilter)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QAbstractNativeEventFilter*) ```
-void q_application_on_install_native_event_filter(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QAbstractNativeEventFilter*)
+void q_application_on_install_native_event_filter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
-/// ``` QApplication* self, QAbstractNativeEventFilter* filterObj ```
+/// @param self QApplication*
+/// @param filterObj QAbstractNativeEventFilter*
 void q_application_remove_native_event_filter(void* self, void* filterObj);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removeNativeEventFilter)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QAbstractNativeEventFilter*) ```
-void q_application_on_remove_native_event_filter(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QAbstractNativeEventFilter*)
+void q_application_on_remove_native_event_filter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#isQuitLockEnabled)
-///
 ///
 bool q_application_is_quit_lock_enabled();
 
@@ -1160,13 +1220,12 @@ bool q_application_is_quit_lock_enabled();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setQuitLockEnabled)
 ///
-/// ``` bool enabled ```
+/// @param enabled bool
 void q_application_set_quit_lock_enabled(bool enabled);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#quit)
-///
 ///
 void q_application_quit();
 
@@ -1174,393 +1233,451 @@ void q_application_quit();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#exit)
 ///
-///
 void q_application_exit();
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_organization_name_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationNameChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_organization_name_changed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_organization_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_organization_domain_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#organizationDomainChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_organization_domain_changed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_organization_domain_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_application_name_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationNameChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_application_name_changed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_application_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_application_version_changed(void* self);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#applicationVersionChanged)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_application_version_changed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_application_version_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
 ///
-/// ``` enum Qt__ApplicationAttribute attribute, bool on ```
+/// @param attribute enum Qt__ApplicationAttribute
+/// @param on bool
 void q_application_set_attribute2(int64_t attribute, bool on);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
-/// ``` int flags ```
+/// @param flags flag of enum QEventLoop__ProcessEventsFlag
 void q_application_process_events1(int64_t flags);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#postEvent)
 ///
-/// ``` QObject* receiver, QEvent* event, int priority ```
+/// @param receiver QObject*
+/// @param event QEvent*
+/// @param priority int
 void q_application_post_event3(void* receiver, void* event, int priority);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
 ///
-/// ``` QObject* receiver ```
+/// @param receiver QObject*
 void q_application_send_posted_events1(void* receiver);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#sendPostedEvents)
 ///
-/// ``` QObject* receiver, int event_type ```
+/// @param receiver QObject*
+/// @param event_type int
 void q_application_send_posted_events2(void* receiver, int event_type);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#removePostedEvents)
 ///
-/// ``` QObject* receiver, int eventType ```
+/// @param receiver QObject*
+/// @param eventType int
 void q_application_remove_posted_events2(void* receiver, int eventType);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// ``` const char* context, const char* key, const char* disambiguation ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param context const char*
+/// @param key const char*
+/// @param disambiguation const char*
 const char* q_application_translate3(const char* context, const char* key, const char* disambiguation);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#translate)
 ///
-/// ``` const char* context, const char* key, const char* disambiguation, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param context const char*
+/// @param key const char*
+/// @param disambiguation const char*
+/// @param n int
 const char* q_application_translate4(const char* context, const char* key, const char* disambiguation, int n);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#exit)
 ///
-/// ``` int retcode ```
+/// @param retcode int
 void q_application_exit1(int retcode);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QApplication* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QApplication*
 const char* q_application_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QApplication* self, char* name ```
+/// @param self QApplication*
+/// @param name char*
 void q_application_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 bool q_application_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QApplication* self, bool b ```
+/// @param self QApplication*
+/// @param b bool
 bool q_application_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 QThread* q_application_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QApplication* self, QThread* thread ```
+/// @param self QApplication*
+/// @param thread QThread*
 bool q_application_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QApplication* self, int interval ```
+/// @param self QApplication*
+/// @param interval int
 int32_t q_application_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QApplication* self, int id ```
+/// @param self QApplication*
+/// @param id int
 void q_application_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QApplication* self, enum Qt__TimerId id ```
+/// @param self QApplication*
+/// @param id enum Qt__TimerId
 void q_application_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 libqt_list /* of QObject* */ q_application_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QApplication* self, QObject* parent ```
+/// @param self QApplication*
+/// @param parent QObject*
 void q_application_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QApplication* self, QObject* filterObj ```
+/// @param self QApplication*
+/// @param filterObj QObject*
 void q_application_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QApplication* self, QObject* obj ```
+/// @param self QApplication*
+/// @param obj QObject*
 void q_application_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_application_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QApplication* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QApplication*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_application_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_application_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_application_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QApplication* self, const char* name, QVariant* value ```
+/// @param self QApplication*
+/// @param name const char*
+/// @param value QVariant*
 bool q_application_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QApplication* self, const char* name ```
+/// @param self QApplication*
+/// @param name const char*
 QVariant* q_application_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QApplication* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QApplication*
 const char** q_application_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 QBindingStorage* q_application_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 const QBindingStorage* q_application_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 QObject* q_application_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QApplication* self, const char* classname ```
+/// @param self QApplication*
+/// @param classname const char*
 bool q_application_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QApplication* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QApplication*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_application_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QApplication* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QApplication*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_application_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QApplication* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QApplication*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QApplication* self, QObject* param1 ```
+/// @param self QApplication*
+/// @param param1 QObject*
 void q_application_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QObject*) ```
-void q_application_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QObject*)
+void q_application_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1568,7 +1685,9 @@ void q_application_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QObject* watched, QEvent* event ```
+/// @param self QApplication*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_application_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1577,7 +1696,9 @@ bool q_application_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QObject* watched, QEvent* event ```
+/// @param self QApplication*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_application_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1586,8 +1707,9 @@ bool q_application_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, bool (*slot)(QApplication*, QObject*, QEvent*) ```
-void q_application_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QApplication*
+/// @param callback bool fn(QApplication*, QObject*, QEvent*)
+void q_application_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1595,7 +1717,8 @@ void q_application_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QTimerEvent* event ```
+/// @param self QApplication*
+/// @param event QTimerEvent*
 void q_application_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1604,7 +1727,8 @@ void q_application_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QTimerEvent* event ```
+/// @param self QApplication*
+/// @param event QTimerEvent*
 void q_application_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1613,8 +1737,9 @@ void q_application_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QTimerEvent*) ```
-void q_application_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QTimerEvent*)
+void q_application_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1622,7 +1747,8 @@ void q_application_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QChildEvent* event ```
+/// @param self QApplication*
+/// @param event QChildEvent*
 void q_application_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1631,7 +1757,8 @@ void q_application_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QChildEvent* event ```
+/// @param self QApplication*
+/// @param event QChildEvent*
 void q_application_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1640,8 +1767,9 @@ void q_application_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QChildEvent*) ```
-void q_application_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QChildEvent*)
+void q_application_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1649,7 +1777,8 @@ void q_application_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QEvent* event ```
+/// @param self QApplication*
+/// @param event QEvent*
 void q_application_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1658,7 +1787,8 @@ void q_application_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QEvent* event ```
+/// @param self QApplication*
+/// @param event QEvent*
 void q_application_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1667,8 +1797,9 @@ void q_application_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QEvent*) ```
-void q_application_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QEvent*)
+void q_application_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1676,7 +1807,8 @@ void q_application_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QMetaMethod* signal ```
+/// @param self QApplication*
+/// @param signal QMetaMethod*
 void q_application_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1685,7 +1817,8 @@ void q_application_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QMetaMethod* signal ```
+/// @param self QApplication*
+/// @param signal QMetaMethod*
 void q_application_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1694,8 +1827,9 @@ void q_application_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QMetaMethod*) ```
-void q_application_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QMetaMethod*)
+void q_application_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1703,7 +1837,8 @@ void q_application_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QMetaMethod* signal ```
+/// @param self QApplication*
+/// @param signal QMetaMethod*
 void q_application_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1712,7 +1847,8 @@ void q_application_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QMetaMethod* signal ```
+/// @param self QApplication*
+/// @param signal QMetaMethod*
 void q_application_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1721,8 +1857,9 @@ void q_application_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, QMetaMethod*) ```
-void q_application_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, QMetaMethod*)
+void q_application_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1730,7 +1867,7 @@ void q_application_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 QObject* q_application_sender(void* self);
 
 /// Inherited from QObject
@@ -1739,7 +1876,7 @@ QObject* q_application_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 QObject* q_application_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1748,8 +1885,9 @@ QObject* q_application_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, QObject* (*slot)() ```
-void q_application_on_sender(void* self, QObject* (*slot)());
+/// @param self QApplication*
+/// @param callback QObject* fn()
+void q_application_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1757,7 +1895,7 @@ void q_application_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 int32_t q_application_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1766,7 +1904,7 @@ int32_t q_application_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 int32_t q_application_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1775,8 +1913,9 @@ int32_t q_application_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, int32_t (*slot)() ```
-void q_application_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QApplication*
+/// @param callback int32_t fn()
+void q_application_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1784,7 +1923,8 @@ void q_application_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, const char* signal ```
+/// @param self QApplication*
+/// @param signal const char*
 int32_t q_application_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1793,7 +1933,8 @@ int32_t q_application_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, const char* signal ```
+/// @param self QApplication*
+/// @param signal const char*
 int32_t q_application_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1802,8 +1943,9 @@ int32_t q_application_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, int32_t (*slot)(QApplication*, const char*) ```
-void q_application_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QApplication*
+/// @param callback int32_t fn(QApplication*, const char*)
+void q_application_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1811,7 +1953,8 @@ void q_application_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplication* self, QMetaMethod* signal ```
+/// @param self QApplication*
+/// @param signal QMetaMethod*
 bool q_application_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1820,7 +1963,8 @@ bool q_application_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplication* self, QMetaMethod* signal ```
+/// @param self QApplication*
+/// @param signal QMetaMethod*
 bool q_application_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1829,8 +1973,9 @@ bool q_application_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplication* self, bool (*slot)(QApplication*, QMetaMethod*) ```
-void q_application_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QApplication*
+/// @param callback bool fn(QApplication*, QMetaMethod*)
+void q_application_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QCoreApplication
 ///
@@ -1838,8 +1983,9 @@ void q_application_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*) ```
-void q_application_on_about_to_quit(void* self, void (*slot)(void*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*)
+void q_application_on_about_to_quit(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -1847,14 +1993,15 @@ void q_application_on_about_to_quit(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QApplication* self, void (*slot)(QApplication*, const char*) ```
-void q_application_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QApplication*
+/// @param callback void fn(QApplication*, const char*)
+void q_application_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#dtor.QApplication)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QApplication* self ```
+/// @param self QApplication*
 void q_application_delete(void* self);
 
 #endif

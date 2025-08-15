@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1715 +15,2107 @@
 
 /// q_inputdialog_new constructs a new QInputDialog object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QInputDialog* q_inputdialog_new(void* parent);
 
 /// q_inputdialog_new2 constructs a new QInputDialog object.
-///
 ///
 QInputDialog* q_inputdialog_new2();
 
 /// q_inputdialog_new3 constructs a new QInputDialog object.
 ///
-/// ``` QWidget* parent, int flags ```
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QInputDialog* q_inputdialog_new3(void* parent, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 const QMetaObject* q_inputdialog_meta_object(void* self);
 
-/// ``` QInputDialog* self, const char* param1 ```
+/// @param self QInputDialog*
+/// @param param1 const char*
 void* q_inputdialog_metacast(void* self, const char* param1);
 
-/// ``` QInputDialog* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QInputDialog*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_inputdialog_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)(QInputDialog*, enum QMetaObject__Call, int, void*) ```
-void q_inputdialog_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QInputDialog*
+/// @param callback int32_t fn(QInputDialog*, enum QMetaObject__Call, int, void*)
+void q_inputdialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QInputDialog* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QInputDialog*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_inputdialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_inputdialog_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setInputMode)
 ///
-/// ``` QInputDialog* self, enum QInputDialog__InputMode mode ```
+/// @param self QInputDialog*
+/// @param mode enum QInputDialog__InputMode
 void q_inputdialog_set_input_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#inputMode)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum QInputDialog__InputMode
 int64_t q_inputdialog_input_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setLabelText)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 void q_inputdialog_set_label_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#labelText)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_label_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setOption)
 ///
-/// ``` QInputDialog* self, enum QInputDialog__InputDialogOption option ```
+/// @param self QInputDialog*
+/// @param option enum QInputDialog__InputDialogOption
 void q_inputdialog_set_option(void* self, int64_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#testOption)
 ///
-/// ``` QInputDialog* self, enum QInputDialog__InputDialogOption option ```
+/// @param self QInputDialog*
+/// @param option enum QInputDialog__InputDialogOption
 bool q_inputdialog_test_option(void* self, int64_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setOptions)
 ///
-/// ``` QInputDialog* self, int options ```
+/// @param self QInputDialog*
+/// @param options flag of enum QInputDialog__InputDialogOption
 void q_inputdialog_set_options(void* self, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#options)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return flag of enum QInputDialog__InputDialogOption
 int64_t q_inputdialog_options(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setTextValue)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 void q_inputdialog_set_text_value(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValue)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_text_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setTextEchoMode)
 ///
-/// ``` QInputDialog* self, enum QLineEdit__EchoMode mode ```
+/// @param self QInputDialog*
+/// @param mode enum QLineEdit__EchoMode
 void q_inputdialog_set_text_echo_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textEchoMode)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum QLineEdit__EchoMode
 int64_t q_inputdialog_text_echo_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setComboBoxEditable)
 ///
-/// ``` QInputDialog* self, bool editable ```
+/// @param self QInputDialog*
+/// @param editable bool
 void q_inputdialog_set_combo_box_editable(void* self, bool editable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#isComboBoxEditable)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_combo_box_editable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setComboBoxItems)
 ///
-/// ``` QInputDialog* self, const char* items[] ```
+/// @param self QInputDialog*
+/// @param items const char**
 void q_inputdialog_set_combo_box_items(void* self, const char* items[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#comboBoxItems)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char** q_inputdialog_combo_box_items(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setIntValue)
 ///
-/// ``` QInputDialog* self, int value ```
+/// @param self QInputDialog*
+/// @param value int
 void q_inputdialog_set_int_value(void* self, int value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValue)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_int_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setIntMinimum)
 ///
-/// ``` QInputDialog* self, int min ```
+/// @param self QInputDialog*
+/// @param min int
 void q_inputdialog_set_int_minimum(void* self, int min);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intMinimum)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_int_minimum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setIntMaximum)
 ///
-/// ``` QInputDialog* self, int max ```
+/// @param self QInputDialog*
+/// @param max int
 void q_inputdialog_set_int_maximum(void* self, int max);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intMaximum)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_int_maximum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setIntRange)
 ///
-/// ``` QInputDialog* self, int min, int max ```
+/// @param self QInputDialog*
+/// @param min int
+/// @param max int
 void q_inputdialog_set_int_range(void* self, int min, int max);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setIntStep)
 ///
-/// ``` QInputDialog* self, int step ```
+/// @param self QInputDialog*
+/// @param step int
 void q_inputdialog_set_int_step(void* self, int step);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intStep)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_int_step(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setDoubleValue)
 ///
-/// ``` QInputDialog* self, double value ```
+/// @param self QInputDialog*
+/// @param value double
 void q_inputdialog_set_double_value(void* self, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValue)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_double_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setDoubleMinimum)
 ///
-/// ``` QInputDialog* self, double min ```
+/// @param self QInputDialog*
+/// @param min double
 void q_inputdialog_set_double_minimum(void* self, double min);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleMinimum)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_double_minimum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setDoubleMaximum)
 ///
-/// ``` QInputDialog* self, double max ```
+/// @param self QInputDialog*
+/// @param max double
 void q_inputdialog_set_double_maximum(void* self, double max);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleMaximum)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_double_maximum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setDoubleRange)
 ///
-/// ``` QInputDialog* self, double min, double max ```
+/// @param self QInputDialog*
+/// @param min double
+/// @param max double
 void q_inputdialog_set_double_range(void* self, double min, double max);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setDoubleDecimals)
 ///
-/// ``` QInputDialog* self, int decimals ```
+/// @param self QInputDialog*
+/// @param decimals int
 void q_inputdialog_set_double_decimals(void* self, int decimals);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleDecimals)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_double_decimals(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setOkButtonText)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 void q_inputdialog_set_ok_button_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#okButtonText)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_ok_button_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setCancelButtonText)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 void q_inputdialog_set_cancel_button_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#cancelButtonText)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_cancel_button_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#minimumSizeHint)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputDialog* self, QSize* (*slot)() ```
-void q_inputdialog_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QInputDialog*
+/// @param callback QSize* fn()
+void q_inputdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_qbase_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#sizeHint)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputDialog* self, QSize* (*slot)() ```
-void q_inputdialog_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QInputDialog*
+/// @param callback QSize* fn()
+void q_inputdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_qbase_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setVisible)
 ///
-/// ``` QInputDialog* self, bool visible ```
+/// @param self QInputDialog*
+/// @param visible bool
 void q_inputdialog_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setVisible)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, bool) ```
-void q_inputdialog_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, bool)
+void q_inputdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setVisible)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputDialog* self, bool visible ```
+/// @param self QInputDialog*
+/// @param visible bool
 void q_inputdialog_qbase_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
 const char* q_inputdialog_get_text(void* parent, const char* title, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
 const char* q_inputdialog_get_multi_line_text(void* parent, const char* title, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* items[] ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param items const char**
 const char* q_inputdialog_get_item(void* parent, const char* title, const char* label, const char* items[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
 int32_t q_inputdialog_get_int(void* parent, const char* title, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
 double q_inputdialog_get_double(void* parent, const char* title, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setDoubleStep)
 ///
-/// ``` QInputDialog* self, double step ```
+/// @param self QInputDialog*
+/// @param step double
 void q_inputdialog_set_double_step(void* self, double step);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleStep)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_double_step(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueChanged)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 void q_inputdialog_text_value_changed(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
-void q_inputdialog_on_text_value_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, const char*)
+void q_inputdialog_on_text_value_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueSelected)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 void q_inputdialog_text_value_selected(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#textValueSelected)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
-void q_inputdialog_on_text_value_selected(void* self, void (*slot)(void*, const char*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, const char*)
+void q_inputdialog_on_text_value_selected(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueChanged)
 ///
-/// ``` QInputDialog* self, int value ```
+/// @param self QInputDialog*
+/// @param value int
 void q_inputdialog_int_value_changed(void* self, int value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, int) ```
-void q_inputdialog_on_int_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, int)
+void q_inputdialog_on_int_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueSelected)
 ///
-/// ``` QInputDialog* self, int value ```
+/// @param self QInputDialog*
+/// @param value int
 void q_inputdialog_int_value_selected(void* self, int value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#intValueSelected)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, int) ```
-void q_inputdialog_on_int_value_selected(void* self, void (*slot)(void*, int));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, int)
+void q_inputdialog_on_int_value_selected(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueChanged)
 ///
-/// ``` QInputDialog* self, double value ```
+/// @param self QInputDialog*
+/// @param value double
 void q_inputdialog_double_value_changed(void* self, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, double) ```
-void q_inputdialog_on_double_value_changed(void* self, void (*slot)(void*, double));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, double)
+void q_inputdialog_on_double_value_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueSelected)
 ///
-/// ``` QInputDialog* self, double value ```
+/// @param self QInputDialog*
+/// @param value double
 void q_inputdialog_double_value_selected(void* self, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#doubleValueSelected)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, double) ```
-void q_inputdialog_on_double_value_selected(void* self, void (*slot)(void*, double));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, double)
+void q_inputdialog_on_double_value_selected(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#done)
 ///
-/// ``` QInputDialog* self, int result ```
+/// @param self QInputDialog*
+/// @param result int
 void q_inputdialog_done(void* self, int result);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#done)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, int) ```
-void q_inputdialog_on_done(void* self, void (*slot)(void*, int));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, int)
+void q_inputdialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#done)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputDialog* self, int result ```
+/// @param self QInputDialog*
+/// @param result int
 void q_inputdialog_qbase_done(void* self, int result);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_inputdialog_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_inputdialog_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#setOption)
 ///
-/// ``` QInputDialog* self, enum QInputDialog__InputDialogOption option, bool on ```
+/// @param self QInputDialog*
+/// @param option enum QInputDialog__InputDialogOption
+/// @param on bool
 void q_inputdialog_set_option2(void* self, int64_t option, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, enum QLineEdit__EchoMode echo ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param echo enum QLineEdit__EchoMode
 const char* q_inputdialog_get_text4(void* parent, const char* title, const char* label, int64_t echo);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, enum QLineEdit__EchoMode echo, const char* text ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param echo enum QLineEdit__EchoMode
+/// @param text const char*
 const char* q_inputdialog_get_text5(void* parent, const char* title, const char* label, int64_t echo, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, enum QLineEdit__EchoMode echo, const char* text, bool* ok ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param echo enum QLineEdit__EchoMode
+/// @param text const char*
+/// @param ok bool*
 const char* q_inputdialog_get_text6(void* parent, const char* title, const char* label, int64_t echo, const char* text, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, enum QLineEdit__EchoMode echo, const char* text, bool* ok, int flags ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param echo enum QLineEdit__EchoMode
+/// @param text const char*
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
 const char* q_inputdialog_get_text7(void* parent, const char* title, const char* label, int64_t echo, const char* text, bool* ok, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, enum QLineEdit__EchoMode echo, const char* text, bool* ok, int flags, int inputMethodHints ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param echo enum QLineEdit__EchoMode
+/// @param text const char*
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
+/// @param inputMethodHints flag of enum Qt__InputMethodHint
 const char* q_inputdialog_get_text8(void* parent, const char* title, const char* label, int64_t echo, const char* text, bool* ok, int64_t flags, int64_t inputMethodHints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* text ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param text const char*
 const char* q_inputdialog_get_multi_line_text4(void* parent, const char* title, const char* label, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* text, bool* ok ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param text const char*
+/// @param ok bool*
 const char* q_inputdialog_get_multi_line_text5(void* parent, const char* title, const char* label, const char* text, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* text, bool* ok, int flags ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param text const char*
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
 const char* q_inputdialog_get_multi_line_text6(void* parent, const char* title, const char* label, const char* text, bool* ok, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getMultiLineText)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* text, bool* ok, int flags, int inputMethodHints ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param text const char*
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
+/// @param inputMethodHints flag of enum Qt__InputMethodHint
 const char* q_inputdialog_get_multi_line_text7(void* parent, const char* title, const char* label, const char* text, bool* ok, int64_t flags, int64_t inputMethodHints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* items[], int current ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param items const char**
+/// @param current int
 const char* q_inputdialog_get_item5(void* parent, const char* title, const char* label, const char* items[], int current);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* items[], int current, bool editable ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param items const char**
+/// @param current int
+/// @param editable bool
 const char* q_inputdialog_get_item6(void* parent, const char* title, const char* label, const char* items[], int current, bool editable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param items const char**
+/// @param current int
+/// @param editable bool
+/// @param ok bool*
 const char* q_inputdialog_get_item7(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int flags ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param items const char**
+/// @param current int
+/// @param editable bool
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
 const char* q_inputdialog_get_item8(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getItem)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int flags, int inputMethodHints ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param items const char**
+/// @param current int
+/// @param editable bool
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
+/// @param inputMethodHints flag of enum Qt__InputMethodHint
 const char* q_inputdialog_get_item9(void* parent, const char* title, const char* label, const char* items[], int current, bool editable, bool* ok, int64_t flags, int64_t inputMethodHints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, int value ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value int
 int32_t q_inputdialog_get_int4(void* parent, const char* title, const char* label, int value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, int value, int minValue ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value int
+/// @param minValue int
 int32_t q_inputdialog_get_int5(void* parent, const char* title, const char* label, int value, int minValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, int value, int minValue, int maxValue ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value int
+/// @param minValue int
+/// @param maxValue int
 int32_t q_inputdialog_get_int6(void* parent, const char* title, const char* label, int value, int minValue, int maxValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, int value, int minValue, int maxValue, int step ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value int
+/// @param minValue int
+/// @param maxValue int
+/// @param step int
 int32_t q_inputdialog_get_int7(void* parent, const char* title, const char* label, int value, int minValue, int maxValue, int step);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, int value, int minValue, int maxValue, int step, bool* ok ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value int
+/// @param minValue int
+/// @param maxValue int
+/// @param step int
+/// @param ok bool*
 int32_t q_inputdialog_get_int8(void* parent, const char* title, const char* label, int value, int minValue, int maxValue, int step, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getInt)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, int value, int minValue, int maxValue, int step, bool* ok, int flags ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value int
+/// @param minValue int
+/// @param maxValue int
+/// @param step int
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
 int32_t q_inputdialog_get_int9(void* parent, const char* title, const char* label, int value, int minValue, int maxValue, int step, bool* ok, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
 double q_inputdialog_get_double4(void* parent, const char* title, const char* label, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value, double minValue ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
+/// @param minValue double
 double q_inputdialog_get_double5(void* parent, const char* title, const char* label, double value, double minValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value, double minValue, double maxValue ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
+/// @param minValue double
+/// @param maxValue double
 double q_inputdialog_get_double6(void* parent, const char* title, const char* label, double value, double minValue, double maxValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
+/// @param minValue double
+/// @param maxValue double
+/// @param decimals int
 double q_inputdialog_get_double7(void* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals, bool* ok ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
+/// @param minValue double
+/// @param maxValue double
+/// @param decimals int
+/// @param ok bool*
 double q_inputdialog_get_double8(void* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals, bool* ok, int flags ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
+/// @param minValue double
+/// @param maxValue double
+/// @param decimals int
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
 double q_inputdialog_get_double9(void* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals, bool* ok, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#getDouble)
 ///
-/// ``` QWidget* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals, bool* ok, int flags, double step ```
+/// @param parent QWidget*
+/// @param title const char*
+/// @param label const char*
+/// @param value double
+/// @param minValue double
+/// @param maxValue double
+/// @param decimals int
+/// @param ok bool*
+/// @param flags flag of enum Qt__WindowType
+/// @param step double
 double q_inputdialog_get_double10(void* parent, const char* title, const char* label, double value, double minValue, double maxValue, int decimals, bool* ok, int64_t flags, double step);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_result(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setSizeGripEnabled)
 ///
-/// ``` QInputDialog* self, bool sizeGripEnabled ```
+/// @param self QInputDialog*
+/// @param sizeGripEnabled bool
 void q_inputdialog_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_size_grip_enabled(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setModal)
 ///
-/// ``` QInputDialog* self, bool modal ```
+/// @param self QInputDialog*
+/// @param modal bool
 void q_inputdialog_set_modal(void* self, bool modal);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setResult)
 ///
-/// ``` QInputDialog* self, int r ```
+/// @param self QInputDialog*
+/// @param r int
 void q_inputdialog_set_result(void* self, int r);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QInputDialog* self, int result ```
+/// @param self QInputDialog*
+/// @param result int
 void q_inputdialog_finished(void* self, int result);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, int) ```
-void q_inputdialog_on_finished(void* self, void (*slot)(void*, int));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, int)
+void q_inputdialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_accepted(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*) ```
-void q_inputdialog_on_accepted(void* self, void (*slot)(void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*)
+void q_inputdialog_on_accepted(void* self, void (*callback)(void*));
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_rejected(void* self);
 
 /// Inherited from QDialog
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*) ```
-void q_inputdialog_on_rejected(void* self, void (*slot)(void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*)
+void q_inputdialog_on_rejected(void* self, void (*callback)(void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 uintptr_t q_inputdialog_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 uintptr_t q_inputdialog_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 uintptr_t q_inputdialog_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QStyle* q_inputdialog_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QInputDialog* self, QStyle* style ```
+/// @param self QInputDialog*
+/// @param style QStyle*
 void q_inputdialog_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum Qt__WindowModality
 int64_t q_inputdialog_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QInputDialog* self, enum Qt__WindowModality windowModality ```
+/// @param self QInputDialog*
+/// @param windowModality enum Qt__WindowModality
 void q_inputdialog_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QInputDialog* self, QWidget* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
 bool q_inputdialog_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QInputDialog* self, bool enabled ```
+/// @param self QInputDialog*
+/// @param enabled bool
 void q_inputdialog_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QInputDialog* self, bool disabled ```
+/// @param self QInputDialog*
+/// @param disabled bool
 void q_inputdialog_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QInputDialog* self, bool windowModified ```
+/// @param self QInputDialog*
+/// @param windowModified bool
 void q_inputdialog_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRect* q_inputdialog_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 const QRect* q_inputdialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRect* q_inputdialog_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QPoint* q_inputdialog_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRect* q_inputdialog_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRect* q_inputdialog_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRegion* q_inputdialog_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QInputDialog* self, QSize* minimumSize ```
+/// @param self QInputDialog*
+/// @param minimumSize QSize*
 void q_inputdialog_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QInputDialog* self, int minw, int minh ```
+/// @param self QInputDialog*
+/// @param minw int
+/// @param minh int
 void q_inputdialog_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QInputDialog* self, QSize* maximumSize ```
+/// @param self QInputDialog*
+/// @param maximumSize QSize*
 void q_inputdialog_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QInputDialog* self, int maxw, int maxh ```
+/// @param self QInputDialog*
+/// @param maxw int
+/// @param maxh int
 void q_inputdialog_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QInputDialog* self, int minw ```
+/// @param self QInputDialog*
+/// @param minw int
 void q_inputdialog_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QInputDialog* self, int minh ```
+/// @param self QInputDialog*
+/// @param minh int
 void q_inputdialog_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QInputDialog* self, int maxw ```
+/// @param self QInputDialog*
+/// @param maxw int
 void q_inputdialog_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QInputDialog* self, int maxh ```
+/// @param self QInputDialog*
+/// @param maxh int
 void q_inputdialog_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QInputDialog* self, QSize* sizeIncrement ```
+/// @param self QInputDialog*
+/// @param sizeIncrement QSize*
 void q_inputdialog_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QInputDialog* self, int w, int h ```
+/// @param self QInputDialog*
+/// @param w int
+/// @param h int
 void q_inputdialog_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSize* q_inputdialog_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QInputDialog* self, QSize* baseSize ```
+/// @param self QInputDialog*
+/// @param baseSize QSize*
 void q_inputdialog_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QInputDialog* self, int basew, int baseh ```
+/// @param self QInputDialog*
+/// @param basew int
+/// @param baseh int
 void q_inputdialog_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QInputDialog* self, QSize* fixedSize ```
+/// @param self QInputDialog*
+/// @param fixedSize QSize*
 void q_inputdialog_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QInputDialog* self, int w, int h ```
+/// @param self QInputDialog*
+/// @param w int
+/// @param h int
 void q_inputdialog_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QInputDialog* self, int w ```
+/// @param self QInputDialog*
+/// @param w int
 void q_inputdialog_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QInputDialog* self, int h ```
+/// @param self QInputDialog*
+/// @param h int
 void q_inputdialog_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QInputDialog* self, QPointF* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPointF*
 QPointF* q_inputdialog_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QInputDialog* self, QPoint* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPoint*
 QPoint* q_inputdialog_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QInputDialog* self, QPointF* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPointF*
 QPointF* q_inputdialog_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QInputDialog* self, QPoint* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPoint*
 QPoint* q_inputdialog_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QInputDialog* self, QPointF* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPointF*
 QPointF* q_inputdialog_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QInputDialog* self, QPoint* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPoint*
 QPoint* q_inputdialog_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QInputDialog* self, QPointF* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPointF*
 QPointF* q_inputdialog_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QInputDialog* self, QPoint* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPoint*
 QPoint* q_inputdialog_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QInputDialog* self, QWidget* param1, QPointF* param2 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_inputdialog_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QInputDialog* self, QWidget* param1, QPoint* param2 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_inputdialog_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QInputDialog* self, QWidget* param1, QPointF* param2 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_inputdialog_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QInputDialog* self, QWidget* param1, QPoint* param2 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_inputdialog_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 const QPalette* q_inputdialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QInputDialog* self, QPalette* palette ```
+/// @param self QInputDialog*
+/// @param palette QPalette*
 void q_inputdialog_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QInputDialog* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QInputDialog*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_inputdialog_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_inputdialog_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QInputDialog* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QInputDialog*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_inputdialog_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_inputdialog_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 const QFont* q_inputdialog_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QInputDialog* self, QFont* font ```
+/// @param self QInputDialog*
+/// @param font QFont*
 void q_inputdialog_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QFontMetrics* q_inputdialog_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QFontInfo* q_inputdialog_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QCursor* q_inputdialog_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QInputDialog* self, QCursor* cursor ```
+/// @param self QInputDialog*
+/// @param cursor QCursor*
 void q_inputdialog_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QInputDialog* self, bool enable ```
+/// @param self QInputDialog*
+/// @param enable bool
 void q_inputdialog_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QInputDialog* self, bool enable ```
+/// @param self QInputDialog*
+/// @param enable bool
 void q_inputdialog_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QInputDialog* self, QBitmap* mask ```
+/// @param self QInputDialog*
+/// @param mask QBitmap*
 void q_inputdialog_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QInputDialog* self, QRegion* mask ```
+/// @param self QInputDialog*
+/// @param mask QRegion*
 void q_inputdialog_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRegion* q_inputdialog_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPaintDevice* target ```
+/// @param self QInputDialog*
+/// @param target QPaintDevice*
 void q_inputdialog_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPainter* painter ```
+/// @param self QInputDialog*
+/// @param painter QPainter*
 void q_inputdialog_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QPixmap* q_inputdialog_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QGraphicsEffect* q_inputdialog_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QInputDialog* self, QGraphicsEffect* effect ```
+/// @param self QInputDialog*
+/// @param effect QGraphicsEffect*
 void q_inputdialog_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QInputDialog* self, enum Qt__GestureType typeVal ```
+/// @param self QInputDialog*
+/// @param typeVal enum Qt__GestureType
 void q_inputdialog_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QInputDialog* self, enum Qt__GestureType typeVal ```
+/// @param self QInputDialog*
+/// @param typeVal enum Qt__GestureType
 void q_inputdialog_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QInputDialog* self, const char* windowTitle ```
+/// @param self QInputDialog*
+/// @param windowTitle const char*
 void q_inputdialog_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QInputDialog* self, const char* styleSheet ```
+/// @param self QInputDialog*
+/// @param styleSheet const char*
 void q_inputdialog_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QInputDialog* self, QIcon* icon ```
+/// @param self QInputDialog*
+/// @param icon QIcon*
 void q_inputdialog_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QIcon* q_inputdialog_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QInputDialog* self, const char* windowIconText ```
+/// @param self QInputDialog*
+/// @param windowIconText const char*
 void q_inputdialog_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QInputDialog* self, const char* windowRole ```
+/// @param self QInputDialog*
+/// @param windowRole const char*
 void q_inputdialog_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QInputDialog* self, const char* filePath ```
+/// @param self QInputDialog*
+/// @param filePath const char*
 void q_inputdialog_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QInputDialog* self, double level ```
+/// @param self QInputDialog*
+/// @param level double
 void q_inputdialog_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QInputDialog* self, const char* toolTip ```
+/// @param self QInputDialog*
+/// @param toolTip const char*
 void q_inputdialog_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QInputDialog* self, int msec ```
+/// @param self QInputDialog*
+/// @param msec int
 void q_inputdialog_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QInputDialog* self, const char* statusTip ```
+/// @param self QInputDialog*
+/// @param statusTip const char*
 void q_inputdialog_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QInputDialog* self, const char* whatsThis ```
+/// @param self QInputDialog*
+/// @param whatsThis const char*
 void q_inputdialog_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QInputDialog* self, const char* name ```
+/// @param self QInputDialog*
+/// @param name const char*
 void q_inputdialog_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QInputDialog* self, const char* description ```
+/// @param self QInputDialog*
+/// @param description const char*
 void q_inputdialog_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QInputDialog* self, enum Qt__LayoutDirection direction ```
+/// @param self QInputDialog*
+/// @param direction enum Qt__LayoutDirection
 void q_inputdialog_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_inputdialog_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QInputDialog* self, QLocale* locale ```
+/// @param self QInputDialog*
+/// @param locale QLocale*
 void q_inputdialog_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QLocale* q_inputdialog_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QInputDialog* self, enum Qt__FocusReason reason ```
+/// @param self QInputDialog*
+/// @param reason enum Qt__FocusReason
 void q_inputdialog_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_inputdialog_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QInputDialog* self, enum Qt__FocusPolicy policy ```
+/// @param self QInputDialog*
+/// @param policy enum Qt__FocusPolicy
 void q_inputdialog_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_inputdialog_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QInputDialog* self, QWidget* focusProxy ```
+/// @param self QInputDialog*
+/// @param focusProxy QWidget*
 void q_inputdialog_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_inputdialog_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QInputDialog* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QInputDialog*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_inputdialog_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QInputDialog* self, QCursor* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QCursor*
 void q_inputdialog_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QInputDialog* self, QKeySequence* key ```
+/// @param self QInputDialog*
+/// @param key QKeySequence*
 int32_t q_inputdialog_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QInputDialog* self, int id ```
+/// @param self QInputDialog*
+/// @param id int
 void q_inputdialog_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QInputDialog* self, int id ```
+/// @param self QInputDialog*
+/// @param id int
 void q_inputdialog_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QInputDialog* self, int id ```
+/// @param self QInputDialog*
+/// @param id int
 void q_inputdialog_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_inputdialog_mouse_grabber();
 
@@ -1732,1161 +2123,1327 @@ QWidget* q_inputdialog_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_inputdialog_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QInputDialog* self, bool enable ```
+/// @param self QInputDialog*
+/// @param enable bool
 void q_inputdialog_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QGraphicsProxyWidget* q_inputdialog_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QInputDialog* self, int x, int y, int w, int h ```
+/// @param self QInputDialog*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_inputdialog_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QInputDialog* self, QRect* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QRect*
 void q_inputdialog_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QInputDialog* self, QRegion* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QRegion*
 void q_inputdialog_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QInputDialog* self, int x, int y, int w, int h ```
+/// @param self QInputDialog*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_inputdialog_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QInputDialog* self, QRect* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QRect*
 void q_inputdialog_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QInputDialog* self, QRegion* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QRegion*
 void q_inputdialog_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QInputDialog* self, bool hidden ```
+/// @param self QInputDialog*
+/// @param hidden bool
 void q_inputdialog_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QInputDialog* self, QWidget* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
 void q_inputdialog_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QInputDialog* self, int x, int y ```
+/// @param self QInputDialog*
+/// @param x int
+/// @param y int
 void q_inputdialog_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QInputDialog* self, QPoint* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QPoint*
 void q_inputdialog_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QInputDialog* self, int w, int h ```
+/// @param self QInputDialog*
+/// @param w int
+/// @param h int
 void q_inputdialog_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QInputDialog* self, QSize* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QSize*
 void q_inputdialog_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QInputDialog* self, int x, int y, int w, int h ```
+/// @param self QInputDialog*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_inputdialog_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QInputDialog* self, QRect* geometry ```
+/// @param self QInputDialog*
+/// @param geometry QRect*
 void q_inputdialog_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 char* q_inputdialog_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QInputDialog* self, const char* geometry ```
+/// @param self QInputDialog*
+/// @param geometry const char*
 bool q_inputdialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QInputDialog* self, QWidget* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
 bool q_inputdialog_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_inputdialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QInputDialog* self, int state ```
+/// @param self QInputDialog*
+/// @param state flag of enum Qt__WindowState
 void q_inputdialog_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QInputDialog* self, int state ```
+/// @param self QInputDialog*
+/// @param state flag of enum Qt__WindowState
 void q_inputdialog_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QSizePolicy* q_inputdialog_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QInputDialog* self, QSizePolicy* sizePolicy ```
+/// @param self QInputDialog*
+/// @param sizePolicy QSizePolicy*
 void q_inputdialog_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QInputDialog* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QInputDialog*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_inputdialog_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRegion* q_inputdialog_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QInputDialog* self, int left, int top, int right, int bottom ```
+/// @param self QInputDialog*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_inputdialog_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QInputDialog* self, QMargins* margins ```
+/// @param self QInputDialog*
+/// @param margins QMargins*
 void q_inputdialog_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QMargins* q_inputdialog_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QRect* q_inputdialog_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QLayout* q_inputdialog_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QInputDialog* self, QLayout* layout ```
+/// @param self QInputDialog*
+/// @param layout QLayout*
 void q_inputdialog_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QInputDialog* self, QWidget* parent ```
+/// @param self QInputDialog*
+/// @param parent QWidget*
 void q_inputdialog_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QInputDialog* self, QWidget* parent, int f ```
+/// @param self QInputDialog*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_inputdialog_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QInputDialog* self, int dx, int dy ```
+/// @param self QInputDialog*
+/// @param dx int
+/// @param dy int
 void q_inputdialog_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QInputDialog* self, int dx, int dy, QRect* param3 ```
+/// @param self QInputDialog*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_inputdialog_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QInputDialog* self, bool on ```
+/// @param self QInputDialog*
+/// @param on bool
 void q_inputdialog_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QInputDialog* self, QAction* action ```
+/// @param self QInputDialog*
+/// @param action QAction*
 void q_inputdialog_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QInputDialog* self, libqt_list /* of QAction* */ actions ```
+/// @param self QInputDialog*
+/// @param actions libqt_list /* of QAction* */
 void q_inputdialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QInputDialog* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QInputDialog*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_inputdialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QInputDialog* self, QAction* before, QAction* action ```
+/// @param self QInputDialog*
+/// @param before QAction*
+/// @param action QAction*
 void q_inputdialog_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QInputDialog* self, QAction* action ```
+/// @param self QInputDialog*
+/// @param action QAction*
 void q_inputdialog_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 libqt_list /* of QAction* */ q_inputdialog_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QInputDialog* self, const char* text ```
+/// @param self QInputDialog*
+/// @param text const char*
 QAction* q_inputdialog_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QInputDialog* self, QIcon* icon, const char* text ```
+/// @param self QInputDialog*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_inputdialog_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QInputDialog* self, const char* text, QKeySequence* shortcut ```
+/// @param self QInputDialog*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_inputdialog_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QInputDialog* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QInputDialog*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_inputdialog_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWidget* q_inputdialog_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QInputDialog* self, int typeVal ```
+/// @param self QInputDialog*
+/// @param typeVal flag of enum Qt__WindowType
 void q_inputdialog_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_inputdialog_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QInputDialog* self, enum Qt__WindowType param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__WindowType
 void q_inputdialog_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QInputDialog* self, int typeVal ```
+/// @param self QInputDialog*
+/// @param typeVal flag of enum Qt__WindowType
 void q_inputdialog_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return enum Qt__WindowType
 int64_t q_inputdialog_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_inputdialog_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QInputDialog* self, int x, int y ```
+/// @param self QInputDialog*
+/// @param x int
+/// @param y int
 QWidget* q_inputdialog_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QInputDialog* self, QPoint* p ```
+/// @param self QInputDialog*
+/// @param p QPoint*
 QWidget* q_inputdialog_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QInputDialog* self, QPointF* p ```
+/// @param self QInputDialog*
+/// @param p QPointF*
 QWidget* q_inputdialog_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QInputDialog* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__WidgetAttribute
 void q_inputdialog_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QInputDialog* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_inputdialog_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QInputDialog* self, QWidget* child ```
+/// @param self QInputDialog*
+/// @param child QWidget*
 bool q_inputdialog_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QInputDialog* self, bool enabled ```
+/// @param self QInputDialog*
+/// @param enabled bool
 void q_inputdialog_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QBackingStore* q_inputdialog_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QWindow* q_inputdialog_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QScreen* q_inputdialog_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QInputDialog* self, QScreen* screen ```
+/// @param self QInputDialog*
+/// @param screen QScreen*
 void q_inputdialog_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_inputdialog_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QInputDialog* self, const char* title ```
+/// @param self QInputDialog*
+/// @param title const char*
 void q_inputdialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
-void q_inputdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, const char*)
+void q_inputdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QInputDialog* self, QIcon* icon ```
+/// @param self QInputDialog*
+/// @param icon QIcon*
 void q_inputdialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QIcon*) ```
-void q_inputdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QIcon*)
+void q_inputdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QInputDialog* self, const char* iconText ```
+/// @param self QInputDialog*
+/// @param iconText const char*
 void q_inputdialog_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
-void q_inputdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, const char*)
+void q_inputdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QInputDialog* self, QPoint* pos ```
+/// @param self QInputDialog*
+/// @param pos QPoint*
 void q_inputdialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QPoint*) ```
-void q_inputdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QPoint*)
+void q_inputdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_inputdialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QInputDialog* self, int hints ```
+/// @param self QInputDialog*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_inputdialog_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QInputDialog*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_inputdialog_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QInputDialog*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_inputdialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QInputDialog*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_inputdialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QInputDialog*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_inputdialog_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QInputDialog*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_inputdialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QInputDialog* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QInputDialog*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_inputdialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QInputDialog* self, QRect* rectangle ```
+/// @param self QInputDialog*
+/// @param rectangle QRect*
 QPixmap* q_inputdialog_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QInputDialog* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QInputDialog*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_inputdialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QInputDialog* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QInputDialog*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_inputdialog_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QInputDialog* self, int id, bool enable ```
+/// @param self QInputDialog*
+/// @param id int
+/// @param enable bool
 void q_inputdialog_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QInputDialog* self, int id, bool enable ```
+/// @param self QInputDialog*
+/// @param id int
+/// @param enable bool
 void q_inputdialog_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QInputDialog* self, enum Qt__WindowType param1, bool on ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_inputdialog_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QInputDialog* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_inputdialog_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_inputdialog_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_inputdialog_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char* q_inputdialog_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QInputDialog* self, char* name ```
+/// @param self QInputDialog*
+/// @param name char*
 void q_inputdialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QInputDialog* self, bool b ```
+/// @param self QInputDialog*
+/// @param b bool
 bool q_inputdialog_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QThread* q_inputdialog_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QInputDialog* self, QThread* thread ```
+/// @param self QInputDialog*
+/// @param thread QThread*
 bool q_inputdialog_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QInputDialog* self, int interval ```
+/// @param self QInputDialog*
+/// @param interval int
 int32_t q_inputdialog_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QInputDialog* self, int id ```
+/// @param self QInputDialog*
+/// @param id int
 void q_inputdialog_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QInputDialog* self, enum Qt__TimerId id ```
+/// @param self QInputDialog*
+/// @param id enum Qt__TimerId
 void q_inputdialog_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 libqt_list /* of QObject* */ q_inputdialog_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QInputDialog* self, QObject* filterObj ```
+/// @param self QInputDialog*
+/// @param filterObj QObject*
 void q_inputdialog_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QInputDialog* self, QObject* obj ```
+/// @param self QInputDialog*
+/// @param obj QObject*
 void q_inputdialog_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_inputdialog_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QInputDialog* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QInputDialog*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_inputdialog_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_inputdialog_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_inputdialog_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QInputDialog* self, const char* name, QVariant* value ```
+/// @param self QInputDialog*
+/// @param name const char*
+/// @param value QVariant*
 bool q_inputdialog_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QInputDialog* self, const char* name ```
+/// @param self QInputDialog*
+/// @param name const char*
 QVariant* q_inputdialog_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QInputDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDialog*
 const char** q_inputdialog_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QBindingStorage* q_inputdialog_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 const QBindingStorage* q_inputdialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*) ```
-void q_inputdialog_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*)
+void q_inputdialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QObject* q_inputdialog_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QInputDialog* self, const char* classname ```
+/// @param self QInputDialog*
+/// @param classname const char*
 bool q_inputdialog_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QInputDialog* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QInputDialog*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_inputdialog_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QInputDialog* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QInputDialog*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_inputdialog_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_inputdialog_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QInputDialog* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QInputDialog*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_inputdialog_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDialog* self, QObject* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QObject*
 void q_inputdialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QObject*) ```
-void q_inputdialog_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QObject*)
+void q_inputdialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 double q_inputdialog_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_inputdialog_device_pixel_ratio_f_scale();
 
@@ -2894,7 +3451,8 @@ double q_inputdialog_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_inputdialog_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QDialog
@@ -2903,7 +3461,7 @@ int32_t q_inputdialog_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_open(void* self);
 
 /// Inherited from QDialog
@@ -2912,7 +3470,7 @@ void q_inputdialog_open(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_qbase_open(void* self);
 
 /// Inherited from QDialog
@@ -2921,8 +3479,9 @@ void q_inputdialog_qbase_open(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)() ```
-void q_inputdialog_on_open(void* self, void (*slot)());
+/// @param self QInputDialog*
+/// @param callback void fn()
+void q_inputdialog_on_open(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -2930,7 +3489,7 @@ void q_inputdialog_on_open(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_exec(void* self);
 
 /// Inherited from QDialog
@@ -2939,7 +3498,7 @@ int32_t q_inputdialog_exec(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_qbase_exec(void* self);
 
 /// Inherited from QDialog
@@ -2948,8 +3507,9 @@ int32_t q_inputdialog_qbase_exec(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)() ```
-void q_inputdialog_on_exec(void* self, int32_t (*slot)());
+/// @param self QInputDialog*
+/// @param callback int32_t fn()
+void q_inputdialog_on_exec(void* self, int32_t (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -2957,7 +3517,7 @@ void q_inputdialog_on_exec(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_accept(void* self);
 
 /// Inherited from QDialog
@@ -2966,7 +3526,7 @@ void q_inputdialog_accept(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_qbase_accept(void* self);
 
 /// Inherited from QDialog
@@ -2975,8 +3535,9 @@ void q_inputdialog_qbase_accept(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)() ```
-void q_inputdialog_on_accept(void* self, void (*slot)());
+/// @param self QInputDialog*
+/// @param callback void fn()
+void q_inputdialog_on_accept(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -2984,7 +3545,7 @@ void q_inputdialog_on_accept(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_reject(void* self);
 
 /// Inherited from QDialog
@@ -2993,7 +3554,7 @@ void q_inputdialog_reject(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_qbase_reject(void* self);
 
 /// Inherited from QDialog
@@ -3002,8 +3563,9 @@ void q_inputdialog_qbase_reject(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)() ```
-void q_inputdialog_on_reject(void* self, void (*slot)());
+/// @param self QInputDialog*
+/// @param callback void fn()
+void q_inputdialog_on_reject(void* self, void (*callback)());
 
 /// Inherited from QDialog
 ///
@@ -3011,7 +3573,8 @@ void q_inputdialog_on_reject(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QKeyEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QKeyEvent*
 void q_inputdialog_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3020,7 +3583,8 @@ void q_inputdialog_key_press_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QKeyEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QKeyEvent*
 void q_inputdialog_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3029,8 +3593,9 @@ void q_inputdialog_qbase_key_press_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QKeyEvent*) ```
-void q_inputdialog_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QKeyEvent*)
+void q_inputdialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -3038,7 +3603,8 @@ void q_inputdialog_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QCloseEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QCloseEvent*
 void q_inputdialog_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3047,7 +3613,8 @@ void q_inputdialog_close_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QCloseEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QCloseEvent*
 void q_inputdialog_qbase_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3056,8 +3623,9 @@ void q_inputdialog_qbase_close_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QCloseEvent*) ```
-void q_inputdialog_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QCloseEvent*)
+void q_inputdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -3065,7 +3633,8 @@ void q_inputdialog_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QShowEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QShowEvent*
 void q_inputdialog_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3074,7 +3643,8 @@ void q_inputdialog_show_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QShowEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QShowEvent*
 void q_inputdialog_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3083,8 +3653,9 @@ void q_inputdialog_qbase_show_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QShowEvent*) ```
-void q_inputdialog_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QShowEvent*)
+void q_inputdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -3092,7 +3663,8 @@ void q_inputdialog_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QResizeEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QResizeEvent*
 void q_inputdialog_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3101,7 +3673,8 @@ void q_inputdialog_resize_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QResizeEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QResizeEvent*
 void q_inputdialog_qbase_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3110,8 +3683,9 @@ void q_inputdialog_qbase_resize_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QResizeEvent*) ```
-void q_inputdialog_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QResizeEvent*)
+void q_inputdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -3119,7 +3693,8 @@ void q_inputdialog_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QContextMenuEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QContextMenuEvent*
 void q_inputdialog_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3128,7 +3703,8 @@ void q_inputdialog_context_menu_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QContextMenuEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QContextMenuEvent*
 void q_inputdialog_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -3137,8 +3713,9 @@ void q_inputdialog_qbase_context_menu_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QContextMenuEvent*) ```
-void q_inputdialog_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QContextMenuEvent*)
+void q_inputdialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -3146,7 +3723,9 @@ void q_inputdialog_on_context_menu_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QObject* param1, QEvent* param2 ```
+/// @param self QInputDialog*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_inputdialog_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
@@ -3155,7 +3734,9 @@ bool q_inputdialog_event_filter(void* self, void* param1, void* param2);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QObject* param1, QEvent* param2 ```
+/// @param self QInputDialog*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_inputdialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
@@ -3164,8 +3745,9 @@ bool q_inputdialog_qbase_event_filter(void* self, void* param1, void* param2);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)(QInputDialog*, QObject*, QEvent*) ```
-void q_inputdialog_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QInputDialog*
+/// @param callback bool fn(QInputDialog*, QObject*, QEvent*)
+void q_inputdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3173,7 +3755,7 @@ void q_inputdialog_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3182,7 +3764,7 @@ int32_t q_inputdialog_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3191,8 +3773,9 @@ int32_t q_inputdialog_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)() ```
-void q_inputdialog_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QInputDialog*
+/// @param callback int32_t fn()
+void q_inputdialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3200,7 +3783,8 @@ void q_inputdialog_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, int param1 ```
+/// @param self QInputDialog*
+/// @param param1 int
 int32_t q_inputdialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3209,7 +3793,8 @@ int32_t q_inputdialog_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int param1 ```
+/// @param self QInputDialog*
+/// @param param1 int
 int32_t q_inputdialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3218,8 +3803,9 @@ int32_t q_inputdialog_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)(QInputDialog*, int) ```
-void q_inputdialog_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QInputDialog*
+/// @param callback int32_t fn(QInputDialog*, int)
+void q_inputdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3227,7 +3813,7 @@ void q_inputdialog_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3236,7 +3822,7 @@ bool q_inputdialog_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3245,8 +3831,9 @@ bool q_inputdialog_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)() ```
-void q_inputdialog_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QInputDialog*
+/// @param callback bool fn()
+void q_inputdialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3254,7 +3841,7 @@ void q_inputdialog_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QPaintEngine* q_inputdialog_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3263,7 +3850,7 @@ QPaintEngine* q_inputdialog_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QPaintEngine* q_inputdialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3272,8 +3859,9 @@ QPaintEngine* q_inputdialog_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QPaintEngine* (*slot)() ```
-void q_inputdialog_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QInputDialog*
+/// @param callback QPaintEngine* fn()
+void q_inputdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3281,7 +3869,8 @@ void q_inputdialog_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEvent*
 bool q_inputdialog_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3290,7 +3879,8 @@ bool q_inputdialog_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEvent*
 bool q_inputdialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3299,8 +3889,9 @@ bool q_inputdialog_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)(QInputDialog*, QEvent*) ```
-void q_inputdialog_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback bool fn(QInputDialog*, QEvent*)
+void q_inputdialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3308,7 +3899,8 @@ void q_inputdialog_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3317,7 +3909,8 @@ void q_inputdialog_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3326,8 +3919,9 @@ void q_inputdialog_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMouseEvent*) ```
-void q_inputdialog_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMouseEvent*)
+void q_inputdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3335,7 +3929,8 @@ void q_inputdialog_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3344,7 +3939,8 @@ void q_inputdialog_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3353,8 +3949,9 @@ void q_inputdialog_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMouseEvent*) ```
-void q_inputdialog_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMouseEvent*)
+void q_inputdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3362,7 +3959,8 @@ void q_inputdialog_on_mouse_release_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3371,7 +3969,8 @@ void q_inputdialog_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3380,8 +3979,9 @@ void q_inputdialog_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMouseEvent*) ```
-void q_inputdialog_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMouseEvent*)
+void q_inputdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3389,7 +3989,8 @@ void q_inputdialog_on_mouse_double_click_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3398,7 +3999,8 @@ void q_inputdialog_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMouseEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMouseEvent*
 void q_inputdialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3407,8 +4009,9 @@ void q_inputdialog_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMouseEvent*) ```
-void q_inputdialog_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMouseEvent*)
+void q_inputdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3416,7 +4019,8 @@ void q_inputdialog_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QWheelEvent* event ```
+/// @param self QInputDialog*
+/// @param event QWheelEvent*
 void q_inputdialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3425,7 +4029,8 @@ void q_inputdialog_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QWheelEvent* event ```
+/// @param self QInputDialog*
+/// @param event QWheelEvent*
 void q_inputdialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3434,8 +4039,9 @@ void q_inputdialog_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QWheelEvent*) ```
-void q_inputdialog_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QWheelEvent*)
+void q_inputdialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3443,7 +4049,8 @@ void q_inputdialog_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QKeyEvent* event ```
+/// @param self QInputDialog*
+/// @param event QKeyEvent*
 void q_inputdialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3452,7 +4059,8 @@ void q_inputdialog_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QKeyEvent* event ```
+/// @param self QInputDialog*
+/// @param event QKeyEvent*
 void q_inputdialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3461,8 +4069,9 @@ void q_inputdialog_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QKeyEvent*) ```
-void q_inputdialog_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QKeyEvent*)
+void q_inputdialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3470,7 +4079,8 @@ void q_inputdialog_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QFocusEvent* event ```
+/// @param self QInputDialog*
+/// @param event QFocusEvent*
 void q_inputdialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3479,7 +4089,8 @@ void q_inputdialog_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QFocusEvent* event ```
+/// @param self QInputDialog*
+/// @param event QFocusEvent*
 void q_inputdialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3488,8 +4099,9 @@ void q_inputdialog_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QFocusEvent*) ```
-void q_inputdialog_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QFocusEvent*)
+void q_inputdialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3497,7 +4109,8 @@ void q_inputdialog_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QFocusEvent* event ```
+/// @param self QInputDialog*
+/// @param event QFocusEvent*
 void q_inputdialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3506,7 +4119,8 @@ void q_inputdialog_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QFocusEvent* event ```
+/// @param self QInputDialog*
+/// @param event QFocusEvent*
 void q_inputdialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3515,8 +4129,9 @@ void q_inputdialog_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QFocusEvent*) ```
-void q_inputdialog_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QFocusEvent*)
+void q_inputdialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3524,7 +4139,8 @@ void q_inputdialog_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QEnterEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEnterEvent*
 void q_inputdialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3533,7 +4149,8 @@ void q_inputdialog_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QEnterEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEnterEvent*
 void q_inputdialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3542,8 +4159,9 @@ void q_inputdialog_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QEnterEvent*) ```
-void q_inputdialog_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QEnterEvent*)
+void q_inputdialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3551,7 +4169,8 @@ void q_inputdialog_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEvent*
 void q_inputdialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3560,7 +4179,8 @@ void q_inputdialog_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEvent*
 void q_inputdialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3569,8 +4189,9 @@ void q_inputdialog_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QEvent*) ```
-void q_inputdialog_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QEvent*)
+void q_inputdialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3578,7 +4199,8 @@ void q_inputdialog_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QPaintEvent* event ```
+/// @param self QInputDialog*
+/// @param event QPaintEvent*
 void q_inputdialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3587,7 +4209,8 @@ void q_inputdialog_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QPaintEvent* event ```
+/// @param self QInputDialog*
+/// @param event QPaintEvent*
 void q_inputdialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3596,8 +4219,9 @@ void q_inputdialog_qbase_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QPaintEvent*) ```
-void q_inputdialog_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QPaintEvent*)
+void q_inputdialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3605,7 +4229,8 @@ void q_inputdialog_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMoveEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMoveEvent*
 void q_inputdialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3614,7 +4239,8 @@ void q_inputdialog_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMoveEvent* event ```
+/// @param self QInputDialog*
+/// @param event QMoveEvent*
 void q_inputdialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3623,8 +4249,9 @@ void q_inputdialog_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMoveEvent*) ```
-void q_inputdialog_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMoveEvent*)
+void q_inputdialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3632,7 +4259,8 @@ void q_inputdialog_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QTabletEvent* event ```
+/// @param self QInputDialog*
+/// @param event QTabletEvent*
 void q_inputdialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3641,7 +4269,8 @@ void q_inputdialog_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QTabletEvent* event ```
+/// @param self QInputDialog*
+/// @param event QTabletEvent*
 void q_inputdialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3650,8 +4279,9 @@ void q_inputdialog_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QTabletEvent*) ```
-void q_inputdialog_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QTabletEvent*)
+void q_inputdialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3659,7 +4289,8 @@ void q_inputdialog_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QActionEvent* event ```
+/// @param self QInputDialog*
+/// @param event QActionEvent*
 void q_inputdialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3668,7 +4299,8 @@ void q_inputdialog_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QActionEvent* event ```
+/// @param self QInputDialog*
+/// @param event QActionEvent*
 void q_inputdialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3677,8 +4309,9 @@ void q_inputdialog_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QActionEvent*) ```
-void q_inputdialog_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QActionEvent*)
+void q_inputdialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3686,7 +4319,8 @@ void q_inputdialog_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QDragEnterEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDragEnterEvent*
 void q_inputdialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3695,7 +4329,8 @@ void q_inputdialog_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QDragEnterEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDragEnterEvent*
 void q_inputdialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3704,8 +4339,9 @@ void q_inputdialog_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QDragEnterEvent*) ```
-void q_inputdialog_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QDragEnterEvent*)
+void q_inputdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3713,7 +4349,8 @@ void q_inputdialog_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QDragMoveEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDragMoveEvent*
 void q_inputdialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3722,7 +4359,8 @@ void q_inputdialog_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QDragMoveEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDragMoveEvent*
 void q_inputdialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3731,8 +4369,9 @@ void q_inputdialog_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QDragMoveEvent*) ```
-void q_inputdialog_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QDragMoveEvent*)
+void q_inputdialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3740,7 +4379,8 @@ void q_inputdialog_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QDragLeaveEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDragLeaveEvent*
 void q_inputdialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3749,7 +4389,8 @@ void q_inputdialog_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QDragLeaveEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDragLeaveEvent*
 void q_inputdialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3758,8 +4399,9 @@ void q_inputdialog_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QDragLeaveEvent*) ```
-void q_inputdialog_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QDragLeaveEvent*)
+void q_inputdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3767,7 +4409,8 @@ void q_inputdialog_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QDropEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDropEvent*
 void q_inputdialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3776,7 +4419,8 @@ void q_inputdialog_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QDropEvent* event ```
+/// @param self QInputDialog*
+/// @param event QDropEvent*
 void q_inputdialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3785,8 +4429,9 @@ void q_inputdialog_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QDropEvent*) ```
-void q_inputdialog_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QDropEvent*)
+void q_inputdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3794,7 +4439,8 @@ void q_inputdialog_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QHideEvent* event ```
+/// @param self QInputDialog*
+/// @param event QHideEvent*
 void q_inputdialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3803,7 +4449,8 @@ void q_inputdialog_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QHideEvent* event ```
+/// @param self QInputDialog*
+/// @param event QHideEvent*
 void q_inputdialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3812,8 +4459,9 @@ void q_inputdialog_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QHideEvent*) ```
-void q_inputdialog_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QHideEvent*)
+void q_inputdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3821,7 +4469,10 @@ void q_inputdialog_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QInputDialog*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_inputdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3830,7 +4481,10 @@ bool q_inputdialog_native_event(void* self, const char* eventType, void* message
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QInputDialog*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_inputdialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3839,8 +4493,9 @@ bool q_inputdialog_qbase_native_event(void* self, const char* eventType, void* m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)(QInputDialog*, const char*, void*, intptr_t*) ```
-void q_inputdialog_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QInputDialog*
+/// @param callback bool fn(QInputDialog*, const char*, void*, intptr_t*)
+void q_inputdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3848,7 +4503,8 @@ void q_inputdialog_on_native_event(void* self, bool (*slot)(void*, const char*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QEvent*
 void q_inputdialog_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3857,7 +4513,8 @@ void q_inputdialog_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QEvent*
 void q_inputdialog_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3866,8 +4523,9 @@ void q_inputdialog_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QEvent*) ```
-void q_inputdialog_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QEvent*)
+void q_inputdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3875,7 +4533,8 @@ void q_inputdialog_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_inputdialog_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3884,7 +4543,8 @@ int32_t q_inputdialog_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_inputdialog_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3893,8 +4553,9 @@ int32_t q_inputdialog_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)(QInputDialog*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_inputdialog_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QInputDialog*
+/// @param callback int32_t fn(QInputDialog*, enum QPaintDevice__PaintDeviceMetric)
+void q_inputdialog_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3902,7 +4563,8 @@ void q_inputdialog_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QPainter* painter ```
+/// @param self QInputDialog*
+/// @param painter QPainter*
 void q_inputdialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3911,7 +4573,8 @@ void q_inputdialog_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QPainter* painter ```
+/// @param self QInputDialog*
+/// @param painter QPainter*
 void q_inputdialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3920,8 +4583,9 @@ void q_inputdialog_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QPainter*) ```
-void q_inputdialog_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QPainter*)
+void q_inputdialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3929,7 +4593,8 @@ void q_inputdialog_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QPoint* offset ```
+/// @param self QInputDialog*
+/// @param offset QPoint*
 QPaintDevice* q_inputdialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3938,7 +4603,8 @@ QPaintDevice* q_inputdialog_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QPoint* offset ```
+/// @param self QInputDialog*
+/// @param offset QPoint*
 QPaintDevice* q_inputdialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3947,8 +4613,9 @@ QPaintDevice* q_inputdialog_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QPaintDevice* (*slot)(QInputDialog*, QPoint*) ```
-void q_inputdialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback QPaintDevice* fn(QInputDialog*, QPoint*)
+void q_inputdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3956,7 +4623,7 @@ void q_inputdialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QPainter* q_inputdialog_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3965,7 +4632,7 @@ QPainter* q_inputdialog_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QPainter* q_inputdialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3974,8 +4641,9 @@ QPainter* q_inputdialog_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QPainter* (*slot)() ```
-void q_inputdialog_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QInputDialog*
+/// @param callback QPainter* fn()
+void q_inputdialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3983,7 +4651,8 @@ void q_inputdialog_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QInputMethodEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QInputMethodEvent*
 void q_inputdialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3992,7 +4661,8 @@ void q_inputdialog_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QInputMethodEvent* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QInputMethodEvent*
 void q_inputdialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -4001,8 +4671,9 @@ void q_inputdialog_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QInputMethodEvent*) ```
-void q_inputdialog_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QInputMethodEvent*)
+void q_inputdialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4010,7 +4681,8 @@ void q_inputdialog_on_input_method_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_inputdialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4019,7 +4691,8 @@ QVariant* q_inputdialog_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QInputDialog*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_inputdialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4028,8 +4701,9 @@ QVariant* q_inputdialog_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QVariant* (*slot)(QInputDialog*, enum Qt__InputMethodQuery) ```
-void q_inputdialog_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QInputDialog*
+/// @param callback QVariant* fn(QInputDialog*, enum Qt__InputMethodQuery)
+void q_inputdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -4037,7 +4711,8 @@ void q_inputdialog_on_input_method_query(void* self, QVariant* (*slot)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, bool next ```
+/// @param self QInputDialog*
+/// @param next bool
 bool q_inputdialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4046,7 +4721,8 @@ bool q_inputdialog_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool next ```
+/// @param self QInputDialog*
+/// @param next bool
 bool q_inputdialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -4055,8 +4731,9 @@ bool q_inputdialog_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)(QInputDialog*, bool) ```
-void q_inputdialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QInputDialog*
+/// @param callback bool fn(QInputDialog*, bool)
+void q_inputdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -4064,7 +4741,8 @@ void q_inputdialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QTimerEvent* event ```
+/// @param self QInputDialog*
+/// @param event QTimerEvent*
 void q_inputdialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4073,7 +4751,8 @@ void q_inputdialog_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QTimerEvent* event ```
+/// @param self QInputDialog*
+/// @param event QTimerEvent*
 void q_inputdialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4082,8 +4761,9 @@ void q_inputdialog_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QTimerEvent*) ```
-void q_inputdialog_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QTimerEvent*)
+void q_inputdialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4091,7 +4771,8 @@ void q_inputdialog_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QChildEvent* event ```
+/// @param self QInputDialog*
+/// @param event QChildEvent*
 void q_inputdialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4100,7 +4781,8 @@ void q_inputdialog_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QChildEvent* event ```
+/// @param self QInputDialog*
+/// @param event QChildEvent*
 void q_inputdialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4109,8 +4791,9 @@ void q_inputdialog_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QChildEvent*) ```
-void q_inputdialog_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QChildEvent*)
+void q_inputdialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4118,7 +4801,8 @@ void q_inputdialog_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEvent*
 void q_inputdialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4127,7 +4811,8 @@ void q_inputdialog_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QEvent* event ```
+/// @param self QInputDialog*
+/// @param event QEvent*
 void q_inputdialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4136,8 +4821,9 @@ void q_inputdialog_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QEvent*) ```
-void q_inputdialog_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QEvent*)
+void q_inputdialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4145,7 +4831,8 @@ void q_inputdialog_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMetaMethod* signal ```
+/// @param self QInputDialog*
+/// @param signal QMetaMethod*
 void q_inputdialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4154,7 +4841,8 @@ void q_inputdialog_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMetaMethod* signal ```
+/// @param self QInputDialog*
+/// @param signal QMetaMethod*
 void q_inputdialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4163,8 +4851,9 @@ void q_inputdialog_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMetaMethod*) ```
-void q_inputdialog_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMetaMethod*)
+void q_inputdialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4172,7 +4861,8 @@ void q_inputdialog_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMetaMethod* signal ```
+/// @param self QInputDialog*
+/// @param signal QMetaMethod*
 void q_inputdialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4181,7 +4871,8 @@ void q_inputdialog_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMetaMethod* signal ```
+/// @param self QInputDialog*
+/// @param signal QMetaMethod*
 void q_inputdialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4190,8 +4881,9 @@ void q_inputdialog_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QMetaMethod*) ```
-void q_inputdialog_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QMetaMethod*)
+void q_inputdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QDialog
 ///
@@ -4199,7 +4891,8 @@ void q_inputdialog_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QWidget* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
 void q_inputdialog_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -4208,7 +4901,8 @@ void q_inputdialog_adjust_position(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QWidget* param1 ```
+/// @param self QInputDialog*
+/// @param param1 QWidget*
 void q_inputdialog_qbase_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
@@ -4217,8 +4911,9 @@ void q_inputdialog_qbase_adjust_position(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, QWidget*) ```
-void q_inputdialog_on_adjust_position(void* self, void (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, QWidget*)
+void q_inputdialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4226,7 +4921,7 @@ void q_inputdialog_on_adjust_position(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4235,7 +4930,7 @@ void q_inputdialog_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4244,8 +4939,9 @@ void q_inputdialog_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)() ```
-void q_inputdialog_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QInputDialog*
+/// @param callback void fn()
+void q_inputdialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4253,7 +4949,7 @@ void q_inputdialog_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_create(void* self);
 
 /// Inherited from QWidget
@@ -4262,7 +4958,7 @@ void q_inputdialog_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4271,8 +4967,9 @@ void q_inputdialog_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)() ```
-void q_inputdialog_on_create(void* self, void (*slot)());
+/// @param self QInputDialog*
+/// @param callback void fn()
+void q_inputdialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4280,7 +4977,7 @@ void q_inputdialog_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4289,7 +4986,7 @@ void q_inputdialog_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4298,8 +4995,9 @@ void q_inputdialog_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, void (*slot)() ```
-void q_inputdialog_on_destroy(void* self, void (*slot)());
+/// @param self QInputDialog*
+/// @param callback void fn()
+void q_inputdialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4307,7 +5005,7 @@ void q_inputdialog_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4316,7 +5014,7 @@ bool q_inputdialog_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4325,8 +5023,9 @@ bool q_inputdialog_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)() ```
-void q_inputdialog_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QInputDialog*
+/// @param callback bool fn()
+void q_inputdialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4334,7 +5033,7 @@ void q_inputdialog_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4343,7 +5042,7 @@ bool q_inputdialog_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 bool q_inputdialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4352,8 +5051,9 @@ bool q_inputdialog_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)() ```
-void q_inputdialog_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QInputDialog*
+/// @param callback bool fn()
+void q_inputdialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4361,7 +5061,7 @@ void q_inputdialog_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QObject* q_inputdialog_sender(void* self);
 
 /// Inherited from QObject
@@ -4370,7 +5070,7 @@ QObject* q_inputdialog_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 QObject* q_inputdialog_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4379,8 +5079,9 @@ QObject* q_inputdialog_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QObject* (*slot)() ```
-void q_inputdialog_on_sender(void* self, QObject* (*slot)());
+/// @param self QInputDialog*
+/// @param callback QObject* fn()
+void q_inputdialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4388,7 +5089,7 @@ void q_inputdialog_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4397,7 +5098,7 @@ int32_t q_inputdialog_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 int32_t q_inputdialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4406,8 +5107,9 @@ int32_t q_inputdialog_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)() ```
-void q_inputdialog_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QInputDialog*
+/// @param callback int32_t fn()
+void q_inputdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4415,7 +5117,8 @@ void q_inputdialog_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, const char* signal ```
+/// @param self QInputDialog*
+/// @param signal const char*
 int32_t q_inputdialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4424,7 +5127,8 @@ int32_t q_inputdialog_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, const char* signal ```
+/// @param self QInputDialog*
+/// @param signal const char*
 int32_t q_inputdialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4433,8 +5137,9 @@ int32_t q_inputdialog_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, int32_t (*slot)(QInputDialog*, const char*) ```
-void q_inputdialog_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QInputDialog*
+/// @param callback int32_t fn(QInputDialog*, const char*)
+void q_inputdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4442,7 +5147,8 @@ void q_inputdialog_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, QMetaMethod* signal ```
+/// @param self QInputDialog*
+/// @param signal QMetaMethod*
 bool q_inputdialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4451,7 +5157,8 @@ bool q_inputdialog_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, QMetaMethod* signal ```
+/// @param self QInputDialog*
+/// @param signal QMetaMethod*
 bool q_inputdialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4460,8 +5167,9 @@ bool q_inputdialog_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, bool (*slot)(QInputDialog*, QMetaMethod*) ```
-void q_inputdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QInputDialog*
+/// @param callback bool fn(QInputDialog*, QMetaMethod*)
+void q_inputdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4469,7 +5177,9 @@ void q_inputdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QInputDialog*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_inputdialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4478,7 +5188,9 @@ double q_inputdialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QInputDialog*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_inputdialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4487,8 +5199,9 @@ double q_inputdialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDialog* self, double (*slot)(QInputDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_inputdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QInputDialog*
+/// @param callback double fn(QInputDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_inputdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4496,14 +5209,15 @@ void q_inputdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QInputDialog* self, void (*slot)(QInputDialog*, const char*) ```
-void q_inputdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QInputDialog*
+/// @param callback void fn(QInputDialog*, const char*)
+void q_inputdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdialog.html#dtor.QInputDialog)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QInputDialog* self ```
+/// @param self QInputDialog*
 void q_inputdialog_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qinputdialog.html#types

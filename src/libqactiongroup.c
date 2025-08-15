@@ -23,8 +23,8 @@ int32_t q_actiongroup_metacall(void* self, int64_t param1, int param2, void* par
     return QActionGroup_Metacall((QActionGroup*)self, param1, param2, param3);
 }
 
-void q_actiongroup_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QActionGroup_OnMetacall((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QActionGroup_OnMetacall((QActionGroup*)self, (intptr_t)callback);
 }
 
 int32_t q_actiongroup_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -103,16 +103,16 @@ void q_actiongroup_triggered(void* self, void* param1) {
     QActionGroup_Triggered((QActionGroup*)self, (QAction*)param1);
 }
 
-void q_actiongroup_on_triggered(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_Connect_Triggered((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_triggered(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_Connect_Triggered((QActionGroup*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_hovered(void* self, void* param1) {
     QActionGroup_Hovered((QActionGroup*)self, (QAction*)param1);
 }
 
-void q_actiongroup_on_hovered(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_Connect_Hovered((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_hovered(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_Connect_Hovered((QActionGroup*)self, (intptr_t)callback);
 }
 
 const char* q_actiongroup_tr2(const char* s, const char* c) {
@@ -233,12 +233,16 @@ const char** q_actiongroup_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_actiongroup_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -256,8 +260,8 @@ void q_actiongroup_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_actiongroup_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_actiongroup_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_actiongroup_parent(void* self) {
@@ -292,8 +296,8 @@ void q_actiongroup_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_actiongroup_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_actiongroup_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_actiongroup_event(void* self, void* event) {
@@ -304,8 +308,8 @@ bool q_actiongroup_qbase_event(void* self, void* event) {
     return QActionGroup_QBaseEvent((QActionGroup*)self, (QEvent*)event);
 }
 
-void q_actiongroup_on_event(void* self, bool (*slot)(void*, void*)) {
-    QActionGroup_OnEvent((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_event(void* self, bool (*callback)(void*, void*)) {
+    QActionGroup_OnEvent((QActionGroup*)self, (intptr_t)callback);
 }
 
 bool q_actiongroup_event_filter(void* self, void* watched, void* event) {
@@ -316,8 +320,8 @@ bool q_actiongroup_qbase_event_filter(void* self, void* watched, void* event) {
     return QActionGroup_QBaseEventFilter((QActionGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_actiongroup_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QActionGroup_OnEventFilter((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QActionGroup_OnEventFilter((QActionGroup*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_timer_event(void* self, void* event) {
@@ -328,8 +332,8 @@ void q_actiongroup_qbase_timer_event(void* self, void* event) {
     QActionGroup_QBaseTimerEvent((QActionGroup*)self, (QTimerEvent*)event);
 }
 
-void q_actiongroup_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_OnTimerEvent((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_OnTimerEvent((QActionGroup*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_child_event(void* self, void* event) {
@@ -340,8 +344,8 @@ void q_actiongroup_qbase_child_event(void* self, void* event) {
     QActionGroup_QBaseChildEvent((QActionGroup*)self, (QChildEvent*)event);
 }
 
-void q_actiongroup_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_OnChildEvent((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_OnChildEvent((QActionGroup*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_custom_event(void* self, void* event) {
@@ -352,8 +356,8 @@ void q_actiongroup_qbase_custom_event(void* self, void* event) {
     QActionGroup_QBaseCustomEvent((QActionGroup*)self, (QEvent*)event);
 }
 
-void q_actiongroup_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_OnCustomEvent((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_OnCustomEvent((QActionGroup*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_connect_notify(void* self, void* signal) {
@@ -364,8 +368,8 @@ void q_actiongroup_qbase_connect_notify(void* self, void* signal) {
     QActionGroup_QBaseConnectNotify((QActionGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_actiongroup_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_OnConnectNotify((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_OnConnectNotify((QActionGroup*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_disconnect_notify(void* self, void* signal) {
@@ -376,8 +380,8 @@ void q_actiongroup_qbase_disconnect_notify(void* self, void* signal) {
     QActionGroup_QBaseDisconnectNotify((QActionGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_actiongroup_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QActionGroup_OnDisconnectNotify((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QActionGroup_OnDisconnectNotify((QActionGroup*)self, (intptr_t)callback);
 }
 
 QObject* q_actiongroup_sender(void* self) {
@@ -388,8 +392,8 @@ QObject* q_actiongroup_qbase_sender(void* self) {
     return QActionGroup_QBaseSender((QActionGroup*)self);
 }
 
-void q_actiongroup_on_sender(void* self, QObject* (*slot)()) {
-    QActionGroup_OnSender((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_sender(void* self, QObject* (*callback)()) {
+    QActionGroup_OnSender((QActionGroup*)self, (intptr_t)callback);
 }
 
 int32_t q_actiongroup_sender_signal_index(void* self) {
@@ -400,8 +404,8 @@ int32_t q_actiongroup_qbase_sender_signal_index(void* self) {
     return QActionGroup_QBaseSenderSignalIndex((QActionGroup*)self);
 }
 
-void q_actiongroup_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QActionGroup_OnSenderSignalIndex((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QActionGroup_OnSenderSignalIndex((QActionGroup*)self, (intptr_t)callback);
 }
 
 int32_t q_actiongroup_receivers(void* self, const char* signal) {
@@ -412,8 +416,8 @@ int32_t q_actiongroup_qbase_receivers(void* self, const char* signal) {
     return QActionGroup_QBaseReceivers((QActionGroup*)self, signal);
 }
 
-void q_actiongroup_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QActionGroup_OnReceivers((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QActionGroup_OnReceivers((QActionGroup*)self, (intptr_t)callback);
 }
 
 bool q_actiongroup_is_signal_connected(void* self, void* signal) {
@@ -424,12 +428,12 @@ bool q_actiongroup_qbase_is_signal_connected(void* self, void* signal) {
     return QActionGroup_QBaseIsSignalConnected((QActionGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_actiongroup_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QActionGroup_OnIsSignalConnected((QActionGroup*)self, (intptr_t)slot);
+void q_actiongroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QActionGroup_OnIsSignalConnected((QActionGroup*)self, (intptr_t)callback);
 }
 
-void q_actiongroup_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_actiongroup_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_actiongroup_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,948 +15,1179 @@
 
 /// q_identityproxymodel_new constructs a new QIdentityProxyModel object.
 ///
-///
 QIdentityProxyModel* q_identityproxymodel_new();
 
 /// q_identityproxymodel_new2 constructs a new QIdentityProxyModel object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QIdentityProxyModel* q_identityproxymodel_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 const QMetaObject* q_identityproxymodel_meta_object(void* self);
 
-/// ``` QIdentityProxyModel* self, const char* param1 ```
+/// @param self QIdentityProxyModel*
+/// @param param1 const char*
 void* q_identityproxymodel_metacast(void* self, const char* param1);
 
-/// ``` QIdentityProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QIdentityProxyModel*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_identityproxymodel_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, int32_t (*slot)(QIdentityProxyModel*, enum QMetaObject__Call, int, void*) ```
-void q_identityproxymodel_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback int32_t fn(QIdentityProxyModel*, enum QMetaObject__Call, int, void*)
+void q_identityproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QIdentityProxyModel*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_identityproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_identityproxymodel_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#columnCount)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 int32_t q_identityproxymodel_column_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#columnCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, int32_t (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_column_count(void* self, int32_t (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback int32_t fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#columnCount)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 int32_t q_identityproxymodel_qbase_column_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#index)
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 QModelIndex* q_identityproxymodel_index(void* self, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#index)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_index(void* self, QModelIndex* (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, int, int, QModelIndex*)
+void q_identityproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#index)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 QModelIndex* q_identityproxymodel_qbase_index(void* self, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapFromSource)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceIndex ```
+/// @param self QIdentityProxyModel*
+/// @param sourceIndex QModelIndex*
 QModelIndex* q_identityproxymodel_map_from_source(void* self, void* sourceIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapFromSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_map_from_source(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapFromSource)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceIndex ```
+/// @param self QIdentityProxyModel*
+/// @param sourceIndex QModelIndex*
 QModelIndex* q_identityproxymodel_qbase_map_from_source(void* self, void* sourceIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapToSource)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* proxyIndex ```
+/// @param self QIdentityProxyModel*
+/// @param proxyIndex QModelIndex*
 QModelIndex* q_identityproxymodel_map_to_source(void* self, void* proxyIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapToSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_map_to_source(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapToSource)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* proxyIndex ```
+/// @param self QIdentityProxyModel*
+/// @param proxyIndex QModelIndex*
 QModelIndex* q_identityproxymodel_qbase_map_to_source(void* self, void* proxyIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#parent)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* child ```
+/// @param self QIdentityProxyModel*
+/// @param child QModelIndex*
 QModelIndex* q_identityproxymodel_parent(void* self, void* child);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#parent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_parent(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#parent)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* child ```
+/// @param self QIdentityProxyModel*
+/// @param child QModelIndex*
 QModelIndex* q_identityproxymodel_qbase_parent(void* self, void* child);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#rowCount)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 int32_t q_identityproxymodel_row_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#rowCount)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, int32_t (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_row_count(void* self, int32_t (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback int32_t fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#rowCount)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 int32_t q_identityproxymodel_qbase_row_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#headerData)
 ///
-/// ``` QIdentityProxyModel* self, int section, enum Qt__Orientation orientation, int role ```
+/// @param self QIdentityProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param role int
 QVariant* q_identityproxymodel_header_data(void* self, int section, int64_t orientation, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#headerData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QVariant* (*slot)(QIdentityProxyModel*, int, enum Qt__Orientation, int) ```
-void q_identityproxymodel_on_header_data(void* self, QVariant* (*slot)(void*, int, int64_t, int));
+/// @param self QIdentityProxyModel*
+/// @param callback QVariant* fn(QIdentityProxyModel*, int, enum Qt__Orientation, int)
+void q_identityproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#headerData)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int section, enum Qt__Orientation orientation, int role ```
+/// @param self QIdentityProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param role int
 QVariant* q_identityproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
-/// ``` QIdentityProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+void q_identityproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dropMimeData)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#sibling)
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* idx ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param idx QModelIndex*
 QModelIndex* q_identityproxymodel_sibling(void* self, int row, int column, void* idx);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#sibling)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_sibling(void* self, QModelIndex* (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, int, int, QModelIndex*)
+void q_identityproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#sibling)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* idx ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param idx QModelIndex*
 QModelIndex* q_identityproxymodel_qbase_sibling(void* self, int row, int column, void* idx);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
-/// ``` QIdentityProxyModel* self, QItemSelection* selection ```
+/// @param self QIdentityProxyModel*
+/// @param selection QItemSelection*
 QItemSelection* q_identityproxymodel_map_selection_from_source(void* self, void* selection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QItemSelection* (*slot)(QIdentityProxyModel*, QItemSelection*) ```
-void q_identityproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QItemSelection* fn(QIdentityProxyModel*, QItemSelection*)
+void q_identityproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionFromSource)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QItemSelection* selection ```
+/// @param self QIdentityProxyModel*
+/// @param selection QItemSelection*
 QItemSelection* q_identityproxymodel_qbase_map_selection_from_source(void* self, void* selection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
-/// ``` QIdentityProxyModel* self, QItemSelection* selection ```
+/// @param self QIdentityProxyModel*
+/// @param selection QItemSelection*
 QItemSelection* q_identityproxymodel_map_selection_to_source(void* self, void* selection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, QItemSelection* (*slot)(QIdentityProxyModel*, QItemSelection*) ```
-void q_identityproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QItemSelection* fn(QIdentityProxyModel*, QItemSelection*)
+void q_identityproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#mapSelectionToSource)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QItemSelection* selection ```
+/// @param self QIdentityProxyModel*
+/// @param selection QItemSelection*
 QItemSelection* q_identityproxymodel_qbase_map_selection_to_source(void* self, void* selection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
+/// @param self QIdentityProxyModel*
+/// @param start QModelIndex*
+/// @param role int
+/// @param value QVariant*
+/// @param hits int
+/// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ q_identityproxymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ (*slot)(QIdentityProxyModel*, QModelIndex*, int, QVariant*, int, int) ```
-void q_identityproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*slot)(void*, void*, int, void*, int, int64_t));
+/// @param self QIdentityProxyModel*
+/// @param callback libqt_list /* of QModelIndex* */ fn(QIdentityProxyModel*, QModelIndex*, int, QVariant*, int, flag of enum Qt__MatchFlag)
+void q_identityproxymodel_on_match(void* self, libqt_list /* of QModelIndex* */ (*callback)(void*, void*, int, void*, int, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#match)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
+/// @param self QIdentityProxyModel*
+/// @param start QModelIndex*
+/// @param role int
+/// @param value QVariant*
+/// @param hits int
+/// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
-/// ``` QIdentityProxyModel* self, QAbstractItemModel* sourceModel ```
+/// @param self QIdentityProxyModel*
+/// @param sourceModel QAbstractItemModel*
 void q_identityproxymodel_set_source_model(void* self, void* sourceModel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QAbstractItemModel*) ```
-void q_identityproxymodel_on_set_source_model(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QAbstractItemModel*)
+void q_identityproxymodel_on_set_source_model(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setSourceModel)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QAbstractItemModel* sourceModel ```
+/// @param self QIdentityProxyModel*
+/// @param sourceModel QAbstractItemModel*
 void q_identityproxymodel_qbase_set_source_model(void* self, void* sourceModel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
-/// ``` QIdentityProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_insert_columns(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, int, int, QModelIndex*)
+void q_identityproxymodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertColumns)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
-/// ``` QIdentityProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_insert_rows(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, int, int, QModelIndex*)
+void q_identityproxymodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#insertRows)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
-/// ``` QIdentityProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_remove_columns(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, int, int, QModelIndex*)
+void q_identityproxymodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeColumns)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
-/// ``` QIdentityProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_remove_rows(void* self, bool (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, int, int, QModelIndex*)
+void q_identityproxymodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#removeRows)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_identityproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveRows)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_identityproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_identityproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#moveColumns)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_identityproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceLayoutChanges)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_handle_source_layout_changes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#handleSourceDataChanges)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_handle_source_data_changes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
-/// ``` QIdentityProxyModel* self, bool handleSourceLayoutChanges ```
+/// @param self QIdentityProxyModel*
+/// @param handleSourceLayoutChanges bool
 void q_identityproxymodel_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, bool) ```
-void q_identityproxymodel_on_set_handle_source_layout_changes(void* self, void (*slot)(void*, bool));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, bool)
+void q_identityproxymodel_on_set_handle_source_layout_changes(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceLayoutChanges)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, bool handleSourceLayoutChanges ```
+/// @param self QIdentityProxyModel*
+/// @param handleSourceLayoutChanges bool
 void q_identityproxymodel_qbase_set_handle_source_layout_changes(void* self, bool handleSourceLayoutChanges);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
-/// ``` QIdentityProxyModel* self, bool handleSourceDataChanges ```
+/// @param self QIdentityProxyModel*
+/// @param handleSourceDataChanges bool
 void q_identityproxymodel_set_handle_source_data_changes(void* self, bool handleSourceDataChanges);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, bool) ```
-void q_identityproxymodel_on_set_handle_source_data_changes(void* self, void (*slot)(void*, bool));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, bool)
+void q_identityproxymodel_on_set_handle_source_data_changes(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#setHandleSourceDataChanges)
 ///
 /// Base class method implementation
 ///
-/// ``` QIdentityProxyModel* self, bool handleSourceDataChanges ```
+/// @param self QIdentityProxyModel*
+/// @param handleSourceDataChanges bool
 void q_identityproxymodel_qbase_set_handle_source_data_changes(void* self, bool handleSourceDataChanges);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_identityproxymodel_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_identityproxymodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractProxyModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#sourceModel)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 QAbstractItemModel* q_identityproxymodel_source_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// ``` QIdentityProxyModel* self, int row, int column ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
 bool q_identityproxymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
-/// ``` QIdentityProxyModel* self, int row ```
+/// @param self QIdentityProxyModel*
+/// @param row int
 bool q_identityproxymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
-/// ``` QIdentityProxyModel* self, int column ```
+/// @param self QIdentityProxyModel*
+/// @param column int
 bool q_identityproxymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
-/// ``` QIdentityProxyModel* self, int row ```
+/// @param self QIdentityProxyModel*
+/// @param row int
 bool q_identityproxymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
-/// ``` QIdentityProxyModel* self, int column ```
+/// @param self QIdentityProxyModel*
+/// @param column int
 bool q_identityproxymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceRow, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_identityproxymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceColumn, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_identityproxymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 bool q_identityproxymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight ```
+/// @param self QIdentityProxyModel*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
 void q_identityproxymodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, QModelIndex*) ```
-void q_identityproxymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, QModelIndex*)
+void q_identityproxymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QIdentityProxyModel* self, enum Qt__Orientation orientation, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param orientation enum Qt__Orientation
+/// @param first int
+/// @param last int
 void q_identityproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, enum Qt__Orientation, int, int) ```
-void q_identityproxymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, enum Qt__Orientation, int, int)
+void q_identityproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*) ```
-void q_identityproxymodel_on_layout_changed(void* self, void (*slot)(void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*)
+void q_identityproxymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*) ```
-void q_identityproxymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*)
+void q_identityproxymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
-/// ``` QIdentityProxyModel* self, int row, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
-/// ``` QIdentityProxyModel* self, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
-/// ``` QIdentityProxyModel* self, int row, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
-/// ``` QIdentityProxyModel* self, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, int options ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param options flag of enum QAbstractItemModel__CheckIndexOption
 bool q_identityproxymodel_check_index2(void* self, void* index, int64_t options);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+/// @param self QIdentityProxyModel*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
+/// @param roles libqt_list /* of int */
 void q_identityproxymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
-void q_identityproxymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
+void q_identityproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+/// @param self QIdentityProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
 void q_identityproxymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
-void q_identityproxymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */)
+void q_identityproxymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+/// @param self QIdentityProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param hint enum QAbstractItemModel__LayoutChangeHint
 void q_identityproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
-void q_identityproxymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+void q_identityproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+/// @param self QIdentityProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
 void q_identityproxymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
-void q_identityproxymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */)
+void q_identityproxymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+/// @param self QIdentityProxyModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param hint enum QAbstractItemModel__LayoutChangeHint
 void q_identityproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
-void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QIdentityProxyModel*
 const char* q_identityproxymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QIdentityProxyModel* self, char* name ```
+/// @param self QIdentityProxyModel*
+/// @param name char*
 void q_identityproxymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QIdentityProxyModel* self, bool b ```
+/// @param self QIdentityProxyModel*
+/// @param b bool
 bool q_identityproxymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 QThread* q_identityproxymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QIdentityProxyModel* self, QThread* thread ```
+/// @param self QIdentityProxyModel*
+/// @param thread QThread*
 bool q_identityproxymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QIdentityProxyModel* self, int interval ```
+/// @param self QIdentityProxyModel*
+/// @param interval int
 int32_t q_identityproxymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QIdentityProxyModel* self, int id ```
+/// @param self QIdentityProxyModel*
+/// @param id int
 void q_identityproxymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QIdentityProxyModel* self, enum Qt__TimerId id ```
+/// @param self QIdentityProxyModel*
+/// @param id enum Qt__TimerId
 void q_identityproxymodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 libqt_list /* of QObject* */ q_identityproxymodel_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QIdentityProxyModel* self, QObject* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QObject*
 void q_identityproxymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QIdentityProxyModel* self, QObject* filterObj ```
+/// @param self QIdentityProxyModel*
+/// @param filterObj QObject*
 void q_identityproxymodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QIdentityProxyModel* self, QObject* obj ```
+/// @param self QIdentityProxyModel*
+/// @param obj QObject*
 void q_identityproxymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_identityproxymodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QIdentityProxyModel* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QIdentityProxyModel*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_identityproxymodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_identityproxymodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_identityproxymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QIdentityProxyModel* self, const char* name, QVariant* value ```
+/// @param self QIdentityProxyModel*
+/// @param name const char*
+/// @param value QVariant*
 bool q_identityproxymodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QIdentityProxyModel* self, const char* name ```
+/// @param self QIdentityProxyModel*
+/// @param name const char*
 QVariant* q_identityproxymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QIdentityProxyModel*
 const char** q_identityproxymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 QBindingStorage* q_identityproxymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 const QBindingStorage* q_identityproxymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*) ```
-void q_identityproxymodel_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*)
+void q_identityproxymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QIdentityProxyModel* self, const char* classname ```
+/// @param self QIdentityProxyModel*
+/// @param classname const char*
 bool q_identityproxymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QIdentityProxyModel* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QIdentityProxyModel*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_identityproxymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QIdentityProxyModel* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QIdentityProxyModel*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_identityproxymodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_identityproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QIdentityProxyModel* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QIdentityProxyModel*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_identityproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIdentityProxyModel* self, QObject* param1 ```
+/// @param self QIdentityProxyModel*
+/// @param param1 QObject*
 void q_identityproxymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QObject*) ```
-void q_identityproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QObject*)
+void q_identityproxymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -965,7 +1195,7 @@ void q_identityproxymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -974,7 +1204,7 @@ bool q_identityproxymodel_submit(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 bool q_identityproxymodel_qbase_submit(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -983,8 +1213,9 @@ bool q_identityproxymodel_qbase_submit(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)() ```
-void q_identityproxymodel_on_submit(void* self, bool (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn()
+void q_identityproxymodel_on_submit(void* self, bool (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -992,7 +1223,7 @@ void q_identityproxymodel_on_submit(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1001,7 +1232,7 @@ void q_identityproxymodel_revert(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_revert(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1010,8 +1241,9 @@ void q_identityproxymodel_qbase_revert(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_revert(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_revert(void* self, void (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1019,7 +1251,9 @@ void q_identityproxymodel_on_revert(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* proxyIndex, int role ```
+/// @param self QIdentityProxyModel*
+/// @param proxyIndex QModelIndex*
+/// @param role int
 QVariant* q_identityproxymodel_data(void* self, void* proxyIndex, int role);
 
 /// Inherited from QAbstractProxyModel
@@ -1028,7 +1262,9 @@ QVariant* q_identityproxymodel_data(void* self, void* proxyIndex, int role);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* proxyIndex, int role ```
+/// @param self QIdentityProxyModel*
+/// @param proxyIndex QModelIndex*
+/// @param role int
 QVariant* q_identityproxymodel_qbase_data(void* self, void* proxyIndex, int role);
 
 /// Inherited from QAbstractProxyModel
@@ -1037,8 +1273,9 @@ QVariant* q_identityproxymodel_qbase_data(void* self, void* proxyIndex, int role
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QVariant* (*slot)(QIdentityProxyModel*, QModelIndex*, int) ```
-void q_identityproxymodel_on_data(void* self, QVariant* (*slot)(void*, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback QVariant* fn(QIdentityProxyModel*, QModelIndex*, int)
+void q_identityproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1046,7 +1283,8 @@ void q_identityproxymodel_on_data(void* self, QVariant* (*slot)(void*, void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 libqt_map /* of int to QVariant* */ q_identityproxymodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1055,7 +1293,8 @@ libqt_map /* of int to QVariant* */ q_identityproxymodel_item_data(void* self, v
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 libqt_map /* of int to QVariant* */ q_identityproxymodel_qbase_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1064,8 +1303,9 @@ libqt_map /* of int to QVariant* */ q_identityproxymodel_qbase_item_data(void* s
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_map /* of int to QVariant* */ (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback libqt_map /* of int to QVariant* */ fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_item_data(void* self, libqt_map /* of int to QVariant* */ (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1073,7 +1313,10 @@ void q_identityproxymodel_on_item_data(void* self, libqt_map /* of int to QVaria
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+///
+/// @return flag of enum Qt__ItemFlag
 int64_t q_identityproxymodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1082,7 +1325,10 @@ int64_t q_identityproxymodel_flags(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+///
+/// @return flag of enum Qt__ItemFlag
 int64_t q_identityproxymodel_qbase_flags(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1091,8 +1337,9 @@ int64_t q_identityproxymodel_qbase_flags(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int64_t (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_flags(void* self, int64_t (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback int64_t fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_flags(void* self, int64_t (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1100,7 +1347,10 @@ void q_identityproxymodel_on_flags(void* self, int64_t (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, QVariant* value, int role ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param value QVariant*
+/// @param role int
 bool q_identityproxymodel_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractProxyModel
@@ -1109,7 +1359,10 @@ bool q_identityproxymodel_set_data(void* self, void* index, void* value, int rol
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, QVariant* value, int role ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param value QVariant*
+/// @param role int
 bool q_identityproxymodel_qbase_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractProxyModel
@@ -1118,8 +1371,9 @@ bool q_identityproxymodel_qbase_set_data(void* self, void* index, void* value, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*, QVariant*, int) ```
-void q_identityproxymodel_on_set_data(void* self, bool (*slot)(void*, void*, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*, QVariant*, int)
+void q_identityproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1127,7 +1381,9 @@ void q_identityproxymodel_on_set_data(void* self, bool (*slot)(void*, void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param roles libqt_map /* of int to QVariant* */
 bool q_identityproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractProxyModel
@@ -1136,7 +1392,9 @@ bool q_identityproxymodel_set_item_data(void* self, void* index, libqt_map /* of
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param roles libqt_map /* of int to QVariant* */
 bool q_identityproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractProxyModel
@@ -1145,8 +1403,9 @@ bool q_identityproxymodel_qbase_set_item_data(void* self, void* index, libqt_map
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*, libqt_map /* of int to QVariant* */) ```
-void q_identityproxymodel_on_set_item_data(void* self, bool (*slot)(void*, void*, libqt_map /* of int to QVariant* */));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*, libqt_map /* of int to QVariant* */)
+void q_identityproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map /* of int to QVariant* */));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1154,7 +1413,11 @@ void q_identityproxymodel_on_set_item_data(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
+/// @param self QIdentityProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param value QVariant*
+/// @param role int
 bool q_identityproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
 /// Inherited from QAbstractProxyModel
@@ -1163,7 +1426,11 @@ bool q_identityproxymodel_set_header_data(void* self, int section, int64_t orien
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
+/// @param self QIdentityProxyModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param value QVariant*
+/// @param role int
 bool q_identityproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
 /// Inherited from QAbstractProxyModel
@@ -1172,8 +1439,9 @@ bool q_identityproxymodel_qbase_set_header_data(void* self, int section, int64_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, int, enum Qt__Orientation, QVariant*, int) ```
-void q_identityproxymodel_on_set_header_data(void* self, bool (*slot)(void*, int, int64_t, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, int, enum Qt__Orientation, QVariant*, int)
+void q_identityproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1181,7 +1449,8 @@ void q_identityproxymodel_on_set_header_data(void* self, bool (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 bool q_identityproxymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1190,7 +1459,8 @@ bool q_identityproxymodel_clear_item_data(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 bool q_identityproxymodel_qbase_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1199,8 +1469,9 @@ bool q_identityproxymodel_qbase_clear_item_data(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_clear_item_data(void* self, bool (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1208,7 +1479,8 @@ void q_identityproxymodel_on_clear_item_data(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 QModelIndex* q_identityproxymodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1217,7 +1489,8 @@ QModelIndex* q_identityproxymodel_buddy(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 QModelIndex* q_identityproxymodel_qbase_buddy(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1226,8 +1499,9 @@ QModelIndex* q_identityproxymodel_qbase_buddy(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_buddy(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1235,7 +1509,8 @@ void q_identityproxymodel_on_buddy(void* self, QModelIndex* (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 bool q_identityproxymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1244,7 +1519,8 @@ bool q_identityproxymodel_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1253,8 +1529,9 @@ bool q_identityproxymodel_qbase_can_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_can_fetch_more(void* self, bool (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1262,7 +1539,8 @@ void q_identityproxymodel_on_can_fetch_more(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 void q_identityproxymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1271,7 +1549,8 @@ void q_identityproxymodel_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 void q_identityproxymodel_qbase_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1280,8 +1559,9 @@ void q_identityproxymodel_qbase_fetch_more(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_fetch_more(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1289,7 +1569,9 @@ void q_identityproxymodel_on_fetch_more(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int column, enum Qt__SortOrder order ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param order enum Qt__SortOrder
 void q_identityproxymodel_sort(void* self, int column, int64_t order);
 
 /// Inherited from QAbstractProxyModel
@@ -1298,7 +1580,9 @@ void q_identityproxymodel_sort(void* self, int column, int64_t order);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int column, enum Qt__SortOrder order ```
+/// @param self QIdentityProxyModel*
+/// @param column int
+/// @param order enum Qt__SortOrder
 void q_identityproxymodel_qbase_sort(void* self, int column, int64_t order);
 
 /// Inherited from QAbstractProxyModel
@@ -1307,8 +1591,9 @@ void q_identityproxymodel_qbase_sort(void* self, int column, int64_t order);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, int, enum Qt__SortOrder) ```
-void q_identityproxymodel_on_sort(void* self, void (*slot)(void*, int, int64_t));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, int, enum Qt__SortOrder)
+void q_identityproxymodel_on_sort(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1316,7 +1601,8 @@ void q_identityproxymodel_on_sort(void* self, void (*slot)(void*, int, int64_t))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 QSize* q_identityproxymodel_span(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1325,7 +1611,8 @@ QSize* q_identityproxymodel_span(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
 QSize* q_identityproxymodel_qbase_span(void* self, void* index);
 
 /// Inherited from QAbstractProxyModel
@@ -1334,8 +1621,9 @@ QSize* q_identityproxymodel_qbase_span(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QSize* (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_span(void* self, QSize* (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QSize* fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1343,7 +1631,8 @@ void q_identityproxymodel_on_span(void* self, QSize* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 bool q_identityproxymodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1352,7 +1641,8 @@ bool q_identityproxymodel_has_children(void* self, void* parent);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1361,8 +1651,9 @@ bool q_identityproxymodel_qbase_has_children(void* self, void* parent);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*) ```
-void q_identityproxymodel_on_has_children(void* self, bool (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*)
+void q_identityproxymodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1370,7 +1661,8 @@ void q_identityproxymodel_on_has_children(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ indexes ```
+/// @param self QIdentityProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* q_identityproxymodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractProxyModel
@@ -1379,7 +1671,8 @@ QMimeData* q_identityproxymodel_mime_data(void* self, libqt_list indexes);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ indexes ```
+/// @param self QIdentityProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* q_identityproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractProxyModel
@@ -1388,8 +1681,9 @@ QMimeData* q_identityproxymodel_qbase_mime_data(void* self, libqt_list indexes);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMimeData* (*slot)(QIdentityProxyModel*, libqt_list /* of QModelIndex* */ indexes ) ```
-void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*slot)(void*, libqt_list));
+/// @param self QIdentityProxyModel*
+/// @param callback QMimeData* fn(QIdentityProxyModel*, libqt_list /* of QModelIndex* */)
+void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1397,7 +1691,12 @@ void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*slot)(void*, lib
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1406,7 +1705,12 @@ bool q_identityproxymodel_can_drop_mime_data(void* self, void* data, int64_t act
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QIdentityProxyModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_identityproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractProxyModel
@@ -1415,25 +1719,30 @@ bool q_identityproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*) ```
-void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*slot)(void*, void*, int64_t, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
+void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 const char** q_identityproxymodel_mime_types(void* self);
 
 /// Inherited from QAbstractProxyModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractproxymodel.html#mimeTypes)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 const char** q_identityproxymodel_qbase_mime_types(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1442,8 +1751,9 @@ const char** q_identityproxymodel_qbase_mime_types(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, const char** (*slot)() ```
-void q_identityproxymodel_on_mime_types(void* self, const char** (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback const char** fn()
+void q_identityproxymodel_on_mime_types(void* self, const char** (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1451,7 +1761,9 @@ void q_identityproxymodel_on_mime_types(void* self, const char** (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_identityproxymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1460,7 +1772,9 @@ int64_t q_identityproxymodel_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_identityproxymodel_qbase_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1469,8 +1783,9 @@ int64_t q_identityproxymodel_qbase_supported_drag_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int64_t (*slot)() ```
-void q_identityproxymodel_on_supported_drag_actions(void* self, int64_t (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback int64_t fn()
+void q_identityproxymodel_on_supported_drag_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1478,7 +1793,9 @@ void q_identityproxymodel_on_supported_drag_actions(void* self, int64_t (*slot)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_identityproxymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1487,7 +1804,9 @@ int64_t q_identityproxymodel_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_identityproxymodel_qbase_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1496,8 +1815,9 @@ int64_t q_identityproxymodel_qbase_supported_drop_actions(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int64_t (*slot)() ```
-void q_identityproxymodel_on_supported_drop_actions(void* self, int64_t (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback int64_t fn()
+void q_identityproxymodel_on_supported_drop_actions(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1505,7 +1825,7 @@ void q_identityproxymodel_on_supported_drop_actions(void* self, int64_t (*slot)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 libqt_map /* of int to char* */ q_identityproxymodel_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1514,7 +1834,7 @@ libqt_map /* of int to char* */ q_identityproxymodel_role_names(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 libqt_map /* of int to char* */ q_identityproxymodel_qbase_role_names(void* self);
 
 /// Inherited from QAbstractProxyModel
@@ -1523,8 +1843,9 @@ libqt_map /* of int to char* */ q_identityproxymodel_qbase_role_names(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_map /* of int to char* */ (*slot)() ```
-void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback libqt_map /* of int to char* */ fn()
+void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to char* */ (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1532,7 +1853,9 @@ void q_identityproxymodel_on_role_names(void* self, libqt_map /* of int to char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param roleDataSpan QModelRoleDataSpan*
 void q_identityproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1541,7 +1864,9 @@ void q_identityproxymodel_multi_data(void* self, void* index, void* roleDataSpan
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
+/// @param self QIdentityProxyModel*
+/// @param index QModelIndex*
+/// @param roleDataSpan QModelRoleDataSpan*
 void q_identityproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
@@ -1550,8 +1875,9 @@ void q_identityproxymodel_qbase_multi_data(void* self, void* index, void* roleDa
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, QModelRoleDataSpan*) ```
-void q_identityproxymodel_on_multi_data(void* self, void (*slot)(void*, void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, QModelRoleDataSpan*)
+void q_identityproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1559,7 +1885,7 @@ void q_identityproxymodel_on_multi_data(void* self, void (*slot)(void*, void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1568,7 +1894,7 @@ void q_identityproxymodel_reset_internal_data(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1577,8 +1903,9 @@ void q_identityproxymodel_qbase_reset_internal_data(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_reset_internal_data(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_reset_internal_data(void* self, void (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1586,7 +1913,8 @@ void q_identityproxymodel_on_reset_internal_data(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QEvent*
 bool q_identityproxymodel_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1595,7 +1923,8 @@ bool q_identityproxymodel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QEvent*
 bool q_identityproxymodel_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1604,8 +1933,9 @@ bool q_identityproxymodel_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QEvent*) ```
-void q_identityproxymodel_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QEvent*)
+void q_identityproxymodel_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1613,7 +1943,9 @@ void q_identityproxymodel_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QObject* watched, QEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_identityproxymodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1622,7 +1954,9 @@ bool q_identityproxymodel_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QObject* watched, QEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_identityproxymodel_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1631,8 +1965,9 @@ bool q_identityproxymodel_qbase_event_filter(void* self, void* watched, void* ev
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QObject*, QEvent*) ```
-void q_identityproxymodel_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QObject*, QEvent*)
+void q_identityproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1640,7 +1975,8 @@ void q_identityproxymodel_on_event_filter(void* self, bool (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QTimerEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QTimerEvent*
 void q_identityproxymodel_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1649,7 +1985,8 @@ void q_identityproxymodel_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QTimerEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QTimerEvent*
 void q_identityproxymodel_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1658,8 +1995,9 @@ void q_identityproxymodel_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QTimerEvent*) ```
-void q_identityproxymodel_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QTimerEvent*)
+void q_identityproxymodel_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1667,7 +2005,8 @@ void q_identityproxymodel_on_timer_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QChildEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QChildEvent*
 void q_identityproxymodel_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1676,7 +2015,8 @@ void q_identityproxymodel_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QChildEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QChildEvent*
 void q_identityproxymodel_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1685,8 +2025,9 @@ void q_identityproxymodel_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QChildEvent*) ```
-void q_identityproxymodel_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QChildEvent*)
+void q_identityproxymodel_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1694,7 +2035,8 @@ void q_identityproxymodel_on_child_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QEvent*
 void q_identityproxymodel_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1703,7 +2045,8 @@ void q_identityproxymodel_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QEvent* event ```
+/// @param self QIdentityProxyModel*
+/// @param event QEvent*
 void q_identityproxymodel_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1712,8 +2055,9 @@ void q_identityproxymodel_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QEvent*) ```
-void q_identityproxymodel_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QEvent*)
+void q_identityproxymodel_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1721,7 +2065,8 @@ void q_identityproxymodel_on_custom_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMetaMethod* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal QMetaMethod*
 void q_identityproxymodel_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1730,7 +2075,8 @@ void q_identityproxymodel_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMetaMethod* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal QMetaMethod*
 void q_identityproxymodel_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1739,8 +2085,9 @@ void q_identityproxymodel_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QMetaMethod*) ```
-void q_identityproxymodel_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QMetaMethod*)
+void q_identityproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1748,7 +2095,8 @@ void q_identityproxymodel_on_connect_notify(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMetaMethod* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal QMetaMethod*
 void q_identityproxymodel_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1757,7 +2105,8 @@ void q_identityproxymodel_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMetaMethod* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal QMetaMethod*
 void q_identityproxymodel_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1766,8 +2115,9 @@ void q_identityproxymodel_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QMetaMethod*) ```
-void q_identityproxymodel_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QMetaMethod*)
+void q_identityproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1775,7 +2125,10 @@ void q_identityproxymodel_on_disconnect_notify(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int row, int col, void* internalPtr ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param col int
+/// @param internalPtr void*
 QModelIndex* q_identityproxymodel_create_source_index(void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
@@ -1784,7 +2137,10 @@ QModelIndex* q_identityproxymodel_create_source_index(void* self, int row, int c
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int row, int col, void* internalPtr ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param col int
+/// @param internalPtr void*
 QModelIndex* q_identityproxymodel_qbase_create_source_index(void* self, int row, int col, void* internalPtr);
 
 /// Inherited from QAbstractProxyModel
@@ -1793,8 +2149,9 @@ QModelIndex* q_identityproxymodel_qbase_create_source_index(void* self, int row,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, int, int, void*) ```
-void q_identityproxymodel_on_create_source_index(void* self, QModelIndex* (*slot)(void*, int, int, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, int, int, void*)
+void q_identityproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1802,7 +2159,9 @@ void q_identityproxymodel_on_create_source_index(void* self, QModelIndex* (*slot
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int row, int column ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
 QModelIndex* q_identityproxymodel_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1811,7 +2170,9 @@ QModelIndex* q_identityproxymodel_create_index(void* self, int row, int column);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int row, int column ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
 QModelIndex* q_identityproxymodel_qbase_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
@@ -1820,8 +2181,9 @@ QModelIndex* q_identityproxymodel_qbase_create_index(void* self, int row, int co
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* (*slot)(QIdentityProxyModel*, int, int) ```
-void q_identityproxymodel_on_create_index(void* self, QModelIndex* (*slot)(void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback QModelIndex* fn(QIdentityProxyModel*, int, int)
+void q_identityproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1829,7 +2191,9 @@ void q_identityproxymodel_on_create_index(void* self, QModelIndex* (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+/// @param self QIdentityProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
+/// @param stream QDataStream*
 void q_identityproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1838,7 +2202,9 @@ void q_identityproxymodel_encode_data(void* self, libqt_list indexes, void* stre
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ indexes, QDataStream* stream ```
+/// @param self QIdentityProxyModel*
+/// @param indexes libqt_list /* of QModelIndex* */
+/// @param stream QDataStream*
 void q_identityproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1847,8 +2213,9 @@ void q_identityproxymodel_qbase_encode_data(void* self, libqt_list indexes, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, libqt_list /* of QModelIndex* */ indexes , QDataStream*) ```
-void q_identityproxymodel_on_encode_data(void* self, void (*slot)(void*, libqt_list, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, libqt_list /* of QModelIndex* */, QDataStream*)
+void q_identityproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1856,7 +2223,11 @@ void q_identityproxymodel_on_encode_data(void* self, void (*slot)(void*, libqt_l
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
+/// @param stream QDataStream*
 bool q_identityproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1865,7 +2236,11 @@ bool q_identityproxymodel_decode_data(void* self, int row, int column, void* par
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int row, int column, QModelIndex* parent, QDataStream* stream ```
+/// @param self QIdentityProxyModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
+/// @param stream QDataStream*
 bool q_identityproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
@@ -1874,8 +2249,9 @@ bool q_identityproxymodel_qbase_decode_data(void* self, int row, int column, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, int, int, QModelIndex*, QDataStream*) ```
-void q_identityproxymodel_on_decode_data(void* self, bool (*slot)(void*, int, int, void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, int, int, QModelIndex*, QDataStream*)
+void q_identityproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1883,7 +2259,10 @@ void q_identityproxymodel_on_decode_data(void* self, bool (*slot)(void*, int, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1892,7 +2271,10 @@ void q_identityproxymodel_begin_insert_rows(void* self, void* parent, int first,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1901,8 +2283,9 @@ void q_identityproxymodel_qbase_begin_insert_rows(void* self, void* parent, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_begin_insert_rows(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1910,7 +2293,7 @@ void q_identityproxymodel_on_begin_insert_rows(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1919,7 +2302,7 @@ void q_identityproxymodel_end_insert_rows(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1928,8 +2311,9 @@ void q_identityproxymodel_qbase_end_insert_rows(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_insert_rows(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_insert_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1937,7 +2321,10 @@ void q_identityproxymodel_on_end_insert_rows(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1946,7 +2333,10 @@ void q_identityproxymodel_begin_remove_rows(void* self, void* parent, int first,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -1955,8 +2345,9 @@ void q_identityproxymodel_qbase_begin_remove_rows(void* self, void* parent, int 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_begin_remove_rows(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1964,7 +2355,7 @@ void q_identityproxymodel_on_begin_remove_rows(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1973,7 +2364,7 @@ void q_identityproxymodel_end_remove_rows(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -1982,8 +2373,9 @@ void q_identityproxymodel_qbase_end_remove_rows(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_remove_rows(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_remove_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1991,7 +2383,12 @@ void q_identityproxymodel_on_end_remove_rows(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationRow int
 bool q_identityproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2000,7 +2397,12 @@ bool q_identityproxymodel_begin_move_rows(void* self, void* sourceParent, int so
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationRow ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationRow int
 bool q_identityproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
@@ -2009,8 +2411,9 @@ bool q_identityproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_begin_move_rows(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2018,7 +2421,7 @@ void q_identityproxymodel_on_begin_move_rows(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2027,7 +2430,7 @@ void q_identityproxymodel_end_move_rows(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2036,8 +2439,9 @@ void q_identityproxymodel_qbase_end_move_rows(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_move_rows(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_move_rows(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2045,7 +2449,10 @@ void q_identityproxymodel_on_end_move_rows(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2054,7 +2461,10 @@ void q_identityproxymodel_begin_insert_columns(void* self, void* parent, int fir
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2063,8 +2473,9 @@ void q_identityproxymodel_qbase_begin_insert_columns(void* self, void* parent, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_begin_insert_columns(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2072,7 +2483,7 @@ void q_identityproxymodel_on_begin_insert_columns(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2081,7 +2492,7 @@ void q_identityproxymodel_end_insert_columns(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2090,8 +2501,9 @@ void q_identityproxymodel_qbase_end_insert_columns(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_insert_columns(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_insert_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2099,7 +2511,10 @@ void q_identityproxymodel_on_end_insert_columns(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2108,7 +2523,10 @@ void q_identityproxymodel_begin_remove_columns(void* self, void* parent, int fir
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* parent, int first, int last ```
+/// @param self QIdentityProxyModel*
+/// @param parent QModelIndex*
+/// @param first int
+/// @param last int
 void q_identityproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
@@ -2117,8 +2535,9 @@ void q_identityproxymodel_qbase_begin_remove_columns(void* self, void* parent, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_begin_remove_columns(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2126,7 +2545,7 @@ void q_identityproxymodel_on_begin_remove_columns(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2135,7 +2554,7 @@ void q_identityproxymodel_end_remove_columns(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2144,8 +2563,9 @@ void q_identityproxymodel_qbase_end_remove_columns(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_remove_columns(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_remove_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2153,7 +2573,12 @@ void q_identityproxymodel_on_end_remove_columns(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationColumn int
 bool q_identityproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2162,7 +2587,12 @@ bool q_identityproxymodel_begin_move_columns(void* self, void* sourceParent, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* sourceParent, int sourceFirst, int sourceLast, QModelIndex* destinationParent, int destinationColumn ```
+/// @param self QIdentityProxyModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceFirst int
+/// @param sourceLast int
+/// @param destinationParent QModelIndex*
+/// @param destinationColumn int
 bool q_identityproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
@@ -2171,8 +2601,9 @@ bool q_identityproxymodel_qbase_begin_move_columns(void* self, void* sourceParen
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_begin_move_columns(void* self, bool (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2180,7 +2611,7 @@ void q_identityproxymodel_on_begin_move_columns(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2189,7 +2620,7 @@ void q_identityproxymodel_end_move_columns(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2198,8 +2629,9 @@ void q_identityproxymodel_qbase_end_move_columns(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_move_columns(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_move_columns(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2207,7 +2639,7 @@ void q_identityproxymodel_on_end_move_columns(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2216,7 +2648,7 @@ void q_identityproxymodel_begin_reset_model(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2225,8 +2657,9 @@ void q_identityproxymodel_qbase_begin_reset_model(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_begin_reset_model(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_begin_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2234,7 +2667,7 @@ void q_identityproxymodel_on_begin_reset_model(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2243,7 +2676,7 @@ void q_identityproxymodel_end_reset_model(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_qbase_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2252,8 +2685,9 @@ void q_identityproxymodel_qbase_end_reset_model(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)() ```
-void q_identityproxymodel_on_end_reset_model(void* self, void (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback void fn()
+void q_identityproxymodel_on_end_reset_model(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2261,7 +2695,9 @@ void q_identityproxymodel_on_end_reset_model(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* from, QModelIndex* to ```
+/// @param self QIdentityProxyModel*
+/// @param from QModelIndex*
+/// @param to QModelIndex*
 void q_identityproxymodel_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2270,7 +2706,9 @@ void q_identityproxymodel_change_persistent_index(void* self, void* from, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QModelIndex* from, QModelIndex* to ```
+/// @param self QIdentityProxyModel*
+/// @param from QModelIndex*
+/// @param to QModelIndex*
 void q_identityproxymodel_qbase_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
@@ -2279,8 +2717,9 @@ void q_identityproxymodel_qbase_change_persistent_index(void* self, void* from, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, QModelIndex*) ```
-void q_identityproxymodel_on_change_persistent_index(void* self, void (*slot)(void*, void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, QModelIndex*)
+void q_identityproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2288,7 +2727,9 @@ void q_identityproxymodel_on_change_persistent_index(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+/// @param self QIdentityProxyModel*
+/// @param from libqt_list /* of QModelIndex* */
+/// @param to libqt_list /* of QModelIndex* */
 void q_identityproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2297,7 +2738,9 @@ void q_identityproxymodel_change_persistent_index_list(void* self, libqt_list fr
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to ```
+/// @param self QIdentityProxyModel*
+/// @param from libqt_list /* of QModelIndex* */
+/// @param to libqt_list /* of QModelIndex* */
 void q_identityproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
@@ -2306,8 +2749,9 @@ void q_identityproxymodel_qbase_change_persistent_index_list(void* self, libqt_l
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, libqt_list /* of QModelIndex* */ from , libqt_list /* of QModelIndex* */ to ) ```
-void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*slot)(void*, libqt_list, libqt_list));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)
+void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2315,7 +2759,7 @@ void q_identityproxymodel_on_change_persistent_index_list(void* self, void (*slo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 libqt_list /* of QModelIndex* */ q_identityproxymodel_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2324,7 +2768,7 @@ libqt_list /* of QModelIndex* */ q_identityproxymodel_persistent_index_list(void
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
@@ -2333,8 +2777,9 @@ libqt_list /* of QModelIndex* */ q_identityproxymodel_qbase_persistent_index_lis
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, libqt_list /* of QModelIndex* */ (*slot)() ```
-void q_identityproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback libqt_list /* of QModelIndex* */ fn()
+void q_identityproxymodel_on_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2342,7 +2787,7 @@ void q_identityproxymodel_on_persistent_index_list(void* self, libqt_list /* of 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 QObject* q_identityproxymodel_sender(void* self);
 
 /// Inherited from QObject
@@ -2351,7 +2796,7 @@ QObject* q_identityproxymodel_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 QObject* q_identityproxymodel_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2360,8 +2805,9 @@ QObject* q_identityproxymodel_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QObject* (*slot)() ```
-void q_identityproxymodel_on_sender(void* self, QObject* (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback QObject* fn()
+void q_identityproxymodel_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2369,7 +2815,7 @@ void q_identityproxymodel_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 int32_t q_identityproxymodel_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2378,7 +2824,7 @@ int32_t q_identityproxymodel_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 int32_t q_identityproxymodel_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2387,8 +2833,9 @@ int32_t q_identityproxymodel_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int32_t (*slot)() ```
-void q_identityproxymodel_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QIdentityProxyModel*
+/// @param callback int32_t fn()
+void q_identityproxymodel_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2396,7 +2843,8 @@ void q_identityproxymodel_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, const char* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal const char*
 int32_t q_identityproxymodel_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2405,7 +2853,8 @@ int32_t q_identityproxymodel_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, const char* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal const char*
 int32_t q_identityproxymodel_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2414,8 +2863,9 @@ int32_t q_identityproxymodel_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, int32_t (*slot)(QIdentityProxyModel*, const char*) ```
-void q_identityproxymodel_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QIdentityProxyModel*
+/// @param callback int32_t fn(QIdentityProxyModel*, const char*)
+void q_identityproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2423,7 +2873,8 @@ void q_identityproxymodel_on_receivers(void* self, int32_t (*slot)(void*, const 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMetaMethod* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal QMetaMethod*
 bool q_identityproxymodel_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2432,7 +2883,8 @@ bool q_identityproxymodel_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, QMetaMethod* signal ```
+/// @param self QIdentityProxyModel*
+/// @param signal QMetaMethod*
 bool q_identityproxymodel_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2441,8 +2893,9 @@ bool q_identityproxymodel_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIdentityProxyModel* self, bool (*slot)(QIdentityProxyModel*, QMetaMethod*) ```
-void q_identityproxymodel_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QIdentityProxyModel*
+/// @param callback bool fn(QIdentityProxyModel*, QMetaMethod*)
+void q_identityproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -2450,8 +2903,9 @@ void q_identityproxymodel_on_is_signal_connected(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*) ```
-void q_identityproxymodel_on_source_model_changed(void* self, void (*slot)(void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*)
+void q_identityproxymodel_on_source_model_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2459,8 +2913,9 @@ void q_identityproxymodel_on_source_model_changed(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2468,8 +2923,9 @@ void q_identityproxymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2477,8 +2933,9 @@ void q_identityproxymodel_on_rows_inserted(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2486,8 +2943,9 @@ void q_identityproxymodel_on_rows_about_to_be_removed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2495,8 +2953,9 @@ void q_identityproxymodel_on_rows_removed(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2504,8 +2963,9 @@ void q_identityproxymodel_on_columns_about_to_be_inserted(void* self, void (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2513,8 +2973,9 @@ void q_identityproxymodel_on_columns_inserted(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2522,8 +2983,9 @@ void q_identityproxymodel_on_columns_about_to_be_removed(void* self, void (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int) ```
-void q_identityproxymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int)
+void q_identityproxymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2531,8 +2993,9 @@ void q_identityproxymodel_on_columns_removed(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*) ```
-void q_identityproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*)
+void q_identityproxymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2540,8 +3003,9 @@ void q_identityproxymodel_on_model_about_to_be_reset(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*) ```
-void q_identityproxymodel_on_model_reset(void* self, void (*slot)(void*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*)
+void q_identityproxymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2549,8 +3013,9 @@ void q_identityproxymodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2558,8 +3023,9 @@ void q_identityproxymodel_on_rows_about_to_be_moved(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2567,8 +3033,9 @@ void q_identityproxymodel_on_rows_moved(void* self, void (*slot)(void*, void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2576,8 +3043,9 @@ void q_identityproxymodel_on_columns_about_to_be_moved(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_identityproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_identityproxymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
 ///
@@ -2585,14 +3053,15 @@ void q_identityproxymodel_on_columns_moved(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIdentityProxyModel* self, void (*slot)(QIdentityProxyModel*, const char*) ```
-void q_identityproxymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QIdentityProxyModel*
+/// @param callback void fn(QIdentityProxyModel*, const char*)
+void q_identityproxymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qidentityproxymodel.html#dtor.QIdentityProxyModel)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QIdentityProxyModel* self ```
+/// @param self QIdentityProxyModel*
 void q_identityproxymodel_delete(void* self);
 
 #endif

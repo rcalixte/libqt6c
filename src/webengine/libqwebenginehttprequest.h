@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,109 +15,130 @@
 
 /// q_webenginehttprequest_new constructs a new QWebEngineHttpRequest object.
 ///
-///
 QWebEngineHttpRequest* q_webenginehttprequest_new();
 
 /// q_webenginehttprequest_new2 constructs a new QWebEngineHttpRequest object.
 ///
-/// ``` QWebEngineHttpRequest* other ```
+/// @param other QWebEngineHttpRequest*
 QWebEngineHttpRequest* q_webenginehttprequest_new2(void* other);
 
 /// q_webenginehttprequest_new3 constructs a new QWebEngineHttpRequest object.
 ///
-/// ``` QUrl* url ```
+/// @param url QUrl*
 QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url);
 
 /// q_webenginehttprequest_new4 constructs a new QWebEngineHttpRequest object.
 ///
-/// ``` QUrl* url, enum QWebEngineHttpRequest__Method* method ```
+/// @param url QUrl*
+/// @param method enum QWebEngineHttpRequest__Method*
 QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int64_t* method);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq)
 ///
-/// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
+/// @param self QWebEngineHttpRequest*
+/// @param other QWebEngineHttpRequest*
 void q_webenginehttprequest_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postRequest)
 ///
-/// ``` QUrl* url, libqt_map /* of const char* to const char* */ postData ```
+/// @param url QUrl*
+/// @param postData libqt_map /* of const char* to const char* */
 QWebEngineHttpRequest* q_webenginehttprequest_post_request(void* url, libqt_map /* of const char* to const char* */ postData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#swap)
 ///
-/// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
+/// @param self QWebEngineHttpRequest*
+/// @param other QWebEngineHttpRequest*
 void q_webenginehttprequest_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq-eq)
 ///
-/// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
+/// @param self QWebEngineHttpRequest*
+/// @param other QWebEngineHttpRequest*
 bool q_webenginehttprequest_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-not-eq)
 ///
-/// ``` QWebEngineHttpRequest* self, QWebEngineHttpRequest* other ```
+/// @param self QWebEngineHttpRequest*
+/// @param other QWebEngineHttpRequest*
 bool q_webenginehttprequest_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#method)
 ///
-/// ``` QWebEngineHttpRequest* self ```
+/// @param self QWebEngineHttpRequest*
+///
+/// @return enum QWebEngineHttpRequest__Method
 int64_t q_webenginehttprequest_method(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setMethod)
 ///
-/// ``` QWebEngineHttpRequest* self, enum QWebEngineHttpRequest__Method method ```
+/// @param self QWebEngineHttpRequest*
+/// @param method enum QWebEngineHttpRequest__Method
 void q_webenginehttprequest_set_method(void* self, int64_t method);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#url)
 ///
-/// ``` QWebEngineHttpRequest* self ```
+/// @param self QWebEngineHttpRequest*
 QUrl* q_webenginehttprequest_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setUrl)
 ///
-/// ``` QWebEngineHttpRequest* self, QUrl* url ```
+/// @param self QWebEngineHttpRequest*
+/// @param url QUrl*
 void q_webenginehttprequest_set_url(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#postData)
 ///
-/// ``` QWebEngineHttpRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHttpRequest*
 char* q_webenginehttprequest_post_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setPostData)
 ///
-/// ``` QWebEngineHttpRequest* self, const char* postData ```
+/// @param self QWebEngineHttpRequest*
+/// @param postData const char*
 void q_webenginehttprequest_set_post_data(void* self, const char* postData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#hasHeader)
 ///
-/// ``` QWebEngineHttpRequest* self, const char* headerName ```
+/// @param self QWebEngineHttpRequest*
+/// @param headerName const char*
 bool q_webenginehttprequest_has_header(void* self, const char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#headers)
 ///
-/// ``` QWebEngineHttpRequest* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHttpRequest*
 const char** q_webenginehttprequest_headers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#header)
 ///
-/// ``` QWebEngineHttpRequest* self, const char* headerName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHttpRequest*
+/// @param headerName const char*
 char* q_webenginehttprequest_header(void* self, const char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setHeader)
 ///
-/// ``` QWebEngineHttpRequest* self, const char* headerName, const char* value ```
+/// @param self QWebEngineHttpRequest*
+/// @param headerName const char*
+/// @param value const char*
 void q_webenginehttprequest_set_header(void* self, const char* headerName, const char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#unsetHeader)
 ///
-/// ``` QWebEngineHttpRequest* self, const char* headerName ```
+/// @param self QWebEngineHttpRequest*
+/// @param headerName const char*
 void q_webenginehttprequest_unset_header(void* self, const char* headerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#dtor.QWebEngineHttpRequest)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineHttpRequest* self ```
+/// @param self QWebEngineHttpRequest*
 void q_webenginehttprequest_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginehttprequest.html#types

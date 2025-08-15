@@ -203,12 +203,16 @@ const char** q_dnstextrecord_values(void* self) {
     libqt_list _arr = QDnsTextRecord_Values((QDnsTextRecord*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dnstextrecord_values");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -324,8 +328,8 @@ int32_t q_dnslookup_metacall(void* self, int64_t param1, int param2, void* param
     return QDnsLookup_Metacall((QDnsLookup*)self, param1, param2, param3);
 }
 
-void q_dnslookup_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QDnsLookup_OnMetacall((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QDnsLookup_OnMetacall((QDnsLookup*)self, (intptr_t)callback);
 }
 
 int32_t q_dnslookup_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -477,48 +481,48 @@ void q_dnslookup_finished(void* self) {
     QDnsLookup_Finished((QDnsLookup*)self);
 }
 
-void q_dnslookup_on_finished(void* self, void (*slot)(void*)) {
-    QDnsLookup_Connect_Finished((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_finished(void* self, void (*callback)(void*)) {
+    QDnsLookup_Connect_Finished((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_name_changed(void* self, const char* name) {
     QDnsLookup_NameChanged((QDnsLookup*)self, qstring(name));
 }
 
-void q_dnslookup_on_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QDnsLookup_Connect_NameChanged((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QDnsLookup_Connect_NameChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_type_changed(void* self, int64_t typeVal) {
     QDnsLookup_TypeChanged((QDnsLookup*)self, typeVal);
 }
 
-void q_dnslookup_on_type_changed(void* self, void (*slot)(void*, int64_t)) {
-    QDnsLookup_Connect_TypeChanged((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_type_changed(void* self, void (*callback)(void*, int64_t)) {
+    QDnsLookup_Connect_TypeChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_nameserver_changed(void* self, void* nameserver) {
     QDnsLookup_NameserverChanged((QDnsLookup*)self, (QHostAddress*)nameserver);
 }
 
-void q_dnslookup_on_nameserver_changed(void* self, void (*slot)(void*, void*)) {
-    QDnsLookup_Connect_NameserverChanged((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_nameserver_changed(void* self, void (*callback)(void*, void*)) {
+    QDnsLookup_Connect_NameserverChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_nameserver_port_changed(void* self, unsigned short port) {
     QDnsLookup_NameserverPortChanged((QDnsLookup*)self, port);
 }
 
-void q_dnslookup_on_nameserver_port_changed(void* self, void (*slot)(void*, unsigned short)) {
-    QDnsLookup_Connect_NameserverPortChanged((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_nameserver_port_changed(void* self, void (*callback)(void*, unsigned short)) {
+    QDnsLookup_Connect_NameserverPortChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_nameserver_protocol_changed(void* self, int64_t protocol) {
     QDnsLookup_NameserverProtocolChanged((QDnsLookup*)self, protocol);
 }
 
-void q_dnslookup_on_nameserver_protocol_changed(void* self, void (*slot)(void*, int64_t)) {
-    QDnsLookup_Connect_NameserverProtocolChanged((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_nameserver_protocol_changed(void* self, void (*callback)(void*, int64_t)) {
+    QDnsLookup_Connect_NameserverProtocolChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
 const char* q_dnslookup_tr2(const char* s, const char* c) {
@@ -643,12 +647,16 @@ const char** q_dnslookup_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dnslookup_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -666,8 +674,8 @@ void q_dnslookup_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_dnslookup_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_dnslookup_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_dnslookup_parent(void* self) {
@@ -702,8 +710,8 @@ void q_dnslookup_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_dnslookup_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_dnslookup_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_dnslookup_event(void* self, void* event) {
@@ -714,8 +722,8 @@ bool q_dnslookup_qbase_event(void* self, void* event) {
     return QDnsLookup_QBaseEvent((QDnsLookup*)self, (QEvent*)event);
 }
 
-void q_dnslookup_on_event(void* self, bool (*slot)(void*, void*)) {
-    QDnsLookup_OnEvent((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_event(void* self, bool (*callback)(void*, void*)) {
+    QDnsLookup_OnEvent((QDnsLookup*)self, (intptr_t)callback);
 }
 
 bool q_dnslookup_event_filter(void* self, void* watched, void* event) {
@@ -726,8 +734,8 @@ bool q_dnslookup_qbase_event_filter(void* self, void* watched, void* event) {
     return QDnsLookup_QBaseEventFilter((QDnsLookup*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_dnslookup_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QDnsLookup_OnEventFilter((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QDnsLookup_OnEventFilter((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_timer_event(void* self, void* event) {
@@ -738,8 +746,8 @@ void q_dnslookup_qbase_timer_event(void* self, void* event) {
     QDnsLookup_QBaseTimerEvent((QDnsLookup*)self, (QTimerEvent*)event);
 }
 
-void q_dnslookup_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QDnsLookup_OnTimerEvent((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QDnsLookup_OnTimerEvent((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_child_event(void* self, void* event) {
@@ -750,8 +758,8 @@ void q_dnslookup_qbase_child_event(void* self, void* event) {
     QDnsLookup_QBaseChildEvent((QDnsLookup*)self, (QChildEvent*)event);
 }
 
-void q_dnslookup_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QDnsLookup_OnChildEvent((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QDnsLookup_OnChildEvent((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_custom_event(void* self, void* event) {
@@ -762,8 +770,8 @@ void q_dnslookup_qbase_custom_event(void* self, void* event) {
     QDnsLookup_QBaseCustomEvent((QDnsLookup*)self, (QEvent*)event);
 }
 
-void q_dnslookup_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QDnsLookup_OnCustomEvent((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QDnsLookup_OnCustomEvent((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_connect_notify(void* self, void* signal) {
@@ -774,8 +782,8 @@ void q_dnslookup_qbase_connect_notify(void* self, void* signal) {
     QDnsLookup_QBaseConnectNotify((QDnsLookup*)self, (QMetaMethod*)signal);
 }
 
-void q_dnslookup_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QDnsLookup_OnConnectNotify((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QDnsLookup_OnConnectNotify((QDnsLookup*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_disconnect_notify(void* self, void* signal) {
@@ -786,8 +794,8 @@ void q_dnslookup_qbase_disconnect_notify(void* self, void* signal) {
     QDnsLookup_QBaseDisconnectNotify((QDnsLookup*)self, (QMetaMethod*)signal);
 }
 
-void q_dnslookup_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QDnsLookup_OnDisconnectNotify((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QDnsLookup_OnDisconnectNotify((QDnsLookup*)self, (intptr_t)callback);
 }
 
 QObject* q_dnslookup_sender(void* self) {
@@ -798,8 +806,8 @@ QObject* q_dnslookup_qbase_sender(void* self) {
     return QDnsLookup_QBaseSender((QDnsLookup*)self);
 }
 
-void q_dnslookup_on_sender(void* self, QObject* (*slot)()) {
-    QDnsLookup_OnSender((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_sender(void* self, QObject* (*callback)()) {
+    QDnsLookup_OnSender((QDnsLookup*)self, (intptr_t)callback);
 }
 
 int32_t q_dnslookup_sender_signal_index(void* self) {
@@ -810,8 +818,8 @@ int32_t q_dnslookup_qbase_sender_signal_index(void* self) {
     return QDnsLookup_QBaseSenderSignalIndex((QDnsLookup*)self);
 }
 
-void q_dnslookup_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QDnsLookup_OnSenderSignalIndex((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QDnsLookup_OnSenderSignalIndex((QDnsLookup*)self, (intptr_t)callback);
 }
 
 int32_t q_dnslookup_receivers(void* self, const char* signal) {
@@ -822,8 +830,8 @@ int32_t q_dnslookup_qbase_receivers(void* self, const char* signal) {
     return QDnsLookup_QBaseReceivers((QDnsLookup*)self, signal);
 }
 
-void q_dnslookup_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QDnsLookup_OnReceivers((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QDnsLookup_OnReceivers((QDnsLookup*)self, (intptr_t)callback);
 }
 
 bool q_dnslookup_is_signal_connected(void* self, void* signal) {
@@ -834,12 +842,12 @@ bool q_dnslookup_qbase_is_signal_connected(void* self, void* signal) {
     return QDnsLookup_QBaseIsSignalConnected((QDnsLookup*)self, (QMetaMethod*)signal);
 }
 
-void q_dnslookup_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QDnsLookup_OnIsSignalConnected((QDnsLookup*)self, (intptr_t)slot);
+void q_dnslookup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QDnsLookup_OnIsSignalConnected((QDnsLookup*)self, (intptr_t)callback);
 }
 
-void q_dnslookup_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_dnslookup_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_dnslookup_delete(void* self) {

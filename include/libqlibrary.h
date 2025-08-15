@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,400 +15,476 @@
 
 /// q_library_new constructs a new QLibrary object.
 ///
-///
 QLibrary* q_library_new();
 
 /// q_library_new2 constructs a new QLibrary object.
 ///
-/// ``` const char* fileName ```
+/// @param fileName const char*
 QLibrary* q_library_new2(const char* fileName);
 
 /// q_library_new3 constructs a new QLibrary object.
 ///
-/// ``` const char* fileName, int verNum ```
+/// @param fileName const char*
+/// @param verNum int
 QLibrary* q_library_new3(const char* fileName, int verNum);
 
 /// q_library_new4 constructs a new QLibrary object.
 ///
-/// ``` const char* fileName, const char* version ```
+/// @param fileName const char*
+/// @param version const char*
 QLibrary* q_library_new4(const char* fileName, const char* version);
 
 /// q_library_new5 constructs a new QLibrary object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QLibrary* q_library_new5(void* parent);
 
 /// q_library_new6 constructs a new QLibrary object.
 ///
-/// ``` const char* fileName, QObject* parent ```
+/// @param fileName const char*
+/// @param parent QObject*
 QLibrary* q_library_new6(const char* fileName, void* parent);
 
 /// q_library_new7 constructs a new QLibrary object.
 ///
-/// ``` const char* fileName, int verNum, QObject* parent ```
+/// @param fileName const char*
+/// @param verNum int
+/// @param parent QObject*
 QLibrary* q_library_new7(const char* fileName, int verNum, void* parent);
 
 /// q_library_new8 constructs a new QLibrary object.
 ///
-/// ``` const char* fileName, const char* version, QObject* parent ```
+/// @param fileName const char*
+/// @param version const char*
+/// @param parent QObject*
 QLibrary* q_library_new8(const char* fileName, const char* version, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 const QMetaObject* q_library_meta_object(void* self);
 
-/// ``` QLibrary* self, const char* param1 ```
+/// @param self QLibrary*
+/// @param param1 const char*
 void* q_library_metacast(void* self, const char* param1);
 
-/// ``` QLibrary* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QLibrary*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_library_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QLibrary* self, int32_t (*slot)(QLibrary*, enum QMetaObject__Call, int, void*) ```
-void q_library_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QLibrary*
+/// @param callback int32_t fn(QLibrary*, enum QMetaObject__Call, int, void*)
+void q_library_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QLibrary* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QLibrary*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_library_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_library_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#load)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_load(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#unload)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_unload(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#isLoaded)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_is_loaded(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#isLibrary)
 ///
-/// ``` const char* fileName ```
+/// @param fileName const char*
 bool q_library_is_library(const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#setFileName)
 ///
-/// ``` QLibrary* self, const char* fileName ```
+/// @param self QLibrary*
+/// @param fileName const char*
 void q_library_set_file_name(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#fileName)
 ///
-/// ``` QLibrary* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLibrary*
 const char* q_library_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#setFileNameAndVersion)
 ///
-/// ``` QLibrary* self, const char* fileName, int verNum ```
+/// @param self QLibrary*
+/// @param fileName const char*
+/// @param verNum int
 void q_library_set_file_name_and_version(void* self, const char* fileName, int verNum);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#setFileNameAndVersion)
 ///
-/// ``` QLibrary* self, const char* fileName, const char* version ```
+/// @param self QLibrary*
+/// @param fileName const char*
+/// @param version const char*
 void q_library_set_file_name_and_version2(void* self, const char* fileName, const char* version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#errorString)
 ///
-/// ``` QLibrary* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLibrary*
 const char* q_library_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#setLoadHints)
 ///
-/// ``` QLibrary* self, int hints ```
+/// @param self QLibrary*
+/// @param hints flag of enum QLibrary__LoadHint
 void q_library_set_load_hints(void* self, int64_t hints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#loadHints)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
+///
+/// @return flag of enum QLibrary__LoadHint
 int64_t q_library_load_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_library_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_library_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QLibrary* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLibrary*
 const char* q_library_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLibrary* self, char* name ```
+/// @param self QLibrary*
+/// @param name char*
 void q_library_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 bool q_library_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QLibrary* self, bool b ```
+/// @param self QLibrary*
+/// @param b bool
 bool q_library_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 QThread* q_library_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QLibrary* self, QThread* thread ```
+/// @param self QLibrary*
+/// @param thread QThread*
 bool q_library_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QLibrary* self, int interval ```
+/// @param self QLibrary*
+/// @param interval int
 int32_t q_library_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QLibrary* self, int id ```
+/// @param self QLibrary*
+/// @param id int
 void q_library_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QLibrary* self, enum Qt__TimerId id ```
+/// @param self QLibrary*
+/// @param id enum Qt__TimerId
 void q_library_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 libqt_list /* of QObject* */ q_library_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QLibrary* self, QObject* parent ```
+/// @param self QLibrary*
+/// @param parent QObject*
 void q_library_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QLibrary* self, QObject* filterObj ```
+/// @param self QLibrary*
+/// @param filterObj QObject*
 void q_library_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QLibrary* self, QObject* obj ```
+/// @param self QLibrary*
+/// @param obj QObject*
 void q_library_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_library_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QLibrary* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QLibrary*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_library_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_library_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_library_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 void q_library_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 void q_library_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QLibrary* self, const char* name, QVariant* value ```
+/// @param self QLibrary*
+/// @param name const char*
+/// @param value QVariant*
 bool q_library_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QLibrary* self, const char* name ```
+/// @param self QLibrary*
+/// @param name const char*
 QVariant* q_library_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QLibrary* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLibrary*
 const char** q_library_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 QBindingStorage* q_library_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 const QBindingStorage* q_library_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 void q_library_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*) ```
-void q_library_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*)
+void q_library_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 QObject* q_library_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QLibrary* self, const char* classname ```
+/// @param self QLibrary*
+/// @param classname const char*
 bool q_library_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 void q_library_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QLibrary* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QLibrary*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_library_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QLibrary* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QLibrary*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_library_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_library_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QLibrary* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QLibrary*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_library_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLibrary* self, QObject* param1 ```
+/// @param self QLibrary*
+/// @param param1 QObject*
 void q_library_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, QObject*) ```
-void q_library_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, QObject*)
+void q_library_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -417,7 +492,8 @@ void q_library_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QEvent* event ```
+/// @param self QLibrary*
+/// @param event QEvent*
 bool q_library_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -426,7 +502,8 @@ bool q_library_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QEvent* event ```
+/// @param self QLibrary*
+/// @param event QEvent*
 bool q_library_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -435,8 +512,9 @@ bool q_library_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, bool (*slot)(QLibrary*, QEvent*) ```
-void q_library_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback bool fn(QLibrary*, QEvent*)
+void q_library_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -444,7 +522,9 @@ void q_library_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QObject* watched, QEvent* event ```
+/// @param self QLibrary*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_library_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -453,7 +533,9 @@ bool q_library_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QObject* watched, QEvent* event ```
+/// @param self QLibrary*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_library_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -462,8 +544,9 @@ bool q_library_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, bool (*slot)(QLibrary*, QObject*, QEvent*) ```
-void q_library_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QLibrary*
+/// @param callback bool fn(QLibrary*, QObject*, QEvent*)
+void q_library_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -471,7 +554,8 @@ void q_library_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QTimerEvent* event ```
+/// @param self QLibrary*
+/// @param event QTimerEvent*
 void q_library_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -480,7 +564,8 @@ void q_library_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QTimerEvent* event ```
+/// @param self QLibrary*
+/// @param event QTimerEvent*
 void q_library_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -489,8 +574,9 @@ void q_library_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, QTimerEvent*) ```
-void q_library_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, QTimerEvent*)
+void q_library_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -498,7 +584,8 @@ void q_library_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QChildEvent* event ```
+/// @param self QLibrary*
+/// @param event QChildEvent*
 void q_library_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -507,7 +594,8 @@ void q_library_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QChildEvent* event ```
+/// @param self QLibrary*
+/// @param event QChildEvent*
 void q_library_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -516,8 +604,9 @@ void q_library_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, QChildEvent*) ```
-void q_library_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, QChildEvent*)
+void q_library_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -525,7 +614,8 @@ void q_library_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QEvent* event ```
+/// @param self QLibrary*
+/// @param event QEvent*
 void q_library_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -534,7 +624,8 @@ void q_library_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QEvent* event ```
+/// @param self QLibrary*
+/// @param event QEvent*
 void q_library_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -543,8 +634,9 @@ void q_library_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, QEvent*) ```
-void q_library_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, QEvent*)
+void q_library_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -552,7 +644,8 @@ void q_library_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QMetaMethod* signal ```
+/// @param self QLibrary*
+/// @param signal QMetaMethod*
 void q_library_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -561,7 +654,8 @@ void q_library_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QMetaMethod* signal ```
+/// @param self QLibrary*
+/// @param signal QMetaMethod*
 void q_library_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -570,8 +664,9 @@ void q_library_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, QMetaMethod*) ```
-void q_library_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, QMetaMethod*)
+void q_library_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -579,7 +674,8 @@ void q_library_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QMetaMethod* signal ```
+/// @param self QLibrary*
+/// @param signal QMetaMethod*
 void q_library_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -588,7 +684,8 @@ void q_library_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QMetaMethod* signal ```
+/// @param self QLibrary*
+/// @param signal QMetaMethod*
 void q_library_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -597,8 +694,9 @@ void q_library_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, QMetaMethod*) ```
-void q_library_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, QMetaMethod*)
+void q_library_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -606,7 +704,7 @@ void q_library_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 QObject* q_library_sender(void* self);
 
 /// Inherited from QObject
@@ -615,7 +713,7 @@ QObject* q_library_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 QObject* q_library_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -624,8 +722,9 @@ QObject* q_library_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, QObject* (*slot)() ```
-void q_library_on_sender(void* self, QObject* (*slot)());
+/// @param self QLibrary*
+/// @param callback QObject* fn()
+void q_library_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -633,7 +732,7 @@ void q_library_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 int32_t q_library_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -642,7 +741,7 @@ int32_t q_library_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 int32_t q_library_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -651,8 +750,9 @@ int32_t q_library_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, int32_t (*slot)() ```
-void q_library_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QLibrary*
+/// @param callback int32_t fn()
+void q_library_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -660,7 +760,8 @@ void q_library_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, const char* signal ```
+/// @param self QLibrary*
+/// @param signal const char*
 int32_t q_library_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -669,7 +770,8 @@ int32_t q_library_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, const char* signal ```
+/// @param self QLibrary*
+/// @param signal const char*
 int32_t q_library_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -678,8 +780,9 @@ int32_t q_library_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, int32_t (*slot)(QLibrary*, const char*) ```
-void q_library_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QLibrary*
+/// @param callback int32_t fn(QLibrary*, const char*)
+void q_library_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -687,7 +790,8 @@ void q_library_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLibrary* self, QMetaMethod* signal ```
+/// @param self QLibrary*
+/// @param signal QMetaMethod*
 bool q_library_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -696,7 +800,8 @@ bool q_library_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLibrary* self, QMetaMethod* signal ```
+/// @param self QLibrary*
+/// @param signal QMetaMethod*
 bool q_library_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -705,8 +810,9 @@ bool q_library_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLibrary* self, bool (*slot)(QLibrary*, QMetaMethod*) ```
-void q_library_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QLibrary*
+/// @param callback bool fn(QLibrary*, QMetaMethod*)
+void q_library_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -714,14 +820,15 @@ void q_library_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLibrary* self, void (*slot)(QLibrary*, const char*) ```
-void q_library_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QLibrary*
+/// @param callback void fn(QLibrary*, const char*)
+void q_library_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibrary.html#dtor.QLibrary)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLibrary* self ```
+/// @param self QLibrary*
 void q_library_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlibrary.html#types

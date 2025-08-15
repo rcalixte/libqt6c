@@ -27,8 +27,8 @@ int32_t q_stackedbarseries_metacall(void* self, int64_t param1, int param2, void
     return QStackedBarSeries_Metacall((QStackedBarSeries*)self, param1, param2, param3);
 }
 
-void q_stackedbarseries_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QStackedBarSeries_OnMetacall((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QStackedBarSeries_OnMetacall((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedbarseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ int64_t q_stackedbarseries_type(void* self) {
     return QStackedBarSeries_Type((QStackedBarSeries*)self);
 }
 
-void q_stackedbarseries_on_type(void* self, int64_t (*slot)()) {
-    QStackedBarSeries_OnType((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_type(void* self, int64_t (*callback)()) {
+    QStackedBarSeries_OnType((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 int64_t q_stackedbarseries_qbase_type(void* self) {
@@ -156,104 +156,104 @@ void q_stackedbarseries_clicked(void* self, int index, void* barset) {
     QAbstractBarSeries_Clicked((QAbstractBarSeries*)self, index, (QBarSet*)barset);
 }
 
-void q_stackedbarseries_on_clicked(void* self, void (*slot)(void*, int, void*)) {
-    QAbstractBarSeries_Connect_Clicked((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_clicked(void* self, void (*callback)(void*, int, void*)) {
+    QAbstractBarSeries_Connect_Clicked((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_hovered(void* self, bool status, int index, void* barset) {
     QAbstractBarSeries_Hovered((QAbstractBarSeries*)self, status, index, (QBarSet*)barset);
 }
 
-void q_stackedbarseries_on_hovered(void* self, void (*slot)(void*, bool, int, void*)) {
-    QAbstractBarSeries_Connect_Hovered((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_hovered(void* self, void (*callback)(void*, bool, int, void*)) {
+    QAbstractBarSeries_Connect_Hovered((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_pressed(void* self, int index, void* barset) {
     QAbstractBarSeries_Pressed((QAbstractBarSeries*)self, index, (QBarSet*)barset);
 }
 
-void q_stackedbarseries_on_pressed(void* self, void (*slot)(void*, int, void*)) {
-    QAbstractBarSeries_Connect_Pressed((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_pressed(void* self, void (*callback)(void*, int, void*)) {
+    QAbstractBarSeries_Connect_Pressed((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_released(void* self, int index, void* barset) {
     QAbstractBarSeries_Released((QAbstractBarSeries*)self, index, (QBarSet*)barset);
 }
 
-void q_stackedbarseries_on_released(void* self, void (*slot)(void*, int, void*)) {
-    QAbstractBarSeries_Connect_Released((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_released(void* self, void (*callback)(void*, int, void*)) {
+    QAbstractBarSeries_Connect_Released((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_double_clicked(void* self, int index, void* barset) {
     QAbstractBarSeries_DoubleClicked((QAbstractBarSeries*)self, index, (QBarSet*)barset);
 }
 
-void q_stackedbarseries_on_double_clicked(void* self, void (*slot)(void*, int, void*)) {
-    QAbstractBarSeries_Connect_DoubleClicked((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_double_clicked(void* self, void (*callback)(void*, int, void*)) {
+    QAbstractBarSeries_Connect_DoubleClicked((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_count_changed(void* self) {
     QAbstractBarSeries_CountChanged((QAbstractBarSeries*)self);
 }
 
-void q_stackedbarseries_on_count_changed(void* self, void (*slot)(void*)) {
-    QAbstractBarSeries_Connect_CountChanged((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_count_changed(void* self, void (*callback)(void*)) {
+    QAbstractBarSeries_Connect_CountChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_labels_visible_changed(void* self) {
     QAbstractBarSeries_LabelsVisibleChanged((QAbstractBarSeries*)self);
 }
 
-void q_stackedbarseries_on_labels_visible_changed(void* self, void (*slot)(void*)) {
-    QAbstractBarSeries_Connect_LabelsVisibleChanged((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_labels_visible_changed(void* self, void (*callback)(void*)) {
+    QAbstractBarSeries_Connect_LabelsVisibleChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_labels_format_changed(void* self, const char* format) {
     QAbstractBarSeries_LabelsFormatChanged((QAbstractBarSeries*)self, qstring(format));
 }
 
-void q_stackedbarseries_on_labels_format_changed(void* self, void (*slot)(void*, const char*)) {
-    QAbstractBarSeries_Connect_LabelsFormatChanged((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_labels_format_changed(void* self, void (*callback)(void*, const char*)) {
+    QAbstractBarSeries_Connect_LabelsFormatChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_labels_position_changed(void* self, int64_t position) {
     QAbstractBarSeries_LabelsPositionChanged((QAbstractBarSeries*)self, position);
 }
 
-void q_stackedbarseries_on_labels_position_changed(void* self, void (*slot)(void*, int64_t)) {
-    QAbstractBarSeries_Connect_LabelsPositionChanged((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_labels_position_changed(void* self, void (*callback)(void*, int64_t)) {
+    QAbstractBarSeries_Connect_LabelsPositionChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_labels_angle_changed(void* self, double angle) {
     QAbstractBarSeries_LabelsAngleChanged((QAbstractBarSeries*)self, angle);
 }
 
-void q_stackedbarseries_on_labels_angle_changed(void* self, void (*slot)(void*, double)) {
-    QAbstractBarSeries_Connect_LabelsAngleChanged((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_labels_angle_changed(void* self, void (*callback)(void*, double)) {
+    QAbstractBarSeries_Connect_LabelsAngleChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_labels_precision_changed(void* self, int precision) {
     QAbstractBarSeries_LabelsPrecisionChanged((QAbstractBarSeries*)self, precision);
 }
 
-void q_stackedbarseries_on_labels_precision_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractBarSeries_Connect_LabelsPrecisionChanged((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_labels_precision_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractBarSeries_Connect_LabelsPrecisionChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_barsets_added(void* self, libqt_list sets) {
     QAbstractBarSeries_BarsetsAdded((QAbstractBarSeries*)self, sets);
 }
 
-void q_stackedbarseries_on_barsets_added(void* self, void (*slot)(void*, libqt_list)) {
-    QAbstractBarSeries_Connect_BarsetsAdded((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_barsets_added(void* self, void (*callback)(void*, libqt_list)) {
+    QAbstractBarSeries_Connect_BarsetsAdded((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_barsets_removed(void* self, libqt_list sets) {
     QAbstractBarSeries_BarsetsRemoved((QAbstractBarSeries*)self, sets);
 }
 
-void q_stackedbarseries_on_barsets_removed(void* self, void (*slot)(void*, libqt_list)) {
-    QAbstractBarSeries_Connect_BarsetsRemoved((QAbstractBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_barsets_removed(void* self, void (*callback)(void*, libqt_list)) {
+    QAbstractBarSeries_Connect_BarsetsRemoved((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_set_labels_visible1(void* self, bool visible) {
@@ -324,32 +324,32 @@ void q_stackedbarseries_name_changed(void* self) {
     QAbstractSeries_NameChanged((QAbstractSeries*)self);
 }
 
-void q_stackedbarseries_on_name_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_name_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_visible_changed(void* self) {
     QAbstractSeries_VisibleChanged((QAbstractSeries*)self);
 }
 
-void q_stackedbarseries_on_visible_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_visible_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_opacity_changed(void* self) {
     QAbstractSeries_OpacityChanged((QAbstractSeries*)self);
 }
 
-void q_stackedbarseries_on_opacity_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_opacity_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_use_open_g_l_changed(void* self) {
     QAbstractSeries_UseOpenGLChanged((QAbstractSeries*)self);
 }
 
-void q_stackedbarseries_on_use_open_g_l_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_use_open_g_l_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_set_visible1(void* self, bool visible) {
@@ -464,12 +464,16 @@ const char** q_stackedbarseries_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_stackedbarseries_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -487,8 +491,8 @@ void q_stackedbarseries_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_stackedbarseries_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_stackedbarseries_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_stackedbarseries_parent(void* self) {
@@ -523,8 +527,8 @@ void q_stackedbarseries_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_stackedbarseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_stackedbarseries_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_stackedbarseries_event(void* self, void* event) {
@@ -535,8 +539,8 @@ bool q_stackedbarseries_qbase_event(void* self, void* event) {
     return QStackedBarSeries_QBaseEvent((QStackedBarSeries*)self, (QEvent*)event);
 }
 
-void q_stackedbarseries_on_event(void* self, bool (*slot)(void*, void*)) {
-    QStackedBarSeries_OnEvent((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_event(void* self, bool (*callback)(void*, void*)) {
+    QStackedBarSeries_OnEvent((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 bool q_stackedbarseries_event_filter(void* self, void* watched, void* event) {
@@ -547,8 +551,8 @@ bool q_stackedbarseries_qbase_event_filter(void* self, void* watched, void* even
     return QStackedBarSeries_QBaseEventFilter((QStackedBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_stackedbarseries_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QStackedBarSeries_OnEventFilter((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QStackedBarSeries_OnEventFilter((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_timer_event(void* self, void* event) {
@@ -559,8 +563,8 @@ void q_stackedbarseries_qbase_timer_event(void* self, void* event) {
     QStackedBarSeries_QBaseTimerEvent((QStackedBarSeries*)self, (QTimerEvent*)event);
 }
 
-void q_stackedbarseries_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QStackedBarSeries_OnTimerEvent((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QStackedBarSeries_OnTimerEvent((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_child_event(void* self, void* event) {
@@ -571,8 +575,8 @@ void q_stackedbarseries_qbase_child_event(void* self, void* event) {
     QStackedBarSeries_QBaseChildEvent((QStackedBarSeries*)self, (QChildEvent*)event);
 }
 
-void q_stackedbarseries_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QStackedBarSeries_OnChildEvent((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QStackedBarSeries_OnChildEvent((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_custom_event(void* self, void* event) {
@@ -583,8 +587,8 @@ void q_stackedbarseries_qbase_custom_event(void* self, void* event) {
     QStackedBarSeries_QBaseCustomEvent((QStackedBarSeries*)self, (QEvent*)event);
 }
 
-void q_stackedbarseries_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QStackedBarSeries_OnCustomEvent((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QStackedBarSeries_OnCustomEvent((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_connect_notify(void* self, void* signal) {
@@ -595,8 +599,8 @@ void q_stackedbarseries_qbase_connect_notify(void* self, void* signal) {
     QStackedBarSeries_QBaseConnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedbarseries_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QStackedBarSeries_OnConnectNotify((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QStackedBarSeries_OnConnectNotify((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_disconnect_notify(void* self, void* signal) {
@@ -607,8 +611,8 @@ void q_stackedbarseries_qbase_disconnect_notify(void* self, void* signal) {
     QStackedBarSeries_QBaseDisconnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedbarseries_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QStackedBarSeries_OnDisconnectNotify((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QStackedBarSeries_OnDisconnectNotify((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 QObject* q_stackedbarseries_sender(void* self) {
@@ -619,8 +623,8 @@ QObject* q_stackedbarseries_qbase_sender(void* self) {
     return QStackedBarSeries_QBaseSender((QStackedBarSeries*)self);
 }
 
-void q_stackedbarseries_on_sender(void* self, QObject* (*slot)()) {
-    QStackedBarSeries_OnSender((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_sender(void* self, QObject* (*callback)()) {
+    QStackedBarSeries_OnSender((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedbarseries_sender_signal_index(void* self) {
@@ -631,8 +635,8 @@ int32_t q_stackedbarseries_qbase_sender_signal_index(void* self) {
     return QStackedBarSeries_QBaseSenderSignalIndex((QStackedBarSeries*)self);
 }
 
-void q_stackedbarseries_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QStackedBarSeries_OnSenderSignalIndex((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QStackedBarSeries_OnSenderSignalIndex((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_stackedbarseries_receivers(void* self, const char* signal) {
@@ -643,8 +647,8 @@ int32_t q_stackedbarseries_qbase_receivers(void* self, const char* signal) {
     return QStackedBarSeries_QBaseReceivers((QStackedBarSeries*)self, signal);
 }
 
-void q_stackedbarseries_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QStackedBarSeries_OnReceivers((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QStackedBarSeries_OnReceivers((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
 bool q_stackedbarseries_is_signal_connected(void* self, void* signal) {
@@ -655,12 +659,12 @@ bool q_stackedbarseries_qbase_is_signal_connected(void* self, void* signal) {
     return QStackedBarSeries_QBaseIsSignalConnected((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedbarseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QStackedBarSeries_OnIsSignalConnected((QStackedBarSeries*)self, (intptr_t)slot);
+void q_stackedbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QStackedBarSeries_OnIsSignalConnected((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
-void q_stackedbarseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_stackedbarseries_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_stackedbarseries_delete(void* self) {

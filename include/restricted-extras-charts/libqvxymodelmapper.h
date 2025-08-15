@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,435 +15,504 @@
 
 /// q_vxymodelmapper_new constructs a new QVXYModelMapper object.
 ///
-///
 QVXYModelMapper* q_vxymodelmapper_new();
 
 /// q_vxymodelmapper_new2 constructs a new QVXYModelMapper object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QVXYModelMapper* q_vxymodelmapper_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 const QMetaObject* q_vxymodelmapper_meta_object(void* self);
 
-/// ``` QVXYModelMapper* self, const char* param1 ```
+/// @param self QVXYModelMapper*
+/// @param param1 const char*
 void* q_vxymodelmapper_metacast(void* self, const char* param1);
 
-/// ``` QVXYModelMapper* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QVXYModelMapper*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_vxymodelmapper_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)(QVXYModelMapper*, enum QMetaObject__Call, int, void*) ```
-void q_vxymodelmapper_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn(QVXYModelMapper*, enum QMetaObject__Call, int, void*)
+void q_vxymodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QVXYModelMapper* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QVXYModelMapper*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_vxymodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_vxymodelmapper_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#model)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QAbstractItemModel* q_vxymodelmapper_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#setModel)
 ///
-/// ``` QVXYModelMapper* self, QAbstractItemModel* model ```
+/// @param self QVXYModelMapper*
+/// @param model QAbstractItemModel*
 void q_vxymodelmapper_set_model(void* self, void* model);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#series)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QXYSeries* q_vxymodelmapper_series(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#setSeries)
 ///
-/// ``` QVXYModelMapper* self, QXYSeries* series ```
+/// @param self QVXYModelMapper*
+/// @param series QXYSeries*
 void q_vxymodelmapper_set_series(void* self, void* series);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#xColumn)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_x_column(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#setXColumn)
 ///
-/// ``` QVXYModelMapper* self, int xColumn ```
+/// @param self QVXYModelMapper*
+/// @param xColumn int
 void q_vxymodelmapper_set_x_column(void* self, int xColumn);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#yColumn)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_y_column(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#setYColumn)
 ///
-/// ``` QVXYModelMapper* self, int yColumn ```
+/// @param self QVXYModelMapper*
+/// @param yColumn int
 void q_vxymodelmapper_set_y_column(void* self, int yColumn);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#firstRow)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_first_row(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#setFirstRow)
 ///
-/// ``` QVXYModelMapper* self, int firstRow ```
+/// @param self QVXYModelMapper*
+/// @param firstRow int
 void q_vxymodelmapper_set_first_row(void* self, int firstRow);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#rowCount)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_row_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#setRowCount)
 ///
-/// ``` QVXYModelMapper* self, int rowCount ```
+/// @param self QVXYModelMapper*
+/// @param rowCount int
 void q_vxymodelmapper_set_row_count(void* self, int rowCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#seriesReplaced)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_series_replaced(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#seriesReplaced)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_series_replaced(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_series_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#modelReplaced)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_model_replaced(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#modelReplaced)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_model_replaced(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_model_replaced(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#xColumnChanged)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_x_column_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#xColumnChanged)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_x_column_changed(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_x_column_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#yColumnChanged)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_y_column_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#yColumnChanged)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_y_column_changed(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_y_column_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#firstRowChanged)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_first_row_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#firstRowChanged)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_first_row_changed(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_first_row_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#rowCountChanged)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_row_count_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#rowCountChanged)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_row_count_changed(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_row_count_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_vxymodelmapper_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_vxymodelmapper_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QVXYModelMapper* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QVXYModelMapper*
 const char* q_vxymodelmapper_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QVXYModelMapper* self, char* name ```
+/// @param self QVXYModelMapper*
+/// @param name char*
 void q_vxymodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 bool q_vxymodelmapper_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 bool q_vxymodelmapper_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 bool q_vxymodelmapper_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 bool q_vxymodelmapper_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QVXYModelMapper* self, bool b ```
+/// @param self QVXYModelMapper*
+/// @param b bool
 bool q_vxymodelmapper_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QThread* q_vxymodelmapper_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QVXYModelMapper* self, QThread* thread ```
+/// @param self QVXYModelMapper*
+/// @param thread QThread*
 bool q_vxymodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QVXYModelMapper* self, int interval ```
+/// @param self QVXYModelMapper*
+/// @param interval int
 int32_t q_vxymodelmapper_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QVXYModelMapper* self, int id ```
+/// @param self QVXYModelMapper*
+/// @param id int
 void q_vxymodelmapper_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QVXYModelMapper* self, enum Qt__TimerId id ```
+/// @param self QVXYModelMapper*
+/// @param id enum Qt__TimerId
 void q_vxymodelmapper_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 libqt_list /* of QObject* */ q_vxymodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QVXYModelMapper* self, QObject* parent ```
+/// @param self QVXYModelMapper*
+/// @param parent QObject*
 void q_vxymodelmapper_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QVXYModelMapper* self, QObject* filterObj ```
+/// @param self QVXYModelMapper*
+/// @param filterObj QObject*
 void q_vxymodelmapper_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QVXYModelMapper* self, QObject* obj ```
+/// @param self QVXYModelMapper*
+/// @param obj QObject*
 void q_vxymodelmapper_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_vxymodelmapper_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QVXYModelMapper* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QVXYModelMapper*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_vxymodelmapper_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_vxymodelmapper_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_vxymodelmapper_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QVXYModelMapper* self, const char* name, QVariant* value ```
+/// @param self QVXYModelMapper*
+/// @param name const char*
+/// @param value QVariant*
 bool q_vxymodelmapper_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QVXYModelMapper* self, const char* name ```
+/// @param self QVXYModelMapper*
+/// @param name const char*
 QVariant* q_vxymodelmapper_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QVXYModelMapper* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QVXYModelMapper*
 const char** q_vxymodelmapper_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QBindingStorage* q_vxymodelmapper_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 const QBindingStorage* q_vxymodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*) ```
-void q_vxymodelmapper_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*)
+void q_vxymodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QObject* q_vxymodelmapper_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QVXYModelMapper* self, const char* classname ```
+/// @param self QVXYModelMapper*
+/// @param classname const char*
 bool q_vxymodelmapper_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QVXYModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QVXYModelMapper*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_vxymodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QVXYModelMapper* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QVXYModelMapper*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_vxymodelmapper_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_vxymodelmapper_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QVXYModelMapper* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QVXYModelMapper*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_vxymodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVXYModelMapper* self, QObject* param1 ```
+/// @param self QVXYModelMapper*
+/// @param param1 QObject*
 void q_vxymodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QObject*) ```
-void q_vxymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, QObject*)
+void q_vxymodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -452,7 +520,8 @@ void q_vxymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QEvent*
 bool q_vxymodelmapper_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -461,7 +530,8 @@ bool q_vxymodelmapper_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QEvent*
 bool q_vxymodelmapper_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -470,8 +540,9 @@ bool q_vxymodelmapper_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, bool (*slot)(QVXYModelMapper*, QEvent*) ```
-void q_vxymodelmapper_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback bool fn(QVXYModelMapper*, QEvent*)
+void q_vxymodelmapper_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -479,7 +550,9 @@ void q_vxymodelmapper_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QObject* watched, QEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_vxymodelmapper_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -488,7 +561,9 @@ bool q_vxymodelmapper_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QObject* watched, QEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_vxymodelmapper_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -497,8 +572,9 @@ bool q_vxymodelmapper_qbase_event_filter(void* self, void* watched, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, bool (*slot)(QVXYModelMapper*, QObject*, QEvent*) ```
-void q_vxymodelmapper_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback bool fn(QVXYModelMapper*, QObject*, QEvent*)
+void q_vxymodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -506,7 +582,8 @@ void q_vxymodelmapper_on_event_filter(void* self, bool (*slot)(void*, void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QTimerEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QTimerEvent*
 void q_vxymodelmapper_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -515,7 +592,8 @@ void q_vxymodelmapper_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QTimerEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QTimerEvent*
 void q_vxymodelmapper_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -524,8 +602,9 @@ void q_vxymodelmapper_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QTimerEvent*) ```
-void q_vxymodelmapper_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, QTimerEvent*)
+void q_vxymodelmapper_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -533,7 +612,8 @@ void q_vxymodelmapper_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QChildEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QChildEvent*
 void q_vxymodelmapper_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -542,7 +622,8 @@ void q_vxymodelmapper_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QChildEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QChildEvent*
 void q_vxymodelmapper_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -551,8 +632,9 @@ void q_vxymodelmapper_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QChildEvent*) ```
-void q_vxymodelmapper_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, QChildEvent*)
+void q_vxymodelmapper_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -560,7 +642,8 @@ void q_vxymodelmapper_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QEvent*
 void q_vxymodelmapper_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -569,7 +652,8 @@ void q_vxymodelmapper_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QEvent* event ```
+/// @param self QVXYModelMapper*
+/// @param event QEvent*
 void q_vxymodelmapper_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -578,8 +662,9 @@ void q_vxymodelmapper_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QEvent*) ```
-void q_vxymodelmapper_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, QEvent*)
+void q_vxymodelmapper_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -587,7 +672,8 @@ void q_vxymodelmapper_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QMetaMethod* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal QMetaMethod*
 void q_vxymodelmapper_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -596,7 +682,8 @@ void q_vxymodelmapper_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QMetaMethod* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal QMetaMethod*
 void q_vxymodelmapper_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -605,8 +692,9 @@ void q_vxymodelmapper_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QMetaMethod*) ```
-void q_vxymodelmapper_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, QMetaMethod*)
+void q_vxymodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -614,7 +702,8 @@ void q_vxymodelmapper_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QMetaMethod* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal QMetaMethod*
 void q_vxymodelmapper_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -623,7 +712,8 @@ void q_vxymodelmapper_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QMetaMethod* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal QMetaMethod*
 void q_vxymodelmapper_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -632,8 +722,9 @@ void q_vxymodelmapper_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, QMetaMethod*) ```
-void q_vxymodelmapper_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, QMetaMethod*)
+void q_vxymodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYModelMapper
 ///
@@ -641,7 +732,7 @@ void q_vxymodelmapper_on_disconnect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_first(void* self);
 
 /// Inherited from QXYModelMapper
@@ -650,7 +741,7 @@ int32_t q_vxymodelmapper_first(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_qbase_first(void* self);
 
 /// Inherited from QXYModelMapper
@@ -659,8 +750,9 @@ int32_t q_vxymodelmapper_qbase_first(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)() ```
-void q_vxymodelmapper_on_first(void* self, int32_t (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn()
+void q_vxymodelmapper_on_first(void* self, int32_t (*callback)());
 
 /// Inherited from QXYModelMapper
 ///
@@ -668,7 +760,8 @@ void q_vxymodelmapper_on_first(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int first ```
+/// @param self QVXYModelMapper*
+/// @param first int
 void q_vxymodelmapper_set_first(void* self, int first);
 
 /// Inherited from QXYModelMapper
@@ -677,7 +770,8 @@ void q_vxymodelmapper_set_first(void* self, int first);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int first ```
+/// @param self QVXYModelMapper*
+/// @param first int
 void q_vxymodelmapper_qbase_set_first(void* self, int first);
 
 /// Inherited from QXYModelMapper
@@ -686,8 +780,9 @@ void q_vxymodelmapper_qbase_set_first(void* self, int first);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, int) ```
-void q_vxymodelmapper_on_set_first(void* self, void (*slot)(void*, int));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, int)
+void q_vxymodelmapper_on_set_first(void* self, void (*callback)(void*, int));
 
 /// Inherited from QXYModelMapper
 ///
@@ -695,7 +790,7 @@ void q_vxymodelmapper_on_set_first(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_count(void* self);
 
 /// Inherited from QXYModelMapper
@@ -704,7 +799,7 @@ int32_t q_vxymodelmapper_count(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_qbase_count(void* self);
 
 /// Inherited from QXYModelMapper
@@ -713,8 +808,9 @@ int32_t q_vxymodelmapper_qbase_count(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)() ```
-void q_vxymodelmapper_on_count(void* self, int32_t (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn()
+void q_vxymodelmapper_on_count(void* self, int32_t (*callback)());
 
 /// Inherited from QXYModelMapper
 ///
@@ -722,7 +818,8 @@ void q_vxymodelmapper_on_count(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int count ```
+/// @param self QVXYModelMapper*
+/// @param count int
 void q_vxymodelmapper_set_count(void* self, int count);
 
 /// Inherited from QXYModelMapper
@@ -731,7 +828,8 @@ void q_vxymodelmapper_set_count(void* self, int count);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int count ```
+/// @param self QVXYModelMapper*
+/// @param count int
 void q_vxymodelmapper_qbase_set_count(void* self, int count);
 
 /// Inherited from QXYModelMapper
@@ -740,8 +838,9 @@ void q_vxymodelmapper_qbase_set_count(void* self, int count);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, int) ```
-void q_vxymodelmapper_on_set_count(void* self, void (*slot)(void*, int));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, int)
+void q_vxymodelmapper_on_set_count(void* self, void (*callback)(void*, int));
 
 /// Inherited from QXYModelMapper
 ///
@@ -749,7 +848,9 @@ void q_vxymodelmapper_on_set_count(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
+///
+/// @return enum Qt__Orientation
 int64_t q_vxymodelmapper_orientation(void* self);
 
 /// Inherited from QXYModelMapper
@@ -758,7 +859,9 @@ int64_t q_vxymodelmapper_orientation(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
+///
+/// @return enum Qt__Orientation
 int64_t q_vxymodelmapper_qbase_orientation(void* self);
 
 /// Inherited from QXYModelMapper
@@ -767,8 +870,9 @@ int64_t q_vxymodelmapper_qbase_orientation(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int64_t (*slot)() ```
-void q_vxymodelmapper_on_orientation(void* self, int64_t (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback int64_t fn()
+void q_vxymodelmapper_on_orientation(void* self, int64_t (*callback)());
 
 /// Inherited from QXYModelMapper
 ///
@@ -776,7 +880,8 @@ void q_vxymodelmapper_on_orientation(void* self, int64_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, enum Qt__Orientation orientation ```
+/// @param self QVXYModelMapper*
+/// @param orientation enum Qt__Orientation
 void q_vxymodelmapper_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QXYModelMapper
@@ -785,7 +890,8 @@ void q_vxymodelmapper_set_orientation(void* self, int64_t orientation);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, enum Qt__Orientation orientation ```
+/// @param self QVXYModelMapper*
+/// @param orientation enum Qt__Orientation
 void q_vxymodelmapper_qbase_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QXYModelMapper
@@ -794,8 +900,9 @@ void q_vxymodelmapper_qbase_set_orientation(void* self, int64_t orientation);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, enum Qt__Orientation) ```
-void q_vxymodelmapper_on_set_orientation(void* self, void (*slot)(void*, int64_t));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, enum Qt__Orientation)
+void q_vxymodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QXYModelMapper
 ///
@@ -803,7 +910,7 @@ void q_vxymodelmapper_on_set_orientation(void* self, void (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_x_section(void* self);
 
 /// Inherited from QXYModelMapper
@@ -812,7 +919,7 @@ int32_t q_vxymodelmapper_x_section(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_qbase_x_section(void* self);
 
 /// Inherited from QXYModelMapper
@@ -821,8 +928,9 @@ int32_t q_vxymodelmapper_qbase_x_section(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)() ```
-void q_vxymodelmapper_on_x_section(void* self, int32_t (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn()
+void q_vxymodelmapper_on_x_section(void* self, int32_t (*callback)());
 
 /// Inherited from QXYModelMapper
 ///
@@ -830,7 +938,8 @@ void q_vxymodelmapper_on_x_section(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int xSection ```
+/// @param self QVXYModelMapper*
+/// @param xSection int
 void q_vxymodelmapper_set_x_section(void* self, int xSection);
 
 /// Inherited from QXYModelMapper
@@ -839,7 +948,8 @@ void q_vxymodelmapper_set_x_section(void* self, int xSection);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int xSection ```
+/// @param self QVXYModelMapper*
+/// @param xSection int
 void q_vxymodelmapper_qbase_set_x_section(void* self, int xSection);
 
 /// Inherited from QXYModelMapper
@@ -848,8 +958,9 @@ void q_vxymodelmapper_qbase_set_x_section(void* self, int xSection);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, int) ```
-void q_vxymodelmapper_on_set_x_section(void* self, void (*slot)(void*, int));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, int)
+void q_vxymodelmapper_on_set_x_section(void* self, void (*callback)(void*, int));
 
 /// Inherited from QXYModelMapper
 ///
@@ -857,7 +968,7 @@ void q_vxymodelmapper_on_set_x_section(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_y_section(void* self);
 
 /// Inherited from QXYModelMapper
@@ -866,7 +977,7 @@ int32_t q_vxymodelmapper_y_section(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_qbase_y_section(void* self);
 
 /// Inherited from QXYModelMapper
@@ -875,8 +986,9 @@ int32_t q_vxymodelmapper_qbase_y_section(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)() ```
-void q_vxymodelmapper_on_y_section(void* self, int32_t (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn()
+void q_vxymodelmapper_on_y_section(void* self, int32_t (*callback)());
 
 /// Inherited from QXYModelMapper
 ///
@@ -884,7 +996,8 @@ void q_vxymodelmapper_on_y_section(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int ySection ```
+/// @param self QVXYModelMapper*
+/// @param ySection int
 void q_vxymodelmapper_set_y_section(void* self, int ySection);
 
 /// Inherited from QXYModelMapper
@@ -893,7 +1006,8 @@ void q_vxymodelmapper_set_y_section(void* self, int ySection);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int ySection ```
+/// @param self QVXYModelMapper*
+/// @param ySection int
 void q_vxymodelmapper_qbase_set_y_section(void* self, int ySection);
 
 /// Inherited from QXYModelMapper
@@ -902,8 +1016,9 @@ void q_vxymodelmapper_qbase_set_y_section(void* self, int ySection);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, int) ```
-void q_vxymodelmapper_on_set_y_section(void* self, void (*slot)(void*, int));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, int)
+void q_vxymodelmapper_on_set_y_section(void* self, void (*callback)(void*, int));
 
 /// Inherited from QObject
 ///
@@ -911,7 +1026,7 @@ void q_vxymodelmapper_on_set_y_section(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QObject* q_vxymodelmapper_sender(void* self);
 
 /// Inherited from QObject
@@ -920,7 +1035,7 @@ QObject* q_vxymodelmapper_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 QObject* q_vxymodelmapper_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -929,8 +1044,9 @@ QObject* q_vxymodelmapper_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QObject* (*slot)() ```
-void q_vxymodelmapper_on_sender(void* self, QObject* (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback QObject* fn()
+void q_vxymodelmapper_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -938,7 +1054,7 @@ void q_vxymodelmapper_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -947,7 +1063,7 @@ int32_t q_vxymodelmapper_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 int32_t q_vxymodelmapper_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -956,8 +1072,9 @@ int32_t q_vxymodelmapper_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)() ```
-void q_vxymodelmapper_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn()
+void q_vxymodelmapper_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -965,7 +1082,8 @@ void q_vxymodelmapper_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, const char* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal const char*
 int32_t q_vxymodelmapper_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -974,7 +1092,8 @@ int32_t q_vxymodelmapper_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, const char* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal const char*
 int32_t q_vxymodelmapper_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -983,8 +1102,9 @@ int32_t q_vxymodelmapper_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, int32_t (*slot)(QVXYModelMapper*, const char*) ```
-void q_vxymodelmapper_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QVXYModelMapper*
+/// @param callback int32_t fn(QVXYModelMapper*, const char*)
+void q_vxymodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -992,7 +1112,8 @@ void q_vxymodelmapper_on_receivers(void* self, int32_t (*slot)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QMetaMethod* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal QMetaMethod*
 bool q_vxymodelmapper_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1001,7 +1122,8 @@ bool q_vxymodelmapper_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, QMetaMethod* signal ```
+/// @param self QVXYModelMapper*
+/// @param signal QMetaMethod*
 bool q_vxymodelmapper_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1010,8 +1132,9 @@ bool q_vxymodelmapper_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QVXYModelMapper* self, bool (*slot)(QVXYModelMapper*, QMetaMethod*) ```
-void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QVXYModelMapper*
+/// @param callback bool fn(QVXYModelMapper*, QMetaMethod*)
+void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1019,14 +1142,15 @@ void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QVXYModelMapper* self, void (*slot)(QVXYModelMapper*, const char*) ```
-void q_vxymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QVXYModelMapper*
+/// @param callback void fn(QVXYModelMapper*, const char*)
+void q_vxymodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvxymodelmapper-qtcharts.html#dtor.QVXYModelMapper)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QVXYModelMapper* self ```
+/// @param self QVXYModelMapper*
 void q_vxymodelmapper_delete(void* self);
 
 #endif

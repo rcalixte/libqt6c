@@ -51,8 +51,8 @@ int32_t q_chart_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QChart_Metacall((QChart*)self, param1, param2, param3);
 }
 
-void q_chart_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QChart_OnMetacall((QChart*)self, (intptr_t)slot);
+void q_chart_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QChart_OnMetacall((QChart*)self, (intptr_t)callback);
 }
 
 int32_t q_chart_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -319,8 +319,8 @@ void q_chart_plot_area_changed(void* self, void* plotArea) {
     QChart_PlotAreaChanged((QChart*)self, (QRectF*)plotArea);
 }
 
-void q_chart_on_plot_area_changed(void* self, void (*slot)(void*, void*)) {
-    QChart_Connect_PlotAreaChanged((QChart*)self, (intptr_t)slot);
+void q_chart_on_plot_area_changed(void* self, void (*callback)(void*, void*)) {
+    QChart_Connect_PlotAreaChanged((QChart*)self, (intptr_t)callback);
 }
 
 const char* q_chart_tr2(const char* s, const char* c) {
@@ -587,16 +587,16 @@ void q_chart_geometry_changed(void* self) {
     QGraphicsWidget_GeometryChanged((QGraphicsWidget*)self);
 }
 
-void q_chart_on_geometry_changed(void* self, void (*slot)(void*)) {
-    QGraphicsWidget_Connect_GeometryChanged((QGraphicsWidget*)self, (intptr_t)slot);
+void q_chart_on_geometry_changed(void* self, void (*callback)(void*)) {
+    QGraphicsWidget_Connect_GeometryChanged((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 void q_chart_layout_changed(void* self) {
     QGraphicsWidget_LayoutChanged((QGraphicsWidget*)self);
 }
 
-void q_chart_on_layout_changed(void* self, void (*slot)(void*)) {
-    QGraphicsWidget_Connect_LayoutChanged((QGraphicsWidget*)self, (intptr_t)slot);
+void q_chart_on_layout_changed(void* self, void (*callback)(void*)) {
+    QGraphicsWidget_Connect_LayoutChanged((QGraphicsWidget*)self, (intptr_t)callback);
 }
 
 bool q_chart_close(void* self) {
@@ -631,96 +631,96 @@ void q_chart_parent_changed(void* self) {
     QGraphicsObject_ParentChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_parent_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_ParentChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_parent_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_ParentChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_opacity_changed(void* self) {
     QGraphicsObject_OpacityChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_opacity_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_OpacityChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_opacity_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_OpacityChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_visible_changed(void* self) {
     QGraphicsObject_VisibleChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_visible_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_VisibleChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_visible_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_VisibleChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_enabled_changed(void* self) {
     QGraphicsObject_EnabledChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_enabled_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_EnabledChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_enabled_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_EnabledChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_x_changed(void* self) {
     QGraphicsObject_XChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_x_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_XChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_x_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_XChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_y_changed(void* self) {
     QGraphicsObject_YChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_y_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_YChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_y_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_YChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_z_changed(void* self) {
     QGraphicsObject_ZChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_z_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_ZChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_z_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_ZChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_rotation_changed(void* self) {
     QGraphicsObject_RotationChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_rotation_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_RotationChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_rotation_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_RotationChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_scale_changed(void* self) {
     QGraphicsObject_ScaleChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_scale_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_ScaleChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_scale_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_ScaleChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_children_changed(void* self) {
     QGraphicsObject_ChildrenChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_children_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_ChildrenChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_children_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_ChildrenChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_width_changed(void* self) {
     QGraphicsObject_WidthChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_width_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_WidthChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_width_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_WidthChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_height_changed(void* self) {
     QGraphicsObject_HeightChanged((QGraphicsObject*)self);
 }
 
-void q_chart_on_height_changed(void* self, void (*slot)(void*)) {
-    QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)slot);
+void q_chart_on_height_changed(void* self, void (*callback)(void*)) {
+    QGraphicsObject_Connect_HeightChanged((QGraphicsObject*)self, (intptr_t)callback);
 }
 
 void q_chart_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
@@ -831,12 +831,16 @@ const char** q_chart_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_chart_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -854,8 +858,8 @@ void q_chart_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_chart_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_chart_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_chart_parent(void* self) {
@@ -890,8 +894,8 @@ void q_chart_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_chart_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_chart_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 QGraphicsScene* q_chart_scene(void* self) {
@@ -1701,8 +1705,8 @@ void q_chart_qbase_set_geometry(void* self, void* rect) {
     QChart_QBaseSetGeometry((QChart*)self, (QRectF*)rect);
 }
 
-void q_chart_on_set_geometry(void* self, void (*slot)(void*, void*)) {
-    QChart_OnSetGeometry((QChart*)self, (intptr_t)slot);
+void q_chart_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+    QChart_OnSetGeometry((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom) {
@@ -1713,8 +1717,8 @@ void q_chart_qbase_get_contents_margins(void* self, double* left, double* top, d
     QChart_QBaseGetContentsMargins((QChart*)self, left, top, right, bottom);
 }
 
-void q_chart_on_get_contents_margins(void* self, void (*slot)(void*, double*, double*, double*, double*)) {
-    QChart_OnGetContentsMargins((QChart*)self, (intptr_t)slot);
+void q_chart_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*)) {
+    QChart_OnGetContentsMargins((QChart*)self, (intptr_t)callback);
 }
 
 int32_t q_chart_type(void* self) {
@@ -1725,8 +1729,8 @@ int32_t q_chart_qbase_type(void* self) {
     return QChart_QBaseType((QChart*)self);
 }
 
-void q_chart_on_type(void* self, int32_t (*slot)()) {
-    QChart_OnType((QChart*)self, (intptr_t)slot);
+void q_chart_on_type(void* self, int32_t (*callback)()) {
+    QChart_OnType((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_paint(void* self, void* painter, void* option, void* widget) {
@@ -1737,8 +1741,8 @@ void q_chart_qbase_paint(void* self, void* painter, void* option, void* widget) 
     QChart_QBasePaint((QChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
-void q_chart_on_paint(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QChart_OnPaint((QChart*)self, (intptr_t)slot);
+void q_chart_on_paint(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QChart_OnPaint((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_paint_window_frame(void* self, void* painter, void* option, void* widget) {
@@ -1749,8 +1753,8 @@ void q_chart_qbase_paint_window_frame(void* self, void* painter, void* option, v
     QChart_QBasePaintWindowFrame((QChart*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
-void q_chart_on_paint_window_frame(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QChart_OnPaintWindowFrame((QChart*)self, (intptr_t)slot);
+void q_chart_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QChart_OnPaintWindowFrame((QChart*)self, (intptr_t)callback);
 }
 
 QRectF* q_chart_bounding_rect(void* self) {
@@ -1761,8 +1765,8 @@ QRectF* q_chart_qbase_bounding_rect(void* self) {
     return QChart_QBaseBoundingRect((QChart*)self);
 }
 
-void q_chart_on_bounding_rect(void* self, QRectF* (*slot)()) {
-    QChart_OnBoundingRect((QChart*)self, (intptr_t)slot);
+void q_chart_on_bounding_rect(void* self, QRectF* (*callback)()) {
+    QChart_OnBoundingRect((QChart*)self, (intptr_t)callback);
 }
 
 QPainterPath* q_chart_shape(void* self) {
@@ -1773,8 +1777,8 @@ QPainterPath* q_chart_qbase_shape(void* self) {
     return QChart_QBaseShape((QChart*)self);
 }
 
-void q_chart_on_shape(void* self, QPainterPath* (*slot)()) {
-    QChart_OnShape((QChart*)self, (intptr_t)slot);
+void q_chart_on_shape(void* self, QPainterPath* (*callback)()) {
+    QChart_OnShape((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_init_style_option(void* self, void* option) {
@@ -1785,8 +1789,8 @@ void q_chart_qbase_init_style_option(void* self, void* option) {
     QChart_QBaseInitStyleOption((QChart*)self, (QStyleOption*)option);
 }
 
-void q_chart_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QChart_OnInitStyleOption((QChart*)self, (intptr_t)slot);
+void q_chart_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QChart_OnInitStyleOption((QChart*)self, (intptr_t)callback);
 }
 
 QSizeF* q_chart_size_hint(void* self, int64_t which, void* constraint) {
@@ -1797,8 +1801,8 @@ QSizeF* q_chart_qbase_size_hint(void* self, int64_t which, void* constraint) {
     return QChart_QBaseSizeHint((QChart*)self, which, (QSizeF*)constraint);
 }
 
-void q_chart_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*)) {
-    QChart_OnSizeHint((QChart*)self, (intptr_t)slot);
+void q_chart_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+    QChart_OnSizeHint((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_update_geometry(void* self) {
@@ -1809,8 +1813,8 @@ void q_chart_qbase_update_geometry(void* self) {
     QChart_QBaseUpdateGeometry((QChart*)self);
 }
 
-void q_chart_on_update_geometry(void* self, void (*slot)()) {
-    QChart_OnUpdateGeometry((QChart*)self, (intptr_t)slot);
+void q_chart_on_update_geometry(void* self, void (*callback)()) {
+    QChart_OnUpdateGeometry((QChart*)self, (intptr_t)callback);
 }
 
 QVariant* q_chart_item_change(void* self, int64_t change, void* value) {
@@ -1821,8 +1825,8 @@ QVariant* q_chart_qbase_item_change(void* self, int64_t change, void* value) {
     return QChart_QBaseItemChange((QChart*)self, change, (QVariant*)value);
 }
 
-void q_chart_on_item_change(void* self, QVariant* (*slot)(void*, int64_t, void*)) {
-    QChart_OnItemChange((QChart*)self, (intptr_t)slot);
+void q_chart_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*)) {
+    QChart_OnItemChange((QChart*)self, (intptr_t)callback);
 }
 
 QVariant* q_chart_property_change(void* self, const char* propertyName, void* value) {
@@ -1833,8 +1837,8 @@ QVariant* q_chart_qbase_property_change(void* self, const char* propertyName, vo
     return QChart_QBasePropertyChange((QChart*)self, qstring(propertyName), (QVariant*)value);
 }
 
-void q_chart_on_property_change(void* self, QVariant* (*slot)(void*, const char*, void*)) {
-    QChart_OnPropertyChange((QChart*)self, (intptr_t)slot);
+void q_chart_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*)) {
+    QChart_OnPropertyChange((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_scene_event(void* self, void* event) {
@@ -1845,8 +1849,8 @@ bool q_chart_qbase_scene_event(void* self, void* event) {
     return QChart_QBaseSceneEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_scene_event(void* self, bool (*slot)(void*, void*)) {
-    QChart_OnSceneEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_scene_event(void* self, bool (*callback)(void*, void*)) {
+    QChart_OnSceneEvent((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_window_frame_event(void* self, void* e) {
@@ -1857,8 +1861,8 @@ bool q_chart_qbase_window_frame_event(void* self, void* e) {
     return QChart_QBaseWindowFrameEvent((QChart*)self, (QEvent*)e);
 }
 
-void q_chart_on_window_frame_event(void* self, bool (*slot)(void*, void*)) {
-    QChart_OnWindowFrameEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_window_frame_event(void* self, bool (*callback)(void*, void*)) {
+    QChart_OnWindowFrameEvent((QChart*)self, (intptr_t)callback);
 }
 
 int64_t q_chart_window_frame_section_at(void* self, void* pos) {
@@ -1869,8 +1873,8 @@ int64_t q_chart_qbase_window_frame_section_at(void* self, void* pos) {
     return QChart_QBaseWindowFrameSectionAt((QChart*)self, (QPointF*)pos);
 }
 
-void q_chart_on_window_frame_section_at(void* self, int64_t (*slot)(void*, void*)) {
-    QChart_OnWindowFrameSectionAt((QChart*)self, (intptr_t)slot);
+void q_chart_on_window_frame_section_at(void* self, int64_t (*callback)(void*, void*)) {
+    QChart_OnWindowFrameSectionAt((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_event(void* self, void* event) {
@@ -1881,8 +1885,8 @@ bool q_chart_qbase_event(void* self, void* event) {
     return QChart_QBaseEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_event(void* self, bool (*slot)(void*, void*)) {
-    QChart_OnEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_event(void* self, bool (*callback)(void*, void*)) {
+    QChart_OnEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_change_event(void* self, void* event) {
@@ -1893,8 +1897,8 @@ void q_chart_qbase_change_event(void* self, void* event) {
     QChart_QBaseChangeEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnChangeEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnChangeEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_close_event(void* self, void* event) {
@@ -1905,8 +1909,8 @@ void q_chart_qbase_close_event(void* self, void* event) {
     QChart_QBaseCloseEvent((QChart*)self, (QCloseEvent*)event);
 }
 
-void q_chart_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnCloseEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnCloseEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_focus_in_event(void* self, void* event) {
@@ -1917,8 +1921,8 @@ void q_chart_qbase_focus_in_event(void* self, void* event) {
     QChart_QBaseFocusInEvent((QChart*)self, (QFocusEvent*)event);
 }
 
-void q_chart_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnFocusInEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnFocusInEvent((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_focus_next_prev_child(void* self, bool next) {
@@ -1929,8 +1933,8 @@ bool q_chart_qbase_focus_next_prev_child(void* self, bool next) {
     return QChart_QBaseFocusNextPrevChild((QChart*)self, next);
 }
 
-void q_chart_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QChart_OnFocusNextPrevChild((QChart*)self, (intptr_t)slot);
+void q_chart_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QChart_OnFocusNextPrevChild((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_focus_out_event(void* self, void* event) {
@@ -1941,8 +1945,8 @@ void q_chart_qbase_focus_out_event(void* self, void* event) {
     QChart_QBaseFocusOutEvent((QChart*)self, (QFocusEvent*)event);
 }
 
-void q_chart_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnFocusOutEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnFocusOutEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_hide_event(void* self, void* event) {
@@ -1953,8 +1957,8 @@ void q_chart_qbase_hide_event(void* self, void* event) {
     QChart_QBaseHideEvent((QChart*)self, (QHideEvent*)event);
 }
 
-void q_chart_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnHideEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnHideEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_move_event(void* self, void* event) {
@@ -1965,8 +1969,8 @@ void q_chart_qbase_move_event(void* self, void* event) {
     QChart_QBaseMoveEvent((QChart*)self, (QGraphicsSceneMoveEvent*)event);
 }
 
-void q_chart_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnMoveEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnMoveEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_polish_event(void* self) {
@@ -1977,8 +1981,8 @@ void q_chart_qbase_polish_event(void* self) {
     QChart_QBasePolishEvent((QChart*)self);
 }
 
-void q_chart_on_polish_event(void* self, void (*slot)()) {
-    QChart_OnPolishEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_polish_event(void* self, void (*callback)()) {
+    QChart_OnPolishEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_resize_event(void* self, void* event) {
@@ -1989,8 +1993,8 @@ void q_chart_qbase_resize_event(void* self, void* event) {
     QChart_QBaseResizeEvent((QChart*)self, (QGraphicsSceneResizeEvent*)event);
 }
 
-void q_chart_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnResizeEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnResizeEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_show_event(void* self, void* event) {
@@ -2001,8 +2005,8 @@ void q_chart_qbase_show_event(void* self, void* event) {
     QChart_QBaseShowEvent((QChart*)self, (QShowEvent*)event);
 }
 
-void q_chart_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnShowEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnShowEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_hover_move_event(void* self, void* event) {
@@ -2013,8 +2017,8 @@ void q_chart_qbase_hover_move_event(void* self, void* event) {
     QChart_QBaseHoverMoveEvent((QChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_chart_on_hover_move_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnHoverMoveEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnHoverMoveEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_hover_leave_event(void* self, void* event) {
@@ -2025,8 +2029,8 @@ void q_chart_qbase_hover_leave_event(void* self, void* event) {
     QChart_QBaseHoverLeaveEvent((QChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_chart_on_hover_leave_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnHoverLeaveEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnHoverLeaveEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_grab_mouse_event(void* self, void* event) {
@@ -2037,8 +2041,8 @@ void q_chart_qbase_grab_mouse_event(void* self, void* event) {
     QChart_QBaseGrabMouseEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_grab_mouse_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnGrabMouseEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_grab_mouse_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnGrabMouseEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_ungrab_mouse_event(void* self, void* event) {
@@ -2049,8 +2053,8 @@ void q_chart_qbase_ungrab_mouse_event(void* self, void* event) {
     QChart_QBaseUngrabMouseEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_ungrab_mouse_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnUngrabMouseEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_ungrab_mouse_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnUngrabMouseEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_grab_keyboard_event(void* self, void* event) {
@@ -2061,8 +2065,8 @@ void q_chart_qbase_grab_keyboard_event(void* self, void* event) {
     QChart_QBaseGrabKeyboardEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_grab_keyboard_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnGrabKeyboardEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_grab_keyboard_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnGrabKeyboardEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_ungrab_keyboard_event(void* self, void* event) {
@@ -2073,8 +2077,8 @@ void q_chart_qbase_ungrab_keyboard_event(void* self, void* event) {
     QChart_QBaseUngrabKeyboardEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_ungrab_keyboard_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnUngrabKeyboardEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_ungrab_keyboard_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnUngrabKeyboardEvent((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_event_filter(void* self, void* watched, void* event) {
@@ -2085,8 +2089,8 @@ bool q_chart_qbase_event_filter(void* self, void* watched, void* event) {
     return QChart_QBaseEventFilter((QChart*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_chart_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QChart_OnEventFilter((QChart*)self, (intptr_t)slot);
+void q_chart_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QChart_OnEventFilter((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_timer_event(void* self, void* event) {
@@ -2097,8 +2101,8 @@ void q_chart_qbase_timer_event(void* self, void* event) {
     QChart_QBaseTimerEvent((QChart*)self, (QTimerEvent*)event);
 }
 
-void q_chart_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnTimerEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnTimerEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_child_event(void* self, void* event) {
@@ -2109,8 +2113,8 @@ void q_chart_qbase_child_event(void* self, void* event) {
     QChart_QBaseChildEvent((QChart*)self, (QChildEvent*)event);
 }
 
-void q_chart_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnChildEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnChildEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_custom_event(void* self, void* event) {
@@ -2121,8 +2125,8 @@ void q_chart_qbase_custom_event(void* self, void* event) {
     QChart_QBaseCustomEvent((QChart*)self, (QEvent*)event);
 }
 
-void q_chart_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnCustomEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnCustomEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_connect_notify(void* self, void* signal) {
@@ -2133,8 +2137,8 @@ void q_chart_qbase_connect_notify(void* self, void* signal) {
     QChart_QBaseConnectNotify((QChart*)self, (QMetaMethod*)signal);
 }
 
-void q_chart_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QChart_OnConnectNotify((QChart*)self, (intptr_t)slot);
+void q_chart_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QChart_OnConnectNotify((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_disconnect_notify(void* self, void* signal) {
@@ -2145,8 +2149,8 @@ void q_chart_qbase_disconnect_notify(void* self, void* signal) {
     QChart_QBaseDisconnectNotify((QChart*)self, (QMetaMethod*)signal);
 }
 
-void q_chart_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QChart_OnDisconnectNotify((QChart*)self, (intptr_t)slot);
+void q_chart_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QChart_OnDisconnectNotify((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_advance(void* self, int phase) {
@@ -2157,8 +2161,8 @@ void q_chart_qbase_advance(void* self, int phase) {
     QChart_QBaseAdvance((QChart*)self, phase);
 }
 
-void q_chart_on_advance(void* self, void (*slot)(void*, int)) {
-    QChart_OnAdvance((QChart*)self, (intptr_t)slot);
+void q_chart_on_advance(void* self, void (*callback)(void*, int)) {
+    QChart_OnAdvance((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_contains(void* self, void* point) {
@@ -2169,8 +2173,8 @@ bool q_chart_qbase_contains(void* self, void* point) {
     return QChart_QBaseContains((QChart*)self, (QPointF*)point);
 }
 
-void q_chart_on_contains(void* self, bool (*slot)(void*, void*)) {
-    QChart_OnContains((QChart*)self, (intptr_t)slot);
+void q_chart_on_contains(void* self, bool (*callback)(void*, void*)) {
+    QChart_OnContains((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_collides_with_item(void* self, void* other, int64_t mode) {
@@ -2181,8 +2185,8 @@ bool q_chart_qbase_collides_with_item(void* self, void* other, int64_t mode) {
     return QChart_QBaseCollidesWithItem((QChart*)self, (QGraphicsItem*)other, mode);
 }
 
-void q_chart_on_collides_with_item(void* self, bool (*slot)(void*, void*, int64_t)) {
-    QChart_OnCollidesWithItem((QChart*)self, (intptr_t)slot);
+void q_chart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t)) {
+    QChart_OnCollidesWithItem((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_collides_with_path(void* self, void* path, int64_t mode) {
@@ -2193,8 +2197,8 @@ bool q_chart_qbase_collides_with_path(void* self, void* path, int64_t mode) {
     return QChart_QBaseCollidesWithPath((QChart*)self, (QPainterPath*)path, mode);
 }
 
-void q_chart_on_collides_with_path(void* self, bool (*slot)(void*, void*, int64_t)) {
-    QChart_OnCollidesWithPath((QChart*)self, (intptr_t)slot);
+void q_chart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t)) {
+    QChart_OnCollidesWithPath((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_is_obscured_by(void* self, void* item) {
@@ -2205,8 +2209,8 @@ bool q_chart_qbase_is_obscured_by(void* self, void* item) {
     return QChart_QBaseIsObscuredBy((QChart*)self, (QGraphicsItem*)item);
 }
 
-void q_chart_on_is_obscured_by(void* self, bool (*slot)(void*, void*)) {
-    QChart_OnIsObscuredBy((QChart*)self, (intptr_t)slot);
+void q_chart_on_is_obscured_by(void* self, bool (*callback)(void*, void*)) {
+    QChart_OnIsObscuredBy((QChart*)self, (intptr_t)callback);
 }
 
 QPainterPath* q_chart_opaque_area(void* self) {
@@ -2217,8 +2221,8 @@ QPainterPath* q_chart_qbase_opaque_area(void* self) {
     return QChart_QBaseOpaqueArea((QChart*)self);
 }
 
-void q_chart_on_opaque_area(void* self, QPainterPath* (*slot)()) {
-    QChart_OnOpaqueArea((QChart*)self, (intptr_t)slot);
+void q_chart_on_opaque_area(void* self, QPainterPath* (*callback)()) {
+    QChart_OnOpaqueArea((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_scene_event_filter(void* self, void* watched, void* event) {
@@ -2229,8 +2233,8 @@ bool q_chart_qbase_scene_event_filter(void* self, void* watched, void* event) {
     return QChart_QBaseSceneEventFilter((QChart*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-void q_chart_on_scene_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QChart_OnSceneEventFilter((QChart*)self, (intptr_t)slot);
+void q_chart_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QChart_OnSceneEventFilter((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_context_menu_event(void* self, void* event) {
@@ -2241,8 +2245,8 @@ void q_chart_qbase_context_menu_event(void* self, void* event) {
     QChart_QBaseContextMenuEvent((QChart*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_chart_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnContextMenuEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnContextMenuEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_drag_enter_event(void* self, void* event) {
@@ -2253,8 +2257,8 @@ void q_chart_qbase_drag_enter_event(void* self, void* event) {
     QChart_QBaseDragEnterEvent((QChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_chart_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnDragEnterEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnDragEnterEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_drag_leave_event(void* self, void* event) {
@@ -2265,8 +2269,8 @@ void q_chart_qbase_drag_leave_event(void* self, void* event) {
     QChart_QBaseDragLeaveEvent((QChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_chart_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnDragLeaveEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnDragLeaveEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_drag_move_event(void* self, void* event) {
@@ -2277,8 +2281,8 @@ void q_chart_qbase_drag_move_event(void* self, void* event) {
     QChart_QBaseDragMoveEvent((QChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_chart_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnDragMoveEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnDragMoveEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_drop_event(void* self, void* event) {
@@ -2289,8 +2293,8 @@ void q_chart_qbase_drop_event(void* self, void* event) {
     QChart_QBaseDropEvent((QChart*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_chart_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnDropEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnDropEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_hover_enter_event(void* self, void* event) {
@@ -2301,8 +2305,8 @@ void q_chart_qbase_hover_enter_event(void* self, void* event) {
     QChart_QBaseHoverEnterEvent((QChart*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_chart_on_hover_enter_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnHoverEnterEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnHoverEnterEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_key_press_event(void* self, void* event) {
@@ -2313,8 +2317,8 @@ void q_chart_qbase_key_press_event(void* self, void* event) {
     QChart_QBaseKeyPressEvent((QChart*)self, (QKeyEvent*)event);
 }
 
-void q_chart_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnKeyPressEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnKeyPressEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_key_release_event(void* self, void* event) {
@@ -2325,8 +2329,8 @@ void q_chart_qbase_key_release_event(void* self, void* event) {
     QChart_QBaseKeyReleaseEvent((QChart*)self, (QKeyEvent*)event);
 }
 
-void q_chart_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnKeyReleaseEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnKeyReleaseEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_mouse_press_event(void* self, void* event) {
@@ -2337,8 +2341,8 @@ void q_chart_qbase_mouse_press_event(void* self, void* event) {
     QChart_QBaseMousePressEvent((QChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_chart_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnMousePressEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnMousePressEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_mouse_move_event(void* self, void* event) {
@@ -2349,8 +2353,8 @@ void q_chart_qbase_mouse_move_event(void* self, void* event) {
     QChart_QBaseMouseMoveEvent((QChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_chart_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnMouseMoveEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnMouseMoveEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_mouse_release_event(void* self, void* event) {
@@ -2361,8 +2365,8 @@ void q_chart_qbase_mouse_release_event(void* self, void* event) {
     QChart_QBaseMouseReleaseEvent((QChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_chart_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnMouseReleaseEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnMouseReleaseEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_mouse_double_click_event(void* self, void* event) {
@@ -2373,8 +2377,8 @@ void q_chart_qbase_mouse_double_click_event(void* self, void* event) {
     QChart_QBaseMouseDoubleClickEvent((QChart*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_chart_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnMouseDoubleClickEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnMouseDoubleClickEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_wheel_event(void* self, void* event) {
@@ -2385,8 +2389,8 @@ void q_chart_qbase_wheel_event(void* self, void* event) {
     QChart_QBaseWheelEvent((QChart*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_chart_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnWheelEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnWheelEvent((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_input_method_event(void* self, void* event) {
@@ -2397,8 +2401,8 @@ void q_chart_qbase_input_method_event(void* self, void* event) {
     QChart_QBaseInputMethodEvent((QChart*)self, (QInputMethodEvent*)event);
 }
 
-void q_chart_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QChart_OnInputMethodEvent((QChart*)self, (intptr_t)slot);
+void q_chart_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QChart_OnInputMethodEvent((QChart*)self, (intptr_t)callback);
 }
 
 QVariant* q_chart_input_method_query(void* self, int64_t query) {
@@ -2409,8 +2413,8 @@ QVariant* q_chart_qbase_input_method_query(void* self, int64_t query) {
     return QChart_QBaseInputMethodQuery((QChart*)self, query);
 }
 
-void q_chart_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QChart_OnInputMethodQuery((QChart*)self, (intptr_t)slot);
+void q_chart_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QChart_OnInputMethodQuery((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_supports_extension(void* self, int64_t extension) {
@@ -2421,8 +2425,8 @@ bool q_chart_qbase_supports_extension(void* self, int64_t extension) {
     return QChart_QBaseSupportsExtension((QChart*)self, extension);
 }
 
-void q_chart_on_supports_extension(void* self, bool (*slot)(void*, int64_t)) {
-    QChart_OnSupportsExtension((QChart*)self, (intptr_t)slot);
+void q_chart_on_supports_extension(void* self, bool (*callback)(void*, int64_t)) {
+    QChart_OnSupportsExtension((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_set_extension(void* self, int64_t extension, void* variant) {
@@ -2433,8 +2437,8 @@ void q_chart_qbase_set_extension(void* self, int64_t extension, void* variant) {
     QChart_QBaseSetExtension((QChart*)self, extension, (QVariant*)variant);
 }
 
-void q_chart_on_set_extension(void* self, void (*slot)(void*, int64_t, void*)) {
-    QChart_OnSetExtension((QChart*)self, (intptr_t)slot);
+void q_chart_on_set_extension(void* self, void (*callback)(void*, int64_t, void*)) {
+    QChart_OnSetExtension((QChart*)self, (intptr_t)callback);
 }
 
 QVariant* q_chart_extension(void* self, void* variant) {
@@ -2445,8 +2449,8 @@ QVariant* q_chart_qbase_extension(void* self, void* variant) {
     return QChart_QBaseExtension((QChart*)self, (QVariant*)variant);
 }
 
-void q_chart_on_extension(void* self, QVariant* (*slot)(void*, void*)) {
-    QChart_OnExtension((QChart*)self, (intptr_t)slot);
+void q_chart_on_extension(void* self, QVariant* (*callback)(void*, void*)) {
+    QChart_OnExtension((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_is_empty(void* self) {
@@ -2457,8 +2461,8 @@ bool q_chart_qbase_is_empty(void* self) {
     return QChart_QBaseIsEmpty((QChart*)self);
 }
 
-void q_chart_on_is_empty(void* self, bool (*slot)()) {
-    QChart_OnIsEmpty((QChart*)self, (intptr_t)slot);
+void q_chart_on_is_empty(void* self, bool (*callback)()) {
+    QChart_OnIsEmpty((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_update_micro_focus(void* self) {
@@ -2469,8 +2473,8 @@ void q_chart_qbase_update_micro_focus(void* self) {
     QChart_QBaseUpdateMicroFocus((QChart*)self);
 }
 
-void q_chart_on_update_micro_focus(void* self, void (*slot)()) {
-    QChart_OnUpdateMicroFocus((QChart*)self, (intptr_t)slot);
+void q_chart_on_update_micro_focus(void* self, void (*callback)()) {
+    QChart_OnUpdateMicroFocus((QChart*)self, (intptr_t)callback);
 }
 
 QObject* q_chart_sender(void* self) {
@@ -2481,8 +2485,8 @@ QObject* q_chart_qbase_sender(void* self) {
     return QChart_QBaseSender((QChart*)self);
 }
 
-void q_chart_on_sender(void* self, QObject* (*slot)()) {
-    QChart_OnSender((QChart*)self, (intptr_t)slot);
+void q_chart_on_sender(void* self, QObject* (*callback)()) {
+    QChart_OnSender((QChart*)self, (intptr_t)callback);
 }
 
 int32_t q_chart_sender_signal_index(void* self) {
@@ -2493,8 +2497,8 @@ int32_t q_chart_qbase_sender_signal_index(void* self) {
     return QChart_QBaseSenderSignalIndex((QChart*)self);
 }
 
-void q_chart_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QChart_OnSenderSignalIndex((QChart*)self, (intptr_t)slot);
+void q_chart_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QChart_OnSenderSignalIndex((QChart*)self, (intptr_t)callback);
 }
 
 int32_t q_chart_receivers(void* self, const char* signal) {
@@ -2505,8 +2509,8 @@ int32_t q_chart_qbase_receivers(void* self, const char* signal) {
     return QChart_QBaseReceivers((QChart*)self, signal);
 }
 
-void q_chart_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QChart_OnReceivers((QChart*)self, (intptr_t)slot);
+void q_chart_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QChart_OnReceivers((QChart*)self, (intptr_t)callback);
 }
 
 bool q_chart_is_signal_connected(void* self, void* signal) {
@@ -2517,8 +2521,8 @@ bool q_chart_qbase_is_signal_connected(void* self, void* signal) {
     return QChart_QBaseIsSignalConnected((QChart*)self, (QMetaMethod*)signal);
 }
 
-void q_chart_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QChart_OnIsSignalConnected((QChart*)self, (intptr_t)slot);
+void q_chart_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QChart_OnIsSignalConnected((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_add_to_index(void* self) {
@@ -2529,8 +2533,8 @@ void q_chart_qbase_add_to_index(void* self) {
     QChart_QBaseAddToIndex((QChart*)self);
 }
 
-void q_chart_on_add_to_index(void* self, void (*slot)()) {
-    QChart_OnAddToIndex((QChart*)self, (intptr_t)slot);
+void q_chart_on_add_to_index(void* self, void (*callback)()) {
+    QChart_OnAddToIndex((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_remove_from_index(void* self) {
@@ -2541,8 +2545,8 @@ void q_chart_qbase_remove_from_index(void* self) {
     QChart_QBaseRemoveFromIndex((QChart*)self);
 }
 
-void q_chart_on_remove_from_index(void* self, void (*slot)()) {
-    QChart_OnRemoveFromIndex((QChart*)self, (intptr_t)slot);
+void q_chart_on_remove_from_index(void* self, void (*callback)()) {
+    QChart_OnRemoveFromIndex((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_prepare_geometry_change(void* self) {
@@ -2553,8 +2557,8 @@ void q_chart_qbase_prepare_geometry_change(void* self) {
     QChart_QBasePrepareGeometryChange((QChart*)self);
 }
 
-void q_chart_on_prepare_geometry_change(void* self, void (*slot)()) {
-    QChart_OnPrepareGeometryChange((QChart*)self, (intptr_t)slot);
+void q_chart_on_prepare_geometry_change(void* self, void (*callback)()) {
+    QChart_OnPrepareGeometryChange((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_set_graphics_item(void* self, void* item) {
@@ -2565,8 +2569,8 @@ void q_chart_qbase_set_graphics_item(void* self, void* item) {
     QChart_QBaseSetGraphicsItem((QChart*)self, (QGraphicsItem*)item);
 }
 
-void q_chart_on_set_graphics_item(void* self, void (*slot)(void*, void*)) {
-    QChart_OnSetGraphicsItem((QChart*)self, (intptr_t)slot);
+void q_chart_on_set_graphics_item(void* self, void (*callback)(void*, void*)) {
+    QChart_OnSetGraphicsItem((QChart*)self, (intptr_t)callback);
 }
 
 void q_chart_set_owned_by_layout(void* self, bool ownedByLayout) {
@@ -2577,12 +2581,12 @@ void q_chart_qbase_set_owned_by_layout(void* self, bool ownedByLayout) {
     QChart_QBaseSetOwnedByLayout((QChart*)self, ownedByLayout);
 }
 
-void q_chart_on_set_owned_by_layout(void* self, void (*slot)(void*, bool)) {
-    QChart_OnSetOwnedByLayout((QChart*)self, (intptr_t)slot);
+void q_chart_on_set_owned_by_layout(void* self, void (*callback)(void*, bool)) {
+    QChart_OnSetOwnedByLayout((QChart*)self, (intptr_t)callback);
 }
 
-void q_chart_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_chart_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_chart_delete(void* self) {

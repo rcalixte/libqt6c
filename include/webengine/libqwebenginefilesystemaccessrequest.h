@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,54 +15,60 @@
 
 /// q_webenginefilesystemaccessrequest_new constructs a new QWebEngineFileSystemAccessRequest object.
 ///
-/// ``` QWebEngineFileSystemAccessRequest* other ```
+/// @param other QWebEngineFileSystemAccessRequest*
 QWebEngineFileSystemAccessRequest* q_webenginefilesystemaccessrequest_new(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#operator-eq)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self, QWebEngineFileSystemAccessRequest* other ```
+/// @param self QWebEngineFileSystemAccessRequest*
+/// @param other QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#swap)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self, QWebEngineFileSystemAccessRequest* other ```
+/// @param self QWebEngineFileSystemAccessRequest*
+/// @param other QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accept)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_accept(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#reject)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_reject(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#origin)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
 QUrl* q_webenginefilesystemaccessrequest_origin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#filePath)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
 QUrl* q_webenginefilesystemaccessrequest_file_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#handleType)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
+///
+/// @return enum QWebEngineFileSystemAccessRequest__HandleType
 int64_t q_webenginefilesystemaccessrequest_handle_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accessFlags)
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
+///
+/// @return flag of enum QWebEngineFileSystemAccessRequest__AccessFlag
 int64_t q_webenginefilesystemaccessrequest_access_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#dtor.QWebEngineFileSystemAccessRequest)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineFileSystemAccessRequest* self ```
+/// @param self QWebEngineFileSystemAccessRequest*
 void q_webenginefilesystemaccessrequest_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#types

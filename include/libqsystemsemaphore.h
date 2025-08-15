@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,164 +15,210 @@
 
 /// q_systemsemaphore_new constructs a new QSystemSemaphore object.
 ///
-/// ``` QNativeIpcKey* key ```
+/// @param key QNativeIpcKey*
 QSystemSemaphore* q_systemsemaphore_new(void* key);
 
 /// q_systemsemaphore_new2 constructs a new QSystemSemaphore object.
 ///
-/// ``` const char* key ```
+/// @param key const char*
 QSystemSemaphore* q_systemsemaphore_new2(const char* key);
 
 /// q_systemsemaphore_new3 constructs a new QSystemSemaphore object.
 ///
-/// ``` QNativeIpcKey* key, int initialValue ```
+/// @param key QNativeIpcKey*
+/// @param initialValue int
 QSystemSemaphore* q_systemsemaphore_new3(void* key, int initialValue);
 
 /// q_systemsemaphore_new4 constructs a new QSystemSemaphore object.
 ///
-/// ``` QNativeIpcKey* key, int initialValue, enum QSystemSemaphore__AccessMode param3 ```
+/// @param key QNativeIpcKey*
+/// @param initialValue int
+/// @param param3 enum QSystemSemaphore__AccessMode
 QSystemSemaphore* q_systemsemaphore_new4(void* key, int initialValue, int64_t param3);
 
 /// q_systemsemaphore_new5 constructs a new QSystemSemaphore object.
 ///
-/// ``` const char* key, int initialValue ```
+/// @param key const char*
+/// @param initialValue int
 QSystemSemaphore* q_systemsemaphore_new5(const char* key, int initialValue);
 
 /// q_systemsemaphore_new6 constructs a new QSystemSemaphore object.
 ///
-/// ``` const char* key, int initialValue, enum QSystemSemaphore__AccessMode mode ```
+/// @param key const char*
+/// @param initialValue int
+/// @param mode enum QSystemSemaphore__AccessMode
 QSystemSemaphore* q_systemsemaphore_new6(const char* key, int initialValue, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* sourceText ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param sourceText const char*
 const char* q_systemsemaphore_tr(const char* sourceText);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, QNativeIpcKey* key ```
+/// @param self QSystemSemaphore*
+/// @param key QNativeIpcKey*
 void q_systemsemaphore_set_native_key(void* self, void* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
 void q_systemsemaphore_set_native_key2(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#nativeIpcKey)
 ///
-/// ``` QSystemSemaphore* self ```
+/// @param self QSystemSemaphore*
 QNativeIpcKey* q_systemsemaphore_native_ipc_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
 void q_systemsemaphore_set_key(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#key)
 ///
-/// ``` QSystemSemaphore* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSystemSemaphore*
 const char* q_systemsemaphore_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#acquire)
 ///
-/// ``` QSystemSemaphore* self ```
+/// @param self QSystemSemaphore*
 bool q_systemsemaphore_acquire(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#release)
 ///
-/// ``` QSystemSemaphore* self ```
+/// @param self QSystemSemaphore*
 bool q_systemsemaphore_release(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#error)
 ///
-/// ``` QSystemSemaphore* self ```
+/// @param self QSystemSemaphore*
+///
+/// @return enum QSystemSemaphore__SystemSemaphoreError
 int64_t q_systemsemaphore_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#errorString)
 ///
-/// ``` QSystemSemaphore* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSystemSemaphore*
 const char* q_systemsemaphore_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#isKeyTypeSupported)
 ///
-/// ``` enum QNativeIpcKey__Type typeVal ```
+/// @param typeVal enum QNativeIpcKey__Type
 bool q_systemsemaphore_is_key_type_supported(int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#platformSafeKey)
 ///
-/// ``` const char* key ```
+/// @param key const char*
 QNativeIpcKey* q_systemsemaphore_platform_safe_key(const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#legacyNativeKey)
 ///
-/// ``` const char* key ```
+/// @param key const char*
 QNativeIpcKey* q_systemsemaphore_legacy_native_key(const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* sourceText, const char* disambiguation ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param sourceText const char*
+/// @param disambiguation const char*
 const char* q_systemsemaphore_tr2(const char* sourceText, const char* disambiguation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* sourceText, const char* disambiguation, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param sourceText const char*
+/// @param disambiguation const char*
+/// @param n int
 const char* q_systemsemaphore_tr3(const char* sourceText, const char* disambiguation, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, QNativeIpcKey* key, int initialValue ```
+/// @param self QSystemSemaphore*
+/// @param key QNativeIpcKey*
+/// @param initialValue int
 void q_systemsemaphore_set_native_key22(void* self, void* key, int initialValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, QNativeIpcKey* key, int initialValue, enum QSystemSemaphore__AccessMode param3 ```
+/// @param self QSystemSemaphore*
+/// @param key QNativeIpcKey*
+/// @param initialValue int
+/// @param param3 enum QSystemSemaphore__AccessMode
 void q_systemsemaphore_set_native_key3(void* self, void* key, int initialValue, int64_t param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key, int initialValue ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
+/// @param initialValue int
 void q_systemsemaphore_set_native_key23(void* self, const char* key, int initialValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key, int initialValue, enum QSystemSemaphore__AccessMode mode ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
+/// @param initialValue int
+/// @param mode enum QSystemSemaphore__AccessMode
 void q_systemsemaphore_set_native_key32(void* self, const char* key, int initialValue, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setNativeKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key, int initialValue, enum QSystemSemaphore__AccessMode mode, enum QNativeIpcKey__Type typeVal ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
+/// @param initialValue int
+/// @param mode enum QSystemSemaphore__AccessMode
+/// @param typeVal enum QNativeIpcKey__Type
 void q_systemsemaphore_set_native_key4(void* self, const char* key, int initialValue, int64_t mode, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key, int initialValue ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
+/// @param initialValue int
 void q_systemsemaphore_set_key2(void* self, const char* key, int initialValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#setKey)
 ///
-/// ``` QSystemSemaphore* self, const char* key, int initialValue, enum QSystemSemaphore__AccessMode mode ```
+/// @param self QSystemSemaphore*
+/// @param key const char*
+/// @param initialValue int
+/// @param mode enum QSystemSemaphore__AccessMode
 void q_systemsemaphore_set_key3(void* self, const char* key, int initialValue, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#release)
 ///
-/// ``` QSystemSemaphore* self, int n ```
+/// @param self QSystemSemaphore*
+/// @param n int
 bool q_systemsemaphore_release1(void* self, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#platformSafeKey)
 ///
-/// ``` const char* key, enum QNativeIpcKey__Type typeVal ```
+/// @param key const char*
+/// @param typeVal enum QNativeIpcKey__Type
 QNativeIpcKey* q_systemsemaphore_platform_safe_key2(const char* key, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#legacyNativeKey)
 ///
-/// ``` const char* key, enum QNativeIpcKey__Type typeVal ```
+/// @param key const char*
+/// @param typeVal enum QNativeIpcKey__Type
 QNativeIpcKey* q_systemsemaphore_legacy_native_key2(const char* key, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsystemsemaphore.html#dtor.QSystemSemaphore)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QSystemSemaphore* self ```
+/// @param self QSystemSemaphore*
 void q_systemsemaphore_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsystemsemaphore.html#types

@@ -119,13 +119,19 @@ QVariant* q_variant_new24(const char* stringVal) {
 
 QVariant* q_variant_new25(const char* stringlist[]) {
     size_t stringlist_len = libqt_strv_length(stringlist);
-    libqt_string* stringlist_qstr = malloc(stringlist_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < stringlist_len; ++_i) {
-        stringlist_qstr[_i] = qstring(stringlist[_i]);
+    libqt_string* stringlist_qstr = (libqt_string*)malloc(stringlist_len * sizeof(libqt_string));
+    if (stringlist_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_variant_new25");
+        abort();
+    }
+    for (size_t i = 0; i < stringlist_len; ++i) {
+        stringlist_qstr[i] = qstring(stringlist[i]);
     }
     libqt_list stringlist_list = qlist(stringlist_qstr, stringlist_len);
 
-    return QVariant_new25(stringlist_list);
+    QVariant* _out = QVariant_new25(stringlist_list);
+    free(stringlist_qstr);
+    return _out;
 }
 
 QVariant* q_variant_new26(void* url) {
@@ -266,12 +272,16 @@ const char** q_variant_to_string_list(void* self) {
     libqt_list _arr = QVariant_ToStringList((QVariant*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_variant_to_string_list");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

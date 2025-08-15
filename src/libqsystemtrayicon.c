@@ -36,8 +36,8 @@ int32_t q_systemtrayicon_metacall(void* self, int64_t param1, int param2, void* 
     return QSystemTrayIcon_Metacall((QSystemTrayIcon*)self, param1, param2, param3);
 }
 
-void q_systemtrayicon_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSystemTrayIcon_OnMetacall((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSystemTrayIcon_OnMetacall((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 int32_t q_systemtrayicon_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -118,24 +118,24 @@ void q_systemtrayicon_activated(void* self, int64_t reason) {
     QSystemTrayIcon_Activated((QSystemTrayIcon*)self, reason);
 }
 
-void q_systemtrayicon_on_activated(void* self, void (*slot)(void*, int64_t)) {
-    QSystemTrayIcon_Connect_Activated((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_activated(void* self, void (*callback)(void*, int64_t)) {
+    QSystemTrayIcon_Connect_Activated((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_message_clicked(void* self) {
     QSystemTrayIcon_MessageClicked((QSystemTrayIcon*)self);
 }
 
-void q_systemtrayicon_on_message_clicked(void* self, void (*slot)(void*)) {
-    QSystemTrayIcon_Connect_MessageClicked((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_message_clicked(void* self, void (*callback)(void*)) {
+    QSystemTrayIcon_Connect_MessageClicked((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 bool q_systemtrayicon_event(void* self, void* event) {
     return QSystemTrayIcon_Event((QSystemTrayIcon*)self, (QEvent*)event);
 }
 
-void q_systemtrayicon_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnEvent((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnEvent((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 bool q_systemtrayicon_qbase_event(void* self, void* event) {
@@ -272,12 +272,16 @@ const char** q_systemtrayicon_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_systemtrayicon_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -295,8 +299,8 @@ void q_systemtrayicon_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_systemtrayicon_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_systemtrayicon_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_systemtrayicon_parent(void* self) {
@@ -331,8 +335,8 @@ void q_systemtrayicon_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_systemtrayicon_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_systemtrayicon_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_systemtrayicon_event_filter(void* self, void* watched, void* event) {
@@ -343,8 +347,8 @@ bool q_systemtrayicon_qbase_event_filter(void* self, void* watched, void* event)
     return QSystemTrayIcon_QBaseEventFilter((QSystemTrayIcon*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_systemtrayicon_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSystemTrayIcon_OnEventFilter((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSystemTrayIcon_OnEventFilter((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_timer_event(void* self, void* event) {
@@ -355,8 +359,8 @@ void q_systemtrayicon_qbase_timer_event(void* self, void* event) {
     QSystemTrayIcon_QBaseTimerEvent((QSystemTrayIcon*)self, (QTimerEvent*)event);
 }
 
-void q_systemtrayicon_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnTimerEvent((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnTimerEvent((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_child_event(void* self, void* event) {
@@ -367,8 +371,8 @@ void q_systemtrayicon_qbase_child_event(void* self, void* event) {
     QSystemTrayIcon_QBaseChildEvent((QSystemTrayIcon*)self, (QChildEvent*)event);
 }
 
-void q_systemtrayicon_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnChildEvent((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnChildEvent((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_custom_event(void* self, void* event) {
@@ -379,8 +383,8 @@ void q_systemtrayicon_qbase_custom_event(void* self, void* event) {
     QSystemTrayIcon_QBaseCustomEvent((QSystemTrayIcon*)self, (QEvent*)event);
 }
 
-void q_systemtrayicon_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnCustomEvent((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnCustomEvent((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_connect_notify(void* self, void* signal) {
@@ -391,8 +395,8 @@ void q_systemtrayicon_qbase_connect_notify(void* self, void* signal) {
     QSystemTrayIcon_QBaseConnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
-void q_systemtrayicon_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnConnectNotify((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnConnectNotify((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_disconnect_notify(void* self, void* signal) {
@@ -403,8 +407,8 @@ void q_systemtrayicon_qbase_disconnect_notify(void* self, void* signal) {
     QSystemTrayIcon_QBaseDisconnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
-void q_systemtrayicon_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnDisconnectNotify((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnDisconnectNotify((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 QObject* q_systemtrayicon_sender(void* self) {
@@ -415,8 +419,8 @@ QObject* q_systemtrayicon_qbase_sender(void* self) {
     return QSystemTrayIcon_QBaseSender((QSystemTrayIcon*)self);
 }
 
-void q_systemtrayicon_on_sender(void* self, QObject* (*slot)()) {
-    QSystemTrayIcon_OnSender((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_sender(void* self, QObject* (*callback)()) {
+    QSystemTrayIcon_OnSender((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 int32_t q_systemtrayicon_sender_signal_index(void* self) {
@@ -427,8 +431,8 @@ int32_t q_systemtrayicon_qbase_sender_signal_index(void* self) {
     return QSystemTrayIcon_QBaseSenderSignalIndex((QSystemTrayIcon*)self);
 }
 
-void q_systemtrayicon_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSystemTrayIcon_OnSenderSignalIndex((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSystemTrayIcon_OnSenderSignalIndex((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 int32_t q_systemtrayicon_receivers(void* self, const char* signal) {
@@ -439,8 +443,8 @@ int32_t q_systemtrayicon_qbase_receivers(void* self, const char* signal) {
     return QSystemTrayIcon_QBaseReceivers((QSystemTrayIcon*)self, signal);
 }
 
-void q_systemtrayicon_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSystemTrayIcon_OnReceivers((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSystemTrayIcon_OnReceivers((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
 bool q_systemtrayicon_is_signal_connected(void* self, void* signal) {
@@ -451,12 +455,12 @@ bool q_systemtrayicon_qbase_is_signal_connected(void* self, void* signal) {
     return QSystemTrayIcon_QBaseIsSignalConnected((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
-void q_systemtrayicon_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSystemTrayIcon_OnIsSignalConnected((QSystemTrayIcon*)self, (intptr_t)slot);
+void q_systemtrayicon_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSystemTrayIcon_OnIsSignalConnected((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
-void q_systemtrayicon_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_systemtrayicon_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_systemtrayicon_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1218 +15,1362 @@
 
 /// q_focusframe_new constructs a new QFocusFrame object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QFocusFrame* q_focusframe_new(void* parent);
 
 /// q_focusframe_new2 constructs a new QFocusFrame object.
-///
 ///
 QFocusFrame* q_focusframe_new2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 const QMetaObject* q_focusframe_meta_object(void* self);
 
-/// ``` QFocusFrame* self, const char* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 const char*
 void* q_focusframe_metacast(void* self, const char* param1);
 
-/// ``` QFocusFrame* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QFocusFrame*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_focusframe_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QFocusFrame* self, int32_t (*slot)(QFocusFrame*, enum QMetaObject__Call, int, void*) ```
-void q_focusframe_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QFocusFrame*
+/// @param callback int32_t fn(QFocusFrame*, enum QMetaObject__Call, int, void*)
+void q_focusframe_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QFocusFrame* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QFocusFrame*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_focusframe_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_focusframe_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#setWidget)
 ///
-/// ``` QFocusFrame* self, QWidget* widget ```
+/// @param self QFocusFrame*
+/// @param widget QWidget*
 void q_focusframe_set_widget(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#widget)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_widget(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#event)
 ///
-/// ``` QFocusFrame* self, QEvent* e ```
+/// @param self QFocusFrame*
+/// @param e QEvent*
 bool q_focusframe_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QFocusFrame* self, bool (*slot)(QFocusFrame*, QEvent*) ```
-void q_focusframe_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback bool fn(QFocusFrame*, QEvent*)
+void q_focusframe_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QFocusFrame* self, QEvent* e ```
+/// @param self QFocusFrame*
+/// @param e QEvent*
 bool q_focusframe_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#eventFilter)
 ///
-/// ``` QFocusFrame* self, QObject* param1, QEvent* param2 ```
+/// @param self QFocusFrame*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_focusframe_event_filter(void* self, void* param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QFocusFrame* self, bool (*slot)(QFocusFrame*, QObject*, QEvent*) ```
-void q_focusframe_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QFocusFrame*
+/// @param callback bool fn(QFocusFrame*, QObject*, QEvent*)
+void q_focusframe_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#eventFilter)
 ///
 /// Base class method implementation
 ///
-/// ``` QFocusFrame* self, QObject* param1, QEvent* param2 ```
+/// @param self QFocusFrame*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_focusframe_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#paintEvent)
 ///
-/// ``` QFocusFrame* self, QPaintEvent* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPaintEvent*
 void q_focusframe_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QPaintEvent*) ```
-void q_focusframe_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QPaintEvent*)
+void q_focusframe_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QFocusFrame* self, QPaintEvent* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPaintEvent*
 void q_focusframe_qbase_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#initStyleOption)
 ///
-/// ``` QFocusFrame* self, QStyleOption* option ```
+/// @param self QFocusFrame*
+/// @param option QStyleOption*
 void q_focusframe_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QStyleOption*) ```
-void q_focusframe_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QStyleOption*)
+void q_focusframe_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// ``` QFocusFrame* self, QStyleOption* option ```
+/// @param self QFocusFrame*
+/// @param option QStyleOption*
 void q_focusframe_qbase_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_focusframe_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_focusframe_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 uintptr_t q_focusframe_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 uintptr_t q_focusframe_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 uintptr_t q_focusframe_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QStyle* q_focusframe_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QFocusFrame* self, QStyle* style ```
+/// @param self QFocusFrame*
+/// @param style QStyle*
 void q_focusframe_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum Qt__WindowModality
 int64_t q_focusframe_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QFocusFrame* self, enum Qt__WindowModality windowModality ```
+/// @param self QFocusFrame*
+/// @param windowModality enum Qt__WindowModality
 void q_focusframe_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QFocusFrame* self, QWidget* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
 bool q_focusframe_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QFocusFrame* self, bool enabled ```
+/// @param self QFocusFrame*
+/// @param enabled bool
 void q_focusframe_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QFocusFrame* self, bool disabled ```
+/// @param self QFocusFrame*
+/// @param disabled bool
 void q_focusframe_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QFocusFrame* self, bool windowModified ```
+/// @param self QFocusFrame*
+/// @param windowModified bool
 void q_focusframe_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRect* q_focusframe_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 const QRect* q_focusframe_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRect* q_focusframe_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QPoint* q_focusframe_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRect* q_focusframe_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRect* q_focusframe_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRegion* q_focusframe_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QFocusFrame* self, QSize* minimumSize ```
+/// @param self QFocusFrame*
+/// @param minimumSize QSize*
 void q_focusframe_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QFocusFrame* self, int minw, int minh ```
+/// @param self QFocusFrame*
+/// @param minw int
+/// @param minh int
 void q_focusframe_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QFocusFrame* self, QSize* maximumSize ```
+/// @param self QFocusFrame*
+/// @param maximumSize QSize*
 void q_focusframe_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QFocusFrame* self, int maxw, int maxh ```
+/// @param self QFocusFrame*
+/// @param maxw int
+/// @param maxh int
 void q_focusframe_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QFocusFrame* self, int minw ```
+/// @param self QFocusFrame*
+/// @param minw int
 void q_focusframe_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QFocusFrame* self, int minh ```
+/// @param self QFocusFrame*
+/// @param minh int
 void q_focusframe_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QFocusFrame* self, int maxw ```
+/// @param self QFocusFrame*
+/// @param maxw int
 void q_focusframe_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QFocusFrame* self, int maxh ```
+/// @param self QFocusFrame*
+/// @param maxh int
 void q_focusframe_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QFocusFrame* self, QSize* sizeIncrement ```
+/// @param self QFocusFrame*
+/// @param sizeIncrement QSize*
 void q_focusframe_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QFocusFrame* self, int w, int h ```
+/// @param self QFocusFrame*
+/// @param w int
+/// @param h int
 void q_focusframe_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QFocusFrame* self, QSize* baseSize ```
+/// @param self QFocusFrame*
+/// @param baseSize QSize*
 void q_focusframe_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QFocusFrame* self, int basew, int baseh ```
+/// @param self QFocusFrame*
+/// @param basew int
+/// @param baseh int
 void q_focusframe_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QFocusFrame* self, QSize* fixedSize ```
+/// @param self QFocusFrame*
+/// @param fixedSize QSize*
 void q_focusframe_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QFocusFrame* self, int w, int h ```
+/// @param self QFocusFrame*
+/// @param w int
+/// @param h int
 void q_focusframe_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QFocusFrame* self, int w ```
+/// @param self QFocusFrame*
+/// @param w int
 void q_focusframe_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QFocusFrame* self, int h ```
+/// @param self QFocusFrame*
+/// @param h int
 void q_focusframe_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QFocusFrame* self, QPointF* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPointF*
 QPointF* q_focusframe_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QFocusFrame* self, QPoint* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPoint*
 QPoint* q_focusframe_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QFocusFrame* self, QPointF* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPointF*
 QPointF* q_focusframe_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QFocusFrame* self, QPoint* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPoint*
 QPoint* q_focusframe_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QFocusFrame* self, QPointF* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPointF*
 QPointF* q_focusframe_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QFocusFrame* self, QPoint* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPoint*
 QPoint* q_focusframe_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QFocusFrame* self, QPointF* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPointF*
 QPointF* q_focusframe_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QFocusFrame* self, QPoint* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPoint*
 QPoint* q_focusframe_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QFocusFrame* self, QWidget* param1, QPointF* param2 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_focusframe_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QFocusFrame* self, QWidget* param1, QPoint* param2 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_focusframe_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QFocusFrame* self, QWidget* param1, QPointF* param2 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_focusframe_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QFocusFrame* self, QWidget* param1, QPoint* param2 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_focusframe_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 const QPalette* q_focusframe_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QFocusFrame* self, QPalette* palette ```
+/// @param self QFocusFrame*
+/// @param palette QPalette*
 void q_focusframe_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QFocusFrame* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QFocusFrame*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_focusframe_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_focusframe_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QFocusFrame* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QFocusFrame*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_focusframe_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_focusframe_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 const QFont* q_focusframe_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QFocusFrame* self, QFont* font ```
+/// @param self QFocusFrame*
+/// @param font QFont*
 void q_focusframe_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QFontMetrics* q_focusframe_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QFontInfo* q_focusframe_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QCursor* q_focusframe_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QFocusFrame* self, QCursor* cursor ```
+/// @param self QFocusFrame*
+/// @param cursor QCursor*
 void q_focusframe_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QFocusFrame* self, bool enable ```
+/// @param self QFocusFrame*
+/// @param enable bool
 void q_focusframe_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QFocusFrame* self, bool enable ```
+/// @param self QFocusFrame*
+/// @param enable bool
 void q_focusframe_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QFocusFrame* self, QBitmap* mask ```
+/// @param self QFocusFrame*
+/// @param mask QBitmap*
 void q_focusframe_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QFocusFrame* self, QRegion* mask ```
+/// @param self QFocusFrame*
+/// @param mask QRegion*
 void q_focusframe_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRegion* q_focusframe_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPaintDevice* target ```
+/// @param self QFocusFrame*
+/// @param target QPaintDevice*
 void q_focusframe_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPainter* painter ```
+/// @param self QFocusFrame*
+/// @param painter QPainter*
 void q_focusframe_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QPixmap* q_focusframe_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QGraphicsEffect* q_focusframe_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QFocusFrame* self, QGraphicsEffect* effect ```
+/// @param self QFocusFrame*
+/// @param effect QGraphicsEffect*
 void q_focusframe_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QFocusFrame* self, enum Qt__GestureType typeVal ```
+/// @param self QFocusFrame*
+/// @param typeVal enum Qt__GestureType
 void q_focusframe_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QFocusFrame* self, enum Qt__GestureType typeVal ```
+/// @param self QFocusFrame*
+/// @param typeVal enum Qt__GestureType
 void q_focusframe_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QFocusFrame* self, const char* windowTitle ```
+/// @param self QFocusFrame*
+/// @param windowTitle const char*
 void q_focusframe_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QFocusFrame* self, const char* styleSheet ```
+/// @param self QFocusFrame*
+/// @param styleSheet const char*
 void q_focusframe_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QFocusFrame* self, QIcon* icon ```
+/// @param self QFocusFrame*
+/// @param icon QIcon*
 void q_focusframe_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QIcon* q_focusframe_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QFocusFrame* self, const char* windowIconText ```
+/// @param self QFocusFrame*
+/// @param windowIconText const char*
 void q_focusframe_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QFocusFrame* self, const char* windowRole ```
+/// @param self QFocusFrame*
+/// @param windowRole const char*
 void q_focusframe_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QFocusFrame* self, const char* filePath ```
+/// @param self QFocusFrame*
+/// @param filePath const char*
 void q_focusframe_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QFocusFrame* self, double level ```
+/// @param self QFocusFrame*
+/// @param level double
 void q_focusframe_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 double q_focusframe_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QFocusFrame* self, const char* toolTip ```
+/// @param self QFocusFrame*
+/// @param toolTip const char*
 void q_focusframe_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QFocusFrame* self, int msec ```
+/// @param self QFocusFrame*
+/// @param msec int
 void q_focusframe_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QFocusFrame* self, const char* statusTip ```
+/// @param self QFocusFrame*
+/// @param statusTip const char*
 void q_focusframe_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QFocusFrame* self, const char* whatsThis ```
+/// @param self QFocusFrame*
+/// @param whatsThis const char*
 void q_focusframe_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QFocusFrame* self, const char* name ```
+/// @param self QFocusFrame*
+/// @param name const char*
 void q_focusframe_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QFocusFrame* self, const char* description ```
+/// @param self QFocusFrame*
+/// @param description const char*
 void q_focusframe_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QFocusFrame* self, enum Qt__LayoutDirection direction ```
+/// @param self QFocusFrame*
+/// @param direction enum Qt__LayoutDirection
 void q_focusframe_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_focusframe_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QFocusFrame* self, QLocale* locale ```
+/// @param self QFocusFrame*
+/// @param locale QLocale*
 void q_focusframe_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QLocale* q_focusframe_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QFocusFrame* self, enum Qt__FocusReason reason ```
+/// @param self QFocusFrame*
+/// @param reason enum Qt__FocusReason
 void q_focusframe_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_focusframe_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QFocusFrame* self, enum Qt__FocusPolicy policy ```
+/// @param self QFocusFrame*
+/// @param policy enum Qt__FocusPolicy
 void q_focusframe_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_focusframe_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QFocusFrame* self, QWidget* focusProxy ```
+/// @param self QFocusFrame*
+/// @param focusProxy QWidget*
 void q_focusframe_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_focusframe_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QFocusFrame* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QFocusFrame*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_focusframe_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QFocusFrame* self, QCursor* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QCursor*
 void q_focusframe_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QFocusFrame* self, QKeySequence* key ```
+/// @param self QFocusFrame*
+/// @param key QKeySequence*
 int32_t q_focusframe_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QFocusFrame* self, int id ```
+/// @param self QFocusFrame*
+/// @param id int
 void q_focusframe_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QFocusFrame* self, int id ```
+/// @param self QFocusFrame*
+/// @param id int
 void q_focusframe_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QFocusFrame* self, int id ```
+/// @param self QFocusFrame*
+/// @param id int
 void q_focusframe_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_focusframe_mouse_grabber();
 
@@ -1235,1161 +1378,1327 @@ QWidget* q_focusframe_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_focusframe_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QFocusFrame* self, bool enable ```
+/// @param self QFocusFrame*
+/// @param enable bool
 void q_focusframe_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QGraphicsProxyWidget* q_focusframe_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QFocusFrame* self, int x, int y, int w, int h ```
+/// @param self QFocusFrame*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_focusframe_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QFocusFrame* self, QRect* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QRect*
 void q_focusframe_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QFocusFrame* self, QRegion* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QRegion*
 void q_focusframe_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QFocusFrame* self, int x, int y, int w, int h ```
+/// @param self QFocusFrame*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_focusframe_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QFocusFrame* self, QRect* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QRect*
 void q_focusframe_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QFocusFrame* self, QRegion* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QRegion*
 void q_focusframe_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QFocusFrame* self, bool hidden ```
+/// @param self QFocusFrame*
+/// @param hidden bool
 void q_focusframe_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QFocusFrame* self, QWidget* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
 void q_focusframe_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QFocusFrame* self, int x, int y ```
+/// @param self QFocusFrame*
+/// @param x int
+/// @param y int
 void q_focusframe_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QFocusFrame* self, QPoint* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QPoint*
 void q_focusframe_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QFocusFrame* self, int w, int h ```
+/// @param self QFocusFrame*
+/// @param w int
+/// @param h int
 void q_focusframe_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QFocusFrame* self, QSize* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QSize*
 void q_focusframe_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QFocusFrame* self, int x, int y, int w, int h ```
+/// @param self QFocusFrame*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_focusframe_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QFocusFrame* self, QRect* geometry ```
+/// @param self QFocusFrame*
+/// @param geometry QRect*
 void q_focusframe_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 char* q_focusframe_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QFocusFrame* self, const char* geometry ```
+/// @param self QFocusFrame*
+/// @param geometry const char*
 bool q_focusframe_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QFocusFrame* self, QWidget* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QWidget*
 bool q_focusframe_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_focusframe_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QFocusFrame* self, int state ```
+/// @param self QFocusFrame*
+/// @param state flag of enum Qt__WindowState
 void q_focusframe_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QFocusFrame* self, int state ```
+/// @param self QFocusFrame*
+/// @param state flag of enum Qt__WindowState
 void q_focusframe_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSizePolicy* q_focusframe_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QFocusFrame* self, QSizePolicy* sizePolicy ```
+/// @param self QFocusFrame*
+/// @param sizePolicy QSizePolicy*
 void q_focusframe_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QFocusFrame* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QFocusFrame*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_focusframe_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRegion* q_focusframe_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QFocusFrame* self, int left, int top, int right, int bottom ```
+/// @param self QFocusFrame*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_focusframe_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QFocusFrame* self, QMargins* margins ```
+/// @param self QFocusFrame*
+/// @param margins QMargins*
 void q_focusframe_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QMargins* q_focusframe_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QRect* q_focusframe_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QLayout* q_focusframe_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QFocusFrame* self, QLayout* layout ```
+/// @param self QFocusFrame*
+/// @param layout QLayout*
 void q_focusframe_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QFocusFrame* self, QWidget* parent ```
+/// @param self QFocusFrame*
+/// @param parent QWidget*
 void q_focusframe_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QFocusFrame* self, QWidget* parent, int f ```
+/// @param self QFocusFrame*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_focusframe_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QFocusFrame* self, int dx, int dy ```
+/// @param self QFocusFrame*
+/// @param dx int
+/// @param dy int
 void q_focusframe_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QFocusFrame* self, int dx, int dy, QRect* param3 ```
+/// @param self QFocusFrame*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_focusframe_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QFocusFrame* self, bool on ```
+/// @param self QFocusFrame*
+/// @param on bool
 void q_focusframe_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QFocusFrame* self, QAction* action ```
+/// @param self QFocusFrame*
+/// @param action QAction*
 void q_focusframe_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QFocusFrame* self, libqt_list /* of QAction* */ actions ```
+/// @param self QFocusFrame*
+/// @param actions libqt_list /* of QAction* */
 void q_focusframe_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QFocusFrame* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QFocusFrame*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_focusframe_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QFocusFrame* self, QAction* before, QAction* action ```
+/// @param self QFocusFrame*
+/// @param before QAction*
+/// @param action QAction*
 void q_focusframe_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QFocusFrame* self, QAction* action ```
+/// @param self QFocusFrame*
+/// @param action QAction*
 void q_focusframe_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 libqt_list /* of QAction* */ q_focusframe_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QFocusFrame* self, const char* text ```
+/// @param self QFocusFrame*
+/// @param text const char*
 QAction* q_focusframe_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QFocusFrame* self, QIcon* icon, const char* text ```
+/// @param self QFocusFrame*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_focusframe_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QFocusFrame* self, const char* text, QKeySequence* shortcut ```
+/// @param self QFocusFrame*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_focusframe_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QFocusFrame* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QFocusFrame*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_focusframe_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWidget* q_focusframe_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QFocusFrame* self, int typeVal ```
+/// @param self QFocusFrame*
+/// @param typeVal flag of enum Qt__WindowType
 void q_focusframe_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_focusframe_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QFocusFrame* self, enum Qt__WindowType param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__WindowType
 void q_focusframe_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QFocusFrame* self, int typeVal ```
+/// @param self QFocusFrame*
+/// @param typeVal flag of enum Qt__WindowType
 void q_focusframe_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return enum Qt__WindowType
 int64_t q_focusframe_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_focusframe_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QFocusFrame* self, int x, int y ```
+/// @param self QFocusFrame*
+/// @param x int
+/// @param y int
 QWidget* q_focusframe_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QFocusFrame* self, QPoint* p ```
+/// @param self QFocusFrame*
+/// @param p QPoint*
 QWidget* q_focusframe_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QFocusFrame* self, QPointF* p ```
+/// @param self QFocusFrame*
+/// @param p QPointF*
 QWidget* q_focusframe_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QFocusFrame* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__WidgetAttribute
 void q_focusframe_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QFocusFrame* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_focusframe_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QFocusFrame* self, QWidget* child ```
+/// @param self QFocusFrame*
+/// @param child QWidget*
 bool q_focusframe_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QFocusFrame* self, bool enabled ```
+/// @param self QFocusFrame*
+/// @param enabled bool
 void q_focusframe_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QBackingStore* q_focusframe_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QWindow* q_focusframe_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QScreen* q_focusframe_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QFocusFrame* self, QScreen* screen ```
+/// @param self QFocusFrame*
+/// @param screen QScreen*
 void q_focusframe_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_focusframe_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QFocusFrame* self, const char* title ```
+/// @param self QFocusFrame*
+/// @param title const char*
 void q_focusframe_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, const char*) ```
-void q_focusframe_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, const char*)
+void q_focusframe_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QFocusFrame* self, QIcon* icon ```
+/// @param self QFocusFrame*
+/// @param icon QIcon*
 void q_focusframe_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QIcon*) ```
-void q_focusframe_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QIcon*)
+void q_focusframe_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QFocusFrame* self, const char* iconText ```
+/// @param self QFocusFrame*
+/// @param iconText const char*
 void q_focusframe_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, const char*) ```
-void q_focusframe_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, const char*)
+void q_focusframe_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QFocusFrame* self, QPoint* pos ```
+/// @param self QFocusFrame*
+/// @param pos QPoint*
 void q_focusframe_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QPoint*) ```
-void q_focusframe_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QPoint*)
+void q_focusframe_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_focusframe_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QFocusFrame* self, int hints ```
+/// @param self QFocusFrame*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_focusframe_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QFocusFrame*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_focusframe_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QFocusFrame*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_focusframe_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QFocusFrame*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_focusframe_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QFocusFrame*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_focusframe_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QFocusFrame*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_focusframe_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QFocusFrame* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QFocusFrame*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_focusframe_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QFocusFrame* self, QRect* rectangle ```
+/// @param self QFocusFrame*
+/// @param rectangle QRect*
 QPixmap* q_focusframe_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QFocusFrame* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QFocusFrame*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_focusframe_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QFocusFrame* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QFocusFrame*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_focusframe_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QFocusFrame* self, int id, bool enable ```
+/// @param self QFocusFrame*
+/// @param id int
+/// @param enable bool
 void q_focusframe_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QFocusFrame* self, int id, bool enable ```
+/// @param self QFocusFrame*
+/// @param id int
+/// @param enable bool
 void q_focusframe_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QFocusFrame* self, enum Qt__WindowType param1, bool on ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_focusframe_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QFocusFrame* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_focusframe_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_focusframe_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_focusframe_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char* q_focusframe_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFocusFrame* self, char* name ```
+/// @param self QFocusFrame*
+/// @param name char*
 void q_focusframe_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QFocusFrame* self, bool b ```
+/// @param self QFocusFrame*
+/// @param b bool
 bool q_focusframe_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QThread* q_focusframe_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QFocusFrame* self, QThread* thread ```
+/// @param self QFocusFrame*
+/// @param thread QThread*
 bool q_focusframe_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QFocusFrame* self, int interval ```
+/// @param self QFocusFrame*
+/// @param interval int
 int32_t q_focusframe_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QFocusFrame* self, int id ```
+/// @param self QFocusFrame*
+/// @param id int
 void q_focusframe_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QFocusFrame* self, enum Qt__TimerId id ```
+/// @param self QFocusFrame*
+/// @param id enum Qt__TimerId
 void q_focusframe_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 libqt_list /* of QObject* */ q_focusframe_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QFocusFrame* self, QObject* filterObj ```
+/// @param self QFocusFrame*
+/// @param filterObj QObject*
 void q_focusframe_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QFocusFrame* self, QObject* obj ```
+/// @param self QFocusFrame*
+/// @param obj QObject*
 void q_focusframe_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_focusframe_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QFocusFrame* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QFocusFrame*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_focusframe_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_focusframe_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_focusframe_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QFocusFrame* self, const char* name, QVariant* value ```
+/// @param self QFocusFrame*
+/// @param name const char*
+/// @param value QVariant*
 bool q_focusframe_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QFocusFrame* self, const char* name ```
+/// @param self QFocusFrame*
+/// @param name const char*
 QVariant* q_focusframe_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QFocusFrame* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFocusFrame*
 const char** q_focusframe_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QBindingStorage* q_focusframe_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 const QBindingStorage* q_focusframe_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*) ```
-void q_focusframe_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*)
+void q_focusframe_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QObject* q_focusframe_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QFocusFrame* self, const char* classname ```
+/// @param self QFocusFrame*
+/// @param classname const char*
 bool q_focusframe_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QFocusFrame* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QFocusFrame*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_focusframe_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QFocusFrame* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QFocusFrame*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_focusframe_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_focusframe_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QFocusFrame* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QFocusFrame*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_focusframe_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFocusFrame* self, QObject* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QObject*
 void q_focusframe_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QObject*) ```
-void q_focusframe_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QObject*)
+void q_focusframe_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 double q_focusframe_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 double q_focusframe_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_focusframe_device_pixel_ratio_f_scale();
 
@@ -2397,7 +2706,8 @@ double q_focusframe_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_focusframe_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -2406,7 +2716,7 @@ int32_t q_focusframe_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2415,7 +2725,7 @@ int32_t q_focusframe_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2424,8 +2734,9 @@ int32_t q_focusframe_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, int32_t (*slot)() ```
-void q_focusframe_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QFocusFrame*
+/// @param callback int32_t fn()
+void q_focusframe_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2433,7 +2744,8 @@ void q_focusframe_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool visible ```
+/// @param self QFocusFrame*
+/// @param visible bool
 void q_focusframe_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2442,7 +2754,8 @@ void q_focusframe_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool visible ```
+/// @param self QFocusFrame*
+/// @param visible bool
 void q_focusframe_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2451,8 +2764,9 @@ void q_focusframe_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, bool) ```
-void q_focusframe_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, bool)
+void q_focusframe_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2460,7 +2774,7 @@ void q_focusframe_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2469,7 +2783,7 @@ QSize* q_focusframe_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2478,8 +2792,9 @@ QSize* q_focusframe_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QSize* (*slot)() ```
-void q_focusframe_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QFocusFrame*
+/// @param callback QSize* fn()
+void q_focusframe_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2487,7 +2802,7 @@ void q_focusframe_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2496,7 +2811,7 @@ QSize* q_focusframe_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QSize* q_focusframe_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2505,8 +2820,9 @@ QSize* q_focusframe_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QSize* (*slot)() ```
-void q_focusframe_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QFocusFrame*
+/// @param callback QSize* fn()
+void q_focusframe_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2514,7 +2830,8 @@ void q_focusframe_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, int param1 ```
+/// @param self QFocusFrame*
+/// @param param1 int
 int32_t q_focusframe_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2523,7 +2840,8 @@ int32_t q_focusframe_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, int param1 ```
+/// @param self QFocusFrame*
+/// @param param1 int
 int32_t q_focusframe_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2532,8 +2850,9 @@ int32_t q_focusframe_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, int32_t (*slot)(QFocusFrame*, int) ```
-void q_focusframe_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QFocusFrame*
+/// @param callback int32_t fn(QFocusFrame*, int)
+void q_focusframe_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2541,7 +2860,7 @@ void q_focusframe_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2550,7 +2869,7 @@ bool q_focusframe_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2559,8 +2878,9 @@ bool q_focusframe_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool (*slot)() ```
-void q_focusframe_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QFocusFrame*
+/// @param callback bool fn()
+void q_focusframe_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2568,7 +2888,7 @@ void q_focusframe_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QPaintEngine* q_focusframe_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2577,7 +2897,7 @@ QPaintEngine* q_focusframe_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QPaintEngine* q_focusframe_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2586,8 +2906,9 @@ QPaintEngine* q_focusframe_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPaintEngine* (*slot)() ```
-void q_focusframe_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QFocusFrame*
+/// @param callback QPaintEngine* fn()
+void q_focusframe_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2595,7 +2916,8 @@ void q_focusframe_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2604,7 +2926,8 @@ void q_focusframe_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2613,8 +2936,9 @@ void q_focusframe_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMouseEvent*) ```
-void q_focusframe_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMouseEvent*)
+void q_focusframe_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2622,7 +2946,8 @@ void q_focusframe_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2631,7 +2956,8 @@ void q_focusframe_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2640,8 +2966,9 @@ void q_focusframe_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMouseEvent*) ```
-void q_focusframe_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMouseEvent*)
+void q_focusframe_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2649,7 +2976,8 @@ void q_focusframe_on_mouse_release_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2658,7 +2986,8 @@ void q_focusframe_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2667,8 +2996,9 @@ void q_focusframe_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMouseEvent*) ```
-void q_focusframe_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMouseEvent*)
+void q_focusframe_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2676,7 +3006,8 @@ void q_focusframe_on_mouse_double_click_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2685,7 +3016,8 @@ void q_focusframe_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMouseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMouseEvent*
 void q_focusframe_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2694,8 +3026,9 @@ void q_focusframe_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMouseEvent*) ```
-void q_focusframe_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMouseEvent*)
+void q_focusframe_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2703,7 +3036,8 @@ void q_focusframe_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QWheelEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QWheelEvent*
 void q_focusframe_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2712,7 +3046,8 @@ void q_focusframe_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QWheelEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QWheelEvent*
 void q_focusframe_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2721,8 +3056,9 @@ void q_focusframe_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QWheelEvent*) ```
-void q_focusframe_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QWheelEvent*)
+void q_focusframe_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2730,7 +3066,8 @@ void q_focusframe_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QKeyEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QKeyEvent*
 void q_focusframe_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2739,7 +3076,8 @@ void q_focusframe_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QKeyEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QKeyEvent*
 void q_focusframe_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2748,8 +3086,9 @@ void q_focusframe_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QKeyEvent*) ```
-void q_focusframe_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QKeyEvent*)
+void q_focusframe_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2757,7 +3096,8 @@ void q_focusframe_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QKeyEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QKeyEvent*
 void q_focusframe_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2766,7 +3106,8 @@ void q_focusframe_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QKeyEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QKeyEvent*
 void q_focusframe_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2775,8 +3116,9 @@ void q_focusframe_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QKeyEvent*) ```
-void q_focusframe_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QKeyEvent*)
+void q_focusframe_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2784,7 +3126,8 @@ void q_focusframe_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QFocusEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QFocusEvent*
 void q_focusframe_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2793,7 +3136,8 @@ void q_focusframe_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QFocusEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QFocusEvent*
 void q_focusframe_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2802,8 +3146,9 @@ void q_focusframe_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QFocusEvent*) ```
-void q_focusframe_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QFocusEvent*)
+void q_focusframe_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2811,7 +3156,8 @@ void q_focusframe_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QFocusEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QFocusEvent*
 void q_focusframe_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2820,7 +3166,8 @@ void q_focusframe_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QFocusEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QFocusEvent*
 void q_focusframe_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2829,8 +3176,9 @@ void q_focusframe_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QFocusEvent*) ```
-void q_focusframe_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QFocusEvent*)
+void q_focusframe_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2838,7 +3186,8 @@ void q_focusframe_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEnterEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QEnterEvent*
 void q_focusframe_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2847,7 +3196,8 @@ void q_focusframe_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEnterEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QEnterEvent*
 void q_focusframe_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2856,8 +3206,9 @@ void q_focusframe_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QEnterEvent*) ```
-void q_focusframe_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QEnterEvent*)
+void q_focusframe_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2865,7 +3216,8 @@ void q_focusframe_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QEvent*
 void q_focusframe_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2874,7 +3226,8 @@ void q_focusframe_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QEvent*
 void q_focusframe_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2883,8 +3236,9 @@ void q_focusframe_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QEvent*) ```
-void q_focusframe_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QEvent*)
+void q_focusframe_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2892,7 +3246,8 @@ void q_focusframe_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMoveEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMoveEvent*
 void q_focusframe_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2901,7 +3256,8 @@ void q_focusframe_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMoveEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QMoveEvent*
 void q_focusframe_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2910,8 +3266,9 @@ void q_focusframe_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMoveEvent*) ```
-void q_focusframe_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMoveEvent*)
+void q_focusframe_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2919,7 +3276,8 @@ void q_focusframe_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QResizeEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QResizeEvent*
 void q_focusframe_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2928,7 +3286,8 @@ void q_focusframe_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QResizeEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QResizeEvent*
 void q_focusframe_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2937,8 +3296,9 @@ void q_focusframe_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QResizeEvent*) ```
-void q_focusframe_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QResizeEvent*)
+void q_focusframe_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2946,7 +3306,8 @@ void q_focusframe_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QCloseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QCloseEvent*
 void q_focusframe_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2955,7 +3316,8 @@ void q_focusframe_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QCloseEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QCloseEvent*
 void q_focusframe_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2964,8 +3326,9 @@ void q_focusframe_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QCloseEvent*) ```
-void q_focusframe_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QCloseEvent*)
+void q_focusframe_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2973,7 +3336,8 @@ void q_focusframe_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QContextMenuEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QContextMenuEvent*
 void q_focusframe_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2982,7 +3346,8 @@ void q_focusframe_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QContextMenuEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QContextMenuEvent*
 void q_focusframe_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2991,8 +3356,9 @@ void q_focusframe_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QContextMenuEvent*) ```
-void q_focusframe_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QContextMenuEvent*)
+void q_focusframe_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3000,7 +3366,8 @@ void q_focusframe_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QTabletEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QTabletEvent*
 void q_focusframe_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3009,7 +3376,8 @@ void q_focusframe_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QTabletEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QTabletEvent*
 void q_focusframe_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3018,8 +3386,9 @@ void q_focusframe_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QTabletEvent*) ```
-void q_focusframe_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QTabletEvent*)
+void q_focusframe_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3027,7 +3396,8 @@ void q_focusframe_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QActionEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QActionEvent*
 void q_focusframe_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3036,7 +3406,8 @@ void q_focusframe_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QActionEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QActionEvent*
 void q_focusframe_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3045,8 +3416,9 @@ void q_focusframe_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QActionEvent*) ```
-void q_focusframe_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QActionEvent*)
+void q_focusframe_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3054,7 +3426,8 @@ void q_focusframe_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDragEnterEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDragEnterEvent*
 void q_focusframe_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3063,7 +3436,8 @@ void q_focusframe_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDragEnterEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDragEnterEvent*
 void q_focusframe_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3072,8 +3446,9 @@ void q_focusframe_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QDragEnterEvent*) ```
-void q_focusframe_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QDragEnterEvent*)
+void q_focusframe_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3081,7 +3456,8 @@ void q_focusframe_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDragMoveEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDragMoveEvent*
 void q_focusframe_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3090,7 +3466,8 @@ void q_focusframe_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDragMoveEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDragMoveEvent*
 void q_focusframe_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3099,8 +3476,9 @@ void q_focusframe_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QDragMoveEvent*) ```
-void q_focusframe_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QDragMoveEvent*)
+void q_focusframe_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3108,7 +3486,8 @@ void q_focusframe_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDragLeaveEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDragLeaveEvent*
 void q_focusframe_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3117,7 +3496,8 @@ void q_focusframe_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDragLeaveEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDragLeaveEvent*
 void q_focusframe_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3126,8 +3506,9 @@ void q_focusframe_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QDragLeaveEvent*) ```
-void q_focusframe_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QDragLeaveEvent*)
+void q_focusframe_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3135,7 +3516,8 @@ void q_focusframe_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDropEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDropEvent*
 void q_focusframe_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3144,7 +3526,8 @@ void q_focusframe_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QDropEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QDropEvent*
 void q_focusframe_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3153,8 +3536,9 @@ void q_focusframe_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QDropEvent*) ```
-void q_focusframe_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QDropEvent*)
+void q_focusframe_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3162,7 +3546,8 @@ void q_focusframe_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QShowEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QShowEvent*
 void q_focusframe_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3171,7 +3556,8 @@ void q_focusframe_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QShowEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QShowEvent*
 void q_focusframe_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3180,8 +3566,9 @@ void q_focusframe_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QShowEvent*) ```
-void q_focusframe_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QShowEvent*)
+void q_focusframe_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3189,7 +3576,8 @@ void q_focusframe_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QHideEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QHideEvent*
 void q_focusframe_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3198,7 +3586,8 @@ void q_focusframe_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QHideEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QHideEvent*
 void q_focusframe_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3207,8 +3596,9 @@ void q_focusframe_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QHideEvent*) ```
-void q_focusframe_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QHideEvent*)
+void q_focusframe_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3216,7 +3606,10 @@ void q_focusframe_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QFocusFrame*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_focusframe_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3225,7 +3618,10 @@ bool q_focusframe_native_event(void* self, const char* eventType, void* message,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QFocusFrame*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_focusframe_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3234,8 +3630,9 @@ bool q_focusframe_qbase_native_event(void* self, const char* eventType, void* me
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool (*slot)(QFocusFrame*, const char*, void*, intptr_t*) ```
-void q_focusframe_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QFocusFrame*
+/// @param callback bool fn(QFocusFrame*, const char*, void*, intptr_t*)
+void q_focusframe_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3243,7 +3640,8 @@ void q_focusframe_on_native_event(void* self, bool (*slot)(void*, const char*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEvent* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QEvent*
 void q_focusframe_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3252,7 +3650,8 @@ void q_focusframe_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEvent* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QEvent*
 void q_focusframe_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3261,8 +3660,9 @@ void q_focusframe_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QEvent*) ```
-void q_focusframe_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QEvent*)
+void q_focusframe_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3270,7 +3670,8 @@ void q_focusframe_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_focusframe_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3279,7 +3680,8 @@ int32_t q_focusframe_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_focusframe_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3288,8 +3690,9 @@ int32_t q_focusframe_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, int32_t (*slot)(QFocusFrame*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_focusframe_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QFocusFrame*
+/// @param callback int32_t fn(QFocusFrame*, enum QPaintDevice__PaintDeviceMetric)
+void q_focusframe_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3297,7 +3700,8 @@ void q_focusframe_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPainter* painter ```
+/// @param self QFocusFrame*
+/// @param painter QPainter*
 void q_focusframe_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3306,7 +3710,8 @@ void q_focusframe_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPainter* painter ```
+/// @param self QFocusFrame*
+/// @param painter QPainter*
 void q_focusframe_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3315,8 +3720,9 @@ void q_focusframe_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QPainter*) ```
-void q_focusframe_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QPainter*)
+void q_focusframe_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3324,7 +3730,8 @@ void q_focusframe_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPoint* offset ```
+/// @param self QFocusFrame*
+/// @param offset QPoint*
 QPaintDevice* q_focusframe_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3333,7 +3740,8 @@ QPaintDevice* q_focusframe_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPoint* offset ```
+/// @param self QFocusFrame*
+/// @param offset QPoint*
 QPaintDevice* q_focusframe_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3342,8 +3750,9 @@ QPaintDevice* q_focusframe_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPaintDevice* (*slot)(QFocusFrame*, QPoint*) ```
-void q_focusframe_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback QPaintDevice* fn(QFocusFrame*, QPoint*)
+void q_focusframe_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3351,7 +3760,7 @@ void q_focusframe_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QPainter* q_focusframe_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3360,7 +3769,7 @@ QPainter* q_focusframe_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QPainter* q_focusframe_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3369,8 +3778,9 @@ QPainter* q_focusframe_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QPainter* (*slot)() ```
-void q_focusframe_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QFocusFrame*
+/// @param callback QPainter* fn()
+void q_focusframe_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3378,7 +3788,8 @@ void q_focusframe_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QInputMethodEvent* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QInputMethodEvent*
 void q_focusframe_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3387,7 +3798,8 @@ void q_focusframe_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QInputMethodEvent* param1 ```
+/// @param self QFocusFrame*
+/// @param param1 QInputMethodEvent*
 void q_focusframe_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3396,8 +3808,9 @@ void q_focusframe_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QInputMethodEvent*) ```
-void q_focusframe_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QInputMethodEvent*)
+void q_focusframe_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3405,7 +3818,8 @@ void q_focusframe_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_focusframe_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3414,7 +3828,8 @@ QVariant* q_focusframe_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QFocusFrame*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_focusframe_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3423,8 +3838,9 @@ QVariant* q_focusframe_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QVariant* (*slot)(QFocusFrame*, enum Qt__InputMethodQuery) ```
-void q_focusframe_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QFocusFrame*
+/// @param callback QVariant* fn(QFocusFrame*, enum Qt__InputMethodQuery)
+void q_focusframe_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3432,7 +3848,8 @@ void q_focusframe_on_input_method_query(void* self, QVariant* (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool next ```
+/// @param self QFocusFrame*
+/// @param next bool
 bool q_focusframe_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3441,7 +3858,8 @@ bool q_focusframe_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool next ```
+/// @param self QFocusFrame*
+/// @param next bool
 bool q_focusframe_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3450,8 +3868,9 @@ bool q_focusframe_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool (*slot)(QFocusFrame*, bool) ```
-void q_focusframe_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QFocusFrame*
+/// @param callback bool fn(QFocusFrame*, bool)
+void q_focusframe_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3459,7 +3878,8 @@ void q_focusframe_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QTimerEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QTimerEvent*
 void q_focusframe_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3468,7 +3888,8 @@ void q_focusframe_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QTimerEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QTimerEvent*
 void q_focusframe_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3477,8 +3898,9 @@ void q_focusframe_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QTimerEvent*) ```
-void q_focusframe_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QTimerEvent*)
+void q_focusframe_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3486,7 +3908,8 @@ void q_focusframe_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QChildEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QChildEvent*
 void q_focusframe_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3495,7 +3918,8 @@ void q_focusframe_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QChildEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QChildEvent*
 void q_focusframe_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3504,8 +3928,9 @@ void q_focusframe_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QChildEvent*) ```
-void q_focusframe_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QChildEvent*)
+void q_focusframe_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3513,7 +3938,8 @@ void q_focusframe_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QEvent*
 void q_focusframe_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3522,7 +3948,8 @@ void q_focusframe_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QEvent* event ```
+/// @param self QFocusFrame*
+/// @param event QEvent*
 void q_focusframe_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3531,8 +3958,9 @@ void q_focusframe_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QEvent*) ```
-void q_focusframe_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QEvent*)
+void q_focusframe_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3540,7 +3968,8 @@ void q_focusframe_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMetaMethod* signal ```
+/// @param self QFocusFrame*
+/// @param signal QMetaMethod*
 void q_focusframe_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3549,7 +3978,8 @@ void q_focusframe_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMetaMethod* signal ```
+/// @param self QFocusFrame*
+/// @param signal QMetaMethod*
 void q_focusframe_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3558,8 +3988,9 @@ void q_focusframe_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMetaMethod*) ```
-void q_focusframe_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMetaMethod*)
+void q_focusframe_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3567,7 +3998,8 @@ void q_focusframe_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMetaMethod* signal ```
+/// @param self QFocusFrame*
+/// @param signal QMetaMethod*
 void q_focusframe_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3576,7 +4008,8 @@ void q_focusframe_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMetaMethod* signal ```
+/// @param self QFocusFrame*
+/// @param signal QMetaMethod*
 void q_focusframe_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3585,8 +4018,9 @@ void q_focusframe_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, QMetaMethod*) ```
-void q_focusframe_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, QMetaMethod*)
+void q_focusframe_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3594,7 +4028,7 @@ void q_focusframe_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3603,7 +4037,7 @@ void q_focusframe_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3612,8 +4046,9 @@ void q_focusframe_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)() ```
-void q_focusframe_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QFocusFrame*
+/// @param callback void fn()
+void q_focusframe_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3621,7 +4056,7 @@ void q_focusframe_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_create(void* self);
 
 /// Inherited from QWidget
@@ -3630,7 +4065,7 @@ void q_focusframe_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3639,8 +4074,9 @@ void q_focusframe_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)() ```
-void q_focusframe_on_create(void* self, void (*slot)());
+/// @param self QFocusFrame*
+/// @param callback void fn()
+void q_focusframe_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3648,7 +4084,7 @@ void q_focusframe_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3657,7 +4093,7 @@ void q_focusframe_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3666,8 +4102,9 @@ void q_focusframe_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, void (*slot)() ```
-void q_focusframe_on_destroy(void* self, void (*slot)());
+/// @param self QFocusFrame*
+/// @param callback void fn()
+void q_focusframe_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3675,7 +4112,7 @@ void q_focusframe_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3684,7 +4121,7 @@ bool q_focusframe_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3693,8 +4130,9 @@ bool q_focusframe_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool (*slot)() ```
-void q_focusframe_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QFocusFrame*
+/// @param callback bool fn()
+void q_focusframe_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3702,7 +4140,7 @@ void q_focusframe_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3711,7 +4149,7 @@ bool q_focusframe_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 bool q_focusframe_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3720,8 +4158,9 @@ bool q_focusframe_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool (*slot)() ```
-void q_focusframe_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QFocusFrame*
+/// @param callback bool fn()
+void q_focusframe_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3729,7 +4168,7 @@ void q_focusframe_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QObject* q_focusframe_sender(void* self);
 
 /// Inherited from QObject
@@ -3738,7 +4177,7 @@ QObject* q_focusframe_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 QObject* q_focusframe_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3747,8 +4186,9 @@ QObject* q_focusframe_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QObject* (*slot)() ```
-void q_focusframe_on_sender(void* self, QObject* (*slot)());
+/// @param self QFocusFrame*
+/// @param callback QObject* fn()
+void q_focusframe_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3756,7 +4196,7 @@ void q_focusframe_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3765,7 +4205,7 @@ int32_t q_focusframe_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 int32_t q_focusframe_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3774,8 +4214,9 @@ int32_t q_focusframe_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, int32_t (*slot)() ```
-void q_focusframe_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QFocusFrame*
+/// @param callback int32_t fn()
+void q_focusframe_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3783,7 +4224,8 @@ void q_focusframe_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, const char* signal ```
+/// @param self QFocusFrame*
+/// @param signal const char*
 int32_t q_focusframe_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3792,7 +4234,8 @@ int32_t q_focusframe_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, const char* signal ```
+/// @param self QFocusFrame*
+/// @param signal const char*
 int32_t q_focusframe_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3801,8 +4244,9 @@ int32_t q_focusframe_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, int32_t (*slot)(QFocusFrame*, const char*) ```
-void q_focusframe_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QFocusFrame*
+/// @param callback int32_t fn(QFocusFrame*, const char*)
+void q_focusframe_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3810,7 +4254,8 @@ void q_focusframe_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMetaMethod* signal ```
+/// @param self QFocusFrame*
+/// @param signal QMetaMethod*
 bool q_focusframe_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3819,7 +4264,8 @@ bool q_focusframe_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, QMetaMethod* signal ```
+/// @param self QFocusFrame*
+/// @param signal QMetaMethod*
 bool q_focusframe_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3828,8 +4274,9 @@ bool q_focusframe_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, bool (*slot)(QFocusFrame*, QMetaMethod*) ```
-void q_focusframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QFocusFrame*
+/// @param callback bool fn(QFocusFrame*, QMetaMethod*)
+void q_focusframe_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3837,7 +4284,9 @@ void q_focusframe_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusFrame* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QFocusFrame*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_focusframe_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3846,7 +4295,9 @@ double q_focusframe_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QFocusFrame*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_focusframe_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3855,8 +4306,9 @@ double q_focusframe_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusFrame* self, double (*slot)(QFocusFrame*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_focusframe_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QFocusFrame*
+/// @param callback double fn(QFocusFrame*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_focusframe_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -3864,14 +4316,15 @@ void q_focusframe_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFocusFrame* self, void (*slot)(QFocusFrame*, const char*) ```
-void q_focusframe_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QFocusFrame*
+/// @param callback void fn(QFocusFrame*, const char*)
+void q_focusframe_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusframe.html#dtor.QFocusFrame)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFocusFrame* self ```
+/// @param self QFocusFrame*
 void q_focusframe_delete(void* self);
 
 #endif

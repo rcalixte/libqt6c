@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,2509 +15,2819 @@
 
 /// q_textbrowser_new constructs a new QTextBrowser object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QTextBrowser* q_textbrowser_new(void* parent);
 
 /// q_textbrowser_new2 constructs a new QTextBrowser object.
-///
 ///
 QTextBrowser* q_textbrowser_new2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 const QMetaObject* q_textbrowser_meta_object(void* self);
 
-/// ``` QTextBrowser* self, const char* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 const char*
 void* q_textbrowser_metacast(void* self, const char* param1);
 
-/// ``` QTextBrowser* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextBrowser*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textbrowser_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, int32_t (*slot)(QTextBrowser*, enum QMetaObject__Call, int, void*) ```
-void q_textbrowser_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTextBrowser*
+/// @param callback int32_t fn(QTextBrowser*, enum QMetaObject__Call, int, void*)
+void q_textbrowser_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextBrowser*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textbrowser_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_textbrowser_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#source)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QUrl* q_textbrowser_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#sourceType)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QTextDocument__ResourceType
 int64_t q_textbrowser_source_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#searchPaths)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char** q_textbrowser_search_paths(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#setSearchPaths)
 ///
-/// ``` QTextBrowser* self, const char* paths[] ```
+/// @param self QTextBrowser*
+/// @param paths const char**
 void q_textbrowser_set_search_paths(void* self, const char* paths[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
 ///
-/// ``` QTextBrowser* self, int typeVal, QUrl* name ```
+/// @param self QTextBrowser*
+/// @param typeVal int
+/// @param name QUrl*
 QVariant* q_textbrowser_load_resource(void* self, int typeVal, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, QVariant* (*slot)(QTextBrowser*, int, QUrl*) ```
-void q_textbrowser_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*));
+/// @param self QTextBrowser*
+/// @param callback QVariant* fn(QTextBrowser*, int, QUrl*)
+void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#loadResource)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, int typeVal, QUrl* name ```
+/// @param self QTextBrowser*
+/// @param typeVal int
+/// @param name QUrl*
 QVariant* q_textbrowser_qbase_load_resource(void* self, int typeVal, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#isBackwardAvailable)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_backward_available(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#isForwardAvailable)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_forward_available(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#clearHistory)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_clear_history(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyTitle)
 ///
-/// ``` QTextBrowser* self, int param1 ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
+/// @param param1 int
 const char* q_textbrowser_history_title(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyUrl)
 ///
-/// ``` QTextBrowser* self, int param1 ```
+/// @param self QTextBrowser*
+/// @param param1 int
 QUrl* q_textbrowser_history_url(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backwardHistoryCount)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_backward_history_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forwardHistoryCount)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_forward_history_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#openExternalLinks)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_open_external_links(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#setOpenExternalLinks)
 ///
-/// ``` QTextBrowser* self, bool open ```
+/// @param self QTextBrowser*
+/// @param open bool
 void q_textbrowser_set_open_external_links(void* self, bool open);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#openLinks)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_open_links(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#setOpenLinks)
 ///
-/// ``` QTextBrowser* self, bool open ```
+/// @param self QTextBrowser*
+/// @param open bool
 void q_textbrowser_set_open_links(void* self, bool open);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#setSource)
 ///
-/// ``` QTextBrowser* self, QUrl* name ```
+/// @param self QTextBrowser*
+/// @param name QUrl*
 void q_textbrowser_set_source(void* self, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_backward(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_backward(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_backward(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backward)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_backward(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_forward(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_forward(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_forward(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forward)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_forward(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#home)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_home(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#home)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_home(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_home(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#home)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_home(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_reload(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_reload(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_reload(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#reload)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_reload(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backwardAvailable)
 ///
-/// ``` QTextBrowser* self, bool param1 ```
+/// @param self QTextBrowser*
+/// @param param1 bool
 void q_textbrowser_backward_available(void* self, bool param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#backwardAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_backward_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, bool)
+void q_textbrowser_on_backward_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forwardAvailable)
 ///
-/// ``` QTextBrowser* self, bool param1 ```
+/// @param self QTextBrowser*
+/// @param param1 bool
 void q_textbrowser_forward_available(void* self, bool param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#forwardAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_forward_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, bool)
+void q_textbrowser_on_forward_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyChanged)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_history_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#historyChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
-void q_textbrowser_on_history_changed(void* self, void (*slot)(void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*)
+void q_textbrowser_on_history_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#sourceChanged)
 ///
-/// ``` QTextBrowser* self, QUrl* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QUrl*
 void q_textbrowser_source_changed(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#sourceChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*) ```
-void q_textbrowser_on_source_changed(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QUrl*)
+void q_textbrowser_on_source_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#highlighted)
 ///
-/// ``` QTextBrowser* self, QUrl* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QUrl*
 void q_textbrowser_highlighted(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#highlighted)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*) ```
-void q_textbrowser_on_highlighted(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QUrl*)
+void q_textbrowser_on_highlighted(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#anchorClicked)
 ///
-/// ``` QTextBrowser* self, QUrl* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QUrl*
 void q_textbrowser_anchor_clicked(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#anchorClicked)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*) ```
-void q_textbrowser_on_anchor_clicked(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QUrl*)
+void q_textbrowser_on_anchor_clicked(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
 ///
-/// ``` QTextBrowser* self, QEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QEvent*
 bool q_textbrowser_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QEvent*) ```
-void q_textbrowser_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, QEvent*)
+void q_textbrowser_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QEvent*
 bool q_textbrowser_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
 ///
-/// ``` QTextBrowser* self, QKeyEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QKeyEvent*
 void q_textbrowser_key_press_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QKeyEvent*) ```
-void q_textbrowser_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QKeyEvent*)
+void q_textbrowser_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QKeyEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QKeyEvent*
 void q_textbrowser_qbase_key_press_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
 ///
-/// ``` QTextBrowser* self, QMouseEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QMouseEvent*
 void q_textbrowser_mouse_move_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
-void q_textbrowser_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+void q_textbrowser_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QMouseEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QMouseEvent*
 void q_textbrowser_qbase_mouse_move_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
 ///
-/// ``` QTextBrowser* self, QMouseEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QMouseEvent*
 void q_textbrowser_mouse_press_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
-void q_textbrowser_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+void q_textbrowser_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QMouseEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QMouseEvent*
 void q_textbrowser_qbase_mouse_press_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
 ///
-/// ``` QTextBrowser* self, QMouseEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QMouseEvent*
 void q_textbrowser_mouse_release_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
-void q_textbrowser_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+void q_textbrowser_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QMouseEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QMouseEvent*
 void q_textbrowser_qbase_mouse_release_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
 ///
-/// ``` QTextBrowser* self, QFocusEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QFocusEvent*
 void q_textbrowser_focus_out_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QFocusEvent*) ```
-void q_textbrowser_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QFocusEvent*)
+void q_textbrowser_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusOutEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QFocusEvent* ev ```
+/// @param self QTextBrowser*
+/// @param ev QFocusEvent*
 void q_textbrowser_qbase_focus_out_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
 ///
-/// ``` QTextBrowser* self, bool next ```
+/// @param self QTextBrowser*
+/// @param next bool
 bool q_textbrowser_focus_next_prev_child(void* self, bool next);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, bool)
+void q_textbrowser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#focusNextPrevChild)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, bool next ```
+/// @param self QTextBrowser*
+/// @param next bool
 bool q_textbrowser_qbase_focus_next_prev_child(void* self, bool next);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
 ///
-/// ``` QTextBrowser* self, QPaintEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QPaintEvent*
 void q_textbrowser_paint_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QPaintEvent*) ```
-void q_textbrowser_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QPaintEvent*)
+void q_textbrowser_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QPaintEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QPaintEvent*
 void q_textbrowser_qbase_paint_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
 ///
-/// ``` QTextBrowser* self, QUrl* name, enum QTextDocument__ResourceType typeVal ```
+/// @param self QTextBrowser*
+/// @param name QUrl*
+/// @param typeVal enum QTextDocument__ResourceType
 void q_textbrowser_do_set_source(void* self, void* name, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QUrl*, enum QTextDocument__ResourceType) ```
-void q_textbrowser_on_do_set_source(void* self, void (*slot)(void*, void*, int64_t));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QUrl*, enum QTextDocument__ResourceType)
+void q_textbrowser_on_do_set_source(void* self, void (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#doSetSource)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextBrowser* self, QUrl* name, enum QTextDocument__ResourceType typeVal ```
+/// @param self QTextBrowser*
+/// @param name QUrl*
+/// @param typeVal enum QTextDocument__ResourceType
 void q_textbrowser_qbase_do_set_source(void* self, void* name, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_textbrowser_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_textbrowser_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#setSource)
 ///
-/// ``` QTextBrowser* self, QUrl* name, enum QTextDocument__ResourceType typeVal ```
+/// @param self QTextBrowser*
+/// @param name QUrl*
+/// @param typeVal enum QTextDocument__ResourceType
 void q_textbrowser_set_source2(void* self, void* name, int64_t typeVal);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setDocument)
 ///
-/// ``` QTextBrowser* self, QTextDocument* document ```
+/// @param self QTextBrowser*
+/// @param document QTextDocument*
 void q_textbrowser_set_document(void* self, void* document);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#document)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QTextDocument* q_textbrowser_document(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setPlaceholderText)
 ///
-/// ``` QTextBrowser* self, const char* placeholderText ```
+/// @param self QTextBrowser*
+/// @param placeholderText const char*
 void q_textbrowser_set_placeholder_text(void* self, const char* placeholderText);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#placeholderText)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_placeholder_text(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setTextCursor)
 ///
-/// ``` QTextBrowser* self, QTextCursor* cursor ```
+/// @param self QTextBrowser*
+/// @param cursor QTextCursor*
 void q_textbrowser_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textCursor)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QTextCursor* q_textbrowser_text_cursor(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#isReadOnly)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_read_only(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setReadOnly)
 ///
-/// ``` QTextBrowser* self, bool ro ```
+/// @param self QTextBrowser*
+/// @param ro bool
 void q_textbrowser_set_read_only(void* self, bool ro);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setTextInteractionFlags)
 ///
-/// ``` QTextBrowser* self, int flags ```
+/// @param self QTextBrowser*
+/// @param flags flag of enum Qt__TextInteractionFlag
 void q_textbrowser_set_text_interaction_flags(void* self, int64_t flags);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textInteractionFlags)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return flag of enum Qt__TextInteractionFlag
 int64_t q_textbrowser_text_interaction_flags(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#fontPointSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 double q_textbrowser_font_point_size(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#fontFamily)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_font_family(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#fontWeight)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_font_weight(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#fontUnderline)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_font_underline(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#fontItalic)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_font_italic(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textColor)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QColor* q_textbrowser_text_color(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textBackgroundColor)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QColor* q_textbrowser_text_background_color(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentFont)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QFont* q_textbrowser_current_font(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#alignment)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return flag of enum Qt__AlignmentFlag
 int64_t q_textbrowser_alignment(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#mergeCurrentCharFormat)
 ///
-/// ``` QTextBrowser* self, QTextCharFormat* modifier ```
+/// @param self QTextBrowser*
+/// @param modifier QTextCharFormat*
 void q_textbrowser_merge_current_char_format(void* self, void* modifier);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setCurrentCharFormat)
 ///
-/// ``` QTextBrowser* self, QTextCharFormat* format ```
+/// @param self QTextBrowser*
+/// @param format QTextCharFormat*
 void q_textbrowser_set_current_char_format(void* self, void* format);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormat)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QTextCharFormat* q_textbrowser_current_char_format(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#autoFormatting)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return flag of enum QTextEdit__AutoFormattingFlag
 int64_t q_textbrowser_auto_formatting(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setAutoFormatting)
 ///
-/// ``` QTextBrowser* self, int features ```
+/// @param self QTextBrowser*
+/// @param features flag of enum QTextEdit__AutoFormattingFlag
 void q_textbrowser_set_auto_formatting(void* self, int64_t features);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#tabChangesFocus)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_tab_changes_focus(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setTabChangesFocus)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 void q_textbrowser_set_tab_changes_focus(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setDocumentTitle)
 ///
-/// ``` QTextBrowser* self, const char* title ```
+/// @param self QTextBrowser*
+/// @param title const char*
 void q_textbrowser_set_document_title(void* self, const char* title);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#documentTitle)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_document_title(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#isUndoRedoEnabled)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_undo_redo_enabled(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setUndoRedoEnabled)
 ///
-/// ``` QTextBrowser* self, bool enable ```
+/// @param self QTextBrowser*
+/// @param enable bool
 void q_textbrowser_set_undo_redo_enabled(void* self, bool enable);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#lineWrapMode)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QTextEdit__LineWrapMode
 int64_t q_textbrowser_line_wrap_mode(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setLineWrapMode)
 ///
-/// ``` QTextBrowser* self, enum QTextEdit__LineWrapMode mode ```
+/// @param self QTextBrowser*
+/// @param mode enum QTextEdit__LineWrapMode
 void q_textbrowser_set_line_wrap_mode(void* self, int64_t mode);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#lineWrapColumnOrWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_line_wrap_column_or_width(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setLineWrapColumnOrWidth)
 ///
-/// ``` QTextBrowser* self, int w ```
+/// @param self QTextBrowser*
+/// @param w int
 void q_textbrowser_set_line_wrap_column_or_width(void* self, int w);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#wordWrapMode)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QTextOption__WrapMode
 int64_t q_textbrowser_word_wrap_mode(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setWordWrapMode)
 ///
-/// ``` QTextBrowser* self, enum QTextOption__WrapMode policy ```
+/// @param self QTextBrowser*
+/// @param policy enum QTextOption__WrapMode
 void q_textbrowser_set_word_wrap_mode(void* self, int64_t policy);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#find)
 ///
-/// ``` QTextBrowser* self, const char* exp ```
+/// @param self QTextBrowser*
+/// @param exp const char*
 bool q_textbrowser_find(void* self, const char* exp);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#find)
 ///
-/// ``` QTextBrowser* self, QRegularExpression* exp ```
+/// @param self QTextBrowser*
+/// @param exp QRegularExpression*
 bool q_textbrowser_find2(void* self, void* exp);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#toPlainText)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_to_plain_text(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#toHtml)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_to_html(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#toMarkdown)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_to_markdown(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#ensureCursorVisible)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_ensure_cursor_visible(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createStandardContextMenu)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QMenu* q_textbrowser_create_standard_context_menu(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#createStandardContextMenu)
 ///
-/// ``` QTextBrowser* self, QPoint* position ```
+/// @param self QTextBrowser*
+/// @param position QPoint*
 QMenu* q_textbrowser_create_standard_context_menu2(void* self, void* position);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorForPosition)
 ///
-/// ``` QTextBrowser* self, QPoint* pos ```
+/// @param self QTextBrowser*
+/// @param pos QPoint*
 QTextCursor* q_textbrowser_cursor_for_position(void* self, void* pos);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorRect)
 ///
-/// ``` QTextBrowser* self, QTextCursor* cursor ```
+/// @param self QTextBrowser*
+/// @param cursor QTextCursor*
 QRect* q_textbrowser_cursor_rect(void* self, void* cursor);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorRect)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_cursor_rect2(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#anchorAt)
 ///
-/// ``` QTextBrowser* self, QPoint* pos ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
+/// @param pos QPoint*
 const char* q_textbrowser_anchor_at(void* self, void* pos);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#overwriteMode)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_overwrite_mode(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setOverwriteMode)
 ///
-/// ``` QTextBrowser* self, bool overwrite ```
+/// @param self QTextBrowser*
+/// @param overwrite bool
 void q_textbrowser_set_overwrite_mode(void* self, bool overwrite);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#tabStopDistance)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 double q_textbrowser_tab_stop_distance(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setTabStopDistance)
 ///
-/// ``` QTextBrowser* self, double distance ```
+/// @param self QTextBrowser*
+/// @param distance double
 void q_textbrowser_set_tab_stop_distance(void* self, double distance);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_cursor_width(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setCursorWidth)
 ///
-/// ``` QTextBrowser* self, int width ```
+/// @param self QTextBrowser*
+/// @param width int
 void q_textbrowser_set_cursor_width(void* self, int width);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#acceptRichText)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_accept_rich_text(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setAcceptRichText)
 ///
-/// ``` QTextBrowser* self, bool accept ```
+/// @param self QTextBrowser*
+/// @param accept bool
 void q_textbrowser_set_accept_rich_text(void* self, bool accept);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setExtraSelections)
 ///
-/// ``` QTextBrowser* self, libqt_list /* of QTextEdit__ExtraSelection* */ selections ```
+/// @param self QTextBrowser*
+/// @param selections libqt_list /* of QTextEdit__ExtraSelection* */
 void q_textbrowser_set_extra_selections(void* self, libqt_list selections);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#extraSelections)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 libqt_list /* of QTextEdit__ExtraSelection* */ q_textbrowser_extra_selections(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#moveCursor)
 ///
-/// ``` QTextBrowser* self, enum QTextCursor__MoveOperation operation ```
+/// @param self QTextBrowser*
+/// @param operation enum QTextCursor__MoveOperation
 void q_textbrowser_move_cursor(void* self, int64_t operation);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#canPaste)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_can_paste(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#print)
 ///
-/// ``` QTextBrowser* self, QPagedPaintDevice* printer ```
+/// @param self QTextBrowser*
+/// @param printer QPagedPaintDevice*
 void q_textbrowser_print(void* self, void* printer);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#inputMethodQuery)
 ///
-/// ``` QTextBrowser* self, enum Qt__InputMethodQuery query, QVariant* argument ```
+/// @param self QTextBrowser*
+/// @param query enum Qt__InputMethodQuery
+/// @param argument QVariant*
 QVariant* q_textbrowser_input_method_query2(void* self, int64_t query, void* argument);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setFontPointSize)
 ///
-/// ``` QTextBrowser* self, double s ```
+/// @param self QTextBrowser*
+/// @param s double
 void q_textbrowser_set_font_point_size(void* self, double s);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setFontFamily)
 ///
-/// ``` QTextBrowser* self, const char* fontFamily ```
+/// @param self QTextBrowser*
+/// @param fontFamily const char*
 void q_textbrowser_set_font_family(void* self, const char* fontFamily);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setFontWeight)
 ///
-/// ``` QTextBrowser* self, int w ```
+/// @param self QTextBrowser*
+/// @param w int
 void q_textbrowser_set_font_weight(void* self, int w);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setFontUnderline)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 void q_textbrowser_set_font_underline(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setFontItalic)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 void q_textbrowser_set_font_italic(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setTextColor)
 ///
-/// ``` QTextBrowser* self, QColor* c ```
+/// @param self QTextBrowser*
+/// @param c QColor*
 void q_textbrowser_set_text_color(void* self, void* c);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setTextBackgroundColor)
 ///
-/// ``` QTextBrowser* self, QColor* c ```
+/// @param self QTextBrowser*
+/// @param c QColor*
 void q_textbrowser_set_text_background_color(void* self, void* c);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setCurrentFont)
 ///
-/// ``` QTextBrowser* self, QFont* f ```
+/// @param self QTextBrowser*
+/// @param f QFont*
 void q_textbrowser_set_current_font(void* self, void* f);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setAlignment)
 ///
-/// ``` QTextBrowser* self, int a ```
+/// @param self QTextBrowser*
+/// @param a flag of enum Qt__AlignmentFlag
 void q_textbrowser_set_alignment(void* self, int64_t a);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setPlainText)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 void q_textbrowser_set_plain_text(void* self, const char* text);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setHtml)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 void q_textbrowser_set_html(void* self, const char* text);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setMarkdown)
 ///
-/// ``` QTextBrowser* self, const char* markdown ```
+/// @param self QTextBrowser*
+/// @param markdown const char*
 void q_textbrowser_set_markdown(void* self, const char* markdown);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setText)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 void q_textbrowser_set_text(void* self, const char* text);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cut)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_cut(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_copy(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#paste)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_paste(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undo)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_undo(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redo)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_redo(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#clear)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_clear(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectAll)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_select_all(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#insertPlainText)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 void q_textbrowser_insert_plain_text(void* self, const char* text);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#insertHtml)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 void q_textbrowser_insert_html(void* self, const char* text);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#append)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 void q_textbrowser_append(void* self, const char* text);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#scrollToAnchor)
 ///
-/// ``` QTextBrowser* self, const char* name ```
+/// @param self QTextBrowser*
+/// @param name const char*
 void q_textbrowser_scroll_to_anchor(void* self, const char* name);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomIn)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_zoom_in(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomOut)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_zoom_out(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_text_changed(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#textChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
-void q_textbrowser_on_text_changed(void* self, void (*slot)(void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*)
+void q_textbrowser_on_text_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undoAvailable)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 void q_textbrowser_undo_available(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#undoAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_undo_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, bool)
+void q_textbrowser_on_undo_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redoAvailable)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 void q_textbrowser_redo_available(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#redoAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_redo_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, bool)
+void q_textbrowser_on_redo_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormatChanged)
 ///
-/// ``` QTextBrowser* self, QTextCharFormat* format ```
+/// @param self QTextBrowser*
+/// @param format QTextCharFormat*
 void q_textbrowser_current_char_format_changed(void* self, void* format);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#currentCharFormatChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QTextCharFormat*) ```
-void q_textbrowser_on_current_char_format_changed(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QTextCharFormat*)
+void q_textbrowser_on_current_char_format_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copyAvailable)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 void q_textbrowser_copy_available(void* self, bool b);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#copyAvailable)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_copy_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, bool)
+void q_textbrowser_on_copy_available(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_selection_changed(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#selectionChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
-void q_textbrowser_on_selection_changed(void* self, void (*slot)(void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*)
+void q_textbrowser_on_selection_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_cursor_position_changed(void* self);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#cursorPositionChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
-void q_textbrowser_on_cursor_position_changed(void* self, void (*slot)(void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*)
+void q_textbrowser_on_cursor_position_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#find)
 ///
-/// ``` QTextBrowser* self, const char* exp, int options ```
+/// @param self QTextBrowser*
+/// @param exp const char*
+/// @param options flag of enum QTextDocument__FindFlag
 bool q_textbrowser_find22(void* self, const char* exp, int64_t options);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#find)
 ///
-/// ``` QTextBrowser* self, QRegularExpression* exp, int options ```
+/// @param self QTextBrowser*
+/// @param exp QRegularExpression*
+/// @param options flag of enum QTextDocument__FindFlag
 bool q_textbrowser_find23(void* self, void* exp, int64_t options);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#toMarkdown)
 ///
-/// ``` QTextBrowser* self, int features ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
+/// @param features flag of enum QTextDocument__MarkdownFeature
 const char* q_textbrowser_to_markdown1(void* self, int64_t features);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#moveCursor)
 ///
-/// ``` QTextBrowser* self, enum QTextCursor__MoveOperation operation, enum QTextCursor__MoveMode mode ```
+/// @param self QTextBrowser*
+/// @param operation enum QTextCursor__MoveOperation
+/// @param mode enum QTextCursor__MoveMode
 void q_textbrowser_move_cursor2(void* self, int64_t operation, int64_t mode);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomIn)
 ///
-/// ``` QTextBrowser* self, int range ```
+/// @param self QTextBrowser*
+/// @param range int
 void q_textbrowser_zoom_in1(void* self, int range);
 
 /// Inherited from QTextEdit
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomOut)
 ///
-/// ``` QTextBrowser* self, int range ```
+/// @param self QTextBrowser*
+/// @param range int
 void q_textbrowser_zoom_out1(void* self, int range);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__ScrollBarPolicy
 int64_t q_textbrowser_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setVerticalScrollBarPolicy)
 ///
-/// ``` QTextBrowser* self, enum Qt__ScrollBarPolicy verticalScrollBarPolicy ```
+/// @param self QTextBrowser*
+/// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
 void q_textbrowser_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QScrollBar* q_textbrowser_vertical_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setVerticalScrollBar)
 ///
-/// ``` QTextBrowser* self, QScrollBar* scrollbar ```
+/// @param self QTextBrowser*
+/// @param scrollbar QScrollBar*
 void q_textbrowser_set_vertical_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__ScrollBarPolicy
 int64_t q_textbrowser_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setHorizontalScrollBarPolicy)
 ///
-/// ``` QTextBrowser* self, enum Qt__ScrollBarPolicy horizontalScrollBarPolicy ```
+/// @param self QTextBrowser*
+/// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
 void q_textbrowser_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QScrollBar* q_textbrowser_horizontal_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setHorizontalScrollBar)
 ///
-/// ``` QTextBrowser* self, QScrollBar* scrollbar ```
+/// @param self QTextBrowser*
+/// @param scrollbar QScrollBar*
 void q_textbrowser_set_horizontal_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_corner_widget(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setCornerWidget)
 ///
-/// ``` QTextBrowser* self, QWidget* widget ```
+/// @param self QTextBrowser*
+/// @param widget QWidget*
 void q_textbrowser_set_corner_widget(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#addScrollBarWidget)
 ///
-/// ``` QTextBrowser* self, QWidget* widget, int alignment ```
+/// @param self QTextBrowser*
+/// @param widget QWidget*
+/// @param alignment flag of enum Qt__AlignmentFlag
 void q_textbrowser_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#scrollBarWidgets)
 ///
-/// ``` QTextBrowser* self, int alignment ```
+/// @param self QTextBrowser*
+/// @param alignment flag of enum Qt__AlignmentFlag
 libqt_list /* of QWidget* */ q_textbrowser_scroll_bar_widgets(void* self, int64_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_viewport(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewport)
 ///
-/// ``` QTextBrowser* self, QWidget* widget ```
+/// @param self QTextBrowser*
+/// @param widget QWidget*
 void q_textbrowser_set_viewport(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_maximum_viewport_size(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QAbstractScrollArea__SizeAdjustPolicy
 int64_t q_textbrowser_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setSizeAdjustPolicy)
 ///
-/// ``` QTextBrowser* self, enum QAbstractScrollArea__SizeAdjustPolicy policy ```
+/// @param self QTextBrowser*
+/// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
 void q_textbrowser_set_size_adjust_policy(void* self, int64_t policy);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_frame_style(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameStyle)
 ///
-/// ``` QTextBrowser* self, int frameStyle ```
+/// @param self QTextBrowser*
+/// @param frameStyle int
 void q_textbrowser_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_frame_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QFrame__Shape
 int64_t q_textbrowser_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShape)
 ///
-/// ``` QTextBrowser* self, enum QFrame__Shape frameShape ```
+/// @param self QTextBrowser*
+/// @param frameShape enum QFrame__Shape
 void q_textbrowser_set_frame_shape(void* self, int64_t frameShape);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QFrame__Shadow
 int64_t q_textbrowser_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShadow)
 ///
-/// ``` QTextBrowser* self, enum QFrame__Shadow frameShadow ```
+/// @param self QTextBrowser*
+/// @param frameShadow enum QFrame__Shadow
 void q_textbrowser_set_frame_shadow(void* self, int64_t frameShadow);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setLineWidth)
 ///
-/// ``` QTextBrowser* self, int lineWidth ```
+/// @param self QTextBrowser*
+/// @param lineWidth int
 void q_textbrowser_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_mid_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setMidLineWidth)
 ///
-/// ``` QTextBrowser* self, int midLineWidth ```
+/// @param self QTextBrowser*
+/// @param midLineWidth int
 void q_textbrowser_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_frame_rect(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameRect)
 ///
-/// ``` QTextBrowser* self, QRect* frameRect ```
+/// @param self QTextBrowser*
+/// @param frameRect QRect*
 void q_textbrowser_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 uintptr_t q_textbrowser_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 uintptr_t q_textbrowser_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 uintptr_t q_textbrowser_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QStyle* q_textbrowser_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QTextBrowser* self, QStyle* style ```
+/// @param self QTextBrowser*
+/// @param style QStyle*
 void q_textbrowser_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__WindowModality
 int64_t q_textbrowser_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QTextBrowser* self, enum Qt__WindowModality windowModality ```
+/// @param self QTextBrowser*
+/// @param windowModality enum Qt__WindowModality
 void q_textbrowser_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QTextBrowser* self, QWidget* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
 bool q_textbrowser_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QTextBrowser* self, bool enabled ```
+/// @param self QTextBrowser*
+/// @param enabled bool
 void q_textbrowser_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QTextBrowser* self, bool disabled ```
+/// @param self QTextBrowser*
+/// @param disabled bool
 void q_textbrowser_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QTextBrowser* self, bool windowModified ```
+/// @param self QTextBrowser*
+/// @param windowModified bool
 void q_textbrowser_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 const QRect* q_textbrowser_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QPoint* q_textbrowser_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRegion* q_textbrowser_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QTextBrowser* self, QSize* minimumSize ```
+/// @param self QTextBrowser*
+/// @param minimumSize QSize*
 void q_textbrowser_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QTextBrowser* self, int minw, int minh ```
+/// @param self QTextBrowser*
+/// @param minw int
+/// @param minh int
 void q_textbrowser_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QTextBrowser* self, QSize* maximumSize ```
+/// @param self QTextBrowser*
+/// @param maximumSize QSize*
 void q_textbrowser_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QTextBrowser* self, int maxw, int maxh ```
+/// @param self QTextBrowser*
+/// @param maxw int
+/// @param maxh int
 void q_textbrowser_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QTextBrowser* self, int minw ```
+/// @param self QTextBrowser*
+/// @param minw int
 void q_textbrowser_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QTextBrowser* self, int minh ```
+/// @param self QTextBrowser*
+/// @param minh int
 void q_textbrowser_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QTextBrowser* self, int maxw ```
+/// @param self QTextBrowser*
+/// @param maxw int
 void q_textbrowser_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QTextBrowser* self, int maxh ```
+/// @param self QTextBrowser*
+/// @param maxh int
 void q_textbrowser_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QTextBrowser* self, QSize* sizeIncrement ```
+/// @param self QTextBrowser*
+/// @param sizeIncrement QSize*
 void q_textbrowser_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QTextBrowser* self, int w, int h ```
+/// @param self QTextBrowser*
+/// @param w int
+/// @param h int
 void q_textbrowser_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QTextBrowser* self, QSize* baseSize ```
+/// @param self QTextBrowser*
+/// @param baseSize QSize*
 void q_textbrowser_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QTextBrowser* self, int basew, int baseh ```
+/// @param self QTextBrowser*
+/// @param basew int
+/// @param baseh int
 void q_textbrowser_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QTextBrowser* self, QSize* fixedSize ```
+/// @param self QTextBrowser*
+/// @param fixedSize QSize*
 void q_textbrowser_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QTextBrowser* self, int w, int h ```
+/// @param self QTextBrowser*
+/// @param w int
+/// @param h int
 void q_textbrowser_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QTextBrowser* self, int w ```
+/// @param self QTextBrowser*
+/// @param w int
 void q_textbrowser_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QTextBrowser* self, int h ```
+/// @param self QTextBrowser*
+/// @param h int
 void q_textbrowser_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QTextBrowser* self, QPointF* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPointF*
 QPointF* q_textbrowser_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QTextBrowser* self, QPoint* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPoint*
 QPoint* q_textbrowser_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QTextBrowser* self, QPointF* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPointF*
 QPointF* q_textbrowser_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QTextBrowser* self, QPoint* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPoint*
 QPoint* q_textbrowser_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QTextBrowser* self, QPointF* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPointF*
 QPointF* q_textbrowser_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QTextBrowser* self, QPoint* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPoint*
 QPoint* q_textbrowser_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QTextBrowser* self, QPointF* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPointF*
 QPointF* q_textbrowser_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QTextBrowser* self, QPoint* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPoint*
 QPoint* q_textbrowser_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QTextBrowser* self, QWidget* param1, QPointF* param2 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_textbrowser_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QTextBrowser* self, QWidget* param1, QPoint* param2 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_textbrowser_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QTextBrowser* self, QWidget* param1, QPointF* param2 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_textbrowser_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QTextBrowser* self, QWidget* param1, QPoint* param2 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_textbrowser_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 const QPalette* q_textbrowser_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QTextBrowser* self, QPalette* palette ```
+/// @param self QTextBrowser*
+/// @param palette QPalette*
 void q_textbrowser_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QTextBrowser* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QTextBrowser*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_textbrowser_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_textbrowser_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QTextBrowser* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QTextBrowser*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_textbrowser_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_textbrowser_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 const QFont* q_textbrowser_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QTextBrowser* self, QFont* font ```
+/// @param self QTextBrowser*
+/// @param font QFont*
 void q_textbrowser_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QFontMetrics* q_textbrowser_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QFontInfo* q_textbrowser_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QCursor* q_textbrowser_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QTextBrowser* self, QCursor* cursor ```
+/// @param self QTextBrowser*
+/// @param cursor QCursor*
 void q_textbrowser_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QTextBrowser* self, bool enable ```
+/// @param self QTextBrowser*
+/// @param enable bool
 void q_textbrowser_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QTextBrowser* self, bool enable ```
+/// @param self QTextBrowser*
+/// @param enable bool
 void q_textbrowser_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QTextBrowser* self, QBitmap* mask ```
+/// @param self QTextBrowser*
+/// @param mask QBitmap*
 void q_textbrowser_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QTextBrowser* self, QRegion* mask ```
+/// @param self QTextBrowser*
+/// @param mask QRegion*
 void q_textbrowser_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRegion* q_textbrowser_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPaintDevice* target ```
+/// @param self QTextBrowser*
+/// @param target QPaintDevice*
 void q_textbrowser_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPainter* painter ```
+/// @param self QTextBrowser*
+/// @param painter QPainter*
 void q_textbrowser_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QPixmap* q_textbrowser_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QGraphicsEffect* q_textbrowser_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QTextBrowser* self, QGraphicsEffect* effect ```
+/// @param self QTextBrowser*
+/// @param effect QGraphicsEffect*
 void q_textbrowser_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QTextBrowser* self, enum Qt__GestureType typeVal ```
+/// @param self QTextBrowser*
+/// @param typeVal enum Qt__GestureType
 void q_textbrowser_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QTextBrowser* self, enum Qt__GestureType typeVal ```
+/// @param self QTextBrowser*
+/// @param typeVal enum Qt__GestureType
 void q_textbrowser_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QTextBrowser* self, const char* windowTitle ```
+/// @param self QTextBrowser*
+/// @param windowTitle const char*
 void q_textbrowser_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QTextBrowser* self, const char* styleSheet ```
+/// @param self QTextBrowser*
+/// @param styleSheet const char*
 void q_textbrowser_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QTextBrowser* self, QIcon* icon ```
+/// @param self QTextBrowser*
+/// @param icon QIcon*
 void q_textbrowser_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QIcon* q_textbrowser_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QTextBrowser* self, const char* windowIconText ```
+/// @param self QTextBrowser*
+/// @param windowIconText const char*
 void q_textbrowser_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QTextBrowser* self, const char* windowRole ```
+/// @param self QTextBrowser*
+/// @param windowRole const char*
 void q_textbrowser_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QTextBrowser* self, const char* filePath ```
+/// @param self QTextBrowser*
+/// @param filePath const char*
 void q_textbrowser_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QTextBrowser* self, double level ```
+/// @param self QTextBrowser*
+/// @param level double
 void q_textbrowser_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 double q_textbrowser_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QTextBrowser* self, const char* toolTip ```
+/// @param self QTextBrowser*
+/// @param toolTip const char*
 void q_textbrowser_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QTextBrowser* self, int msec ```
+/// @param self QTextBrowser*
+/// @param msec int
 void q_textbrowser_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QTextBrowser* self, const char* statusTip ```
+/// @param self QTextBrowser*
+/// @param statusTip const char*
 void q_textbrowser_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QTextBrowser* self, const char* whatsThis ```
+/// @param self QTextBrowser*
+/// @param whatsThis const char*
 void q_textbrowser_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QTextBrowser* self, const char* name ```
+/// @param self QTextBrowser*
+/// @param name const char*
 void q_textbrowser_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QTextBrowser* self, const char* description ```
+/// @param self QTextBrowser*
+/// @param description const char*
 void q_textbrowser_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QTextBrowser* self, enum Qt__LayoutDirection direction ```
+/// @param self QTextBrowser*
+/// @param direction enum Qt__LayoutDirection
 void q_textbrowser_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_textbrowser_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QTextBrowser* self, QLocale* locale ```
+/// @param self QTextBrowser*
+/// @param locale QLocale*
 void q_textbrowser_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QLocale* q_textbrowser_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QTextBrowser* self, enum Qt__FocusReason reason ```
+/// @param self QTextBrowser*
+/// @param reason enum Qt__FocusReason
 void q_textbrowser_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_textbrowser_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QTextBrowser* self, enum Qt__FocusPolicy policy ```
+/// @param self QTextBrowser*
+/// @param policy enum Qt__FocusPolicy
 void q_textbrowser_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_textbrowser_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QTextBrowser* self, QWidget* focusProxy ```
+/// @param self QTextBrowser*
+/// @param focusProxy QWidget*
 void q_textbrowser_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_textbrowser_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QTextBrowser* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QTextBrowser*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_textbrowser_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QTextBrowser* self, QCursor* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QCursor*
 void q_textbrowser_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QTextBrowser* self, QKeySequence* key ```
+/// @param self QTextBrowser*
+/// @param key QKeySequence*
 int32_t q_textbrowser_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QTextBrowser* self, int id ```
+/// @param self QTextBrowser*
+/// @param id int
 void q_textbrowser_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QTextBrowser* self, int id ```
+/// @param self QTextBrowser*
+/// @param id int
 void q_textbrowser_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QTextBrowser* self, int id ```
+/// @param self QTextBrowser*
+/// @param id int
 void q_textbrowser_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_textbrowser_mouse_grabber();
 
@@ -2526,1154 +2835,1320 @@ QWidget* q_textbrowser_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_textbrowser_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QTextBrowser* self, bool enable ```
+/// @param self QTextBrowser*
+/// @param enable bool
 void q_textbrowser_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QGraphicsProxyWidget* q_textbrowser_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTextBrowser* self, int x, int y, int w, int h ```
+/// @param self QTextBrowser*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_textbrowser_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTextBrowser* self, QRect* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QRect*
 void q_textbrowser_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTextBrowser* self, QRegion* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QRegion*
 void q_textbrowser_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTextBrowser* self, int x, int y, int w, int h ```
+/// @param self QTextBrowser*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_textbrowser_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTextBrowser* self, QRect* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QRect*
 void q_textbrowser_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTextBrowser* self, QRegion* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QRegion*
 void q_textbrowser_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QTextBrowser* self, bool hidden ```
+/// @param self QTextBrowser*
+/// @param hidden bool
 void q_textbrowser_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QTextBrowser* self, QWidget* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
 void q_textbrowser_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QTextBrowser* self, int x, int y ```
+/// @param self QTextBrowser*
+/// @param x int
+/// @param y int
 void q_textbrowser_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QTextBrowser* self, QPoint* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPoint*
 void q_textbrowser_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QTextBrowser* self, int w, int h ```
+/// @param self QTextBrowser*
+/// @param w int
+/// @param h int
 void q_textbrowser_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QTextBrowser* self, QSize* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QSize*
 void q_textbrowser_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QTextBrowser* self, int x, int y, int w, int h ```
+/// @param self QTextBrowser*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_textbrowser_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QTextBrowser* self, QRect* geometry ```
+/// @param self QTextBrowser*
+/// @param geometry QRect*
 void q_textbrowser_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 char* q_textbrowser_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QTextBrowser* self, const char* geometry ```
+/// @param self QTextBrowser*
+/// @param geometry const char*
 bool q_textbrowser_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QTextBrowser* self, QWidget* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QWidget*
 bool q_textbrowser_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_textbrowser_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QTextBrowser* self, int state ```
+/// @param self QTextBrowser*
+/// @param state flag of enum Qt__WindowState
 void q_textbrowser_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QTextBrowser* self, int state ```
+/// @param self QTextBrowser*
+/// @param state flag of enum Qt__WindowState
 void q_textbrowser_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSizePolicy* q_textbrowser_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QTextBrowser* self, QSizePolicy* sizePolicy ```
+/// @param self QTextBrowser*
+/// @param sizePolicy QSizePolicy*
 void q_textbrowser_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QTextBrowser* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QTextBrowser*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_textbrowser_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRegion* q_textbrowser_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QTextBrowser* self, int left, int top, int right, int bottom ```
+/// @param self QTextBrowser*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_textbrowser_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QTextBrowser* self, QMargins* margins ```
+/// @param self QTextBrowser*
+/// @param margins QMargins*
 void q_textbrowser_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QMargins* q_textbrowser_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QRect* q_textbrowser_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QLayout* q_textbrowser_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QTextBrowser* self, QLayout* layout ```
+/// @param self QTextBrowser*
+/// @param layout QLayout*
 void q_textbrowser_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QTextBrowser* self, QWidget* parent ```
+/// @param self QTextBrowser*
+/// @param parent QWidget*
 void q_textbrowser_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QTextBrowser* self, QWidget* parent, int f ```
+/// @param self QTextBrowser*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_textbrowser_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QTextBrowser* self, int dx, int dy ```
+/// @param self QTextBrowser*
+/// @param dx int
+/// @param dy int
 void q_textbrowser_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QTextBrowser* self, int dx, int dy, QRect* param3 ```
+/// @param self QTextBrowser*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_textbrowser_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QTextBrowser* self, bool on ```
+/// @param self QTextBrowser*
+/// @param on bool
 void q_textbrowser_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTextBrowser* self, QAction* action ```
+/// @param self QTextBrowser*
+/// @param action QAction*
 void q_textbrowser_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTextBrowser* self, libqt_list /* of QAction* */ actions ```
+/// @param self QTextBrowser*
+/// @param actions libqt_list /* of QAction* */
 void q_textbrowser_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTextBrowser* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QTextBrowser*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_textbrowser_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QTextBrowser* self, QAction* before, QAction* action ```
+/// @param self QTextBrowser*
+/// @param before QAction*
+/// @param action QAction*
 void q_textbrowser_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QTextBrowser* self, QAction* action ```
+/// @param self QTextBrowser*
+/// @param action QAction*
 void q_textbrowser_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 libqt_list /* of QAction* */ q_textbrowser_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTextBrowser* self, const char* text ```
+/// @param self QTextBrowser*
+/// @param text const char*
 QAction* q_textbrowser_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTextBrowser* self, QIcon* icon, const char* text ```
+/// @param self QTextBrowser*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_textbrowser_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTextBrowser* self, const char* text, QKeySequence* shortcut ```
+/// @param self QTextBrowser*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_textbrowser_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTextBrowser* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QTextBrowser*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_textbrowser_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWidget* q_textbrowser_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QTextBrowser* self, int typeVal ```
+/// @param self QTextBrowser*
+/// @param typeVal flag of enum Qt__WindowType
 void q_textbrowser_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_textbrowser_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QTextBrowser* self, enum Qt__WindowType param1 ```
+/// @param self QTextBrowser*
+/// @param param1 enum Qt__WindowType
 void q_textbrowser_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QTextBrowser* self, int typeVal ```
+/// @param self QTextBrowser*
+/// @param typeVal flag of enum Qt__WindowType
 void q_textbrowser_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return enum Qt__WindowType
 int64_t q_textbrowser_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QTextBrowser* self, int x, int y ```
+/// @param self QTextBrowser*
+/// @param x int
+/// @param y int
 QWidget* q_textbrowser_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QTextBrowser* self, QPoint* p ```
+/// @param self QTextBrowser*
+/// @param p QPoint*
 QWidget* q_textbrowser_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QTextBrowser* self, QPointF* p ```
+/// @param self QTextBrowser*
+/// @param p QPointF*
 QWidget* q_textbrowser_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QTextBrowser* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QTextBrowser*
+/// @param param1 enum Qt__WidgetAttribute
 void q_textbrowser_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QTextBrowser* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QTextBrowser*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_textbrowser_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QTextBrowser* self, QWidget* child ```
+/// @param self QTextBrowser*
+/// @param child QWidget*
 bool q_textbrowser_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QTextBrowser* self, bool enabled ```
+/// @param self QTextBrowser*
+/// @param enabled bool
 void q_textbrowser_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QBackingStore* q_textbrowser_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QWindow* q_textbrowser_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QScreen* q_textbrowser_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QTextBrowser* self, QScreen* screen ```
+/// @param self QTextBrowser*
+/// @param screen QScreen*
 void q_textbrowser_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_textbrowser_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTextBrowser* self, const char* title ```
+/// @param self QTextBrowser*
+/// @param title const char*
 void q_textbrowser_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, const char*) ```
-void q_textbrowser_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, const char*)
+void q_textbrowser_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTextBrowser* self, QIcon* icon ```
+/// @param self QTextBrowser*
+/// @param icon QIcon*
 void q_textbrowser_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QIcon*) ```
-void q_textbrowser_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QIcon*)
+void q_textbrowser_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTextBrowser* self, const char* iconText ```
+/// @param self QTextBrowser*
+/// @param iconText const char*
 void q_textbrowser_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, const char*) ```
-void q_textbrowser_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, const char*)
+void q_textbrowser_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTextBrowser* self, QPoint* pos ```
+/// @param self QTextBrowser*
+/// @param pos QPoint*
 void q_textbrowser_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QPoint*) ```
-void q_textbrowser_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QPoint*)
+void q_textbrowser_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_textbrowser_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QTextBrowser* self, int hints ```
+/// @param self QTextBrowser*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_textbrowser_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QTextBrowser*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_textbrowser_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QTextBrowser*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_textbrowser_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QTextBrowser*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_textbrowser_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QTextBrowser*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_textbrowser_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QTextBrowser*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_textbrowser_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTextBrowser* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QTextBrowser*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_textbrowser_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QTextBrowser* self, QRect* rectangle ```
+/// @param self QTextBrowser*
+/// @param rectangle QRect*
 QPixmap* q_textbrowser_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QTextBrowser* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QTextBrowser*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_textbrowser_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QTextBrowser* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QTextBrowser*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_textbrowser_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QTextBrowser* self, int id, bool enable ```
+/// @param self QTextBrowser*
+/// @param id int
+/// @param enable bool
 void q_textbrowser_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QTextBrowser* self, int id, bool enable ```
+/// @param self QTextBrowser*
+/// @param id int
+/// @param enable bool
 void q_textbrowser_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QTextBrowser* self, enum Qt__WindowType param1, bool on ```
+/// @param self QTextBrowser*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_textbrowser_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QTextBrowser* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QTextBrowser*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_textbrowser_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_textbrowser_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_textbrowser_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char* q_textbrowser_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextBrowser* self, char* name ```
+/// @param self QTextBrowser*
+/// @param name char*
 void q_textbrowser_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTextBrowser* self, bool b ```
+/// @param self QTextBrowser*
+/// @param b bool
 bool q_textbrowser_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QThread* q_textbrowser_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextBrowser* self, QThread* thread ```
+/// @param self QTextBrowser*
+/// @param thread QThread*
 bool q_textbrowser_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextBrowser* self, int interval ```
+/// @param self QTextBrowser*
+/// @param interval int
 int32_t q_textbrowser_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextBrowser* self, int id ```
+/// @param self QTextBrowser*
+/// @param id int
 void q_textbrowser_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextBrowser* self, enum Qt__TimerId id ```
+/// @param self QTextBrowser*
+/// @param id enum Qt__TimerId
 void q_textbrowser_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 libqt_list /* of QObject* */ q_textbrowser_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTextBrowser* self, QObject* filterObj ```
+/// @param self QTextBrowser*
+/// @param filterObj QObject*
 void q_textbrowser_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTextBrowser* self, QObject* obj ```
+/// @param self QTextBrowser*
+/// @param obj QObject*
 void q_textbrowser_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_textbrowser_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextBrowser* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTextBrowser*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_textbrowser_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_textbrowser_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_textbrowser_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTextBrowser* self, const char* name, QVariant* value ```
+/// @param self QTextBrowser*
+/// @param name const char*
+/// @param value QVariant*
 bool q_textbrowser_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTextBrowser* self, const char* name ```
+/// @param self QTextBrowser*
+/// @param name const char*
 QVariant* q_textbrowser_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTextBrowser* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextBrowser*
 const char** q_textbrowser_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QBindingStorage* q_textbrowser_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 const QBindingStorage* q_textbrowser_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*) ```
-void q_textbrowser_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*)
+void q_textbrowser_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QObject* q_textbrowser_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTextBrowser* self, const char* classname ```
+/// @param self QTextBrowser*
+/// @param classname const char*
 bool q_textbrowser_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextBrowser* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTextBrowser*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_textbrowser_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextBrowser* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTextBrowser*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_textbrowser_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textbrowser_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextBrowser* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTextBrowser*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textbrowser_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBrowser* self, QObject* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QObject*
 void q_textbrowser_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QObject*) ```
-void q_textbrowser_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QObject*)
+void q_textbrowser_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 double q_textbrowser_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 double q_textbrowser_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_textbrowser_device_pixel_ratio_f_scale();
 
@@ -3681,7 +4156,8 @@ double q_textbrowser_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_textbrowser_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QTextEdit
@@ -3690,7 +4166,8 @@ int32_t q_textbrowser_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, enum Qt__InputMethodQuery property ```
+/// @param self QTextBrowser*
+/// @param property enum Qt__InputMethodQuery
 QVariant* q_textbrowser_input_method_query(void* self, int64_t property);
 
 /// Inherited from QTextEdit
@@ -3699,7 +4176,8 @@ QVariant* q_textbrowser_input_method_query(void* self, int64_t property);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, enum Qt__InputMethodQuery property ```
+/// @param self QTextBrowser*
+/// @param property enum Qt__InputMethodQuery
 QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property);
 
 /// Inherited from QTextEdit
@@ -3708,8 +4186,9 @@ QVariant* q_textbrowser_qbase_input_method_query(void* self, int64_t property);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QVariant* (*slot)(QTextBrowser*, enum Qt__InputMethodQuery) ```
-void q_textbrowser_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QTextBrowser*
+/// @param callback QVariant* fn(QTextBrowser*, enum Qt__InputMethodQuery)
+void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QTextEdit
 ///
@@ -3717,7 +4196,8 @@ void q_textbrowser_on_input_method_query(void* self, QVariant* (*slot)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QTimerEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QTimerEvent*
 void q_textbrowser_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3726,7 +4206,8 @@ void q_textbrowser_timer_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QTimerEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QTimerEvent*
 void q_textbrowser_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3735,8 +4216,9 @@ void q_textbrowser_qbase_timer_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QTimerEvent*) ```
-void q_textbrowser_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QTimerEvent*)
+void q_textbrowser_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3744,7 +4226,8 @@ void q_textbrowser_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QKeyEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QKeyEvent*
 void q_textbrowser_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3753,7 +4236,8 @@ void q_textbrowser_key_release_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QKeyEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QKeyEvent*
 void q_textbrowser_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3762,8 +4246,9 @@ void q_textbrowser_qbase_key_release_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QKeyEvent*) ```
-void q_textbrowser_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QKeyEvent*)
+void q_textbrowser_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3771,7 +4256,8 @@ void q_textbrowser_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QResizeEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QResizeEvent*
 void q_textbrowser_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3780,7 +4266,8 @@ void q_textbrowser_resize_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QResizeEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QResizeEvent*
 void q_textbrowser_qbase_resize_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3789,8 +4276,9 @@ void q_textbrowser_qbase_resize_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QResizeEvent*) ```
-void q_textbrowser_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QResizeEvent*)
+void q_textbrowser_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3798,7 +4286,8 @@ void q_textbrowser_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMouseEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QMouseEvent*
 void q_textbrowser_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3807,7 +4296,8 @@ void q_textbrowser_mouse_double_click_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMouseEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QMouseEvent*
 void q_textbrowser_qbase_mouse_double_click_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3816,8 +4306,9 @@ void q_textbrowser_qbase_mouse_double_click_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMouseEvent*) ```
-void q_textbrowser_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMouseEvent*)
+void q_textbrowser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3825,7 +4316,8 @@ void q_textbrowser_on_mouse_double_click_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QContextMenuEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QContextMenuEvent*
 void q_textbrowser_context_menu_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3834,7 +4326,8 @@ void q_textbrowser_context_menu_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QContextMenuEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QContextMenuEvent*
 void q_textbrowser_qbase_context_menu_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3843,8 +4336,9 @@ void q_textbrowser_qbase_context_menu_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QContextMenuEvent*) ```
-void q_textbrowser_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QContextMenuEvent*)
+void q_textbrowser_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3852,7 +4346,8 @@ void q_textbrowser_on_context_menu_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDragEnterEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDragEnterEvent*
 void q_textbrowser_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3861,7 +4356,8 @@ void q_textbrowser_drag_enter_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDragEnterEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDragEnterEvent*
 void q_textbrowser_qbase_drag_enter_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3870,8 +4366,9 @@ void q_textbrowser_qbase_drag_enter_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QDragEnterEvent*) ```
-void q_textbrowser_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QDragEnterEvent*)
+void q_textbrowser_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3879,7 +4376,8 @@ void q_textbrowser_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDragLeaveEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDragLeaveEvent*
 void q_textbrowser_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3888,7 +4386,8 @@ void q_textbrowser_drag_leave_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDragLeaveEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDragLeaveEvent*
 void q_textbrowser_qbase_drag_leave_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3897,8 +4396,9 @@ void q_textbrowser_qbase_drag_leave_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QDragLeaveEvent*) ```
-void q_textbrowser_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QDragLeaveEvent*)
+void q_textbrowser_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3906,7 +4406,8 @@ void q_textbrowser_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDragMoveEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDragMoveEvent*
 void q_textbrowser_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3915,7 +4416,8 @@ void q_textbrowser_drag_move_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDragMoveEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDragMoveEvent*
 void q_textbrowser_qbase_drag_move_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3924,8 +4426,9 @@ void q_textbrowser_qbase_drag_move_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QDragMoveEvent*) ```
-void q_textbrowser_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QDragMoveEvent*)
+void q_textbrowser_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3933,7 +4436,8 @@ void q_textbrowser_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDropEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDropEvent*
 void q_textbrowser_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3942,7 +4446,8 @@ void q_textbrowser_drop_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QDropEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QDropEvent*
 void q_textbrowser_qbase_drop_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3951,8 +4456,9 @@ void q_textbrowser_qbase_drop_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QDropEvent*) ```
-void q_textbrowser_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QDropEvent*)
+void q_textbrowser_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3960,7 +4466,8 @@ void q_textbrowser_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QFocusEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QFocusEvent*
 void q_textbrowser_focus_in_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3969,7 +4476,8 @@ void q_textbrowser_focus_in_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QFocusEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QFocusEvent*
 void q_textbrowser_qbase_focus_in_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -3978,8 +4486,9 @@ void q_textbrowser_qbase_focus_in_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QFocusEvent*) ```
-void q_textbrowser_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QFocusEvent*)
+void q_textbrowser_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -3987,7 +4496,8 @@ void q_textbrowser_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QShowEvent* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QShowEvent*
 void q_textbrowser_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -3996,7 +4506,8 @@ void q_textbrowser_show_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QShowEvent* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QShowEvent*
 void q_textbrowser_qbase_show_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4005,8 +4516,9 @@ void q_textbrowser_qbase_show_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QShowEvent*) ```
-void q_textbrowser_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QShowEvent*)
+void q_textbrowser_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4014,7 +4526,8 @@ void q_textbrowser_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QEvent*
 void q_textbrowser_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4023,7 +4536,8 @@ void q_textbrowser_change_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QEvent*
 void q_textbrowser_qbase_change_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4032,8 +4546,9 @@ void q_textbrowser_qbase_change_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QEvent*) ```
-void q_textbrowser_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QEvent*)
+void q_textbrowser_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4041,7 +4556,8 @@ void q_textbrowser_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QWheelEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QWheelEvent*
 void q_textbrowser_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4050,7 +4566,8 @@ void q_textbrowser_wheel_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QWheelEvent* e ```
+/// @param self QTextBrowser*
+/// @param e QWheelEvent*
 void q_textbrowser_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QTextEdit
@@ -4059,8 +4576,9 @@ void q_textbrowser_qbase_wheel_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QWheelEvent*) ```
-void q_textbrowser_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QWheelEvent*)
+void q_textbrowser_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4068,7 +4586,7 @@ void q_textbrowser_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QMimeData* q_textbrowser_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
@@ -4077,7 +4595,7 @@ QMimeData* q_textbrowser_create_mime_data_from_selection(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QMimeData* q_textbrowser_qbase_create_mime_data_from_selection(void* self);
 
 /// Inherited from QTextEdit
@@ -4086,8 +4604,9 @@ QMimeData* q_textbrowser_qbase_create_mime_data_from_selection(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMimeData* (*slot)() ```
-void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QMimeData* fn()
+void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)());
 
 /// Inherited from QTextEdit
 ///
@@ -4095,7 +4614,8 @@ void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*s
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMimeData* source ```
+/// @param self QTextBrowser*
+/// @param source QMimeData*
 bool q_textbrowser_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4104,7 +4624,8 @@ bool q_textbrowser_can_insert_from_mime_data(void* self, void* source);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMimeData* source ```
+/// @param self QTextBrowser*
+/// @param source QMimeData*
 bool q_textbrowser_qbase_can_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4113,8 +4634,9 @@ bool q_textbrowser_qbase_can_insert_from_mime_data(void* self, void* source);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QMimeData*) ```
-void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, QMimeData*)
+void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4122,7 +4644,8 @@ void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMimeData* source ```
+/// @param self QTextBrowser*
+/// @param source QMimeData*
 void q_textbrowser_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4131,7 +4654,8 @@ void q_textbrowser_insert_from_mime_data(void* self, void* source);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMimeData* source ```
+/// @param self QTextBrowser*
+/// @param source QMimeData*
 void q_textbrowser_qbase_insert_from_mime_data(void* self, void* source);
 
 /// Inherited from QTextEdit
@@ -4140,8 +4664,9 @@ void q_textbrowser_qbase_insert_from_mime_data(void* self, void* source);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMimeData*) ```
-void q_textbrowser_on_insert_from_mime_data(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMimeData*)
+void q_textbrowser_on_insert_from_mime_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4149,7 +4674,8 @@ void q_textbrowser_on_insert_from_mime_data(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QInputMethodEvent* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QInputMethodEvent*
 void q_textbrowser_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4158,7 +4684,8 @@ void q_textbrowser_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QInputMethodEvent* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QInputMethodEvent*
 void q_textbrowser_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QTextEdit
@@ -4167,8 +4694,9 @@ void q_textbrowser_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QInputMethodEvent*) ```
-void q_textbrowser_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QInputMethodEvent*)
+void q_textbrowser_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4176,7 +4704,9 @@ void q_textbrowser_on_input_method_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, int dx, int dy ```
+/// @param self QTextBrowser*
+/// @param dx int
+/// @param dy int
 void q_textbrowser_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
@@ -4185,7 +4715,9 @@ void q_textbrowser_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int dx, int dy ```
+/// @param self QTextBrowser*
+/// @param dx int
+/// @param dy int
 void q_textbrowser_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QTextEdit
@@ -4194,8 +4726,9 @@ void q_textbrowser_qbase_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, int, int) ```
-void q_textbrowser_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, int, int)
+void q_textbrowser_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QTextEdit
 ///
@@ -4203,7 +4736,8 @@ void q_textbrowser_on_scroll_contents_by(void* self, void (*slot)(void*, int, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QTextCursor* cursor ```
+/// @param self QTextBrowser*
+/// @param cursor QTextCursor*
 void q_textbrowser_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
@@ -4212,7 +4746,8 @@ void q_textbrowser_do_set_text_cursor(void* self, void* cursor);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QTextCursor* cursor ```
+/// @param self QTextBrowser*
+/// @param cursor QTextCursor*
 void q_textbrowser_qbase_do_set_text_cursor(void* self, void* cursor);
 
 /// Inherited from QTextEdit
@@ -4221,8 +4756,9 @@ void q_textbrowser_qbase_do_set_text_cursor(void* self, void* cursor);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QTextCursor*) ```
-void q_textbrowser_on_do_set_text_cursor(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QTextCursor*)
+void q_textbrowser_on_do_set_text_cursor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4230,7 +4766,7 @@ void q_textbrowser_on_do_set_text_cursor(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4239,7 +4775,7 @@ QSize* q_textbrowser_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4248,8 +4784,9 @@ QSize* q_textbrowser_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QSize* (*slot)() ```
-void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QSize* fn()
+void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4257,7 +4794,7 @@ void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4266,7 +4803,7 @@ QSize* q_textbrowser_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4275,8 +4812,9 @@ QSize* q_textbrowser_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QSize* (*slot)() ```
-void q_textbrowser_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QSize* fn()
+void q_textbrowser_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4284,7 +4822,8 @@ void q_textbrowser_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QWidget* viewport ```
+/// @param self QTextBrowser*
+/// @param viewport QWidget*
 void q_textbrowser_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -4293,7 +4832,8 @@ void q_textbrowser_setup_viewport(void* self, void* viewport);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QWidget* viewport ```
+/// @param self QTextBrowser*
+/// @param viewport QWidget*
 void q_textbrowser_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -4302,8 +4842,9 @@ void q_textbrowser_qbase_setup_viewport(void* self, void* viewport);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QWidget*) ```
-void q_textbrowser_on_setup_viewport(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QWidget*)
+void q_textbrowser_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4311,7 +4852,9 @@ void q_textbrowser_on_setup_viewport(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QObject* param1, QEvent* param2 ```
+/// @param self QTextBrowser*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_textbrowser_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
@@ -4320,7 +4863,9 @@ bool q_textbrowser_event_filter(void* self, void* param1, void* param2);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QObject* param1, QEvent* param2 ```
+/// @param self QTextBrowser*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_textbrowser_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QAbstractScrollArea
@@ -4329,8 +4874,9 @@ bool q_textbrowser_qbase_event_filter(void* self, void* param1, void* param2);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QObject*, QEvent*) ```
-void q_textbrowser_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, QObject*, QEvent*)
+void q_textbrowser_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4338,7 +4884,8 @@ void q_textbrowser_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QEvent*
 bool q_textbrowser_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -4347,7 +4894,8 @@ bool q_textbrowser_viewport_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QEvent*
 bool q_textbrowser_qbase_viewport_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -4356,8 +4904,9 @@ bool q_textbrowser_qbase_viewport_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QEvent*) ```
-void q_textbrowser_on_viewport_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, QEvent*)
+void q_textbrowser_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4365,7 +4914,7 @@ void q_textbrowser_on_viewport_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4374,7 +4923,7 @@ QSize* q_textbrowser_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QSize* q_textbrowser_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4383,8 +4932,9 @@ QSize* q_textbrowser_qbase_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QSize* (*slot)() ```
-void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QSize* fn()
+void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
 ///
@@ -4392,7 +4942,8 @@ void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QStyleOptionFrame* option ```
+/// @param self QTextBrowser*
+/// @param option QStyleOptionFrame*
 void q_textbrowser_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -4401,7 +4952,8 @@ void q_textbrowser_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QStyleOptionFrame* option ```
+/// @param self QTextBrowser*
+/// @param option QStyleOptionFrame*
 void q_textbrowser_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -4410,8 +4962,9 @@ void q_textbrowser_qbase_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QStyleOptionFrame*) ```
-void q_textbrowser_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QStyleOptionFrame*)
+void q_textbrowser_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4419,7 +4972,7 @@ void q_textbrowser_on_init_style_option(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -4428,7 +4981,7 @@ int32_t q_textbrowser_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -4437,8 +4990,9 @@ int32_t q_textbrowser_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int32_t (*slot)() ```
-void q_textbrowser_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QTextBrowser*
+/// @param callback int32_t fn()
+void q_textbrowser_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4446,7 +5000,8 @@ void q_textbrowser_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool visible ```
+/// @param self QTextBrowser*
+/// @param visible bool
 void q_textbrowser_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -4455,7 +5010,8 @@ void q_textbrowser_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool visible ```
+/// @param self QTextBrowser*
+/// @param visible bool
 void q_textbrowser_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -4464,8 +5020,9 @@ void q_textbrowser_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, bool) ```
-void q_textbrowser_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, bool)
+void q_textbrowser_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -4473,7 +5030,8 @@ void q_textbrowser_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, int param1 ```
+/// @param self QTextBrowser*
+/// @param param1 int
 int32_t q_textbrowser_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -4482,7 +5040,8 @@ int32_t q_textbrowser_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int param1 ```
+/// @param self QTextBrowser*
+/// @param param1 int
 int32_t q_textbrowser_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -4491,8 +5050,9 @@ int32_t q_textbrowser_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int32_t (*slot)(QTextBrowser*, int) ```
-void q_textbrowser_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QTextBrowser*
+/// @param callback int32_t fn(QTextBrowser*, int)
+void q_textbrowser_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -4500,7 +5060,7 @@ void q_textbrowser_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -4509,7 +5069,7 @@ bool q_textbrowser_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -4518,8 +5078,9 @@ bool q_textbrowser_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)() ```
-void q_textbrowser_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QTextBrowser*
+/// @param callback bool fn()
+void q_textbrowser_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4527,7 +5088,7 @@ void q_textbrowser_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QPaintEngine* q_textbrowser_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -4536,7 +5097,7 @@ QPaintEngine* q_textbrowser_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QPaintEngine* q_textbrowser_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -4545,8 +5106,9 @@ QPaintEngine* q_textbrowser_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPaintEngine* (*slot)() ```
-void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QPaintEngine* fn()
+void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4554,7 +5116,8 @@ void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEnterEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QEnterEvent*
 void q_textbrowser_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4563,7 +5126,8 @@ void q_textbrowser_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEnterEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QEnterEvent*
 void q_textbrowser_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4572,8 +5136,9 @@ void q_textbrowser_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QEnterEvent*) ```
-void q_textbrowser_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QEnterEvent*)
+void q_textbrowser_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4581,7 +5146,8 @@ void q_textbrowser_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QEvent*
 void q_textbrowser_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4590,7 +5156,8 @@ void q_textbrowser_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QEvent*
 void q_textbrowser_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4599,8 +5166,9 @@ void q_textbrowser_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QEvent*) ```
-void q_textbrowser_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QEvent*)
+void q_textbrowser_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4608,7 +5176,8 @@ void q_textbrowser_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMoveEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QMoveEvent*
 void q_textbrowser_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4617,7 +5186,8 @@ void q_textbrowser_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMoveEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QMoveEvent*
 void q_textbrowser_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4626,8 +5196,9 @@ void q_textbrowser_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMoveEvent*) ```
-void q_textbrowser_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMoveEvent*)
+void q_textbrowser_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4635,7 +5206,8 @@ void q_textbrowser_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QCloseEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QCloseEvent*
 void q_textbrowser_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4644,7 +5216,8 @@ void q_textbrowser_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QCloseEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QCloseEvent*
 void q_textbrowser_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4653,8 +5226,9 @@ void q_textbrowser_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QCloseEvent*) ```
-void q_textbrowser_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QCloseEvent*)
+void q_textbrowser_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4662,7 +5236,8 @@ void q_textbrowser_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QTabletEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QTabletEvent*
 void q_textbrowser_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4671,7 +5246,8 @@ void q_textbrowser_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QTabletEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QTabletEvent*
 void q_textbrowser_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4680,8 +5256,9 @@ void q_textbrowser_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QTabletEvent*) ```
-void q_textbrowser_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QTabletEvent*)
+void q_textbrowser_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4689,7 +5266,8 @@ void q_textbrowser_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QActionEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QActionEvent*
 void q_textbrowser_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4698,7 +5276,8 @@ void q_textbrowser_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QActionEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QActionEvent*
 void q_textbrowser_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4707,8 +5286,9 @@ void q_textbrowser_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QActionEvent*) ```
-void q_textbrowser_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QActionEvent*)
+void q_textbrowser_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4716,7 +5296,8 @@ void q_textbrowser_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QHideEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QHideEvent*
 void q_textbrowser_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4725,7 +5306,8 @@ void q_textbrowser_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QHideEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QHideEvent*
 void q_textbrowser_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -4734,8 +5316,9 @@ void q_textbrowser_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QHideEvent*) ```
-void q_textbrowser_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QHideEvent*)
+void q_textbrowser_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4743,7 +5326,10 @@ void q_textbrowser_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QTextBrowser*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_textbrowser_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4752,7 +5338,10 @@ bool q_textbrowser_native_event(void* self, const char* eventType, void* message
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QTextBrowser*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_textbrowser_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -4761,8 +5350,9 @@ bool q_textbrowser_qbase_native_event(void* self, const char* eventType, void* m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, const char*, void*, intptr_t*) ```
-void q_textbrowser_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, const char*, void*, intptr_t*)
+void q_textbrowser_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -4770,7 +5360,8 @@ void q_textbrowser_on_native_event(void* self, bool (*slot)(void*, const char*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QTextBrowser*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_textbrowser_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4779,7 +5370,8 @@ int32_t q_textbrowser_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QTextBrowser*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_textbrowser_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -4788,8 +5380,9 @@ int32_t q_textbrowser_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int32_t (*slot)(QTextBrowser*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_textbrowser_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QTextBrowser*
+/// @param callback int32_t fn(QTextBrowser*, enum QPaintDevice__PaintDeviceMetric)
+void q_textbrowser_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -4797,7 +5390,8 @@ void q_textbrowser_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPainter* painter ```
+/// @param self QTextBrowser*
+/// @param painter QPainter*
 void q_textbrowser_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4806,7 +5400,8 @@ void q_textbrowser_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPainter* painter ```
+/// @param self QTextBrowser*
+/// @param painter QPainter*
 void q_textbrowser_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -4815,8 +5410,9 @@ void q_textbrowser_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QPainter*) ```
-void q_textbrowser_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QPainter*)
+void q_textbrowser_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4824,7 +5420,8 @@ void q_textbrowser_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPoint* offset ```
+/// @param self QTextBrowser*
+/// @param offset QPoint*
 QPaintDevice* q_textbrowser_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4833,7 +5430,8 @@ QPaintDevice* q_textbrowser_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPoint* offset ```
+/// @param self QTextBrowser*
+/// @param offset QPoint*
 QPaintDevice* q_textbrowser_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -4842,8 +5440,9 @@ QPaintDevice* q_textbrowser_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPaintDevice* (*slot)(QTextBrowser*, QPoint*) ```
-void q_textbrowser_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback QPaintDevice* fn(QTextBrowser*, QPoint*)
+void q_textbrowser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -4851,7 +5450,7 @@ void q_textbrowser_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QPainter* q_textbrowser_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4860,7 +5459,7 @@ QPainter* q_textbrowser_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QPainter* q_textbrowser_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -4869,8 +5468,9 @@ QPainter* q_textbrowser_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPainter* (*slot)() ```
-void q_textbrowser_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QPainter* fn()
+void q_textbrowser_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4878,7 +5478,8 @@ void q_textbrowser_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QChildEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QChildEvent*
 void q_textbrowser_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4887,7 +5488,8 @@ void q_textbrowser_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QChildEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QChildEvent*
 void q_textbrowser_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4896,8 +5498,9 @@ void q_textbrowser_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QChildEvent*) ```
-void q_textbrowser_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QChildEvent*)
+void q_textbrowser_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4905,7 +5508,8 @@ void q_textbrowser_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QEvent*
 void q_textbrowser_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4914,7 +5518,8 @@ void q_textbrowser_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QEvent* event ```
+/// @param self QTextBrowser*
+/// @param event QEvent*
 void q_textbrowser_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -4923,8 +5528,9 @@ void q_textbrowser_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QEvent*) ```
-void q_textbrowser_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QEvent*)
+void q_textbrowser_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4932,7 +5538,8 @@ void q_textbrowser_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMetaMethod* signal ```
+/// @param self QTextBrowser*
+/// @param signal QMetaMethod*
 void q_textbrowser_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4941,7 +5548,8 @@ void q_textbrowser_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMetaMethod* signal ```
+/// @param self QTextBrowser*
+/// @param signal QMetaMethod*
 void q_textbrowser_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4950,8 +5558,9 @@ void q_textbrowser_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMetaMethod*) ```
-void q_textbrowser_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMetaMethod*)
+void q_textbrowser_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -4959,7 +5568,8 @@ void q_textbrowser_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMetaMethod* signal ```
+/// @param self QTextBrowser*
+/// @param signal QMetaMethod*
 void q_textbrowser_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4968,7 +5578,8 @@ void q_textbrowser_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMetaMethod* signal ```
+/// @param self QTextBrowser*
+/// @param signal QMetaMethod*
 void q_textbrowser_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4977,8 +5588,9 @@ void q_textbrowser_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QMetaMethod*) ```
-void q_textbrowser_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QMetaMethod*)
+void q_textbrowser_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QTextEdit
 ///
@@ -4986,7 +5598,8 @@ void q_textbrowser_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, float range ```
+/// @param self QTextBrowser*
+/// @param range float
 void q_textbrowser_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
@@ -4995,7 +5608,8 @@ void q_textbrowser_zoom_in_f(void* self, float range);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, float range ```
+/// @param self QTextBrowser*
+/// @param range float
 void q_textbrowser_qbase_zoom_in_f(void* self, float range);
 
 /// Inherited from QTextEdit
@@ -5004,8 +5618,9 @@ void q_textbrowser_qbase_zoom_in_f(void* self, float range);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, float) ```
-void q_textbrowser_on_zoom_in_f(void* self, void (*slot)(void*, float));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, float)
+void q_textbrowser_on_zoom_in_f(void* self, void (*callback)(void*, float));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5013,7 +5628,11 @@ void q_textbrowser_on_zoom_in_f(void* self, void (*slot)(void*, float));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, int left, int top, int right, int bottom ```
+/// @param self QTextBrowser*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_textbrowser_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -5022,7 +5641,11 @@ void q_textbrowser_set_viewport_margins(void* self, int left, int top, int right
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int left, int top, int right, int bottom ```
+/// @param self QTextBrowser*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_textbrowser_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -5031,8 +5654,9 @@ void q_textbrowser_qbase_set_viewport_margins(void* self, int left, int top, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, int, int, int, int) ```
-void q_textbrowser_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, int, int, int, int)
+void q_textbrowser_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5040,7 +5664,7 @@ void q_textbrowser_on_set_viewport_margins(void* self, void (*slot)(void*, int, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QMargins* q_textbrowser_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5049,7 +5673,7 @@ QMargins* q_textbrowser_viewport_margins(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QMargins* q_textbrowser_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5058,8 +5682,9 @@ QMargins* q_textbrowser_qbase_viewport_margins(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMargins* (*slot)() ```
-void q_textbrowser_on_viewport_margins(void* self, QMargins* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QMargins* fn()
+void q_textbrowser_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
 ///
@@ -5067,7 +5692,8 @@ void q_textbrowser_on_viewport_margins(void* self, QMargins* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPainter* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPainter*
 void q_textbrowser_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5076,7 +5702,8 @@ void q_textbrowser_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QPainter* param1 ```
+/// @param self QTextBrowser*
+/// @param param1 QPainter*
 void q_textbrowser_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5085,8 +5712,9 @@ void q_textbrowser_qbase_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, QPainter*) ```
-void q_textbrowser_on_draw_frame(void* self, void (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, QPainter*)
+void q_textbrowser_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5094,7 +5722,7 @@ void q_textbrowser_on_draw_frame(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -5103,7 +5731,7 @@ void q_textbrowser_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -5112,8 +5740,9 @@ void q_textbrowser_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5121,7 +5750,7 @@ void q_textbrowser_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_create(void* self);
 
 /// Inherited from QWidget
@@ -5130,7 +5759,7 @@ void q_textbrowser_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -5139,8 +5768,9 @@ void q_textbrowser_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_create(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5148,7 +5778,7 @@ void q_textbrowser_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_destroy(void* self);
 
 /// Inherited from QWidget
@@ -5157,7 +5787,7 @@ void q_textbrowser_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -5166,8 +5796,9 @@ void q_textbrowser_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, void (*slot)() ```
-void q_textbrowser_on_destroy(void* self, void (*slot)());
+/// @param self QTextBrowser*
+/// @param callback void fn()
+void q_textbrowser_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5175,7 +5806,7 @@ void q_textbrowser_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -5184,7 +5815,7 @@ bool q_textbrowser_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -5193,8 +5824,9 @@ bool q_textbrowser_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)() ```
-void q_textbrowser_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QTextBrowser*
+/// @param callback bool fn()
+void q_textbrowser_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5202,7 +5834,7 @@ void q_textbrowser_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -5211,7 +5843,7 @@ bool q_textbrowser_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 bool q_textbrowser_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -5220,8 +5852,9 @@ bool q_textbrowser_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)() ```
-void q_textbrowser_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QTextBrowser*
+/// @param callback bool fn()
+void q_textbrowser_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -5229,7 +5862,7 @@ void q_textbrowser_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QObject* q_textbrowser_sender(void* self);
 
 /// Inherited from QObject
@@ -5238,7 +5871,7 @@ QObject* q_textbrowser_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 QObject* q_textbrowser_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -5247,8 +5880,9 @@ QObject* q_textbrowser_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QObject* (*slot)() ```
-void q_textbrowser_on_sender(void* self, QObject* (*slot)());
+/// @param self QTextBrowser*
+/// @param callback QObject* fn()
+void q_textbrowser_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -5256,7 +5890,7 @@ void q_textbrowser_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -5265,7 +5899,7 @@ int32_t q_textbrowser_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 int32_t q_textbrowser_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -5274,8 +5908,9 @@ int32_t q_textbrowser_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int32_t (*slot)() ```
-void q_textbrowser_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTextBrowser*
+/// @param callback int32_t fn()
+void q_textbrowser_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -5283,7 +5918,8 @@ void q_textbrowser_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, const char* signal ```
+/// @param self QTextBrowser*
+/// @param signal const char*
 int32_t q_textbrowser_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -5292,7 +5928,8 @@ int32_t q_textbrowser_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, const char* signal ```
+/// @param self QTextBrowser*
+/// @param signal const char*
 int32_t q_textbrowser_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -5301,8 +5938,9 @@ int32_t q_textbrowser_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, int32_t (*slot)(QTextBrowser*, const char*) ```
-void q_textbrowser_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTextBrowser*
+/// @param callback int32_t fn(QTextBrowser*, const char*)
+void q_textbrowser_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -5310,7 +5948,8 @@ void q_textbrowser_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMetaMethod* signal ```
+/// @param self QTextBrowser*
+/// @param signal QMetaMethod*
 bool q_textbrowser_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5319,7 +5958,8 @@ bool q_textbrowser_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, QMetaMethod* signal ```
+/// @param self QTextBrowser*
+/// @param signal QMetaMethod*
 bool q_textbrowser_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5328,8 +5968,9 @@ bool q_textbrowser_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, bool (*slot)(QTextBrowser*, QMetaMethod*) ```
-void q_textbrowser_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTextBrowser*
+/// @param callback bool fn(QTextBrowser*, QMetaMethod*)
+void q_textbrowser_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -5337,7 +5978,9 @@ void q_textbrowser_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QTextBrowser*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_textbrowser_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -5346,7 +5989,9 @@ double q_textbrowser_get_decoded_metric_f(void* self, int64_t metricA, int64_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QTextBrowser*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_textbrowser_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -5355,8 +6000,9 @@ double q_textbrowser_qbase_get_decoded_metric_f(void* self, int64_t metricA, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextBrowser* self, double (*slot)(QTextBrowser*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_textbrowser_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QTextBrowser*
+/// @param callback double fn(QTextBrowser*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_textbrowser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -5364,14 +6010,15 @@ void q_textbrowser_on_get_decoded_metric_f(void* self, double (*slot)(void*, int
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextBrowser* self, void (*slot)(QTextBrowser*, const char*) ```
-void q_textbrowser_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextBrowser*
+/// @param callback void fn(QTextBrowser*, const char*)
+void q_textbrowser_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextbrowser.html#dtor.QTextBrowser)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextBrowser* self ```
+/// @param self QTextBrowser*
 void q_textbrowser_delete(void* self);
 
 #endif

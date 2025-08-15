@@ -25,8 +25,8 @@ int32_t q_chronotimer_metacall(void* self, int64_t param1, int param2, void* par
     return QChronoTimer_Metacall((QChronoTimer*)self, param1, param2, param3);
 }
 
-void q_chronotimer_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QChronoTimer_OnMetacall((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QChronoTimer_OnMetacall((QChronoTimer*)self, (intptr_t)callback);
 }
 
 int32_t q_chronotimer_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -72,8 +72,8 @@ void q_chronotimer_timer_event(void* self, void* param1) {
     QChronoTimer_TimerEvent((QChronoTimer*)self, (QTimerEvent*)param1);
 }
 
-void q_chronotimer_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QChronoTimer_OnTimerEvent((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QChronoTimer_OnTimerEvent((QChronoTimer*)self, (intptr_t)callback);
 }
 
 void q_chronotimer_qbase_timer_event(void* self, void* param1) {
@@ -198,12 +198,16 @@ const char** q_chronotimer_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_chronotimer_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -221,8 +225,8 @@ void q_chronotimer_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_chronotimer_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_chronotimer_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_chronotimer_parent(void* self) {
@@ -257,8 +261,8 @@ void q_chronotimer_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_chronotimer_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_chronotimer_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_chronotimer_event(void* self, void* event) {
@@ -269,8 +273,8 @@ bool q_chronotimer_qbase_event(void* self, void* event) {
     return QChronoTimer_QBaseEvent((QChronoTimer*)self, (QEvent*)event);
 }
 
-void q_chronotimer_on_event(void* self, bool (*slot)(void*, void*)) {
-    QChronoTimer_OnEvent((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_event(void* self, bool (*callback)(void*, void*)) {
+    QChronoTimer_OnEvent((QChronoTimer*)self, (intptr_t)callback);
 }
 
 bool q_chronotimer_event_filter(void* self, void* watched, void* event) {
@@ -281,8 +285,8 @@ bool q_chronotimer_qbase_event_filter(void* self, void* watched, void* event) {
     return QChronoTimer_QBaseEventFilter((QChronoTimer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_chronotimer_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QChronoTimer_OnEventFilter((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QChronoTimer_OnEventFilter((QChronoTimer*)self, (intptr_t)callback);
 }
 
 void q_chronotimer_child_event(void* self, void* event) {
@@ -293,8 +297,8 @@ void q_chronotimer_qbase_child_event(void* self, void* event) {
     QChronoTimer_QBaseChildEvent((QChronoTimer*)self, (QChildEvent*)event);
 }
 
-void q_chronotimer_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QChronoTimer_OnChildEvent((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QChronoTimer_OnChildEvent((QChronoTimer*)self, (intptr_t)callback);
 }
 
 void q_chronotimer_custom_event(void* self, void* event) {
@@ -305,8 +309,8 @@ void q_chronotimer_qbase_custom_event(void* self, void* event) {
     QChronoTimer_QBaseCustomEvent((QChronoTimer*)self, (QEvent*)event);
 }
 
-void q_chronotimer_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QChronoTimer_OnCustomEvent((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QChronoTimer_OnCustomEvent((QChronoTimer*)self, (intptr_t)callback);
 }
 
 void q_chronotimer_connect_notify(void* self, void* signal) {
@@ -317,8 +321,8 @@ void q_chronotimer_qbase_connect_notify(void* self, void* signal) {
     QChronoTimer_QBaseConnectNotify((QChronoTimer*)self, (QMetaMethod*)signal);
 }
 
-void q_chronotimer_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QChronoTimer_OnConnectNotify((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QChronoTimer_OnConnectNotify((QChronoTimer*)self, (intptr_t)callback);
 }
 
 void q_chronotimer_disconnect_notify(void* self, void* signal) {
@@ -329,8 +333,8 @@ void q_chronotimer_qbase_disconnect_notify(void* self, void* signal) {
     QChronoTimer_QBaseDisconnectNotify((QChronoTimer*)self, (QMetaMethod*)signal);
 }
 
-void q_chronotimer_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QChronoTimer_OnDisconnectNotify((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QChronoTimer_OnDisconnectNotify((QChronoTimer*)self, (intptr_t)callback);
 }
 
 QObject* q_chronotimer_sender(void* self) {
@@ -341,8 +345,8 @@ QObject* q_chronotimer_qbase_sender(void* self) {
     return QChronoTimer_QBaseSender((QChronoTimer*)self);
 }
 
-void q_chronotimer_on_sender(void* self, QObject* (*slot)()) {
-    QChronoTimer_OnSender((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_sender(void* self, QObject* (*callback)()) {
+    QChronoTimer_OnSender((QChronoTimer*)self, (intptr_t)callback);
 }
 
 int32_t q_chronotimer_sender_signal_index(void* self) {
@@ -353,8 +357,8 @@ int32_t q_chronotimer_qbase_sender_signal_index(void* self) {
     return QChronoTimer_QBaseSenderSignalIndex((QChronoTimer*)self);
 }
 
-void q_chronotimer_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QChronoTimer_OnSenderSignalIndex((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QChronoTimer_OnSenderSignalIndex((QChronoTimer*)self, (intptr_t)callback);
 }
 
 int32_t q_chronotimer_receivers(void* self, const char* signal) {
@@ -365,8 +369,8 @@ int32_t q_chronotimer_qbase_receivers(void* self, const char* signal) {
     return QChronoTimer_QBaseReceivers((QChronoTimer*)self, signal);
 }
 
-void q_chronotimer_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QChronoTimer_OnReceivers((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QChronoTimer_OnReceivers((QChronoTimer*)self, (intptr_t)callback);
 }
 
 bool q_chronotimer_is_signal_connected(void* self, void* signal) {
@@ -377,16 +381,16 @@ bool q_chronotimer_qbase_is_signal_connected(void* self, void* signal) {
     return QChronoTimer_QBaseIsSignalConnected((QChronoTimer*)self, (QMetaMethod*)signal);
 }
 
-void q_chronotimer_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QChronoTimer_OnIsSignalConnected((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QChronoTimer_OnIsSignalConnected((QChronoTimer*)self, (intptr_t)callback);
 }
 
-void q_chronotimer_on_timeout(void* self, void (*slot)(void*)) {
-    QChronoTimer_Connect_Timeout((QChronoTimer*)self, (intptr_t)slot);
+void q_chronotimer_on_timeout(void* self, void (*callback)(void*)) {
+    QChronoTimer_Connect_Timeout((QChronoTimer*)self, (intptr_t)callback);
 }
 
-void q_chronotimer_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_chronotimer_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_chronotimer_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,49 +15,54 @@
 
 /// q_ocspresponse_new constructs a new QOcspResponse object.
 ///
-///
 QOcspResponse* q_ocspresponse_new();
 
 /// q_ocspresponse_new2 constructs a new QOcspResponse object.
 ///
-/// ``` QOcspResponse* other ```
+/// @param other QOcspResponse*
 QOcspResponse* q_ocspresponse_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#operator-eq)
 ///
-/// ``` QOcspResponse* self, QOcspResponse* other ```
+/// @param self QOcspResponse*
+/// @param other QOcspResponse*
 void q_ocspresponse_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#certificateStatus)
 ///
-/// ``` QOcspResponse* self ```
+/// @param self QOcspResponse*
+///
+/// @return enum QOcspResponse__QOcspCertificateStatus
 int64_t q_ocspresponse_certificate_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#revocationReason)
 ///
-/// ``` QOcspResponse* self ```
+/// @param self QOcspResponse*
+///
+/// @return enum QOcspResponse__QOcspRevocationReason
 int64_t q_ocspresponse_revocation_reason(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#responder)
 ///
-/// ``` QOcspResponse* self ```
+/// @param self QOcspResponse*
 QSslCertificate* q_ocspresponse_responder(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#subject)
 ///
-/// ``` QOcspResponse* self ```
+/// @param self QOcspResponse*
 QSslCertificate* q_ocspresponse_subject(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#swap)
 ///
-/// ``` QOcspResponse* self, QOcspResponse* other ```
+/// @param self QOcspResponse*
+/// @param other QOcspResponse*
 void q_ocspresponse_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#dtor.QOcspResponse)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QOcspResponse* self ```
+/// @param self QOcspResponse*
 void q_ocspresponse_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qocspresponse.html#types

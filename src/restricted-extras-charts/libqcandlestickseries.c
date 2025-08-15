@@ -30,8 +30,8 @@ int32_t q_candlestickseries_metacall(void* self, int64_t param1, int param2, voi
     return QCandlestickSeries_Metacall((QCandlestickSeries*)self, param1, param2, param3);
 }
 
-void q_candlestickseries_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QCandlestickSeries_OnMetacall((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QCandlestickSeries_OnMetacall((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_candlestickseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -86,8 +86,8 @@ int64_t q_candlestickseries_type(void* self) {
     return QCandlestickSeries_Type((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_type(void* self, int64_t (*slot)()) {
-    QCandlestickSeries_OnType((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_type(void* self, int64_t (*callback)()) {
+    QCandlestickSeries_OnType((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 int64_t q_candlestickseries_qbase_type(void* self) {
@@ -178,144 +178,144 @@ void q_candlestickseries_clicked(void* self, void* set) {
     QCandlestickSeries_Clicked((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-void q_candlestickseries_on_clicked(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_Connect_Clicked((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_clicked(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_Connect_Clicked((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_hovered(void* self, bool status, void* set) {
     QCandlestickSeries_Hovered((QCandlestickSeries*)self, status, (QCandlestickSet*)set);
 }
 
-void q_candlestickseries_on_hovered(void* self, void (*slot)(void*, bool, void*)) {
-    QCandlestickSeries_Connect_Hovered((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_hovered(void* self, void (*callback)(void*, bool, void*)) {
+    QCandlestickSeries_Connect_Hovered((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_pressed(void* self, void* set) {
     QCandlestickSeries_Pressed((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-void q_candlestickseries_on_pressed(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_Connect_Pressed((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_pressed(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_Connect_Pressed((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_released(void* self, void* set) {
     QCandlestickSeries_Released((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-void q_candlestickseries_on_released(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_Connect_Released((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_released(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_Connect_Released((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_double_clicked(void* self, void* set) {
     QCandlestickSeries_DoubleClicked((QCandlestickSeries*)self, (QCandlestickSet*)set);
 }
 
-void q_candlestickseries_on_double_clicked(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_Connect_DoubleClicked((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_double_clicked(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_Connect_DoubleClicked((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_candlestick_sets_added(void* self, libqt_list sets) {
     QCandlestickSeries_CandlestickSetsAdded((QCandlestickSeries*)self, sets);
 }
 
-void q_candlestickseries_on_candlestick_sets_added(void* self, void (*slot)(void*, libqt_list)) {
-    QCandlestickSeries_Connect_CandlestickSetsAdded((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_candlestick_sets_added(void* self, void (*callback)(void*, libqt_list)) {
+    QCandlestickSeries_Connect_CandlestickSetsAdded((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_candlestick_sets_removed(void* self, libqt_list sets) {
     QCandlestickSeries_CandlestickSetsRemoved((QCandlestickSeries*)self, sets);
 }
 
-void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*slot)(void*, libqt_list)) {
-    QCandlestickSeries_Connect_CandlestickSetsRemoved((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_candlestick_sets_removed(void* self, void (*callback)(void*, libqt_list)) {
+    QCandlestickSeries_Connect_CandlestickSetsRemoved((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_count_changed(void* self) {
     QCandlestickSeries_CountChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_count_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_CountChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_count_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_CountChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_maximum_column_width_changed(void* self) {
     QCandlestickSeries_MaximumColumnWidthChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_maximum_column_width_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_MaximumColumnWidthChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_maximum_column_width_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_MaximumColumnWidthChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_minimum_column_width_changed(void* self) {
     QCandlestickSeries_MinimumColumnWidthChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_minimum_column_width_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_MinimumColumnWidthChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_minimum_column_width_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_MinimumColumnWidthChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_body_width_changed(void* self) {
     QCandlestickSeries_BodyWidthChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_body_width_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_BodyWidthChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_body_width_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_BodyWidthChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_body_outline_visibility_changed(void* self) {
     QCandlestickSeries_BodyOutlineVisibilityChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_body_outline_visibility_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_BodyOutlineVisibilityChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_body_outline_visibility_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_BodyOutlineVisibilityChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_caps_width_changed(void* self) {
     QCandlestickSeries_CapsWidthChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_caps_width_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_CapsWidthChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_caps_width_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_CapsWidthChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_caps_visibility_changed(void* self) {
     QCandlestickSeries_CapsVisibilityChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_caps_visibility_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_CapsVisibilityChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_caps_visibility_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_CapsVisibilityChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_increasing_color_changed(void* self) {
     QCandlestickSeries_IncreasingColorChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_increasing_color_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_IncreasingColorChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_increasing_color_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_IncreasingColorChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_decreasing_color_changed(void* self) {
     QCandlestickSeries_DecreasingColorChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_decreasing_color_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_DecreasingColorChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_decreasing_color_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_DecreasingColorChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_brush_changed(void* self) {
     QCandlestickSeries_BrushChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_brush_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_BrushChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_brush_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_BrushChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_pen_changed(void* self) {
     QCandlestickSeries_PenChanged((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_pen_changed(void* self, void (*slot)(void*)) {
-    QCandlestickSeries_Connect_PenChanged((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_pen_changed(void* self, void (*callback)(void*)) {
+    QCandlestickSeries_Connect_PenChanged((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 const char* q_candlestickseries_tr2(const char* s, const char* c) {
@@ -396,32 +396,32 @@ void q_candlestickseries_name_changed(void* self) {
     QAbstractSeries_NameChanged((QAbstractSeries*)self);
 }
 
-void q_candlestickseries_on_name_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_name_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_visible_changed(void* self) {
     QAbstractSeries_VisibleChanged((QAbstractSeries*)self);
 }
 
-void q_candlestickseries_on_visible_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_visible_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_opacity_changed(void* self) {
     QAbstractSeries_OpacityChanged((QAbstractSeries*)self);
 }
 
-void q_candlestickseries_on_opacity_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_opacity_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_use_open_g_l_changed(void* self) {
     QAbstractSeries_UseOpenGLChanged((QAbstractSeries*)self);
 }
 
-void q_candlestickseries_on_use_open_g_l_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_use_open_g_l_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_set_visible1(void* self, bool visible) {
@@ -536,12 +536,16 @@ const char** q_candlestickseries_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_candlestickseries_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -559,8 +563,8 @@ void q_candlestickseries_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_candlestickseries_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_candlestickseries_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_candlestickseries_parent(void* self) {
@@ -595,8 +599,8 @@ void q_candlestickseries_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_candlestickseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_candlestickseries_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_candlestickseries_event(void* self, void* event) {
@@ -607,8 +611,8 @@ bool q_candlestickseries_qbase_event(void* self, void* event) {
     return QCandlestickSeries_QBaseEvent((QCandlestickSeries*)self, (QEvent*)event);
 }
 
-void q_candlestickseries_on_event(void* self, bool (*slot)(void*, void*)) {
-    QCandlestickSeries_OnEvent((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_event(void* self, bool (*callback)(void*, void*)) {
+    QCandlestickSeries_OnEvent((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 bool q_candlestickseries_event_filter(void* self, void* watched, void* event) {
@@ -619,8 +623,8 @@ bool q_candlestickseries_qbase_event_filter(void* self, void* watched, void* eve
     return QCandlestickSeries_QBaseEventFilter((QCandlestickSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_candlestickseries_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QCandlestickSeries_OnEventFilter((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QCandlestickSeries_OnEventFilter((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_timer_event(void* self, void* event) {
@@ -631,8 +635,8 @@ void q_candlestickseries_qbase_timer_event(void* self, void* event) {
     QCandlestickSeries_QBaseTimerEvent((QCandlestickSeries*)self, (QTimerEvent*)event);
 }
 
-void q_candlestickseries_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_OnTimerEvent((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_OnTimerEvent((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_child_event(void* self, void* event) {
@@ -643,8 +647,8 @@ void q_candlestickseries_qbase_child_event(void* self, void* event) {
     QCandlestickSeries_QBaseChildEvent((QCandlestickSeries*)self, (QChildEvent*)event);
 }
 
-void q_candlestickseries_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_OnChildEvent((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_OnChildEvent((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_custom_event(void* self, void* event) {
@@ -655,8 +659,8 @@ void q_candlestickseries_qbase_custom_event(void* self, void* event) {
     QCandlestickSeries_QBaseCustomEvent((QCandlestickSeries*)self, (QEvent*)event);
 }
 
-void q_candlestickseries_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_OnCustomEvent((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_OnCustomEvent((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_connect_notify(void* self, void* signal) {
@@ -667,8 +671,8 @@ void q_candlestickseries_qbase_connect_notify(void* self, void* signal) {
     QCandlestickSeries_QBaseConnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickseries_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_OnConnectNotify((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_OnConnectNotify((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_disconnect_notify(void* self, void* signal) {
@@ -679,8 +683,8 @@ void q_candlestickseries_qbase_disconnect_notify(void* self, void* signal) {
     QCandlestickSeries_QBaseDisconnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickseries_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QCandlestickSeries_OnDisconnectNotify((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QCandlestickSeries_OnDisconnectNotify((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 QObject* q_candlestickseries_sender(void* self) {
@@ -691,8 +695,8 @@ QObject* q_candlestickseries_qbase_sender(void* self) {
     return QCandlestickSeries_QBaseSender((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_sender(void* self, QObject* (*slot)()) {
-    QCandlestickSeries_OnSender((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_sender(void* self, QObject* (*callback)()) {
+    QCandlestickSeries_OnSender((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_candlestickseries_sender_signal_index(void* self) {
@@ -703,8 +707,8 @@ int32_t q_candlestickseries_qbase_sender_signal_index(void* self) {
     return QCandlestickSeries_QBaseSenderSignalIndex((QCandlestickSeries*)self);
 }
 
-void q_candlestickseries_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QCandlestickSeries_OnSenderSignalIndex((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QCandlestickSeries_OnSenderSignalIndex((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 int32_t q_candlestickseries_receivers(void* self, const char* signal) {
@@ -715,8 +719,8 @@ int32_t q_candlestickseries_qbase_receivers(void* self, const char* signal) {
     return QCandlestickSeries_QBaseReceivers((QCandlestickSeries*)self, signal);
 }
 
-void q_candlestickseries_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QCandlestickSeries_OnReceivers((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QCandlestickSeries_OnReceivers((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
 bool q_candlestickseries_is_signal_connected(void* self, void* signal) {
@@ -727,12 +731,12 @@ bool q_candlestickseries_qbase_is_signal_connected(void* self, void* signal) {
     return QCandlestickSeries_QBaseIsSignalConnected((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QCandlestickSeries_OnIsSignalConnected((QCandlestickSeries*)self, (intptr_t)slot);
+void q_candlestickseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QCandlestickSeries_OnIsSignalConnected((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-void q_candlestickseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_candlestickseries_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_candlestickseries_delete(void* self) {

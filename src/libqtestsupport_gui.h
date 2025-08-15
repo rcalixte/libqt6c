@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -14,51 +13,68 @@
 
 /// https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#press)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId, QPoint* pt ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
+/// @param pt QPoint*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_press(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#move)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId, QPoint* pt ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
+/// @param pt QPoint*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_move(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#release)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId, QPoint* pt ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
+/// @param pt QPoint*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_release(void* self, int touchId, void* pt);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#stationary)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#stationary)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_stationary(void* self, int touchId);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#commit)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#commit)
 ///
-/// ``` QTest__QTouchEventSequence* self, bool processEvents ```
+/// @param self QTest__QTouchEventSequence*
+/// @param processEvents bool
 bool q_test__qtoucheventsequence_commit(void* self, bool processEvents);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#press)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#press)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId, QPoint* pt, QWindow* window ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
+/// @param pt QPoint*
+/// @param window QWindow*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_press3(void* self, int touchId, void* pt, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#move)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#move)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId, QPoint* pt, QWindow* window ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
+/// @param pt QPoint*
+/// @param window QWindow*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_move3(void* self, int touchId, void* pt, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest__qtoucheventsequence.html#release)
+/// [Qt documentation](https://doc.qt.io/qt-6/qtest-qtoucheventsequence.html#release)
 ///
-/// ``` QTest__QTouchEventSequence* self, int touchId, QPoint* pt, QWindow* window ```
+/// @param self QTest__QTouchEventSequence*
+/// @param touchId int
+/// @param pt QPoint*
+/// @param window QWindow*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_release3(void* self, int touchId, void* pt, void* window);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtest::qtoucheventsequence.html#dtor.QTest::QTouchEventSequence)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTest__QTouchEventSequence* self ```
+/// @param self QTest__QTouchEventSequence*
 void q_test__qtoucheventsequence_delete(void* self);
 
 #endif

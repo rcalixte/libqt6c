@@ -36,8 +36,8 @@ int32_t q_spinbox_metacall(void* self, int64_t param1, int param2, void* param3)
     return QSpinBox_Metacall((QSpinBox*)self, param1, param2, param3);
 }
 
-void q_spinbox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSpinBox_OnMetacall((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSpinBox_OnMetacall((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -132,8 +132,8 @@ bool q_spinbox_event(void* self, void* event) {
     return QSpinBox_Event((QSpinBox*)self, (QEvent*)event);
 }
 
-void q_spinbox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSpinBox_OnEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSpinBox_OnEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_qbase_event(void* self, void* event) {
@@ -144,8 +144,8 @@ int64_t q_spinbox_validate(void* self, const char* input, int* pos) {
     return QSpinBox_Validate((QSpinBox*)self, qstring(input), pos);
 }
 
-void q_spinbox_on_validate(void* self, int64_t (*slot)(void*, const char*, int*)) {
-    QSpinBox_OnValidate((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_validate(void* self, int64_t (*callback)(void*, const char*, int*)) {
+    QSpinBox_OnValidate((QSpinBox*)self, (intptr_t)callback);
 }
 
 int64_t q_spinbox_qbase_validate(void* self, const char* input, int* pos) {
@@ -156,8 +156,8 @@ int32_t q_spinbox_value_from_text(void* self, const char* text) {
     return QSpinBox_ValueFromText((QSpinBox*)self, qstring(text));
 }
 
-void q_spinbox_on_value_from_text(void* self, int32_t (*slot)(void*, const char*)) {
-    QSpinBox_OnValueFromText((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_value_from_text(void* self, int32_t (*callback)(void*, const char*)) {
+    QSpinBox_OnValueFromText((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_qbase_value_from_text(void* self, const char* text) {
@@ -171,8 +171,8 @@ const char* q_spinbox_text_from_value(void* self, int val) {
     return _ret;
 }
 
-void q_spinbox_on_text_from_value(void* self, const char* (*slot)(void*, int)) {
-    QSpinBox_OnTextFromValue((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_text_from_value(void* self, const char* (*callback)(void*, int)) {
+    QSpinBox_OnTextFromValue((QSpinBox*)self, (intptr_t)callback);
 }
 
 const char* q_spinbox_qbase_text_from_value(void* self, int val) {
@@ -186,8 +186,8 @@ void q_spinbox_fixup(void* self, const char* str) {
     QSpinBox_Fixup((QSpinBox*)self, qstring(str));
 }
 
-void q_spinbox_on_fixup(void* self, void (*slot)(void*, const char*)) {
-    QSpinBox_OnFixup((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_fixup(void* self, void (*callback)(void*, const char*)) {
+    QSpinBox_OnFixup((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_qbase_fixup(void* self, const char* str) {
@@ -202,16 +202,16 @@ void q_spinbox_value_changed(void* self, int param1) {
     QSpinBox_ValueChanged((QSpinBox*)self, param1);
 }
 
-void q_spinbox_on_value_changed(void* self, void (*slot)(void*, int)) {
-    QSpinBox_Connect_ValueChanged((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_value_changed(void* self, void (*callback)(void*, int)) {
+    QSpinBox_Connect_ValueChanged((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_text_changed(void* self, const char* param1) {
     QSpinBox_TextChanged((QSpinBox*)self, qstring(param1));
 }
 
-void q_spinbox_on_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QSpinBox_Connect_TextChanged((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QSpinBox_Connect_TextChanged((QSpinBox*)self, (intptr_t)callback);
 }
 
 const char* q_spinbox_tr2(const char* s, const char* c) {
@@ -342,8 +342,8 @@ void q_spinbox_editing_finished(void* self) {
     QAbstractSpinBox_EditingFinished((QAbstractSpinBox*)self);
 }
 
-void q_spinbox_on_editing_finished(void* self, void (*slot)(void*)) {
-    QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_editing_finished(void* self, void (*callback)(void*)) {
+    QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 uintptr_t q_spinbox_win_id(void* self) {
@@ -1372,32 +1372,32 @@ void q_spinbox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_spinbox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_spinbox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_spinbox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_spinbox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_spinbox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_spinbox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_spinbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_spinbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_spinbox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_spinbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_spinbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_spinbox_input_method_hints(void* self) {
@@ -1568,12 +1568,16 @@ const char** q_spinbox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_spinbox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1591,8 +1595,8 @@ void q_spinbox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_spinbox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_spinbox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_spinbox_parent(void* self) {
@@ -1627,8 +1631,8 @@ void q_spinbox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_spinbox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_spinbox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_painting_active(void* self) {
@@ -1691,8 +1695,8 @@ QSize* q_spinbox_qbase_size_hint(void* self) {
     return QSpinBox_QBaseSizeHint((QSpinBox*)self);
 }
 
-void q_spinbox_on_size_hint(void* self, QSize* (*slot)()) {
-    QSpinBox_OnSizeHint((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_size_hint(void* self, QSize* (*callback)()) {
+    QSpinBox_OnSizeHint((QSpinBox*)self, (intptr_t)callback);
 }
 
 QSize* q_spinbox_minimum_size_hint(void* self) {
@@ -1703,8 +1707,8 @@ QSize* q_spinbox_qbase_minimum_size_hint(void* self) {
     return QSpinBox_QBaseMinimumSizeHint((QSpinBox*)self);
 }
 
-void q_spinbox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QSpinBox_OnMinimumSizeHint((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QSpinBox_OnMinimumSizeHint((QSpinBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_spinbox_input_method_query(void* self, int64_t param1) {
@@ -1715,8 +1719,8 @@ QVariant* q_spinbox_qbase_input_method_query(void* self, int64_t param1) {
     return QSpinBox_QBaseInputMethodQuery((QSpinBox*)self, param1);
 }
 
-void q_spinbox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QSpinBox_OnInputMethodQuery((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QSpinBox_OnInputMethodQuery((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_step_by(void* self, int steps) {
@@ -1727,8 +1731,8 @@ void q_spinbox_qbase_step_by(void* self, int steps) {
     QSpinBox_QBaseStepBy((QSpinBox*)self, steps);
 }
 
-void q_spinbox_on_step_by(void* self, void (*slot)(void*, int)) {
-    QSpinBox_OnStepBy((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_step_by(void* self, void (*callback)(void*, int)) {
+    QSpinBox_OnStepBy((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_clear(void* self) {
@@ -1739,8 +1743,8 @@ void q_spinbox_qbase_clear(void* self) {
     QSpinBox_QBaseClear((QSpinBox*)self);
 }
 
-void q_spinbox_on_clear(void* self, void (*slot)()) {
-    QSpinBox_OnClear((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_clear(void* self, void (*callback)()) {
+    QSpinBox_OnClear((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_resize_event(void* self, void* event) {
@@ -1751,8 +1755,8 @@ void q_spinbox_qbase_resize_event(void* self, void* event) {
     QSpinBox_QBaseResizeEvent((QSpinBox*)self, (QResizeEvent*)event);
 }
 
-void q_spinbox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnResizeEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnResizeEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_key_press_event(void* self, void* event) {
@@ -1763,8 +1767,8 @@ void q_spinbox_qbase_key_press_event(void* self, void* event) {
     QSpinBox_QBaseKeyPressEvent((QSpinBox*)self, (QKeyEvent*)event);
 }
 
-void q_spinbox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnKeyPressEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnKeyPressEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_key_release_event(void* self, void* event) {
@@ -1775,8 +1779,8 @@ void q_spinbox_qbase_key_release_event(void* self, void* event) {
     QSpinBox_QBaseKeyReleaseEvent((QSpinBox*)self, (QKeyEvent*)event);
 }
 
-void q_spinbox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnKeyReleaseEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnKeyReleaseEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_wheel_event(void* self, void* event) {
@@ -1787,8 +1791,8 @@ void q_spinbox_qbase_wheel_event(void* self, void* event) {
     QSpinBox_QBaseWheelEvent((QSpinBox*)self, (QWheelEvent*)event);
 }
 
-void q_spinbox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnWheelEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnWheelEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_focus_in_event(void* self, void* event) {
@@ -1799,8 +1803,8 @@ void q_spinbox_qbase_focus_in_event(void* self, void* event) {
     QSpinBox_QBaseFocusInEvent((QSpinBox*)self, (QFocusEvent*)event);
 }
 
-void q_spinbox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnFocusInEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnFocusInEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_focus_out_event(void* self, void* event) {
@@ -1811,8 +1815,8 @@ void q_spinbox_qbase_focus_out_event(void* self, void* event) {
     QSpinBox_QBaseFocusOutEvent((QSpinBox*)self, (QFocusEvent*)event);
 }
 
-void q_spinbox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnFocusOutEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnFocusOutEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_context_menu_event(void* self, void* event) {
@@ -1823,8 +1827,8 @@ void q_spinbox_qbase_context_menu_event(void* self, void* event) {
     QSpinBox_QBaseContextMenuEvent((QSpinBox*)self, (QContextMenuEvent*)event);
 }
 
-void q_spinbox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnContextMenuEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnContextMenuEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_change_event(void* self, void* event) {
@@ -1835,8 +1839,8 @@ void q_spinbox_qbase_change_event(void* self, void* event) {
     QSpinBox_QBaseChangeEvent((QSpinBox*)self, (QEvent*)event);
 }
 
-void q_spinbox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnChangeEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnChangeEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_close_event(void* self, void* event) {
@@ -1847,8 +1851,8 @@ void q_spinbox_qbase_close_event(void* self, void* event) {
     QSpinBox_QBaseCloseEvent((QSpinBox*)self, (QCloseEvent*)event);
 }
 
-void q_spinbox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnCloseEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnCloseEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_hide_event(void* self, void* event) {
@@ -1859,8 +1863,8 @@ void q_spinbox_qbase_hide_event(void* self, void* event) {
     QSpinBox_QBaseHideEvent((QSpinBox*)self, (QHideEvent*)event);
 }
 
-void q_spinbox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnHideEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnHideEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_mouse_press_event(void* self, void* event) {
@@ -1871,8 +1875,8 @@ void q_spinbox_qbase_mouse_press_event(void* self, void* event) {
     QSpinBox_QBaseMousePressEvent((QSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_spinbox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnMousePressEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnMousePressEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_mouse_release_event(void* self, void* event) {
@@ -1883,8 +1887,8 @@ void q_spinbox_qbase_mouse_release_event(void* self, void* event) {
     QSpinBox_QBaseMouseReleaseEvent((QSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_spinbox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnMouseReleaseEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnMouseReleaseEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_mouse_move_event(void* self, void* event) {
@@ -1895,8 +1899,8 @@ void q_spinbox_qbase_mouse_move_event(void* self, void* event) {
     QSpinBox_QBaseMouseMoveEvent((QSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_spinbox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnMouseMoveEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnMouseMoveEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_timer_event(void* self, void* event) {
@@ -1907,8 +1911,8 @@ void q_spinbox_qbase_timer_event(void* self, void* event) {
     QSpinBox_QBaseTimerEvent((QSpinBox*)self, (QTimerEvent*)event);
 }
 
-void q_spinbox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnTimerEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnTimerEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_paint_event(void* self, void* event) {
@@ -1919,8 +1923,8 @@ void q_spinbox_qbase_paint_event(void* self, void* event) {
     QSpinBox_QBasePaintEvent((QSpinBox*)self, (QPaintEvent*)event);
 }
 
-void q_spinbox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnPaintEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnPaintEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_show_event(void* self, void* event) {
@@ -1931,8 +1935,8 @@ void q_spinbox_qbase_show_event(void* self, void* event) {
     QSpinBox_QBaseShowEvent((QSpinBox*)self, (QShowEvent*)event);
 }
 
-void q_spinbox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnShowEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnShowEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_init_style_option(void* self, void* option) {
@@ -1943,8 +1947,8 @@ void q_spinbox_qbase_init_style_option(void* self, void* option) {
     QSpinBox_QBaseInitStyleOption((QSpinBox*)self, (QStyleOptionSpinBox*)option);
 }
 
-void q_spinbox_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnInitStyleOption((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnInitStyleOption((QSpinBox*)self, (intptr_t)callback);
 }
 
 int64_t q_spinbox_step_enabled(void* self) {
@@ -1955,8 +1959,8 @@ int64_t q_spinbox_qbase_step_enabled(void* self) {
     return QSpinBox_QBaseStepEnabled((QSpinBox*)self);
 }
 
-void q_spinbox_on_step_enabled(void* self, int64_t (*slot)()) {
-    QSpinBox_OnStepEnabled((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_step_enabled(void* self, int64_t (*callback)()) {
+    QSpinBox_OnStepEnabled((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_dev_type(void* self) {
@@ -1967,8 +1971,8 @@ int32_t q_spinbox_qbase_dev_type(void* self) {
     return QSpinBox_QBaseDevType((QSpinBox*)self);
 }
 
-void q_spinbox_on_dev_type(void* self, int32_t (*slot)()) {
-    QSpinBox_OnDevType((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_dev_type(void* self, int32_t (*callback)()) {
+    QSpinBox_OnDevType((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_set_visible(void* self, bool visible) {
@@ -1979,8 +1983,8 @@ void q_spinbox_qbase_set_visible(void* self, bool visible) {
     QSpinBox_QBaseSetVisible((QSpinBox*)self, visible);
 }
 
-void q_spinbox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QSpinBox_OnSetVisible((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QSpinBox_OnSetVisible((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_height_for_width(void* self, int param1) {
@@ -1991,8 +1995,8 @@ int32_t q_spinbox_qbase_height_for_width(void* self, int param1) {
     return QSpinBox_QBaseHeightForWidth((QSpinBox*)self, param1);
 }
 
-void q_spinbox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QSpinBox_OnHeightForWidth((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QSpinBox_OnHeightForWidth((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_has_height_for_width(void* self) {
@@ -2003,8 +2007,8 @@ bool q_spinbox_qbase_has_height_for_width(void* self) {
     return QSpinBox_QBaseHasHeightForWidth((QSpinBox*)self);
 }
 
-void q_spinbox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QSpinBox_OnHasHeightForWidth((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QSpinBox_OnHasHeightForWidth((QSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_spinbox_paint_engine(void* self) {
@@ -2015,8 +2019,8 @@ QPaintEngine* q_spinbox_qbase_paint_engine(void* self) {
     return QSpinBox_QBasePaintEngine((QSpinBox*)self);
 }
 
-void q_spinbox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QSpinBox_OnPaintEngine((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QSpinBox_OnPaintEngine((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_mouse_double_click_event(void* self, void* event) {
@@ -2027,8 +2031,8 @@ void q_spinbox_qbase_mouse_double_click_event(void* self, void* event) {
     QSpinBox_QBaseMouseDoubleClickEvent((QSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_spinbox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnMouseDoubleClickEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnMouseDoubleClickEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_enter_event(void* self, void* event) {
@@ -2039,8 +2043,8 @@ void q_spinbox_qbase_enter_event(void* self, void* event) {
     QSpinBox_QBaseEnterEvent((QSpinBox*)self, (QEnterEvent*)event);
 }
 
-void q_spinbox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnEnterEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnEnterEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_leave_event(void* self, void* event) {
@@ -2051,8 +2055,8 @@ void q_spinbox_qbase_leave_event(void* self, void* event) {
     QSpinBox_QBaseLeaveEvent((QSpinBox*)self, (QEvent*)event);
 }
 
-void q_spinbox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnLeaveEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnLeaveEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_move_event(void* self, void* event) {
@@ -2063,8 +2067,8 @@ void q_spinbox_qbase_move_event(void* self, void* event) {
     QSpinBox_QBaseMoveEvent((QSpinBox*)self, (QMoveEvent*)event);
 }
 
-void q_spinbox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnMoveEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnMoveEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_tablet_event(void* self, void* event) {
@@ -2075,8 +2079,8 @@ void q_spinbox_qbase_tablet_event(void* self, void* event) {
     QSpinBox_QBaseTabletEvent((QSpinBox*)self, (QTabletEvent*)event);
 }
 
-void q_spinbox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnTabletEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnTabletEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_action_event(void* self, void* event) {
@@ -2087,8 +2091,8 @@ void q_spinbox_qbase_action_event(void* self, void* event) {
     QSpinBox_QBaseActionEvent((QSpinBox*)self, (QActionEvent*)event);
 }
 
-void q_spinbox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnActionEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnActionEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_drag_enter_event(void* self, void* event) {
@@ -2099,8 +2103,8 @@ void q_spinbox_qbase_drag_enter_event(void* self, void* event) {
     QSpinBox_QBaseDragEnterEvent((QSpinBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_spinbox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnDragEnterEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnDragEnterEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_drag_move_event(void* self, void* event) {
@@ -2111,8 +2115,8 @@ void q_spinbox_qbase_drag_move_event(void* self, void* event) {
     QSpinBox_QBaseDragMoveEvent((QSpinBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_spinbox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnDragMoveEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnDragMoveEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_drag_leave_event(void* self, void* event) {
@@ -2123,8 +2127,8 @@ void q_spinbox_qbase_drag_leave_event(void* self, void* event) {
     QSpinBox_QBaseDragLeaveEvent((QSpinBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_spinbox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnDragLeaveEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnDragLeaveEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_drop_event(void* self, void* event) {
@@ -2135,8 +2139,8 @@ void q_spinbox_qbase_drop_event(void* self, void* event) {
     QSpinBox_QBaseDropEvent((QSpinBox*)self, (QDropEvent*)event);
 }
 
-void q_spinbox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnDropEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnDropEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2147,8 +2151,8 @@ bool q_spinbox_qbase_native_event(void* self, const char* eventType, void* messa
     return QSpinBox_QBaseNativeEvent((QSpinBox*)self, qstring(eventType), message, result);
 }
 
-void q_spinbox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QSpinBox_OnNativeEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QSpinBox_OnNativeEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_metric(void* self, int64_t param1) {
@@ -2159,8 +2163,8 @@ int32_t q_spinbox_qbase_metric(void* self, int64_t param1) {
     return QSpinBox_QBaseMetric((QSpinBox*)self, param1);
 }
 
-void q_spinbox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QSpinBox_OnMetric((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QSpinBox_OnMetric((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_init_painter(void* self, void* painter) {
@@ -2171,8 +2175,8 @@ void q_spinbox_qbase_init_painter(void* self, void* painter) {
     QSpinBox_QBaseInitPainter((QSpinBox*)self, (QPainter*)painter);
 }
 
-void q_spinbox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnInitPainter((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnInitPainter((QSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_spinbox_redirected(void* self, void* offset) {
@@ -2183,8 +2187,8 @@ QPaintDevice* q_spinbox_qbase_redirected(void* self, void* offset) {
     return QSpinBox_QBaseRedirected((QSpinBox*)self, (QPoint*)offset);
 }
 
-void q_spinbox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QSpinBox_OnRedirected((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QSpinBox_OnRedirected((QSpinBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_spinbox_shared_painter(void* self) {
@@ -2195,8 +2199,8 @@ QPainter* q_spinbox_qbase_shared_painter(void* self) {
     return QSpinBox_QBaseSharedPainter((QSpinBox*)self);
 }
 
-void q_spinbox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QSpinBox_OnSharedPainter((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QSpinBox_OnSharedPainter((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_input_method_event(void* self, void* param1) {
@@ -2207,8 +2211,8 @@ void q_spinbox_qbase_input_method_event(void* self, void* param1) {
     QSpinBox_QBaseInputMethodEvent((QSpinBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_spinbox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnInputMethodEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnInputMethodEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_focus_next_prev_child(void* self, bool next) {
@@ -2219,8 +2223,8 @@ bool q_spinbox_qbase_focus_next_prev_child(void* self, bool next) {
     return QSpinBox_QBaseFocusNextPrevChild((QSpinBox*)self, next);
 }
 
-void q_spinbox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QSpinBox_OnFocusNextPrevChild((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QSpinBox_OnFocusNextPrevChild((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_event_filter(void* self, void* watched, void* event) {
@@ -2231,8 +2235,8 @@ bool q_spinbox_qbase_event_filter(void* self, void* watched, void* event) {
     return QSpinBox_QBaseEventFilter((QSpinBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_spinbox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSpinBox_OnEventFilter((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSpinBox_OnEventFilter((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_child_event(void* self, void* event) {
@@ -2243,8 +2247,8 @@ void q_spinbox_qbase_child_event(void* self, void* event) {
     QSpinBox_QBaseChildEvent((QSpinBox*)self, (QChildEvent*)event);
 }
 
-void q_spinbox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnChildEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnChildEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_custom_event(void* self, void* event) {
@@ -2255,8 +2259,8 @@ void q_spinbox_qbase_custom_event(void* self, void* event) {
     QSpinBox_QBaseCustomEvent((QSpinBox*)self, (QEvent*)event);
 }
 
-void q_spinbox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnCustomEvent((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnCustomEvent((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_connect_notify(void* self, void* signal) {
@@ -2267,8 +2271,8 @@ void q_spinbox_qbase_connect_notify(void* self, void* signal) {
     QSpinBox_QBaseConnectNotify((QSpinBox*)self, (QMetaMethod*)signal);
 }
 
-void q_spinbox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnConnectNotify((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnConnectNotify((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_disconnect_notify(void* self, void* signal) {
@@ -2279,8 +2283,8 @@ void q_spinbox_qbase_disconnect_notify(void* self, void* signal) {
     QSpinBox_QBaseDisconnectNotify((QSpinBox*)self, (QMetaMethod*)signal);
 }
 
-void q_spinbox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnDisconnectNotify((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnDisconnectNotify((QSpinBox*)self, (intptr_t)callback);
 }
 
 QLineEdit* q_spinbox_line_edit(void* self) {
@@ -2291,8 +2295,8 @@ QLineEdit* q_spinbox_qbase_line_edit(void* self) {
     return QSpinBox_QBaseLineEdit((QSpinBox*)self);
 }
 
-void q_spinbox_on_line_edit(void* self, QLineEdit* (*slot)()) {
-    QSpinBox_OnLineEdit((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_line_edit(void* self, QLineEdit* (*callback)()) {
+    QSpinBox_OnLineEdit((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_set_line_edit(void* self, void* edit) {
@@ -2303,8 +2307,8 @@ void q_spinbox_qbase_set_line_edit(void* self, void* edit) {
     QSpinBox_QBaseSetLineEdit((QSpinBox*)self, (QLineEdit*)edit);
 }
 
-void q_spinbox_on_set_line_edit(void* self, void (*slot)(void*, void*)) {
-    QSpinBox_OnSetLineEdit((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_set_line_edit(void* self, void (*callback)(void*, void*)) {
+    QSpinBox_OnSetLineEdit((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_update_micro_focus(void* self) {
@@ -2315,8 +2319,8 @@ void q_spinbox_qbase_update_micro_focus(void* self) {
     QSpinBox_QBaseUpdateMicroFocus((QSpinBox*)self);
 }
 
-void q_spinbox_on_update_micro_focus(void* self, void (*slot)()) {
-    QSpinBox_OnUpdateMicroFocus((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_update_micro_focus(void* self, void (*callback)()) {
+    QSpinBox_OnUpdateMicroFocus((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_create(void* self) {
@@ -2327,8 +2331,8 @@ void q_spinbox_qbase_create(void* self) {
     QSpinBox_QBaseCreate((QSpinBox*)self);
 }
 
-void q_spinbox_on_create(void* self, void (*slot)()) {
-    QSpinBox_OnCreate((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_create(void* self, void (*callback)()) {
+    QSpinBox_OnCreate((QSpinBox*)self, (intptr_t)callback);
 }
 
 void q_spinbox_destroy(void* self) {
@@ -2339,8 +2343,8 @@ void q_spinbox_qbase_destroy(void* self) {
     QSpinBox_QBaseDestroy((QSpinBox*)self);
 }
 
-void q_spinbox_on_destroy(void* self, void (*slot)()) {
-    QSpinBox_OnDestroy((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_destroy(void* self, void (*callback)()) {
+    QSpinBox_OnDestroy((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_focus_next_child(void* self) {
@@ -2351,8 +2355,8 @@ bool q_spinbox_qbase_focus_next_child(void* self) {
     return QSpinBox_QBaseFocusNextChild((QSpinBox*)self);
 }
 
-void q_spinbox_on_focus_next_child(void* self, bool (*slot)()) {
-    QSpinBox_OnFocusNextChild((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_focus_next_child(void* self, bool (*callback)()) {
+    QSpinBox_OnFocusNextChild((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_focus_previous_child(void* self) {
@@ -2363,8 +2367,8 @@ bool q_spinbox_qbase_focus_previous_child(void* self) {
     return QSpinBox_QBaseFocusPreviousChild((QSpinBox*)self);
 }
 
-void q_spinbox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QSpinBox_OnFocusPreviousChild((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QSpinBox_OnFocusPreviousChild((QSpinBox*)self, (intptr_t)callback);
 }
 
 QObject* q_spinbox_sender(void* self) {
@@ -2375,8 +2379,8 @@ QObject* q_spinbox_qbase_sender(void* self) {
     return QSpinBox_QBaseSender((QSpinBox*)self);
 }
 
-void q_spinbox_on_sender(void* self, QObject* (*slot)()) {
-    QSpinBox_OnSender((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_sender(void* self, QObject* (*callback)()) {
+    QSpinBox_OnSender((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_sender_signal_index(void* self) {
@@ -2387,8 +2391,8 @@ int32_t q_spinbox_qbase_sender_signal_index(void* self) {
     return QSpinBox_QBaseSenderSignalIndex((QSpinBox*)self);
 }
 
-void q_spinbox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSpinBox_OnSenderSignalIndex((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSpinBox_OnSenderSignalIndex((QSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_spinbox_receivers(void* self, const char* signal) {
@@ -2399,8 +2403,8 @@ int32_t q_spinbox_qbase_receivers(void* self, const char* signal) {
     return QSpinBox_QBaseReceivers((QSpinBox*)self, signal);
 }
 
-void q_spinbox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSpinBox_OnReceivers((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSpinBox_OnReceivers((QSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_spinbox_is_signal_connected(void* self, void* signal) {
@@ -2411,8 +2415,8 @@ bool q_spinbox_qbase_is_signal_connected(void* self, void* signal) {
     return QSpinBox_QBaseIsSignalConnected((QSpinBox*)self, (QMetaMethod*)signal);
 }
 
-void q_spinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSpinBox_OnIsSignalConnected((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSpinBox_OnIsSignalConnected((QSpinBox*)self, (intptr_t)callback);
 }
 
 double q_spinbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2423,12 +2427,12 @@ double q_spinbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t
     return QSpinBox_QBaseGetDecodedMetricF((QSpinBox*)self, metricA, metricB);
 }
 
-void q_spinbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QSpinBox_OnGetDecodedMetricF((QSpinBox*)self, (intptr_t)slot);
+void q_spinbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QSpinBox_OnGetDecodedMetricF((QSpinBox*)self, (intptr_t)callback);
 }
 
-void q_spinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_spinbox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_spinbox_delete(void* self) {
@@ -2455,8 +2459,8 @@ int32_t q_doublespinbox_metacall(void* self, int64_t param1, int param2, void* p
     return QDoubleSpinBox_Metacall((QDoubleSpinBox*)self, param1, param2, param3);
 }
 
-void q_doublespinbox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QDoubleSpinBox_OnMetacall((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QDoubleSpinBox_OnMetacall((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_doublespinbox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -2551,8 +2555,8 @@ int64_t q_doublespinbox_validate(void* self, const char* input, int* pos) {
     return QDoubleSpinBox_Validate((QDoubleSpinBox*)self, qstring(input), pos);
 }
 
-void q_doublespinbox_on_validate(void* self, int64_t (*slot)(void*, const char*, int*)) {
-    QDoubleSpinBox_OnValidate((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_validate(void* self, int64_t (*callback)(void*, const char*, int*)) {
+    QDoubleSpinBox_OnValidate((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int64_t q_doublespinbox_qbase_validate(void* self, const char* input, int* pos) {
@@ -2563,8 +2567,8 @@ double q_doublespinbox_value_from_text(void* self, const char* text) {
     return QDoubleSpinBox_ValueFromText((QDoubleSpinBox*)self, qstring(text));
 }
 
-void q_doublespinbox_on_value_from_text(void* self, double (*slot)(void*, const char*)) {
-    QDoubleSpinBox_OnValueFromText((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_value_from_text(void* self, double (*callback)(void*, const char*)) {
+    QDoubleSpinBox_OnValueFromText((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 double q_doublespinbox_qbase_value_from_text(void* self, const char* text) {
@@ -2578,8 +2582,8 @@ const char* q_doublespinbox_text_from_value(void* self, double val) {
     return _ret;
 }
 
-void q_doublespinbox_on_text_from_value(void* self, const char* (*slot)(void*, double)) {
-    QDoubleSpinBox_OnTextFromValue((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_text_from_value(void* self, const char* (*callback)(void*, double)) {
+    QDoubleSpinBox_OnTextFromValue((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 const char* q_doublespinbox_qbase_text_from_value(void* self, double val) {
@@ -2593,8 +2597,8 @@ void q_doublespinbox_fixup(void* self, const char* str) {
     QDoubleSpinBox_Fixup((QDoubleSpinBox*)self, qstring(str));
 }
 
-void q_doublespinbox_on_fixup(void* self, void (*slot)(void*, const char*)) {
-    QDoubleSpinBox_OnFixup((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_fixup(void* self, void (*callback)(void*, const char*)) {
+    QDoubleSpinBox_OnFixup((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_qbase_fixup(void* self, const char* str) {
@@ -2609,16 +2613,16 @@ void q_doublespinbox_value_changed(void* self, double param1) {
     QDoubleSpinBox_ValueChanged((QDoubleSpinBox*)self, param1);
 }
 
-void q_doublespinbox_on_value_changed(void* self, void (*slot)(void*, double)) {
-    QDoubleSpinBox_Connect_ValueChanged((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_value_changed(void* self, void (*callback)(void*, double)) {
+    QDoubleSpinBox_Connect_ValueChanged((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_text_changed(void* self, const char* param1) {
     QDoubleSpinBox_TextChanged((QDoubleSpinBox*)self, qstring(param1));
 }
 
-void q_doublespinbox_on_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QDoubleSpinBox_Connect_TextChanged((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QDoubleSpinBox_Connect_TextChanged((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 const char* q_doublespinbox_tr2(const char* s, const char* c) {
@@ -2749,8 +2753,8 @@ void q_doublespinbox_editing_finished(void* self) {
     QAbstractSpinBox_EditingFinished((QAbstractSpinBox*)self);
 }
 
-void q_doublespinbox_on_editing_finished(void* self, void (*slot)(void*)) {
-    QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_editing_finished(void* self, void (*callback)(void*)) {
+    QAbstractSpinBox_Connect_EditingFinished((QAbstractSpinBox*)self, (intptr_t)callback);
 }
 
 uintptr_t q_doublespinbox_win_id(void* self) {
@@ -3779,32 +3783,32 @@ void q_doublespinbox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_doublespinbox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_doublespinbox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_doublespinbox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_doublespinbox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_doublespinbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_doublespinbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_doublespinbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_doublespinbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_doublespinbox_input_method_hints(void* self) {
@@ -3975,12 +3979,16 @@ const char** q_doublespinbox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_doublespinbox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -3998,8 +4006,8 @@ void q_doublespinbox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_doublespinbox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_doublespinbox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_doublespinbox_parent(void* self) {
@@ -4034,8 +4042,8 @@ void q_doublespinbox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_doublespinbox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_doublespinbox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_painting_active(void* self) {
@@ -4098,8 +4106,8 @@ QSize* q_doublespinbox_qbase_size_hint(void* self) {
     return QDoubleSpinBox_QBaseSizeHint((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_size_hint(void* self, QSize* (*slot)()) {
-    QDoubleSpinBox_OnSizeHint((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_size_hint(void* self, QSize* (*callback)()) {
+    QDoubleSpinBox_OnSizeHint((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QSize* q_doublespinbox_minimum_size_hint(void* self) {
@@ -4110,8 +4118,8 @@ QSize* q_doublespinbox_qbase_minimum_size_hint(void* self) {
     return QDoubleSpinBox_QBaseMinimumSizeHint((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QDoubleSpinBox_OnMinimumSizeHint((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QDoubleSpinBox_OnMinimumSizeHint((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_event(void* self, void* event) {
@@ -4122,8 +4130,8 @@ bool q_doublespinbox_qbase_event(void* self, void* event) {
     return QDoubleSpinBox_QBaseEvent((QDoubleSpinBox*)self, (QEvent*)event);
 }
 
-void q_doublespinbox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_doublespinbox_input_method_query(void* self, int64_t param1) {
@@ -4134,8 +4142,8 @@ QVariant* q_doublespinbox_qbase_input_method_query(void* self, int64_t param1) {
     return QDoubleSpinBox_QBaseInputMethodQuery((QDoubleSpinBox*)self, param1);
 }
 
-void q_doublespinbox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QDoubleSpinBox_OnInputMethodQuery((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QDoubleSpinBox_OnInputMethodQuery((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_step_by(void* self, int steps) {
@@ -4146,8 +4154,8 @@ void q_doublespinbox_qbase_step_by(void* self, int steps) {
     QDoubleSpinBox_QBaseStepBy((QDoubleSpinBox*)self, steps);
 }
 
-void q_doublespinbox_on_step_by(void* self, void (*slot)(void*, int)) {
-    QDoubleSpinBox_OnStepBy((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_step_by(void* self, void (*callback)(void*, int)) {
+    QDoubleSpinBox_OnStepBy((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_clear(void* self) {
@@ -4158,8 +4166,8 @@ void q_doublespinbox_qbase_clear(void* self) {
     QDoubleSpinBox_QBaseClear((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_clear(void* self, void (*slot)()) {
-    QDoubleSpinBox_OnClear((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_clear(void* self, void (*callback)()) {
+    QDoubleSpinBox_OnClear((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_resize_event(void* self, void* event) {
@@ -4170,8 +4178,8 @@ void q_doublespinbox_qbase_resize_event(void* self, void* event) {
     QDoubleSpinBox_QBaseResizeEvent((QDoubleSpinBox*)self, (QResizeEvent*)event);
 }
 
-void q_doublespinbox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnResizeEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnResizeEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_key_press_event(void* self, void* event) {
@@ -4182,8 +4190,8 @@ void q_doublespinbox_qbase_key_press_event(void* self, void* event) {
     QDoubleSpinBox_QBaseKeyPressEvent((QDoubleSpinBox*)self, (QKeyEvent*)event);
 }
 
-void q_doublespinbox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnKeyPressEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnKeyPressEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_key_release_event(void* self, void* event) {
@@ -4194,8 +4202,8 @@ void q_doublespinbox_qbase_key_release_event(void* self, void* event) {
     QDoubleSpinBox_QBaseKeyReleaseEvent((QDoubleSpinBox*)self, (QKeyEvent*)event);
 }
 
-void q_doublespinbox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnKeyReleaseEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnKeyReleaseEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_wheel_event(void* self, void* event) {
@@ -4206,8 +4214,8 @@ void q_doublespinbox_qbase_wheel_event(void* self, void* event) {
     QDoubleSpinBox_QBaseWheelEvent((QDoubleSpinBox*)self, (QWheelEvent*)event);
 }
 
-void q_doublespinbox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnWheelEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnWheelEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_focus_in_event(void* self, void* event) {
@@ -4218,8 +4226,8 @@ void q_doublespinbox_qbase_focus_in_event(void* self, void* event) {
     QDoubleSpinBox_QBaseFocusInEvent((QDoubleSpinBox*)self, (QFocusEvent*)event);
 }
 
-void q_doublespinbox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnFocusInEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnFocusInEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_focus_out_event(void* self, void* event) {
@@ -4230,8 +4238,8 @@ void q_doublespinbox_qbase_focus_out_event(void* self, void* event) {
     QDoubleSpinBox_QBaseFocusOutEvent((QDoubleSpinBox*)self, (QFocusEvent*)event);
 }
 
-void q_doublespinbox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnFocusOutEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnFocusOutEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_context_menu_event(void* self, void* event) {
@@ -4242,8 +4250,8 @@ void q_doublespinbox_qbase_context_menu_event(void* self, void* event) {
     QDoubleSpinBox_QBaseContextMenuEvent((QDoubleSpinBox*)self, (QContextMenuEvent*)event);
 }
 
-void q_doublespinbox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnContextMenuEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnContextMenuEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_change_event(void* self, void* event) {
@@ -4254,8 +4262,8 @@ void q_doublespinbox_qbase_change_event(void* self, void* event) {
     QDoubleSpinBox_QBaseChangeEvent((QDoubleSpinBox*)self, (QEvent*)event);
 }
 
-void q_doublespinbox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnChangeEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnChangeEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_close_event(void* self, void* event) {
@@ -4266,8 +4274,8 @@ void q_doublespinbox_qbase_close_event(void* self, void* event) {
     QDoubleSpinBox_QBaseCloseEvent((QDoubleSpinBox*)self, (QCloseEvent*)event);
 }
 
-void q_doublespinbox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnCloseEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnCloseEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_hide_event(void* self, void* event) {
@@ -4278,8 +4286,8 @@ void q_doublespinbox_qbase_hide_event(void* self, void* event) {
     QDoubleSpinBox_QBaseHideEvent((QDoubleSpinBox*)self, (QHideEvent*)event);
 }
 
-void q_doublespinbox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnHideEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnHideEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_mouse_press_event(void* self, void* event) {
@@ -4290,8 +4298,8 @@ void q_doublespinbox_qbase_mouse_press_event(void* self, void* event) {
     QDoubleSpinBox_QBaseMousePressEvent((QDoubleSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_doublespinbox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnMousePressEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnMousePressEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_mouse_release_event(void* self, void* event) {
@@ -4302,8 +4310,8 @@ void q_doublespinbox_qbase_mouse_release_event(void* self, void* event) {
     QDoubleSpinBox_QBaseMouseReleaseEvent((QDoubleSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_doublespinbox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnMouseReleaseEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnMouseReleaseEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_mouse_move_event(void* self, void* event) {
@@ -4314,8 +4322,8 @@ void q_doublespinbox_qbase_mouse_move_event(void* self, void* event) {
     QDoubleSpinBox_QBaseMouseMoveEvent((QDoubleSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_doublespinbox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnMouseMoveEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnMouseMoveEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_timer_event(void* self, void* event) {
@@ -4326,8 +4334,8 @@ void q_doublespinbox_qbase_timer_event(void* self, void* event) {
     QDoubleSpinBox_QBaseTimerEvent((QDoubleSpinBox*)self, (QTimerEvent*)event);
 }
 
-void q_doublespinbox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnTimerEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnTimerEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_paint_event(void* self, void* event) {
@@ -4338,8 +4346,8 @@ void q_doublespinbox_qbase_paint_event(void* self, void* event) {
     QDoubleSpinBox_QBasePaintEvent((QDoubleSpinBox*)self, (QPaintEvent*)event);
 }
 
-void q_doublespinbox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnPaintEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnPaintEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_show_event(void* self, void* event) {
@@ -4350,8 +4358,8 @@ void q_doublespinbox_qbase_show_event(void* self, void* event) {
     QDoubleSpinBox_QBaseShowEvent((QDoubleSpinBox*)self, (QShowEvent*)event);
 }
 
-void q_doublespinbox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnShowEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnShowEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_init_style_option(void* self, void* option) {
@@ -4362,8 +4370,8 @@ void q_doublespinbox_qbase_init_style_option(void* self, void* option) {
     QDoubleSpinBox_QBaseInitStyleOption((QDoubleSpinBox*)self, (QStyleOptionSpinBox*)option);
 }
 
-void q_doublespinbox_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnInitStyleOption((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnInitStyleOption((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int64_t q_doublespinbox_step_enabled(void* self) {
@@ -4374,8 +4382,8 @@ int64_t q_doublespinbox_qbase_step_enabled(void* self) {
     return QDoubleSpinBox_QBaseStepEnabled((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_step_enabled(void* self, int64_t (*slot)()) {
-    QDoubleSpinBox_OnStepEnabled((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_step_enabled(void* self, int64_t (*callback)()) {
+    QDoubleSpinBox_OnStepEnabled((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_doublespinbox_dev_type(void* self) {
@@ -4386,8 +4394,8 @@ int32_t q_doublespinbox_qbase_dev_type(void* self) {
     return QDoubleSpinBox_QBaseDevType((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_dev_type(void* self, int32_t (*slot)()) {
-    QDoubleSpinBox_OnDevType((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_dev_type(void* self, int32_t (*callback)()) {
+    QDoubleSpinBox_OnDevType((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_set_visible(void* self, bool visible) {
@@ -4398,8 +4406,8 @@ void q_doublespinbox_qbase_set_visible(void* self, bool visible) {
     QDoubleSpinBox_QBaseSetVisible((QDoubleSpinBox*)self, visible);
 }
 
-void q_doublespinbox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QDoubleSpinBox_OnSetVisible((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QDoubleSpinBox_OnSetVisible((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_doublespinbox_height_for_width(void* self, int param1) {
@@ -4410,8 +4418,8 @@ int32_t q_doublespinbox_qbase_height_for_width(void* self, int param1) {
     return QDoubleSpinBox_QBaseHeightForWidth((QDoubleSpinBox*)self, param1);
 }
 
-void q_doublespinbox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QDoubleSpinBox_OnHeightForWidth((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QDoubleSpinBox_OnHeightForWidth((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_has_height_for_width(void* self) {
@@ -4422,8 +4430,8 @@ bool q_doublespinbox_qbase_has_height_for_width(void* self) {
     return QDoubleSpinBox_QBaseHasHeightForWidth((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QDoubleSpinBox_OnHasHeightForWidth((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QDoubleSpinBox_OnHasHeightForWidth((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_doublespinbox_paint_engine(void* self) {
@@ -4434,8 +4442,8 @@ QPaintEngine* q_doublespinbox_qbase_paint_engine(void* self) {
     return QDoubleSpinBox_QBasePaintEngine((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QDoubleSpinBox_OnPaintEngine((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QDoubleSpinBox_OnPaintEngine((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_mouse_double_click_event(void* self, void* event) {
@@ -4446,8 +4454,8 @@ void q_doublespinbox_qbase_mouse_double_click_event(void* self, void* event) {
     QDoubleSpinBox_QBaseMouseDoubleClickEvent((QDoubleSpinBox*)self, (QMouseEvent*)event);
 }
 
-void q_doublespinbox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnMouseDoubleClickEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnMouseDoubleClickEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_enter_event(void* self, void* event) {
@@ -4458,8 +4466,8 @@ void q_doublespinbox_qbase_enter_event(void* self, void* event) {
     QDoubleSpinBox_QBaseEnterEvent((QDoubleSpinBox*)self, (QEnterEvent*)event);
 }
 
-void q_doublespinbox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnEnterEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnEnterEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_leave_event(void* self, void* event) {
@@ -4470,8 +4478,8 @@ void q_doublespinbox_qbase_leave_event(void* self, void* event) {
     QDoubleSpinBox_QBaseLeaveEvent((QDoubleSpinBox*)self, (QEvent*)event);
 }
 
-void q_doublespinbox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnLeaveEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnLeaveEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_move_event(void* self, void* event) {
@@ -4482,8 +4490,8 @@ void q_doublespinbox_qbase_move_event(void* self, void* event) {
     QDoubleSpinBox_QBaseMoveEvent((QDoubleSpinBox*)self, (QMoveEvent*)event);
 }
 
-void q_doublespinbox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnMoveEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnMoveEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_tablet_event(void* self, void* event) {
@@ -4494,8 +4502,8 @@ void q_doublespinbox_qbase_tablet_event(void* self, void* event) {
     QDoubleSpinBox_QBaseTabletEvent((QDoubleSpinBox*)self, (QTabletEvent*)event);
 }
 
-void q_doublespinbox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnTabletEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnTabletEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_action_event(void* self, void* event) {
@@ -4506,8 +4514,8 @@ void q_doublespinbox_qbase_action_event(void* self, void* event) {
     QDoubleSpinBox_QBaseActionEvent((QDoubleSpinBox*)self, (QActionEvent*)event);
 }
 
-void q_doublespinbox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnActionEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnActionEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_drag_enter_event(void* self, void* event) {
@@ -4518,8 +4526,8 @@ void q_doublespinbox_qbase_drag_enter_event(void* self, void* event) {
     QDoubleSpinBox_QBaseDragEnterEvent((QDoubleSpinBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_doublespinbox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnDragEnterEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnDragEnterEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_drag_move_event(void* self, void* event) {
@@ -4530,8 +4538,8 @@ void q_doublespinbox_qbase_drag_move_event(void* self, void* event) {
     QDoubleSpinBox_QBaseDragMoveEvent((QDoubleSpinBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_doublespinbox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnDragMoveEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnDragMoveEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_drag_leave_event(void* self, void* event) {
@@ -4542,8 +4550,8 @@ void q_doublespinbox_qbase_drag_leave_event(void* self, void* event) {
     QDoubleSpinBox_QBaseDragLeaveEvent((QDoubleSpinBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_doublespinbox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnDragLeaveEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnDragLeaveEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_drop_event(void* self, void* event) {
@@ -4554,8 +4562,8 @@ void q_doublespinbox_qbase_drop_event(void* self, void* event) {
     QDoubleSpinBox_QBaseDropEvent((QDoubleSpinBox*)self, (QDropEvent*)event);
 }
 
-void q_doublespinbox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnDropEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnDropEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -4566,8 +4574,8 @@ bool q_doublespinbox_qbase_native_event(void* self, const char* eventType, void*
     return QDoubleSpinBox_QBaseNativeEvent((QDoubleSpinBox*)self, qstring(eventType), message, result);
 }
 
-void q_doublespinbox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QDoubleSpinBox_OnNativeEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QDoubleSpinBox_OnNativeEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_doublespinbox_metric(void* self, int64_t param1) {
@@ -4578,8 +4586,8 @@ int32_t q_doublespinbox_qbase_metric(void* self, int64_t param1) {
     return QDoubleSpinBox_QBaseMetric((QDoubleSpinBox*)self, param1);
 }
 
-void q_doublespinbox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QDoubleSpinBox_OnMetric((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QDoubleSpinBox_OnMetric((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_init_painter(void* self, void* painter) {
@@ -4590,8 +4598,8 @@ void q_doublespinbox_qbase_init_painter(void* self, void* painter) {
     QDoubleSpinBox_QBaseInitPainter((QDoubleSpinBox*)self, (QPainter*)painter);
 }
 
-void q_doublespinbox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnInitPainter((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnInitPainter((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_doublespinbox_redirected(void* self, void* offset) {
@@ -4602,8 +4610,8 @@ QPaintDevice* q_doublespinbox_qbase_redirected(void* self, void* offset) {
     return QDoubleSpinBox_QBaseRedirected((QDoubleSpinBox*)self, (QPoint*)offset);
 }
 
-void q_doublespinbox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnRedirected((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnRedirected((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_doublespinbox_shared_painter(void* self) {
@@ -4614,8 +4622,8 @@ QPainter* q_doublespinbox_qbase_shared_painter(void* self) {
     return QDoubleSpinBox_QBaseSharedPainter((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QDoubleSpinBox_OnSharedPainter((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QDoubleSpinBox_OnSharedPainter((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_input_method_event(void* self, void* param1) {
@@ -4626,8 +4634,8 @@ void q_doublespinbox_qbase_input_method_event(void* self, void* param1) {
     QDoubleSpinBox_QBaseInputMethodEvent((QDoubleSpinBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_doublespinbox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnInputMethodEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnInputMethodEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_focus_next_prev_child(void* self, bool next) {
@@ -4638,8 +4646,8 @@ bool q_doublespinbox_qbase_focus_next_prev_child(void* self, bool next) {
     return QDoubleSpinBox_QBaseFocusNextPrevChild((QDoubleSpinBox*)self, next);
 }
 
-void q_doublespinbox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QDoubleSpinBox_OnFocusNextPrevChild((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QDoubleSpinBox_OnFocusNextPrevChild((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_event_filter(void* self, void* watched, void* event) {
@@ -4650,8 +4658,8 @@ bool q_doublespinbox_qbase_event_filter(void* self, void* watched, void* event) 
     return QDoubleSpinBox_QBaseEventFilter((QDoubleSpinBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_doublespinbox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QDoubleSpinBox_OnEventFilter((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QDoubleSpinBox_OnEventFilter((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_child_event(void* self, void* event) {
@@ -4662,8 +4670,8 @@ void q_doublespinbox_qbase_child_event(void* self, void* event) {
     QDoubleSpinBox_QBaseChildEvent((QDoubleSpinBox*)self, (QChildEvent*)event);
 }
 
-void q_doublespinbox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnChildEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnChildEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_custom_event(void* self, void* event) {
@@ -4674,8 +4682,8 @@ void q_doublespinbox_qbase_custom_event(void* self, void* event) {
     QDoubleSpinBox_QBaseCustomEvent((QDoubleSpinBox*)self, (QEvent*)event);
 }
 
-void q_doublespinbox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnCustomEvent((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnCustomEvent((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_connect_notify(void* self, void* signal) {
@@ -4686,8 +4694,8 @@ void q_doublespinbox_qbase_connect_notify(void* self, void* signal) {
     QDoubleSpinBox_QBaseConnectNotify((QDoubleSpinBox*)self, (QMetaMethod*)signal);
 }
 
-void q_doublespinbox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnConnectNotify((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnConnectNotify((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_disconnect_notify(void* self, void* signal) {
@@ -4698,8 +4706,8 @@ void q_doublespinbox_qbase_disconnect_notify(void* self, void* signal) {
     QDoubleSpinBox_QBaseDisconnectNotify((QDoubleSpinBox*)self, (QMetaMethod*)signal);
 }
 
-void q_doublespinbox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnDisconnectNotify((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnDisconnectNotify((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QLineEdit* q_doublespinbox_line_edit(void* self) {
@@ -4710,8 +4718,8 @@ QLineEdit* q_doublespinbox_qbase_line_edit(void* self) {
     return QDoubleSpinBox_QBaseLineEdit((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_line_edit(void* self, QLineEdit* (*slot)()) {
-    QDoubleSpinBox_OnLineEdit((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_line_edit(void* self, QLineEdit* (*callback)()) {
+    QDoubleSpinBox_OnLineEdit((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_set_line_edit(void* self, void* edit) {
@@ -4722,8 +4730,8 @@ void q_doublespinbox_qbase_set_line_edit(void* self, void* edit) {
     QDoubleSpinBox_QBaseSetLineEdit((QDoubleSpinBox*)self, (QLineEdit*)edit);
 }
 
-void q_doublespinbox_on_set_line_edit(void* self, void (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnSetLineEdit((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_set_line_edit(void* self, void (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnSetLineEdit((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_update_micro_focus(void* self) {
@@ -4734,8 +4742,8 @@ void q_doublespinbox_qbase_update_micro_focus(void* self) {
     QDoubleSpinBox_QBaseUpdateMicroFocus((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_update_micro_focus(void* self, void (*slot)()) {
-    QDoubleSpinBox_OnUpdateMicroFocus((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_update_micro_focus(void* self, void (*callback)()) {
+    QDoubleSpinBox_OnUpdateMicroFocus((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_create(void* self) {
@@ -4746,8 +4754,8 @@ void q_doublespinbox_qbase_create(void* self) {
     QDoubleSpinBox_QBaseCreate((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_create(void* self, void (*slot)()) {
-    QDoubleSpinBox_OnCreate((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_create(void* self, void (*callback)()) {
+    QDoubleSpinBox_OnCreate((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_destroy(void* self) {
@@ -4758,8 +4766,8 @@ void q_doublespinbox_qbase_destroy(void* self) {
     QDoubleSpinBox_QBaseDestroy((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_destroy(void* self, void (*slot)()) {
-    QDoubleSpinBox_OnDestroy((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_destroy(void* self, void (*callback)()) {
+    QDoubleSpinBox_OnDestroy((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_focus_next_child(void* self) {
@@ -4770,8 +4778,8 @@ bool q_doublespinbox_qbase_focus_next_child(void* self) {
     return QDoubleSpinBox_QBaseFocusNextChild((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_focus_next_child(void* self, bool (*slot)()) {
-    QDoubleSpinBox_OnFocusNextChild((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_focus_next_child(void* self, bool (*callback)()) {
+    QDoubleSpinBox_OnFocusNextChild((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_focus_previous_child(void* self) {
@@ -4782,8 +4790,8 @@ bool q_doublespinbox_qbase_focus_previous_child(void* self) {
     return QDoubleSpinBox_QBaseFocusPreviousChild((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QDoubleSpinBox_OnFocusPreviousChild((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QDoubleSpinBox_OnFocusPreviousChild((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 QObject* q_doublespinbox_sender(void* self) {
@@ -4794,8 +4802,8 @@ QObject* q_doublespinbox_qbase_sender(void* self) {
     return QDoubleSpinBox_QBaseSender((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_sender(void* self, QObject* (*slot)()) {
-    QDoubleSpinBox_OnSender((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_sender(void* self, QObject* (*callback)()) {
+    QDoubleSpinBox_OnSender((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_doublespinbox_sender_signal_index(void* self) {
@@ -4806,8 +4814,8 @@ int32_t q_doublespinbox_qbase_sender_signal_index(void* self) {
     return QDoubleSpinBox_QBaseSenderSignalIndex((QDoubleSpinBox*)self);
 }
 
-void q_doublespinbox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QDoubleSpinBox_OnSenderSignalIndex((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QDoubleSpinBox_OnSenderSignalIndex((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 int32_t q_doublespinbox_receivers(void* self, const char* signal) {
@@ -4818,8 +4826,8 @@ int32_t q_doublespinbox_qbase_receivers(void* self, const char* signal) {
     return QDoubleSpinBox_QBaseReceivers((QDoubleSpinBox*)self, signal);
 }
 
-void q_doublespinbox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QDoubleSpinBox_OnReceivers((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QDoubleSpinBox_OnReceivers((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 bool q_doublespinbox_is_signal_connected(void* self, void* signal) {
@@ -4830,8 +4838,8 @@ bool q_doublespinbox_qbase_is_signal_connected(void* self, void* signal) {
     return QDoubleSpinBox_QBaseIsSignalConnected((QDoubleSpinBox*)self, (QMetaMethod*)signal);
 }
 
-void q_doublespinbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QDoubleSpinBox_OnIsSignalConnected((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QDoubleSpinBox_OnIsSignalConnected((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
 double q_doublespinbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -4842,12 +4850,12 @@ double q_doublespinbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, i
     return QDoubleSpinBox_QBaseGetDecodedMetricF((QDoubleSpinBox*)self, metricA, metricB);
 }
 
-void q_doublespinbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QDoubleSpinBox_OnGetDecodedMetricF((QDoubleSpinBox*)self, (intptr_t)slot);
+void q_doublespinbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QDoubleSpinBox_OnGetDecodedMetricF((QDoubleSpinBox*)self, (intptr_t)callback);
 }
 
-void q_doublespinbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_doublespinbox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_doublespinbox_delete(void* self) {

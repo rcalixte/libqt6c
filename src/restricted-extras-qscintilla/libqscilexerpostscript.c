@@ -30,8 +30,8 @@ int32_t q_scilexerpostscript_metacall(void* self, int64_t param1, int param2, vo
     return QsciLexerPostScript_Metacall((QsciLexerPostScript*)self, param1, param2, param3);
 }
 
-void q_scilexerpostscript_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QsciLexerPostScript_OnMetacall((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QsciLexerPostScript_OnMetacall((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -104,8 +104,8 @@ void q_scilexerpostscript_set_tokenize(void* self, bool tokenize) {
     QsciLexerPostScript_SetTokenize((QsciLexerPostScript*)self, tokenize);
 }
 
-void q_scilexerpostscript_on_set_tokenize(void* self, void (*slot)(void*, bool)) {
-    QsciLexerPostScript_OnSetTokenize((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_tokenize(void* self, void (*callback)(void*, bool)) {
+    QsciLexerPostScript_OnSetTokenize((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_qbase_set_tokenize(void* self, bool tokenize) {
@@ -116,8 +116,8 @@ void q_scilexerpostscript_set_level(void* self, int level) {
     QsciLexerPostScript_SetLevel((QsciLexerPostScript*)self, level);
 }
 
-void q_scilexerpostscript_on_set_level(void* self, void (*slot)(void*, int)) {
-    QsciLexerPostScript_OnSetLevel((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_level(void* self, void (*callback)(void*, int)) {
+    QsciLexerPostScript_OnSetLevel((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_qbase_set_level(void* self, int level) {
@@ -128,8 +128,8 @@ void q_scilexerpostscript_set_fold_compact(void* self, bool fold) {
     QsciLexerPostScript_SetFoldCompact((QsciLexerPostScript*)self, fold);
 }
 
-void q_scilexerpostscript_on_set_fold_compact(void* self, void (*slot)(void*, bool)) {
-    QsciLexerPostScript_OnSetFoldCompact((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_fold_compact(void* self, void (*callback)(void*, bool)) {
+    QsciLexerPostScript_OnSetFoldCompact((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_qbase_set_fold_compact(void* self, bool fold) {
@@ -140,8 +140,8 @@ void q_scilexerpostscript_set_fold_at_else(void* self, bool fold) {
     QsciLexerPostScript_SetFoldAtElse((QsciLexerPostScript*)self, fold);
 }
 
-void q_scilexerpostscript_on_set_fold_at_else(void* self, void (*slot)(void*, bool)) {
-    QsciLexerPostScript_OnSetFoldAtElse((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_fold_at_else(void* self, void (*callback)(void*, bool)) {
+    QsciLexerPostScript_OnSetFoldAtElse((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_qbase_set_fold_at_else(void* self, bool fold) {
@@ -152,8 +152,8 @@ bool q_scilexerpostscript_read_properties(void* self, void* qs, const char* pref
     return QsciLexerPostScript_ReadProperties((QsciLexerPostScript*)self, (QSettings*)qs, qstring(prefix));
 }
 
-void q_scilexerpostscript_on_read_properties(void* self, bool (*slot)(void*, void*, const char*)) {
-    QsciLexerPostScript_OnReadProperties((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_read_properties(void* self, bool (*callback)(void*, void*, const char*)) {
+    QsciLexerPostScript_OnReadProperties((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_qbase_read_properties(void* self, void* qs, const char* prefix) {
@@ -164,8 +164,8 @@ bool q_scilexerpostscript_write_properties(void* self, void* qs, const char* pre
     return QsciLexerPostScript_WriteProperties((QsciLexerPostScript*)self, (QSettings*)qs, qstring(prefix));
 }
 
-void q_scilexerpostscript_on_write_properties(void* self, bool (*slot)(void*, void*, const char*)) {
-    QsciLexerPostScript_OnWriteProperties((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_write_properties(void* self, bool (*callback)(void*, void*, const char*)) {
+    QsciLexerPostScript_OnWriteProperties((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_qbase_write_properties(void* self, void* qs, const char* prefix) {
@@ -226,40 +226,40 @@ void q_scilexerpostscript_color_changed(void* self, void* c, int style) {
     QsciLexer_ColorChanged((QsciLexer*)self, (QColor*)c, style);
 }
 
-void q_scilexerpostscript_on_color_changed(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexer_Connect_ColorChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_color_changed(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexer_Connect_ColorChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_eol_fill_changed(void* self, bool eolfilled, int style) {
     QsciLexer_EolFillChanged((QsciLexer*)self, eolfilled, style);
 }
 
-void q_scilexerpostscript_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int)) {
-    QsciLexer_Connect_EolFillChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int)) {
+    QsciLexer_Connect_EolFillChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_font_changed(void* self, void* f, int style) {
     QsciLexer_FontChanged((QsciLexer*)self, (QFont*)f, style);
 }
 
-void q_scilexerpostscript_on_font_changed(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexer_Connect_FontChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_font_changed(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexer_Connect_FontChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_paper_changed(void* self, void* c, int style) {
     QsciLexer_PaperChanged((QsciLexer*)self, (QColor*)c, style);
 }
 
-void q_scilexerpostscript_on_paper_changed(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexer_Connect_PaperChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_paper_changed(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexer_Connect_PaperChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_property_changed(void* self, const char* prop, const char* val) {
     QsciLexer_PropertyChanged((QsciLexer*)self, prop, val);
 }
 
-void q_scilexerpostscript_on_property_changed(void* self, void (*slot)(void*, const char*, const char*)) {
-    QsciLexer_Connect_PropertyChanged((QsciLexer*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_property_changed(void* self, void (*callback)(void*, const char*, const char*)) {
+    QsciLexer_Connect_PropertyChanged((QsciLexer*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_read_settings2(void* self, void* qs, const char* prefix) {
@@ -374,12 +374,16 @@ const char** q_scilexerpostscript_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scilexerpostscript_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -397,8 +401,8 @@ void q_scilexerpostscript_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_scilexerpostscript_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_scilexerpostscript_parent(void* self) {
@@ -433,8 +437,8 @@ void q_scilexerpostscript_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_scilexerpostscript_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_lexer_id(void* self) {
@@ -445,8 +449,8 @@ int32_t q_scilexerpostscript_qbase_lexer_id(void* self) {
     return QsciLexerPostScript_QBaseLexerId((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_lexer_id(void* self, int32_t (*slot)()) {
-    QsciLexerPostScript_OnLexerId((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_lexer_id(void* self, int32_t (*callback)()) {
+    QsciLexerPostScript_OnLexerId((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerpostscript_auto_completion_fillups(void* self) {
@@ -457,20 +461,24 @@ const char* q_scilexerpostscript_qbase_auto_completion_fillups(void* self) {
     return QsciLexerPostScript_QBaseAutoCompletionFillups((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_auto_completion_fillups(void* self, const char* (*slot)()) {
-    QsciLexerPostScript_OnAutoCompletionFillups((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_auto_completion_fillups(void* self, const char* (*callback)()) {
+    QsciLexerPostScript_OnAutoCompletionFillups((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char** q_scilexerpostscript_auto_completion_word_separators(void* self) {
     libqt_list _arr = QsciLexerPostScript_AutoCompletionWordSeparators((QsciLexerPostScript*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scilexerpostscript_auto_completion_word_separators");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -480,19 +488,23 @@ const char** q_scilexerpostscript_qbase_auto_completion_word_separators(void* se
     libqt_list _arr = QsciLexerPostScript_QBaseAutoCompletionWordSeparators((QsciLexerPostScript*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scilexerpostscript_auto_completion_word_separators");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_scilexerpostscript_on_auto_completion_word_separators(void* self, const char** (*slot)()) {
-    QsciLexerPostScript_OnAutoCompletionWordSeparators((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_auto_completion_word_separators(void* self, const char** (*callback)()) {
+    QsciLexerPostScript_OnAutoCompletionWordSeparators((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerpostscript_block_end(void* self, int* style) {
@@ -503,8 +515,8 @@ const char* q_scilexerpostscript_qbase_block_end(void* self, int* style) {
     return QsciLexerPostScript_QBaseBlockEnd((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_block_end(void* self, const char* (*slot)(void*, int*)) {
-    QsciLexerPostScript_OnBlockEnd((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_block_end(void* self, const char* (*callback)(void*, int*)) {
+    QsciLexerPostScript_OnBlockEnd((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_block_lookback(void* self) {
@@ -515,8 +527,8 @@ int32_t q_scilexerpostscript_qbase_block_lookback(void* self) {
     return QsciLexerPostScript_QBaseBlockLookback((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_block_lookback(void* self, int32_t (*slot)()) {
-    QsciLexerPostScript_OnBlockLookback((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_block_lookback(void* self, int32_t (*callback)()) {
+    QsciLexerPostScript_OnBlockLookback((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerpostscript_block_start(void* self, int* style) {
@@ -527,8 +539,8 @@ const char* q_scilexerpostscript_qbase_block_start(void* self, int* style) {
     return QsciLexerPostScript_QBaseBlockStart((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_block_start(void* self, const char* (*slot)(void*, int*)) {
-    QsciLexerPostScript_OnBlockStart((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_block_start(void* self, const char* (*callback)(void*, int*)) {
+    QsciLexerPostScript_OnBlockStart((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerpostscript_block_start_keyword(void* self, int* style) {
@@ -539,8 +551,8 @@ const char* q_scilexerpostscript_qbase_block_start_keyword(void* self, int* styl
     return QsciLexerPostScript_QBaseBlockStartKeyword((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_block_start_keyword(void* self, const char* (*slot)(void*, int*)) {
-    QsciLexerPostScript_OnBlockStartKeyword((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_block_start_keyword(void* self, const char* (*callback)(void*, int*)) {
+    QsciLexerPostScript_OnBlockStartKeyword((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_case_sensitive(void* self) {
@@ -551,8 +563,8 @@ bool q_scilexerpostscript_qbase_case_sensitive(void* self) {
     return QsciLexerPostScript_QBaseCaseSensitive((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_case_sensitive(void* self, bool (*slot)()) {
-    QsciLexerPostScript_OnCaseSensitive((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_case_sensitive(void* self, bool (*callback)()) {
+    QsciLexerPostScript_OnCaseSensitive((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerpostscript_color(void* self, int style) {
@@ -563,8 +575,8 @@ QColor* q_scilexerpostscript_qbase_color(void* self, int style) {
     return QsciLexerPostScript_QBaseColor((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_color(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerPostScript_OnColor((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_color(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerPostScript_OnColor((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_eol_fill(void* self, int style) {
@@ -575,8 +587,8 @@ bool q_scilexerpostscript_qbase_eol_fill(void* self, int style) {
     return QsciLexerPostScript_QBaseEolFill((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_eol_fill(void* self, bool (*slot)(void*, int)) {
-    QsciLexerPostScript_OnEolFill((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_eol_fill(void* self, bool (*callback)(void*, int)) {
+    QsciLexerPostScript_OnEolFill((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerpostscript_font(void* self, int style) {
@@ -587,8 +599,8 @@ QFont* q_scilexerpostscript_qbase_font(void* self, int style) {
     return QsciLexerPostScript_QBaseFont((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_font(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerPostScript_OnFont((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_font(void* self, QFont* (*callback)(void*, int)) {
+    QsciLexerPostScript_OnFont((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_indentation_guide_view(void* self) {
@@ -599,8 +611,8 @@ int32_t q_scilexerpostscript_qbase_indentation_guide_view(void* self) {
     return QsciLexerPostScript_QBaseIndentationGuideView((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_indentation_guide_view(void* self, int32_t (*slot)()) {
-    QsciLexerPostScript_OnIndentationGuideView((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_indentation_guide_view(void* self, int32_t (*callback)()) {
+    QsciLexerPostScript_OnIndentationGuideView((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_default_style(void* self) {
@@ -611,8 +623,8 @@ int32_t q_scilexerpostscript_qbase_default_style(void* self) {
     return QsciLexerPostScript_QBaseDefaultStyle((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_default_style(void* self, int32_t (*slot)()) {
-    QsciLexerPostScript_OnDefaultStyle((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_default_style(void* self, int32_t (*callback)()) {
+    QsciLexerPostScript_OnDefaultStyle((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerpostscript_paper(void* self, int style) {
@@ -623,8 +635,8 @@ QColor* q_scilexerpostscript_qbase_paper(void* self, int style) {
     return QsciLexerPostScript_QBasePaper((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_paper(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerPostScript_OnPaper((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_paper(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerPostScript_OnPaper((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerpostscript_default_color2(void* self, int style) {
@@ -635,8 +647,8 @@ QColor* q_scilexerpostscript_qbase_default_color2(void* self, int style) {
     return QsciLexerPostScript_QBaseDefaultColor2((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_default_color2(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerPostScript_OnDefaultColor2((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerPostScript_OnDefaultColor2((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_default_eol_fill(void* self, int style) {
@@ -647,8 +659,8 @@ bool q_scilexerpostscript_qbase_default_eol_fill(void* self, int style) {
     return QsciLexerPostScript_QBaseDefaultEolFill((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_default_eol_fill(void* self, bool (*slot)(void*, int)) {
-    QsciLexerPostScript_OnDefaultEolFill((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_default_eol_fill(void* self, bool (*callback)(void*, int)) {
+    QsciLexerPostScript_OnDefaultEolFill((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QFont* q_scilexerpostscript_default_font2(void* self, int style) {
@@ -659,8 +671,8 @@ QFont* q_scilexerpostscript_qbase_default_font2(void* self, int style) {
     return QsciLexerPostScript_QBaseDefaultFont2((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_default_font2(void* self, QFont* (*slot)(void*, int)) {
-    QsciLexerPostScript_OnDefaultFont2((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
+    QsciLexerPostScript_OnDefaultFont2((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QColor* q_scilexerpostscript_default_paper2(void* self, int style) {
@@ -671,8 +683,8 @@ QColor* q_scilexerpostscript_qbase_default_paper2(void* self, int style) {
     return QsciLexerPostScript_QBaseDefaultPaper2((QsciLexerPostScript*)self, style);
 }
 
-void q_scilexerpostscript_on_default_paper2(void* self, QColor* (*slot)(void*, int)) {
-    QsciLexerPostScript_OnDefaultPaper2((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
+    QsciLexerPostScript_OnDefaultPaper2((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_set_editor(void* self, void* editor) {
@@ -683,8 +695,8 @@ void q_scilexerpostscript_qbase_set_editor(void* self, void* editor) {
     QsciLexerPostScript_QBaseSetEditor((QsciLexerPostScript*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexerpostscript_on_set_editor(void* self, void (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnSetEditor((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_editor(void* self, void (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnSetEditor((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_style_bits_needed(void* self) {
@@ -695,8 +707,8 @@ int32_t q_scilexerpostscript_qbase_style_bits_needed(void* self) {
     return QsciLexerPostScript_QBaseStyleBitsNeeded((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_style_bits_needed(void* self, int32_t (*slot)()) {
-    QsciLexerPostScript_OnStyleBitsNeeded((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_style_bits_needed(void* self, int32_t (*callback)()) {
+    QsciLexerPostScript_OnStyleBitsNeeded((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerpostscript_word_characters(void* self) {
@@ -707,8 +719,8 @@ const char* q_scilexerpostscript_qbase_word_characters(void* self) {
     return QsciLexerPostScript_QBaseWordCharacters((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_word_characters(void* self, const char* (*slot)()) {
-    QsciLexerPostScript_OnWordCharacters((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_word_characters(void* self, const char* (*callback)()) {
+    QsciLexerPostScript_OnWordCharacters((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_set_auto_indent_style(void* self, int autoindentstyle) {
@@ -719,8 +731,8 @@ void q_scilexerpostscript_qbase_set_auto_indent_style(void* self, int autoindent
     QsciLexerPostScript_QBaseSetAutoIndentStyle((QsciLexerPostScript*)self, autoindentstyle);
 }
 
-void q_scilexerpostscript_on_set_auto_indent_style(void* self, void (*slot)(void*, int)) {
-    QsciLexerPostScript_OnSetAutoIndentStyle((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
+    QsciLexerPostScript_OnSetAutoIndentStyle((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_set_color(void* self, void* c, int style) {
@@ -731,8 +743,8 @@ void q_scilexerpostscript_qbase_set_color(void* self, void* c, int style) {
     QsciLexerPostScript_QBaseSetColor((QsciLexerPostScript*)self, (QColor*)c, style);
 }
 
-void q_scilexerpostscript_on_set_color(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexerPostScript_OnSetColor((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_color(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexerPostScript_OnSetColor((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_set_eol_fill(void* self, bool eoffill, int style) {
@@ -743,8 +755,8 @@ void q_scilexerpostscript_qbase_set_eol_fill(void* self, bool eoffill, int style
     QsciLexerPostScript_QBaseSetEolFill((QsciLexerPostScript*)self, eoffill, style);
 }
 
-void q_scilexerpostscript_on_set_eol_fill(void* self, void (*slot)(void*, bool, int)) {
-    QsciLexerPostScript_OnSetEolFill((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
+    QsciLexerPostScript_OnSetEolFill((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_set_font(void* self, void* f, int style) {
@@ -755,8 +767,8 @@ void q_scilexerpostscript_qbase_set_font(void* self, void* f, int style) {
     QsciLexerPostScript_QBaseSetFont((QsciLexerPostScript*)self, (QFont*)f, style);
 }
 
-void q_scilexerpostscript_on_set_font(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexerPostScript_OnSetFont((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_font(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexerPostScript_OnSetFont((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_set_paper(void* self, void* c, int style) {
@@ -767,8 +779,8 @@ void q_scilexerpostscript_qbase_set_paper(void* self, void* c, int style) {
     QsciLexerPostScript_QBaseSetPaper((QsciLexerPostScript*)self, (QColor*)c, style);
 }
 
-void q_scilexerpostscript_on_set_paper(void* self, void (*slot)(void*, void*, int)) {
-    QsciLexerPostScript_OnSetPaper((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
+    QsciLexerPostScript_OnSetPaper((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_event(void* self, void* event) {
@@ -779,8 +791,8 @@ bool q_scilexerpostscript_qbase_event(void* self, void* event) {
     return QsciLexerPostScript_QBaseEvent((QsciLexerPostScript*)self, (QEvent*)event);
 }
 
-void q_scilexerpostscript_on_event(void* self, bool (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnEvent((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_event(void* self, bool (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnEvent((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_event_filter(void* self, void* watched, void* event) {
@@ -791,8 +803,8 @@ bool q_scilexerpostscript_qbase_event_filter(void* self, void* watched, void* ev
     return QsciLexerPostScript_QBaseEventFilter((QsciLexerPostScript*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_scilexerpostscript_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QsciLexerPostScript_OnEventFilter((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QsciLexerPostScript_OnEventFilter((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_timer_event(void* self, void* event) {
@@ -803,8 +815,8 @@ void q_scilexerpostscript_qbase_timer_event(void* self, void* event) {
     QsciLexerPostScript_QBaseTimerEvent((QsciLexerPostScript*)self, (QTimerEvent*)event);
 }
 
-void q_scilexerpostscript_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnTimerEvent((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnTimerEvent((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_child_event(void* self, void* event) {
@@ -815,8 +827,8 @@ void q_scilexerpostscript_qbase_child_event(void* self, void* event) {
     QsciLexerPostScript_QBaseChildEvent((QsciLexerPostScript*)self, (QChildEvent*)event);
 }
 
-void q_scilexerpostscript_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnChildEvent((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnChildEvent((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_custom_event(void* self, void* event) {
@@ -827,8 +839,8 @@ void q_scilexerpostscript_qbase_custom_event(void* self, void* event) {
     QsciLexerPostScript_QBaseCustomEvent((QsciLexerPostScript*)self, (QEvent*)event);
 }
 
-void q_scilexerpostscript_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnCustomEvent((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnCustomEvent((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_connect_notify(void* self, void* signal) {
@@ -839,8 +851,8 @@ void q_scilexerpostscript_qbase_connect_notify(void* self, void* signal) {
     QsciLexerPostScript_QBaseConnectNotify((QsciLexerPostScript*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerpostscript_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnConnectNotify((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnConnectNotify((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_disconnect_notify(void* self, void* signal) {
@@ -851,8 +863,8 @@ void q_scilexerpostscript_qbase_disconnect_notify(void* self, void* signal) {
     QsciLexerPostScript_QBaseDisconnectNotify((QsciLexerPostScript*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerpostscript_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnDisconnectNotify((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnDisconnectNotify((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 char* q_scilexerpostscript_text_as_bytes(void* self, const char* text) {
@@ -869,8 +881,8 @@ char* q_scilexerpostscript_qbase_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-void q_scilexerpostscript_on_text_as_bytes(void* self, char* (*slot)(void*, const char*)) {
-    QsciLexerPostScript_OnTextAsBytes((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_text_as_bytes(void* self, char* (*callback)(void*, const char*)) {
+    QsciLexerPostScript_OnTextAsBytes((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 const char* q_scilexerpostscript_bytes_as_text(void* self, const char* bytes, int size) {
@@ -887,8 +899,8 @@ const char* q_scilexerpostscript_qbase_bytes_as_text(void* self, const char* byt
     return _ret;
 }
 
-void q_scilexerpostscript_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int)) {
-    QsciLexerPostScript_OnBytesAsText((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int)) {
+    QsciLexerPostScript_OnBytesAsText((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 QObject* q_scilexerpostscript_sender(void* self) {
@@ -899,8 +911,8 @@ QObject* q_scilexerpostscript_qbase_sender(void* self) {
     return QsciLexerPostScript_QBaseSender((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_sender(void* self, QObject* (*slot)()) {
-    QsciLexerPostScript_OnSender((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_sender(void* self, QObject* (*callback)()) {
+    QsciLexerPostScript_OnSender((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_sender_signal_index(void* self) {
@@ -911,8 +923,8 @@ int32_t q_scilexerpostscript_qbase_sender_signal_index(void* self) {
     return QsciLexerPostScript_QBaseSenderSignalIndex((QsciLexerPostScript*)self);
 }
 
-void q_scilexerpostscript_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QsciLexerPostScript_OnSenderSignalIndex((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QsciLexerPostScript_OnSenderSignalIndex((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 int32_t q_scilexerpostscript_receivers(void* self, const char* signal) {
@@ -923,8 +935,8 @@ int32_t q_scilexerpostscript_qbase_receivers(void* self, const char* signal) {
     return QsciLexerPostScript_QBaseReceivers((QsciLexerPostScript*)self, signal);
 }
 
-void q_scilexerpostscript_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QsciLexerPostScript_OnReceivers((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QsciLexerPostScript_OnReceivers((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
 bool q_scilexerpostscript_is_signal_connected(void* self, void* signal) {
@@ -935,12 +947,12 @@ bool q_scilexerpostscript_qbase_is_signal_connected(void* self, void* signal) {
     return QsciLexerPostScript_QBaseIsSignalConnected((QsciLexerPostScript*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerpostscript_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QsciLexerPostScript_OnIsSignalConnected((QsciLexerPostScript*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QsciLexerPostScript_OnIsSignalConnected((QsciLexerPostScript*)self, (intptr_t)callback);
 }
 
-void q_scilexerpostscript_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_scilexerpostscript_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_scilexerpostscript_delete(void* self) {
